@@ -325,16 +325,16 @@ export interface EKS {
    */
   associateAccessPolicy(
     args: AssociateAccessPolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AssociateAccessPolicyCommandOutput>;
   associateAccessPolicy(
     args: AssociateAccessPolicyCommandInput,
-    cb: (err: any, data?: AssociateAccessPolicyCommandOutput) => void
+    cb: (err: any, data?: AssociateAccessPolicyCommandOutput) => void,
   ): void;
   associateAccessPolicy(
     args: AssociateAccessPolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AssociateAccessPolicyCommandOutput) => void
+    cb: (err: any, data?: AssociateAccessPolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -342,16 +342,16 @@ export interface EKS {
    */
   associateEncryptionConfig(
     args: AssociateEncryptionConfigCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AssociateEncryptionConfigCommandOutput>;
   associateEncryptionConfig(
     args: AssociateEncryptionConfigCommandInput,
-    cb: (err: any, data?: AssociateEncryptionConfigCommandOutput) => void
+    cb: (err: any, data?: AssociateEncryptionConfigCommandOutput) => void,
   ): void;
   associateEncryptionConfig(
     args: AssociateEncryptionConfigCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AssociateEncryptionConfigCommandOutput) => void
+    cb: (err: any, data?: AssociateEncryptionConfigCommandOutput) => void,
   ): void;
 
   /**
@@ -359,16 +359,16 @@ export interface EKS {
    */
   associateIdentityProviderConfig(
     args: AssociateIdentityProviderConfigCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AssociateIdentityProviderConfigCommandOutput>;
   associateIdentityProviderConfig(
     args: AssociateIdentityProviderConfigCommandInput,
-    cb: (err: any, data?: AssociateIdentityProviderConfigCommandOutput) => void
+    cb: (err: any, data?: AssociateIdentityProviderConfigCommandOutput) => void,
   ): void;
   associateIdentityProviderConfig(
     args: AssociateIdentityProviderConfigCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AssociateIdentityProviderConfigCommandOutput) => void
+    cb: (err: any, data?: AssociateIdentityProviderConfigCommandOutput) => void,
   ): void;
 
   /**
@@ -376,16 +376,16 @@ export interface EKS {
    */
   createAccessEntry(
     args: CreateAccessEntryCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateAccessEntryCommandOutput>;
   createAccessEntry(
     args: CreateAccessEntryCommandInput,
-    cb: (err: any, data?: CreateAccessEntryCommandOutput) => void
+    cb: (err: any, data?: CreateAccessEntryCommandOutput) => void,
   ): void;
   createAccessEntry(
     args: CreateAccessEntryCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateAccessEntryCommandOutput) => void
+    cb: (err: any, data?: CreateAccessEntryCommandOutput) => void,
   ): void;
 
   /**
@@ -396,7 +396,7 @@ export interface EKS {
   createAddon(
     args: CreateAddonCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateAddonCommandOutput) => void
+    cb: (err: any, data?: CreateAddonCommandOutput) => void,
   ): void;
 
   /**
@@ -407,7 +407,7 @@ export interface EKS {
   createCluster(
     args: CreateClusterCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateClusterCommandOutput) => void
+    cb: (err: any, data?: CreateClusterCommandOutput) => void,
   ): void;
 
   /**
@@ -415,16 +415,16 @@ export interface EKS {
    */
   createEksAnywhereSubscription(
     args: CreateEksAnywhereSubscriptionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateEksAnywhereSubscriptionCommandOutput>;
   createEksAnywhereSubscription(
     args: CreateEksAnywhereSubscriptionCommandInput,
-    cb: (err: any, data?: CreateEksAnywhereSubscriptionCommandOutput) => void
+    cb: (err: any, data?: CreateEksAnywhereSubscriptionCommandOutput) => void,
   ): void;
   createEksAnywhereSubscription(
     args: CreateEksAnywhereSubscriptionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateEksAnywhereSubscriptionCommandOutput) => void
+    cb: (err: any, data?: CreateEksAnywhereSubscriptionCommandOutput) => void,
   ): void;
 
   /**
@@ -432,16 +432,16 @@ export interface EKS {
    */
   createFargateProfile(
     args: CreateFargateProfileCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateFargateProfileCommandOutput>;
   createFargateProfile(
     args: CreateFargateProfileCommandInput,
-    cb: (err: any, data?: CreateFargateProfileCommandOutput) => void
+    cb: (err: any, data?: CreateFargateProfileCommandOutput) => void,
   ): void;
   createFargateProfile(
     args: CreateFargateProfileCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateFargateProfileCommandOutput) => void
+    cb: (err: any, data?: CreateFargateProfileCommandOutput) => void,
   ): void;
 
   /**
@@ -449,13 +449,13 @@ export interface EKS {
    */
   createNodegroup(
     args: CreateNodegroupCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateNodegroupCommandOutput>;
   createNodegroup(args: CreateNodegroupCommandInput, cb: (err: any, data?: CreateNodegroupCommandOutput) => void): void;
   createNodegroup(
     args: CreateNodegroupCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateNodegroupCommandOutput) => void
+    cb: (err: any, data?: CreateNodegroupCommandOutput) => void,
   ): void;
 
   /**
@@ -463,16 +463,16 @@ export interface EKS {
    */
   createPodIdentityAssociation(
     args: CreatePodIdentityAssociationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreatePodIdentityAssociationCommandOutput>;
   createPodIdentityAssociation(
     args: CreatePodIdentityAssociationCommandInput,
-    cb: (err: any, data?: CreatePodIdentityAssociationCommandOutput) => void
+    cb: (err: any, data?: CreatePodIdentityAssociationCommandOutput) => void,
   ): void;
   createPodIdentityAssociation(
     args: CreatePodIdentityAssociationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreatePodIdentityAssociationCommandOutput) => void
+    cb: (err: any, data?: CreatePodIdentityAssociationCommandOutput) => void,
   ): void;
 
   /**
@@ -480,16 +480,16 @@ export interface EKS {
    */
   deleteAccessEntry(
     args: DeleteAccessEntryCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteAccessEntryCommandOutput>;
   deleteAccessEntry(
     args: DeleteAccessEntryCommandInput,
-    cb: (err: any, data?: DeleteAccessEntryCommandOutput) => void
+    cb: (err: any, data?: DeleteAccessEntryCommandOutput) => void,
   ): void;
   deleteAccessEntry(
     args: DeleteAccessEntryCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteAccessEntryCommandOutput) => void
+    cb: (err: any, data?: DeleteAccessEntryCommandOutput) => void,
   ): void;
 
   /**
@@ -500,7 +500,7 @@ export interface EKS {
   deleteAddon(
     args: DeleteAddonCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteAddonCommandOutput) => void
+    cb: (err: any, data?: DeleteAddonCommandOutput) => void,
   ): void;
 
   /**
@@ -511,7 +511,7 @@ export interface EKS {
   deleteCluster(
     args: DeleteClusterCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteClusterCommandOutput) => void
+    cb: (err: any, data?: DeleteClusterCommandOutput) => void,
   ): void;
 
   /**
@@ -519,16 +519,16 @@ export interface EKS {
    */
   deleteEksAnywhereSubscription(
     args: DeleteEksAnywhereSubscriptionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteEksAnywhereSubscriptionCommandOutput>;
   deleteEksAnywhereSubscription(
     args: DeleteEksAnywhereSubscriptionCommandInput,
-    cb: (err: any, data?: DeleteEksAnywhereSubscriptionCommandOutput) => void
+    cb: (err: any, data?: DeleteEksAnywhereSubscriptionCommandOutput) => void,
   ): void;
   deleteEksAnywhereSubscription(
     args: DeleteEksAnywhereSubscriptionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteEksAnywhereSubscriptionCommandOutput) => void
+    cb: (err: any, data?: DeleteEksAnywhereSubscriptionCommandOutput) => void,
   ): void;
 
   /**
@@ -536,16 +536,16 @@ export interface EKS {
    */
   deleteFargateProfile(
     args: DeleteFargateProfileCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteFargateProfileCommandOutput>;
   deleteFargateProfile(
     args: DeleteFargateProfileCommandInput,
-    cb: (err: any, data?: DeleteFargateProfileCommandOutput) => void
+    cb: (err: any, data?: DeleteFargateProfileCommandOutput) => void,
   ): void;
   deleteFargateProfile(
     args: DeleteFargateProfileCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteFargateProfileCommandOutput) => void
+    cb: (err: any, data?: DeleteFargateProfileCommandOutput) => void,
   ): void;
 
   /**
@@ -553,13 +553,13 @@ export interface EKS {
    */
   deleteNodegroup(
     args: DeleteNodegroupCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteNodegroupCommandOutput>;
   deleteNodegroup(args: DeleteNodegroupCommandInput, cb: (err: any, data?: DeleteNodegroupCommandOutput) => void): void;
   deleteNodegroup(
     args: DeleteNodegroupCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteNodegroupCommandOutput) => void
+    cb: (err: any, data?: DeleteNodegroupCommandOutput) => void,
   ): void;
 
   /**
@@ -567,16 +567,16 @@ export interface EKS {
    */
   deletePodIdentityAssociation(
     args: DeletePodIdentityAssociationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeletePodIdentityAssociationCommandOutput>;
   deletePodIdentityAssociation(
     args: DeletePodIdentityAssociationCommandInput,
-    cb: (err: any, data?: DeletePodIdentityAssociationCommandOutput) => void
+    cb: (err: any, data?: DeletePodIdentityAssociationCommandOutput) => void,
   ): void;
   deletePodIdentityAssociation(
     args: DeletePodIdentityAssociationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeletePodIdentityAssociationCommandOutput) => void
+    cb: (err: any, data?: DeletePodIdentityAssociationCommandOutput) => void,
   ): void;
 
   /**
@@ -584,16 +584,16 @@ export interface EKS {
    */
   deregisterCluster(
     args: DeregisterClusterCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeregisterClusterCommandOutput>;
   deregisterCluster(
     args: DeregisterClusterCommandInput,
-    cb: (err: any, data?: DeregisterClusterCommandOutput) => void
+    cb: (err: any, data?: DeregisterClusterCommandOutput) => void,
   ): void;
   deregisterCluster(
     args: DeregisterClusterCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeregisterClusterCommandOutput) => void
+    cb: (err: any, data?: DeregisterClusterCommandOutput) => void,
   ): void;
 
   /**
@@ -601,16 +601,16 @@ export interface EKS {
    */
   describeAccessEntry(
     args: DescribeAccessEntryCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeAccessEntryCommandOutput>;
   describeAccessEntry(
     args: DescribeAccessEntryCommandInput,
-    cb: (err: any, data?: DescribeAccessEntryCommandOutput) => void
+    cb: (err: any, data?: DescribeAccessEntryCommandOutput) => void,
   ): void;
   describeAccessEntry(
     args: DescribeAccessEntryCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeAccessEntryCommandOutput) => void
+    cb: (err: any, data?: DescribeAccessEntryCommandOutput) => void,
   ): void;
 
   /**
@@ -621,7 +621,7 @@ export interface EKS {
   describeAddon(
     args: DescribeAddonCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeAddonCommandOutput) => void
+    cb: (err: any, data?: DescribeAddonCommandOutput) => void,
   ): void;
 
   /**
@@ -629,16 +629,16 @@ export interface EKS {
    */
   describeAddonConfiguration(
     args: DescribeAddonConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeAddonConfigurationCommandOutput>;
   describeAddonConfiguration(
     args: DescribeAddonConfigurationCommandInput,
-    cb: (err: any, data?: DescribeAddonConfigurationCommandOutput) => void
+    cb: (err: any, data?: DescribeAddonConfigurationCommandOutput) => void,
   ): void;
   describeAddonConfiguration(
     args: DescribeAddonConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeAddonConfigurationCommandOutput) => void
+    cb: (err: any, data?: DescribeAddonConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -647,16 +647,16 @@ export interface EKS {
   describeAddonVersions(): Promise<DescribeAddonVersionsCommandOutput>;
   describeAddonVersions(
     args: DescribeAddonVersionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeAddonVersionsCommandOutput>;
   describeAddonVersions(
     args: DescribeAddonVersionsCommandInput,
-    cb: (err: any, data?: DescribeAddonVersionsCommandOutput) => void
+    cb: (err: any, data?: DescribeAddonVersionsCommandOutput) => void,
   ): void;
   describeAddonVersions(
     args: DescribeAddonVersionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeAddonVersionsCommandOutput) => void
+    cb: (err: any, data?: DescribeAddonVersionsCommandOutput) => void,
   ): void;
 
   /**
@@ -664,13 +664,13 @@ export interface EKS {
    */
   describeCluster(
     args: DescribeClusterCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeClusterCommandOutput>;
   describeCluster(args: DescribeClusterCommandInput, cb: (err: any, data?: DescribeClusterCommandOutput) => void): void;
   describeCluster(
     args: DescribeClusterCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeClusterCommandOutput) => void
+    cb: (err: any, data?: DescribeClusterCommandOutput) => void,
   ): void;
 
   /**
@@ -678,16 +678,16 @@ export interface EKS {
    */
   describeEksAnywhereSubscription(
     args: DescribeEksAnywhereSubscriptionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeEksAnywhereSubscriptionCommandOutput>;
   describeEksAnywhereSubscription(
     args: DescribeEksAnywhereSubscriptionCommandInput,
-    cb: (err: any, data?: DescribeEksAnywhereSubscriptionCommandOutput) => void
+    cb: (err: any, data?: DescribeEksAnywhereSubscriptionCommandOutput) => void,
   ): void;
   describeEksAnywhereSubscription(
     args: DescribeEksAnywhereSubscriptionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeEksAnywhereSubscriptionCommandOutput) => void
+    cb: (err: any, data?: DescribeEksAnywhereSubscriptionCommandOutput) => void,
   ): void;
 
   /**
@@ -695,16 +695,16 @@ export interface EKS {
    */
   describeFargateProfile(
     args: DescribeFargateProfileCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeFargateProfileCommandOutput>;
   describeFargateProfile(
     args: DescribeFargateProfileCommandInput,
-    cb: (err: any, data?: DescribeFargateProfileCommandOutput) => void
+    cb: (err: any, data?: DescribeFargateProfileCommandOutput) => void,
   ): void;
   describeFargateProfile(
     args: DescribeFargateProfileCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeFargateProfileCommandOutput) => void
+    cb: (err: any, data?: DescribeFargateProfileCommandOutput) => void,
   ): void;
 
   /**
@@ -712,16 +712,16 @@ export interface EKS {
    */
   describeIdentityProviderConfig(
     args: DescribeIdentityProviderConfigCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeIdentityProviderConfigCommandOutput>;
   describeIdentityProviderConfig(
     args: DescribeIdentityProviderConfigCommandInput,
-    cb: (err: any, data?: DescribeIdentityProviderConfigCommandOutput) => void
+    cb: (err: any, data?: DescribeIdentityProviderConfigCommandOutput) => void,
   ): void;
   describeIdentityProviderConfig(
     args: DescribeIdentityProviderConfigCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeIdentityProviderConfigCommandOutput) => void
+    cb: (err: any, data?: DescribeIdentityProviderConfigCommandOutput) => void,
   ): void;
 
   /**
@@ -729,13 +729,13 @@ export interface EKS {
    */
   describeInsight(
     args: DescribeInsightCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeInsightCommandOutput>;
   describeInsight(args: DescribeInsightCommandInput, cb: (err: any, data?: DescribeInsightCommandOutput) => void): void;
   describeInsight(
     args: DescribeInsightCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeInsightCommandOutput) => void
+    cb: (err: any, data?: DescribeInsightCommandOutput) => void,
   ): void;
 
   /**
@@ -743,16 +743,16 @@ export interface EKS {
    */
   describeNodegroup(
     args: DescribeNodegroupCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeNodegroupCommandOutput>;
   describeNodegroup(
     args: DescribeNodegroupCommandInput,
-    cb: (err: any, data?: DescribeNodegroupCommandOutput) => void
+    cb: (err: any, data?: DescribeNodegroupCommandOutput) => void,
   ): void;
   describeNodegroup(
     args: DescribeNodegroupCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeNodegroupCommandOutput) => void
+    cb: (err: any, data?: DescribeNodegroupCommandOutput) => void,
   ): void;
 
   /**
@@ -760,16 +760,16 @@ export interface EKS {
    */
   describePodIdentityAssociation(
     args: DescribePodIdentityAssociationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribePodIdentityAssociationCommandOutput>;
   describePodIdentityAssociation(
     args: DescribePodIdentityAssociationCommandInput,
-    cb: (err: any, data?: DescribePodIdentityAssociationCommandOutput) => void
+    cb: (err: any, data?: DescribePodIdentityAssociationCommandOutput) => void,
   ): void;
   describePodIdentityAssociation(
     args: DescribePodIdentityAssociationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribePodIdentityAssociationCommandOutput) => void
+    cb: (err: any, data?: DescribePodIdentityAssociationCommandOutput) => void,
   ): void;
 
   /**
@@ -777,13 +777,13 @@ export interface EKS {
    */
   describeUpdate(
     args: DescribeUpdateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeUpdateCommandOutput>;
   describeUpdate(args: DescribeUpdateCommandInput, cb: (err: any, data?: DescribeUpdateCommandOutput) => void): void;
   describeUpdate(
     args: DescribeUpdateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeUpdateCommandOutput) => void
+    cb: (err: any, data?: DescribeUpdateCommandOutput) => void,
   ): void;
 
   /**
@@ -791,16 +791,16 @@ export interface EKS {
    */
   disassociateAccessPolicy(
     args: DisassociateAccessPolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DisassociateAccessPolicyCommandOutput>;
   disassociateAccessPolicy(
     args: DisassociateAccessPolicyCommandInput,
-    cb: (err: any, data?: DisassociateAccessPolicyCommandOutput) => void
+    cb: (err: any, data?: DisassociateAccessPolicyCommandOutput) => void,
   ): void;
   disassociateAccessPolicy(
     args: DisassociateAccessPolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DisassociateAccessPolicyCommandOutput) => void
+    cb: (err: any, data?: DisassociateAccessPolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -808,16 +808,16 @@ export interface EKS {
    */
   disassociateIdentityProviderConfig(
     args: DisassociateIdentityProviderConfigCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DisassociateIdentityProviderConfigCommandOutput>;
   disassociateIdentityProviderConfig(
     args: DisassociateIdentityProviderConfigCommandInput,
-    cb: (err: any, data?: DisassociateIdentityProviderConfigCommandOutput) => void
+    cb: (err: any, data?: DisassociateIdentityProviderConfigCommandOutput) => void,
   ): void;
   disassociateIdentityProviderConfig(
     args: DisassociateIdentityProviderConfigCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DisassociateIdentityProviderConfigCommandOutput) => void
+    cb: (err: any, data?: DisassociateIdentityProviderConfigCommandOutput) => void,
   ): void;
 
   /**
@@ -825,16 +825,16 @@ export interface EKS {
    */
   listAccessEntries(
     args: ListAccessEntriesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListAccessEntriesCommandOutput>;
   listAccessEntries(
     args: ListAccessEntriesCommandInput,
-    cb: (err: any, data?: ListAccessEntriesCommandOutput) => void
+    cb: (err: any, data?: ListAccessEntriesCommandOutput) => void,
   ): void;
   listAccessEntries(
     args: ListAccessEntriesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListAccessEntriesCommandOutput) => void
+    cb: (err: any, data?: ListAccessEntriesCommandOutput) => void,
   ): void;
 
   /**
@@ -843,16 +843,16 @@ export interface EKS {
   listAccessPolicies(): Promise<ListAccessPoliciesCommandOutput>;
   listAccessPolicies(
     args: ListAccessPoliciesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListAccessPoliciesCommandOutput>;
   listAccessPolicies(
     args: ListAccessPoliciesCommandInput,
-    cb: (err: any, data?: ListAccessPoliciesCommandOutput) => void
+    cb: (err: any, data?: ListAccessPoliciesCommandOutput) => void,
   ): void;
   listAccessPolicies(
     args: ListAccessPoliciesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListAccessPoliciesCommandOutput) => void
+    cb: (err: any, data?: ListAccessPoliciesCommandOutput) => void,
   ): void;
 
   /**
@@ -863,7 +863,7 @@ export interface EKS {
   listAddons(
     args: ListAddonsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListAddonsCommandOutput) => void
+    cb: (err: any, data?: ListAddonsCommandOutput) => void,
   ): void;
 
   /**
@@ -871,16 +871,16 @@ export interface EKS {
    */
   listAssociatedAccessPolicies(
     args: ListAssociatedAccessPoliciesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListAssociatedAccessPoliciesCommandOutput>;
   listAssociatedAccessPolicies(
     args: ListAssociatedAccessPoliciesCommandInput,
-    cb: (err: any, data?: ListAssociatedAccessPoliciesCommandOutput) => void
+    cb: (err: any, data?: ListAssociatedAccessPoliciesCommandOutput) => void,
   ): void;
   listAssociatedAccessPolicies(
     args: ListAssociatedAccessPoliciesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListAssociatedAccessPoliciesCommandOutput) => void
+    cb: (err: any, data?: ListAssociatedAccessPoliciesCommandOutput) => void,
   ): void;
 
   /**
@@ -892,7 +892,7 @@ export interface EKS {
   listClusters(
     args: ListClustersCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListClustersCommandOutput) => void
+    cb: (err: any, data?: ListClustersCommandOutput) => void,
   ): void;
 
   /**
@@ -901,16 +901,16 @@ export interface EKS {
   listEksAnywhereSubscriptions(): Promise<ListEksAnywhereSubscriptionsCommandOutput>;
   listEksAnywhereSubscriptions(
     args: ListEksAnywhereSubscriptionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListEksAnywhereSubscriptionsCommandOutput>;
   listEksAnywhereSubscriptions(
     args: ListEksAnywhereSubscriptionsCommandInput,
-    cb: (err: any, data?: ListEksAnywhereSubscriptionsCommandOutput) => void
+    cb: (err: any, data?: ListEksAnywhereSubscriptionsCommandOutput) => void,
   ): void;
   listEksAnywhereSubscriptions(
     args: ListEksAnywhereSubscriptionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListEksAnywhereSubscriptionsCommandOutput) => void
+    cb: (err: any, data?: ListEksAnywhereSubscriptionsCommandOutput) => void,
   ): void;
 
   /**
@@ -918,16 +918,16 @@ export interface EKS {
    */
   listFargateProfiles(
     args: ListFargateProfilesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListFargateProfilesCommandOutput>;
   listFargateProfiles(
     args: ListFargateProfilesCommandInput,
-    cb: (err: any, data?: ListFargateProfilesCommandOutput) => void
+    cb: (err: any, data?: ListFargateProfilesCommandOutput) => void,
   ): void;
   listFargateProfiles(
     args: ListFargateProfilesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListFargateProfilesCommandOutput) => void
+    cb: (err: any, data?: ListFargateProfilesCommandOutput) => void,
   ): void;
 
   /**
@@ -935,16 +935,16 @@ export interface EKS {
    */
   listIdentityProviderConfigs(
     args: ListIdentityProviderConfigsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListIdentityProviderConfigsCommandOutput>;
   listIdentityProviderConfigs(
     args: ListIdentityProviderConfigsCommandInput,
-    cb: (err: any, data?: ListIdentityProviderConfigsCommandOutput) => void
+    cb: (err: any, data?: ListIdentityProviderConfigsCommandOutput) => void,
   ): void;
   listIdentityProviderConfigs(
     args: ListIdentityProviderConfigsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListIdentityProviderConfigsCommandOutput) => void
+    cb: (err: any, data?: ListIdentityProviderConfigsCommandOutput) => void,
   ): void;
 
   /**
@@ -955,7 +955,7 @@ export interface EKS {
   listInsights(
     args: ListInsightsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListInsightsCommandOutput) => void
+    cb: (err: any, data?: ListInsightsCommandOutput) => void,
   ): void;
 
   /**
@@ -963,13 +963,13 @@ export interface EKS {
    */
   listNodegroups(
     args: ListNodegroupsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListNodegroupsCommandOutput>;
   listNodegroups(args: ListNodegroupsCommandInput, cb: (err: any, data?: ListNodegroupsCommandOutput) => void): void;
   listNodegroups(
     args: ListNodegroupsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListNodegroupsCommandOutput) => void
+    cb: (err: any, data?: ListNodegroupsCommandOutput) => void,
   ): void;
 
   /**
@@ -977,16 +977,16 @@ export interface EKS {
    */
   listPodIdentityAssociations(
     args: ListPodIdentityAssociationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListPodIdentityAssociationsCommandOutput>;
   listPodIdentityAssociations(
     args: ListPodIdentityAssociationsCommandInput,
-    cb: (err: any, data?: ListPodIdentityAssociationsCommandOutput) => void
+    cb: (err: any, data?: ListPodIdentityAssociationsCommandOutput) => void,
   ): void;
   listPodIdentityAssociations(
     args: ListPodIdentityAssociationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListPodIdentityAssociationsCommandOutput) => void
+    cb: (err: any, data?: ListPodIdentityAssociationsCommandOutput) => void,
   ): void;
 
   /**
@@ -994,16 +994,16 @@ export interface EKS {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -1014,7 +1014,7 @@ export interface EKS {
   listUpdates(
     args: ListUpdatesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListUpdatesCommandOutput) => void
+    cb: (err: any, data?: ListUpdatesCommandOutput) => void,
   ): void;
 
   /**
@@ -1022,13 +1022,13 @@ export interface EKS {
    */
   registerCluster(
     args: RegisterClusterCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<RegisterClusterCommandOutput>;
   registerCluster(args: RegisterClusterCommandInput, cb: (err: any, data?: RegisterClusterCommandOutput) => void): void;
   registerCluster(
     args: RegisterClusterCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RegisterClusterCommandOutput) => void
+    cb: (err: any, data?: RegisterClusterCommandOutput) => void,
   ): void;
 
   /**
@@ -1039,7 +1039,7 @@ export interface EKS {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -1050,7 +1050,7 @@ export interface EKS {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -1058,16 +1058,16 @@ export interface EKS {
    */
   updateAccessEntry(
     args: UpdateAccessEntryCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateAccessEntryCommandOutput>;
   updateAccessEntry(
     args: UpdateAccessEntryCommandInput,
-    cb: (err: any, data?: UpdateAccessEntryCommandOutput) => void
+    cb: (err: any, data?: UpdateAccessEntryCommandOutput) => void,
   ): void;
   updateAccessEntry(
     args: UpdateAccessEntryCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateAccessEntryCommandOutput) => void
+    cb: (err: any, data?: UpdateAccessEntryCommandOutput) => void,
   ): void;
 
   /**
@@ -1078,7 +1078,7 @@ export interface EKS {
   updateAddon(
     args: UpdateAddonCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateAddonCommandOutput) => void
+    cb: (err: any, data?: UpdateAddonCommandOutput) => void,
   ): void;
 
   /**
@@ -1086,16 +1086,16 @@ export interface EKS {
    */
   updateClusterConfig(
     args: UpdateClusterConfigCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateClusterConfigCommandOutput>;
   updateClusterConfig(
     args: UpdateClusterConfigCommandInput,
-    cb: (err: any, data?: UpdateClusterConfigCommandOutput) => void
+    cb: (err: any, data?: UpdateClusterConfigCommandOutput) => void,
   ): void;
   updateClusterConfig(
     args: UpdateClusterConfigCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateClusterConfigCommandOutput) => void
+    cb: (err: any, data?: UpdateClusterConfigCommandOutput) => void,
   ): void;
 
   /**
@@ -1103,16 +1103,16 @@ export interface EKS {
    */
   updateClusterVersion(
     args: UpdateClusterVersionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateClusterVersionCommandOutput>;
   updateClusterVersion(
     args: UpdateClusterVersionCommandInput,
-    cb: (err: any, data?: UpdateClusterVersionCommandOutput) => void
+    cb: (err: any, data?: UpdateClusterVersionCommandOutput) => void,
   ): void;
   updateClusterVersion(
     args: UpdateClusterVersionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateClusterVersionCommandOutput) => void
+    cb: (err: any, data?: UpdateClusterVersionCommandOutput) => void,
   ): void;
 
   /**
@@ -1120,16 +1120,16 @@ export interface EKS {
    */
   updateEksAnywhereSubscription(
     args: UpdateEksAnywhereSubscriptionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateEksAnywhereSubscriptionCommandOutput>;
   updateEksAnywhereSubscription(
     args: UpdateEksAnywhereSubscriptionCommandInput,
-    cb: (err: any, data?: UpdateEksAnywhereSubscriptionCommandOutput) => void
+    cb: (err: any, data?: UpdateEksAnywhereSubscriptionCommandOutput) => void,
   ): void;
   updateEksAnywhereSubscription(
     args: UpdateEksAnywhereSubscriptionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateEksAnywhereSubscriptionCommandOutput) => void
+    cb: (err: any, data?: UpdateEksAnywhereSubscriptionCommandOutput) => void,
   ): void;
 
   /**
@@ -1137,16 +1137,16 @@ export interface EKS {
    */
   updateNodegroupConfig(
     args: UpdateNodegroupConfigCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateNodegroupConfigCommandOutput>;
   updateNodegroupConfig(
     args: UpdateNodegroupConfigCommandInput,
-    cb: (err: any, data?: UpdateNodegroupConfigCommandOutput) => void
+    cb: (err: any, data?: UpdateNodegroupConfigCommandOutput) => void,
   ): void;
   updateNodegroupConfig(
     args: UpdateNodegroupConfigCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateNodegroupConfigCommandOutput) => void
+    cb: (err: any, data?: UpdateNodegroupConfigCommandOutput) => void,
   ): void;
 
   /**
@@ -1154,16 +1154,16 @@ export interface EKS {
    */
   updateNodegroupVersion(
     args: UpdateNodegroupVersionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateNodegroupVersionCommandOutput>;
   updateNodegroupVersion(
     args: UpdateNodegroupVersionCommandInput,
-    cb: (err: any, data?: UpdateNodegroupVersionCommandOutput) => void
+    cb: (err: any, data?: UpdateNodegroupVersionCommandOutput) => void,
   ): void;
   updateNodegroupVersion(
     args: UpdateNodegroupVersionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateNodegroupVersionCommandOutput) => void
+    cb: (err: any, data?: UpdateNodegroupVersionCommandOutput) => void,
   ): void;
 
   /**
@@ -1171,16 +1171,16 @@ export interface EKS {
    */
   updatePodIdentityAssociation(
     args: UpdatePodIdentityAssociationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdatePodIdentityAssociationCommandOutput>;
   updatePodIdentityAssociation(
     args: UpdatePodIdentityAssociationCommandInput,
-    cb: (err: any, data?: UpdatePodIdentityAssociationCommandOutput) => void
+    cb: (err: any, data?: UpdatePodIdentityAssociationCommandOutput) => void,
   ): void;
   updatePodIdentityAssociation(
     args: UpdatePodIdentityAssociationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdatePodIdentityAssociationCommandOutput) => void
+    cb: (err: any, data?: UpdatePodIdentityAssociationCommandOutput) => void,
   ): void;
 }
 

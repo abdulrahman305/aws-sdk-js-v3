@@ -160,7 +160,7 @@ import {
  */
 export const se_CreateApplicationCommand = async (
   input: CreateApplicationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -173,7 +173,7 @@ export const se_CreateApplicationCommand = async (
       Description: [],
       Name: [],
       Tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -184,7 +184,7 @@ export const se_CreateApplicationCommand = async (
  */
 export const se_CreateConfigurationProfileCommand = async (
   input: CreateConfigurationProfileCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -203,7 +203,7 @@ export const se_CreateConfigurationProfileCommand = async (
       Tags: (_) => _json(_),
       Type: [],
       Validators: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -214,7 +214,7 @@ export const se_CreateConfigurationProfileCommand = async (
  */
 export const se_CreateDeploymentStrategyCommand = async (
   input: CreateDeploymentStrategyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -232,7 +232,7 @@ export const se_CreateDeploymentStrategyCommand = async (
       Name: [],
       ReplicateTo: [],
       Tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -243,7 +243,7 @@ export const se_CreateDeploymentStrategyCommand = async (
  */
 export const se_CreateEnvironmentCommand = async (
   input: CreateEnvironmentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -258,7 +258,7 @@ export const se_CreateEnvironmentCommand = async (
       Monitors: (_) => _json(_),
       Name: [],
       Tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -269,7 +269,7 @@ export const se_CreateEnvironmentCommand = async (
  */
 export const se_CreateExtensionCommand = async (
   input: CreateExtensionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -285,7 +285,7 @@ export const se_CreateExtensionCommand = async (
       Name: [],
       Parameters: (_) => _json(_),
       Tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -296,7 +296,7 @@ export const se_CreateExtensionCommand = async (
  */
 export const se_CreateExtensionAssociationCommand = async (
   input: CreateExtensionAssociationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -311,7 +311,7 @@ export const se_CreateExtensionAssociationCommand = async (
       Parameters: (_) => _json(_),
       ResourceIdentifier: [],
       Tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -322,7 +322,7 @@ export const se_CreateExtensionAssociationCommand = async (
  */
 export const se_CreateHostedConfigurationVersionCommand = async (
   input: CreateHostedConfigurationVersionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -347,7 +347,7 @@ export const se_CreateHostedConfigurationVersionCommand = async (
  */
 export const se_DeleteApplicationCommand = async (
   input: DeleteApplicationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -363,7 +363,7 @@ export const se_DeleteApplicationCommand = async (
  */
 export const se_DeleteConfigurationProfileCommand = async (
   input: DeleteConfigurationProfileCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -380,7 +380,7 @@ export const se_DeleteConfigurationProfileCommand = async (
  */
 export const se_DeleteDeploymentStrategyCommand = async (
   input: DeleteDeploymentStrategyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -396,7 +396,7 @@ export const se_DeleteDeploymentStrategyCommand = async (
  */
 export const se_DeleteEnvironmentCommand = async (
   input: DeleteEnvironmentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -413,7 +413,7 @@ export const se_DeleteEnvironmentCommand = async (
  */
 export const se_DeleteExtensionCommand = async (
   input: DeleteExtensionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -432,7 +432,7 @@ export const se_DeleteExtensionCommand = async (
  */
 export const se_DeleteExtensionAssociationCommand = async (
   input: DeleteExtensionAssociationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -448,12 +448,12 @@ export const se_DeleteExtensionAssociationCommand = async (
  */
 export const se_DeleteHostedConfigurationVersionCommand = async (
   input: DeleteHostedConfigurationVersionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
   b.bp(
-    "/applications/{ApplicationId}/configurationprofiles/{ConfigurationProfileId}/hostedconfigurationversions/{VersionNumber}"
+    "/applications/{ApplicationId}/configurationprofiles/{ConfigurationProfileId}/hostedconfigurationversions/{VersionNumber}",
   );
   b.p("ApplicationId", () => input.ApplicationId!, "{ApplicationId}", false);
   b.p("ConfigurationProfileId", () => input.ConfigurationProfileId!, "{ConfigurationProfileId}", false);
@@ -468,7 +468,7 @@ export const se_DeleteHostedConfigurationVersionCommand = async (
  */
 export const se_GetApplicationCommand = async (
   input: GetApplicationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -484,7 +484,7 @@ export const se_GetApplicationCommand = async (
  */
 export const se_GetConfigurationCommand = async (
   input: GetConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -506,7 +506,7 @@ export const se_GetConfigurationCommand = async (
  */
 export const se_GetConfigurationProfileCommand = async (
   input: GetConfigurationProfileCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -523,7 +523,7 @@ export const se_GetConfigurationProfileCommand = async (
  */
 export const se_GetDeploymentCommand = async (
   input: GetDeploymentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -541,7 +541,7 @@ export const se_GetDeploymentCommand = async (
  */
 export const se_GetDeploymentStrategyCommand = async (
   input: GetDeploymentStrategyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -557,7 +557,7 @@ export const se_GetDeploymentStrategyCommand = async (
  */
 export const se_GetEnvironmentCommand = async (
   input: GetEnvironmentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -574,7 +574,7 @@ export const se_GetEnvironmentCommand = async (
  */
 export const se_GetExtensionCommand = async (
   input: GetExtensionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -593,7 +593,7 @@ export const se_GetExtensionCommand = async (
  */
 export const se_GetExtensionAssociationCommand = async (
   input: GetExtensionAssociationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -609,12 +609,12 @@ export const se_GetExtensionAssociationCommand = async (
  */
 export const se_GetHostedConfigurationVersionCommand = async (
   input: GetHostedConfigurationVersionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
   b.bp(
-    "/applications/{ApplicationId}/configurationprofiles/{ConfigurationProfileId}/hostedconfigurationversions/{VersionNumber}"
+    "/applications/{ApplicationId}/configurationprofiles/{ConfigurationProfileId}/hostedconfigurationversions/{VersionNumber}",
   );
   b.p("ApplicationId", () => input.ApplicationId!, "{ApplicationId}", false);
   b.p("ConfigurationProfileId", () => input.ConfigurationProfileId!, "{ConfigurationProfileId}", false);
@@ -629,7 +629,7 @@ export const se_GetHostedConfigurationVersionCommand = async (
  */
 export const se_ListApplicationsCommand = async (
   input: ListApplicationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -648,7 +648,7 @@ export const se_ListApplicationsCommand = async (
  */
 export const se_ListConfigurationProfilesCommand = async (
   input: ListConfigurationProfilesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -669,7 +669,7 @@ export const se_ListConfigurationProfilesCommand = async (
  */
 export const se_ListDeploymentsCommand = async (
   input: ListDeploymentsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -690,7 +690,7 @@ export const se_ListDeploymentsCommand = async (
  */
 export const se_ListDeploymentStrategiesCommand = async (
   input: ListDeploymentStrategiesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -709,7 +709,7 @@ export const se_ListDeploymentStrategiesCommand = async (
  */
 export const se_ListEnvironmentsCommand = async (
   input: ListEnvironmentsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -729,7 +729,7 @@ export const se_ListEnvironmentsCommand = async (
  */
 export const se_ListExtensionAssociationsCommand = async (
   input: ListExtensionAssociationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -751,7 +751,7 @@ export const se_ListExtensionAssociationsCommand = async (
  */
 export const se_ListExtensionsCommand = async (
   input: ListExtensionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -771,7 +771,7 @@ export const se_ListExtensionsCommand = async (
  */
 export const se_ListHostedConfigurationVersionsCommand = async (
   input: ListHostedConfigurationVersionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -793,7 +793,7 @@ export const se_ListHostedConfigurationVersionsCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -809,7 +809,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_StartDeploymentCommand = async (
   input: StartDeploymentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -828,7 +828,7 @@ export const se_StartDeploymentCommand = async (
       DynamicExtensionParameters: (_) => _json(_),
       KmsKeyIdentifier: [],
       Tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -839,7 +839,7 @@ export const se_StartDeploymentCommand = async (
  */
 export const se_StopDeploymentCommand = async (
   input: StopDeploymentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -857,7 +857,7 @@ export const se_StopDeploymentCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -869,7 +869,7 @@ export const se_TagResourceCommand = async (
   body = JSON.stringify(
     take(input, {
       Tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -880,7 +880,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -902,7 +902,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateApplicationCommand = async (
   input: UpdateApplicationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -915,7 +915,7 @@ export const se_UpdateApplicationCommand = async (
     take(input, {
       Description: [],
       Name: [],
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -926,7 +926,7 @@ export const se_UpdateApplicationCommand = async (
  */
 export const se_UpdateConfigurationProfileCommand = async (
   input: UpdateConfigurationProfileCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -943,7 +943,7 @@ export const se_UpdateConfigurationProfileCommand = async (
       Name: [],
       RetrievalRoleArn: [],
       Validators: (_) => _json(_),
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -954,7 +954,7 @@ export const se_UpdateConfigurationProfileCommand = async (
  */
 export const se_UpdateDeploymentStrategyCommand = async (
   input: UpdateDeploymentStrategyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -970,7 +970,7 @@ export const se_UpdateDeploymentStrategyCommand = async (
       FinalBakeTimeInMinutes: [],
       GrowthFactor: (_) => __serializeFloat(_),
       GrowthType: [],
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -981,7 +981,7 @@ export const se_UpdateDeploymentStrategyCommand = async (
  */
 export const se_UpdateEnvironmentCommand = async (
   input: UpdateEnvironmentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -996,7 +996,7 @@ export const se_UpdateEnvironmentCommand = async (
       Description: [],
       Monitors: (_) => _json(_),
       Name: [],
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -1007,7 +1007,7 @@ export const se_UpdateEnvironmentCommand = async (
  */
 export const se_UpdateExtensionCommand = async (
   input: UpdateExtensionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1022,7 +1022,7 @@ export const se_UpdateExtensionCommand = async (
       Description: [],
       Parameters: (_) => _json(_),
       VersionNumber: [],
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -1033,7 +1033,7 @@ export const se_UpdateExtensionCommand = async (
  */
 export const se_UpdateExtensionAssociationCommand = async (
   input: UpdateExtensionAssociationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1045,7 +1045,7 @@ export const se_UpdateExtensionAssociationCommand = async (
   body = JSON.stringify(
     take(input, {
       Parameters: (_) => _json(_),
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -1056,7 +1056,7 @@ export const se_UpdateExtensionAssociationCommand = async (
  */
 export const se_ValidateConfigurationCommand = async (
   input: ValidateConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1076,7 +1076,7 @@ export const se_ValidateConfigurationCommand = async (
  */
 export const de_CreateApplicationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateApplicationCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1099,7 +1099,7 @@ export const de_CreateApplicationCommand = async (
  */
 export const de_CreateConfigurationProfileCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateConfigurationProfileCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1129,7 +1129,7 @@ export const de_CreateConfigurationProfileCommand = async (
  */
 export const de_CreateDeploymentStrategyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateDeploymentStrategyCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1157,7 +1157,7 @@ export const de_CreateDeploymentStrategyCommand = async (
  */
 export const de_CreateEnvironmentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateEnvironmentCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1183,7 +1183,7 @@ export const de_CreateEnvironmentCommand = async (
  */
 export const de_CreateExtensionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateExtensionCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1210,7 +1210,7 @@ export const de_CreateExtensionCommand = async (
  */
 export const de_CreateExtensionAssociationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateExtensionAssociationCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1236,7 +1236,7 @@ export const de_CreateExtensionAssociationCommand = async (
  */
 export const de_CreateHostedConfigurationVersionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateHostedConfigurationVersionCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1261,7 +1261,7 @@ export const de_CreateHostedConfigurationVersionCommand = async (
  */
 export const de_DeleteApplicationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteApplicationCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1278,7 +1278,7 @@ export const de_DeleteApplicationCommand = async (
  */
 export const de_DeleteConfigurationProfileCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteConfigurationProfileCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1295,7 +1295,7 @@ export const de_DeleteConfigurationProfileCommand = async (
  */
 export const de_DeleteDeploymentStrategyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteDeploymentStrategyCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1312,7 +1312,7 @@ export const de_DeleteDeploymentStrategyCommand = async (
  */
 export const de_DeleteEnvironmentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteEnvironmentCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1329,7 +1329,7 @@ export const de_DeleteEnvironmentCommand = async (
  */
 export const de_DeleteExtensionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteExtensionCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1346,7 +1346,7 @@ export const de_DeleteExtensionCommand = async (
  */
 export const de_DeleteExtensionAssociationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteExtensionAssociationCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1363,7 +1363,7 @@ export const de_DeleteExtensionAssociationCommand = async (
  */
 export const de_DeleteHostedConfigurationVersionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteHostedConfigurationVersionCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1380,7 +1380,7 @@ export const de_DeleteHostedConfigurationVersionCommand = async (
  */
 export const de_GetApplicationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetApplicationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1403,7 +1403,7 @@ export const de_GetApplicationCommand = async (
  */
 export const de_GetConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1423,7 +1423,7 @@ export const de_GetConfigurationCommand = async (
  */
 export const de_GetConfigurationProfileCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetConfigurationProfileCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1453,7 +1453,7 @@ export const de_GetConfigurationProfileCommand = async (
  */
 export const de_GetDeploymentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetDeploymentCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1495,7 +1495,7 @@ export const de_GetDeploymentCommand = async (
  */
 export const de_GetDeploymentStrategyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetDeploymentStrategyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1523,7 +1523,7 @@ export const de_GetDeploymentStrategyCommand = async (
  */
 export const de_GetEnvironmentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetEnvironmentCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1549,7 +1549,7 @@ export const de_GetEnvironmentCommand = async (
  */
 export const de_GetExtensionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetExtensionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1576,7 +1576,7 @@ export const de_GetExtensionCommand = async (
  */
 export const de_GetExtensionAssociationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetExtensionAssociationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1602,7 +1602,7 @@ export const de_GetExtensionAssociationCommand = async (
  */
 export const de_GetHostedConfigurationVersionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetHostedConfigurationVersionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1627,7 +1627,7 @@ export const de_GetHostedConfigurationVersionCommand = async (
  */
 export const de_ListApplicationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListApplicationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1649,7 +1649,7 @@ export const de_ListApplicationsCommand = async (
  */
 export const de_ListConfigurationProfilesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListConfigurationProfilesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1671,7 +1671,7 @@ export const de_ListConfigurationProfilesCommand = async (
  */
 export const de_ListDeploymentsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListDeploymentsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1693,7 +1693,7 @@ export const de_ListDeploymentsCommand = async (
  */
 export const de_ListDeploymentStrategiesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListDeploymentStrategiesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1715,7 +1715,7 @@ export const de_ListDeploymentStrategiesCommand = async (
  */
 export const de_ListEnvironmentsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListEnvironmentsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1737,7 +1737,7 @@ export const de_ListEnvironmentsCommand = async (
  */
 export const de_ListExtensionAssociationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListExtensionAssociationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1759,7 +1759,7 @@ export const de_ListExtensionAssociationsCommand = async (
  */
 export const de_ListExtensionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListExtensionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1781,7 +1781,7 @@ export const de_ListExtensionsCommand = async (
  */
 export const de_ListHostedConfigurationVersionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListHostedConfigurationVersionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1803,7 +1803,7 @@ export const de_ListHostedConfigurationVersionsCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1824,7 +1824,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_StartDeploymentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartDeploymentCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1866,7 +1866,7 @@ export const de_StartDeploymentCommand = async (
  */
 export const de_StopDeploymentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StopDeploymentCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1908,7 +1908,7 @@ export const de_StopDeploymentCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1925,7 +1925,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1942,7 +1942,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateApplicationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateApplicationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1965,7 +1965,7 @@ export const de_UpdateApplicationCommand = async (
  */
 export const de_UpdateConfigurationProfileCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateConfigurationProfileCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1995,7 +1995,7 @@ export const de_UpdateConfigurationProfileCommand = async (
  */
 export const de_UpdateDeploymentStrategyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateDeploymentStrategyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2023,7 +2023,7 @@ export const de_UpdateDeploymentStrategyCommand = async (
  */
 export const de_UpdateEnvironmentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateEnvironmentCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2049,7 +2049,7 @@ export const de_UpdateEnvironmentCommand = async (
  */
 export const de_UpdateExtensionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateExtensionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2076,7 +2076,7 @@ export const de_UpdateExtensionCommand = async (
  */
 export const de_UpdateExtensionAssociationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateExtensionAssociationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2102,7 +2102,7 @@ export const de_UpdateExtensionAssociationCommand = async (
  */
 export const de_ValidateConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ValidateConfigurationCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2194,7 +2194,7 @@ const de_ConflictExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_InternalServerExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2214,7 +2214,7 @@ const de_InternalServerExceptionRes = async (
  */
 const de_PayloadTooLargeExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PayloadTooLargeException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2237,7 +2237,7 @@ const de_PayloadTooLargeExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2258,7 +2258,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_ServiceQuotaExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceQuotaExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;

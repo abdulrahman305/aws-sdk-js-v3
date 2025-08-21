@@ -2475,7 +2475,7 @@ export const DescribeEdgeConfigurationOutputFilterSensitiveLog = (obj: DescribeE
  * @internal
  */
 export const ListEdgeAgentConfigurationsEdgeConfigFilterSensitiveLog = (
-  obj: ListEdgeAgentConfigurationsEdgeConfig
+  obj: ListEdgeAgentConfigurationsEdgeConfig,
 ): any => ({
   ...obj,
   ...(obj.EdgeConfig && { EdgeConfig: EdgeConfigFilterSensitiveLog(obj.EdgeConfig) }),

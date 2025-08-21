@@ -220,7 +220,7 @@ it("GlacierChecksums:Request", async () => {
     expect(r.headers["x-amz-glacier-version"]).toBe("2012-06-01");
     expect(r.headers["x-amz-sha256-tree-hash"]).toBeDefined();
     expect(r.headers["x-amz-sha256-tree-hash"]).toBe(
-      "b94d27b9934d3e08a52e52d7da7dabfac484efe37a5380ee9088f7ace2efcde9"
+      "b94d27b9934d3e08a52e52d7da7dabfac484efe37a5380ee9088f7ace2efcde9",
     );
 
     expect(r.body).toBeDefined();
@@ -304,7 +304,7 @@ it("GlacierMultipartChecksums:Request", async () => {
     expect(r.headers["x-amz-glacier-version"]).toBe("2012-06-01");
     expect(r.headers["x-amz-sha256-tree-hash"]).toBeDefined();
     expect(r.headers["x-amz-sha256-tree-hash"]).toBe(
-      "b94d27b9934d3e08a52e52d7da7dabfac484efe37a5380ee9088f7ace2efcde9"
+      "b94d27b9934d3e08a52e52d7da7dabfac484efe37a5380ee9088f7ace2efcde9",
     );
 
     expect(r.body).toBeDefined();
@@ -322,7 +322,7 @@ it("GlacierMultipartChecksums:Request", async () => {
 const compareEquivalentUnknownTypeBodies = (
   utf8Encoder: __Encoder,
   expectedBody: string,
-  generatedBody: string | Uint8Array
+  generatedBody: string | Uint8Array,
 ): Object => {
   const expectedParts = { Value: expectedBody };
   const generatedParts = {

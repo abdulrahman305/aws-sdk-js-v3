@@ -33,7 +33,7 @@ Given(
       signatureVersion: signatureVersion,
     });
     callback();
-  }
+  },
 );
 
 When("I create a bucket with the location constraint {string}", function (location, callback) {
@@ -67,7 +67,7 @@ Then("the bucket should have a location constraint of {string}", function (loc, 
       if (err) callback(err);
       self.assert.equal(data.LocationConstraint, loc);
       callback();
-    }
+    },
   );
 });
 
@@ -107,7 +107,7 @@ When("I get the transition lifecycle configuration on the bucket", function (cal
       {
         Bucket: this.bucket,
       },
-      next
+      next,
     );
   });
 });
@@ -147,7 +147,7 @@ When("I get the bucket CORS configuration", function (callback) {
     {
       Bucket: this.bucket,
     },
-    callback
+    callback,
   );
 });
 
@@ -199,7 +199,7 @@ When("I get the bucket tagging", function (callback) {
     {
       Bucket: this.bucket,
     },
-    callback
+    callback,
   );
 });
 
@@ -226,9 +226,9 @@ When("I create a bucket with a DNS compatible name that contains a dot", functio
         {
           Bucket: bucket,
         },
-        callback
+        callback,
       );
-    }
+    },
   );
 });
 

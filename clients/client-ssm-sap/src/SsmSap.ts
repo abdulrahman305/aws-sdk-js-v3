@@ -131,16 +131,16 @@ export interface SsmSap {
    */
   deleteResourcePermission(
     args: DeleteResourcePermissionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteResourcePermissionCommandOutput>;
   deleteResourcePermission(
     args: DeleteResourcePermissionCommandInput,
-    cb: (err: any, data?: DeleteResourcePermissionCommandOutput) => void
+    cb: (err: any, data?: DeleteResourcePermissionCommandOutput) => void,
   ): void;
   deleteResourcePermission(
     args: DeleteResourcePermissionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteResourcePermissionCommandOutput) => void
+    cb: (err: any, data?: DeleteResourcePermissionCommandOutput) => void,
   ): void;
 
   /**
@@ -148,16 +148,16 @@ export interface SsmSap {
    */
   deregisterApplication(
     args: DeregisterApplicationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeregisterApplicationCommandOutput>;
   deregisterApplication(
     args: DeregisterApplicationCommandInput,
-    cb: (err: any, data?: DeregisterApplicationCommandOutput) => void
+    cb: (err: any, data?: DeregisterApplicationCommandOutput) => void,
   ): void;
   deregisterApplication(
     args: DeregisterApplicationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeregisterApplicationCommandOutput) => void
+    cb: (err: any, data?: DeregisterApplicationCommandOutput) => void,
   ): void;
 
   /**
@@ -166,13 +166,13 @@ export interface SsmSap {
   getApplication(): Promise<GetApplicationCommandOutput>;
   getApplication(
     args: GetApplicationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetApplicationCommandOutput>;
   getApplication(args: GetApplicationCommandInput, cb: (err: any, data?: GetApplicationCommandOutput) => void): void;
   getApplication(
     args: GetApplicationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetApplicationCommandOutput) => void
+    cb: (err: any, data?: GetApplicationCommandOutput) => void,
   ): void;
 
   /**
@@ -183,7 +183,7 @@ export interface SsmSap {
   getComponent(
     args: GetComponentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetComponentCommandOutput) => void
+    cb: (err: any, data?: GetComponentCommandOutput) => void,
   ): void;
 
   /**
@@ -195,7 +195,7 @@ export interface SsmSap {
   getDatabase(
     args: GetDatabaseCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetDatabaseCommandOutput) => void
+    cb: (err: any, data?: GetDatabaseCommandOutput) => void,
   ): void;
 
   /**
@@ -206,7 +206,7 @@ export interface SsmSap {
   getOperation(
     args: GetOperationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetOperationCommandOutput) => void
+    cb: (err: any, data?: GetOperationCommandOutput) => void,
   ): void;
 
   /**
@@ -214,16 +214,16 @@ export interface SsmSap {
    */
   getResourcePermission(
     args: GetResourcePermissionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetResourcePermissionCommandOutput>;
   getResourcePermission(
     args: GetResourcePermissionCommandInput,
-    cb: (err: any, data?: GetResourcePermissionCommandOutput) => void
+    cb: (err: any, data?: GetResourcePermissionCommandOutput) => void,
   ): void;
   getResourcePermission(
     args: GetResourcePermissionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetResourcePermissionCommandOutput) => void
+    cb: (err: any, data?: GetResourcePermissionCommandOutput) => void,
   ): void;
 
   /**
@@ -232,16 +232,16 @@ export interface SsmSap {
   listApplications(): Promise<ListApplicationsCommandOutput>;
   listApplications(
     args: ListApplicationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListApplicationsCommandOutput>;
   listApplications(
     args: ListApplicationsCommandInput,
-    cb: (err: any, data?: ListApplicationsCommandOutput) => void
+    cb: (err: any, data?: ListApplicationsCommandOutput) => void,
   ): void;
   listApplications(
     args: ListApplicationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListApplicationsCommandOutput) => void
+    cb: (err: any, data?: ListApplicationsCommandOutput) => void,
   ): void;
 
   /**
@@ -250,13 +250,13 @@ export interface SsmSap {
   listComponents(): Promise<ListComponentsCommandOutput>;
   listComponents(
     args: ListComponentsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListComponentsCommandOutput>;
   listComponents(args: ListComponentsCommandInput, cb: (err: any, data?: ListComponentsCommandOutput) => void): void;
   listComponents(
     args: ListComponentsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListComponentsCommandOutput) => void
+    cb: (err: any, data?: ListComponentsCommandOutput) => void,
   ): void;
 
   /**
@@ -268,7 +268,7 @@ export interface SsmSap {
   listDatabases(
     args: ListDatabasesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListDatabasesCommandOutput) => void
+    cb: (err: any, data?: ListDatabasesCommandOutput) => void,
   ): void;
 
   /**
@@ -276,16 +276,16 @@ export interface SsmSap {
    */
   listOperationEvents(
     args: ListOperationEventsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListOperationEventsCommandOutput>;
   listOperationEvents(
     args: ListOperationEventsCommandInput,
-    cb: (err: any, data?: ListOperationEventsCommandOutput) => void
+    cb: (err: any, data?: ListOperationEventsCommandOutput) => void,
   ): void;
   listOperationEvents(
     args: ListOperationEventsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListOperationEventsCommandOutput) => void
+    cb: (err: any, data?: ListOperationEventsCommandOutput) => void,
   ): void;
 
   /**
@@ -293,13 +293,13 @@ export interface SsmSap {
    */
   listOperations(
     args: ListOperationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListOperationsCommandOutput>;
   listOperations(args: ListOperationsCommandInput, cb: (err: any, data?: ListOperationsCommandOutput) => void): void;
   listOperations(
     args: ListOperationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListOperationsCommandOutput) => void
+    cb: (err: any, data?: ListOperationsCommandOutput) => void,
   ): void;
 
   /**
@@ -307,16 +307,16 @@ export interface SsmSap {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -324,16 +324,16 @@ export interface SsmSap {
    */
   putResourcePermission(
     args: PutResourcePermissionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutResourcePermissionCommandOutput>;
   putResourcePermission(
     args: PutResourcePermissionCommandInput,
-    cb: (err: any, data?: PutResourcePermissionCommandOutput) => void
+    cb: (err: any, data?: PutResourcePermissionCommandOutput) => void,
   ): void;
   putResourcePermission(
     args: PutResourcePermissionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutResourcePermissionCommandOutput) => void
+    cb: (err: any, data?: PutResourcePermissionCommandOutput) => void,
   ): void;
 
   /**
@@ -341,16 +341,16 @@ export interface SsmSap {
    */
   registerApplication(
     args: RegisterApplicationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<RegisterApplicationCommandOutput>;
   registerApplication(
     args: RegisterApplicationCommandInput,
-    cb: (err: any, data?: RegisterApplicationCommandOutput) => void
+    cb: (err: any, data?: RegisterApplicationCommandOutput) => void,
   ): void;
   registerApplication(
     args: RegisterApplicationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RegisterApplicationCommandOutput) => void
+    cb: (err: any, data?: RegisterApplicationCommandOutput) => void,
   ): void;
 
   /**
@@ -358,16 +358,16 @@ export interface SsmSap {
    */
   startApplication(
     args: StartApplicationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartApplicationCommandOutput>;
   startApplication(
     args: StartApplicationCommandInput,
-    cb: (err: any, data?: StartApplicationCommandOutput) => void
+    cb: (err: any, data?: StartApplicationCommandOutput) => void,
   ): void;
   startApplication(
     args: StartApplicationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartApplicationCommandOutput) => void
+    cb: (err: any, data?: StartApplicationCommandOutput) => void,
   ): void;
 
   /**
@@ -375,16 +375,16 @@ export interface SsmSap {
    */
   startApplicationRefresh(
     args: StartApplicationRefreshCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartApplicationRefreshCommandOutput>;
   startApplicationRefresh(
     args: StartApplicationRefreshCommandInput,
-    cb: (err: any, data?: StartApplicationRefreshCommandOutput) => void
+    cb: (err: any, data?: StartApplicationRefreshCommandOutput) => void,
   ): void;
   startApplicationRefresh(
     args: StartApplicationRefreshCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartApplicationRefreshCommandOutput) => void
+    cb: (err: any, data?: StartApplicationRefreshCommandOutput) => void,
   ): void;
 
   /**
@@ -392,13 +392,13 @@ export interface SsmSap {
    */
   stopApplication(
     args: StopApplicationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StopApplicationCommandOutput>;
   stopApplication(args: StopApplicationCommandInput, cb: (err: any, data?: StopApplicationCommandOutput) => void): void;
   stopApplication(
     args: StopApplicationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StopApplicationCommandOutput) => void
+    cb: (err: any, data?: StopApplicationCommandOutput) => void,
   ): void;
 
   /**
@@ -409,7 +409,7 @@ export interface SsmSap {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -420,7 +420,7 @@ export interface SsmSap {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -428,16 +428,16 @@ export interface SsmSap {
    */
   updateApplicationSettings(
     args: UpdateApplicationSettingsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateApplicationSettingsCommandOutput>;
   updateApplicationSettings(
     args: UpdateApplicationSettingsCommandInput,
-    cb: (err: any, data?: UpdateApplicationSettingsCommandOutput) => void
+    cb: (err: any, data?: UpdateApplicationSettingsCommandOutput) => void,
   ): void;
   updateApplicationSettings(
     args: UpdateApplicationSettingsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateApplicationSettingsCommandOutput) => void
+    cb: (err: any, data?: UpdateApplicationSettingsCommandOutput) => void,
   ): void;
 }
 

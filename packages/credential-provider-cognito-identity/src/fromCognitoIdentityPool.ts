@@ -40,7 +40,7 @@ export function fromCognitoIdentityPool({
     const _client =
       client ??
       new CognitoIdentityClient(
-        Object.assign({}, clientConfig ?? {}, { region: clientConfig?.region ?? parentClientConfig?.region })
+        Object.assign({}, clientConfig ?? {}, { region: clientConfig?.region ?? parentClientConfig?.region }),
       );
 
     let identityId: string | undefined = (cacheKey && (await cache.getItem(cacheKey))) as string | undefined;
@@ -50,7 +50,7 @@ export function fromCognitoIdentityPool({
           AccountId: accountId,
           IdentityPoolId: identityPoolId,
           Logins: logins ? await resolveLogins(logins) : undefined,
-        })
+        }),
       );
       identityId = IdentityId as string;
       if (cacheKey) {

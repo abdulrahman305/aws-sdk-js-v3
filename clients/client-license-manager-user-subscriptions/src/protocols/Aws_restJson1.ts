@@ -75,7 +75,7 @@ import {
  */
 export const se_AssociateUserCommand = async (
   input: AssociateUserCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -89,7 +89,7 @@ export const se_AssociateUserCommand = async (
       IdentityProvider: (_) => _json(_),
       InstanceId: [],
       Username: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -100,7 +100,7 @@ export const se_AssociateUserCommand = async (
  */
 export const se_DeregisterIdentityProviderCommand = async (
   input: DeregisterIdentityProviderCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -112,7 +112,7 @@ export const se_DeregisterIdentityProviderCommand = async (
     take(input, {
       IdentityProvider: (_) => _json(_),
       Product: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -123,7 +123,7 @@ export const se_DeregisterIdentityProviderCommand = async (
  */
 export const se_DisassociateUserCommand = async (
   input: DisassociateUserCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -137,7 +137,7 @@ export const se_DisassociateUserCommand = async (
       IdentityProvider: (_) => _json(_),
       InstanceId: [],
       Username: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -148,7 +148,7 @@ export const se_DisassociateUserCommand = async (
  */
 export const se_ListIdentityProvidersCommand = async (
   input: ListIdentityProvidersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -160,7 +160,7 @@ export const se_ListIdentityProvidersCommand = async (
     take(input, {
       MaxResults: [],
       NextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -171,7 +171,7 @@ export const se_ListIdentityProvidersCommand = async (
  */
 export const se_ListInstancesCommand = async (
   input: ListInstancesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -184,7 +184,7 @@ export const se_ListInstancesCommand = async (
       Filters: (_) => _json(_),
       MaxResults: [],
       NextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -195,7 +195,7 @@ export const se_ListInstancesCommand = async (
  */
 export const se_ListProductSubscriptionsCommand = async (
   input: ListProductSubscriptionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -210,7 +210,7 @@ export const se_ListProductSubscriptionsCommand = async (
       MaxResults: [],
       NextToken: [],
       Product: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -221,7 +221,7 @@ export const se_ListProductSubscriptionsCommand = async (
  */
 export const se_ListUserAssociationsCommand = async (
   input: ListUserAssociationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -236,7 +236,7 @@ export const se_ListUserAssociationsCommand = async (
       InstanceId: [],
       MaxResults: [],
       NextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -247,7 +247,7 @@ export const se_ListUserAssociationsCommand = async (
  */
 export const se_RegisterIdentityProviderCommand = async (
   input: RegisterIdentityProviderCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -260,7 +260,7 @@ export const se_RegisterIdentityProviderCommand = async (
       IdentityProvider: (_) => _json(_),
       Product: [],
       Settings: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -271,7 +271,7 @@ export const se_RegisterIdentityProviderCommand = async (
  */
 export const se_StartProductSubscriptionCommand = async (
   input: StartProductSubscriptionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -285,7 +285,7 @@ export const se_StartProductSubscriptionCommand = async (
       IdentityProvider: (_) => _json(_),
       Product: [],
       Username: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -296,7 +296,7 @@ export const se_StartProductSubscriptionCommand = async (
  */
 export const se_StopProductSubscriptionCommand = async (
   input: StopProductSubscriptionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -310,7 +310,7 @@ export const se_StopProductSubscriptionCommand = async (
       IdentityProvider: (_) => _json(_),
       Product: [],
       Username: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -321,7 +321,7 @@ export const se_StopProductSubscriptionCommand = async (
  */
 export const se_UpdateIdentityProviderSettingsCommand = async (
   input: UpdateIdentityProviderSettingsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -334,7 +334,7 @@ export const se_UpdateIdentityProviderSettingsCommand = async (
       IdentityProvider: (_) => _json(_),
       Product: [],
       UpdateSettings: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -345,7 +345,7 @@ export const se_UpdateIdentityProviderSettingsCommand = async (
  */
 export const de_AssociateUserCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssociateUserCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -366,7 +366,7 @@ export const de_AssociateUserCommand = async (
  */
 export const de_DeregisterIdentityProviderCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeregisterIdentityProviderCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -387,7 +387,7 @@ export const de_DeregisterIdentityProviderCommand = async (
  */
 export const de_DisassociateUserCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisassociateUserCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -408,7 +408,7 @@ export const de_DisassociateUserCommand = async (
  */
 export const de_ListIdentityProvidersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListIdentityProvidersCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -430,7 +430,7 @@ export const de_ListIdentityProvidersCommand = async (
  */
 export const de_ListInstancesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListInstancesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -452,7 +452,7 @@ export const de_ListInstancesCommand = async (
  */
 export const de_ListProductSubscriptionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListProductSubscriptionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -474,7 +474,7 @@ export const de_ListProductSubscriptionsCommand = async (
  */
 export const de_ListUserAssociationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListUserAssociationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -496,7 +496,7 @@ export const de_ListUserAssociationsCommand = async (
  */
 export const de_RegisterIdentityProviderCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RegisterIdentityProviderCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -517,7 +517,7 @@ export const de_RegisterIdentityProviderCommand = async (
  */
 export const de_StartProductSubscriptionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartProductSubscriptionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -538,7 +538,7 @@ export const de_StartProductSubscriptionCommand = async (
  */
 export const de_StopProductSubscriptionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StopProductSubscriptionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -559,7 +559,7 @@ export const de_StopProductSubscriptionCommand = async (
  */
 export const de_UpdateIdentityProviderSettingsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateIdentityProviderSettingsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -622,7 +622,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -659,7 +659,7 @@ const de_ConflictExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_InternalServerExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -679,7 +679,7 @@ const de_InternalServerExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -699,7 +699,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_ServiceQuotaExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceQuotaExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;

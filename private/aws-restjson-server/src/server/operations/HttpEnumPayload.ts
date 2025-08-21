@@ -61,14 +61,14 @@ export class HttpEnumPayloadSerializer
 
 export const getHttpEnumPayloadHandler = <Context>(
   operation: __Operation<HttpEnumPayloadServerInput, HttpEnumPayloadServerOutput, Context>,
-  customizer: __ValidationCustomizer<"HttpEnumPayload">
+  customizer: __ValidationCustomizer<"HttpEnumPayload">,
 ): __ServiceHandler<Context, __HttpRequest, __HttpResponse> => {
   const mux = new httpbinding.HttpBindingMux<"RestJson", "HttpEnumPayload">([
     new httpbinding.UriSpec<"RestJson", "HttpEnumPayload">(
       "POST",
       [{ type: "path_literal", value: "EnumPayload" }],
       [],
-      { service: "RestJson", operation: "HttpEnumPayload" }
+      { service: "RestJson", operation: "HttpEnumPayload" },
     ),
   ]);
   return new HttpEnumPayloadHandler(
@@ -76,7 +76,7 @@ export const getHttpEnumPayloadHandler = <Context>(
     mux,
     new HttpEnumPayloadSerializer(),
     serializeFrameworkException,
-    customizer
+    customizer,
   );
 };
 
@@ -97,7 +97,7 @@ async function handle<S, O extends keyof S & string, Context>(
   operation: __Operation<__OperationInput<S[O]>, __OperationOutput<S[O]>, Context>,
   serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
   validationFn: (input: __OperationInput<S[O]>) => __ValidationFailure[],
-  validationCustomizer: __ValidationCustomizer<O>
+  validationCustomizer: __ValidationCustomizer<O>,
 ): Promise<__HttpResponse> {
   let input;
   try {
@@ -139,7 +139,7 @@ export class HttpEnumPayloadHandler<Context> implements __ServiceHandler<Context
   >;
   private readonly serializeFrameworkException: (
     e: __SmithyFrameworkException,
-    ctx: __ServerSerdeContext
+    ctx: __ServerSerdeContext,
   ) => Promise<__HttpResponse>;
   private readonly validationCustomizer: __ValidationCustomizer<"HttpEnumPayload">;
   /**
@@ -156,7 +156,7 @@ export class HttpEnumPayloadHandler<Context> implements __ServiceHandler<Context
     mux: __Mux<"RestJson", "HttpEnumPayload">,
     serializer: __OperationSerializer<RestJsonService<Context>, "HttpEnumPayload", HttpEnumPayloadErrors>,
     serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
-    validationCustomizer: __ValidationCustomizer<"HttpEnumPayload">
+    validationCustomizer: __ValidationCustomizer<"HttpEnumPayload">,
   ) {
     this.operation = operation;
     this.mux = mux;
@@ -168,7 +168,7 @@ export class HttpEnumPayloadHandler<Context> implements __ServiceHandler<Context
     const target = this.mux.match(request);
     if (target === undefined) {
       console.log(
-        "Received a request that did not match aws.protocoltests.restjson#RestJson.HttpEnumPayload. This indicates a misconfiguration."
+        "Received a request that did not match aws.protocoltests.restjson#RestJson.HttpEnumPayload. This indicates a misconfiguration.",
       );
       return this.serializeFrameworkException(new __InternalFailureException(), serdeContextBase);
     }
@@ -180,7 +180,7 @@ export class HttpEnumPayloadHandler<Context> implements __ServiceHandler<Context
       this.operation,
       this.serializeFrameworkException,
       HttpEnumPayloadServerInput.validate,
-      this.validationCustomizer
+      this.validationCustomizer,
     );
   }
 }

@@ -3653,7 +3653,7 @@ export const ListCustomLineItemVersionsOutputFilterSensitiveLog = (obj: ListCust
   ...obj,
   ...(obj.CustomLineItemVersions && {
     CustomLineItemVersions: obj.CustomLineItemVersions.map((item) =>
-      CustomLineItemVersionListElementFilterSensitiveLog(item)
+      CustomLineItemVersionListElementFilterSensitiveLog(item),
     ),
   }),
 });

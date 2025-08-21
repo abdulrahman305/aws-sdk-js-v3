@@ -47,7 +47,7 @@ export const getRuntimeConfig = (config: RekognitionStreamingClientConfig) => {
         | WebSocketRequestHandler
         | WebSocketFetchHandlerOptions
         | (() => Promise<WebSocketFetchHandlerOptions>)) ?? defaultConfigProvider,
-      HttpRequestHandler.create(defaultConfigProvider)
+      HttpRequestHandler.create(defaultConfigProvider),
     ),
     retryMode: config?.retryMode ?? (async () => (await defaultConfigProvider()).retryMode || DEFAULT_RETRY_MODE),
     sha256: config?.sha256 ?? Sha256,

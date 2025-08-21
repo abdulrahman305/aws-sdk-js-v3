@@ -52,7 +52,7 @@ import {
  */
 export const se_CreateApplicationCommand = async (
   input: CreateApplicationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -67,7 +67,7 @@ export const se_CreateApplicationCommand = async (
       clientToken: [true, (_) => _ ?? generateIdempotencyToken()],
       roleArn: [],
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -78,7 +78,7 @@ export const se_CreateApplicationCommand = async (
  */
 export const se_DeleteApplicationCommand = async (
   input: DeleteApplicationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -97,7 +97,7 @@ export const se_DeleteApplicationCommand = async (
  */
 export const se_DescribeApplicationCommand = async (
   input: DescribeApplicationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -113,7 +113,7 @@ export const se_DescribeApplicationCommand = async (
  */
 export const se_ListApplicationsCommand = async (
   input: ListApplicationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -131,7 +131,7 @@ export const se_ListApplicationsCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -147,7 +147,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -159,7 +159,7 @@ export const se_TagResourceCommand = async (
   body = JSON.stringify(
     take(input, {
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -170,7 +170,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -192,7 +192,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateApplicationCommand = async (
   input: UpdateApplicationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -206,7 +206,7 @@ export const se_UpdateApplicationCommand = async (
       applicationDescription: [],
       applicationName: [],
       clientToken: [true, (_) => _ ?? generateIdempotencyToken()],
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -217,7 +217,7 @@ export const se_UpdateApplicationCommand = async (
  */
 export const de_CreateApplicationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateApplicationCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -239,7 +239,7 @@ export const de_CreateApplicationCommand = async (
  */
 export const de_DeleteApplicationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteApplicationCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -256,7 +256,7 @@ export const de_DeleteApplicationCommand = async (
  */
 export const de_DescribeApplicationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeApplicationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -288,7 +288,7 @@ export const de_DescribeApplicationCommand = async (
  */
 export const de_ListApplicationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListApplicationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -310,7 +310,7 @@ export const de_ListApplicationsCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -331,7 +331,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -348,7 +348,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -365,7 +365,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateApplicationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateApplicationCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -438,7 +438,7 @@ const de_ConflictExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_InternalFailureExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalFailureException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -458,7 +458,7 @@ const de_InternalFailureExceptionRes = async (
  */
 const de_InvalidRequestExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidRequestException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -478,7 +478,7 @@ const de_InvalidRequestExceptionRes = async (
  */
 const de_LimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<LimitExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -498,7 +498,7 @@ const de_LimitExceededExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;

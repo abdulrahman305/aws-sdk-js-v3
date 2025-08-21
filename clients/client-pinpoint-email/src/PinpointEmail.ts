@@ -253,16 +253,16 @@ export interface PinpointEmail {
    */
   createConfigurationSet(
     args: CreateConfigurationSetCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateConfigurationSetCommandOutput>;
   createConfigurationSet(
     args: CreateConfigurationSetCommandInput,
-    cb: (err: any, data?: CreateConfigurationSetCommandOutput) => void
+    cb: (err: any, data?: CreateConfigurationSetCommandOutput) => void,
   ): void;
   createConfigurationSet(
     args: CreateConfigurationSetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateConfigurationSetCommandOutput) => void
+    cb: (err: any, data?: CreateConfigurationSetCommandOutput) => void,
   ): void;
 
   /**
@@ -270,16 +270,16 @@ export interface PinpointEmail {
    */
   createConfigurationSetEventDestination(
     args: CreateConfigurationSetEventDestinationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateConfigurationSetEventDestinationCommandOutput>;
   createConfigurationSetEventDestination(
     args: CreateConfigurationSetEventDestinationCommandInput,
-    cb: (err: any, data?: CreateConfigurationSetEventDestinationCommandOutput) => void
+    cb: (err: any, data?: CreateConfigurationSetEventDestinationCommandOutput) => void,
   ): void;
   createConfigurationSetEventDestination(
     args: CreateConfigurationSetEventDestinationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateConfigurationSetEventDestinationCommandOutput) => void
+    cb: (err: any, data?: CreateConfigurationSetEventDestinationCommandOutput) => void,
   ): void;
 
   /**
@@ -287,16 +287,16 @@ export interface PinpointEmail {
    */
   createDedicatedIpPool(
     args: CreateDedicatedIpPoolCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateDedicatedIpPoolCommandOutput>;
   createDedicatedIpPool(
     args: CreateDedicatedIpPoolCommandInput,
-    cb: (err: any, data?: CreateDedicatedIpPoolCommandOutput) => void
+    cb: (err: any, data?: CreateDedicatedIpPoolCommandOutput) => void,
   ): void;
   createDedicatedIpPool(
     args: CreateDedicatedIpPoolCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateDedicatedIpPoolCommandOutput) => void
+    cb: (err: any, data?: CreateDedicatedIpPoolCommandOutput) => void,
   ): void;
 
   /**
@@ -304,16 +304,16 @@ export interface PinpointEmail {
    */
   createDeliverabilityTestReport(
     args: CreateDeliverabilityTestReportCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateDeliverabilityTestReportCommandOutput>;
   createDeliverabilityTestReport(
     args: CreateDeliverabilityTestReportCommandInput,
-    cb: (err: any, data?: CreateDeliverabilityTestReportCommandOutput) => void
+    cb: (err: any, data?: CreateDeliverabilityTestReportCommandOutput) => void,
   ): void;
   createDeliverabilityTestReport(
     args: CreateDeliverabilityTestReportCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateDeliverabilityTestReportCommandOutput) => void
+    cb: (err: any, data?: CreateDeliverabilityTestReportCommandOutput) => void,
   ): void;
 
   /**
@@ -321,16 +321,16 @@ export interface PinpointEmail {
    */
   createEmailIdentity(
     args: CreateEmailIdentityCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateEmailIdentityCommandOutput>;
   createEmailIdentity(
     args: CreateEmailIdentityCommandInput,
-    cb: (err: any, data?: CreateEmailIdentityCommandOutput) => void
+    cb: (err: any, data?: CreateEmailIdentityCommandOutput) => void,
   ): void;
   createEmailIdentity(
     args: CreateEmailIdentityCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateEmailIdentityCommandOutput) => void
+    cb: (err: any, data?: CreateEmailIdentityCommandOutput) => void,
   ): void;
 
   /**
@@ -338,16 +338,16 @@ export interface PinpointEmail {
    */
   deleteConfigurationSet(
     args: DeleteConfigurationSetCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteConfigurationSetCommandOutput>;
   deleteConfigurationSet(
     args: DeleteConfigurationSetCommandInput,
-    cb: (err: any, data?: DeleteConfigurationSetCommandOutput) => void
+    cb: (err: any, data?: DeleteConfigurationSetCommandOutput) => void,
   ): void;
   deleteConfigurationSet(
     args: DeleteConfigurationSetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteConfigurationSetCommandOutput) => void
+    cb: (err: any, data?: DeleteConfigurationSetCommandOutput) => void,
   ): void;
 
   /**
@@ -355,16 +355,16 @@ export interface PinpointEmail {
    */
   deleteConfigurationSetEventDestination(
     args: DeleteConfigurationSetEventDestinationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteConfigurationSetEventDestinationCommandOutput>;
   deleteConfigurationSetEventDestination(
     args: DeleteConfigurationSetEventDestinationCommandInput,
-    cb: (err: any, data?: DeleteConfigurationSetEventDestinationCommandOutput) => void
+    cb: (err: any, data?: DeleteConfigurationSetEventDestinationCommandOutput) => void,
   ): void;
   deleteConfigurationSetEventDestination(
     args: DeleteConfigurationSetEventDestinationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteConfigurationSetEventDestinationCommandOutput) => void
+    cb: (err: any, data?: DeleteConfigurationSetEventDestinationCommandOutput) => void,
   ): void;
 
   /**
@@ -372,16 +372,16 @@ export interface PinpointEmail {
    */
   deleteDedicatedIpPool(
     args: DeleteDedicatedIpPoolCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteDedicatedIpPoolCommandOutput>;
   deleteDedicatedIpPool(
     args: DeleteDedicatedIpPoolCommandInput,
-    cb: (err: any, data?: DeleteDedicatedIpPoolCommandOutput) => void
+    cb: (err: any, data?: DeleteDedicatedIpPoolCommandOutput) => void,
   ): void;
   deleteDedicatedIpPool(
     args: DeleteDedicatedIpPoolCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteDedicatedIpPoolCommandOutput) => void
+    cb: (err: any, data?: DeleteDedicatedIpPoolCommandOutput) => void,
   ): void;
 
   /**
@@ -389,16 +389,16 @@ export interface PinpointEmail {
    */
   deleteEmailIdentity(
     args: DeleteEmailIdentityCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteEmailIdentityCommandOutput>;
   deleteEmailIdentity(
     args: DeleteEmailIdentityCommandInput,
-    cb: (err: any, data?: DeleteEmailIdentityCommandOutput) => void
+    cb: (err: any, data?: DeleteEmailIdentityCommandOutput) => void,
   ): void;
   deleteEmailIdentity(
     args: DeleteEmailIdentityCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteEmailIdentityCommandOutput) => void
+    cb: (err: any, data?: DeleteEmailIdentityCommandOutput) => void,
   ): void;
 
   /**
@@ -410,7 +410,7 @@ export interface PinpointEmail {
   getAccount(
     args: GetAccountCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetAccountCommandOutput) => void
+    cb: (err: any, data?: GetAccountCommandOutput) => void,
   ): void;
 
   /**
@@ -418,16 +418,16 @@ export interface PinpointEmail {
    */
   getBlacklistReports(
     args: GetBlacklistReportsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetBlacklistReportsCommandOutput>;
   getBlacklistReports(
     args: GetBlacklistReportsCommandInput,
-    cb: (err: any, data?: GetBlacklistReportsCommandOutput) => void
+    cb: (err: any, data?: GetBlacklistReportsCommandOutput) => void,
   ): void;
   getBlacklistReports(
     args: GetBlacklistReportsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetBlacklistReportsCommandOutput) => void
+    cb: (err: any, data?: GetBlacklistReportsCommandOutput) => void,
   ): void;
 
   /**
@@ -435,16 +435,16 @@ export interface PinpointEmail {
    */
   getConfigurationSet(
     args: GetConfigurationSetCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetConfigurationSetCommandOutput>;
   getConfigurationSet(
     args: GetConfigurationSetCommandInput,
-    cb: (err: any, data?: GetConfigurationSetCommandOutput) => void
+    cb: (err: any, data?: GetConfigurationSetCommandOutput) => void,
   ): void;
   getConfigurationSet(
     args: GetConfigurationSetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetConfigurationSetCommandOutput) => void
+    cb: (err: any, data?: GetConfigurationSetCommandOutput) => void,
   ): void;
 
   /**
@@ -452,16 +452,16 @@ export interface PinpointEmail {
    */
   getConfigurationSetEventDestinations(
     args: GetConfigurationSetEventDestinationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetConfigurationSetEventDestinationsCommandOutput>;
   getConfigurationSetEventDestinations(
     args: GetConfigurationSetEventDestinationsCommandInput,
-    cb: (err: any, data?: GetConfigurationSetEventDestinationsCommandOutput) => void
+    cb: (err: any, data?: GetConfigurationSetEventDestinationsCommandOutput) => void,
   ): void;
   getConfigurationSetEventDestinations(
     args: GetConfigurationSetEventDestinationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetConfigurationSetEventDestinationsCommandOutput) => void
+    cb: (err: any, data?: GetConfigurationSetEventDestinationsCommandOutput) => void,
   ): void;
 
   /**
@@ -469,13 +469,13 @@ export interface PinpointEmail {
    */
   getDedicatedIp(
     args: GetDedicatedIpCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetDedicatedIpCommandOutput>;
   getDedicatedIp(args: GetDedicatedIpCommandInput, cb: (err: any, data?: GetDedicatedIpCommandOutput) => void): void;
   getDedicatedIp(
     args: GetDedicatedIpCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetDedicatedIpCommandOutput) => void
+    cb: (err: any, data?: GetDedicatedIpCommandOutput) => void,
   ): void;
 
   /**
@@ -484,13 +484,13 @@ export interface PinpointEmail {
   getDedicatedIps(): Promise<GetDedicatedIpsCommandOutput>;
   getDedicatedIps(
     args: GetDedicatedIpsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetDedicatedIpsCommandOutput>;
   getDedicatedIps(args: GetDedicatedIpsCommandInput, cb: (err: any, data?: GetDedicatedIpsCommandOutput) => void): void;
   getDedicatedIps(
     args: GetDedicatedIpsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetDedicatedIpsCommandOutput) => void
+    cb: (err: any, data?: GetDedicatedIpsCommandOutput) => void,
   ): void;
 
   /**
@@ -499,16 +499,16 @@ export interface PinpointEmail {
   getDeliverabilityDashboardOptions(): Promise<GetDeliverabilityDashboardOptionsCommandOutput>;
   getDeliverabilityDashboardOptions(
     args: GetDeliverabilityDashboardOptionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetDeliverabilityDashboardOptionsCommandOutput>;
   getDeliverabilityDashboardOptions(
     args: GetDeliverabilityDashboardOptionsCommandInput,
-    cb: (err: any, data?: GetDeliverabilityDashboardOptionsCommandOutput) => void
+    cb: (err: any, data?: GetDeliverabilityDashboardOptionsCommandOutput) => void,
   ): void;
   getDeliverabilityDashboardOptions(
     args: GetDeliverabilityDashboardOptionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetDeliverabilityDashboardOptionsCommandOutput) => void
+    cb: (err: any, data?: GetDeliverabilityDashboardOptionsCommandOutput) => void,
   ): void;
 
   /**
@@ -516,16 +516,16 @@ export interface PinpointEmail {
    */
   getDeliverabilityTestReport(
     args: GetDeliverabilityTestReportCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetDeliverabilityTestReportCommandOutput>;
   getDeliverabilityTestReport(
     args: GetDeliverabilityTestReportCommandInput,
-    cb: (err: any, data?: GetDeliverabilityTestReportCommandOutput) => void
+    cb: (err: any, data?: GetDeliverabilityTestReportCommandOutput) => void,
   ): void;
   getDeliverabilityTestReport(
     args: GetDeliverabilityTestReportCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetDeliverabilityTestReportCommandOutput) => void
+    cb: (err: any, data?: GetDeliverabilityTestReportCommandOutput) => void,
   ): void;
 
   /**
@@ -533,16 +533,16 @@ export interface PinpointEmail {
    */
   getDomainDeliverabilityCampaign(
     args: GetDomainDeliverabilityCampaignCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetDomainDeliverabilityCampaignCommandOutput>;
   getDomainDeliverabilityCampaign(
     args: GetDomainDeliverabilityCampaignCommandInput,
-    cb: (err: any, data?: GetDomainDeliverabilityCampaignCommandOutput) => void
+    cb: (err: any, data?: GetDomainDeliverabilityCampaignCommandOutput) => void,
   ): void;
   getDomainDeliverabilityCampaign(
     args: GetDomainDeliverabilityCampaignCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetDomainDeliverabilityCampaignCommandOutput) => void
+    cb: (err: any, data?: GetDomainDeliverabilityCampaignCommandOutput) => void,
   ): void;
 
   /**
@@ -550,16 +550,16 @@ export interface PinpointEmail {
    */
   getDomainStatisticsReport(
     args: GetDomainStatisticsReportCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetDomainStatisticsReportCommandOutput>;
   getDomainStatisticsReport(
     args: GetDomainStatisticsReportCommandInput,
-    cb: (err: any, data?: GetDomainStatisticsReportCommandOutput) => void
+    cb: (err: any, data?: GetDomainStatisticsReportCommandOutput) => void,
   ): void;
   getDomainStatisticsReport(
     args: GetDomainStatisticsReportCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetDomainStatisticsReportCommandOutput) => void
+    cb: (err: any, data?: GetDomainStatisticsReportCommandOutput) => void,
   ): void;
 
   /**
@@ -567,16 +567,16 @@ export interface PinpointEmail {
    */
   getEmailIdentity(
     args: GetEmailIdentityCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetEmailIdentityCommandOutput>;
   getEmailIdentity(
     args: GetEmailIdentityCommandInput,
-    cb: (err: any, data?: GetEmailIdentityCommandOutput) => void
+    cb: (err: any, data?: GetEmailIdentityCommandOutput) => void,
   ): void;
   getEmailIdentity(
     args: GetEmailIdentityCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetEmailIdentityCommandOutput) => void
+    cb: (err: any, data?: GetEmailIdentityCommandOutput) => void,
   ): void;
 
   /**
@@ -585,16 +585,16 @@ export interface PinpointEmail {
   listConfigurationSets(): Promise<ListConfigurationSetsCommandOutput>;
   listConfigurationSets(
     args: ListConfigurationSetsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListConfigurationSetsCommandOutput>;
   listConfigurationSets(
     args: ListConfigurationSetsCommandInput,
-    cb: (err: any, data?: ListConfigurationSetsCommandOutput) => void
+    cb: (err: any, data?: ListConfigurationSetsCommandOutput) => void,
   ): void;
   listConfigurationSets(
     args: ListConfigurationSetsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListConfigurationSetsCommandOutput) => void
+    cb: (err: any, data?: ListConfigurationSetsCommandOutput) => void,
   ): void;
 
   /**
@@ -603,16 +603,16 @@ export interface PinpointEmail {
   listDedicatedIpPools(): Promise<ListDedicatedIpPoolsCommandOutput>;
   listDedicatedIpPools(
     args: ListDedicatedIpPoolsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListDedicatedIpPoolsCommandOutput>;
   listDedicatedIpPools(
     args: ListDedicatedIpPoolsCommandInput,
-    cb: (err: any, data?: ListDedicatedIpPoolsCommandOutput) => void
+    cb: (err: any, data?: ListDedicatedIpPoolsCommandOutput) => void,
   ): void;
   listDedicatedIpPools(
     args: ListDedicatedIpPoolsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListDedicatedIpPoolsCommandOutput) => void
+    cb: (err: any, data?: ListDedicatedIpPoolsCommandOutput) => void,
   ): void;
 
   /**
@@ -621,16 +621,16 @@ export interface PinpointEmail {
   listDeliverabilityTestReports(): Promise<ListDeliverabilityTestReportsCommandOutput>;
   listDeliverabilityTestReports(
     args: ListDeliverabilityTestReportsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListDeliverabilityTestReportsCommandOutput>;
   listDeliverabilityTestReports(
     args: ListDeliverabilityTestReportsCommandInput,
-    cb: (err: any, data?: ListDeliverabilityTestReportsCommandOutput) => void
+    cb: (err: any, data?: ListDeliverabilityTestReportsCommandOutput) => void,
   ): void;
   listDeliverabilityTestReports(
     args: ListDeliverabilityTestReportsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListDeliverabilityTestReportsCommandOutput) => void
+    cb: (err: any, data?: ListDeliverabilityTestReportsCommandOutput) => void,
   ): void;
 
   /**
@@ -638,16 +638,16 @@ export interface PinpointEmail {
    */
   listDomainDeliverabilityCampaigns(
     args: ListDomainDeliverabilityCampaignsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListDomainDeliverabilityCampaignsCommandOutput>;
   listDomainDeliverabilityCampaigns(
     args: ListDomainDeliverabilityCampaignsCommandInput,
-    cb: (err: any, data?: ListDomainDeliverabilityCampaignsCommandOutput) => void
+    cb: (err: any, data?: ListDomainDeliverabilityCampaignsCommandOutput) => void,
   ): void;
   listDomainDeliverabilityCampaigns(
     args: ListDomainDeliverabilityCampaignsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListDomainDeliverabilityCampaignsCommandOutput) => void
+    cb: (err: any, data?: ListDomainDeliverabilityCampaignsCommandOutput) => void,
   ): void;
 
   /**
@@ -656,16 +656,16 @@ export interface PinpointEmail {
   listEmailIdentities(): Promise<ListEmailIdentitiesCommandOutput>;
   listEmailIdentities(
     args: ListEmailIdentitiesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListEmailIdentitiesCommandOutput>;
   listEmailIdentities(
     args: ListEmailIdentitiesCommandInput,
-    cb: (err: any, data?: ListEmailIdentitiesCommandOutput) => void
+    cb: (err: any, data?: ListEmailIdentitiesCommandOutput) => void,
   ): void;
   listEmailIdentities(
     args: ListEmailIdentitiesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListEmailIdentitiesCommandOutput) => void
+    cb: (err: any, data?: ListEmailIdentitiesCommandOutput) => void,
   ): void;
 
   /**
@@ -673,16 +673,16 @@ export interface PinpointEmail {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -691,16 +691,16 @@ export interface PinpointEmail {
   putAccountDedicatedIpWarmupAttributes(): Promise<PutAccountDedicatedIpWarmupAttributesCommandOutput>;
   putAccountDedicatedIpWarmupAttributes(
     args: PutAccountDedicatedIpWarmupAttributesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutAccountDedicatedIpWarmupAttributesCommandOutput>;
   putAccountDedicatedIpWarmupAttributes(
     args: PutAccountDedicatedIpWarmupAttributesCommandInput,
-    cb: (err: any, data?: PutAccountDedicatedIpWarmupAttributesCommandOutput) => void
+    cb: (err: any, data?: PutAccountDedicatedIpWarmupAttributesCommandOutput) => void,
   ): void;
   putAccountDedicatedIpWarmupAttributes(
     args: PutAccountDedicatedIpWarmupAttributesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutAccountDedicatedIpWarmupAttributesCommandOutput) => void
+    cb: (err: any, data?: PutAccountDedicatedIpWarmupAttributesCommandOutput) => void,
   ): void;
 
   /**
@@ -709,16 +709,16 @@ export interface PinpointEmail {
   putAccountSendingAttributes(): Promise<PutAccountSendingAttributesCommandOutput>;
   putAccountSendingAttributes(
     args: PutAccountSendingAttributesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutAccountSendingAttributesCommandOutput>;
   putAccountSendingAttributes(
     args: PutAccountSendingAttributesCommandInput,
-    cb: (err: any, data?: PutAccountSendingAttributesCommandOutput) => void
+    cb: (err: any, data?: PutAccountSendingAttributesCommandOutput) => void,
   ): void;
   putAccountSendingAttributes(
     args: PutAccountSendingAttributesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutAccountSendingAttributesCommandOutput) => void
+    cb: (err: any, data?: PutAccountSendingAttributesCommandOutput) => void,
   ): void;
 
   /**
@@ -726,16 +726,16 @@ export interface PinpointEmail {
    */
   putConfigurationSetDeliveryOptions(
     args: PutConfigurationSetDeliveryOptionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutConfigurationSetDeliveryOptionsCommandOutput>;
   putConfigurationSetDeliveryOptions(
     args: PutConfigurationSetDeliveryOptionsCommandInput,
-    cb: (err: any, data?: PutConfigurationSetDeliveryOptionsCommandOutput) => void
+    cb: (err: any, data?: PutConfigurationSetDeliveryOptionsCommandOutput) => void,
   ): void;
   putConfigurationSetDeliveryOptions(
     args: PutConfigurationSetDeliveryOptionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutConfigurationSetDeliveryOptionsCommandOutput) => void
+    cb: (err: any, data?: PutConfigurationSetDeliveryOptionsCommandOutput) => void,
   ): void;
 
   /**
@@ -743,16 +743,16 @@ export interface PinpointEmail {
    */
   putConfigurationSetReputationOptions(
     args: PutConfigurationSetReputationOptionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutConfigurationSetReputationOptionsCommandOutput>;
   putConfigurationSetReputationOptions(
     args: PutConfigurationSetReputationOptionsCommandInput,
-    cb: (err: any, data?: PutConfigurationSetReputationOptionsCommandOutput) => void
+    cb: (err: any, data?: PutConfigurationSetReputationOptionsCommandOutput) => void,
   ): void;
   putConfigurationSetReputationOptions(
     args: PutConfigurationSetReputationOptionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutConfigurationSetReputationOptionsCommandOutput) => void
+    cb: (err: any, data?: PutConfigurationSetReputationOptionsCommandOutput) => void,
   ): void;
 
   /**
@@ -760,16 +760,16 @@ export interface PinpointEmail {
    */
   putConfigurationSetSendingOptions(
     args: PutConfigurationSetSendingOptionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutConfigurationSetSendingOptionsCommandOutput>;
   putConfigurationSetSendingOptions(
     args: PutConfigurationSetSendingOptionsCommandInput,
-    cb: (err: any, data?: PutConfigurationSetSendingOptionsCommandOutput) => void
+    cb: (err: any, data?: PutConfigurationSetSendingOptionsCommandOutput) => void,
   ): void;
   putConfigurationSetSendingOptions(
     args: PutConfigurationSetSendingOptionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutConfigurationSetSendingOptionsCommandOutput) => void
+    cb: (err: any, data?: PutConfigurationSetSendingOptionsCommandOutput) => void,
   ): void;
 
   /**
@@ -777,16 +777,16 @@ export interface PinpointEmail {
    */
   putConfigurationSetTrackingOptions(
     args: PutConfigurationSetTrackingOptionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutConfigurationSetTrackingOptionsCommandOutput>;
   putConfigurationSetTrackingOptions(
     args: PutConfigurationSetTrackingOptionsCommandInput,
-    cb: (err: any, data?: PutConfigurationSetTrackingOptionsCommandOutput) => void
+    cb: (err: any, data?: PutConfigurationSetTrackingOptionsCommandOutput) => void,
   ): void;
   putConfigurationSetTrackingOptions(
     args: PutConfigurationSetTrackingOptionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutConfigurationSetTrackingOptionsCommandOutput) => void
+    cb: (err: any, data?: PutConfigurationSetTrackingOptionsCommandOutput) => void,
   ): void;
 
   /**
@@ -794,16 +794,16 @@ export interface PinpointEmail {
    */
   putDedicatedIpInPool(
     args: PutDedicatedIpInPoolCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutDedicatedIpInPoolCommandOutput>;
   putDedicatedIpInPool(
     args: PutDedicatedIpInPoolCommandInput,
-    cb: (err: any, data?: PutDedicatedIpInPoolCommandOutput) => void
+    cb: (err: any, data?: PutDedicatedIpInPoolCommandOutput) => void,
   ): void;
   putDedicatedIpInPool(
     args: PutDedicatedIpInPoolCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutDedicatedIpInPoolCommandOutput) => void
+    cb: (err: any, data?: PutDedicatedIpInPoolCommandOutput) => void,
   ): void;
 
   /**
@@ -811,16 +811,16 @@ export interface PinpointEmail {
    */
   putDedicatedIpWarmupAttributes(
     args: PutDedicatedIpWarmupAttributesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutDedicatedIpWarmupAttributesCommandOutput>;
   putDedicatedIpWarmupAttributes(
     args: PutDedicatedIpWarmupAttributesCommandInput,
-    cb: (err: any, data?: PutDedicatedIpWarmupAttributesCommandOutput) => void
+    cb: (err: any, data?: PutDedicatedIpWarmupAttributesCommandOutput) => void,
   ): void;
   putDedicatedIpWarmupAttributes(
     args: PutDedicatedIpWarmupAttributesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutDedicatedIpWarmupAttributesCommandOutput) => void
+    cb: (err: any, data?: PutDedicatedIpWarmupAttributesCommandOutput) => void,
   ): void;
 
   /**
@@ -828,16 +828,16 @@ export interface PinpointEmail {
    */
   putDeliverabilityDashboardOption(
     args: PutDeliverabilityDashboardOptionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutDeliverabilityDashboardOptionCommandOutput>;
   putDeliverabilityDashboardOption(
     args: PutDeliverabilityDashboardOptionCommandInput,
-    cb: (err: any, data?: PutDeliverabilityDashboardOptionCommandOutput) => void
+    cb: (err: any, data?: PutDeliverabilityDashboardOptionCommandOutput) => void,
   ): void;
   putDeliverabilityDashboardOption(
     args: PutDeliverabilityDashboardOptionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutDeliverabilityDashboardOptionCommandOutput) => void
+    cb: (err: any, data?: PutDeliverabilityDashboardOptionCommandOutput) => void,
   ): void;
 
   /**
@@ -845,16 +845,16 @@ export interface PinpointEmail {
    */
   putEmailIdentityDkimAttributes(
     args: PutEmailIdentityDkimAttributesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutEmailIdentityDkimAttributesCommandOutput>;
   putEmailIdentityDkimAttributes(
     args: PutEmailIdentityDkimAttributesCommandInput,
-    cb: (err: any, data?: PutEmailIdentityDkimAttributesCommandOutput) => void
+    cb: (err: any, data?: PutEmailIdentityDkimAttributesCommandOutput) => void,
   ): void;
   putEmailIdentityDkimAttributes(
     args: PutEmailIdentityDkimAttributesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutEmailIdentityDkimAttributesCommandOutput) => void
+    cb: (err: any, data?: PutEmailIdentityDkimAttributesCommandOutput) => void,
   ): void;
 
   /**
@@ -862,16 +862,16 @@ export interface PinpointEmail {
    */
   putEmailIdentityFeedbackAttributes(
     args: PutEmailIdentityFeedbackAttributesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutEmailIdentityFeedbackAttributesCommandOutput>;
   putEmailIdentityFeedbackAttributes(
     args: PutEmailIdentityFeedbackAttributesCommandInput,
-    cb: (err: any, data?: PutEmailIdentityFeedbackAttributesCommandOutput) => void
+    cb: (err: any, data?: PutEmailIdentityFeedbackAttributesCommandOutput) => void,
   ): void;
   putEmailIdentityFeedbackAttributes(
     args: PutEmailIdentityFeedbackAttributesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutEmailIdentityFeedbackAttributesCommandOutput) => void
+    cb: (err: any, data?: PutEmailIdentityFeedbackAttributesCommandOutput) => void,
   ): void;
 
   /**
@@ -879,16 +879,16 @@ export interface PinpointEmail {
    */
   putEmailIdentityMailFromAttributes(
     args: PutEmailIdentityMailFromAttributesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutEmailIdentityMailFromAttributesCommandOutput>;
   putEmailIdentityMailFromAttributes(
     args: PutEmailIdentityMailFromAttributesCommandInput,
-    cb: (err: any, data?: PutEmailIdentityMailFromAttributesCommandOutput) => void
+    cb: (err: any, data?: PutEmailIdentityMailFromAttributesCommandOutput) => void,
   ): void;
   putEmailIdentityMailFromAttributes(
     args: PutEmailIdentityMailFromAttributesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutEmailIdentityMailFromAttributesCommandOutput) => void
+    cb: (err: any, data?: PutEmailIdentityMailFromAttributesCommandOutput) => void,
   ): void;
 
   /**
@@ -899,7 +899,7 @@ export interface PinpointEmail {
   sendEmail(
     args: SendEmailCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SendEmailCommandOutput) => void
+    cb: (err: any, data?: SendEmailCommandOutput) => void,
   ): void;
 
   /**
@@ -910,7 +910,7 @@ export interface PinpointEmail {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -921,7 +921,7 @@ export interface PinpointEmail {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -929,16 +929,16 @@ export interface PinpointEmail {
    */
   updateConfigurationSetEventDestination(
     args: UpdateConfigurationSetEventDestinationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateConfigurationSetEventDestinationCommandOutput>;
   updateConfigurationSetEventDestination(
     args: UpdateConfigurationSetEventDestinationCommandInput,
-    cb: (err: any, data?: UpdateConfigurationSetEventDestinationCommandOutput) => void
+    cb: (err: any, data?: UpdateConfigurationSetEventDestinationCommandOutput) => void,
   ): void;
   updateConfigurationSetEventDestination(
     args: UpdateConfigurationSetEventDestinationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateConfigurationSetEventDestinationCommandOutput) => void
+    cb: (err: any, data?: UpdateConfigurationSetEventDestinationCommandOutput) => void,
   ): void;
 }
 

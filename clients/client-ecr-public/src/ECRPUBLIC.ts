@@ -143,16 +143,16 @@ export interface ECRPUBLIC {
    */
   batchCheckLayerAvailability(
     args: BatchCheckLayerAvailabilityCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<BatchCheckLayerAvailabilityCommandOutput>;
   batchCheckLayerAvailability(
     args: BatchCheckLayerAvailabilityCommandInput,
-    cb: (err: any, data?: BatchCheckLayerAvailabilityCommandOutput) => void
+    cb: (err: any, data?: BatchCheckLayerAvailabilityCommandOutput) => void,
   ): void;
   batchCheckLayerAvailability(
     args: BatchCheckLayerAvailabilityCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: BatchCheckLayerAvailabilityCommandOutput) => void
+    cb: (err: any, data?: BatchCheckLayerAvailabilityCommandOutput) => void,
   ): void;
 
   /**
@@ -160,16 +160,16 @@ export interface ECRPUBLIC {
    */
   batchDeleteImage(
     args: BatchDeleteImageCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<BatchDeleteImageCommandOutput>;
   batchDeleteImage(
     args: BatchDeleteImageCommandInput,
-    cb: (err: any, data?: BatchDeleteImageCommandOutput) => void
+    cb: (err: any, data?: BatchDeleteImageCommandOutput) => void,
   ): void;
   batchDeleteImage(
     args: BatchDeleteImageCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: BatchDeleteImageCommandOutput) => void
+    cb: (err: any, data?: BatchDeleteImageCommandOutput) => void,
   ): void;
 
   /**
@@ -177,16 +177,16 @@ export interface ECRPUBLIC {
    */
   completeLayerUpload(
     args: CompleteLayerUploadCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CompleteLayerUploadCommandOutput>;
   completeLayerUpload(
     args: CompleteLayerUploadCommandInput,
-    cb: (err: any, data?: CompleteLayerUploadCommandOutput) => void
+    cb: (err: any, data?: CompleteLayerUploadCommandOutput) => void,
   ): void;
   completeLayerUpload(
     args: CompleteLayerUploadCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CompleteLayerUploadCommandOutput) => void
+    cb: (err: any, data?: CompleteLayerUploadCommandOutput) => void,
   ): void;
 
   /**
@@ -194,16 +194,16 @@ export interface ECRPUBLIC {
    */
   createRepository(
     args: CreateRepositoryCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateRepositoryCommandOutput>;
   createRepository(
     args: CreateRepositoryCommandInput,
-    cb: (err: any, data?: CreateRepositoryCommandOutput) => void
+    cb: (err: any, data?: CreateRepositoryCommandOutput) => void,
   ): void;
   createRepository(
     args: CreateRepositoryCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateRepositoryCommandOutput) => void
+    cb: (err: any, data?: CreateRepositoryCommandOutput) => void,
   ): void;
 
   /**
@@ -211,16 +211,16 @@ export interface ECRPUBLIC {
    */
   deleteRepository(
     args: DeleteRepositoryCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteRepositoryCommandOutput>;
   deleteRepository(
     args: DeleteRepositoryCommandInput,
-    cb: (err: any, data?: DeleteRepositoryCommandOutput) => void
+    cb: (err: any, data?: DeleteRepositoryCommandOutput) => void,
   ): void;
   deleteRepository(
     args: DeleteRepositoryCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteRepositoryCommandOutput) => void
+    cb: (err: any, data?: DeleteRepositoryCommandOutput) => void,
   ): void;
 
   /**
@@ -228,16 +228,16 @@ export interface ECRPUBLIC {
    */
   deleteRepositoryPolicy(
     args: DeleteRepositoryPolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteRepositoryPolicyCommandOutput>;
   deleteRepositoryPolicy(
     args: DeleteRepositoryPolicyCommandInput,
-    cb: (err: any, data?: DeleteRepositoryPolicyCommandOutput) => void
+    cb: (err: any, data?: DeleteRepositoryPolicyCommandOutput) => void,
   ): void;
   deleteRepositoryPolicy(
     args: DeleteRepositoryPolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteRepositoryPolicyCommandOutput) => void
+    cb: (err: any, data?: DeleteRepositoryPolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -245,13 +245,13 @@ export interface ECRPUBLIC {
    */
   describeImages(
     args: DescribeImagesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeImagesCommandOutput>;
   describeImages(args: DescribeImagesCommandInput, cb: (err: any, data?: DescribeImagesCommandOutput) => void): void;
   describeImages(
     args: DescribeImagesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeImagesCommandOutput) => void
+    cb: (err: any, data?: DescribeImagesCommandOutput) => void,
   ): void;
 
   /**
@@ -259,16 +259,16 @@ export interface ECRPUBLIC {
    */
   describeImageTags(
     args: DescribeImageTagsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeImageTagsCommandOutput>;
   describeImageTags(
     args: DescribeImageTagsCommandInput,
-    cb: (err: any, data?: DescribeImageTagsCommandOutput) => void
+    cb: (err: any, data?: DescribeImageTagsCommandOutput) => void,
   ): void;
   describeImageTags(
     args: DescribeImageTagsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeImageTagsCommandOutput) => void
+    cb: (err: any, data?: DescribeImageTagsCommandOutput) => void,
   ): void;
 
   /**
@@ -277,16 +277,16 @@ export interface ECRPUBLIC {
   describeRegistries(): Promise<DescribeRegistriesCommandOutput>;
   describeRegistries(
     args: DescribeRegistriesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeRegistriesCommandOutput>;
   describeRegistries(
     args: DescribeRegistriesCommandInput,
-    cb: (err: any, data?: DescribeRegistriesCommandOutput) => void
+    cb: (err: any, data?: DescribeRegistriesCommandOutput) => void,
   ): void;
   describeRegistries(
     args: DescribeRegistriesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeRegistriesCommandOutput) => void
+    cb: (err: any, data?: DescribeRegistriesCommandOutput) => void,
   ): void;
 
   /**
@@ -295,16 +295,16 @@ export interface ECRPUBLIC {
   describeRepositories(): Promise<DescribeRepositoriesCommandOutput>;
   describeRepositories(
     args: DescribeRepositoriesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeRepositoriesCommandOutput>;
   describeRepositories(
     args: DescribeRepositoriesCommandInput,
-    cb: (err: any, data?: DescribeRepositoriesCommandOutput) => void
+    cb: (err: any, data?: DescribeRepositoriesCommandOutput) => void,
   ): void;
   describeRepositories(
     args: DescribeRepositoriesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeRepositoriesCommandOutput) => void
+    cb: (err: any, data?: DescribeRepositoriesCommandOutput) => void,
   ): void;
 
   /**
@@ -313,16 +313,16 @@ export interface ECRPUBLIC {
   getAuthorizationToken(): Promise<GetAuthorizationTokenCommandOutput>;
   getAuthorizationToken(
     args: GetAuthorizationTokenCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetAuthorizationTokenCommandOutput>;
   getAuthorizationToken(
     args: GetAuthorizationTokenCommandInput,
-    cb: (err: any, data?: GetAuthorizationTokenCommandOutput) => void
+    cb: (err: any, data?: GetAuthorizationTokenCommandOutput) => void,
   ): void;
   getAuthorizationToken(
     args: GetAuthorizationTokenCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetAuthorizationTokenCommandOutput) => void
+    cb: (err: any, data?: GetAuthorizationTokenCommandOutput) => void,
   ): void;
 
   /**
@@ -331,16 +331,16 @@ export interface ECRPUBLIC {
   getRegistryCatalogData(): Promise<GetRegistryCatalogDataCommandOutput>;
   getRegistryCatalogData(
     args: GetRegistryCatalogDataCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetRegistryCatalogDataCommandOutput>;
   getRegistryCatalogData(
     args: GetRegistryCatalogDataCommandInput,
-    cb: (err: any, data?: GetRegistryCatalogDataCommandOutput) => void
+    cb: (err: any, data?: GetRegistryCatalogDataCommandOutput) => void,
   ): void;
   getRegistryCatalogData(
     args: GetRegistryCatalogDataCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetRegistryCatalogDataCommandOutput) => void
+    cb: (err: any, data?: GetRegistryCatalogDataCommandOutput) => void,
   ): void;
 
   /**
@@ -348,16 +348,16 @@ export interface ECRPUBLIC {
    */
   getRepositoryCatalogData(
     args: GetRepositoryCatalogDataCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetRepositoryCatalogDataCommandOutput>;
   getRepositoryCatalogData(
     args: GetRepositoryCatalogDataCommandInput,
-    cb: (err: any, data?: GetRepositoryCatalogDataCommandOutput) => void
+    cb: (err: any, data?: GetRepositoryCatalogDataCommandOutput) => void,
   ): void;
   getRepositoryCatalogData(
     args: GetRepositoryCatalogDataCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetRepositoryCatalogDataCommandOutput) => void
+    cb: (err: any, data?: GetRepositoryCatalogDataCommandOutput) => void,
   ): void;
 
   /**
@@ -365,16 +365,16 @@ export interface ECRPUBLIC {
    */
   getRepositoryPolicy(
     args: GetRepositoryPolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetRepositoryPolicyCommandOutput>;
   getRepositoryPolicy(
     args: GetRepositoryPolicyCommandInput,
-    cb: (err: any, data?: GetRepositoryPolicyCommandOutput) => void
+    cb: (err: any, data?: GetRepositoryPolicyCommandOutput) => void,
   ): void;
   getRepositoryPolicy(
     args: GetRepositoryPolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetRepositoryPolicyCommandOutput) => void
+    cb: (err: any, data?: GetRepositoryPolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -382,16 +382,16 @@ export interface ECRPUBLIC {
    */
   initiateLayerUpload(
     args: InitiateLayerUploadCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<InitiateLayerUploadCommandOutput>;
   initiateLayerUpload(
     args: InitiateLayerUploadCommandInput,
-    cb: (err: any, data?: InitiateLayerUploadCommandOutput) => void
+    cb: (err: any, data?: InitiateLayerUploadCommandOutput) => void,
   ): void;
   initiateLayerUpload(
     args: InitiateLayerUploadCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: InitiateLayerUploadCommandOutput) => void
+    cb: (err: any, data?: InitiateLayerUploadCommandOutput) => void,
   ): void;
 
   /**
@@ -399,16 +399,16 @@ export interface ECRPUBLIC {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -419,7 +419,7 @@ export interface ECRPUBLIC {
   putImage(
     args: PutImageCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutImageCommandOutput) => void
+    cb: (err: any, data?: PutImageCommandOutput) => void,
   ): void;
 
   /**
@@ -428,16 +428,16 @@ export interface ECRPUBLIC {
   putRegistryCatalogData(): Promise<PutRegistryCatalogDataCommandOutput>;
   putRegistryCatalogData(
     args: PutRegistryCatalogDataCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutRegistryCatalogDataCommandOutput>;
   putRegistryCatalogData(
     args: PutRegistryCatalogDataCommandInput,
-    cb: (err: any, data?: PutRegistryCatalogDataCommandOutput) => void
+    cb: (err: any, data?: PutRegistryCatalogDataCommandOutput) => void,
   ): void;
   putRegistryCatalogData(
     args: PutRegistryCatalogDataCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutRegistryCatalogDataCommandOutput) => void
+    cb: (err: any, data?: PutRegistryCatalogDataCommandOutput) => void,
   ): void;
 
   /**
@@ -445,16 +445,16 @@ export interface ECRPUBLIC {
    */
   putRepositoryCatalogData(
     args: PutRepositoryCatalogDataCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutRepositoryCatalogDataCommandOutput>;
   putRepositoryCatalogData(
     args: PutRepositoryCatalogDataCommandInput,
-    cb: (err: any, data?: PutRepositoryCatalogDataCommandOutput) => void
+    cb: (err: any, data?: PutRepositoryCatalogDataCommandOutput) => void,
   ): void;
   putRepositoryCatalogData(
     args: PutRepositoryCatalogDataCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutRepositoryCatalogDataCommandOutput) => void
+    cb: (err: any, data?: PutRepositoryCatalogDataCommandOutput) => void,
   ): void;
 
   /**
@@ -462,16 +462,16 @@ export interface ECRPUBLIC {
    */
   setRepositoryPolicy(
     args: SetRepositoryPolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<SetRepositoryPolicyCommandOutput>;
   setRepositoryPolicy(
     args: SetRepositoryPolicyCommandInput,
-    cb: (err: any, data?: SetRepositoryPolicyCommandOutput) => void
+    cb: (err: any, data?: SetRepositoryPolicyCommandOutput) => void,
   ): void;
   setRepositoryPolicy(
     args: SetRepositoryPolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SetRepositoryPolicyCommandOutput) => void
+    cb: (err: any, data?: SetRepositoryPolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -482,7 +482,7 @@ export interface ECRPUBLIC {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -493,7 +493,7 @@ export interface ECRPUBLIC {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -501,13 +501,13 @@ export interface ECRPUBLIC {
    */
   uploadLayerPart(
     args: UploadLayerPartCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UploadLayerPartCommandOutput>;
   uploadLayerPart(args: UploadLayerPartCommandInput, cb: (err: any, data?: UploadLayerPartCommandOutput) => void): void;
   uploadLayerPart(
     args: UploadLayerPartCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UploadLayerPartCommandOutput) => void
+    cb: (err: any, data?: UploadLayerPartCommandOutput) => void,
   ): void;
 }
 

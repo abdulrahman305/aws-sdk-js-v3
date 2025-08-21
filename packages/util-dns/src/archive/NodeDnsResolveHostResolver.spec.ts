@@ -26,7 +26,7 @@ describe(NodeDnsResolveHostResolver.name, () => {
       hostName: TEST_VALID_IPV4_ADDRESS,
     };
     const RESOLVED_HOST_ADDRESSES: HostAddress[] = await TEST_HOST_RESOLVER.resolveAddress(
-      CURRENT_TEST_HOST_RESOLVER_ARGUMENTS
+      CURRENT_TEST_HOST_RESOLVER_ARGUMENTS,
     );
     expect(Array.isArray(RESOLVED_HOST_ADDRESSES)).toBe(true);
     expect(RESOLVED_HOST_ADDRESSES).toHaveLength(1);
@@ -46,7 +46,7 @@ describe(NodeDnsResolveHostResolver.name, () => {
       hostName: TEST_VALID_IPV6_ADDRESS,
     };
     const RESOLVED_HOST_ADDRESSES: HostAddress[] = await TEST_HOST_RESOLVER.resolveAddress(
-      CURRENT_TEST_HOST_RESOLVER_ARGUMENTS
+      CURRENT_TEST_HOST_RESOLVER_ARGUMENTS,
     );
     expect(Array.isArray(RESOLVED_HOST_ADDRESSES)).toBe(true);
     expect(RESOLVED_HOST_ADDRESSES).toHaveLength(1);
@@ -63,7 +63,7 @@ describe(NodeDnsResolveHostResolver.name, () => {
       ...TEST_HOST_RESOLVER_ARGUMENTS,
     };
     await expect(TEST_HOST_RESOLVER.resolveAddress(CURRENT_TEST_HOST_RESOLVER_ARGUMENTS)).rejects.toThrowError(
-      "queryA ENOTFOUND TEST_HOST_NAME"
+      "queryA ENOTFOUND TEST_HOST_NAME",
     );
   });
 
@@ -74,7 +74,7 @@ describe(NodeDnsResolveHostResolver.name, () => {
       hostName: HOST_NAME,
     };
     const RESOLVED_HOST_ADDRESSES: HostAddress[] = await TEST_HOST_RESOLVER.resolveAddress(
-      CURRENT_TEST_HOST_RESOLVER_ARGUMENTS
+      CURRENT_TEST_HOST_RESOLVER_ARGUMENTS,
     );
     expect(RESOLVED_HOST_ADDRESSES.length).toBeGreaterThan(0);
     for (const hostAddress of RESOLVED_HOST_ADDRESSES) {
@@ -83,14 +83,14 @@ describe(NodeDnsResolveHostResolver.name, () => {
       expect(hostAddress.address).toBeDefined();
       expect(hostAddress.address.length).toBeGreaterThan(0);
       expect(hostAddress.addressType === HostAddressType.A || hostAddress.addressType === HostAddressType.AAAA).toBe(
-        true
+        true,
       );
     }
   });
 
   test("reportFailureOnAddress() should throw a not implemented error", async () => {
     expect(() => TEST_HOST_RESOLVER.reportFailureOnAddress(TEST_HOST_ADDRESS)).toThrowError(
-      "reportFailureOnAddress(addr) is not implemented"
+      "reportFailureOnAddress(addr) is not implemented",
     );
   });
 
@@ -100,7 +100,7 @@ describe(NodeDnsResolveHostResolver.name, () => {
 
   test("purgeCache(args) should throw a not implemented error", async () => {
     expect(() => TEST_HOST_RESOLVER.purgeCache(TEST_HOST_RESOLVER_ARGUMENTS)).toThrowError(
-      "purgeCache(args?) is not implemented"
+      "purgeCache(args?) is not implemented",
     );
   });
 });

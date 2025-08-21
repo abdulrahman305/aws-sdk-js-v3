@@ -60,7 +60,7 @@ const checkState = async (client: OmicsClient, input: GetRunCommandInput): Promi
  */
 export const waitForRunRunning = async (
   params: WaiterConfiguration<OmicsClient>,
-  input: GetRunCommandInput
+  input: GetRunCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 30, maxDelay: 600 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -72,7 +72,7 @@ export const waitForRunRunning = async (
  */
 export const waitUntilRunRunning = async (
   params: WaiterConfiguration<OmicsClient>,
-  input: GetRunCommandInput
+  input: GetRunCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 30, maxDelay: 600 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

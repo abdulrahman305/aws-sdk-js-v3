@@ -43,7 +43,7 @@ import { PersonalizeRuntimeServiceException as __BaseException } from "../models
  */
 export const se_GetActionRecommendationsCommand = async (
   input: GetActionRecommendationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -58,7 +58,7 @@ export const se_GetActionRecommendationsCommand = async (
       filterValues: (_) => _json(_),
       numResults: [],
       userId: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -69,7 +69,7 @@ export const se_GetActionRecommendationsCommand = async (
  */
 export const se_GetPersonalizedRankingCommand = async (
   input: GetPersonalizedRankingCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -86,7 +86,7 @@ export const se_GetPersonalizedRankingCommand = async (
       inputList: (_) => _json(_),
       metadataColumns: (_) => _json(_),
       userId: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -97,7 +97,7 @@ export const se_GetPersonalizedRankingCommand = async (
  */
 export const se_GetRecommendationsCommand = async (
   input: GetRecommendationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -117,7 +117,7 @@ export const se_GetRecommendationsCommand = async (
       promotions: (_) => _json(_),
       recommenderArn: [],
       userId: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -128,7 +128,7 @@ export const se_GetRecommendationsCommand = async (
  */
 export const de_GetActionRecommendationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetActionRecommendationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -150,7 +150,7 @@ export const de_GetActionRecommendationsCommand = async (
  */
 export const de_GetPersonalizedRankingCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetPersonalizedRankingCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -172,7 +172,7 @@ export const de_GetPersonalizedRankingCommand = async (
  */
 export const de_GetRecommendationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetRecommendationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -221,7 +221,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_InvalidInputExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidInputException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -241,7 +241,7 @@ const de_InvalidInputExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;

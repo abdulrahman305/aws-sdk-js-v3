@@ -63,7 +63,7 @@ const checkState = async (client: OmicsClient, input: GetAnnotationImportJobComm
  */
 export const waitForAnnotationImportJobCreated = async (
   params: WaiterConfiguration<OmicsClient>,
-  input: GetAnnotationImportJobCommandInput
+  input: GetAnnotationImportJobCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 30, maxDelay: 600 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -75,7 +75,7 @@ export const waitForAnnotationImportJobCreated = async (
  */
 export const waitUntilAnnotationImportJobCreated = async (
   params: WaiterConfiguration<OmicsClient>,
-  input: GetAnnotationImportJobCommandInput
+  input: GetAnnotationImportJobCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 30, maxDelay: 600 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

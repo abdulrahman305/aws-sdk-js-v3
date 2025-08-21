@@ -135,16 +135,16 @@ export interface Appflow {
    */
   cancelFlowExecutions(
     args: CancelFlowExecutionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CancelFlowExecutionsCommandOutput>;
   cancelFlowExecutions(
     args: CancelFlowExecutionsCommandInput,
-    cb: (err: any, data?: CancelFlowExecutionsCommandOutput) => void
+    cb: (err: any, data?: CancelFlowExecutionsCommandOutput) => void,
   ): void;
   cancelFlowExecutions(
     args: CancelFlowExecutionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CancelFlowExecutionsCommandOutput) => void
+    cb: (err: any, data?: CancelFlowExecutionsCommandOutput) => void,
   ): void;
 
   /**
@@ -152,16 +152,16 @@ export interface Appflow {
    */
   createConnectorProfile(
     args: CreateConnectorProfileCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateConnectorProfileCommandOutput>;
   createConnectorProfile(
     args: CreateConnectorProfileCommandInput,
-    cb: (err: any, data?: CreateConnectorProfileCommandOutput) => void
+    cb: (err: any, data?: CreateConnectorProfileCommandOutput) => void,
   ): void;
   createConnectorProfile(
     args: CreateConnectorProfileCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateConnectorProfileCommandOutput) => void
+    cb: (err: any, data?: CreateConnectorProfileCommandOutput) => void,
   ): void;
 
   /**
@@ -172,7 +172,7 @@ export interface Appflow {
   createFlow(
     args: CreateFlowCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateFlowCommandOutput) => void
+    cb: (err: any, data?: CreateFlowCommandOutput) => void,
   ): void;
 
   /**
@@ -180,16 +180,16 @@ export interface Appflow {
    */
   deleteConnectorProfile(
     args: DeleteConnectorProfileCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteConnectorProfileCommandOutput>;
   deleteConnectorProfile(
     args: DeleteConnectorProfileCommandInput,
-    cb: (err: any, data?: DeleteConnectorProfileCommandOutput) => void
+    cb: (err: any, data?: DeleteConnectorProfileCommandOutput) => void,
   ): void;
   deleteConnectorProfile(
     args: DeleteConnectorProfileCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteConnectorProfileCommandOutput) => void
+    cb: (err: any, data?: DeleteConnectorProfileCommandOutput) => void,
   ): void;
 
   /**
@@ -200,7 +200,7 @@ export interface Appflow {
   deleteFlow(
     args: DeleteFlowCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteFlowCommandOutput) => void
+    cb: (err: any, data?: DeleteFlowCommandOutput) => void,
   ): void;
 
   /**
@@ -208,16 +208,16 @@ export interface Appflow {
    */
   describeConnector(
     args: DescribeConnectorCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeConnectorCommandOutput>;
   describeConnector(
     args: DescribeConnectorCommandInput,
-    cb: (err: any, data?: DescribeConnectorCommandOutput) => void
+    cb: (err: any, data?: DescribeConnectorCommandOutput) => void,
   ): void;
   describeConnector(
     args: DescribeConnectorCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeConnectorCommandOutput) => void
+    cb: (err: any, data?: DescribeConnectorCommandOutput) => void,
   ): void;
 
   /**
@@ -225,16 +225,16 @@ export interface Appflow {
    */
   describeConnectorEntity(
     args: DescribeConnectorEntityCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeConnectorEntityCommandOutput>;
   describeConnectorEntity(
     args: DescribeConnectorEntityCommandInput,
-    cb: (err: any, data?: DescribeConnectorEntityCommandOutput) => void
+    cb: (err: any, data?: DescribeConnectorEntityCommandOutput) => void,
   ): void;
   describeConnectorEntity(
     args: DescribeConnectorEntityCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeConnectorEntityCommandOutput) => void
+    cb: (err: any, data?: DescribeConnectorEntityCommandOutput) => void,
   ): void;
 
   /**
@@ -243,16 +243,16 @@ export interface Appflow {
   describeConnectorProfiles(): Promise<DescribeConnectorProfilesCommandOutput>;
   describeConnectorProfiles(
     args: DescribeConnectorProfilesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeConnectorProfilesCommandOutput>;
   describeConnectorProfiles(
     args: DescribeConnectorProfilesCommandInput,
-    cb: (err: any, data?: DescribeConnectorProfilesCommandOutput) => void
+    cb: (err: any, data?: DescribeConnectorProfilesCommandOutput) => void,
   ): void;
   describeConnectorProfiles(
     args: DescribeConnectorProfilesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeConnectorProfilesCommandOutput) => void
+    cb: (err: any, data?: DescribeConnectorProfilesCommandOutput) => void,
   ): void;
 
   /**
@@ -261,16 +261,16 @@ export interface Appflow {
   describeConnectors(): Promise<DescribeConnectorsCommandOutput>;
   describeConnectors(
     args: DescribeConnectorsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeConnectorsCommandOutput>;
   describeConnectors(
     args: DescribeConnectorsCommandInput,
-    cb: (err: any, data?: DescribeConnectorsCommandOutput) => void
+    cb: (err: any, data?: DescribeConnectorsCommandOutput) => void,
   ): void;
   describeConnectors(
     args: DescribeConnectorsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeConnectorsCommandOutput) => void
+    cb: (err: any, data?: DescribeConnectorsCommandOutput) => void,
   ): void;
 
   /**
@@ -281,7 +281,7 @@ export interface Appflow {
   describeFlow(
     args: DescribeFlowCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeFlowCommandOutput) => void
+    cb: (err: any, data?: DescribeFlowCommandOutput) => void,
   ): void;
 
   /**
@@ -289,16 +289,16 @@ export interface Appflow {
    */
   describeFlowExecutionRecords(
     args: DescribeFlowExecutionRecordsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeFlowExecutionRecordsCommandOutput>;
   describeFlowExecutionRecords(
     args: DescribeFlowExecutionRecordsCommandInput,
-    cb: (err: any, data?: DescribeFlowExecutionRecordsCommandOutput) => void
+    cb: (err: any, data?: DescribeFlowExecutionRecordsCommandOutput) => void,
   ): void;
   describeFlowExecutionRecords(
     args: DescribeFlowExecutionRecordsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeFlowExecutionRecordsCommandOutput) => void
+    cb: (err: any, data?: DescribeFlowExecutionRecordsCommandOutput) => void,
   ): void;
 
   /**
@@ -307,16 +307,16 @@ export interface Appflow {
   listConnectorEntities(): Promise<ListConnectorEntitiesCommandOutput>;
   listConnectorEntities(
     args: ListConnectorEntitiesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListConnectorEntitiesCommandOutput>;
   listConnectorEntities(
     args: ListConnectorEntitiesCommandInput,
-    cb: (err: any, data?: ListConnectorEntitiesCommandOutput) => void
+    cb: (err: any, data?: ListConnectorEntitiesCommandOutput) => void,
   ): void;
   listConnectorEntities(
     args: ListConnectorEntitiesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListConnectorEntitiesCommandOutput) => void
+    cb: (err: any, data?: ListConnectorEntitiesCommandOutput) => void,
   ): void;
 
   /**
@@ -325,13 +325,13 @@ export interface Appflow {
   listConnectors(): Promise<ListConnectorsCommandOutput>;
   listConnectors(
     args: ListConnectorsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListConnectorsCommandOutput>;
   listConnectors(args: ListConnectorsCommandInput, cb: (err: any, data?: ListConnectorsCommandOutput) => void): void;
   listConnectors(
     args: ListConnectorsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListConnectorsCommandOutput) => void
+    cb: (err: any, data?: ListConnectorsCommandOutput) => void,
   ): void;
 
   /**
@@ -343,7 +343,7 @@ export interface Appflow {
   listFlows(
     args: ListFlowsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListFlowsCommandOutput) => void
+    cb: (err: any, data?: ListFlowsCommandOutput) => void,
   ): void;
 
   /**
@@ -351,16 +351,16 @@ export interface Appflow {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -369,16 +369,16 @@ export interface Appflow {
   registerConnector(): Promise<RegisterConnectorCommandOutput>;
   registerConnector(
     args: RegisterConnectorCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<RegisterConnectorCommandOutput>;
   registerConnector(
     args: RegisterConnectorCommandInput,
-    cb: (err: any, data?: RegisterConnectorCommandOutput) => void
+    cb: (err: any, data?: RegisterConnectorCommandOutput) => void,
   ): void;
   registerConnector(
     args: RegisterConnectorCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RegisterConnectorCommandOutput) => void
+    cb: (err: any, data?: RegisterConnectorCommandOutput) => void,
   ): void;
 
   /**
@@ -387,16 +387,16 @@ export interface Appflow {
   resetConnectorMetadataCache(): Promise<ResetConnectorMetadataCacheCommandOutput>;
   resetConnectorMetadataCache(
     args: ResetConnectorMetadataCacheCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ResetConnectorMetadataCacheCommandOutput>;
   resetConnectorMetadataCache(
     args: ResetConnectorMetadataCacheCommandInput,
-    cb: (err: any, data?: ResetConnectorMetadataCacheCommandOutput) => void
+    cb: (err: any, data?: ResetConnectorMetadataCacheCommandOutput) => void,
   ): void;
   resetConnectorMetadataCache(
     args: ResetConnectorMetadataCacheCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ResetConnectorMetadataCacheCommandOutput) => void
+    cb: (err: any, data?: ResetConnectorMetadataCacheCommandOutput) => void,
   ): void;
 
   /**
@@ -407,7 +407,7 @@ export interface Appflow {
   startFlow(
     args: StartFlowCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartFlowCommandOutput) => void
+    cb: (err: any, data?: StartFlowCommandOutput) => void,
   ): void;
 
   /**
@@ -418,7 +418,7 @@ export interface Appflow {
   stopFlow(
     args: StopFlowCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StopFlowCommandOutput) => void
+    cb: (err: any, data?: StopFlowCommandOutput) => void,
   ): void;
 
   /**
@@ -429,7 +429,7 @@ export interface Appflow {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -437,16 +437,16 @@ export interface Appflow {
    */
   unregisterConnector(
     args: UnregisterConnectorCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UnregisterConnectorCommandOutput>;
   unregisterConnector(
     args: UnregisterConnectorCommandInput,
-    cb: (err: any, data?: UnregisterConnectorCommandOutput) => void
+    cb: (err: any, data?: UnregisterConnectorCommandOutput) => void,
   ): void;
   unregisterConnector(
     args: UnregisterConnectorCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UnregisterConnectorCommandOutput) => void
+    cb: (err: any, data?: UnregisterConnectorCommandOutput) => void,
   ): void;
 
   /**
@@ -457,7 +457,7 @@ export interface Appflow {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -465,16 +465,16 @@ export interface Appflow {
    */
   updateConnectorProfile(
     args: UpdateConnectorProfileCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateConnectorProfileCommandOutput>;
   updateConnectorProfile(
     args: UpdateConnectorProfileCommandInput,
-    cb: (err: any, data?: UpdateConnectorProfileCommandOutput) => void
+    cb: (err: any, data?: UpdateConnectorProfileCommandOutput) => void,
   ): void;
   updateConnectorProfile(
     args: UpdateConnectorProfileCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateConnectorProfileCommandOutput) => void
+    cb: (err: any, data?: UpdateConnectorProfileCommandOutput) => void,
   ): void;
 
   /**
@@ -482,16 +482,16 @@ export interface Appflow {
    */
   updateConnectorRegistration(
     args: UpdateConnectorRegistrationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateConnectorRegistrationCommandOutput>;
   updateConnectorRegistration(
     args: UpdateConnectorRegistrationCommandInput,
-    cb: (err: any, data?: UpdateConnectorRegistrationCommandOutput) => void
+    cb: (err: any, data?: UpdateConnectorRegistrationCommandOutput) => void,
   ): void;
   updateConnectorRegistration(
     args: UpdateConnectorRegistrationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateConnectorRegistrationCommandOutput) => void
+    cb: (err: any, data?: UpdateConnectorRegistrationCommandOutput) => void,
   ): void;
 
   /**
@@ -502,7 +502,7 @@ export interface Appflow {
   updateFlow(
     args: UpdateFlowCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateFlowCommandOutput) => void
+    cb: (err: any, data?: UpdateFlowCommandOutput) => void,
   ): void;
 }
 

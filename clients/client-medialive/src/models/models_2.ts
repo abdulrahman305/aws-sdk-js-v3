@@ -4864,7 +4864,7 @@ export interface UpdateReservationResponse {
  * @internal
  */
 export const DescribeInputDeviceThumbnailResponseFilterSensitiveLog = (
-  obj: DescribeInputDeviceThumbnailResponse
+  obj: DescribeInputDeviceThumbnailResponse,
 ): any => ({
   ...obj,
 });

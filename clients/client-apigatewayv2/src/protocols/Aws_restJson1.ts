@@ -174,7 +174,7 @@ import {
  */
 export const se_CreateApiCommand = async (
   input: CreateApiCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -197,7 +197,7 @@ export const se_CreateApiCommand = async (
       tags: [, (_) => _json(_), `Tags`],
       target: [, , `Target`],
       version: [, , `Version`],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -208,7 +208,7 @@ export const se_CreateApiCommand = async (
  */
 export const se_CreateApiMappingCommand = async (
   input: CreateApiMappingCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -222,7 +222,7 @@ export const se_CreateApiMappingCommand = async (
       apiId: [, , `ApiId`],
       apiMappingKey: [, , `ApiMappingKey`],
       stage: [, , `Stage`],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -233,7 +233,7 @@ export const se_CreateApiMappingCommand = async (
  */
 export const se_CreateAuthorizerCommand = async (
   input: CreateAuthorizerCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -254,7 +254,7 @@ export const se_CreateAuthorizerCommand = async (
       identityValidationExpression: [, , `IdentityValidationExpression`],
       jwtConfiguration: [, (_) => se_JWTConfiguration(_, context), `JwtConfiguration`],
       name: [, , `Name`],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -265,7 +265,7 @@ export const se_CreateAuthorizerCommand = async (
  */
 export const se_CreateDeploymentCommand = async (
   input: CreateDeploymentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -278,7 +278,7 @@ export const se_CreateDeploymentCommand = async (
     take(input, {
       description: [, , `Description`],
       stageName: [, , `StageName`],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -289,7 +289,7 @@ export const se_CreateDeploymentCommand = async (
  */
 export const se_CreateDomainNameCommand = async (
   input: CreateDomainNameCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -303,7 +303,7 @@ export const se_CreateDomainNameCommand = async (
       domainNameConfigurations: [, (_) => se_DomainNameConfigurations(_, context), `DomainNameConfigurations`],
       mutualTlsAuthentication: [, (_) => se_MutualTlsAuthenticationInput(_, context), `MutualTlsAuthentication`],
       tags: [, (_) => _json(_), `Tags`],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -314,7 +314,7 @@ export const se_CreateDomainNameCommand = async (
  */
 export const se_CreateIntegrationCommand = async (
   input: CreateIntegrationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -342,7 +342,7 @@ export const se_CreateIntegrationCommand = async (
       templateSelectionExpression: [, , `TemplateSelectionExpression`],
       timeoutInMillis: [, , `TimeoutInMillis`],
       tlsConfig: [, (_) => se_TlsConfigInput(_, context), `TlsConfig`],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -353,7 +353,7 @@ export const se_CreateIntegrationCommand = async (
  */
 export const se_CreateIntegrationResponseCommand = async (
   input: CreateIntegrationResponseCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -370,7 +370,7 @@ export const se_CreateIntegrationResponseCommand = async (
       responseParameters: [, (_) => _json(_), `ResponseParameters`],
       responseTemplates: [, (_) => _json(_), `ResponseTemplates`],
       templateSelectionExpression: [, , `TemplateSelectionExpression`],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -381,7 +381,7 @@ export const se_CreateIntegrationResponseCommand = async (
  */
 export const se_CreateModelCommand = async (
   input: CreateModelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -396,7 +396,7 @@ export const se_CreateModelCommand = async (
       description: [, , `Description`],
       name: [, , `Name`],
       schema: [, , `Schema`],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -407,7 +407,7 @@ export const se_CreateModelCommand = async (
  */
 export const se_CreateRouteCommand = async (
   input: CreateRouteCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -429,7 +429,7 @@ export const se_CreateRouteCommand = async (
       routeKey: [, , `RouteKey`],
       routeResponseSelectionExpression: [, , `RouteResponseSelectionExpression`],
       target: [, , `Target`],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -440,7 +440,7 @@ export const se_CreateRouteCommand = async (
  */
 export const se_CreateRouteResponseCommand = async (
   input: CreateRouteResponseCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -456,7 +456,7 @@ export const se_CreateRouteResponseCommand = async (
       responseModels: [, (_) => _json(_), `ResponseModels`],
       responseParameters: [, (_) => se_RouteParameters(_, context), `ResponseParameters`],
       routeResponseKey: [, , `RouteResponseKey`],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -467,7 +467,7 @@ export const se_CreateRouteResponseCommand = async (
  */
 export const se_CreateStageCommand = async (
   input: CreateStageCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -488,7 +488,7 @@ export const se_CreateStageCommand = async (
       stageName: [, , `StageName`],
       stageVariables: [, (_) => _json(_), `StageVariables`],
       tags: [, (_) => _json(_), `Tags`],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -499,7 +499,7 @@ export const se_CreateStageCommand = async (
  */
 export const se_CreateVpcLinkCommand = async (
   input: CreateVpcLinkCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -513,7 +513,7 @@ export const se_CreateVpcLinkCommand = async (
       securityGroupIds: [, (_) => _json(_), `SecurityGroupIds`],
       subnetIds: [, (_) => _json(_), `SubnetIds`],
       tags: [, (_) => _json(_), `Tags`],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -524,7 +524,7 @@ export const se_CreateVpcLinkCommand = async (
  */
 export const se_DeleteAccessLogSettingsCommand = async (
   input: DeleteAccessLogSettingsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -541,7 +541,7 @@ export const se_DeleteAccessLogSettingsCommand = async (
  */
 export const se_DeleteApiCommand = async (
   input: DeleteApiCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -557,7 +557,7 @@ export const se_DeleteApiCommand = async (
  */
 export const se_DeleteApiMappingCommand = async (
   input: DeleteApiMappingCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -574,7 +574,7 @@ export const se_DeleteApiMappingCommand = async (
  */
 export const se_DeleteAuthorizerCommand = async (
   input: DeleteAuthorizerCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -591,7 +591,7 @@ export const se_DeleteAuthorizerCommand = async (
  */
 export const se_DeleteCorsConfigurationCommand = async (
   input: DeleteCorsConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -607,7 +607,7 @@ export const se_DeleteCorsConfigurationCommand = async (
  */
 export const se_DeleteDeploymentCommand = async (
   input: DeleteDeploymentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -624,7 +624,7 @@ export const se_DeleteDeploymentCommand = async (
  */
 export const se_DeleteDomainNameCommand = async (
   input: DeleteDomainNameCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -640,7 +640,7 @@ export const se_DeleteDomainNameCommand = async (
  */
 export const se_DeleteIntegrationCommand = async (
   input: DeleteIntegrationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -657,7 +657,7 @@ export const se_DeleteIntegrationCommand = async (
  */
 export const se_DeleteIntegrationResponseCommand = async (
   input: DeleteIntegrationResponseCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -675,7 +675,7 @@ export const se_DeleteIntegrationResponseCommand = async (
  */
 export const se_DeleteModelCommand = async (
   input: DeleteModelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -692,7 +692,7 @@ export const se_DeleteModelCommand = async (
  */
 export const se_DeleteRouteCommand = async (
   input: DeleteRouteCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -709,7 +709,7 @@ export const se_DeleteRouteCommand = async (
  */
 export const se_DeleteRouteRequestParameterCommand = async (
   input: DeleteRouteRequestParameterCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -727,7 +727,7 @@ export const se_DeleteRouteRequestParameterCommand = async (
  */
 export const se_DeleteRouteResponseCommand = async (
   input: DeleteRouteResponseCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -745,7 +745,7 @@ export const se_DeleteRouteResponseCommand = async (
  */
 export const se_DeleteRouteSettingsCommand = async (
   input: DeleteRouteSettingsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -763,7 +763,7 @@ export const se_DeleteRouteSettingsCommand = async (
  */
 export const se_DeleteStageCommand = async (
   input: DeleteStageCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -780,7 +780,7 @@ export const se_DeleteStageCommand = async (
  */
 export const se_DeleteVpcLinkCommand = async (
   input: DeleteVpcLinkCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -796,7 +796,7 @@ export const se_DeleteVpcLinkCommand = async (
  */
 export const se_ExportApiCommand = async (
   input: ExportApiCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -832,7 +832,7 @@ export const se_GetApiCommand = async (input: GetApiCommandInput, context: __Ser
  */
 export const se_GetApiMappingCommand = async (
   input: GetApiMappingCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -849,7 +849,7 @@ export const se_GetApiMappingCommand = async (
  */
 export const se_GetApiMappingsCommand = async (
   input: GetApiMappingsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -869,7 +869,7 @@ export const se_GetApiMappingsCommand = async (
  */
 export const se_GetApisCommand = async (
   input: GetApisCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -888,7 +888,7 @@ export const se_GetApisCommand = async (
  */
 export const se_GetAuthorizerCommand = async (
   input: GetAuthorizerCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -905,7 +905,7 @@ export const se_GetAuthorizerCommand = async (
  */
 export const se_GetAuthorizersCommand = async (
   input: GetAuthorizersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -925,7 +925,7 @@ export const se_GetAuthorizersCommand = async (
  */
 export const se_GetDeploymentCommand = async (
   input: GetDeploymentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -942,7 +942,7 @@ export const se_GetDeploymentCommand = async (
  */
 export const se_GetDeploymentsCommand = async (
   input: GetDeploymentsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -962,7 +962,7 @@ export const se_GetDeploymentsCommand = async (
  */
 export const se_GetDomainNameCommand = async (
   input: GetDomainNameCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -978,7 +978,7 @@ export const se_GetDomainNameCommand = async (
  */
 export const se_GetDomainNamesCommand = async (
   input: GetDomainNamesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -997,7 +997,7 @@ export const se_GetDomainNamesCommand = async (
  */
 export const se_GetIntegrationCommand = async (
   input: GetIntegrationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1014,7 +1014,7 @@ export const se_GetIntegrationCommand = async (
  */
 export const se_GetIntegrationResponseCommand = async (
   input: GetIntegrationResponseCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1032,7 +1032,7 @@ export const se_GetIntegrationResponseCommand = async (
  */
 export const se_GetIntegrationResponsesCommand = async (
   input: GetIntegrationResponsesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1053,7 +1053,7 @@ export const se_GetIntegrationResponsesCommand = async (
  */
 export const se_GetIntegrationsCommand = async (
   input: GetIntegrationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1073,7 +1073,7 @@ export const se_GetIntegrationsCommand = async (
  */
 export const se_GetModelCommand = async (
   input: GetModelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1090,7 +1090,7 @@ export const se_GetModelCommand = async (
  */
 export const se_GetModelsCommand = async (
   input: GetModelsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1110,7 +1110,7 @@ export const se_GetModelsCommand = async (
  */
 export const se_GetModelTemplateCommand = async (
   input: GetModelTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1127,7 +1127,7 @@ export const se_GetModelTemplateCommand = async (
  */
 export const se_GetRouteCommand = async (
   input: GetRouteCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1144,7 +1144,7 @@ export const se_GetRouteCommand = async (
  */
 export const se_GetRouteResponseCommand = async (
   input: GetRouteResponseCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1162,7 +1162,7 @@ export const se_GetRouteResponseCommand = async (
  */
 export const se_GetRouteResponsesCommand = async (
   input: GetRouteResponsesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1183,7 +1183,7 @@ export const se_GetRouteResponsesCommand = async (
  */
 export const se_GetRoutesCommand = async (
   input: GetRoutesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1203,7 +1203,7 @@ export const se_GetRoutesCommand = async (
  */
 export const se_GetStageCommand = async (
   input: GetStageCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1220,7 +1220,7 @@ export const se_GetStageCommand = async (
  */
 export const se_GetStagesCommand = async (
   input: GetStagesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1240,7 +1240,7 @@ export const se_GetStagesCommand = async (
  */
 export const se_GetTagsCommand = async (
   input: GetTagsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1256,7 +1256,7 @@ export const se_GetTagsCommand = async (
  */
 export const se_GetVpcLinkCommand = async (
   input: GetVpcLinkCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1272,7 +1272,7 @@ export const se_GetVpcLinkCommand = async (
  */
 export const se_GetVpcLinksCommand = async (
   input: GetVpcLinksCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1291,7 +1291,7 @@ export const se_GetVpcLinksCommand = async (
  */
 export const se_ImportApiCommand = async (
   input: ImportApiCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1306,7 +1306,7 @@ export const se_ImportApiCommand = async (
   body = JSON.stringify(
     take(input, {
       body: [, , `Body`],
-    })
+    }),
   );
   b.m("PUT").h(headers).q(query).b(body);
   return b.build();
@@ -1317,7 +1317,7 @@ export const se_ImportApiCommand = async (
  */
 export const se_ReimportApiCommand = async (
   input: ReimportApiCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1333,7 +1333,7 @@ export const se_ReimportApiCommand = async (
   body = JSON.stringify(
     take(input, {
       body: [, , `Body`],
-    })
+    }),
   );
   b.m("PUT").h(headers).q(query).b(body);
   return b.build();
@@ -1344,7 +1344,7 @@ export const se_ReimportApiCommand = async (
  */
 export const se_ResetAuthorizersCacheCommand = async (
   input: ResetAuthorizersCacheCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1361,7 +1361,7 @@ export const se_ResetAuthorizersCacheCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1373,7 +1373,7 @@ export const se_TagResourceCommand = async (
   body = JSON.stringify(
     take(input, {
       tags: [, (_) => _json(_), `Tags`],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1384,7 +1384,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1406,7 +1406,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateApiCommand = async (
   input: UpdateApiCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1428,7 +1428,7 @@ export const se_UpdateApiCommand = async (
       routeSelectionExpression: [, , `RouteSelectionExpression`],
       target: [, , `Target`],
       version: [, , `Version`],
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -1439,7 +1439,7 @@ export const se_UpdateApiCommand = async (
  */
 export const se_UpdateApiMappingCommand = async (
   input: UpdateApiMappingCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1454,7 +1454,7 @@ export const se_UpdateApiMappingCommand = async (
       apiId: [, , `ApiId`],
       apiMappingKey: [, , `ApiMappingKey`],
       stage: [, , `Stage`],
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -1465,7 +1465,7 @@ export const se_UpdateApiMappingCommand = async (
  */
 export const se_UpdateAuthorizerCommand = async (
   input: UpdateAuthorizerCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1487,7 +1487,7 @@ export const se_UpdateAuthorizerCommand = async (
       identityValidationExpression: [, , `IdentityValidationExpression`],
       jwtConfiguration: [, (_) => se_JWTConfiguration(_, context), `JwtConfiguration`],
       name: [, , `Name`],
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -1498,7 +1498,7 @@ export const se_UpdateAuthorizerCommand = async (
  */
 export const se_UpdateDeploymentCommand = async (
   input: UpdateDeploymentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1511,7 +1511,7 @@ export const se_UpdateDeploymentCommand = async (
   body = JSON.stringify(
     take(input, {
       description: [, , `Description`],
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -1522,7 +1522,7 @@ export const se_UpdateDeploymentCommand = async (
  */
 export const se_UpdateDomainNameCommand = async (
   input: UpdateDomainNameCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1535,7 +1535,7 @@ export const se_UpdateDomainNameCommand = async (
     take(input, {
       domainNameConfigurations: [, (_) => se_DomainNameConfigurations(_, context), `DomainNameConfigurations`],
       mutualTlsAuthentication: [, (_) => se_MutualTlsAuthenticationInput(_, context), `MutualTlsAuthentication`],
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -1546,7 +1546,7 @@ export const se_UpdateDomainNameCommand = async (
  */
 export const se_UpdateIntegrationCommand = async (
   input: UpdateIntegrationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1575,7 +1575,7 @@ export const se_UpdateIntegrationCommand = async (
       templateSelectionExpression: [, , `TemplateSelectionExpression`],
       timeoutInMillis: [, , `TimeoutInMillis`],
       tlsConfig: [, (_) => se_TlsConfigInput(_, context), `TlsConfig`],
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -1586,7 +1586,7 @@ export const se_UpdateIntegrationCommand = async (
  */
 export const se_UpdateIntegrationResponseCommand = async (
   input: UpdateIntegrationResponseCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1604,7 +1604,7 @@ export const se_UpdateIntegrationResponseCommand = async (
       responseParameters: [, (_) => _json(_), `ResponseParameters`],
       responseTemplates: [, (_) => _json(_), `ResponseTemplates`],
       templateSelectionExpression: [, , `TemplateSelectionExpression`],
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -1615,7 +1615,7 @@ export const se_UpdateIntegrationResponseCommand = async (
  */
 export const se_UpdateModelCommand = async (
   input: UpdateModelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1631,7 +1631,7 @@ export const se_UpdateModelCommand = async (
       description: [, , `Description`],
       name: [, , `Name`],
       schema: [, , `Schema`],
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -1642,7 +1642,7 @@ export const se_UpdateModelCommand = async (
  */
 export const se_UpdateRouteCommand = async (
   input: UpdateRouteCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1665,7 +1665,7 @@ export const se_UpdateRouteCommand = async (
       routeKey: [, , `RouteKey`],
       routeResponseSelectionExpression: [, , `RouteResponseSelectionExpression`],
       target: [, , `Target`],
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -1676,7 +1676,7 @@ export const se_UpdateRouteCommand = async (
  */
 export const se_UpdateRouteResponseCommand = async (
   input: UpdateRouteResponseCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1693,7 +1693,7 @@ export const se_UpdateRouteResponseCommand = async (
       responseModels: [, (_) => _json(_), `ResponseModels`],
       responseParameters: [, (_) => se_RouteParameters(_, context), `ResponseParameters`],
       routeResponseKey: [, , `RouteResponseKey`],
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -1704,7 +1704,7 @@ export const se_UpdateRouteResponseCommand = async (
  */
 export const se_UpdateStageCommand = async (
   input: UpdateStageCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1724,7 +1724,7 @@ export const se_UpdateStageCommand = async (
       description: [, , `Description`],
       routeSettings: [, (_) => se_RouteSettingsMap(_, context), `RouteSettings`],
       stageVariables: [, (_) => _json(_), `StageVariables`],
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -1735,7 +1735,7 @@ export const se_UpdateStageCommand = async (
  */
 export const se_UpdateVpcLinkCommand = async (
   input: UpdateVpcLinkCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1747,7 +1747,7 @@ export const se_UpdateVpcLinkCommand = async (
   body = JSON.stringify(
     take(input, {
       name: [, , `Name`],
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -1758,7 +1758,7 @@ export const se_UpdateVpcLinkCommand = async (
  */
 export const de_CreateApiCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateApiCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1794,7 +1794,7 @@ export const de_CreateApiCommand = async (
  */
 export const de_CreateApiMappingCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateApiMappingCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1818,7 +1818,7 @@ export const de_CreateApiMappingCommand = async (
  */
 export const de_CreateAuthorizerCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateAuthorizerCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1849,7 +1849,7 @@ export const de_CreateAuthorizerCommand = async (
  */
 export const de_CreateDeploymentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateDeploymentCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1875,7 +1875,7 @@ export const de_CreateDeploymentCommand = async (
  */
 export const de_CreateDomainNameCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateDomainNameCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1900,7 +1900,7 @@ export const de_CreateDomainNameCommand = async (
  */
 export const de_CreateIntegrationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateIntegrationCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1940,7 +1940,7 @@ export const de_CreateIntegrationCommand = async (
  */
 export const de_CreateIntegrationResponseCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateIntegrationResponseCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1966,7 +1966,7 @@ export const de_CreateIntegrationResponseCommand = async (
  */
 export const de_CreateModelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateModelCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1991,7 +1991,7 @@ export const de_CreateModelCommand = async (
  */
 export const de_CreateRouteCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateRouteCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2024,7 +2024,7 @@ export const de_CreateRouteCommand = async (
  */
 export const de_CreateRouteResponseCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateRouteResponseCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2049,7 +2049,7 @@ export const de_CreateRouteResponseCommand = async (
  */
 export const de_CreateStageCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateStageCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2083,7 +2083,7 @@ export const de_CreateStageCommand = async (
  */
 export const de_CreateVpcLinkCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateVpcLinkCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2112,7 +2112,7 @@ export const de_CreateVpcLinkCommand = async (
  */
 export const de_DeleteAccessLogSettingsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteAccessLogSettingsCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2129,7 +2129,7 @@ export const de_DeleteAccessLogSettingsCommand = async (
  */
 export const de_DeleteApiCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteApiCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2146,7 +2146,7 @@ export const de_DeleteApiCommand = async (
  */
 export const de_DeleteApiMappingCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteApiMappingCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2163,7 +2163,7 @@ export const de_DeleteApiMappingCommand = async (
  */
 export const de_DeleteAuthorizerCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteAuthorizerCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2180,7 +2180,7 @@ export const de_DeleteAuthorizerCommand = async (
  */
 export const de_DeleteCorsConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteCorsConfigurationCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2197,7 +2197,7 @@ export const de_DeleteCorsConfigurationCommand = async (
  */
 export const de_DeleteDeploymentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteDeploymentCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2214,7 +2214,7 @@ export const de_DeleteDeploymentCommand = async (
  */
 export const de_DeleteDomainNameCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteDomainNameCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2231,7 +2231,7 @@ export const de_DeleteDomainNameCommand = async (
  */
 export const de_DeleteIntegrationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteIntegrationCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2248,7 +2248,7 @@ export const de_DeleteIntegrationCommand = async (
  */
 export const de_DeleteIntegrationResponseCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteIntegrationResponseCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2265,7 +2265,7 @@ export const de_DeleteIntegrationResponseCommand = async (
  */
 export const de_DeleteModelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteModelCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2282,7 +2282,7 @@ export const de_DeleteModelCommand = async (
  */
 export const de_DeleteRouteCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteRouteCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2299,7 +2299,7 @@ export const de_DeleteRouteCommand = async (
  */
 export const de_DeleteRouteRequestParameterCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteRouteRequestParameterCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2316,7 +2316,7 @@ export const de_DeleteRouteRequestParameterCommand = async (
  */
 export const de_DeleteRouteResponseCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteRouteResponseCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2333,7 +2333,7 @@ export const de_DeleteRouteResponseCommand = async (
  */
 export const de_DeleteRouteSettingsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteRouteSettingsCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2350,7 +2350,7 @@ export const de_DeleteRouteSettingsCommand = async (
  */
 export const de_DeleteStageCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteStageCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2367,7 +2367,7 @@ export const de_DeleteStageCommand = async (
  */
 export const de_DeleteVpcLinkCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteVpcLinkCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2384,7 +2384,7 @@ export const de_DeleteVpcLinkCommand = async (
  */
 export const de_ExportApiCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ExportApiCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2402,7 +2402,7 @@ export const de_ExportApiCommand = async (
  */
 export const de_GetApiCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetApiCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2438,7 +2438,7 @@ export const de_GetApiCommand = async (
  */
 export const de_GetApiMappingCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetApiMappingCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2462,7 +2462,7 @@ export const de_GetApiMappingCommand = async (
  */
 export const de_GetApiMappingsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetApiMappingsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2484,7 +2484,7 @@ export const de_GetApiMappingsCommand = async (
  */
 export const de_GetApisCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetApisCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2506,7 +2506,7 @@ export const de_GetApisCommand = async (
  */
 export const de_GetAuthorizerCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetAuthorizerCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2537,7 +2537,7 @@ export const de_GetAuthorizerCommand = async (
  */
 export const de_GetAuthorizersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetAuthorizersCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2559,7 +2559,7 @@ export const de_GetAuthorizersCommand = async (
  */
 export const de_GetDeploymentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetDeploymentCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2585,7 +2585,7 @@ export const de_GetDeploymentCommand = async (
  */
 export const de_GetDeploymentsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetDeploymentsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2607,7 +2607,7 @@ export const de_GetDeploymentsCommand = async (
  */
 export const de_GetDomainNameCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetDomainNameCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2632,7 +2632,7 @@ export const de_GetDomainNameCommand = async (
  */
 export const de_GetDomainNamesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetDomainNamesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2654,7 +2654,7 @@ export const de_GetDomainNamesCommand = async (
  */
 export const de_GetIntegrationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetIntegrationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2694,7 +2694,7 @@ export const de_GetIntegrationCommand = async (
  */
 export const de_GetIntegrationResponseCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetIntegrationResponseCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2720,7 +2720,7 @@ export const de_GetIntegrationResponseCommand = async (
  */
 export const de_GetIntegrationResponsesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetIntegrationResponsesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2742,7 +2742,7 @@ export const de_GetIntegrationResponsesCommand = async (
  */
 export const de_GetIntegrationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetIntegrationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2764,7 +2764,7 @@ export const de_GetIntegrationsCommand = async (
  */
 export const de_GetModelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetModelCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2789,7 +2789,7 @@ export const de_GetModelCommand = async (
  */
 export const de_GetModelsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetModelsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2811,7 +2811,7 @@ export const de_GetModelsCommand = async (
  */
 export const de_GetModelTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetModelTemplateCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2832,7 +2832,7 @@ export const de_GetModelTemplateCommand = async (
  */
 export const de_GetRouteCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetRouteCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2865,7 +2865,7 @@ export const de_GetRouteCommand = async (
  */
 export const de_GetRouteResponseCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetRouteResponseCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2890,7 +2890,7 @@ export const de_GetRouteResponseCommand = async (
  */
 export const de_GetRouteResponsesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetRouteResponsesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2912,7 +2912,7 @@ export const de_GetRouteResponsesCommand = async (
  */
 export const de_GetRoutesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetRoutesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2934,7 +2934,7 @@ export const de_GetRoutesCommand = async (
  */
 export const de_GetStageCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetStageCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2968,7 +2968,7 @@ export const de_GetStageCommand = async (
  */
 export const de_GetStagesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetStagesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2990,7 +2990,7 @@ export const de_GetStagesCommand = async (
  */
 export const de_GetTagsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetTagsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3011,7 +3011,7 @@ export const de_GetTagsCommand = async (
  */
 export const de_GetVpcLinkCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetVpcLinkCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3040,7 +3040,7 @@ export const de_GetVpcLinkCommand = async (
  */
 export const de_GetVpcLinksCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetVpcLinksCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3062,7 +3062,7 @@ export const de_GetVpcLinksCommand = async (
  */
 export const de_ImportApiCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ImportApiCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3098,7 +3098,7 @@ export const de_ImportApiCommand = async (
  */
 export const de_ReimportApiCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ReimportApiCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3134,7 +3134,7 @@ export const de_ReimportApiCommand = async (
  */
 export const de_ResetAuthorizersCacheCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResetAuthorizersCacheCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3151,7 +3151,7 @@ export const de_ResetAuthorizersCacheCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3168,7 +3168,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3185,7 +3185,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateApiCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateApiCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3221,7 +3221,7 @@ export const de_UpdateApiCommand = async (
  */
 export const de_UpdateApiMappingCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateApiMappingCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3245,7 +3245,7 @@ export const de_UpdateApiMappingCommand = async (
  */
 export const de_UpdateAuthorizerCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateAuthorizerCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3276,7 +3276,7 @@ export const de_UpdateAuthorizerCommand = async (
  */
 export const de_UpdateDeploymentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateDeploymentCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3302,7 +3302,7 @@ export const de_UpdateDeploymentCommand = async (
  */
 export const de_UpdateDomainNameCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateDomainNameCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3327,7 +3327,7 @@ export const de_UpdateDomainNameCommand = async (
  */
 export const de_UpdateIntegrationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateIntegrationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3367,7 +3367,7 @@ export const de_UpdateIntegrationCommand = async (
  */
 export const de_UpdateIntegrationResponseCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateIntegrationResponseCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3393,7 +3393,7 @@ export const de_UpdateIntegrationResponseCommand = async (
  */
 export const de_UpdateModelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateModelCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3418,7 +3418,7 @@ export const de_UpdateModelCommand = async (
  */
 export const de_UpdateRouteCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateRouteCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3451,7 +3451,7 @@ export const de_UpdateRouteCommand = async (
  */
 export const de_UpdateRouteResponseCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateRouteResponseCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3476,7 +3476,7 @@ export const de_UpdateRouteResponseCommand = async (
  */
 export const de_UpdateStageCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateStageCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3510,7 +3510,7 @@ export const de_UpdateStageCommand = async (
  */
 export const de_UpdateVpcLinkCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateVpcLinkCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3575,7 +3575,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -3647,7 +3647,7 @@ const de_NotFoundExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_TooManyRequestsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyRequestsException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -4233,13 +4233,16 @@ const de_Route = (output: any, context: __SerdeContext): Route => {
  * deserializeAws_restJson1RouteParameters
  */
 const de_RouteParameters = (output: any, context: __SerdeContext): Record<string, ParameterConstraints> => {
-  return Object.entries(output).reduce((acc: Record<string, ParameterConstraints>, [key, value]: [string, any]) => {
-    if (value === null) {
+  return Object.entries(output).reduce(
+    (acc: Record<string, ParameterConstraints>, [key, value]: [string, any]) => {
+      if (value === null) {
+        return acc;
+      }
+      acc[key as string] = de_ParameterConstraints(value, context);
       return acc;
-    }
-    acc[key as string] = de_ParameterConstraints(value, context);
-    return acc;
-  }, {} as Record<string, ParameterConstraints>);
+    },
+    {} as Record<string, ParameterConstraints>,
+  );
 };
 
 /**
@@ -4272,13 +4275,16 @@ const de_RouteSettings = (output: any, context: __SerdeContext): RouteSettings =
  * deserializeAws_restJson1RouteSettingsMap
  */
 const de_RouteSettingsMap = (output: any, context: __SerdeContext): Record<string, RouteSettings> => {
-  return Object.entries(output).reduce((acc: Record<string, RouteSettings>, [key, value]: [string, any]) => {
-    if (value === null) {
+  return Object.entries(output).reduce(
+    (acc: Record<string, RouteSettings>, [key, value]: [string, any]) => {
+      if (value === null) {
+        return acc;
+      }
+      acc[key as string] = de_RouteSettings(value, context);
       return acc;
-    }
-    acc[key as string] = de_RouteSettings(value, context);
-    return acc;
-  }, {} as Record<string, RouteSettings>);
+    },
+    {} as Record<string, RouteSettings>,
+  );
 };
 
 // de_SecurityGroupIdList omitted.

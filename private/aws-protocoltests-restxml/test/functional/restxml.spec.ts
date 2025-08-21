@@ -600,7 +600,7 @@ it("BodyWithXmlName:Response", async () => {
       {
         "content-type": "application/xml",
       },
-      `<Ahoy><nested><name>Phreddy</name></nested></Ahoy>`
+      `<Ahoy><nested><name>Phreddy</name></nested></Ahoy>`,
     ),
   });
 
@@ -747,7 +747,7 @@ it("RestXmlDateTimeWithNegativeOffset:Response", async () => {
       `<DatetimeOffsetsOutput>
           <datetime>2019-12-16T22:48:18-01:00</datetime>
       </DatetimeOffsetsOutput>
-      `
+      `,
     ),
   });
 
@@ -788,7 +788,7 @@ it("RestXmlDateTimeWithPositiveOffset:Response", async () => {
       `<DatetimeOffsetsOutput>
           <datetime>2019-12-17T00:48:18+01:00</datetime>
       </DatetimeOffsetsOutput>
-      `
+      `,
     ),
   });
 
@@ -1047,7 +1047,7 @@ it("FlattenedXmlMap:Response", async () => {
               <key>baz</key>
               <value>Baz</value>
           </myMap>
-      </FlattenedXmlMapResponse>`
+      </FlattenedXmlMapResponse>`,
     ),
   });
 
@@ -1147,7 +1147,7 @@ it("FlattenedXmlMapWithXmlName:Response", async () => {
               <K>b</K>
               <V>B</V>
           </KVP>
-      </FlattenedXmlMapWithXmlNameResponse>`
+      </FlattenedXmlMapWithXmlNameResponse>`,
     ),
   });
 
@@ -1198,7 +1198,7 @@ it("RestXmlFlattenedXmlMapWithXmlNamespace:Response", async () => {
               <K xmlns="https://the-key.example.com">b</K>
               <V xmlns="https://the-value.example.com">B</V>
           </KVP>
-      </FlattenedXmlMapWithXmlNamespaceOutput>`
+      </FlattenedXmlMapWithXmlNamespaceOutput>`,
     ),
   });
 
@@ -1243,7 +1243,7 @@ it("RestXmlDateTimeWithFractionalSeconds:Response", async () => {
       `<FractionalSecondsOutput>
           <datetime>2000-01-02T20:34:56.123Z</datetime>
       </FractionalSecondsOutput>
-      `
+      `,
     ),
   });
 
@@ -1281,7 +1281,7 @@ it("GreetingWithErrors:Response", async () => {
       {
         "x-greeting": "Hello",
       },
-      ``
+      ``,
     ),
   });
 
@@ -1328,7 +1328,7 @@ it("InvalidGreetingError:Error:GreetingWithErrors", async () => {
          </Error>
          <RequestId>foo-id</RequestId>
       </ErrorResponse>
-      `
+      `,
     ),
   });
 
@@ -1381,7 +1381,7 @@ it("ComplexError:Error:GreetingWithErrors", async () => {
          </Error>
          <RequestId>foo-id</RequestId>
       </ErrorResponse>
-      `
+      `,
     ),
   });
 
@@ -1559,7 +1559,7 @@ it("HttpPayloadTraitsWithBlob:Response", async () => {
       {
         "x-foo": "Foo",
       },
-      `blobby blob blob`
+      `blobby blob blob`,
     ),
   });
 
@@ -1599,7 +1599,7 @@ it("HttpPayloadTraitsWithNoBlobBody:Response", async () => {
       {
         "x-foo": "Foo",
       },
-      ``
+      ``,
     ),
   });
 
@@ -1679,7 +1679,7 @@ it("HttpPayloadTraitsWithMediaTypeWithBlob:Response", async () => {
         "x-foo": "Foo",
         "content-type": "text/plain",
       },
-      `blobby blob blob`
+      `blobby blob blob`,
     ),
   });
 
@@ -1758,7 +1758,7 @@ it("HttpPayloadWithMemberXmlName:Response", async () => {
       {
         "content-type": "application/xml",
       },
-      `<Hola><name>Phreddy</name></Hola>`
+      `<Hola><name>Phreddy</name></Hola>`,
     ),
   });
 
@@ -1847,7 +1847,7 @@ it("HttpPayloadWithStructure:Response", async () => {
           <greeting>hello</greeting>
           <name>Phreddy</name>
       </NestedPayload>
-      `
+      `,
     ),
   });
 
@@ -1959,7 +1959,7 @@ it("RestXmlHttpPayloadWithUnion:Response", async () => {
       },
       `<UnionPayload>
           <greeting>hello</greeting>
-      </UnionPayload>`
+      </UnionPayload>`,
     ),
   });
 
@@ -1999,7 +1999,7 @@ it.skip("RestXmlHttpPayloadWithUnsetUnion:Response", async () => {
       {
         "content-length": "0",
       },
-      ``
+      ``,
     ),
   });
 
@@ -2067,7 +2067,7 @@ it("HttpPayloadWithXmlName:Response", async () => {
       {
         "content-type": "application/xml",
       },
-      `<Hello><name>Phreddy</name></Hello>`
+      `<Hello><name>Phreddy</name></Hello>`,
     ),
   });
 
@@ -2150,7 +2150,7 @@ it("HttpPayloadWithXmlNamespace:Response", async () => {
       },
       `<PayloadWithXmlNamespace xmlns="http://foo.com">
           <name>Phreddy</name>
-      </PayloadWithXmlNamespace>`
+      </PayloadWithXmlNamespace>`,
     ),
   });
 
@@ -2233,7 +2233,7 @@ it("HttpPayloadWithXmlNamespaceAndPrefix:Response", async () => {
       },
       `<PayloadWithXmlNamespaceAndPrefix xmlns:baz="http://foo.com">
           <name>Phreddy</name>
-      </PayloadWithXmlNamespaceAndPrefix>`
+      </PayloadWithXmlNamespaceAndPrefix>`,
     ),
   });
 
@@ -2351,7 +2351,7 @@ it("HttpPrefixHeadersArePresent:Response", async () => {
         "x-foo-abc": "Abc value",
         "x-foo-def": "Def value",
       },
-      ``
+      ``,
     ),
   });
 
@@ -2395,7 +2395,7 @@ it("HttpPrefixHeadersAreNotPresent:Response", async () => {
       {
         "x-foo": "Foo",
       },
-      ``
+      ``,
     ),
   });
 
@@ -2628,7 +2628,7 @@ it("HttpRequestLabelEscaping:Request", async () => {
     const r = err.request;
     expect(r.method).toBe("GET");
     expect(r.path).toBe(
-      "/HttpRequestWithLabels/%20%25%3A%2F%3F%23%5B%5D%40%21%24%26%27%28%29%2A%2B%2C%3B%3D%F0%9F%98%B9/1/2/3/4.1/5.1/true/2019-12-16T23%3A48%3A18Z"
+      "/HttpRequestWithLabels/%20%25%3A%2F%3F%23%5B%5D%40%21%24%26%27%28%29%2A%2B%2C%3B%3D%F0%9F%98%B9/1/2/3/4.1/5.1/true/2019-12-16T23%3A48%3A18Z",
     );
 
     expect(r.body).toBeFalsy();
@@ -2671,7 +2671,7 @@ it("HttpRequestWithLabelsAndTimestampFormat:Request", async () => {
     const r = err.request;
     expect(r.method).toBe("GET");
     expect(r.path).toBe(
-      "/HttpRequestWithLabelsAndTimestampFormat/1576540098/Mon%2C%2016%20Dec%202019%2023%3A48%3A18%20GMT/2019-12-16T23%3A48%3A18Z/2019-12-16T23%3A48%3A18Z/1576540098/Mon%2C%2016%20Dec%202019%2023%3A48%3A18%20GMT/2019-12-16T23%3A48%3A18Z"
+      "/HttpRequestWithLabelsAndTimestampFormat/1576540098/Mon%2C%2016%20Dec%202019%2023%3A48%3A18%20GMT/2019-12-16T23%3A48%3A18Z/2019-12-16T23%3A48%3A18Z/1576540098/Mon%2C%2016%20Dec%202019%2023%3A48%3A18%20GMT/2019-12-16T23%3A48%3A18Z",
     );
 
     expect(r.body).toBeFalsy();
@@ -2690,7 +2690,7 @@ it("RestXmlHttpResponseCode:Response", async () => {
       {
         "content-type": "application/xml",
       },
-      ``
+      ``,
     ),
   });
 
@@ -2786,7 +2786,7 @@ it("IgnoreQueryParamsInResponse:Response", async () => {
       {
         "content-type": "application/xml",
       },
-      `<IgnoreQueryParamsInResponseOutput><baz>bam</baz></IgnoreQueryParamsInResponseOutput>`
+      `<IgnoreQueryParamsInResponseOutput><baz>bam</baz></IgnoreQueryParamsInResponseOutput>`,
     ),
   });
 
@@ -3144,7 +3144,7 @@ it("InputAndOutputWithStringHeaders:Response", async () => {
         "x-stringset": "a, b, c",
         "x-string": "Hello",
       },
-      ``
+      ``,
     ),
   });
 
@@ -3192,7 +3192,7 @@ it("InputAndOutputWithNumericHeaders:Response", async () => {
         "x-double": "1.1",
         "x-short": "123",
       },
-      ``
+      ``,
     ),
   });
 
@@ -3250,7 +3250,7 @@ it("InputAndOutputWithBooleanHeaders:Response", async () => {
         "x-boolean1": "true",
         "x-boolean2": "false",
       },
-      ``
+      ``,
     ),
   });
 
@@ -3292,7 +3292,7 @@ it("InputAndOutputWithTimestampHeaders:Response", async () => {
       {
         "x-timestamplist": "Mon, 16 Dec 2019 23:48:18 GMT, Mon, 16 Dec 2019 23:48:18 GMT",
       },
-      ``
+      ``,
     ),
   });
 
@@ -3331,7 +3331,7 @@ it("InputAndOutputWithEnumHeaders:Response", async () => {
         "x-enumlist": "Foo, Bar, Baz",
         "x-enum": "Foo",
       },
-      ``
+      ``,
     ),
   });
 
@@ -3372,7 +3372,7 @@ it("RestXmlSupportsNaNFloatHeaderOutputs:Response", async () => {
         "x-float": "NaN",
         "x-double": "NaN",
       },
-      ``
+      ``,
     ),
   });
 
@@ -3413,7 +3413,7 @@ it("RestXmlSupportsInfinityFloatHeaderOutputs:Response", async () => {
         "x-float": "Infinity",
         "x-double": "Infinity",
       },
-      ``
+      ``,
     ),
   });
 
@@ -3454,7 +3454,7 @@ it("RestXmlSupportsNegativeInfinityFloatHeaderOutputs:Response", async () => {
         "x-float": "-Infinity",
         "x-double": "-Infinity",
       },
-      ``
+      ``,
     ),
   });
 
@@ -3609,7 +3609,7 @@ it("NestedXmlMapResponse:Response", async () => {
                   </value>
               </entry>
           </nestedMap>
-      </NestedXmlMapsResponse>`
+      </NestedXmlMapsResponse>`,
     ),
   });
 
@@ -3662,7 +3662,7 @@ it("FlatNestedXmlMapResponse:Response", async () => {
                   </entry>
               </value>
           </flatNestedMap>
-      </NestedXmlMapsResponse>`
+      </NestedXmlMapsResponse>`,
     ),
   });
 
@@ -4184,7 +4184,7 @@ it("RecursiveShapes:Response", async () => {
               </nested>
           </nested>
       </RecursiveShapesResponse>
-      `
+      `,
     ),
   });
 
@@ -4570,7 +4570,7 @@ it("SimpleScalarProperties:Response", async () => {
           <floatValue>5.5</floatValue>
           <DoubleDribble>6.5</DoubleDribble>
       </SimpleScalarPropertiesResponse>
-      `
+      `,
     ),
   });
 
@@ -4636,7 +4636,7 @@ it("SimpleScalarPropertiesComplexEscapes:Response", async () => {
       `<SimpleScalarPropertiesResponse>
           <stringValue>escaped data: &amp;lt;&#xD;&#10;</stringValue>
       </SimpleScalarPropertiesResponse>
-      `
+      `,
     ),
   });
 
@@ -4680,7 +4680,7 @@ it("SimpleScalarPropertiesWithEscapedCharacter:Response", async () => {
       `<SimpleScalarPropertiesResponse>
           <stringValue>&lt;string&gt;</stringValue>
       </SimpleScalarPropertiesResponse>
-      `
+      `,
     ),
   });
 
@@ -4727,7 +4727,7 @@ it("SimpleScalarPropertiesWithXMLPreamble:Response", async () => {
           <stringValue>string</stringValue>
           <!--xml comment-->
       </SimpleScalarPropertiesResponse>
-      `
+      `,
     ),
   });
 
@@ -4772,7 +4772,7 @@ it("SimpleScalarPropertiesWithWhiteSpace:Response", async () => {
       <SimpleScalarPropertiesResponse>
           <stringValue> string with white    space </stringValue>
       </SimpleScalarPropertiesResponse>
-      `
+      `,
     ),
   });
 
@@ -4817,7 +4817,7 @@ it("SimpleScalarPropertiesPureWhiteSpace:Response", async () => {
       <SimpleScalarPropertiesResponse>
           <stringValue>  </stringValue>
       </SimpleScalarPropertiesResponse>
-      `
+      `,
     ),
   });
 
@@ -4861,7 +4861,7 @@ it("RestXmlSupportsNaNFloatOutputs:Response", async () => {
           <floatValue>NaN</floatValue>
           <DoubleDribble>NaN</DoubleDribble>
       </SimpleScalarPropertiesResponse>
-      `
+      `,
     ),
   });
 
@@ -4905,7 +4905,7 @@ it("RestXmlSupportsInfinityFloatOutputs:Response", async () => {
           <floatValue>Infinity</floatValue>
           <DoubleDribble>Infinity</DoubleDribble>
       </SimpleScalarPropertiesResponse>
-      `
+      `,
     ),
   });
 
@@ -4949,7 +4949,7 @@ it("RestXmlSupportsNegativeInfinityFloatOutputs:Response", async () => {
           <floatValue>-Infinity</floatValue>
           <DoubleDribble>-Infinity</DoubleDribble>
       </SimpleScalarPropertiesResponse>
-      `
+      `,
     ),
   });
 
@@ -5051,7 +5051,7 @@ it("TimestampFormatHeaders:Response", async () => {
         "x-memberhttpdate": "Mon, 16 Dec 2019 23:48:18 GMT",
         "x-targetdatetime": "2019-12-16T23:48:18Z",
       },
-      ``
+      ``,
     ),
   });
 
@@ -5186,7 +5186,7 @@ it("XmlAttributes:Response", async () => {
       `<XmlAttributesResponse test="test">
           <foo>hi</foo>
       </XmlAttributesResponse>
-      `
+      `,
     ),
   });
 
@@ -5272,7 +5272,7 @@ it("XmlAttributesOnPayload:Response", async () => {
       `<XmlAttributesPayloadResponse test="test">
           <foo>hi</foo>
       </XmlAttributesPayloadResponse>
-      `
+      `,
     ),
   });
 
@@ -5356,7 +5356,7 @@ it("XmlBlobs:Response", async () => {
       `<XmlBlobsResponse>
           <data>dmFsdWU=</data>
       </XmlBlobsResponse>
-      `
+      `,
     ),
   });
 
@@ -5397,7 +5397,7 @@ it("XmlEmptyBlobs:Response", async () => {
       `<XmlEmptyBlobsResponse>
           <data></data>
       </XmlEmptyBlobsResponse>
-      `
+      `,
     ),
   });
 
@@ -5438,7 +5438,7 @@ it("XmlEmptySelfClosedBlobs:Response", async () => {
       `<XmlEmptyBlobsResponse>
           <data/>
       </XmlEmptyBlobsResponse>
-      `
+      `,
     ),
   });
 
@@ -5522,7 +5522,7 @@ it("XmlEmptyLists:Response", async () => {
               <stringList/>
               <stringSet></stringSet>
       </XmlEmptyListsResponse>
-      `
+      `,
     ),
   });
 
@@ -5604,7 +5604,7 @@ it("XmlEmptyMaps:Response", async () => {
       `<XmlEmptyMapsResponse>
           <myMap></myMap>
       </XmlEmptyMapsResponse>
-      `
+      `,
     ),
   });
 
@@ -5645,7 +5645,7 @@ it("XmlEmptySelfClosedMaps:Response", async () => {
       `<XmlEmptyMapsResponse>
           <myMap/>
       </XmlEmptyMapsResponse>
-      `
+      `,
     ),
   });
 
@@ -5725,7 +5725,7 @@ it("XmlEmptyStrings:Response", async () => {
       `<XmlEmptyStringsResponse>
           <emptyString></emptyString>
       </XmlEmptyStringsResponse>
-      `
+      `,
     ),
   });
 
@@ -5766,7 +5766,7 @@ it("XmlEmptySelfClosedStrings:Response", async () => {
       `<XmlEmptyStringsResponse>
           <emptyString/>
       </XmlEmptyStringsResponse>
-      `
+      `,
     ),
   });
 
@@ -5900,7 +5900,7 @@ it("XmlEnums:Response", async () => {
               </entry>
           </fooEnumMap>
       </XmlEnumsResponse>
-      `
+      `,
     ),
   });
 
@@ -6056,7 +6056,7 @@ it("XmlIntEnums:Response", async () => {
               </entry>
           </intEnumMap>
       </XmlIntEnumsResponse>
-      `
+      `,
     ),
   });
 
@@ -6348,7 +6348,7 @@ it("XmlLists:Response", async () => {
               <other>8</other>
           </flattenedStructureList>
       </XmlListsResponse>
-      `
+      `,
     ),
   });
 
@@ -6526,7 +6526,7 @@ it("XmlMaps:Response", async () => {
               </entry>
           </myMap>
       </XmlMapsResponse>
-      `
+      `,
     ),
   });
 
@@ -6648,7 +6648,7 @@ it("XmlMapsXmlName:Response", async () => {
               </entry>
           </myMap>
       </XmlMapsXmlNameResponse>
-      `
+      `,
     ),
   });
 
@@ -6756,7 +6756,7 @@ it("RestXmlXmlMapWithXmlNamespace:Response", async () => {
                   <V xmlns="https://the-value.example.com">B</V>
               </entry>
           </KVP>
-      </XmlMapWithXmlNamespaceResponse>`
+      </XmlMapWithXmlNamespaceResponse>`,
     ),
   });
 
@@ -6856,7 +6856,7 @@ it("XmlNamespaces:Response", async () => {
               </values>
           </nested>
       </XmlNamespacesResponse>
-      `
+      `,
     ),
   });
 
@@ -7174,7 +7174,7 @@ it("XmlTimestamps:Response", async () => {
       `<XmlTimestampsResponse>
           <normal>2014-04-29T18:30:38Z</normal>
       </XmlTimestampsResponse>
-      `
+      `,
     ),
   });
 
@@ -7215,7 +7215,7 @@ it("XmlTimestampsWithDateTimeFormat:Response", async () => {
       `<XmlTimestampsResponse>
           <dateTime>2014-04-29T18:30:38Z</dateTime>
       </XmlTimestampsResponse>
-      `
+      `,
     ),
   });
 
@@ -7256,7 +7256,7 @@ it("XmlTimestampsWithDateTimeOnTargetFormat:Response", async () => {
       `<XmlTimestampsResponse>
           <dateTimeOnTarget>2014-04-29T18:30:38Z</dateTimeOnTarget>
       </XmlTimestampsResponse>
-      `
+      `,
     ),
   });
 
@@ -7297,7 +7297,7 @@ it("XmlTimestampsWithEpochSecondsFormat:Response", async () => {
       `<XmlTimestampsResponse>
           <epochSeconds>1398796238</epochSeconds>
       </XmlTimestampsResponse>
-      `
+      `,
     ),
   });
 
@@ -7338,7 +7338,7 @@ it("XmlTimestampsWithEpochSecondsOnTargetFormat:Response", async () => {
       `<XmlTimestampsResponse>
           <epochSecondsOnTarget>1398796238</epochSecondsOnTarget>
       </XmlTimestampsResponse>
-      `
+      `,
     ),
   });
 
@@ -7379,7 +7379,7 @@ it("XmlTimestampsWithHttpDateFormat:Response", async () => {
       `<XmlTimestampsResponse>
           <httpDate>Tue, 29 Apr 2014 18:30:38 GMT</httpDate>
       </XmlTimestampsResponse>
-      `
+      `,
     ),
   });
 
@@ -7420,7 +7420,7 @@ it("XmlTimestampsWithHttpDateOnTargetFormat:Response", async () => {
       `<XmlTimestampsResponse>
           <httpDateOnTarget>Tue, 29 Apr 2014 18:30:38 GMT</httpDateOnTarget>
       </XmlTimestampsResponse>
-      `
+      `,
     ),
   });
 
@@ -7673,7 +7673,7 @@ it("XmlUnionsWithStructMember:Response", async () => {
              </structValue>
           </unionValue>
       </XmlUnionsResponse>
-      `
+      `,
     ),
   });
 
@@ -7734,7 +7734,7 @@ it("XmlUnionsWithStringMember:Response", async () => {
             <stringValue>some string</stringValue>
          </unionValue>
       </XmlUnionsResponse>
-      `
+      `,
     ),
   });
 
@@ -7779,7 +7779,7 @@ it("XmlUnionsWithBooleanMember:Response", async () => {
             <booleanValue>true</booleanValue>
          </unionValue>
       </XmlUnionsResponse>
-      `
+      `,
     ),
   });
 
@@ -7826,7 +7826,7 @@ it("XmlUnionsWithUnionMember:Response", async () => {
             </unionValue>
          </unionValue>
       </XmlUnionsResponse>
-      `
+      `,
     ),
   });
 
@@ -7863,7 +7863,7 @@ it("XmlUnionsWithUnionMember:Response", async () => {
 const compareEquivalentUnknownTypeBodies = (
   utf8Encoder: __Encoder,
   expectedBody: string,
-  generatedBody: string | Uint8Array
+  generatedBody: string | Uint8Array,
 ): Object => {
   const expectedParts = { Value: expectedBody };
   const generatedParts = {

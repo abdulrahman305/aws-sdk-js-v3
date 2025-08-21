@@ -25,7 +25,7 @@ export interface WebSocketResolvedConfig {
 }
 
 export const resolveWebSocketConfig = <T>(
-  input: T & WebSocketInputConfig & PreviouslyResolved
+  input: T & WebSocketInputConfig & PreviouslyResolved,
 ): T & WebSocketResolvedConfig => ({
   ...input,
   signer: async (authScheme: AuthScheme) => {

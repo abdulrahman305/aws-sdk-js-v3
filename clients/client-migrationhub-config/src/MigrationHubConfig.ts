@@ -37,16 +37,16 @@ export interface MigrationHubConfig {
    */
   createHomeRegionControl(
     args: CreateHomeRegionControlCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateHomeRegionControlCommandOutput>;
   createHomeRegionControl(
     args: CreateHomeRegionControlCommandInput,
-    cb: (err: any, data?: CreateHomeRegionControlCommandOutput) => void
+    cb: (err: any, data?: CreateHomeRegionControlCommandOutput) => void,
   ): void;
   createHomeRegionControl(
     args: CreateHomeRegionControlCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateHomeRegionControlCommandOutput) => void
+    cb: (err: any, data?: CreateHomeRegionControlCommandOutput) => void,
   ): void;
 
   /**
@@ -54,16 +54,16 @@ export interface MigrationHubConfig {
    */
   deleteHomeRegionControl(
     args: DeleteHomeRegionControlCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteHomeRegionControlCommandOutput>;
   deleteHomeRegionControl(
     args: DeleteHomeRegionControlCommandInput,
-    cb: (err: any, data?: DeleteHomeRegionControlCommandOutput) => void
+    cb: (err: any, data?: DeleteHomeRegionControlCommandOutput) => void,
   ): void;
   deleteHomeRegionControl(
     args: DeleteHomeRegionControlCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteHomeRegionControlCommandOutput) => void
+    cb: (err: any, data?: DeleteHomeRegionControlCommandOutput) => void,
   ): void;
 
   /**
@@ -72,16 +72,16 @@ export interface MigrationHubConfig {
   describeHomeRegionControls(): Promise<DescribeHomeRegionControlsCommandOutput>;
   describeHomeRegionControls(
     args: DescribeHomeRegionControlsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeHomeRegionControlsCommandOutput>;
   describeHomeRegionControls(
     args: DescribeHomeRegionControlsCommandInput,
-    cb: (err: any, data?: DescribeHomeRegionControlsCommandOutput) => void
+    cb: (err: any, data?: DescribeHomeRegionControlsCommandOutput) => void,
   ): void;
   describeHomeRegionControls(
     args: DescribeHomeRegionControlsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeHomeRegionControlsCommandOutput) => void
+    cb: (err: any, data?: DescribeHomeRegionControlsCommandOutput) => void,
   ): void;
 
   /**
@@ -93,7 +93,7 @@ export interface MigrationHubConfig {
   getHomeRegion(
     args: GetHomeRegionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetHomeRegionCommandOutput) => void
+    cb: (err: any, data?: GetHomeRegionCommandOutput) => void,
   ): void;
 }
 

@@ -826,7 +826,7 @@ import {
  */
 export const se_AllocateStaticIpCommand = async (
   input: AllocateStaticIpCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("AllocateStaticIp");
   let body: any;
@@ -839,7 +839,7 @@ export const se_AllocateStaticIpCommand = async (
  */
 export const se_AttachCertificateToDistributionCommand = async (
   input: AttachCertificateToDistributionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("AttachCertificateToDistribution");
   let body: any;
@@ -852,7 +852,7 @@ export const se_AttachCertificateToDistributionCommand = async (
  */
 export const se_AttachDiskCommand = async (
   input: AttachDiskCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("AttachDisk");
   let body: any;
@@ -865,7 +865,7 @@ export const se_AttachDiskCommand = async (
  */
 export const se_AttachInstancesToLoadBalancerCommand = async (
   input: AttachInstancesToLoadBalancerCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("AttachInstancesToLoadBalancer");
   let body: any;
@@ -878,7 +878,7 @@ export const se_AttachInstancesToLoadBalancerCommand = async (
  */
 export const se_AttachLoadBalancerTlsCertificateCommand = async (
   input: AttachLoadBalancerTlsCertificateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("AttachLoadBalancerTlsCertificate");
   let body: any;
@@ -891,7 +891,7 @@ export const se_AttachLoadBalancerTlsCertificateCommand = async (
  */
 export const se_AttachStaticIpCommand = async (
   input: AttachStaticIpCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("AttachStaticIp");
   let body: any;
@@ -904,7 +904,7 @@ export const se_AttachStaticIpCommand = async (
  */
 export const se_CloseInstancePublicPortsCommand = async (
   input: CloseInstancePublicPortsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CloseInstancePublicPorts");
   let body: any;
@@ -917,7 +917,7 @@ export const se_CloseInstancePublicPortsCommand = async (
  */
 export const se_CopySnapshotCommand = async (
   input: CopySnapshotCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CopySnapshot");
   let body: any;
@@ -930,7 +930,7 @@ export const se_CopySnapshotCommand = async (
  */
 export const se_CreateBucketCommand = async (
   input: CreateBucketCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateBucket");
   let body: any;
@@ -943,7 +943,7 @@ export const se_CreateBucketCommand = async (
  */
 export const se_CreateBucketAccessKeyCommand = async (
   input: CreateBucketAccessKeyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateBucketAccessKey");
   let body: any;
@@ -956,7 +956,7 @@ export const se_CreateBucketAccessKeyCommand = async (
  */
 export const se_CreateCertificateCommand = async (
   input: CreateCertificateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateCertificate");
   let body: any;
@@ -969,7 +969,7 @@ export const se_CreateCertificateCommand = async (
  */
 export const se_CreateCloudFormationStackCommand = async (
   input: CreateCloudFormationStackCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateCloudFormationStack");
   let body: any;
@@ -982,7 +982,7 @@ export const se_CreateCloudFormationStackCommand = async (
  */
 export const se_CreateContactMethodCommand = async (
   input: CreateContactMethodCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateContactMethod");
   let body: any;
@@ -995,7 +995,7 @@ export const se_CreateContactMethodCommand = async (
  */
 export const se_CreateContainerServiceCommand = async (
   input: CreateContainerServiceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateContainerService");
   let body: any;
@@ -1008,7 +1008,7 @@ export const se_CreateContainerServiceCommand = async (
  */
 export const se_CreateContainerServiceDeploymentCommand = async (
   input: CreateContainerServiceDeploymentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateContainerServiceDeployment");
   let body: any;
@@ -1021,7 +1021,7 @@ export const se_CreateContainerServiceDeploymentCommand = async (
  */
 export const se_CreateContainerServiceRegistryLoginCommand = async (
   input: CreateContainerServiceRegistryLoginCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateContainerServiceRegistryLogin");
   let body: any;
@@ -1034,7 +1034,7 @@ export const se_CreateContainerServiceRegistryLoginCommand = async (
  */
 export const se_CreateDiskCommand = async (
   input: CreateDiskCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateDisk");
   let body: any;
@@ -1047,7 +1047,7 @@ export const se_CreateDiskCommand = async (
  */
 export const se_CreateDiskFromSnapshotCommand = async (
   input: CreateDiskFromSnapshotCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateDiskFromSnapshot");
   let body: any;
@@ -1060,7 +1060,7 @@ export const se_CreateDiskFromSnapshotCommand = async (
  */
 export const se_CreateDiskSnapshotCommand = async (
   input: CreateDiskSnapshotCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateDiskSnapshot");
   let body: any;
@@ -1073,7 +1073,7 @@ export const se_CreateDiskSnapshotCommand = async (
  */
 export const se_CreateDistributionCommand = async (
   input: CreateDistributionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateDistribution");
   let body: any;
@@ -1086,7 +1086,7 @@ export const se_CreateDistributionCommand = async (
  */
 export const se_CreateDomainCommand = async (
   input: CreateDomainCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateDomain");
   let body: any;
@@ -1099,7 +1099,7 @@ export const se_CreateDomainCommand = async (
  */
 export const se_CreateDomainEntryCommand = async (
   input: CreateDomainEntryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateDomainEntry");
   let body: any;
@@ -1112,7 +1112,7 @@ export const se_CreateDomainEntryCommand = async (
  */
 export const se_CreateGUISessionAccessDetailsCommand = async (
   input: CreateGUISessionAccessDetailsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateGUISessionAccessDetails");
   let body: any;
@@ -1125,7 +1125,7 @@ export const se_CreateGUISessionAccessDetailsCommand = async (
  */
 export const se_CreateInstancesCommand = async (
   input: CreateInstancesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateInstances");
   let body: any;
@@ -1138,7 +1138,7 @@ export const se_CreateInstancesCommand = async (
  */
 export const se_CreateInstancesFromSnapshotCommand = async (
   input: CreateInstancesFromSnapshotCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateInstancesFromSnapshot");
   let body: any;
@@ -1151,7 +1151,7 @@ export const se_CreateInstancesFromSnapshotCommand = async (
  */
 export const se_CreateInstanceSnapshotCommand = async (
   input: CreateInstanceSnapshotCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateInstanceSnapshot");
   let body: any;
@@ -1164,7 +1164,7 @@ export const se_CreateInstanceSnapshotCommand = async (
  */
 export const se_CreateKeyPairCommand = async (
   input: CreateKeyPairCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateKeyPair");
   let body: any;
@@ -1177,7 +1177,7 @@ export const se_CreateKeyPairCommand = async (
  */
 export const se_CreateLoadBalancerCommand = async (
   input: CreateLoadBalancerCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateLoadBalancer");
   let body: any;
@@ -1190,7 +1190,7 @@ export const se_CreateLoadBalancerCommand = async (
  */
 export const se_CreateLoadBalancerTlsCertificateCommand = async (
   input: CreateLoadBalancerTlsCertificateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateLoadBalancerTlsCertificate");
   let body: any;
@@ -1203,7 +1203,7 @@ export const se_CreateLoadBalancerTlsCertificateCommand = async (
  */
 export const se_CreateRelationalDatabaseCommand = async (
   input: CreateRelationalDatabaseCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateRelationalDatabase");
   let body: any;
@@ -1216,7 +1216,7 @@ export const se_CreateRelationalDatabaseCommand = async (
  */
 export const se_CreateRelationalDatabaseFromSnapshotCommand = async (
   input: CreateRelationalDatabaseFromSnapshotCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateRelationalDatabaseFromSnapshot");
   let body: any;
@@ -1229,7 +1229,7 @@ export const se_CreateRelationalDatabaseFromSnapshotCommand = async (
  */
 export const se_CreateRelationalDatabaseSnapshotCommand = async (
   input: CreateRelationalDatabaseSnapshotCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateRelationalDatabaseSnapshot");
   let body: any;
@@ -1242,7 +1242,7 @@ export const se_CreateRelationalDatabaseSnapshotCommand = async (
  */
 export const se_DeleteAlarmCommand = async (
   input: DeleteAlarmCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteAlarm");
   let body: any;
@@ -1255,7 +1255,7 @@ export const se_DeleteAlarmCommand = async (
  */
 export const se_DeleteAutoSnapshotCommand = async (
   input: DeleteAutoSnapshotCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteAutoSnapshot");
   let body: any;
@@ -1268,7 +1268,7 @@ export const se_DeleteAutoSnapshotCommand = async (
  */
 export const se_DeleteBucketCommand = async (
   input: DeleteBucketCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteBucket");
   let body: any;
@@ -1281,7 +1281,7 @@ export const se_DeleteBucketCommand = async (
  */
 export const se_DeleteBucketAccessKeyCommand = async (
   input: DeleteBucketAccessKeyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteBucketAccessKey");
   let body: any;
@@ -1294,7 +1294,7 @@ export const se_DeleteBucketAccessKeyCommand = async (
  */
 export const se_DeleteCertificateCommand = async (
   input: DeleteCertificateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteCertificate");
   let body: any;
@@ -1307,7 +1307,7 @@ export const se_DeleteCertificateCommand = async (
  */
 export const se_DeleteContactMethodCommand = async (
   input: DeleteContactMethodCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteContactMethod");
   let body: any;
@@ -1320,7 +1320,7 @@ export const se_DeleteContactMethodCommand = async (
  */
 export const se_DeleteContainerImageCommand = async (
   input: DeleteContainerImageCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteContainerImage");
   let body: any;
@@ -1333,7 +1333,7 @@ export const se_DeleteContainerImageCommand = async (
  */
 export const se_DeleteContainerServiceCommand = async (
   input: DeleteContainerServiceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteContainerService");
   let body: any;
@@ -1346,7 +1346,7 @@ export const se_DeleteContainerServiceCommand = async (
  */
 export const se_DeleteDiskCommand = async (
   input: DeleteDiskCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteDisk");
   let body: any;
@@ -1359,7 +1359,7 @@ export const se_DeleteDiskCommand = async (
  */
 export const se_DeleteDiskSnapshotCommand = async (
   input: DeleteDiskSnapshotCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteDiskSnapshot");
   let body: any;
@@ -1372,7 +1372,7 @@ export const se_DeleteDiskSnapshotCommand = async (
  */
 export const se_DeleteDistributionCommand = async (
   input: DeleteDistributionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteDistribution");
   let body: any;
@@ -1385,7 +1385,7 @@ export const se_DeleteDistributionCommand = async (
  */
 export const se_DeleteDomainCommand = async (
   input: DeleteDomainCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteDomain");
   let body: any;
@@ -1398,7 +1398,7 @@ export const se_DeleteDomainCommand = async (
  */
 export const se_DeleteDomainEntryCommand = async (
   input: DeleteDomainEntryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteDomainEntry");
   let body: any;
@@ -1411,7 +1411,7 @@ export const se_DeleteDomainEntryCommand = async (
  */
 export const se_DeleteInstanceCommand = async (
   input: DeleteInstanceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteInstance");
   let body: any;
@@ -1424,7 +1424,7 @@ export const se_DeleteInstanceCommand = async (
  */
 export const se_DeleteInstanceSnapshotCommand = async (
   input: DeleteInstanceSnapshotCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteInstanceSnapshot");
   let body: any;
@@ -1437,7 +1437,7 @@ export const se_DeleteInstanceSnapshotCommand = async (
  */
 export const se_DeleteKeyPairCommand = async (
   input: DeleteKeyPairCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteKeyPair");
   let body: any;
@@ -1450,7 +1450,7 @@ export const se_DeleteKeyPairCommand = async (
  */
 export const se_DeleteKnownHostKeysCommand = async (
   input: DeleteKnownHostKeysCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteKnownHostKeys");
   let body: any;
@@ -1463,7 +1463,7 @@ export const se_DeleteKnownHostKeysCommand = async (
  */
 export const se_DeleteLoadBalancerCommand = async (
   input: DeleteLoadBalancerCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteLoadBalancer");
   let body: any;
@@ -1476,7 +1476,7 @@ export const se_DeleteLoadBalancerCommand = async (
  */
 export const se_DeleteLoadBalancerTlsCertificateCommand = async (
   input: DeleteLoadBalancerTlsCertificateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteLoadBalancerTlsCertificate");
   let body: any;
@@ -1489,7 +1489,7 @@ export const se_DeleteLoadBalancerTlsCertificateCommand = async (
  */
 export const se_DeleteRelationalDatabaseCommand = async (
   input: DeleteRelationalDatabaseCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteRelationalDatabase");
   let body: any;
@@ -1502,7 +1502,7 @@ export const se_DeleteRelationalDatabaseCommand = async (
  */
 export const se_DeleteRelationalDatabaseSnapshotCommand = async (
   input: DeleteRelationalDatabaseSnapshotCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteRelationalDatabaseSnapshot");
   let body: any;
@@ -1515,7 +1515,7 @@ export const se_DeleteRelationalDatabaseSnapshotCommand = async (
  */
 export const se_DetachCertificateFromDistributionCommand = async (
   input: DetachCertificateFromDistributionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DetachCertificateFromDistribution");
   let body: any;
@@ -1528,7 +1528,7 @@ export const se_DetachCertificateFromDistributionCommand = async (
  */
 export const se_DetachDiskCommand = async (
   input: DetachDiskCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DetachDisk");
   let body: any;
@@ -1541,7 +1541,7 @@ export const se_DetachDiskCommand = async (
  */
 export const se_DetachInstancesFromLoadBalancerCommand = async (
   input: DetachInstancesFromLoadBalancerCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DetachInstancesFromLoadBalancer");
   let body: any;
@@ -1554,7 +1554,7 @@ export const se_DetachInstancesFromLoadBalancerCommand = async (
  */
 export const se_DetachStaticIpCommand = async (
   input: DetachStaticIpCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DetachStaticIp");
   let body: any;
@@ -1567,7 +1567,7 @@ export const se_DetachStaticIpCommand = async (
  */
 export const se_DisableAddOnCommand = async (
   input: DisableAddOnCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DisableAddOn");
   let body: any;
@@ -1580,7 +1580,7 @@ export const se_DisableAddOnCommand = async (
  */
 export const se_DownloadDefaultKeyPairCommand = async (
   input: DownloadDefaultKeyPairCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DownloadDefaultKeyPair");
   let body: any;
@@ -1593,7 +1593,7 @@ export const se_DownloadDefaultKeyPairCommand = async (
  */
 export const se_EnableAddOnCommand = async (
   input: EnableAddOnCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("EnableAddOn");
   let body: any;
@@ -1606,7 +1606,7 @@ export const se_EnableAddOnCommand = async (
  */
 export const se_ExportSnapshotCommand = async (
   input: ExportSnapshotCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ExportSnapshot");
   let body: any;
@@ -1619,7 +1619,7 @@ export const se_ExportSnapshotCommand = async (
  */
 export const se_GetActiveNamesCommand = async (
   input: GetActiveNamesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetActiveNames");
   let body: any;
@@ -1632,7 +1632,7 @@ export const se_GetActiveNamesCommand = async (
  */
 export const se_GetAlarmsCommand = async (
   input: GetAlarmsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetAlarms");
   let body: any;
@@ -1645,7 +1645,7 @@ export const se_GetAlarmsCommand = async (
  */
 export const se_GetAutoSnapshotsCommand = async (
   input: GetAutoSnapshotsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetAutoSnapshots");
   let body: any;
@@ -1658,7 +1658,7 @@ export const se_GetAutoSnapshotsCommand = async (
  */
 export const se_GetBlueprintsCommand = async (
   input: GetBlueprintsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetBlueprints");
   let body: any;
@@ -1671,7 +1671,7 @@ export const se_GetBlueprintsCommand = async (
  */
 export const se_GetBucketAccessKeysCommand = async (
   input: GetBucketAccessKeysCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetBucketAccessKeys");
   let body: any;
@@ -1684,7 +1684,7 @@ export const se_GetBucketAccessKeysCommand = async (
  */
 export const se_GetBucketBundlesCommand = async (
   input: GetBucketBundlesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetBucketBundles");
   let body: any;
@@ -1697,7 +1697,7 @@ export const se_GetBucketBundlesCommand = async (
  */
 export const se_GetBucketMetricDataCommand = async (
   input: GetBucketMetricDataCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetBucketMetricData");
   let body: any;
@@ -1710,7 +1710,7 @@ export const se_GetBucketMetricDataCommand = async (
  */
 export const se_GetBucketsCommand = async (
   input: GetBucketsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetBuckets");
   let body: any;
@@ -1723,7 +1723,7 @@ export const se_GetBucketsCommand = async (
  */
 export const se_GetBundlesCommand = async (
   input: GetBundlesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetBundles");
   let body: any;
@@ -1736,7 +1736,7 @@ export const se_GetBundlesCommand = async (
  */
 export const se_GetCertificatesCommand = async (
   input: GetCertificatesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetCertificates");
   let body: any;
@@ -1749,7 +1749,7 @@ export const se_GetCertificatesCommand = async (
  */
 export const se_GetCloudFormationStackRecordsCommand = async (
   input: GetCloudFormationStackRecordsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetCloudFormationStackRecords");
   let body: any;
@@ -1762,7 +1762,7 @@ export const se_GetCloudFormationStackRecordsCommand = async (
  */
 export const se_GetContactMethodsCommand = async (
   input: GetContactMethodsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetContactMethods");
   let body: any;
@@ -1775,7 +1775,7 @@ export const se_GetContactMethodsCommand = async (
  */
 export const se_GetContainerAPIMetadataCommand = async (
   input: GetContainerAPIMetadataCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetContainerAPIMetadata");
   let body: any;
@@ -1788,7 +1788,7 @@ export const se_GetContainerAPIMetadataCommand = async (
  */
 export const se_GetContainerImagesCommand = async (
   input: GetContainerImagesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetContainerImages");
   let body: any;
@@ -1801,7 +1801,7 @@ export const se_GetContainerImagesCommand = async (
  */
 export const se_GetContainerLogCommand = async (
   input: GetContainerLogCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetContainerLog");
   let body: any;
@@ -1814,7 +1814,7 @@ export const se_GetContainerLogCommand = async (
  */
 export const se_GetContainerServiceDeploymentsCommand = async (
   input: GetContainerServiceDeploymentsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetContainerServiceDeployments");
   let body: any;
@@ -1827,7 +1827,7 @@ export const se_GetContainerServiceDeploymentsCommand = async (
  */
 export const se_GetContainerServiceMetricDataCommand = async (
   input: GetContainerServiceMetricDataCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetContainerServiceMetricData");
   let body: any;
@@ -1840,7 +1840,7 @@ export const se_GetContainerServiceMetricDataCommand = async (
  */
 export const se_GetContainerServicePowersCommand = async (
   input: GetContainerServicePowersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetContainerServicePowers");
   let body: any;
@@ -1853,7 +1853,7 @@ export const se_GetContainerServicePowersCommand = async (
  */
 export const se_GetContainerServicesCommand = async (
   input: GetContainerServicesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetContainerServices");
   let body: any;
@@ -1866,7 +1866,7 @@ export const se_GetContainerServicesCommand = async (
  */
 export const se_GetCostEstimateCommand = async (
   input: GetCostEstimateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetCostEstimate");
   let body: any;
@@ -1879,7 +1879,7 @@ export const se_GetCostEstimateCommand = async (
  */
 export const se_GetDiskCommand = async (
   input: GetDiskCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetDisk");
   let body: any;
@@ -1892,7 +1892,7 @@ export const se_GetDiskCommand = async (
  */
 export const se_GetDisksCommand = async (
   input: GetDisksCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetDisks");
   let body: any;
@@ -1905,7 +1905,7 @@ export const se_GetDisksCommand = async (
  */
 export const se_GetDiskSnapshotCommand = async (
   input: GetDiskSnapshotCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetDiskSnapshot");
   let body: any;
@@ -1918,7 +1918,7 @@ export const se_GetDiskSnapshotCommand = async (
  */
 export const se_GetDiskSnapshotsCommand = async (
   input: GetDiskSnapshotsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetDiskSnapshots");
   let body: any;
@@ -1931,7 +1931,7 @@ export const se_GetDiskSnapshotsCommand = async (
  */
 export const se_GetDistributionBundlesCommand = async (
   input: GetDistributionBundlesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetDistributionBundles");
   let body: any;
@@ -1944,7 +1944,7 @@ export const se_GetDistributionBundlesCommand = async (
  */
 export const se_GetDistributionLatestCacheResetCommand = async (
   input: GetDistributionLatestCacheResetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetDistributionLatestCacheReset");
   let body: any;
@@ -1957,7 +1957,7 @@ export const se_GetDistributionLatestCacheResetCommand = async (
  */
 export const se_GetDistributionMetricDataCommand = async (
   input: GetDistributionMetricDataCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetDistributionMetricData");
   let body: any;
@@ -1970,7 +1970,7 @@ export const se_GetDistributionMetricDataCommand = async (
  */
 export const se_GetDistributionsCommand = async (
   input: GetDistributionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetDistributions");
   let body: any;
@@ -1983,7 +1983,7 @@ export const se_GetDistributionsCommand = async (
  */
 export const se_GetDomainCommand = async (
   input: GetDomainCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetDomain");
   let body: any;
@@ -1996,7 +1996,7 @@ export const se_GetDomainCommand = async (
  */
 export const se_GetDomainsCommand = async (
   input: GetDomainsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetDomains");
   let body: any;
@@ -2009,7 +2009,7 @@ export const se_GetDomainsCommand = async (
  */
 export const se_GetExportSnapshotRecordsCommand = async (
   input: GetExportSnapshotRecordsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetExportSnapshotRecords");
   let body: any;
@@ -2022,7 +2022,7 @@ export const se_GetExportSnapshotRecordsCommand = async (
  */
 export const se_GetInstanceCommand = async (
   input: GetInstanceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetInstance");
   let body: any;
@@ -2035,7 +2035,7 @@ export const se_GetInstanceCommand = async (
  */
 export const se_GetInstanceAccessDetailsCommand = async (
   input: GetInstanceAccessDetailsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetInstanceAccessDetails");
   let body: any;
@@ -2048,7 +2048,7 @@ export const se_GetInstanceAccessDetailsCommand = async (
  */
 export const se_GetInstanceMetricDataCommand = async (
   input: GetInstanceMetricDataCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetInstanceMetricData");
   let body: any;
@@ -2061,7 +2061,7 @@ export const se_GetInstanceMetricDataCommand = async (
  */
 export const se_GetInstancePortStatesCommand = async (
   input: GetInstancePortStatesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetInstancePortStates");
   let body: any;
@@ -2074,7 +2074,7 @@ export const se_GetInstancePortStatesCommand = async (
  */
 export const se_GetInstancesCommand = async (
   input: GetInstancesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetInstances");
   let body: any;
@@ -2087,7 +2087,7 @@ export const se_GetInstancesCommand = async (
  */
 export const se_GetInstanceSnapshotCommand = async (
   input: GetInstanceSnapshotCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetInstanceSnapshot");
   let body: any;
@@ -2100,7 +2100,7 @@ export const se_GetInstanceSnapshotCommand = async (
  */
 export const se_GetInstanceSnapshotsCommand = async (
   input: GetInstanceSnapshotsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetInstanceSnapshots");
   let body: any;
@@ -2113,7 +2113,7 @@ export const se_GetInstanceSnapshotsCommand = async (
  */
 export const se_GetInstanceStateCommand = async (
   input: GetInstanceStateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetInstanceState");
   let body: any;
@@ -2126,7 +2126,7 @@ export const se_GetInstanceStateCommand = async (
  */
 export const se_GetKeyPairCommand = async (
   input: GetKeyPairCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetKeyPair");
   let body: any;
@@ -2139,7 +2139,7 @@ export const se_GetKeyPairCommand = async (
  */
 export const se_GetKeyPairsCommand = async (
   input: GetKeyPairsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetKeyPairs");
   let body: any;
@@ -2152,7 +2152,7 @@ export const se_GetKeyPairsCommand = async (
  */
 export const se_GetLoadBalancerCommand = async (
   input: GetLoadBalancerCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetLoadBalancer");
   let body: any;
@@ -2165,7 +2165,7 @@ export const se_GetLoadBalancerCommand = async (
  */
 export const se_GetLoadBalancerMetricDataCommand = async (
   input: GetLoadBalancerMetricDataCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetLoadBalancerMetricData");
   let body: any;
@@ -2178,7 +2178,7 @@ export const se_GetLoadBalancerMetricDataCommand = async (
  */
 export const se_GetLoadBalancersCommand = async (
   input: GetLoadBalancersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetLoadBalancers");
   let body: any;
@@ -2191,7 +2191,7 @@ export const se_GetLoadBalancersCommand = async (
  */
 export const se_GetLoadBalancerTlsCertificatesCommand = async (
   input: GetLoadBalancerTlsCertificatesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetLoadBalancerTlsCertificates");
   let body: any;
@@ -2204,7 +2204,7 @@ export const se_GetLoadBalancerTlsCertificatesCommand = async (
  */
 export const se_GetLoadBalancerTlsPoliciesCommand = async (
   input: GetLoadBalancerTlsPoliciesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetLoadBalancerTlsPolicies");
   let body: any;
@@ -2217,7 +2217,7 @@ export const se_GetLoadBalancerTlsPoliciesCommand = async (
  */
 export const se_GetOperationCommand = async (
   input: GetOperationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetOperation");
   let body: any;
@@ -2230,7 +2230,7 @@ export const se_GetOperationCommand = async (
  */
 export const se_GetOperationsCommand = async (
   input: GetOperationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetOperations");
   let body: any;
@@ -2243,7 +2243,7 @@ export const se_GetOperationsCommand = async (
  */
 export const se_GetOperationsForResourceCommand = async (
   input: GetOperationsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetOperationsForResource");
   let body: any;
@@ -2256,7 +2256,7 @@ export const se_GetOperationsForResourceCommand = async (
  */
 export const se_GetRegionsCommand = async (
   input: GetRegionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetRegions");
   let body: any;
@@ -2269,7 +2269,7 @@ export const se_GetRegionsCommand = async (
  */
 export const se_GetRelationalDatabaseCommand = async (
   input: GetRelationalDatabaseCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetRelationalDatabase");
   let body: any;
@@ -2282,7 +2282,7 @@ export const se_GetRelationalDatabaseCommand = async (
  */
 export const se_GetRelationalDatabaseBlueprintsCommand = async (
   input: GetRelationalDatabaseBlueprintsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetRelationalDatabaseBlueprints");
   let body: any;
@@ -2295,7 +2295,7 @@ export const se_GetRelationalDatabaseBlueprintsCommand = async (
  */
 export const se_GetRelationalDatabaseBundlesCommand = async (
   input: GetRelationalDatabaseBundlesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetRelationalDatabaseBundles");
   let body: any;
@@ -2308,7 +2308,7 @@ export const se_GetRelationalDatabaseBundlesCommand = async (
  */
 export const se_GetRelationalDatabaseEventsCommand = async (
   input: GetRelationalDatabaseEventsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetRelationalDatabaseEvents");
   let body: any;
@@ -2321,7 +2321,7 @@ export const se_GetRelationalDatabaseEventsCommand = async (
  */
 export const se_GetRelationalDatabaseLogEventsCommand = async (
   input: GetRelationalDatabaseLogEventsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetRelationalDatabaseLogEvents");
   let body: any;
@@ -2334,7 +2334,7 @@ export const se_GetRelationalDatabaseLogEventsCommand = async (
  */
 export const se_GetRelationalDatabaseLogStreamsCommand = async (
   input: GetRelationalDatabaseLogStreamsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetRelationalDatabaseLogStreams");
   let body: any;
@@ -2347,7 +2347,7 @@ export const se_GetRelationalDatabaseLogStreamsCommand = async (
  */
 export const se_GetRelationalDatabaseMasterUserPasswordCommand = async (
   input: GetRelationalDatabaseMasterUserPasswordCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetRelationalDatabaseMasterUserPassword");
   let body: any;
@@ -2360,7 +2360,7 @@ export const se_GetRelationalDatabaseMasterUserPasswordCommand = async (
  */
 export const se_GetRelationalDatabaseMetricDataCommand = async (
   input: GetRelationalDatabaseMetricDataCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetRelationalDatabaseMetricData");
   let body: any;
@@ -2373,7 +2373,7 @@ export const se_GetRelationalDatabaseMetricDataCommand = async (
  */
 export const se_GetRelationalDatabaseParametersCommand = async (
   input: GetRelationalDatabaseParametersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetRelationalDatabaseParameters");
   let body: any;
@@ -2386,7 +2386,7 @@ export const se_GetRelationalDatabaseParametersCommand = async (
  */
 export const se_GetRelationalDatabasesCommand = async (
   input: GetRelationalDatabasesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetRelationalDatabases");
   let body: any;
@@ -2399,7 +2399,7 @@ export const se_GetRelationalDatabasesCommand = async (
  */
 export const se_GetRelationalDatabaseSnapshotCommand = async (
   input: GetRelationalDatabaseSnapshotCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetRelationalDatabaseSnapshot");
   let body: any;
@@ -2412,7 +2412,7 @@ export const se_GetRelationalDatabaseSnapshotCommand = async (
  */
 export const se_GetRelationalDatabaseSnapshotsCommand = async (
   input: GetRelationalDatabaseSnapshotsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetRelationalDatabaseSnapshots");
   let body: any;
@@ -2425,7 +2425,7 @@ export const se_GetRelationalDatabaseSnapshotsCommand = async (
  */
 export const se_GetSetupHistoryCommand = async (
   input: GetSetupHistoryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetSetupHistory");
   let body: any;
@@ -2438,7 +2438,7 @@ export const se_GetSetupHistoryCommand = async (
  */
 export const se_GetStaticIpCommand = async (
   input: GetStaticIpCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetStaticIp");
   let body: any;
@@ -2451,7 +2451,7 @@ export const se_GetStaticIpCommand = async (
  */
 export const se_GetStaticIpsCommand = async (
   input: GetStaticIpsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetStaticIps");
   let body: any;
@@ -2464,7 +2464,7 @@ export const se_GetStaticIpsCommand = async (
  */
 export const se_ImportKeyPairCommand = async (
   input: ImportKeyPairCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ImportKeyPair");
   let body: any;
@@ -2477,7 +2477,7 @@ export const se_ImportKeyPairCommand = async (
  */
 export const se_IsVpcPeeredCommand = async (
   input: IsVpcPeeredCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("IsVpcPeered");
   let body: any;
@@ -2490,7 +2490,7 @@ export const se_IsVpcPeeredCommand = async (
  */
 export const se_OpenInstancePublicPortsCommand = async (
   input: OpenInstancePublicPortsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("OpenInstancePublicPorts");
   let body: any;
@@ -2503,7 +2503,7 @@ export const se_OpenInstancePublicPortsCommand = async (
  */
 export const se_PeerVpcCommand = async (
   input: PeerVpcCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("PeerVpc");
   let body: any;
@@ -2516,7 +2516,7 @@ export const se_PeerVpcCommand = async (
  */
 export const se_PutAlarmCommand = async (
   input: PutAlarmCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("PutAlarm");
   let body: any;
@@ -2529,7 +2529,7 @@ export const se_PutAlarmCommand = async (
  */
 export const se_PutInstancePublicPortsCommand = async (
   input: PutInstancePublicPortsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("PutInstancePublicPorts");
   let body: any;
@@ -2542,7 +2542,7 @@ export const se_PutInstancePublicPortsCommand = async (
  */
 export const se_RebootInstanceCommand = async (
   input: RebootInstanceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("RebootInstance");
   let body: any;
@@ -2555,7 +2555,7 @@ export const se_RebootInstanceCommand = async (
  */
 export const se_RebootRelationalDatabaseCommand = async (
   input: RebootRelationalDatabaseCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("RebootRelationalDatabase");
   let body: any;
@@ -2568,7 +2568,7 @@ export const se_RebootRelationalDatabaseCommand = async (
  */
 export const se_RegisterContainerImageCommand = async (
   input: RegisterContainerImageCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("RegisterContainerImage");
   let body: any;
@@ -2581,7 +2581,7 @@ export const se_RegisterContainerImageCommand = async (
  */
 export const se_ReleaseStaticIpCommand = async (
   input: ReleaseStaticIpCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ReleaseStaticIp");
   let body: any;
@@ -2594,7 +2594,7 @@ export const se_ReleaseStaticIpCommand = async (
  */
 export const se_ResetDistributionCacheCommand = async (
   input: ResetDistributionCacheCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ResetDistributionCache");
   let body: any;
@@ -2607,7 +2607,7 @@ export const se_ResetDistributionCacheCommand = async (
  */
 export const se_SendContactMethodVerificationCommand = async (
   input: SendContactMethodVerificationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("SendContactMethodVerification");
   let body: any;
@@ -2620,7 +2620,7 @@ export const se_SendContactMethodVerificationCommand = async (
  */
 export const se_SetIpAddressTypeCommand = async (
   input: SetIpAddressTypeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("SetIpAddressType");
   let body: any;
@@ -2633,7 +2633,7 @@ export const se_SetIpAddressTypeCommand = async (
  */
 export const se_SetResourceAccessForBucketCommand = async (
   input: SetResourceAccessForBucketCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("SetResourceAccessForBucket");
   let body: any;
@@ -2646,7 +2646,7 @@ export const se_SetResourceAccessForBucketCommand = async (
  */
 export const se_SetupInstanceHttpsCommand = async (
   input: SetupInstanceHttpsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("SetupInstanceHttps");
   let body: any;
@@ -2659,7 +2659,7 @@ export const se_SetupInstanceHttpsCommand = async (
  */
 export const se_StartGUISessionCommand = async (
   input: StartGUISessionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StartGUISession");
   let body: any;
@@ -2672,7 +2672,7 @@ export const se_StartGUISessionCommand = async (
  */
 export const se_StartInstanceCommand = async (
   input: StartInstanceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StartInstance");
   let body: any;
@@ -2685,7 +2685,7 @@ export const se_StartInstanceCommand = async (
  */
 export const se_StartRelationalDatabaseCommand = async (
   input: StartRelationalDatabaseCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StartRelationalDatabase");
   let body: any;
@@ -2698,7 +2698,7 @@ export const se_StartRelationalDatabaseCommand = async (
  */
 export const se_StopGUISessionCommand = async (
   input: StopGUISessionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StopGUISession");
   let body: any;
@@ -2711,7 +2711,7 @@ export const se_StopGUISessionCommand = async (
  */
 export const se_StopInstanceCommand = async (
   input: StopInstanceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StopInstance");
   let body: any;
@@ -2724,7 +2724,7 @@ export const se_StopInstanceCommand = async (
  */
 export const se_StopRelationalDatabaseCommand = async (
   input: StopRelationalDatabaseCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StopRelationalDatabase");
   let body: any;
@@ -2737,7 +2737,7 @@ export const se_StopRelationalDatabaseCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("TagResource");
   let body: any;
@@ -2750,7 +2750,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_TestAlarmCommand = async (
   input: TestAlarmCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("TestAlarm");
   let body: any;
@@ -2763,7 +2763,7 @@ export const se_TestAlarmCommand = async (
  */
 export const se_UnpeerVpcCommand = async (
   input: UnpeerVpcCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UnpeerVpc");
   let body: any;
@@ -2776,7 +2776,7 @@ export const se_UnpeerVpcCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UntagResource");
   let body: any;
@@ -2789,7 +2789,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateBucketCommand = async (
   input: UpdateBucketCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateBucket");
   let body: any;
@@ -2802,7 +2802,7 @@ export const se_UpdateBucketCommand = async (
  */
 export const se_UpdateBucketBundleCommand = async (
   input: UpdateBucketBundleCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateBucketBundle");
   let body: any;
@@ -2815,7 +2815,7 @@ export const se_UpdateBucketBundleCommand = async (
  */
 export const se_UpdateContainerServiceCommand = async (
   input: UpdateContainerServiceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateContainerService");
   let body: any;
@@ -2828,7 +2828,7 @@ export const se_UpdateContainerServiceCommand = async (
  */
 export const se_UpdateDistributionCommand = async (
   input: UpdateDistributionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateDistribution");
   let body: any;
@@ -2841,7 +2841,7 @@ export const se_UpdateDistributionCommand = async (
  */
 export const se_UpdateDistributionBundleCommand = async (
   input: UpdateDistributionBundleCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateDistributionBundle");
   let body: any;
@@ -2854,7 +2854,7 @@ export const se_UpdateDistributionBundleCommand = async (
  */
 export const se_UpdateDomainEntryCommand = async (
   input: UpdateDomainEntryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateDomainEntry");
   let body: any;
@@ -2867,7 +2867,7 @@ export const se_UpdateDomainEntryCommand = async (
  */
 export const se_UpdateInstanceMetadataOptionsCommand = async (
   input: UpdateInstanceMetadataOptionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateInstanceMetadataOptions");
   let body: any;
@@ -2880,7 +2880,7 @@ export const se_UpdateInstanceMetadataOptionsCommand = async (
  */
 export const se_UpdateLoadBalancerAttributeCommand = async (
   input: UpdateLoadBalancerAttributeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateLoadBalancerAttribute");
   let body: any;
@@ -2893,7 +2893,7 @@ export const se_UpdateLoadBalancerAttributeCommand = async (
  */
 export const se_UpdateRelationalDatabaseCommand = async (
   input: UpdateRelationalDatabaseCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateRelationalDatabase");
   let body: any;
@@ -2906,7 +2906,7 @@ export const se_UpdateRelationalDatabaseCommand = async (
  */
 export const se_UpdateRelationalDatabaseParametersCommand = async (
   input: UpdateRelationalDatabaseParametersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateRelationalDatabaseParameters");
   let body: any;
@@ -2919,7 +2919,7 @@ export const se_UpdateRelationalDatabaseParametersCommand = async (
  */
 export const de_AllocateStaticIpCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AllocateStaticIpCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2939,7 +2939,7 @@ export const de_AllocateStaticIpCommand = async (
  */
 export const de_AttachCertificateToDistributionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AttachCertificateToDistributionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2959,7 +2959,7 @@ export const de_AttachCertificateToDistributionCommand = async (
  */
 export const de_AttachDiskCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AttachDiskCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2979,7 +2979,7 @@ export const de_AttachDiskCommand = async (
  */
 export const de_AttachInstancesToLoadBalancerCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AttachInstancesToLoadBalancerCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2999,7 +2999,7 @@ export const de_AttachInstancesToLoadBalancerCommand = async (
  */
 export const de_AttachLoadBalancerTlsCertificateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AttachLoadBalancerTlsCertificateCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3019,7 +3019,7 @@ export const de_AttachLoadBalancerTlsCertificateCommand = async (
  */
 export const de_AttachStaticIpCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AttachStaticIpCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3039,7 +3039,7 @@ export const de_AttachStaticIpCommand = async (
  */
 export const de_CloseInstancePublicPortsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CloseInstancePublicPortsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3059,7 +3059,7 @@ export const de_CloseInstancePublicPortsCommand = async (
  */
 export const de_CopySnapshotCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CopySnapshotCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3079,7 +3079,7 @@ export const de_CopySnapshotCommand = async (
  */
 export const de_CreateBucketCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateBucketCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3099,7 +3099,7 @@ export const de_CreateBucketCommand = async (
  */
 export const de_CreateBucketAccessKeyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateBucketAccessKeyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3119,7 +3119,7 @@ export const de_CreateBucketAccessKeyCommand = async (
  */
 export const de_CreateCertificateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateCertificateCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3139,7 +3139,7 @@ export const de_CreateCertificateCommand = async (
  */
 export const de_CreateCloudFormationStackCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateCloudFormationStackCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3159,7 +3159,7 @@ export const de_CreateCloudFormationStackCommand = async (
  */
 export const de_CreateContactMethodCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateContactMethodCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3179,7 +3179,7 @@ export const de_CreateContactMethodCommand = async (
  */
 export const de_CreateContainerServiceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateContainerServiceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3199,7 +3199,7 @@ export const de_CreateContainerServiceCommand = async (
  */
 export const de_CreateContainerServiceDeploymentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateContainerServiceDeploymentCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3219,7 +3219,7 @@ export const de_CreateContainerServiceDeploymentCommand = async (
  */
 export const de_CreateContainerServiceRegistryLoginCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateContainerServiceRegistryLoginCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3239,7 +3239,7 @@ export const de_CreateContainerServiceRegistryLoginCommand = async (
  */
 export const de_CreateDiskCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateDiskCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3259,7 +3259,7 @@ export const de_CreateDiskCommand = async (
  */
 export const de_CreateDiskFromSnapshotCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateDiskFromSnapshotCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3279,7 +3279,7 @@ export const de_CreateDiskFromSnapshotCommand = async (
  */
 export const de_CreateDiskSnapshotCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateDiskSnapshotCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3299,7 +3299,7 @@ export const de_CreateDiskSnapshotCommand = async (
  */
 export const de_CreateDistributionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateDistributionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3319,7 +3319,7 @@ export const de_CreateDistributionCommand = async (
  */
 export const de_CreateDomainCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateDomainCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3339,7 +3339,7 @@ export const de_CreateDomainCommand = async (
  */
 export const de_CreateDomainEntryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateDomainEntryCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3359,7 +3359,7 @@ export const de_CreateDomainEntryCommand = async (
  */
 export const de_CreateGUISessionAccessDetailsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateGUISessionAccessDetailsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3379,7 +3379,7 @@ export const de_CreateGUISessionAccessDetailsCommand = async (
  */
 export const de_CreateInstancesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateInstancesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3399,7 +3399,7 @@ export const de_CreateInstancesCommand = async (
  */
 export const de_CreateInstancesFromSnapshotCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateInstancesFromSnapshotCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3419,7 +3419,7 @@ export const de_CreateInstancesFromSnapshotCommand = async (
  */
 export const de_CreateInstanceSnapshotCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateInstanceSnapshotCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3439,7 +3439,7 @@ export const de_CreateInstanceSnapshotCommand = async (
  */
 export const de_CreateKeyPairCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateKeyPairCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3459,7 +3459,7 @@ export const de_CreateKeyPairCommand = async (
  */
 export const de_CreateLoadBalancerCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateLoadBalancerCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3479,7 +3479,7 @@ export const de_CreateLoadBalancerCommand = async (
  */
 export const de_CreateLoadBalancerTlsCertificateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateLoadBalancerTlsCertificateCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3499,7 +3499,7 @@ export const de_CreateLoadBalancerTlsCertificateCommand = async (
  */
 export const de_CreateRelationalDatabaseCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateRelationalDatabaseCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3519,7 +3519,7 @@ export const de_CreateRelationalDatabaseCommand = async (
  */
 export const de_CreateRelationalDatabaseFromSnapshotCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateRelationalDatabaseFromSnapshotCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3539,7 +3539,7 @@ export const de_CreateRelationalDatabaseFromSnapshotCommand = async (
  */
 export const de_CreateRelationalDatabaseSnapshotCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateRelationalDatabaseSnapshotCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3559,7 +3559,7 @@ export const de_CreateRelationalDatabaseSnapshotCommand = async (
  */
 export const de_DeleteAlarmCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteAlarmCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3579,7 +3579,7 @@ export const de_DeleteAlarmCommand = async (
  */
 export const de_DeleteAutoSnapshotCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteAutoSnapshotCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3599,7 +3599,7 @@ export const de_DeleteAutoSnapshotCommand = async (
  */
 export const de_DeleteBucketCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteBucketCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3619,7 +3619,7 @@ export const de_DeleteBucketCommand = async (
  */
 export const de_DeleteBucketAccessKeyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteBucketAccessKeyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3639,7 +3639,7 @@ export const de_DeleteBucketAccessKeyCommand = async (
  */
 export const de_DeleteCertificateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteCertificateCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3659,7 +3659,7 @@ export const de_DeleteCertificateCommand = async (
  */
 export const de_DeleteContactMethodCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteContactMethodCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3679,7 +3679,7 @@ export const de_DeleteContactMethodCommand = async (
  */
 export const de_DeleteContainerImageCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteContainerImageCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3699,7 +3699,7 @@ export const de_DeleteContainerImageCommand = async (
  */
 export const de_DeleteContainerServiceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteContainerServiceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3719,7 +3719,7 @@ export const de_DeleteContainerServiceCommand = async (
  */
 export const de_DeleteDiskCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteDiskCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3739,7 +3739,7 @@ export const de_DeleteDiskCommand = async (
  */
 export const de_DeleteDiskSnapshotCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteDiskSnapshotCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3759,7 +3759,7 @@ export const de_DeleteDiskSnapshotCommand = async (
  */
 export const de_DeleteDistributionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteDistributionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3779,7 +3779,7 @@ export const de_DeleteDistributionCommand = async (
  */
 export const de_DeleteDomainCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteDomainCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3799,7 +3799,7 @@ export const de_DeleteDomainCommand = async (
  */
 export const de_DeleteDomainEntryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteDomainEntryCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3819,7 +3819,7 @@ export const de_DeleteDomainEntryCommand = async (
  */
 export const de_DeleteInstanceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteInstanceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3839,7 +3839,7 @@ export const de_DeleteInstanceCommand = async (
  */
 export const de_DeleteInstanceSnapshotCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteInstanceSnapshotCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3859,7 +3859,7 @@ export const de_DeleteInstanceSnapshotCommand = async (
  */
 export const de_DeleteKeyPairCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteKeyPairCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3879,7 +3879,7 @@ export const de_DeleteKeyPairCommand = async (
  */
 export const de_DeleteKnownHostKeysCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteKnownHostKeysCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3899,7 +3899,7 @@ export const de_DeleteKnownHostKeysCommand = async (
  */
 export const de_DeleteLoadBalancerCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteLoadBalancerCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3919,7 +3919,7 @@ export const de_DeleteLoadBalancerCommand = async (
  */
 export const de_DeleteLoadBalancerTlsCertificateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteLoadBalancerTlsCertificateCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3939,7 +3939,7 @@ export const de_DeleteLoadBalancerTlsCertificateCommand = async (
  */
 export const de_DeleteRelationalDatabaseCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteRelationalDatabaseCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3959,7 +3959,7 @@ export const de_DeleteRelationalDatabaseCommand = async (
  */
 export const de_DeleteRelationalDatabaseSnapshotCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteRelationalDatabaseSnapshotCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3979,7 +3979,7 @@ export const de_DeleteRelationalDatabaseSnapshotCommand = async (
  */
 export const de_DetachCertificateFromDistributionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DetachCertificateFromDistributionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3999,7 +3999,7 @@ export const de_DetachCertificateFromDistributionCommand = async (
  */
 export const de_DetachDiskCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DetachDiskCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4019,7 +4019,7 @@ export const de_DetachDiskCommand = async (
  */
 export const de_DetachInstancesFromLoadBalancerCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DetachInstancesFromLoadBalancerCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4039,7 +4039,7 @@ export const de_DetachInstancesFromLoadBalancerCommand = async (
  */
 export const de_DetachStaticIpCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DetachStaticIpCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4059,7 +4059,7 @@ export const de_DetachStaticIpCommand = async (
  */
 export const de_DisableAddOnCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisableAddOnCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4079,7 +4079,7 @@ export const de_DisableAddOnCommand = async (
  */
 export const de_DownloadDefaultKeyPairCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DownloadDefaultKeyPairCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4099,7 +4099,7 @@ export const de_DownloadDefaultKeyPairCommand = async (
  */
 export const de_EnableAddOnCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<EnableAddOnCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4119,7 +4119,7 @@ export const de_EnableAddOnCommand = async (
  */
 export const de_ExportSnapshotCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ExportSnapshotCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4139,7 +4139,7 @@ export const de_ExportSnapshotCommand = async (
  */
 export const de_GetActiveNamesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetActiveNamesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4159,7 +4159,7 @@ export const de_GetActiveNamesCommand = async (
  */
 export const de_GetAlarmsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetAlarmsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4179,7 +4179,7 @@ export const de_GetAlarmsCommand = async (
  */
 export const de_GetAutoSnapshotsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetAutoSnapshotsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4199,7 +4199,7 @@ export const de_GetAutoSnapshotsCommand = async (
  */
 export const de_GetBlueprintsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetBlueprintsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4219,7 +4219,7 @@ export const de_GetBlueprintsCommand = async (
  */
 export const de_GetBucketAccessKeysCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetBucketAccessKeysCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4239,7 +4239,7 @@ export const de_GetBucketAccessKeysCommand = async (
  */
 export const de_GetBucketBundlesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetBucketBundlesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4259,7 +4259,7 @@ export const de_GetBucketBundlesCommand = async (
  */
 export const de_GetBucketMetricDataCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetBucketMetricDataCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4279,7 +4279,7 @@ export const de_GetBucketMetricDataCommand = async (
  */
 export const de_GetBucketsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetBucketsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4299,7 +4299,7 @@ export const de_GetBucketsCommand = async (
  */
 export const de_GetBundlesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetBundlesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4319,7 +4319,7 @@ export const de_GetBundlesCommand = async (
  */
 export const de_GetCertificatesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetCertificatesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4339,7 +4339,7 @@ export const de_GetCertificatesCommand = async (
  */
 export const de_GetCloudFormationStackRecordsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetCloudFormationStackRecordsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4359,7 +4359,7 @@ export const de_GetCloudFormationStackRecordsCommand = async (
  */
 export const de_GetContactMethodsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetContactMethodsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4379,7 +4379,7 @@ export const de_GetContactMethodsCommand = async (
  */
 export const de_GetContainerAPIMetadataCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetContainerAPIMetadataCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4399,7 +4399,7 @@ export const de_GetContainerAPIMetadataCommand = async (
  */
 export const de_GetContainerImagesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetContainerImagesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4419,7 +4419,7 @@ export const de_GetContainerImagesCommand = async (
  */
 export const de_GetContainerLogCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetContainerLogCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4439,7 +4439,7 @@ export const de_GetContainerLogCommand = async (
  */
 export const de_GetContainerServiceDeploymentsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetContainerServiceDeploymentsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4459,7 +4459,7 @@ export const de_GetContainerServiceDeploymentsCommand = async (
  */
 export const de_GetContainerServiceMetricDataCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetContainerServiceMetricDataCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4479,7 +4479,7 @@ export const de_GetContainerServiceMetricDataCommand = async (
  */
 export const de_GetContainerServicePowersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetContainerServicePowersCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4499,7 +4499,7 @@ export const de_GetContainerServicePowersCommand = async (
  */
 export const de_GetContainerServicesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetContainerServicesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4519,7 +4519,7 @@ export const de_GetContainerServicesCommand = async (
  */
 export const de_GetCostEstimateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetCostEstimateCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4539,7 +4539,7 @@ export const de_GetCostEstimateCommand = async (
  */
 export const de_GetDiskCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetDiskCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4559,7 +4559,7 @@ export const de_GetDiskCommand = async (
  */
 export const de_GetDisksCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetDisksCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4579,7 +4579,7 @@ export const de_GetDisksCommand = async (
  */
 export const de_GetDiskSnapshotCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetDiskSnapshotCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4599,7 +4599,7 @@ export const de_GetDiskSnapshotCommand = async (
  */
 export const de_GetDiskSnapshotsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetDiskSnapshotsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4619,7 +4619,7 @@ export const de_GetDiskSnapshotsCommand = async (
  */
 export const de_GetDistributionBundlesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetDistributionBundlesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4639,7 +4639,7 @@ export const de_GetDistributionBundlesCommand = async (
  */
 export const de_GetDistributionLatestCacheResetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetDistributionLatestCacheResetCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4659,7 +4659,7 @@ export const de_GetDistributionLatestCacheResetCommand = async (
  */
 export const de_GetDistributionMetricDataCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetDistributionMetricDataCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4679,7 +4679,7 @@ export const de_GetDistributionMetricDataCommand = async (
  */
 export const de_GetDistributionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetDistributionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4699,7 +4699,7 @@ export const de_GetDistributionsCommand = async (
  */
 export const de_GetDomainCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetDomainCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4719,7 +4719,7 @@ export const de_GetDomainCommand = async (
  */
 export const de_GetDomainsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetDomainsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4739,7 +4739,7 @@ export const de_GetDomainsCommand = async (
  */
 export const de_GetExportSnapshotRecordsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetExportSnapshotRecordsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4759,7 +4759,7 @@ export const de_GetExportSnapshotRecordsCommand = async (
  */
 export const de_GetInstanceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetInstanceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4779,7 +4779,7 @@ export const de_GetInstanceCommand = async (
  */
 export const de_GetInstanceAccessDetailsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetInstanceAccessDetailsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4799,7 +4799,7 @@ export const de_GetInstanceAccessDetailsCommand = async (
  */
 export const de_GetInstanceMetricDataCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetInstanceMetricDataCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4819,7 +4819,7 @@ export const de_GetInstanceMetricDataCommand = async (
  */
 export const de_GetInstancePortStatesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetInstancePortStatesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4839,7 +4839,7 @@ export const de_GetInstancePortStatesCommand = async (
  */
 export const de_GetInstancesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetInstancesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4859,7 +4859,7 @@ export const de_GetInstancesCommand = async (
  */
 export const de_GetInstanceSnapshotCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetInstanceSnapshotCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4879,7 +4879,7 @@ export const de_GetInstanceSnapshotCommand = async (
  */
 export const de_GetInstanceSnapshotsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetInstanceSnapshotsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4899,7 +4899,7 @@ export const de_GetInstanceSnapshotsCommand = async (
  */
 export const de_GetInstanceStateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetInstanceStateCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4919,7 +4919,7 @@ export const de_GetInstanceStateCommand = async (
  */
 export const de_GetKeyPairCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetKeyPairCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4939,7 +4939,7 @@ export const de_GetKeyPairCommand = async (
  */
 export const de_GetKeyPairsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetKeyPairsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4959,7 +4959,7 @@ export const de_GetKeyPairsCommand = async (
  */
 export const de_GetLoadBalancerCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetLoadBalancerCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4979,7 +4979,7 @@ export const de_GetLoadBalancerCommand = async (
  */
 export const de_GetLoadBalancerMetricDataCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetLoadBalancerMetricDataCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4999,7 +4999,7 @@ export const de_GetLoadBalancerMetricDataCommand = async (
  */
 export const de_GetLoadBalancersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetLoadBalancersCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5019,7 +5019,7 @@ export const de_GetLoadBalancersCommand = async (
  */
 export const de_GetLoadBalancerTlsCertificatesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetLoadBalancerTlsCertificatesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5039,7 +5039,7 @@ export const de_GetLoadBalancerTlsCertificatesCommand = async (
  */
 export const de_GetLoadBalancerTlsPoliciesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetLoadBalancerTlsPoliciesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5059,7 +5059,7 @@ export const de_GetLoadBalancerTlsPoliciesCommand = async (
  */
 export const de_GetOperationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetOperationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5079,7 +5079,7 @@ export const de_GetOperationCommand = async (
  */
 export const de_GetOperationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetOperationsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5099,7 +5099,7 @@ export const de_GetOperationsCommand = async (
  */
 export const de_GetOperationsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetOperationsForResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5119,7 +5119,7 @@ export const de_GetOperationsForResourceCommand = async (
  */
 export const de_GetRegionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetRegionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5139,7 +5139,7 @@ export const de_GetRegionsCommand = async (
  */
 export const de_GetRelationalDatabaseCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetRelationalDatabaseCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5159,7 +5159,7 @@ export const de_GetRelationalDatabaseCommand = async (
  */
 export const de_GetRelationalDatabaseBlueprintsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetRelationalDatabaseBlueprintsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5179,7 +5179,7 @@ export const de_GetRelationalDatabaseBlueprintsCommand = async (
  */
 export const de_GetRelationalDatabaseBundlesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetRelationalDatabaseBundlesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5199,7 +5199,7 @@ export const de_GetRelationalDatabaseBundlesCommand = async (
  */
 export const de_GetRelationalDatabaseEventsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetRelationalDatabaseEventsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5219,7 +5219,7 @@ export const de_GetRelationalDatabaseEventsCommand = async (
  */
 export const de_GetRelationalDatabaseLogEventsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetRelationalDatabaseLogEventsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5239,7 +5239,7 @@ export const de_GetRelationalDatabaseLogEventsCommand = async (
  */
 export const de_GetRelationalDatabaseLogStreamsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetRelationalDatabaseLogStreamsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5259,7 +5259,7 @@ export const de_GetRelationalDatabaseLogStreamsCommand = async (
  */
 export const de_GetRelationalDatabaseMasterUserPasswordCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetRelationalDatabaseMasterUserPasswordCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5279,7 +5279,7 @@ export const de_GetRelationalDatabaseMasterUserPasswordCommand = async (
  */
 export const de_GetRelationalDatabaseMetricDataCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetRelationalDatabaseMetricDataCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5299,7 +5299,7 @@ export const de_GetRelationalDatabaseMetricDataCommand = async (
  */
 export const de_GetRelationalDatabaseParametersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetRelationalDatabaseParametersCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5319,7 +5319,7 @@ export const de_GetRelationalDatabaseParametersCommand = async (
  */
 export const de_GetRelationalDatabasesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetRelationalDatabasesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5339,7 +5339,7 @@ export const de_GetRelationalDatabasesCommand = async (
  */
 export const de_GetRelationalDatabaseSnapshotCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetRelationalDatabaseSnapshotCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5359,7 +5359,7 @@ export const de_GetRelationalDatabaseSnapshotCommand = async (
  */
 export const de_GetRelationalDatabaseSnapshotsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetRelationalDatabaseSnapshotsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5379,7 +5379,7 @@ export const de_GetRelationalDatabaseSnapshotsCommand = async (
  */
 export const de_GetSetupHistoryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetSetupHistoryCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5399,7 +5399,7 @@ export const de_GetSetupHistoryCommand = async (
  */
 export const de_GetStaticIpCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetStaticIpCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5419,7 +5419,7 @@ export const de_GetStaticIpCommand = async (
  */
 export const de_GetStaticIpsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetStaticIpsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5439,7 +5439,7 @@ export const de_GetStaticIpsCommand = async (
  */
 export const de_ImportKeyPairCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ImportKeyPairCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5459,7 +5459,7 @@ export const de_ImportKeyPairCommand = async (
  */
 export const de_IsVpcPeeredCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<IsVpcPeeredCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5479,7 +5479,7 @@ export const de_IsVpcPeeredCommand = async (
  */
 export const de_OpenInstancePublicPortsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<OpenInstancePublicPortsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5499,7 +5499,7 @@ export const de_OpenInstancePublicPortsCommand = async (
  */
 export const de_PeerVpcCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PeerVpcCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5519,7 +5519,7 @@ export const de_PeerVpcCommand = async (
  */
 export const de_PutAlarmCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutAlarmCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5539,7 +5539,7 @@ export const de_PutAlarmCommand = async (
  */
 export const de_PutInstancePublicPortsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutInstancePublicPortsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5559,7 +5559,7 @@ export const de_PutInstancePublicPortsCommand = async (
  */
 export const de_RebootInstanceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RebootInstanceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5579,7 +5579,7 @@ export const de_RebootInstanceCommand = async (
  */
 export const de_RebootRelationalDatabaseCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RebootRelationalDatabaseCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5599,7 +5599,7 @@ export const de_RebootRelationalDatabaseCommand = async (
  */
 export const de_RegisterContainerImageCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RegisterContainerImageCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5619,7 +5619,7 @@ export const de_RegisterContainerImageCommand = async (
  */
 export const de_ReleaseStaticIpCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ReleaseStaticIpCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5639,7 +5639,7 @@ export const de_ReleaseStaticIpCommand = async (
  */
 export const de_ResetDistributionCacheCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResetDistributionCacheCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5659,7 +5659,7 @@ export const de_ResetDistributionCacheCommand = async (
  */
 export const de_SendContactMethodVerificationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SendContactMethodVerificationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5679,7 +5679,7 @@ export const de_SendContactMethodVerificationCommand = async (
  */
 export const de_SetIpAddressTypeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SetIpAddressTypeCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5699,7 +5699,7 @@ export const de_SetIpAddressTypeCommand = async (
  */
 export const de_SetResourceAccessForBucketCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SetResourceAccessForBucketCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5719,7 +5719,7 @@ export const de_SetResourceAccessForBucketCommand = async (
  */
 export const de_SetupInstanceHttpsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SetupInstanceHttpsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5739,7 +5739,7 @@ export const de_SetupInstanceHttpsCommand = async (
  */
 export const de_StartGUISessionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartGUISessionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5759,7 +5759,7 @@ export const de_StartGUISessionCommand = async (
  */
 export const de_StartInstanceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartInstanceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5779,7 +5779,7 @@ export const de_StartInstanceCommand = async (
  */
 export const de_StartRelationalDatabaseCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartRelationalDatabaseCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5799,7 +5799,7 @@ export const de_StartRelationalDatabaseCommand = async (
  */
 export const de_StopGUISessionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StopGUISessionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5819,7 +5819,7 @@ export const de_StopGUISessionCommand = async (
  */
 export const de_StopInstanceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StopInstanceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5839,7 +5839,7 @@ export const de_StopInstanceCommand = async (
  */
 export const de_StopRelationalDatabaseCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StopRelationalDatabaseCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5859,7 +5859,7 @@ export const de_StopRelationalDatabaseCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5879,7 +5879,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_TestAlarmCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TestAlarmCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5899,7 +5899,7 @@ export const de_TestAlarmCommand = async (
  */
 export const de_UnpeerVpcCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UnpeerVpcCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5919,7 +5919,7 @@ export const de_UnpeerVpcCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5939,7 +5939,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateBucketCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateBucketCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5959,7 +5959,7 @@ export const de_UpdateBucketCommand = async (
  */
 export const de_UpdateBucketBundleCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateBucketBundleCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5979,7 +5979,7 @@ export const de_UpdateBucketBundleCommand = async (
  */
 export const de_UpdateContainerServiceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateContainerServiceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5999,7 +5999,7 @@ export const de_UpdateContainerServiceCommand = async (
  */
 export const de_UpdateDistributionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateDistributionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -6019,7 +6019,7 @@ export const de_UpdateDistributionCommand = async (
  */
 export const de_UpdateDistributionBundleCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateDistributionBundleCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -6039,7 +6039,7 @@ export const de_UpdateDistributionBundleCommand = async (
  */
 export const de_UpdateDomainEntryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateDomainEntryCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -6059,7 +6059,7 @@ export const de_UpdateDomainEntryCommand = async (
  */
 export const de_UpdateInstanceMetadataOptionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateInstanceMetadataOptionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -6079,7 +6079,7 @@ export const de_UpdateInstanceMetadataOptionsCommand = async (
  */
 export const de_UpdateLoadBalancerAttributeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateLoadBalancerAttributeCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -6099,7 +6099,7 @@ export const de_UpdateLoadBalancerAttributeCommand = async (
  */
 export const de_UpdateRelationalDatabaseCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateRelationalDatabaseCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -6119,7 +6119,7 @@ export const de_UpdateRelationalDatabaseCommand = async (
  */
 export const de_UpdateRelationalDatabaseParametersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateRelationalDatabaseParametersCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -6180,7 +6180,7 @@ const de_CommandError = async (output: __HttpResponse, context: __SerdeContext):
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -6196,7 +6196,7 @@ const de_AccessDeniedExceptionRes = async (
  */
 const de_AccountSetupInProgressExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccountSetupInProgressException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -6212,7 +6212,7 @@ const de_AccountSetupInProgressExceptionRes = async (
  */
 const de_InvalidInputExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidInputException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -6241,7 +6241,7 @@ const de_NotFoundExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_OperationFailureExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<OperationFailureException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -6270,7 +6270,7 @@ const de_ServiceExceptionRes = async (parsedOutput: any, context: __SerdeContext
  */
 const de_UnauthenticatedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UnauthenticatedException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -6384,7 +6384,7 @@ const de_UnauthenticatedExceptionRes = async (
  */
 const se_CreateRelationalDatabaseFromSnapshotRequest = (
   input: CreateRelationalDatabaseFromSnapshotRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     availabilityZone: [],
@@ -6537,7 +6537,7 @@ const se_GetContainerLogRequest = (input: GetContainerLogRequest, context: __Ser
  */
 const se_GetContainerServiceMetricDataRequest = (
   input: GetContainerServiceMetricDataRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     endTime: (_) => _.getTime() / 1_000,
@@ -6674,7 +6674,7 @@ const se_GetLoadBalancerMetricDataRequest = (input: GetLoadBalancerMetricDataReq
  */
 const se_GetRelationalDatabaseLogEventsRequest = (
   input: GetRelationalDatabaseLogEventsRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     endTime: (_) => _.getTime() / 1_000,
@@ -6695,7 +6695,7 @@ const se_GetRelationalDatabaseLogEventsRequest = (
  */
 const se_GetRelationalDatabaseMetricDataRequest = (
   input: GetRelationalDatabaseMetricDataRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     endTime: (_) => _.getTime() / 1_000,
@@ -6973,7 +6973,7 @@ const de_AllocateStaticIpResult = (output: any, context: __SerdeContext): Alloca
  */
 const de_AttachCertificateToDistributionResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): AttachCertificateToDistributionResult => {
   return take(output, {
     operation: (_: any) => de_Operation(_, context),
@@ -6998,7 +6998,7 @@ const de_AttachDiskResult = (output: any, context: __SerdeContext): AttachDiskRe
  */
 const de_AttachInstancesToLoadBalancerResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): AttachInstancesToLoadBalancerResult => {
   return take(output, {
     operations: (_: any) => de_OperationList(_, context),
@@ -7010,7 +7010,7 @@ const de_AttachInstancesToLoadBalancerResult = (
  */
 const de_AttachLoadBalancerTlsCertificateResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): AttachLoadBalancerTlsCertificateResult => {
   return take(output, {
     operations: (_: any) => de_OperationList(_, context),
@@ -7553,7 +7553,7 @@ const de_CreateContactMethodResult = (output: any, context: __SerdeContext): Cre
  */
 const de_CreateContainerServiceDeploymentResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CreateContainerServiceDeploymentResult => {
   return take(output, {
     containerService: (_: any) => de_ContainerService(_, context),
@@ -7565,7 +7565,7 @@ const de_CreateContainerServiceDeploymentResult = (
  */
 const de_CreateContainerServiceRegistryLoginResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CreateContainerServiceRegistryLoginResult => {
   return take(output, {
     registryLogin: (_: any) => de_ContainerServiceRegistryLogin(_, context),
@@ -7643,7 +7643,7 @@ const de_CreateDomainResult = (output: any, context: __SerdeContext): CreateDoma
  */
 const de_CreateInstancesFromSnapshotResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CreateInstancesFromSnapshotResult => {
   return take(output, {
     operations: (_: any) => de_OperationList(_, context),
@@ -7694,7 +7694,7 @@ const de_CreateLoadBalancerResult = (output: any, context: __SerdeContext): Crea
  */
 const de_CreateLoadBalancerTlsCertificateResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CreateLoadBalancerTlsCertificateResult => {
   return take(output, {
     operations: (_: any) => de_OperationList(_, context),
@@ -7706,7 +7706,7 @@ const de_CreateLoadBalancerTlsCertificateResult = (
  */
 const de_CreateRelationalDatabaseFromSnapshotResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CreateRelationalDatabaseFromSnapshotResult => {
   return take(output, {
     operations: (_: any) => de_OperationList(_, context),
@@ -7727,7 +7727,7 @@ const de_CreateRelationalDatabaseResult = (output: any, context: __SerdeContext)
  */
 const de_CreateRelationalDatabaseSnapshotResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CreateRelationalDatabaseSnapshotResult => {
   return take(output, {
     operations: (_: any) => de_OperationList(_, context),
@@ -7887,7 +7887,7 @@ const de_DeleteLoadBalancerResult = (output: any, context: __SerdeContext): Dele
  */
 const de_DeleteLoadBalancerTlsCertificateResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DeleteLoadBalancerTlsCertificateResult => {
   return take(output, {
     operations: (_: any) => de_OperationList(_, context),
@@ -7908,7 +7908,7 @@ const de_DeleteRelationalDatabaseResult = (output: any, context: __SerdeContext)
  */
 const de_DeleteRelationalDatabaseSnapshotResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DeleteRelationalDatabaseSnapshotResult => {
   return take(output, {
     operations: (_: any) => de_OperationList(_, context),
@@ -7922,7 +7922,7 @@ const de_DeleteRelationalDatabaseSnapshotResult = (
  */
 const de_DetachCertificateFromDistributionResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DetachCertificateFromDistributionResult => {
   return take(output, {
     operation: (_: any) => de_Operation(_, context),
@@ -7943,7 +7943,7 @@ const de_DetachDiskResult = (output: any, context: __SerdeContext): DetachDiskRe
  */
 const de_DetachInstancesFromLoadBalancerResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DetachInstancesFromLoadBalancerResult => {
   return take(output, {
     operations: (_: any) => de_OperationList(_, context),
@@ -8314,7 +8314,7 @@ const de_GetCertificatesResult = (output: any, context: __SerdeContext): GetCert
  */
 const de_GetCloudFormationStackRecordsResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): GetCloudFormationStackRecordsResult => {
   return take(output, {
     cloudFormationStackRecords: (_: any) => de_CloudFormationStackRecordList(_, context),
@@ -8357,7 +8357,7 @@ const de_GetContainerLogResult = (output: any, context: __SerdeContext): GetCont
  */
 const de_GetContainerServiceDeploymentsResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): GetContainerServiceDeploymentsResult => {
   return take(output, {
     deployments: (_: any) => de_ContainerServiceDeploymentList(_, context),
@@ -8369,7 +8369,7 @@ const de_GetContainerServiceDeploymentsResult = (
  */
 const de_GetContainerServiceMetricDataResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): GetContainerServiceMetricDataResult => {
   return take(output, {
     metricData: (_: any) => de_MetricDatapointList(_, context),
@@ -8447,7 +8447,7 @@ const de_GetDistributionBundlesResult = (output: any, context: __SerdeContext): 
  */
 const de_GetDistributionLatestCacheResetResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): GetDistributionLatestCacheResetResult => {
   return take(output, {
     createTime: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
@@ -8618,7 +8618,7 @@ const de_GetLoadBalancersResult = (output: any, context: __SerdeContext): GetLoa
  */
 const de_GetLoadBalancerTlsCertificatesResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): GetLoadBalancerTlsCertificatesResult => {
   return take(output, {
     tlsCertificates: (_: any) => de_LoadBalancerTlsCertificateList(_, context),
@@ -8666,7 +8666,7 @@ const de_GetOperationsResult = (output: any, context: __SerdeContext): GetOperat
  */
 const de_GetRelationalDatabaseBundlesResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): GetRelationalDatabaseBundlesResult => {
   return take(output, {
     bundles: (_: any) => de_RelationalDatabaseBundleList(_, context),
@@ -8679,7 +8679,7 @@ const de_GetRelationalDatabaseBundlesResult = (
  */
 const de_GetRelationalDatabaseEventsResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): GetRelationalDatabaseEventsResult => {
   return take(output, {
     nextPageToken: __expectString,
@@ -8692,7 +8692,7 @@ const de_GetRelationalDatabaseEventsResult = (
  */
 const de_GetRelationalDatabaseLogEventsResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): GetRelationalDatabaseLogEventsResult => {
   return take(output, {
     nextBackwardToken: __expectString,
@@ -8708,7 +8708,7 @@ const de_GetRelationalDatabaseLogEventsResult = (
  */
 const de_GetRelationalDatabaseMasterUserPasswordResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): GetRelationalDatabaseMasterUserPasswordResult => {
   return take(output, {
     createdAt: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
@@ -8721,7 +8721,7 @@ const de_GetRelationalDatabaseMasterUserPasswordResult = (
  */
 const de_GetRelationalDatabaseMetricDataResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): GetRelationalDatabaseMetricDataResult => {
   return take(output, {
     metricData: (_: any) => de_MetricDatapointList(_, context),
@@ -8745,7 +8745,7 @@ const de_GetRelationalDatabaseResult = (output: any, context: __SerdeContext): G
  */
 const de_GetRelationalDatabaseSnapshotResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): GetRelationalDatabaseSnapshotResult => {
   return take(output, {
     relationalDatabaseSnapshot: (_: any) => de_RelationalDatabaseSnapshot(_, context),
@@ -8757,7 +8757,7 @@ const de_GetRelationalDatabaseSnapshotResult = (
  */
 const de_GetRelationalDatabaseSnapshotsResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): GetRelationalDatabaseSnapshotsResult => {
   return take(output, {
     nextPageToken: __expectString,
@@ -9569,7 +9569,7 @@ const de_ResourcesBudgetEstimate = (output: any, context: __SerdeContext): Resou
  */
 const de_SendContactMethodVerificationResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): SendContactMethodVerificationResult => {
   return take(output, {
     operations: (_: any) => de_OperationList(_, context),
@@ -9596,7 +9596,7 @@ const de_SetIpAddressTypeResult = (output: any, context: __SerdeContext): SetIpA
  */
 const de_SetResourceAccessForBucketResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): SetResourceAccessForBucketResult => {
   return take(output, {
     operations: (_: any) => de_OperationList(_, context),
@@ -9880,7 +9880,7 @@ const de_UpdateDomainEntryResult = (output: any, context: __SerdeContext): Updat
  */
 const de_UpdateInstanceMetadataOptionsResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): UpdateInstanceMetadataOptionsResult => {
   return take(output, {
     operation: (_: any) => de_Operation(_, context),
@@ -9892,7 +9892,7 @@ const de_UpdateInstanceMetadataOptionsResult = (
  */
 const de_UpdateLoadBalancerAttributeResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): UpdateLoadBalancerAttributeResult => {
   return take(output, {
     operations: (_: any) => de_OperationList(_, context),
@@ -9904,7 +9904,7 @@ const de_UpdateLoadBalancerAttributeResult = (
  */
 const de_UpdateRelationalDatabaseParametersResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): UpdateRelationalDatabaseParametersResult => {
   return take(output, {
     operations: (_: any) => de_OperationList(_, context),
@@ -9938,7 +9938,7 @@ const buildHttpRpcRequest = async (
   headers: __HeaderBag,
   path: string,
   resolvedHostname: string | undefined,
-  body: any
+  body: any,
 ): Promise<__HttpRequest> => {
   const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
   const contents: any = {

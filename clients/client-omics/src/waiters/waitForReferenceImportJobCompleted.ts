@@ -79,7 +79,7 @@ const checkState = async (client: OmicsClient, input: GetReferenceImportJobComma
  */
 export const waitForReferenceImportJobCompleted = async (
   params: WaiterConfiguration<OmicsClient>,
-  input: GetReferenceImportJobCommandInput
+  input: GetReferenceImportJobCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 30, maxDelay: 600 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -91,7 +91,7 @@ export const waitForReferenceImportJobCompleted = async (
  */
 export const waitUntilReferenceImportJobCompleted = async (
   params: WaiterConfiguration<OmicsClient>,
-  input: GetReferenceImportJobCommandInput
+  input: GetReferenceImportJobCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 30, maxDelay: 600 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

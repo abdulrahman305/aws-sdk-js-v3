@@ -46,7 +46,7 @@ export namespace MalformedLengthQueryStringServerInput {
    * @internal
    */
   export const validate: (
-    obj: Parameters<typeof MalformedLengthQueryStringInput.validate>[0]
+    obj: Parameters<typeof MalformedLengthQueryStringInput.validate>[0],
   ) => __ValidationFailure[] = MalformedLengthQueryStringInput.validate;
 }
 export interface MalformedLengthQueryStringServerOutput {}
@@ -82,14 +82,14 @@ export class MalformedLengthQueryStringSerializer
 }
 
 export const getMalformedLengthQueryStringHandler = <Context>(
-  operation: __Operation<MalformedLengthQueryStringServerInput, MalformedLengthQueryStringServerOutput, Context>
+  operation: __Operation<MalformedLengthQueryStringServerInput, MalformedLengthQueryStringServerOutput, Context>,
 ): __ServiceHandler<Context, __HttpRequest, __HttpResponse> => {
   const mux = new httpbinding.HttpBindingMux<"RestJsonValidation", "MalformedLengthQueryString">([
     new httpbinding.UriSpec<"RestJsonValidation", "MalformedLengthQueryString">(
       "POST",
       [{ type: "path_literal", value: "MalformedLengthQueryString" }],
       [],
-      { service: "RestJsonValidation", operation: "MalformedLengthQueryString" }
+      { service: "RestJsonValidation", operation: "MalformedLengthQueryString" },
     ),
   ]);
   const customizer: __ValidationCustomizer<"MalformedLengthQueryString"> = (ctx, failures) => {
@@ -111,7 +111,7 @@ export const getMalformedLengthQueryStringHandler = <Context>(
     mux,
     new MalformedLengthQueryStringSerializer(),
     serializeFrameworkException,
-    customizer
+    customizer,
   );
 };
 
@@ -132,7 +132,7 @@ async function handle<S, O extends keyof S & string, Context>(
   operation: __Operation<__OperationInput<S[O]>, __OperationOutput<S[O]>, Context>,
   serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
   validationFn: (input: __OperationInput<S[O]>) => __ValidationFailure[],
-  validationCustomizer: __ValidationCustomizer<O>
+  validationCustomizer: __ValidationCustomizer<O>,
 ): Promise<__HttpResponse> {
   let input;
   try {
@@ -178,7 +178,7 @@ export class MalformedLengthQueryStringHandler<Context> implements __ServiceHand
   >;
   private readonly serializeFrameworkException: (
     e: __SmithyFrameworkException,
-    ctx: __ServerSerdeContext
+    ctx: __ServerSerdeContext,
   ) => Promise<__HttpResponse>;
   private readonly validationCustomizer: __ValidationCustomizer<"MalformedLengthQueryString">;
   /**
@@ -199,7 +199,7 @@ export class MalformedLengthQueryStringHandler<Context> implements __ServiceHand
       MalformedLengthQueryStringErrors
     >,
     serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
-    validationCustomizer: __ValidationCustomizer<"MalformedLengthQueryString">
+    validationCustomizer: __ValidationCustomizer<"MalformedLengthQueryString">,
   ) {
     this.operation = operation;
     this.mux = mux;
@@ -211,7 +211,7 @@ export class MalformedLengthQueryStringHandler<Context> implements __ServiceHand
     const target = this.mux.match(request);
     if (target === undefined) {
       console.log(
-        "Received a request that did not match aws.protocoltests.restjson.validation#RestJsonValidation.MalformedLengthQueryString. This indicates a misconfiguration."
+        "Received a request that did not match aws.protocoltests.restjson.validation#RestJsonValidation.MalformedLengthQueryString. This indicates a misconfiguration.",
       );
       return this.serializeFrameworkException(new __InternalFailureException(), serdeContextBase);
     }
@@ -223,7 +223,7 @@ export class MalformedLengthQueryStringHandler<Context> implements __ServiceHand
       this.operation,
       this.serializeFrameworkException,
       MalformedLengthQueryStringServerInput.validate,
-      this.validationCustomizer
+      this.validationCustomizer,
     );
   }
 }

@@ -704,14 +704,14 @@ CLI profile name [123456789011_ReadOnly]: my-sso-profile<ENTER>
 
 ```javascript
 //...
-const client = new FooClient({ credentials: fromSSO({ profile: "my-sso-profile" })});
+const client = new FooClient({ credentials: fromSSO({ profile: "my-sso-profile" }) });
 ```
 
 Alternatively, the SSO credential provider is supported in shared INI credentials provider
 
 ```javascript
 //...
-const client = new FooClient({ credentials: fromIni({ profile: "my-sso-profile" })});
+const client = new FooClient({ credentials: fromIni({ profile: "my-sso-profile" }) });
 ```
 
 3. To log out from the current SSO session, use the AWS CLI:

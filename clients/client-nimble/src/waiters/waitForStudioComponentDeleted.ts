@@ -36,7 +36,7 @@ const checkState = async (client: NimbleClient, input: GetStudioComponentCommand
  */
 export const waitForStudioComponentDeleted = async (
   params: WaiterConfiguration<NimbleClient>,
-  input: GetStudioComponentCommandInput
+  input: GetStudioComponentCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 1, maxDelay: 120 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -48,7 +48,7 @@ export const waitForStudioComponentDeleted = async (
  */
 export const waitUntilStudioComponentDeleted = async (
   params: WaiterConfiguration<NimbleClient>,
-  input: GetStudioComponentCommandInput
+  input: GetStudioComponentCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 1, maxDelay: 120 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

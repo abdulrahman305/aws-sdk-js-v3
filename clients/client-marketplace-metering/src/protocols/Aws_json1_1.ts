@@ -60,7 +60,7 @@ import {
  */
 export const se_BatchMeterUsageCommand = async (
   input: BatchMeterUsageCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("BatchMeterUsage");
   let body: any;
@@ -73,7 +73,7 @@ export const se_BatchMeterUsageCommand = async (
  */
 export const se_MeterUsageCommand = async (
   input: MeterUsageCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("MeterUsage");
   let body: any;
@@ -86,7 +86,7 @@ export const se_MeterUsageCommand = async (
  */
 export const se_RegisterUsageCommand = async (
   input: RegisterUsageCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("RegisterUsage");
   let body: any;
@@ -99,7 +99,7 @@ export const se_RegisterUsageCommand = async (
  */
 export const se_ResolveCustomerCommand = async (
   input: ResolveCustomerCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ResolveCustomer");
   let body: any;
@@ -112,7 +112,7 @@ export const se_ResolveCustomerCommand = async (
  */
 export const de_BatchMeterUsageCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchMeterUsageCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -132,7 +132,7 @@ export const de_BatchMeterUsageCommand = async (
  */
 export const de_MeterUsageCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<MeterUsageCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -152,7 +152,7 @@ export const de_MeterUsageCommand = async (
  */
 export const de_RegisterUsageCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RegisterUsageCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -172,7 +172,7 @@ export const de_RegisterUsageCommand = async (
  */
 export const de_ResolveCustomerCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResolveCustomerCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -263,7 +263,7 @@ const de_CommandError = async (output: __HttpResponse, context: __SerdeContext):
  */
 const de_CustomerNotEntitledExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CustomerNotEntitledException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -279,7 +279,7 @@ const de_CustomerNotEntitledExceptionRes = async (
  */
 const de_DisabledApiExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisabledApiException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -295,7 +295,7 @@ const de_DisabledApiExceptionRes = async (
  */
 const de_DuplicateRequestExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DuplicateRequestException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -311,7 +311,7 @@ const de_DuplicateRequestExceptionRes = async (
  */
 const de_ExpiredTokenExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ExpiredTokenException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -327,7 +327,7 @@ const de_ExpiredTokenExceptionRes = async (
  */
 const de_InternalServiceErrorExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServiceErrorException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -343,7 +343,7 @@ const de_InternalServiceErrorExceptionRes = async (
  */
 const de_InvalidCustomerIdentifierExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidCustomerIdentifierException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -359,7 +359,7 @@ const de_InvalidCustomerIdentifierExceptionRes = async (
  */
 const de_InvalidEndpointRegionExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidEndpointRegionException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -375,7 +375,7 @@ const de_InvalidEndpointRegionExceptionRes = async (
  */
 const de_InvalidProductCodeExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidProductCodeException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -391,7 +391,7 @@ const de_InvalidProductCodeExceptionRes = async (
  */
 const de_InvalidPublicKeyVersionExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidPublicKeyVersionException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -407,7 +407,7 @@ const de_InvalidPublicKeyVersionExceptionRes = async (
  */
 const de_InvalidRegionExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidRegionException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -436,7 +436,7 @@ const de_InvalidTagExceptionRes = async (parsedOutput: any, context: __SerdeCont
  */
 const de_InvalidTokenExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidTokenException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -452,7 +452,7 @@ const de_InvalidTokenExceptionRes = async (
  */
 const de_InvalidUsageAllocationsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidUsageAllocationsException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -468,7 +468,7 @@ const de_InvalidUsageAllocationsExceptionRes = async (
  */
 const de_InvalidUsageDimensionExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidUsageDimensionException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -484,7 +484,7 @@ const de_InvalidUsageDimensionExceptionRes = async (
  */
 const de_PlatformNotSupportedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PlatformNotSupportedException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -513,7 +513,7 @@ const de_ThrottlingExceptionRes = async (parsedOutput: any, context: __SerdeCont
  */
 const de_TimestampOutOfBoundsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TimestampOutOfBoundsException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -716,7 +716,7 @@ const buildHttpRpcRequest = async (
   headers: __HeaderBag,
   path: string,
   resolvedHostname: string | undefined,
-  body: any
+  body: any,
 ): Promise<__HttpRequest> => {
   const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
   const contents: any = {

@@ -25,16 +25,16 @@ export interface KinesisVideoSignaling {
    */
   getIceServerConfig(
     args: GetIceServerConfigCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetIceServerConfigCommandOutput>;
   getIceServerConfig(
     args: GetIceServerConfigCommandInput,
-    cb: (err: any, data?: GetIceServerConfigCommandOutput) => void
+    cb: (err: any, data?: GetIceServerConfigCommandOutput) => void,
   ): void;
   getIceServerConfig(
     args: GetIceServerConfigCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetIceServerConfigCommandOutput) => void
+    cb: (err: any, data?: GetIceServerConfigCommandOutput) => void,
   ): void;
 
   /**
@@ -42,16 +42,16 @@ export interface KinesisVideoSignaling {
    */
   sendAlexaOfferToMaster(
     args: SendAlexaOfferToMasterCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<SendAlexaOfferToMasterCommandOutput>;
   sendAlexaOfferToMaster(
     args: SendAlexaOfferToMasterCommandInput,
-    cb: (err: any, data?: SendAlexaOfferToMasterCommandOutput) => void
+    cb: (err: any, data?: SendAlexaOfferToMasterCommandOutput) => void,
   ): void;
   sendAlexaOfferToMaster(
     args: SendAlexaOfferToMasterCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SendAlexaOfferToMasterCommandOutput) => void
+    cb: (err: any, data?: SendAlexaOfferToMasterCommandOutput) => void,
   ): void;
 }
 

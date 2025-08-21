@@ -9,7 +9,7 @@ import {
 
 const checkState = async (
   client: AutoScalingClient,
-  input: DescribeAutoScalingGroupsCommandInput
+  input: DescribeAutoScalingGroupsCommandInput,
 ): Promise<WaiterResult> => {
   let reason;
   try {
@@ -42,7 +42,7 @@ const checkState = async (
  */
 export const waitForGroupExists = async (
   params: WaiterConfiguration<AutoScalingClient>,
-  input: DescribeAutoScalingGroupsCommandInput
+  input: DescribeAutoScalingGroupsCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 5, maxDelay: 120 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -54,7 +54,7 @@ export const waitForGroupExists = async (
  */
 export const waitUntilGroupExists = async (
   params: WaiterConfiguration<AutoScalingClient>,
-  input: DescribeAutoScalingGroupsCommandInput
+  input: DescribeAutoScalingGroupsCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 5, maxDelay: 120 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

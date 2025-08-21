@@ -263,16 +263,16 @@ export interface MailManager {
    */
   createAddonInstance(
     args: CreateAddonInstanceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateAddonInstanceCommandOutput>;
   createAddonInstance(
     args: CreateAddonInstanceCommandInput,
-    cb: (err: any, data?: CreateAddonInstanceCommandOutput) => void
+    cb: (err: any, data?: CreateAddonInstanceCommandOutput) => void,
   ): void;
   createAddonInstance(
     args: CreateAddonInstanceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateAddonInstanceCommandOutput) => void
+    cb: (err: any, data?: CreateAddonInstanceCommandOutput) => void,
   ): void;
 
   /**
@@ -280,16 +280,16 @@ export interface MailManager {
    */
   createAddonSubscription(
     args: CreateAddonSubscriptionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateAddonSubscriptionCommandOutput>;
   createAddonSubscription(
     args: CreateAddonSubscriptionCommandInput,
-    cb: (err: any, data?: CreateAddonSubscriptionCommandOutput) => void
+    cb: (err: any, data?: CreateAddonSubscriptionCommandOutput) => void,
   ): void;
   createAddonSubscription(
     args: CreateAddonSubscriptionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateAddonSubscriptionCommandOutput) => void
+    cb: (err: any, data?: CreateAddonSubscriptionCommandOutput) => void,
   ): void;
 
   /**
@@ -300,7 +300,7 @@ export interface MailManager {
   createArchive(
     args: CreateArchiveCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateArchiveCommandOutput) => void
+    cb: (err: any, data?: CreateArchiveCommandOutput) => void,
   ): void;
 
   /**
@@ -308,16 +308,16 @@ export interface MailManager {
    */
   createIngressPoint(
     args: CreateIngressPointCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateIngressPointCommandOutput>;
   createIngressPoint(
     args: CreateIngressPointCommandInput,
-    cb: (err: any, data?: CreateIngressPointCommandOutput) => void
+    cb: (err: any, data?: CreateIngressPointCommandOutput) => void,
   ): void;
   createIngressPoint(
     args: CreateIngressPointCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateIngressPointCommandOutput) => void
+    cb: (err: any, data?: CreateIngressPointCommandOutput) => void,
   ): void;
 
   /**
@@ -328,7 +328,7 @@ export interface MailManager {
   createRelay(
     args: CreateRelayCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateRelayCommandOutput) => void
+    cb: (err: any, data?: CreateRelayCommandOutput) => void,
   ): void;
 
   /**
@@ -339,7 +339,7 @@ export interface MailManager {
   createRuleSet(
     args: CreateRuleSetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateRuleSetCommandOutput) => void
+    cb: (err: any, data?: CreateRuleSetCommandOutput) => void,
   ): void;
 
   /**
@@ -347,16 +347,16 @@ export interface MailManager {
    */
   createTrafficPolicy(
     args: CreateTrafficPolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateTrafficPolicyCommandOutput>;
   createTrafficPolicy(
     args: CreateTrafficPolicyCommandInput,
-    cb: (err: any, data?: CreateTrafficPolicyCommandOutput) => void
+    cb: (err: any, data?: CreateTrafficPolicyCommandOutput) => void,
   ): void;
   createTrafficPolicy(
     args: CreateTrafficPolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateTrafficPolicyCommandOutput) => void
+    cb: (err: any, data?: CreateTrafficPolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -364,16 +364,16 @@ export interface MailManager {
    */
   deleteAddonInstance(
     args: DeleteAddonInstanceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteAddonInstanceCommandOutput>;
   deleteAddonInstance(
     args: DeleteAddonInstanceCommandInput,
-    cb: (err: any, data?: DeleteAddonInstanceCommandOutput) => void
+    cb: (err: any, data?: DeleteAddonInstanceCommandOutput) => void,
   ): void;
   deleteAddonInstance(
     args: DeleteAddonInstanceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteAddonInstanceCommandOutput) => void
+    cb: (err: any, data?: DeleteAddonInstanceCommandOutput) => void,
   ): void;
 
   /**
@@ -381,16 +381,16 @@ export interface MailManager {
    */
   deleteAddonSubscription(
     args: DeleteAddonSubscriptionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteAddonSubscriptionCommandOutput>;
   deleteAddonSubscription(
     args: DeleteAddonSubscriptionCommandInput,
-    cb: (err: any, data?: DeleteAddonSubscriptionCommandOutput) => void
+    cb: (err: any, data?: DeleteAddonSubscriptionCommandOutput) => void,
   ): void;
   deleteAddonSubscription(
     args: DeleteAddonSubscriptionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteAddonSubscriptionCommandOutput) => void
+    cb: (err: any, data?: DeleteAddonSubscriptionCommandOutput) => void,
   ): void;
 
   /**
@@ -401,7 +401,7 @@ export interface MailManager {
   deleteArchive(
     args: DeleteArchiveCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteArchiveCommandOutput) => void
+    cb: (err: any, data?: DeleteArchiveCommandOutput) => void,
   ): void;
 
   /**
@@ -409,16 +409,16 @@ export interface MailManager {
    */
   deleteIngressPoint(
     args: DeleteIngressPointCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteIngressPointCommandOutput>;
   deleteIngressPoint(
     args: DeleteIngressPointCommandInput,
-    cb: (err: any, data?: DeleteIngressPointCommandOutput) => void
+    cb: (err: any, data?: DeleteIngressPointCommandOutput) => void,
   ): void;
   deleteIngressPoint(
     args: DeleteIngressPointCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteIngressPointCommandOutput) => void
+    cb: (err: any, data?: DeleteIngressPointCommandOutput) => void,
   ): void;
 
   /**
@@ -429,7 +429,7 @@ export interface MailManager {
   deleteRelay(
     args: DeleteRelayCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteRelayCommandOutput) => void
+    cb: (err: any, data?: DeleteRelayCommandOutput) => void,
   ): void;
 
   /**
@@ -440,7 +440,7 @@ export interface MailManager {
   deleteRuleSet(
     args: DeleteRuleSetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteRuleSetCommandOutput) => void
+    cb: (err: any, data?: DeleteRuleSetCommandOutput) => void,
   ): void;
 
   /**
@@ -448,16 +448,16 @@ export interface MailManager {
    */
   deleteTrafficPolicy(
     args: DeleteTrafficPolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteTrafficPolicyCommandOutput>;
   deleteTrafficPolicy(
     args: DeleteTrafficPolicyCommandInput,
-    cb: (err: any, data?: DeleteTrafficPolicyCommandOutput) => void
+    cb: (err: any, data?: DeleteTrafficPolicyCommandOutput) => void,
   ): void;
   deleteTrafficPolicy(
     args: DeleteTrafficPolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteTrafficPolicyCommandOutput) => void
+    cb: (err: any, data?: DeleteTrafficPolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -465,16 +465,16 @@ export interface MailManager {
    */
   getAddonInstance(
     args: GetAddonInstanceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetAddonInstanceCommandOutput>;
   getAddonInstance(
     args: GetAddonInstanceCommandInput,
-    cb: (err: any, data?: GetAddonInstanceCommandOutput) => void
+    cb: (err: any, data?: GetAddonInstanceCommandOutput) => void,
   ): void;
   getAddonInstance(
     args: GetAddonInstanceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetAddonInstanceCommandOutput) => void
+    cb: (err: any, data?: GetAddonInstanceCommandOutput) => void,
   ): void;
 
   /**
@@ -482,16 +482,16 @@ export interface MailManager {
    */
   getAddonSubscription(
     args: GetAddonSubscriptionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetAddonSubscriptionCommandOutput>;
   getAddonSubscription(
     args: GetAddonSubscriptionCommandInput,
-    cb: (err: any, data?: GetAddonSubscriptionCommandOutput) => void
+    cb: (err: any, data?: GetAddonSubscriptionCommandOutput) => void,
   ): void;
   getAddonSubscription(
     args: GetAddonSubscriptionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetAddonSubscriptionCommandOutput) => void
+    cb: (err: any, data?: GetAddonSubscriptionCommandOutput) => void,
   ): void;
 
   /**
@@ -502,7 +502,7 @@ export interface MailManager {
   getArchive(
     args: GetArchiveCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetArchiveCommandOutput) => void
+    cb: (err: any, data?: GetArchiveCommandOutput) => void,
   ): void;
 
   /**
@@ -510,16 +510,16 @@ export interface MailManager {
    */
   getArchiveExport(
     args: GetArchiveExportCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetArchiveExportCommandOutput>;
   getArchiveExport(
     args: GetArchiveExportCommandInput,
-    cb: (err: any, data?: GetArchiveExportCommandOutput) => void
+    cb: (err: any, data?: GetArchiveExportCommandOutput) => void,
   ): void;
   getArchiveExport(
     args: GetArchiveExportCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetArchiveExportCommandOutput) => void
+    cb: (err: any, data?: GetArchiveExportCommandOutput) => void,
   ): void;
 
   /**
@@ -527,16 +527,16 @@ export interface MailManager {
    */
   getArchiveMessage(
     args: GetArchiveMessageCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetArchiveMessageCommandOutput>;
   getArchiveMessage(
     args: GetArchiveMessageCommandInput,
-    cb: (err: any, data?: GetArchiveMessageCommandOutput) => void
+    cb: (err: any, data?: GetArchiveMessageCommandOutput) => void,
   ): void;
   getArchiveMessage(
     args: GetArchiveMessageCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetArchiveMessageCommandOutput) => void
+    cb: (err: any, data?: GetArchiveMessageCommandOutput) => void,
   ): void;
 
   /**
@@ -544,16 +544,16 @@ export interface MailManager {
    */
   getArchiveMessageContent(
     args: GetArchiveMessageContentCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetArchiveMessageContentCommandOutput>;
   getArchiveMessageContent(
     args: GetArchiveMessageContentCommandInput,
-    cb: (err: any, data?: GetArchiveMessageContentCommandOutput) => void
+    cb: (err: any, data?: GetArchiveMessageContentCommandOutput) => void,
   ): void;
   getArchiveMessageContent(
     args: GetArchiveMessageContentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetArchiveMessageContentCommandOutput) => void
+    cb: (err: any, data?: GetArchiveMessageContentCommandOutput) => void,
   ): void;
 
   /**
@@ -561,16 +561,16 @@ export interface MailManager {
    */
   getArchiveSearch(
     args: GetArchiveSearchCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetArchiveSearchCommandOutput>;
   getArchiveSearch(
     args: GetArchiveSearchCommandInput,
-    cb: (err: any, data?: GetArchiveSearchCommandOutput) => void
+    cb: (err: any, data?: GetArchiveSearchCommandOutput) => void,
   ): void;
   getArchiveSearch(
     args: GetArchiveSearchCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetArchiveSearchCommandOutput) => void
+    cb: (err: any, data?: GetArchiveSearchCommandOutput) => void,
   ): void;
 
   /**
@@ -578,16 +578,16 @@ export interface MailManager {
    */
   getArchiveSearchResults(
     args: GetArchiveSearchResultsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetArchiveSearchResultsCommandOutput>;
   getArchiveSearchResults(
     args: GetArchiveSearchResultsCommandInput,
-    cb: (err: any, data?: GetArchiveSearchResultsCommandOutput) => void
+    cb: (err: any, data?: GetArchiveSearchResultsCommandOutput) => void,
   ): void;
   getArchiveSearchResults(
     args: GetArchiveSearchResultsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetArchiveSearchResultsCommandOutput) => void
+    cb: (err: any, data?: GetArchiveSearchResultsCommandOutput) => void,
   ): void;
 
   /**
@@ -595,13 +595,13 @@ export interface MailManager {
    */
   getIngressPoint(
     args: GetIngressPointCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetIngressPointCommandOutput>;
   getIngressPoint(args: GetIngressPointCommandInput, cb: (err: any, data?: GetIngressPointCommandOutput) => void): void;
   getIngressPoint(
     args: GetIngressPointCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetIngressPointCommandOutput) => void
+    cb: (err: any, data?: GetIngressPointCommandOutput) => void,
   ): void;
 
   /**
@@ -612,7 +612,7 @@ export interface MailManager {
   getRelay(
     args: GetRelayCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetRelayCommandOutput) => void
+    cb: (err: any, data?: GetRelayCommandOutput) => void,
   ): void;
 
   /**
@@ -623,7 +623,7 @@ export interface MailManager {
   getRuleSet(
     args: GetRuleSetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetRuleSetCommandOutput) => void
+    cb: (err: any, data?: GetRuleSetCommandOutput) => void,
   ): void;
 
   /**
@@ -631,16 +631,16 @@ export interface MailManager {
    */
   getTrafficPolicy(
     args: GetTrafficPolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetTrafficPolicyCommandOutput>;
   getTrafficPolicy(
     args: GetTrafficPolicyCommandInput,
-    cb: (err: any, data?: GetTrafficPolicyCommandOutput) => void
+    cb: (err: any, data?: GetTrafficPolicyCommandOutput) => void,
   ): void;
   getTrafficPolicy(
     args: GetTrafficPolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetTrafficPolicyCommandOutput) => void
+    cb: (err: any, data?: GetTrafficPolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -649,16 +649,16 @@ export interface MailManager {
   listAddonInstances(): Promise<ListAddonInstancesCommandOutput>;
   listAddonInstances(
     args: ListAddonInstancesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListAddonInstancesCommandOutput>;
   listAddonInstances(
     args: ListAddonInstancesCommandInput,
-    cb: (err: any, data?: ListAddonInstancesCommandOutput) => void
+    cb: (err: any, data?: ListAddonInstancesCommandOutput) => void,
   ): void;
   listAddonInstances(
     args: ListAddonInstancesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListAddonInstancesCommandOutput) => void
+    cb: (err: any, data?: ListAddonInstancesCommandOutput) => void,
   ): void;
 
   /**
@@ -667,16 +667,16 @@ export interface MailManager {
   listAddonSubscriptions(): Promise<ListAddonSubscriptionsCommandOutput>;
   listAddonSubscriptions(
     args: ListAddonSubscriptionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListAddonSubscriptionsCommandOutput>;
   listAddonSubscriptions(
     args: ListAddonSubscriptionsCommandInput,
-    cb: (err: any, data?: ListAddonSubscriptionsCommandOutput) => void
+    cb: (err: any, data?: ListAddonSubscriptionsCommandOutput) => void,
   ): void;
   listAddonSubscriptions(
     args: ListAddonSubscriptionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListAddonSubscriptionsCommandOutput) => void
+    cb: (err: any, data?: ListAddonSubscriptionsCommandOutput) => void,
   ): void;
 
   /**
@@ -684,16 +684,16 @@ export interface MailManager {
    */
   listArchiveExports(
     args: ListArchiveExportsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListArchiveExportsCommandOutput>;
   listArchiveExports(
     args: ListArchiveExportsCommandInput,
-    cb: (err: any, data?: ListArchiveExportsCommandOutput) => void
+    cb: (err: any, data?: ListArchiveExportsCommandOutput) => void,
   ): void;
   listArchiveExports(
     args: ListArchiveExportsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListArchiveExportsCommandOutput) => void
+    cb: (err: any, data?: ListArchiveExportsCommandOutput) => void,
   ): void;
 
   /**
@@ -705,7 +705,7 @@ export interface MailManager {
   listArchives(
     args: ListArchivesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListArchivesCommandOutput) => void
+    cb: (err: any, data?: ListArchivesCommandOutput) => void,
   ): void;
 
   /**
@@ -713,16 +713,16 @@ export interface MailManager {
    */
   listArchiveSearches(
     args: ListArchiveSearchesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListArchiveSearchesCommandOutput>;
   listArchiveSearches(
     args: ListArchiveSearchesCommandInput,
-    cb: (err: any, data?: ListArchiveSearchesCommandOutput) => void
+    cb: (err: any, data?: ListArchiveSearchesCommandOutput) => void,
   ): void;
   listArchiveSearches(
     args: ListArchiveSearchesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListArchiveSearchesCommandOutput) => void
+    cb: (err: any, data?: ListArchiveSearchesCommandOutput) => void,
   ): void;
 
   /**
@@ -731,16 +731,16 @@ export interface MailManager {
   listIngressPoints(): Promise<ListIngressPointsCommandOutput>;
   listIngressPoints(
     args: ListIngressPointsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListIngressPointsCommandOutput>;
   listIngressPoints(
     args: ListIngressPointsCommandInput,
-    cb: (err: any, data?: ListIngressPointsCommandOutput) => void
+    cb: (err: any, data?: ListIngressPointsCommandOutput) => void,
   ): void;
   listIngressPoints(
     args: ListIngressPointsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListIngressPointsCommandOutput) => void
+    cb: (err: any, data?: ListIngressPointsCommandOutput) => void,
   ): void;
 
   /**
@@ -752,7 +752,7 @@ export interface MailManager {
   listRelays(
     args: ListRelaysCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListRelaysCommandOutput) => void
+    cb: (err: any, data?: ListRelaysCommandOutput) => void,
   ): void;
 
   /**
@@ -764,7 +764,7 @@ export interface MailManager {
   listRuleSets(
     args: ListRuleSetsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListRuleSetsCommandOutput) => void
+    cb: (err: any, data?: ListRuleSetsCommandOutput) => void,
   ): void;
 
   /**
@@ -772,16 +772,16 @@ export interface MailManager {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -790,16 +790,16 @@ export interface MailManager {
   listTrafficPolicies(): Promise<ListTrafficPoliciesCommandOutput>;
   listTrafficPolicies(
     args: ListTrafficPoliciesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTrafficPoliciesCommandOutput>;
   listTrafficPolicies(
     args: ListTrafficPoliciesCommandInput,
-    cb: (err: any, data?: ListTrafficPoliciesCommandOutput) => void
+    cb: (err: any, data?: ListTrafficPoliciesCommandOutput) => void,
   ): void;
   listTrafficPolicies(
     args: ListTrafficPoliciesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTrafficPoliciesCommandOutput) => void
+    cb: (err: any, data?: ListTrafficPoliciesCommandOutput) => void,
   ): void;
 
   /**
@@ -807,16 +807,16 @@ export interface MailManager {
    */
   startArchiveExport(
     args: StartArchiveExportCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartArchiveExportCommandOutput>;
   startArchiveExport(
     args: StartArchiveExportCommandInput,
-    cb: (err: any, data?: StartArchiveExportCommandOutput) => void
+    cb: (err: any, data?: StartArchiveExportCommandOutput) => void,
   ): void;
   startArchiveExport(
     args: StartArchiveExportCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartArchiveExportCommandOutput) => void
+    cb: (err: any, data?: StartArchiveExportCommandOutput) => void,
   ): void;
 
   /**
@@ -824,16 +824,16 @@ export interface MailManager {
    */
   startArchiveSearch(
     args: StartArchiveSearchCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartArchiveSearchCommandOutput>;
   startArchiveSearch(
     args: StartArchiveSearchCommandInput,
-    cb: (err: any, data?: StartArchiveSearchCommandOutput) => void
+    cb: (err: any, data?: StartArchiveSearchCommandOutput) => void,
   ): void;
   startArchiveSearch(
     args: StartArchiveSearchCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartArchiveSearchCommandOutput) => void
+    cb: (err: any, data?: StartArchiveSearchCommandOutput) => void,
   ): void;
 
   /**
@@ -841,16 +841,16 @@ export interface MailManager {
    */
   stopArchiveExport(
     args: StopArchiveExportCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StopArchiveExportCommandOutput>;
   stopArchiveExport(
     args: StopArchiveExportCommandInput,
-    cb: (err: any, data?: StopArchiveExportCommandOutput) => void
+    cb: (err: any, data?: StopArchiveExportCommandOutput) => void,
   ): void;
   stopArchiveExport(
     args: StopArchiveExportCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StopArchiveExportCommandOutput) => void
+    cb: (err: any, data?: StopArchiveExportCommandOutput) => void,
   ): void;
 
   /**
@@ -858,16 +858,16 @@ export interface MailManager {
    */
   stopArchiveSearch(
     args: StopArchiveSearchCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StopArchiveSearchCommandOutput>;
   stopArchiveSearch(
     args: StopArchiveSearchCommandInput,
-    cb: (err: any, data?: StopArchiveSearchCommandOutput) => void
+    cb: (err: any, data?: StopArchiveSearchCommandOutput) => void,
   ): void;
   stopArchiveSearch(
     args: StopArchiveSearchCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StopArchiveSearchCommandOutput) => void
+    cb: (err: any, data?: StopArchiveSearchCommandOutput) => void,
   ): void;
 
   /**
@@ -878,7 +878,7 @@ export interface MailManager {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -889,7 +889,7 @@ export interface MailManager {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -900,7 +900,7 @@ export interface MailManager {
   updateArchive(
     args: UpdateArchiveCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateArchiveCommandOutput) => void
+    cb: (err: any, data?: UpdateArchiveCommandOutput) => void,
   ): void;
 
   /**
@@ -908,16 +908,16 @@ export interface MailManager {
    */
   updateIngressPoint(
     args: UpdateIngressPointCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateIngressPointCommandOutput>;
   updateIngressPoint(
     args: UpdateIngressPointCommandInput,
-    cb: (err: any, data?: UpdateIngressPointCommandOutput) => void
+    cb: (err: any, data?: UpdateIngressPointCommandOutput) => void,
   ): void;
   updateIngressPoint(
     args: UpdateIngressPointCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateIngressPointCommandOutput) => void
+    cb: (err: any, data?: UpdateIngressPointCommandOutput) => void,
   ): void;
 
   /**
@@ -928,7 +928,7 @@ export interface MailManager {
   updateRelay(
     args: UpdateRelayCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateRelayCommandOutput) => void
+    cb: (err: any, data?: UpdateRelayCommandOutput) => void,
   ): void;
 
   /**
@@ -939,7 +939,7 @@ export interface MailManager {
   updateRuleSet(
     args: UpdateRuleSetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateRuleSetCommandOutput) => void
+    cb: (err: any, data?: UpdateRuleSetCommandOutput) => void,
   ): void;
 
   /**
@@ -947,16 +947,16 @@ export interface MailManager {
    */
   updateTrafficPolicy(
     args: UpdateTrafficPolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateTrafficPolicyCommandOutput>;
   updateTrafficPolicy(
     args: UpdateTrafficPolicyCommandInput,
-    cb: (err: any, data?: UpdateTrafficPolicyCommandOutput) => void
+    cb: (err: any, data?: UpdateTrafficPolicyCommandOutput) => void,
   ): void;
   updateTrafficPolicy(
     args: UpdateTrafficPolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateTrafficPolicyCommandOutput) => void
+    cb: (err: any, data?: UpdateTrafficPolicyCommandOutput) => void,
   ): void;
 }
 

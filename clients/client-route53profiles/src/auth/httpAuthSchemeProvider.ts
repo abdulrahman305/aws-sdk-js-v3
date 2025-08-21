@@ -41,7 +41,7 @@ export interface Route53ProfilesHttpAuthSchemeParametersProvider
 export const defaultRoute53ProfilesHttpAuthSchemeParametersProvider = async (
   config: Route53ProfilesClientResolvedConfig,
   context: HandlerExecutionContext,
-  input: object
+  input: object,
 ): Promise<Route53ProfilesHttpAuthSchemeParameters> => {
   return {
     operation: getSmithyContext(context).operation as string,
@@ -129,7 +129,7 @@ export interface HttpAuthSchemeResolvedConfig extends AwsSdkSigV4AuthResolvedCon
  * @internal
  */
 export const resolveHttpAuthSchemeConfig = <T>(
-  config: T & HttpAuthSchemeInputConfig & AwsSdkSigV4PreviouslyResolved
+  config: T & HttpAuthSchemeInputConfig & AwsSdkSigV4PreviouslyResolved,
 ): T & HttpAuthSchemeResolvedConfig => {
   const config_0 = resolveAwsSdkSigV4Config(config);
   return {

@@ -371,7 +371,7 @@ import {
  */
 export const se_AssociateAppBlockBuilderAppBlockCommand = async (
   input: AssociateAppBlockBuilderAppBlockCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("AssociateAppBlockBuilderAppBlock");
   let body: any;
@@ -384,7 +384,7 @@ export const se_AssociateAppBlockBuilderAppBlockCommand = async (
  */
 export const se_AssociateApplicationFleetCommand = async (
   input: AssociateApplicationFleetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("AssociateApplicationFleet");
   let body: any;
@@ -397,7 +397,7 @@ export const se_AssociateApplicationFleetCommand = async (
  */
 export const se_AssociateApplicationToEntitlementCommand = async (
   input: AssociateApplicationToEntitlementCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("AssociateApplicationToEntitlement");
   let body: any;
@@ -410,7 +410,7 @@ export const se_AssociateApplicationToEntitlementCommand = async (
  */
 export const se_AssociateFleetCommand = async (
   input: AssociateFleetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("AssociateFleet");
   let body: any;
@@ -423,7 +423,7 @@ export const se_AssociateFleetCommand = async (
  */
 export const se_BatchAssociateUserStackCommand = async (
   input: BatchAssociateUserStackCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("BatchAssociateUserStack");
   let body: any;
@@ -436,7 +436,7 @@ export const se_BatchAssociateUserStackCommand = async (
  */
 export const se_BatchDisassociateUserStackCommand = async (
   input: BatchDisassociateUserStackCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("BatchDisassociateUserStack");
   let body: any;
@@ -449,7 +449,7 @@ export const se_BatchDisassociateUserStackCommand = async (
  */
 export const se_CopyImageCommand = async (
   input: CopyImageCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CopyImage");
   let body: any;
@@ -462,7 +462,7 @@ export const se_CopyImageCommand = async (
  */
 export const se_CreateAppBlockCommand = async (
   input: CreateAppBlockCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateAppBlock");
   let body: any;
@@ -475,7 +475,7 @@ export const se_CreateAppBlockCommand = async (
  */
 export const se_CreateAppBlockBuilderCommand = async (
   input: CreateAppBlockBuilderCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateAppBlockBuilder");
   let body: any;
@@ -488,7 +488,7 @@ export const se_CreateAppBlockBuilderCommand = async (
  */
 export const se_CreateAppBlockBuilderStreamingURLCommand = async (
   input: CreateAppBlockBuilderStreamingURLCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateAppBlockBuilderStreamingURL");
   let body: any;
@@ -501,7 +501,7 @@ export const se_CreateAppBlockBuilderStreamingURLCommand = async (
  */
 export const se_CreateApplicationCommand = async (
   input: CreateApplicationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateApplication");
   let body: any;
@@ -514,7 +514,7 @@ export const se_CreateApplicationCommand = async (
  */
 export const se_CreateDirectoryConfigCommand = async (
   input: CreateDirectoryConfigCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateDirectoryConfig");
   let body: any;
@@ -527,7 +527,7 @@ export const se_CreateDirectoryConfigCommand = async (
  */
 export const se_CreateEntitlementCommand = async (
   input: CreateEntitlementCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateEntitlement");
   let body: any;
@@ -540,7 +540,7 @@ export const se_CreateEntitlementCommand = async (
  */
 export const se_CreateFleetCommand = async (
   input: CreateFleetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateFleet");
   let body: any;
@@ -553,7 +553,7 @@ export const se_CreateFleetCommand = async (
  */
 export const se_CreateImageBuilderCommand = async (
   input: CreateImageBuilderCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateImageBuilder");
   let body: any;
@@ -566,7 +566,7 @@ export const se_CreateImageBuilderCommand = async (
  */
 export const se_CreateImageBuilderStreamingURLCommand = async (
   input: CreateImageBuilderStreamingURLCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateImageBuilderStreamingURL");
   let body: any;
@@ -579,7 +579,7 @@ export const se_CreateImageBuilderStreamingURLCommand = async (
  */
 export const se_CreateStackCommand = async (
   input: CreateStackCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateStack");
   let body: any;
@@ -592,7 +592,7 @@ export const se_CreateStackCommand = async (
  */
 export const se_CreateStreamingURLCommand = async (
   input: CreateStreamingURLCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateStreamingURL");
   let body: any;
@@ -605,7 +605,7 @@ export const se_CreateStreamingURLCommand = async (
  */
 export const se_CreateUpdatedImageCommand = async (
   input: CreateUpdatedImageCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateUpdatedImage");
   let body: any;
@@ -618,7 +618,7 @@ export const se_CreateUpdatedImageCommand = async (
  */
 export const se_CreateUsageReportSubscriptionCommand = async (
   input: CreateUsageReportSubscriptionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateUsageReportSubscription");
   let body: any;
@@ -631,7 +631,7 @@ export const se_CreateUsageReportSubscriptionCommand = async (
  */
 export const se_CreateUserCommand = async (
   input: CreateUserCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateUser");
   let body: any;
@@ -644,7 +644,7 @@ export const se_CreateUserCommand = async (
  */
 export const se_DeleteAppBlockCommand = async (
   input: DeleteAppBlockCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteAppBlock");
   let body: any;
@@ -657,7 +657,7 @@ export const se_DeleteAppBlockCommand = async (
  */
 export const se_DeleteAppBlockBuilderCommand = async (
   input: DeleteAppBlockBuilderCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteAppBlockBuilder");
   let body: any;
@@ -670,7 +670,7 @@ export const se_DeleteAppBlockBuilderCommand = async (
  */
 export const se_DeleteApplicationCommand = async (
   input: DeleteApplicationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteApplication");
   let body: any;
@@ -683,7 +683,7 @@ export const se_DeleteApplicationCommand = async (
  */
 export const se_DeleteDirectoryConfigCommand = async (
   input: DeleteDirectoryConfigCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteDirectoryConfig");
   let body: any;
@@ -696,7 +696,7 @@ export const se_DeleteDirectoryConfigCommand = async (
  */
 export const se_DeleteEntitlementCommand = async (
   input: DeleteEntitlementCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteEntitlement");
   let body: any;
@@ -709,7 +709,7 @@ export const se_DeleteEntitlementCommand = async (
  */
 export const se_DeleteFleetCommand = async (
   input: DeleteFleetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteFleet");
   let body: any;
@@ -722,7 +722,7 @@ export const se_DeleteFleetCommand = async (
  */
 export const se_DeleteImageCommand = async (
   input: DeleteImageCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteImage");
   let body: any;
@@ -735,7 +735,7 @@ export const se_DeleteImageCommand = async (
  */
 export const se_DeleteImageBuilderCommand = async (
   input: DeleteImageBuilderCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteImageBuilder");
   let body: any;
@@ -748,7 +748,7 @@ export const se_DeleteImageBuilderCommand = async (
  */
 export const se_DeleteImagePermissionsCommand = async (
   input: DeleteImagePermissionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteImagePermissions");
   let body: any;
@@ -761,7 +761,7 @@ export const se_DeleteImagePermissionsCommand = async (
  */
 export const se_DeleteStackCommand = async (
   input: DeleteStackCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteStack");
   let body: any;
@@ -774,7 +774,7 @@ export const se_DeleteStackCommand = async (
  */
 export const se_DeleteUsageReportSubscriptionCommand = async (
   input: DeleteUsageReportSubscriptionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteUsageReportSubscription");
   let body: any;
@@ -787,7 +787,7 @@ export const se_DeleteUsageReportSubscriptionCommand = async (
  */
 export const se_DeleteUserCommand = async (
   input: DeleteUserCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteUser");
   let body: any;
@@ -800,7 +800,7 @@ export const se_DeleteUserCommand = async (
  */
 export const se_DescribeAppBlockBuilderAppBlockAssociationsCommand = async (
   input: DescribeAppBlockBuilderAppBlockAssociationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeAppBlockBuilderAppBlockAssociations");
   let body: any;
@@ -813,7 +813,7 @@ export const se_DescribeAppBlockBuilderAppBlockAssociationsCommand = async (
  */
 export const se_DescribeAppBlockBuildersCommand = async (
   input: DescribeAppBlockBuildersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeAppBlockBuilders");
   let body: any;
@@ -826,7 +826,7 @@ export const se_DescribeAppBlockBuildersCommand = async (
  */
 export const se_DescribeAppBlocksCommand = async (
   input: DescribeAppBlocksCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeAppBlocks");
   let body: any;
@@ -839,7 +839,7 @@ export const se_DescribeAppBlocksCommand = async (
  */
 export const se_DescribeApplicationFleetAssociationsCommand = async (
   input: DescribeApplicationFleetAssociationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeApplicationFleetAssociations");
   let body: any;
@@ -852,7 +852,7 @@ export const se_DescribeApplicationFleetAssociationsCommand = async (
  */
 export const se_DescribeApplicationsCommand = async (
   input: DescribeApplicationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeApplications");
   let body: any;
@@ -865,7 +865,7 @@ export const se_DescribeApplicationsCommand = async (
  */
 export const se_DescribeDirectoryConfigsCommand = async (
   input: DescribeDirectoryConfigsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeDirectoryConfigs");
   let body: any;
@@ -878,7 +878,7 @@ export const se_DescribeDirectoryConfigsCommand = async (
  */
 export const se_DescribeEntitlementsCommand = async (
   input: DescribeEntitlementsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeEntitlements");
   let body: any;
@@ -891,7 +891,7 @@ export const se_DescribeEntitlementsCommand = async (
  */
 export const se_DescribeFleetsCommand = async (
   input: DescribeFleetsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeFleets");
   let body: any;
@@ -904,7 +904,7 @@ export const se_DescribeFleetsCommand = async (
  */
 export const se_DescribeImageBuildersCommand = async (
   input: DescribeImageBuildersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeImageBuilders");
   let body: any;
@@ -917,7 +917,7 @@ export const se_DescribeImageBuildersCommand = async (
  */
 export const se_DescribeImagePermissionsCommand = async (
   input: DescribeImagePermissionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeImagePermissions");
   let body: any;
@@ -930,7 +930,7 @@ export const se_DescribeImagePermissionsCommand = async (
  */
 export const se_DescribeImagesCommand = async (
   input: DescribeImagesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeImages");
   let body: any;
@@ -943,7 +943,7 @@ export const se_DescribeImagesCommand = async (
  */
 export const se_DescribeSessionsCommand = async (
   input: DescribeSessionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeSessions");
   let body: any;
@@ -956,7 +956,7 @@ export const se_DescribeSessionsCommand = async (
  */
 export const se_DescribeStacksCommand = async (
   input: DescribeStacksCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeStacks");
   let body: any;
@@ -969,7 +969,7 @@ export const se_DescribeStacksCommand = async (
  */
 export const se_DescribeUsageReportSubscriptionsCommand = async (
   input: DescribeUsageReportSubscriptionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeUsageReportSubscriptions");
   let body: any;
@@ -982,7 +982,7 @@ export const se_DescribeUsageReportSubscriptionsCommand = async (
  */
 export const se_DescribeUsersCommand = async (
   input: DescribeUsersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeUsers");
   let body: any;
@@ -995,7 +995,7 @@ export const se_DescribeUsersCommand = async (
  */
 export const se_DescribeUserStackAssociationsCommand = async (
   input: DescribeUserStackAssociationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeUserStackAssociations");
   let body: any;
@@ -1008,7 +1008,7 @@ export const se_DescribeUserStackAssociationsCommand = async (
  */
 export const se_DisableUserCommand = async (
   input: DisableUserCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DisableUser");
   let body: any;
@@ -1021,7 +1021,7 @@ export const se_DisableUserCommand = async (
  */
 export const se_DisassociateAppBlockBuilderAppBlockCommand = async (
   input: DisassociateAppBlockBuilderAppBlockCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DisassociateAppBlockBuilderAppBlock");
   let body: any;
@@ -1034,7 +1034,7 @@ export const se_DisassociateAppBlockBuilderAppBlockCommand = async (
  */
 export const se_DisassociateApplicationFleetCommand = async (
   input: DisassociateApplicationFleetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DisassociateApplicationFleet");
   let body: any;
@@ -1047,7 +1047,7 @@ export const se_DisassociateApplicationFleetCommand = async (
  */
 export const se_DisassociateApplicationFromEntitlementCommand = async (
   input: DisassociateApplicationFromEntitlementCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DisassociateApplicationFromEntitlement");
   let body: any;
@@ -1060,7 +1060,7 @@ export const se_DisassociateApplicationFromEntitlementCommand = async (
  */
 export const se_DisassociateFleetCommand = async (
   input: DisassociateFleetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DisassociateFleet");
   let body: any;
@@ -1073,7 +1073,7 @@ export const se_DisassociateFleetCommand = async (
  */
 export const se_EnableUserCommand = async (
   input: EnableUserCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("EnableUser");
   let body: any;
@@ -1086,7 +1086,7 @@ export const se_EnableUserCommand = async (
  */
 export const se_ExpireSessionCommand = async (
   input: ExpireSessionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ExpireSession");
   let body: any;
@@ -1099,7 +1099,7 @@ export const se_ExpireSessionCommand = async (
  */
 export const se_ListAssociatedFleetsCommand = async (
   input: ListAssociatedFleetsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListAssociatedFleets");
   let body: any;
@@ -1112,7 +1112,7 @@ export const se_ListAssociatedFleetsCommand = async (
  */
 export const se_ListAssociatedStacksCommand = async (
   input: ListAssociatedStacksCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListAssociatedStacks");
   let body: any;
@@ -1125,7 +1125,7 @@ export const se_ListAssociatedStacksCommand = async (
  */
 export const se_ListEntitledApplicationsCommand = async (
   input: ListEntitledApplicationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListEntitledApplications");
   let body: any;
@@ -1138,7 +1138,7 @@ export const se_ListEntitledApplicationsCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListTagsForResource");
   let body: any;
@@ -1151,7 +1151,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_StartAppBlockBuilderCommand = async (
   input: StartAppBlockBuilderCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StartAppBlockBuilder");
   let body: any;
@@ -1164,7 +1164,7 @@ export const se_StartAppBlockBuilderCommand = async (
  */
 export const se_StartFleetCommand = async (
   input: StartFleetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StartFleet");
   let body: any;
@@ -1177,7 +1177,7 @@ export const se_StartFleetCommand = async (
  */
 export const se_StartImageBuilderCommand = async (
   input: StartImageBuilderCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StartImageBuilder");
   let body: any;
@@ -1190,7 +1190,7 @@ export const se_StartImageBuilderCommand = async (
  */
 export const se_StopAppBlockBuilderCommand = async (
   input: StopAppBlockBuilderCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StopAppBlockBuilder");
   let body: any;
@@ -1203,7 +1203,7 @@ export const se_StopAppBlockBuilderCommand = async (
  */
 export const se_StopFleetCommand = async (
   input: StopFleetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StopFleet");
   let body: any;
@@ -1216,7 +1216,7 @@ export const se_StopFleetCommand = async (
  */
 export const se_StopImageBuilderCommand = async (
   input: StopImageBuilderCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StopImageBuilder");
   let body: any;
@@ -1229,7 +1229,7 @@ export const se_StopImageBuilderCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("TagResource");
   let body: any;
@@ -1242,7 +1242,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UntagResource");
   let body: any;
@@ -1255,7 +1255,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateAppBlockBuilderCommand = async (
   input: UpdateAppBlockBuilderCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateAppBlockBuilder");
   let body: any;
@@ -1268,7 +1268,7 @@ export const se_UpdateAppBlockBuilderCommand = async (
  */
 export const se_UpdateApplicationCommand = async (
   input: UpdateApplicationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateApplication");
   let body: any;
@@ -1281,7 +1281,7 @@ export const se_UpdateApplicationCommand = async (
  */
 export const se_UpdateDirectoryConfigCommand = async (
   input: UpdateDirectoryConfigCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateDirectoryConfig");
   let body: any;
@@ -1294,7 +1294,7 @@ export const se_UpdateDirectoryConfigCommand = async (
  */
 export const se_UpdateEntitlementCommand = async (
   input: UpdateEntitlementCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateEntitlement");
   let body: any;
@@ -1307,7 +1307,7 @@ export const se_UpdateEntitlementCommand = async (
  */
 export const se_UpdateFleetCommand = async (
   input: UpdateFleetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateFleet");
   let body: any;
@@ -1320,7 +1320,7 @@ export const se_UpdateFleetCommand = async (
  */
 export const se_UpdateImagePermissionsCommand = async (
   input: UpdateImagePermissionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateImagePermissions");
   let body: any;
@@ -1333,7 +1333,7 @@ export const se_UpdateImagePermissionsCommand = async (
  */
 export const se_UpdateStackCommand = async (
   input: UpdateStackCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateStack");
   let body: any;
@@ -1346,7 +1346,7 @@ export const se_UpdateStackCommand = async (
  */
 export const de_AssociateAppBlockBuilderAppBlockCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssociateAppBlockBuilderAppBlockCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1366,7 +1366,7 @@ export const de_AssociateAppBlockBuilderAppBlockCommand = async (
  */
 export const de_AssociateApplicationFleetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssociateApplicationFleetCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1386,7 +1386,7 @@ export const de_AssociateApplicationFleetCommand = async (
  */
 export const de_AssociateApplicationToEntitlementCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssociateApplicationToEntitlementCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1406,7 +1406,7 @@ export const de_AssociateApplicationToEntitlementCommand = async (
  */
 export const de_AssociateFleetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssociateFleetCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1426,7 +1426,7 @@ export const de_AssociateFleetCommand = async (
  */
 export const de_BatchAssociateUserStackCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchAssociateUserStackCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1446,7 +1446,7 @@ export const de_BatchAssociateUserStackCommand = async (
  */
 export const de_BatchDisassociateUserStackCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchDisassociateUserStackCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1466,7 +1466,7 @@ export const de_BatchDisassociateUserStackCommand = async (
  */
 export const de_CopyImageCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CopyImageCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1486,7 +1486,7 @@ export const de_CopyImageCommand = async (
  */
 export const de_CreateAppBlockCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateAppBlockCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1506,7 +1506,7 @@ export const de_CreateAppBlockCommand = async (
  */
 export const de_CreateAppBlockBuilderCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateAppBlockBuilderCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1526,7 +1526,7 @@ export const de_CreateAppBlockBuilderCommand = async (
  */
 export const de_CreateAppBlockBuilderStreamingURLCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateAppBlockBuilderStreamingURLCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1546,7 +1546,7 @@ export const de_CreateAppBlockBuilderStreamingURLCommand = async (
  */
 export const de_CreateApplicationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateApplicationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1566,7 +1566,7 @@ export const de_CreateApplicationCommand = async (
  */
 export const de_CreateDirectoryConfigCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateDirectoryConfigCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1586,7 +1586,7 @@ export const de_CreateDirectoryConfigCommand = async (
  */
 export const de_CreateEntitlementCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateEntitlementCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1606,7 +1606,7 @@ export const de_CreateEntitlementCommand = async (
  */
 export const de_CreateFleetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateFleetCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1626,7 +1626,7 @@ export const de_CreateFleetCommand = async (
  */
 export const de_CreateImageBuilderCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateImageBuilderCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1646,7 +1646,7 @@ export const de_CreateImageBuilderCommand = async (
  */
 export const de_CreateImageBuilderStreamingURLCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateImageBuilderStreamingURLCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1666,7 +1666,7 @@ export const de_CreateImageBuilderStreamingURLCommand = async (
  */
 export const de_CreateStackCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateStackCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1686,7 +1686,7 @@ export const de_CreateStackCommand = async (
  */
 export const de_CreateStreamingURLCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateStreamingURLCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1706,7 +1706,7 @@ export const de_CreateStreamingURLCommand = async (
  */
 export const de_CreateUpdatedImageCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateUpdatedImageCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1726,7 +1726,7 @@ export const de_CreateUpdatedImageCommand = async (
  */
 export const de_CreateUsageReportSubscriptionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateUsageReportSubscriptionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1746,7 +1746,7 @@ export const de_CreateUsageReportSubscriptionCommand = async (
  */
 export const de_CreateUserCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateUserCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1766,7 +1766,7 @@ export const de_CreateUserCommand = async (
  */
 export const de_DeleteAppBlockCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteAppBlockCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1786,7 +1786,7 @@ export const de_DeleteAppBlockCommand = async (
  */
 export const de_DeleteAppBlockBuilderCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteAppBlockBuilderCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1806,7 +1806,7 @@ export const de_DeleteAppBlockBuilderCommand = async (
  */
 export const de_DeleteApplicationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteApplicationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1826,7 +1826,7 @@ export const de_DeleteApplicationCommand = async (
  */
 export const de_DeleteDirectoryConfigCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteDirectoryConfigCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1846,7 +1846,7 @@ export const de_DeleteDirectoryConfigCommand = async (
  */
 export const de_DeleteEntitlementCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteEntitlementCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1866,7 +1866,7 @@ export const de_DeleteEntitlementCommand = async (
  */
 export const de_DeleteFleetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteFleetCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1886,7 +1886,7 @@ export const de_DeleteFleetCommand = async (
  */
 export const de_DeleteImageCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteImageCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1906,7 +1906,7 @@ export const de_DeleteImageCommand = async (
  */
 export const de_DeleteImageBuilderCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteImageBuilderCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1926,7 +1926,7 @@ export const de_DeleteImageBuilderCommand = async (
  */
 export const de_DeleteImagePermissionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteImagePermissionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1946,7 +1946,7 @@ export const de_DeleteImagePermissionsCommand = async (
  */
 export const de_DeleteStackCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteStackCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1966,7 +1966,7 @@ export const de_DeleteStackCommand = async (
  */
 export const de_DeleteUsageReportSubscriptionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteUsageReportSubscriptionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1986,7 +1986,7 @@ export const de_DeleteUsageReportSubscriptionCommand = async (
  */
 export const de_DeleteUserCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteUserCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2006,7 +2006,7 @@ export const de_DeleteUserCommand = async (
  */
 export const de_DescribeAppBlockBuilderAppBlockAssociationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeAppBlockBuilderAppBlockAssociationsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2026,7 +2026,7 @@ export const de_DescribeAppBlockBuilderAppBlockAssociationsCommand = async (
  */
 export const de_DescribeAppBlockBuildersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeAppBlockBuildersCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2046,7 +2046,7 @@ export const de_DescribeAppBlockBuildersCommand = async (
  */
 export const de_DescribeAppBlocksCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeAppBlocksCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2066,7 +2066,7 @@ export const de_DescribeAppBlocksCommand = async (
  */
 export const de_DescribeApplicationFleetAssociationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeApplicationFleetAssociationsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2086,7 +2086,7 @@ export const de_DescribeApplicationFleetAssociationsCommand = async (
  */
 export const de_DescribeApplicationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeApplicationsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2106,7 +2106,7 @@ export const de_DescribeApplicationsCommand = async (
  */
 export const de_DescribeDirectoryConfigsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeDirectoryConfigsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2126,7 +2126,7 @@ export const de_DescribeDirectoryConfigsCommand = async (
  */
 export const de_DescribeEntitlementsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeEntitlementsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2146,7 +2146,7 @@ export const de_DescribeEntitlementsCommand = async (
  */
 export const de_DescribeFleetsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeFleetsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2166,7 +2166,7 @@ export const de_DescribeFleetsCommand = async (
  */
 export const de_DescribeImageBuildersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeImageBuildersCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2186,7 +2186,7 @@ export const de_DescribeImageBuildersCommand = async (
  */
 export const de_DescribeImagePermissionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeImagePermissionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2206,7 +2206,7 @@ export const de_DescribeImagePermissionsCommand = async (
  */
 export const de_DescribeImagesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeImagesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2226,7 +2226,7 @@ export const de_DescribeImagesCommand = async (
  */
 export const de_DescribeSessionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeSessionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2246,7 +2246,7 @@ export const de_DescribeSessionsCommand = async (
  */
 export const de_DescribeStacksCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeStacksCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2266,7 +2266,7 @@ export const de_DescribeStacksCommand = async (
  */
 export const de_DescribeUsageReportSubscriptionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeUsageReportSubscriptionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2286,7 +2286,7 @@ export const de_DescribeUsageReportSubscriptionsCommand = async (
  */
 export const de_DescribeUsersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeUsersCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2306,7 +2306,7 @@ export const de_DescribeUsersCommand = async (
  */
 export const de_DescribeUserStackAssociationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeUserStackAssociationsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2326,7 +2326,7 @@ export const de_DescribeUserStackAssociationsCommand = async (
  */
 export const de_DisableUserCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisableUserCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2346,7 +2346,7 @@ export const de_DisableUserCommand = async (
  */
 export const de_DisassociateAppBlockBuilderAppBlockCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisassociateAppBlockBuilderAppBlockCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2366,7 +2366,7 @@ export const de_DisassociateAppBlockBuilderAppBlockCommand = async (
  */
 export const de_DisassociateApplicationFleetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisassociateApplicationFleetCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2386,7 +2386,7 @@ export const de_DisassociateApplicationFleetCommand = async (
  */
 export const de_DisassociateApplicationFromEntitlementCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisassociateApplicationFromEntitlementCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2406,7 +2406,7 @@ export const de_DisassociateApplicationFromEntitlementCommand = async (
  */
 export const de_DisassociateFleetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisassociateFleetCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2426,7 +2426,7 @@ export const de_DisassociateFleetCommand = async (
  */
 export const de_EnableUserCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<EnableUserCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2446,7 +2446,7 @@ export const de_EnableUserCommand = async (
  */
 export const de_ExpireSessionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ExpireSessionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2466,7 +2466,7 @@ export const de_ExpireSessionCommand = async (
  */
 export const de_ListAssociatedFleetsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAssociatedFleetsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2486,7 +2486,7 @@ export const de_ListAssociatedFleetsCommand = async (
  */
 export const de_ListAssociatedStacksCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAssociatedStacksCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2506,7 +2506,7 @@ export const de_ListAssociatedStacksCommand = async (
  */
 export const de_ListEntitledApplicationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListEntitledApplicationsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2526,7 +2526,7 @@ export const de_ListEntitledApplicationsCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2546,7 +2546,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_StartAppBlockBuilderCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartAppBlockBuilderCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2566,7 +2566,7 @@ export const de_StartAppBlockBuilderCommand = async (
  */
 export const de_StartFleetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartFleetCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2586,7 +2586,7 @@ export const de_StartFleetCommand = async (
  */
 export const de_StartImageBuilderCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartImageBuilderCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2606,7 +2606,7 @@ export const de_StartImageBuilderCommand = async (
  */
 export const de_StopAppBlockBuilderCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StopAppBlockBuilderCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2626,7 +2626,7 @@ export const de_StopAppBlockBuilderCommand = async (
  */
 export const de_StopFleetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StopFleetCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2646,7 +2646,7 @@ export const de_StopFleetCommand = async (
  */
 export const de_StopImageBuilderCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StopImageBuilderCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2666,7 +2666,7 @@ export const de_StopImageBuilderCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2686,7 +2686,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2706,7 +2706,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateAppBlockBuilderCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateAppBlockBuilderCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2726,7 +2726,7 @@ export const de_UpdateAppBlockBuilderCommand = async (
  */
 export const de_UpdateApplicationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateApplicationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2746,7 +2746,7 @@ export const de_UpdateApplicationCommand = async (
  */
 export const de_UpdateDirectoryConfigCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateDirectoryConfigCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2766,7 +2766,7 @@ export const de_UpdateDirectoryConfigCommand = async (
  */
 export const de_UpdateEntitlementCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateEntitlementCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2786,7 +2786,7 @@ export const de_UpdateEntitlementCommand = async (
  */
 export const de_UpdateFleetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateFleetCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2806,7 +2806,7 @@ export const de_UpdateFleetCommand = async (
  */
 export const de_UpdateImagePermissionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateImagePermissionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2826,7 +2826,7 @@ export const de_UpdateImagePermissionsCommand = async (
  */
 export const de_UpdateStackCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateStackCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2908,7 +2908,7 @@ const de_CommandError = async (output: __HttpResponse, context: __SerdeContext):
  */
 const de_ConcurrentModificationExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ConcurrentModificationException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2924,7 +2924,7 @@ const de_ConcurrentModificationExceptionRes = async (
  */
 const de_EntitlementAlreadyExistsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<EntitlementAlreadyExistsException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2940,7 +2940,7 @@ const de_EntitlementAlreadyExistsExceptionRes = async (
  */
 const de_EntitlementNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<EntitlementNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2956,7 +2956,7 @@ const de_EntitlementNotFoundExceptionRes = async (
  */
 const de_IncompatibleImageExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<IncompatibleImageException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2972,7 +2972,7 @@ const de_IncompatibleImageExceptionRes = async (
  */
 const de_InvalidAccountStatusExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidAccountStatusException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2988,7 +2988,7 @@ const de_InvalidAccountStatusExceptionRes = async (
  */
 const de_InvalidParameterCombinationExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidParameterCombinationException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3004,7 +3004,7 @@ const de_InvalidParameterCombinationExceptionRes = async (
  */
 const de_InvalidRoleExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidRoleException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3020,7 +3020,7 @@ const de_InvalidRoleExceptionRes = async (
  */
 const de_LimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<LimitExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3036,7 +3036,7 @@ const de_LimitExceededExceptionRes = async (
  */
 const de_OperationNotPermittedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<OperationNotPermittedException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3052,7 +3052,7 @@ const de_OperationNotPermittedExceptionRes = async (
  */
 const de_RequestLimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RequestLimitExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3068,7 +3068,7 @@ const de_RequestLimitExceededExceptionRes = async (
  */
 const de_ResourceAlreadyExistsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceAlreadyExistsException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3084,7 +3084,7 @@ const de_ResourceAlreadyExistsExceptionRes = async (
  */
 const de_ResourceInUseExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceInUseException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3100,7 +3100,7 @@ const de_ResourceInUseExceptionRes = async (
  */
 const de_ResourceNotAvailableExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotAvailableException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3116,7 +3116,7 @@ const de_ResourceNotAvailableExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3501,7 +3501,7 @@ const de_CreateAppBlockBuilderResult = (output: any, context: __SerdeContext): C
  */
 const de_CreateAppBlockBuilderStreamingURLResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CreateAppBlockBuilderStreamingURLResult => {
   return take(output, {
     Expires: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
@@ -3568,7 +3568,7 @@ const de_CreateImageBuilderResult = (output: any, context: __SerdeContext): Crea
  */
 const de_CreateImageBuilderStreamingURLResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CreateImageBuilderStreamingURLResult => {
   return take(output, {
     Expires: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
@@ -3758,7 +3758,7 @@ const de_DescribeStacksResult = (output: any, context: __SerdeContext): Describe
  */
 const de_DescribeUsageReportSubscriptionsResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeUsageReportSubscriptionsResult => {
   return take(output, {
     NextToken: __expectString,
@@ -4340,7 +4340,7 @@ const buildHttpRpcRequest = async (
   headers: __HeaderBag,
   path: string,
   resolvedHostname: string | undefined,
-  body: any
+  body: any,
 ): Promise<__HttpRequest> => {
   const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
   const contents: any = {

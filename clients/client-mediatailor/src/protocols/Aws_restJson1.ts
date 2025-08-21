@@ -174,7 +174,7 @@ import {
  */
 export const se_ConfigureLogsForChannelCommand = async (
   input: ConfigureLogsForChannelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -186,7 +186,7 @@ export const se_ConfigureLogsForChannelCommand = async (
     take(input, {
       ChannelName: [],
       LogTypes: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -197,7 +197,7 @@ export const se_ConfigureLogsForChannelCommand = async (
  */
 export const se_ConfigureLogsForPlaybackConfigurationCommand = async (
   input: ConfigureLogsForPlaybackConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -209,7 +209,7 @@ export const se_ConfigureLogsForPlaybackConfigurationCommand = async (
     take(input, {
       PercentEnabled: [],
       PlaybackConfigurationName: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -220,7 +220,7 @@ export const se_ConfigureLogsForPlaybackConfigurationCommand = async (
  */
 export const se_CreateChannelCommand = async (
   input: CreateChannelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -238,7 +238,7 @@ export const se_CreateChannelCommand = async (
       tags: [, (_) => _json(_), `Tags`],
       Tier: [],
       TimeShiftConfiguration: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -249,7 +249,7 @@ export const se_CreateChannelCommand = async (
  */
 export const se_CreateLiveSourceCommand = async (
   input: CreateLiveSourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -263,7 +263,7 @@ export const se_CreateLiveSourceCommand = async (
     take(input, {
       HttpPackageConfigurations: (_) => _json(_),
       tags: [, (_) => _json(_), `Tags`],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -274,7 +274,7 @@ export const se_CreateLiveSourceCommand = async (
  */
 export const se_CreatePrefetchScheduleCommand = async (
   input: CreatePrefetchScheduleCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -289,7 +289,7 @@ export const se_CreatePrefetchScheduleCommand = async (
       Consumption: (_) => se_PrefetchConsumption(_, context),
       Retrieval: (_) => se_PrefetchRetrieval(_, context),
       StreamId: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -300,7 +300,7 @@ export const se_CreatePrefetchScheduleCommand = async (
  */
 export const se_CreateProgramCommand = async (
   input: CreateProgramCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -318,7 +318,7 @@ export const se_CreateProgramCommand = async (
       ScheduleConfiguration: (_) => _json(_),
       SourceLocationName: [],
       VodSourceName: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -329,7 +329,7 @@ export const se_CreateProgramCommand = async (
  */
 export const se_CreateSourceLocationCommand = async (
   input: CreateSourceLocationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -345,7 +345,7 @@ export const se_CreateSourceLocationCommand = async (
       HttpConfiguration: (_) => _json(_),
       SegmentDeliveryConfigurations: (_) => _json(_),
       tags: [, (_) => _json(_), `Tags`],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -356,7 +356,7 @@ export const se_CreateSourceLocationCommand = async (
  */
 export const se_CreateVodSourceCommand = async (
   input: CreateVodSourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -370,7 +370,7 @@ export const se_CreateVodSourceCommand = async (
     take(input, {
       HttpPackageConfigurations: (_) => _json(_),
       tags: [, (_) => _json(_), `Tags`],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -381,7 +381,7 @@ export const se_CreateVodSourceCommand = async (
  */
 export const se_DeleteChannelCommand = async (
   input: DeleteChannelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -397,7 +397,7 @@ export const se_DeleteChannelCommand = async (
  */
 export const se_DeleteChannelPolicyCommand = async (
   input: DeleteChannelPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -413,7 +413,7 @@ export const se_DeleteChannelPolicyCommand = async (
  */
 export const se_DeleteLiveSourceCommand = async (
   input: DeleteLiveSourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -430,7 +430,7 @@ export const se_DeleteLiveSourceCommand = async (
  */
 export const se_DeletePlaybackConfigurationCommand = async (
   input: DeletePlaybackConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -446,7 +446,7 @@ export const se_DeletePlaybackConfigurationCommand = async (
  */
 export const se_DeletePrefetchScheduleCommand = async (
   input: DeletePrefetchScheduleCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -463,7 +463,7 @@ export const se_DeletePrefetchScheduleCommand = async (
  */
 export const se_DeleteProgramCommand = async (
   input: DeleteProgramCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -480,7 +480,7 @@ export const se_DeleteProgramCommand = async (
  */
 export const se_DeleteSourceLocationCommand = async (
   input: DeleteSourceLocationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -496,7 +496,7 @@ export const se_DeleteSourceLocationCommand = async (
  */
 export const se_DeleteVodSourceCommand = async (
   input: DeleteVodSourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -513,7 +513,7 @@ export const se_DeleteVodSourceCommand = async (
  */
 export const se_DescribeChannelCommand = async (
   input: DescribeChannelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -529,7 +529,7 @@ export const se_DescribeChannelCommand = async (
  */
 export const se_DescribeLiveSourceCommand = async (
   input: DescribeLiveSourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -546,7 +546,7 @@ export const se_DescribeLiveSourceCommand = async (
  */
 export const se_DescribeProgramCommand = async (
   input: DescribeProgramCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -563,7 +563,7 @@ export const se_DescribeProgramCommand = async (
  */
 export const se_DescribeSourceLocationCommand = async (
   input: DescribeSourceLocationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -579,7 +579,7 @@ export const se_DescribeSourceLocationCommand = async (
  */
 export const se_DescribeVodSourceCommand = async (
   input: DescribeVodSourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -596,7 +596,7 @@ export const se_DescribeVodSourceCommand = async (
  */
 export const se_GetChannelPolicyCommand = async (
   input: GetChannelPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -612,7 +612,7 @@ export const se_GetChannelPolicyCommand = async (
  */
 export const se_GetChannelScheduleCommand = async (
   input: GetChannelScheduleCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -634,7 +634,7 @@ export const se_GetChannelScheduleCommand = async (
  */
 export const se_GetPlaybackConfigurationCommand = async (
   input: GetPlaybackConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -650,7 +650,7 @@ export const se_GetPlaybackConfigurationCommand = async (
  */
 export const se_GetPrefetchScheduleCommand = async (
   input: GetPrefetchScheduleCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -667,7 +667,7 @@ export const se_GetPrefetchScheduleCommand = async (
  */
 export const se_ListAlertsCommand = async (
   input: ListAlertsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -687,7 +687,7 @@ export const se_ListAlertsCommand = async (
  */
 export const se_ListChannelsCommand = async (
   input: ListChannelsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -706,7 +706,7 @@ export const se_ListChannelsCommand = async (
  */
 export const se_ListLiveSourcesCommand = async (
   input: ListLiveSourcesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -726,7 +726,7 @@ export const se_ListLiveSourcesCommand = async (
  */
 export const se_ListPlaybackConfigurationsCommand = async (
   input: ListPlaybackConfigurationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -745,7 +745,7 @@ export const se_ListPlaybackConfigurationsCommand = async (
  */
 export const se_ListPrefetchSchedulesCommand = async (
   input: ListPrefetchSchedulesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -759,7 +759,7 @@ export const se_ListPrefetchSchedulesCommand = async (
       MaxResults: [],
       NextToken: [],
       StreamId: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -770,7 +770,7 @@ export const se_ListPrefetchSchedulesCommand = async (
  */
 export const se_ListSourceLocationsCommand = async (
   input: ListSourceLocationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -789,7 +789,7 @@ export const se_ListSourceLocationsCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -805,7 +805,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_ListVodSourcesCommand = async (
   input: ListVodSourcesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -825,7 +825,7 @@ export const se_ListVodSourcesCommand = async (
  */
 export const se_PutChannelPolicyCommand = async (
   input: PutChannelPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -837,7 +837,7 @@ export const se_PutChannelPolicyCommand = async (
   body = JSON.stringify(
     take(input, {
       Policy: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -848,7 +848,7 @@ export const se_PutChannelPolicyCommand = async (
  */
 export const se_PutPlaybackConfigurationCommand = async (
   input: PutPlaybackConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -873,7 +873,7 @@ export const se_PutPlaybackConfigurationCommand = async (
       tags: [, (_) => _json(_), `Tags`],
       TranscodeProfileName: [],
       VideoContentSourceUrl: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -884,7 +884,7 @@ export const se_PutPlaybackConfigurationCommand = async (
  */
 export const se_StartChannelCommand = async (
   input: StartChannelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -900,7 +900,7 @@ export const se_StartChannelCommand = async (
  */
 export const se_StopChannelCommand = async (
   input: StopChannelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -916,7 +916,7 @@ export const se_StopChannelCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -928,7 +928,7 @@ export const se_TagResourceCommand = async (
   body = JSON.stringify(
     take(input, {
       tags: [, (_) => _json(_), `Tags`],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -939,7 +939,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -961,7 +961,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateChannelCommand = async (
   input: UpdateChannelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -976,7 +976,7 @@ export const se_UpdateChannelCommand = async (
       FillerSlate: (_) => _json(_),
       Outputs: (_) => _json(_),
       TimeShiftConfiguration: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -987,7 +987,7 @@ export const se_UpdateChannelCommand = async (
  */
 export const se_UpdateLiveSourceCommand = async (
   input: UpdateLiveSourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1000,7 +1000,7 @@ export const se_UpdateLiveSourceCommand = async (
   body = JSON.stringify(
     take(input, {
       HttpPackageConfigurations: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1011,7 +1011,7 @@ export const se_UpdateLiveSourceCommand = async (
  */
 export const se_UpdateProgramCommand = async (
   input: UpdateProgramCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1026,7 +1026,7 @@ export const se_UpdateProgramCommand = async (
       AdBreaks: (_) => _json(_),
       AudienceMedia: (_) => _json(_),
       ScheduleConfiguration: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1037,7 +1037,7 @@ export const se_UpdateProgramCommand = async (
  */
 export const se_UpdateSourceLocationCommand = async (
   input: UpdateSourceLocationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1052,7 +1052,7 @@ export const se_UpdateSourceLocationCommand = async (
       DefaultSegmentDeliveryConfiguration: (_) => _json(_),
       HttpConfiguration: (_) => _json(_),
       SegmentDeliveryConfigurations: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1063,7 +1063,7 @@ export const se_UpdateSourceLocationCommand = async (
  */
 export const se_UpdateVodSourceCommand = async (
   input: UpdateVodSourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1076,7 +1076,7 @@ export const se_UpdateVodSourceCommand = async (
   body = JSON.stringify(
     take(input, {
       HttpPackageConfigurations: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1087,7 +1087,7 @@ export const se_UpdateVodSourceCommand = async (
  */
 export const de_ConfigureLogsForChannelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ConfigureLogsForChannelCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1109,7 +1109,7 @@ export const de_ConfigureLogsForChannelCommand = async (
  */
 export const de_ConfigureLogsForPlaybackConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ConfigureLogsForPlaybackConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1131,7 +1131,7 @@ export const de_ConfigureLogsForPlaybackConfigurationCommand = async (
  */
 export const de_CreateChannelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateChannelCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1163,7 +1163,7 @@ export const de_CreateChannelCommand = async (
  */
 export const de_CreateLiveSourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateLiveSourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1190,7 +1190,7 @@ export const de_CreateLiveSourceCommand = async (
  */
 export const de_CreatePrefetchScheduleCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreatePrefetchScheduleCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1216,7 +1216,7 @@ export const de_CreatePrefetchScheduleCommand = async (
  */
 export const de_CreateProgramCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateProgramCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1248,7 +1248,7 @@ export const de_CreateProgramCommand = async (
  */
 export const de_CreateSourceLocationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateSourceLocationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1277,7 +1277,7 @@ export const de_CreateSourceLocationCommand = async (
  */
 export const de_CreateVodSourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateVodSourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1304,7 +1304,7 @@ export const de_CreateVodSourceCommand = async (
  */
 export const de_DeleteChannelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteChannelCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1321,7 +1321,7 @@ export const de_DeleteChannelCommand = async (
  */
 export const de_DeleteChannelPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteChannelPolicyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1338,7 +1338,7 @@ export const de_DeleteChannelPolicyCommand = async (
  */
 export const de_DeleteLiveSourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteLiveSourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1355,7 +1355,7 @@ export const de_DeleteLiveSourceCommand = async (
  */
 export const de_DeletePlaybackConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeletePlaybackConfigurationCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1372,7 +1372,7 @@ export const de_DeletePlaybackConfigurationCommand = async (
  */
 export const de_DeletePrefetchScheduleCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeletePrefetchScheduleCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1389,7 +1389,7 @@ export const de_DeletePrefetchScheduleCommand = async (
  */
 export const de_DeleteProgramCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteProgramCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1406,7 +1406,7 @@ export const de_DeleteProgramCommand = async (
  */
 export const de_DeleteSourceLocationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteSourceLocationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1423,7 +1423,7 @@ export const de_DeleteSourceLocationCommand = async (
  */
 export const de_DeleteVodSourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteVodSourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1440,7 +1440,7 @@ export const de_DeleteVodSourceCommand = async (
  */
 export const de_DescribeChannelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeChannelCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1473,7 +1473,7 @@ export const de_DescribeChannelCommand = async (
  */
 export const de_DescribeLiveSourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeLiveSourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1500,7 +1500,7 @@ export const de_DescribeLiveSourceCommand = async (
  */
 export const de_DescribeProgramCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeProgramCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1532,7 +1532,7 @@ export const de_DescribeProgramCommand = async (
  */
 export const de_DescribeSourceLocationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeSourceLocationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1561,7 +1561,7 @@ export const de_DescribeSourceLocationCommand = async (
  */
 export const de_DescribeVodSourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeVodSourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1589,7 +1589,7 @@ export const de_DescribeVodSourceCommand = async (
  */
 export const de_GetChannelPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetChannelPolicyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1610,7 +1610,7 @@ export const de_GetChannelPolicyCommand = async (
  */
 export const de_GetChannelScheduleCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetChannelScheduleCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1632,7 +1632,7 @@ export const de_GetChannelScheduleCommand = async (
  */
 export const de_GetPlaybackConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetPlaybackConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1672,7 +1672,7 @@ export const de_GetPlaybackConfigurationCommand = async (
  */
 export const de_GetPrefetchScheduleCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetPrefetchScheduleCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1698,7 +1698,7 @@ export const de_GetPrefetchScheduleCommand = async (
  */
 export const de_ListAlertsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAlertsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1720,7 +1720,7 @@ export const de_ListAlertsCommand = async (
  */
 export const de_ListChannelsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListChannelsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1742,7 +1742,7 @@ export const de_ListChannelsCommand = async (
  */
 export const de_ListLiveSourcesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListLiveSourcesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1764,7 +1764,7 @@ export const de_ListLiveSourcesCommand = async (
  */
 export const de_ListPlaybackConfigurationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListPlaybackConfigurationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1786,7 +1786,7 @@ export const de_ListPlaybackConfigurationsCommand = async (
  */
 export const de_ListPrefetchSchedulesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListPrefetchSchedulesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1808,7 +1808,7 @@ export const de_ListPrefetchSchedulesCommand = async (
  */
 export const de_ListSourceLocationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListSourceLocationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1830,7 +1830,7 @@ export const de_ListSourceLocationsCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1851,7 +1851,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_ListVodSourcesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListVodSourcesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1873,7 +1873,7 @@ export const de_ListVodSourcesCommand = async (
  */
 export const de_PutChannelPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutChannelPolicyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1890,7 +1890,7 @@ export const de_PutChannelPolicyCommand = async (
  */
 export const de_PutPlaybackConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutPlaybackConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1930,7 +1930,7 @@ export const de_PutPlaybackConfigurationCommand = async (
  */
 export const de_StartChannelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartChannelCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1947,7 +1947,7 @@ export const de_StartChannelCommand = async (
  */
 export const de_StopChannelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StopChannelCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1964,7 +1964,7 @@ export const de_StopChannelCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1981,7 +1981,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1998,7 +1998,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateChannelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateChannelCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2030,7 +2030,7 @@ export const de_UpdateChannelCommand = async (
  */
 export const de_UpdateLiveSourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateLiveSourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2057,7 +2057,7 @@ export const de_UpdateLiveSourceCommand = async (
  */
 export const de_UpdateProgramCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateProgramCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2089,7 +2089,7 @@ export const de_UpdateProgramCommand = async (
  */
 export const de_UpdateSourceLocationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateSourceLocationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2118,7 +2118,7 @@ export const de_UpdateSourceLocationCommand = async (
  */
 export const de_UpdateVodSourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateVodSourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);

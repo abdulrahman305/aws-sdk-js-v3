@@ -153,7 +153,7 @@ import {
  */
 export const se_CreateConnectionCommand = async (
   input: CreateConnectionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateConnection");
   let body: any;
@@ -166,7 +166,7 @@ export const se_CreateConnectionCommand = async (
  */
 export const se_CreateHostCommand = async (
   input: CreateHostCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateHost");
   let body: any;
@@ -179,7 +179,7 @@ export const se_CreateHostCommand = async (
  */
 export const se_CreateRepositoryLinkCommand = async (
   input: CreateRepositoryLinkCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateRepositoryLink");
   let body: any;
@@ -192,7 +192,7 @@ export const se_CreateRepositoryLinkCommand = async (
  */
 export const se_CreateSyncConfigurationCommand = async (
   input: CreateSyncConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateSyncConfiguration");
   let body: any;
@@ -205,7 +205,7 @@ export const se_CreateSyncConfigurationCommand = async (
  */
 export const se_DeleteConnectionCommand = async (
   input: DeleteConnectionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteConnection");
   let body: any;
@@ -218,7 +218,7 @@ export const se_DeleteConnectionCommand = async (
  */
 export const se_DeleteHostCommand = async (
   input: DeleteHostCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteHost");
   let body: any;
@@ -231,7 +231,7 @@ export const se_DeleteHostCommand = async (
  */
 export const se_DeleteRepositoryLinkCommand = async (
   input: DeleteRepositoryLinkCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteRepositoryLink");
   let body: any;
@@ -244,7 +244,7 @@ export const se_DeleteRepositoryLinkCommand = async (
  */
 export const se_DeleteSyncConfigurationCommand = async (
   input: DeleteSyncConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteSyncConfiguration");
   let body: any;
@@ -257,7 +257,7 @@ export const se_DeleteSyncConfigurationCommand = async (
  */
 export const se_GetConnectionCommand = async (
   input: GetConnectionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetConnection");
   let body: any;
@@ -270,7 +270,7 @@ export const se_GetConnectionCommand = async (
  */
 export const se_GetHostCommand = async (
   input: GetHostCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetHost");
   let body: any;
@@ -283,7 +283,7 @@ export const se_GetHostCommand = async (
  */
 export const se_GetRepositoryLinkCommand = async (
   input: GetRepositoryLinkCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetRepositoryLink");
   let body: any;
@@ -296,7 +296,7 @@ export const se_GetRepositoryLinkCommand = async (
  */
 export const se_GetRepositorySyncStatusCommand = async (
   input: GetRepositorySyncStatusCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetRepositorySyncStatus");
   let body: any;
@@ -309,7 +309,7 @@ export const se_GetRepositorySyncStatusCommand = async (
  */
 export const se_GetResourceSyncStatusCommand = async (
   input: GetResourceSyncStatusCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetResourceSyncStatus");
   let body: any;
@@ -322,7 +322,7 @@ export const se_GetResourceSyncStatusCommand = async (
  */
 export const se_GetSyncBlockerSummaryCommand = async (
   input: GetSyncBlockerSummaryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetSyncBlockerSummary");
   let body: any;
@@ -335,7 +335,7 @@ export const se_GetSyncBlockerSummaryCommand = async (
  */
 export const se_GetSyncConfigurationCommand = async (
   input: GetSyncConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetSyncConfiguration");
   let body: any;
@@ -348,7 +348,7 @@ export const se_GetSyncConfigurationCommand = async (
  */
 export const se_ListConnectionsCommand = async (
   input: ListConnectionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListConnections");
   let body: any;
@@ -361,7 +361,7 @@ export const se_ListConnectionsCommand = async (
  */
 export const se_ListHostsCommand = async (
   input: ListHostsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListHosts");
   let body: any;
@@ -374,7 +374,7 @@ export const se_ListHostsCommand = async (
  */
 export const se_ListRepositoryLinksCommand = async (
   input: ListRepositoryLinksCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListRepositoryLinks");
   let body: any;
@@ -387,7 +387,7 @@ export const se_ListRepositoryLinksCommand = async (
  */
 export const se_ListRepositorySyncDefinitionsCommand = async (
   input: ListRepositorySyncDefinitionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListRepositorySyncDefinitions");
   let body: any;
@@ -400,7 +400,7 @@ export const se_ListRepositorySyncDefinitionsCommand = async (
  */
 export const se_ListSyncConfigurationsCommand = async (
   input: ListSyncConfigurationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListSyncConfigurations");
   let body: any;
@@ -413,7 +413,7 @@ export const se_ListSyncConfigurationsCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListTagsForResource");
   let body: any;
@@ -426,7 +426,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("TagResource");
   let body: any;
@@ -439,7 +439,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UntagResource");
   let body: any;
@@ -452,7 +452,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateHostCommand = async (
   input: UpdateHostCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateHost");
   let body: any;
@@ -465,7 +465,7 @@ export const se_UpdateHostCommand = async (
  */
 export const se_UpdateRepositoryLinkCommand = async (
   input: UpdateRepositoryLinkCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateRepositoryLink");
   let body: any;
@@ -478,7 +478,7 @@ export const se_UpdateRepositoryLinkCommand = async (
  */
 export const se_UpdateSyncBlockerCommand = async (
   input: UpdateSyncBlockerCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateSyncBlocker");
   let body: any;
@@ -491,7 +491,7 @@ export const se_UpdateSyncBlockerCommand = async (
  */
 export const se_UpdateSyncConfigurationCommand = async (
   input: UpdateSyncConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateSyncConfiguration");
   let body: any;
@@ -504,7 +504,7 @@ export const se_UpdateSyncConfigurationCommand = async (
  */
 export const de_CreateConnectionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateConnectionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -524,7 +524,7 @@ export const de_CreateConnectionCommand = async (
  */
 export const de_CreateHostCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateHostCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -544,7 +544,7 @@ export const de_CreateHostCommand = async (
  */
 export const de_CreateRepositoryLinkCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateRepositoryLinkCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -564,7 +564,7 @@ export const de_CreateRepositoryLinkCommand = async (
  */
 export const de_CreateSyncConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateSyncConfigurationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -584,7 +584,7 @@ export const de_CreateSyncConfigurationCommand = async (
  */
 export const de_DeleteConnectionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteConnectionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -604,7 +604,7 @@ export const de_DeleteConnectionCommand = async (
  */
 export const de_DeleteHostCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteHostCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -624,7 +624,7 @@ export const de_DeleteHostCommand = async (
  */
 export const de_DeleteRepositoryLinkCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteRepositoryLinkCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -644,7 +644,7 @@ export const de_DeleteRepositoryLinkCommand = async (
  */
 export const de_DeleteSyncConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteSyncConfigurationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -664,7 +664,7 @@ export const de_DeleteSyncConfigurationCommand = async (
  */
 export const de_GetConnectionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetConnectionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -684,7 +684,7 @@ export const de_GetConnectionCommand = async (
  */
 export const de_GetHostCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetHostCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -704,7 +704,7 @@ export const de_GetHostCommand = async (
  */
 export const de_GetRepositoryLinkCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetRepositoryLinkCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -724,7 +724,7 @@ export const de_GetRepositoryLinkCommand = async (
  */
 export const de_GetRepositorySyncStatusCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetRepositorySyncStatusCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -744,7 +744,7 @@ export const de_GetRepositorySyncStatusCommand = async (
  */
 export const de_GetResourceSyncStatusCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetResourceSyncStatusCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -764,7 +764,7 @@ export const de_GetResourceSyncStatusCommand = async (
  */
 export const de_GetSyncBlockerSummaryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetSyncBlockerSummaryCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -784,7 +784,7 @@ export const de_GetSyncBlockerSummaryCommand = async (
  */
 export const de_GetSyncConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetSyncConfigurationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -804,7 +804,7 @@ export const de_GetSyncConfigurationCommand = async (
  */
 export const de_ListConnectionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListConnectionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -824,7 +824,7 @@ export const de_ListConnectionsCommand = async (
  */
 export const de_ListHostsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListHostsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -844,7 +844,7 @@ export const de_ListHostsCommand = async (
  */
 export const de_ListRepositoryLinksCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListRepositoryLinksCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -864,7 +864,7 @@ export const de_ListRepositoryLinksCommand = async (
  */
 export const de_ListRepositorySyncDefinitionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListRepositorySyncDefinitionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -884,7 +884,7 @@ export const de_ListRepositorySyncDefinitionsCommand = async (
  */
 export const de_ListSyncConfigurationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListSyncConfigurationsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -904,7 +904,7 @@ export const de_ListSyncConfigurationsCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -924,7 +924,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -944,7 +944,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -964,7 +964,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateHostCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateHostCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -984,7 +984,7 @@ export const de_UpdateHostCommand = async (
  */
 export const de_UpdateRepositoryLinkCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateRepositoryLinkCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1004,7 +1004,7 @@ export const de_UpdateRepositoryLinkCommand = async (
  */
 export const de_UpdateSyncBlockerCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateSyncBlockerCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1024,7 +1024,7 @@ export const de_UpdateSyncBlockerCommand = async (
  */
 export const de_UpdateSyncConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateSyncConfigurationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1115,7 +1115,7 @@ const de_CommandError = async (output: __HttpResponse, context: __SerdeContext):
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1131,7 +1131,7 @@ const de_AccessDeniedExceptionRes = async (
  */
 const de_ConcurrentModificationExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ConcurrentModificationException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1147,7 +1147,7 @@ const de_ConcurrentModificationExceptionRes = async (
  */
 const de_ConditionalCheckFailedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ConditionalCheckFailedException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1176,7 +1176,7 @@ const de_ConflictExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_InternalServerExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1192,7 +1192,7 @@ const de_InternalServerExceptionRes = async (
  */
 const de_InvalidInputExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidInputException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1208,7 +1208,7 @@ const de_InvalidInputExceptionRes = async (
  */
 const de_LimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<LimitExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1224,7 +1224,7 @@ const de_LimitExceededExceptionRes = async (
  */
 const de_ResourceAlreadyExistsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceAlreadyExistsException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1240,7 +1240,7 @@ const de_ResourceAlreadyExistsExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1256,7 +1256,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_ResourceUnavailableExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceUnavailableException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1272,7 +1272,7 @@ const de_ResourceUnavailableExceptionRes = async (
  */
 const de_RetryLatestCommitFailedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RetryLatestCommitFailedException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1288,7 +1288,7 @@ const de_RetryLatestCommitFailedExceptionRes = async (
  */
 const de_SyncBlockerDoesNotExistExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SyncBlockerDoesNotExistException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1304,7 +1304,7 @@ const de_SyncBlockerDoesNotExistExceptionRes = async (
  */
 const de_SyncConfigurationStillExistsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SyncConfigurationStillExistsException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1333,7 +1333,7 @@ const de_ThrottlingExceptionRes = async (parsedOutput: any, context: __SerdeCont
  */
 const de_UnsupportedOperationExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UnsupportedOperationException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1349,7 +1349,7 @@ const de_UnsupportedOperationExceptionRes = async (
  */
 const de_UnsupportedProviderTypeExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UnsupportedProviderTypeException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1365,7 +1365,7 @@ const de_UnsupportedProviderTypeExceptionRes = async (
  */
 const de_UpdateOutOfSyncExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateOutOfSyncException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1728,7 +1728,7 @@ const buildHttpRpcRequest = async (
   headers: __HeaderBag,
   path: string,
   resolvedHostname: string | undefined,
-  body: any
+  body: any,
 ): Promise<__HttpRequest> => {
   const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
   const contents: any = {

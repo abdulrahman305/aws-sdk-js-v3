@@ -81,7 +81,7 @@ const checkState = async (client: RDSClient, input: DescribeTenantDatabasesComma
  */
 export const waitForTenantDatabaseAvailable = async (
   params: WaiterConfiguration<RDSClient>,
-  input: DescribeTenantDatabasesCommandInput
+  input: DescribeTenantDatabasesCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 30, maxDelay: 120 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -93,7 +93,7 @@ export const waitForTenantDatabaseAvailable = async (
  */
 export const waitUntilTenantDatabaseAvailable = async (
   params: WaiterConfiguration<RDSClient>,
-  input: DescribeTenantDatabasesCommandInput
+  input: DescribeTenantDatabasesCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 30, maxDelay: 120 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

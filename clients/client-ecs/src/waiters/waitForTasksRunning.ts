@@ -64,7 +64,7 @@ const checkState = async (client: ECSClient, input: DescribeTasksCommandInput): 
  */
 export const waitForTasksRunning = async (
   params: WaiterConfiguration<ECSClient>,
-  input: DescribeTasksCommandInput
+  input: DescribeTasksCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 6, maxDelay: 120 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -76,7 +76,7 @@ export const waitForTasksRunning = async (
  */
 export const waitUntilTasksRunning = async (
   params: WaiterConfiguration<ECSClient>,
-  input: DescribeTasksCommandInput
+  input: DescribeTasksCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 6, maxDelay: 120 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

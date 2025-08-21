@@ -210,7 +210,7 @@ it("AwsJson10EmptyInputAndEmptyOutputSendJsonObject:Response", async () => {
       {
         "content-type": "application/x-amz-json-1.0",
       },
-      `{}`
+      `{}`,
     ),
   });
 
@@ -317,7 +317,7 @@ it("AwsJson10InvalidGreetingError:Error:GreetingWithErrors", async () => {
       `{
           "__type": "aws.protocoltests.json10#InvalidGreeting",
           "Message": "Hi"
-      }`
+      }`,
     ),
   });
 
@@ -455,7 +455,7 @@ it("AwsJson10FooErrorUsingCode:Error:GreetingWithErrors", async () => {
       },
       `{
           "code": "FooError"
-      }`
+      }`,
     ),
   });
 
@@ -491,7 +491,7 @@ it("AwsJson10FooErrorUsingCodeAndNamespace:Error:GreetingWithErrors", async () =
       },
       `{
           "code": "aws.protocoltests.json10#FooError"
-      }`
+      }`,
     ),
   });
 
@@ -527,7 +527,7 @@ it("AwsJson10FooErrorUsingCodeUriAndNamespace:Error:GreetingWithErrors", async (
       },
       `{
           "code": "aws.protocoltests.json10#FooError:http://internal.amazon.com/coral/com.amazon.coral.validate/"
-      }`
+      }`,
     ),
   });
 
@@ -563,7 +563,7 @@ it("AwsJson10FooErrorWithDunderType:Error:GreetingWithErrors", async () => {
       },
       `{
           "__type": "FooError"
-      }`
+      }`,
     ),
   });
 
@@ -599,7 +599,7 @@ it("AwsJson10FooErrorWithDunderTypeAndNamespace:Error:GreetingWithErrors", async
       },
       `{
           "__type": "aws.protocoltests.json10#FooError"
-      }`
+      }`,
     ),
   });
 
@@ -635,7 +635,7 @@ it("AwsJson10FooErrorWithDunderTypeUriAndNamespace:Error:GreetingWithErrors", as
       },
       `{
           "__type": "aws.protocoltests.json10#FooError:http://internal.amazon.com/coral/com.amazon.coral.validate/"
-      }`
+      }`,
     ),
   });
 
@@ -675,7 +675,7 @@ it("AwsJson10ComplexError:Error:GreetingWithErrors", async () => {
           "Nested": {
               "Foo": "bar"
           }
-      }`
+      }`,
     ),
   });
 
@@ -724,7 +724,7 @@ it("AwsJson10EmptyComplexError:Error:GreetingWithErrors", async () => {
       },
       `{
           "__type": "aws.protocoltests.json10#ComplexError"
-      }`
+      }`,
     ),
   });
 
@@ -1245,7 +1245,7 @@ it("AwsJson10DeserializeStringUnionValue:Response", async () => {
           "contents": {
               "stringValue": "foo"
           }
-      }`
+      }`,
     ),
   });
 
@@ -1289,7 +1289,7 @@ it("AwsJson10DeserializeBooleanUnionValue:Response", async () => {
           "contents": {
               "booleanValue": true
           }
-      }`
+      }`,
     ),
   });
 
@@ -1333,7 +1333,7 @@ it("AwsJson10DeserializeNumberUnionValue:Response", async () => {
           "contents": {
               "numberValue": 1
           }
-      }`
+      }`,
     ),
   });
 
@@ -1377,7 +1377,7 @@ it("AwsJson10DeserializeBlobUnionValue:Response", async () => {
           "contents": {
               "blobValue": "Zm9v"
           }
-      }`
+      }`,
     ),
   });
 
@@ -1421,7 +1421,7 @@ it("AwsJson10DeserializeTimestampUnionValue:Response", async () => {
           "contents": {
               "timestampValue": 1398796238
           }
-      }`
+      }`,
     ),
   });
 
@@ -1465,7 +1465,7 @@ it("AwsJson10DeserializeEnumUnionValue:Response", async () => {
           "contents": {
               "enumValue": "Foo"
           }
-      }`
+      }`,
     ),
   });
 
@@ -1509,7 +1509,7 @@ it("AwsJson10DeserializeIntEnumUnionValue:Response", async () => {
           "contents": {
               "intEnumValue": 1
           }
-      }`
+      }`,
     ),
   });
 
@@ -1553,7 +1553,7 @@ it("AwsJson10DeserializeListUnionValue:Response", async () => {
           "contents": {
               "listValue": ["foo", "bar"]
           }
-      }`
+      }`,
     ),
   });
 
@@ -1600,7 +1600,7 @@ it("AwsJson10DeserializeMapUnionValue:Response", async () => {
                   "spam": "eggs"
               }
           }
-      }`
+      }`,
     ),
   });
 
@@ -1650,7 +1650,7 @@ it("AwsJson10DeserializeStructureUnionValue:Response", async () => {
                   "hi": "hello"
               }
           }
-      }`
+      }`,
     ),
   });
 
@@ -1699,7 +1699,7 @@ it("AwsJson10DeserializeIgnoreType:Response", async () => {
                   "hi": "hello"
               }
           }
-      }`
+      }`,
     ),
   });
 
@@ -1756,7 +1756,7 @@ it("AwsJson10DeserializeAllowNulls:Response", async () => {
                 "hi": "hello"
             }
           }
-      }`
+      }`,
     ),
   });
 
@@ -1842,7 +1842,7 @@ it("AwsJson10HandlesEmptyOutputShape:Response", async () => {
       {
         "content-type": "application/x-amz-json-1.0",
       },
-      `{}`
+      `{}`,
     ),
   });
 
@@ -1876,7 +1876,7 @@ it("AwsJson10HandlesUnexpectedJsonOutput:Response", async () => {
       },
       `{
           "foo": true
-      }`
+      }`,
     ),
   });
 
@@ -1909,7 +1909,7 @@ it("AwsJson10ServiceRespondsWithNoPayload:Response", async () => {
       {
         "content-type": "application/x-amz-json-1.0",
       },
-      ``
+      ``,
     ),
   });
 
@@ -1974,7 +1974,7 @@ it("AwsJson10NoInputAndOutput:Response", async () => {
       {
         "content-type": "application/x-amz-json-1.0",
       },
-      `{}`
+      `{}`,
     ),
   });
 
@@ -2310,7 +2310,7 @@ it.skip("AwsJson10ClientPopulatesDefaultsValuesWhenMissingInResponse:Response", 
       {
         "content-type": "application/x-amz-json-1.0",
       },
-      `{}`
+      `{}`,
     ),
   });
 
@@ -2429,7 +2429,7 @@ it.skip("AwsJson10ClientIgnoresDefaultValuesIfMemberValuesArePresentInResponse:R
           "zeroLong": 1,
           "zeroFloat": 1.0,
           "zeroDouble": 1.0
-      }`
+      }`,
     ),
   });
 
@@ -2676,7 +2676,7 @@ it.skip("AwsJson10ClientPopulatesNestedDefaultsWhenMissingInResponseBody:Respons
                   }
               }
           }
-      }`
+      }`,
     ),
   });
 
@@ -2766,7 +2766,7 @@ it.skip("AwsJson10ClientErrorCorrectsWhenServerFailsToSerializeRequiredValues:Re
       {
         "content-type": "application/x-amz-json-1.0",
       },
-      `{}`
+      `{}`,
     ),
   });
 
@@ -3023,7 +3023,7 @@ it("AwsJson10SupportsNaNFloatInputs:Response", async () => {
       `{
           "floatValue": "NaN",
           "doubleValue": "NaN"
-      }`
+      }`,
     ),
   });
 
@@ -3066,7 +3066,7 @@ it("AwsJson10SupportsInfinityFloatInputs:Response", async () => {
       `{
           "floatValue": "Infinity",
           "doubleValue": "Infinity"
-      }`
+      }`,
     ),
   });
 
@@ -3109,7 +3109,7 @@ it("AwsJson10SupportsNegativeInfinityFloatInputs:Response", async () => {
       `{
           "floatValue": "-Infinity",
           "doubleValue": "-Infinity"
-      }`
+      }`,
     ),
   });
 
@@ -3155,7 +3155,7 @@ const compareEquivalentJsonBodies = (expectedBody: string, generatedBody: string
 const compareEquivalentUnknownTypeBodies = (
   utf8Encoder: __Encoder,
   expectedBody: string,
-  generatedBody: string | Uint8Array
+  generatedBody: string | Uint8Array,
 ): Object => {
   const expectedParts = { Value: expectedBody };
   const generatedParts = {

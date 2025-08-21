@@ -47,7 +47,7 @@ import { SageMakerA2IRuntimeServiceException as __BaseException } from "../model
  */
 export const se_DeleteHumanLoopCommand = async (
   input: DeleteHumanLoopCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -63,7 +63,7 @@ export const se_DeleteHumanLoopCommand = async (
  */
 export const se_DescribeHumanLoopCommand = async (
   input: DescribeHumanLoopCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -79,7 +79,7 @@ export const se_DescribeHumanLoopCommand = async (
  */
 export const se_ListHumanLoopsCommand = async (
   input: ListHumanLoopsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -102,7 +102,7 @@ export const se_ListHumanLoopsCommand = async (
  */
 export const se_StartHumanLoopCommand = async (
   input: StartHumanLoopCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -116,7 +116,7 @@ export const se_StartHumanLoopCommand = async (
       FlowDefinitionArn: [],
       HumanLoopInput: (_) => _json(_),
       HumanLoopName: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -127,7 +127,7 @@ export const se_StartHumanLoopCommand = async (
  */
 export const se_StopHumanLoopCommand = async (
   input: StopHumanLoopCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -138,7 +138,7 @@ export const se_StopHumanLoopCommand = async (
   body = JSON.stringify(
     take(input, {
       HumanLoopName: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -149,7 +149,7 @@ export const se_StopHumanLoopCommand = async (
  */
 export const de_DeleteHumanLoopCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteHumanLoopCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -166,7 +166,7 @@ export const de_DeleteHumanLoopCommand = async (
  */
 export const de_DescribeHumanLoopCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeHumanLoopCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -194,7 +194,7 @@ export const de_DescribeHumanLoopCommand = async (
  */
 export const de_ListHumanLoopsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListHumanLoopsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -216,7 +216,7 @@ export const de_ListHumanLoopsCommand = async (
  */
 export const de_StartHumanLoopCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartHumanLoopCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -237,7 +237,7 @@ export const de_StartHumanLoopCommand = async (
  */
 export const de_StopHumanLoopCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StopHumanLoopCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -310,7 +310,7 @@ const de_ConflictExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_InternalServerExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -330,7 +330,7 @@ const de_InternalServerExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -350,7 +350,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_ServiceQuotaExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceQuotaExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;

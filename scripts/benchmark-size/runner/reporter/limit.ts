@@ -43,14 +43,14 @@ export class LimitValidator {
       const limitRule = resolvedPackageLimit[limitKey];
       if (limitRule.limit && newReportValue > limitRule.limit) {
         throw new Error(
-          `${packageName} package ${limitKey} is ${newReportValue}, exceeds the limit of ${limitRule.limit}`
+          `${packageName} package ${limitKey} is ${newReportValue}, exceeds the limit of ${limitRule.limit}`,
         );
       }
       if (limitRule.hike && newReportValue > (limitRule.hike + 1) * oldReportValue) {
         throw new Error(
           `${packageName} package ${limitKey} is ${newReportValue}, increases by more than ${Math.round(
-            limitRule.hike * 100
-          )}%`
+            limitRule.hike * 100,
+          )}%`,
         );
       }
     }
@@ -59,7 +59,7 @@ export class LimitValidator {
   private parsePackageLimit(value: unknown): PackageLimit {
     if (typeof value !== "object") {
       throw new Error(
-        `Cannot parse the package limit ${value}. expect object with optional keys from ${validatingKeys}`
+        `Cannot parse the package limit ${value}. expect object with optional keys from ${validatingKeys}`,
       );
     }
     const packageLimit: PackageLimit = {};

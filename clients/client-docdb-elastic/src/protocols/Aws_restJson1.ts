@@ -73,7 +73,7 @@ import {
  */
 export const se_CopyClusterSnapshotCommand = async (
   input: CopyClusterSnapshotCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -88,7 +88,7 @@ export const se_CopyClusterSnapshotCommand = async (
       kmsKeyId: [],
       tags: (_) => _json(_),
       targetSnapshotName: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -99,7 +99,7 @@ export const se_CopyClusterSnapshotCommand = async (
  */
 export const se_CreateClusterCommand = async (
   input: CreateClusterCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -124,7 +124,7 @@ export const se_CreateClusterCommand = async (
       subnetIds: (_) => _json(_),
       tags: (_) => _json(_),
       vpcSecurityGroupIds: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -135,7 +135,7 @@ export const se_CreateClusterCommand = async (
  */
 export const se_CreateClusterSnapshotCommand = async (
   input: CreateClusterSnapshotCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -148,7 +148,7 @@ export const se_CreateClusterSnapshotCommand = async (
       clusterArn: [],
       snapshotName: [],
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -159,7 +159,7 @@ export const se_CreateClusterSnapshotCommand = async (
  */
 export const se_DeleteClusterCommand = async (
   input: DeleteClusterCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -175,7 +175,7 @@ export const se_DeleteClusterCommand = async (
  */
 export const se_DeleteClusterSnapshotCommand = async (
   input: DeleteClusterSnapshotCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -191,7 +191,7 @@ export const se_DeleteClusterSnapshotCommand = async (
  */
 export const se_GetClusterCommand = async (
   input: GetClusterCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -207,7 +207,7 @@ export const se_GetClusterCommand = async (
  */
 export const se_GetClusterSnapshotCommand = async (
   input: GetClusterSnapshotCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -223,7 +223,7 @@ export const se_GetClusterSnapshotCommand = async (
  */
 export const se_ListClustersCommand = async (
   input: ListClustersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -242,7 +242,7 @@ export const se_ListClustersCommand = async (
  */
 export const se_ListClusterSnapshotsCommand = async (
   input: ListClusterSnapshotsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -263,7 +263,7 @@ export const se_ListClusterSnapshotsCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -279,7 +279,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_RestoreClusterFromSnapshotCommand = async (
   input: RestoreClusterFromSnapshotCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -297,7 +297,7 @@ export const se_RestoreClusterFromSnapshotCommand = async (
       subnetIds: (_) => _json(_),
       tags: (_) => _json(_),
       vpcSecurityGroupIds: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -308,7 +308,7 @@ export const se_RestoreClusterFromSnapshotCommand = async (
  */
 export const se_StartClusterCommand = async (
   input: StartClusterCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -324,7 +324,7 @@ export const se_StartClusterCommand = async (
  */
 export const se_StopClusterCommand = async (
   input: StopClusterCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -340,7 +340,7 @@ export const se_StopClusterCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -352,7 +352,7 @@ export const se_TagResourceCommand = async (
   body = JSON.stringify(
     take(input, {
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -363,7 +363,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -385,7 +385,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateClusterCommand = async (
   input: UpdateClusterCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -407,7 +407,7 @@ export const se_UpdateClusterCommand = async (
       shardInstanceCount: [],
       subnetIds: (_) => _json(_),
       vpcSecurityGroupIds: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -418,7 +418,7 @@ export const se_UpdateClusterCommand = async (
  */
 export const de_CopyClusterSnapshotCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CopyClusterSnapshotCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -439,7 +439,7 @@ export const de_CopyClusterSnapshotCommand = async (
  */
 export const de_CreateClusterCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateClusterCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -460,7 +460,7 @@ export const de_CreateClusterCommand = async (
  */
 export const de_CreateClusterSnapshotCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateClusterSnapshotCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -481,7 +481,7 @@ export const de_CreateClusterSnapshotCommand = async (
  */
 export const de_DeleteClusterCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteClusterCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -502,7 +502,7 @@ export const de_DeleteClusterCommand = async (
  */
 export const de_DeleteClusterSnapshotCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteClusterSnapshotCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -523,7 +523,7 @@ export const de_DeleteClusterSnapshotCommand = async (
  */
 export const de_GetClusterCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetClusterCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -544,7 +544,7 @@ export const de_GetClusterCommand = async (
  */
 export const de_GetClusterSnapshotCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetClusterSnapshotCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -565,7 +565,7 @@ export const de_GetClusterSnapshotCommand = async (
  */
 export const de_ListClustersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListClustersCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -587,7 +587,7 @@ export const de_ListClustersCommand = async (
  */
 export const de_ListClusterSnapshotsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListClusterSnapshotsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -609,7 +609,7 @@ export const de_ListClusterSnapshotsCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -630,7 +630,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_RestoreClusterFromSnapshotCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RestoreClusterFromSnapshotCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -651,7 +651,7 @@ export const de_RestoreClusterFromSnapshotCommand = async (
  */
 export const de_StartClusterCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartClusterCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -672,7 +672,7 @@ export const de_StartClusterCommand = async (
  */
 export const de_StopClusterCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StopClusterCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -693,7 +693,7 @@ export const de_StopClusterCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -710,7 +710,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -727,7 +727,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateClusterCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateClusterCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -790,7 +790,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -829,7 +829,7 @@ const de_ConflictExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_InternalServerExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -849,7 +849,7 @@ const de_InternalServerExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -871,7 +871,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_ServiceQuotaExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceQuotaExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;

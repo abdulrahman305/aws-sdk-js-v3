@@ -6,7 +6,7 @@ describe(awsExpectUnion.name, () => {
       awsExpectUnion({
         K: "V",
         __type: "X",
-      })
+      }),
     ).toEqual({
       K: "V",
     });
@@ -16,7 +16,7 @@ describe(awsExpectUnion.name, () => {
     expect(() =>
       awsExpectUnion({
         __type: "X",
-      })
+      }),
     ).toThrowError();
 
     expect(() =>
@@ -24,7 +24,7 @@ describe(awsExpectUnion.name, () => {
         K: "V",
         I: "S",
         __type: "X",
-      })
+      }),
     ).toThrowError();
   });
 });

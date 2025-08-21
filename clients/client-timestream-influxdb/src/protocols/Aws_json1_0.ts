@@ -68,7 +68,7 @@ import { TimestreamInfluxDBServiceException as __BaseException } from "../models
  */
 export const se_CreateDbInstanceCommand = async (
   input: CreateDbInstanceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateDbInstance");
   let body: any;
@@ -81,7 +81,7 @@ export const se_CreateDbInstanceCommand = async (
  */
 export const se_CreateDbParameterGroupCommand = async (
   input: CreateDbParameterGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateDbParameterGroup");
   let body: any;
@@ -94,7 +94,7 @@ export const se_CreateDbParameterGroupCommand = async (
  */
 export const se_DeleteDbInstanceCommand = async (
   input: DeleteDbInstanceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteDbInstance");
   let body: any;
@@ -107,7 +107,7 @@ export const se_DeleteDbInstanceCommand = async (
  */
 export const se_GetDbInstanceCommand = async (
   input: GetDbInstanceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetDbInstance");
   let body: any;
@@ -120,7 +120,7 @@ export const se_GetDbInstanceCommand = async (
  */
 export const se_GetDbParameterGroupCommand = async (
   input: GetDbParameterGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetDbParameterGroup");
   let body: any;
@@ -133,7 +133,7 @@ export const se_GetDbParameterGroupCommand = async (
  */
 export const se_ListDbInstancesCommand = async (
   input: ListDbInstancesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListDbInstances");
   let body: any;
@@ -146,7 +146,7 @@ export const se_ListDbInstancesCommand = async (
  */
 export const se_ListDbParameterGroupsCommand = async (
   input: ListDbParameterGroupsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListDbParameterGroups");
   let body: any;
@@ -159,7 +159,7 @@ export const se_ListDbParameterGroupsCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListTagsForResource");
   let body: any;
@@ -172,7 +172,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("TagResource");
   let body: any;
@@ -185,7 +185,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UntagResource");
   let body: any;
@@ -198,7 +198,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateDbInstanceCommand = async (
   input: UpdateDbInstanceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateDbInstance");
   let body: any;
@@ -211,7 +211,7 @@ export const se_UpdateDbInstanceCommand = async (
  */
 export const de_CreateDbInstanceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateDbInstanceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -231,7 +231,7 @@ export const de_CreateDbInstanceCommand = async (
  */
 export const de_CreateDbParameterGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateDbParameterGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -251,7 +251,7 @@ export const de_CreateDbParameterGroupCommand = async (
  */
 export const de_DeleteDbInstanceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteDbInstanceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -271,7 +271,7 @@ export const de_DeleteDbInstanceCommand = async (
  */
 export const de_GetDbInstanceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetDbInstanceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -291,7 +291,7 @@ export const de_GetDbInstanceCommand = async (
  */
 export const de_GetDbParameterGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetDbParameterGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -311,7 +311,7 @@ export const de_GetDbParameterGroupCommand = async (
  */
 export const de_ListDbInstancesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListDbInstancesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -331,7 +331,7 @@ export const de_ListDbInstancesCommand = async (
  */
 export const de_ListDbParameterGroupsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListDbParameterGroupsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -351,7 +351,7 @@ export const de_ListDbParameterGroupsCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -371,7 +371,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -388,7 +388,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -405,7 +405,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateDbInstanceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateDbInstanceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -466,7 +466,7 @@ const de_CommandError = async (output: __HttpResponse, context: __SerdeContext):
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -495,7 +495,7 @@ const de_ConflictExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_InternalServerExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -511,7 +511,7 @@ const de_InternalServerExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -527,7 +527,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_ServiceQuotaExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceQuotaExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -674,7 +674,7 @@ const buildHttpRpcRequest = async (
   headers: __HeaderBag,
   path: string,
   resolvedHostname: string | undefined,
-  body: any
+  body: any,
 ): Promise<__HttpRequest> => {
   const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
   const contents: any = {

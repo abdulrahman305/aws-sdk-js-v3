@@ -52,8 +52,8 @@ export const generatePackageSizeReport = async (options: PackageSizeReportOption
     const packageVersion = JSON.parse(
       await fsPromise.readFile(
         join(options.workspacePackages.filter((pkg) => pkg.name === options.packageName)[0].location, "package.json"),
-        "utf8"
-      )
+        "utf8",
+      ),
     ).version;
     options.output.push({
       name: options.packageName,

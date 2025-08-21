@@ -140,7 +140,7 @@ export class UpdateReplicationConfigurationTemplateCommand extends $Command
   .n("MgnClient", "UpdateReplicationConfigurationTemplateCommand")
   .f(
     UpdateReplicationConfigurationTemplateRequestFilterSensitiveLog,
-    ReplicationConfigurationTemplateFilterSensitiveLog
+    ReplicationConfigurationTemplateFilterSensitiveLog,
   )
   .ser(se_UpdateReplicationConfigurationTemplateCommand)
   .de(de_UpdateReplicationConfigurationTemplateCommand)

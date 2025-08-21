@@ -6,7 +6,7 @@ import { DatabaseMigrationServiceClient } from "../DatabaseMigrationServiceClien
 
 const checkState = async (
   client: DatabaseMigrationServiceClient,
-  input: DescribeConnectionsCommandInput
+  input: DescribeConnectionsCommandInput,
 ): Promise<WaiterResult> => {
   let reason;
   try {
@@ -53,7 +53,7 @@ const checkState = async (
  */
 export const waitForTestConnectionSucceeds = async (
   params: WaiterConfiguration<DatabaseMigrationServiceClient>,
-  input: DescribeConnectionsCommandInput
+  input: DescribeConnectionsCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 5, maxDelay: 120 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -65,7 +65,7 @@ export const waitForTestConnectionSucceeds = async (
  */
 export const waitUntilTestConnectionSucceeds = async (
   params: WaiterConfiguration<DatabaseMigrationServiceClient>,
-  input: DescribeConnectionsCommandInput
+  input: DescribeConnectionsCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 5, maxDelay: 120 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

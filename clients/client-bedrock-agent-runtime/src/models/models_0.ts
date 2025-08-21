@@ -3826,7 +3826,7 @@ export const SessionStateFilterSensitiveLog = (obj: SessionState): any => ({
   ...obj,
   ...(obj.returnControlInvocationResults && {
     returnControlInvocationResults: obj.returnControlInvocationResults.map((item) =>
-      InvocationResultMemberFilterSensitiveLog(item)
+      InvocationResultMemberFilterSensitiveLog(item),
     ),
   }),
 });
@@ -3978,7 +3978,7 @@ export const GuardrailRegexFilterFilterSensitiveLog = (obj: GuardrailRegexFilter
  * @internal
  */
 export const GuardrailSensitiveInformationPolicyAssessmentFilterSensitiveLog = (
-  obj: GuardrailSensitiveInformationPolicyAssessment
+  obj: GuardrailSensitiveInformationPolicyAssessment,
 ): any => ({
   ...obj,
   ...(obj.piiEntities && { piiEntities: SENSITIVE_STRING }),
@@ -4145,7 +4145,7 @@ export const PostProcessingParsedResponseFilterSensitiveLog = (obj: PostProcessi
  * @internal
  */
 export const PostProcessingModelInvocationOutputFilterSensitiveLog = (
-  obj: PostProcessingModelInvocationOutput
+  obj: PostProcessingModelInvocationOutput,
 ): any => ({
   ...obj,
   ...(obj.parsedResponse && { parsedResponse: SENSITIVE_STRING }),
@@ -4252,7 +4252,7 @@ export const PromptTemplateFilterSensitiveLog = (obj: PromptTemplate): any => ({
  * @internal
  */
 export const ExternalSourcesGenerationConfigurationFilterSensitiveLog = (
-  obj: ExternalSourcesGenerationConfiguration
+  obj: ExternalSourcesGenerationConfiguration,
 ): any => ({
   ...obj,
   ...(obj.promptTemplate && { promptTemplate: PromptTemplateFilterSensitiveLog(obj.promptTemplate) }),
@@ -4279,7 +4279,7 @@ export const ExternalSourceFilterSensitiveLog = (obj: ExternalSource): any => ({
  * @internal
  */
 export const ExternalSourcesRetrieveAndGenerateConfigurationFilterSensitiveLog = (
-  obj: ExternalSourcesRetrieveAndGenerateConfiguration
+  obj: ExternalSourcesRetrieveAndGenerateConfiguration,
 ): any => ({
   ...obj,
   ...(obj.sources && { sources: obj.sources.map((item) => ExternalSourceFilterSensitiveLog(item)) }),
@@ -4361,7 +4361,7 @@ export const RetrievalFilterFilterSensitiveLog = (obj: RetrievalFilter): any => 
  * @internal
  */
 export const KnowledgeBaseVectorSearchConfigurationFilterSensitiveLog = (
-  obj: KnowledgeBaseVectorSearchConfiguration
+  obj: KnowledgeBaseVectorSearchConfiguration,
 ): any => ({
   ...obj,
   ...(obj.filter && { filter: SENSITIVE_STRING }),
@@ -4371,7 +4371,7 @@ export const KnowledgeBaseVectorSearchConfigurationFilterSensitiveLog = (
  * @internal
  */
 export const KnowledgeBaseRetrievalConfigurationFilterSensitiveLog = (
-  obj: KnowledgeBaseRetrievalConfiguration
+  obj: KnowledgeBaseRetrievalConfiguration,
 ): any => ({
   ...obj,
   ...(obj.vectorSearchConfiguration && {
@@ -4383,7 +4383,7 @@ export const KnowledgeBaseRetrievalConfigurationFilterSensitiveLog = (
  * @internal
  */
 export const KnowledgeBaseRetrieveAndGenerateConfigurationFilterSensitiveLog = (
-  obj: KnowledgeBaseRetrieveAndGenerateConfiguration
+  obj: KnowledgeBaseRetrieveAndGenerateConfiguration,
 ): any => ({
   ...obj,
   ...(obj.retrievalConfiguration && {
@@ -4412,12 +4412,12 @@ export const RetrieveAndGenerateConfigurationFilterSensitiveLog = (obj: Retrieve
   ...obj,
   ...(obj.knowledgeBaseConfiguration && {
     knowledgeBaseConfiguration: KnowledgeBaseRetrieveAndGenerateConfigurationFilterSensitiveLog(
-      obj.knowledgeBaseConfiguration
+      obj.knowledgeBaseConfiguration,
     ),
   }),
   ...(obj.externalSourcesConfiguration && {
     externalSourcesConfiguration: ExternalSourcesRetrieveAndGenerateConfigurationFilterSensitiveLog(
-      obj.externalSourcesConfiguration
+      obj.externalSourcesConfiguration,
     ),
   }),
 });
@@ -4430,7 +4430,7 @@ export const RetrieveAndGenerateRequestFilterSensitiveLog = (obj: RetrieveAndGen
   ...(obj.input && { input: SENSITIVE_STRING }),
   ...(obj.retrieveAndGenerateConfiguration && {
     retrieveAndGenerateConfiguration: RetrieveAndGenerateConfigurationFilterSensitiveLog(
-      obj.retrieveAndGenerateConfiguration
+      obj.retrieveAndGenerateConfiguration,
     ),
   }),
 });

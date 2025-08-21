@@ -26,7 +26,7 @@ export interface BedrockAgentRuntime {
   invokeAgent(
     args: InvokeAgentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: InvokeAgentCommandOutput) => void
+    cb: (err: any, data?: InvokeAgentCommandOutput) => void,
   ): void;
 
   /**
@@ -37,7 +37,7 @@ export interface BedrockAgentRuntime {
   retrieve(
     args: RetrieveCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RetrieveCommandOutput) => void
+    cb: (err: any, data?: RetrieveCommandOutput) => void,
   ): void;
 
   /**
@@ -45,16 +45,16 @@ export interface BedrockAgentRuntime {
    */
   retrieveAndGenerate(
     args: RetrieveAndGenerateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<RetrieveAndGenerateCommandOutput>;
   retrieveAndGenerate(
     args: RetrieveAndGenerateCommandInput,
-    cb: (err: any, data?: RetrieveAndGenerateCommandOutput) => void
+    cb: (err: any, data?: RetrieveAndGenerateCommandOutput) => void,
   ): void;
   retrieveAndGenerate(
     args: RetrieveAndGenerateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RetrieveAndGenerateCommandOutput) => void
+    cb: (err: any, data?: RetrieveAndGenerateCommandOutput) => void,
   ): void;
 }
 

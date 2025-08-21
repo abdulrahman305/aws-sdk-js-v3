@@ -182,7 +182,7 @@ export interface ElasticLoadBalancing {
   addTags(
     args: AddTagsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AddTagsCommandOutput) => void
+    cb: (err: any, data?: AddTagsCommandOutput) => void,
   ): void;
 
   /**
@@ -190,16 +190,16 @@ export interface ElasticLoadBalancing {
    */
   applySecurityGroupsToLoadBalancer(
     args: ApplySecurityGroupsToLoadBalancerCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ApplySecurityGroupsToLoadBalancerCommandOutput>;
   applySecurityGroupsToLoadBalancer(
     args: ApplySecurityGroupsToLoadBalancerCommandInput,
-    cb: (err: any, data?: ApplySecurityGroupsToLoadBalancerCommandOutput) => void
+    cb: (err: any, data?: ApplySecurityGroupsToLoadBalancerCommandOutput) => void,
   ): void;
   applySecurityGroupsToLoadBalancer(
     args: ApplySecurityGroupsToLoadBalancerCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ApplySecurityGroupsToLoadBalancerCommandOutput) => void
+    cb: (err: any, data?: ApplySecurityGroupsToLoadBalancerCommandOutput) => void,
   ): void;
 
   /**
@@ -207,16 +207,16 @@ export interface ElasticLoadBalancing {
    */
   attachLoadBalancerToSubnets(
     args: AttachLoadBalancerToSubnetsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AttachLoadBalancerToSubnetsCommandOutput>;
   attachLoadBalancerToSubnets(
     args: AttachLoadBalancerToSubnetsCommandInput,
-    cb: (err: any, data?: AttachLoadBalancerToSubnetsCommandOutput) => void
+    cb: (err: any, data?: AttachLoadBalancerToSubnetsCommandOutput) => void,
   ): void;
   attachLoadBalancerToSubnets(
     args: AttachLoadBalancerToSubnetsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AttachLoadBalancerToSubnetsCommandOutput) => void
+    cb: (err: any, data?: AttachLoadBalancerToSubnetsCommandOutput) => void,
   ): void;
 
   /**
@@ -224,16 +224,16 @@ export interface ElasticLoadBalancing {
    */
   configureHealthCheck(
     args: ConfigureHealthCheckCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ConfigureHealthCheckCommandOutput>;
   configureHealthCheck(
     args: ConfigureHealthCheckCommandInput,
-    cb: (err: any, data?: ConfigureHealthCheckCommandOutput) => void
+    cb: (err: any, data?: ConfigureHealthCheckCommandOutput) => void,
   ): void;
   configureHealthCheck(
     args: ConfigureHealthCheckCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ConfigureHealthCheckCommandOutput) => void
+    cb: (err: any, data?: ConfigureHealthCheckCommandOutput) => void,
   ): void;
 
   /**
@@ -241,16 +241,16 @@ export interface ElasticLoadBalancing {
    */
   createAppCookieStickinessPolicy(
     args: CreateAppCookieStickinessPolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateAppCookieStickinessPolicyCommandOutput>;
   createAppCookieStickinessPolicy(
     args: CreateAppCookieStickinessPolicyCommandInput,
-    cb: (err: any, data?: CreateAppCookieStickinessPolicyCommandOutput) => void
+    cb: (err: any, data?: CreateAppCookieStickinessPolicyCommandOutput) => void,
   ): void;
   createAppCookieStickinessPolicy(
     args: CreateAppCookieStickinessPolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateAppCookieStickinessPolicyCommandOutput) => void
+    cb: (err: any, data?: CreateAppCookieStickinessPolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -258,16 +258,16 @@ export interface ElasticLoadBalancing {
    */
   createLBCookieStickinessPolicy(
     args: CreateLBCookieStickinessPolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateLBCookieStickinessPolicyCommandOutput>;
   createLBCookieStickinessPolicy(
     args: CreateLBCookieStickinessPolicyCommandInput,
-    cb: (err: any, data?: CreateLBCookieStickinessPolicyCommandOutput) => void
+    cb: (err: any, data?: CreateLBCookieStickinessPolicyCommandOutput) => void,
   ): void;
   createLBCookieStickinessPolicy(
     args: CreateLBCookieStickinessPolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateLBCookieStickinessPolicyCommandOutput) => void
+    cb: (err: any, data?: CreateLBCookieStickinessPolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -275,16 +275,16 @@ export interface ElasticLoadBalancing {
    */
   createLoadBalancer(
     args: CreateLoadBalancerCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateLoadBalancerCommandOutput>;
   createLoadBalancer(
     args: CreateLoadBalancerCommandInput,
-    cb: (err: any, data?: CreateLoadBalancerCommandOutput) => void
+    cb: (err: any, data?: CreateLoadBalancerCommandOutput) => void,
   ): void;
   createLoadBalancer(
     args: CreateLoadBalancerCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateLoadBalancerCommandOutput) => void
+    cb: (err: any, data?: CreateLoadBalancerCommandOutput) => void,
   ): void;
 
   /**
@@ -292,16 +292,16 @@ export interface ElasticLoadBalancing {
    */
   createLoadBalancerListeners(
     args: CreateLoadBalancerListenersCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateLoadBalancerListenersCommandOutput>;
   createLoadBalancerListeners(
     args: CreateLoadBalancerListenersCommandInput,
-    cb: (err: any, data?: CreateLoadBalancerListenersCommandOutput) => void
+    cb: (err: any, data?: CreateLoadBalancerListenersCommandOutput) => void,
   ): void;
   createLoadBalancerListeners(
     args: CreateLoadBalancerListenersCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateLoadBalancerListenersCommandOutput) => void
+    cb: (err: any, data?: CreateLoadBalancerListenersCommandOutput) => void,
   ): void;
 
   /**
@@ -309,16 +309,16 @@ export interface ElasticLoadBalancing {
    */
   createLoadBalancerPolicy(
     args: CreateLoadBalancerPolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateLoadBalancerPolicyCommandOutput>;
   createLoadBalancerPolicy(
     args: CreateLoadBalancerPolicyCommandInput,
-    cb: (err: any, data?: CreateLoadBalancerPolicyCommandOutput) => void
+    cb: (err: any, data?: CreateLoadBalancerPolicyCommandOutput) => void,
   ): void;
   createLoadBalancerPolicy(
     args: CreateLoadBalancerPolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateLoadBalancerPolicyCommandOutput) => void
+    cb: (err: any, data?: CreateLoadBalancerPolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -326,16 +326,16 @@ export interface ElasticLoadBalancing {
    */
   deleteLoadBalancer(
     args: DeleteLoadBalancerCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteLoadBalancerCommandOutput>;
   deleteLoadBalancer(
     args: DeleteLoadBalancerCommandInput,
-    cb: (err: any, data?: DeleteLoadBalancerCommandOutput) => void
+    cb: (err: any, data?: DeleteLoadBalancerCommandOutput) => void,
   ): void;
   deleteLoadBalancer(
     args: DeleteLoadBalancerCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteLoadBalancerCommandOutput) => void
+    cb: (err: any, data?: DeleteLoadBalancerCommandOutput) => void,
   ): void;
 
   /**
@@ -343,16 +343,16 @@ export interface ElasticLoadBalancing {
    */
   deleteLoadBalancerListeners(
     args: DeleteLoadBalancerListenersCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteLoadBalancerListenersCommandOutput>;
   deleteLoadBalancerListeners(
     args: DeleteLoadBalancerListenersCommandInput,
-    cb: (err: any, data?: DeleteLoadBalancerListenersCommandOutput) => void
+    cb: (err: any, data?: DeleteLoadBalancerListenersCommandOutput) => void,
   ): void;
   deleteLoadBalancerListeners(
     args: DeleteLoadBalancerListenersCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteLoadBalancerListenersCommandOutput) => void
+    cb: (err: any, data?: DeleteLoadBalancerListenersCommandOutput) => void,
   ): void;
 
   /**
@@ -360,16 +360,16 @@ export interface ElasticLoadBalancing {
    */
   deleteLoadBalancerPolicy(
     args: DeleteLoadBalancerPolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteLoadBalancerPolicyCommandOutput>;
   deleteLoadBalancerPolicy(
     args: DeleteLoadBalancerPolicyCommandInput,
-    cb: (err: any, data?: DeleteLoadBalancerPolicyCommandOutput) => void
+    cb: (err: any, data?: DeleteLoadBalancerPolicyCommandOutput) => void,
   ): void;
   deleteLoadBalancerPolicy(
     args: DeleteLoadBalancerPolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteLoadBalancerPolicyCommandOutput) => void
+    cb: (err: any, data?: DeleteLoadBalancerPolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -377,16 +377,16 @@ export interface ElasticLoadBalancing {
    */
   deregisterInstancesFromLoadBalancer(
     args: DeregisterInstancesFromLoadBalancerCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeregisterInstancesFromLoadBalancerCommandOutput>;
   deregisterInstancesFromLoadBalancer(
     args: DeregisterInstancesFromLoadBalancerCommandInput,
-    cb: (err: any, data?: DeregisterInstancesFromLoadBalancerCommandOutput) => void
+    cb: (err: any, data?: DeregisterInstancesFromLoadBalancerCommandOutput) => void,
   ): void;
   deregisterInstancesFromLoadBalancer(
     args: DeregisterInstancesFromLoadBalancerCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeregisterInstancesFromLoadBalancerCommandOutput) => void
+    cb: (err: any, data?: DeregisterInstancesFromLoadBalancerCommandOutput) => void,
   ): void;
 
   /**
@@ -395,16 +395,16 @@ export interface ElasticLoadBalancing {
   describeAccountLimits(): Promise<DescribeAccountLimitsCommandOutput>;
   describeAccountLimits(
     args: DescribeAccountLimitsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeAccountLimitsCommandOutput>;
   describeAccountLimits(
     args: DescribeAccountLimitsCommandInput,
-    cb: (err: any, data?: DescribeAccountLimitsCommandOutput) => void
+    cb: (err: any, data?: DescribeAccountLimitsCommandOutput) => void,
   ): void;
   describeAccountLimits(
     args: DescribeAccountLimitsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeAccountLimitsCommandOutput) => void
+    cb: (err: any, data?: DescribeAccountLimitsCommandOutput) => void,
   ): void;
 
   /**
@@ -412,16 +412,16 @@ export interface ElasticLoadBalancing {
    */
   describeInstanceHealth(
     args: DescribeInstanceHealthCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeInstanceHealthCommandOutput>;
   describeInstanceHealth(
     args: DescribeInstanceHealthCommandInput,
-    cb: (err: any, data?: DescribeInstanceHealthCommandOutput) => void
+    cb: (err: any, data?: DescribeInstanceHealthCommandOutput) => void,
   ): void;
   describeInstanceHealth(
     args: DescribeInstanceHealthCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeInstanceHealthCommandOutput) => void
+    cb: (err: any, data?: DescribeInstanceHealthCommandOutput) => void,
   ): void;
 
   /**
@@ -429,16 +429,16 @@ export interface ElasticLoadBalancing {
    */
   describeLoadBalancerAttributes(
     args: DescribeLoadBalancerAttributesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeLoadBalancerAttributesCommandOutput>;
   describeLoadBalancerAttributes(
     args: DescribeLoadBalancerAttributesCommandInput,
-    cb: (err: any, data?: DescribeLoadBalancerAttributesCommandOutput) => void
+    cb: (err: any, data?: DescribeLoadBalancerAttributesCommandOutput) => void,
   ): void;
   describeLoadBalancerAttributes(
     args: DescribeLoadBalancerAttributesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeLoadBalancerAttributesCommandOutput) => void
+    cb: (err: any, data?: DescribeLoadBalancerAttributesCommandOutput) => void,
   ): void;
 
   /**
@@ -447,16 +447,16 @@ export interface ElasticLoadBalancing {
   describeLoadBalancerPolicies(): Promise<DescribeLoadBalancerPoliciesCommandOutput>;
   describeLoadBalancerPolicies(
     args: DescribeLoadBalancerPoliciesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeLoadBalancerPoliciesCommandOutput>;
   describeLoadBalancerPolicies(
     args: DescribeLoadBalancerPoliciesCommandInput,
-    cb: (err: any, data?: DescribeLoadBalancerPoliciesCommandOutput) => void
+    cb: (err: any, data?: DescribeLoadBalancerPoliciesCommandOutput) => void,
   ): void;
   describeLoadBalancerPolicies(
     args: DescribeLoadBalancerPoliciesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeLoadBalancerPoliciesCommandOutput) => void
+    cb: (err: any, data?: DescribeLoadBalancerPoliciesCommandOutput) => void,
   ): void;
 
   /**
@@ -465,16 +465,16 @@ export interface ElasticLoadBalancing {
   describeLoadBalancerPolicyTypes(): Promise<DescribeLoadBalancerPolicyTypesCommandOutput>;
   describeLoadBalancerPolicyTypes(
     args: DescribeLoadBalancerPolicyTypesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeLoadBalancerPolicyTypesCommandOutput>;
   describeLoadBalancerPolicyTypes(
     args: DescribeLoadBalancerPolicyTypesCommandInput,
-    cb: (err: any, data?: DescribeLoadBalancerPolicyTypesCommandOutput) => void
+    cb: (err: any, data?: DescribeLoadBalancerPolicyTypesCommandOutput) => void,
   ): void;
   describeLoadBalancerPolicyTypes(
     args: DescribeLoadBalancerPolicyTypesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeLoadBalancerPolicyTypesCommandOutput) => void
+    cb: (err: any, data?: DescribeLoadBalancerPolicyTypesCommandOutput) => void,
   ): void;
 
   /**
@@ -483,16 +483,16 @@ export interface ElasticLoadBalancing {
   describeLoadBalancers(): Promise<DescribeLoadBalancersCommandOutput>;
   describeLoadBalancers(
     args: DescribeLoadBalancersCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeLoadBalancersCommandOutput>;
   describeLoadBalancers(
     args: DescribeLoadBalancersCommandInput,
-    cb: (err: any, data?: DescribeLoadBalancersCommandOutput) => void
+    cb: (err: any, data?: DescribeLoadBalancersCommandOutput) => void,
   ): void;
   describeLoadBalancers(
     args: DescribeLoadBalancersCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeLoadBalancersCommandOutput) => void
+    cb: (err: any, data?: DescribeLoadBalancersCommandOutput) => void,
   ): void;
 
   /**
@@ -503,7 +503,7 @@ export interface ElasticLoadBalancing {
   describeTags(
     args: DescribeTagsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeTagsCommandOutput) => void
+    cb: (err: any, data?: DescribeTagsCommandOutput) => void,
   ): void;
 
   /**
@@ -511,16 +511,16 @@ export interface ElasticLoadBalancing {
    */
   detachLoadBalancerFromSubnets(
     args: DetachLoadBalancerFromSubnetsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DetachLoadBalancerFromSubnetsCommandOutput>;
   detachLoadBalancerFromSubnets(
     args: DetachLoadBalancerFromSubnetsCommandInput,
-    cb: (err: any, data?: DetachLoadBalancerFromSubnetsCommandOutput) => void
+    cb: (err: any, data?: DetachLoadBalancerFromSubnetsCommandOutput) => void,
   ): void;
   detachLoadBalancerFromSubnets(
     args: DetachLoadBalancerFromSubnetsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DetachLoadBalancerFromSubnetsCommandOutput) => void
+    cb: (err: any, data?: DetachLoadBalancerFromSubnetsCommandOutput) => void,
   ): void;
 
   /**
@@ -528,16 +528,16 @@ export interface ElasticLoadBalancing {
    */
   disableAvailabilityZonesForLoadBalancer(
     args: DisableAvailabilityZonesForLoadBalancerCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DisableAvailabilityZonesForLoadBalancerCommandOutput>;
   disableAvailabilityZonesForLoadBalancer(
     args: DisableAvailabilityZonesForLoadBalancerCommandInput,
-    cb: (err: any, data?: DisableAvailabilityZonesForLoadBalancerCommandOutput) => void
+    cb: (err: any, data?: DisableAvailabilityZonesForLoadBalancerCommandOutput) => void,
   ): void;
   disableAvailabilityZonesForLoadBalancer(
     args: DisableAvailabilityZonesForLoadBalancerCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DisableAvailabilityZonesForLoadBalancerCommandOutput) => void
+    cb: (err: any, data?: DisableAvailabilityZonesForLoadBalancerCommandOutput) => void,
   ): void;
 
   /**
@@ -545,16 +545,16 @@ export interface ElasticLoadBalancing {
    */
   enableAvailabilityZonesForLoadBalancer(
     args: EnableAvailabilityZonesForLoadBalancerCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<EnableAvailabilityZonesForLoadBalancerCommandOutput>;
   enableAvailabilityZonesForLoadBalancer(
     args: EnableAvailabilityZonesForLoadBalancerCommandInput,
-    cb: (err: any, data?: EnableAvailabilityZonesForLoadBalancerCommandOutput) => void
+    cb: (err: any, data?: EnableAvailabilityZonesForLoadBalancerCommandOutput) => void,
   ): void;
   enableAvailabilityZonesForLoadBalancer(
     args: EnableAvailabilityZonesForLoadBalancerCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: EnableAvailabilityZonesForLoadBalancerCommandOutput) => void
+    cb: (err: any, data?: EnableAvailabilityZonesForLoadBalancerCommandOutput) => void,
   ): void;
 
   /**
@@ -562,16 +562,16 @@ export interface ElasticLoadBalancing {
    */
   modifyLoadBalancerAttributes(
     args: ModifyLoadBalancerAttributesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ModifyLoadBalancerAttributesCommandOutput>;
   modifyLoadBalancerAttributes(
     args: ModifyLoadBalancerAttributesCommandInput,
-    cb: (err: any, data?: ModifyLoadBalancerAttributesCommandOutput) => void
+    cb: (err: any, data?: ModifyLoadBalancerAttributesCommandOutput) => void,
   ): void;
   modifyLoadBalancerAttributes(
     args: ModifyLoadBalancerAttributesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ModifyLoadBalancerAttributesCommandOutput) => void
+    cb: (err: any, data?: ModifyLoadBalancerAttributesCommandOutput) => void,
   ): void;
 
   /**
@@ -579,16 +579,16 @@ export interface ElasticLoadBalancing {
    */
   registerInstancesWithLoadBalancer(
     args: RegisterInstancesWithLoadBalancerCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<RegisterInstancesWithLoadBalancerCommandOutput>;
   registerInstancesWithLoadBalancer(
     args: RegisterInstancesWithLoadBalancerCommandInput,
-    cb: (err: any, data?: RegisterInstancesWithLoadBalancerCommandOutput) => void
+    cb: (err: any, data?: RegisterInstancesWithLoadBalancerCommandOutput) => void,
   ): void;
   registerInstancesWithLoadBalancer(
     args: RegisterInstancesWithLoadBalancerCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RegisterInstancesWithLoadBalancerCommandOutput) => void
+    cb: (err: any, data?: RegisterInstancesWithLoadBalancerCommandOutput) => void,
   ): void;
 
   /**
@@ -599,7 +599,7 @@ export interface ElasticLoadBalancing {
   removeTags(
     args: RemoveTagsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RemoveTagsCommandOutput) => void
+    cb: (err: any, data?: RemoveTagsCommandOutput) => void,
   ): void;
 
   /**
@@ -607,16 +607,16 @@ export interface ElasticLoadBalancing {
    */
   setLoadBalancerListenerSSLCertificate(
     args: SetLoadBalancerListenerSSLCertificateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<SetLoadBalancerListenerSSLCertificateCommandOutput>;
   setLoadBalancerListenerSSLCertificate(
     args: SetLoadBalancerListenerSSLCertificateCommandInput,
-    cb: (err: any, data?: SetLoadBalancerListenerSSLCertificateCommandOutput) => void
+    cb: (err: any, data?: SetLoadBalancerListenerSSLCertificateCommandOutput) => void,
   ): void;
   setLoadBalancerListenerSSLCertificate(
     args: SetLoadBalancerListenerSSLCertificateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SetLoadBalancerListenerSSLCertificateCommandOutput) => void
+    cb: (err: any, data?: SetLoadBalancerListenerSSLCertificateCommandOutput) => void,
   ): void;
 
   /**
@@ -624,16 +624,16 @@ export interface ElasticLoadBalancing {
    */
   setLoadBalancerPoliciesForBackendServer(
     args: SetLoadBalancerPoliciesForBackendServerCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<SetLoadBalancerPoliciesForBackendServerCommandOutput>;
   setLoadBalancerPoliciesForBackendServer(
     args: SetLoadBalancerPoliciesForBackendServerCommandInput,
-    cb: (err: any, data?: SetLoadBalancerPoliciesForBackendServerCommandOutput) => void
+    cb: (err: any, data?: SetLoadBalancerPoliciesForBackendServerCommandOutput) => void,
   ): void;
   setLoadBalancerPoliciesForBackendServer(
     args: SetLoadBalancerPoliciesForBackendServerCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SetLoadBalancerPoliciesForBackendServerCommandOutput) => void
+    cb: (err: any, data?: SetLoadBalancerPoliciesForBackendServerCommandOutput) => void,
   ): void;
 
   /**
@@ -641,16 +641,16 @@ export interface ElasticLoadBalancing {
    */
   setLoadBalancerPoliciesOfListener(
     args: SetLoadBalancerPoliciesOfListenerCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<SetLoadBalancerPoliciesOfListenerCommandOutput>;
   setLoadBalancerPoliciesOfListener(
     args: SetLoadBalancerPoliciesOfListenerCommandInput,
-    cb: (err: any, data?: SetLoadBalancerPoliciesOfListenerCommandOutput) => void
+    cb: (err: any, data?: SetLoadBalancerPoliciesOfListenerCommandOutput) => void,
   ): void;
   setLoadBalancerPoliciesOfListener(
     args: SetLoadBalancerPoliciesOfListenerCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SetLoadBalancerPoliciesOfListenerCommandOutput) => void
+    cb: (err: any, data?: SetLoadBalancerPoliciesOfListenerCommandOutput) => void,
   ): void;
 }
 

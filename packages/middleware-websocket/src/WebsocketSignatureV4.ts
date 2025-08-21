@@ -34,7 +34,7 @@ export class WebsocketSignatureV4 implements RequestSigner, RequestPresigner {
           // request omits headers except for required 'host' header. If we sign
           // the other headers, the signature could be mismatch.
           unsignableHeaders: new Set(Object.keys(toSign.headers).filter((header) => header !== "host")),
-        }
+        },
       );
       return {
         ...signedRequest,

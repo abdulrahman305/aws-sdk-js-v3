@@ -41,7 +41,7 @@ export interface KinesisAnalyticsV2HttpAuthSchemeParametersProvider
 export const defaultKinesisAnalyticsV2HttpAuthSchemeParametersProvider = async (
   config: KinesisAnalyticsV2ClientResolvedConfig,
   context: HandlerExecutionContext,
-  input: object
+  input: object,
 ): Promise<KinesisAnalyticsV2HttpAuthSchemeParameters> => {
   return {
     operation: getSmithyContext(context).operation as string,
@@ -82,7 +82,7 @@ export interface KinesisAnalyticsV2HttpAuthSchemeProvider
  * @internal
  */
 export const defaultKinesisAnalyticsV2HttpAuthSchemeProvider: KinesisAnalyticsV2HttpAuthSchemeProvider = (
-  authParameters
+  authParameters,
 ) => {
   const options: HttpAuthOption[] = [];
   switch (authParameters.operation) {
@@ -131,7 +131,7 @@ export interface HttpAuthSchemeResolvedConfig extends AwsSdkSigV4AuthResolvedCon
  * @internal
  */
 export const resolveHttpAuthSchemeConfig = <T>(
-  config: T & HttpAuthSchemeInputConfig & AwsSdkSigV4PreviouslyResolved
+  config: T & HttpAuthSchemeInputConfig & AwsSdkSigV4PreviouslyResolved,
 ): T & HttpAuthSchemeResolvedConfig => {
   const config_0 = resolveAwsSdkSigV4Config(config);
   return {

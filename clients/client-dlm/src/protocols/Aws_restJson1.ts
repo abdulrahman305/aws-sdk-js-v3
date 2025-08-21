@@ -86,7 +86,7 @@ import {
  */
 export const se_CreateLifecyclePolicyCommand = async (
   input: CreateLifecyclePolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -108,7 +108,7 @@ export const se_CreateLifecyclePolicyCommand = async (
       RetainInterval: [],
       State: [],
       Tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -119,7 +119,7 @@ export const se_CreateLifecyclePolicyCommand = async (
  */
 export const se_DeleteLifecyclePolicyCommand = async (
   input: DeleteLifecyclePolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -135,7 +135,7 @@ export const se_DeleteLifecyclePolicyCommand = async (
  */
 export const se_GetLifecyclePoliciesCommand = async (
   input: GetLifecyclePoliciesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -158,7 +158,7 @@ export const se_GetLifecyclePoliciesCommand = async (
  */
 export const se_GetLifecyclePolicyCommand = async (
   input: GetLifecyclePolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -174,7 +174,7 @@ export const se_GetLifecyclePolicyCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -190,7 +190,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -202,7 +202,7 @@ export const se_TagResourceCommand = async (
   body = JSON.stringify(
     take(input, {
       Tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -213,7 +213,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -235,7 +235,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateLifecyclePolicyCommand = async (
   input: UpdateLifecyclePolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -256,7 +256,7 @@ export const se_UpdateLifecyclePolicyCommand = async (
       PolicyDetails: (_) => _json(_),
       RetainInterval: [],
       State: [],
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -267,7 +267,7 @@ export const se_UpdateLifecyclePolicyCommand = async (
  */
 export const de_CreateLifecyclePolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateLifecyclePolicyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -288,7 +288,7 @@ export const de_CreateLifecyclePolicyCommand = async (
  */
 export const de_DeleteLifecyclePolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteLifecyclePolicyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -305,7 +305,7 @@ export const de_DeleteLifecyclePolicyCommand = async (
  */
 export const de_GetLifecyclePoliciesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetLifecyclePoliciesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -326,7 +326,7 @@ export const de_GetLifecyclePoliciesCommand = async (
  */
 export const de_GetLifecyclePolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetLifecyclePolicyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -347,7 +347,7 @@ export const de_GetLifecyclePolicyCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -368,7 +368,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -385,7 +385,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -402,7 +402,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateLifecyclePolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateLifecyclePolicyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -452,7 +452,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_InternalServerExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -473,7 +473,7 @@ const de_InternalServerExceptionRes = async (
  */
 const de_InvalidRequestExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidRequestException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -496,7 +496,7 @@ const de_InvalidRequestExceptionRes = async (
  */
 const de_LimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<LimitExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -518,7 +518,7 @@ const de_LimitExceededExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;

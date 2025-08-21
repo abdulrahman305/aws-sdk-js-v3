@@ -9,7 +9,7 @@ import {
 
 const checkState = async (
   client: ACMPCAClient,
-  input: DescribeCertificateAuthorityAuditReportCommandInput
+  input: DescribeCertificateAuthorityAuditReportCommandInput,
 ): Promise<WaiterResult> => {
   let reason;
   try {
@@ -45,7 +45,7 @@ const checkState = async (
  */
 export const waitForAuditReportCreated = async (
   params: WaiterConfiguration<ACMPCAClient>,
-  input: DescribeCertificateAuthorityAuditReportCommandInput
+  input: DescribeCertificateAuthorityAuditReportCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 3, maxDelay: 120 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -57,7 +57,7 @@ export const waitForAuditReportCreated = async (
  */
 export const waitUntilAuditReportCreated = async (
   params: WaiterConfiguration<ACMPCAClient>,
-  input: DescribeCertificateAuthorityAuditReportCommandInput
+  input: DescribeCertificateAuthorityAuditReportCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 3, maxDelay: 120 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

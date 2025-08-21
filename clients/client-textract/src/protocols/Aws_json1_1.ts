@@ -187,7 +187,7 @@ import { TextractServiceException as __BaseException } from "../models/TextractS
  */
 export const se_AnalyzeDocumentCommand = async (
   input: AnalyzeDocumentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("AnalyzeDocument");
   let body: any;
@@ -200,7 +200,7 @@ export const se_AnalyzeDocumentCommand = async (
  */
 export const se_AnalyzeExpenseCommand = async (
   input: AnalyzeExpenseCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("AnalyzeExpense");
   let body: any;
@@ -213,7 +213,7 @@ export const se_AnalyzeExpenseCommand = async (
  */
 export const se_AnalyzeIDCommand = async (
   input: AnalyzeIDCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("AnalyzeID");
   let body: any;
@@ -226,7 +226,7 @@ export const se_AnalyzeIDCommand = async (
  */
 export const se_CreateAdapterCommand = async (
   input: CreateAdapterCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateAdapter");
   let body: any;
@@ -239,7 +239,7 @@ export const se_CreateAdapterCommand = async (
  */
 export const se_CreateAdapterVersionCommand = async (
   input: CreateAdapterVersionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateAdapterVersion");
   let body: any;
@@ -252,7 +252,7 @@ export const se_CreateAdapterVersionCommand = async (
  */
 export const se_DeleteAdapterCommand = async (
   input: DeleteAdapterCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteAdapter");
   let body: any;
@@ -265,7 +265,7 @@ export const se_DeleteAdapterCommand = async (
  */
 export const se_DeleteAdapterVersionCommand = async (
   input: DeleteAdapterVersionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteAdapterVersion");
   let body: any;
@@ -278,7 +278,7 @@ export const se_DeleteAdapterVersionCommand = async (
  */
 export const se_DetectDocumentTextCommand = async (
   input: DetectDocumentTextCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DetectDocumentText");
   let body: any;
@@ -291,7 +291,7 @@ export const se_DetectDocumentTextCommand = async (
  */
 export const se_GetAdapterCommand = async (
   input: GetAdapterCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetAdapter");
   let body: any;
@@ -304,7 +304,7 @@ export const se_GetAdapterCommand = async (
  */
 export const se_GetAdapterVersionCommand = async (
   input: GetAdapterVersionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetAdapterVersion");
   let body: any;
@@ -317,7 +317,7 @@ export const se_GetAdapterVersionCommand = async (
  */
 export const se_GetDocumentAnalysisCommand = async (
   input: GetDocumentAnalysisCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetDocumentAnalysis");
   let body: any;
@@ -330,7 +330,7 @@ export const se_GetDocumentAnalysisCommand = async (
  */
 export const se_GetDocumentTextDetectionCommand = async (
   input: GetDocumentTextDetectionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetDocumentTextDetection");
   let body: any;
@@ -343,7 +343,7 @@ export const se_GetDocumentTextDetectionCommand = async (
  */
 export const se_GetExpenseAnalysisCommand = async (
   input: GetExpenseAnalysisCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetExpenseAnalysis");
   let body: any;
@@ -356,7 +356,7 @@ export const se_GetExpenseAnalysisCommand = async (
  */
 export const se_GetLendingAnalysisCommand = async (
   input: GetLendingAnalysisCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetLendingAnalysis");
   let body: any;
@@ -369,7 +369,7 @@ export const se_GetLendingAnalysisCommand = async (
  */
 export const se_GetLendingAnalysisSummaryCommand = async (
   input: GetLendingAnalysisSummaryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetLendingAnalysisSummary");
   let body: any;
@@ -382,7 +382,7 @@ export const se_GetLendingAnalysisSummaryCommand = async (
  */
 export const se_ListAdaptersCommand = async (
   input: ListAdaptersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListAdapters");
   let body: any;
@@ -395,7 +395,7 @@ export const se_ListAdaptersCommand = async (
  */
 export const se_ListAdapterVersionsCommand = async (
   input: ListAdapterVersionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListAdapterVersions");
   let body: any;
@@ -408,7 +408,7 @@ export const se_ListAdapterVersionsCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListTagsForResource");
   let body: any;
@@ -421,7 +421,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_StartDocumentAnalysisCommand = async (
   input: StartDocumentAnalysisCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StartDocumentAnalysis");
   let body: any;
@@ -434,7 +434,7 @@ export const se_StartDocumentAnalysisCommand = async (
  */
 export const se_StartDocumentTextDetectionCommand = async (
   input: StartDocumentTextDetectionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StartDocumentTextDetection");
   let body: any;
@@ -447,7 +447,7 @@ export const se_StartDocumentTextDetectionCommand = async (
  */
 export const se_StartExpenseAnalysisCommand = async (
   input: StartExpenseAnalysisCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StartExpenseAnalysis");
   let body: any;
@@ -460,7 +460,7 @@ export const se_StartExpenseAnalysisCommand = async (
  */
 export const se_StartLendingAnalysisCommand = async (
   input: StartLendingAnalysisCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StartLendingAnalysis");
   let body: any;
@@ -473,7 +473,7 @@ export const se_StartLendingAnalysisCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("TagResource");
   let body: any;
@@ -486,7 +486,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UntagResource");
   let body: any;
@@ -499,7 +499,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateAdapterCommand = async (
   input: UpdateAdapterCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateAdapter");
   let body: any;
@@ -512,7 +512,7 @@ export const se_UpdateAdapterCommand = async (
  */
 export const de_AnalyzeDocumentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AnalyzeDocumentCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -532,7 +532,7 @@ export const de_AnalyzeDocumentCommand = async (
  */
 export const de_AnalyzeExpenseCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AnalyzeExpenseCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -552,7 +552,7 @@ export const de_AnalyzeExpenseCommand = async (
  */
 export const de_AnalyzeIDCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AnalyzeIDCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -572,7 +572,7 @@ export const de_AnalyzeIDCommand = async (
  */
 export const de_CreateAdapterCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateAdapterCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -592,7 +592,7 @@ export const de_CreateAdapterCommand = async (
  */
 export const de_CreateAdapterVersionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateAdapterVersionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -612,7 +612,7 @@ export const de_CreateAdapterVersionCommand = async (
  */
 export const de_DeleteAdapterCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteAdapterCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -632,7 +632,7 @@ export const de_DeleteAdapterCommand = async (
  */
 export const de_DeleteAdapterVersionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteAdapterVersionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -652,7 +652,7 @@ export const de_DeleteAdapterVersionCommand = async (
  */
 export const de_DetectDocumentTextCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DetectDocumentTextCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -672,7 +672,7 @@ export const de_DetectDocumentTextCommand = async (
  */
 export const de_GetAdapterCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetAdapterCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -692,7 +692,7 @@ export const de_GetAdapterCommand = async (
  */
 export const de_GetAdapterVersionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetAdapterVersionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -712,7 +712,7 @@ export const de_GetAdapterVersionCommand = async (
  */
 export const de_GetDocumentAnalysisCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetDocumentAnalysisCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -732,7 +732,7 @@ export const de_GetDocumentAnalysisCommand = async (
  */
 export const de_GetDocumentTextDetectionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetDocumentTextDetectionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -752,7 +752,7 @@ export const de_GetDocumentTextDetectionCommand = async (
  */
 export const de_GetExpenseAnalysisCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetExpenseAnalysisCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -772,7 +772,7 @@ export const de_GetExpenseAnalysisCommand = async (
  */
 export const de_GetLendingAnalysisCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetLendingAnalysisCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -792,7 +792,7 @@ export const de_GetLendingAnalysisCommand = async (
  */
 export const de_GetLendingAnalysisSummaryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetLendingAnalysisSummaryCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -812,7 +812,7 @@ export const de_GetLendingAnalysisSummaryCommand = async (
  */
 export const de_ListAdaptersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAdaptersCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -832,7 +832,7 @@ export const de_ListAdaptersCommand = async (
  */
 export const de_ListAdapterVersionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAdapterVersionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -852,7 +852,7 @@ export const de_ListAdapterVersionsCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -872,7 +872,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_StartDocumentAnalysisCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartDocumentAnalysisCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -892,7 +892,7 @@ export const de_StartDocumentAnalysisCommand = async (
  */
 export const de_StartDocumentTextDetectionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartDocumentTextDetectionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -912,7 +912,7 @@ export const de_StartDocumentTextDetectionCommand = async (
  */
 export const de_StartExpenseAnalysisCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartExpenseAnalysisCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -932,7 +932,7 @@ export const de_StartExpenseAnalysisCommand = async (
  */
 export const de_StartLendingAnalysisCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartLendingAnalysisCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -952,7 +952,7 @@ export const de_StartLendingAnalysisCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -972,7 +972,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -992,7 +992,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateAdapterCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateAdapterCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1086,7 +1086,7 @@ const de_CommandError = async (output: __HttpResponse, context: __SerdeContext):
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1102,7 +1102,7 @@ const de_AccessDeniedExceptionRes = async (
  */
 const de_BadDocumentExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BadDocumentException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1131,7 +1131,7 @@ const de_ConflictExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_DocumentTooLargeExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DocumentTooLargeException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1147,7 +1147,7 @@ const de_DocumentTooLargeExceptionRes = async (
  */
 const de_HumanLoopQuotaExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<HumanLoopQuotaExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1163,7 +1163,7 @@ const de_HumanLoopQuotaExceededExceptionRes = async (
  */
 const de_IdempotentParameterMismatchExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<IdempotentParameterMismatchException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1192,7 +1192,7 @@ const de_InternalServerErrorRes = async (parsedOutput: any, context: __SerdeCont
  */
 const de_InvalidJobIdExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidJobIdException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1208,7 +1208,7 @@ const de_InvalidJobIdExceptionRes = async (
  */
 const de_InvalidKMSKeyExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidKMSKeyException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1224,7 +1224,7 @@ const de_InvalidKMSKeyExceptionRes = async (
  */
 const de_InvalidParameterExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidParameterException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1240,7 +1240,7 @@ const de_InvalidParameterExceptionRes = async (
  */
 const de_InvalidS3ObjectExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidS3ObjectException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1256,7 +1256,7 @@ const de_InvalidS3ObjectExceptionRes = async (
  */
 const de_LimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<LimitExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1272,7 +1272,7 @@ const de_LimitExceededExceptionRes = async (
  */
 const de_ProvisionedThroughputExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ProvisionedThroughputExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1288,7 +1288,7 @@ const de_ProvisionedThroughputExceededExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1304,7 +1304,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_ServiceQuotaExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceQuotaExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1333,7 +1333,7 @@ const de_ThrottlingExceptionRes = async (parsedOutput: any, context: __SerdeCont
  */
 const de_UnsupportedDocumentExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UnsupportedDocumentException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1933,7 +1933,7 @@ const de_GetDocumentAnalysisResponse = (output: any, context: __SerdeContext): G
  */
 const de_GetDocumentTextDetectionResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): GetDocumentTextDetectionResponse => {
   return take(output, {
     Blocks: (_: any) => de_BlockList(_, context),
@@ -2369,7 +2369,7 @@ const buildHttpRpcRequest = async (
   headers: __HeaderBag,
   path: string,
   resolvedHostname: string | undefined,
-  body: any
+  body: any,
 ): Promise<__HttpRequest> => {
   const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
   const contents: any = {

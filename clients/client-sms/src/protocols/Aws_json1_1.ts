@@ -207,7 +207,7 @@ import { SMSServiceException as __BaseException } from "../models/SMSServiceExce
  */
 export const se_CreateAppCommand = async (
   input: CreateAppCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateApp");
   let body: any;
@@ -220,7 +220,7 @@ export const se_CreateAppCommand = async (
  */
 export const se_CreateReplicationJobCommand = async (
   input: CreateReplicationJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateReplicationJob");
   let body: any;
@@ -233,7 +233,7 @@ export const se_CreateReplicationJobCommand = async (
  */
 export const se_DeleteAppCommand = async (
   input: DeleteAppCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteApp");
   let body: any;
@@ -246,7 +246,7 @@ export const se_DeleteAppCommand = async (
  */
 export const se_DeleteAppLaunchConfigurationCommand = async (
   input: DeleteAppLaunchConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteAppLaunchConfiguration");
   let body: any;
@@ -259,7 +259,7 @@ export const se_DeleteAppLaunchConfigurationCommand = async (
  */
 export const se_DeleteAppReplicationConfigurationCommand = async (
   input: DeleteAppReplicationConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteAppReplicationConfiguration");
   let body: any;
@@ -272,7 +272,7 @@ export const se_DeleteAppReplicationConfigurationCommand = async (
  */
 export const se_DeleteAppValidationConfigurationCommand = async (
   input: DeleteAppValidationConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteAppValidationConfiguration");
   let body: any;
@@ -285,7 +285,7 @@ export const se_DeleteAppValidationConfigurationCommand = async (
  */
 export const se_DeleteReplicationJobCommand = async (
   input: DeleteReplicationJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteReplicationJob");
   let body: any;
@@ -298,7 +298,7 @@ export const se_DeleteReplicationJobCommand = async (
  */
 export const se_DeleteServerCatalogCommand = async (
   input: DeleteServerCatalogCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteServerCatalog");
   let body: any;
@@ -311,7 +311,7 @@ export const se_DeleteServerCatalogCommand = async (
  */
 export const se_DisassociateConnectorCommand = async (
   input: DisassociateConnectorCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DisassociateConnector");
   let body: any;
@@ -324,7 +324,7 @@ export const se_DisassociateConnectorCommand = async (
  */
 export const se_GenerateChangeSetCommand = async (
   input: GenerateChangeSetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GenerateChangeSet");
   let body: any;
@@ -337,7 +337,7 @@ export const se_GenerateChangeSetCommand = async (
  */
 export const se_GenerateTemplateCommand = async (
   input: GenerateTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GenerateTemplate");
   let body: any;
@@ -360,7 +360,7 @@ export const se_GetAppCommand = async (input: GetAppCommandInput, context: __Ser
  */
 export const se_GetAppLaunchConfigurationCommand = async (
   input: GetAppLaunchConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetAppLaunchConfiguration");
   let body: any;
@@ -373,7 +373,7 @@ export const se_GetAppLaunchConfigurationCommand = async (
  */
 export const se_GetAppReplicationConfigurationCommand = async (
   input: GetAppReplicationConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetAppReplicationConfiguration");
   let body: any;
@@ -386,7 +386,7 @@ export const se_GetAppReplicationConfigurationCommand = async (
  */
 export const se_GetAppValidationConfigurationCommand = async (
   input: GetAppValidationConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetAppValidationConfiguration");
   let body: any;
@@ -399,7 +399,7 @@ export const se_GetAppValidationConfigurationCommand = async (
  */
 export const se_GetAppValidationOutputCommand = async (
   input: GetAppValidationOutputCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetAppValidationOutput");
   let body: any;
@@ -412,7 +412,7 @@ export const se_GetAppValidationOutputCommand = async (
  */
 export const se_GetConnectorsCommand = async (
   input: GetConnectorsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetConnectors");
   let body: any;
@@ -425,7 +425,7 @@ export const se_GetConnectorsCommand = async (
  */
 export const se_GetReplicationJobsCommand = async (
   input: GetReplicationJobsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetReplicationJobs");
   let body: any;
@@ -438,7 +438,7 @@ export const se_GetReplicationJobsCommand = async (
  */
 export const se_GetReplicationRunsCommand = async (
   input: GetReplicationRunsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetReplicationRuns");
   let body: any;
@@ -451,7 +451,7 @@ export const se_GetReplicationRunsCommand = async (
  */
 export const se_GetServersCommand = async (
   input: GetServersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetServers");
   let body: any;
@@ -464,7 +464,7 @@ export const se_GetServersCommand = async (
  */
 export const se_ImportAppCatalogCommand = async (
   input: ImportAppCatalogCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ImportAppCatalog");
   let body: any;
@@ -477,7 +477,7 @@ export const se_ImportAppCatalogCommand = async (
  */
 export const se_ImportServerCatalogCommand = async (
   input: ImportServerCatalogCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ImportServerCatalog");
   let body: any;
@@ -490,7 +490,7 @@ export const se_ImportServerCatalogCommand = async (
  */
 export const se_LaunchAppCommand = async (
   input: LaunchAppCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("LaunchApp");
   let body: any;
@@ -503,7 +503,7 @@ export const se_LaunchAppCommand = async (
  */
 export const se_ListAppsCommand = async (
   input: ListAppsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListApps");
   let body: any;
@@ -516,7 +516,7 @@ export const se_ListAppsCommand = async (
  */
 export const se_NotifyAppValidationOutputCommand = async (
   input: NotifyAppValidationOutputCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("NotifyAppValidationOutput");
   let body: any;
@@ -529,7 +529,7 @@ export const se_NotifyAppValidationOutputCommand = async (
  */
 export const se_PutAppLaunchConfigurationCommand = async (
   input: PutAppLaunchConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("PutAppLaunchConfiguration");
   let body: any;
@@ -542,7 +542,7 @@ export const se_PutAppLaunchConfigurationCommand = async (
  */
 export const se_PutAppReplicationConfigurationCommand = async (
   input: PutAppReplicationConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("PutAppReplicationConfiguration");
   let body: any;
@@ -555,7 +555,7 @@ export const se_PutAppReplicationConfigurationCommand = async (
  */
 export const se_PutAppValidationConfigurationCommand = async (
   input: PutAppValidationConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("PutAppValidationConfiguration");
   let body: any;
@@ -568,7 +568,7 @@ export const se_PutAppValidationConfigurationCommand = async (
  */
 export const se_StartAppReplicationCommand = async (
   input: StartAppReplicationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StartAppReplication");
   let body: any;
@@ -581,7 +581,7 @@ export const se_StartAppReplicationCommand = async (
  */
 export const se_StartOnDemandAppReplicationCommand = async (
   input: StartOnDemandAppReplicationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StartOnDemandAppReplication");
   let body: any;
@@ -594,7 +594,7 @@ export const se_StartOnDemandAppReplicationCommand = async (
  */
 export const se_StartOnDemandReplicationRunCommand = async (
   input: StartOnDemandReplicationRunCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StartOnDemandReplicationRun");
   let body: any;
@@ -607,7 +607,7 @@ export const se_StartOnDemandReplicationRunCommand = async (
  */
 export const se_StopAppReplicationCommand = async (
   input: StopAppReplicationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StopAppReplication");
   let body: any;
@@ -620,7 +620,7 @@ export const se_StopAppReplicationCommand = async (
  */
 export const se_TerminateAppCommand = async (
   input: TerminateAppCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("TerminateApp");
   let body: any;
@@ -633,7 +633,7 @@ export const se_TerminateAppCommand = async (
  */
 export const se_UpdateAppCommand = async (
   input: UpdateAppCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateApp");
   let body: any;
@@ -646,7 +646,7 @@ export const se_UpdateAppCommand = async (
  */
 export const se_UpdateReplicationJobCommand = async (
   input: UpdateReplicationJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateReplicationJob");
   let body: any;
@@ -659,7 +659,7 @@ export const se_UpdateReplicationJobCommand = async (
  */
 export const de_CreateAppCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateAppCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -679,7 +679,7 @@ export const de_CreateAppCommand = async (
  */
 export const de_CreateReplicationJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateReplicationJobCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -699,7 +699,7 @@ export const de_CreateReplicationJobCommand = async (
  */
 export const de_DeleteAppCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteAppCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -719,7 +719,7 @@ export const de_DeleteAppCommand = async (
  */
 export const de_DeleteAppLaunchConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteAppLaunchConfigurationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -739,7 +739,7 @@ export const de_DeleteAppLaunchConfigurationCommand = async (
  */
 export const de_DeleteAppReplicationConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteAppReplicationConfigurationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -759,7 +759,7 @@ export const de_DeleteAppReplicationConfigurationCommand = async (
  */
 export const de_DeleteAppValidationConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteAppValidationConfigurationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -779,7 +779,7 @@ export const de_DeleteAppValidationConfigurationCommand = async (
  */
 export const de_DeleteReplicationJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteReplicationJobCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -799,7 +799,7 @@ export const de_DeleteReplicationJobCommand = async (
  */
 export const de_DeleteServerCatalogCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteServerCatalogCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -819,7 +819,7 @@ export const de_DeleteServerCatalogCommand = async (
  */
 export const de_DisassociateConnectorCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisassociateConnectorCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -839,7 +839,7 @@ export const de_DisassociateConnectorCommand = async (
  */
 export const de_GenerateChangeSetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GenerateChangeSetCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -859,7 +859,7 @@ export const de_GenerateChangeSetCommand = async (
  */
 export const de_GenerateTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GenerateTemplateCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -879,7 +879,7 @@ export const de_GenerateTemplateCommand = async (
  */
 export const de_GetAppCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetAppCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -899,7 +899,7 @@ export const de_GetAppCommand = async (
  */
 export const de_GetAppLaunchConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetAppLaunchConfigurationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -919,7 +919,7 @@ export const de_GetAppLaunchConfigurationCommand = async (
  */
 export const de_GetAppReplicationConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetAppReplicationConfigurationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -939,7 +939,7 @@ export const de_GetAppReplicationConfigurationCommand = async (
  */
 export const de_GetAppValidationConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetAppValidationConfigurationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -959,7 +959,7 @@ export const de_GetAppValidationConfigurationCommand = async (
  */
 export const de_GetAppValidationOutputCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetAppValidationOutputCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -979,7 +979,7 @@ export const de_GetAppValidationOutputCommand = async (
  */
 export const de_GetConnectorsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetConnectorsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -999,7 +999,7 @@ export const de_GetConnectorsCommand = async (
  */
 export const de_GetReplicationJobsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetReplicationJobsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1019,7 +1019,7 @@ export const de_GetReplicationJobsCommand = async (
  */
 export const de_GetReplicationRunsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetReplicationRunsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1039,7 +1039,7 @@ export const de_GetReplicationRunsCommand = async (
  */
 export const de_GetServersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetServersCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1059,7 +1059,7 @@ export const de_GetServersCommand = async (
  */
 export const de_ImportAppCatalogCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ImportAppCatalogCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1079,7 +1079,7 @@ export const de_ImportAppCatalogCommand = async (
  */
 export const de_ImportServerCatalogCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ImportServerCatalogCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1099,7 +1099,7 @@ export const de_ImportServerCatalogCommand = async (
  */
 export const de_LaunchAppCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<LaunchAppCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1119,7 +1119,7 @@ export const de_LaunchAppCommand = async (
  */
 export const de_ListAppsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAppsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1139,7 +1139,7 @@ export const de_ListAppsCommand = async (
  */
 export const de_NotifyAppValidationOutputCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<NotifyAppValidationOutputCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1159,7 +1159,7 @@ export const de_NotifyAppValidationOutputCommand = async (
  */
 export const de_PutAppLaunchConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutAppLaunchConfigurationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1179,7 +1179,7 @@ export const de_PutAppLaunchConfigurationCommand = async (
  */
 export const de_PutAppReplicationConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutAppReplicationConfigurationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1199,7 +1199,7 @@ export const de_PutAppReplicationConfigurationCommand = async (
  */
 export const de_PutAppValidationConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutAppValidationConfigurationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1219,7 +1219,7 @@ export const de_PutAppValidationConfigurationCommand = async (
  */
 export const de_StartAppReplicationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartAppReplicationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1239,7 +1239,7 @@ export const de_StartAppReplicationCommand = async (
  */
 export const de_StartOnDemandAppReplicationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartOnDemandAppReplicationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1259,7 +1259,7 @@ export const de_StartOnDemandAppReplicationCommand = async (
  */
 export const de_StartOnDemandReplicationRunCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartOnDemandReplicationRunCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1279,7 +1279,7 @@ export const de_StartOnDemandReplicationRunCommand = async (
  */
 export const de_StopAppReplicationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StopAppReplicationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1299,7 +1299,7 @@ export const de_StopAppReplicationCommand = async (
  */
 export const de_TerminateAppCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TerminateAppCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1319,7 +1319,7 @@ export const de_TerminateAppCommand = async (
  */
 export const de_UpdateAppCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateAppCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1339,7 +1339,7 @@ export const de_UpdateAppCommand = async (
  */
 export const de_UpdateReplicationJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateReplicationJobCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1415,7 +1415,7 @@ const de_CommandError = async (output: __HttpResponse, context: __SerdeContext):
  */
 const de_DryRunOperationExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DryRunOperationException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1444,7 +1444,7 @@ const de_InternalErrorRes = async (parsedOutput: any, context: __SerdeContext): 
  */
 const de_InvalidParameterExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidParameterException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1460,7 +1460,7 @@ const de_InvalidParameterExceptionRes = async (
  */
 const de_MissingRequiredParameterExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<MissingRequiredParameterException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1476,7 +1476,7 @@ const de_MissingRequiredParameterExceptionRes = async (
  */
 const de_NoConnectorsAvailableExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<NoConnectorsAvailableException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1492,7 +1492,7 @@ const de_NoConnectorsAvailableExceptionRes = async (
  */
 const de_OperationNotPermittedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<OperationNotPermittedException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1508,7 +1508,7 @@ const de_OperationNotPermittedExceptionRes = async (
  */
 const de_ReplicationJobAlreadyExistsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ReplicationJobAlreadyExistsException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1524,7 +1524,7 @@ const de_ReplicationJobAlreadyExistsExceptionRes = async (
  */
 const de_ReplicationJobNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ReplicationJobNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1540,7 +1540,7 @@ const de_ReplicationJobNotFoundExceptionRes = async (
  */
 const de_ReplicationRunLimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ReplicationRunLimitExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1556,7 +1556,7 @@ const de_ReplicationRunLimitExceededExceptionRes = async (
  */
 const de_ServerCannotBeReplicatedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServerCannotBeReplicatedException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1572,7 +1572,7 @@ const de_ServerCannotBeReplicatedExceptionRes = async (
  */
 const de_TemporarilyUnavailableExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TemporarilyUnavailableException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1588,7 +1588,7 @@ const de_TemporarilyUnavailableExceptionRes = async (
  */
 const de_UnauthorizedOperationExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UnauthorizedOperationException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1680,7 +1680,7 @@ const se_CreateReplicationJobRequest = (input: CreateReplicationJobRequest, cont
  */
 const se_PutAppReplicationConfigurationRequest = (
   input: PutAppReplicationConfigurationRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     appId: [],
@@ -1705,7 +1705,7 @@ const se_PutAppReplicationConfigurationRequest = (
  */
 const se_ServerGroupReplicationConfiguration = (
   input: ServerGroupReplicationConfiguration,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     serverGroupId: [],
@@ -1718,7 +1718,7 @@ const se_ServerGroupReplicationConfiguration = (
  */
 const se_ServerGroupReplicationConfigurations = (
   input: ServerGroupReplicationConfiguration[],
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return input
     .filter((e: any) => e != null)
@@ -1943,7 +1943,7 @@ const de_CreateAppResponse = (output: any, context: __SerdeContext): CreateAppRe
  */
 const de_GetAppReplicationConfigurationResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): GetAppReplicationConfigurationResponse => {
   return take(output, {
     serverGroupReplicationConfigurations: (_: any) => de_ServerGroupReplicationConfigurations(_, context),
@@ -2154,7 +2154,7 @@ const de_ReplicationRunList = (output: any, context: __SerdeContext): Replicatio
  */
 const de_ServerGroupReplicationConfiguration = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ServerGroupReplicationConfiguration => {
   return take(output, {
     serverGroupId: __expectString,
@@ -2167,7 +2167,7 @@ const de_ServerGroupReplicationConfiguration = (
  */
 const de_ServerGroupReplicationConfigurations = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ServerGroupReplicationConfiguration[] => {
   const retVal = (output || [])
     .filter((e: any) => e != null)
@@ -2322,7 +2322,7 @@ const buildHttpRpcRequest = async (
   headers: __HeaderBag,
   path: string,
   resolvedHostname: string | undefined,
-  body: any
+  body: any,
 ): Promise<__HttpRequest> => {
   const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
   const contents: any = {

@@ -77,7 +77,7 @@ import {
  */
 export const se_BatchAcknowledgeAlarmCommand = async (
   input: BatchAcknowledgeAlarmCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -88,7 +88,7 @@ export const se_BatchAcknowledgeAlarmCommand = async (
   body = JSON.stringify(
     take(input, {
       acknowledgeActionRequests: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -99,7 +99,7 @@ export const se_BatchAcknowledgeAlarmCommand = async (
  */
 export const se_BatchDeleteDetectorCommand = async (
   input: BatchDeleteDetectorCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -110,7 +110,7 @@ export const se_BatchDeleteDetectorCommand = async (
   body = JSON.stringify(
     take(input, {
       detectors: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -121,7 +121,7 @@ export const se_BatchDeleteDetectorCommand = async (
  */
 export const se_BatchDisableAlarmCommand = async (
   input: BatchDisableAlarmCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -132,7 +132,7 @@ export const se_BatchDisableAlarmCommand = async (
   body = JSON.stringify(
     take(input, {
       disableActionRequests: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -143,7 +143,7 @@ export const se_BatchDisableAlarmCommand = async (
  */
 export const se_BatchEnableAlarmCommand = async (
   input: BatchEnableAlarmCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -154,7 +154,7 @@ export const se_BatchEnableAlarmCommand = async (
   body = JSON.stringify(
     take(input, {
       enableActionRequests: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -165,7 +165,7 @@ export const se_BatchEnableAlarmCommand = async (
  */
 export const se_BatchPutMessageCommand = async (
   input: BatchPutMessageCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -176,7 +176,7 @@ export const se_BatchPutMessageCommand = async (
   body = JSON.stringify(
     take(input, {
       messages: (_) => se_Messages(_, context),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -187,7 +187,7 @@ export const se_BatchPutMessageCommand = async (
  */
 export const se_BatchResetAlarmCommand = async (
   input: BatchResetAlarmCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -198,7 +198,7 @@ export const se_BatchResetAlarmCommand = async (
   body = JSON.stringify(
     take(input, {
       resetActionRequests: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -209,7 +209,7 @@ export const se_BatchResetAlarmCommand = async (
  */
 export const se_BatchSnoozeAlarmCommand = async (
   input: BatchSnoozeAlarmCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -220,7 +220,7 @@ export const se_BatchSnoozeAlarmCommand = async (
   body = JSON.stringify(
     take(input, {
       snoozeActionRequests: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -231,7 +231,7 @@ export const se_BatchSnoozeAlarmCommand = async (
  */
 export const se_BatchUpdateDetectorCommand = async (
   input: BatchUpdateDetectorCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -242,7 +242,7 @@ export const se_BatchUpdateDetectorCommand = async (
   body = JSON.stringify(
     take(input, {
       detectors: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -253,7 +253,7 @@ export const se_BatchUpdateDetectorCommand = async (
  */
 export const se_DescribeAlarmCommand = async (
   input: DescribeAlarmCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -272,7 +272,7 @@ export const se_DescribeAlarmCommand = async (
  */
 export const se_DescribeDetectorCommand = async (
   input: DescribeDetectorCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -291,7 +291,7 @@ export const se_DescribeDetectorCommand = async (
  */
 export const se_ListAlarmsCommand = async (
   input: ListAlarmsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -311,7 +311,7 @@ export const se_ListAlarmsCommand = async (
  */
 export const se_ListDetectorsCommand = async (
   input: ListDetectorsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -332,7 +332,7 @@ export const se_ListDetectorsCommand = async (
  */
 export const de_BatchAcknowledgeAlarmCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchAcknowledgeAlarmCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -353,7 +353,7 @@ export const de_BatchAcknowledgeAlarmCommand = async (
  */
 export const de_BatchDeleteDetectorCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchDeleteDetectorCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -374,7 +374,7 @@ export const de_BatchDeleteDetectorCommand = async (
  */
 export const de_BatchDisableAlarmCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchDisableAlarmCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -395,7 +395,7 @@ export const de_BatchDisableAlarmCommand = async (
  */
 export const de_BatchEnableAlarmCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchEnableAlarmCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -416,7 +416,7 @@ export const de_BatchEnableAlarmCommand = async (
  */
 export const de_BatchPutMessageCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchPutMessageCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -437,7 +437,7 @@ export const de_BatchPutMessageCommand = async (
  */
 export const de_BatchResetAlarmCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchResetAlarmCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -458,7 +458,7 @@ export const de_BatchResetAlarmCommand = async (
  */
 export const de_BatchSnoozeAlarmCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchSnoozeAlarmCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -479,7 +479,7 @@ export const de_BatchSnoozeAlarmCommand = async (
  */
 export const de_BatchUpdateDetectorCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchUpdateDetectorCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -500,7 +500,7 @@ export const de_BatchUpdateDetectorCommand = async (
  */
 export const de_DescribeAlarmCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeAlarmCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -521,7 +521,7 @@ export const de_DescribeAlarmCommand = async (
  */
 export const de_DescribeDetectorCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeDetectorCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -542,7 +542,7 @@ export const de_DescribeDetectorCommand = async (
  */
 export const de_ListAlarmsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAlarmsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -564,7 +564,7 @@ export const de_ListAlarmsCommand = async (
  */
 export const de_ListDetectorsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListDetectorsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -622,7 +622,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_InternalFailureExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalFailureException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -642,7 +642,7 @@ const de_InternalFailureExceptionRes = async (
  */
 const de_InvalidRequestExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidRequestException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -662,7 +662,7 @@ const de_InvalidRequestExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -682,7 +682,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_ServiceUnavailableExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceUnavailableException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;

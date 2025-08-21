@@ -65,14 +65,14 @@ export class TimestampFormatHeadersSerializer
 
 export const getTimestampFormatHeadersHandler = <Context>(
   operation: __Operation<TimestampFormatHeadersServerInput, TimestampFormatHeadersServerOutput, Context>,
-  customizer: __ValidationCustomizer<"TimestampFormatHeaders">
+  customizer: __ValidationCustomizer<"TimestampFormatHeaders">,
 ): __ServiceHandler<Context, __HttpRequest, __HttpResponse> => {
   const mux = new httpbinding.HttpBindingMux<"RestJson", "TimestampFormatHeaders">([
     new httpbinding.UriSpec<"RestJson", "TimestampFormatHeaders">(
       "POST",
       [{ type: "path_literal", value: "TimestampFormatHeaders" }],
       [],
-      { service: "RestJson", operation: "TimestampFormatHeaders" }
+      { service: "RestJson", operation: "TimestampFormatHeaders" },
     ),
   ]);
   return new TimestampFormatHeadersHandler(
@@ -80,7 +80,7 @@ export const getTimestampFormatHeadersHandler = <Context>(
     mux,
     new TimestampFormatHeadersSerializer(),
     serializeFrameworkException,
-    customizer
+    customizer,
   );
 };
 
@@ -101,7 +101,7 @@ async function handle<S, O extends keyof S & string, Context>(
   operation: __Operation<__OperationInput<S[O]>, __OperationOutput<S[O]>, Context>,
   serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
   validationFn: (input: __OperationInput<S[O]>) => __ValidationFailure[],
-  validationCustomizer: __ValidationCustomizer<O>
+  validationCustomizer: __ValidationCustomizer<O>,
 ): Promise<__HttpResponse> {
   let input;
   try {
@@ -147,7 +147,7 @@ export class TimestampFormatHeadersHandler<Context> implements __ServiceHandler<
   >;
   private readonly serializeFrameworkException: (
     e: __SmithyFrameworkException,
-    ctx: __ServerSerdeContext
+    ctx: __ServerSerdeContext,
   ) => Promise<__HttpResponse>;
   private readonly validationCustomizer: __ValidationCustomizer<"TimestampFormatHeaders">;
   /**
@@ -164,7 +164,7 @@ export class TimestampFormatHeadersHandler<Context> implements __ServiceHandler<
     mux: __Mux<"RestJson", "TimestampFormatHeaders">,
     serializer: __OperationSerializer<RestJsonService<Context>, "TimestampFormatHeaders", TimestampFormatHeadersErrors>,
     serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
-    validationCustomizer: __ValidationCustomizer<"TimestampFormatHeaders">
+    validationCustomizer: __ValidationCustomizer<"TimestampFormatHeaders">,
   ) {
     this.operation = operation;
     this.mux = mux;
@@ -176,7 +176,7 @@ export class TimestampFormatHeadersHandler<Context> implements __ServiceHandler<
     const target = this.mux.match(request);
     if (target === undefined) {
       console.log(
-        "Received a request that did not match aws.protocoltests.restjson#RestJson.TimestampFormatHeaders. This indicates a misconfiguration."
+        "Received a request that did not match aws.protocoltests.restjson#RestJson.TimestampFormatHeaders. This indicates a misconfiguration.",
       );
       return this.serializeFrameworkException(new __InternalFailureException(), serdeContextBase);
     }
@@ -188,7 +188,7 @@ export class TimestampFormatHeadersHandler<Context> implements __ServiceHandler<
       this.operation,
       this.serializeFrameworkException,
       TimestampFormatHeadersServerInput.validate,
-      this.validationCustomizer
+      this.validationCustomizer,
     );
   }
 }

@@ -31,16 +31,16 @@ export interface ApiGatewayManagementApi {
    */
   deleteConnection(
     args: DeleteConnectionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteConnectionCommandOutput>;
   deleteConnection(
     args: DeleteConnectionCommandInput,
-    cb: (err: any, data?: DeleteConnectionCommandOutput) => void
+    cb: (err: any, data?: DeleteConnectionCommandOutput) => void,
   ): void;
   deleteConnection(
     args: DeleteConnectionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteConnectionCommandOutput) => void
+    cb: (err: any, data?: DeleteConnectionCommandOutput) => void,
   ): void;
 
   /**
@@ -51,7 +51,7 @@ export interface ApiGatewayManagementApi {
   getConnection(
     args: GetConnectionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetConnectionCommandOutput) => void
+    cb: (err: any, data?: GetConnectionCommandOutput) => void,
   ): void;
 
   /**
@@ -59,16 +59,16 @@ export interface ApiGatewayManagementApi {
    */
   postToConnection(
     args: PostToConnectionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PostToConnectionCommandOutput>;
   postToConnection(
     args: PostToConnectionCommandInput,
-    cb: (err: any, data?: PostToConnectionCommandOutput) => void
+    cb: (err: any, data?: PostToConnectionCommandOutput) => void,
   ): void;
   postToConnection(
     args: PostToConnectionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PostToConnectionCommandOutput) => void
+    cb: (err: any, data?: PostToConnectionCommandOutput) => void,
   ): void;
 }
 

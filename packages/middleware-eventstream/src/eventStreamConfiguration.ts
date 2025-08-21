@@ -32,7 +32,7 @@ interface PreviouslyResolved {
 }
 
 export function resolveEventStreamConfig<T>(
-  input: T & PreviouslyResolved & EventStreamInputConfig
+  input: T & PreviouslyResolved & EventStreamInputConfig,
 ): T & EventStreamResolvedConfig {
   const eventSigner = input.signer;
   const messageSigner = input.signer;

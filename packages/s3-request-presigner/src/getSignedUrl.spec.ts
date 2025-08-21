@@ -37,7 +37,7 @@ jest.mock("@smithy/middleware-endpoint", () => {
         properties: {
           authSchemes: [{ name: "sigv4a", signingRegionSet: ["*"] }],
         },
-      })
+      }),
     ),
   };
 });
@@ -89,7 +89,7 @@ describe("getSignedUrl", () => {
       {
         relation: "before",
         toMiddleware: "presignInterceptMiddleware",
-      }
+      },
     );
     const command = new GetObjectCommand({
       Bucket: "Bucket",
@@ -149,12 +149,12 @@ describe("getSignedUrl", () => {
           (args.request as HttpRequest).headers[header] = "foo";
           return next(args);
         },
-        { step: "serialize", priority: "low" }
+        { step: "serialize", priority: "low" },
       );
       await getSignedUrl(client, command);
       expect(mockPresign).toBeCalled();
       expect(mockPresign.mock.calls[0][0].headers[header]).toBeUndefined();
-    }
+    },
   );
   it("should set region to * when sigv4a is the auth scheme", async () => {
     const mockPresigned = "a presigned url";

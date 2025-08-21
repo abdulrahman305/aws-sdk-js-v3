@@ -116,7 +116,7 @@ export interface MedicalImaging {
   copyImageSet(
     args: CopyImageSetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CopyImageSetCommandOutput) => void
+    cb: (err: any, data?: CopyImageSetCommandOutput) => void,
   ): void;
 
   /**
@@ -124,13 +124,13 @@ export interface MedicalImaging {
    */
   createDatastore(
     args: CreateDatastoreCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateDatastoreCommandOutput>;
   createDatastore(args: CreateDatastoreCommandInput, cb: (err: any, data?: CreateDatastoreCommandOutput) => void): void;
   createDatastore(
     args: CreateDatastoreCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateDatastoreCommandOutput) => void
+    cb: (err: any, data?: CreateDatastoreCommandOutput) => void,
   ): void;
 
   /**
@@ -138,13 +138,13 @@ export interface MedicalImaging {
    */
   deleteDatastore(
     args: DeleteDatastoreCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteDatastoreCommandOutput>;
   deleteDatastore(args: DeleteDatastoreCommandInput, cb: (err: any, data?: DeleteDatastoreCommandOutput) => void): void;
   deleteDatastore(
     args: DeleteDatastoreCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteDatastoreCommandOutput) => void
+    cb: (err: any, data?: DeleteDatastoreCommandOutput) => void,
   ): void;
 
   /**
@@ -152,13 +152,13 @@ export interface MedicalImaging {
    */
   deleteImageSet(
     args: DeleteImageSetCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteImageSetCommandOutput>;
   deleteImageSet(args: DeleteImageSetCommandInput, cb: (err: any, data?: DeleteImageSetCommandOutput) => void): void;
   deleteImageSet(
     args: DeleteImageSetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteImageSetCommandOutput) => void
+    cb: (err: any, data?: DeleteImageSetCommandOutput) => void,
   ): void;
 
   /**
@@ -169,7 +169,7 @@ export interface MedicalImaging {
   getDatastore(
     args: GetDatastoreCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetDatastoreCommandOutput) => void
+    cb: (err: any, data?: GetDatastoreCommandOutput) => void,
   ): void;
 
   /**
@@ -177,16 +177,16 @@ export interface MedicalImaging {
    */
   getDICOMImportJob(
     args: GetDICOMImportJobCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetDICOMImportJobCommandOutput>;
   getDICOMImportJob(
     args: GetDICOMImportJobCommandInput,
-    cb: (err: any, data?: GetDICOMImportJobCommandOutput) => void
+    cb: (err: any, data?: GetDICOMImportJobCommandOutput) => void,
   ): void;
   getDICOMImportJob(
     args: GetDICOMImportJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetDICOMImportJobCommandOutput) => void
+    cb: (err: any, data?: GetDICOMImportJobCommandOutput) => void,
   ): void;
 
   /**
@@ -197,7 +197,7 @@ export interface MedicalImaging {
   getImageFrame(
     args: GetImageFrameCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetImageFrameCommandOutput) => void
+    cb: (err: any, data?: GetImageFrameCommandOutput) => void,
   ): void;
 
   /**
@@ -208,7 +208,7 @@ export interface MedicalImaging {
   getImageSet(
     args: GetImageSetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetImageSetCommandOutput) => void
+    cb: (err: any, data?: GetImageSetCommandOutput) => void,
   ): void;
 
   /**
@@ -216,16 +216,16 @@ export interface MedicalImaging {
    */
   getImageSetMetadata(
     args: GetImageSetMetadataCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetImageSetMetadataCommandOutput>;
   getImageSetMetadata(
     args: GetImageSetMetadataCommandInput,
-    cb: (err: any, data?: GetImageSetMetadataCommandOutput) => void
+    cb: (err: any, data?: GetImageSetMetadataCommandOutput) => void,
   ): void;
   getImageSetMetadata(
     args: GetImageSetMetadataCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetImageSetMetadataCommandOutput) => void
+    cb: (err: any, data?: GetImageSetMetadataCommandOutput) => void,
   ): void;
 
   /**
@@ -234,13 +234,13 @@ export interface MedicalImaging {
   listDatastores(): Promise<ListDatastoresCommandOutput>;
   listDatastores(
     args: ListDatastoresCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListDatastoresCommandOutput>;
   listDatastores(args: ListDatastoresCommandInput, cb: (err: any, data?: ListDatastoresCommandOutput) => void): void;
   listDatastores(
     args: ListDatastoresCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListDatastoresCommandOutput) => void
+    cb: (err: any, data?: ListDatastoresCommandOutput) => void,
   ): void;
 
   /**
@@ -248,16 +248,16 @@ export interface MedicalImaging {
    */
   listDICOMImportJobs(
     args: ListDICOMImportJobsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListDICOMImportJobsCommandOutput>;
   listDICOMImportJobs(
     args: ListDICOMImportJobsCommandInput,
-    cb: (err: any, data?: ListDICOMImportJobsCommandOutput) => void
+    cb: (err: any, data?: ListDICOMImportJobsCommandOutput) => void,
   ): void;
   listDICOMImportJobs(
     args: ListDICOMImportJobsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListDICOMImportJobsCommandOutput) => void
+    cb: (err: any, data?: ListDICOMImportJobsCommandOutput) => void,
   ): void;
 
   /**
@@ -265,16 +265,16 @@ export interface MedicalImaging {
    */
   listImageSetVersions(
     args: ListImageSetVersionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListImageSetVersionsCommandOutput>;
   listImageSetVersions(
     args: ListImageSetVersionsCommandInput,
-    cb: (err: any, data?: ListImageSetVersionsCommandOutput) => void
+    cb: (err: any, data?: ListImageSetVersionsCommandOutput) => void,
   ): void;
   listImageSetVersions(
     args: ListImageSetVersionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListImageSetVersionsCommandOutput) => void
+    cb: (err: any, data?: ListImageSetVersionsCommandOutput) => void,
   ): void;
 
   /**
@@ -282,16 +282,16 @@ export interface MedicalImaging {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -299,13 +299,13 @@ export interface MedicalImaging {
    */
   searchImageSets(
     args: SearchImageSetsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<SearchImageSetsCommandOutput>;
   searchImageSets(args: SearchImageSetsCommandInput, cb: (err: any, data?: SearchImageSetsCommandOutput) => void): void;
   searchImageSets(
     args: SearchImageSetsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SearchImageSetsCommandOutput) => void
+    cb: (err: any, data?: SearchImageSetsCommandOutput) => void,
   ): void;
 
   /**
@@ -313,16 +313,16 @@ export interface MedicalImaging {
    */
   startDICOMImportJob(
     args: StartDICOMImportJobCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartDICOMImportJobCommandOutput>;
   startDICOMImportJob(
     args: StartDICOMImportJobCommandInput,
-    cb: (err: any, data?: StartDICOMImportJobCommandOutput) => void
+    cb: (err: any, data?: StartDICOMImportJobCommandOutput) => void,
   ): void;
   startDICOMImportJob(
     args: StartDICOMImportJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartDICOMImportJobCommandOutput) => void
+    cb: (err: any, data?: StartDICOMImportJobCommandOutput) => void,
   ): void;
 
   /**
@@ -333,7 +333,7 @@ export interface MedicalImaging {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -344,7 +344,7 @@ export interface MedicalImaging {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -352,16 +352,16 @@ export interface MedicalImaging {
    */
   updateImageSetMetadata(
     args: UpdateImageSetMetadataCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateImageSetMetadataCommandOutput>;
   updateImageSetMetadata(
     args: UpdateImageSetMetadataCommandInput,
-    cb: (err: any, data?: UpdateImageSetMetadataCommandOutput) => void
+    cb: (err: any, data?: UpdateImageSetMetadataCommandOutput) => void,
   ): void;
   updateImageSetMetadata(
     args: UpdateImageSetMetadataCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateImageSetMetadataCommandOutput) => void
+    cb: (err: any, data?: UpdateImageSetMetadataCommandOutput) => void,
   ): void;
 }
 

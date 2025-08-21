@@ -85,16 +85,16 @@ export interface IotDeviceAdvisor {
    */
   createSuiteDefinition(
     args: CreateSuiteDefinitionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateSuiteDefinitionCommandOutput>;
   createSuiteDefinition(
     args: CreateSuiteDefinitionCommandInput,
-    cb: (err: any, data?: CreateSuiteDefinitionCommandOutput) => void
+    cb: (err: any, data?: CreateSuiteDefinitionCommandOutput) => void,
   ): void;
   createSuiteDefinition(
     args: CreateSuiteDefinitionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateSuiteDefinitionCommandOutput) => void
+    cb: (err: any, data?: CreateSuiteDefinitionCommandOutput) => void,
   ): void;
 
   /**
@@ -102,16 +102,16 @@ export interface IotDeviceAdvisor {
    */
   deleteSuiteDefinition(
     args: DeleteSuiteDefinitionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteSuiteDefinitionCommandOutput>;
   deleteSuiteDefinition(
     args: DeleteSuiteDefinitionCommandInput,
-    cb: (err: any, data?: DeleteSuiteDefinitionCommandOutput) => void
+    cb: (err: any, data?: DeleteSuiteDefinitionCommandOutput) => void,
   ): void;
   deleteSuiteDefinition(
     args: DeleteSuiteDefinitionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteSuiteDefinitionCommandOutput) => void
+    cb: (err: any, data?: DeleteSuiteDefinitionCommandOutput) => void,
   ): void;
 
   /**
@@ -123,7 +123,7 @@ export interface IotDeviceAdvisor {
   getEndpoint(
     args: GetEndpointCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetEndpointCommandOutput) => void
+    cb: (err: any, data?: GetEndpointCommandOutput) => void,
   ): void;
 
   /**
@@ -131,16 +131,16 @@ export interface IotDeviceAdvisor {
    */
   getSuiteDefinition(
     args: GetSuiteDefinitionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetSuiteDefinitionCommandOutput>;
   getSuiteDefinition(
     args: GetSuiteDefinitionCommandInput,
-    cb: (err: any, data?: GetSuiteDefinitionCommandOutput) => void
+    cb: (err: any, data?: GetSuiteDefinitionCommandOutput) => void,
   ): void;
   getSuiteDefinition(
     args: GetSuiteDefinitionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetSuiteDefinitionCommandOutput) => void
+    cb: (err: any, data?: GetSuiteDefinitionCommandOutput) => void,
   ): void;
 
   /**
@@ -151,7 +151,7 @@ export interface IotDeviceAdvisor {
   getSuiteRun(
     args: GetSuiteRunCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetSuiteRunCommandOutput) => void
+    cb: (err: any, data?: GetSuiteRunCommandOutput) => void,
   ): void;
 
   /**
@@ -159,16 +159,16 @@ export interface IotDeviceAdvisor {
    */
   getSuiteRunReport(
     args: GetSuiteRunReportCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetSuiteRunReportCommandOutput>;
   getSuiteRunReport(
     args: GetSuiteRunReportCommandInput,
-    cb: (err: any, data?: GetSuiteRunReportCommandOutput) => void
+    cb: (err: any, data?: GetSuiteRunReportCommandOutput) => void,
   ): void;
   getSuiteRunReport(
     args: GetSuiteRunReportCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetSuiteRunReportCommandOutput) => void
+    cb: (err: any, data?: GetSuiteRunReportCommandOutput) => void,
   ): void;
 
   /**
@@ -177,16 +177,16 @@ export interface IotDeviceAdvisor {
   listSuiteDefinitions(): Promise<ListSuiteDefinitionsCommandOutput>;
   listSuiteDefinitions(
     args: ListSuiteDefinitionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListSuiteDefinitionsCommandOutput>;
   listSuiteDefinitions(
     args: ListSuiteDefinitionsCommandInput,
-    cb: (err: any, data?: ListSuiteDefinitionsCommandOutput) => void
+    cb: (err: any, data?: ListSuiteDefinitionsCommandOutput) => void,
   ): void;
   listSuiteDefinitions(
     args: ListSuiteDefinitionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListSuiteDefinitionsCommandOutput) => void
+    cb: (err: any, data?: ListSuiteDefinitionsCommandOutput) => void,
   ): void;
 
   /**
@@ -198,7 +198,7 @@ export interface IotDeviceAdvisor {
   listSuiteRuns(
     args: ListSuiteRunsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListSuiteRunsCommandOutput) => void
+    cb: (err: any, data?: ListSuiteRunsCommandOutput) => void,
   ): void;
 
   /**
@@ -206,16 +206,16 @@ export interface IotDeviceAdvisor {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -226,7 +226,7 @@ export interface IotDeviceAdvisor {
   startSuiteRun(
     args: StartSuiteRunCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartSuiteRunCommandOutput) => void
+    cb: (err: any, data?: StartSuiteRunCommandOutput) => void,
   ): void;
 
   /**
@@ -237,7 +237,7 @@ export interface IotDeviceAdvisor {
   stopSuiteRun(
     args: StopSuiteRunCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StopSuiteRunCommandOutput) => void
+    cb: (err: any, data?: StopSuiteRunCommandOutput) => void,
   ): void;
 
   /**
@@ -248,7 +248,7 @@ export interface IotDeviceAdvisor {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -259,7 +259,7 @@ export interface IotDeviceAdvisor {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -267,16 +267,16 @@ export interface IotDeviceAdvisor {
    */
   updateSuiteDefinition(
     args: UpdateSuiteDefinitionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateSuiteDefinitionCommandOutput>;
   updateSuiteDefinition(
     args: UpdateSuiteDefinitionCommandInput,
-    cb: (err: any, data?: UpdateSuiteDefinitionCommandOutput) => void
+    cb: (err: any, data?: UpdateSuiteDefinitionCommandOutput) => void,
   ): void;
   updateSuiteDefinition(
     args: UpdateSuiteDefinitionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateSuiteDefinitionCommandOutput) => void
+    cb: (err: any, data?: UpdateSuiteDefinitionCommandOutput) => void,
   ): void;
 }
 

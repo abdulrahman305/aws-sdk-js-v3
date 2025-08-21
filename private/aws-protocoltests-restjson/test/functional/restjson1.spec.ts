@@ -739,7 +739,7 @@ it("RestJsonDateTimeWithNegativeOffset:Response", async () => {
       `      {
                 "datetime": "2019-12-16T22:48:18-01:00"
             }
-      `
+      `,
     ),
   });
 
@@ -778,7 +778,7 @@ it("RestJsonDateTimeWithPositiveOffset:Response", async () => {
       `      {
                 "datetime": "2019-12-17T00:48:18+01:00"
             }
-      `
+      `,
     ),
   });
 
@@ -1061,7 +1061,7 @@ it("DocumentOutput:Response", async () => {
           "documentValue": {
               "foo": "bar"
           }
-      }`
+      }`,
     ),
   });
 
@@ -1106,7 +1106,7 @@ it("DocumentOutputString:Response", async () => {
       `{
           "stringValue": "string",
           "documentValue": "hello"
-      }`
+      }`,
     ),
   });
 
@@ -1149,7 +1149,7 @@ it("DocumentOutputNumber:Response", async () => {
       `{
           "stringValue": "string",
           "documentValue": 10
-      }`
+      }`,
     ),
   });
 
@@ -1192,7 +1192,7 @@ it("DocumentOutputBoolean:Response", async () => {
       `{
           "stringValue": "string",
           "documentValue": false
-      }`
+      }`,
     ),
   });
 
@@ -1238,7 +1238,7 @@ it("DocumentOutputArray:Response", async () => {
               true,
               false
           ]
-      }`
+      }`,
     ),
   });
 
@@ -1335,7 +1335,7 @@ it("DocumentTypeAsMapValueOutput:Response", async () => {
               "bar": [ "b", "a", "r" ],
               "baz": "BAZ"
           }
-      }`
+      }`,
     ),
   });
 
@@ -1460,7 +1460,7 @@ it("DocumentTypeAsPayloadOutput:Response", async () => {
       },
       `{
           "foo": "bar"
-      }`
+      }`,
     ),
   });
 
@@ -1500,7 +1500,7 @@ it("DocumentTypeAsPayloadOutputString:Response", async () => {
       {
         "content-type": "application/json",
       },
-      `"hello"`
+      `"hello"`,
     ),
   });
 
@@ -1569,7 +1569,7 @@ it("RestJsonEmptyInputAndEmptyOutput:Response", async () => {
       {
         "content-type": "application/json",
       },
-      `{}`
+      `{}`,
     ),
   });
 
@@ -1693,7 +1693,7 @@ it("RestJsonDateTimeWithFractionalSeconds:Response", async () => {
       `      {
                 "datetime": "2000-01-02T20:34:56.123Z"
             }
-      `
+      `,
     ),
   });
 
@@ -1735,7 +1735,7 @@ it("RestJsonGreetingWithErrors:Response", async () => {
       {
         "x-greeting": "Hello",
       },
-      `{}`
+      `{}`,
     ),
   });
 
@@ -1775,7 +1775,7 @@ it("RestJsonGreetingWithErrorsNoPayload:Response", async () => {
       {
         "x-greeting": "Hello",
       },
-      ``
+      ``,
     ),
   });
 
@@ -1908,7 +1908,7 @@ it("RestJsonFooErrorUsingCode:Error:GreetingWithErrors", async () => {
       },
       `{
           "code": "FooError"
-      }`
+      }`,
     ),
   });
 
@@ -1944,7 +1944,7 @@ it("RestJsonFooErrorUsingCodeAndNamespace:Error:GreetingWithErrors", async () =>
       },
       `{
           "code": "aws.protocoltests.restjson#FooError"
-      }`
+      }`,
     ),
   });
 
@@ -1980,7 +1980,7 @@ it("RestJsonFooErrorUsingCodeUriAndNamespace:Error:GreetingWithErrors", async ()
       },
       `{
           "code": "aws.protocoltests.restjson#FooError:http://internal.amazon.com/coral/com.amazon.coral.validate/"
-      }`
+      }`,
     ),
   });
 
@@ -2016,7 +2016,7 @@ it("RestJsonFooErrorWithDunderType:Error:GreetingWithErrors", async () => {
       },
       `{
           "__type": "FooError"
-      }`
+      }`,
     ),
   });
 
@@ -2052,7 +2052,7 @@ it("RestJsonFooErrorWithDunderTypeAndNamespace:Error:GreetingWithErrors", async 
       },
       `{
           "__type": "aws.protocoltests.restjson#FooError"
-      }`
+      }`,
     ),
   });
 
@@ -2088,7 +2088,7 @@ it("RestJsonFooErrorWithDunderTypeUriAndNamespace:Error:GreetingWithErrors", asy
       },
       `{
           "__type": "aws.protocoltests.restjson#FooError:http://internal.amazon.com/coral/com.amazon.coral.validate/"
-      }`
+      }`,
     ),
   });
 
@@ -2129,7 +2129,7 @@ it("RestJsonComplexErrorWithNoMessage:Error:GreetingWithErrors", async () => {
           "Nested": {
               "Fooooo": "bar"
           }
-      }`
+      }`,
     ),
   });
 
@@ -2176,7 +2176,7 @@ it("RestJsonEmptyComplexErrorWithNoMessage:Error:GreetingWithErrors", async () =
         "x-amzn-errortype": "ComplexError",
         "content-type": "application/json",
       },
-      `{}`
+      `{}`,
     ),
   });
 
@@ -2213,7 +2213,7 @@ it("RestJsonInvalidGreetingError:Error:GreetingWithErrors", async () => {
       },
       `{
           "Message": "Hi"
-      }`
+      }`,
     ),
   });
 
@@ -2456,7 +2456,7 @@ it("RestJsonHttpPayloadTraitsWithBlob:Response", async () => {
       {
         "x-foo": "Foo",
       },
-      `blobby blob blob`
+      `blobby blob blob`,
     ),
   });
 
@@ -2496,7 +2496,7 @@ it("RestJsonHttpPayloadTraitsWithNoBlobBody:Response", async () => {
       {
         "x-foo": "Foo",
       },
-      ``
+      ``,
     ),
   });
 
@@ -2576,7 +2576,7 @@ it("RestJsonHttpPayloadTraitsWithMediaTypeWithBlob:Response", async () => {
         "x-foo": "Foo",
         "content-type": "text/plain",
       },
-      `blobby blob blob`
+      `blobby blob blob`,
     ),
   });
 
@@ -2663,7 +2663,7 @@ it("RestJsonHttpPayloadWithStructure:Response", async () => {
       `{
           "greeting": "hello",
           "name": "Phreddy"
-      }`
+      }`,
     ),
   });
 
@@ -2775,7 +2775,7 @@ it("RestJsonHttpPayloadWithUnion:Response", async () => {
       },
       `{
           "greeting": "hello"
-      }`
+      }`,
     ),
   });
 
@@ -2815,7 +2815,7 @@ it.skip("RestJsonHttpPayloadWithUnsetUnion:Response", async () => {
       {
         "content-length": "0",
       },
-      ``
+      ``,
     ),
   });
 
@@ -3192,7 +3192,7 @@ it("RestJsonHttpRequestLabelEscaping:Request", async () => {
     const r = err.request;
     expect(r.method).toBe("GET");
     expect(r.path).toBe(
-      "/HttpRequestWithLabels/%20%25%3A%2F%3F%23%5B%5D%40%21%24%26%27%28%29%2A%2B%2C%3B%3D%F0%9F%98%B9/1/2/3/4.1/5.1/true/2019-12-16T23%3A48%3A18Z"
+      "/HttpRequestWithLabels/%20%25%3A%2F%3F%23%5B%5D%40%21%24%26%27%28%29%2A%2B%2C%3B%3D%F0%9F%98%B9/1/2/3/4.1/5.1/true/2019-12-16T23%3A48%3A18Z",
     );
 
     expect(r.body).toBeFalsy();
@@ -3235,7 +3235,7 @@ it("RestJsonHttpRequestWithLabelsAndTimestampFormat:Request", async () => {
     const r = err.request;
     expect(r.method).toBe("GET");
     expect(r.path).toBe(
-      "/HttpRequestWithLabelsAndTimestampFormat/1576540098/Mon%2C%2016%20Dec%202019%2023%3A48%3A18%20GMT/2019-12-16T23%3A48%3A18Z/2019-12-16T23%3A48%3A18Z/1576540098/Mon%2C%2016%20Dec%202019%2023%3A48%3A18%20GMT/2019-12-16T23%3A48%3A18Z"
+      "/HttpRequestWithLabelsAndTimestampFormat/1576540098/Mon%2C%2016%20Dec%202019%2023%3A48%3A18%20GMT/2019-12-16T23%3A48%3A18Z/2019-12-16T23%3A48%3A18Z/1576540098/Mon%2C%2016%20Dec%202019%2023%3A48%3A18%20GMT/2019-12-16T23%3A48%3A18Z",
     );
 
     expect(r.body).toBeFalsy();
@@ -3287,7 +3287,7 @@ it("RestJsonHttpResponseCode:Response", async () => {
       {
         "content-type": "application/json",
       },
-      `{}`
+      `{}`,
     ),
   });
 
@@ -3419,7 +3419,7 @@ it("RestJsonIgnoreQueryParamsInResponse:Response", async () => {
       {
         "content-type": "application/json",
       },
-      `{}`
+      `{}`,
     ),
   });
 
@@ -4291,7 +4291,7 @@ it("RestJsonJsonBlobs:Response", async () => {
       },
       `{
           "data": "dmFsdWU="
-      }`
+      }`,
     ),
   });
 
@@ -4411,7 +4411,7 @@ it("RestJsonJsonEnums:Response", async () => {
               "hi": "Foo",
               "zero": "0"
           }
-      }`
+      }`,
     ),
   });
 
@@ -4557,7 +4557,7 @@ it("RestJsonJsonIntEnums:Response", async () => {
               "abc": 1,
               "def": 2
           }
-      }`
+      }`,
     ),
   });
 
@@ -4831,7 +4831,7 @@ it("RestJsonLists:Response", async () => {
                   "other": "4"
               }
           ]
-      }`
+      }`,
     ),
   });
 
@@ -4911,7 +4911,7 @@ it("RestJsonListsEmpty:Response", async () => {
       },
       `{
           "stringList": []
-      }`
+      }`,
     ),
   });
 
@@ -5105,7 +5105,7 @@ it("RestJsonJsonMaps:Response", async () => {
                   "hi": "bye"
               }
           }
-      }`
+      }`,
     ),
   });
 
@@ -5158,7 +5158,7 @@ it("RestJsonDeserializesZeroValuesInMaps:Response", async () => {
           "denseBooleanMap": {
               "x": false
           }
-      }`
+      }`,
     ),
   });
 
@@ -5207,7 +5207,7 @@ it("RestJsonDeserializesDenseSetMap:Response", async () => {
               "x": [],
               "y": ["a", "b"]
           }
-      }`
+      }`,
     ),
   });
 
@@ -5256,7 +5256,7 @@ it("RestJsonDeserializesDenseSetMapAndSkipsNull:Response", async () => {
               "y": ["a", "b"],
               "z": null
           }
-      }`
+      }`,
     ),
   });
 
@@ -5566,7 +5566,7 @@ it("RestJsonJsonTimestamps:Response", async () => {
       },
       `{
           "normal": 1398796238
-      }`
+      }`,
     ),
   });
 
@@ -5606,7 +5606,7 @@ it("RestJsonJsonTimestampsWithDateTimeFormat:Response", async () => {
       },
       `{
           "dateTime": "2014-04-29T18:30:38Z"
-      }`
+      }`,
     ),
   });
 
@@ -5646,7 +5646,7 @@ it("RestJsonJsonTimestampsWithDateTimeOnTargetFormat:Response", async () => {
       },
       `{
           "dateTimeOnTarget": "2014-04-29T18:30:38Z"
-      }`
+      }`,
     ),
   });
 
@@ -5686,7 +5686,7 @@ it("RestJsonJsonTimestampsWithEpochSecondsFormat:Response", async () => {
       },
       `{
           "epochSeconds": 1398796238
-      }`
+      }`,
     ),
   });
 
@@ -5726,7 +5726,7 @@ it("RestJsonJsonTimestampsWithEpochSecondsOnTargetFormat:Response", async () => 
       },
       `{
           "epochSecondsOnTarget": 1398796238
-      }`
+      }`,
     ),
   });
 
@@ -5766,7 +5766,7 @@ it("RestJsonJsonTimestampsWithHttpDateFormat:Response", async () => {
       },
       `{
           "httpDate": "Tue, 29 Apr 2014 18:30:38 GMT"
-      }`
+      }`,
     ),
   });
 
@@ -5806,7 +5806,7 @@ it("RestJsonJsonTimestampsWithHttpDateOnTargetFormat:Response", async () => {
       },
       `{
           "httpDateOnTarget": "Tue, 29 Apr 2014 18:30:38 GMT"
-      }`
+      }`,
     ),
   });
 
@@ -6283,7 +6283,7 @@ it("RestJsonDeserializeStringUnionValue:Response", async () => {
           "contents": {
               "stringValue": "foo"
           }
-      }`
+      }`,
     ),
   });
 
@@ -6327,7 +6327,7 @@ it("RestJsonDeserializeBooleanUnionValue:Response", async () => {
           "contents": {
               "booleanValue": true
           }
-      }`
+      }`,
     ),
   });
 
@@ -6371,7 +6371,7 @@ it("RestJsonDeserializeNumberUnionValue:Response", async () => {
           "contents": {
               "numberValue": 1
           }
-      }`
+      }`,
     ),
   });
 
@@ -6415,7 +6415,7 @@ it("RestJsonDeserializeBlobUnionValue:Response", async () => {
           "contents": {
               "blobValue": "Zm9v"
           }
-      }`
+      }`,
     ),
   });
 
@@ -6459,7 +6459,7 @@ it("RestJsonDeserializeTimestampUnionValue:Response", async () => {
           "contents": {
               "timestampValue": 1398796238
           }
-      }`
+      }`,
     ),
   });
 
@@ -6503,7 +6503,7 @@ it("RestJsonDeserializeEnumUnionValue:Response", async () => {
           "contents": {
               "enumValue": "Foo"
           }
-      }`
+      }`,
     ),
   });
 
@@ -6547,7 +6547,7 @@ it("RestJsonDeserializeListUnionValue:Response", async () => {
           "contents": {
               "listValue": ["foo", "bar"]
           }
-      }`
+      }`,
     ),
   });
 
@@ -6594,7 +6594,7 @@ it("RestJsonDeserializeMapUnionValue:Response", async () => {
                   "spam": "eggs"
               }
           }
-      }`
+      }`,
     ),
   });
 
@@ -6644,7 +6644,7 @@ it("RestJsonDeserializeStructureUnionValue:Response", async () => {
                   "hi": "hello"
               }
           }
-      }`
+      }`,
     ),
   });
 
@@ -6693,7 +6693,7 @@ it("RestJsonDeserializeIgnoreType:Response", async () => {
                   "hi": "hello"
               }
           }
-      }`
+      }`,
     ),
   });
 
@@ -6883,7 +6883,7 @@ it("RestJsonNoInputAndOutputWithJson:Response", async () => {
       {
         "content-type": "application/json",
       },
-      `{}`
+      `{}`,
     ),
   });
 
@@ -7121,7 +7121,7 @@ it("RestJsonOutputUnionWithUnitMember:Response", async () => {
           "action": {
               "quit": {}
           }
-      }`
+      }`,
     ),
   });
 
@@ -7291,7 +7291,7 @@ it("PostUnionWithJsonNameResponse1:Response", async () => {
           "value": {
               "FOO": "hi"
           }
-      }`
+      }`,
     ),
   });
 
@@ -7335,7 +7335,7 @@ it("PostUnionWithJsonNameResponse2:Response", async () => {
           "value": {
               "_baz": "hi"
           }
-      }`
+      }`,
     ),
   });
 
@@ -7379,7 +7379,7 @@ it("PostUnionWithJsonNameResponse3:Response", async () => {
           "value": {
               "bar": "hi"
           }
-      }`
+      }`,
     ),
   });
 
@@ -7701,7 +7701,7 @@ it("RestJsonRecursiveShapes:Response", async () => {
                   }
               }
           }
-      }`
+      }`,
     ),
   });
 
@@ -7989,7 +7989,7 @@ it("RestJsonSimpleScalarProperties:Response", async () => {
           "longValue": 4,
           "floatValue": 5.5,
           "DoubleDribble": 6.5
-      }`
+      }`,
     ),
   });
 
@@ -8047,7 +8047,7 @@ it("RestJsonDoesntDeserializeNullStructureValues:Response", async () => {
       },
       `{
           "stringValue": null
-      }`
+      }`,
     ),
   });
 
@@ -8079,7 +8079,7 @@ it("RestJsonSupportsNaNFloatInputs:Response", async () => {
       `{
           "floatValue": "NaN",
           "DoubleDribble": "NaN"
-      }`
+      }`,
     ),
   });
 
@@ -8122,7 +8122,7 @@ it("RestJsonSupportsInfinityFloatInputs:Response", async () => {
       `{
           "floatValue": "Infinity",
           "DoubleDribble": "Infinity"
-      }`
+      }`,
     ),
   });
 
@@ -8165,7 +8165,7 @@ it("RestJsonSupportsNegativeInfinityFloatInputs:Response", async () => {
       `{
           "floatValue": "-Infinity",
           "DoubleDribble": "-Infinity"
-      }`
+      }`,
     ),
   });
 
@@ -8251,7 +8251,7 @@ it("RestJsonSparseListsSerializeNull:Response", async () => {
               null,
               "hi"
           ]
-      }`
+      }`,
     ),
   });
 
@@ -8556,7 +8556,7 @@ it("RestJsonSparseJsonMaps:Response", async () => {
                   "hi": "bye"
               }
          }
-      }`
+      }`,
     ),
   });
 
@@ -8615,7 +8615,7 @@ it("RestJsonDeserializesSparseNullMapValues:Response", async () => {
           "sparseStructMap": {
               "x": null
           }
-      }`
+      }`,
     ),
   });
 
@@ -8674,7 +8674,7 @@ it("RestJsonDeserializesZeroValuesInSparseMaps:Response", async () => {
           "sparseBooleanMap": {
               "x": false
           }
-      }`
+      }`,
     ),
   });
 
@@ -8723,7 +8723,7 @@ it("RestJsonDeserializesSparseSetMap:Response", async () => {
               "x": [],
               "y": ["a", "b"]
           }
-      }`
+      }`,
     ),
   });
 
@@ -8771,7 +8771,7 @@ it("RestJsonDeserializesSparseSetMapAndRetainsNull:Response", async () => {
               "y": ["a", "b"],
               "z": null
           }
-      }`
+      }`,
     ),
   });
 
@@ -8888,7 +8888,7 @@ it("RestJsonStreamingTraitsWithBlob:Response", async () => {
         "x-foo": "Foo",
         "content-type": "application/octet-stream",
       },
-      `blobby blob blob`
+      `blobby blob blob`,
     ),
   });
 
@@ -8933,7 +8933,7 @@ it("RestJsonStreamingTraitsWithNoBlobBody:Response", async () => {
       {
         "x-foo": "Foo",
       },
-      ``
+      ``,
     ),
   });
 
@@ -9090,7 +9090,7 @@ it("RestJsonStreamingTraitsWithMediaTypeWithBlob:Response", async () => {
         "x-foo": "Foo",
         "content-type": "text/plain",
       },
-      `blobby blob blob`
+      `blobby blob blob`,
     ),
   });
 
@@ -9625,7 +9625,7 @@ const compareEquivalentJsonBodies = (expectedBody: string, generatedBody: string
 const compareEquivalentOctetStreamBodies = (
   utf8Encoder: __Encoder,
   expectedBody: string,
-  generatedBody: Uint8Array
+  generatedBody: Uint8Array,
 ): Object => {
   const expectedParts = { Value: expectedBody };
   const generatedParts = { Value: utf8Encoder(generatedBody) };
@@ -9640,7 +9640,7 @@ const compareEquivalentOctetStreamBodies = (
 const compareEquivalentUnknownTypeBodies = (
   utf8Encoder: __Encoder,
   expectedBody: string,
-  generatedBody: string | Uint8Array
+  generatedBody: string | Uint8Array,
 ): Object => {
   const expectedParts = { Value: expectedBody };
   const generatedParts = {

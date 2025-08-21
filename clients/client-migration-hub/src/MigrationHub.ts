@@ -115,16 +115,16 @@ export interface MigrationHub {
    */
   associateCreatedArtifact(
     args: AssociateCreatedArtifactCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AssociateCreatedArtifactCommandOutput>;
   associateCreatedArtifact(
     args: AssociateCreatedArtifactCommandInput,
-    cb: (err: any, data?: AssociateCreatedArtifactCommandOutput) => void
+    cb: (err: any, data?: AssociateCreatedArtifactCommandOutput) => void,
   ): void;
   associateCreatedArtifact(
     args: AssociateCreatedArtifactCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AssociateCreatedArtifactCommandOutput) => void
+    cb: (err: any, data?: AssociateCreatedArtifactCommandOutput) => void,
   ): void;
 
   /**
@@ -132,16 +132,16 @@ export interface MigrationHub {
    */
   associateDiscoveredResource(
     args: AssociateDiscoveredResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AssociateDiscoveredResourceCommandOutput>;
   associateDiscoveredResource(
     args: AssociateDiscoveredResourceCommandInput,
-    cb: (err: any, data?: AssociateDiscoveredResourceCommandOutput) => void
+    cb: (err: any, data?: AssociateDiscoveredResourceCommandOutput) => void,
   ): void;
   associateDiscoveredResource(
     args: AssociateDiscoveredResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AssociateDiscoveredResourceCommandOutput) => void
+    cb: (err: any, data?: AssociateDiscoveredResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -149,16 +149,16 @@ export interface MigrationHub {
    */
   createProgressUpdateStream(
     args: CreateProgressUpdateStreamCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateProgressUpdateStreamCommandOutput>;
   createProgressUpdateStream(
     args: CreateProgressUpdateStreamCommandInput,
-    cb: (err: any, data?: CreateProgressUpdateStreamCommandOutput) => void
+    cb: (err: any, data?: CreateProgressUpdateStreamCommandOutput) => void,
   ): void;
   createProgressUpdateStream(
     args: CreateProgressUpdateStreamCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateProgressUpdateStreamCommandOutput) => void
+    cb: (err: any, data?: CreateProgressUpdateStreamCommandOutput) => void,
   ): void;
 
   /**
@@ -166,16 +166,16 @@ export interface MigrationHub {
    */
   deleteProgressUpdateStream(
     args: DeleteProgressUpdateStreamCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteProgressUpdateStreamCommandOutput>;
   deleteProgressUpdateStream(
     args: DeleteProgressUpdateStreamCommandInput,
-    cb: (err: any, data?: DeleteProgressUpdateStreamCommandOutput) => void
+    cb: (err: any, data?: DeleteProgressUpdateStreamCommandOutput) => void,
   ): void;
   deleteProgressUpdateStream(
     args: DeleteProgressUpdateStreamCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteProgressUpdateStreamCommandOutput) => void
+    cb: (err: any, data?: DeleteProgressUpdateStreamCommandOutput) => void,
   ): void;
 
   /**
@@ -183,16 +183,16 @@ export interface MigrationHub {
    */
   describeApplicationState(
     args: DescribeApplicationStateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeApplicationStateCommandOutput>;
   describeApplicationState(
     args: DescribeApplicationStateCommandInput,
-    cb: (err: any, data?: DescribeApplicationStateCommandOutput) => void
+    cb: (err: any, data?: DescribeApplicationStateCommandOutput) => void,
   ): void;
   describeApplicationState(
     args: DescribeApplicationStateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeApplicationStateCommandOutput) => void
+    cb: (err: any, data?: DescribeApplicationStateCommandOutput) => void,
   ): void;
 
   /**
@@ -200,16 +200,16 @@ export interface MigrationHub {
    */
   describeMigrationTask(
     args: DescribeMigrationTaskCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeMigrationTaskCommandOutput>;
   describeMigrationTask(
     args: DescribeMigrationTaskCommandInput,
-    cb: (err: any, data?: DescribeMigrationTaskCommandOutput) => void
+    cb: (err: any, data?: DescribeMigrationTaskCommandOutput) => void,
   ): void;
   describeMigrationTask(
     args: DescribeMigrationTaskCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeMigrationTaskCommandOutput) => void
+    cb: (err: any, data?: DescribeMigrationTaskCommandOutput) => void,
   ): void;
 
   /**
@@ -217,16 +217,16 @@ export interface MigrationHub {
    */
   disassociateCreatedArtifact(
     args: DisassociateCreatedArtifactCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DisassociateCreatedArtifactCommandOutput>;
   disassociateCreatedArtifact(
     args: DisassociateCreatedArtifactCommandInput,
-    cb: (err: any, data?: DisassociateCreatedArtifactCommandOutput) => void
+    cb: (err: any, data?: DisassociateCreatedArtifactCommandOutput) => void,
   ): void;
   disassociateCreatedArtifact(
     args: DisassociateCreatedArtifactCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DisassociateCreatedArtifactCommandOutput) => void
+    cb: (err: any, data?: DisassociateCreatedArtifactCommandOutput) => void,
   ): void;
 
   /**
@@ -234,16 +234,16 @@ export interface MigrationHub {
    */
   disassociateDiscoveredResource(
     args: DisassociateDiscoveredResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DisassociateDiscoveredResourceCommandOutput>;
   disassociateDiscoveredResource(
     args: DisassociateDiscoveredResourceCommandInput,
-    cb: (err: any, data?: DisassociateDiscoveredResourceCommandOutput) => void
+    cb: (err: any, data?: DisassociateDiscoveredResourceCommandOutput) => void,
   ): void;
   disassociateDiscoveredResource(
     args: DisassociateDiscoveredResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DisassociateDiscoveredResourceCommandOutput) => void
+    cb: (err: any, data?: DisassociateDiscoveredResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -251,16 +251,16 @@ export interface MigrationHub {
    */
   importMigrationTask(
     args: ImportMigrationTaskCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ImportMigrationTaskCommandOutput>;
   importMigrationTask(
     args: ImportMigrationTaskCommandInput,
-    cb: (err: any, data?: ImportMigrationTaskCommandOutput) => void
+    cb: (err: any, data?: ImportMigrationTaskCommandOutput) => void,
   ): void;
   importMigrationTask(
     args: ImportMigrationTaskCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ImportMigrationTaskCommandOutput) => void
+    cb: (err: any, data?: ImportMigrationTaskCommandOutput) => void,
   ): void;
 
   /**
@@ -269,16 +269,16 @@ export interface MigrationHub {
   listApplicationStates(): Promise<ListApplicationStatesCommandOutput>;
   listApplicationStates(
     args: ListApplicationStatesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListApplicationStatesCommandOutput>;
   listApplicationStates(
     args: ListApplicationStatesCommandInput,
-    cb: (err: any, data?: ListApplicationStatesCommandOutput) => void
+    cb: (err: any, data?: ListApplicationStatesCommandOutput) => void,
   ): void;
   listApplicationStates(
     args: ListApplicationStatesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListApplicationStatesCommandOutput) => void
+    cb: (err: any, data?: ListApplicationStatesCommandOutput) => void,
   ): void;
 
   /**
@@ -286,16 +286,16 @@ export interface MigrationHub {
    */
   listCreatedArtifacts(
     args: ListCreatedArtifactsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListCreatedArtifactsCommandOutput>;
   listCreatedArtifacts(
     args: ListCreatedArtifactsCommandInput,
-    cb: (err: any, data?: ListCreatedArtifactsCommandOutput) => void
+    cb: (err: any, data?: ListCreatedArtifactsCommandOutput) => void,
   ): void;
   listCreatedArtifacts(
     args: ListCreatedArtifactsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListCreatedArtifactsCommandOutput) => void
+    cb: (err: any, data?: ListCreatedArtifactsCommandOutput) => void,
   ): void;
 
   /**
@@ -303,16 +303,16 @@ export interface MigrationHub {
    */
   listDiscoveredResources(
     args: ListDiscoveredResourcesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListDiscoveredResourcesCommandOutput>;
   listDiscoveredResources(
     args: ListDiscoveredResourcesCommandInput,
-    cb: (err: any, data?: ListDiscoveredResourcesCommandOutput) => void
+    cb: (err: any, data?: ListDiscoveredResourcesCommandOutput) => void,
   ): void;
   listDiscoveredResources(
     args: ListDiscoveredResourcesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListDiscoveredResourcesCommandOutput) => void
+    cb: (err: any, data?: ListDiscoveredResourcesCommandOutput) => void,
   ): void;
 
   /**
@@ -321,16 +321,16 @@ export interface MigrationHub {
   listMigrationTasks(): Promise<ListMigrationTasksCommandOutput>;
   listMigrationTasks(
     args: ListMigrationTasksCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListMigrationTasksCommandOutput>;
   listMigrationTasks(
     args: ListMigrationTasksCommandInput,
-    cb: (err: any, data?: ListMigrationTasksCommandOutput) => void
+    cb: (err: any, data?: ListMigrationTasksCommandOutput) => void,
   ): void;
   listMigrationTasks(
     args: ListMigrationTasksCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListMigrationTasksCommandOutput) => void
+    cb: (err: any, data?: ListMigrationTasksCommandOutput) => void,
   ): void;
 
   /**
@@ -339,16 +339,16 @@ export interface MigrationHub {
   listProgressUpdateStreams(): Promise<ListProgressUpdateStreamsCommandOutput>;
   listProgressUpdateStreams(
     args: ListProgressUpdateStreamsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListProgressUpdateStreamsCommandOutput>;
   listProgressUpdateStreams(
     args: ListProgressUpdateStreamsCommandInput,
-    cb: (err: any, data?: ListProgressUpdateStreamsCommandOutput) => void
+    cb: (err: any, data?: ListProgressUpdateStreamsCommandOutput) => void,
   ): void;
   listProgressUpdateStreams(
     args: ListProgressUpdateStreamsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListProgressUpdateStreamsCommandOutput) => void
+    cb: (err: any, data?: ListProgressUpdateStreamsCommandOutput) => void,
   ): void;
 
   /**
@@ -356,16 +356,16 @@ export interface MigrationHub {
    */
   notifyApplicationState(
     args: NotifyApplicationStateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<NotifyApplicationStateCommandOutput>;
   notifyApplicationState(
     args: NotifyApplicationStateCommandInput,
-    cb: (err: any, data?: NotifyApplicationStateCommandOutput) => void
+    cb: (err: any, data?: NotifyApplicationStateCommandOutput) => void,
   ): void;
   notifyApplicationState(
     args: NotifyApplicationStateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: NotifyApplicationStateCommandOutput) => void
+    cb: (err: any, data?: NotifyApplicationStateCommandOutput) => void,
   ): void;
 
   /**
@@ -373,16 +373,16 @@ export interface MigrationHub {
    */
   notifyMigrationTaskState(
     args: NotifyMigrationTaskStateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<NotifyMigrationTaskStateCommandOutput>;
   notifyMigrationTaskState(
     args: NotifyMigrationTaskStateCommandInput,
-    cb: (err: any, data?: NotifyMigrationTaskStateCommandOutput) => void
+    cb: (err: any, data?: NotifyMigrationTaskStateCommandOutput) => void,
   ): void;
   notifyMigrationTaskState(
     args: NotifyMigrationTaskStateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: NotifyMigrationTaskStateCommandOutput) => void
+    cb: (err: any, data?: NotifyMigrationTaskStateCommandOutput) => void,
   ): void;
 
   /**
@@ -390,16 +390,16 @@ export interface MigrationHub {
    */
   putResourceAttributes(
     args: PutResourceAttributesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutResourceAttributesCommandOutput>;
   putResourceAttributes(
     args: PutResourceAttributesCommandInput,
-    cb: (err: any, data?: PutResourceAttributesCommandOutput) => void
+    cb: (err: any, data?: PutResourceAttributesCommandOutput) => void,
   ): void;
   putResourceAttributes(
     args: PutResourceAttributesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutResourceAttributesCommandOutput) => void
+    cb: (err: any, data?: PutResourceAttributesCommandOutput) => void,
   ): void;
 }
 

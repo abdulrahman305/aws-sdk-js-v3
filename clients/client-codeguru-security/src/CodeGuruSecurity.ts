@@ -71,16 +71,16 @@ export interface CodeGuruSecurity {
    */
   batchGetFindings(
     args: BatchGetFindingsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<BatchGetFindingsCommandOutput>;
   batchGetFindings(
     args: BatchGetFindingsCommandInput,
-    cb: (err: any, data?: BatchGetFindingsCommandOutput) => void
+    cb: (err: any, data?: BatchGetFindingsCommandOutput) => void,
   ): void;
   batchGetFindings(
     args: BatchGetFindingsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: BatchGetFindingsCommandOutput) => void
+    cb: (err: any, data?: BatchGetFindingsCommandOutput) => void,
   ): void;
 
   /**
@@ -91,7 +91,7 @@ export interface CodeGuruSecurity {
   createScan(
     args: CreateScanCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateScanCommandOutput) => void
+    cb: (err: any, data?: CreateScanCommandOutput) => void,
   ): void;
 
   /**
@@ -99,13 +99,13 @@ export interface CodeGuruSecurity {
    */
   createUploadUrl(
     args: CreateUploadUrlCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateUploadUrlCommandOutput>;
   createUploadUrl(args: CreateUploadUrlCommandInput, cb: (err: any, data?: CreateUploadUrlCommandOutput) => void): void;
   createUploadUrl(
     args: CreateUploadUrlCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateUploadUrlCommandOutput) => void
+    cb: (err: any, data?: CreateUploadUrlCommandOutput) => void,
   ): void;
 
   /**
@@ -114,16 +114,16 @@ export interface CodeGuruSecurity {
   getAccountConfiguration(): Promise<GetAccountConfigurationCommandOutput>;
   getAccountConfiguration(
     args: GetAccountConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetAccountConfigurationCommandOutput>;
   getAccountConfiguration(
     args: GetAccountConfigurationCommandInput,
-    cb: (err: any, data?: GetAccountConfigurationCommandOutput) => void
+    cb: (err: any, data?: GetAccountConfigurationCommandOutput) => void,
   ): void;
   getAccountConfiguration(
     args: GetAccountConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetAccountConfigurationCommandOutput) => void
+    cb: (err: any, data?: GetAccountConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -134,7 +134,7 @@ export interface CodeGuruSecurity {
   getFindings(
     args: GetFindingsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetFindingsCommandOutput) => void
+    cb: (err: any, data?: GetFindingsCommandOutput) => void,
   ): void;
 
   /**
@@ -142,16 +142,16 @@ export interface CodeGuruSecurity {
    */
   getMetricsSummary(
     args: GetMetricsSummaryCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetMetricsSummaryCommandOutput>;
   getMetricsSummary(
     args: GetMetricsSummaryCommandInput,
-    cb: (err: any, data?: GetMetricsSummaryCommandOutput) => void
+    cb: (err: any, data?: GetMetricsSummaryCommandOutput) => void,
   ): void;
   getMetricsSummary(
     args: GetMetricsSummaryCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetMetricsSummaryCommandOutput) => void
+    cb: (err: any, data?: GetMetricsSummaryCommandOutput) => void,
   ): void;
 
   /**
@@ -162,7 +162,7 @@ export interface CodeGuruSecurity {
   getScan(
     args: GetScanCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetScanCommandOutput) => void
+    cb: (err: any, data?: GetScanCommandOutput) => void,
   ): void;
 
   /**
@@ -170,16 +170,16 @@ export interface CodeGuruSecurity {
    */
   listFindingsMetrics(
     args: ListFindingsMetricsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListFindingsMetricsCommandOutput>;
   listFindingsMetrics(
     args: ListFindingsMetricsCommandInput,
-    cb: (err: any, data?: ListFindingsMetricsCommandOutput) => void
+    cb: (err: any, data?: ListFindingsMetricsCommandOutput) => void,
   ): void;
   listFindingsMetrics(
     args: ListFindingsMetricsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListFindingsMetricsCommandOutput) => void
+    cb: (err: any, data?: ListFindingsMetricsCommandOutput) => void,
   ): void;
 
   /**
@@ -191,7 +191,7 @@ export interface CodeGuruSecurity {
   listScans(
     args: ListScansCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListScansCommandOutput) => void
+    cb: (err: any, data?: ListScansCommandOutput) => void,
   ): void;
 
   /**
@@ -199,16 +199,16 @@ export interface CodeGuruSecurity {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -219,7 +219,7 @@ export interface CodeGuruSecurity {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -230,7 +230,7 @@ export interface CodeGuruSecurity {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -238,16 +238,16 @@ export interface CodeGuruSecurity {
    */
   updateAccountConfiguration(
     args: UpdateAccountConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateAccountConfigurationCommandOutput>;
   updateAccountConfiguration(
     args: UpdateAccountConfigurationCommandInput,
-    cb: (err: any, data?: UpdateAccountConfigurationCommandOutput) => void
+    cb: (err: any, data?: UpdateAccountConfigurationCommandOutput) => void,
   ): void;
   updateAccountConfiguration(
     args: UpdateAccountConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateAccountConfigurationCommandOutput) => void
+    cb: (err: any, data?: UpdateAccountConfigurationCommandOutput) => void,
   ): void;
 }
 

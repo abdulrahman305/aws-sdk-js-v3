@@ -31,7 +31,7 @@ const checkState = async (client: DynamoDBClient, input: DescribeTableCommandInp
  */
 export const waitForTableExists = async (
   params: WaiterConfiguration<DynamoDBClient>,
-  input: DescribeTableCommandInput
+  input: DescribeTableCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 20, maxDelay: 120 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -43,7 +43,7 @@ export const waitForTableExists = async (
  */
 export const waitUntilTableExists = async (
   params: WaiterConfiguration<DynamoDBClient>,
-  input: DescribeTableCommandInput
+  input: DescribeTableCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 20, maxDelay: 120 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

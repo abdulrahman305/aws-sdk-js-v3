@@ -37,7 +37,7 @@ export interface CodeCatalystHttpAuthSchemeParametersProvider
 export const defaultCodeCatalystHttpAuthSchemeParametersProvider = async (
   config: CodeCatalystClientResolvedConfig,
   context: HandlerExecutionContext,
-  input: object
+  input: object,
 ): Promise<CodeCatalystHttpAuthSchemeParameters> => {
   return {
     operation: getSmithyContext(context).operation as string,
@@ -45,13 +45,13 @@ export const defaultCodeCatalystHttpAuthSchemeParametersProvider = async (
 };
 
 function createSmithyApiHttpBearerAuthHttpAuthOption(
-  authParameters: CodeCatalystHttpAuthSchemeParameters
+  authParameters: CodeCatalystHttpAuthSchemeParameters,
 ): HttpAuthOption {
   return {
     schemeId: "smithy.api#httpBearerAuth",
     propertiesExtractor: <T>(
       { profile, filepath, configFilepath, ignoreCache }: T & FromSsoInit,
-      context: HandlerExecutionContext
+      context: HandlerExecutionContext,
     ) => ({
       /**
        * @internal
@@ -133,7 +133,7 @@ export interface HttpAuthSchemeResolvedConfig {
  * @internal
  */
 export const resolveHttpAuthSchemeConfig = <T>(
-  config: T & HttpAuthSchemeInputConfig
+  config: T & HttpAuthSchemeInputConfig,
 ): T & HttpAuthSchemeResolvedConfig => {
   const token = memoizeIdentityProvider(config.token, isIdentityExpired, doesIdentityRequireRefresh);
   return {

@@ -7,9 +7,7 @@ import { TestHttpHandler } from "./test-http-handler";
 describe(TestHttpHandler.name, () => {
   it("checks requests using matchers", async () => {
     // const client = new JsonProtocol({});
-
     // expect.assertions(15);
-
     // new TestHttpHandler({
     //   method: "POST",
     //   hostname: /jsonprotocol\.(.*?)\.amazonaws\.com/,
@@ -35,7 +33,6 @@ describe(TestHttpHandler.name, () => {
     //     expect(parse.Boolean).toBe(false);
     //   },
     // }).watch(client);
-
     // await client.kitchenSinkOperation({
     //   Blob: new Uint8Array(),
     //   Boolean: false,

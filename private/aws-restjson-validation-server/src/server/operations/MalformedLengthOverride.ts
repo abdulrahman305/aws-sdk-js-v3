@@ -77,14 +77,14 @@ export class MalformedLengthOverrideSerializer
 }
 
 export const getMalformedLengthOverrideHandler = <Context>(
-  operation: __Operation<MalformedLengthOverrideServerInput, MalformedLengthOverrideServerOutput, Context>
+  operation: __Operation<MalformedLengthOverrideServerInput, MalformedLengthOverrideServerOutput, Context>,
 ): __ServiceHandler<Context, __HttpRequest, __HttpResponse> => {
   const mux = new httpbinding.HttpBindingMux<"RestJsonValidation", "MalformedLengthOverride">([
     new httpbinding.UriSpec<"RestJsonValidation", "MalformedLengthOverride">(
       "POST",
       [{ type: "path_literal", value: "MalformedLengthOverride" }],
       [],
-      { service: "RestJsonValidation", operation: "MalformedLengthOverride" }
+      { service: "RestJsonValidation", operation: "MalformedLengthOverride" },
     ),
   ]);
   const customizer: __ValidationCustomizer<"MalformedLengthOverride"> = (ctx, failures) => {
@@ -106,7 +106,7 @@ export const getMalformedLengthOverrideHandler = <Context>(
     mux,
     new MalformedLengthOverrideSerializer(),
     serializeFrameworkException,
-    customizer
+    customizer,
   );
 };
 
@@ -127,7 +127,7 @@ async function handle<S, O extends keyof S & string, Context>(
   operation: __Operation<__OperationInput<S[O]>, __OperationOutput<S[O]>, Context>,
   serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
   validationFn: (input: __OperationInput<S[O]>) => __ValidationFailure[],
-  validationCustomizer: __ValidationCustomizer<O>
+  validationCustomizer: __ValidationCustomizer<O>,
 ): Promise<__HttpResponse> {
   let input;
   try {
@@ -173,7 +173,7 @@ export class MalformedLengthOverrideHandler<Context> implements __ServiceHandler
   >;
   private readonly serializeFrameworkException: (
     e: __SmithyFrameworkException,
-    ctx: __ServerSerdeContext
+    ctx: __ServerSerdeContext,
   ) => Promise<__HttpResponse>;
   private readonly validationCustomizer: __ValidationCustomizer<"MalformedLengthOverride">;
   /**
@@ -194,7 +194,7 @@ export class MalformedLengthOverrideHandler<Context> implements __ServiceHandler
       MalformedLengthOverrideErrors
     >,
     serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
-    validationCustomizer: __ValidationCustomizer<"MalformedLengthOverride">
+    validationCustomizer: __ValidationCustomizer<"MalformedLengthOverride">,
   ) {
     this.operation = operation;
     this.mux = mux;
@@ -206,7 +206,7 @@ export class MalformedLengthOverrideHandler<Context> implements __ServiceHandler
     const target = this.mux.match(request);
     if (target === undefined) {
       console.log(
-        "Received a request that did not match aws.protocoltests.restjson.validation#RestJsonValidation.MalformedLengthOverride. This indicates a misconfiguration."
+        "Received a request that did not match aws.protocoltests.restjson.validation#RestJsonValidation.MalformedLengthOverride. This indicates a misconfiguration.",
       );
       return this.serializeFrameworkException(new __InternalFailureException(), serdeContextBase);
     }
@@ -218,7 +218,7 @@ export class MalformedLengthOverrideHandler<Context> implements __ServiceHandler
       this.operation,
       this.serializeFrameworkException,
       MalformedLengthOverrideServerInput.validate,
-      this.validationCustomizer
+      this.validationCustomizer,
     );
   }
 }

@@ -45,7 +45,7 @@ import {
  */
 export const se_ListCommonControlsCommand = async (
   input: ListCommonControlsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -60,7 +60,7 @@ export const se_ListCommonControlsCommand = async (
   body = JSON.stringify(
     take(input, {
       CommonControlFilter: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).q(query).b(body);
   return b.build();
@@ -71,7 +71,7 @@ export const se_ListCommonControlsCommand = async (
  */
 export const se_ListDomainsCommand = async (
   input: ListDomainsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -90,7 +90,7 @@ export const se_ListDomainsCommand = async (
  */
 export const se_ListObjectivesCommand = async (
   input: ListObjectivesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -105,7 +105,7 @@ export const se_ListObjectivesCommand = async (
   body = JSON.stringify(
     take(input, {
       ObjectiveFilter: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).q(query).b(body);
   return b.build();
@@ -116,7 +116,7 @@ export const se_ListObjectivesCommand = async (
  */
 export const de_ListCommonControlsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListCommonControlsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -138,7 +138,7 @@ export const de_ListCommonControlsCommand = async (
  */
 export const de_ListDomainsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListDomainsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -160,7 +160,7 @@ export const de_ListDomainsCommand = async (
  */
 export const de_ListObjectivesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListObjectivesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -215,7 +215,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -235,7 +235,7 @@ const de_AccessDeniedExceptionRes = async (
  */
 const de_InternalServerExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;

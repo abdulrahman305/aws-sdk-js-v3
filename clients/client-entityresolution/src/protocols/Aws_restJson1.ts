@@ -158,7 +158,7 @@ import {
  */
 export const se_AddPolicyStatementCommand = async (
   input: AddPolicyStatementCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -174,7 +174,7 @@ export const se_AddPolicyStatementCommand = async (
       condition: [],
       effect: [],
       principal: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -185,7 +185,7 @@ export const se_AddPolicyStatementCommand = async (
  */
 export const se_BatchDeleteUniqueIdCommand = async (
   input: BatchDeleteUniqueIdCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -207,7 +207,7 @@ export const se_BatchDeleteUniqueIdCommand = async (
  */
 export const se_CreateIdMappingWorkflowCommand = async (
   input: CreateIdMappingWorkflowCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -224,7 +224,7 @@ export const se_CreateIdMappingWorkflowCommand = async (
       roleArn: [],
       tags: (_) => _json(_),
       workflowName: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -235,7 +235,7 @@ export const se_CreateIdMappingWorkflowCommand = async (
  */
 export const se_CreateIdNamespaceCommand = async (
   input: CreateIdNamespaceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -252,7 +252,7 @@ export const se_CreateIdNamespaceCommand = async (
       roleArn: [],
       tags: (_) => _json(_),
       type: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -263,7 +263,7 @@ export const se_CreateIdNamespaceCommand = async (
  */
 export const se_CreateMatchingWorkflowCommand = async (
   input: CreateMatchingWorkflowCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -281,7 +281,7 @@ export const se_CreateMatchingWorkflowCommand = async (
       roleArn: [],
       tags: (_) => _json(_),
       workflowName: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -292,7 +292,7 @@ export const se_CreateMatchingWorkflowCommand = async (
  */
 export const se_CreateSchemaMappingCommand = async (
   input: CreateSchemaMappingCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -306,7 +306,7 @@ export const se_CreateSchemaMappingCommand = async (
       mappedInputFields: (_) => _json(_),
       schemaName: [],
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -317,7 +317,7 @@ export const se_CreateSchemaMappingCommand = async (
  */
 export const se_DeleteIdMappingWorkflowCommand = async (
   input: DeleteIdMappingWorkflowCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -333,7 +333,7 @@ export const se_DeleteIdMappingWorkflowCommand = async (
  */
 export const se_DeleteIdNamespaceCommand = async (
   input: DeleteIdNamespaceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -349,7 +349,7 @@ export const se_DeleteIdNamespaceCommand = async (
  */
 export const se_DeleteMatchingWorkflowCommand = async (
   input: DeleteMatchingWorkflowCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -365,7 +365,7 @@ export const se_DeleteMatchingWorkflowCommand = async (
  */
 export const se_DeletePolicyStatementCommand = async (
   input: DeletePolicyStatementCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -382,7 +382,7 @@ export const se_DeletePolicyStatementCommand = async (
  */
 export const se_DeleteSchemaMappingCommand = async (
   input: DeleteSchemaMappingCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -398,7 +398,7 @@ export const se_DeleteSchemaMappingCommand = async (
  */
 export const se_GetIdMappingJobCommand = async (
   input: GetIdMappingJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -415,7 +415,7 @@ export const se_GetIdMappingJobCommand = async (
  */
 export const se_GetIdMappingWorkflowCommand = async (
   input: GetIdMappingWorkflowCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -431,7 +431,7 @@ export const se_GetIdMappingWorkflowCommand = async (
  */
 export const se_GetIdNamespaceCommand = async (
   input: GetIdNamespaceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -447,7 +447,7 @@ export const se_GetIdNamespaceCommand = async (
  */
 export const se_GetMatchIdCommand = async (
   input: GetMatchIdCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -460,7 +460,7 @@ export const se_GetMatchIdCommand = async (
     take(input, {
       applyNormalization: [],
       record: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -471,7 +471,7 @@ export const se_GetMatchIdCommand = async (
  */
 export const se_GetMatchingJobCommand = async (
   input: GetMatchingJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -488,7 +488,7 @@ export const se_GetMatchingJobCommand = async (
  */
 export const se_GetMatchingWorkflowCommand = async (
   input: GetMatchingWorkflowCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -504,7 +504,7 @@ export const se_GetMatchingWorkflowCommand = async (
  */
 export const se_GetPolicyCommand = async (
   input: GetPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -520,7 +520,7 @@ export const se_GetPolicyCommand = async (
  */
 export const se_GetProviderServiceCommand = async (
   input: GetProviderServiceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -537,7 +537,7 @@ export const se_GetProviderServiceCommand = async (
  */
 export const se_GetSchemaMappingCommand = async (
   input: GetSchemaMappingCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -553,7 +553,7 @@ export const se_GetSchemaMappingCommand = async (
  */
 export const se_ListIdMappingJobsCommand = async (
   input: ListIdMappingJobsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -573,7 +573,7 @@ export const se_ListIdMappingJobsCommand = async (
  */
 export const se_ListIdMappingWorkflowsCommand = async (
   input: ListIdMappingWorkflowsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -592,7 +592,7 @@ export const se_ListIdMappingWorkflowsCommand = async (
  */
 export const se_ListIdNamespacesCommand = async (
   input: ListIdNamespacesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -611,7 +611,7 @@ export const se_ListIdNamespacesCommand = async (
  */
 export const se_ListMatchingJobsCommand = async (
   input: ListMatchingJobsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -631,7 +631,7 @@ export const se_ListMatchingJobsCommand = async (
  */
 export const se_ListMatchingWorkflowsCommand = async (
   input: ListMatchingWorkflowsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -650,7 +650,7 @@ export const se_ListMatchingWorkflowsCommand = async (
  */
 export const se_ListProviderServicesCommand = async (
   input: ListProviderServicesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -670,7 +670,7 @@ export const se_ListProviderServicesCommand = async (
  */
 export const se_ListSchemaMappingsCommand = async (
   input: ListSchemaMappingsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -689,7 +689,7 @@ export const se_ListSchemaMappingsCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -705,7 +705,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_PutPolicyCommand = async (
   input: PutPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -718,7 +718,7 @@ export const se_PutPolicyCommand = async (
     take(input, {
       policy: [],
       token: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -729,7 +729,7 @@ export const se_PutPolicyCommand = async (
  */
 export const se_StartIdMappingJobCommand = async (
   input: StartIdMappingJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -741,7 +741,7 @@ export const se_StartIdMappingJobCommand = async (
   body = JSON.stringify(
     take(input, {
       outputSourceConfig: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -752,7 +752,7 @@ export const se_StartIdMappingJobCommand = async (
  */
 export const se_StartMatchingJobCommand = async (
   input: StartMatchingJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -768,7 +768,7 @@ export const se_StartMatchingJobCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -780,7 +780,7 @@ export const se_TagResourceCommand = async (
   body = JSON.stringify(
     take(input, {
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -791,7 +791,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -813,7 +813,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateIdMappingWorkflowCommand = async (
   input: UpdateIdMappingWorkflowCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -829,7 +829,7 @@ export const se_UpdateIdMappingWorkflowCommand = async (
       inputSourceConfig: (_) => _json(_),
       outputSourceConfig: (_) => _json(_),
       roleArn: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -840,7 +840,7 @@ export const se_UpdateIdMappingWorkflowCommand = async (
  */
 export const se_UpdateIdNamespaceCommand = async (
   input: UpdateIdNamespaceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -855,7 +855,7 @@ export const se_UpdateIdNamespaceCommand = async (
       idMappingWorkflowProperties: (_) => se_IdNamespaceIdMappingWorkflowPropertiesList(_, context),
       inputSourceConfig: (_) => _json(_),
       roleArn: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -866,7 +866,7 @@ export const se_UpdateIdNamespaceCommand = async (
  */
 export const se_UpdateMatchingWorkflowCommand = async (
   input: UpdateMatchingWorkflowCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -883,7 +883,7 @@ export const se_UpdateMatchingWorkflowCommand = async (
       outputSourceConfig: (_) => _json(_),
       resolutionTechniques: (_) => se_ResolutionTechniques(_, context),
       roleArn: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -894,7 +894,7 @@ export const se_UpdateMatchingWorkflowCommand = async (
  */
 export const se_UpdateSchemaMappingCommand = async (
   input: UpdateSchemaMappingCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -907,7 +907,7 @@ export const se_UpdateSchemaMappingCommand = async (
     take(input, {
       description: [],
       mappedInputFields: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -918,7 +918,7 @@ export const se_UpdateSchemaMappingCommand = async (
  */
 export const de_AddPolicyStatementCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AddPolicyStatementCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -941,7 +941,7 @@ export const de_AddPolicyStatementCommand = async (
  */
 export const de_BatchDeleteUniqueIdCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchDeleteUniqueIdCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -965,7 +965,7 @@ export const de_BatchDeleteUniqueIdCommand = async (
  */
 export const de_CreateIdMappingWorkflowCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateIdMappingWorkflowCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -992,7 +992,7 @@ export const de_CreateIdMappingWorkflowCommand = async (
  */
 export const de_CreateIdNamespaceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateIdNamespaceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1022,7 +1022,7 @@ export const de_CreateIdNamespaceCommand = async (
  */
 export const de_CreateMatchingWorkflowCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateMatchingWorkflowCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1050,7 +1050,7 @@ export const de_CreateMatchingWorkflowCommand = async (
  */
 export const de_CreateSchemaMappingCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateSchemaMappingCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1074,7 +1074,7 @@ export const de_CreateSchemaMappingCommand = async (
  */
 export const de_DeleteIdMappingWorkflowCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteIdMappingWorkflowCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1095,7 +1095,7 @@ export const de_DeleteIdMappingWorkflowCommand = async (
  */
 export const de_DeleteIdNamespaceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteIdNamespaceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1116,7 +1116,7 @@ export const de_DeleteIdNamespaceCommand = async (
  */
 export const de_DeleteMatchingWorkflowCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteMatchingWorkflowCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1137,7 +1137,7 @@ export const de_DeleteMatchingWorkflowCommand = async (
  */
 export const de_DeletePolicyStatementCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeletePolicyStatementCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1160,7 +1160,7 @@ export const de_DeletePolicyStatementCommand = async (
  */
 export const de_DeleteSchemaMappingCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteSchemaMappingCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1181,7 +1181,7 @@ export const de_DeleteSchemaMappingCommand = async (
  */
 export const de_GetIdMappingJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetIdMappingJobCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1208,7 +1208,7 @@ export const de_GetIdMappingJobCommand = async (
  */
 export const de_GetIdMappingWorkflowCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetIdMappingWorkflowCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1238,7 +1238,7 @@ export const de_GetIdMappingWorkflowCommand = async (
  */
 export const de_GetIdNamespaceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetIdNamespaceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1268,7 +1268,7 @@ export const de_GetIdNamespaceCommand = async (
  */
 export const de_GetMatchIdCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetMatchIdCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1290,7 +1290,7 @@ export const de_GetMatchIdCommand = async (
  */
 export const de_GetMatchingJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetMatchingJobCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1317,7 +1317,7 @@ export const de_GetMatchingJobCommand = async (
  */
 export const de_GetMatchingWorkflowCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetMatchingWorkflowCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1348,7 +1348,7 @@ export const de_GetMatchingWorkflowCommand = async (
  */
 export const de_GetPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetPolicyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1371,7 +1371,7 @@ export const de_GetPolicyCommand = async (
  */
 export const de_GetProviderServiceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetProviderServiceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1404,7 +1404,7 @@ export const de_GetProviderServiceCommand = async (
  */
 export const de_GetSchemaMappingCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetSchemaMappingCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1432,7 +1432,7 @@ export const de_GetSchemaMappingCommand = async (
  */
 export const de_ListIdMappingJobsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListIdMappingJobsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1454,7 +1454,7 @@ export const de_ListIdMappingJobsCommand = async (
  */
 export const de_ListIdMappingWorkflowsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListIdMappingWorkflowsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1476,7 +1476,7 @@ export const de_ListIdMappingWorkflowsCommand = async (
  */
 export const de_ListIdNamespacesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListIdNamespacesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1498,7 +1498,7 @@ export const de_ListIdNamespacesCommand = async (
  */
 export const de_ListMatchingJobsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListMatchingJobsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1520,7 +1520,7 @@ export const de_ListMatchingJobsCommand = async (
  */
 export const de_ListMatchingWorkflowsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListMatchingWorkflowsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1542,7 +1542,7 @@ export const de_ListMatchingWorkflowsCommand = async (
  */
 export const de_ListProviderServicesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListProviderServicesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1564,7 +1564,7 @@ export const de_ListProviderServicesCommand = async (
  */
 export const de_ListSchemaMappingsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListSchemaMappingsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1586,7 +1586,7 @@ export const de_ListSchemaMappingsCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1607,7 +1607,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_PutPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutPolicyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1630,7 +1630,7 @@ export const de_PutPolicyCommand = async (
  */
 export const de_StartIdMappingJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartIdMappingJobCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1652,7 +1652,7 @@ export const de_StartIdMappingJobCommand = async (
  */
 export const de_StartMatchingJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartMatchingJobCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1673,7 +1673,7 @@ export const de_StartMatchingJobCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1690,7 +1690,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1707,7 +1707,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateIdMappingWorkflowCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateIdMappingWorkflowCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1734,7 +1734,7 @@ export const de_UpdateIdMappingWorkflowCommand = async (
  */
 export const de_UpdateIdNamespaceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateIdNamespaceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1763,7 +1763,7 @@ export const de_UpdateIdNamespaceCommand = async (
  */
 export const de_UpdateMatchingWorkflowCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateMatchingWorkflowCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1790,7 +1790,7 @@ export const de_UpdateMatchingWorkflowCommand = async (
  */
 export const de_UpdateSchemaMappingCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateSchemaMappingCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1856,7 +1856,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1893,7 +1893,7 @@ const de_ConflictExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_ExceedsLimitExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ExceedsLimitException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1915,7 +1915,7 @@ const de_ExceedsLimitExceptionRes = async (
  */
 const de_InternalServerExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1935,7 +1935,7 @@ const de_InternalServerExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2011,7 +2011,7 @@ const se_IdMappingTechniques = (input: IdMappingTechniques, context: __SerdeCont
  */
 const se_IdNamespaceIdMappingWorkflowProperties = (
   input: IdNamespaceIdMappingWorkflowProperties,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     idMappingType: [],
@@ -2024,7 +2024,7 @@ const se_IdNamespaceIdMappingWorkflowProperties = (
  */
 const se_IdNamespaceIdMappingWorkflowPropertiesList = (
   input: IdNamespaceIdMappingWorkflowProperties[],
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return input
     .filter((e: any) => e != null)
@@ -2179,7 +2179,7 @@ const de_IdMappingWorkflowSummary = (output: any, context: __SerdeContext): IdMa
  */
 const de_IdNamespaceIdMappingWorkflowProperties = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): IdNamespaceIdMappingWorkflowProperties => {
   return take(output, {
     idMappingType: __expectString,
@@ -2192,7 +2192,7 @@ const de_IdNamespaceIdMappingWorkflowProperties = (
  */
 const de_IdNamespaceIdMappingWorkflowPropertiesList = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): IdNamespaceIdMappingWorkflowProperties[] => {
   const retVal = (output || [])
     .filter((e: any) => e != null)
@@ -2324,7 +2324,7 @@ const de_NamespaceProviderProperties = (output: any, context: __SerdeContext): N
  */
 const de_ProviderIdNameSpaceConfiguration = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ProviderIdNameSpaceConfiguration => {
   return take(output, {
     description: __expectString,

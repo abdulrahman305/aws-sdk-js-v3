@@ -10,7 +10,7 @@ interface Buffers {
 export async function* getChunkStream<T>(
   data: T,
   partSize: number,
-  getNextData: (data: T) => AsyncGenerator<Uint8Array>
+  getNextData: (data: T) => AsyncGenerator<Uint8Array>,
 ): AsyncGenerator<RawDataPart, void, undefined> {
   let partNumber = 1;
   const currentBuffer: Buffers = { chunks: [], length: 0 };

@@ -40,16 +40,16 @@ export interface Pricing {
   describeServices(): Promise<DescribeServicesCommandOutput>;
   describeServices(
     args: DescribeServicesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeServicesCommandOutput>;
   describeServices(
     args: DescribeServicesCommandInput,
-    cb: (err: any, data?: DescribeServicesCommandOutput) => void
+    cb: (err: any, data?: DescribeServicesCommandOutput) => void,
   ): void;
   describeServices(
     args: DescribeServicesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeServicesCommandOutput) => void
+    cb: (err: any, data?: DescribeServicesCommandOutput) => void,
   ): void;
 
   /**
@@ -57,16 +57,16 @@ export interface Pricing {
    */
   getAttributeValues(
     args: GetAttributeValuesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetAttributeValuesCommandOutput>;
   getAttributeValues(
     args: GetAttributeValuesCommandInput,
-    cb: (err: any, data?: GetAttributeValuesCommandOutput) => void
+    cb: (err: any, data?: GetAttributeValuesCommandOutput) => void,
   ): void;
   getAttributeValues(
     args: GetAttributeValuesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetAttributeValuesCommandOutput) => void
+    cb: (err: any, data?: GetAttributeValuesCommandOutput) => void,
   ): void;
 
   /**
@@ -74,16 +74,16 @@ export interface Pricing {
    */
   getPriceListFileUrl(
     args: GetPriceListFileUrlCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetPriceListFileUrlCommandOutput>;
   getPriceListFileUrl(
     args: GetPriceListFileUrlCommandInput,
-    cb: (err: any, data?: GetPriceListFileUrlCommandOutput) => void
+    cb: (err: any, data?: GetPriceListFileUrlCommandOutput) => void,
   ): void;
   getPriceListFileUrl(
     args: GetPriceListFileUrlCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetPriceListFileUrlCommandOutput) => void
+    cb: (err: any, data?: GetPriceListFileUrlCommandOutput) => void,
   ): void;
 
   /**
@@ -94,7 +94,7 @@ export interface Pricing {
   getProducts(
     args: GetProductsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetProductsCommandOutput) => void
+    cb: (err: any, data?: GetProductsCommandOutput) => void,
   ): void;
 
   /**
@@ -102,13 +102,13 @@ export interface Pricing {
    */
   listPriceLists(
     args: ListPriceListsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListPriceListsCommandOutput>;
   listPriceLists(args: ListPriceListsCommandInput, cb: (err: any, data?: ListPriceListsCommandOutput) => void): void;
   listPriceLists(
     args: ListPriceListsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListPriceListsCommandOutput) => void
+    cb: (err: any, data?: ListPriceListsCommandOutput) => void,
   ): void;
 }
 

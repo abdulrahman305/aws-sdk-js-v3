@@ -161,7 +161,7 @@ export class CreateCalculatedAttributeDefinitionCommand extends $Command
   .n("CustomerProfilesClient", "CreateCalculatedAttributeDefinitionCommand")
   .f(
     CreateCalculatedAttributeDefinitionRequestFilterSensitiveLog,
-    CreateCalculatedAttributeDefinitionResponseFilterSensitiveLog
+    CreateCalculatedAttributeDefinitionResponseFilterSensitiveLog,
   )
   .ser(se_CreateCalculatedAttributeDefinitionCommand)
   .de(de_CreateCalculatedAttributeDefinitionCommand)

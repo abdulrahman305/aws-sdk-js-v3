@@ -362,7 +362,7 @@ import {
  */
 export const se_AssociateMemberToFarmCommand = async (
   input: AssociateMemberToFarmCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -377,7 +377,7 @@ export const se_AssociateMemberToFarmCommand = async (
       identityStoreId: [],
       membershipLevel: [],
       principalType: [],
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -396,7 +396,7 @@ export const se_AssociateMemberToFarmCommand = async (
  */
 export const se_AssociateMemberToFleetCommand = async (
   input: AssociateMemberToFleetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -412,7 +412,7 @@ export const se_AssociateMemberToFleetCommand = async (
       identityStoreId: [],
       membershipLevel: [],
       principalType: [],
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -431,7 +431,7 @@ export const se_AssociateMemberToFleetCommand = async (
  */
 export const se_AssociateMemberToJobCommand = async (
   input: AssociateMemberToJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -448,7 +448,7 @@ export const se_AssociateMemberToJobCommand = async (
       identityStoreId: [],
       membershipLevel: [],
       principalType: [],
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -467,7 +467,7 @@ export const se_AssociateMemberToJobCommand = async (
  */
 export const se_AssociateMemberToQueueCommand = async (
   input: AssociateMemberToQueueCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -483,7 +483,7 @@ export const se_AssociateMemberToQueueCommand = async (
       identityStoreId: [],
       membershipLevel: [],
       principalType: [],
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -502,7 +502,7 @@ export const se_AssociateMemberToQueueCommand = async (
  */
 export const se_AssumeFleetRoleForReadCommand = async (
   input: AssumeFleetRoleForReadCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -527,7 +527,7 @@ export const se_AssumeFleetRoleForReadCommand = async (
  */
 export const se_AssumeFleetRoleForWorkerCommand = async (
   input: AssumeFleetRoleForWorkerCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -553,7 +553,7 @@ export const se_AssumeFleetRoleForWorkerCommand = async (
  */
 export const se_AssumeQueueRoleForReadCommand = async (
   input: AssumeQueueRoleForReadCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -578,7 +578,7 @@ export const se_AssumeQueueRoleForReadCommand = async (
  */
 export const se_AssumeQueueRoleForUserCommand = async (
   input: AssumeQueueRoleForUserCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -603,7 +603,7 @@ export const se_AssumeQueueRoleForUserCommand = async (
  */
 export const se_AssumeQueueRoleForWorkerCommand = async (
   input: AssumeQueueRoleForWorkerCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -632,7 +632,7 @@ export const se_AssumeQueueRoleForWorkerCommand = async (
  */
 export const se_BatchGetJobEntityCommand = async (
   input: BatchGetJobEntityCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -646,7 +646,7 @@ export const se_BatchGetJobEntityCommand = async (
   body = JSON.stringify(
     take(input, {
       identifiers: (_) => _json(_),
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -665,7 +665,7 @@ export const se_BatchGetJobEntityCommand = async (
  */
 export const se_CopyJobTemplateCommand = async (
   input: CopyJobTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -679,7 +679,7 @@ export const se_CopyJobTemplateCommand = async (
   body = JSON.stringify(
     take(input, {
       targetS3Location: (_) => _json(_),
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -698,7 +698,7 @@ export const se_CopyJobTemplateCommand = async (
  */
 export const se_CreateBudgetCommand = async (
   input: CreateBudgetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -716,7 +716,7 @@ export const se_CreateBudgetCommand = async (
       displayName: [],
       schedule: (_) => se_BudgetSchedule(_, context),
       usageTrackingResource: (_) => _json(_),
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -735,7 +735,7 @@ export const se_CreateBudgetCommand = async (
  */
 export const se_CreateFarmCommand = async (
   input: CreateFarmCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -750,7 +750,7 @@ export const se_CreateFarmCommand = async (
       displayName: [],
       kmsKeyArn: [],
       tags: (_) => _json(_),
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -769,7 +769,7 @@ export const se_CreateFarmCommand = async (
  */
 export const se_CreateFleetCommand = async (
   input: CreateFleetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -788,7 +788,7 @@ export const se_CreateFleetCommand = async (
       minWorkerCount: [],
       roleArn: [],
       tags: (_) => _json(_),
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -807,7 +807,7 @@ export const se_CreateFleetCommand = async (
  */
 export const se_CreateJobCommand = async (
   input: CreateJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -829,7 +829,7 @@ export const se_CreateJobCommand = async (
       targetTaskRunStatus: [],
       template: [],
       templateType: [],
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -848,7 +848,7 @@ export const se_CreateJobCommand = async (
  */
 export const se_CreateLicenseEndpointCommand = async (
   input: CreateLicenseEndpointCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -863,7 +863,7 @@ export const se_CreateLicenseEndpointCommand = async (
       subnetIds: (_) => _json(_),
       tags: (_) => _json(_),
       vpcId: [],
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -882,7 +882,7 @@ export const se_CreateLicenseEndpointCommand = async (
  */
 export const se_CreateMonitorCommand = async (
   input: CreateMonitorCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -897,7 +897,7 @@ export const se_CreateMonitorCommand = async (
       identityCenterInstanceArn: [],
       roleArn: [],
       subdomain: [],
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -916,7 +916,7 @@ export const se_CreateMonitorCommand = async (
  */
 export const se_CreateQueueCommand = async (
   input: CreateQueueCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -937,7 +937,7 @@ export const se_CreateQueueCommand = async (
       requiredFileSystemLocationNames: (_) => _json(_),
       roleArn: [],
       tags: (_) => _json(_),
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -956,7 +956,7 @@ export const se_CreateQueueCommand = async (
  */
 export const se_CreateQueueEnvironmentCommand = async (
   input: CreateQueueEnvironmentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -972,7 +972,7 @@ export const se_CreateQueueEnvironmentCommand = async (
       priority: [],
       template: [],
       templateType: [],
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -991,7 +991,7 @@ export const se_CreateQueueEnvironmentCommand = async (
  */
 export const se_CreateQueueFleetAssociationCommand = async (
   input: CreateQueueFleetAssociationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1004,7 +1004,7 @@ export const se_CreateQueueFleetAssociationCommand = async (
     take(input, {
       fleetId: [],
       queueId: [],
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -1023,7 +1023,7 @@ export const se_CreateQueueFleetAssociationCommand = async (
  */
 export const se_CreateStorageProfileCommand = async (
   input: CreateStorageProfileCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1038,7 +1038,7 @@ export const se_CreateStorageProfileCommand = async (
       displayName: [],
       fileSystemLocations: (_) => _json(_),
       osFamily: [],
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -1057,7 +1057,7 @@ export const se_CreateStorageProfileCommand = async (
  */
 export const se_CreateWorkerCommand = async (
   input: CreateWorkerCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1071,7 +1071,7 @@ export const se_CreateWorkerCommand = async (
   body = JSON.stringify(
     take(input, {
       hostProperties: (_) => _json(_),
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -1090,7 +1090,7 @@ export const se_CreateWorkerCommand = async (
  */
 export const se_DeleteBudgetCommand = async (
   input: DeleteBudgetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1115,7 +1115,7 @@ export const se_DeleteBudgetCommand = async (
  */
 export const se_DeleteFarmCommand = async (
   input: DeleteFarmCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1139,7 +1139,7 @@ export const se_DeleteFarmCommand = async (
  */
 export const se_DeleteFleetCommand = async (
   input: DeleteFleetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1166,7 +1166,7 @@ export const se_DeleteFleetCommand = async (
  */
 export const se_DeleteLicenseEndpointCommand = async (
   input: DeleteLicenseEndpointCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1190,7 +1190,7 @@ export const se_DeleteLicenseEndpointCommand = async (
  */
 export const se_DeleteMeteredProductCommand = async (
   input: DeleteMeteredProductCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1215,7 +1215,7 @@ export const se_DeleteMeteredProductCommand = async (
  */
 export const se_DeleteMonitorCommand = async (
   input: DeleteMonitorCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1239,7 +1239,7 @@ export const se_DeleteMonitorCommand = async (
  */
 export const se_DeleteQueueCommand = async (
   input: DeleteQueueCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1264,7 +1264,7 @@ export const se_DeleteQueueCommand = async (
  */
 export const se_DeleteQueueEnvironmentCommand = async (
   input: DeleteQueueEnvironmentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1290,7 +1290,7 @@ export const se_DeleteQueueEnvironmentCommand = async (
  */
 export const se_DeleteQueueFleetAssociationCommand = async (
   input: DeleteQueueFleetAssociationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1316,7 +1316,7 @@ export const se_DeleteQueueFleetAssociationCommand = async (
  */
 export const se_DeleteStorageProfileCommand = async (
   input: DeleteStorageProfileCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1341,7 +1341,7 @@ export const se_DeleteStorageProfileCommand = async (
  */
 export const se_DeleteWorkerCommand = async (
   input: DeleteWorkerCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1367,7 +1367,7 @@ export const se_DeleteWorkerCommand = async (
  */
 export const se_DisassociateMemberFromFarmCommand = async (
   input: DisassociateMemberFromFarmCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1392,7 +1392,7 @@ export const se_DisassociateMemberFromFarmCommand = async (
  */
 export const se_DisassociateMemberFromFleetCommand = async (
   input: DisassociateMemberFromFleetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1418,7 +1418,7 @@ export const se_DisassociateMemberFromFleetCommand = async (
  */
 export const se_DisassociateMemberFromJobCommand = async (
   input: DisassociateMemberFromJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1445,7 +1445,7 @@ export const se_DisassociateMemberFromJobCommand = async (
  */
 export const se_DisassociateMemberFromQueueCommand = async (
   input: DisassociateMemberFromQueueCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1471,7 +1471,7 @@ export const se_DisassociateMemberFromQueueCommand = async (
  */
 export const se_GetBudgetCommand = async (
   input: GetBudgetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1496,7 +1496,7 @@ export const se_GetBudgetCommand = async (
  */
 export const se_GetFarmCommand = async (
   input: GetFarmCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1520,7 +1520,7 @@ export const se_GetFarmCommand = async (
  */
 export const se_GetFleetCommand = async (
   input: GetFleetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1568,7 +1568,7 @@ export const se_GetJobCommand = async (input: GetJobCommandInput, context: __Ser
  */
 export const se_GetLicenseEndpointCommand = async (
   input: GetLicenseEndpointCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1592,7 +1592,7 @@ export const se_GetLicenseEndpointCommand = async (
  */
 export const se_GetMonitorCommand = async (
   input: GetMonitorCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1616,7 +1616,7 @@ export const se_GetMonitorCommand = async (
  */
 export const se_GetQueueCommand = async (
   input: GetQueueCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1641,7 +1641,7 @@ export const se_GetQueueCommand = async (
  */
 export const se_GetQueueEnvironmentCommand = async (
   input: GetQueueEnvironmentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1667,7 +1667,7 @@ export const se_GetQueueEnvironmentCommand = async (
  */
 export const se_GetQueueFleetAssociationCommand = async (
   input: GetQueueFleetAssociationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1693,7 +1693,7 @@ export const se_GetQueueFleetAssociationCommand = async (
  */
 export const se_GetSessionCommand = async (
   input: GetSessionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1720,7 +1720,7 @@ export const se_GetSessionCommand = async (
  */
 export const se_GetSessionActionCommand = async (
   input: GetSessionActionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1747,7 +1747,7 @@ export const se_GetSessionActionCommand = async (
  */
 export const se_GetSessionsStatisticsAggregationCommand = async (
   input: GetSessionsStatisticsAggregationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1776,7 +1776,7 @@ export const se_GetSessionsStatisticsAggregationCommand = async (
  */
 export const se_GetStepCommand = async (
   input: GetStepCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1803,7 +1803,7 @@ export const se_GetStepCommand = async (
  */
 export const se_GetStorageProfileCommand = async (
   input: GetStorageProfileCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1828,7 +1828,7 @@ export const se_GetStorageProfileCommand = async (
  */
 export const se_GetStorageProfileForQueueCommand = async (
   input: GetStorageProfileForQueueCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1854,7 +1854,7 @@ export const se_GetStorageProfileForQueueCommand = async (
  */
 export const se_GetTaskCommand = async (
   input: GetTaskCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1882,7 +1882,7 @@ export const se_GetTaskCommand = async (
  */
 export const se_GetWorkerCommand = async (
   input: GetWorkerCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1908,7 +1908,7 @@ export const se_GetWorkerCommand = async (
  */
 export const se_ListAvailableMeteredProductsCommand = async (
   input: ListAvailableMeteredProductsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1935,7 +1935,7 @@ export const se_ListAvailableMeteredProductsCommand = async (
  */
 export const se_ListBudgetsCommand = async (
   input: ListBudgetsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1964,7 +1964,7 @@ export const se_ListBudgetsCommand = async (
  */
 export const se_ListFarmMembersCommand = async (
   input: ListFarmMembersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1992,7 +1992,7 @@ export const se_ListFarmMembersCommand = async (
  */
 export const se_ListFarmsCommand = async (
   input: ListFarmsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -2020,7 +2020,7 @@ export const se_ListFarmsCommand = async (
  */
 export const se_ListFleetMembersCommand = async (
   input: ListFleetMembersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -2049,7 +2049,7 @@ export const se_ListFleetMembersCommand = async (
  */
 export const se_ListFleetsCommand = async (
   input: ListFleetsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -2080,7 +2080,7 @@ export const se_ListFleetsCommand = async (
  */
 export const se_ListJobMembersCommand = async (
   input: ListJobMembersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -2110,7 +2110,7 @@ export const se_ListJobMembersCommand = async (
  */
 export const se_ListJobsCommand = async (
   input: ListJobsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -2140,7 +2140,7 @@ export const se_ListJobsCommand = async (
  */
 export const se_ListLicenseEndpointsCommand = async (
   input: ListLicenseEndpointsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -2167,7 +2167,7 @@ export const se_ListLicenseEndpointsCommand = async (
  */
 export const se_ListMeteredProductsCommand = async (
   input: ListMeteredProductsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -2195,7 +2195,7 @@ export const se_ListMeteredProductsCommand = async (
  */
 export const se_ListMonitorsCommand = async (
   input: ListMonitorsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -2222,7 +2222,7 @@ export const se_ListMonitorsCommand = async (
  */
 export const se_ListQueueEnvironmentsCommand = async (
   input: ListQueueEnvironmentsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -2251,7 +2251,7 @@ export const se_ListQueueEnvironmentsCommand = async (
  */
 export const se_ListQueueFleetAssociationsCommand = async (
   input: ListQueueFleetAssociationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -2281,7 +2281,7 @@ export const se_ListQueueFleetAssociationsCommand = async (
  */
 export const se_ListQueueMembersCommand = async (
   input: ListQueueMembersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -2310,7 +2310,7 @@ export const se_ListQueueMembersCommand = async (
  */
 export const se_ListQueuesCommand = async (
   input: ListQueuesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -2340,7 +2340,7 @@ export const se_ListQueuesCommand = async (
  */
 export const se_ListSessionActionsCommand = async (
   input: ListSessionActionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -2372,7 +2372,7 @@ export const se_ListSessionActionsCommand = async (
  */
 export const se_ListSessionsCommand = async (
   input: ListSessionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -2402,7 +2402,7 @@ export const se_ListSessionsCommand = async (
  */
 export const se_ListSessionsForWorkerCommand = async (
   input: ListSessionsForWorkerCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -2432,7 +2432,7 @@ export const se_ListSessionsForWorkerCommand = async (
  */
 export const se_ListStepConsumersCommand = async (
   input: ListStepConsumersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -2463,7 +2463,7 @@ export const se_ListStepConsumersCommand = async (
  */
 export const se_ListStepDependenciesCommand = async (
   input: ListStepDependenciesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -2494,7 +2494,7 @@ export const se_ListStepDependenciesCommand = async (
  */
 export const se_ListStepsCommand = async (
   input: ListStepsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -2524,7 +2524,7 @@ export const se_ListStepsCommand = async (
  */
 export const se_ListStorageProfilesCommand = async (
   input: ListStorageProfilesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -2552,7 +2552,7 @@ export const se_ListStorageProfilesCommand = async (
  */
 export const se_ListStorageProfilesForQueueCommand = async (
   input: ListStorageProfilesForQueueCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -2581,7 +2581,7 @@ export const se_ListStorageProfilesForQueueCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -2605,7 +2605,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_ListTasksCommand = async (
   input: ListTasksCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -2636,7 +2636,7 @@ export const se_ListTasksCommand = async (
  */
 export const se_ListWorkersCommand = async (
   input: ListWorkersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -2665,7 +2665,7 @@ export const se_ListWorkersCommand = async (
  */
 export const se_PutMeteredProductCommand = async (
   input: PutMeteredProductCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -2690,7 +2690,7 @@ export const se_PutMeteredProductCommand = async (
  */
 export const se_SearchJobsCommand = async (
   input: SearchJobsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2706,7 +2706,7 @@ export const se_SearchJobsCommand = async (
       pageSize: [],
       queueIds: (_) => _json(_),
       sortExpressions: (_) => _json(_),
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -2725,7 +2725,7 @@ export const se_SearchJobsCommand = async (
  */
 export const se_SearchStepsCommand = async (
   input: SearchStepsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2742,7 +2742,7 @@ export const se_SearchStepsCommand = async (
       pageSize: [],
       queueIds: (_) => _json(_),
       sortExpressions: (_) => _json(_),
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -2761,7 +2761,7 @@ export const se_SearchStepsCommand = async (
  */
 export const se_SearchTasksCommand = async (
   input: SearchTasksCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2778,7 +2778,7 @@ export const se_SearchTasksCommand = async (
       pageSize: [],
       queueIds: (_) => _json(_),
       sortExpressions: (_) => _json(_),
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -2797,7 +2797,7 @@ export const se_SearchTasksCommand = async (
  */
 export const se_SearchWorkersCommand = async (
   input: SearchWorkersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2813,7 +2813,7 @@ export const se_SearchWorkersCommand = async (
       itemOffset: [],
       pageSize: [],
       sortExpressions: (_) => _json(_),
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -2832,7 +2832,7 @@ export const se_SearchWorkersCommand = async (
  */
 export const se_StartSessionsStatisticsAggregationCommand = async (
   input: StartSessionsStatisticsAggregationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2850,7 +2850,7 @@ export const se_StartSessionsStatisticsAggregationCommand = async (
       startTime: (_) => __serializeDateTime(_),
       statistics: (_) => _json(_),
       timezone: [],
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -2869,7 +2869,7 @@ export const se_StartSessionsStatisticsAggregationCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2881,7 +2881,7 @@ export const se_TagResourceCommand = async (
   body = JSON.stringify(
     take(input, {
       tags: (_) => _json(_),
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -2900,7 +2900,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -2930,7 +2930,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateBudgetCommand = async (
   input: UpdateBudgetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -2950,7 +2950,7 @@ export const se_UpdateBudgetCommand = async (
       displayName: [],
       schedule: (_) => se_BudgetSchedule(_, context),
       status: [],
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -2969,7 +2969,7 @@ export const se_UpdateBudgetCommand = async (
  */
 export const se_UpdateFarmCommand = async (
   input: UpdateFarmCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2982,7 +2982,7 @@ export const se_UpdateFarmCommand = async (
     take(input, {
       description: [],
       displayName: [],
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -3001,7 +3001,7 @@ export const se_UpdateFarmCommand = async (
  */
 export const se_UpdateFleetCommand = async (
   input: UpdateFleetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -3020,7 +3020,7 @@ export const se_UpdateFleetCommand = async (
       maxWorkerCount: [],
       minWorkerCount: [],
       roleArn: [],
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -3039,7 +3039,7 @@ export const se_UpdateFleetCommand = async (
  */
 export const se_UpdateJobCommand = async (
   input: UpdateJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -3058,7 +3058,7 @@ export const se_UpdateJobCommand = async (
       maxRetriesPerTask: [],
       priority: [],
       targetTaskRunStatus: [],
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -3077,7 +3077,7 @@ export const se_UpdateJobCommand = async (
  */
 export const se_UpdateMonitorCommand = async (
   input: UpdateMonitorCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -3091,7 +3091,7 @@ export const se_UpdateMonitorCommand = async (
       displayName: [],
       roleArn: [],
       subdomain: [],
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -3110,7 +3110,7 @@ export const se_UpdateMonitorCommand = async (
  */
 export const se_UpdateQueueCommand = async (
   input: UpdateQueueCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -3133,7 +3133,7 @@ export const se_UpdateQueueCommand = async (
       requiredFileSystemLocationNamesToAdd: (_) => _json(_),
       requiredFileSystemLocationNamesToRemove: (_) => _json(_),
       roleArn: [],
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -3152,7 +3152,7 @@ export const se_UpdateQueueCommand = async (
  */
 export const se_UpdateQueueEnvironmentCommand = async (
   input: UpdateQueueEnvironmentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -3169,7 +3169,7 @@ export const se_UpdateQueueEnvironmentCommand = async (
       priority: [],
       template: [],
       templateType: [],
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -3188,7 +3188,7 @@ export const se_UpdateQueueEnvironmentCommand = async (
  */
 export const se_UpdateQueueFleetAssociationCommand = async (
   input: UpdateQueueFleetAssociationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -3202,7 +3202,7 @@ export const se_UpdateQueueFleetAssociationCommand = async (
   body = JSON.stringify(
     take(input, {
       status: [],
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -3221,7 +3221,7 @@ export const se_UpdateQueueFleetAssociationCommand = async (
  */
 export const se_UpdateSessionCommand = async (
   input: UpdateSessionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -3237,7 +3237,7 @@ export const se_UpdateSessionCommand = async (
   body = JSON.stringify(
     take(input, {
       targetLifecycleStatus: [],
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -3256,7 +3256,7 @@ export const se_UpdateSessionCommand = async (
  */
 export const se_UpdateStepCommand = async (
   input: UpdateStepCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -3272,7 +3272,7 @@ export const se_UpdateStepCommand = async (
   body = JSON.stringify(
     take(input, {
       targetTaskRunStatus: [],
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -3291,7 +3291,7 @@ export const se_UpdateStepCommand = async (
  */
 export const se_UpdateStorageProfileCommand = async (
   input: UpdateStorageProfileCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -3308,7 +3308,7 @@ export const se_UpdateStorageProfileCommand = async (
       fileSystemLocationsToAdd: (_) => _json(_),
       fileSystemLocationsToRemove: (_) => _json(_),
       osFamily: [],
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -3327,7 +3327,7 @@ export const se_UpdateStorageProfileCommand = async (
  */
 export const se_UpdateTaskCommand = async (
   input: UpdateTaskCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -3344,7 +3344,7 @@ export const se_UpdateTaskCommand = async (
   body = JSON.stringify(
     take(input, {
       targetRunStatus: [],
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -3363,7 +3363,7 @@ export const se_UpdateTaskCommand = async (
  */
 export const se_UpdateWorkerCommand = async (
   input: UpdateWorkerCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -3379,7 +3379,7 @@ export const se_UpdateWorkerCommand = async (
       capabilities: (_) => se_WorkerCapabilities(_, context),
       hostProperties: (_) => _json(_),
       status: [],
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -3398,7 +3398,7 @@ export const se_UpdateWorkerCommand = async (
  */
 export const se_UpdateWorkerScheduleCommand = async (
   input: UpdateWorkerScheduleCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -3412,7 +3412,7 @@ export const se_UpdateWorkerScheduleCommand = async (
   body = JSON.stringify(
     take(input, {
       updatedSessionActions: (_) => se_UpdatedSessionActions(_, context),
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -3431,7 +3431,7 @@ export const se_UpdateWorkerScheduleCommand = async (
  */
 export const de_AssociateMemberToFarmCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssociateMemberToFarmCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3448,7 +3448,7 @@ export const de_AssociateMemberToFarmCommand = async (
  */
 export const de_AssociateMemberToFleetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssociateMemberToFleetCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3465,7 +3465,7 @@ export const de_AssociateMemberToFleetCommand = async (
  */
 export const de_AssociateMemberToJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssociateMemberToJobCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3482,7 +3482,7 @@ export const de_AssociateMemberToJobCommand = async (
  */
 export const de_AssociateMemberToQueueCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssociateMemberToQueueCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3499,7 +3499,7 @@ export const de_AssociateMemberToQueueCommand = async (
  */
 export const de_AssumeFleetRoleForReadCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssumeFleetRoleForReadCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3520,7 +3520,7 @@ export const de_AssumeFleetRoleForReadCommand = async (
  */
 export const de_AssumeFleetRoleForWorkerCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssumeFleetRoleForWorkerCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3541,7 +3541,7 @@ export const de_AssumeFleetRoleForWorkerCommand = async (
  */
 export const de_AssumeQueueRoleForReadCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssumeQueueRoleForReadCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3562,7 +3562,7 @@ export const de_AssumeQueueRoleForReadCommand = async (
  */
 export const de_AssumeQueueRoleForUserCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssumeQueueRoleForUserCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3583,7 +3583,7 @@ export const de_AssumeQueueRoleForUserCommand = async (
  */
 export const de_AssumeQueueRoleForWorkerCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssumeQueueRoleForWorkerCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3604,7 +3604,7 @@ export const de_AssumeQueueRoleForWorkerCommand = async (
  */
 export const de_BatchGetJobEntityCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchGetJobEntityCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3626,7 +3626,7 @@ export const de_BatchGetJobEntityCommand = async (
  */
 export const de_CopyJobTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CopyJobTemplateCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3647,7 +3647,7 @@ export const de_CopyJobTemplateCommand = async (
  */
 export const de_CreateBudgetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateBudgetCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3668,7 +3668,7 @@ export const de_CreateBudgetCommand = async (
  */
 export const de_CreateFarmCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateFarmCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3689,7 +3689,7 @@ export const de_CreateFarmCommand = async (
  */
 export const de_CreateFleetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateFleetCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3710,7 +3710,7 @@ export const de_CreateFleetCommand = async (
  */
 export const de_CreateJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateJobCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3731,7 +3731,7 @@ export const de_CreateJobCommand = async (
  */
 export const de_CreateLicenseEndpointCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateLicenseEndpointCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3752,7 +3752,7 @@ export const de_CreateLicenseEndpointCommand = async (
  */
 export const de_CreateMonitorCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateMonitorCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3774,7 +3774,7 @@ export const de_CreateMonitorCommand = async (
  */
 export const de_CreateQueueCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateQueueCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3795,7 +3795,7 @@ export const de_CreateQueueCommand = async (
  */
 export const de_CreateQueueEnvironmentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateQueueEnvironmentCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3816,7 +3816,7 @@ export const de_CreateQueueEnvironmentCommand = async (
  */
 export const de_CreateQueueFleetAssociationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateQueueFleetAssociationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3833,7 +3833,7 @@ export const de_CreateQueueFleetAssociationCommand = async (
  */
 export const de_CreateStorageProfileCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateStorageProfileCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3854,7 +3854,7 @@ export const de_CreateStorageProfileCommand = async (
  */
 export const de_CreateWorkerCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateWorkerCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3875,7 +3875,7 @@ export const de_CreateWorkerCommand = async (
  */
 export const de_DeleteBudgetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteBudgetCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3892,7 +3892,7 @@ export const de_DeleteBudgetCommand = async (
  */
 export const de_DeleteFarmCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteFarmCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3909,7 +3909,7 @@ export const de_DeleteFarmCommand = async (
  */
 export const de_DeleteFleetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteFleetCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3926,7 +3926,7 @@ export const de_DeleteFleetCommand = async (
  */
 export const de_DeleteLicenseEndpointCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteLicenseEndpointCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3943,7 +3943,7 @@ export const de_DeleteLicenseEndpointCommand = async (
  */
 export const de_DeleteMeteredProductCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteMeteredProductCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3960,7 +3960,7 @@ export const de_DeleteMeteredProductCommand = async (
  */
 export const de_DeleteMonitorCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteMonitorCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3977,7 +3977,7 @@ export const de_DeleteMonitorCommand = async (
  */
 export const de_DeleteQueueCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteQueueCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3994,7 +3994,7 @@ export const de_DeleteQueueCommand = async (
  */
 export const de_DeleteQueueEnvironmentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteQueueEnvironmentCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4011,7 +4011,7 @@ export const de_DeleteQueueEnvironmentCommand = async (
  */
 export const de_DeleteQueueFleetAssociationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteQueueFleetAssociationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4028,7 +4028,7 @@ export const de_DeleteQueueFleetAssociationCommand = async (
  */
 export const de_DeleteStorageProfileCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteStorageProfileCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4045,7 +4045,7 @@ export const de_DeleteStorageProfileCommand = async (
  */
 export const de_DeleteWorkerCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteWorkerCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4062,7 +4062,7 @@ export const de_DeleteWorkerCommand = async (
  */
 export const de_DisassociateMemberFromFarmCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisassociateMemberFromFarmCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4079,7 +4079,7 @@ export const de_DisassociateMemberFromFarmCommand = async (
  */
 export const de_DisassociateMemberFromFleetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisassociateMemberFromFleetCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4096,7 +4096,7 @@ export const de_DisassociateMemberFromFleetCommand = async (
  */
 export const de_DisassociateMemberFromJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisassociateMemberFromJobCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4113,7 +4113,7 @@ export const de_DisassociateMemberFromJobCommand = async (
  */
 export const de_DisassociateMemberFromQueueCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisassociateMemberFromQueueCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4130,7 +4130,7 @@ export const de_DisassociateMemberFromQueueCommand = async (
  */
 export const de_GetBudgetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetBudgetCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4164,7 +4164,7 @@ export const de_GetBudgetCommand = async (
  */
 export const de_GetFarmCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetFarmCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4192,7 +4192,7 @@ export const de_GetFarmCommand = async (
  */
 export const de_GetFleetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetFleetCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4229,7 +4229,7 @@ export const de_GetFleetCommand = async (
  */
 export const de_GetJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetJobCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4269,7 +4269,7 @@ export const de_GetJobCommand = async (
  */
 export const de_GetLicenseEndpointCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetLicenseEndpointCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4296,7 +4296,7 @@ export const de_GetLicenseEndpointCommand = async (
  */
 export const de_GetMonitorCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetMonitorCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4327,7 +4327,7 @@ export const de_GetMonitorCommand = async (
  */
 export const de_GetQueueCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetQueueCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4363,7 +4363,7 @@ export const de_GetQueueCommand = async (
  */
 export const de_GetQueueEnvironmentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetQueueEnvironmentCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4392,7 +4392,7 @@ export const de_GetQueueEnvironmentCommand = async (
  */
 export const de_GetQueueFleetAssociationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetQueueFleetAssociationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4419,7 +4419,7 @@ export const de_GetQueueFleetAssociationCommand = async (
  */
 export const de_GetSessionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetSessionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4451,7 +4451,7 @@ export const de_GetSessionCommand = async (
  */
 export const de_GetSessionActionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetSessionActionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4481,7 +4481,7 @@ export const de_GetSessionActionCommand = async (
  */
 export const de_GetSessionsStatisticsAggregationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetSessionsStatisticsAggregationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4505,7 +4505,7 @@ export const de_GetSessionsStatisticsAggregationCommand = async (
  */
 export const de_GetStepCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetStepCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4542,7 +4542,7 @@ export const de_GetStepCommand = async (
  */
 export const de_GetStorageProfileCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetStorageProfileCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4570,7 +4570,7 @@ export const de_GetStorageProfileCommand = async (
  */
 export const de_GetStorageProfileForQueueCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetStorageProfileForQueueCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4594,7 +4594,7 @@ export const de_GetStorageProfileForQueueCommand = async (
  */
 export const de_GetTaskCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetTaskCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4626,7 +4626,7 @@ export const de_GetTaskCommand = async (
  */
 export const de_GetWorkerCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetWorkerCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4656,7 +4656,7 @@ export const de_GetWorkerCommand = async (
  */
 export const de_ListAvailableMeteredProductsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAvailableMeteredProductsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4678,7 +4678,7 @@ export const de_ListAvailableMeteredProductsCommand = async (
  */
 export const de_ListBudgetsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListBudgetsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4700,7 +4700,7 @@ export const de_ListBudgetsCommand = async (
  */
 export const de_ListFarmMembersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListFarmMembersCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4722,7 +4722,7 @@ export const de_ListFarmMembersCommand = async (
  */
 export const de_ListFarmsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListFarmsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4744,7 +4744,7 @@ export const de_ListFarmsCommand = async (
  */
 export const de_ListFleetMembersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListFleetMembersCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4766,7 +4766,7 @@ export const de_ListFleetMembersCommand = async (
  */
 export const de_ListFleetsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListFleetsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4788,7 +4788,7 @@ export const de_ListFleetsCommand = async (
  */
 export const de_ListJobMembersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListJobMembersCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4810,7 +4810,7 @@ export const de_ListJobMembersCommand = async (
  */
 export const de_ListJobsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListJobsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4832,7 +4832,7 @@ export const de_ListJobsCommand = async (
  */
 export const de_ListLicenseEndpointsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListLicenseEndpointsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4854,7 +4854,7 @@ export const de_ListLicenseEndpointsCommand = async (
  */
 export const de_ListMeteredProductsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListMeteredProductsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4876,7 +4876,7 @@ export const de_ListMeteredProductsCommand = async (
  */
 export const de_ListMonitorsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListMonitorsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4898,7 +4898,7 @@ export const de_ListMonitorsCommand = async (
  */
 export const de_ListQueueEnvironmentsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListQueueEnvironmentsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4920,7 +4920,7 @@ export const de_ListQueueEnvironmentsCommand = async (
  */
 export const de_ListQueueFleetAssociationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListQueueFleetAssociationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4942,7 +4942,7 @@ export const de_ListQueueFleetAssociationsCommand = async (
  */
 export const de_ListQueueMembersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListQueueMembersCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4964,7 +4964,7 @@ export const de_ListQueueMembersCommand = async (
  */
 export const de_ListQueuesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListQueuesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4986,7 +4986,7 @@ export const de_ListQueuesCommand = async (
  */
 export const de_ListSessionActionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListSessionActionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5008,7 +5008,7 @@ export const de_ListSessionActionsCommand = async (
  */
 export const de_ListSessionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListSessionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5030,7 +5030,7 @@ export const de_ListSessionsCommand = async (
  */
 export const de_ListSessionsForWorkerCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListSessionsForWorkerCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5052,7 +5052,7 @@ export const de_ListSessionsForWorkerCommand = async (
  */
 export const de_ListStepConsumersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListStepConsumersCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5074,7 +5074,7 @@ export const de_ListStepConsumersCommand = async (
  */
 export const de_ListStepDependenciesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListStepDependenciesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5096,7 +5096,7 @@ export const de_ListStepDependenciesCommand = async (
  */
 export const de_ListStepsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListStepsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5118,7 +5118,7 @@ export const de_ListStepsCommand = async (
  */
 export const de_ListStorageProfilesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListStorageProfilesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5140,7 +5140,7 @@ export const de_ListStorageProfilesCommand = async (
  */
 export const de_ListStorageProfilesForQueueCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListStorageProfilesForQueueCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5162,7 +5162,7 @@ export const de_ListStorageProfilesForQueueCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5183,7 +5183,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_ListTasksCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTasksCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5205,7 +5205,7 @@ export const de_ListTasksCommand = async (
  */
 export const de_ListWorkersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListWorkersCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5227,7 +5227,7 @@ export const de_ListWorkersCommand = async (
  */
 export const de_PutMeteredProductCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutMeteredProductCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5244,7 +5244,7 @@ export const de_PutMeteredProductCommand = async (
  */
 export const de_SearchJobsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SearchJobsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5267,7 +5267,7 @@ export const de_SearchJobsCommand = async (
  */
 export const de_SearchStepsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SearchStepsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5290,7 +5290,7 @@ export const de_SearchStepsCommand = async (
  */
 export const de_SearchTasksCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SearchTasksCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5313,7 +5313,7 @@ export const de_SearchTasksCommand = async (
  */
 export const de_SearchWorkersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SearchWorkersCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5336,7 +5336,7 @@ export const de_SearchWorkersCommand = async (
  */
 export const de_StartSessionsStatisticsAggregationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartSessionsStatisticsAggregationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5357,7 +5357,7 @@ export const de_StartSessionsStatisticsAggregationCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5374,7 +5374,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5391,7 +5391,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateBudgetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateBudgetCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5408,7 +5408,7 @@ export const de_UpdateBudgetCommand = async (
  */
 export const de_UpdateFarmCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateFarmCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5425,7 +5425,7 @@ export const de_UpdateFarmCommand = async (
  */
 export const de_UpdateFleetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateFleetCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5442,7 +5442,7 @@ export const de_UpdateFleetCommand = async (
  */
 export const de_UpdateJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateJobCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5459,7 +5459,7 @@ export const de_UpdateJobCommand = async (
  */
 export const de_UpdateMonitorCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateMonitorCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5476,7 +5476,7 @@ export const de_UpdateMonitorCommand = async (
  */
 export const de_UpdateQueueCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateQueueCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5493,7 +5493,7 @@ export const de_UpdateQueueCommand = async (
  */
 export const de_UpdateQueueEnvironmentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateQueueEnvironmentCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5510,7 +5510,7 @@ export const de_UpdateQueueEnvironmentCommand = async (
  */
 export const de_UpdateQueueFleetAssociationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateQueueFleetAssociationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5527,7 +5527,7 @@ export const de_UpdateQueueFleetAssociationCommand = async (
  */
 export const de_UpdateSessionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateSessionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5544,7 +5544,7 @@ export const de_UpdateSessionCommand = async (
  */
 export const de_UpdateStepCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateStepCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5561,7 +5561,7 @@ export const de_UpdateStepCommand = async (
  */
 export const de_UpdateStorageProfileCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateStorageProfileCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5578,7 +5578,7 @@ export const de_UpdateStorageProfileCommand = async (
  */
 export const de_UpdateTaskCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateTaskCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5595,7 +5595,7 @@ export const de_UpdateTaskCommand = async (
  */
 export const de_UpdateWorkerCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateWorkerCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5616,7 +5616,7 @@ export const de_UpdateWorkerCommand = async (
  */
 export const de_UpdateWorkerScheduleCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateWorkerScheduleCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5682,7 +5682,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -5724,7 +5724,7 @@ const de_ConflictExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_InternalServerErrorExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerErrorException> => {
   const contents: any = map({
     [_rAS]: [() => void 0 !== parsedOutput.headers[_ra], () => __strictParseInt32(parsedOutput.headers[_ra])],
@@ -5746,7 +5746,7 @@ const de_InternalServerErrorExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -5769,7 +5769,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_ServiceQuotaExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceQuotaExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -5893,7 +5893,7 @@ const se_BudgetActionToRemove = (input: BudgetActionToRemove, context: __SerdeCo
 const se_BudgetSchedule = (input: BudgetSchedule, context: __SerdeContext): any => {
   return BudgetSchedule.visit(input, {
     fixed: (value) => ({ fixed: se_FixedBudgetSchedule(value, context) }),
-    _: (name, value) => ({ name: value } as any),
+    _: (name, value) => ({ name: value }) as any,
   });
 };
 
@@ -5902,7 +5902,7 @@ const se_BudgetSchedule = (input: BudgetSchedule, context: __SerdeContext): any 
  */
 const se_CustomerManagedFleetConfiguration = (
   input: CustomerManagedFleetConfiguration,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     mode: [],
@@ -5916,7 +5916,7 @@ const se_CustomerManagedFleetConfiguration = (
  */
 const se_CustomerManagedWorkerCapabilities = (
   input: CustomerManagedWorkerCapabilities,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     acceleratorCount: _json,
@@ -5995,7 +5995,7 @@ const se_FleetConfiguration = (input: FleetConfiguration, context: __SerdeContex
   return FleetConfiguration.visit(input, {
     customerManaged: (value) => ({ customerManaged: se_CustomerManagedFleetConfiguration(value, context) }),
     serviceManagedEc2: (value) => ({ serviceManagedEc2: se_ServiceManagedEc2FleetConfiguration(value, context) }),
-    _: (name, value) => ({ name: value } as any),
+    _: (name, value) => ({ name: value }) as any,
   });
 };
 
@@ -6057,7 +6057,7 @@ const se_SearchFilterExpression = (input: SearchFilterExpression, context: __Ser
     parameterFilter: (value) => ({ parameterFilter: _json(value) }),
     searchTermFilter: (value) => ({ searchTermFilter: _json(value) }),
     stringFilter: (value) => ({ stringFilter: _json(value) }),
-    _: (name, value) => ({ name: value } as any),
+    _: (name, value) => ({ name: value }) as any,
   });
 };
 
@@ -6095,7 +6095,7 @@ const se_SearchGroupedFilterExpressions = (input: SearchGroupedFilterExpressions
  */
 const se_ServiceManagedEc2FleetConfiguration = (
   input: ServiceManagedEc2FleetConfiguration,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     instanceCapabilities: (_) => se_ServiceManagedEc2InstanceCapabilities(_, context),
@@ -6108,7 +6108,7 @@ const se_ServiceManagedEc2FleetConfiguration = (
  */
 const se_ServiceManagedEc2InstanceCapabilities = (
   input: ServiceManagedEc2InstanceCapabilities,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     allowedInstanceTypes: _json,
@@ -6325,7 +6325,7 @@ const de_ConsumedUsages = (output: any, context: __SerdeContext): ConsumedUsages
  */
 const de_CustomerManagedFleetConfiguration = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CustomerManagedFleetConfiguration => {
   return take(output, {
     mode: __expectString,
@@ -6339,7 +6339,7 @@ const de_CustomerManagedFleetConfiguration = (
  */
 const de_CustomerManagedWorkerCapabilities = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CustomerManagedWorkerCapabilities => {
   return take(output, {
     acceleratorCount: _json,
@@ -6845,7 +6845,7 @@ const de_ResponseBudgetActionList = (output: any, context: __SerdeContext): Resp
  */
 const de_ServiceManagedEc2FleetConfiguration = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ServiceManagedEc2FleetConfiguration => {
   return take(output, {
     instanceCapabilities: (_: any) => de_ServiceManagedEc2InstanceCapabilities(_, context),
@@ -6858,7 +6858,7 @@ const de_ServiceManagedEc2FleetConfiguration = (
  */
 const de_ServiceManagedEc2InstanceCapabilities = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ServiceManagedEc2InstanceCapabilities => {
   return take(output, {
     allowedInstanceTypes: _json,

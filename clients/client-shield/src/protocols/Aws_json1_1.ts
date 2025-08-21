@@ -209,7 +209,7 @@ import { ShieldServiceException as __BaseException } from "../models/ShieldServi
  */
 export const se_AssociateDRTLogBucketCommand = async (
   input: AssociateDRTLogBucketCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("AssociateDRTLogBucket");
   let body: any;
@@ -222,7 +222,7 @@ export const se_AssociateDRTLogBucketCommand = async (
  */
 export const se_AssociateDRTRoleCommand = async (
   input: AssociateDRTRoleCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("AssociateDRTRole");
   let body: any;
@@ -235,7 +235,7 @@ export const se_AssociateDRTRoleCommand = async (
  */
 export const se_AssociateHealthCheckCommand = async (
   input: AssociateHealthCheckCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("AssociateHealthCheck");
   let body: any;
@@ -248,7 +248,7 @@ export const se_AssociateHealthCheckCommand = async (
  */
 export const se_AssociateProactiveEngagementDetailsCommand = async (
   input: AssociateProactiveEngagementDetailsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("AssociateProactiveEngagementDetails");
   let body: any;
@@ -261,7 +261,7 @@ export const se_AssociateProactiveEngagementDetailsCommand = async (
  */
 export const se_CreateProtectionCommand = async (
   input: CreateProtectionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateProtection");
   let body: any;
@@ -274,7 +274,7 @@ export const se_CreateProtectionCommand = async (
  */
 export const se_CreateProtectionGroupCommand = async (
   input: CreateProtectionGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateProtectionGroup");
   let body: any;
@@ -287,7 +287,7 @@ export const se_CreateProtectionGroupCommand = async (
  */
 export const se_CreateSubscriptionCommand = async (
   input: CreateSubscriptionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateSubscription");
   let body: any;
@@ -300,7 +300,7 @@ export const se_CreateSubscriptionCommand = async (
  */
 export const se_DeleteProtectionCommand = async (
   input: DeleteProtectionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteProtection");
   let body: any;
@@ -313,7 +313,7 @@ export const se_DeleteProtectionCommand = async (
  */
 export const se_DeleteProtectionGroupCommand = async (
   input: DeleteProtectionGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteProtectionGroup");
   let body: any;
@@ -326,7 +326,7 @@ export const se_DeleteProtectionGroupCommand = async (
  */
 export const se_DeleteSubscriptionCommand = async (
   input: DeleteSubscriptionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteSubscription");
   let body: any;
@@ -339,7 +339,7 @@ export const se_DeleteSubscriptionCommand = async (
  */
 export const se_DescribeAttackCommand = async (
   input: DescribeAttackCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeAttack");
   let body: any;
@@ -352,7 +352,7 @@ export const se_DescribeAttackCommand = async (
  */
 export const se_DescribeAttackStatisticsCommand = async (
   input: DescribeAttackStatisticsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeAttackStatistics");
   let body: any;
@@ -365,7 +365,7 @@ export const se_DescribeAttackStatisticsCommand = async (
  */
 export const se_DescribeDRTAccessCommand = async (
   input: DescribeDRTAccessCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeDRTAccess");
   let body: any;
@@ -378,7 +378,7 @@ export const se_DescribeDRTAccessCommand = async (
  */
 export const se_DescribeEmergencyContactSettingsCommand = async (
   input: DescribeEmergencyContactSettingsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeEmergencyContactSettings");
   let body: any;
@@ -391,7 +391,7 @@ export const se_DescribeEmergencyContactSettingsCommand = async (
  */
 export const se_DescribeProtectionCommand = async (
   input: DescribeProtectionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeProtection");
   let body: any;
@@ -404,7 +404,7 @@ export const se_DescribeProtectionCommand = async (
  */
 export const se_DescribeProtectionGroupCommand = async (
   input: DescribeProtectionGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeProtectionGroup");
   let body: any;
@@ -417,7 +417,7 @@ export const se_DescribeProtectionGroupCommand = async (
  */
 export const se_DescribeSubscriptionCommand = async (
   input: DescribeSubscriptionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeSubscription");
   let body: any;
@@ -430,7 +430,7 @@ export const se_DescribeSubscriptionCommand = async (
  */
 export const se_DisableApplicationLayerAutomaticResponseCommand = async (
   input: DisableApplicationLayerAutomaticResponseCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DisableApplicationLayerAutomaticResponse");
   let body: any;
@@ -443,7 +443,7 @@ export const se_DisableApplicationLayerAutomaticResponseCommand = async (
  */
 export const se_DisableProactiveEngagementCommand = async (
   input: DisableProactiveEngagementCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DisableProactiveEngagement");
   let body: any;
@@ -456,7 +456,7 @@ export const se_DisableProactiveEngagementCommand = async (
  */
 export const se_DisassociateDRTLogBucketCommand = async (
   input: DisassociateDRTLogBucketCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DisassociateDRTLogBucket");
   let body: any;
@@ -469,7 +469,7 @@ export const se_DisassociateDRTLogBucketCommand = async (
  */
 export const se_DisassociateDRTRoleCommand = async (
   input: DisassociateDRTRoleCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DisassociateDRTRole");
   let body: any;
@@ -482,7 +482,7 @@ export const se_DisassociateDRTRoleCommand = async (
  */
 export const se_DisassociateHealthCheckCommand = async (
   input: DisassociateHealthCheckCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DisassociateHealthCheck");
   let body: any;
@@ -495,7 +495,7 @@ export const se_DisassociateHealthCheckCommand = async (
  */
 export const se_EnableApplicationLayerAutomaticResponseCommand = async (
   input: EnableApplicationLayerAutomaticResponseCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("EnableApplicationLayerAutomaticResponse");
   let body: any;
@@ -508,7 +508,7 @@ export const se_EnableApplicationLayerAutomaticResponseCommand = async (
  */
 export const se_EnableProactiveEngagementCommand = async (
   input: EnableProactiveEngagementCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("EnableProactiveEngagement");
   let body: any;
@@ -521,7 +521,7 @@ export const se_EnableProactiveEngagementCommand = async (
  */
 export const se_GetSubscriptionStateCommand = async (
   input: GetSubscriptionStateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetSubscriptionState");
   let body: any;
@@ -534,7 +534,7 @@ export const se_GetSubscriptionStateCommand = async (
  */
 export const se_ListAttacksCommand = async (
   input: ListAttacksCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListAttacks");
   let body: any;
@@ -547,7 +547,7 @@ export const se_ListAttacksCommand = async (
  */
 export const se_ListProtectionGroupsCommand = async (
   input: ListProtectionGroupsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListProtectionGroups");
   let body: any;
@@ -560,7 +560,7 @@ export const se_ListProtectionGroupsCommand = async (
  */
 export const se_ListProtectionsCommand = async (
   input: ListProtectionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListProtections");
   let body: any;
@@ -573,7 +573,7 @@ export const se_ListProtectionsCommand = async (
  */
 export const se_ListResourcesInProtectionGroupCommand = async (
   input: ListResourcesInProtectionGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListResourcesInProtectionGroup");
   let body: any;
@@ -586,7 +586,7 @@ export const se_ListResourcesInProtectionGroupCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListTagsForResource");
   let body: any;
@@ -599,7 +599,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("TagResource");
   let body: any;
@@ -612,7 +612,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UntagResource");
   let body: any;
@@ -625,7 +625,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateApplicationLayerAutomaticResponseCommand = async (
   input: UpdateApplicationLayerAutomaticResponseCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateApplicationLayerAutomaticResponse");
   let body: any;
@@ -638,7 +638,7 @@ export const se_UpdateApplicationLayerAutomaticResponseCommand = async (
  */
 export const se_UpdateEmergencyContactSettingsCommand = async (
   input: UpdateEmergencyContactSettingsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateEmergencyContactSettings");
   let body: any;
@@ -651,7 +651,7 @@ export const se_UpdateEmergencyContactSettingsCommand = async (
  */
 export const se_UpdateProtectionGroupCommand = async (
   input: UpdateProtectionGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateProtectionGroup");
   let body: any;
@@ -664,7 +664,7 @@ export const se_UpdateProtectionGroupCommand = async (
  */
 export const se_UpdateSubscriptionCommand = async (
   input: UpdateSubscriptionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateSubscription");
   let body: any;
@@ -677,7 +677,7 @@ export const se_UpdateSubscriptionCommand = async (
  */
 export const de_AssociateDRTLogBucketCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssociateDRTLogBucketCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -697,7 +697,7 @@ export const de_AssociateDRTLogBucketCommand = async (
  */
 export const de_AssociateDRTRoleCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssociateDRTRoleCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -717,7 +717,7 @@ export const de_AssociateDRTRoleCommand = async (
  */
 export const de_AssociateHealthCheckCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssociateHealthCheckCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -737,7 +737,7 @@ export const de_AssociateHealthCheckCommand = async (
  */
 export const de_AssociateProactiveEngagementDetailsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssociateProactiveEngagementDetailsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -757,7 +757,7 @@ export const de_AssociateProactiveEngagementDetailsCommand = async (
  */
 export const de_CreateProtectionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateProtectionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -777,7 +777,7 @@ export const de_CreateProtectionCommand = async (
  */
 export const de_CreateProtectionGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateProtectionGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -797,7 +797,7 @@ export const de_CreateProtectionGroupCommand = async (
  */
 export const de_CreateSubscriptionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateSubscriptionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -817,7 +817,7 @@ export const de_CreateSubscriptionCommand = async (
  */
 export const de_DeleteProtectionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteProtectionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -837,7 +837,7 @@ export const de_DeleteProtectionCommand = async (
  */
 export const de_DeleteProtectionGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteProtectionGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -857,7 +857,7 @@ export const de_DeleteProtectionGroupCommand = async (
  */
 export const de_DeleteSubscriptionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteSubscriptionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -877,7 +877,7 @@ export const de_DeleteSubscriptionCommand = async (
  */
 export const de_DescribeAttackCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeAttackCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -897,7 +897,7 @@ export const de_DescribeAttackCommand = async (
  */
 export const de_DescribeAttackStatisticsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeAttackStatisticsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -917,7 +917,7 @@ export const de_DescribeAttackStatisticsCommand = async (
  */
 export const de_DescribeDRTAccessCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeDRTAccessCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -937,7 +937,7 @@ export const de_DescribeDRTAccessCommand = async (
  */
 export const de_DescribeEmergencyContactSettingsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeEmergencyContactSettingsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -957,7 +957,7 @@ export const de_DescribeEmergencyContactSettingsCommand = async (
  */
 export const de_DescribeProtectionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeProtectionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -977,7 +977,7 @@ export const de_DescribeProtectionCommand = async (
  */
 export const de_DescribeProtectionGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeProtectionGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -997,7 +997,7 @@ export const de_DescribeProtectionGroupCommand = async (
  */
 export const de_DescribeSubscriptionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeSubscriptionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1017,7 +1017,7 @@ export const de_DescribeSubscriptionCommand = async (
  */
 export const de_DisableApplicationLayerAutomaticResponseCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisableApplicationLayerAutomaticResponseCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1037,7 +1037,7 @@ export const de_DisableApplicationLayerAutomaticResponseCommand = async (
  */
 export const de_DisableProactiveEngagementCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisableProactiveEngagementCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1057,7 +1057,7 @@ export const de_DisableProactiveEngagementCommand = async (
  */
 export const de_DisassociateDRTLogBucketCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisassociateDRTLogBucketCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1077,7 +1077,7 @@ export const de_DisassociateDRTLogBucketCommand = async (
  */
 export const de_DisassociateDRTRoleCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisassociateDRTRoleCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1097,7 +1097,7 @@ export const de_DisassociateDRTRoleCommand = async (
  */
 export const de_DisassociateHealthCheckCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisassociateHealthCheckCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1117,7 +1117,7 @@ export const de_DisassociateHealthCheckCommand = async (
  */
 export const de_EnableApplicationLayerAutomaticResponseCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<EnableApplicationLayerAutomaticResponseCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1137,7 +1137,7 @@ export const de_EnableApplicationLayerAutomaticResponseCommand = async (
  */
 export const de_EnableProactiveEngagementCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<EnableProactiveEngagementCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1157,7 +1157,7 @@ export const de_EnableProactiveEngagementCommand = async (
  */
 export const de_GetSubscriptionStateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetSubscriptionStateCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1177,7 +1177,7 @@ export const de_GetSubscriptionStateCommand = async (
  */
 export const de_ListAttacksCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAttacksCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1197,7 +1197,7 @@ export const de_ListAttacksCommand = async (
  */
 export const de_ListProtectionGroupsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListProtectionGroupsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1217,7 +1217,7 @@ export const de_ListProtectionGroupsCommand = async (
  */
 export const de_ListProtectionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListProtectionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1237,7 +1237,7 @@ export const de_ListProtectionsCommand = async (
  */
 export const de_ListResourcesInProtectionGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListResourcesInProtectionGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1257,7 +1257,7 @@ export const de_ListResourcesInProtectionGroupCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1277,7 +1277,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1297,7 +1297,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1317,7 +1317,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateApplicationLayerAutomaticResponseCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateApplicationLayerAutomaticResponseCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1337,7 +1337,7 @@ export const de_UpdateApplicationLayerAutomaticResponseCommand = async (
  */
 export const de_UpdateEmergencyContactSettingsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateEmergencyContactSettingsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1357,7 +1357,7 @@ export const de_UpdateEmergencyContactSettingsCommand = async (
  */
 export const de_UpdateProtectionGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateProtectionGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1377,7 +1377,7 @@ export const de_UpdateProtectionGroupCommand = async (
  */
 export const de_UpdateSubscriptionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateSubscriptionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1456,7 +1456,7 @@ const de_CommandError = async (output: __HttpResponse, context: __SerdeContext):
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1472,7 +1472,7 @@ const de_AccessDeniedExceptionRes = async (
  */
 const de_AccessDeniedForDependencyExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedForDependencyException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1488,7 +1488,7 @@ const de_AccessDeniedForDependencyExceptionRes = async (
  */
 const de_InternalErrorExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalErrorException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1504,7 +1504,7 @@ const de_InternalErrorExceptionRes = async (
  */
 const de_InvalidOperationExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidOperationException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1520,7 +1520,7 @@ const de_InvalidOperationExceptionRes = async (
  */
 const de_InvalidPaginationTokenExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidPaginationTokenException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1536,7 +1536,7 @@ const de_InvalidPaginationTokenExceptionRes = async (
  */
 const de_InvalidParameterExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidParameterException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1552,7 +1552,7 @@ const de_InvalidParameterExceptionRes = async (
  */
 const de_InvalidResourceExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidResourceException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1568,7 +1568,7 @@ const de_InvalidResourceExceptionRes = async (
  */
 const de_LimitsExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<LimitsExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1584,7 +1584,7 @@ const de_LimitsExceededExceptionRes = async (
  */
 const de_LockedSubscriptionExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<LockedSubscriptionException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1600,7 +1600,7 @@ const de_LockedSubscriptionExceptionRes = async (
  */
 const de_NoAssociatedRoleExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<NoAssociatedRoleException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1616,7 +1616,7 @@ const de_NoAssociatedRoleExceptionRes = async (
  */
 const de_OptimisticLockExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<OptimisticLockException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1632,7 +1632,7 @@ const de_OptimisticLockExceptionRes = async (
  */
 const de_ResourceAlreadyExistsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceAlreadyExistsException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1648,7 +1648,7 @@ const de_ResourceAlreadyExistsExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1925,7 +1925,7 @@ const de_DescribeAttackResponse = (output: any, context: __SerdeContext): Descri
  */
 const de_DescribeAttackStatisticsResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeAttackStatisticsResponse => {
   return take(output, {
     DataItems: (_: any) => de_AttackStatisticsDataList(_, context),
@@ -2184,7 +2184,7 @@ const buildHttpRpcRequest = async (
   headers: __HeaderBag,
   path: string,
   resolvedHostname: string | undefined,
-  body: any
+  body: any,
 ): Promise<__HttpRequest> => {
   const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
   const contents: any = {

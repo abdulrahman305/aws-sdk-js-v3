@@ -61,14 +61,14 @@ export class MalformedBooleanSerializer
 
 export const getMalformedBooleanHandler = <Context>(
   operation: __Operation<MalformedBooleanServerInput, MalformedBooleanServerOutput, Context>,
-  customizer: __ValidationCustomizer<"MalformedBoolean">
+  customizer: __ValidationCustomizer<"MalformedBoolean">,
 ): __ServiceHandler<Context, __HttpRequest, __HttpResponse> => {
   const mux = new httpbinding.HttpBindingMux<"RestJson", "MalformedBoolean">([
     new httpbinding.UriSpec<"RestJson", "MalformedBoolean">(
       "POST",
       [{ type: "path_literal", value: "MalformedBoolean" }, { type: "path" }],
       [],
-      { service: "RestJson", operation: "MalformedBoolean" }
+      { service: "RestJson", operation: "MalformedBoolean" },
     ),
   ]);
   return new MalformedBooleanHandler(
@@ -76,7 +76,7 @@ export const getMalformedBooleanHandler = <Context>(
     mux,
     new MalformedBooleanSerializer(),
     serializeFrameworkException,
-    customizer
+    customizer,
   );
 };
 
@@ -97,7 +97,7 @@ async function handle<S, O extends keyof S & string, Context>(
   operation: __Operation<__OperationInput<S[O]>, __OperationOutput<S[O]>, Context>,
   serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
   validationFn: (input: __OperationInput<S[O]>) => __ValidationFailure[],
-  validationCustomizer: __ValidationCustomizer<O>
+  validationCustomizer: __ValidationCustomizer<O>,
 ): Promise<__HttpResponse> {
   let input;
   try {
@@ -139,7 +139,7 @@ export class MalformedBooleanHandler<Context> implements __ServiceHandler<Contex
   >;
   private readonly serializeFrameworkException: (
     e: __SmithyFrameworkException,
-    ctx: __ServerSerdeContext
+    ctx: __ServerSerdeContext,
   ) => Promise<__HttpResponse>;
   private readonly validationCustomizer: __ValidationCustomizer<"MalformedBoolean">;
   /**
@@ -156,7 +156,7 @@ export class MalformedBooleanHandler<Context> implements __ServiceHandler<Contex
     mux: __Mux<"RestJson", "MalformedBoolean">,
     serializer: __OperationSerializer<RestJsonService<Context>, "MalformedBoolean", MalformedBooleanErrors>,
     serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
-    validationCustomizer: __ValidationCustomizer<"MalformedBoolean">
+    validationCustomizer: __ValidationCustomizer<"MalformedBoolean">,
   ) {
     this.operation = operation;
     this.mux = mux;
@@ -168,7 +168,7 @@ export class MalformedBooleanHandler<Context> implements __ServiceHandler<Contex
     const target = this.mux.match(request);
     if (target === undefined) {
       console.log(
-        "Received a request that did not match aws.protocoltests.restjson#RestJson.MalformedBoolean. This indicates a misconfiguration."
+        "Received a request that did not match aws.protocoltests.restjson#RestJson.MalformedBoolean. This indicates a misconfiguration.",
       );
       return this.serializeFrameworkException(new __InternalFailureException(), serdeContextBase);
     }
@@ -180,7 +180,7 @@ export class MalformedBooleanHandler<Context> implements __ServiceHandler<Contex
       this.operation,
       this.serializeFrameworkException,
       MalformedBooleanServerInput.validate,
-      this.validationCustomizer
+      this.validationCustomizer,
     );
   }
 }

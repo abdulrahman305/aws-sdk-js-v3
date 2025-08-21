@@ -39,7 +39,7 @@ describe(resolveEndpoint.name, () => {
 
           if (error) {
             expect(() => resolveEndpoint(ruleSetObject, { endpointParams: params })).toThrowError(
-              new EndpointError(error)
+              new EndpointError(error),
             );
           }
         });

@@ -8722,7 +8722,7 @@ export const TaskParameterValueFilterSensitiveLog = (obj: TaskParameterValue): a
  * @internal
  */
 export const AssignedTaskRunSessionActionDefinitionFilterSensitiveLog = (
-  obj: AssignedTaskRunSessionActionDefinition
+  obj: AssignedTaskRunSessionActionDefinition,
 ): any => ({
   ...obj,
   ...(obj.parameters && { parameters: SENSITIVE_STRING }),
@@ -9045,9 +9045,10 @@ export const UpdateWorkerScheduleRequestFilterSensitiveLog = (obj: UpdateWorkerS
   ...(obj.updatedSessionActions && {
     updatedSessionActions: Object.entries(obj.updatedSessionActions).reduce(
       (acc: any, [key, value]: [string, UpdatedSessionActionInfo]) => (
-        (acc[key] = UpdatedSessionActionInfoFilterSensitiveLog(value)), acc
+        (acc[key] = UpdatedSessionActionInfoFilterSensitiveLog(value)),
+        acc
       ),
-      {}
+      {},
     ),
   }),
 });
@@ -9060,9 +9061,10 @@ export const UpdateWorkerScheduleResponseFilterSensitiveLog = (obj: UpdateWorker
   ...(obj.assignedSessions && {
     assignedSessions: Object.entries(obj.assignedSessions).reduce(
       (acc: any, [key, value]: [string, AssignedSession]) => (
-        (acc[key] = AssignedSessionFilterSensitiveLog(value)), acc
+        (acc[key] = AssignedSessionFilterSensitiveLog(value)),
+        acc
       ),
-      {}
+      {},
     ),
   }),
 });

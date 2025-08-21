@@ -163,7 +163,7 @@ import { VoiceIDServiceException as __BaseException } from "../models/VoiceIDSer
  */
 export const se_AssociateFraudsterCommand = async (
   input: AssociateFraudsterCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("AssociateFraudster");
   let body: any;
@@ -176,7 +176,7 @@ export const se_AssociateFraudsterCommand = async (
  */
 export const se_CreateDomainCommand = async (
   input: CreateDomainCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateDomain");
   let body: any;
@@ -189,7 +189,7 @@ export const se_CreateDomainCommand = async (
  */
 export const se_CreateWatchlistCommand = async (
   input: CreateWatchlistCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateWatchlist");
   let body: any;
@@ -202,7 +202,7 @@ export const se_CreateWatchlistCommand = async (
  */
 export const se_DeleteDomainCommand = async (
   input: DeleteDomainCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteDomain");
   let body: any;
@@ -215,7 +215,7 @@ export const se_DeleteDomainCommand = async (
  */
 export const se_DeleteFraudsterCommand = async (
   input: DeleteFraudsterCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteFraudster");
   let body: any;
@@ -228,7 +228,7 @@ export const se_DeleteFraudsterCommand = async (
  */
 export const se_DeleteSpeakerCommand = async (
   input: DeleteSpeakerCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteSpeaker");
   let body: any;
@@ -241,7 +241,7 @@ export const se_DeleteSpeakerCommand = async (
  */
 export const se_DeleteWatchlistCommand = async (
   input: DeleteWatchlistCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteWatchlist");
   let body: any;
@@ -254,7 +254,7 @@ export const se_DeleteWatchlistCommand = async (
  */
 export const se_DescribeDomainCommand = async (
   input: DescribeDomainCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeDomain");
   let body: any;
@@ -267,7 +267,7 @@ export const se_DescribeDomainCommand = async (
  */
 export const se_DescribeFraudsterCommand = async (
   input: DescribeFraudsterCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeFraudster");
   let body: any;
@@ -280,7 +280,7 @@ export const se_DescribeFraudsterCommand = async (
  */
 export const se_DescribeFraudsterRegistrationJobCommand = async (
   input: DescribeFraudsterRegistrationJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeFraudsterRegistrationJob");
   let body: any;
@@ -293,7 +293,7 @@ export const se_DescribeFraudsterRegistrationJobCommand = async (
  */
 export const se_DescribeSpeakerCommand = async (
   input: DescribeSpeakerCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeSpeaker");
   let body: any;
@@ -306,7 +306,7 @@ export const se_DescribeSpeakerCommand = async (
  */
 export const se_DescribeSpeakerEnrollmentJobCommand = async (
   input: DescribeSpeakerEnrollmentJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeSpeakerEnrollmentJob");
   let body: any;
@@ -319,7 +319,7 @@ export const se_DescribeSpeakerEnrollmentJobCommand = async (
  */
 export const se_DescribeWatchlistCommand = async (
   input: DescribeWatchlistCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeWatchlist");
   let body: any;
@@ -332,7 +332,7 @@ export const se_DescribeWatchlistCommand = async (
  */
 export const se_DisassociateFraudsterCommand = async (
   input: DisassociateFraudsterCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DisassociateFraudster");
   let body: any;
@@ -345,7 +345,7 @@ export const se_DisassociateFraudsterCommand = async (
  */
 export const se_EvaluateSessionCommand = async (
   input: EvaluateSessionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("EvaluateSession");
   let body: any;
@@ -358,7 +358,7 @@ export const se_EvaluateSessionCommand = async (
  */
 export const se_ListDomainsCommand = async (
   input: ListDomainsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListDomains");
   let body: any;
@@ -371,7 +371,7 @@ export const se_ListDomainsCommand = async (
  */
 export const se_ListFraudsterRegistrationJobsCommand = async (
   input: ListFraudsterRegistrationJobsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListFraudsterRegistrationJobs");
   let body: any;
@@ -384,7 +384,7 @@ export const se_ListFraudsterRegistrationJobsCommand = async (
  */
 export const se_ListFraudstersCommand = async (
   input: ListFraudstersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListFraudsters");
   let body: any;
@@ -397,7 +397,7 @@ export const se_ListFraudstersCommand = async (
  */
 export const se_ListSpeakerEnrollmentJobsCommand = async (
   input: ListSpeakerEnrollmentJobsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListSpeakerEnrollmentJobs");
   let body: any;
@@ -410,7 +410,7 @@ export const se_ListSpeakerEnrollmentJobsCommand = async (
  */
 export const se_ListSpeakersCommand = async (
   input: ListSpeakersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListSpeakers");
   let body: any;
@@ -423,7 +423,7 @@ export const se_ListSpeakersCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListTagsForResource");
   let body: any;
@@ -436,7 +436,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_ListWatchlistsCommand = async (
   input: ListWatchlistsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListWatchlists");
   let body: any;
@@ -449,7 +449,7 @@ export const se_ListWatchlistsCommand = async (
  */
 export const se_OptOutSpeakerCommand = async (
   input: OptOutSpeakerCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("OptOutSpeaker");
   let body: any;
@@ -462,7 +462,7 @@ export const se_OptOutSpeakerCommand = async (
  */
 export const se_StartFraudsterRegistrationJobCommand = async (
   input: StartFraudsterRegistrationJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StartFraudsterRegistrationJob");
   let body: any;
@@ -475,7 +475,7 @@ export const se_StartFraudsterRegistrationJobCommand = async (
  */
 export const se_StartSpeakerEnrollmentJobCommand = async (
   input: StartSpeakerEnrollmentJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StartSpeakerEnrollmentJob");
   let body: any;
@@ -488,7 +488,7 @@ export const se_StartSpeakerEnrollmentJobCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("TagResource");
   let body: any;
@@ -501,7 +501,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UntagResource");
   let body: any;
@@ -514,7 +514,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateDomainCommand = async (
   input: UpdateDomainCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateDomain");
   let body: any;
@@ -527,7 +527,7 @@ export const se_UpdateDomainCommand = async (
  */
 export const se_UpdateWatchlistCommand = async (
   input: UpdateWatchlistCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateWatchlist");
   let body: any;
@@ -540,7 +540,7 @@ export const se_UpdateWatchlistCommand = async (
  */
 export const de_AssociateFraudsterCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssociateFraudsterCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -560,7 +560,7 @@ export const de_AssociateFraudsterCommand = async (
  */
 export const de_CreateDomainCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateDomainCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -580,7 +580,7 @@ export const de_CreateDomainCommand = async (
  */
 export const de_CreateWatchlistCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateWatchlistCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -600,7 +600,7 @@ export const de_CreateWatchlistCommand = async (
  */
 export const de_DeleteDomainCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteDomainCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -617,7 +617,7 @@ export const de_DeleteDomainCommand = async (
  */
 export const de_DeleteFraudsterCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteFraudsterCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -634,7 +634,7 @@ export const de_DeleteFraudsterCommand = async (
  */
 export const de_DeleteSpeakerCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteSpeakerCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -651,7 +651,7 @@ export const de_DeleteSpeakerCommand = async (
  */
 export const de_DeleteWatchlistCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteWatchlistCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -668,7 +668,7 @@ export const de_DeleteWatchlistCommand = async (
  */
 export const de_DescribeDomainCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeDomainCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -688,7 +688,7 @@ export const de_DescribeDomainCommand = async (
  */
 export const de_DescribeFraudsterCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeFraudsterCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -708,7 +708,7 @@ export const de_DescribeFraudsterCommand = async (
  */
 export const de_DescribeFraudsterRegistrationJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeFraudsterRegistrationJobCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -728,7 +728,7 @@ export const de_DescribeFraudsterRegistrationJobCommand = async (
  */
 export const de_DescribeSpeakerCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeSpeakerCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -748,7 +748,7 @@ export const de_DescribeSpeakerCommand = async (
  */
 export const de_DescribeSpeakerEnrollmentJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeSpeakerEnrollmentJobCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -768,7 +768,7 @@ export const de_DescribeSpeakerEnrollmentJobCommand = async (
  */
 export const de_DescribeWatchlistCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeWatchlistCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -788,7 +788,7 @@ export const de_DescribeWatchlistCommand = async (
  */
 export const de_DisassociateFraudsterCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisassociateFraudsterCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -808,7 +808,7 @@ export const de_DisassociateFraudsterCommand = async (
  */
 export const de_EvaluateSessionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<EvaluateSessionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -828,7 +828,7 @@ export const de_EvaluateSessionCommand = async (
  */
 export const de_ListDomainsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListDomainsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -848,7 +848,7 @@ export const de_ListDomainsCommand = async (
  */
 export const de_ListFraudsterRegistrationJobsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListFraudsterRegistrationJobsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -868,7 +868,7 @@ export const de_ListFraudsterRegistrationJobsCommand = async (
  */
 export const de_ListFraudstersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListFraudstersCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -888,7 +888,7 @@ export const de_ListFraudstersCommand = async (
  */
 export const de_ListSpeakerEnrollmentJobsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListSpeakerEnrollmentJobsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -908,7 +908,7 @@ export const de_ListSpeakerEnrollmentJobsCommand = async (
  */
 export const de_ListSpeakersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListSpeakersCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -928,7 +928,7 @@ export const de_ListSpeakersCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -948,7 +948,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_ListWatchlistsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListWatchlistsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -968,7 +968,7 @@ export const de_ListWatchlistsCommand = async (
  */
 export const de_OptOutSpeakerCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<OptOutSpeakerCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -988,7 +988,7 @@ export const de_OptOutSpeakerCommand = async (
  */
 export const de_StartFraudsterRegistrationJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartFraudsterRegistrationJobCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1008,7 +1008,7 @@ export const de_StartFraudsterRegistrationJobCommand = async (
  */
 export const de_StartSpeakerEnrollmentJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartSpeakerEnrollmentJobCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1028,7 +1028,7 @@ export const de_StartSpeakerEnrollmentJobCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1048,7 +1048,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1068,7 +1068,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateDomainCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateDomainCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1088,7 +1088,7 @@ export const de_UpdateDomainCommand = async (
  */
 export const de_UpdateWatchlistCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateWatchlistCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1149,7 +1149,7 @@ const de_CommandError = async (output: __HttpResponse, context: __SerdeContext):
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1178,7 +1178,7 @@ const de_ConflictExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_InternalServerExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1194,7 +1194,7 @@ const de_InternalServerExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1210,7 +1210,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_ServiceQuotaExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceQuotaExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1335,7 +1335,7 @@ const se_CreateWatchlistRequest = (input: CreateWatchlistRequest, context: __Ser
  */
 const se_StartFraudsterRegistrationJobRequest = (
   input: StartFraudsterRegistrationJobRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     ClientToken: [true, (_) => _ ?? generateIdempotencyToken()],
@@ -1440,7 +1440,7 @@ const de_DescribeDomainResponse = (output: any, context: __SerdeContext): Descri
  */
 const de_DescribeFraudsterRegistrationJobResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeFraudsterRegistrationJobResponse => {
   return take(output, {
     Job: (_: any) => de_FraudsterRegistrationJob(_, context),
@@ -1461,7 +1461,7 @@ const de_DescribeFraudsterResponse = (output: any, context: __SerdeContext): Des
  */
 const de_DescribeSpeakerEnrollmentJobResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeSpeakerEnrollmentJobResponse => {
   return take(output, {
     Job: (_: any) => de_SpeakerEnrollmentJob(_, context),
@@ -1623,7 +1623,7 @@ const de_FraudsterRegistrationJob = (output: any, context: __SerdeContext): Frau
  */
 const de_FraudsterRegistrationJobSummaries = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): FraudsterRegistrationJobSummary[] => {
   const retVal = (output || [])
     .filter((e: any) => e != null)
@@ -1696,7 +1696,7 @@ const de_ListDomainsResponse = (output: any, context: __SerdeContext): ListDomai
  */
 const de_ListFraudsterRegistrationJobsResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ListFraudsterRegistrationJobsResponse => {
   return take(output, {
     JobSummaries: (_: any) => de_FraudsterRegistrationJobSummaries(_, context),
@@ -1719,7 +1719,7 @@ const de_ListFraudstersResponse = (output: any, context: __SerdeContext): ListFr
  */
 const de_ListSpeakerEnrollmentJobsResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ListSpeakerEnrollmentJobsResponse => {
   return take(output, {
     JobSummaries: (_: any) => de_SpeakerEnrollmentJobSummaries(_, context),
@@ -1869,7 +1869,7 @@ const de_SpeakerSummary = (output: any, context: __SerdeContext): SpeakerSummary
  */
 const de_StartFraudsterRegistrationJobResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): StartFraudsterRegistrationJobResponse => {
   return take(output, {
     Job: (_: any) => de_FraudsterRegistrationJob(_, context),
@@ -1881,7 +1881,7 @@ const de_StartFraudsterRegistrationJobResponse = (
  */
 const de_StartSpeakerEnrollmentJobResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): StartSpeakerEnrollmentJobResponse => {
   return take(output, {
     Job: (_: any) => de_SpeakerEnrollmentJob(_, context),
@@ -1982,7 +1982,7 @@ const buildHttpRpcRequest = async (
   headers: __HeaderBag,
   path: string,
   resolvedHostname: string | undefined,
-  body: any
+  body: any,
 ): Promise<__HttpRequest> => {
   const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
   const contents: any = {

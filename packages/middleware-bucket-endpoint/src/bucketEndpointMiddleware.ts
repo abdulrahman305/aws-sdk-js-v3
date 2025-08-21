@@ -18,7 +18,7 @@ export const bucketEndpointMiddleware =
   (options: BucketEndpointResolvedConfig): BuildMiddleware<any, any> =>
   <Output extends MetadataBearer>(
     next: BuildHandler<any, Output>,
-    context: HandlerExecutionContext
+    context: HandlerExecutionContext,
   ): BuildHandler<any, Output> =>
   async (args: BuildHandlerArguments<any>): Promise<BuildHandlerOutput<Output>> => {
     const { Bucket: bucketName } = args.input as { Bucket: string };

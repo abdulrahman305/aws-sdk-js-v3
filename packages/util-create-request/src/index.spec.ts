@@ -71,7 +71,7 @@ describe("create-request", () => {
       },
       {
         step: "initialize",
-      }
+      },
     );
     operationCommand.middlewareStack.add(
       (next) => (args: SerializeHandlerArguments<OperationInput>) => {
@@ -82,7 +82,7 @@ describe("create-request", () => {
       },
       {
         step: "serialize",
-      }
+      },
     );
     operationCommand.middlewareStack.add(
       (next) => (args: BuildHandlerArguments<OperationInput>) => {
@@ -93,7 +93,7 @@ describe("create-request", () => {
       },
       {
         step: "build",
-      }
+      },
     );
     operationCommand.middlewareStack.add(
       (next) => (args: FinalizeHandlerArguments<OperationInput>) => {
@@ -104,7 +104,7 @@ describe("create-request", () => {
       },
       {
         step: "finalizeRequest",
-      }
+      },
     );
 
     fooClient.middlewareStack.add(
@@ -118,7 +118,7 @@ describe("create-request", () => {
       },
       {
         step: "initialize",
-      }
+      },
     );
     fooClient.middlewareStack.add(
       (next) => (args: SerializeHandlerArguments<OperationInput>) => {
@@ -129,7 +129,7 @@ describe("create-request", () => {
       },
       {
         step: "serialize",
-      }
+      },
     );
     fooClient.middlewareStack.add(
       (next) => (args: BuildHandlerArguments<OperationInput>) => {
@@ -140,7 +140,7 @@ describe("create-request", () => {
       },
       {
         step: "build",
-      }
+      },
     );
     fooClient.middlewareStack.add(
       (next) => (args: FinalizeHandlerArguments<OperationInput>) => {
@@ -151,11 +151,11 @@ describe("create-request", () => {
       },
       {
         step: "finalizeRequest",
-      }
+      },
     );
     const request = await createRequest(
       fooClient as unknown as Client<any, InputTypesUnion, MetadataBearer, any>,
-      operationCommand
+      operationCommand,
     );
     expect(request).toEqual({
       ...httpRequest,

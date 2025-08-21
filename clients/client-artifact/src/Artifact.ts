@@ -42,16 +42,16 @@ export interface Artifact {
   getAccountSettings(): Promise<GetAccountSettingsCommandOutput>;
   getAccountSettings(
     args: GetAccountSettingsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetAccountSettingsCommandOutput>;
   getAccountSettings(
     args: GetAccountSettingsCommandInput,
-    cb: (err: any, data?: GetAccountSettingsCommandOutput) => void
+    cb: (err: any, data?: GetAccountSettingsCommandOutput) => void,
   ): void;
   getAccountSettings(
     args: GetAccountSettingsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetAccountSettingsCommandOutput) => void
+    cb: (err: any, data?: GetAccountSettingsCommandOutput) => void,
   ): void;
 
   /**
@@ -62,7 +62,7 @@ export interface Artifact {
   getReport(
     args: GetReportCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetReportCommandOutput) => void
+    cb: (err: any, data?: GetReportCommandOutput) => void,
   ): void;
 
   /**
@@ -70,16 +70,16 @@ export interface Artifact {
    */
   getReportMetadata(
     args: GetReportMetadataCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetReportMetadataCommandOutput>;
   getReportMetadata(
     args: GetReportMetadataCommandInput,
-    cb: (err: any, data?: GetReportMetadataCommandOutput) => void
+    cb: (err: any, data?: GetReportMetadataCommandOutput) => void,
   ): void;
   getReportMetadata(
     args: GetReportMetadataCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetReportMetadataCommandOutput) => void
+    cb: (err: any, data?: GetReportMetadataCommandOutput) => void,
   ): void;
 
   /**
@@ -87,16 +87,16 @@ export interface Artifact {
    */
   getTermForReport(
     args: GetTermForReportCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetTermForReportCommandOutput>;
   getTermForReport(
     args: GetTermForReportCommandInput,
-    cb: (err: any, data?: GetTermForReportCommandOutput) => void
+    cb: (err: any, data?: GetTermForReportCommandOutput) => void,
   ): void;
   getTermForReport(
     args: GetTermForReportCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetTermForReportCommandOutput) => void
+    cb: (err: any, data?: GetTermForReportCommandOutput) => void,
   ): void;
 
   /**
@@ -108,7 +108,7 @@ export interface Artifact {
   listReports(
     args: ListReportsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListReportsCommandOutput) => void
+    cb: (err: any, data?: ListReportsCommandOutput) => void,
   ): void;
 
   /**
@@ -117,16 +117,16 @@ export interface Artifact {
   putAccountSettings(): Promise<PutAccountSettingsCommandOutput>;
   putAccountSettings(
     args: PutAccountSettingsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutAccountSettingsCommandOutput>;
   putAccountSettings(
     args: PutAccountSettingsCommandInput,
-    cb: (err: any, data?: PutAccountSettingsCommandOutput) => void
+    cb: (err: any, data?: PutAccountSettingsCommandOutput) => void,
   ): void;
   putAccountSettings(
     args: PutAccountSettingsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutAccountSettingsCommandOutput) => void
+    cb: (err: any, data?: PutAccountSettingsCommandOutput) => void,
   ): void;
 }
 

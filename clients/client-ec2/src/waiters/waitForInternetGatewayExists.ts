@@ -38,7 +38,7 @@ const checkState = async (client: EC2Client, input: DescribeInternetGatewaysComm
  */
 export const waitForInternetGatewayExists = async (
   params: WaiterConfiguration<EC2Client>,
-  input: DescribeInternetGatewaysCommandInput
+  input: DescribeInternetGatewaysCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 5, maxDelay: 120 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -50,7 +50,7 @@ export const waitForInternetGatewayExists = async (
  */
 export const waitUntilInternetGatewayExists = async (
   params: WaiterConfiguration<EC2Client>,
-  input: DescribeInternetGatewaysCommandInput
+  input: DescribeInternetGatewaysCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 5, maxDelay: 120 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

@@ -117,7 +117,7 @@ export function getSignedUrl({
     const resources = getPolicyResources(policy!);
     if (!resources[0]) {
       throw new Error(
-        "@aws-sdk/cloudfront-signer: No URL provided and unable to determine URL from first policy statement resource."
+        "@aws-sdk/cloudfront-signer: No URL provided and unable to determine URL from first policy statement resource.",
       );
     }
     baseUrl = resources[0].replace("*://", "https://");
@@ -415,7 +415,7 @@ class CloudfrontSignBuilder {
         ipAddress,
         dateLessThan: parsedDates.dateLessThan,
         dateGreaterThan: parsedDates.dateGreaterThan,
-      })
+      }),
     );
   }
 

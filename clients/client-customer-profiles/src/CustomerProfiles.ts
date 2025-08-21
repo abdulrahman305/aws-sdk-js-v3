@@ -308,7 +308,7 @@ export interface CustomerProfiles {
   addProfileKey(
     args: AddProfileKeyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AddProfileKeyCommandOutput) => void
+    cb: (err: any, data?: AddProfileKeyCommandOutput) => void,
   ): void;
 
   /**
@@ -316,16 +316,16 @@ export interface CustomerProfiles {
    */
   createCalculatedAttributeDefinition(
     args: CreateCalculatedAttributeDefinitionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateCalculatedAttributeDefinitionCommandOutput>;
   createCalculatedAttributeDefinition(
     args: CreateCalculatedAttributeDefinitionCommandInput,
-    cb: (err: any, data?: CreateCalculatedAttributeDefinitionCommandOutput) => void
+    cb: (err: any, data?: CreateCalculatedAttributeDefinitionCommandOutput) => void,
   ): void;
   createCalculatedAttributeDefinition(
     args: CreateCalculatedAttributeDefinitionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateCalculatedAttributeDefinitionCommandOutput) => void
+    cb: (err: any, data?: CreateCalculatedAttributeDefinitionCommandOutput) => void,
   ): void;
 
   /**
@@ -336,7 +336,7 @@ export interface CustomerProfiles {
   createDomain(
     args: CreateDomainCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateDomainCommandOutput) => void
+    cb: (err: any, data?: CreateDomainCommandOutput) => void,
   ): void;
 
   /**
@@ -344,16 +344,16 @@ export interface CustomerProfiles {
    */
   createEventStream(
     args: CreateEventStreamCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateEventStreamCommandOutput>;
   createEventStream(
     args: CreateEventStreamCommandInput,
-    cb: (err: any, data?: CreateEventStreamCommandOutput) => void
+    cb: (err: any, data?: CreateEventStreamCommandOutput) => void,
   ): void;
   createEventStream(
     args: CreateEventStreamCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateEventStreamCommandOutput) => void
+    cb: (err: any, data?: CreateEventStreamCommandOutput) => void,
   ): void;
 
   /**
@@ -361,16 +361,16 @@ export interface CustomerProfiles {
    */
   createIntegrationWorkflow(
     args: CreateIntegrationWorkflowCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateIntegrationWorkflowCommandOutput>;
   createIntegrationWorkflow(
     args: CreateIntegrationWorkflowCommandInput,
-    cb: (err: any, data?: CreateIntegrationWorkflowCommandOutput) => void
+    cb: (err: any, data?: CreateIntegrationWorkflowCommandOutput) => void,
   ): void;
   createIntegrationWorkflow(
     args: CreateIntegrationWorkflowCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateIntegrationWorkflowCommandOutput) => void
+    cb: (err: any, data?: CreateIntegrationWorkflowCommandOutput) => void,
   ): void;
 
   /**
@@ -381,7 +381,7 @@ export interface CustomerProfiles {
   createProfile(
     args: CreateProfileCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateProfileCommandOutput) => void
+    cb: (err: any, data?: CreateProfileCommandOutput) => void,
   ): void;
 
   /**
@@ -389,16 +389,16 @@ export interface CustomerProfiles {
    */
   deleteCalculatedAttributeDefinition(
     args: DeleteCalculatedAttributeDefinitionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteCalculatedAttributeDefinitionCommandOutput>;
   deleteCalculatedAttributeDefinition(
     args: DeleteCalculatedAttributeDefinitionCommandInput,
-    cb: (err: any, data?: DeleteCalculatedAttributeDefinitionCommandOutput) => void
+    cb: (err: any, data?: DeleteCalculatedAttributeDefinitionCommandOutput) => void,
   ): void;
   deleteCalculatedAttributeDefinition(
     args: DeleteCalculatedAttributeDefinitionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteCalculatedAttributeDefinitionCommandOutput) => void
+    cb: (err: any, data?: DeleteCalculatedAttributeDefinitionCommandOutput) => void,
   ): void;
 
   /**
@@ -409,7 +409,7 @@ export interface CustomerProfiles {
   deleteDomain(
     args: DeleteDomainCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteDomainCommandOutput) => void
+    cb: (err: any, data?: DeleteDomainCommandOutput) => void,
   ): void;
 
   /**
@@ -417,16 +417,16 @@ export interface CustomerProfiles {
    */
   deleteEventStream(
     args: DeleteEventStreamCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteEventStreamCommandOutput>;
   deleteEventStream(
     args: DeleteEventStreamCommandInput,
-    cb: (err: any, data?: DeleteEventStreamCommandOutput) => void
+    cb: (err: any, data?: DeleteEventStreamCommandOutput) => void,
   ): void;
   deleteEventStream(
     args: DeleteEventStreamCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteEventStreamCommandOutput) => void
+    cb: (err: any, data?: DeleteEventStreamCommandOutput) => void,
   ): void;
 
   /**
@@ -434,16 +434,16 @@ export interface CustomerProfiles {
    */
   deleteIntegration(
     args: DeleteIntegrationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteIntegrationCommandOutput>;
   deleteIntegration(
     args: DeleteIntegrationCommandInput,
-    cb: (err: any, data?: DeleteIntegrationCommandOutput) => void
+    cb: (err: any, data?: DeleteIntegrationCommandOutput) => void,
   ): void;
   deleteIntegration(
     args: DeleteIntegrationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteIntegrationCommandOutput) => void
+    cb: (err: any, data?: DeleteIntegrationCommandOutput) => void,
   ): void;
 
   /**
@@ -454,7 +454,7 @@ export interface CustomerProfiles {
   deleteProfile(
     args: DeleteProfileCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteProfileCommandOutput) => void
+    cb: (err: any, data?: DeleteProfileCommandOutput) => void,
   ): void;
 
   /**
@@ -462,16 +462,16 @@ export interface CustomerProfiles {
    */
   deleteProfileKey(
     args: DeleteProfileKeyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteProfileKeyCommandOutput>;
   deleteProfileKey(
     args: DeleteProfileKeyCommandInput,
-    cb: (err: any, data?: DeleteProfileKeyCommandOutput) => void
+    cb: (err: any, data?: DeleteProfileKeyCommandOutput) => void,
   ): void;
   deleteProfileKey(
     args: DeleteProfileKeyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteProfileKeyCommandOutput) => void
+    cb: (err: any, data?: DeleteProfileKeyCommandOutput) => void,
   ): void;
 
   /**
@@ -479,16 +479,16 @@ export interface CustomerProfiles {
    */
   deleteProfileObject(
     args: DeleteProfileObjectCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteProfileObjectCommandOutput>;
   deleteProfileObject(
     args: DeleteProfileObjectCommandInput,
-    cb: (err: any, data?: DeleteProfileObjectCommandOutput) => void
+    cb: (err: any, data?: DeleteProfileObjectCommandOutput) => void,
   ): void;
   deleteProfileObject(
     args: DeleteProfileObjectCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteProfileObjectCommandOutput) => void
+    cb: (err: any, data?: DeleteProfileObjectCommandOutput) => void,
   ): void;
 
   /**
@@ -496,16 +496,16 @@ export interface CustomerProfiles {
    */
   deleteProfileObjectType(
     args: DeleteProfileObjectTypeCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteProfileObjectTypeCommandOutput>;
   deleteProfileObjectType(
     args: DeleteProfileObjectTypeCommandInput,
-    cb: (err: any, data?: DeleteProfileObjectTypeCommandOutput) => void
+    cb: (err: any, data?: DeleteProfileObjectTypeCommandOutput) => void,
   ): void;
   deleteProfileObjectType(
     args: DeleteProfileObjectTypeCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteProfileObjectTypeCommandOutput) => void
+    cb: (err: any, data?: DeleteProfileObjectTypeCommandOutput) => void,
   ): void;
 
   /**
@@ -513,13 +513,13 @@ export interface CustomerProfiles {
    */
   deleteWorkflow(
     args: DeleteWorkflowCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteWorkflowCommandOutput>;
   deleteWorkflow(args: DeleteWorkflowCommandInput, cb: (err: any, data?: DeleteWorkflowCommandOutput) => void): void;
   deleteWorkflow(
     args: DeleteWorkflowCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteWorkflowCommandOutput) => void
+    cb: (err: any, data?: DeleteWorkflowCommandOutput) => void,
   ): void;
 
   /**
@@ -527,16 +527,16 @@ export interface CustomerProfiles {
    */
   detectProfileObjectType(
     args: DetectProfileObjectTypeCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DetectProfileObjectTypeCommandOutput>;
   detectProfileObjectType(
     args: DetectProfileObjectTypeCommandInput,
-    cb: (err: any, data?: DetectProfileObjectTypeCommandOutput) => void
+    cb: (err: any, data?: DetectProfileObjectTypeCommandOutput) => void,
   ): void;
   detectProfileObjectType(
     args: DetectProfileObjectTypeCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DetectProfileObjectTypeCommandOutput) => void
+    cb: (err: any, data?: DetectProfileObjectTypeCommandOutput) => void,
   ): void;
 
   /**
@@ -544,16 +544,16 @@ export interface CustomerProfiles {
    */
   getAutoMergingPreview(
     args: GetAutoMergingPreviewCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetAutoMergingPreviewCommandOutput>;
   getAutoMergingPreview(
     args: GetAutoMergingPreviewCommandInput,
-    cb: (err: any, data?: GetAutoMergingPreviewCommandOutput) => void
+    cb: (err: any, data?: GetAutoMergingPreviewCommandOutput) => void,
   ): void;
   getAutoMergingPreview(
     args: GetAutoMergingPreviewCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetAutoMergingPreviewCommandOutput) => void
+    cb: (err: any, data?: GetAutoMergingPreviewCommandOutput) => void,
   ): void;
 
   /**
@@ -561,16 +561,16 @@ export interface CustomerProfiles {
    */
   getCalculatedAttributeDefinition(
     args: GetCalculatedAttributeDefinitionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetCalculatedAttributeDefinitionCommandOutput>;
   getCalculatedAttributeDefinition(
     args: GetCalculatedAttributeDefinitionCommandInput,
-    cb: (err: any, data?: GetCalculatedAttributeDefinitionCommandOutput) => void
+    cb: (err: any, data?: GetCalculatedAttributeDefinitionCommandOutput) => void,
   ): void;
   getCalculatedAttributeDefinition(
     args: GetCalculatedAttributeDefinitionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetCalculatedAttributeDefinitionCommandOutput) => void
+    cb: (err: any, data?: GetCalculatedAttributeDefinitionCommandOutput) => void,
   ): void;
 
   /**
@@ -578,16 +578,16 @@ export interface CustomerProfiles {
    */
   getCalculatedAttributeForProfile(
     args: GetCalculatedAttributeForProfileCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetCalculatedAttributeForProfileCommandOutput>;
   getCalculatedAttributeForProfile(
     args: GetCalculatedAttributeForProfileCommandInput,
-    cb: (err: any, data?: GetCalculatedAttributeForProfileCommandOutput) => void
+    cb: (err: any, data?: GetCalculatedAttributeForProfileCommandOutput) => void,
   ): void;
   getCalculatedAttributeForProfile(
     args: GetCalculatedAttributeForProfileCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetCalculatedAttributeForProfileCommandOutput) => void
+    cb: (err: any, data?: GetCalculatedAttributeForProfileCommandOutput) => void,
   ): void;
 
   /**
@@ -598,7 +598,7 @@ export interface CustomerProfiles {
   getDomain(
     args: GetDomainCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetDomainCommandOutput) => void
+    cb: (err: any, data?: GetDomainCommandOutput) => void,
   ): void;
 
   /**
@@ -606,13 +606,13 @@ export interface CustomerProfiles {
    */
   getEventStream(
     args: GetEventStreamCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetEventStreamCommandOutput>;
   getEventStream(args: GetEventStreamCommandInput, cb: (err: any, data?: GetEventStreamCommandOutput) => void): void;
   getEventStream(
     args: GetEventStreamCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetEventStreamCommandOutput) => void
+    cb: (err: any, data?: GetEventStreamCommandOutput) => void,
   ): void;
 
   /**
@@ -620,16 +620,16 @@ export interface CustomerProfiles {
    */
   getIdentityResolutionJob(
     args: GetIdentityResolutionJobCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetIdentityResolutionJobCommandOutput>;
   getIdentityResolutionJob(
     args: GetIdentityResolutionJobCommandInput,
-    cb: (err: any, data?: GetIdentityResolutionJobCommandOutput) => void
+    cb: (err: any, data?: GetIdentityResolutionJobCommandOutput) => void,
   ): void;
   getIdentityResolutionJob(
     args: GetIdentityResolutionJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetIdentityResolutionJobCommandOutput) => void
+    cb: (err: any, data?: GetIdentityResolutionJobCommandOutput) => void,
   ): void;
 
   /**
@@ -637,13 +637,13 @@ export interface CustomerProfiles {
    */
   getIntegration(
     args: GetIntegrationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetIntegrationCommandOutput>;
   getIntegration(args: GetIntegrationCommandInput, cb: (err: any, data?: GetIntegrationCommandOutput) => void): void;
   getIntegration(
     args: GetIntegrationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetIntegrationCommandOutput) => void
+    cb: (err: any, data?: GetIntegrationCommandOutput) => void,
   ): void;
 
   /**
@@ -654,7 +654,7 @@ export interface CustomerProfiles {
   getMatches(
     args: GetMatchesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetMatchesCommandOutput) => void
+    cb: (err: any, data?: GetMatchesCommandOutput) => void,
   ): void;
 
   /**
@@ -662,16 +662,16 @@ export interface CustomerProfiles {
    */
   getProfileObjectType(
     args: GetProfileObjectTypeCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetProfileObjectTypeCommandOutput>;
   getProfileObjectType(
     args: GetProfileObjectTypeCommandInput,
-    cb: (err: any, data?: GetProfileObjectTypeCommandOutput) => void
+    cb: (err: any, data?: GetProfileObjectTypeCommandOutput) => void,
   ): void;
   getProfileObjectType(
     args: GetProfileObjectTypeCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetProfileObjectTypeCommandOutput) => void
+    cb: (err: any, data?: GetProfileObjectTypeCommandOutput) => void,
   ): void;
 
   /**
@@ -679,16 +679,16 @@ export interface CustomerProfiles {
    */
   getProfileObjectTypeTemplate(
     args: GetProfileObjectTypeTemplateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetProfileObjectTypeTemplateCommandOutput>;
   getProfileObjectTypeTemplate(
     args: GetProfileObjectTypeTemplateCommandInput,
-    cb: (err: any, data?: GetProfileObjectTypeTemplateCommandOutput) => void
+    cb: (err: any, data?: GetProfileObjectTypeTemplateCommandOutput) => void,
   ): void;
   getProfileObjectTypeTemplate(
     args: GetProfileObjectTypeTemplateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetProfileObjectTypeTemplateCommandOutput) => void
+    cb: (err: any, data?: GetProfileObjectTypeTemplateCommandOutput) => void,
   ): void;
 
   /**
@@ -696,16 +696,16 @@ export interface CustomerProfiles {
    */
   getSimilarProfiles(
     args: GetSimilarProfilesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetSimilarProfilesCommandOutput>;
   getSimilarProfiles(
     args: GetSimilarProfilesCommandInput,
-    cb: (err: any, data?: GetSimilarProfilesCommandOutput) => void
+    cb: (err: any, data?: GetSimilarProfilesCommandOutput) => void,
   ): void;
   getSimilarProfiles(
     args: GetSimilarProfilesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetSimilarProfilesCommandOutput) => void
+    cb: (err: any, data?: GetSimilarProfilesCommandOutput) => void,
   ): void;
 
   /**
@@ -716,7 +716,7 @@ export interface CustomerProfiles {
   getWorkflow(
     args: GetWorkflowCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetWorkflowCommandOutput) => void
+    cb: (err: any, data?: GetWorkflowCommandOutput) => void,
   ): void;
 
   /**
@@ -724,16 +724,16 @@ export interface CustomerProfiles {
    */
   getWorkflowSteps(
     args: GetWorkflowStepsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetWorkflowStepsCommandOutput>;
   getWorkflowSteps(
     args: GetWorkflowStepsCommandInput,
-    cb: (err: any, data?: GetWorkflowStepsCommandOutput) => void
+    cb: (err: any, data?: GetWorkflowStepsCommandOutput) => void,
   ): void;
   getWorkflowSteps(
     args: GetWorkflowStepsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetWorkflowStepsCommandOutput) => void
+    cb: (err: any, data?: GetWorkflowStepsCommandOutput) => void,
   ): void;
 
   /**
@@ -741,16 +741,16 @@ export interface CustomerProfiles {
    */
   listAccountIntegrations(
     args: ListAccountIntegrationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListAccountIntegrationsCommandOutput>;
   listAccountIntegrations(
     args: ListAccountIntegrationsCommandInput,
-    cb: (err: any, data?: ListAccountIntegrationsCommandOutput) => void
+    cb: (err: any, data?: ListAccountIntegrationsCommandOutput) => void,
   ): void;
   listAccountIntegrations(
     args: ListAccountIntegrationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListAccountIntegrationsCommandOutput) => void
+    cb: (err: any, data?: ListAccountIntegrationsCommandOutput) => void,
   ): void;
 
   /**
@@ -758,16 +758,16 @@ export interface CustomerProfiles {
    */
   listCalculatedAttributeDefinitions(
     args: ListCalculatedAttributeDefinitionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListCalculatedAttributeDefinitionsCommandOutput>;
   listCalculatedAttributeDefinitions(
     args: ListCalculatedAttributeDefinitionsCommandInput,
-    cb: (err: any, data?: ListCalculatedAttributeDefinitionsCommandOutput) => void
+    cb: (err: any, data?: ListCalculatedAttributeDefinitionsCommandOutput) => void,
   ): void;
   listCalculatedAttributeDefinitions(
     args: ListCalculatedAttributeDefinitionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListCalculatedAttributeDefinitionsCommandOutput) => void
+    cb: (err: any, data?: ListCalculatedAttributeDefinitionsCommandOutput) => void,
   ): void;
 
   /**
@@ -775,16 +775,16 @@ export interface CustomerProfiles {
    */
   listCalculatedAttributesForProfile(
     args: ListCalculatedAttributesForProfileCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListCalculatedAttributesForProfileCommandOutput>;
   listCalculatedAttributesForProfile(
     args: ListCalculatedAttributesForProfileCommandInput,
-    cb: (err: any, data?: ListCalculatedAttributesForProfileCommandOutput) => void
+    cb: (err: any, data?: ListCalculatedAttributesForProfileCommandOutput) => void,
   ): void;
   listCalculatedAttributesForProfile(
     args: ListCalculatedAttributesForProfileCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListCalculatedAttributesForProfileCommandOutput) => void
+    cb: (err: any, data?: ListCalculatedAttributesForProfileCommandOutput) => void,
   ): void;
 
   /**
@@ -796,7 +796,7 @@ export interface CustomerProfiles {
   listDomains(
     args: ListDomainsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListDomainsCommandOutput) => void
+    cb: (err: any, data?: ListDomainsCommandOutput) => void,
   ): void;
 
   /**
@@ -804,16 +804,16 @@ export interface CustomerProfiles {
    */
   listEventStreams(
     args: ListEventStreamsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListEventStreamsCommandOutput>;
   listEventStreams(
     args: ListEventStreamsCommandInput,
-    cb: (err: any, data?: ListEventStreamsCommandOutput) => void
+    cb: (err: any, data?: ListEventStreamsCommandOutput) => void,
   ): void;
   listEventStreams(
     args: ListEventStreamsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListEventStreamsCommandOutput) => void
+    cb: (err: any, data?: ListEventStreamsCommandOutput) => void,
   ): void;
 
   /**
@@ -821,16 +821,16 @@ export interface CustomerProfiles {
    */
   listIdentityResolutionJobs(
     args: ListIdentityResolutionJobsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListIdentityResolutionJobsCommandOutput>;
   listIdentityResolutionJobs(
     args: ListIdentityResolutionJobsCommandInput,
-    cb: (err: any, data?: ListIdentityResolutionJobsCommandOutput) => void
+    cb: (err: any, data?: ListIdentityResolutionJobsCommandOutput) => void,
   ): void;
   listIdentityResolutionJobs(
     args: ListIdentityResolutionJobsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListIdentityResolutionJobsCommandOutput) => void
+    cb: (err: any, data?: ListIdentityResolutionJobsCommandOutput) => void,
   ): void;
 
   /**
@@ -838,16 +838,16 @@ export interface CustomerProfiles {
    */
   listIntegrations(
     args: ListIntegrationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListIntegrationsCommandOutput>;
   listIntegrations(
     args: ListIntegrationsCommandInput,
-    cb: (err: any, data?: ListIntegrationsCommandOutput) => void
+    cb: (err: any, data?: ListIntegrationsCommandOutput) => void,
   ): void;
   listIntegrations(
     args: ListIntegrationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListIntegrationsCommandOutput) => void
+    cb: (err: any, data?: ListIntegrationsCommandOutput) => void,
   ): void;
 
   /**
@@ -855,16 +855,16 @@ export interface CustomerProfiles {
    */
   listProfileObjects(
     args: ListProfileObjectsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListProfileObjectsCommandOutput>;
   listProfileObjects(
     args: ListProfileObjectsCommandInput,
-    cb: (err: any, data?: ListProfileObjectsCommandOutput) => void
+    cb: (err: any, data?: ListProfileObjectsCommandOutput) => void,
   ): void;
   listProfileObjects(
     args: ListProfileObjectsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListProfileObjectsCommandOutput) => void
+    cb: (err: any, data?: ListProfileObjectsCommandOutput) => void,
   ): void;
 
   /**
@@ -872,16 +872,16 @@ export interface CustomerProfiles {
    */
   listProfileObjectTypes(
     args: ListProfileObjectTypesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListProfileObjectTypesCommandOutput>;
   listProfileObjectTypes(
     args: ListProfileObjectTypesCommandInput,
-    cb: (err: any, data?: ListProfileObjectTypesCommandOutput) => void
+    cb: (err: any, data?: ListProfileObjectTypesCommandOutput) => void,
   ): void;
   listProfileObjectTypes(
     args: ListProfileObjectTypesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListProfileObjectTypesCommandOutput) => void
+    cb: (err: any, data?: ListProfileObjectTypesCommandOutput) => void,
   ): void;
 
   /**
@@ -890,16 +890,16 @@ export interface CustomerProfiles {
   listProfileObjectTypeTemplates(): Promise<ListProfileObjectTypeTemplatesCommandOutput>;
   listProfileObjectTypeTemplates(
     args: ListProfileObjectTypeTemplatesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListProfileObjectTypeTemplatesCommandOutput>;
   listProfileObjectTypeTemplates(
     args: ListProfileObjectTypeTemplatesCommandInput,
-    cb: (err: any, data?: ListProfileObjectTypeTemplatesCommandOutput) => void
+    cb: (err: any, data?: ListProfileObjectTypeTemplatesCommandOutput) => void,
   ): void;
   listProfileObjectTypeTemplates(
     args: ListProfileObjectTypeTemplatesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListProfileObjectTypeTemplatesCommandOutput) => void
+    cb: (err: any, data?: ListProfileObjectTypeTemplatesCommandOutput) => void,
   ): void;
 
   /**
@@ -907,16 +907,16 @@ export interface CustomerProfiles {
    */
   listRuleBasedMatches(
     args: ListRuleBasedMatchesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListRuleBasedMatchesCommandOutput>;
   listRuleBasedMatches(
     args: ListRuleBasedMatchesCommandInput,
-    cb: (err: any, data?: ListRuleBasedMatchesCommandOutput) => void
+    cb: (err: any, data?: ListRuleBasedMatchesCommandOutput) => void,
   ): void;
   listRuleBasedMatches(
     args: ListRuleBasedMatchesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListRuleBasedMatchesCommandOutput) => void
+    cb: (err: any, data?: ListRuleBasedMatchesCommandOutput) => void,
   ): void;
 
   /**
@@ -924,16 +924,16 @@ export interface CustomerProfiles {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -944,7 +944,7 @@ export interface CustomerProfiles {
   listWorkflows(
     args: ListWorkflowsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListWorkflowsCommandOutput) => void
+    cb: (err: any, data?: ListWorkflowsCommandOutput) => void,
   ): void;
 
   /**
@@ -955,7 +955,7 @@ export interface CustomerProfiles {
   mergeProfiles(
     args: MergeProfilesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: MergeProfilesCommandOutput) => void
+    cb: (err: any, data?: MergeProfilesCommandOutput) => void,
   ): void;
 
   /**
@@ -963,13 +963,13 @@ export interface CustomerProfiles {
    */
   putIntegration(
     args: PutIntegrationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutIntegrationCommandOutput>;
   putIntegration(args: PutIntegrationCommandInput, cb: (err: any, data?: PutIntegrationCommandOutput) => void): void;
   putIntegration(
     args: PutIntegrationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutIntegrationCommandOutput) => void
+    cb: (err: any, data?: PutIntegrationCommandOutput) => void,
   ): void;
 
   /**
@@ -977,16 +977,16 @@ export interface CustomerProfiles {
    */
   putProfileObject(
     args: PutProfileObjectCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutProfileObjectCommandOutput>;
   putProfileObject(
     args: PutProfileObjectCommandInput,
-    cb: (err: any, data?: PutProfileObjectCommandOutput) => void
+    cb: (err: any, data?: PutProfileObjectCommandOutput) => void,
   ): void;
   putProfileObject(
     args: PutProfileObjectCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutProfileObjectCommandOutput) => void
+    cb: (err: any, data?: PutProfileObjectCommandOutput) => void,
   ): void;
 
   /**
@@ -994,16 +994,16 @@ export interface CustomerProfiles {
    */
   putProfileObjectType(
     args: PutProfileObjectTypeCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutProfileObjectTypeCommandOutput>;
   putProfileObjectType(
     args: PutProfileObjectTypeCommandInput,
-    cb: (err: any, data?: PutProfileObjectTypeCommandOutput) => void
+    cb: (err: any, data?: PutProfileObjectTypeCommandOutput) => void,
   ): void;
   putProfileObjectType(
     args: PutProfileObjectTypeCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutProfileObjectTypeCommandOutput) => void
+    cb: (err: any, data?: PutProfileObjectTypeCommandOutput) => void,
   ): void;
 
   /**
@@ -1011,13 +1011,13 @@ export interface CustomerProfiles {
    */
   searchProfiles(
     args: SearchProfilesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<SearchProfilesCommandOutput>;
   searchProfiles(args: SearchProfilesCommandInput, cb: (err: any, data?: SearchProfilesCommandOutput) => void): void;
   searchProfiles(
     args: SearchProfilesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SearchProfilesCommandOutput) => void
+    cb: (err: any, data?: SearchProfilesCommandOutput) => void,
   ): void;
 
   /**
@@ -1028,7 +1028,7 @@ export interface CustomerProfiles {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -1039,7 +1039,7 @@ export interface CustomerProfiles {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -1047,16 +1047,16 @@ export interface CustomerProfiles {
    */
   updateCalculatedAttributeDefinition(
     args: UpdateCalculatedAttributeDefinitionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateCalculatedAttributeDefinitionCommandOutput>;
   updateCalculatedAttributeDefinition(
     args: UpdateCalculatedAttributeDefinitionCommandInput,
-    cb: (err: any, data?: UpdateCalculatedAttributeDefinitionCommandOutput) => void
+    cb: (err: any, data?: UpdateCalculatedAttributeDefinitionCommandOutput) => void,
   ): void;
   updateCalculatedAttributeDefinition(
     args: UpdateCalculatedAttributeDefinitionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateCalculatedAttributeDefinitionCommandOutput) => void
+    cb: (err: any, data?: UpdateCalculatedAttributeDefinitionCommandOutput) => void,
   ): void;
 
   /**
@@ -1067,7 +1067,7 @@ export interface CustomerProfiles {
   updateDomain(
     args: UpdateDomainCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateDomainCommandOutput) => void
+    cb: (err: any, data?: UpdateDomainCommandOutput) => void,
   ): void;
 
   /**
@@ -1078,7 +1078,7 @@ export interface CustomerProfiles {
   updateProfile(
     args: UpdateProfileCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateProfileCommandOutput) => void
+    cb: (err: any, data?: UpdateProfileCommandOutput) => void,
   ): void;
 }
 

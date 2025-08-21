@@ -76,7 +76,7 @@ import {
  */
 export const se_CreateNotificationRuleCommand = async (
   input: CreateNotificationRuleCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -94,7 +94,7 @@ export const se_CreateNotificationRuleCommand = async (
       Status: [],
       Tags: (_) => _json(_),
       Targets: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -105,7 +105,7 @@ export const se_CreateNotificationRuleCommand = async (
  */
 export const se_DeleteNotificationRuleCommand = async (
   input: DeleteNotificationRuleCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -116,7 +116,7 @@ export const se_DeleteNotificationRuleCommand = async (
   body = JSON.stringify(
     take(input, {
       Arn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -127,7 +127,7 @@ export const se_DeleteNotificationRuleCommand = async (
  */
 export const se_DeleteTargetCommand = async (
   input: DeleteTargetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -139,7 +139,7 @@ export const se_DeleteTargetCommand = async (
     take(input, {
       ForceUnsubscribeAll: [],
       TargetAddress: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -150,7 +150,7 @@ export const se_DeleteTargetCommand = async (
  */
 export const se_DescribeNotificationRuleCommand = async (
   input: DescribeNotificationRuleCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -161,7 +161,7 @@ export const se_DescribeNotificationRuleCommand = async (
   body = JSON.stringify(
     take(input, {
       Arn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -172,7 +172,7 @@ export const se_DescribeNotificationRuleCommand = async (
  */
 export const se_ListEventTypesCommand = async (
   input: ListEventTypesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -185,7 +185,7 @@ export const se_ListEventTypesCommand = async (
       Filters: (_) => _json(_),
       MaxResults: [],
       NextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -196,7 +196,7 @@ export const se_ListEventTypesCommand = async (
  */
 export const se_ListNotificationRulesCommand = async (
   input: ListNotificationRulesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -209,7 +209,7 @@ export const se_ListNotificationRulesCommand = async (
       Filters: (_) => _json(_),
       MaxResults: [],
       NextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -220,7 +220,7 @@ export const se_ListNotificationRulesCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -231,7 +231,7 @@ export const se_ListTagsForResourceCommand = async (
   body = JSON.stringify(
     take(input, {
       Arn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -242,7 +242,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_ListTargetsCommand = async (
   input: ListTargetsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -255,7 +255,7 @@ export const se_ListTargetsCommand = async (
       Filters: (_) => _json(_),
       MaxResults: [],
       NextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -266,7 +266,7 @@ export const se_ListTargetsCommand = async (
  */
 export const se_SubscribeCommand = async (
   input: SubscribeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -279,7 +279,7 @@ export const se_SubscribeCommand = async (
       Arn: [],
       ClientRequestToken: [],
       Target: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -290,7 +290,7 @@ export const se_SubscribeCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -302,7 +302,7 @@ export const se_TagResourceCommand = async (
     take(input, {
       Arn: [],
       Tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -313,7 +313,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UnsubscribeCommand = async (
   input: UnsubscribeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -325,7 +325,7 @@ export const se_UnsubscribeCommand = async (
     take(input, {
       Arn: [],
       TargetAddress: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -336,7 +336,7 @@ export const se_UnsubscribeCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -358,7 +358,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateNotificationRuleCommand = async (
   input: UpdateNotificationRuleCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -374,7 +374,7 @@ export const se_UpdateNotificationRuleCommand = async (
       Name: [],
       Status: [],
       Targets: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -385,7 +385,7 @@ export const se_UpdateNotificationRuleCommand = async (
  */
 export const de_CreateNotificationRuleCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateNotificationRuleCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -406,7 +406,7 @@ export const de_CreateNotificationRuleCommand = async (
  */
 export const de_DeleteNotificationRuleCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteNotificationRuleCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -427,7 +427,7 @@ export const de_DeleteNotificationRuleCommand = async (
  */
 export const de_DeleteTargetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteTargetCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -444,7 +444,7 @@ export const de_DeleteTargetCommand = async (
  */
 export const de_DescribeNotificationRuleCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeNotificationRuleCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -475,7 +475,7 @@ export const de_DescribeNotificationRuleCommand = async (
  */
 export const de_ListEventTypesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListEventTypesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -497,7 +497,7 @@ export const de_ListEventTypesCommand = async (
  */
 export const de_ListNotificationRulesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListNotificationRulesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -519,7 +519,7 @@ export const de_ListNotificationRulesCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -540,7 +540,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_ListTargetsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTargetsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -562,7 +562,7 @@ export const de_ListTargetsCommand = async (
  */
 export const de_SubscribeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SubscribeCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -583,7 +583,7 @@ export const de_SubscribeCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -604,7 +604,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UnsubscribeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UnsubscribeCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -625,7 +625,7 @@ export const de_UnsubscribeCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -642,7 +642,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateNotificationRuleCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateNotificationRuleCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -704,7 +704,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -724,7 +724,7 @@ const de_AccessDeniedExceptionRes = async (
  */
 const de_ConcurrentModificationExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ConcurrentModificationException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -744,7 +744,7 @@ const de_ConcurrentModificationExceptionRes = async (
  */
 const de_ConfigurationExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ConfigurationException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -764,7 +764,7 @@ const de_ConfigurationExceptionRes = async (
  */
 const de_InvalidNextTokenExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidNextTokenException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -784,7 +784,7 @@ const de_InvalidNextTokenExceptionRes = async (
  */
 const de_LimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<LimitExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -804,7 +804,7 @@ const de_LimitExceededExceptionRes = async (
  */
 const de_ResourceAlreadyExistsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceAlreadyExistsException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -824,7 +824,7 @@ const de_ResourceAlreadyExistsExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;

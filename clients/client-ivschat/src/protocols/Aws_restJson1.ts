@@ -88,7 +88,7 @@ import {
  */
 export const se_CreateChatTokenCommand = async (
   input: CreateChatTokenCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -103,7 +103,7 @@ export const se_CreateChatTokenCommand = async (
       roomIdentifier: [],
       sessionDurationInMinutes: [],
       userId: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -114,7 +114,7 @@ export const se_CreateChatTokenCommand = async (
  */
 export const se_CreateLoggingConfigurationCommand = async (
   input: CreateLoggingConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -127,7 +127,7 @@ export const se_CreateLoggingConfigurationCommand = async (
       destinationConfiguration: (_) => _json(_),
       name: [],
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -138,7 +138,7 @@ export const se_CreateLoggingConfigurationCommand = async (
  */
 export const se_CreateRoomCommand = async (
   input: CreateRoomCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -154,7 +154,7 @@ export const se_CreateRoomCommand = async (
       messageReviewHandler: (_) => _json(_),
       name: [],
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -165,7 +165,7 @@ export const se_CreateRoomCommand = async (
  */
 export const se_DeleteLoggingConfigurationCommand = async (
   input: DeleteLoggingConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -176,7 +176,7 @@ export const se_DeleteLoggingConfigurationCommand = async (
   body = JSON.stringify(
     take(input, {
       identifier: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -187,7 +187,7 @@ export const se_DeleteLoggingConfigurationCommand = async (
  */
 export const se_DeleteMessageCommand = async (
   input: DeleteMessageCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -200,7 +200,7 @@ export const se_DeleteMessageCommand = async (
       id: [],
       reason: [],
       roomIdentifier: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -211,7 +211,7 @@ export const se_DeleteMessageCommand = async (
  */
 export const se_DeleteRoomCommand = async (
   input: DeleteRoomCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -222,7 +222,7 @@ export const se_DeleteRoomCommand = async (
   body = JSON.stringify(
     take(input, {
       identifier: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -233,7 +233,7 @@ export const se_DeleteRoomCommand = async (
  */
 export const se_DisconnectUserCommand = async (
   input: DisconnectUserCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -246,7 +246,7 @@ export const se_DisconnectUserCommand = async (
       reason: [],
       roomIdentifier: [],
       userId: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -257,7 +257,7 @@ export const se_DisconnectUserCommand = async (
  */
 export const se_GetLoggingConfigurationCommand = async (
   input: GetLoggingConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -268,7 +268,7 @@ export const se_GetLoggingConfigurationCommand = async (
   body = JSON.stringify(
     take(input, {
       identifier: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -279,7 +279,7 @@ export const se_GetLoggingConfigurationCommand = async (
  */
 export const se_GetRoomCommand = async (
   input: GetRoomCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -290,7 +290,7 @@ export const se_GetRoomCommand = async (
   body = JSON.stringify(
     take(input, {
       identifier: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -301,7 +301,7 @@ export const se_GetRoomCommand = async (
  */
 export const se_ListLoggingConfigurationsCommand = async (
   input: ListLoggingConfigurationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -313,7 +313,7 @@ export const se_ListLoggingConfigurationsCommand = async (
     take(input, {
       maxResults: [],
       nextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -324,7 +324,7 @@ export const se_ListLoggingConfigurationsCommand = async (
  */
 export const se_ListRoomsCommand = async (
   input: ListRoomsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -339,7 +339,7 @@ export const se_ListRoomsCommand = async (
       messageReviewHandlerUri: [],
       name: [],
       nextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -350,7 +350,7 @@ export const se_ListRoomsCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -366,7 +366,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_SendEventCommand = async (
   input: SendEventCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -379,7 +379,7 @@ export const se_SendEventCommand = async (
       attributes: (_) => _json(_),
       eventName: [],
       roomIdentifier: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -390,7 +390,7 @@ export const se_SendEventCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -402,7 +402,7 @@ export const se_TagResourceCommand = async (
   body = JSON.stringify(
     take(input, {
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -413,7 +413,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -435,7 +435,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateLoggingConfigurationCommand = async (
   input: UpdateLoggingConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -448,7 +448,7 @@ export const se_UpdateLoggingConfigurationCommand = async (
       destinationConfiguration: (_) => _json(_),
       identifier: [],
       name: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -459,7 +459,7 @@ export const se_UpdateLoggingConfigurationCommand = async (
  */
 export const se_UpdateRoomCommand = async (
   input: UpdateRoomCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -475,7 +475,7 @@ export const se_UpdateRoomCommand = async (
       maximumMessageRatePerSecond: [],
       messageReviewHandler: (_) => _json(_),
       name: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -486,7 +486,7 @@ export const se_UpdateRoomCommand = async (
  */
 export const de_CreateChatTokenCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateChatTokenCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -509,7 +509,7 @@ export const de_CreateChatTokenCommand = async (
  */
 export const de_CreateLoggingConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateLoggingConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -537,7 +537,7 @@ export const de_CreateLoggingConfigurationCommand = async (
  */
 export const de_CreateRoomCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateRoomCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -567,7 +567,7 @@ export const de_CreateRoomCommand = async (
  */
 export const de_DeleteLoggingConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteLoggingConfigurationCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -584,7 +584,7 @@ export const de_DeleteLoggingConfigurationCommand = async (
  */
 export const de_DeleteMessageCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteMessageCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -605,7 +605,7 @@ export const de_DeleteMessageCommand = async (
  */
 export const de_DeleteRoomCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteRoomCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -622,7 +622,7 @@ export const de_DeleteRoomCommand = async (
  */
 export const de_DisconnectUserCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisconnectUserCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -639,7 +639,7 @@ export const de_DisconnectUserCommand = async (
  */
 export const de_GetLoggingConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetLoggingConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -667,7 +667,7 @@ export const de_GetLoggingConfigurationCommand = async (
  */
 export const de_GetRoomCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetRoomCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -697,7 +697,7 @@ export const de_GetRoomCommand = async (
  */
 export const de_ListLoggingConfigurationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListLoggingConfigurationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -719,7 +719,7 @@ export const de_ListLoggingConfigurationsCommand = async (
  */
 export const de_ListRoomsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListRoomsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -741,7 +741,7 @@ export const de_ListRoomsCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -762,7 +762,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_SendEventCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SendEventCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -783,7 +783,7 @@ export const de_SendEventCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -800,7 +800,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -817,7 +817,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateLoggingConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateLoggingConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -845,7 +845,7 @@ export const de_UpdateLoggingConfigurationCommand = async (
  */
 export const de_UpdateRoomCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateRoomCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -920,7 +920,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -959,7 +959,7 @@ const de_ConflictExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_InternalServerExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -996,7 +996,7 @@ const de_PendingVerificationRes = async (parsedOutput: any, context: __SerdeCont
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1018,7 +1018,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_ServiceQuotaExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceQuotaExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;

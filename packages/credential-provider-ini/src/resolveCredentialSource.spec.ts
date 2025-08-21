@@ -62,7 +62,7 @@ describe(resolveCredentialSource.name, () => {
     const mockCredentialSource = "mockCredentialSource";
     const expectedError = new CredentialsProviderError(
       `Unsupported credential source in profile ${mockProfileName}. Got ${mockCredentialSource}, ` +
-        `expected EcsContainer or Ec2InstanceMetadata or Environment.`
+        `expected EcsContainer or Ec2InstanceMetadata or Environment.`,
     );
     try {
       await (

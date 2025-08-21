@@ -138,7 +138,7 @@ export class CreateReplicationConfigurationTemplateCommand extends $Command
   .n("MgnClient", "CreateReplicationConfigurationTemplateCommand")
   .f(
     CreateReplicationConfigurationTemplateRequestFilterSensitiveLog,
-    ReplicationConfigurationTemplateFilterSensitiveLog
+    ReplicationConfigurationTemplateFilterSensitiveLog,
   )
   .ser(se_CreateReplicationConfigurationTemplateCommand)
   .de(de_CreateReplicationConfigurationTemplateCommand)

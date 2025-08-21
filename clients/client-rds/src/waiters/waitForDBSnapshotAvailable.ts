@@ -106,7 +106,7 @@ const checkState = async (client: RDSClient, input: DescribeDBSnapshotsCommandIn
  */
 export const waitForDBSnapshotAvailable = async (
   params: WaiterConfiguration<RDSClient>,
-  input: DescribeDBSnapshotsCommandInput
+  input: DescribeDBSnapshotsCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 30, maxDelay: 120 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -118,7 +118,7 @@ export const waitForDBSnapshotAvailable = async (
  */
 export const waitUntilDBSnapshotAvailable = async (
   params: WaiterConfiguration<RDSClient>,
-  input: DescribeDBSnapshotsCommandInput
+  input: DescribeDBSnapshotsCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 30, maxDelay: 120 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

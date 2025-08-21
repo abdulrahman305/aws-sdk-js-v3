@@ -298,7 +298,7 @@ import { TranscribeServiceException as __BaseException } from "../models/Transcr
  */
 export const se_CreateCallAnalyticsCategoryCommand = async (
   input: CreateCallAnalyticsCategoryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateCallAnalyticsCategory");
   let body: any;
@@ -311,7 +311,7 @@ export const se_CreateCallAnalyticsCategoryCommand = async (
  */
 export const se_CreateLanguageModelCommand = async (
   input: CreateLanguageModelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateLanguageModel");
   let body: any;
@@ -324,7 +324,7 @@ export const se_CreateLanguageModelCommand = async (
  */
 export const se_CreateMedicalVocabularyCommand = async (
   input: CreateMedicalVocabularyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateMedicalVocabulary");
   let body: any;
@@ -337,7 +337,7 @@ export const se_CreateMedicalVocabularyCommand = async (
  */
 export const se_CreateVocabularyCommand = async (
   input: CreateVocabularyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateVocabulary");
   let body: any;
@@ -350,7 +350,7 @@ export const se_CreateVocabularyCommand = async (
  */
 export const se_CreateVocabularyFilterCommand = async (
   input: CreateVocabularyFilterCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateVocabularyFilter");
   let body: any;
@@ -363,7 +363,7 @@ export const se_CreateVocabularyFilterCommand = async (
  */
 export const se_DeleteCallAnalyticsCategoryCommand = async (
   input: DeleteCallAnalyticsCategoryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteCallAnalyticsCategory");
   let body: any;
@@ -376,7 +376,7 @@ export const se_DeleteCallAnalyticsCategoryCommand = async (
  */
 export const se_DeleteCallAnalyticsJobCommand = async (
   input: DeleteCallAnalyticsJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteCallAnalyticsJob");
   let body: any;
@@ -389,7 +389,7 @@ export const se_DeleteCallAnalyticsJobCommand = async (
  */
 export const se_DeleteLanguageModelCommand = async (
   input: DeleteLanguageModelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteLanguageModel");
   let body: any;
@@ -402,7 +402,7 @@ export const se_DeleteLanguageModelCommand = async (
  */
 export const se_DeleteMedicalScribeJobCommand = async (
   input: DeleteMedicalScribeJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteMedicalScribeJob");
   let body: any;
@@ -415,7 +415,7 @@ export const se_DeleteMedicalScribeJobCommand = async (
  */
 export const se_DeleteMedicalTranscriptionJobCommand = async (
   input: DeleteMedicalTranscriptionJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteMedicalTranscriptionJob");
   let body: any;
@@ -428,7 +428,7 @@ export const se_DeleteMedicalTranscriptionJobCommand = async (
  */
 export const se_DeleteMedicalVocabularyCommand = async (
   input: DeleteMedicalVocabularyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteMedicalVocabulary");
   let body: any;
@@ -441,7 +441,7 @@ export const se_DeleteMedicalVocabularyCommand = async (
  */
 export const se_DeleteTranscriptionJobCommand = async (
   input: DeleteTranscriptionJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteTranscriptionJob");
   let body: any;
@@ -454,7 +454,7 @@ export const se_DeleteTranscriptionJobCommand = async (
  */
 export const se_DeleteVocabularyCommand = async (
   input: DeleteVocabularyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteVocabulary");
   let body: any;
@@ -467,7 +467,7 @@ export const se_DeleteVocabularyCommand = async (
  */
 export const se_DeleteVocabularyFilterCommand = async (
   input: DeleteVocabularyFilterCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteVocabularyFilter");
   let body: any;
@@ -480,7 +480,7 @@ export const se_DeleteVocabularyFilterCommand = async (
  */
 export const se_DescribeLanguageModelCommand = async (
   input: DescribeLanguageModelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeLanguageModel");
   let body: any;
@@ -493,7 +493,7 @@ export const se_DescribeLanguageModelCommand = async (
  */
 export const se_GetCallAnalyticsCategoryCommand = async (
   input: GetCallAnalyticsCategoryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetCallAnalyticsCategory");
   let body: any;
@@ -506,7 +506,7 @@ export const se_GetCallAnalyticsCategoryCommand = async (
  */
 export const se_GetCallAnalyticsJobCommand = async (
   input: GetCallAnalyticsJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetCallAnalyticsJob");
   let body: any;
@@ -519,7 +519,7 @@ export const se_GetCallAnalyticsJobCommand = async (
  */
 export const se_GetMedicalScribeJobCommand = async (
   input: GetMedicalScribeJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetMedicalScribeJob");
   let body: any;
@@ -532,7 +532,7 @@ export const se_GetMedicalScribeJobCommand = async (
  */
 export const se_GetMedicalTranscriptionJobCommand = async (
   input: GetMedicalTranscriptionJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetMedicalTranscriptionJob");
   let body: any;
@@ -545,7 +545,7 @@ export const se_GetMedicalTranscriptionJobCommand = async (
  */
 export const se_GetMedicalVocabularyCommand = async (
   input: GetMedicalVocabularyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetMedicalVocabulary");
   let body: any;
@@ -558,7 +558,7 @@ export const se_GetMedicalVocabularyCommand = async (
  */
 export const se_GetTranscriptionJobCommand = async (
   input: GetTranscriptionJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetTranscriptionJob");
   let body: any;
@@ -571,7 +571,7 @@ export const se_GetTranscriptionJobCommand = async (
  */
 export const se_GetVocabularyCommand = async (
   input: GetVocabularyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetVocabulary");
   let body: any;
@@ -584,7 +584,7 @@ export const se_GetVocabularyCommand = async (
  */
 export const se_GetVocabularyFilterCommand = async (
   input: GetVocabularyFilterCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetVocabularyFilter");
   let body: any;
@@ -597,7 +597,7 @@ export const se_GetVocabularyFilterCommand = async (
  */
 export const se_ListCallAnalyticsCategoriesCommand = async (
   input: ListCallAnalyticsCategoriesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListCallAnalyticsCategories");
   let body: any;
@@ -610,7 +610,7 @@ export const se_ListCallAnalyticsCategoriesCommand = async (
  */
 export const se_ListCallAnalyticsJobsCommand = async (
   input: ListCallAnalyticsJobsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListCallAnalyticsJobs");
   let body: any;
@@ -623,7 +623,7 @@ export const se_ListCallAnalyticsJobsCommand = async (
  */
 export const se_ListLanguageModelsCommand = async (
   input: ListLanguageModelsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListLanguageModels");
   let body: any;
@@ -636,7 +636,7 @@ export const se_ListLanguageModelsCommand = async (
  */
 export const se_ListMedicalScribeJobsCommand = async (
   input: ListMedicalScribeJobsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListMedicalScribeJobs");
   let body: any;
@@ -649,7 +649,7 @@ export const se_ListMedicalScribeJobsCommand = async (
  */
 export const se_ListMedicalTranscriptionJobsCommand = async (
   input: ListMedicalTranscriptionJobsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListMedicalTranscriptionJobs");
   let body: any;
@@ -662,7 +662,7 @@ export const se_ListMedicalTranscriptionJobsCommand = async (
  */
 export const se_ListMedicalVocabulariesCommand = async (
   input: ListMedicalVocabulariesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListMedicalVocabularies");
   let body: any;
@@ -675,7 +675,7 @@ export const se_ListMedicalVocabulariesCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListTagsForResource");
   let body: any;
@@ -688,7 +688,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_ListTranscriptionJobsCommand = async (
   input: ListTranscriptionJobsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListTranscriptionJobs");
   let body: any;
@@ -701,7 +701,7 @@ export const se_ListTranscriptionJobsCommand = async (
  */
 export const se_ListVocabulariesCommand = async (
   input: ListVocabulariesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListVocabularies");
   let body: any;
@@ -714,7 +714,7 @@ export const se_ListVocabulariesCommand = async (
  */
 export const se_ListVocabularyFiltersCommand = async (
   input: ListVocabularyFiltersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListVocabularyFilters");
   let body: any;
@@ -727,7 +727,7 @@ export const se_ListVocabularyFiltersCommand = async (
  */
 export const se_StartCallAnalyticsJobCommand = async (
   input: StartCallAnalyticsJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StartCallAnalyticsJob");
   let body: any;
@@ -740,7 +740,7 @@ export const se_StartCallAnalyticsJobCommand = async (
  */
 export const se_StartMedicalScribeJobCommand = async (
   input: StartMedicalScribeJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StartMedicalScribeJob");
   let body: any;
@@ -753,7 +753,7 @@ export const se_StartMedicalScribeJobCommand = async (
  */
 export const se_StartMedicalTranscriptionJobCommand = async (
   input: StartMedicalTranscriptionJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StartMedicalTranscriptionJob");
   let body: any;
@@ -766,7 +766,7 @@ export const se_StartMedicalTranscriptionJobCommand = async (
  */
 export const se_StartTranscriptionJobCommand = async (
   input: StartTranscriptionJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StartTranscriptionJob");
   let body: any;
@@ -779,7 +779,7 @@ export const se_StartTranscriptionJobCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("TagResource");
   let body: any;
@@ -792,7 +792,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UntagResource");
   let body: any;
@@ -805,7 +805,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateCallAnalyticsCategoryCommand = async (
   input: UpdateCallAnalyticsCategoryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateCallAnalyticsCategory");
   let body: any;
@@ -818,7 +818,7 @@ export const se_UpdateCallAnalyticsCategoryCommand = async (
  */
 export const se_UpdateMedicalVocabularyCommand = async (
   input: UpdateMedicalVocabularyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateMedicalVocabulary");
   let body: any;
@@ -831,7 +831,7 @@ export const se_UpdateMedicalVocabularyCommand = async (
  */
 export const se_UpdateVocabularyCommand = async (
   input: UpdateVocabularyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateVocabulary");
   let body: any;
@@ -844,7 +844,7 @@ export const se_UpdateVocabularyCommand = async (
  */
 export const se_UpdateVocabularyFilterCommand = async (
   input: UpdateVocabularyFilterCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateVocabularyFilter");
   let body: any;
@@ -857,7 +857,7 @@ export const se_UpdateVocabularyFilterCommand = async (
  */
 export const de_CreateCallAnalyticsCategoryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateCallAnalyticsCategoryCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -877,7 +877,7 @@ export const de_CreateCallAnalyticsCategoryCommand = async (
  */
 export const de_CreateLanguageModelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateLanguageModelCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -897,7 +897,7 @@ export const de_CreateLanguageModelCommand = async (
  */
 export const de_CreateMedicalVocabularyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateMedicalVocabularyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -917,7 +917,7 @@ export const de_CreateMedicalVocabularyCommand = async (
  */
 export const de_CreateVocabularyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateVocabularyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -937,7 +937,7 @@ export const de_CreateVocabularyCommand = async (
  */
 export const de_CreateVocabularyFilterCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateVocabularyFilterCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -957,7 +957,7 @@ export const de_CreateVocabularyFilterCommand = async (
  */
 export const de_DeleteCallAnalyticsCategoryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteCallAnalyticsCategoryCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -977,7 +977,7 @@ export const de_DeleteCallAnalyticsCategoryCommand = async (
  */
 export const de_DeleteCallAnalyticsJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteCallAnalyticsJobCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -997,7 +997,7 @@ export const de_DeleteCallAnalyticsJobCommand = async (
  */
 export const de_DeleteLanguageModelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteLanguageModelCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1014,7 +1014,7 @@ export const de_DeleteLanguageModelCommand = async (
  */
 export const de_DeleteMedicalScribeJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteMedicalScribeJobCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1031,7 +1031,7 @@ export const de_DeleteMedicalScribeJobCommand = async (
  */
 export const de_DeleteMedicalTranscriptionJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteMedicalTranscriptionJobCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1048,7 +1048,7 @@ export const de_DeleteMedicalTranscriptionJobCommand = async (
  */
 export const de_DeleteMedicalVocabularyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteMedicalVocabularyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1065,7 +1065,7 @@ export const de_DeleteMedicalVocabularyCommand = async (
  */
 export const de_DeleteTranscriptionJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteTranscriptionJobCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1082,7 +1082,7 @@ export const de_DeleteTranscriptionJobCommand = async (
  */
 export const de_DeleteVocabularyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteVocabularyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1099,7 +1099,7 @@ export const de_DeleteVocabularyCommand = async (
  */
 export const de_DeleteVocabularyFilterCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteVocabularyFilterCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1116,7 +1116,7 @@ export const de_DeleteVocabularyFilterCommand = async (
  */
 export const de_DescribeLanguageModelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeLanguageModelCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1136,7 +1136,7 @@ export const de_DescribeLanguageModelCommand = async (
  */
 export const de_GetCallAnalyticsCategoryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetCallAnalyticsCategoryCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1156,7 +1156,7 @@ export const de_GetCallAnalyticsCategoryCommand = async (
  */
 export const de_GetCallAnalyticsJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetCallAnalyticsJobCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1176,7 +1176,7 @@ export const de_GetCallAnalyticsJobCommand = async (
  */
 export const de_GetMedicalScribeJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetMedicalScribeJobCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1196,7 +1196,7 @@ export const de_GetMedicalScribeJobCommand = async (
  */
 export const de_GetMedicalTranscriptionJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetMedicalTranscriptionJobCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1216,7 +1216,7 @@ export const de_GetMedicalTranscriptionJobCommand = async (
  */
 export const de_GetMedicalVocabularyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetMedicalVocabularyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1236,7 +1236,7 @@ export const de_GetMedicalVocabularyCommand = async (
  */
 export const de_GetTranscriptionJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetTranscriptionJobCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1256,7 +1256,7 @@ export const de_GetTranscriptionJobCommand = async (
  */
 export const de_GetVocabularyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetVocabularyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1276,7 +1276,7 @@ export const de_GetVocabularyCommand = async (
  */
 export const de_GetVocabularyFilterCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetVocabularyFilterCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1296,7 +1296,7 @@ export const de_GetVocabularyFilterCommand = async (
  */
 export const de_ListCallAnalyticsCategoriesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListCallAnalyticsCategoriesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1316,7 +1316,7 @@ export const de_ListCallAnalyticsCategoriesCommand = async (
  */
 export const de_ListCallAnalyticsJobsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListCallAnalyticsJobsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1336,7 +1336,7 @@ export const de_ListCallAnalyticsJobsCommand = async (
  */
 export const de_ListLanguageModelsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListLanguageModelsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1356,7 +1356,7 @@ export const de_ListLanguageModelsCommand = async (
  */
 export const de_ListMedicalScribeJobsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListMedicalScribeJobsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1376,7 +1376,7 @@ export const de_ListMedicalScribeJobsCommand = async (
  */
 export const de_ListMedicalTranscriptionJobsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListMedicalTranscriptionJobsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1396,7 +1396,7 @@ export const de_ListMedicalTranscriptionJobsCommand = async (
  */
 export const de_ListMedicalVocabulariesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListMedicalVocabulariesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1416,7 +1416,7 @@ export const de_ListMedicalVocabulariesCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1436,7 +1436,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_ListTranscriptionJobsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTranscriptionJobsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1456,7 +1456,7 @@ export const de_ListTranscriptionJobsCommand = async (
  */
 export const de_ListVocabulariesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListVocabulariesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1476,7 +1476,7 @@ export const de_ListVocabulariesCommand = async (
  */
 export const de_ListVocabularyFiltersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListVocabularyFiltersCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1496,7 +1496,7 @@ export const de_ListVocabularyFiltersCommand = async (
  */
 export const de_StartCallAnalyticsJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartCallAnalyticsJobCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1516,7 +1516,7 @@ export const de_StartCallAnalyticsJobCommand = async (
  */
 export const de_StartMedicalScribeJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartMedicalScribeJobCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1536,7 +1536,7 @@ export const de_StartMedicalScribeJobCommand = async (
  */
 export const de_StartMedicalTranscriptionJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartMedicalTranscriptionJobCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1556,7 +1556,7 @@ export const de_StartMedicalTranscriptionJobCommand = async (
  */
 export const de_StartTranscriptionJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartTranscriptionJobCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1576,7 +1576,7 @@ export const de_StartTranscriptionJobCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1596,7 +1596,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1616,7 +1616,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateCallAnalyticsCategoryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateCallAnalyticsCategoryCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1636,7 +1636,7 @@ export const de_UpdateCallAnalyticsCategoryCommand = async (
  */
 export const de_UpdateMedicalVocabularyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateMedicalVocabularyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1656,7 +1656,7 @@ export const de_UpdateMedicalVocabularyCommand = async (
  */
 export const de_UpdateVocabularyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateVocabularyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1676,7 +1676,7 @@ export const de_UpdateVocabularyCommand = async (
  */
 export const de_UpdateVocabularyFilterCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateVocabularyFilterCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1757,7 +1757,7 @@ const de_ConflictExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_InternalFailureExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalFailureException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1773,7 +1773,7 @@ const de_InternalFailureExceptionRes = async (
  */
 const de_LimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<LimitExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2063,7 +2063,7 @@ const de_CategoryPropertiesList = (output: any, context: __SerdeContext): Catego
  */
 const de_CreateCallAnalyticsCategoryResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CreateCallAnalyticsCategoryResponse => {
   return take(output, {
     CategoryProperties: (_: any) => de_CategoryProperties(_, context),
@@ -2127,7 +2127,7 @@ const de_DescribeLanguageModelResponse = (output: any, context: __SerdeContext):
  */
 const de_GetCallAnalyticsCategoryResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): GetCallAnalyticsCategoryResponse => {
   return take(output, {
     CategoryProperties: (_: any) => de_CategoryProperties(_, context),
@@ -2157,7 +2157,7 @@ const de_GetMedicalScribeJobResponse = (output: any, context: __SerdeContext): G
  */
 const de_GetMedicalTranscriptionJobResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): GetMedicalTranscriptionJobResponse => {
   return take(output, {
     MedicalTranscriptionJob: (_: any) => de_MedicalTranscriptionJob(_, context),
@@ -2273,7 +2273,7 @@ const de_LanguageModel = (output: any, context: __SerdeContext): LanguageModel =
  */
 const de_ListCallAnalyticsCategoriesResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ListCallAnalyticsCategoriesResponse => {
   return take(output, {
     Categories: (_: any) => de_CategoryPropertiesList(_, context),
@@ -2318,7 +2318,7 @@ const de_ListMedicalScribeJobsResponse = (output: any, context: __SerdeContext):
  */
 const de_ListMedicalTranscriptionJobsResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ListMedicalTranscriptionJobsResponse => {
   return take(output, {
     MedicalTranscriptionJobSummaries: (_: any) => de_MedicalTranscriptionJobSummaries(_, context),
@@ -2461,7 +2461,7 @@ const de_MedicalTranscriptionJob = (output: any, context: __SerdeContext): Medic
  */
 const de_MedicalTranscriptionJobSummaries = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): MedicalTranscriptionJobSummary[] => {
   const retVal = (output || [])
     .filter((e: any) => e != null)
@@ -2547,7 +2547,7 @@ const de_StartMedicalScribeJobResponse = (output: any, context: __SerdeContext):
  */
 const de_StartMedicalTranscriptionJobResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): StartMedicalTranscriptionJobResponse => {
   return take(output, {
     MedicalTranscriptionJob: (_: any) => de_MedicalTranscriptionJob(_, context),
@@ -2663,7 +2663,7 @@ const de_TranscriptionJobSummary = (output: any, context: __SerdeContext): Trans
  */
 const de_UpdateCallAnalyticsCategoryResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): UpdateCallAnalyticsCategoryResponse => {
   return take(output, {
     CategoryProperties: (_: any) => de_CategoryProperties(_, context),
@@ -2770,7 +2770,7 @@ const buildHttpRpcRequest = async (
   headers: __HeaderBag,
   path: string,
   resolvedHostname: string | undefined,
-  body: any
+  body: any,
 ): Promise<__HttpRequest> => {
   const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
   const contents: any = {

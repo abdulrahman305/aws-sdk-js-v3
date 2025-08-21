@@ -49,16 +49,16 @@ export interface ApplicationCostProfiler {
    */
   deleteReportDefinition(
     args: DeleteReportDefinitionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteReportDefinitionCommandOutput>;
   deleteReportDefinition(
     args: DeleteReportDefinitionCommandInput,
-    cb: (err: any, data?: DeleteReportDefinitionCommandOutput) => void
+    cb: (err: any, data?: DeleteReportDefinitionCommandOutput) => void,
   ): void;
   deleteReportDefinition(
     args: DeleteReportDefinitionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteReportDefinitionCommandOutput) => void
+    cb: (err: any, data?: DeleteReportDefinitionCommandOutput) => void,
   ): void;
 
   /**
@@ -66,16 +66,16 @@ export interface ApplicationCostProfiler {
    */
   getReportDefinition(
     args: GetReportDefinitionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetReportDefinitionCommandOutput>;
   getReportDefinition(
     args: GetReportDefinitionCommandInput,
-    cb: (err: any, data?: GetReportDefinitionCommandOutput) => void
+    cb: (err: any, data?: GetReportDefinitionCommandOutput) => void,
   ): void;
   getReportDefinition(
     args: GetReportDefinitionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetReportDefinitionCommandOutput) => void
+    cb: (err: any, data?: GetReportDefinitionCommandOutput) => void,
   ): void;
 
   /**
@@ -83,16 +83,16 @@ export interface ApplicationCostProfiler {
    */
   importApplicationUsage(
     args: ImportApplicationUsageCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ImportApplicationUsageCommandOutput>;
   importApplicationUsage(
     args: ImportApplicationUsageCommandInput,
-    cb: (err: any, data?: ImportApplicationUsageCommandOutput) => void
+    cb: (err: any, data?: ImportApplicationUsageCommandOutput) => void,
   ): void;
   importApplicationUsage(
     args: ImportApplicationUsageCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ImportApplicationUsageCommandOutput) => void
+    cb: (err: any, data?: ImportApplicationUsageCommandOutput) => void,
   ): void;
 
   /**
@@ -101,16 +101,16 @@ export interface ApplicationCostProfiler {
   listReportDefinitions(): Promise<ListReportDefinitionsCommandOutput>;
   listReportDefinitions(
     args: ListReportDefinitionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListReportDefinitionsCommandOutput>;
   listReportDefinitions(
     args: ListReportDefinitionsCommandInput,
-    cb: (err: any, data?: ListReportDefinitionsCommandOutput) => void
+    cb: (err: any, data?: ListReportDefinitionsCommandOutput) => void,
   ): void;
   listReportDefinitions(
     args: ListReportDefinitionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListReportDefinitionsCommandOutput) => void
+    cb: (err: any, data?: ListReportDefinitionsCommandOutput) => void,
   ): void;
 
   /**
@@ -118,16 +118,16 @@ export interface ApplicationCostProfiler {
    */
   putReportDefinition(
     args: PutReportDefinitionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutReportDefinitionCommandOutput>;
   putReportDefinition(
     args: PutReportDefinitionCommandInput,
-    cb: (err: any, data?: PutReportDefinitionCommandOutput) => void
+    cb: (err: any, data?: PutReportDefinitionCommandOutput) => void,
   ): void;
   putReportDefinition(
     args: PutReportDefinitionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutReportDefinitionCommandOutput) => void
+    cb: (err: any, data?: PutReportDefinitionCommandOutput) => void,
   ): void;
 
   /**
@@ -135,16 +135,16 @@ export interface ApplicationCostProfiler {
    */
   updateReportDefinition(
     args: UpdateReportDefinitionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateReportDefinitionCommandOutput>;
   updateReportDefinition(
     args: UpdateReportDefinitionCommandInput,
-    cb: (err: any, data?: UpdateReportDefinitionCommandOutput) => void
+    cb: (err: any, data?: UpdateReportDefinitionCommandOutput) => void,
   ): void;
   updateReportDefinition(
     args: UpdateReportDefinitionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateReportDefinitionCommandOutput) => void
+    cb: (err: any, data?: UpdateReportDefinitionCommandOutput) => void,
   ): void;
 }
 

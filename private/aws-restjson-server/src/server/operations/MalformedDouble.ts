@@ -61,14 +61,14 @@ export class MalformedDoubleSerializer
 
 export const getMalformedDoubleHandler = <Context>(
   operation: __Operation<MalformedDoubleServerInput, MalformedDoubleServerOutput, Context>,
-  customizer: __ValidationCustomizer<"MalformedDouble">
+  customizer: __ValidationCustomizer<"MalformedDouble">,
 ): __ServiceHandler<Context, __HttpRequest, __HttpResponse> => {
   const mux = new httpbinding.HttpBindingMux<"RestJson", "MalformedDouble">([
     new httpbinding.UriSpec<"RestJson", "MalformedDouble">(
       "POST",
       [{ type: "path_literal", value: "MalformedDouble" }, { type: "path" }],
       [],
-      { service: "RestJson", operation: "MalformedDouble" }
+      { service: "RestJson", operation: "MalformedDouble" },
     ),
   ]);
   return new MalformedDoubleHandler(
@@ -76,7 +76,7 @@ export const getMalformedDoubleHandler = <Context>(
     mux,
     new MalformedDoubleSerializer(),
     serializeFrameworkException,
-    customizer
+    customizer,
   );
 };
 
@@ -97,7 +97,7 @@ async function handle<S, O extends keyof S & string, Context>(
   operation: __Operation<__OperationInput<S[O]>, __OperationOutput<S[O]>, Context>,
   serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
   validationFn: (input: __OperationInput<S[O]>) => __ValidationFailure[],
-  validationCustomizer: __ValidationCustomizer<O>
+  validationCustomizer: __ValidationCustomizer<O>,
 ): Promise<__HttpResponse> {
   let input;
   try {
@@ -139,7 +139,7 @@ export class MalformedDoubleHandler<Context> implements __ServiceHandler<Context
   >;
   private readonly serializeFrameworkException: (
     e: __SmithyFrameworkException,
-    ctx: __ServerSerdeContext
+    ctx: __ServerSerdeContext,
   ) => Promise<__HttpResponse>;
   private readonly validationCustomizer: __ValidationCustomizer<"MalformedDouble">;
   /**
@@ -156,7 +156,7 @@ export class MalformedDoubleHandler<Context> implements __ServiceHandler<Context
     mux: __Mux<"RestJson", "MalformedDouble">,
     serializer: __OperationSerializer<RestJsonService<Context>, "MalformedDouble", MalformedDoubleErrors>,
     serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
-    validationCustomizer: __ValidationCustomizer<"MalformedDouble">
+    validationCustomizer: __ValidationCustomizer<"MalformedDouble">,
   ) {
     this.operation = operation;
     this.mux = mux;
@@ -168,7 +168,7 @@ export class MalformedDoubleHandler<Context> implements __ServiceHandler<Context
     const target = this.mux.match(request);
     if (target === undefined) {
       console.log(
-        "Received a request that did not match aws.protocoltests.restjson#RestJson.MalformedDouble. This indicates a misconfiguration."
+        "Received a request that did not match aws.protocoltests.restjson#RestJson.MalformedDouble. This indicates a misconfiguration.",
       );
       return this.serializeFrameworkException(new __InternalFailureException(), serdeContextBase);
     }
@@ -180,7 +180,7 @@ export class MalformedDoubleHandler<Context> implements __ServiceHandler<Context
       this.operation,
       this.serializeFrameworkException,
       MalformedDoubleServerInput.validate,
-      this.validationCustomizer
+      this.validationCustomizer,
     );
   }
 }

@@ -61,14 +61,14 @@ export class RecursiveShapesSerializer
 
 export const getRecursiveShapesHandler = <Context>(
   operation: __Operation<RecursiveShapesServerInput, RecursiveShapesServerOutput, Context>,
-  customizer: __ValidationCustomizer<"RecursiveShapes">
+  customizer: __ValidationCustomizer<"RecursiveShapes">,
 ): __ServiceHandler<Context, __HttpRequest, __HttpResponse> => {
   const mux = new httpbinding.HttpBindingMux<"RestJson", "RecursiveShapes">([
     new httpbinding.UriSpec<"RestJson", "RecursiveShapes">(
       "PUT",
       [{ type: "path_literal", value: "RecursiveShapes" }],
       [],
-      { service: "RestJson", operation: "RecursiveShapes" }
+      { service: "RestJson", operation: "RecursiveShapes" },
     ),
   ]);
   return new RecursiveShapesHandler(
@@ -76,7 +76,7 @@ export const getRecursiveShapesHandler = <Context>(
     mux,
     new RecursiveShapesSerializer(),
     serializeFrameworkException,
-    customizer
+    customizer,
   );
 };
 
@@ -97,7 +97,7 @@ async function handle<S, O extends keyof S & string, Context>(
   operation: __Operation<__OperationInput<S[O]>, __OperationOutput<S[O]>, Context>,
   serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
   validationFn: (input: __OperationInput<S[O]>) => __ValidationFailure[],
-  validationCustomizer: __ValidationCustomizer<O>
+  validationCustomizer: __ValidationCustomizer<O>,
 ): Promise<__HttpResponse> {
   let input;
   try {
@@ -139,7 +139,7 @@ export class RecursiveShapesHandler<Context> implements __ServiceHandler<Context
   >;
   private readonly serializeFrameworkException: (
     e: __SmithyFrameworkException,
-    ctx: __ServerSerdeContext
+    ctx: __ServerSerdeContext,
   ) => Promise<__HttpResponse>;
   private readonly validationCustomizer: __ValidationCustomizer<"RecursiveShapes">;
   /**
@@ -156,7 +156,7 @@ export class RecursiveShapesHandler<Context> implements __ServiceHandler<Context
     mux: __Mux<"RestJson", "RecursiveShapes">,
     serializer: __OperationSerializer<RestJsonService<Context>, "RecursiveShapes", RecursiveShapesErrors>,
     serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
-    validationCustomizer: __ValidationCustomizer<"RecursiveShapes">
+    validationCustomizer: __ValidationCustomizer<"RecursiveShapes">,
   ) {
     this.operation = operation;
     this.mux = mux;
@@ -168,7 +168,7 @@ export class RecursiveShapesHandler<Context> implements __ServiceHandler<Context
     const target = this.mux.match(request);
     if (target === undefined) {
       console.log(
-        "Received a request that did not match aws.protocoltests.restjson#RestJson.RecursiveShapes. This indicates a misconfiguration."
+        "Received a request that did not match aws.protocoltests.restjson#RestJson.RecursiveShapes. This indicates a misconfiguration.",
       );
       return this.serializeFrameworkException(new __InternalFailureException(), serdeContextBase);
     }
@@ -180,7 +180,7 @@ export class RecursiveShapesHandler<Context> implements __ServiceHandler<Context
       this.operation,
       this.serializeFrameworkException,
       RecursiveShapesServerInput.validate,
-      this.validationCustomizer
+      this.validationCustomizer,
     );
   }
 }

@@ -92,7 +92,7 @@ export interface ResourceGroups {
   createGroup(
     args: CreateGroupCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateGroupCommandOutput) => void
+    cb: (err: any, data?: CreateGroupCommandOutput) => void,
   ): void;
 
   /**
@@ -104,7 +104,7 @@ export interface ResourceGroups {
   deleteGroup(
     args: DeleteGroupCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteGroupCommandOutput) => void
+    cb: (err: any, data?: DeleteGroupCommandOutput) => void,
   ): void;
 
   /**
@@ -113,16 +113,16 @@ export interface ResourceGroups {
   getAccountSettings(): Promise<GetAccountSettingsCommandOutput>;
   getAccountSettings(
     args: GetAccountSettingsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetAccountSettingsCommandOutput>;
   getAccountSettings(
     args: GetAccountSettingsCommandInput,
-    cb: (err: any, data?: GetAccountSettingsCommandOutput) => void
+    cb: (err: any, data?: GetAccountSettingsCommandOutput) => void,
   ): void;
   getAccountSettings(
     args: GetAccountSettingsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetAccountSettingsCommandOutput) => void
+    cb: (err: any, data?: GetAccountSettingsCommandOutput) => void,
   ): void;
 
   /**
@@ -134,7 +134,7 @@ export interface ResourceGroups {
   getGroup(
     args: GetGroupCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetGroupCommandOutput) => void
+    cb: (err: any, data?: GetGroupCommandOutput) => void,
   ): void;
 
   /**
@@ -143,16 +143,16 @@ export interface ResourceGroups {
   getGroupConfiguration(): Promise<GetGroupConfigurationCommandOutput>;
   getGroupConfiguration(
     args: GetGroupConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetGroupConfigurationCommandOutput>;
   getGroupConfiguration(
     args: GetGroupConfigurationCommandInput,
-    cb: (err: any, data?: GetGroupConfigurationCommandOutput) => void
+    cb: (err: any, data?: GetGroupConfigurationCommandOutput) => void,
   ): void;
   getGroupConfiguration(
     args: GetGroupConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetGroupConfigurationCommandOutput) => void
+    cb: (err: any, data?: GetGroupConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -164,7 +164,7 @@ export interface ResourceGroups {
   getGroupQuery(
     args: GetGroupQueryCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetGroupQueryCommandOutput) => void
+    cb: (err: any, data?: GetGroupQueryCommandOutput) => void,
   ): void;
 
   /**
@@ -175,7 +175,7 @@ export interface ResourceGroups {
   getTags(
     args: GetTagsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetTagsCommandOutput) => void
+    cb: (err: any, data?: GetTagsCommandOutput) => void,
   ): void;
 
   /**
@@ -183,13 +183,13 @@ export interface ResourceGroups {
    */
   groupResources(
     args: GroupResourcesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GroupResourcesCommandOutput>;
   groupResources(args: GroupResourcesCommandInput, cb: (err: any, data?: GroupResourcesCommandOutput) => void): void;
   groupResources(
     args: GroupResourcesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GroupResourcesCommandOutput) => void
+    cb: (err: any, data?: GroupResourcesCommandOutput) => void,
   ): void;
 
   /**
@@ -198,16 +198,16 @@ export interface ResourceGroups {
   listGroupResources(): Promise<ListGroupResourcesCommandOutput>;
   listGroupResources(
     args: ListGroupResourcesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListGroupResourcesCommandOutput>;
   listGroupResources(
     args: ListGroupResourcesCommandInput,
-    cb: (err: any, data?: ListGroupResourcesCommandOutput) => void
+    cb: (err: any, data?: ListGroupResourcesCommandOutput) => void,
   ): void;
   listGroupResources(
     args: ListGroupResourcesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListGroupResourcesCommandOutput) => void
+    cb: (err: any, data?: ListGroupResourcesCommandOutput) => void,
   ): void;
 
   /**
@@ -219,7 +219,7 @@ export interface ResourceGroups {
   listGroups(
     args: ListGroupsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListGroupsCommandOutput) => void
+    cb: (err: any, data?: ListGroupsCommandOutput) => void,
   ): void;
 
   /**
@@ -228,16 +228,16 @@ export interface ResourceGroups {
   putGroupConfiguration(): Promise<PutGroupConfigurationCommandOutput>;
   putGroupConfiguration(
     args: PutGroupConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutGroupConfigurationCommandOutput>;
   putGroupConfiguration(
     args: PutGroupConfigurationCommandInput,
-    cb: (err: any, data?: PutGroupConfigurationCommandOutput) => void
+    cb: (err: any, data?: PutGroupConfigurationCommandOutput) => void,
   ): void;
   putGroupConfiguration(
     args: PutGroupConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutGroupConfigurationCommandOutput) => void
+    cb: (err: any, data?: PutGroupConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -245,13 +245,13 @@ export interface ResourceGroups {
    */
   searchResources(
     args: SearchResourcesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<SearchResourcesCommandOutput>;
   searchResources(args: SearchResourcesCommandInput, cb: (err: any, data?: SearchResourcesCommandOutput) => void): void;
   searchResources(
     args: SearchResourcesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SearchResourcesCommandOutput) => void
+    cb: (err: any, data?: SearchResourcesCommandOutput) => void,
   ): void;
 
   /**
@@ -266,16 +266,16 @@ export interface ResourceGroups {
    */
   ungroupResources(
     args: UngroupResourcesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UngroupResourcesCommandOutput>;
   ungroupResources(
     args: UngroupResourcesCommandInput,
-    cb: (err: any, data?: UngroupResourcesCommandOutput) => void
+    cb: (err: any, data?: UngroupResourcesCommandOutput) => void,
   ): void;
   ungroupResources(
     args: UngroupResourcesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UngroupResourcesCommandOutput) => void
+    cb: (err: any, data?: UngroupResourcesCommandOutput) => void,
   ): void;
 
   /**
@@ -286,7 +286,7 @@ export interface ResourceGroups {
   untag(
     args: UntagCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagCommandOutput) => void
+    cb: (err: any, data?: UntagCommandOutput) => void,
   ): void;
 
   /**
@@ -295,16 +295,16 @@ export interface ResourceGroups {
   updateAccountSettings(): Promise<UpdateAccountSettingsCommandOutput>;
   updateAccountSettings(
     args: UpdateAccountSettingsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateAccountSettingsCommandOutput>;
   updateAccountSettings(
     args: UpdateAccountSettingsCommandInput,
-    cb: (err: any, data?: UpdateAccountSettingsCommandOutput) => void
+    cb: (err: any, data?: UpdateAccountSettingsCommandOutput) => void,
   ): void;
   updateAccountSettings(
     args: UpdateAccountSettingsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateAccountSettingsCommandOutput) => void
+    cb: (err: any, data?: UpdateAccountSettingsCommandOutput) => void,
   ): void;
 
   /**
@@ -316,7 +316,7 @@ export interface ResourceGroups {
   updateGroup(
     args: UpdateGroupCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateGroupCommandOutput) => void
+    cb: (err: any, data?: UpdateGroupCommandOutput) => void,
   ): void;
 
   /**
@@ -324,16 +324,16 @@ export interface ResourceGroups {
    */
   updateGroupQuery(
     args: UpdateGroupQueryCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateGroupQueryCommandOutput>;
   updateGroupQuery(
     args: UpdateGroupQueryCommandInput,
-    cb: (err: any, data?: UpdateGroupQueryCommandOutput) => void
+    cb: (err: any, data?: UpdateGroupQueryCommandOutput) => void,
   ): void;
   updateGroupQuery(
     args: UpdateGroupQueryCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateGroupQueryCommandOutput) => void
+    cb: (err: any, data?: UpdateGroupQueryCommandOutput) => void,
   ): void;
 }
 

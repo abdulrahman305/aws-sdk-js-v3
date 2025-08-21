@@ -4657,7 +4657,7 @@ export interface UpdateConnectionResponse {
  * @internal
  */
 export const CreateConnectionApiKeyAuthRequestParametersFilterSensitiveLog = (
-  obj: CreateConnectionApiKeyAuthRequestParameters
+  obj: CreateConnectionApiKeyAuthRequestParameters,
 ): any => ({
   ...obj,
   ...(obj.ApiKeyValue && { ApiKeyValue: SENSITIVE_STRING }),
@@ -4667,7 +4667,7 @@ export const CreateConnectionApiKeyAuthRequestParametersFilterSensitiveLog = (
  * @internal
  */
 export const CreateConnectionBasicAuthRequestParametersFilterSensitiveLog = (
-  obj: CreateConnectionBasicAuthRequestParameters
+  obj: CreateConnectionBasicAuthRequestParameters,
 ): any => ({
   ...obj,
   ...(obj.Password && { Password: SENSITIVE_STRING }),
@@ -4707,7 +4707,7 @@ export const ConnectionHttpParametersFilterSensitiveLog = (obj: ConnectionHttpPa
   }),
   ...(obj.QueryStringParameters && {
     QueryStringParameters: obj.QueryStringParameters.map((item) =>
-      ConnectionQueryStringParameterFilterSensitiveLog(item)
+      ConnectionQueryStringParameterFilterSensitiveLog(item),
     ),
   }),
   ...(obj.BodyParameters && {
@@ -4719,7 +4719,7 @@ export const ConnectionHttpParametersFilterSensitiveLog = (obj: ConnectionHttpPa
  * @internal
  */
 export const CreateConnectionOAuthClientRequestParametersFilterSensitiveLog = (
-  obj: CreateConnectionOAuthClientRequestParameters
+  obj: CreateConnectionOAuthClientRequestParameters,
 ): any => ({
   ...obj,
   ...(obj.ClientSecret && { ClientSecret: SENSITIVE_STRING }),
@@ -4729,7 +4729,7 @@ export const CreateConnectionOAuthClientRequestParametersFilterSensitiveLog = (
  * @internal
  */
 export const CreateConnectionOAuthRequestParametersFilterSensitiveLog = (
-  obj: CreateConnectionOAuthRequestParameters
+  obj: CreateConnectionOAuthRequestParameters,
 ): any => ({
   ...obj,
   ...(obj.ClientParameters && {
@@ -4744,7 +4744,7 @@ export const CreateConnectionOAuthRequestParametersFilterSensitiveLog = (
  * @internal
  */
 export const CreateConnectionAuthRequestParametersFilterSensitiveLog = (
-  obj: CreateConnectionAuthRequestParameters
+  obj: CreateConnectionAuthRequestParameters,
 ): any => ({
   ...obj,
   ...(obj.BasicAuthParameters && {
@@ -4806,7 +4806,7 @@ export const DescribeConnectionResponseFilterSensitiveLog = (obj: DescribeConnec
  * @internal
  */
 export const UpdateConnectionApiKeyAuthRequestParametersFilterSensitiveLog = (
-  obj: UpdateConnectionApiKeyAuthRequestParameters
+  obj: UpdateConnectionApiKeyAuthRequestParameters,
 ): any => ({
   ...obj,
   ...(obj.ApiKeyValue && { ApiKeyValue: SENSITIVE_STRING }),
@@ -4816,7 +4816,7 @@ export const UpdateConnectionApiKeyAuthRequestParametersFilterSensitiveLog = (
  * @internal
  */
 export const UpdateConnectionBasicAuthRequestParametersFilterSensitiveLog = (
-  obj: UpdateConnectionBasicAuthRequestParameters
+  obj: UpdateConnectionBasicAuthRequestParameters,
 ): any => ({
   ...obj,
   ...(obj.Password && { Password: SENSITIVE_STRING }),
@@ -4826,7 +4826,7 @@ export const UpdateConnectionBasicAuthRequestParametersFilterSensitiveLog = (
  * @internal
  */
 export const UpdateConnectionOAuthClientRequestParametersFilterSensitiveLog = (
-  obj: UpdateConnectionOAuthClientRequestParameters
+  obj: UpdateConnectionOAuthClientRequestParameters,
 ): any => ({
   ...obj,
   ...(obj.ClientSecret && { ClientSecret: SENSITIVE_STRING }),
@@ -4836,7 +4836,7 @@ export const UpdateConnectionOAuthClientRequestParametersFilterSensitiveLog = (
  * @internal
  */
 export const UpdateConnectionOAuthRequestParametersFilterSensitiveLog = (
-  obj: UpdateConnectionOAuthRequestParameters
+  obj: UpdateConnectionOAuthRequestParameters,
 ): any => ({
   ...obj,
   ...(obj.ClientParameters && {
@@ -4851,7 +4851,7 @@ export const UpdateConnectionOAuthRequestParametersFilterSensitiveLog = (
  * @internal
  */
 export const UpdateConnectionAuthRequestParametersFilterSensitiveLog = (
-  obj: UpdateConnectionAuthRequestParameters
+  obj: UpdateConnectionAuthRequestParameters,
 ): any => ({
   ...obj,
   ...(obj.BasicAuthParameters && {

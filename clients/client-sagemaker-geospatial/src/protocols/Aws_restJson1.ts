@@ -172,7 +172,7 @@ import { SageMakerGeospatialServiceException as __BaseException } from "../model
  */
 export const se_DeleteEarthObservationJobCommand = async (
   input: DeleteEarthObservationJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -188,7 +188,7 @@ export const se_DeleteEarthObservationJobCommand = async (
  */
 export const se_DeleteVectorEnrichmentJobCommand = async (
   input: DeleteVectorEnrichmentJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -204,7 +204,7 @@ export const se_DeleteVectorEnrichmentJobCommand = async (
  */
 export const se_ExportEarthObservationJobCommand = async (
   input: ExportEarthObservationJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -219,7 +219,7 @@ export const se_ExportEarthObservationJobCommand = async (
       ExecutionRoleArn: [],
       ExportSourceImages: [],
       OutputConfig: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -230,7 +230,7 @@ export const se_ExportEarthObservationJobCommand = async (
  */
 export const se_ExportVectorEnrichmentJobCommand = async (
   input: ExportVectorEnrichmentJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -244,7 +244,7 @@ export const se_ExportVectorEnrichmentJobCommand = async (
       ClientToken: [true, (_) => _ ?? generateIdempotencyToken()],
       ExecutionRoleArn: [],
       OutputConfig: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -255,7 +255,7 @@ export const se_ExportVectorEnrichmentJobCommand = async (
  */
 export const se_GetEarthObservationJobCommand = async (
   input: GetEarthObservationJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -271,7 +271,7 @@ export const se_GetEarthObservationJobCommand = async (
  */
 export const se_GetRasterDataCollectionCommand = async (
   input: GetRasterDataCollectionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -287,7 +287,7 @@ export const se_GetRasterDataCollectionCommand = async (
  */
 export const se_GetTileCommand = async (
   input: GetTileCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -319,7 +319,7 @@ export const se_GetTileCommand = async (
  */
 export const se_GetVectorEnrichmentJobCommand = async (
   input: GetVectorEnrichmentJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -335,7 +335,7 @@ export const se_GetVectorEnrichmentJobCommand = async (
  */
 export const se_ListEarthObservationJobsCommand = async (
   input: ListEarthObservationJobsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -350,7 +350,7 @@ export const se_ListEarthObservationJobsCommand = async (
       SortBy: [],
       SortOrder: [],
       StatusEquals: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -361,7 +361,7 @@ export const se_ListEarthObservationJobsCommand = async (
  */
 export const se_ListRasterDataCollectionsCommand = async (
   input: ListRasterDataCollectionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -380,7 +380,7 @@ export const se_ListRasterDataCollectionsCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -396,7 +396,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_ListVectorEnrichmentJobsCommand = async (
   input: ListVectorEnrichmentJobsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -411,7 +411,7 @@ export const se_ListVectorEnrichmentJobsCommand = async (
       SortBy: [],
       SortOrder: [],
       StatusEquals: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -422,7 +422,7 @@ export const se_ListVectorEnrichmentJobsCommand = async (
  */
 export const se_SearchRasterDataCollectionCommand = async (
   input: SearchRasterDataCollectionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -435,7 +435,7 @@ export const se_SearchRasterDataCollectionCommand = async (
       Arn: [],
       NextToken: [],
       RasterDataCollectionQuery: (_) => se_RasterDataCollectionQueryWithBandFilterInput(_, context),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -446,7 +446,7 @@ export const se_SearchRasterDataCollectionCommand = async (
  */
 export const se_StartEarthObservationJobCommand = async (
   input: StartEarthObservationJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -463,7 +463,7 @@ export const se_StartEarthObservationJobCommand = async (
       KmsKeyId: [],
       Name: [],
       Tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -474,7 +474,7 @@ export const se_StartEarthObservationJobCommand = async (
  */
 export const se_StartVectorEnrichmentJobCommand = async (
   input: StartVectorEnrichmentJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -491,7 +491,7 @@ export const se_StartVectorEnrichmentJobCommand = async (
       KmsKeyId: [],
       Name: [],
       Tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -502,7 +502,7 @@ export const se_StartVectorEnrichmentJobCommand = async (
  */
 export const se_StopEarthObservationJobCommand = async (
   input: StopEarthObservationJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -513,7 +513,7 @@ export const se_StopEarthObservationJobCommand = async (
   body = JSON.stringify(
     take(input, {
       Arn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -524,7 +524,7 @@ export const se_StopEarthObservationJobCommand = async (
  */
 export const se_StopVectorEnrichmentJobCommand = async (
   input: StopVectorEnrichmentJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -535,7 +535,7 @@ export const se_StopVectorEnrichmentJobCommand = async (
   body = JSON.stringify(
     take(input, {
       Arn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -546,7 +546,7 @@ export const se_StopVectorEnrichmentJobCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -558,7 +558,7 @@ export const se_TagResourceCommand = async (
   body = JSON.stringify(
     take(input, {
       Tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -569,7 +569,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -591,7 +591,7 @@ export const se_UntagResourceCommand = async (
  */
 export const de_DeleteEarthObservationJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteEarthObservationJobCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -608,7 +608,7 @@ export const de_DeleteEarthObservationJobCommand = async (
  */
 export const de_DeleteVectorEnrichmentJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteVectorEnrichmentJobCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -625,7 +625,7 @@ export const de_DeleteVectorEnrichmentJobCommand = async (
  */
 export const de_ExportEarthObservationJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ExportEarthObservationJobCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -651,7 +651,7 @@ export const de_ExportEarthObservationJobCommand = async (
  */
 export const de_ExportVectorEnrichmentJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ExportVectorEnrichmentJobCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -676,7 +676,7 @@ export const de_ExportVectorEnrichmentJobCommand = async (
  */
 export const de_GetEarthObservationJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetEarthObservationJobCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -710,7 +710,7 @@ export const de_GetEarthObservationJobCommand = async (
  */
 export const de_GetRasterDataCollectionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetRasterDataCollectionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -738,7 +738,7 @@ export const de_GetRasterDataCollectionCommand = async (
  */
 export const de_GetTileCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext & __SdkStreamSerdeContext
+  context: __SerdeContext & __SdkStreamSerdeContext,
 ): Promise<GetTileCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -757,7 +757,7 @@ export const de_GetTileCommand = async (
  */
 export const de_GetVectorEnrichmentJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetVectorEnrichmentJobCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -791,7 +791,7 @@ export const de_GetVectorEnrichmentJobCommand = async (
  */
 export const de_ListEarthObservationJobsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListEarthObservationJobsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -813,7 +813,7 @@ export const de_ListEarthObservationJobsCommand = async (
  */
 export const de_ListRasterDataCollectionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListRasterDataCollectionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -835,7 +835,7 @@ export const de_ListRasterDataCollectionsCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -856,7 +856,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_ListVectorEnrichmentJobsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListVectorEnrichmentJobsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -878,7 +878,7 @@ export const de_ListVectorEnrichmentJobsCommand = async (
  */
 export const de_SearchRasterDataCollectionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SearchRasterDataCollectionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -901,7 +901,7 @@ export const de_SearchRasterDataCollectionCommand = async (
  */
 export const de_StartEarthObservationJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartEarthObservationJobCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -931,7 +931,7 @@ export const de_StartEarthObservationJobCommand = async (
  */
 export const de_StartVectorEnrichmentJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartVectorEnrichmentJobCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -962,7 +962,7 @@ export const de_StartVectorEnrichmentJobCommand = async (
  */
 export const de_StopEarthObservationJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StopEarthObservationJobCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -979,7 +979,7 @@ export const de_StopEarthObservationJobCommand = async (
  */
 export const de_StopVectorEnrichmentJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StopVectorEnrichmentJobCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -996,7 +996,7 @@ export const de_StopVectorEnrichmentJobCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1013,7 +1013,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1072,7 +1072,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1110,7 +1110,7 @@ const de_ConflictExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_InternalServerExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1131,7 +1131,7 @@ const de_InternalServerExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1152,7 +1152,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_ServiceQuotaExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceQuotaExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1210,7 +1210,7 @@ const de_ValidationExceptionRes = async (parsedOutput: any, context: __SerdeCont
 const se_AreaOfInterest = (input: AreaOfInterest, context: __SerdeContext): any => {
   return AreaOfInterest.visit(input, {
     AreaOfInterestGeometry: (value) => ({ AreaOfInterestGeometry: se_AreaOfInterestGeometry(value, context) }),
-    _: (name, value) => ({ name: value } as any),
+    _: (name, value) => ({ name: value }) as any,
   });
 };
 
@@ -1221,7 +1221,7 @@ const se_AreaOfInterestGeometry = (input: AreaOfInterestGeometry, context: __Ser
   return AreaOfInterestGeometry.visit(input, {
     MultiPolygonGeometry: (value) => ({ MultiPolygonGeometry: se_MultiPolygonGeometryInput(value, context) }),
     PolygonGeometry: (value) => ({ PolygonGeometry: se_PolygonGeometryInput(value, context) }),
-    _: (name, value) => ({ name: value } as any),
+    _: (name, value) => ({ name: value }) as any,
   });
 };
 
@@ -1273,7 +1273,7 @@ const se_JobConfigInput = (input: JobConfigInput, context: __SerdeContext): any 
     StackConfig: (value) => ({ StackConfig: se_StackConfigInput(value, context) }),
     TemporalStatisticsConfig: (value) => ({ TemporalStatisticsConfig: _json(value) }),
     ZonalStatisticsConfig: (value) => ({ ZonalStatisticsConfig: _json(value) }),
-    _: (name, value) => ({ name: value } as any),
+    _: (name, value) => ({ name: value }) as any,
   });
 };
 
@@ -1391,7 +1391,7 @@ const se_Property = (input: Property, context: __SerdeContext): any => {
     ViewOffNadir: (value) => ({ ViewOffNadir: se_ViewOffNadirInput(value, context) }),
     ViewSunAzimuth: (value) => ({ ViewSunAzimuth: se_ViewSunAzimuthInput(value, context) }),
     ViewSunElevation: (value) => ({ ViewSunElevation: se_ViewSunElevationInput(value, context) }),
-    _: (name, value) => ({ name: value } as any),
+    _: (name, value) => ({ name: value }) as any,
   });
 };
 
@@ -1442,7 +1442,7 @@ const se_RasterDataCollectionQueryInput = (input: RasterDataCollectionQueryInput
  */
 const se_RasterDataCollectionQueryWithBandFilterInput = (
   input: RasterDataCollectionQueryWithBandFilterInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     AreaOfInterest: (_) => se_AreaOfInterest(_, context),
@@ -1810,7 +1810,7 @@ const de_LinearRingsList = (output: any, context: __SerdeContext): number[][][][
  */
 const de_ListEarthObservationJobOutputConfig = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ListEarthObservationJobOutputConfig => {
   return take(output, {
     Arn: __expectString,
@@ -1828,7 +1828,7 @@ const de_ListEarthObservationJobOutputConfig = (
  */
 const de_ListVectorEnrichmentJobOutputConfig = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ListVectorEnrichmentJobOutputConfig => {
   return take(output, {
     Arn: __expectString,

@@ -134,7 +134,7 @@ import {
  */
 export const se_BatchGetFieldCommand = async (
   input: BatchGetFieldCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -146,7 +146,7 @@ export const se_BatchGetFieldCommand = async (
   body = JSON.stringify(
     take(input, {
       fields: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -157,7 +157,7 @@ export const se_BatchGetFieldCommand = async (
  */
 export const se_BatchPutFieldOptionsCommand = async (
   input: BatchPutFieldOptionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -170,7 +170,7 @@ export const se_BatchPutFieldOptionsCommand = async (
   body = JSON.stringify(
     take(input, {
       options: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -181,7 +181,7 @@ export const se_BatchPutFieldOptionsCommand = async (
  */
 export const se_CreateCaseCommand = async (
   input: CreateCaseCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -196,7 +196,7 @@ export const se_CreateCaseCommand = async (
       fields: (_) => se_FieldValueList(_, context),
       performedBy: (_) => _json(_),
       templateId: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -207,7 +207,7 @@ export const se_CreateCaseCommand = async (
  */
 export const se_CreateDomainCommand = async (
   input: CreateDomainCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -218,7 +218,7 @@ export const se_CreateDomainCommand = async (
   body = JSON.stringify(
     take(input, {
       name: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -229,7 +229,7 @@ export const se_CreateDomainCommand = async (
  */
 export const se_CreateFieldCommand = async (
   input: CreateFieldCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -243,7 +243,7 @@ export const se_CreateFieldCommand = async (
       description: [],
       name: [],
       type: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -254,7 +254,7 @@ export const se_CreateFieldCommand = async (
  */
 export const se_CreateLayoutCommand = async (
   input: CreateLayoutCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -267,7 +267,7 @@ export const se_CreateLayoutCommand = async (
     take(input, {
       content: (_) => _json(_),
       name: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -278,7 +278,7 @@ export const se_CreateLayoutCommand = async (
  */
 export const se_CreateRelatedItemCommand = async (
   input: CreateRelatedItemCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -293,7 +293,7 @@ export const se_CreateRelatedItemCommand = async (
       content: (_) => _json(_),
       performedBy: (_) => _json(_),
       type: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -304,7 +304,7 @@ export const se_CreateRelatedItemCommand = async (
  */
 export const se_CreateTemplateCommand = async (
   input: CreateTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -320,7 +320,7 @@ export const se_CreateTemplateCommand = async (
       name: [],
       requiredFields: (_) => _json(_),
       status: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -331,7 +331,7 @@ export const se_CreateTemplateCommand = async (
  */
 export const se_DeleteDomainCommand = async (
   input: DeleteDomainCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -347,7 +347,7 @@ export const se_DeleteDomainCommand = async (
  */
 export const se_DeleteFieldCommand = async (
   input: DeleteFieldCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -364,7 +364,7 @@ export const se_DeleteFieldCommand = async (
  */
 export const se_DeleteLayoutCommand = async (
   input: DeleteLayoutCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -381,7 +381,7 @@ export const se_DeleteLayoutCommand = async (
  */
 export const se_DeleteTemplateCommand = async (
   input: DeleteTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -398,7 +398,7 @@ export const se_DeleteTemplateCommand = async (
  */
 export const se_GetCaseCommand = async (
   input: GetCaseCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -412,7 +412,7 @@ export const se_GetCaseCommand = async (
     take(input, {
       fields: (_) => _json(_),
       nextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -423,7 +423,7 @@ export const se_GetCaseCommand = async (
  */
 export const se_GetCaseAuditEventsCommand = async (
   input: GetCaseAuditEventsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -437,7 +437,7 @@ export const se_GetCaseAuditEventsCommand = async (
     take(input, {
       maxResults: [],
       nextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -448,7 +448,7 @@ export const se_GetCaseAuditEventsCommand = async (
  */
 export const se_GetCaseEventConfigurationCommand = async (
   input: GetCaseEventConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -464,7 +464,7 @@ export const se_GetCaseEventConfigurationCommand = async (
  */
 export const se_GetDomainCommand = async (
   input: GetDomainCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -480,7 +480,7 @@ export const se_GetDomainCommand = async (
  */
 export const se_GetLayoutCommand = async (
   input: GetLayoutCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -497,7 +497,7 @@ export const se_GetLayoutCommand = async (
  */
 export const se_GetTemplateCommand = async (
   input: GetTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -514,7 +514,7 @@ export const se_GetTemplateCommand = async (
  */
 export const se_ListCasesForContactCommand = async (
   input: ListCasesForContactCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -528,7 +528,7 @@ export const se_ListCasesForContactCommand = async (
       contactArn: [],
       maxResults: [],
       nextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -539,7 +539,7 @@ export const se_ListCasesForContactCommand = async (
  */
 export const se_ListDomainsCommand = async (
   input: ListDomainsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -558,7 +558,7 @@ export const se_ListDomainsCommand = async (
  */
 export const se_ListFieldOptionsCommand = async (
   input: ListFieldOptionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -580,7 +580,7 @@ export const se_ListFieldOptionsCommand = async (
  */
 export const se_ListFieldsCommand = async (
   input: ListFieldsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -600,7 +600,7 @@ export const se_ListFieldsCommand = async (
  */
 export const se_ListLayoutsCommand = async (
   input: ListLayoutsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -620,7 +620,7 @@ export const se_ListLayoutsCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -636,7 +636,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_ListTemplatesCommand = async (
   input: ListTemplatesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -657,7 +657,7 @@ export const se_ListTemplatesCommand = async (
  */
 export const se_PutCaseEventConfigurationCommand = async (
   input: PutCaseEventConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -669,7 +669,7 @@ export const se_PutCaseEventConfigurationCommand = async (
   body = JSON.stringify(
     take(input, {
       eventBridge: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -680,7 +680,7 @@ export const se_PutCaseEventConfigurationCommand = async (
  */
 export const se_SearchCasesCommand = async (
   input: SearchCasesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -697,7 +697,7 @@ export const se_SearchCasesCommand = async (
       nextToken: [],
       searchTerm: [],
       sorts: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -708,7 +708,7 @@ export const se_SearchCasesCommand = async (
  */
 export const se_SearchRelatedItemsCommand = async (
   input: SearchRelatedItemsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -723,7 +723,7 @@ export const se_SearchRelatedItemsCommand = async (
       filters: (_) => _json(_),
       maxResults: [],
       nextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -734,7 +734,7 @@ export const se_SearchRelatedItemsCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -746,7 +746,7 @@ export const se_TagResourceCommand = async (
   body = JSON.stringify(
     take(input, {
       tags: (_) => se_Tags(_, context),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -757,7 +757,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -779,7 +779,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateCaseCommand = async (
   input: UpdateCaseCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -793,7 +793,7 @@ export const se_UpdateCaseCommand = async (
     take(input, {
       fields: (_) => se_FieldValueList(_, context),
       performedBy: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -804,7 +804,7 @@ export const se_UpdateCaseCommand = async (
  */
 export const se_UpdateFieldCommand = async (
   input: UpdateFieldCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -818,7 +818,7 @@ export const se_UpdateFieldCommand = async (
     take(input, {
       description: [],
       name: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -829,7 +829,7 @@ export const se_UpdateFieldCommand = async (
  */
 export const se_UpdateLayoutCommand = async (
   input: UpdateLayoutCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -843,7 +843,7 @@ export const se_UpdateLayoutCommand = async (
     take(input, {
       content: (_) => _json(_),
       name: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -854,7 +854,7 @@ export const se_UpdateLayoutCommand = async (
  */
 export const se_UpdateTemplateCommand = async (
   input: UpdateTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -871,7 +871,7 @@ export const se_UpdateTemplateCommand = async (
       name: [],
       requiredFields: (_) => _json(_),
       status: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -882,7 +882,7 @@ export const se_UpdateTemplateCommand = async (
  */
 export const de_BatchGetFieldCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchGetFieldCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -904,7 +904,7 @@ export const de_BatchGetFieldCommand = async (
  */
 export const de_BatchPutFieldOptionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchPutFieldOptionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -925,7 +925,7 @@ export const de_BatchPutFieldOptionsCommand = async (
  */
 export const de_CreateCaseCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateCaseCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -947,7 +947,7 @@ export const de_CreateCaseCommand = async (
  */
 export const de_CreateDomainCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateDomainCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -970,7 +970,7 @@ export const de_CreateDomainCommand = async (
  */
 export const de_CreateFieldCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateFieldCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -992,7 +992,7 @@ export const de_CreateFieldCommand = async (
  */
 export const de_CreateLayoutCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateLayoutCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1014,7 +1014,7 @@ export const de_CreateLayoutCommand = async (
  */
 export const de_CreateRelatedItemCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateRelatedItemCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1036,7 +1036,7 @@ export const de_CreateRelatedItemCommand = async (
  */
 export const de_CreateTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateTemplateCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1058,7 +1058,7 @@ export const de_CreateTemplateCommand = async (
  */
 export const de_DeleteDomainCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteDomainCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1075,7 +1075,7 @@ export const de_DeleteDomainCommand = async (
  */
 export const de_DeleteFieldCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteFieldCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1092,7 +1092,7 @@ export const de_DeleteFieldCommand = async (
  */
 export const de_DeleteLayoutCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteLayoutCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1109,7 +1109,7 @@ export const de_DeleteLayoutCommand = async (
  */
 export const de_DeleteTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteTemplateCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1126,7 +1126,7 @@ export const de_DeleteTemplateCommand = async (
  */
 export const de_GetCaseCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetCaseCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1150,7 +1150,7 @@ export const de_GetCaseCommand = async (
  */
 export const de_GetCaseAuditEventsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetCaseAuditEventsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1172,7 +1172,7 @@ export const de_GetCaseAuditEventsCommand = async (
  */
 export const de_GetCaseEventConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetCaseEventConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1193,7 +1193,7 @@ export const de_GetCaseEventConfigurationCommand = async (
  */
 export const de_GetDomainCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetDomainCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1219,7 +1219,7 @@ export const de_GetDomainCommand = async (
  */
 export const de_GetLayoutCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetLayoutCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1247,7 +1247,7 @@ export const de_GetLayoutCommand = async (
  */
 export const de_GetTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetTemplateCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1278,7 +1278,7 @@ export const de_GetTemplateCommand = async (
  */
 export const de_ListCasesForContactCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListCasesForContactCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1300,7 +1300,7 @@ export const de_ListCasesForContactCommand = async (
  */
 export const de_ListDomainsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListDomainsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1322,7 +1322,7 @@ export const de_ListDomainsCommand = async (
  */
 export const de_ListFieldOptionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListFieldOptionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1344,7 +1344,7 @@ export const de_ListFieldOptionsCommand = async (
  */
 export const de_ListFieldsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListFieldsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1366,7 +1366,7 @@ export const de_ListFieldsCommand = async (
  */
 export const de_ListLayoutsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListLayoutsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1388,7 +1388,7 @@ export const de_ListLayoutsCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1409,7 +1409,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_ListTemplatesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTemplatesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1431,7 +1431,7 @@ export const de_ListTemplatesCommand = async (
  */
 export const de_PutCaseEventConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutCaseEventConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1448,7 +1448,7 @@ export const de_PutCaseEventConfigurationCommand = async (
  */
 export const de_SearchCasesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SearchCasesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1470,7 +1470,7 @@ export const de_SearchCasesCommand = async (
  */
 export const de_SearchRelatedItemsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SearchRelatedItemsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1492,7 +1492,7 @@ export const de_SearchRelatedItemsCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1509,7 +1509,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1526,7 +1526,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateCaseCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateCaseCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1543,7 +1543,7 @@ export const de_UpdateCaseCommand = async (
  */
 export const de_UpdateFieldCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateFieldCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1560,7 +1560,7 @@ export const de_UpdateFieldCommand = async (
  */
 export const de_UpdateLayoutCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateLayoutCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1577,7 +1577,7 @@ export const de_UpdateLayoutCommand = async (
  */
 export const de_UpdateTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateTemplateCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1636,7 +1636,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1673,7 +1673,7 @@ const de_ConflictExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_InternalServerExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerException> => {
   const contents: any = map({
     [_rAS]: [() => void 0 !== parsedOutput.headers[_ra], () => __strictParseInt32(parsedOutput.headers[_ra])],
@@ -1695,7 +1695,7 @@ const de_InternalServerExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1717,7 +1717,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_ServiceQuotaExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceQuotaExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1781,7 +1781,7 @@ const se_CaseFilter = (input: CaseFilter, context: __SerdeContext): any => {
     field: (value) => ({ field: se_FieldFilter(value, context) }),
     not: (value) => ({ not: se_CaseFilter(value, context) }),
     orAll: (value) => ({ orAll: se_CaseFilterList(value, context) }),
-    _: (name, value) => ({ name: value } as any),
+    _: (name, value) => ({ name: value }) as any,
   });
 };
 
@@ -1823,7 +1823,7 @@ const se_FieldFilter = (input: FieldFilter, context: __SerdeContext): any => {
     greaterThanOrEqualTo: (value) => ({ greaterThanOrEqualTo: se_FieldValue(value, context) }),
     lessThan: (value) => ({ lessThan: se_FieldValue(value, context) }),
     lessThanOrEqualTo: (value) => ({ lessThanOrEqualTo: se_FieldValue(value, context) }),
-    _: (name, value) => ({ name: value } as any),
+    _: (name, value) => ({ name: value }) as any,
   });
 };
 
@@ -1872,7 +1872,7 @@ const se_FieldValueUnion = (input: FieldValueUnion, context: __SerdeContext): an
     emptyValue: (value) => ({ emptyValue: _json(value) }),
     stringValue: (value) => ({ stringValue: value }),
     userArnValue: (value) => ({ userArnValue: value }),
-    _: (name, value) => ({ name: value } as any),
+    _: (name, value) => ({ name: value }) as any,
   });
 };
 
@@ -2216,7 +2216,7 @@ const de_SearchRelatedItemsResponseItem = (output: any, context: __SerdeContext)
  */
 const de_SearchRelatedItemsResponseItemList = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): SearchRelatedItemsResponseItem[] => {
   const retVal = (output || []).map((entry: any) => {
     if (entry === null) {
@@ -2235,14 +2235,17 @@ const de_SearchRelatedItemsResponseItemList = (
  * deserializeAws_restJson1Tags
  */
 const de_Tags = (output: any, context: __SerdeContext): Record<string, string> => {
-  return Object.entries(output).reduce((acc: Record<string, string>, [key, value]: [string, any]) => {
-    if (value === null) {
-      acc[key as string] = null as any;
+  return Object.entries(output).reduce(
+    (acc: Record<string, string>, [key, value]: [string, any]) => {
+      if (value === null) {
+        acc[key as string] = null as any;
+        return acc;
+      }
+      acc[key as string] = __expectString(value) as any;
       return acc;
-    }
-    acc[key as string] = __expectString(value) as any;
-    return acc;
-  }, {} as Record<string, string>);
+    },
+    {} as Record<string, string>,
+  );
 };
 
 // de_TemplateSummary omitted.

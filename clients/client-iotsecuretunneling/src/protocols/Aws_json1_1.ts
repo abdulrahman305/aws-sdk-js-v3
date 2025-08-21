@@ -60,7 +60,7 @@ import {
  */
 export const se_CloseTunnelCommand = async (
   input: CloseTunnelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CloseTunnel");
   let body: any;
@@ -73,7 +73,7 @@ export const se_CloseTunnelCommand = async (
  */
 export const se_DescribeTunnelCommand = async (
   input: DescribeTunnelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeTunnel");
   let body: any;
@@ -86,7 +86,7 @@ export const se_DescribeTunnelCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListTagsForResource");
   let body: any;
@@ -99,7 +99,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_ListTunnelsCommand = async (
   input: ListTunnelsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListTunnels");
   let body: any;
@@ -112,7 +112,7 @@ export const se_ListTunnelsCommand = async (
  */
 export const se_OpenTunnelCommand = async (
   input: OpenTunnelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("OpenTunnel");
   let body: any;
@@ -125,7 +125,7 @@ export const se_OpenTunnelCommand = async (
  */
 export const se_RotateTunnelAccessTokenCommand = async (
   input: RotateTunnelAccessTokenCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("RotateTunnelAccessToken");
   let body: any;
@@ -138,7 +138,7 @@ export const se_RotateTunnelAccessTokenCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("TagResource");
   let body: any;
@@ -151,7 +151,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UntagResource");
   let body: any;
@@ -164,7 +164,7 @@ export const se_UntagResourceCommand = async (
  */
 export const de_CloseTunnelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CloseTunnelCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -184,7 +184,7 @@ export const de_CloseTunnelCommand = async (
  */
 export const de_DescribeTunnelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeTunnelCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -204,7 +204,7 @@ export const de_DescribeTunnelCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -224,7 +224,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_ListTunnelsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTunnelsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -244,7 +244,7 @@ export const de_ListTunnelsCommand = async (
  */
 export const de_OpenTunnelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<OpenTunnelCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -264,7 +264,7 @@ export const de_OpenTunnelCommand = async (
  */
 export const de_RotateTunnelAccessTokenCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RotateTunnelAccessTokenCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -284,7 +284,7 @@ export const de_RotateTunnelAccessTokenCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -304,7 +304,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -350,7 +350,7 @@ const de_CommandError = async (output: __HttpResponse, context: __SerdeContext):
  */
 const de_LimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<LimitExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -366,7 +366,7 @@ const de_LimitExceededExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -523,7 +523,7 @@ const buildHttpRpcRequest = async (
   headers: __HeaderBag,
   path: string,
   resolvedHostname: string | undefined,
-  body: any
+  body: any,
 ): Promise<__HttpRequest> => {
   const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
   const contents: any = {

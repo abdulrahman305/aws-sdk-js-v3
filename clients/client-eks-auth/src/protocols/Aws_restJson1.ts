@@ -45,7 +45,7 @@ import {
  */
 export const se_AssumeRoleForPodIdentityCommand = async (
   input: AssumeRoleForPodIdentityCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -57,7 +57,7 @@ export const se_AssumeRoleForPodIdentityCommand = async (
   body = JSON.stringify(
     take(input, {
       token: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -68,7 +68,7 @@ export const se_AssumeRoleForPodIdentityCommand = async (
  */
 export const de_AssumeRoleForPodIdentityCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssumeRoleForPodIdentityCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -141,7 +141,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -161,7 +161,7 @@ const de_AccessDeniedExceptionRes = async (
  */
 const de_ExpiredTokenExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ExpiredTokenException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -181,7 +181,7 @@ const de_ExpiredTokenExceptionRes = async (
  */
 const de_InternalServerExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -201,7 +201,7 @@ const de_InternalServerExceptionRes = async (
  */
 const de_InvalidParameterExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidParameterException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -221,7 +221,7 @@ const de_InvalidParameterExceptionRes = async (
  */
 const de_InvalidRequestExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidRequestException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -241,7 +241,7 @@ const de_InvalidRequestExceptionRes = async (
  */
 const de_InvalidTokenExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidTokenException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -261,7 +261,7 @@ const de_InvalidTokenExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -281,7 +281,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_ServiceUnavailableExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceUnavailableException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;

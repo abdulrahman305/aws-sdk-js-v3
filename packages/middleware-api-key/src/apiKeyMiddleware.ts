@@ -28,7 +28,7 @@ import { ApiKeyResolvedConfig } from "./apiKeyConfiguration";
 export const apiKeyMiddleware =
   <Input extends object, Output extends object>(
     pluginConfig: ApiKeyResolvedConfig,
-    middlewareConfig: HttpAuthDefinition
+    middlewareConfig: HttpAuthDefinition,
   ): FinalizeRequestMiddleware<Input, Output> =>
   (next: FinalizeHandler<Input, Output>, context: HandlerExecutionContext): FinalizeHandler<Input, Output> =>
     async function (args: FinalizeHandlerArguments<Input>): Promise<FinalizeHandlerOutput<Output>> {
@@ -68,7 +68,7 @@ export const apiKeyMiddlewareOptions: RelativeMiddlewareOptions = {
 
 export const getApiKeyPlugin = (
   pluginConfig: ApiKeyResolvedConfig,
-  middlewareConfig: HttpAuthDefinition
+  middlewareConfig: HttpAuthDefinition,
 ): Pluggable<any, any> => ({
   applyToStack: (clientStack) => {
     clientStack.addRelativeTo(apiKeyMiddleware(pluginConfig, middlewareConfig), apiKeyMiddlewareOptions);

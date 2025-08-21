@@ -423,16 +423,16 @@ export interface WAF {
    */
   createByteMatchSet(
     args: CreateByteMatchSetCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateByteMatchSetCommandOutput>;
   createByteMatchSet(
     args: CreateByteMatchSetCommandInput,
-    cb: (err: any, data?: CreateByteMatchSetCommandOutput) => void
+    cb: (err: any, data?: CreateByteMatchSetCommandOutput) => void,
   ): void;
   createByteMatchSet(
     args: CreateByteMatchSetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateByteMatchSetCommandOutput) => void
+    cb: (err: any, data?: CreateByteMatchSetCommandOutput) => void,
   ): void;
 
   /**
@@ -440,16 +440,16 @@ export interface WAF {
    */
   createGeoMatchSet(
     args: CreateGeoMatchSetCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateGeoMatchSetCommandOutput>;
   createGeoMatchSet(
     args: CreateGeoMatchSetCommandInput,
-    cb: (err: any, data?: CreateGeoMatchSetCommandOutput) => void
+    cb: (err: any, data?: CreateGeoMatchSetCommandOutput) => void,
   ): void;
   createGeoMatchSet(
     args: CreateGeoMatchSetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateGeoMatchSetCommandOutput) => void
+    cb: (err: any, data?: CreateGeoMatchSetCommandOutput) => void,
   ): void;
 
   /**
@@ -460,7 +460,7 @@ export interface WAF {
   createIPSet(
     args: CreateIPSetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateIPSetCommandOutput) => void
+    cb: (err: any, data?: CreateIPSetCommandOutput) => void,
   ): void;
 
   /**
@@ -468,16 +468,16 @@ export interface WAF {
    */
   createRateBasedRule(
     args: CreateRateBasedRuleCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateRateBasedRuleCommandOutput>;
   createRateBasedRule(
     args: CreateRateBasedRuleCommandInput,
-    cb: (err: any, data?: CreateRateBasedRuleCommandOutput) => void
+    cb: (err: any, data?: CreateRateBasedRuleCommandOutput) => void,
   ): void;
   createRateBasedRule(
     args: CreateRateBasedRuleCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateRateBasedRuleCommandOutput) => void
+    cb: (err: any, data?: CreateRateBasedRuleCommandOutput) => void,
   ): void;
 
   /**
@@ -485,16 +485,16 @@ export interface WAF {
    */
   createRegexMatchSet(
     args: CreateRegexMatchSetCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateRegexMatchSetCommandOutput>;
   createRegexMatchSet(
     args: CreateRegexMatchSetCommandInput,
-    cb: (err: any, data?: CreateRegexMatchSetCommandOutput) => void
+    cb: (err: any, data?: CreateRegexMatchSetCommandOutput) => void,
   ): void;
   createRegexMatchSet(
     args: CreateRegexMatchSetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateRegexMatchSetCommandOutput) => void
+    cb: (err: any, data?: CreateRegexMatchSetCommandOutput) => void,
   ): void;
 
   /**
@@ -502,16 +502,16 @@ export interface WAF {
    */
   createRegexPatternSet(
     args: CreateRegexPatternSetCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateRegexPatternSetCommandOutput>;
   createRegexPatternSet(
     args: CreateRegexPatternSetCommandInput,
-    cb: (err: any, data?: CreateRegexPatternSetCommandOutput) => void
+    cb: (err: any, data?: CreateRegexPatternSetCommandOutput) => void,
   ): void;
   createRegexPatternSet(
     args: CreateRegexPatternSetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateRegexPatternSetCommandOutput) => void
+    cb: (err: any, data?: CreateRegexPatternSetCommandOutput) => void,
   ): void;
 
   /**
@@ -522,7 +522,7 @@ export interface WAF {
   createRule(
     args: CreateRuleCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateRuleCommandOutput) => void
+    cb: (err: any, data?: CreateRuleCommandOutput) => void,
   ): void;
 
   /**
@@ -530,13 +530,13 @@ export interface WAF {
    */
   createRuleGroup(
     args: CreateRuleGroupCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateRuleGroupCommandOutput>;
   createRuleGroup(args: CreateRuleGroupCommandInput, cb: (err: any, data?: CreateRuleGroupCommandOutput) => void): void;
   createRuleGroup(
     args: CreateRuleGroupCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateRuleGroupCommandOutput) => void
+    cb: (err: any, data?: CreateRuleGroupCommandOutput) => void,
   ): void;
 
   /**
@@ -544,16 +544,16 @@ export interface WAF {
    */
   createSizeConstraintSet(
     args: CreateSizeConstraintSetCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateSizeConstraintSetCommandOutput>;
   createSizeConstraintSet(
     args: CreateSizeConstraintSetCommandInput,
-    cb: (err: any, data?: CreateSizeConstraintSetCommandOutput) => void
+    cb: (err: any, data?: CreateSizeConstraintSetCommandOutput) => void,
   ): void;
   createSizeConstraintSet(
     args: CreateSizeConstraintSetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateSizeConstraintSetCommandOutput) => void
+    cb: (err: any, data?: CreateSizeConstraintSetCommandOutput) => void,
   ): void;
 
   /**
@@ -561,16 +561,16 @@ export interface WAF {
    */
   createSqlInjectionMatchSet(
     args: CreateSqlInjectionMatchSetCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateSqlInjectionMatchSetCommandOutput>;
   createSqlInjectionMatchSet(
     args: CreateSqlInjectionMatchSetCommandInput,
-    cb: (err: any, data?: CreateSqlInjectionMatchSetCommandOutput) => void
+    cb: (err: any, data?: CreateSqlInjectionMatchSetCommandOutput) => void,
   ): void;
   createSqlInjectionMatchSet(
     args: CreateSqlInjectionMatchSetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateSqlInjectionMatchSetCommandOutput) => void
+    cb: (err: any, data?: CreateSqlInjectionMatchSetCommandOutput) => void,
   ): void;
 
   /**
@@ -581,7 +581,7 @@ export interface WAF {
   createWebACL(
     args: CreateWebACLCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateWebACLCommandOutput) => void
+    cb: (err: any, data?: CreateWebACLCommandOutput) => void,
   ): void;
 
   /**
@@ -589,16 +589,16 @@ export interface WAF {
    */
   createWebACLMigrationStack(
     args: CreateWebACLMigrationStackCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateWebACLMigrationStackCommandOutput>;
   createWebACLMigrationStack(
     args: CreateWebACLMigrationStackCommandInput,
-    cb: (err: any, data?: CreateWebACLMigrationStackCommandOutput) => void
+    cb: (err: any, data?: CreateWebACLMigrationStackCommandOutput) => void,
   ): void;
   createWebACLMigrationStack(
     args: CreateWebACLMigrationStackCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateWebACLMigrationStackCommandOutput) => void
+    cb: (err: any, data?: CreateWebACLMigrationStackCommandOutput) => void,
   ): void;
 
   /**
@@ -606,16 +606,16 @@ export interface WAF {
    */
   createXssMatchSet(
     args: CreateXssMatchSetCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateXssMatchSetCommandOutput>;
   createXssMatchSet(
     args: CreateXssMatchSetCommandInput,
-    cb: (err: any, data?: CreateXssMatchSetCommandOutput) => void
+    cb: (err: any, data?: CreateXssMatchSetCommandOutput) => void,
   ): void;
   createXssMatchSet(
     args: CreateXssMatchSetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateXssMatchSetCommandOutput) => void
+    cb: (err: any, data?: CreateXssMatchSetCommandOutput) => void,
   ): void;
 
   /**
@@ -623,16 +623,16 @@ export interface WAF {
    */
   deleteByteMatchSet(
     args: DeleteByteMatchSetCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteByteMatchSetCommandOutput>;
   deleteByteMatchSet(
     args: DeleteByteMatchSetCommandInput,
-    cb: (err: any, data?: DeleteByteMatchSetCommandOutput) => void
+    cb: (err: any, data?: DeleteByteMatchSetCommandOutput) => void,
   ): void;
   deleteByteMatchSet(
     args: DeleteByteMatchSetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteByteMatchSetCommandOutput) => void
+    cb: (err: any, data?: DeleteByteMatchSetCommandOutput) => void,
   ): void;
 
   /**
@@ -640,16 +640,16 @@ export interface WAF {
    */
   deleteGeoMatchSet(
     args: DeleteGeoMatchSetCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteGeoMatchSetCommandOutput>;
   deleteGeoMatchSet(
     args: DeleteGeoMatchSetCommandInput,
-    cb: (err: any, data?: DeleteGeoMatchSetCommandOutput) => void
+    cb: (err: any, data?: DeleteGeoMatchSetCommandOutput) => void,
   ): void;
   deleteGeoMatchSet(
     args: DeleteGeoMatchSetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteGeoMatchSetCommandOutput) => void
+    cb: (err: any, data?: DeleteGeoMatchSetCommandOutput) => void,
   ): void;
 
   /**
@@ -660,7 +660,7 @@ export interface WAF {
   deleteIPSet(
     args: DeleteIPSetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteIPSetCommandOutput) => void
+    cb: (err: any, data?: DeleteIPSetCommandOutput) => void,
   ): void;
 
   /**
@@ -668,16 +668,16 @@ export interface WAF {
    */
   deleteLoggingConfiguration(
     args: DeleteLoggingConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteLoggingConfigurationCommandOutput>;
   deleteLoggingConfiguration(
     args: DeleteLoggingConfigurationCommandInput,
-    cb: (err: any, data?: DeleteLoggingConfigurationCommandOutput) => void
+    cb: (err: any, data?: DeleteLoggingConfigurationCommandOutput) => void,
   ): void;
   deleteLoggingConfiguration(
     args: DeleteLoggingConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteLoggingConfigurationCommandOutput) => void
+    cb: (err: any, data?: DeleteLoggingConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -685,16 +685,16 @@ export interface WAF {
    */
   deletePermissionPolicy(
     args: DeletePermissionPolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeletePermissionPolicyCommandOutput>;
   deletePermissionPolicy(
     args: DeletePermissionPolicyCommandInput,
-    cb: (err: any, data?: DeletePermissionPolicyCommandOutput) => void
+    cb: (err: any, data?: DeletePermissionPolicyCommandOutput) => void,
   ): void;
   deletePermissionPolicy(
     args: DeletePermissionPolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeletePermissionPolicyCommandOutput) => void
+    cb: (err: any, data?: DeletePermissionPolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -702,16 +702,16 @@ export interface WAF {
    */
   deleteRateBasedRule(
     args: DeleteRateBasedRuleCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteRateBasedRuleCommandOutput>;
   deleteRateBasedRule(
     args: DeleteRateBasedRuleCommandInput,
-    cb: (err: any, data?: DeleteRateBasedRuleCommandOutput) => void
+    cb: (err: any, data?: DeleteRateBasedRuleCommandOutput) => void,
   ): void;
   deleteRateBasedRule(
     args: DeleteRateBasedRuleCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteRateBasedRuleCommandOutput) => void
+    cb: (err: any, data?: DeleteRateBasedRuleCommandOutput) => void,
   ): void;
 
   /**
@@ -719,16 +719,16 @@ export interface WAF {
    */
   deleteRegexMatchSet(
     args: DeleteRegexMatchSetCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteRegexMatchSetCommandOutput>;
   deleteRegexMatchSet(
     args: DeleteRegexMatchSetCommandInput,
-    cb: (err: any, data?: DeleteRegexMatchSetCommandOutput) => void
+    cb: (err: any, data?: DeleteRegexMatchSetCommandOutput) => void,
   ): void;
   deleteRegexMatchSet(
     args: DeleteRegexMatchSetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteRegexMatchSetCommandOutput) => void
+    cb: (err: any, data?: DeleteRegexMatchSetCommandOutput) => void,
   ): void;
 
   /**
@@ -736,16 +736,16 @@ export interface WAF {
    */
   deleteRegexPatternSet(
     args: DeleteRegexPatternSetCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteRegexPatternSetCommandOutput>;
   deleteRegexPatternSet(
     args: DeleteRegexPatternSetCommandInput,
-    cb: (err: any, data?: DeleteRegexPatternSetCommandOutput) => void
+    cb: (err: any, data?: DeleteRegexPatternSetCommandOutput) => void,
   ): void;
   deleteRegexPatternSet(
     args: DeleteRegexPatternSetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteRegexPatternSetCommandOutput) => void
+    cb: (err: any, data?: DeleteRegexPatternSetCommandOutput) => void,
   ): void;
 
   /**
@@ -756,7 +756,7 @@ export interface WAF {
   deleteRule(
     args: DeleteRuleCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteRuleCommandOutput) => void
+    cb: (err: any, data?: DeleteRuleCommandOutput) => void,
   ): void;
 
   /**
@@ -764,13 +764,13 @@ export interface WAF {
    */
   deleteRuleGroup(
     args: DeleteRuleGroupCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteRuleGroupCommandOutput>;
   deleteRuleGroup(args: DeleteRuleGroupCommandInput, cb: (err: any, data?: DeleteRuleGroupCommandOutput) => void): void;
   deleteRuleGroup(
     args: DeleteRuleGroupCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteRuleGroupCommandOutput) => void
+    cb: (err: any, data?: DeleteRuleGroupCommandOutput) => void,
   ): void;
 
   /**
@@ -778,16 +778,16 @@ export interface WAF {
    */
   deleteSizeConstraintSet(
     args: DeleteSizeConstraintSetCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteSizeConstraintSetCommandOutput>;
   deleteSizeConstraintSet(
     args: DeleteSizeConstraintSetCommandInput,
-    cb: (err: any, data?: DeleteSizeConstraintSetCommandOutput) => void
+    cb: (err: any, data?: DeleteSizeConstraintSetCommandOutput) => void,
   ): void;
   deleteSizeConstraintSet(
     args: DeleteSizeConstraintSetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteSizeConstraintSetCommandOutput) => void
+    cb: (err: any, data?: DeleteSizeConstraintSetCommandOutput) => void,
   ): void;
 
   /**
@@ -795,16 +795,16 @@ export interface WAF {
    */
   deleteSqlInjectionMatchSet(
     args: DeleteSqlInjectionMatchSetCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteSqlInjectionMatchSetCommandOutput>;
   deleteSqlInjectionMatchSet(
     args: DeleteSqlInjectionMatchSetCommandInput,
-    cb: (err: any, data?: DeleteSqlInjectionMatchSetCommandOutput) => void
+    cb: (err: any, data?: DeleteSqlInjectionMatchSetCommandOutput) => void,
   ): void;
   deleteSqlInjectionMatchSet(
     args: DeleteSqlInjectionMatchSetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteSqlInjectionMatchSetCommandOutput) => void
+    cb: (err: any, data?: DeleteSqlInjectionMatchSetCommandOutput) => void,
   ): void;
 
   /**
@@ -815,7 +815,7 @@ export interface WAF {
   deleteWebACL(
     args: DeleteWebACLCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteWebACLCommandOutput) => void
+    cb: (err: any, data?: DeleteWebACLCommandOutput) => void,
   ): void;
 
   /**
@@ -823,16 +823,16 @@ export interface WAF {
    */
   deleteXssMatchSet(
     args: DeleteXssMatchSetCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteXssMatchSetCommandOutput>;
   deleteXssMatchSet(
     args: DeleteXssMatchSetCommandInput,
-    cb: (err: any, data?: DeleteXssMatchSetCommandOutput) => void
+    cb: (err: any, data?: DeleteXssMatchSetCommandOutput) => void,
   ): void;
   deleteXssMatchSet(
     args: DeleteXssMatchSetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteXssMatchSetCommandOutput) => void
+    cb: (err: any, data?: DeleteXssMatchSetCommandOutput) => void,
   ): void;
 
   /**
@@ -840,13 +840,13 @@ export interface WAF {
    */
   getByteMatchSet(
     args: GetByteMatchSetCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetByteMatchSetCommandOutput>;
   getByteMatchSet(args: GetByteMatchSetCommandInput, cb: (err: any, data?: GetByteMatchSetCommandOutput) => void): void;
   getByteMatchSet(
     args: GetByteMatchSetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetByteMatchSetCommandOutput) => void
+    cb: (err: any, data?: GetByteMatchSetCommandOutput) => void,
   ): void;
 
   /**
@@ -855,13 +855,13 @@ export interface WAF {
   getChangeToken(): Promise<GetChangeTokenCommandOutput>;
   getChangeToken(
     args: GetChangeTokenCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetChangeTokenCommandOutput>;
   getChangeToken(args: GetChangeTokenCommandInput, cb: (err: any, data?: GetChangeTokenCommandOutput) => void): void;
   getChangeToken(
     args: GetChangeTokenCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetChangeTokenCommandOutput) => void
+    cb: (err: any, data?: GetChangeTokenCommandOutput) => void,
   ): void;
 
   /**
@@ -869,16 +869,16 @@ export interface WAF {
    */
   getChangeTokenStatus(
     args: GetChangeTokenStatusCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetChangeTokenStatusCommandOutput>;
   getChangeTokenStatus(
     args: GetChangeTokenStatusCommandInput,
-    cb: (err: any, data?: GetChangeTokenStatusCommandOutput) => void
+    cb: (err: any, data?: GetChangeTokenStatusCommandOutput) => void,
   ): void;
   getChangeTokenStatus(
     args: GetChangeTokenStatusCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetChangeTokenStatusCommandOutput) => void
+    cb: (err: any, data?: GetChangeTokenStatusCommandOutput) => void,
   ): void;
 
   /**
@@ -886,13 +886,13 @@ export interface WAF {
    */
   getGeoMatchSet(
     args: GetGeoMatchSetCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetGeoMatchSetCommandOutput>;
   getGeoMatchSet(args: GetGeoMatchSetCommandInput, cb: (err: any, data?: GetGeoMatchSetCommandOutput) => void): void;
   getGeoMatchSet(
     args: GetGeoMatchSetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetGeoMatchSetCommandOutput) => void
+    cb: (err: any, data?: GetGeoMatchSetCommandOutput) => void,
   ): void;
 
   /**
@@ -903,7 +903,7 @@ export interface WAF {
   getIPSet(
     args: GetIPSetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetIPSetCommandOutput) => void
+    cb: (err: any, data?: GetIPSetCommandOutput) => void,
   ): void;
 
   /**
@@ -911,16 +911,16 @@ export interface WAF {
    */
   getLoggingConfiguration(
     args: GetLoggingConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetLoggingConfigurationCommandOutput>;
   getLoggingConfiguration(
     args: GetLoggingConfigurationCommandInput,
-    cb: (err: any, data?: GetLoggingConfigurationCommandOutput) => void
+    cb: (err: any, data?: GetLoggingConfigurationCommandOutput) => void,
   ): void;
   getLoggingConfiguration(
     args: GetLoggingConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetLoggingConfigurationCommandOutput) => void
+    cb: (err: any, data?: GetLoggingConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -928,16 +928,16 @@ export interface WAF {
    */
   getPermissionPolicy(
     args: GetPermissionPolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetPermissionPolicyCommandOutput>;
   getPermissionPolicy(
     args: GetPermissionPolicyCommandInput,
-    cb: (err: any, data?: GetPermissionPolicyCommandOutput) => void
+    cb: (err: any, data?: GetPermissionPolicyCommandOutput) => void,
   ): void;
   getPermissionPolicy(
     args: GetPermissionPolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetPermissionPolicyCommandOutput) => void
+    cb: (err: any, data?: GetPermissionPolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -945,16 +945,16 @@ export interface WAF {
    */
   getRateBasedRule(
     args: GetRateBasedRuleCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetRateBasedRuleCommandOutput>;
   getRateBasedRule(
     args: GetRateBasedRuleCommandInput,
-    cb: (err: any, data?: GetRateBasedRuleCommandOutput) => void
+    cb: (err: any, data?: GetRateBasedRuleCommandOutput) => void,
   ): void;
   getRateBasedRule(
     args: GetRateBasedRuleCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetRateBasedRuleCommandOutput) => void
+    cb: (err: any, data?: GetRateBasedRuleCommandOutput) => void,
   ): void;
 
   /**
@@ -962,16 +962,16 @@ export interface WAF {
    */
   getRateBasedRuleManagedKeys(
     args: GetRateBasedRuleManagedKeysCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetRateBasedRuleManagedKeysCommandOutput>;
   getRateBasedRuleManagedKeys(
     args: GetRateBasedRuleManagedKeysCommandInput,
-    cb: (err: any, data?: GetRateBasedRuleManagedKeysCommandOutput) => void
+    cb: (err: any, data?: GetRateBasedRuleManagedKeysCommandOutput) => void,
   ): void;
   getRateBasedRuleManagedKeys(
     args: GetRateBasedRuleManagedKeysCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetRateBasedRuleManagedKeysCommandOutput) => void
+    cb: (err: any, data?: GetRateBasedRuleManagedKeysCommandOutput) => void,
   ): void;
 
   /**
@@ -979,16 +979,16 @@ export interface WAF {
    */
   getRegexMatchSet(
     args: GetRegexMatchSetCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetRegexMatchSetCommandOutput>;
   getRegexMatchSet(
     args: GetRegexMatchSetCommandInput,
-    cb: (err: any, data?: GetRegexMatchSetCommandOutput) => void
+    cb: (err: any, data?: GetRegexMatchSetCommandOutput) => void,
   ): void;
   getRegexMatchSet(
     args: GetRegexMatchSetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetRegexMatchSetCommandOutput) => void
+    cb: (err: any, data?: GetRegexMatchSetCommandOutput) => void,
   ): void;
 
   /**
@@ -996,16 +996,16 @@ export interface WAF {
    */
   getRegexPatternSet(
     args: GetRegexPatternSetCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetRegexPatternSetCommandOutput>;
   getRegexPatternSet(
     args: GetRegexPatternSetCommandInput,
-    cb: (err: any, data?: GetRegexPatternSetCommandOutput) => void
+    cb: (err: any, data?: GetRegexPatternSetCommandOutput) => void,
   ): void;
   getRegexPatternSet(
     args: GetRegexPatternSetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetRegexPatternSetCommandOutput) => void
+    cb: (err: any, data?: GetRegexPatternSetCommandOutput) => void,
   ): void;
 
   /**
@@ -1016,7 +1016,7 @@ export interface WAF {
   getRule(
     args: GetRuleCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetRuleCommandOutput) => void
+    cb: (err: any, data?: GetRuleCommandOutput) => void,
   ): void;
 
   /**
@@ -1027,7 +1027,7 @@ export interface WAF {
   getRuleGroup(
     args: GetRuleGroupCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetRuleGroupCommandOutput) => void
+    cb: (err: any, data?: GetRuleGroupCommandOutput) => void,
   ): void;
 
   /**
@@ -1035,16 +1035,16 @@ export interface WAF {
    */
   getSampledRequests(
     args: GetSampledRequestsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetSampledRequestsCommandOutput>;
   getSampledRequests(
     args: GetSampledRequestsCommandInput,
-    cb: (err: any, data?: GetSampledRequestsCommandOutput) => void
+    cb: (err: any, data?: GetSampledRequestsCommandOutput) => void,
   ): void;
   getSampledRequests(
     args: GetSampledRequestsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetSampledRequestsCommandOutput) => void
+    cb: (err: any, data?: GetSampledRequestsCommandOutput) => void,
   ): void;
 
   /**
@@ -1052,16 +1052,16 @@ export interface WAF {
    */
   getSizeConstraintSet(
     args: GetSizeConstraintSetCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetSizeConstraintSetCommandOutput>;
   getSizeConstraintSet(
     args: GetSizeConstraintSetCommandInput,
-    cb: (err: any, data?: GetSizeConstraintSetCommandOutput) => void
+    cb: (err: any, data?: GetSizeConstraintSetCommandOutput) => void,
   ): void;
   getSizeConstraintSet(
     args: GetSizeConstraintSetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetSizeConstraintSetCommandOutput) => void
+    cb: (err: any, data?: GetSizeConstraintSetCommandOutput) => void,
   ): void;
 
   /**
@@ -1069,16 +1069,16 @@ export interface WAF {
    */
   getSqlInjectionMatchSet(
     args: GetSqlInjectionMatchSetCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetSqlInjectionMatchSetCommandOutput>;
   getSqlInjectionMatchSet(
     args: GetSqlInjectionMatchSetCommandInput,
-    cb: (err: any, data?: GetSqlInjectionMatchSetCommandOutput) => void
+    cb: (err: any, data?: GetSqlInjectionMatchSetCommandOutput) => void,
   ): void;
   getSqlInjectionMatchSet(
     args: GetSqlInjectionMatchSetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetSqlInjectionMatchSetCommandOutput) => void
+    cb: (err: any, data?: GetSqlInjectionMatchSetCommandOutput) => void,
   ): void;
 
   /**
@@ -1089,7 +1089,7 @@ export interface WAF {
   getWebACL(
     args: GetWebACLCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetWebACLCommandOutput) => void
+    cb: (err: any, data?: GetWebACLCommandOutput) => void,
   ): void;
 
   /**
@@ -1097,13 +1097,13 @@ export interface WAF {
    */
   getXssMatchSet(
     args: GetXssMatchSetCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetXssMatchSetCommandOutput>;
   getXssMatchSet(args: GetXssMatchSetCommandInput, cb: (err: any, data?: GetXssMatchSetCommandOutput) => void): void;
   getXssMatchSet(
     args: GetXssMatchSetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetXssMatchSetCommandOutput) => void
+    cb: (err: any, data?: GetXssMatchSetCommandOutput) => void,
   ): void;
 
   /**
@@ -1112,16 +1112,16 @@ export interface WAF {
   listActivatedRulesInRuleGroup(): Promise<ListActivatedRulesInRuleGroupCommandOutput>;
   listActivatedRulesInRuleGroup(
     args: ListActivatedRulesInRuleGroupCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListActivatedRulesInRuleGroupCommandOutput>;
   listActivatedRulesInRuleGroup(
     args: ListActivatedRulesInRuleGroupCommandInput,
-    cb: (err: any, data?: ListActivatedRulesInRuleGroupCommandOutput) => void
+    cb: (err: any, data?: ListActivatedRulesInRuleGroupCommandOutput) => void,
   ): void;
   listActivatedRulesInRuleGroup(
     args: ListActivatedRulesInRuleGroupCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListActivatedRulesInRuleGroupCommandOutput) => void
+    cb: (err: any, data?: ListActivatedRulesInRuleGroupCommandOutput) => void,
   ): void;
 
   /**
@@ -1130,16 +1130,16 @@ export interface WAF {
   listByteMatchSets(): Promise<ListByteMatchSetsCommandOutput>;
   listByteMatchSets(
     args: ListByteMatchSetsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListByteMatchSetsCommandOutput>;
   listByteMatchSets(
     args: ListByteMatchSetsCommandInput,
-    cb: (err: any, data?: ListByteMatchSetsCommandOutput) => void
+    cb: (err: any, data?: ListByteMatchSetsCommandOutput) => void,
   ): void;
   listByteMatchSets(
     args: ListByteMatchSetsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListByteMatchSetsCommandOutput) => void
+    cb: (err: any, data?: ListByteMatchSetsCommandOutput) => void,
   ): void;
 
   /**
@@ -1148,16 +1148,16 @@ export interface WAF {
   listGeoMatchSets(): Promise<ListGeoMatchSetsCommandOutput>;
   listGeoMatchSets(
     args: ListGeoMatchSetsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListGeoMatchSetsCommandOutput>;
   listGeoMatchSets(
     args: ListGeoMatchSetsCommandInput,
-    cb: (err: any, data?: ListGeoMatchSetsCommandOutput) => void
+    cb: (err: any, data?: ListGeoMatchSetsCommandOutput) => void,
   ): void;
   listGeoMatchSets(
     args: ListGeoMatchSetsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListGeoMatchSetsCommandOutput) => void
+    cb: (err: any, data?: ListGeoMatchSetsCommandOutput) => void,
   ): void;
 
   /**
@@ -1169,7 +1169,7 @@ export interface WAF {
   listIPSets(
     args: ListIPSetsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListIPSetsCommandOutput) => void
+    cb: (err: any, data?: ListIPSetsCommandOutput) => void,
   ): void;
 
   /**
@@ -1178,16 +1178,16 @@ export interface WAF {
   listLoggingConfigurations(): Promise<ListLoggingConfigurationsCommandOutput>;
   listLoggingConfigurations(
     args: ListLoggingConfigurationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListLoggingConfigurationsCommandOutput>;
   listLoggingConfigurations(
     args: ListLoggingConfigurationsCommandInput,
-    cb: (err: any, data?: ListLoggingConfigurationsCommandOutput) => void
+    cb: (err: any, data?: ListLoggingConfigurationsCommandOutput) => void,
   ): void;
   listLoggingConfigurations(
     args: ListLoggingConfigurationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListLoggingConfigurationsCommandOutput) => void
+    cb: (err: any, data?: ListLoggingConfigurationsCommandOutput) => void,
   ): void;
 
   /**
@@ -1196,16 +1196,16 @@ export interface WAF {
   listRateBasedRules(): Promise<ListRateBasedRulesCommandOutput>;
   listRateBasedRules(
     args: ListRateBasedRulesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListRateBasedRulesCommandOutput>;
   listRateBasedRules(
     args: ListRateBasedRulesCommandInput,
-    cb: (err: any, data?: ListRateBasedRulesCommandOutput) => void
+    cb: (err: any, data?: ListRateBasedRulesCommandOutput) => void,
   ): void;
   listRateBasedRules(
     args: ListRateBasedRulesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListRateBasedRulesCommandOutput) => void
+    cb: (err: any, data?: ListRateBasedRulesCommandOutput) => void,
   ): void;
 
   /**
@@ -1214,16 +1214,16 @@ export interface WAF {
   listRegexMatchSets(): Promise<ListRegexMatchSetsCommandOutput>;
   listRegexMatchSets(
     args: ListRegexMatchSetsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListRegexMatchSetsCommandOutput>;
   listRegexMatchSets(
     args: ListRegexMatchSetsCommandInput,
-    cb: (err: any, data?: ListRegexMatchSetsCommandOutput) => void
+    cb: (err: any, data?: ListRegexMatchSetsCommandOutput) => void,
   ): void;
   listRegexMatchSets(
     args: ListRegexMatchSetsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListRegexMatchSetsCommandOutput) => void
+    cb: (err: any, data?: ListRegexMatchSetsCommandOutput) => void,
   ): void;
 
   /**
@@ -1232,16 +1232,16 @@ export interface WAF {
   listRegexPatternSets(): Promise<ListRegexPatternSetsCommandOutput>;
   listRegexPatternSets(
     args: ListRegexPatternSetsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListRegexPatternSetsCommandOutput>;
   listRegexPatternSets(
     args: ListRegexPatternSetsCommandInput,
-    cb: (err: any, data?: ListRegexPatternSetsCommandOutput) => void
+    cb: (err: any, data?: ListRegexPatternSetsCommandOutput) => void,
   ): void;
   listRegexPatternSets(
     args: ListRegexPatternSetsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListRegexPatternSetsCommandOutput) => void
+    cb: (err: any, data?: ListRegexPatternSetsCommandOutput) => void,
   ): void;
 
   /**
@@ -1250,13 +1250,13 @@ export interface WAF {
   listRuleGroups(): Promise<ListRuleGroupsCommandOutput>;
   listRuleGroups(
     args: ListRuleGroupsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListRuleGroupsCommandOutput>;
   listRuleGroups(args: ListRuleGroupsCommandInput, cb: (err: any, data?: ListRuleGroupsCommandOutput) => void): void;
   listRuleGroups(
     args: ListRuleGroupsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListRuleGroupsCommandOutput) => void
+    cb: (err: any, data?: ListRuleGroupsCommandOutput) => void,
   ): void;
 
   /**
@@ -1268,7 +1268,7 @@ export interface WAF {
   listRules(
     args: ListRulesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListRulesCommandOutput) => void
+    cb: (err: any, data?: ListRulesCommandOutput) => void,
   ): void;
 
   /**
@@ -1277,16 +1277,16 @@ export interface WAF {
   listSizeConstraintSets(): Promise<ListSizeConstraintSetsCommandOutput>;
   listSizeConstraintSets(
     args: ListSizeConstraintSetsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListSizeConstraintSetsCommandOutput>;
   listSizeConstraintSets(
     args: ListSizeConstraintSetsCommandInput,
-    cb: (err: any, data?: ListSizeConstraintSetsCommandOutput) => void
+    cb: (err: any, data?: ListSizeConstraintSetsCommandOutput) => void,
   ): void;
   listSizeConstraintSets(
     args: ListSizeConstraintSetsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListSizeConstraintSetsCommandOutput) => void
+    cb: (err: any, data?: ListSizeConstraintSetsCommandOutput) => void,
   ): void;
 
   /**
@@ -1295,16 +1295,16 @@ export interface WAF {
   listSqlInjectionMatchSets(): Promise<ListSqlInjectionMatchSetsCommandOutput>;
   listSqlInjectionMatchSets(
     args: ListSqlInjectionMatchSetsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListSqlInjectionMatchSetsCommandOutput>;
   listSqlInjectionMatchSets(
     args: ListSqlInjectionMatchSetsCommandInput,
-    cb: (err: any, data?: ListSqlInjectionMatchSetsCommandOutput) => void
+    cb: (err: any, data?: ListSqlInjectionMatchSetsCommandOutput) => void,
   ): void;
   listSqlInjectionMatchSets(
     args: ListSqlInjectionMatchSetsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListSqlInjectionMatchSetsCommandOutput) => void
+    cb: (err: any, data?: ListSqlInjectionMatchSetsCommandOutput) => void,
   ): void;
 
   /**
@@ -1313,16 +1313,16 @@ export interface WAF {
   listSubscribedRuleGroups(): Promise<ListSubscribedRuleGroupsCommandOutput>;
   listSubscribedRuleGroups(
     args: ListSubscribedRuleGroupsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListSubscribedRuleGroupsCommandOutput>;
   listSubscribedRuleGroups(
     args: ListSubscribedRuleGroupsCommandInput,
-    cb: (err: any, data?: ListSubscribedRuleGroupsCommandOutput) => void
+    cb: (err: any, data?: ListSubscribedRuleGroupsCommandOutput) => void,
   ): void;
   listSubscribedRuleGroups(
     args: ListSubscribedRuleGroupsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListSubscribedRuleGroupsCommandOutput) => void
+    cb: (err: any, data?: ListSubscribedRuleGroupsCommandOutput) => void,
   ): void;
 
   /**
@@ -1330,16 +1330,16 @@ export interface WAF {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -1351,7 +1351,7 @@ export interface WAF {
   listWebACLs(
     args: ListWebACLsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListWebACLsCommandOutput) => void
+    cb: (err: any, data?: ListWebACLsCommandOutput) => void,
   ): void;
 
   /**
@@ -1360,16 +1360,16 @@ export interface WAF {
   listXssMatchSets(): Promise<ListXssMatchSetsCommandOutput>;
   listXssMatchSets(
     args: ListXssMatchSetsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListXssMatchSetsCommandOutput>;
   listXssMatchSets(
     args: ListXssMatchSetsCommandInput,
-    cb: (err: any, data?: ListXssMatchSetsCommandOutput) => void
+    cb: (err: any, data?: ListXssMatchSetsCommandOutput) => void,
   ): void;
   listXssMatchSets(
     args: ListXssMatchSetsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListXssMatchSetsCommandOutput) => void
+    cb: (err: any, data?: ListXssMatchSetsCommandOutput) => void,
   ): void;
 
   /**
@@ -1377,16 +1377,16 @@ export interface WAF {
    */
   putLoggingConfiguration(
     args: PutLoggingConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutLoggingConfigurationCommandOutput>;
   putLoggingConfiguration(
     args: PutLoggingConfigurationCommandInput,
-    cb: (err: any, data?: PutLoggingConfigurationCommandOutput) => void
+    cb: (err: any, data?: PutLoggingConfigurationCommandOutput) => void,
   ): void;
   putLoggingConfiguration(
     args: PutLoggingConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutLoggingConfigurationCommandOutput) => void
+    cb: (err: any, data?: PutLoggingConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -1394,16 +1394,16 @@ export interface WAF {
    */
   putPermissionPolicy(
     args: PutPermissionPolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutPermissionPolicyCommandOutput>;
   putPermissionPolicy(
     args: PutPermissionPolicyCommandInput,
-    cb: (err: any, data?: PutPermissionPolicyCommandOutput) => void
+    cb: (err: any, data?: PutPermissionPolicyCommandOutput) => void,
   ): void;
   putPermissionPolicy(
     args: PutPermissionPolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutPermissionPolicyCommandOutput) => void
+    cb: (err: any, data?: PutPermissionPolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -1414,7 +1414,7 @@ export interface WAF {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -1425,7 +1425,7 @@ export interface WAF {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -1433,16 +1433,16 @@ export interface WAF {
    */
   updateByteMatchSet(
     args: UpdateByteMatchSetCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateByteMatchSetCommandOutput>;
   updateByteMatchSet(
     args: UpdateByteMatchSetCommandInput,
-    cb: (err: any, data?: UpdateByteMatchSetCommandOutput) => void
+    cb: (err: any, data?: UpdateByteMatchSetCommandOutput) => void,
   ): void;
   updateByteMatchSet(
     args: UpdateByteMatchSetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateByteMatchSetCommandOutput) => void
+    cb: (err: any, data?: UpdateByteMatchSetCommandOutput) => void,
   ): void;
 
   /**
@@ -1450,16 +1450,16 @@ export interface WAF {
    */
   updateGeoMatchSet(
     args: UpdateGeoMatchSetCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateGeoMatchSetCommandOutput>;
   updateGeoMatchSet(
     args: UpdateGeoMatchSetCommandInput,
-    cb: (err: any, data?: UpdateGeoMatchSetCommandOutput) => void
+    cb: (err: any, data?: UpdateGeoMatchSetCommandOutput) => void,
   ): void;
   updateGeoMatchSet(
     args: UpdateGeoMatchSetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateGeoMatchSetCommandOutput) => void
+    cb: (err: any, data?: UpdateGeoMatchSetCommandOutput) => void,
   ): void;
 
   /**
@@ -1470,7 +1470,7 @@ export interface WAF {
   updateIPSet(
     args: UpdateIPSetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateIPSetCommandOutput) => void
+    cb: (err: any, data?: UpdateIPSetCommandOutput) => void,
   ): void;
 
   /**
@@ -1478,16 +1478,16 @@ export interface WAF {
    */
   updateRateBasedRule(
     args: UpdateRateBasedRuleCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateRateBasedRuleCommandOutput>;
   updateRateBasedRule(
     args: UpdateRateBasedRuleCommandInput,
-    cb: (err: any, data?: UpdateRateBasedRuleCommandOutput) => void
+    cb: (err: any, data?: UpdateRateBasedRuleCommandOutput) => void,
   ): void;
   updateRateBasedRule(
     args: UpdateRateBasedRuleCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateRateBasedRuleCommandOutput) => void
+    cb: (err: any, data?: UpdateRateBasedRuleCommandOutput) => void,
   ): void;
 
   /**
@@ -1495,16 +1495,16 @@ export interface WAF {
    */
   updateRegexMatchSet(
     args: UpdateRegexMatchSetCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateRegexMatchSetCommandOutput>;
   updateRegexMatchSet(
     args: UpdateRegexMatchSetCommandInput,
-    cb: (err: any, data?: UpdateRegexMatchSetCommandOutput) => void
+    cb: (err: any, data?: UpdateRegexMatchSetCommandOutput) => void,
   ): void;
   updateRegexMatchSet(
     args: UpdateRegexMatchSetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateRegexMatchSetCommandOutput) => void
+    cb: (err: any, data?: UpdateRegexMatchSetCommandOutput) => void,
   ): void;
 
   /**
@@ -1512,16 +1512,16 @@ export interface WAF {
    */
   updateRegexPatternSet(
     args: UpdateRegexPatternSetCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateRegexPatternSetCommandOutput>;
   updateRegexPatternSet(
     args: UpdateRegexPatternSetCommandInput,
-    cb: (err: any, data?: UpdateRegexPatternSetCommandOutput) => void
+    cb: (err: any, data?: UpdateRegexPatternSetCommandOutput) => void,
   ): void;
   updateRegexPatternSet(
     args: UpdateRegexPatternSetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateRegexPatternSetCommandOutput) => void
+    cb: (err: any, data?: UpdateRegexPatternSetCommandOutput) => void,
   ): void;
 
   /**
@@ -1532,7 +1532,7 @@ export interface WAF {
   updateRule(
     args: UpdateRuleCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateRuleCommandOutput) => void
+    cb: (err: any, data?: UpdateRuleCommandOutput) => void,
   ): void;
 
   /**
@@ -1540,13 +1540,13 @@ export interface WAF {
    */
   updateRuleGroup(
     args: UpdateRuleGroupCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateRuleGroupCommandOutput>;
   updateRuleGroup(args: UpdateRuleGroupCommandInput, cb: (err: any, data?: UpdateRuleGroupCommandOutput) => void): void;
   updateRuleGroup(
     args: UpdateRuleGroupCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateRuleGroupCommandOutput) => void
+    cb: (err: any, data?: UpdateRuleGroupCommandOutput) => void,
   ): void;
 
   /**
@@ -1554,16 +1554,16 @@ export interface WAF {
    */
   updateSizeConstraintSet(
     args: UpdateSizeConstraintSetCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateSizeConstraintSetCommandOutput>;
   updateSizeConstraintSet(
     args: UpdateSizeConstraintSetCommandInput,
-    cb: (err: any, data?: UpdateSizeConstraintSetCommandOutput) => void
+    cb: (err: any, data?: UpdateSizeConstraintSetCommandOutput) => void,
   ): void;
   updateSizeConstraintSet(
     args: UpdateSizeConstraintSetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateSizeConstraintSetCommandOutput) => void
+    cb: (err: any, data?: UpdateSizeConstraintSetCommandOutput) => void,
   ): void;
 
   /**
@@ -1571,16 +1571,16 @@ export interface WAF {
    */
   updateSqlInjectionMatchSet(
     args: UpdateSqlInjectionMatchSetCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateSqlInjectionMatchSetCommandOutput>;
   updateSqlInjectionMatchSet(
     args: UpdateSqlInjectionMatchSetCommandInput,
-    cb: (err: any, data?: UpdateSqlInjectionMatchSetCommandOutput) => void
+    cb: (err: any, data?: UpdateSqlInjectionMatchSetCommandOutput) => void,
   ): void;
   updateSqlInjectionMatchSet(
     args: UpdateSqlInjectionMatchSetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateSqlInjectionMatchSetCommandOutput) => void
+    cb: (err: any, data?: UpdateSqlInjectionMatchSetCommandOutput) => void,
   ): void;
 
   /**
@@ -1591,7 +1591,7 @@ export interface WAF {
   updateWebACL(
     args: UpdateWebACLCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateWebACLCommandOutput) => void
+    cb: (err: any, data?: UpdateWebACLCommandOutput) => void,
   ): void;
 
   /**
@@ -1599,16 +1599,16 @@ export interface WAF {
    */
   updateXssMatchSet(
     args: UpdateXssMatchSetCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateXssMatchSetCommandOutput>;
   updateXssMatchSet(
     args: UpdateXssMatchSetCommandInput,
-    cb: (err: any, data?: UpdateXssMatchSetCommandOutput) => void
+    cb: (err: any, data?: UpdateXssMatchSetCommandOutput) => void,
   ): void;
   updateXssMatchSet(
     args: UpdateXssMatchSetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateXssMatchSetCommandOutput) => void
+    cb: (err: any, data?: UpdateXssMatchSetCommandOutput) => void,
   ): void;
 }
 

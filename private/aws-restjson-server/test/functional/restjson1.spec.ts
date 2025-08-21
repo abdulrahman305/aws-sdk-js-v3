@@ -385,7 +385,7 @@ it("RestJsonAllQueryStringTypes:ServerRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "GET",
@@ -552,7 +552,7 @@ it("RestJsonQueryStringMap:ServerRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "GET",
@@ -601,7 +601,7 @@ it("RestJsonQueryStringEscaping:ServerRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "GET",
@@ -649,7 +649,7 @@ it("RestJsonSupportsNaNFloatQueryValues:ServerRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "GET",
@@ -702,7 +702,7 @@ it("RestJsonSupportsInfinityFloatQueryValues:ServerRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "GET",
@@ -755,7 +755,7 @@ it("RestJsonSupportsNegativeInfinityFloatQueryValues:ServerRequest", async () =>
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "GET",
@@ -808,7 +808,7 @@ it("RestJsonZeroAndFalseQueryValues:ServerRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "GET",
@@ -861,7 +861,7 @@ it("RestJsonConstantAndVariableQueryStringMissingOneValue:ServerRequest", async 
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "GET",
@@ -906,7 +906,7 @@ it("RestJsonConstantAndVariableQueryStringAllValues:ServerRequest", async () => 
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "GET",
@@ -954,7 +954,7 @@ it("RestJsonConstantQueryString:ServerRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "GET",
@@ -999,7 +999,7 @@ it("DocumentTypeInputWithObject:ServerRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "PUT",
@@ -1047,7 +1047,7 @@ it("DocumentInputWithString:ServerRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "PUT",
@@ -1093,7 +1093,7 @@ it("DocumentInputWithNumber:ServerRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "PUT",
@@ -1139,7 +1139,7 @@ it("DocumentInputWithBoolean:ServerRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "PUT",
@@ -1185,7 +1185,7 @@ it("DocumentInputWithList:ServerRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "PUT",
@@ -1263,7 +1263,7 @@ it("DocumentOutput:ServerResponse", async () => {
   }
   const request = new HttpRequest({ method: "POST", hostname: "example.com" });
   const serFn: (
-    op: RestJsonServiceOperations
+    op: RestJsonServiceOperations,
   ) => __OperationSerializer<RestJsonService<{}>, RestJsonServiceOperations, __ServiceException> = (op) => {
     return new TestSerializer();
   };
@@ -1277,7 +1277,7 @@ it("DocumentOutput:ServerResponse", async () => {
         throw f;
       }
       return undefined;
-    }
+    },
   );
   const r = await handler.handle(request, {});
 
@@ -1326,7 +1326,7 @@ it("DocumentOutputString:ServerResponse", async () => {
   }
   const request = new HttpRequest({ method: "POST", hostname: "example.com" });
   const serFn: (
-    op: RestJsonServiceOperations
+    op: RestJsonServiceOperations,
   ) => __OperationSerializer<RestJsonService<{}>, RestJsonServiceOperations, __ServiceException> = (op) => {
     return new TestSerializer();
   };
@@ -1340,7 +1340,7 @@ it("DocumentOutputString:ServerResponse", async () => {
         throw f;
       }
       return undefined;
-    }
+    },
   );
   const r = await handler.handle(request, {});
 
@@ -1387,7 +1387,7 @@ it("DocumentOutputNumber:ServerResponse", async () => {
   }
   const request = new HttpRequest({ method: "POST", hostname: "example.com" });
   const serFn: (
-    op: RestJsonServiceOperations
+    op: RestJsonServiceOperations,
   ) => __OperationSerializer<RestJsonService<{}>, RestJsonServiceOperations, __ServiceException> = (op) => {
     return new TestSerializer();
   };
@@ -1401,7 +1401,7 @@ it("DocumentOutputNumber:ServerResponse", async () => {
         throw f;
       }
       return undefined;
-    }
+    },
   );
   const r = await handler.handle(request, {});
 
@@ -1448,7 +1448,7 @@ it("DocumentOutputBoolean:ServerResponse", async () => {
   }
   const request = new HttpRequest({ method: "POST", hostname: "example.com" });
   const serFn: (
-    op: RestJsonServiceOperations
+    op: RestJsonServiceOperations,
   ) => __OperationSerializer<RestJsonService<{}>, RestJsonServiceOperations, __ServiceException> = (op) => {
     return new TestSerializer();
   };
@@ -1462,7 +1462,7 @@ it("DocumentOutputBoolean:ServerResponse", async () => {
         throw f;
       }
       return undefined;
-    }
+    },
   );
   const r = await handler.handle(request, {});
 
@@ -1509,7 +1509,7 @@ it("DocumentOutputArray:ServerResponse", async () => {
   }
   const request = new HttpRequest({ method: "POST", hostname: "example.com" });
   const serFn: (
-    op: RestJsonServiceOperations
+    op: RestJsonServiceOperations,
   ) => __OperationSerializer<RestJsonService<{}>, RestJsonServiceOperations, __ServiceException> = (op) => {
     return new TestSerializer();
   };
@@ -1523,7 +1523,7 @@ it("DocumentOutputArray:ServerResponse", async () => {
         throw f;
       }
       return undefined;
-    }
+    },
   );
   const r = await handler.handle(request, {});
 
@@ -1561,7 +1561,7 @@ it("DocumentTypeAsMapValueInput:ServerRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "PUT",
@@ -1635,7 +1635,7 @@ it("DocumentTypeAsMapValueOutput:ServerResponse", async () => {
   }
   const request = new HttpRequest({ method: "POST", hostname: "example.com" });
   const serFn: (
-    op: RestJsonServiceOperations
+    op: RestJsonServiceOperations,
   ) => __OperationSerializer<RestJsonService<{}>, RestJsonServiceOperations, __ServiceException> = (op) => {
     return new TestSerializer();
   };
@@ -1649,7 +1649,7 @@ it("DocumentTypeAsMapValueOutput:ServerResponse", async () => {
         throw f;
       }
       return undefined;
-    }
+    },
   );
   const r = await handler.handle(request, {});
 
@@ -1687,7 +1687,7 @@ it("DocumentTypeAsPayloadInput:ServerRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "PUT",
@@ -1733,7 +1733,7 @@ it("DocumentTypeAsPayloadInputString:ServerRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "PUT",
@@ -1789,7 +1789,7 @@ it("DocumentTypeAsPayloadOutput:ServerResponse", async () => {
   }
   const request = new HttpRequest({ method: "POST", hostname: "example.com" });
   const serFn: (
-    op: RestJsonServiceOperations
+    op: RestJsonServiceOperations,
   ) => __OperationSerializer<RestJsonService<{}>, RestJsonServiceOperations, __ServiceException> = (op) => {
     return new TestSerializer();
   };
@@ -1803,7 +1803,7 @@ it("DocumentTypeAsPayloadOutput:ServerResponse", async () => {
         throw f;
       }
       return undefined;
-    }
+    },
   );
   const r = await handler.handle(request, {});
 
@@ -1847,7 +1847,7 @@ it("DocumentTypeAsPayloadOutputString:ServerResponse", async () => {
   }
   const request = new HttpRequest({ method: "POST", hostname: "example.com" });
   const serFn: (
-    op: RestJsonServiceOperations
+    op: RestJsonServiceOperations,
   ) => __OperationSerializer<RestJsonService<{}>, RestJsonServiceOperations, __ServiceException> = (op) => {
     return new TestSerializer();
   };
@@ -1861,7 +1861,7 @@ it("DocumentTypeAsPayloadOutputString:ServerResponse", async () => {
         throw f;
       }
       return undefined;
-    }
+    },
   );
   const r = await handler.handle(request, {});
 
@@ -1895,7 +1895,7 @@ it("RestJsonEmptyInputAndEmptyOutput:ServerRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -1928,7 +1928,7 @@ it("RestJsonEmptyInputAndEmptyOutputWithJson:ServerRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -1972,7 +1972,7 @@ it("RestJsonEmptyInputAndEmptyOutput:ServerResponse", async () => {
   }
   const request = new HttpRequest({ method: "POST", hostname: "example.com" });
   const serFn: (
-    op: RestJsonServiceOperations
+    op: RestJsonServiceOperations,
   ) => __OperationSerializer<RestJsonService<{}>, RestJsonServiceOperations, __ServiceException> = (op) => {
     return new TestSerializer();
   };
@@ -1986,7 +1986,7 @@ it("RestJsonEmptyInputAndEmptyOutput:ServerResponse", async () => {
         throw f;
       }
       return undefined;
-    }
+    },
   );
   const r = await handler.handle(request, {});
 
@@ -2019,7 +2019,7 @@ it("RestJsonEndpointTrait:ServerRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -2053,7 +2053,7 @@ it("RestJsonEndpointTraitWithHostLabel:ServerRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -2109,7 +2109,7 @@ it("RestJsonGreetingWithErrors:ServerResponse", async () => {
   }
   const request = new HttpRequest({ method: "POST", hostname: "example.com" });
   const serFn: (
-    op: RestJsonServiceOperations
+    op: RestJsonServiceOperations,
   ) => __OperationSerializer<RestJsonService<{}>, RestJsonServiceOperations, __ServiceException> = (op) => {
     return new TestSerializer();
   };
@@ -2123,7 +2123,7 @@ it("RestJsonGreetingWithErrors:ServerResponse", async () => {
         throw f;
       }
       return undefined;
-    }
+    },
   );
   const r = await handler.handle(request, {});
 
@@ -2177,7 +2177,7 @@ it("RestJsonComplexErrorWithNoMessage:ServerErrorResponse", async () => {
   }
   const request = new HttpRequest({ method: "POST", hostname: "example.com" });
   const serFn: (
-    op: RestJsonServiceOperations
+    op: RestJsonServiceOperations,
   ) => __OperationSerializer<RestJsonService<{}>, RestJsonServiceOperations, __ServiceException> = (op) => {
     return new TestSerializer();
   };
@@ -2191,7 +2191,7 @@ it("RestJsonComplexErrorWithNoMessage:ServerErrorResponse", async () => {
         throw f;
       }
       return undefined;
-    }
+    },
   );
   const r = await handler.handle(request, {});
 
@@ -2243,7 +2243,7 @@ it("RestJsonEmptyComplexErrorWithNoMessage:ServerErrorResponse", async () => {
   }
   const request = new HttpRequest({ method: "POST", hostname: "example.com" });
   const serFn: (
-    op: RestJsonServiceOperations
+    op: RestJsonServiceOperations,
   ) => __OperationSerializer<RestJsonService<{}>, RestJsonServiceOperations, __ServiceException> = (op) => {
     return new TestSerializer();
   };
@@ -2257,7 +2257,7 @@ it("RestJsonEmptyComplexErrorWithNoMessage:ServerErrorResponse", async () => {
         throw f;
       }
       return undefined;
-    }
+    },
   );
   const r = await handler.handle(request, {});
 
@@ -2307,7 +2307,7 @@ it("RestJsonInvalidGreetingError:ServerErrorResponse", async () => {
   }
   const request = new HttpRequest({ method: "POST", hostname: "example.com" });
   const serFn: (
-    op: RestJsonServiceOperations
+    op: RestJsonServiceOperations,
   ) => __OperationSerializer<RestJsonService<{}>, RestJsonServiceOperations, __ServiceException> = (op) => {
     return new TestSerializer();
   };
@@ -2321,7 +2321,7 @@ it("RestJsonInvalidGreetingError:ServerErrorResponse", async () => {
         throw f;
       }
       return undefined;
-    }
+    },
   );
   const r = await handler.handle(request, {});
 
@@ -2357,7 +2357,7 @@ it("RestJsonHttpChecksumRequired:ServerRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -2399,7 +2399,7 @@ it("RestJsonEnumPayloadRequest:ServerRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -2448,7 +2448,7 @@ it("RestJsonEnumPayloadResponse:ServerResponse", async () => {
   }
   const request = new HttpRequest({ method: "POST", hostname: "example.com" });
   const serFn: (
-    op: RestJsonServiceOperations
+    op: RestJsonServiceOperations,
   ) => __OperationSerializer<RestJsonService<{}>, RestJsonServiceOperations, __ServiceException> = (op) => {
     return new TestSerializer();
   };
@@ -2462,7 +2462,7 @@ it("RestJsonEnumPayloadResponse:ServerResponse", async () => {
         throw f;
       }
       return undefined;
-    }
+    },
   );
   const r = await handler.handle(request, {});
 
@@ -2491,7 +2491,7 @@ it("RestJsonHttpPayloadTraitsWithBlob:ServerRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -2538,7 +2538,7 @@ it("RestJsonHttpPayloadTraitsWithNoBlobBody:ServerRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -2583,7 +2583,7 @@ it("RestJsonHttpPayloadTraitsWithBlobAcceptsAllContentTypes:ServerRequest", asyn
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -2631,7 +2631,7 @@ it("RestJsonHttpPayloadTraitsWithBlobAcceptsAllAccepts:ServerRequest", async () 
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -2690,7 +2690,7 @@ it("RestJsonHttpPayloadTraitsWithBlob:ServerResponse", async () => {
   }
   const request = new HttpRequest({ method: "POST", hostname: "example.com" });
   const serFn: (
-    op: RestJsonServiceOperations
+    op: RestJsonServiceOperations,
   ) => __OperationSerializer<RestJsonService<{}>, RestJsonServiceOperations, __ServiceException> = (op) => {
     return new TestSerializer();
   };
@@ -2704,7 +2704,7 @@ it("RestJsonHttpPayloadTraitsWithBlob:ServerResponse", async () => {
         throw f;
       }
       return undefined;
-    }
+    },
   );
   const r = await handler.handle(request, {});
 
@@ -2746,7 +2746,7 @@ it("RestJsonHttpPayloadTraitsWithNoBlobBody:ServerResponse", async () => {
   }
   const request = new HttpRequest({ method: "POST", hostname: "example.com" });
   const serFn: (
-    op: RestJsonServiceOperations
+    op: RestJsonServiceOperations,
   ) => __OperationSerializer<RestJsonService<{}>, RestJsonServiceOperations, __ServiceException> = (op) => {
     return new TestSerializer();
   };
@@ -2760,7 +2760,7 @@ it("RestJsonHttpPayloadTraitsWithNoBlobBody:ServerResponse", async () => {
         throw f;
       }
       return undefined;
-    }
+    },
   );
   const r = await handler.handle(request, {});
 
@@ -2788,7 +2788,7 @@ it("RestJsonHttpPayloadTraitsWithMediaTypeWithBlob:ServerRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -2847,7 +2847,7 @@ it("RestJsonHttpPayloadTraitsWithMediaTypeWithBlob:ServerResponse", async () => 
   }
   const request = new HttpRequest({ method: "POST", hostname: "example.com" });
   const serFn: (
-    op: RestJsonServiceOperations
+    op: RestJsonServiceOperations,
   ) => __OperationSerializer<RestJsonService<{}>, RestJsonServiceOperations, __ServiceException> = (op) => {
     return new TestSerializer();
   };
@@ -2861,7 +2861,7 @@ it("RestJsonHttpPayloadTraitsWithMediaTypeWithBlob:ServerResponse", async () => 
         throw f;
       }
       return undefined;
-    }
+    },
   );
   const r = await handler.handle(request, {});
 
@@ -2895,7 +2895,7 @@ it("RestJsonHttpPayloadWithStructure:ServerRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "PUT",
@@ -2957,7 +2957,7 @@ it("RestJsonHttpPayloadWithStructure:ServerResponse", async () => {
   }
   const request = new HttpRequest({ method: "POST", hostname: "example.com" });
   const serFn: (
-    op: RestJsonServiceOperations
+    op: RestJsonServiceOperations,
   ) => __OperationSerializer<RestJsonService<{}>, RestJsonServiceOperations, __ServiceException> = (op) => {
     return new TestSerializer();
   };
@@ -2971,7 +2971,7 @@ it("RestJsonHttpPayloadWithStructure:ServerResponse", async () => {
         throw f;
       }
       return undefined;
-    }
+    },
   );
   const r = await handler.handle(request, {});
 
@@ -3006,7 +3006,7 @@ it("RestJsonHttpPayloadWithUnion:ServerRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "PUT",
@@ -3052,7 +3052,7 @@ it.skip("RestJsonHttpPayloadWithUnsetUnion:ServerRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "PUT",
@@ -3096,7 +3096,7 @@ it("RestJsonHttpPayloadWithUnion:ServerResponse", async () => {
   }
   const request = new HttpRequest({ method: "POST", hostname: "example.com" });
   const serFn: (
-    op: RestJsonServiceOperations
+    op: RestJsonServiceOperations,
   ) => __OperationSerializer<RestJsonService<{}>, RestJsonServiceOperations, __ServiceException> = (op) => {
     return new TestSerializer();
   };
@@ -3110,7 +3110,7 @@ it("RestJsonHttpPayloadWithUnion:ServerResponse", async () => {
         throw f;
       }
       return undefined;
-    }
+    },
   );
   const r = await handler.handle(request, {});
 
@@ -3152,7 +3152,7 @@ it.skip("RestJsonHttpPayloadWithUnsetUnion:ServerResponse", async () => {
   }
   const request = new HttpRequest({ method: "POST", hostname: "example.com" });
   const serFn: (
-    op: RestJsonServiceOperations
+    op: RestJsonServiceOperations,
   ) => __OperationSerializer<RestJsonService<{}>, RestJsonServiceOperations, __ServiceException> = (op) => {
     return new TestSerializer();
   };
@@ -3166,7 +3166,7 @@ it.skip("RestJsonHttpPayloadWithUnsetUnion:ServerResponse", async () => {
         throw f;
       }
       return undefined;
-    }
+    },
   );
   const r = await handler.handle(request, {});
 
@@ -3194,7 +3194,7 @@ it("RestJsonHttpPrefixHeadersArePresent:ServerRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "GET",
@@ -3262,7 +3262,7 @@ it("RestJsonHttpPrefixHeadersArePresent:ServerResponse", async () => {
   }
   const request = new HttpRequest({ method: "POST", hostname: "example.com" });
   const serFn: (
-    op: RestJsonServiceOperations
+    op: RestJsonServiceOperations,
   ) => __OperationSerializer<RestJsonService<{}>, RestJsonServiceOperations, __ServiceException> = (op) => {
     return new TestSerializer();
   };
@@ -3276,7 +3276,7 @@ it("RestJsonHttpPrefixHeadersArePresent:ServerResponse", async () => {
         throw f;
       }
       return undefined;
-    }
+    },
   );
   const r = await handler.handle(request, {});
 
@@ -3320,7 +3320,7 @@ it("HttpPrefixHeadersResponse:ServerResponse", async () => {
   }
   const request = new HttpRequest({ method: "POST", hostname: "example.com" });
   const serFn: (
-    op: RestJsonServiceOperations
+    op: RestJsonServiceOperations,
   ) => __OperationSerializer<RestJsonService<{}>, RestJsonServiceOperations, __ServiceException> = (op) => {
     return new TestSerializer();
   };
@@ -3334,7 +3334,7 @@ it("HttpPrefixHeadersResponse:ServerResponse", async () => {
         throw f;
       }
       return undefined;
-    }
+    },
   );
   const r = await handler.handle(request, {});
 
@@ -3362,7 +3362,7 @@ it("RestJsonSupportsNaNFloatLabels:ServerRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "GET",
@@ -3406,7 +3406,7 @@ it("RestJsonSupportsInfinityFloatLabels:ServerRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "GET",
@@ -3450,7 +3450,7 @@ it("RestJsonSupportsNegativeInfinityFloatLabels:ServerRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "GET",
@@ -3494,7 +3494,7 @@ it("RestJsonHttpRequestWithGreedyLabelInPath:ServerRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "GET",
@@ -3538,7 +3538,7 @@ it("RestJsonInputWithHeadersAndAllParams:ServerRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "GET",
@@ -3594,7 +3594,7 @@ it("RestJsonHttpRequestLabelEscaping:ServerRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "GET",
@@ -3650,7 +3650,7 @@ it("RestJsonHttpRequestWithLabelsAndTimestampFormat:ServerRequest", async () => 
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "GET",
@@ -3704,7 +3704,7 @@ it("RestJsonToleratesRegexCharsInSegments:ServerRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "GET",
@@ -3760,7 +3760,7 @@ it("RestJsonHttpResponseCode:ServerResponse", async () => {
   }
   const request = new HttpRequest({ method: "POST", hostname: "example.com" });
   const serFn: (
-    op: RestJsonServiceOperations
+    op: RestJsonServiceOperations,
   ) => __OperationSerializer<RestJsonService<{}>, RestJsonServiceOperations, __ServiceException> = (op) => {
     return new TestSerializer();
   };
@@ -3774,7 +3774,7 @@ it("RestJsonHttpResponseCode:ServerResponse", async () => {
         throw f;
       }
       return undefined;
-    }
+    },
   );
   const r = await handler.handle(request, {});
 
@@ -3817,7 +3817,7 @@ it("RestJsonHttpResponseCodeDefaultsToModeledCode:ServerResponse", async () => {
   }
   const request = new HttpRequest({ method: "POST", hostname: "example.com" });
   const serFn: (
-    op: RestJsonServiceOperations
+    op: RestJsonServiceOperations,
   ) => __OperationSerializer<RestJsonService<{}>, RestJsonServiceOperations, __ServiceException> = (op) => {
     return new TestSerializer();
   };
@@ -3831,7 +3831,7 @@ it("RestJsonHttpResponseCodeDefaultsToModeledCode:ServerResponse", async () => {
         throw f;
       }
       return undefined;
-    }
+    },
   );
   const r = await handler.handle(request, {});
 
@@ -3860,7 +3860,7 @@ it("RestJsonStringPayloadRequest:ServerRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -3909,7 +3909,7 @@ it("RestJsonStringPayloadResponse:ServerResponse", async () => {
   }
   const request = new HttpRequest({ method: "POST", hostname: "example.com" });
   const serFn: (
-    op: RestJsonServiceOperations
+    op: RestJsonServiceOperations,
   ) => __OperationSerializer<RestJsonService<{}>, RestJsonServiceOperations, __ServiceException> = (op) => {
     return new TestSerializer();
   };
@@ -3923,7 +3923,7 @@ it("RestJsonStringPayloadResponse:ServerResponse", async () => {
         throw f;
       }
       return undefined;
-    }
+    },
   );
   const r = await handler.handle(request, {});
 
@@ -3963,7 +3963,7 @@ it("RestJsonIgnoreQueryParamsInResponse:ServerResponse", async () => {
   }
   const request = new HttpRequest({ method: "POST", hostname: "example.com" });
   const serFn: (
-    op: RestJsonServiceOperations
+    op: RestJsonServiceOperations,
   ) => __OperationSerializer<RestJsonService<{}>, RestJsonServiceOperations, __ServiceException> = (op) => {
     return new TestSerializer();
   };
@@ -3977,7 +3977,7 @@ it("RestJsonIgnoreQueryParamsInResponse:ServerResponse", async () => {
         throw f;
       }
       return undefined;
-    }
+    },
   );
   const r = await handler.handle(request, {});
 
@@ -4009,7 +4009,7 @@ it("RestJsonInputAndOutputWithStringHeaders:ServerRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -4059,7 +4059,7 @@ it.skip("RestJsonInputAndOutputWithQuotedStringHeaders:ServerRequest", async () 
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -4103,7 +4103,7 @@ it("RestJsonInputAndOutputWithNumericHeaders:ServerRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -4171,7 +4171,7 @@ it("RestJsonInputAndOutputWithBooleanHeaders:ServerRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -4221,7 +4221,7 @@ it("RestJsonInputAndOutputWithTimestampHeaders:ServerRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -4265,7 +4265,7 @@ it("RestJsonInputAndOutputWithEnumHeaders:ServerRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -4312,7 +4312,7 @@ it("RestJsonInputAndOutputWithIntEnumHeaders:ServerRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -4365,7 +4365,7 @@ it("RestJsonSupportsNaNFloatHeaderInputs:ServerRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -4412,7 +4412,7 @@ it("RestJsonSupportsInfinityFloatHeaderInputs:ServerRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -4459,7 +4459,7 @@ it("RestJsonSupportsNegativeInfinityFloatHeaderInputs:ServerRequest", async () =
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -4520,7 +4520,7 @@ it("RestJsonInputAndOutputWithStringHeaders:ServerResponse", async () => {
   }
   const request = new HttpRequest({ method: "POST", hostname: "example.com" });
   const serFn: (
-    op: RestJsonServiceOperations
+    op: RestJsonServiceOperations,
   ) => __OperationSerializer<RestJsonService<{}>, RestJsonServiceOperations, __ServiceException> = (op) => {
     return new TestSerializer();
   };
@@ -4534,7 +4534,7 @@ it("RestJsonInputAndOutputWithStringHeaders:ServerResponse", async () => {
         throw f;
       }
       return undefined;
-    }
+    },
   );
   const r = await handler.handle(request, {});
 
@@ -4574,7 +4574,7 @@ it.skip("RestJsonInputAndOutputWithQuotedStringHeaders:ServerResponse", async ()
   }
   const request = new HttpRequest({ method: "POST", hostname: "example.com" });
   const serFn: (
-    op: RestJsonServiceOperations
+    op: RestJsonServiceOperations,
   ) => __OperationSerializer<RestJsonService<{}>, RestJsonServiceOperations, __ServiceException> = (op) => {
     return new TestSerializer();
   };
@@ -4588,7 +4588,7 @@ it.skip("RestJsonInputAndOutputWithQuotedStringHeaders:ServerResponse", async ()
         throw f;
       }
       return undefined;
-    }
+    },
   );
   const r = await handler.handle(request, {});
 
@@ -4642,7 +4642,7 @@ it("RestJsonInputAndOutputWithNumericHeaders:ServerResponse", async () => {
   }
   const request = new HttpRequest({ method: "POST", hostname: "example.com" });
   const serFn: (
-    op: RestJsonServiceOperations
+    op: RestJsonServiceOperations,
   ) => __OperationSerializer<RestJsonService<{}>, RestJsonServiceOperations, __ServiceException> = (op) => {
     return new TestSerializer();
   };
@@ -4656,7 +4656,7 @@ it("RestJsonInputAndOutputWithNumericHeaders:ServerResponse", async () => {
         throw f;
       }
       return undefined;
-    }
+    },
   );
   const r = await handler.handle(request, {});
 
@@ -4708,7 +4708,7 @@ it("RestJsonInputAndOutputWithBooleanHeaders:ServerResponse", async () => {
   }
   const request = new HttpRequest({ method: "POST", hostname: "example.com" });
   const serFn: (
-    op: RestJsonServiceOperations
+    op: RestJsonServiceOperations,
   ) => __OperationSerializer<RestJsonService<{}>, RestJsonServiceOperations, __ServiceException> = (op) => {
     return new TestSerializer();
   };
@@ -4722,7 +4722,7 @@ it("RestJsonInputAndOutputWithBooleanHeaders:ServerResponse", async () => {
         throw f;
       }
       return undefined;
-    }
+    },
   );
   const r = await handler.handle(request, {});
 
@@ -4762,7 +4762,7 @@ it("RestJsonInputAndOutputWithTimestampHeaders:ServerResponse", async () => {
   }
   const request = new HttpRequest({ method: "POST", hostname: "example.com" });
   const serFn: (
-    op: RestJsonServiceOperations
+    op: RestJsonServiceOperations,
   ) => __OperationSerializer<RestJsonService<{}>, RestJsonServiceOperations, __ServiceException> = (op) => {
     return new TestSerializer();
   };
@@ -4776,7 +4776,7 @@ it("RestJsonInputAndOutputWithTimestampHeaders:ServerResponse", async () => {
         throw f;
       }
       return undefined;
-    }
+    },
   );
   const r = await handler.handle(request, {});
 
@@ -4814,7 +4814,7 @@ it("RestJsonInputAndOutputWithEnumHeaders:ServerResponse", async () => {
   }
   const request = new HttpRequest({ method: "POST", hostname: "example.com" });
   const serFn: (
-    op: RestJsonServiceOperations
+    op: RestJsonServiceOperations,
   ) => __OperationSerializer<RestJsonService<{}>, RestJsonServiceOperations, __ServiceException> = (op) => {
     return new TestSerializer();
   };
@@ -4828,7 +4828,7 @@ it("RestJsonInputAndOutputWithEnumHeaders:ServerResponse", async () => {
         throw f;
       }
       return undefined;
-    }
+    },
   );
   const r = await handler.handle(request, {});
 
@@ -4874,7 +4874,7 @@ it("RestJsonInputAndOutputWithIntEnumHeaders:ServerResponse", async () => {
   }
   const request = new HttpRequest({ method: "POST", hostname: "example.com" });
   const serFn: (
-    op: RestJsonServiceOperations
+    op: RestJsonServiceOperations,
   ) => __OperationSerializer<RestJsonService<{}>, RestJsonServiceOperations, __ServiceException> = (op) => {
     return new TestSerializer();
   };
@@ -4888,7 +4888,7 @@ it("RestJsonInputAndOutputWithIntEnumHeaders:ServerResponse", async () => {
         throw f;
       }
       return undefined;
-    }
+    },
   );
   const r = await handler.handle(request, {});
 
@@ -4928,7 +4928,7 @@ it("RestJsonSupportsNaNFloatHeaderOutputs:ServerResponse", async () => {
   }
   const request = new HttpRequest({ method: "POST", hostname: "example.com" });
   const serFn: (
-    op: RestJsonServiceOperations
+    op: RestJsonServiceOperations,
   ) => __OperationSerializer<RestJsonService<{}>, RestJsonServiceOperations, __ServiceException> = (op) => {
     return new TestSerializer();
   };
@@ -4942,7 +4942,7 @@ it("RestJsonSupportsNaNFloatHeaderOutputs:ServerResponse", async () => {
         throw f;
       }
       return undefined;
-    }
+    },
   );
   const r = await handler.handle(request, {});
 
@@ -4982,7 +4982,7 @@ it("RestJsonSupportsInfinityFloatHeaderOutputs:ServerResponse", async () => {
   }
   const request = new HttpRequest({ method: "POST", hostname: "example.com" });
   const serFn: (
-    op: RestJsonServiceOperations
+    op: RestJsonServiceOperations,
   ) => __OperationSerializer<RestJsonService<{}>, RestJsonServiceOperations, __ServiceException> = (op) => {
     return new TestSerializer();
   };
@@ -4996,7 +4996,7 @@ it("RestJsonSupportsInfinityFloatHeaderOutputs:ServerResponse", async () => {
         throw f;
       }
       return undefined;
-    }
+    },
   );
   const r = await handler.handle(request, {});
 
@@ -5036,7 +5036,7 @@ it("RestJsonSupportsNegativeInfinityFloatHeaderOutputs:ServerResponse", async ()
   }
   const request = new HttpRequest({ method: "POST", hostname: "example.com" });
   const serFn: (
-    op: RestJsonServiceOperations
+    op: RestJsonServiceOperations,
   ) => __OperationSerializer<RestJsonService<{}>, RestJsonServiceOperations, __ServiceException> = (op) => {
     return new TestSerializer();
   };
@@ -5050,7 +5050,7 @@ it("RestJsonSupportsNegativeInfinityFloatHeaderOutputs:ServerResponse", async ()
         throw f;
       }
       return undefined;
-    }
+    },
   );
   const r = await handler.handle(request, {});
 
@@ -5078,7 +5078,7 @@ it("RestJsonJsonBlobs:ServerRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -5132,7 +5132,7 @@ it("RestJsonJsonBlobs:ServerResponse", async () => {
   }
   const request = new HttpRequest({ method: "POST", hostname: "example.com" });
   const serFn: (
-    op: RestJsonServiceOperations
+    op: RestJsonServiceOperations,
   ) => __OperationSerializer<RestJsonService<{}>, RestJsonServiceOperations, __ServiceException> = (op) => {
     return new TestSerializer();
   };
@@ -5146,7 +5146,7 @@ it("RestJsonJsonBlobs:ServerResponse", async () => {
         throw f;
       }
       return undefined;
-    }
+    },
   );
   const r = await handler.handle(request, {});
 
@@ -5180,7 +5180,7 @@ it("RestJsonJsonEnums:ServerRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "PUT",
@@ -5264,7 +5264,7 @@ it("RestJsonJsonEnums:ServerResponse", async () => {
   }
   const request = new HttpRequest({ method: "POST", hostname: "example.com" });
   const serFn: (
-    op: RestJsonServiceOperations
+    op: RestJsonServiceOperations,
   ) => __OperationSerializer<RestJsonService<{}>, RestJsonServiceOperations, __ServiceException> = (op) => {
     return new TestSerializer();
   };
@@ -5278,7 +5278,7 @@ it("RestJsonJsonEnums:ServerResponse", async () => {
         throw f;
       }
       return undefined;
-    }
+    },
   );
   const r = await handler.handle(request, {});
 
@@ -5326,7 +5326,7 @@ it("RestJsonJsonIntEnums:ServerRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "PUT",
@@ -5430,7 +5430,7 @@ it("RestJsonJsonIntEnums:ServerResponse", async () => {
   }
   const request = new HttpRequest({ method: "POST", hostname: "example.com" });
   const serFn: (
-    op: RestJsonServiceOperations
+    op: RestJsonServiceOperations,
   ) => __OperationSerializer<RestJsonService<{}>, RestJsonServiceOperations, __ServiceException> = (op) => {
     return new TestSerializer();
   };
@@ -5444,7 +5444,7 @@ it("RestJsonJsonIntEnums:ServerResponse", async () => {
         throw f;
       }
       return undefined;
-    }
+    },
   );
   const r = await handler.handle(request, {});
 
@@ -5493,7 +5493,7 @@ it("RestJsonLists:ServerRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "PUT",
@@ -5579,7 +5579,7 @@ it("RestJsonListsEmpty:ServerRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "PUT",
@@ -5673,7 +5673,7 @@ it("RestJsonLists:ServerResponse", async () => {
   }
   const request = new HttpRequest({ method: "POST", hostname: "example.com" });
   const serFn: (
-    op: RestJsonServiceOperations
+    op: RestJsonServiceOperations,
   ) => __OperationSerializer<RestJsonService<{}>, RestJsonServiceOperations, __ServiceException> = (op) => {
     return new TestSerializer();
   };
@@ -5687,7 +5687,7 @@ it("RestJsonLists:ServerResponse", async () => {
         throw f;
       }
       return undefined;
-    }
+    },
   );
   const r = await handler.handle(request, {});
 
@@ -5778,7 +5778,7 @@ it("RestJsonListsEmpty:ServerResponse", async () => {
   }
   const request = new HttpRequest({ method: "POST", hostname: "example.com" });
   const serFn: (
-    op: RestJsonServiceOperations
+    op: RestJsonServiceOperations,
   ) => __OperationSerializer<RestJsonService<{}>, RestJsonServiceOperations, __ServiceException> = (op) => {
     return new TestSerializer();
   };
@@ -5792,7 +5792,7 @@ it("RestJsonListsEmpty:ServerResponse", async () => {
         throw f;
       }
       return undefined;
-    }
+    },
   );
   const r = await handler.handle(request, {});
 
@@ -5826,7 +5826,7 @@ it("RestJsonJsonMaps:ServerRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -5880,7 +5880,7 @@ it("RestJsonSerializesZeroValuesInMaps:ServerRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -5932,7 +5932,7 @@ it("RestJsonSerializesDenseSetMap:ServerRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -5998,7 +5998,7 @@ it("RestJsonJsonMaps:ServerResponse", async () => {
   }
   const request = new HttpRequest({ method: "POST", hostname: "example.com" });
   const serFn: (
-    op: RestJsonServiceOperations
+    op: RestJsonServiceOperations,
   ) => __OperationSerializer<RestJsonService<{}>, RestJsonServiceOperations, __ServiceException> = (op) => {
     return new TestSerializer();
   };
@@ -6012,7 +6012,7 @@ it("RestJsonJsonMaps:ServerResponse", async () => {
         throw f;
       }
       return undefined;
-    }
+    },
   );
   const r = await handler.handle(request, {});
 
@@ -6069,7 +6069,7 @@ it("RestJsonDeserializesZeroValuesInMaps:ServerResponse", async () => {
   }
   const request = new HttpRequest({ method: "POST", hostname: "example.com" });
   const serFn: (
-    op: RestJsonServiceOperations
+    op: RestJsonServiceOperations,
   ) => __OperationSerializer<RestJsonService<{}>, RestJsonServiceOperations, __ServiceException> = (op) => {
     return new TestSerializer();
   };
@@ -6083,7 +6083,7 @@ it("RestJsonDeserializesZeroValuesInMaps:ServerResponse", async () => {
         throw f;
       }
       return undefined;
-    }
+    },
   );
   const r = await handler.handle(request, {});
 
@@ -6136,7 +6136,7 @@ it("RestJsonDeserializesDenseSetMap:ServerResponse", async () => {
   }
   const request = new HttpRequest({ method: "POST", hostname: "example.com" });
   const serFn: (
-    op: RestJsonServiceOperations
+    op: RestJsonServiceOperations,
   ) => __OperationSerializer<RestJsonService<{}>, RestJsonServiceOperations, __ServiceException> = (op) => {
     return new TestSerializer();
   };
@@ -6150,7 +6150,7 @@ it("RestJsonDeserializesDenseSetMap:ServerResponse", async () => {
         throw f;
       }
       return undefined;
-    }
+    },
   );
   const r = await handler.handle(request, {});
 
@@ -6187,7 +6187,7 @@ it("RestJsonJsonTimestamps:ServerRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -6231,7 +6231,7 @@ it("RestJsonJsonTimestampsWithDateTimeFormat:ServerRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -6275,7 +6275,7 @@ it("RestJsonJsonTimestampsWithDateTimeOnTargetFormat:ServerRequest", async () =>
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -6319,7 +6319,7 @@ it("RestJsonJsonTimestampsWithEpochSecondsFormat:ServerRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -6363,7 +6363,7 @@ it("RestJsonJsonTimestampsWithEpochSecondsOnTargetFormat:ServerRequest", async (
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -6407,7 +6407,7 @@ it("RestJsonJsonTimestampsWithHttpDateFormat:ServerRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -6451,7 +6451,7 @@ it("RestJsonJsonTimestampsWithHttpDateOnTargetFormat:ServerRequest", async () =>
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -6505,7 +6505,7 @@ it("RestJsonJsonTimestamps:ServerResponse", async () => {
   }
   const request = new HttpRequest({ method: "POST", hostname: "example.com" });
   const serFn: (
-    op: RestJsonServiceOperations
+    op: RestJsonServiceOperations,
   ) => __OperationSerializer<RestJsonService<{}>, RestJsonServiceOperations, __ServiceException> = (op) => {
     return new TestSerializer();
   };
@@ -6519,7 +6519,7 @@ it("RestJsonJsonTimestamps:ServerResponse", async () => {
         throw f;
       }
       return undefined;
-    }
+    },
   );
   const r = await handler.handle(request, {});
 
@@ -6563,7 +6563,7 @@ it("RestJsonJsonTimestampsWithDateTimeFormat:ServerResponse", async () => {
   }
   const request = new HttpRequest({ method: "POST", hostname: "example.com" });
   const serFn: (
-    op: RestJsonServiceOperations
+    op: RestJsonServiceOperations,
   ) => __OperationSerializer<RestJsonService<{}>, RestJsonServiceOperations, __ServiceException> = (op) => {
     return new TestSerializer();
   };
@@ -6577,7 +6577,7 @@ it("RestJsonJsonTimestampsWithDateTimeFormat:ServerResponse", async () => {
         throw f;
       }
       return undefined;
-    }
+    },
   );
   const r = await handler.handle(request, {});
 
@@ -6621,7 +6621,7 @@ it("RestJsonJsonTimestampsWithDateTimeOnTargetFormat:ServerResponse", async () =
   }
   const request = new HttpRequest({ method: "POST", hostname: "example.com" });
   const serFn: (
-    op: RestJsonServiceOperations
+    op: RestJsonServiceOperations,
   ) => __OperationSerializer<RestJsonService<{}>, RestJsonServiceOperations, __ServiceException> = (op) => {
     return new TestSerializer();
   };
@@ -6635,7 +6635,7 @@ it("RestJsonJsonTimestampsWithDateTimeOnTargetFormat:ServerResponse", async () =
         throw f;
       }
       return undefined;
-    }
+    },
   );
   const r = await handler.handle(request, {});
 
@@ -6679,7 +6679,7 @@ it("RestJsonJsonTimestampsWithEpochSecondsFormat:ServerResponse", async () => {
   }
   const request = new HttpRequest({ method: "POST", hostname: "example.com" });
   const serFn: (
-    op: RestJsonServiceOperations
+    op: RestJsonServiceOperations,
   ) => __OperationSerializer<RestJsonService<{}>, RestJsonServiceOperations, __ServiceException> = (op) => {
     return new TestSerializer();
   };
@@ -6693,7 +6693,7 @@ it("RestJsonJsonTimestampsWithEpochSecondsFormat:ServerResponse", async () => {
         throw f;
       }
       return undefined;
-    }
+    },
   );
   const r = await handler.handle(request, {});
 
@@ -6737,7 +6737,7 @@ it("RestJsonJsonTimestampsWithEpochSecondsOnTargetFormat:ServerResponse", async 
   }
   const request = new HttpRequest({ method: "POST", hostname: "example.com" });
   const serFn: (
-    op: RestJsonServiceOperations
+    op: RestJsonServiceOperations,
   ) => __OperationSerializer<RestJsonService<{}>, RestJsonServiceOperations, __ServiceException> = (op) => {
     return new TestSerializer();
   };
@@ -6751,7 +6751,7 @@ it("RestJsonJsonTimestampsWithEpochSecondsOnTargetFormat:ServerResponse", async 
         throw f;
       }
       return undefined;
-    }
+    },
   );
   const r = await handler.handle(request, {});
 
@@ -6795,7 +6795,7 @@ it("RestJsonJsonTimestampsWithHttpDateFormat:ServerResponse", async () => {
   }
   const request = new HttpRequest({ method: "POST", hostname: "example.com" });
   const serFn: (
-    op: RestJsonServiceOperations
+    op: RestJsonServiceOperations,
   ) => __OperationSerializer<RestJsonService<{}>, RestJsonServiceOperations, __ServiceException> = (op) => {
     return new TestSerializer();
   };
@@ -6809,7 +6809,7 @@ it("RestJsonJsonTimestampsWithHttpDateFormat:ServerResponse", async () => {
         throw f;
       }
       return undefined;
-    }
+    },
   );
   const r = await handler.handle(request, {});
 
@@ -6853,7 +6853,7 @@ it("RestJsonJsonTimestampsWithHttpDateOnTargetFormat:ServerResponse", async () =
   }
   const request = new HttpRequest({ method: "POST", hostname: "example.com" });
   const serFn: (
-    op: RestJsonServiceOperations
+    op: RestJsonServiceOperations,
   ) => __OperationSerializer<RestJsonService<{}>, RestJsonServiceOperations, __ServiceException> = (op) => {
     return new TestSerializer();
   };
@@ -6867,7 +6867,7 @@ it("RestJsonJsonTimestampsWithHttpDateOnTargetFormat:ServerResponse", async () =
         throw f;
       }
       return undefined;
-    }
+    },
   );
   const r = await handler.handle(request, {});
 
@@ -6901,7 +6901,7 @@ it("RestJsonSerializeStringUnionValue:ServerRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "PUT",
@@ -6947,7 +6947,7 @@ it("RestJsonSerializeBooleanUnionValue:ServerRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "PUT",
@@ -6993,7 +6993,7 @@ it("RestJsonSerializeNumberUnionValue:ServerRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "PUT",
@@ -7039,7 +7039,7 @@ it("RestJsonSerializeBlobUnionValue:ServerRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "PUT",
@@ -7085,7 +7085,7 @@ it("RestJsonSerializeTimestampUnionValue:ServerRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "PUT",
@@ -7131,7 +7131,7 @@ it("RestJsonSerializeEnumUnionValue:ServerRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "PUT",
@@ -7177,7 +7177,7 @@ it("RestJsonSerializeListUnionValue:ServerRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "PUT",
@@ -7223,7 +7223,7 @@ it("RestJsonSerializeMapUnionValue:ServerRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "PUT",
@@ -7275,7 +7275,7 @@ it("RestJsonSerializeStructureUnionValue:ServerRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "PUT",
@@ -7325,7 +7325,7 @@ it("RestJsonSerializeRenamedStructureUnionValue:ServerRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "PUT",
@@ -7387,7 +7387,7 @@ it("RestJsonDeserializeStringUnionValue:ServerResponse", async () => {
   }
   const request = new HttpRequest({ method: "POST", hostname: "example.com" });
   const serFn: (
-    op: RestJsonServiceOperations
+    op: RestJsonServiceOperations,
   ) => __OperationSerializer<RestJsonService<{}>, RestJsonServiceOperations, __ServiceException> = (op) => {
     return new TestSerializer();
   };
@@ -7401,7 +7401,7 @@ it("RestJsonDeserializeStringUnionValue:ServerResponse", async () => {
         throw f;
       }
       return undefined;
-    }
+    },
   );
   const r = await handler.handle(request, {});
 
@@ -7449,7 +7449,7 @@ it("RestJsonDeserializeBooleanUnionValue:ServerResponse", async () => {
   }
   const request = new HttpRequest({ method: "POST", hostname: "example.com" });
   const serFn: (
-    op: RestJsonServiceOperations
+    op: RestJsonServiceOperations,
   ) => __OperationSerializer<RestJsonService<{}>, RestJsonServiceOperations, __ServiceException> = (op) => {
     return new TestSerializer();
   };
@@ -7463,7 +7463,7 @@ it("RestJsonDeserializeBooleanUnionValue:ServerResponse", async () => {
         throw f;
       }
       return undefined;
-    }
+    },
   );
   const r = await handler.handle(request, {});
 
@@ -7511,7 +7511,7 @@ it("RestJsonDeserializeNumberUnionValue:ServerResponse", async () => {
   }
   const request = new HttpRequest({ method: "POST", hostname: "example.com" });
   const serFn: (
-    op: RestJsonServiceOperations
+    op: RestJsonServiceOperations,
   ) => __OperationSerializer<RestJsonService<{}>, RestJsonServiceOperations, __ServiceException> = (op) => {
     return new TestSerializer();
   };
@@ -7525,7 +7525,7 @@ it("RestJsonDeserializeNumberUnionValue:ServerResponse", async () => {
         throw f;
       }
       return undefined;
-    }
+    },
   );
   const r = await handler.handle(request, {});
 
@@ -7573,7 +7573,7 @@ it("RestJsonDeserializeBlobUnionValue:ServerResponse", async () => {
   }
   const request = new HttpRequest({ method: "POST", hostname: "example.com" });
   const serFn: (
-    op: RestJsonServiceOperations
+    op: RestJsonServiceOperations,
   ) => __OperationSerializer<RestJsonService<{}>, RestJsonServiceOperations, __ServiceException> = (op) => {
     return new TestSerializer();
   };
@@ -7587,7 +7587,7 @@ it("RestJsonDeserializeBlobUnionValue:ServerResponse", async () => {
         throw f;
       }
       return undefined;
-    }
+    },
   );
   const r = await handler.handle(request, {});
 
@@ -7635,7 +7635,7 @@ it("RestJsonDeserializeTimestampUnionValue:ServerResponse", async () => {
   }
   const request = new HttpRequest({ method: "POST", hostname: "example.com" });
   const serFn: (
-    op: RestJsonServiceOperations
+    op: RestJsonServiceOperations,
   ) => __OperationSerializer<RestJsonService<{}>, RestJsonServiceOperations, __ServiceException> = (op) => {
     return new TestSerializer();
   };
@@ -7649,7 +7649,7 @@ it("RestJsonDeserializeTimestampUnionValue:ServerResponse", async () => {
         throw f;
       }
       return undefined;
-    }
+    },
   );
   const r = await handler.handle(request, {});
 
@@ -7697,7 +7697,7 @@ it("RestJsonDeserializeEnumUnionValue:ServerResponse", async () => {
   }
   const request = new HttpRequest({ method: "POST", hostname: "example.com" });
   const serFn: (
-    op: RestJsonServiceOperations
+    op: RestJsonServiceOperations,
   ) => __OperationSerializer<RestJsonService<{}>, RestJsonServiceOperations, __ServiceException> = (op) => {
     return new TestSerializer();
   };
@@ -7711,7 +7711,7 @@ it("RestJsonDeserializeEnumUnionValue:ServerResponse", async () => {
         throw f;
       }
       return undefined;
-    }
+    },
   );
   const r = await handler.handle(request, {});
 
@@ -7759,7 +7759,7 @@ it("RestJsonDeserializeListUnionValue:ServerResponse", async () => {
   }
   const request = new HttpRequest({ method: "POST", hostname: "example.com" });
   const serFn: (
-    op: RestJsonServiceOperations
+    op: RestJsonServiceOperations,
   ) => __OperationSerializer<RestJsonService<{}>, RestJsonServiceOperations, __ServiceException> = (op) => {
     return new TestSerializer();
   };
@@ -7773,7 +7773,7 @@ it("RestJsonDeserializeListUnionValue:ServerResponse", async () => {
         throw f;
       }
       return undefined;
-    }
+    },
   );
   const r = await handler.handle(request, {});
 
@@ -7825,7 +7825,7 @@ it("RestJsonDeserializeMapUnionValue:ServerResponse", async () => {
   }
   const request = new HttpRequest({ method: "POST", hostname: "example.com" });
   const serFn: (
-    op: RestJsonServiceOperations
+    op: RestJsonServiceOperations,
   ) => __OperationSerializer<RestJsonService<{}>, RestJsonServiceOperations, __ServiceException> = (op) => {
     return new TestSerializer();
   };
@@ -7839,7 +7839,7 @@ it("RestJsonDeserializeMapUnionValue:ServerResponse", async () => {
         throw f;
       }
       return undefined;
-    }
+    },
   );
   const r = await handler.handle(request, {});
 
@@ -7892,7 +7892,7 @@ it("RestJsonDeserializeStructureUnionValue:ServerResponse", async () => {
   }
   const request = new HttpRequest({ method: "POST", hostname: "example.com" });
   const serFn: (
-    op: RestJsonServiceOperations
+    op: RestJsonServiceOperations,
   ) => __OperationSerializer<RestJsonService<{}>, RestJsonServiceOperations, __ServiceException> = (op) => {
     return new TestSerializer();
   };
@@ -7906,7 +7906,7 @@ it("RestJsonDeserializeStructureUnionValue:ServerResponse", async () => {
         throw f;
       }
       return undefined;
-    }
+    },
   );
   const r = await handler.handle(request, {});
 
@@ -7946,7 +7946,7 @@ it("RestJsonWithBodyExpectsApplicationJsonAccept:MalformedRequest", async () => 
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -7984,7 +7984,7 @@ it("RestJsonWithPayloadExpectsImpliedAccept:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -8021,7 +8021,7 @@ it("RestJsonWithPayloadExpectsModeledAccept:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -8059,7 +8059,7 @@ it("RestJsonBodyMalformedBlobInvalidBase64_case0:MalformedRequest", async () => 
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -8098,7 +8098,7 @@ it("RestJsonBodyMalformedBlobInvalidBase64_case1:MalformedRequest", async () => 
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -8137,7 +8137,7 @@ it("RestJsonBodyMalformedBlobInvalidBase64_case2:MalformedRequest", async () => 
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -8176,7 +8176,7 @@ it("RestJsonBodyMalformedBlobInvalidBase64_case3:MalformedRequest", async () => 
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -8215,7 +8215,7 @@ it("RestJsonBodyMalformedBlobInvalidBase64_case4:MalformedRequest", async () => 
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -8254,7 +8254,7 @@ it("RestJsonBodyMalformedBlobInvalidBase64_case5:MalformedRequest", async () => 
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -8293,7 +8293,7 @@ it("RestJsonBodyMalformedBlobInvalidBase64_case6:MalformedRequest", async () => 
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -8332,7 +8332,7 @@ it("RestJsonBodyMalformedBlobInvalidBase64_case7:MalformedRequest", async () => 
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -8371,7 +8371,7 @@ it("RestJsonBodyMalformedBlobInvalidBase64_case8:MalformedRequest", async () => 
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -8409,7 +8409,7 @@ it.skip("RestJsonBodyBooleanStringCoercion_case0:MalformedRequest", async () => 
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -8447,7 +8447,7 @@ it.skip("RestJsonBodyBooleanStringCoercion_case1:MalformedRequest", async () => 
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -8485,7 +8485,7 @@ it.skip("RestJsonBodyBooleanStringCoercion_case2:MalformedRequest", async () => 
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -8523,7 +8523,7 @@ it("RestJsonBodyBooleanStringCoercion_case3:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -8561,7 +8561,7 @@ it("RestJsonBodyBooleanStringCoercion_case4:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -8599,7 +8599,7 @@ it("RestJsonBodyBooleanStringCoercion_case5:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -8637,7 +8637,7 @@ it("RestJsonBodyBooleanStringCoercion_case6:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -8675,7 +8675,7 @@ it("RestJsonBodyBooleanStringCoercion_case7:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -8713,7 +8713,7 @@ it("RestJsonBodyBooleanStringCoercion_case8:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -8751,7 +8751,7 @@ it("RestJsonBodyBooleanStringCoercion_case9:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -8789,7 +8789,7 @@ it("RestJsonBodyBooleanStringCoercion_case10:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -8827,7 +8827,7 @@ it("RestJsonBodyBooleanStringCoercion_case11:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -8865,7 +8865,7 @@ it.skip("RestJsonBodyBooleanStringCoercion_case12:MalformedRequest", async () =>
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -8903,7 +8903,7 @@ it.skip("RestJsonBodyBooleanStringCoercion_case13:MalformedRequest", async () =>
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -8941,7 +8941,7 @@ it.skip("RestJsonBodyBooleanStringCoercion_case14:MalformedRequest", async () =>
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -8979,7 +8979,7 @@ it("RestJsonBodyBooleanStringCoercion_case15:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -9017,7 +9017,7 @@ it("RestJsonBodyBooleanStringCoercion_case16:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -9055,7 +9055,7 @@ it("RestJsonBodyBooleanStringCoercion_case17:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -9093,7 +9093,7 @@ it("RestJsonBodyBooleanStringCoercion_case18:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -9131,7 +9131,7 @@ it("RestJsonBodyBooleanStringCoercion_case19:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -9169,7 +9169,7 @@ it("RestJsonBodyBooleanStringCoercion_case20:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -9207,7 +9207,7 @@ it("RestJsonBodyBooleanStringCoercion_case21:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -9245,7 +9245,7 @@ it("RestJsonBodyBooleanStringCoercion_case22:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -9283,7 +9283,7 @@ it("RestJsonBodyBooleanStringCoercion_case23:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -9321,7 +9321,7 @@ it("RestJsonBodyBooleanBadLiteral_case0:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -9359,7 +9359,7 @@ it("RestJsonBodyBooleanBadLiteral_case1:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -9397,7 +9397,7 @@ it("RestJsonBodyBooleanBadLiteral_case2:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -9435,7 +9435,7 @@ it("RestJsonBodyBooleanBadLiteral_case3:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -9473,7 +9473,7 @@ it("RestJsonBodyBooleanBadLiteral_case4:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -9511,7 +9511,7 @@ it("RestJsonBodyBooleanBadLiteral_case5:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -9549,7 +9549,7 @@ it("RestJsonBodyBooleanBadLiteral_case6:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -9587,7 +9587,7 @@ it.skip("RestJsonBodyBooleanBadLiteral_case7:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -9625,7 +9625,7 @@ it("RestJsonBodyBooleanBadLiteral_case8:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -9663,7 +9663,7 @@ it("RestJsonBodyBooleanBadLiteral_case9:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -9701,7 +9701,7 @@ it("RestJsonBodyBooleanBadLiteral_case10:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -9739,7 +9739,7 @@ it("RestJsonBodyBooleanBadLiteral_case11:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -9777,7 +9777,7 @@ it("RestJsonBodyBooleanBadLiteral_case12:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -9815,7 +9815,7 @@ it("RestJsonBodyBooleanBadLiteral_case13:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -9853,7 +9853,7 @@ it("RestJsonBodyBooleanBadLiteral_case14:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -9891,7 +9891,7 @@ it("RestJsonBodyBooleanBadLiteral_case15:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -9929,7 +9929,7 @@ it("RestJsonBodyBooleanBadLiteral_case16:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -9967,7 +9967,7 @@ it("RestJsonBodyBooleanBadLiteral_case17:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -10005,7 +10005,7 @@ it.skip("RestJsonBodyBooleanBadLiteral_case18:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -10043,7 +10043,7 @@ it("RestJsonBodyBooleanBadLiteral_case19:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -10081,7 +10081,7 @@ it("RestJsonBodyBooleanBadLiteral_case20:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -10119,7 +10119,7 @@ it("RestJsonBodyBooleanBadLiteral_case21:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -10157,7 +10157,7 @@ it("RestJsonPathBooleanStringCoercion_case0:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -10192,7 +10192,7 @@ it("RestJsonPathBooleanStringCoercion_case1:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -10227,7 +10227,7 @@ it("RestJsonPathBooleanStringCoercion_case2:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -10262,7 +10262,7 @@ it("RestJsonPathBooleanStringCoercion_case3:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -10297,7 +10297,7 @@ it("RestJsonPathBooleanStringCoercion_case4:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -10332,7 +10332,7 @@ it("RestJsonPathBooleanStringCoercion_case5:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -10367,7 +10367,7 @@ it("RestJsonPathBooleanStringCoercion_case6:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -10402,7 +10402,7 @@ it("RestJsonPathBooleanStringCoercion_case7:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -10437,7 +10437,7 @@ it("RestJsonPathBooleanStringCoercion_case8:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -10472,7 +10472,7 @@ it("RestJsonPathBooleanStringCoercion_case9:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -10507,7 +10507,7 @@ it("RestJsonPathBooleanStringCoercion_case10:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -10542,7 +10542,7 @@ it("RestJsonPathBooleanStringCoercion_case11:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -10577,7 +10577,7 @@ it("RestJsonPathBooleanStringCoercion_case12:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -10612,7 +10612,7 @@ it("RestJsonPathBooleanStringCoercion_case13:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -10647,7 +10647,7 @@ it("RestJsonPathBooleanStringCoercion_case14:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -10682,7 +10682,7 @@ it("RestJsonPathBooleanStringCoercion_case15:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -10717,7 +10717,7 @@ it("RestJsonPathBooleanStringCoercion_case16:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -10752,7 +10752,7 @@ it("RestJsonPathBooleanStringCoercion_case17:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -10787,7 +10787,7 @@ it("RestJsonPathBooleanStringCoercion_case18:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -10822,7 +10822,7 @@ it("RestJsonPathBooleanStringCoercion_case19:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -10857,7 +10857,7 @@ it("RestJsonPathBooleanStringCoercion_case20:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -10892,7 +10892,7 @@ it("RestJsonPathBooleanStringCoercion_case21:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -10927,7 +10927,7 @@ it("RestJsonQueryBooleanStringCoercion_case0:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -10964,7 +10964,7 @@ it("RestJsonQueryBooleanStringCoercion_case1:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -11001,7 +11001,7 @@ it("RestJsonQueryBooleanStringCoercion_case2:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -11038,7 +11038,7 @@ it("RestJsonQueryBooleanStringCoercion_case3:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -11075,7 +11075,7 @@ it("RestJsonQueryBooleanStringCoercion_case4:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -11112,7 +11112,7 @@ it("RestJsonQueryBooleanStringCoercion_case5:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -11149,7 +11149,7 @@ it("RestJsonQueryBooleanStringCoercion_case6:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -11186,7 +11186,7 @@ it("RestJsonQueryBooleanStringCoercion_case7:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -11223,7 +11223,7 @@ it("RestJsonQueryBooleanStringCoercion_case8:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -11260,7 +11260,7 @@ it("RestJsonQueryBooleanStringCoercion_case9:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -11297,7 +11297,7 @@ it("RestJsonQueryBooleanStringCoercion_case10:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -11334,7 +11334,7 @@ it("RestJsonQueryBooleanStringCoercion_case11:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -11371,7 +11371,7 @@ it("RestJsonQueryBooleanStringCoercion_case12:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -11408,7 +11408,7 @@ it("RestJsonQueryBooleanStringCoercion_case13:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -11445,7 +11445,7 @@ it("RestJsonQueryBooleanStringCoercion_case14:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -11482,7 +11482,7 @@ it("RestJsonQueryBooleanStringCoercion_case15:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -11519,7 +11519,7 @@ it("RestJsonQueryBooleanStringCoercion_case16:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -11556,7 +11556,7 @@ it("RestJsonQueryBooleanStringCoercion_case17:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -11593,7 +11593,7 @@ it("RestJsonQueryBooleanStringCoercion_case18:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -11630,7 +11630,7 @@ it("RestJsonQueryBooleanStringCoercion_case19:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -11667,7 +11667,7 @@ it("RestJsonQueryBooleanStringCoercion_case20:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -11704,7 +11704,7 @@ it("RestJsonQueryBooleanStringCoercion_case21:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -11741,7 +11741,7 @@ it("RestJsonHeaderBooleanStringCoercion_case0:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -11778,7 +11778,7 @@ it("RestJsonHeaderBooleanStringCoercion_case1:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -11815,7 +11815,7 @@ it("RestJsonHeaderBooleanStringCoercion_case2:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -11852,7 +11852,7 @@ it("RestJsonHeaderBooleanStringCoercion_case3:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -11889,7 +11889,7 @@ it("RestJsonHeaderBooleanStringCoercion_case4:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -11926,7 +11926,7 @@ it("RestJsonHeaderBooleanStringCoercion_case5:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -11963,7 +11963,7 @@ it("RestJsonHeaderBooleanStringCoercion_case6:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -12000,7 +12000,7 @@ it("RestJsonHeaderBooleanStringCoercion_case7:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -12037,7 +12037,7 @@ it("RestJsonHeaderBooleanStringCoercion_case8:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -12074,7 +12074,7 @@ it("RestJsonHeaderBooleanStringCoercion_case9:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -12111,7 +12111,7 @@ it("RestJsonHeaderBooleanStringCoercion_case10:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -12148,7 +12148,7 @@ it("RestJsonHeaderBooleanStringCoercion_case11:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -12185,7 +12185,7 @@ it("RestJsonHeaderBooleanStringCoercion_case12:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -12222,7 +12222,7 @@ it("RestJsonHeaderBooleanStringCoercion_case13:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -12259,7 +12259,7 @@ it("RestJsonHeaderBooleanStringCoercion_case14:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -12296,7 +12296,7 @@ it("RestJsonHeaderBooleanStringCoercion_case15:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -12333,7 +12333,7 @@ it("RestJsonHeaderBooleanStringCoercion_case16:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -12370,7 +12370,7 @@ it("RestJsonHeaderBooleanStringCoercion_case17:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -12407,7 +12407,7 @@ it("RestJsonHeaderBooleanStringCoercion_case18:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -12444,7 +12444,7 @@ it("RestJsonHeaderBooleanStringCoercion_case19:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -12481,7 +12481,7 @@ it("RestJsonHeaderBooleanStringCoercion_case20:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -12518,7 +12518,7 @@ it("RestJsonHeaderBooleanStringCoercion_case21:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -12555,7 +12555,7 @@ it("RestJsonBodyByteUnderflowOverflow_case0:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -12593,7 +12593,7 @@ it("RestJsonBodyByteUnderflowOverflow_case1:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -12631,7 +12631,7 @@ it("RestJsonBodyByteUnderflowOverflow_case2:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -12669,7 +12669,7 @@ it("RestJsonBodyByteUnderflowOverflow_case3:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -12707,7 +12707,7 @@ it("RestJsonBodyByteUnderflowOverflow_case4:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -12745,7 +12745,7 @@ it("RestJsonPathByteUnderflowOverflow_case0:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -12780,7 +12780,7 @@ it("RestJsonPathByteUnderflowOverflow_case1:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -12815,7 +12815,7 @@ it("RestJsonPathByteUnderflowOverflow_case2:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -12850,7 +12850,7 @@ it("RestJsonPathByteUnderflowOverflow_case3:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -12885,7 +12885,7 @@ it("RestJsonPathByteUnderflowOverflow_case4:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -12920,7 +12920,7 @@ it("RestJsonQueryByteUnderflowOverflow_case0:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -12957,7 +12957,7 @@ it("RestJsonQueryByteUnderflowOverflow_case1:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -12994,7 +12994,7 @@ it("RestJsonQueryByteUnderflowOverflow_case2:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -13031,7 +13031,7 @@ it("RestJsonQueryByteUnderflowOverflow_case3:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -13068,7 +13068,7 @@ it("RestJsonQueryByteUnderflowOverflow_case4:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -13105,7 +13105,7 @@ it("RestJsonHeaderByteUnderflowOverflow_case0:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -13142,7 +13142,7 @@ it("RestJsonHeaderByteUnderflowOverflow_case1:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -13179,7 +13179,7 @@ it("RestJsonHeaderByteUnderflowOverflow_case2:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -13216,7 +13216,7 @@ it("RestJsonHeaderByteUnderflowOverflow_case3:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -13253,7 +13253,7 @@ it("RestJsonHeaderByteUnderflowOverflow_case4:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -13290,7 +13290,7 @@ it("RestJsonBodyByteMalformedValueRejected_case0:MalformedRequest", async () => 
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -13328,7 +13328,7 @@ it("RestJsonBodyByteMalformedValueRejected_case1:MalformedRequest", async () => 
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -13366,7 +13366,7 @@ it("RestJsonBodyByteMalformedValueRejected_case2:MalformedRequest", async () => 
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -13404,7 +13404,7 @@ it("RestJsonBodyByteMalformedValueRejected_case3:MalformedRequest", async () => 
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -13442,7 +13442,7 @@ it("RestJsonBodyByteMalformedValueRejected_case4:MalformedRequest", async () => 
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -13480,7 +13480,7 @@ it("RestJsonBodyByteMalformedValueRejected_case5:MalformedRequest", async () => 
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -13518,7 +13518,7 @@ it("RestJsonBodyByteMalformedValueRejected_case6:MalformedRequest", async () => 
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -13556,7 +13556,7 @@ it("RestJsonBodyByteMalformedValueRejected_case7:MalformedRequest", async () => 
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -13594,7 +13594,7 @@ it("RestJsonBodyByteMalformedValueRejected_case8:MalformedRequest", async () => 
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -13632,7 +13632,7 @@ it("RestJsonBodyByteMalformedValueRejected_case9:MalformedRequest", async () => 
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -13670,7 +13670,7 @@ it("RestJsonBodyByteMalformedValueRejected_case10:MalformedRequest", async () =>
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -13708,7 +13708,7 @@ it("RestJsonPathByteMalformedValueRejected_case0:MalformedRequest", async () => 
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -13743,7 +13743,7 @@ it("RestJsonPathByteMalformedValueRejected_case1:MalformedRequest", async () => 
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -13778,7 +13778,7 @@ it("RestJsonPathByteMalformedValueRejected_case2:MalformedRequest", async () => 
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -13813,7 +13813,7 @@ it("RestJsonPathByteMalformedValueRejected_case3:MalformedRequest", async () => 
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -13848,7 +13848,7 @@ it("RestJsonPathByteMalformedValueRejected_case4:MalformedRequest", async () => 
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -13883,7 +13883,7 @@ it("RestJsonPathByteMalformedValueRejected_case5:MalformedRequest", async () => 
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -13918,7 +13918,7 @@ it("RestJsonPathByteMalformedValueRejected_case6:MalformedRequest", async () => 
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -13953,7 +13953,7 @@ it("RestJsonQueryByteMalformedValueRejected_case0:MalformedRequest", async () =>
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -13990,7 +13990,7 @@ it("RestJsonQueryByteMalformedValueRejected_case1:MalformedRequest", async () =>
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -14027,7 +14027,7 @@ it("RestJsonQueryByteMalformedValueRejected_case2:MalformedRequest", async () =>
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -14064,7 +14064,7 @@ it("RestJsonQueryByteMalformedValueRejected_case3:MalformedRequest", async () =>
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -14101,7 +14101,7 @@ it("RestJsonQueryByteMalformedValueRejected_case4:MalformedRequest", async () =>
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -14138,7 +14138,7 @@ it("RestJsonQueryByteMalformedValueRejected_case5:MalformedRequest", async () =>
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -14175,7 +14175,7 @@ it("RestJsonQueryByteMalformedValueRejected_case6:MalformedRequest", async () =>
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -14212,7 +14212,7 @@ it("RestJsonHeaderByteMalformedValueRejected_case0:MalformedRequest", async () =
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -14249,7 +14249,7 @@ it("RestJsonHeaderByteMalformedValueRejected_case1:MalformedRequest", async () =
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -14286,7 +14286,7 @@ it("RestJsonHeaderByteMalformedValueRejected_case2:MalformedRequest", async () =
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -14323,7 +14323,7 @@ it("RestJsonHeaderByteMalformedValueRejected_case3:MalformedRequest", async () =
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -14360,7 +14360,7 @@ it("RestJsonHeaderByteMalformedValueRejected_case4:MalformedRequest", async () =
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -14397,7 +14397,7 @@ it("RestJsonHeaderByteMalformedValueRejected_case5:MalformedRequest", async () =
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -14434,7 +14434,7 @@ it("RestJsonHeaderByteMalformedValueRejected_case6:MalformedRequest", async () =
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -14471,7 +14471,7 @@ it("RestJsonWithBodyExpectsApplicationJsonContentType:MalformedRequest", async (
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -14509,7 +14509,7 @@ it("RestJsonWithoutBodyExpectsEmptyContentType:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -14547,7 +14547,7 @@ it("RestJsonWithPayloadExpectsModeledContentType:MalformedRequest", async () => 
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -14586,7 +14586,7 @@ it("RestJsonWithPayloadExpectsImpliedContentType:MalformedRequest", async () => 
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -14624,7 +14624,7 @@ it("RestJsonBodyDoubleMalformedValueRejected_case0:MalformedRequest", async () =
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -14662,7 +14662,7 @@ it("RestJsonBodyDoubleMalformedValueRejected_case1:MalformedRequest", async () =
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -14700,7 +14700,7 @@ it("RestJsonBodyDoubleMalformedValueRejected_case2:MalformedRequest", async () =
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -14738,7 +14738,7 @@ it("RestJsonBodyDoubleMalformedValueRejected_case3:MalformedRequest", async () =
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -14776,7 +14776,7 @@ it("RestJsonBodyDoubleMalformedValueRejected_case4:MalformedRequest", async () =
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -14814,7 +14814,7 @@ it("RestJsonBodyDoubleMalformedValueRejected_case5:MalformedRequest", async () =
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -14852,7 +14852,7 @@ it("RestJsonBodyDoubleMalformedValueRejected_case6:MalformedRequest", async () =
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -14890,7 +14890,7 @@ it("RestJsonPathDoubleMalformedValueRejected_case0:MalformedRequest", async () =
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -14925,7 +14925,7 @@ it("RestJsonPathDoubleMalformedValueRejected_case1:MalformedRequest", async () =
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -14960,7 +14960,7 @@ it("RestJsonPathDoubleMalformedValueRejected_case2:MalformedRequest", async () =
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -14995,7 +14995,7 @@ it("RestJsonQueryDoubleMalformedValueRejected_case0:MalformedRequest", async () 
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -15032,7 +15032,7 @@ it("RestJsonQueryDoubleMalformedValueRejected_case1:MalformedRequest", async () 
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -15069,7 +15069,7 @@ it("RestJsonQueryDoubleMalformedValueRejected_case2:MalformedRequest", async () 
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -15106,7 +15106,7 @@ it("RestJsonHeaderDoubleMalformedValueRejected_case0:MalformedRequest", async ()
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -15143,7 +15143,7 @@ it("RestJsonHeaderDoubleMalformedValueRejected_case1:MalformedRequest", async ()
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -15180,7 +15180,7 @@ it("RestJsonHeaderDoubleMalformedValueRejected_case2:MalformedRequest", async ()
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -15217,7 +15217,7 @@ it("RestJsonBodyFloatMalformedValueRejected_case0:MalformedRequest", async () =>
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -15255,7 +15255,7 @@ it("RestJsonBodyFloatMalformedValueRejected_case1:MalformedRequest", async () =>
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -15293,7 +15293,7 @@ it("RestJsonBodyFloatMalformedValueRejected_case2:MalformedRequest", async () =>
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -15331,7 +15331,7 @@ it("RestJsonBodyFloatMalformedValueRejected_case3:MalformedRequest", async () =>
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -15369,7 +15369,7 @@ it("RestJsonBodyFloatMalformedValueRejected_case4:MalformedRequest", async () =>
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -15407,7 +15407,7 @@ it("RestJsonBodyFloatMalformedValueRejected_case5:MalformedRequest", async () =>
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -15445,7 +15445,7 @@ it("RestJsonBodyFloatMalformedValueRejected_case6:MalformedRequest", async () =>
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -15483,7 +15483,7 @@ it("RestJsonPathFloatMalformedValueRejected_case0:MalformedRequest", async () =>
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -15518,7 +15518,7 @@ it("RestJsonPathFloatMalformedValueRejected_case1:MalformedRequest", async () =>
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -15553,7 +15553,7 @@ it("RestJsonPathFloatMalformedValueRejected_case2:MalformedRequest", async () =>
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -15588,7 +15588,7 @@ it("RestJsonQueryFloatMalformedValueRejected_case0:MalformedRequest", async () =
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -15625,7 +15625,7 @@ it("RestJsonQueryFloatMalformedValueRejected_case1:MalformedRequest", async () =
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -15662,7 +15662,7 @@ it("RestJsonQueryFloatMalformedValueRejected_case2:MalformedRequest", async () =
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -15699,7 +15699,7 @@ it("RestJsonHeaderFloatMalformedValueRejected_case0:MalformedRequest", async () 
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -15736,7 +15736,7 @@ it("RestJsonHeaderFloatMalformedValueRejected_case1:MalformedRequest", async () 
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -15773,7 +15773,7 @@ it("RestJsonHeaderFloatMalformedValueRejected_case2:MalformedRequest", async () 
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -15810,7 +15810,7 @@ it("RestJsonBodyIntegerUnderflowOverflow_case0:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -15848,7 +15848,7 @@ it("RestJsonBodyIntegerUnderflowOverflow_case1:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -15886,7 +15886,7 @@ it("RestJsonBodyIntegerUnderflowOverflow_case2:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -15924,7 +15924,7 @@ it("RestJsonPathIntegerUnderflowOverflow_case0:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -15959,7 +15959,7 @@ it("RestJsonPathIntegerUnderflowOverflow_case1:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -15994,7 +15994,7 @@ it("RestJsonPathIntegerUnderflowOverflow_case2:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -16029,7 +16029,7 @@ it("RestJsonQueryIntegerUnderflowOverflow_case0:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -16066,7 +16066,7 @@ it("RestJsonQueryIntegerUnderflowOverflow_case1:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -16103,7 +16103,7 @@ it("RestJsonQueryIntegerUnderflowOverflow_case2:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -16140,7 +16140,7 @@ it("RestJsonHeaderIntegerUnderflowOverflow_case0:MalformedRequest", async () => 
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -16177,7 +16177,7 @@ it("RestJsonHeaderIntegerUnderflowOverflow_case1:MalformedRequest", async () => 
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -16214,7 +16214,7 @@ it("RestJsonHeaderIntegerUnderflowOverflow_case2:MalformedRequest", async () => 
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -16251,7 +16251,7 @@ it("RestJsonBodyIntegerMalformedValueRejected_case0:MalformedRequest", async () 
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -16289,7 +16289,7 @@ it("RestJsonBodyIntegerMalformedValueRejected_case1:MalformedRequest", async () 
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -16327,7 +16327,7 @@ it("RestJsonBodyIntegerMalformedValueRejected_case2:MalformedRequest", async () 
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -16365,7 +16365,7 @@ it("RestJsonBodyIntegerMalformedValueRejected_case3:MalformedRequest", async () 
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -16403,7 +16403,7 @@ it("RestJsonBodyIntegerMalformedValueRejected_case4:MalformedRequest", async () 
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -16441,7 +16441,7 @@ it("RestJsonBodyIntegerMalformedValueRejected_case5:MalformedRequest", async () 
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -16479,7 +16479,7 @@ it("RestJsonBodyIntegerMalformedValueRejected_case6:MalformedRequest", async () 
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -16517,7 +16517,7 @@ it("RestJsonBodyIntegerMalformedValueRejected_case7:MalformedRequest", async () 
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -16555,7 +16555,7 @@ it("RestJsonBodyIntegerMalformedValueRejected_case8:MalformedRequest", async () 
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -16593,7 +16593,7 @@ it("RestJsonBodyIntegerMalformedValueRejected_case9:MalformedRequest", async () 
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -16631,7 +16631,7 @@ it("RestJsonBodyIntegerMalformedValueRejected_case10:MalformedRequest", async ()
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -16669,7 +16669,7 @@ it("RestJsonPathIntegerMalformedValueRejected_case0:MalformedRequest", async () 
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -16704,7 +16704,7 @@ it("RestJsonPathIntegerMalformedValueRejected_case1:MalformedRequest", async () 
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -16739,7 +16739,7 @@ it("RestJsonPathIntegerMalformedValueRejected_case2:MalformedRequest", async () 
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -16774,7 +16774,7 @@ it("RestJsonPathIntegerMalformedValueRejected_case3:MalformedRequest", async () 
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -16809,7 +16809,7 @@ it("RestJsonPathIntegerMalformedValueRejected_case4:MalformedRequest", async () 
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -16844,7 +16844,7 @@ it("RestJsonPathIntegerMalformedValueRejected_case5:MalformedRequest", async () 
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -16879,7 +16879,7 @@ it("RestJsonPathIntegerMalformedValueRejected_case6:MalformedRequest", async () 
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -16914,7 +16914,7 @@ it("RestJsonQueryIntegerMalformedValueRejected_case0:MalformedRequest", async ()
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -16951,7 +16951,7 @@ it("RestJsonQueryIntegerMalformedValueRejected_case1:MalformedRequest", async ()
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -16988,7 +16988,7 @@ it("RestJsonQueryIntegerMalformedValueRejected_case2:MalformedRequest", async ()
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -17025,7 +17025,7 @@ it("RestJsonQueryIntegerMalformedValueRejected_case3:MalformedRequest", async ()
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -17062,7 +17062,7 @@ it("RestJsonQueryIntegerMalformedValueRejected_case4:MalformedRequest", async ()
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -17099,7 +17099,7 @@ it("RestJsonQueryIntegerMalformedValueRejected_case5:MalformedRequest", async ()
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -17136,7 +17136,7 @@ it("RestJsonQueryIntegerMalformedValueRejected_case6:MalformedRequest", async ()
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -17173,7 +17173,7 @@ it("RestJsonHeaderIntegerMalformedValueRejected_case0:MalformedRequest", async (
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -17210,7 +17210,7 @@ it("RestJsonHeaderIntegerMalformedValueRejected_case1:MalformedRequest", async (
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -17247,7 +17247,7 @@ it("RestJsonHeaderIntegerMalformedValueRejected_case2:MalformedRequest", async (
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -17284,7 +17284,7 @@ it("RestJsonHeaderIntegerMalformedValueRejected_case3:MalformedRequest", async (
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -17321,7 +17321,7 @@ it("RestJsonHeaderIntegerMalformedValueRejected_case4:MalformedRequest", async (
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -17358,7 +17358,7 @@ it("RestJsonHeaderIntegerMalformedValueRejected_case5:MalformedRequest", async (
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -17395,7 +17395,7 @@ it("RestJsonHeaderIntegerMalformedValueRejected_case6:MalformedRequest", async (
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -17433,7 +17433,7 @@ it("RestJsonBodyMalformedListNullItem:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -17472,7 +17472,7 @@ it("RestJsonBodyMalformedListUnclosed:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -17510,7 +17510,7 @@ it.skip("RestJsonBodyLongUnderflowOverflow_case0:MalformedRequest", async () => 
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -17548,7 +17548,7 @@ it.skip("RestJsonBodyLongUnderflowOverflow_case1:MalformedRequest", async () => 
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -17586,7 +17586,7 @@ it.skip("RestJsonBodyLongUnderflowOverflow_case2:MalformedRequest", async () => 
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -17624,7 +17624,7 @@ it.skip("RestJsonPathLongUnderflowOverflow_case0:MalformedRequest", async () => 
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -17659,7 +17659,7 @@ it.skip("RestJsonPathLongUnderflowOverflow_case1:MalformedRequest", async () => 
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -17694,7 +17694,7 @@ it.skip("RestJsonPathLongUnderflowOverflow_case2:MalformedRequest", async () => 
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -17729,7 +17729,7 @@ it.skip("RestJsonQueryLongUnderflowOverflow_case0:MalformedRequest", async () =>
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -17766,7 +17766,7 @@ it.skip("RestJsonQueryLongUnderflowOverflow_case1:MalformedRequest", async () =>
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -17803,7 +17803,7 @@ it.skip("RestJsonQueryLongUnderflowOverflow_case2:MalformedRequest", async () =>
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -17840,7 +17840,7 @@ it.skip("RestJsonHeaderLongUnderflowOverflow_case0:MalformedRequest", async () =
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -17877,7 +17877,7 @@ it.skip("RestJsonHeaderLongUnderflowOverflow_case1:MalformedRequest", async () =
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -17914,7 +17914,7 @@ it.skip("RestJsonHeaderLongUnderflowOverflow_case2:MalformedRequest", async () =
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -17951,7 +17951,7 @@ it("RestJsonBodyLongMalformedValueRejected_case0:MalformedRequest", async () => 
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -17989,7 +17989,7 @@ it("RestJsonBodyLongMalformedValueRejected_case1:MalformedRequest", async () => 
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -18027,7 +18027,7 @@ it("RestJsonBodyLongMalformedValueRejected_case2:MalformedRequest", async () => 
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -18065,7 +18065,7 @@ it("RestJsonBodyLongMalformedValueRejected_case3:MalformedRequest", async () => 
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -18103,7 +18103,7 @@ it("RestJsonBodyLongMalformedValueRejected_case4:MalformedRequest", async () => 
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -18141,7 +18141,7 @@ it("RestJsonBodyLongMalformedValueRejected_case5:MalformedRequest", async () => 
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -18179,7 +18179,7 @@ it("RestJsonBodyLongMalformedValueRejected_case6:MalformedRequest", async () => 
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -18217,7 +18217,7 @@ it("RestJsonBodyLongMalformedValueRejected_case7:MalformedRequest", async () => 
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -18255,7 +18255,7 @@ it("RestJsonBodyLongMalformedValueRejected_case8:MalformedRequest", async () => 
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -18293,7 +18293,7 @@ it("RestJsonBodyLongMalformedValueRejected_case9:MalformedRequest", async () => 
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -18331,7 +18331,7 @@ it("RestJsonBodyLongMalformedValueRejected_case10:MalformedRequest", async () =>
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -18369,7 +18369,7 @@ it("RestJsonPathLongMalformedValueRejected_case0:MalformedRequest", async () => 
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -18404,7 +18404,7 @@ it("RestJsonPathLongMalformedValueRejected_case1:MalformedRequest", async () => 
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -18439,7 +18439,7 @@ it("RestJsonPathLongMalformedValueRejected_case2:MalformedRequest", async () => 
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -18474,7 +18474,7 @@ it("RestJsonPathLongMalformedValueRejected_case3:MalformedRequest", async () => 
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -18509,7 +18509,7 @@ it("RestJsonPathLongMalformedValueRejected_case4:MalformedRequest", async () => 
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -18544,7 +18544,7 @@ it("RestJsonPathLongMalformedValueRejected_case5:MalformedRequest", async () => 
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -18579,7 +18579,7 @@ it("RestJsonPathLongMalformedValueRejected_case6:MalformedRequest", async () => 
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -18614,7 +18614,7 @@ it("RestJsonQueryLongMalformedValueRejected_case0:MalformedRequest", async () =>
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -18651,7 +18651,7 @@ it("RestJsonQueryLongMalformedValueRejected_case1:MalformedRequest", async () =>
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -18688,7 +18688,7 @@ it("RestJsonQueryLongMalformedValueRejected_case2:MalformedRequest", async () =>
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -18725,7 +18725,7 @@ it("RestJsonQueryLongMalformedValueRejected_case3:MalformedRequest", async () =>
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -18762,7 +18762,7 @@ it("RestJsonQueryLongMalformedValueRejected_case4:MalformedRequest", async () =>
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -18799,7 +18799,7 @@ it("RestJsonQueryLongMalformedValueRejected_case5:MalformedRequest", async () =>
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -18836,7 +18836,7 @@ it("RestJsonQueryLongMalformedValueRejected_case6:MalformedRequest", async () =>
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -18873,7 +18873,7 @@ it("RestJsonHeaderLongMalformedValueRejected_case0:MalformedRequest", async () =
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -18910,7 +18910,7 @@ it("RestJsonHeaderLongMalformedValueRejected_case1:MalformedRequest", async () =
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -18947,7 +18947,7 @@ it("RestJsonHeaderLongMalformedValueRejected_case2:MalformedRequest", async () =
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -18984,7 +18984,7 @@ it("RestJsonHeaderLongMalformedValueRejected_case3:MalformedRequest", async () =
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -19021,7 +19021,7 @@ it("RestJsonHeaderLongMalformedValueRejected_case4:MalformedRequest", async () =
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -19058,7 +19058,7 @@ it("RestJsonHeaderLongMalformedValueRejected_case5:MalformedRequest", async () =
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -19095,7 +19095,7 @@ it("RestJsonHeaderLongMalformedValueRejected_case6:MalformedRequest", async () =
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -19133,7 +19133,7 @@ it("RestJsonBodyMalformedMapNullKey:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -19172,7 +19172,7 @@ it.skip("RestJsonBodyMalformedMapNullValue:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -19211,7 +19211,7 @@ it("RestJsonInvalidJsonBody_case0:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -19250,7 +19250,7 @@ it("RestJsonInvalidJsonBody_case1:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -19289,7 +19289,7 @@ it("RestJsonInvalidJsonBody_case2:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -19328,7 +19328,7 @@ it("RestJsonInvalidJsonBody_case3:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -19367,7 +19367,7 @@ it("RestJsonInvalidJsonBody_case4:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -19406,7 +19406,7 @@ it("RestJsonInvalidJsonBody_case5:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -19445,7 +19445,7 @@ it("RestJsonInvalidJsonBody_case6:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -19484,7 +19484,7 @@ it("RestJsonInvalidJsonBody_case7:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -19523,7 +19523,7 @@ it("RestJsonTechnicallyValidJsonBody_case0:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -19562,7 +19562,7 @@ it("RestJsonTechnicallyValidJsonBody_case1:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -19601,7 +19601,7 @@ it("RestJsonTechnicallyValidJsonBody_case2:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -19639,7 +19639,7 @@ it("RestJsonBodyShortUnderflowOverflow_case0:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -19677,7 +19677,7 @@ it("RestJsonBodyShortUnderflowOverflow_case1:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -19715,7 +19715,7 @@ it("RestJsonBodyShortUnderflowOverflow_case2:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -19753,7 +19753,7 @@ it("RestJsonBodyShortUnderflowOverflow_case3:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -19791,7 +19791,7 @@ it("RestJsonBodyShortUnderflowOverflow_case4:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -19829,7 +19829,7 @@ it("RestJsonPathShortUnderflowOverflow_case0:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -19864,7 +19864,7 @@ it("RestJsonPathShortUnderflowOverflow_case1:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -19899,7 +19899,7 @@ it("RestJsonPathShortUnderflowOverflow_case2:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -19934,7 +19934,7 @@ it("RestJsonPathShortUnderflowOverflow_case3:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -19969,7 +19969,7 @@ it("RestJsonPathShortUnderflowOverflow_case4:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -20004,7 +20004,7 @@ it("RestJsonQueryShortUnderflowOverflow_case0:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -20041,7 +20041,7 @@ it("RestJsonQueryShortUnderflowOverflow_case1:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -20078,7 +20078,7 @@ it("RestJsonQueryShortUnderflowOverflow_case2:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -20115,7 +20115,7 @@ it("RestJsonQueryShortUnderflowOverflow_case3:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -20152,7 +20152,7 @@ it("RestJsonQueryShortUnderflowOverflow_case4:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -20189,7 +20189,7 @@ it("RestJsonHeaderShortUnderflowOverflow_case0:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -20226,7 +20226,7 @@ it("RestJsonHeaderShortUnderflowOverflow_case1:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -20263,7 +20263,7 @@ it("RestJsonHeaderShortUnderflowOverflow_case2:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -20300,7 +20300,7 @@ it("RestJsonHeaderShortUnderflowOverflow_case3:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -20337,7 +20337,7 @@ it("RestJsonHeaderShortUnderflowOverflow_case4:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -20374,7 +20374,7 @@ it("RestJsonBodyShortMalformedValueRejected_case0:MalformedRequest", async () =>
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -20412,7 +20412,7 @@ it("RestJsonBodyShortMalformedValueRejected_case1:MalformedRequest", async () =>
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -20450,7 +20450,7 @@ it("RestJsonBodyShortMalformedValueRejected_case2:MalformedRequest", async () =>
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -20488,7 +20488,7 @@ it("RestJsonBodyShortMalformedValueRejected_case3:MalformedRequest", async () =>
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -20526,7 +20526,7 @@ it("RestJsonBodyShortMalformedValueRejected_case4:MalformedRequest", async () =>
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -20564,7 +20564,7 @@ it("RestJsonBodyShortMalformedValueRejected_case5:MalformedRequest", async () =>
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -20602,7 +20602,7 @@ it("RestJsonBodyShortMalformedValueRejected_case6:MalformedRequest", async () =>
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -20640,7 +20640,7 @@ it("RestJsonBodyShortMalformedValueRejected_case7:MalformedRequest", async () =>
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -20678,7 +20678,7 @@ it("RestJsonBodyShortMalformedValueRejected_case8:MalformedRequest", async () =>
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -20716,7 +20716,7 @@ it("RestJsonBodyShortMalformedValueRejected_case9:MalformedRequest", async () =>
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -20754,7 +20754,7 @@ it("RestJsonBodyShortMalformedValueRejected_case10:MalformedRequest", async () =
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -20792,7 +20792,7 @@ it("RestJsonPathShortMalformedValueRejected_case0:MalformedRequest", async () =>
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -20827,7 +20827,7 @@ it("RestJsonPathShortMalformedValueRejected_case1:MalformedRequest", async () =>
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -20862,7 +20862,7 @@ it("RestJsonPathShortMalformedValueRejected_case2:MalformedRequest", async () =>
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -20897,7 +20897,7 @@ it("RestJsonPathShortMalformedValueRejected_case3:MalformedRequest", async () =>
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -20932,7 +20932,7 @@ it("RestJsonPathShortMalformedValueRejected_case4:MalformedRequest", async () =>
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -20967,7 +20967,7 @@ it("RestJsonPathShortMalformedValueRejected_case5:MalformedRequest", async () =>
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -21002,7 +21002,7 @@ it("RestJsonPathShortMalformedValueRejected_case6:MalformedRequest", async () =>
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -21037,7 +21037,7 @@ it("RestJsonQueryShortMalformedValueRejected_case0:MalformedRequest", async () =
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -21074,7 +21074,7 @@ it("RestJsonQueryShortMalformedValueRejected_case1:MalformedRequest", async () =
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -21111,7 +21111,7 @@ it("RestJsonQueryShortMalformedValueRejected_case2:MalformedRequest", async () =
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -21148,7 +21148,7 @@ it("RestJsonQueryShortMalformedValueRejected_case3:MalformedRequest", async () =
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -21185,7 +21185,7 @@ it("RestJsonQueryShortMalformedValueRejected_case4:MalformedRequest", async () =
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -21222,7 +21222,7 @@ it("RestJsonQueryShortMalformedValueRejected_case5:MalformedRequest", async () =
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -21259,7 +21259,7 @@ it("RestJsonQueryShortMalformedValueRejected_case6:MalformedRequest", async () =
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -21296,7 +21296,7 @@ it("RestJsonHeaderShortMalformedValueRejected_case0:MalformedRequest", async () 
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -21333,7 +21333,7 @@ it("RestJsonHeaderShortMalformedValueRejected_case1:MalformedRequest", async () 
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -21370,7 +21370,7 @@ it("RestJsonHeaderShortMalformedValueRejected_case2:MalformedRequest", async () 
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -21407,7 +21407,7 @@ it("RestJsonHeaderShortMalformedValueRejected_case3:MalformedRequest", async () 
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -21444,7 +21444,7 @@ it("RestJsonHeaderShortMalformedValueRejected_case4:MalformedRequest", async () 
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -21481,7 +21481,7 @@ it("RestJsonHeaderShortMalformedValueRejected_case5:MalformedRequest", async () 
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -21518,7 +21518,7 @@ it("RestJsonHeaderShortMalformedValueRejected_case6:MalformedRequest", async () 
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -21557,7 +21557,7 @@ it("RestJsonHeaderMalformedStringInvalidBase64MediaType_case0:MalformedRequest",
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -21597,7 +21597,7 @@ it("RestJsonHeaderMalformedStringInvalidBase64MediaType_case1:MalformedRequest",
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -21637,7 +21637,7 @@ it("RestJsonHeaderMalformedStringInvalidBase64MediaType_case2:MalformedRequest",
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -21677,7 +21677,7 @@ it("RestJsonHeaderMalformedStringInvalidBase64MediaType_case3:MalformedRequest",
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -21716,7 +21716,7 @@ it("RestJsonBodyTimestampDateTimeRejectsHttpDate_case0:MalformedRequest", async 
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -21755,7 +21755,7 @@ it("RestJsonBodyTimestampDateTimeRejectsEpochSeconds_case0:MalformedRequest", as
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -21794,7 +21794,7 @@ it("RestJsonBodyTimestampDateTimeRejectsEpochSeconds_case1:MalformedRequest", as
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -21833,7 +21833,7 @@ it("RestJsonBodyTimestampDateTimeRejectsUTCOffsets_case0:MalformedRequest", asyn
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -21872,7 +21872,7 @@ it("RestJsonBodyTimestampDateTimeRejectsDifferent8601Formats_case0:MalformedRequ
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -21911,7 +21911,7 @@ it("RestJsonBodyTimestampDateTimeRejectsDifferent8601Formats_case1:MalformedRequ
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -21950,7 +21950,7 @@ it("RestJsonBodyTimestampDateTimeRejectsDifferent8601Formats_case2:MalformedRequ
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -21989,7 +21989,7 @@ it("RestJsonBodyTimestampDateTimeRejectsDifferent8601Formats_case3:MalformedRequ
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -22028,7 +22028,7 @@ it("RestJsonBodyTimestampDateTimeRejectsDifferent8601Formats_case4:MalformedRequ
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -22067,7 +22067,7 @@ it("RestJsonBodyTimestampDateTimeRejectsDifferent8601Formats_case5:MalformedRequ
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -22106,7 +22106,7 @@ it("RestJsonBodyTimestampDateTimeRejectsDifferent8601Formats_case6:MalformedRequ
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -22145,7 +22145,7 @@ it("RestJsonBodyTimestampDateTimeRejectsDifferent8601Formats_case7:MalformedRequ
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -22184,7 +22184,7 @@ it("RestJsonBodyTimestampDateTimeRejectsDifferent8601Formats_case8:MalformedRequ
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -22223,7 +22223,7 @@ it("RestJsonBodyTimestampDateTimeRejectsDifferent8601Formats_case9:MalformedRequ
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -22262,7 +22262,7 @@ it("RestJsonBodyTimestampDateTimeRejectsDifferent8601Formats_case10:MalformedReq
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -22301,7 +22301,7 @@ it("RestJsonBodyTimestampDateTimeRejectsDifferent8601Formats_case11:MalformedReq
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -22340,7 +22340,7 @@ it("RestJsonBodyTimestampDateTimeRejectsDifferent8601Formats_case12:MalformedReq
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -22379,7 +22379,7 @@ it("RestJsonBodyTimestampDateTimeRejectsDifferent8601Formats_case13:MalformedReq
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -22418,7 +22418,7 @@ it("RestJsonBodyTimestampDateTimeRejectsDifferent8601Formats_case14:MalformedReq
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -22457,7 +22457,7 @@ it.skip("RestJsonBodyTimestampDefaultRejectsDateTime_case0:MalformedRequest", as
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -22496,7 +22496,7 @@ it.skip("RestJsonBodyTimestampDefaultRejectsDateTime_case1:MalformedRequest", as
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -22535,7 +22535,7 @@ it.skip("RestJsonBodyTimestampDefaultRejectsDateTime_case2:MalformedRequest", as
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -22574,7 +22574,7 @@ it.skip("RestJsonBodyTimestampDefaultRejectsStringifiedEpochSeconds_case0:Malfor
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -22613,7 +22613,7 @@ it.skip("RestJsonBodyTimestampDefaultRejectsStringifiedEpochSeconds_case1:Malfor
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -22651,7 +22651,7 @@ it("RestJsonBodyTimestampDefaultRejectsMalformedEpochSeconds_case0:MalformedRequ
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -22689,7 +22689,7 @@ it("RestJsonBodyTimestampDefaultRejectsMalformedEpochSeconds_case1:MalformedRequ
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -22727,7 +22727,7 @@ it("RestJsonBodyTimestampDefaultRejectsMalformedEpochSeconds_case2:MalformedRequ
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -22765,7 +22765,7 @@ it("RestJsonBodyTimestampDefaultRejectsMalformedEpochSeconds_case3:MalformedRequ
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -22803,7 +22803,7 @@ it("RestJsonBodyTimestampDefaultRejectsMalformedEpochSeconds_case4:MalformedRequ
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -22841,7 +22841,7 @@ it("RestJsonBodyTimestampDefaultRejectsMalformedEpochSeconds_case5:MalformedRequ
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -22879,7 +22879,7 @@ it("RestJsonBodyTimestampDefaultRejectsMalformedEpochSeconds_case6:MalformedRequ
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -22917,7 +22917,7 @@ it("RestJsonBodyTimestampDefaultRejectsMalformedEpochSeconds_case7:MalformedRequ
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -22955,7 +22955,7 @@ it("RestJsonBodyTimestampDefaultRejectsMalformedEpochSeconds_case8:MalformedRequ
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -22993,7 +22993,7 @@ it("RestJsonBodyTimestampDefaultRejectsMalformedEpochSeconds_case9:MalformedRequ
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -23032,7 +23032,7 @@ it("RestJsonBodyTimestampDefaultRejectsHttpDate_case0:MalformedRequest", async (
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -23071,7 +23071,7 @@ it("RestJsonBodyTimestampHttpDateRejectsDateTime_case0:MalformedRequest", async 
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -23110,7 +23110,7 @@ it("RestJsonBodyTimestampHttpDateRejectsDateTime_case1:MalformedRequest", async 
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -23149,7 +23149,7 @@ it("RestJsonBodyTimestampHttpDateRejectsDateTime_case2:MalformedRequest", async 
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -23188,7 +23188,7 @@ it("RestJsonBodyTimestampHttpDateRejectsEpoch_case0:MalformedRequest", async () 
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -23227,7 +23227,7 @@ it("RestJsonBodyTimestampHttpDateRejectsEpoch_case1:MalformedRequest", async () 
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -23266,7 +23266,7 @@ it("RestJsonHeaderTimestampDateTimeRejectsHttpDate_case0:MalformedRequest", asyn
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -23304,7 +23304,7 @@ it("RestJsonHeaderTimestampDateTimeRejectsEpochSeconds_case0:MalformedRequest", 
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -23342,7 +23342,7 @@ it("RestJsonHeaderTimestampDateTimeRejectsEpochSeconds_case1:MalformedRequest", 
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -23380,7 +23380,7 @@ it("RestJsonHeaderTimestampDateTimeRejectsDifferent8601Formats_case0:MalformedRe
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -23418,7 +23418,7 @@ it("RestJsonHeaderTimestampDateTimeRejectsDifferent8601Formats_case1:MalformedRe
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -23456,7 +23456,7 @@ it("RestJsonHeaderTimestampDateTimeRejectsDifferent8601Formats_case2:MalformedRe
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -23494,7 +23494,7 @@ it("RestJsonHeaderTimestampDateTimeRejectsDifferent8601Formats_case3:MalformedRe
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -23532,7 +23532,7 @@ it("RestJsonHeaderTimestampDateTimeRejectsDifferent8601Formats_case4:MalformedRe
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -23570,7 +23570,7 @@ it("RestJsonHeaderTimestampDateTimeRejectsDifferent8601Formats_case5:MalformedRe
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -23608,7 +23608,7 @@ it("RestJsonHeaderTimestampDateTimeRejectsDifferent8601Formats_case6:MalformedRe
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -23646,7 +23646,7 @@ it("RestJsonHeaderTimestampDateTimeRejectsDifferent8601Formats_case7:MalformedRe
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -23684,7 +23684,7 @@ it("RestJsonHeaderTimestampDateTimeRejectsDifferent8601Formats_case8:MalformedRe
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -23722,7 +23722,7 @@ it("RestJsonHeaderTimestampDateTimeRejectsDifferent8601Formats_case9:MalformedRe
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -23760,7 +23760,7 @@ it("RestJsonHeaderTimestampDateTimeRejectsDifferent8601Formats_case10:MalformedR
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -23798,7 +23798,7 @@ it("RestJsonHeaderTimestampDateTimeRejectsDifferent8601Formats_case11:MalformedR
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -23836,7 +23836,7 @@ it("RestJsonHeaderTimestampDateTimeRejectsDifferent8601Formats_case12:MalformedR
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -23874,7 +23874,7 @@ it("RestJsonHeaderTimestampDateTimeRejectsDifferent8601Formats_case13:MalformedR
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -23912,7 +23912,7 @@ it("RestJsonHeaderTimestampDateTimeRejectsDifferent8601Formats_case14:MalformedR
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -23950,7 +23950,7 @@ it("RestJsonHeaderTimestampDefaultRejectsDateTime_case0:MalformedRequest", async
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -23988,7 +23988,7 @@ it("RestJsonHeaderTimestampDefaultRejectsDateTime_case1:MalformedRequest", async
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -24026,7 +24026,7 @@ it("RestJsonHeaderTimestampDefaultRejectsDateTime_case2:MalformedRequest", async
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -24064,7 +24064,7 @@ it("RestJsonHeaderTimestampDefaultRejectsEpochSeconds_case0:MalformedRequest", a
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -24102,7 +24102,7 @@ it("RestJsonHeaderTimestampDefaultRejectsEpochSeconds_case1:MalformedRequest", a
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -24140,7 +24140,7 @@ it("RestJsonHeaderTimestampEpochRejectsDateTime_case0:MalformedRequest", async (
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -24178,7 +24178,7 @@ it("RestJsonHeaderTimestampEpochRejectsDateTime_case1:MalformedRequest", async (
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -24216,7 +24216,7 @@ it("RestJsonHeaderTimestampEpochRejectsDateTime_case2:MalformedRequest", async (
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -24254,7 +24254,7 @@ it("RestJsonHeaderTimestampEpochRejectsHttpDate_case0:MalformedRequest", async (
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -24291,7 +24291,7 @@ it("RestJsonHeaderTimestampEpochRejectsMalformedValues_case0:MalformedRequest", 
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -24328,7 +24328,7 @@ it("RestJsonHeaderTimestampEpochRejectsMalformedValues_case1:MalformedRequest", 
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -24365,7 +24365,7 @@ it("RestJsonHeaderTimestampEpochRejectsMalformedValues_case2:MalformedRequest", 
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -24402,7 +24402,7 @@ it("RestJsonHeaderTimestampEpochRejectsMalformedValues_case3:MalformedRequest", 
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -24439,7 +24439,7 @@ it("RestJsonHeaderTimestampEpochRejectsMalformedValues_case4:MalformedRequest", 
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -24476,7 +24476,7 @@ it("RestJsonHeaderTimestampEpochRejectsMalformedValues_case5:MalformedRequest", 
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -24513,7 +24513,7 @@ it("RestJsonHeaderTimestampEpochRejectsMalformedValues_case6:MalformedRequest", 
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -24551,7 +24551,7 @@ it("RestJsonPathTimestampDefaultRejectsHttpDate_case0:MalformedRequest", async (
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -24587,7 +24587,7 @@ it("RestJsonPathTimestampDefaultRejectsHttpDate_case1:MalformedRequest", async (
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -24623,7 +24623,7 @@ it("RestJsonPathTimestampDefaultRejectsEpochSeconds_case0:MalformedRequest", asy
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -24659,7 +24659,7 @@ it("RestJsonPathTimestampDefaultRejectsEpochSeconds_case1:MalformedRequest", asy
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -24695,7 +24695,7 @@ it("RestJsonPathTimestampDefaultRejectsUTCOffsets:MalformedRequest", async () =>
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -24731,7 +24731,7 @@ it("RestJsonPathTimestampDefaultRejectsDifferent8601Formats_case0:MalformedReque
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -24767,7 +24767,7 @@ it("RestJsonPathTimestampDefaultRejectsDifferent8601Formats_case1:MalformedReque
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -24803,7 +24803,7 @@ it("RestJsonPathTimestampDefaultRejectsDifferent8601Formats_case2:MalformedReque
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -24839,7 +24839,7 @@ it("RestJsonPathTimestampDefaultRejectsDifferent8601Formats_case3:MalformedReque
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -24875,7 +24875,7 @@ it("RestJsonPathTimestampDefaultRejectsDifferent8601Formats_case4:MalformedReque
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -24911,7 +24911,7 @@ it("RestJsonPathTimestampDefaultRejectsDifferent8601Formats_case5:MalformedReque
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -24947,7 +24947,7 @@ it("RestJsonPathTimestampDefaultRejectsDifferent8601Formats_case6:MalformedReque
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -24983,7 +24983,7 @@ it("RestJsonPathTimestampDefaultRejectsDifferent8601Formats_case7:MalformedReque
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -25019,7 +25019,7 @@ it("RestJsonPathTimestampDefaultRejectsDifferent8601Formats_case8:MalformedReque
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -25055,7 +25055,7 @@ it("RestJsonPathTimestampDefaultRejectsDifferent8601Formats_case9:MalformedReque
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -25091,7 +25091,7 @@ it("RestJsonPathTimestampDefaultRejectsDifferent8601Formats_case10:MalformedRequ
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -25127,7 +25127,7 @@ it("RestJsonPathTimestampDefaultRejectsDifferent8601Formats_case11:MalformedRequ
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -25163,7 +25163,7 @@ it("RestJsonPathTimestampDefaultRejectsDifferent8601Formats_case12:MalformedRequ
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -25199,7 +25199,7 @@ it("RestJsonPathTimestampDefaultRejectsDifferent8601Formats_case13:MalformedRequ
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -25235,7 +25235,7 @@ it("RestJsonPathTimestampDefaultRejectsDifferent8601Formats_case14:MalformedRequ
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -25271,7 +25271,7 @@ it("RestJsonPathTimestampEpochRejectsDateTime_case0:MalformedRequest", async () 
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -25307,7 +25307,7 @@ it("RestJsonPathTimestampEpochRejectsDateTime_case1:MalformedRequest", async () 
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -25343,7 +25343,7 @@ it("RestJsonPathTimestampEpochRejectsDateTime_case2:MalformedRequest", async () 
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -25379,7 +25379,7 @@ it("RestJsonPathTimestampEpochRejectsHttpDate_case0:MalformedRequest", async () 
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -25415,7 +25415,7 @@ it("RestJsonPathTimestampEpochRejectsHttpDate_case1:MalformedRequest", async () 
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -25450,7 +25450,7 @@ it("RestJsonPathTimestampEpochRejectsMalformedValues_case0:MalformedRequest", as
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -25485,7 +25485,7 @@ it("RestJsonPathTimestampEpochRejectsMalformedValues_case1:MalformedRequest", as
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -25520,7 +25520,7 @@ it("RestJsonPathTimestampEpochRejectsMalformedValues_case2:MalformedRequest", as
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -25555,7 +25555,7 @@ it("RestJsonPathTimestampEpochRejectsMalformedValues_case3:MalformedRequest", as
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -25590,7 +25590,7 @@ it("RestJsonPathTimestampEpochRejectsMalformedValues_case4:MalformedRequest", as
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -25625,7 +25625,7 @@ it("RestJsonPathTimestampEpochRejectsMalformedValues_case5:MalformedRequest", as
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -25660,7 +25660,7 @@ it("RestJsonPathTimestampEpochRejectsMalformedValues_case6:MalformedRequest", as
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -25696,7 +25696,7 @@ it("RestJsonPathTimestampHttpDateRejectsDateTime_case0:MalformedRequest", async 
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -25732,7 +25732,7 @@ it("RestJsonPathTimestampHttpDateRejectsDateTime_case1:MalformedRequest", async 
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -25768,7 +25768,7 @@ it("RestJsonPathTimestampHttpDateRejectsDateTime_case2:MalformedRequest", async 
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -25804,7 +25804,7 @@ it("RestJsonPathTimestampHttpDateRejectsEpochSeconds_case0:MalformedRequest", as
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -25840,7 +25840,7 @@ it("RestJsonPathTimestampHttpDateRejectsEpochSeconds_case1:MalformedRequest", as
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -25876,7 +25876,7 @@ it("RestJsonQueryTimestampDefaultRejectsHttpDate_case0:MalformedRequest", async 
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -25914,7 +25914,7 @@ it("RestJsonQueryTimestampDefaultRejectsHttpDate_case1:MalformedRequest", async 
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -25952,7 +25952,7 @@ it("RestJsonQueryTimestampDefaultRejectsEpochSeconds_case0:MalformedRequest", as
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -25990,7 +25990,7 @@ it("RestJsonQueryTimestampDefaultRejectsEpochSeconds_case1:MalformedRequest", as
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -26028,7 +26028,7 @@ it("RestJsonQueryTimestampDefaultRejectsUTCOffsets:MalformedRequest", async () =
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -26066,7 +26066,7 @@ it("RestJsonQueryTimestampDefaultRejectsDifferent8601Formats_case0:MalformedRequ
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -26104,7 +26104,7 @@ it("RestJsonQueryTimestampDefaultRejectsDifferent8601Formats_case1:MalformedRequ
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -26142,7 +26142,7 @@ it("RestJsonQueryTimestampDefaultRejectsDifferent8601Formats_case2:MalformedRequ
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -26180,7 +26180,7 @@ it("RestJsonQueryTimestampDefaultRejectsDifferent8601Formats_case3:MalformedRequ
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -26218,7 +26218,7 @@ it("RestJsonQueryTimestampDefaultRejectsDifferent8601Formats_case4:MalformedRequ
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -26256,7 +26256,7 @@ it("RestJsonQueryTimestampDefaultRejectsDifferent8601Formats_case5:MalformedRequ
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -26294,7 +26294,7 @@ it("RestJsonQueryTimestampDefaultRejectsDifferent8601Formats_case6:MalformedRequ
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -26332,7 +26332,7 @@ it("RestJsonQueryTimestampDefaultRejectsDifferent8601Formats_case7:MalformedRequ
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -26370,7 +26370,7 @@ it("RestJsonQueryTimestampDefaultRejectsDifferent8601Formats_case8:MalformedRequ
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -26408,7 +26408,7 @@ it("RestJsonQueryTimestampDefaultRejectsDifferent8601Formats_case9:MalformedRequ
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -26446,7 +26446,7 @@ it("RestJsonQueryTimestampDefaultRejectsDifferent8601Formats_case10:MalformedReq
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -26484,7 +26484,7 @@ it("RestJsonQueryTimestampDefaultRejectsDifferent8601Formats_case11:MalformedReq
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -26522,7 +26522,7 @@ it("RestJsonQueryTimestampDefaultRejectsDifferent8601Formats_case12:MalformedReq
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -26560,7 +26560,7 @@ it("RestJsonQueryTimestampDefaultRejectsDifferent8601Formats_case13:MalformedReq
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -26598,7 +26598,7 @@ it("RestJsonQueryTimestampDefaultRejectsDifferent8601Formats_case14:MalformedReq
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -26636,7 +26636,7 @@ it("RestJsonQueryTimestampEpochRejectsDateTime_case0:MalformedRequest", async ()
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -26674,7 +26674,7 @@ it("RestJsonQueryTimestampEpochRejectsDateTime_case1:MalformedRequest", async ()
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -26712,7 +26712,7 @@ it("RestJsonQueryTimestampEpochRejectsDateTime_case2:MalformedRequest", async ()
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -26750,7 +26750,7 @@ it("RestJsonQueryTimestampEpochRejectsHttpDate_case0:MalformedRequest", async ()
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -26788,7 +26788,7 @@ it("RestJsonQueryTimestampEpochRejectsHttpDate_case1:MalformedRequest", async ()
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -26825,7 +26825,7 @@ it("RestJsonQueryTimestampEpochRejectsMalformedValues_case0:MalformedRequest", a
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -26862,7 +26862,7 @@ it("RestJsonQueryTimestampEpochRejectsMalformedValues_case1:MalformedRequest", a
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -26899,7 +26899,7 @@ it("RestJsonQueryTimestampEpochRejectsMalformedValues_case2:MalformedRequest", a
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -26936,7 +26936,7 @@ it("RestJsonQueryTimestampEpochRejectsMalformedValues_case3:MalformedRequest", a
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -26973,7 +26973,7 @@ it("RestJsonQueryTimestampEpochRejectsMalformedValues_case4:MalformedRequest", a
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -27010,7 +27010,7 @@ it("RestJsonQueryTimestampEpochRejectsMalformedValues_case5:MalformedRequest", a
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -27047,7 +27047,7 @@ it("RestJsonQueryTimestampEpochRejectsMalformedValues_case6:MalformedRequest", a
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -27085,7 +27085,7 @@ it("RestJsonQueryTimestampHttpDateRejectsDateTime_case0:MalformedRequest", async
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -27123,7 +27123,7 @@ it("RestJsonQueryTimestampHttpDateRejectsDateTime_case1:MalformedRequest", async
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -27161,7 +27161,7 @@ it("RestJsonQueryTimestampHttpDateRejectsDateTime_case2:MalformedRequest", async
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -27199,7 +27199,7 @@ it("RestJsonQueryTimestampHttpDateRejectsEpochSeconds_case0:MalformedRequest", a
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -27237,7 +27237,7 @@ it("RestJsonQueryTimestampHttpDateRejectsEpochSeconds_case1:MalformedRequest", a
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -27275,7 +27275,7 @@ it("RestJsonMalformedUnionMultipleFieldsSet:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -27314,7 +27314,7 @@ it("RestJsonMalformedUnionKnownAndUnknownFieldsSet:MalformedRequest", async () =
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -27353,7 +27353,7 @@ it("RestJsonMalformedUnionNoFieldsSet:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -27392,7 +27392,7 @@ it("RestJsonMalformedUnionValueIsArray:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -27431,7 +27431,7 @@ it.skip("RestJsonMalformedUnionUnknownMember:MalformedRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -27467,7 +27467,7 @@ it("MediaTypeHeaderInputBase64:ServerRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "GET",
@@ -27521,7 +27521,7 @@ it("MediaTypeHeaderOutputBase64:ServerResponse", async () => {
   }
   const request = new HttpRequest({ method: "POST", hostname: "example.com" });
   const serFn: (
-    op: RestJsonServiceOperations
+    op: RestJsonServiceOperations,
   ) => __OperationSerializer<RestJsonService<{}>, RestJsonServiceOperations, __ServiceException> = (op) => {
     return new TestSerializer();
   };
@@ -27535,7 +27535,7 @@ it("MediaTypeHeaderOutputBase64:ServerResponse", async () => {
         throw f;
       }
       return undefined;
-    }
+    },
   );
   const r = await handler.handle(request, {});
 
@@ -27563,7 +27563,7 @@ it("RestJsonNoInputAndNoOutput:ServerRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -27596,7 +27596,7 @@ it("RestJsonNoInputAllowsAccept:ServerRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -27639,7 +27639,7 @@ it("RestJsonNoInputAndNoOutput:ServerResponse", async () => {
   }
   const request = new HttpRequest({ method: "POST", hostname: "example.com" });
   const serFn: (
-    op: RestJsonServiceOperations
+    op: RestJsonServiceOperations,
   ) => __OperationSerializer<RestJsonService<{}>, RestJsonServiceOperations, __ServiceException> = (op) => {
     return new TestSerializer();
   };
@@ -27653,7 +27653,7 @@ it("RestJsonNoInputAndNoOutput:ServerResponse", async () => {
         throw f;
       }
       return undefined;
-    }
+    },
   );
   const r = await handler.handle(request, {});
 
@@ -27680,7 +27680,7 @@ it("RestJsonNoInputAndOutput:ServerRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -27713,7 +27713,7 @@ it("RestJsonNoInputAndOutputAllowsAccept:ServerRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -27756,7 +27756,7 @@ it("RestJsonNoInputAndOutputWithJson:ServerResponse", async () => {
   }
   const request = new HttpRequest({ method: "POST", hostname: "example.com" });
   const serFn: (
-    op: RestJsonServiceOperations
+    op: RestJsonServiceOperations,
   ) => __OperationSerializer<RestJsonService<{}>, RestJsonServiceOperations, __ServiceException> = (op) => {
     return new TestSerializer();
   };
@@ -27770,7 +27770,7 @@ it("RestJsonNoInputAndOutputWithJson:ServerResponse", async () => {
         throw f;
       }
       return undefined;
-    }
+    },
   );
   const r = await handler.handle(request, {});
 
@@ -27816,7 +27816,7 @@ it("RestJsonNullAndEmptyHeaders:ServerResponse", async () => {
   }
   const request = new HttpRequest({ method: "POST", hostname: "example.com" });
   const serFn: (
-    op: RestJsonServiceOperations
+    op: RestJsonServiceOperations,
   ) => __OperationSerializer<RestJsonService<{}>, RestJsonServiceOperations, __ServiceException> = (op) => {
     return new TestSerializer();
   };
@@ -27830,7 +27830,7 @@ it("RestJsonNullAndEmptyHeaders:ServerResponse", async () => {
         throw f;
       }
       return undefined;
-    }
+    },
   );
   const r = await handler.handle(request, {});
 
@@ -27857,7 +27857,7 @@ it("RestJsonSerializesEmptyQueryValue:ServerRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "GET",
@@ -27901,7 +27901,7 @@ it("RestJsonServersAcceptStaticQueryParamAsEmptyString:ServerRequest", async () 
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "GET",
@@ -27945,7 +27945,7 @@ it("RestJsonInputUnionWithUnitMember:ServerRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -28003,7 +28003,7 @@ it("RestJsonOutputUnionWithUnitMember:ServerResponse", async () => {
   }
   const request = new HttpRequest({ method: "POST", hostname: "example.com" });
   const serFn: (
-    op: RestJsonServiceOperations
+    op: RestJsonServiceOperations,
   ) => __OperationSerializer<RestJsonService<{}>, RestJsonServiceOperations, __ServiceException> = (op) => {
     return new TestSerializer();
   };
@@ -28017,7 +28017,7 @@ it("RestJsonOutputUnionWithUnitMember:ServerResponse", async () => {
         throw f;
       }
       return undefined;
-    }
+    },
   );
   const r = await handler.handle(request, {});
 
@@ -28053,7 +28053,7 @@ it("PostUnionWithJsonNameRequest1:ServerRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -28099,7 +28099,7 @@ it("PostUnionWithJsonNameRequest2:ServerRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -28145,7 +28145,7 @@ it("PostUnionWithJsonNameRequest3:ServerRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -28203,7 +28203,7 @@ it("PostUnionWithJsonNameResponse1:ServerResponse", async () => {
   }
   const request = new HttpRequest({ method: "POST", hostname: "example.com" });
   const serFn: (
-    op: RestJsonServiceOperations
+    op: RestJsonServiceOperations,
   ) => __OperationSerializer<RestJsonService<{}>, RestJsonServiceOperations, __ServiceException> = (op) => {
     return new TestSerializer();
   };
@@ -28217,7 +28217,7 @@ it("PostUnionWithJsonNameResponse1:ServerResponse", async () => {
         throw f;
       }
       return undefined;
-    }
+    },
   );
   const r = await handler.handle(request, {});
 
@@ -28265,7 +28265,7 @@ it("PostUnionWithJsonNameResponse2:ServerResponse", async () => {
   }
   const request = new HttpRequest({ method: "POST", hostname: "example.com" });
   const serFn: (
-    op: RestJsonServiceOperations
+    op: RestJsonServiceOperations,
   ) => __OperationSerializer<RestJsonService<{}>, RestJsonServiceOperations, __ServiceException> = (op) => {
     return new TestSerializer();
   };
@@ -28279,7 +28279,7 @@ it("PostUnionWithJsonNameResponse2:ServerResponse", async () => {
         throw f;
       }
       return undefined;
-    }
+    },
   );
   const r = await handler.handle(request, {});
 
@@ -28327,7 +28327,7 @@ it("PostUnionWithJsonNameResponse3:ServerResponse", async () => {
   }
   const request = new HttpRequest({ method: "POST", hostname: "example.com" });
   const serFn: (
-    op: RestJsonServiceOperations
+    op: RestJsonServiceOperations,
   ) => __OperationSerializer<RestJsonService<{}>, RestJsonServiceOperations, __ServiceException> = (op) => {
     return new TestSerializer();
   };
@@ -28341,7 +28341,7 @@ it("PostUnionWithJsonNameResponse3:ServerResponse", async () => {
         throw f;
       }
       return undefined;
-    }
+    },
   );
   const r = await handler.handle(request, {});
 
@@ -28377,7 +28377,7 @@ it.skip("SDKAppliedContentEncoding_restJson1:ServerRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -28423,7 +28423,7 @@ it.skip("SDKAppendedGzipAfterProvidedEncoding_restJson1:ServerRequest", async ()
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -28468,7 +28468,7 @@ it("RestJsonServersQueryParamsStringListMap:ServerRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -28519,7 +28519,7 @@ it("RestJsonServersPutAllQueryParamsInMap:ServerRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -28570,7 +28570,7 @@ it("RestJsonRecursiveShapes:ServerRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "PUT",
@@ -28654,7 +28654,7 @@ it("RestJsonRecursiveShapes:ServerResponse", async () => {
   }
   const request = new HttpRequest({ method: "POST", hostname: "example.com" });
   const serFn: (
-    op: RestJsonServiceOperations
+    op: RestJsonServiceOperations,
   ) => __OperationSerializer<RestJsonService<{}>, RestJsonServiceOperations, __ServiceException> = (op) => {
     return new TestSerializer();
   };
@@ -28668,7 +28668,7 @@ it("RestJsonRecursiveShapes:ServerResponse", async () => {
         throw f;
       }
       return undefined;
-    }
+    },
   );
   const r = await handler.handle(request, {});
 
@@ -28713,7 +28713,7 @@ it("RestJsonSimpleScalarProperties:ServerRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "PUT",
@@ -28778,7 +28778,7 @@ it("RestJsonServersDontSerializeNullStructureValues:ServerRequest", async () => 
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "PUT",
@@ -28812,7 +28812,7 @@ it("RestJsonSupportsNaNFloatInputs:ServerRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "PUT",
@@ -28858,7 +28858,7 @@ it("RestJsonSupportsInfinityFloatInputs:ServerRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "PUT",
@@ -28904,7 +28904,7 @@ it("RestJsonSupportsNegativeInfinityFloatInputs:ServerRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "PUT",
@@ -28978,7 +28978,7 @@ it("RestJsonSimpleScalarProperties:ServerResponse", async () => {
   }
   const request = new HttpRequest({ method: "POST", hostname: "example.com" });
   const serFn: (
-    op: RestJsonServiceOperations
+    op: RestJsonServiceOperations,
   ) => __OperationSerializer<RestJsonService<{}>, RestJsonServiceOperations, __ServiceException> = (op) => {
     return new TestSerializer();
   };
@@ -28992,7 +28992,7 @@ it("RestJsonSimpleScalarProperties:ServerResponse", async () => {
         throw f;
       }
       return undefined;
-    }
+    },
   );
   const r = await handler.handle(request, {});
 
@@ -29046,7 +29046,7 @@ it("RestJsonServersDontSerializeNullStructureValues:ServerResponse", async () =>
   }
   const request = new HttpRequest({ method: "POST", hostname: "example.com" });
   const serFn: (
-    op: RestJsonServiceOperations
+    op: RestJsonServiceOperations,
   ) => __OperationSerializer<RestJsonService<{}>, RestJsonServiceOperations, __ServiceException> = (op) => {
     return new TestSerializer();
   };
@@ -29060,7 +29060,7 @@ it("RestJsonServersDontSerializeNullStructureValues:ServerResponse", async () =>
         throw f;
       }
       return undefined;
-    }
+    },
   );
   const r = await handler.handle(request, {});
 
@@ -29104,7 +29104,7 @@ it("RestJsonSupportsNaNFloatInputs:ServerResponse", async () => {
   }
   const request = new HttpRequest({ method: "POST", hostname: "example.com" });
   const serFn: (
-    op: RestJsonServiceOperations
+    op: RestJsonServiceOperations,
   ) => __OperationSerializer<RestJsonService<{}>, RestJsonServiceOperations, __ServiceException> = (op) => {
     return new TestSerializer();
   };
@@ -29118,7 +29118,7 @@ it("RestJsonSupportsNaNFloatInputs:ServerResponse", async () => {
         throw f;
       }
       return undefined;
-    }
+    },
   );
   const r = await handler.handle(request, {});
 
@@ -29165,7 +29165,7 @@ it("RestJsonSupportsInfinityFloatInputs:ServerResponse", async () => {
   }
   const request = new HttpRequest({ method: "POST", hostname: "example.com" });
   const serFn: (
-    op: RestJsonServiceOperations
+    op: RestJsonServiceOperations,
   ) => __OperationSerializer<RestJsonService<{}>, RestJsonServiceOperations, __ServiceException> = (op) => {
     return new TestSerializer();
   };
@@ -29179,7 +29179,7 @@ it("RestJsonSupportsInfinityFloatInputs:ServerResponse", async () => {
         throw f;
       }
       return undefined;
-    }
+    },
   );
   const r = await handler.handle(request, {});
 
@@ -29226,7 +29226,7 @@ it("RestJsonSupportsNegativeInfinityFloatInputs:ServerResponse", async () => {
   }
   const request = new HttpRequest({ method: "POST", hostname: "example.com" });
   const serFn: (
-    op: RestJsonServiceOperations
+    op: RestJsonServiceOperations,
   ) => __OperationSerializer<RestJsonService<{}>, RestJsonServiceOperations, __ServiceException> = (op) => {
     return new TestSerializer();
   };
@@ -29240,7 +29240,7 @@ it("RestJsonSupportsNegativeInfinityFloatInputs:ServerResponse", async () => {
         throw f;
       }
       return undefined;
-    }
+    },
   );
   const r = await handler.handle(request, {});
 
@@ -29275,7 +29275,7 @@ it("RestJsonSparseListsSerializeNull:ServerRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "PUT",
@@ -29329,7 +29329,7 @@ it("RestJsonSparseListsSerializeNull:ServerResponse", async () => {
   }
   const request = new HttpRequest({ method: "POST", hostname: "example.com" });
   const serFn: (
-    op: RestJsonServiceOperations
+    op: RestJsonServiceOperations,
   ) => __OperationSerializer<RestJsonService<{}>, RestJsonServiceOperations, __ServiceException> = (op) => {
     return new TestSerializer();
   };
@@ -29343,7 +29343,7 @@ it("RestJsonSparseListsSerializeNull:ServerResponse", async () => {
         throw f;
       }
       return undefined;
-    }
+    },
   );
   const r = await handler.handle(request, {});
 
@@ -29380,7 +29380,7 @@ it("RestJsonSparseJsonMaps:ServerRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -29434,7 +29434,7 @@ it("RestJsonSerializesSparseNullMapValues:ServerRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -29494,7 +29494,7 @@ it("RestJsonSerializesZeroValuesInSparseMaps:ServerRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -29546,7 +29546,7 @@ it("RestJsonSerializesSparseSetMap:ServerRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -29594,7 +29594,7 @@ it("RestJsonSerializesSparseSetMapAndRetainsNull:ServerRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -29664,7 +29664,7 @@ it("RestJsonSparseJsonMaps:ServerResponse", async () => {
   }
   const request = new HttpRequest({ method: "POST", hostname: "example.com" });
   const serFn: (
-    op: RestJsonServiceOperations
+    op: RestJsonServiceOperations,
   ) => __OperationSerializer<RestJsonService<{}>, RestJsonServiceOperations, __ServiceException> = (op) => {
     return new TestSerializer();
   };
@@ -29678,7 +29678,7 @@ it("RestJsonSparseJsonMaps:ServerResponse", async () => {
         throw f;
       }
       return undefined;
-    }
+    },
   );
   const r = await handler.handle(request, {});
 
@@ -29743,7 +29743,7 @@ it("RestJsonDeserializesSparseNullMapValues:ServerResponse", async () => {
   }
   const request = new HttpRequest({ method: "POST", hostname: "example.com" });
   const serFn: (
-    op: RestJsonServiceOperations
+    op: RestJsonServiceOperations,
   ) => __OperationSerializer<RestJsonService<{}>, RestJsonServiceOperations, __ServiceException> = (op) => {
     return new TestSerializer();
   };
@@ -29757,7 +29757,7 @@ it("RestJsonDeserializesSparseNullMapValues:ServerResponse", async () => {
         throw f;
       }
       return undefined;
-    }
+    },
   );
   const r = await handler.handle(request, {});
 
@@ -29818,7 +29818,7 @@ it("RestJsonDeserializesZeroValuesInSparseMaps:ServerResponse", async () => {
   }
   const request = new HttpRequest({ method: "POST", hostname: "example.com" });
   const serFn: (
-    op: RestJsonServiceOperations
+    op: RestJsonServiceOperations,
   ) => __OperationSerializer<RestJsonService<{}>, RestJsonServiceOperations, __ServiceException> = (op) => {
     return new TestSerializer();
   };
@@ -29832,7 +29832,7 @@ it("RestJsonDeserializesZeroValuesInSparseMaps:ServerResponse", async () => {
         throw f;
       }
       return undefined;
-    }
+    },
   );
   const r = await handler.handle(request, {});
 
@@ -29885,7 +29885,7 @@ it("RestJsonDeserializesSparseSetMap:ServerResponse", async () => {
   }
   const request = new HttpRequest({ method: "POST", hostname: "example.com" });
   const serFn: (
-    op: RestJsonServiceOperations
+    op: RestJsonServiceOperations,
   ) => __OperationSerializer<RestJsonService<{}>, RestJsonServiceOperations, __ServiceException> = (op) => {
     return new TestSerializer();
   };
@@ -29899,7 +29899,7 @@ it("RestJsonDeserializesSparseSetMap:ServerResponse", async () => {
         throw f;
       }
       return undefined;
-    }
+    },
   );
   const r = await handler.handle(request, {});
 
@@ -29952,7 +29952,7 @@ it("RestJsonDeserializesSparseSetMapAndRetainsNull:ServerResponse", async () => 
   }
   const request = new HttpRequest({ method: "POST", hostname: "example.com" });
   const serFn: (
-    op: RestJsonServiceOperations
+    op: RestJsonServiceOperations,
   ) => __OperationSerializer<RestJsonService<{}>, RestJsonServiceOperations, __ServiceException> = (op) => {
     return new TestSerializer();
   };
@@ -29966,7 +29966,7 @@ it("RestJsonDeserializesSparseSetMapAndRetainsNull:ServerResponse", async () => 
         throw f;
       }
       return undefined;
-    }
+    },
   );
   const r = await handler.handle(request, {});
 
@@ -30004,7 +30004,7 @@ it("RestJsonStreamingTraitsWithBlob:ServerRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -30056,7 +30056,7 @@ it("RestJsonStreamingTraitsWithNoBlobBody:ServerRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -30117,7 +30117,7 @@ it("RestJsonStreamingTraitsWithBlob:ServerResponse", async () => {
   }
   const request = new HttpRequest({ method: "POST", hostname: "example.com" });
   const serFn: (
-    op: RestJsonServiceOperations
+    op: RestJsonServiceOperations,
   ) => __OperationSerializer<RestJsonService<{}>, RestJsonServiceOperations, __ServiceException> = (op) => {
     return new TestSerializer();
   };
@@ -30131,7 +30131,7 @@ it("RestJsonStreamingTraitsWithBlob:ServerResponse", async () => {
         throw f;
       }
       return undefined;
-    }
+    },
   );
   const r = await handler.handle(request, {});
 
@@ -30175,7 +30175,7 @@ it("RestJsonStreamingTraitsWithNoBlobBody:ServerResponse", async () => {
   }
   const request = new HttpRequest({ method: "POST", hostname: "example.com" });
   const serFn: (
-    op: RestJsonServiceOperations
+    op: RestJsonServiceOperations,
   ) => __OperationSerializer<RestJsonService<{}>, RestJsonServiceOperations, __ServiceException> = (op) => {
     return new TestSerializer();
   };
@@ -30189,7 +30189,7 @@ it("RestJsonStreamingTraitsWithNoBlobBody:ServerResponse", async () => {
         throw f;
       }
       return undefined;
-    }
+    },
   );
   const r = await handler.handle(request, {});
 
@@ -30217,7 +30217,7 @@ it("RestJsonStreamingTraitsRequireLengthWithBlob:ServerRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -30269,7 +30269,7 @@ it("RestJsonStreamingTraitsRequireLengthWithNoBlobBody:ServerRequest", async () 
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -30318,7 +30318,7 @@ it("RestJsonStreamingTraitsWithMediaTypeWithBlob:ServerRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -30382,7 +30382,7 @@ it("RestJsonStreamingTraitsWithMediaTypeWithBlob:ServerResponse", async () => {
   }
   const request = new HttpRequest({ method: "POST", hostname: "example.com" });
   const serFn: (
-    op: RestJsonServiceOperations
+    op: RestJsonServiceOperations,
   ) => __OperationSerializer<RestJsonService<{}>, RestJsonServiceOperations, __ServiceException> = (op) => {
     return new TestSerializer();
   };
@@ -30396,7 +30396,7 @@ it("RestJsonStreamingTraitsWithMediaTypeWithBlob:ServerResponse", async () => {
         throw f;
       }
       return undefined;
-    }
+    },
   );
   const r = await handler.handle(request, {});
 
@@ -30430,7 +30430,7 @@ it("RestJsonTestBodyStructure:ServerRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -30476,7 +30476,7 @@ it("RestJsonHttpWithEmptyBody:ServerRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -30510,7 +30510,7 @@ it("RestJsonHttpWithNoModeledBody:ServerRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "GET",
@@ -30542,7 +30542,7 @@ it("RestJsonHttpWithHeaderMemberNoModeledBody:ServerRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "GET",
@@ -30586,7 +30586,7 @@ it("RestJsonHttpWithEmptyBlobPayload:ServerRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -30620,7 +30620,7 @@ it("RestJsonTestPayloadBlob:ServerRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -30666,7 +30666,7 @@ it("RestJsonHttpWithEmptyStructurePayload:ServerRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -30700,7 +30700,7 @@ it("RestJsonTestPayloadStructure:ServerRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -30746,7 +30746,7 @@ it("RestJsonHttpWithHeadersButNoPayload:ServerRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -30791,7 +30791,7 @@ it("RestJsonTimestampFormatHeaders:ServerRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -30875,7 +30875,7 @@ it("RestJsonTimestampFormatHeaders:ServerResponse", async () => {
   }
   const request = new HttpRequest({ method: "POST", hostname: "example.com" });
   const serFn: (
-    op: RestJsonServiceOperations
+    op: RestJsonServiceOperations,
   ) => __OperationSerializer<RestJsonService<{}>, RestJsonServiceOperations, __ServiceException> = (op) => {
     return new TestSerializer();
   };
@@ -30889,7 +30889,7 @@ it("RestJsonTimestampFormatHeaders:ServerResponse", async () => {
         throw f;
       }
       return undefined;
-    }
+    },
   );
   const r = await handler.handle(request, {});
 
@@ -30929,7 +30929,7 @@ it("RestJsonUnitInputAndOutput:ServerRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -30962,7 +30962,7 @@ it("RestJsonUnitInputAllowsAccept:ServerRequest", async () => {
         throw failures;
       }
       return undefined;
-    }
+    },
   );
   const request = new HttpRequest({
     method: "POST",
@@ -31005,7 +31005,7 @@ it("RestJsonUnitInputAndOutputNoOutput:ServerResponse", async () => {
   }
   const request = new HttpRequest({ method: "POST", hostname: "example.com" });
   const serFn: (
-    op: RestJsonServiceOperations
+    op: RestJsonServiceOperations,
   ) => __OperationSerializer<RestJsonService<{}>, RestJsonServiceOperations, __ServiceException> = (op) => {
     return new TestSerializer();
   };
@@ -31019,7 +31019,7 @@ it("RestJsonUnitInputAndOutputNoOutput:ServerResponse", async () => {
         throw f;
       }
       return undefined;
-    }
+    },
   );
   const r = await handler.handle(request, {});
 
@@ -31046,7 +31046,7 @@ const compareEquivalentJsonBodies = (expectedBody: string, generatedBody: string
 const compareEquivalentOctetStreamBodies = (
   utf8Encoder: __Encoder,
   expectedBody: string,
-  generatedBody: Uint8Array
+  generatedBody: Uint8Array,
 ): Object => {
   const expectedParts = { Value: expectedBody };
   const generatedParts = { Value: utf8Encoder(generatedBody) };
@@ -31061,7 +31061,7 @@ const compareEquivalentOctetStreamBodies = (
 const compareEquivalentUnknownTypeBodies = (
   utf8Encoder: __Encoder,
   expectedBody: string,
-  generatedBody: string | Uint8Array
+  generatedBody: string | Uint8Array,
 ): Object => {
   const expectedParts = { Value: expectedBody };
   const generatedParts = {

@@ -115,7 +115,7 @@ describe(validateChecksumFromResponse.name, () => {
     } catch (error) {
       expect(error.message).toMatch(
         `Checksum mismatch: expected "${mockChecksum}" but received "${incorrectChecksum}"` +
-          ` in response header "${mockResponseAlgorithms[0]}".`
+          ` in response header "${mockResponseAlgorithms[0]}".`,
       );
     }
     expect(getChecksumAlgorithmListForResponse).toHaveBeenCalledWith(mockResponseAlgorithms);

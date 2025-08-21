@@ -223,7 +223,7 @@ import { RestXmlProtocolServiceException as __BaseException } from "../models/Re
  */
 export const se_AllQueryStringTypesCommand = async (
   input: AllQueryStringTypesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -285,7 +285,7 @@ export const se_AllQueryStringTypesCommand = async (
  */
 export const se_BodyWithXmlNameCommand = async (
   input: BodyWithXmlNameCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -308,7 +308,7 @@ export const se_BodyWithXmlNameCommand = async (
  */
 export const se_ConstantAndVariableQueryStringCommand = async (
   input: ConstantAndVariableQueryStringCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -328,7 +328,7 @@ export const se_ConstantAndVariableQueryStringCommand = async (
  */
 export const se_ConstantQueryStringCommand = async (
   input: ConstantQueryStringCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -348,7 +348,7 @@ export const se_ConstantQueryStringCommand = async (
  */
 export const se_DatetimeOffsetsCommand = async (
   input: DatetimeOffsetsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -366,7 +366,7 @@ export const se_DatetimeOffsetsCommand = async (
  */
 export const se_EmptyInputAndEmptyOutputCommand = async (
   input: EmptyInputAndEmptyOutputCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -384,7 +384,7 @@ export const se_EmptyInputAndEmptyOutputCommand = async (
  */
 export const se_EndpointOperationCommand = async (
   input: EndpointOperationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -410,7 +410,7 @@ export const se_EndpointOperationCommand = async (
  */
 export const se_EndpointWithHostLabelHeaderOperationCommand = async (
   input: EndpointWithHostLabelHeaderOperationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -439,7 +439,7 @@ export const se_EndpointWithHostLabelHeaderOperationCommand = async (
  */
 export const se_EndpointWithHostLabelOperationCommand = async (
   input: EndpointWithHostLabelOperationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -474,7 +474,7 @@ export const se_EndpointWithHostLabelOperationCommand = async (
  */
 export const se_FlattenedXmlMapCommand = async (
   input: FlattenedXmlMapCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -495,7 +495,7 @@ export const se_FlattenedXmlMapCommand = async (
  */
 export const se_FlattenedXmlMapWithXmlNameCommand = async (
   input: FlattenedXmlMapWithXmlNameCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -516,7 +516,7 @@ export const se_FlattenedXmlMapWithXmlNameCommand = async (
  */
 export const se_FlattenedXmlMapWithXmlNamespaceCommand = async (
   input: FlattenedXmlMapWithXmlNamespaceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -534,7 +534,7 @@ export const se_FlattenedXmlMapWithXmlNamespaceCommand = async (
  */
 export const se_FractionalSecondsCommand = async (
   input: FractionalSecondsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -552,7 +552,7 @@ export const se_FractionalSecondsCommand = async (
  */
 export const se_GreetingWithErrorsCommand = async (
   input: GreetingWithErrorsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -570,7 +570,7 @@ export const se_GreetingWithErrorsCommand = async (
  */
 export const se_HttpEnumPayloadCommand = async (
   input: HttpEnumPayloadCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -592,7 +592,7 @@ export const se_HttpEnumPayloadCommand = async (
  */
 export const se_HttpPayloadTraitsCommand = async (
   input: HttpPayloadTraitsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -615,7 +615,7 @@ export const se_HttpPayloadTraitsCommand = async (
  */
 export const se_HttpPayloadTraitsWithMediaTypeCommand = async (
   input: HttpPayloadTraitsWithMediaTypeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -638,7 +638,7 @@ export const se_HttpPayloadTraitsWithMediaTypeCommand = async (
  */
 export const se_HttpPayloadWithMemberXmlNameCommand = async (
   input: HttpPayloadWithMemberXmlNameCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -662,7 +662,7 @@ export const se_HttpPayloadWithMemberXmlNameCommand = async (
  */
 export const se_HttpPayloadWithStructureCommand = async (
   input: HttpPayloadWithStructureCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -685,7 +685,7 @@ export const se_HttpPayloadWithStructureCommand = async (
  */
 export const se_HttpPayloadWithUnionCommand = async (
   input: HttpPayloadWithUnionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -708,7 +708,7 @@ export const se_HttpPayloadWithUnionCommand = async (
  */
 export const se_HttpPayloadWithXmlNameCommand = async (
   input: HttpPayloadWithXmlNameCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -731,7 +731,7 @@ export const se_HttpPayloadWithXmlNameCommand = async (
  */
 export const se_HttpPayloadWithXmlNamespaceCommand = async (
   input: HttpPayloadWithXmlNamespaceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -755,7 +755,7 @@ export const se_HttpPayloadWithXmlNamespaceCommand = async (
  */
 export const se_HttpPayloadWithXmlNamespaceAndPrefixCommand = async (
   input: HttpPayloadWithXmlNamespaceAndPrefixCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -779,7 +779,7 @@ export const se_HttpPayloadWithXmlNamespaceAndPrefixCommand = async (
  */
 export const se_HttpPrefixHeadersCommand = async (
   input: HttpPrefixHeadersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -801,7 +801,7 @@ export const se_HttpPrefixHeadersCommand = async (
  */
 export const se_HttpRequestWithFloatLabelsCommand = async (
   input: HttpRequestWithFloatLabelsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -818,7 +818,7 @@ export const se_HttpRequestWithFloatLabelsCommand = async (
  */
 export const se_HttpRequestWithGreedyLabelInPathCommand = async (
   input: HttpRequestWithGreedyLabelInPathCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -835,7 +835,7 @@ export const se_HttpRequestWithGreedyLabelInPathCommand = async (
  */
 export const se_HttpRequestWithLabelsCommand = async (
   input: HttpRequestWithLabelsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -858,18 +858,18 @@ export const se_HttpRequestWithLabelsCommand = async (
  */
 export const se_HttpRequestWithLabelsAndTimestampFormatCommand = async (
   input: HttpRequestWithLabelsAndTimestampFormatCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
   b.bp(
-    "/HttpRequestWithLabelsAndTimestampFormat/{memberEpochSeconds}/{memberHttpDate}/{memberDateTime}/{defaultFormat}/{targetEpochSeconds}/{targetHttpDate}/{targetDateTime}"
+    "/HttpRequestWithLabelsAndTimestampFormat/{memberEpochSeconds}/{memberHttpDate}/{memberDateTime}/{defaultFormat}/{targetEpochSeconds}/{targetHttpDate}/{targetDateTime}",
   );
   b.p(
     "memberEpochSeconds",
     () => (input.memberEpochSeconds!.getTime() / 1_000).toString(),
     "{memberEpochSeconds}",
-    false
+    false,
   );
   b.p("memberHttpDate", () => __dateToUtcString(input.memberHttpDate!).toString(), "{memberHttpDate}", false);
   b.p("memberDateTime", () => __serializeDateTime(input.memberDateTime!).toString(), "{memberDateTime}", false);
@@ -878,7 +878,7 @@ export const se_HttpRequestWithLabelsAndTimestampFormatCommand = async (
     "targetEpochSeconds",
     () => (input.targetEpochSeconds!.getTime() / 1_000).toString(),
     "{targetEpochSeconds}",
-    false
+    false,
   );
   b.p("targetHttpDate", () => __dateToUtcString(input.targetHttpDate!).toString(), "{targetHttpDate}", false);
   b.p("targetDateTime", () => __serializeDateTime(input.targetDateTime!).toString(), "{targetDateTime}", false);
@@ -892,7 +892,7 @@ export const se_HttpRequestWithLabelsAndTimestampFormatCommand = async (
  */
 export const se_HttpResponseCodeCommand = async (
   input: HttpResponseCodeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -910,7 +910,7 @@ export const se_HttpResponseCodeCommand = async (
  */
 export const se_HttpStringPayloadCommand = async (
   input: HttpStringPayloadCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -932,7 +932,7 @@ export const se_HttpStringPayloadCommand = async (
  */
 export const se_IgnoreQueryParamsInResponseCommand = async (
   input: IgnoreQueryParamsInResponseCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -950,7 +950,7 @@ export const se_IgnoreQueryParamsInResponseCommand = async (
  */
 export const se_InputAndOutputWithHeadersCommand = async (
   input: InputAndOutputWithHeadersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1006,7 +1006,7 @@ export const se_InputAndOutputWithHeadersCommand = async (
  */
 export const se_NestedXmlMapsCommand = async (
   input: NestedXmlMapsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1028,7 +1028,7 @@ export const se_NestedXmlMapsCommand = async (
  */
 export const se_NoInputAndNoOutputCommand = async (
   input: NoInputAndNoOutputCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1046,7 +1046,7 @@ export const se_NoInputAndNoOutputCommand = async (
  */
 export const se_NoInputAndOutputCommand = async (
   input: NoInputAndOutputCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1064,7 +1064,7 @@ export const se_NoInputAndOutputCommand = async (
  */
 export const se_NullAndEmptyHeadersClientCommand = async (
   input: NullAndEmptyHeadersClientCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1086,7 +1086,7 @@ export const se_NullAndEmptyHeadersClientCommand = async (
  */
 export const se_NullAndEmptyHeadersServerCommand = async (
   input: NullAndEmptyHeadersServerCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1108,7 +1108,7 @@ export const se_NullAndEmptyHeadersServerCommand = async (
  */
 export const se_OmitsNullSerializesEmptyStringCommand = async (
   input: OmitsNullSerializesEmptyStringCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1127,7 +1127,7 @@ export const se_OmitsNullSerializesEmptyStringCommand = async (
  */
 export const se_PutWithContentEncodingCommand = async (
   input: PutWithContentEncodingCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1151,7 +1151,7 @@ export const se_PutWithContentEncodingCommand = async (
  */
 export const se_QueryIdempotencyTokenAutoFillCommand = async (
   input: QueryIdempotencyTokenAutoFillCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1169,7 +1169,7 @@ export const se_QueryIdempotencyTokenAutoFillCommand = async (
  */
 export const se_QueryParamsAsStringListMapCommand = async (
   input: QueryParamsAsStringListMapCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1188,7 +1188,7 @@ export const se_QueryParamsAsStringListMapCommand = async (
  */
 export const se_QueryPrecedenceCommand = async (
   input: QueryPrecedenceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1207,7 +1207,7 @@ export const se_QueryPrecedenceCommand = async (
  */
 export const se_RecursiveShapesCommand = async (
   input: RecursiveShapesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1230,7 +1230,7 @@ export const se_RecursiveShapesCommand = async (
  */
 export const se_SimpleScalarPropertiesCommand = async (
   input: SimpleScalarPropertiesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1278,7 +1278,7 @@ export const se_SimpleScalarPropertiesCommand = async (
  */
 export const se_TimestampFormatHeadersCommand = async (
   input: TimestampFormatHeadersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1301,7 +1301,7 @@ export const se_TimestampFormatHeadersCommand = async (
  */
 export const se_XmlAttributesCommand = async (
   input: XmlAttributesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1325,7 +1325,7 @@ export const se_XmlAttributesCommand = async (
  */
 export const se_XmlAttributesOnPayloadCommand = async (
   input: XmlAttributesOnPayloadCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1348,7 +1348,7 @@ export const se_XmlAttributesOnPayloadCommand = async (
  */
 export const se_XmlBlobsCommand = async (
   input: XmlBlobsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1371,7 +1371,7 @@ export const se_XmlBlobsCommand = async (
  */
 export const se_XmlEmptyBlobsCommand = async (
   input: XmlEmptyBlobsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1394,7 +1394,7 @@ export const se_XmlEmptyBlobsCommand = async (
  */
 export const se_XmlEmptyListsCommand = async (
   input: XmlEmptyListsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1409,10 +1409,10 @@ export const se_XmlEmptyListsCommand = async (
   bn.l(input, "flattenedList", "flattenedList", () => se_RenamedListMembers(input[_fL]!, context));
   bn.l(input, "flattenedList2", "customName", () => se_RenamedListMembers(input[_fLl]!, context));
   bn.l(input, "flattenedListWithMemberNamespace", "flattenedListWithMemberNamespace", () =>
-    se_ListWithMemberNamespace(input[_fLWMN]!, context)
+    se_ListWithMemberNamespace(input[_fLWMN]!, context),
   );
   bn.l(input, "flattenedListWithNamespace", "flattenedListWithNamespace", () =>
-    se_ListWithNamespace(input[_fLWN]!, context)
+    se_ListWithNamespace(input[_fLWN]!, context),
   );
   bn.l(input, "flattenedStructureList", "flattenedStructureList", () => se_StructureList(input[_fSL]!, context));
   bn.lc(input, "intEnumList", "intEnumList", () => se_IntegerEnumList(input[_iEL]!, context));
@@ -1433,7 +1433,7 @@ export const se_XmlEmptyListsCommand = async (
  */
 export const se_XmlEmptyMapsCommand = async (
   input: XmlEmptyMapsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1454,7 +1454,7 @@ export const se_XmlEmptyMapsCommand = async (
  */
 export const se_XmlEmptyStringsCommand = async (
   input: XmlEmptyStringsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1477,7 +1477,7 @@ export const se_XmlEmptyStringsCommand = async (
  */
 export const se_XmlEnumsCommand = async (
   input: XmlEnumsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1509,7 +1509,7 @@ export const se_XmlEnumsCommand = async (
  */
 export const se_XmlIntEnumsCommand = async (
   input: XmlIntEnumsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1541,7 +1541,7 @@ export const se_XmlIntEnumsCommand = async (
  */
 export const se_XmlListsCommand = async (
   input: XmlListsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1556,10 +1556,10 @@ export const se_XmlListsCommand = async (
   bn.l(input, "flattenedList", "flattenedList", () => se_RenamedListMembers(input[_fL]!, context));
   bn.l(input, "flattenedList2", "customName", () => se_RenamedListMembers(input[_fLl]!, context));
   bn.l(input, "flattenedListWithMemberNamespace", "flattenedListWithMemberNamespace", () =>
-    se_ListWithMemberNamespace(input[_fLWMN]!, context)
+    se_ListWithMemberNamespace(input[_fLWMN]!, context),
   );
   bn.l(input, "flattenedListWithNamespace", "flattenedListWithNamespace", () =>
-    se_ListWithNamespace(input[_fLWN]!, context)
+    se_ListWithNamespace(input[_fLWN]!, context),
   );
   bn.l(input, "flattenedStructureList", "flattenedStructureList", () => se_StructureList(input[_fSL]!, context));
   bn.lc(input, "intEnumList", "intEnumList", () => se_IntegerEnumList(input[_iEL]!, context));
@@ -1580,7 +1580,7 @@ export const se_XmlListsCommand = async (
  */
 export const se_XmlMapsCommand = async (
   input: XmlMapsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1601,7 +1601,7 @@ export const se_XmlMapsCommand = async (
  */
 export const se_XmlMapsXmlNameCommand = async (
   input: XmlMapsXmlNameCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1622,7 +1622,7 @@ export const se_XmlMapsXmlNameCommand = async (
  */
 export const se_XmlMapWithXmlNamespaceCommand = async (
   input: XmlMapWithXmlNamespaceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1651,7 +1651,7 @@ export const se_XmlMapWithXmlNamespaceCommand = async (
  */
 export const se_XmlNamespacesCommand = async (
   input: XmlNamespacesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1675,7 +1675,7 @@ export const se_XmlNamespacesCommand = async (
  */
 export const se_XmlTimestampsCommand = async (
   input: XmlTimestampsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1716,7 +1716,7 @@ export const se_XmlTimestampsCommand = async (
  */
 export const se_XmlUnionsCommand = async (
   input: XmlUnionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1739,7 +1739,7 @@ export const se_XmlUnionsCommand = async (
  */
 export const de_AllQueryStringTypesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AllQueryStringTypesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1756,7 +1756,7 @@ export const de_AllQueryStringTypesCommand = async (
  */
 export const de_BodyWithXmlNameCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BodyWithXmlNameCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1776,7 +1776,7 @@ export const de_BodyWithXmlNameCommand = async (
  */
 export const de_ConstantAndVariableQueryStringCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ConstantAndVariableQueryStringCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1793,7 +1793,7 @@ export const de_ConstantAndVariableQueryStringCommand = async (
  */
 export const de_ConstantQueryStringCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ConstantQueryStringCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1810,7 +1810,7 @@ export const de_ConstantQueryStringCommand = async (
  */
 export const de_DatetimeOffsetsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DatetimeOffsetsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1830,7 +1830,7 @@ export const de_DatetimeOffsetsCommand = async (
  */
 export const de_EmptyInputAndEmptyOutputCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<EmptyInputAndEmptyOutputCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1847,7 +1847,7 @@ export const de_EmptyInputAndEmptyOutputCommand = async (
  */
 export const de_EndpointOperationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<EndpointOperationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1864,7 +1864,7 @@ export const de_EndpointOperationCommand = async (
  */
 export const de_EndpointWithHostLabelHeaderOperationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<EndpointWithHostLabelHeaderOperationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1881,7 +1881,7 @@ export const de_EndpointWithHostLabelHeaderOperationCommand = async (
  */
 export const de_EndpointWithHostLabelOperationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<EndpointWithHostLabelOperationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1898,7 +1898,7 @@ export const de_EndpointWithHostLabelOperationCommand = async (
  */
 export const de_FlattenedXmlMapCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<FlattenedXmlMapCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1920,7 +1920,7 @@ export const de_FlattenedXmlMapCommand = async (
  */
 export const de_FlattenedXmlMapWithXmlNameCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<FlattenedXmlMapWithXmlNameCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1942,7 +1942,7 @@ export const de_FlattenedXmlMapWithXmlNameCommand = async (
  */
 export const de_FlattenedXmlMapWithXmlNamespaceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<FlattenedXmlMapWithXmlNamespaceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1964,7 +1964,7 @@ export const de_FlattenedXmlMapWithXmlNamespaceCommand = async (
  */
 export const de_FractionalSecondsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<FractionalSecondsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1984,7 +1984,7 @@ export const de_FractionalSecondsCommand = async (
  */
 export const de_GreetingWithErrorsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GreetingWithErrorsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2002,7 +2002,7 @@ export const de_GreetingWithErrorsCommand = async (
  */
 export const de_HttpEnumPayloadCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<HttpEnumPayloadCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2020,7 +2020,7 @@ export const de_HttpEnumPayloadCommand = async (
  */
 export const de_HttpPayloadTraitsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<HttpPayloadTraitsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2039,7 +2039,7 @@ export const de_HttpPayloadTraitsCommand = async (
  */
 export const de_HttpPayloadTraitsWithMediaTypeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<HttpPayloadTraitsWithMediaTypeCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2058,7 +2058,7 @@ export const de_HttpPayloadTraitsWithMediaTypeCommand = async (
  */
 export const de_HttpPayloadWithMemberXmlNameCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<HttpPayloadWithMemberXmlNameCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2076,7 +2076,7 @@ export const de_HttpPayloadWithMemberXmlNameCommand = async (
  */
 export const de_HttpPayloadWithStructureCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<HttpPayloadWithStructureCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2094,7 +2094,7 @@ export const de_HttpPayloadWithStructureCommand = async (
  */
 export const de_HttpPayloadWithUnionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<HttpPayloadWithUnionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2112,7 +2112,7 @@ export const de_HttpPayloadWithUnionCommand = async (
  */
 export const de_HttpPayloadWithXmlNameCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<HttpPayloadWithXmlNameCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2130,7 +2130,7 @@ export const de_HttpPayloadWithXmlNameCommand = async (
  */
 export const de_HttpPayloadWithXmlNamespaceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<HttpPayloadWithXmlNamespaceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2148,7 +2148,7 @@ export const de_HttpPayloadWithXmlNamespaceCommand = async (
  */
 export const de_HttpPayloadWithXmlNamespaceAndPrefixCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<HttpPayloadWithXmlNamespaceAndPrefixCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2166,7 +2166,7 @@ export const de_HttpPayloadWithXmlNamespaceAndPrefixCommand = async (
  */
 export const de_HttpPrefixHeadersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<HttpPrefixHeadersCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2193,7 +2193,7 @@ export const de_HttpPrefixHeadersCommand = async (
  */
 export const de_HttpRequestWithFloatLabelsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<HttpRequestWithFloatLabelsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2210,7 +2210,7 @@ export const de_HttpRequestWithFloatLabelsCommand = async (
  */
 export const de_HttpRequestWithGreedyLabelInPathCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<HttpRequestWithGreedyLabelInPathCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2227,7 +2227,7 @@ export const de_HttpRequestWithGreedyLabelInPathCommand = async (
  */
 export const de_HttpRequestWithLabelsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<HttpRequestWithLabelsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2244,7 +2244,7 @@ export const de_HttpRequestWithLabelsCommand = async (
  */
 export const de_HttpRequestWithLabelsAndTimestampFormatCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<HttpRequestWithLabelsAndTimestampFormatCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2261,7 +2261,7 @@ export const de_HttpRequestWithLabelsAndTimestampFormatCommand = async (
  */
 export const de_HttpResponseCodeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<HttpResponseCodeCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2281,7 +2281,7 @@ export const de_HttpResponseCodeCommand = async (
  */
 export const de_HttpStringPayloadCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<HttpStringPayloadCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2299,7 +2299,7 @@ export const de_HttpStringPayloadCommand = async (
  */
 export const de_IgnoreQueryParamsInResponseCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<IgnoreQueryParamsInResponseCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2319,7 +2319,7 @@ export const de_IgnoreQueryParamsInResponseCommand = async (
  */
 export const de_InputAndOutputWithHeadersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InputAndOutputWithHeadersCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2355,7 +2355,7 @@ export const de_InputAndOutputWithHeadersCommand = async (
       () => void 0 !== output.headers[_xt],
       () =>
         __splitEvery(output.headers[_xt] || "", ",", 2).map(
-          (_entry) => __expectNonNull(__parseRfc7231DateTime(_entry.trim())) as any
+          (_entry) => __expectNonNull(__parseRfc7231DateTime(_entry.trim())) as any,
         ),
     ],
     [_hE]: [, output.headers[_xe]],
@@ -2373,7 +2373,7 @@ export const de_InputAndOutputWithHeadersCommand = async (
  */
 export const de_NestedXmlMapsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<NestedXmlMapsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2400,7 +2400,7 @@ export const de_NestedXmlMapsCommand = async (
  */
 export const de_NoInputAndNoOutputCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<NoInputAndNoOutputCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2417,7 +2417,7 @@ export const de_NoInputAndNoOutputCommand = async (
  */
 export const de_NoInputAndOutputCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<NoInputAndOutputCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2434,7 +2434,7 @@ export const de_NoInputAndOutputCommand = async (
  */
 export const de_NullAndEmptyHeadersClientCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<NullAndEmptyHeadersClientCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2457,7 +2457,7 @@ export const de_NullAndEmptyHeadersClientCommand = async (
  */
 export const de_NullAndEmptyHeadersServerCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<NullAndEmptyHeadersServerCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2480,7 +2480,7 @@ export const de_NullAndEmptyHeadersServerCommand = async (
  */
 export const de_OmitsNullSerializesEmptyStringCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<OmitsNullSerializesEmptyStringCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2497,7 +2497,7 @@ export const de_OmitsNullSerializesEmptyStringCommand = async (
  */
 export const de_PutWithContentEncodingCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutWithContentEncodingCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2514,7 +2514,7 @@ export const de_PutWithContentEncodingCommand = async (
  */
 export const de_QueryIdempotencyTokenAutoFillCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<QueryIdempotencyTokenAutoFillCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2531,7 +2531,7 @@ export const de_QueryIdempotencyTokenAutoFillCommand = async (
  */
 export const de_QueryParamsAsStringListMapCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<QueryParamsAsStringListMapCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2548,7 +2548,7 @@ export const de_QueryParamsAsStringListMapCommand = async (
  */
 export const de_QueryPrecedenceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<QueryPrecedenceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2565,7 +2565,7 @@ export const de_QueryPrecedenceCommand = async (
  */
 export const de_RecursiveShapesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RecursiveShapesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2585,7 +2585,7 @@ export const de_RecursiveShapesCommand = async (
  */
 export const de_SimpleScalarPropertiesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SimpleScalarPropertiesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2630,7 +2630,7 @@ export const de_SimpleScalarPropertiesCommand = async (
  */
 export const de_TimestampFormatHeadersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TimestampFormatHeadersCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2666,7 +2666,7 @@ export const de_TimestampFormatHeadersCommand = async (
  */
 export const de_XmlAttributesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<XmlAttributesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2689,7 +2689,7 @@ export const de_XmlAttributesCommand = async (
  */
 export const de_XmlAttributesOnPayloadCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<XmlAttributesOnPayloadCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2707,7 +2707,7 @@ export const de_XmlAttributesOnPayloadCommand = async (
  */
 export const de_XmlBlobsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<XmlBlobsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2727,7 +2727,7 @@ export const de_XmlBlobsCommand = async (
  */
 export const de_XmlEmptyBlobsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<XmlEmptyBlobsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2747,7 +2747,7 @@ export const de_XmlEmptyBlobsCommand = async (
  */
 export const de_XmlEmptyListsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<XmlEmptyListsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2839,7 +2839,7 @@ export const de_XmlEmptyListsCommand = async (
  */
 export const de_XmlEmptyMapsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<XmlEmptyMapsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2861,7 +2861,7 @@ export const de_XmlEmptyMapsCommand = async (
  */
 export const de_XmlEmptyStringsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<XmlEmptyStringsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2881,7 +2881,7 @@ export const de_XmlEmptyStringsCommand = async (
  */
 export const de_XmlEnumsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<XmlEnumsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2922,7 +2922,7 @@ export const de_XmlEnumsCommand = async (
  */
 export const de_XmlIntEnumsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<XmlIntEnumsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2963,7 +2963,7 @@ export const de_XmlIntEnumsCommand = async (
  */
 export const de_XmlListsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<XmlListsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3055,7 +3055,7 @@ export const de_XmlListsCommand = async (
  */
 export const de_XmlMapsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<XmlMapsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3077,7 +3077,7 @@ export const de_XmlMapsCommand = async (
  */
 export const de_XmlMapsXmlNameCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<XmlMapsXmlNameCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3099,7 +3099,7 @@ export const de_XmlMapsXmlNameCommand = async (
  */
 export const de_XmlMapWithXmlNamespaceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<XmlMapWithXmlNamespaceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3121,7 +3121,7 @@ export const de_XmlMapWithXmlNamespaceCommand = async (
  */
 export const de_XmlNamespacesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<XmlNamespacesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3141,7 +3141,7 @@ export const de_XmlNamespacesCommand = async (
  */
 export const de_XmlTimestampsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<XmlTimestampsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3179,7 +3179,7 @@ export const de_XmlTimestampsCommand = async (
  */
 export const de_XmlUnionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<XmlUnionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3317,7 +3317,7 @@ const se_NestedMap = (input: Record<string, Record<string, FooEnum>>, context: _
       entryNode.c(
         n.reduce((acc: __XmlNode, workingNode: any) => {
           return acc.c(workingNode);
-        }, new __XmlNode(_v))
+        }, new __XmlNode(_v)),
       );
       return entryNode;
     });
@@ -3375,7 +3375,7 @@ const se_PayloadWithXmlNamespaceAndPrefix = (input: PayloadWithXmlNamespaceAndPr
  */
 const se_RecursiveShapesInputOutputNested1 = (
   input: RecursiveShapesInputOutputNested1,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const bn = new __XmlNode(_RSION);
   if (input[_f] != null) {
@@ -3392,7 +3392,7 @@ const se_RecursiveShapesInputOutputNested1 = (
  */
 const se_RecursiveShapesInputOutputNested2 = (
   input: RecursiveShapesInputOutputNested2,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const bn = new __XmlNode(_RSIONe);
   if (input[_ba] != null) {
@@ -3941,7 +3941,7 @@ const de_PayloadWithXmlNamespace = (output: any, context: __SerdeContext): Paylo
  */
 const de_PayloadWithXmlNamespaceAndPrefix = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): PayloadWithXmlNamespaceAndPrefix => {
   const contents: any = {};
   if (output[_na] != null) {
@@ -3955,7 +3955,7 @@ const de_PayloadWithXmlNamespaceAndPrefix = (
  */
 const de_RecursiveShapesInputOutputNested1 = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): RecursiveShapesInputOutputNested1 => {
   const contents: any = {};
   if (output[_f] != null) {
@@ -3972,7 +3972,7 @@ const de_RecursiveShapesInputOutputNested1 = (
  */
 const de_RecursiveShapesInputOutputNested2 = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): RecursiveShapesInputOutputNested2 => {
   const contents: any = {};
   if (output[_ba] != null) {

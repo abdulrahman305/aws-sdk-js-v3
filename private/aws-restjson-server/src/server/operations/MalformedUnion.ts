@@ -61,14 +61,14 @@ export class MalformedUnionSerializer
 
 export const getMalformedUnionHandler = <Context>(
   operation: __Operation<MalformedUnionServerInput, MalformedUnionServerOutput, Context>,
-  customizer: __ValidationCustomizer<"MalformedUnion">
+  customizer: __ValidationCustomizer<"MalformedUnion">,
 ): __ServiceHandler<Context, __HttpRequest, __HttpResponse> => {
   const mux = new httpbinding.HttpBindingMux<"RestJson", "MalformedUnion">([
     new httpbinding.UriSpec<"RestJson", "MalformedUnion">(
       "POST",
       [{ type: "path_literal", value: "MalformedUnion" }],
       [],
-      { service: "RestJson", operation: "MalformedUnion" }
+      { service: "RestJson", operation: "MalformedUnion" },
     ),
   ]);
   return new MalformedUnionHandler(
@@ -76,7 +76,7 @@ export const getMalformedUnionHandler = <Context>(
     mux,
     new MalformedUnionSerializer(),
     serializeFrameworkException,
-    customizer
+    customizer,
   );
 };
 
@@ -97,7 +97,7 @@ async function handle<S, O extends keyof S & string, Context>(
   operation: __Operation<__OperationInput<S[O]>, __OperationOutput<S[O]>, Context>,
   serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
   validationFn: (input: __OperationInput<S[O]>) => __ValidationFailure[],
-  validationCustomizer: __ValidationCustomizer<O>
+  validationCustomizer: __ValidationCustomizer<O>,
 ): Promise<__HttpResponse> {
   let input;
   try {
@@ -135,7 +135,7 @@ export class MalformedUnionHandler<Context> implements __ServiceHandler<Context>
   private readonly serializer: __OperationSerializer<RestJsonService<Context>, "MalformedUnion", MalformedUnionErrors>;
   private readonly serializeFrameworkException: (
     e: __SmithyFrameworkException,
-    ctx: __ServerSerdeContext
+    ctx: __ServerSerdeContext,
   ) => Promise<__HttpResponse>;
   private readonly validationCustomizer: __ValidationCustomizer<"MalformedUnion">;
   /**
@@ -152,7 +152,7 @@ export class MalformedUnionHandler<Context> implements __ServiceHandler<Context>
     mux: __Mux<"RestJson", "MalformedUnion">,
     serializer: __OperationSerializer<RestJsonService<Context>, "MalformedUnion", MalformedUnionErrors>,
     serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
-    validationCustomizer: __ValidationCustomizer<"MalformedUnion">
+    validationCustomizer: __ValidationCustomizer<"MalformedUnion">,
   ) {
     this.operation = operation;
     this.mux = mux;
@@ -164,7 +164,7 @@ export class MalformedUnionHandler<Context> implements __ServiceHandler<Context>
     const target = this.mux.match(request);
     if (target === undefined) {
       console.log(
-        "Received a request that did not match aws.protocoltests.restjson#RestJson.MalformedUnion. This indicates a misconfiguration."
+        "Received a request that did not match aws.protocoltests.restjson#RestJson.MalformedUnion. This indicates a misconfiguration.",
       );
       return this.serializeFrameworkException(new __InternalFailureException(), serdeContextBase);
     }
@@ -176,7 +176,7 @@ export class MalformedUnionHandler<Context> implements __ServiceHandler<Context>
       this.operation,
       this.serializeFrameworkException,
       MalformedUnionServerInput.validate,
-      this.validationCustomizer
+      this.validationCustomizer,
     );
   }
 }

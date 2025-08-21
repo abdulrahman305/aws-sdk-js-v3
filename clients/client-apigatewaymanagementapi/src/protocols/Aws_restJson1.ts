@@ -38,7 +38,7 @@ import {
  */
 export const se_DeleteConnectionCommand = async (
   input: DeleteConnectionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -54,7 +54,7 @@ export const se_DeleteConnectionCommand = async (
  */
 export const se_GetConnectionCommand = async (
   input: GetConnectionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -70,7 +70,7 @@ export const se_GetConnectionCommand = async (
  */
 export const se_PostToConnectionCommand = async (
   input: PostToConnectionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -91,7 +91,7 @@ export const se_PostToConnectionCommand = async (
  */
 export const de_DeleteConnectionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteConnectionCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -108,7 +108,7 @@ export const de_DeleteConnectionCommand = async (
  */
 export const de_GetConnectionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetConnectionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -131,7 +131,7 @@ export const de_GetConnectionCommand = async (
  */
 export const de_PostToConnectionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PostToConnectionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -211,7 +211,7 @@ const de_GoneExceptionRes = async (parsedOutput: any, context: __SerdeContext): 
  */
 const de_LimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<LimitExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -229,7 +229,7 @@ const de_LimitExceededExceptionRes = async (
  */
 const de_PayloadTooLargeExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PayloadTooLargeException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;

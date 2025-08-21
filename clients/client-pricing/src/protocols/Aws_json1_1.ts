@@ -49,7 +49,7 @@ import { PricingServiceException as __BaseException } from "../models/PricingSer
  */
 export const se_DescribeServicesCommand = async (
   input: DescribeServicesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeServices");
   let body: any;
@@ -62,7 +62,7 @@ export const se_DescribeServicesCommand = async (
  */
 export const se_GetAttributeValuesCommand = async (
   input: GetAttributeValuesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetAttributeValues");
   let body: any;
@@ -75,7 +75,7 @@ export const se_GetAttributeValuesCommand = async (
  */
 export const se_GetPriceListFileUrlCommand = async (
   input: GetPriceListFileUrlCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetPriceListFileUrl");
   let body: any;
@@ -88,7 +88,7 @@ export const se_GetPriceListFileUrlCommand = async (
  */
 export const se_GetProductsCommand = async (
   input: GetProductsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetProducts");
   let body: any;
@@ -101,7 +101,7 @@ export const se_GetProductsCommand = async (
  */
 export const se_ListPriceListsCommand = async (
   input: ListPriceListsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListPriceLists");
   let body: any;
@@ -114,7 +114,7 @@ export const se_ListPriceListsCommand = async (
  */
 export const de_DescribeServicesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeServicesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -134,7 +134,7 @@ export const de_DescribeServicesCommand = async (
  */
 export const de_GetAttributeValuesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetAttributeValuesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -154,7 +154,7 @@ export const de_GetAttributeValuesCommand = async (
  */
 export const de_GetPriceListFileUrlCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetPriceListFileUrlCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -174,7 +174,7 @@ export const de_GetPriceListFileUrlCommand = async (
  */
 export const de_GetProductsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetProductsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -194,7 +194,7 @@ export const de_GetProductsCommand = async (
  */
 export const de_ListPriceListsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListPriceListsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -258,7 +258,7 @@ const de_CommandError = async (output: __HttpResponse, context: __SerdeContext):
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -274,7 +274,7 @@ const de_AccessDeniedExceptionRes = async (
  */
 const de_ExpiredNextTokenExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ExpiredNextTokenException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -290,7 +290,7 @@ const de_ExpiredNextTokenExceptionRes = async (
  */
 const de_InternalErrorExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalErrorException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -306,7 +306,7 @@ const de_InternalErrorExceptionRes = async (
  */
 const de_InvalidNextTokenExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidNextTokenException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -322,7 +322,7 @@ const de_InvalidNextTokenExceptionRes = async (
  */
 const de_InvalidParameterExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidParameterException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -351,7 +351,7 @@ const de_NotFoundExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -482,7 +482,7 @@ const buildHttpRpcRequest = async (
   headers: __HeaderBag,
   path: string,
   resolvedHostname: string | undefined,
-  body: any
+  body: any,
 ): Promise<__HttpRequest> => {
   const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
   const contents: any = {

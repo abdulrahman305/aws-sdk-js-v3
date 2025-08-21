@@ -476,7 +476,7 @@ import { S3ControlServiceException as __BaseException } from "../models/S3Contro
  */
 export const se_AssociateAccessGrantsIdentityCenterCommand = async (
   input: AssociateAccessGrantsIdentityCenterCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -511,7 +511,7 @@ export const se_AssociateAccessGrantsIdentityCenterCommand = async (
  */
 export const se_CreateAccessGrantCommand = async (
   input: CreateAccessGrantCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -558,7 +558,7 @@ export const se_CreateAccessGrantCommand = async (
  */
 export const se_CreateAccessGrantsInstanceCommand = async (
   input: CreateAccessGrantsInstanceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -594,7 +594,7 @@ export const se_CreateAccessGrantsInstanceCommand = async (
  */
 export const se_CreateAccessGrantsLocationCommand = async (
   input: CreateAccessGrantsLocationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -633,7 +633,7 @@ export const se_CreateAccessGrantsLocationCommand = async (
  */
 export const se_CreateAccessPointCommand = async (
   input: CreateAccessPointCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -680,7 +680,7 @@ export const se_CreateAccessPointCommand = async (
  */
 export const se_CreateAccessPointForObjectLambdaCommand = async (
   input: CreateAccessPointForObjectLambdaCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -718,7 +718,7 @@ export const se_CreateAccessPointForObjectLambdaCommand = async (
  */
 export const se_CreateBucketCommand = async (
   input: CreateBucketCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -751,7 +751,7 @@ export const se_CreateBucketCommand = async (
  */
 export const se_CreateJobCommand = async (
   input: CreateJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -816,7 +816,7 @@ export const se_CreateJobCommand = async (
  */
 export const se_CreateMultiRegionAccessPointCommand = async (
   input: CreateMultiRegionAccessPointCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -859,7 +859,7 @@ export const se_CreateMultiRegionAccessPointCommand = async (
  */
 export const se_CreateStorageLensGroupCommand = async (
   input: CreateStorageLensGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -897,7 +897,7 @@ export const se_CreateStorageLensGroupCommand = async (
  */
 export const se_DeleteAccessGrantCommand = async (
   input: DeleteAccessGrantCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -927,7 +927,7 @@ export const se_DeleteAccessGrantCommand = async (
  */
 export const se_DeleteAccessGrantsInstanceCommand = async (
   input: DeleteAccessGrantsInstanceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -956,7 +956,7 @@ export const se_DeleteAccessGrantsInstanceCommand = async (
  */
 export const se_DeleteAccessGrantsInstanceResourcePolicyCommand = async (
   input: DeleteAccessGrantsInstanceResourcePolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -985,7 +985,7 @@ export const se_DeleteAccessGrantsInstanceResourcePolicyCommand = async (
  */
 export const se_DeleteAccessGrantsLocationCommand = async (
   input: DeleteAccessGrantsLocationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1015,7 +1015,7 @@ export const se_DeleteAccessGrantsLocationCommand = async (
  */
 export const se_DeleteAccessPointCommand = async (
   input: DeleteAccessPointCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1045,7 +1045,7 @@ export const se_DeleteAccessPointCommand = async (
  */
 export const se_DeleteAccessPointForObjectLambdaCommand = async (
   input: DeleteAccessPointForObjectLambdaCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1075,7 +1075,7 @@ export const se_DeleteAccessPointForObjectLambdaCommand = async (
  */
 export const se_DeleteAccessPointPolicyCommand = async (
   input: DeleteAccessPointPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1105,7 +1105,7 @@ export const se_DeleteAccessPointPolicyCommand = async (
  */
 export const se_DeleteAccessPointPolicyForObjectLambdaCommand = async (
   input: DeleteAccessPointPolicyForObjectLambdaCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1135,7 +1135,7 @@ export const se_DeleteAccessPointPolicyForObjectLambdaCommand = async (
  */
 export const se_DeleteBucketCommand = async (
   input: DeleteBucketCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1165,7 +1165,7 @@ export const se_DeleteBucketCommand = async (
  */
 export const se_DeleteBucketLifecycleConfigurationCommand = async (
   input: DeleteBucketLifecycleConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1195,7 +1195,7 @@ export const se_DeleteBucketLifecycleConfigurationCommand = async (
  */
 export const se_DeleteBucketPolicyCommand = async (
   input: DeleteBucketPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1225,7 +1225,7 @@ export const se_DeleteBucketPolicyCommand = async (
  */
 export const se_DeleteBucketReplicationCommand = async (
   input: DeleteBucketReplicationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1255,7 +1255,7 @@ export const se_DeleteBucketReplicationCommand = async (
  */
 export const se_DeleteBucketTaggingCommand = async (
   input: DeleteBucketTaggingCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1285,7 +1285,7 @@ export const se_DeleteBucketTaggingCommand = async (
  */
 export const se_DeleteJobTaggingCommand = async (
   input: DeleteJobTaggingCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1315,7 +1315,7 @@ export const se_DeleteJobTaggingCommand = async (
  */
 export const se_DeleteMultiRegionAccessPointCommand = async (
   input: DeleteMultiRegionAccessPointCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1358,7 +1358,7 @@ export const se_DeleteMultiRegionAccessPointCommand = async (
  */
 export const se_DeletePublicAccessBlockCommand = async (
   input: DeletePublicAccessBlockCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1387,7 +1387,7 @@ export const se_DeletePublicAccessBlockCommand = async (
  */
 export const se_DeleteStorageLensConfigurationCommand = async (
   input: DeleteStorageLensConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1417,7 +1417,7 @@ export const se_DeleteStorageLensConfigurationCommand = async (
  */
 export const se_DeleteStorageLensConfigurationTaggingCommand = async (
   input: DeleteStorageLensConfigurationTaggingCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1447,7 +1447,7 @@ export const se_DeleteStorageLensConfigurationTaggingCommand = async (
  */
 export const se_DeleteStorageLensGroupCommand = async (
   input: DeleteStorageLensGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1477,7 +1477,7 @@ export const se_DeleteStorageLensGroupCommand = async (
  */
 export const se_DescribeJobCommand = async (
   input: DescribeJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1507,7 +1507,7 @@ export const se_DescribeJobCommand = async (
  */
 export const se_DescribeMultiRegionAccessPointOperationCommand = async (
   input: DescribeMultiRegionAccessPointOperationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1537,7 +1537,7 @@ export const se_DescribeMultiRegionAccessPointOperationCommand = async (
  */
 export const se_DissociateAccessGrantsIdentityCenterCommand = async (
   input: DissociateAccessGrantsIdentityCenterCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1566,7 +1566,7 @@ export const se_DissociateAccessGrantsIdentityCenterCommand = async (
  */
 export const se_GetAccessGrantCommand = async (
   input: GetAccessGrantCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1596,7 +1596,7 @@ export const se_GetAccessGrantCommand = async (
  */
 export const se_GetAccessGrantsInstanceCommand = async (
   input: GetAccessGrantsInstanceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1625,7 +1625,7 @@ export const se_GetAccessGrantsInstanceCommand = async (
  */
 export const se_GetAccessGrantsInstanceForPrefixCommand = async (
   input: GetAccessGrantsInstanceForPrefixCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1657,7 +1657,7 @@ export const se_GetAccessGrantsInstanceForPrefixCommand = async (
  */
 export const se_GetAccessGrantsInstanceResourcePolicyCommand = async (
   input: GetAccessGrantsInstanceResourcePolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1686,7 +1686,7 @@ export const se_GetAccessGrantsInstanceResourcePolicyCommand = async (
  */
 export const se_GetAccessGrantsLocationCommand = async (
   input: GetAccessGrantsLocationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1716,7 +1716,7 @@ export const se_GetAccessGrantsLocationCommand = async (
  */
 export const se_GetAccessPointCommand = async (
   input: GetAccessPointCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1746,7 +1746,7 @@ export const se_GetAccessPointCommand = async (
  */
 export const se_GetAccessPointConfigurationForObjectLambdaCommand = async (
   input: GetAccessPointConfigurationForObjectLambdaCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1776,7 +1776,7 @@ export const se_GetAccessPointConfigurationForObjectLambdaCommand = async (
  */
 export const se_GetAccessPointForObjectLambdaCommand = async (
   input: GetAccessPointForObjectLambdaCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1806,7 +1806,7 @@ export const se_GetAccessPointForObjectLambdaCommand = async (
  */
 export const se_GetAccessPointPolicyCommand = async (
   input: GetAccessPointPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1836,7 +1836,7 @@ export const se_GetAccessPointPolicyCommand = async (
  */
 export const se_GetAccessPointPolicyForObjectLambdaCommand = async (
   input: GetAccessPointPolicyForObjectLambdaCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1866,7 +1866,7 @@ export const se_GetAccessPointPolicyForObjectLambdaCommand = async (
  */
 export const se_GetAccessPointPolicyStatusCommand = async (
   input: GetAccessPointPolicyStatusCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1896,7 +1896,7 @@ export const se_GetAccessPointPolicyStatusCommand = async (
  */
 export const se_GetAccessPointPolicyStatusForObjectLambdaCommand = async (
   input: GetAccessPointPolicyStatusForObjectLambdaCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1926,7 +1926,7 @@ export const se_GetAccessPointPolicyStatusForObjectLambdaCommand = async (
  */
 export const se_GetBucketCommand = async (
   input: GetBucketCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1956,7 +1956,7 @@ export const se_GetBucketCommand = async (
  */
 export const se_GetBucketLifecycleConfigurationCommand = async (
   input: GetBucketLifecycleConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1986,7 +1986,7 @@ export const se_GetBucketLifecycleConfigurationCommand = async (
  */
 export const se_GetBucketPolicyCommand = async (
   input: GetBucketPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -2016,7 +2016,7 @@ export const se_GetBucketPolicyCommand = async (
  */
 export const se_GetBucketReplicationCommand = async (
   input: GetBucketReplicationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -2046,7 +2046,7 @@ export const se_GetBucketReplicationCommand = async (
  */
 export const se_GetBucketTaggingCommand = async (
   input: GetBucketTaggingCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -2076,7 +2076,7 @@ export const se_GetBucketTaggingCommand = async (
  */
 export const se_GetBucketVersioningCommand = async (
   input: GetBucketVersioningCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -2106,7 +2106,7 @@ export const se_GetBucketVersioningCommand = async (
  */
 export const se_GetDataAccessCommand = async (
   input: GetDataAccessCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -2142,7 +2142,7 @@ export const se_GetDataAccessCommand = async (
  */
 export const se_GetJobTaggingCommand = async (
   input: GetJobTaggingCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -2172,7 +2172,7 @@ export const se_GetJobTaggingCommand = async (
  */
 export const se_GetMultiRegionAccessPointCommand = async (
   input: GetMultiRegionAccessPointCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -2202,7 +2202,7 @@ export const se_GetMultiRegionAccessPointCommand = async (
  */
 export const se_GetMultiRegionAccessPointPolicyCommand = async (
   input: GetMultiRegionAccessPointPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -2232,7 +2232,7 @@ export const se_GetMultiRegionAccessPointPolicyCommand = async (
  */
 export const se_GetMultiRegionAccessPointPolicyStatusCommand = async (
   input: GetMultiRegionAccessPointPolicyStatusCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -2262,7 +2262,7 @@ export const se_GetMultiRegionAccessPointPolicyStatusCommand = async (
  */
 export const se_GetMultiRegionAccessPointRoutesCommand = async (
   input: GetMultiRegionAccessPointRoutesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -2292,7 +2292,7 @@ export const se_GetMultiRegionAccessPointRoutesCommand = async (
  */
 export const se_GetPublicAccessBlockCommand = async (
   input: GetPublicAccessBlockCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -2321,7 +2321,7 @@ export const se_GetPublicAccessBlockCommand = async (
  */
 export const se_GetStorageLensConfigurationCommand = async (
   input: GetStorageLensConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -2351,7 +2351,7 @@ export const se_GetStorageLensConfigurationCommand = async (
  */
 export const se_GetStorageLensConfigurationTaggingCommand = async (
   input: GetStorageLensConfigurationTaggingCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -2381,7 +2381,7 @@ export const se_GetStorageLensConfigurationTaggingCommand = async (
  */
 export const se_GetStorageLensGroupCommand = async (
   input: GetStorageLensGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -2411,7 +2411,7 @@ export const se_GetStorageLensGroupCommand = async (
  */
 export const se_ListAccessGrantsCommand = async (
   input: ListAccessGrantsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -2449,7 +2449,7 @@ export const se_ListAccessGrantsCommand = async (
  */
 export const se_ListAccessGrantsInstancesCommand = async (
   input: ListAccessGrantsInstancesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -2482,7 +2482,7 @@ export const se_ListAccessGrantsInstancesCommand = async (
  */
 export const se_ListAccessGrantsLocationsCommand = async (
   input: ListAccessGrantsLocationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -2516,7 +2516,7 @@ export const se_ListAccessGrantsLocationsCommand = async (
  */
 export const se_ListAccessPointsCommand = async (
   input: ListAccessPointsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -2550,7 +2550,7 @@ export const se_ListAccessPointsCommand = async (
  */
 export const se_ListAccessPointsForObjectLambdaCommand = async (
   input: ListAccessPointsForObjectLambdaCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -2583,7 +2583,7 @@ export const se_ListAccessPointsForObjectLambdaCommand = async (
  */
 export const se_ListJobsCommand = async (
   input: ListJobsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -2617,7 +2617,7 @@ export const se_ListJobsCommand = async (
  */
 export const se_ListMultiRegionAccessPointsCommand = async (
   input: ListMultiRegionAccessPointsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -2650,7 +2650,7 @@ export const se_ListMultiRegionAccessPointsCommand = async (
  */
 export const se_ListRegionalBucketsCommand = async (
   input: ListRegionalBucketsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -2684,7 +2684,7 @@ export const se_ListRegionalBucketsCommand = async (
  */
 export const se_ListStorageLensConfigurationsCommand = async (
   input: ListStorageLensConfigurationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -2716,7 +2716,7 @@ export const se_ListStorageLensConfigurationsCommand = async (
  */
 export const se_ListStorageLensGroupsCommand = async (
   input: ListStorageLensGroupsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -2748,7 +2748,7 @@ export const se_ListStorageLensGroupsCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -2778,7 +2778,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_PutAccessGrantsInstanceResourcePolicyCommand = async (
   input: PutAccessGrantsInstanceResourcePolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -2816,7 +2816,7 @@ export const se_PutAccessGrantsInstanceResourcePolicyCommand = async (
  */
 export const se_PutAccessPointConfigurationForObjectLambdaCommand = async (
   input: PutAccessPointConfigurationForObjectLambdaCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -2854,7 +2854,7 @@ export const se_PutAccessPointConfigurationForObjectLambdaCommand = async (
  */
 export const se_PutAccessPointPolicyCommand = async (
   input: PutAccessPointPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -2890,7 +2890,7 @@ export const se_PutAccessPointPolicyCommand = async (
  */
 export const se_PutAccessPointPolicyForObjectLambdaCommand = async (
   input: PutAccessPointPolicyForObjectLambdaCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -2928,7 +2928,7 @@ export const se_PutAccessPointPolicyForObjectLambdaCommand = async (
  */
 export const se_PutBucketLifecycleConfigurationCommand = async (
   input: PutBucketLifecycleConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -2966,7 +2966,7 @@ export const se_PutBucketLifecycleConfigurationCommand = async (
  */
 export const se_PutBucketPolicyCommand = async (
   input: PutBucketPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -3003,7 +3003,7 @@ export const se_PutBucketPolicyCommand = async (
  */
 export const se_PutBucketReplicationCommand = async (
   input: PutBucketReplicationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -3041,7 +3041,7 @@ export const se_PutBucketReplicationCommand = async (
  */
 export const se_PutBucketTaggingCommand = async (
   input: PutBucketTaggingCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -3079,7 +3079,7 @@ export const se_PutBucketTaggingCommand = async (
  */
 export const se_PutBucketVersioningCommand = async (
   input: PutBucketVersioningCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -3118,7 +3118,7 @@ export const se_PutBucketVersioningCommand = async (
  */
 export const se_PutJobTaggingCommand = async (
   input: PutJobTaggingCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -3154,7 +3154,7 @@ export const se_PutJobTaggingCommand = async (
  */
 export const se_PutMultiRegionAccessPointPolicyCommand = async (
   input: PutMultiRegionAccessPointPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -3197,7 +3197,7 @@ export const se_PutMultiRegionAccessPointPolicyCommand = async (
  */
 export const se_PutPublicAccessBlockCommand = async (
   input: PutPublicAccessBlockCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -3234,7 +3234,7 @@ export const se_PutPublicAccessBlockCommand = async (
  */
 export const se_PutStorageLensConfigurationCommand = async (
   input: PutStorageLensConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -3273,7 +3273,7 @@ export const se_PutStorageLensConfigurationCommand = async (
  */
 export const se_PutStorageLensConfigurationTaggingCommand = async (
   input: PutStorageLensConfigurationTaggingCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -3309,7 +3309,7 @@ export const se_PutStorageLensConfigurationTaggingCommand = async (
  */
 export const se_SubmitMultiRegionAccessPointRoutesCommand = async (
   input: SubmitMultiRegionAccessPointRoutesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -3345,7 +3345,7 @@ export const se_SubmitMultiRegionAccessPointRoutesCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -3381,7 +3381,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -3417,7 +3417,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateAccessGrantsLocationCommand = async (
   input: UpdateAccessGrantsLocationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -3453,7 +3453,7 @@ export const se_UpdateAccessGrantsLocationCommand = async (
  */
 export const se_UpdateJobPriorityCommand = async (
   input: UpdateJobPriorityCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -3486,7 +3486,7 @@ export const se_UpdateJobPriorityCommand = async (
  */
 export const se_UpdateJobStatusCommand = async (
   input: UpdateJobStatusCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -3520,7 +3520,7 @@ export const se_UpdateJobStatusCommand = async (
  */
 export const se_UpdateStorageLensGroupCommand = async (
   input: UpdateStorageLensGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -3558,7 +3558,7 @@ export const se_UpdateStorageLensGroupCommand = async (
  */
 export const de_AssociateAccessGrantsIdentityCenterCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssociateAccessGrantsIdentityCenterCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3575,7 +3575,7 @@ export const de_AssociateAccessGrantsIdentityCenterCommand = async (
  */
 export const de_CreateAccessGrantCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateAccessGrantCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3619,7 +3619,7 @@ export const de_CreateAccessGrantCommand = async (
  */
 export const de_CreateAccessGrantsInstanceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateAccessGrantsInstanceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3648,7 +3648,7 @@ export const de_CreateAccessGrantsInstanceCommand = async (
  */
 export const de_CreateAccessGrantsLocationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateAccessGrantsLocationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3680,7 +3680,7 @@ export const de_CreateAccessGrantsLocationCommand = async (
  */
 export const de_CreateAccessPointCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateAccessPointCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3703,7 +3703,7 @@ export const de_CreateAccessPointCommand = async (
  */
 export const de_CreateAccessPointForObjectLambdaCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateAccessPointForObjectLambdaCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3726,7 +3726,7 @@ export const de_CreateAccessPointForObjectLambdaCommand = async (
  */
 export const de_CreateBucketCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateBucketCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3747,7 +3747,7 @@ export const de_CreateBucketCommand = async (
  */
 export const de_CreateJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateJobCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3767,7 +3767,7 @@ export const de_CreateJobCommand = async (
  */
 export const de_CreateMultiRegionAccessPointCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateMultiRegionAccessPointCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3787,7 +3787,7 @@ export const de_CreateMultiRegionAccessPointCommand = async (
  */
 export const de_CreateStorageLensGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateStorageLensGroupCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3804,7 +3804,7 @@ export const de_CreateStorageLensGroupCommand = async (
  */
 export const de_DeleteAccessGrantCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteAccessGrantCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3821,7 +3821,7 @@ export const de_DeleteAccessGrantCommand = async (
  */
 export const de_DeleteAccessGrantsInstanceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteAccessGrantsInstanceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3838,7 +3838,7 @@ export const de_DeleteAccessGrantsInstanceCommand = async (
  */
 export const de_DeleteAccessGrantsInstanceResourcePolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteAccessGrantsInstanceResourcePolicyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3855,7 +3855,7 @@ export const de_DeleteAccessGrantsInstanceResourcePolicyCommand = async (
  */
 export const de_DeleteAccessGrantsLocationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteAccessGrantsLocationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3872,7 +3872,7 @@ export const de_DeleteAccessGrantsLocationCommand = async (
  */
 export const de_DeleteAccessPointCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteAccessPointCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3889,7 +3889,7 @@ export const de_DeleteAccessPointCommand = async (
  */
 export const de_DeleteAccessPointForObjectLambdaCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteAccessPointForObjectLambdaCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3906,7 +3906,7 @@ export const de_DeleteAccessPointForObjectLambdaCommand = async (
  */
 export const de_DeleteAccessPointPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteAccessPointPolicyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3923,7 +3923,7 @@ export const de_DeleteAccessPointPolicyCommand = async (
  */
 export const de_DeleteAccessPointPolicyForObjectLambdaCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteAccessPointPolicyForObjectLambdaCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3940,7 +3940,7 @@ export const de_DeleteAccessPointPolicyForObjectLambdaCommand = async (
  */
 export const de_DeleteBucketCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteBucketCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3957,7 +3957,7 @@ export const de_DeleteBucketCommand = async (
  */
 export const de_DeleteBucketLifecycleConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteBucketLifecycleConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3974,7 +3974,7 @@ export const de_DeleteBucketLifecycleConfigurationCommand = async (
  */
 export const de_DeleteBucketPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteBucketPolicyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3991,7 +3991,7 @@ export const de_DeleteBucketPolicyCommand = async (
  */
 export const de_DeleteBucketReplicationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteBucketReplicationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4008,7 +4008,7 @@ export const de_DeleteBucketReplicationCommand = async (
  */
 export const de_DeleteBucketTaggingCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteBucketTaggingCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4025,7 +4025,7 @@ export const de_DeleteBucketTaggingCommand = async (
  */
 export const de_DeleteJobTaggingCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteJobTaggingCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4042,7 +4042,7 @@ export const de_DeleteJobTaggingCommand = async (
  */
 export const de_DeleteMultiRegionAccessPointCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteMultiRegionAccessPointCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4062,7 +4062,7 @@ export const de_DeleteMultiRegionAccessPointCommand = async (
  */
 export const de_DeletePublicAccessBlockCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeletePublicAccessBlockCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4079,7 +4079,7 @@ export const de_DeletePublicAccessBlockCommand = async (
  */
 export const de_DeleteStorageLensConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteStorageLensConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4096,7 +4096,7 @@ export const de_DeleteStorageLensConfigurationCommand = async (
  */
 export const de_DeleteStorageLensConfigurationTaggingCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteStorageLensConfigurationTaggingCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4113,7 +4113,7 @@ export const de_DeleteStorageLensConfigurationTaggingCommand = async (
  */
 export const de_DeleteStorageLensGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteStorageLensGroupCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4130,7 +4130,7 @@ export const de_DeleteStorageLensGroupCommand = async (
  */
 export const de_DescribeJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeJobCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4150,7 +4150,7 @@ export const de_DescribeJobCommand = async (
  */
 export const de_DescribeMultiRegionAccessPointOperationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeMultiRegionAccessPointOperationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4170,7 +4170,7 @@ export const de_DescribeMultiRegionAccessPointOperationCommand = async (
  */
 export const de_DissociateAccessGrantsIdentityCenterCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DissociateAccessGrantsIdentityCenterCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4187,7 +4187,7 @@ export const de_DissociateAccessGrantsIdentityCenterCommand = async (
  */
 export const de_GetAccessGrantCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetAccessGrantCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4231,7 +4231,7 @@ export const de_GetAccessGrantCommand = async (
  */
 export const de_GetAccessGrantsInstanceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetAccessGrantsInstanceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4260,7 +4260,7 @@ export const de_GetAccessGrantsInstanceCommand = async (
  */
 export const de_GetAccessGrantsInstanceForPrefixCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetAccessGrantsInstanceForPrefixCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4283,7 +4283,7 @@ export const de_GetAccessGrantsInstanceForPrefixCommand = async (
  */
 export const de_GetAccessGrantsInstanceResourcePolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetAccessGrantsInstanceResourcePolicyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4309,7 +4309,7 @@ export const de_GetAccessGrantsInstanceResourcePolicyCommand = async (
  */
 export const de_GetAccessGrantsLocationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetAccessGrantsLocationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4341,7 +4341,7 @@ export const de_GetAccessGrantsLocationCommand = async (
  */
 export const de_GetAccessPointCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetAccessPointCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4390,7 +4390,7 @@ export const de_GetAccessPointCommand = async (
  */
 export const de_GetAccessPointConfigurationForObjectLambdaCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetAccessPointConfigurationForObjectLambdaCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4410,7 +4410,7 @@ export const de_GetAccessPointConfigurationForObjectLambdaCommand = async (
  */
 export const de_GetAccessPointForObjectLambdaCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetAccessPointForObjectLambdaCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4439,7 +4439,7 @@ export const de_GetAccessPointForObjectLambdaCommand = async (
  */
 export const de_GetAccessPointPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetAccessPointPolicyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4459,7 +4459,7 @@ export const de_GetAccessPointPolicyCommand = async (
  */
 export const de_GetAccessPointPolicyForObjectLambdaCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetAccessPointPolicyForObjectLambdaCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4479,7 +4479,7 @@ export const de_GetAccessPointPolicyForObjectLambdaCommand = async (
  */
 export const de_GetAccessPointPolicyStatusCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetAccessPointPolicyStatusCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4499,7 +4499,7 @@ export const de_GetAccessPointPolicyStatusCommand = async (
  */
 export const de_GetAccessPointPolicyStatusForObjectLambdaCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetAccessPointPolicyStatusForObjectLambdaCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4519,7 +4519,7 @@ export const de_GetAccessPointPolicyStatusForObjectLambdaCommand = async (
  */
 export const de_GetBucketCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetBucketCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4545,7 +4545,7 @@ export const de_GetBucketCommand = async (
  */
 export const de_GetBucketLifecycleConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetBucketLifecycleConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4567,7 +4567,7 @@ export const de_GetBucketLifecycleConfigurationCommand = async (
  */
 export const de_GetBucketPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetBucketPolicyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4587,7 +4587,7 @@ export const de_GetBucketPolicyCommand = async (
  */
 export const de_GetBucketReplicationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetBucketReplicationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4607,7 +4607,7 @@ export const de_GetBucketReplicationCommand = async (
  */
 export const de_GetBucketTaggingCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetBucketTaggingCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4629,7 +4629,7 @@ export const de_GetBucketTaggingCommand = async (
  */
 export const de_GetBucketVersioningCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetBucketVersioningCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4652,7 +4652,7 @@ export const de_GetBucketVersioningCommand = async (
  */
 export const de_GetDataAccessCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetDataAccessCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4675,7 +4675,7 @@ export const de_GetDataAccessCommand = async (
  */
 export const de_GetJobTaggingCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetJobTaggingCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4697,7 +4697,7 @@ export const de_GetJobTaggingCommand = async (
  */
 export const de_GetMultiRegionAccessPointCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetMultiRegionAccessPointCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4717,7 +4717,7 @@ export const de_GetMultiRegionAccessPointCommand = async (
  */
 export const de_GetMultiRegionAccessPointPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetMultiRegionAccessPointPolicyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4737,7 +4737,7 @@ export const de_GetMultiRegionAccessPointPolicyCommand = async (
  */
 export const de_GetMultiRegionAccessPointPolicyStatusCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetMultiRegionAccessPointPolicyStatusCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4757,7 +4757,7 @@ export const de_GetMultiRegionAccessPointPolicyStatusCommand = async (
  */
 export const de_GetMultiRegionAccessPointRoutesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetMultiRegionAccessPointRoutesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4782,7 +4782,7 @@ export const de_GetMultiRegionAccessPointRoutesCommand = async (
  */
 export const de_GetPublicAccessBlockCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetPublicAccessBlockCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4800,7 +4800,7 @@ export const de_GetPublicAccessBlockCommand = async (
  */
 export const de_GetStorageLensConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetStorageLensConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4818,7 +4818,7 @@ export const de_GetStorageLensConfigurationCommand = async (
  */
 export const de_GetStorageLensConfigurationTaggingCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetStorageLensConfigurationTaggingCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4840,7 +4840,7 @@ export const de_GetStorageLensConfigurationTaggingCommand = async (
  */
 export const de_GetStorageLensGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetStorageLensGroupCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4858,7 +4858,7 @@ export const de_GetStorageLensGroupCommand = async (
  */
 export const de_ListAccessGrantsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAccessGrantsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4883,7 +4883,7 @@ export const de_ListAccessGrantsCommand = async (
  */
 export const de_ListAccessGrantsInstancesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAccessGrantsInstancesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4908,7 +4908,7 @@ export const de_ListAccessGrantsInstancesCommand = async (
  */
 export const de_ListAccessGrantsLocationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAccessGrantsLocationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4933,7 +4933,7 @@ export const de_ListAccessGrantsLocationsCommand = async (
  */
 export const de_ListAccessPointsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAccessPointsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4958,7 +4958,7 @@ export const de_ListAccessPointsCommand = async (
  */
 export const de_ListAccessPointsForObjectLambdaCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAccessPointsForObjectLambdaCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4983,7 +4983,7 @@ export const de_ListAccessPointsForObjectLambdaCommand = async (
  */
 export const de_ListJobsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListJobsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5008,7 +5008,7 @@ export const de_ListJobsCommand = async (
  */
 export const de_ListMultiRegionAccessPointsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListMultiRegionAccessPointsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5033,7 +5033,7 @@ export const de_ListMultiRegionAccessPointsCommand = async (
  */
 export const de_ListRegionalBucketsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListRegionalBucketsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5058,7 +5058,7 @@ export const de_ListRegionalBucketsCommand = async (
  */
 export const de_ListStorageLensConfigurationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListStorageLensConfigurationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5083,7 +5083,7 @@ export const de_ListStorageLensConfigurationsCommand = async (
  */
 export const de_ListStorageLensGroupsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListStorageLensGroupsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5108,7 +5108,7 @@ export const de_ListStorageLensGroupsCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5130,7 +5130,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_PutAccessGrantsInstanceResourcePolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutAccessGrantsInstanceResourcePolicyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5156,7 +5156,7 @@ export const de_PutAccessGrantsInstanceResourcePolicyCommand = async (
  */
 export const de_PutAccessPointConfigurationForObjectLambdaCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutAccessPointConfigurationForObjectLambdaCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5173,7 +5173,7 @@ export const de_PutAccessPointConfigurationForObjectLambdaCommand = async (
  */
 export const de_PutAccessPointPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutAccessPointPolicyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5190,7 +5190,7 @@ export const de_PutAccessPointPolicyCommand = async (
  */
 export const de_PutAccessPointPolicyForObjectLambdaCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutAccessPointPolicyForObjectLambdaCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5207,7 +5207,7 @@ export const de_PutAccessPointPolicyForObjectLambdaCommand = async (
  */
 export const de_PutBucketLifecycleConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutBucketLifecycleConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5224,7 +5224,7 @@ export const de_PutBucketLifecycleConfigurationCommand = async (
  */
 export const de_PutBucketPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutBucketPolicyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5241,7 +5241,7 @@ export const de_PutBucketPolicyCommand = async (
  */
 export const de_PutBucketReplicationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutBucketReplicationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5258,7 +5258,7 @@ export const de_PutBucketReplicationCommand = async (
  */
 export const de_PutBucketTaggingCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutBucketTaggingCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5275,7 +5275,7 @@ export const de_PutBucketTaggingCommand = async (
  */
 export const de_PutBucketVersioningCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutBucketVersioningCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5292,7 +5292,7 @@ export const de_PutBucketVersioningCommand = async (
  */
 export const de_PutJobTaggingCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutJobTaggingCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5309,7 +5309,7 @@ export const de_PutJobTaggingCommand = async (
  */
 export const de_PutMultiRegionAccessPointPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutMultiRegionAccessPointPolicyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5329,7 +5329,7 @@ export const de_PutMultiRegionAccessPointPolicyCommand = async (
  */
 export const de_PutPublicAccessBlockCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutPublicAccessBlockCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5346,7 +5346,7 @@ export const de_PutPublicAccessBlockCommand = async (
  */
 export const de_PutStorageLensConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutStorageLensConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5363,7 +5363,7 @@ export const de_PutStorageLensConfigurationCommand = async (
  */
 export const de_PutStorageLensConfigurationTaggingCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutStorageLensConfigurationTaggingCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5380,7 +5380,7 @@ export const de_PutStorageLensConfigurationTaggingCommand = async (
  */
 export const de_SubmitMultiRegionAccessPointRoutesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SubmitMultiRegionAccessPointRoutesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5397,7 +5397,7 @@ export const de_SubmitMultiRegionAccessPointRoutesCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5414,7 +5414,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5431,7 +5431,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateAccessGrantsLocationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateAccessGrantsLocationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5463,7 +5463,7 @@ export const de_UpdateAccessGrantsLocationCommand = async (
  */
 export const de_UpdateJobPriorityCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateJobPriorityCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5486,7 +5486,7 @@ export const de_UpdateJobPriorityCommand = async (
  */
 export const de_UpdateJobStatusCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateJobStatusCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5512,7 +5512,7 @@ export const de_UpdateJobStatusCommand = async (
  */
 export const de_UpdateStorageLensGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateStorageLensGroupCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5615,7 +5615,7 @@ const de_BucketAlreadyExistsRes = async (parsedOutput: any, context: __SerdeCont
  */
 const de_BucketAlreadyOwnedByYouRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BucketAlreadyOwnedByYou> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -5631,7 +5631,7 @@ const de_BucketAlreadyOwnedByYouRes = async (
  */
 const de_IdempotencyExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<IdempotencyException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -5650,7 +5650,7 @@ const de_IdempotencyExceptionRes = async (
  */
 const de_InternalServiceExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServiceException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -5669,7 +5669,7 @@ const de_InternalServiceExceptionRes = async (
  */
 const de_InvalidNextTokenExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidNextTokenException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -5688,7 +5688,7 @@ const de_InvalidNextTokenExceptionRes = async (
  */
 const de_InvalidRequestExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidRequestException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -5723,7 +5723,7 @@ const de_JobStatusExceptionRes = async (parsedOutput: any, context: __SerdeConte
  */
 const de_NoSuchPublicAccessBlockConfigurationRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<NoSuchPublicAccessBlockConfiguration> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -5758,7 +5758,7 @@ const de_NotFoundExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_TooManyRequestsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyRequestsException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -5777,7 +5777,7 @@ const de_TooManyRequestsExceptionRes = async (
  */
 const de_TooManyTagsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyTagsException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -5818,7 +5818,7 @@ const se_AccessControlTranslation = (input: AccessControlTranslation, context: _
  */
 const se_AccessGrantsLocationConfiguration = (
   input: AccessGrantsLocationConfiguration,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const bn = new __XmlNode(_AGLC);
   if (input[_SSP] != null) {
@@ -5962,7 +5962,7 @@ const se_CreateBucketConfiguration = (input: CreateBucketConfiguration, context:
  */
 const se_CreateMultiRegionAccessPointInput = (
   input: CreateMultiRegionAccessPointInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const bn = new __XmlNode(_CMRAPI);
   if (input[_N] != null) {
@@ -5991,7 +5991,7 @@ const se_DeleteMarkerReplication = (input: DeleteMarkerReplication, context: __S
  */
 const se_DeleteMultiRegionAccessPointInput = (
   input: DeleteMultiRegionAccessPointInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const bn = new __XmlNode(_DMRAPI);
   if (input[_N] != null) {
@@ -6166,7 +6166,7 @@ const se_JobManifestGeneratorFilter = (input: JobManifestGeneratorFilter, contex
     bn.c(__XmlNode.of(_OCT, __serializeDateTime(input[_CB])).n(_CB));
   }
   bn.lc(input, "ObjectReplicationStatuses", "ObjectReplicationStatuses", () =>
-    se_ReplicationStatusFilterList(input[_ORS]!, context)
+    se_ReplicationStatusFilterList(input[_ORS]!, context),
   );
   if (input[_KNC] != null) {
     bn.c(se_KeyNameConstraint(input[_KNC], context).n(_KNC));
@@ -6276,7 +6276,7 @@ const se_KeyNameConstraint = (input: KeyNameConstraint, context: __SerdeContext)
   bn.lc(input, "MatchAnyPrefix", "MatchAnyPrefix", () => se_NonEmptyMaxLength1024StringList(input[_MAP]!, context));
   bn.lc(input, "MatchAnySuffix", "MatchAnySuffix", () => se_NonEmptyMaxLength1024StringList(input[_MAS]!, context));
   bn.lc(input, "MatchAnySubstring", "MatchAnySubstring", () =>
-    se_NonEmptyMaxLength1024StringList(input[_MASa]!, context)
+    se_NonEmptyMaxLength1024StringList(input[_MASa]!, context),
   );
   return bn;
 };
@@ -6339,7 +6339,7 @@ const se_LifecycleRule = (input: LifecycleRule, context: __SerdeContext): any =>
   }
   bn.lc(input, "Transitions", "Transitions", () => se_TransitionList(input[_Tr]!, context));
   bn.lc(input, "NoncurrentVersionTransitions", "NoncurrentVersionTransitions", () =>
-    se_NoncurrentVersionTransitionList(input[_NVT]!, context)
+    se_NoncurrentVersionTransitionList(input[_NVT]!, context),
   );
   if (input[_NVE] != null) {
     bn.c(se_NoncurrentVersionExpiration(input[_NVE], context).n(_NVE));
@@ -6571,7 +6571,7 @@ const se_ObjectLambdaConfiguration = (input: ObjectLambdaConfiguration, context:
   }
   bn.lc(input, "AllowedFeatures", "AllowedFeatures", () => se_ObjectLambdaAllowedFeaturesList(input[_AFl]!, context));
   bn.lc(input, "TransformationConfigurations", "TransformationConfigurations", () =>
-    se_ObjectLambdaTransformationConfigurationsList(input[_TC]!, context)
+    se_ObjectLambdaTransformationConfigurationsList(input[_TC]!, context),
   );
   return bn;
 };
@@ -6581,7 +6581,7 @@ const se_ObjectLambdaConfiguration = (input: ObjectLambdaConfiguration, context:
  */
 const se_ObjectLambdaContentTransformation = (
   input: ObjectLambdaContentTransformation,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const bn = new __XmlNode(_OLCT);
   ObjectLambdaContentTransformation.visit(input, {
@@ -6605,11 +6605,11 @@ const se_ObjectLambdaContentTransformation = (
  */
 const se_ObjectLambdaTransformationConfiguration = (
   input: ObjectLambdaTransformationConfiguration,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const bn = new __XmlNode(_OLTC);
   bn.lc(input, "Actions", "Actions", () =>
-    se_ObjectLambdaTransformationConfigurationActionsList(input[_Act]!, context)
+    se_ObjectLambdaTransformationConfigurationActionsList(input[_Act]!, context),
   );
   if (input[_CTo] != null) {
     bn.c(se_ObjectLambdaContentTransformation(input[_CTo], context).n(_CTo));
@@ -6622,7 +6622,7 @@ const se_ObjectLambdaTransformationConfiguration = (
  */
 const se_ObjectLambdaTransformationConfigurationActionsList = (
   input: ObjectLambdaTransformationConfigurationAction[],
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return input
     .filter((e: any) => e != null)
@@ -6637,7 +6637,7 @@ const se_ObjectLambdaTransformationConfigurationActionsList = (
  */
 const se_ObjectLambdaTransformationConfigurationsList = (
   input: ObjectLambdaTransformationConfiguration[],
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return input
     .filter((e: any) => e != null)
@@ -6697,7 +6697,7 @@ const se_PublicAccessBlockConfiguration = (input: PublicAccessBlockConfiguration
  */
 const se_PutMultiRegionAccessPointPolicyInput = (
   input: PutMultiRegionAccessPointPolicyInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const bn = new __XmlNode(_PMRAPPI);
   if (input[_N] != null) {
@@ -7529,7 +7529,7 @@ const se_StorageLensGroupLevelInclude = (input: string[], context: __SerdeContex
  */
 const se_StorageLensGroupLevelSelectionCriteria = (
   input: StorageLensGroupLevelSelectionCriteria,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const bn = new __XmlNode(_SLGLSC);
   bn.lc(input, "Include", "Include", () => se_StorageLensGroupLevelInclude(input[_I]!, context));
@@ -7733,7 +7733,7 @@ const de_AccessGrantsList = (output: any, context: __SerdeContext): ListAccessGr
  */
 const de_AccessGrantsLocationConfiguration = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): AccessGrantsLocationConfiguration => {
   const contents: any = {};
   if (output[_SSP] != null) {
@@ -7993,7 +7993,7 @@ const de_CloudWatchMetrics = (output: any, context: __SerdeContext): CloudWatchM
  */
 const de_CreateMultiRegionAccessPointInput = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CreateMultiRegionAccessPointInput => {
   const contents: any = {};
   if (output[_N] != null) {
@@ -8046,7 +8046,7 @@ const de_DeleteMarkerReplication = (output: any, context: __SerdeContext): Delet
  */
 const de_DeleteMultiRegionAccessPointInput = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DeleteMultiRegionAccessPointInput => {
   const contents: any = {};
   if (output[_N] != null) {
@@ -8124,7 +8124,7 @@ const de_Endpoints = (output: any, context: __SerdeContext): Record<string, stri
  */
 const de_EstablishedMultiRegionAccessPointPolicy = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): EstablishedMultiRegionAccessPointPolicy => {
   const contents: any = {};
   if (output[_Po] != null) {
@@ -8774,7 +8774,7 @@ const de_ListAccessGrantsLocationsEntry = (output: any, context: __SerdeContext)
  */
 const de_ListStorageLensConfigurationEntry = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ListStorageLensConfigurationEntry => {
   const contents: any = {};
   if (output[_Id_] != null) {
@@ -8889,7 +8889,7 @@ const de_Metrics = (output: any, context: __SerdeContext): Metrics => {
  */
 const de_MultiRegionAccessPointPolicyDocument = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): MultiRegionAccessPointPolicyDocument => {
   const contents: any = {};
   if (output[_Es] != null) {
@@ -8906,7 +8906,7 @@ const de_MultiRegionAccessPointPolicyDocument = (
  */
 const de_MultiRegionAccessPointRegionalResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): MultiRegionAccessPointRegionalResponse => {
   const contents: any = {};
   if (output[_N] != null) {
@@ -8923,7 +8923,7 @@ const de_MultiRegionAccessPointRegionalResponse = (
  */
 const de_MultiRegionAccessPointRegionalResponseList = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): MultiRegionAccessPointRegionalResponse[] => {
   return (output || [])
     .filter((e: any) => e != null)
@@ -8993,7 +8993,7 @@ const de_MultiRegionAccessPointRoute = (output: any, context: __SerdeContext): M
  */
 const de_MultiRegionAccessPointsAsyncResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): MultiRegionAccessPointsAsyncResponse => {
   const contents: any = {};
   if (output.Regions === "") {
@@ -9136,7 +9136,7 @@ const de_ObjectLambdaConfiguration = (output: any, context: __SerdeContext): Obj
  */
 const de_ObjectLambdaContentTransformation = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ObjectLambdaContentTransformation => {
   if (output[_ALw] != null) {
     return {
@@ -9151,7 +9151,7 @@ const de_ObjectLambdaContentTransformation = (
  */
 const de_ObjectLambdaTransformationConfiguration = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ObjectLambdaTransformationConfiguration => {
   const contents: any = {};
   if (output.Actions === "") {
@@ -9159,7 +9159,7 @@ const de_ObjectLambdaTransformationConfiguration = (
   } else if (output[_Act] != null && output[_Act][_Acti] != null) {
     contents[_Act] = de_ObjectLambdaTransformationConfigurationActionsList(
       __getArrayIfSingleItem(output[_Act][_Acti]),
-      context
+      context,
     );
   }
   if (output.ContentTransformation === "") {
@@ -9175,7 +9175,7 @@ const de_ObjectLambdaTransformationConfiguration = (
  */
 const de_ObjectLambdaTransformationConfigurationActionsList = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ObjectLambdaTransformationConfigurationAction[] => {
   return (output || [])
     .filter((e: any) => e != null)
@@ -9189,7 +9189,7 @@ const de_ObjectLambdaTransformationConfigurationActionsList = (
  */
 const de_ObjectLambdaTransformationConfigurationsList = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ObjectLambdaTransformationConfiguration[] => {
   return (output || [])
     .filter((e: any) => e != null)
@@ -9239,7 +9239,7 @@ const de_PrefixLevelStorageMetrics = (output: any, context: __SerdeContext): Pre
  */
 const de_ProposedMultiRegionAccessPointPolicy = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ProposedMultiRegionAccessPointPolicy => {
   const contents: any = {};
   if (output[_Po] != null) {
@@ -9273,7 +9273,7 @@ const de_PublicAccessBlockConfiguration = (output: any, context: __SerdeContext)
  */
 const de_PutMultiRegionAccessPointPolicyInput = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): PutMultiRegionAccessPointPolicyInput => {
   const contents: any = {};
   if (output[_N] != null) {
@@ -9730,7 +9730,7 @@ const de_S3GrantList = (output: any, context: __SerdeContext): S3Grant[] => {
  */
 const de_S3InitiateRestoreObjectOperation = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): S3InitiateRestoreObjectOperation => {
   const contents: any = {};
   if (output[_EID] != null) {
@@ -10257,7 +10257,7 @@ const de_StorageLensGroupLevelInclude = (output: any, context: __SerdeContext): 
  */
 const de_StorageLensGroupLevelSelectionCriteria = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): StorageLensGroupLevelSelectionCriteria => {
   const contents: any = {};
   if (output.Include === "") {

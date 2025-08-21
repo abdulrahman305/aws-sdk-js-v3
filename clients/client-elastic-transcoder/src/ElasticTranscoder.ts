@@ -94,7 +94,7 @@ export interface ElasticTranscoder {
   cancelJob(
     args: CancelJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CancelJobCommandOutput) => void
+    cb: (err: any, data?: CancelJobCommandOutput) => void,
   ): void;
 
   /**
@@ -105,7 +105,7 @@ export interface ElasticTranscoder {
   createJob(
     args: CreateJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateJobCommandOutput) => void
+    cb: (err: any, data?: CreateJobCommandOutput) => void,
   ): void;
 
   /**
@@ -113,13 +113,13 @@ export interface ElasticTranscoder {
    */
   createPipeline(
     args: CreatePipelineCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreatePipelineCommandOutput>;
   createPipeline(args: CreatePipelineCommandInput, cb: (err: any, data?: CreatePipelineCommandOutput) => void): void;
   createPipeline(
     args: CreatePipelineCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreatePipelineCommandOutput) => void
+    cb: (err: any, data?: CreatePipelineCommandOutput) => void,
   ): void;
 
   /**
@@ -130,7 +130,7 @@ export interface ElasticTranscoder {
   createPreset(
     args: CreatePresetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreatePresetCommandOutput) => void
+    cb: (err: any, data?: CreatePresetCommandOutput) => void,
   ): void;
 
   /**
@@ -138,13 +138,13 @@ export interface ElasticTranscoder {
    */
   deletePipeline(
     args: DeletePipelineCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeletePipelineCommandOutput>;
   deletePipeline(args: DeletePipelineCommandInput, cb: (err: any, data?: DeletePipelineCommandOutput) => void): void;
   deletePipeline(
     args: DeletePipelineCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeletePipelineCommandOutput) => void
+    cb: (err: any, data?: DeletePipelineCommandOutput) => void,
   ): void;
 
   /**
@@ -155,7 +155,7 @@ export interface ElasticTranscoder {
   deletePreset(
     args: DeletePresetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeletePresetCommandOutput) => void
+    cb: (err: any, data?: DeletePresetCommandOutput) => void,
   ): void;
 
   /**
@@ -163,16 +163,16 @@ export interface ElasticTranscoder {
    */
   listJobsByPipeline(
     args: ListJobsByPipelineCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListJobsByPipelineCommandOutput>;
   listJobsByPipeline(
     args: ListJobsByPipelineCommandInput,
-    cb: (err: any, data?: ListJobsByPipelineCommandOutput) => void
+    cb: (err: any, data?: ListJobsByPipelineCommandOutput) => void,
   ): void;
   listJobsByPipeline(
     args: ListJobsByPipelineCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListJobsByPipelineCommandOutput) => void
+    cb: (err: any, data?: ListJobsByPipelineCommandOutput) => void,
   ): void;
 
   /**
@@ -180,16 +180,16 @@ export interface ElasticTranscoder {
    */
   listJobsByStatus(
     args: ListJobsByStatusCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListJobsByStatusCommandOutput>;
   listJobsByStatus(
     args: ListJobsByStatusCommandInput,
-    cb: (err: any, data?: ListJobsByStatusCommandOutput) => void
+    cb: (err: any, data?: ListJobsByStatusCommandOutput) => void,
   ): void;
   listJobsByStatus(
     args: ListJobsByStatusCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListJobsByStatusCommandOutput) => void
+    cb: (err: any, data?: ListJobsByStatusCommandOutput) => void,
   ): void;
 
   /**
@@ -201,7 +201,7 @@ export interface ElasticTranscoder {
   listPipelines(
     args: ListPipelinesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListPipelinesCommandOutput) => void
+    cb: (err: any, data?: ListPipelinesCommandOutput) => void,
   ): void;
 
   /**
@@ -213,7 +213,7 @@ export interface ElasticTranscoder {
   listPresets(
     args: ListPresetsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListPresetsCommandOutput) => void
+    cb: (err: any, data?: ListPresetsCommandOutput) => void,
   ): void;
 
   /**
@@ -224,7 +224,7 @@ export interface ElasticTranscoder {
   readJob(
     args: ReadJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ReadJobCommandOutput) => void
+    cb: (err: any, data?: ReadJobCommandOutput) => void,
   ): void;
 
   /**
@@ -235,7 +235,7 @@ export interface ElasticTranscoder {
   readPipeline(
     args: ReadPipelineCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ReadPipelineCommandOutput) => void
+    cb: (err: any, data?: ReadPipelineCommandOutput) => void,
   ): void;
 
   /**
@@ -246,7 +246,7 @@ export interface ElasticTranscoder {
   readPreset(
     args: ReadPresetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ReadPresetCommandOutput) => void
+    cb: (err: any, data?: ReadPresetCommandOutput) => void,
   ): void;
 
   /**
@@ -257,7 +257,7 @@ export interface ElasticTranscoder {
   testRole(
     args: TestRoleCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TestRoleCommandOutput) => void
+    cb: (err: any, data?: TestRoleCommandOutput) => void,
   ): void;
 
   /**
@@ -265,13 +265,13 @@ export interface ElasticTranscoder {
    */
   updatePipeline(
     args: UpdatePipelineCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdatePipelineCommandOutput>;
   updatePipeline(args: UpdatePipelineCommandInput, cb: (err: any, data?: UpdatePipelineCommandOutput) => void): void;
   updatePipeline(
     args: UpdatePipelineCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdatePipelineCommandOutput) => void
+    cb: (err: any, data?: UpdatePipelineCommandOutput) => void,
   ): void;
 
   /**
@@ -279,16 +279,16 @@ export interface ElasticTranscoder {
    */
   updatePipelineNotifications(
     args: UpdatePipelineNotificationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdatePipelineNotificationsCommandOutput>;
   updatePipelineNotifications(
     args: UpdatePipelineNotificationsCommandInput,
-    cb: (err: any, data?: UpdatePipelineNotificationsCommandOutput) => void
+    cb: (err: any, data?: UpdatePipelineNotificationsCommandOutput) => void,
   ): void;
   updatePipelineNotifications(
     args: UpdatePipelineNotificationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdatePipelineNotificationsCommandOutput) => void
+    cb: (err: any, data?: UpdatePipelineNotificationsCommandOutput) => void,
   ): void;
 
   /**
@@ -296,16 +296,16 @@ export interface ElasticTranscoder {
    */
   updatePipelineStatus(
     args: UpdatePipelineStatusCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdatePipelineStatusCommandOutput>;
   updatePipelineStatus(
     args: UpdatePipelineStatusCommandInput,
-    cb: (err: any, data?: UpdatePipelineStatusCommandOutput) => void
+    cb: (err: any, data?: UpdatePipelineStatusCommandOutput) => void,
   ): void;
   updatePipelineStatus(
     args: UpdatePipelineStatusCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdatePipelineStatusCommandOutput) => void
+    cb: (err: any, data?: UpdatePipelineStatusCommandOutput) => void,
   ): void;
 }
 

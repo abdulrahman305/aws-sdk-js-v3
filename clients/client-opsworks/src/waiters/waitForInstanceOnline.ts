@@ -148,7 +148,7 @@ const checkState = async (client: OpsWorksClient, input: DescribeInstancesComman
  */
 export const waitForInstanceOnline = async (
   params: WaiterConfiguration<OpsWorksClient>,
-  input: DescribeInstancesCommandInput
+  input: DescribeInstancesCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 15, maxDelay: 120 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -160,7 +160,7 @@ export const waitForInstanceOnline = async (
  */
 export const waitUntilInstanceOnline = async (
   params: WaiterConfiguration<OpsWorksClient>,
-  input: DescribeInstancesCommandInput
+  input: DescribeInstancesCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 15, maxDelay: 120 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

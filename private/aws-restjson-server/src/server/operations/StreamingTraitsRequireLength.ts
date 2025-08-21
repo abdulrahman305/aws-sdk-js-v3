@@ -42,7 +42,7 @@ export namespace StreamingTraitsRequireLengthServerInput {
    * @internal
    */
   export const validate: (
-    obj: Parameters<typeof StreamingTraitsRequireLengthInput.validate>[0]
+    obj: Parameters<typeof StreamingTraitsRequireLengthInput.validate>[0],
   ) => __ValidationFailure[] = StreamingTraitsRequireLengthInput.validate;
 }
 export interface StreamingTraitsRequireLengthServerOutput {}
@@ -67,14 +67,14 @@ export class StreamingTraitsRequireLengthSerializer
 
 export const getStreamingTraitsRequireLengthHandler = <Context>(
   operation: __Operation<StreamingTraitsRequireLengthServerInput, StreamingTraitsRequireLengthServerOutput, Context>,
-  customizer: __ValidationCustomizer<"StreamingTraitsRequireLength">
+  customizer: __ValidationCustomizer<"StreamingTraitsRequireLength">,
 ): __ServiceHandler<Context, __HttpRequest, __HttpResponse> => {
   const mux = new httpbinding.HttpBindingMux<"RestJson", "StreamingTraitsRequireLength">([
     new httpbinding.UriSpec<"RestJson", "StreamingTraitsRequireLength">(
       "POST",
       [{ type: "path_literal", value: "StreamingTraitsRequireLength" }],
       [],
-      { service: "RestJson", operation: "StreamingTraitsRequireLength" }
+      { service: "RestJson", operation: "StreamingTraitsRequireLength" },
     ),
   ]);
   return new StreamingTraitsRequireLengthHandler(
@@ -82,7 +82,7 @@ export const getStreamingTraitsRequireLengthHandler = <Context>(
     mux,
     new StreamingTraitsRequireLengthSerializer(),
     serializeFrameworkException,
-    customizer
+    customizer,
   );
 };
 
@@ -103,7 +103,7 @@ async function handle<S, O extends keyof S & string, Context>(
   operation: __Operation<__OperationInput<S[O]>, __OperationOutput<S[O]>, Context>,
   serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
   validationFn: (input: __OperationInput<S[O]>) => __ValidationFailure[],
-  validationCustomizer: __ValidationCustomizer<O>
+  validationCustomizer: __ValidationCustomizer<O>,
 ): Promise<__HttpResponse> {
   let input;
   try {
@@ -149,7 +149,7 @@ export class StreamingTraitsRequireLengthHandler<Context> implements __ServiceHa
   >;
   private readonly serializeFrameworkException: (
     e: __SmithyFrameworkException,
-    ctx: __ServerSerdeContext
+    ctx: __ServerSerdeContext,
   ) => Promise<__HttpResponse>;
   private readonly validationCustomizer: __ValidationCustomizer<"StreamingTraitsRequireLength">;
   /**
@@ -170,7 +170,7 @@ export class StreamingTraitsRequireLengthHandler<Context> implements __ServiceHa
       StreamingTraitsRequireLengthErrors
     >,
     serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
-    validationCustomizer: __ValidationCustomizer<"StreamingTraitsRequireLength">
+    validationCustomizer: __ValidationCustomizer<"StreamingTraitsRequireLength">,
   ) {
     this.operation = operation;
     this.mux = mux;
@@ -182,7 +182,7 @@ export class StreamingTraitsRequireLengthHandler<Context> implements __ServiceHa
     const target = this.mux.match(request);
     if (target === undefined) {
       console.log(
-        "Received a request that did not match aws.protocoltests.restjson#RestJson.StreamingTraitsRequireLength. This indicates a misconfiguration."
+        "Received a request that did not match aws.protocoltests.restjson#RestJson.StreamingTraitsRequireLength. This indicates a misconfiguration.",
       );
       return this.serializeFrameworkException(new __InternalFailureException(), serdeContextBase);
     }
@@ -194,7 +194,7 @@ export class StreamingTraitsRequireLengthHandler<Context> implements __ServiceHa
       this.operation,
       this.serializeFrameworkException,
       StreamingTraitsRequireLengthServerInput.validate,
-      this.validationCustomizer
+      this.validationCustomizer,
     );
   }
 }

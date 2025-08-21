@@ -312,7 +312,7 @@ import {
  */
 export const se_AssociateMemberCommand = async (
   input: AssociateMemberCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -323,7 +323,7 @@ export const se_AssociateMemberCommand = async (
   body = JSON.stringify(
     take(input, {
       accountId: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -334,7 +334,7 @@ export const se_AssociateMemberCommand = async (
  */
 export const se_BatchGetAccountStatusCommand = async (
   input: BatchGetAccountStatusCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -345,7 +345,7 @@ export const se_BatchGetAccountStatusCommand = async (
   body = JSON.stringify(
     take(input, {
       accountIds: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -356,7 +356,7 @@ export const se_BatchGetAccountStatusCommand = async (
  */
 export const se_BatchGetCodeSnippetCommand = async (
   input: BatchGetCodeSnippetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -367,7 +367,7 @@ export const se_BatchGetCodeSnippetCommand = async (
   body = JSON.stringify(
     take(input, {
       findingArns: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -378,7 +378,7 @@ export const se_BatchGetCodeSnippetCommand = async (
  */
 export const se_BatchGetFindingDetailsCommand = async (
   input: BatchGetFindingDetailsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -389,7 +389,7 @@ export const se_BatchGetFindingDetailsCommand = async (
   body = JSON.stringify(
     take(input, {
       findingArns: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -400,7 +400,7 @@ export const se_BatchGetFindingDetailsCommand = async (
  */
 export const se_BatchGetFreeTrialInfoCommand = async (
   input: BatchGetFreeTrialInfoCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -411,7 +411,7 @@ export const se_BatchGetFreeTrialInfoCommand = async (
   body = JSON.stringify(
     take(input, {
       accountIds: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -422,7 +422,7 @@ export const se_BatchGetFreeTrialInfoCommand = async (
  */
 export const se_BatchGetMemberEc2DeepInspectionStatusCommand = async (
   input: BatchGetMemberEc2DeepInspectionStatusCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -433,7 +433,7 @@ export const se_BatchGetMemberEc2DeepInspectionStatusCommand = async (
   body = JSON.stringify(
     take(input, {
       accountIds: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -444,7 +444,7 @@ export const se_BatchGetMemberEc2DeepInspectionStatusCommand = async (
  */
 export const se_BatchUpdateMemberEc2DeepInspectionStatusCommand = async (
   input: BatchUpdateMemberEc2DeepInspectionStatusCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -455,7 +455,7 @@ export const se_BatchUpdateMemberEc2DeepInspectionStatusCommand = async (
   body = JSON.stringify(
     take(input, {
       accountIds: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -466,7 +466,7 @@ export const se_BatchUpdateMemberEc2DeepInspectionStatusCommand = async (
  */
 export const se_CancelFindingsReportCommand = async (
   input: CancelFindingsReportCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -477,7 +477,7 @@ export const se_CancelFindingsReportCommand = async (
   body = JSON.stringify(
     take(input, {
       reportId: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -488,7 +488,7 @@ export const se_CancelFindingsReportCommand = async (
  */
 export const se_CancelSbomExportCommand = async (
   input: CancelSbomExportCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -499,7 +499,7 @@ export const se_CancelSbomExportCommand = async (
   body = JSON.stringify(
     take(input, {
       reportId: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -510,7 +510,7 @@ export const se_CancelSbomExportCommand = async (
  */
 export const se_CreateCisScanConfigurationCommand = async (
   input: CreateCisScanConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -525,7 +525,7 @@ export const se_CreateCisScanConfigurationCommand = async (
       securityLevel: [],
       tags: (_) => _json(_),
       targets: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -536,7 +536,7 @@ export const se_CreateCisScanConfigurationCommand = async (
  */
 export const se_CreateFilterCommand = async (
   input: CreateFilterCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -552,7 +552,7 @@ export const se_CreateFilterCommand = async (
       name: [],
       reason: [],
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -563,7 +563,7 @@ export const se_CreateFilterCommand = async (
  */
 export const se_CreateFindingsReportCommand = async (
   input: CreateFindingsReportCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -576,7 +576,7 @@ export const se_CreateFindingsReportCommand = async (
       filterCriteria: (_) => se_FilterCriteria(_, context),
       reportFormat: [],
       s3Destination: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -587,7 +587,7 @@ export const se_CreateFindingsReportCommand = async (
  */
 export const se_CreateSbomExportCommand = async (
   input: CreateSbomExportCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -600,7 +600,7 @@ export const se_CreateSbomExportCommand = async (
       reportFormat: [],
       resourceFilterCriteria: (_) => _json(_),
       s3Destination: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -611,7 +611,7 @@ export const se_CreateSbomExportCommand = async (
  */
 export const se_DeleteCisScanConfigurationCommand = async (
   input: DeleteCisScanConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -622,7 +622,7 @@ export const se_DeleteCisScanConfigurationCommand = async (
   body = JSON.stringify(
     take(input, {
       scanConfigurationArn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -633,7 +633,7 @@ export const se_DeleteCisScanConfigurationCommand = async (
  */
 export const se_DeleteFilterCommand = async (
   input: DeleteFilterCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -644,7 +644,7 @@ export const se_DeleteFilterCommand = async (
   body = JSON.stringify(
     take(input, {
       arn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -655,7 +655,7 @@ export const se_DeleteFilterCommand = async (
  */
 export const se_DescribeOrganizationConfigurationCommand = async (
   input: DescribeOrganizationConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -673,7 +673,7 @@ export const se_DescribeOrganizationConfigurationCommand = async (
  */
 export const se_DisableCommand = async (
   input: DisableCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -685,7 +685,7 @@ export const se_DisableCommand = async (
     take(input, {
       accountIds: (_) => _json(_),
       resourceTypes: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -696,7 +696,7 @@ export const se_DisableCommand = async (
  */
 export const se_DisableDelegatedAdminAccountCommand = async (
   input: DisableDelegatedAdminAccountCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -707,7 +707,7 @@ export const se_DisableDelegatedAdminAccountCommand = async (
   body = JSON.stringify(
     take(input, {
       delegatedAdminAccountId: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -718,7 +718,7 @@ export const se_DisableDelegatedAdminAccountCommand = async (
  */
 export const se_DisassociateMemberCommand = async (
   input: DisassociateMemberCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -729,7 +729,7 @@ export const se_DisassociateMemberCommand = async (
   body = JSON.stringify(
     take(input, {
       accountId: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -750,7 +750,7 @@ export const se_EnableCommand = async (input: EnableCommandInput, context: __Ser
       accountIds: (_) => _json(_),
       clientToken: [true, (_) => _ ?? generateIdempotencyToken()],
       resourceTypes: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -761,7 +761,7 @@ export const se_EnableCommand = async (input: EnableCommandInput, context: __Ser
  */
 export const se_EnableDelegatedAdminAccountCommand = async (
   input: EnableDelegatedAdminAccountCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -773,7 +773,7 @@ export const se_EnableDelegatedAdminAccountCommand = async (
     take(input, {
       clientToken: [true, (_) => _ ?? generateIdempotencyToken()],
       delegatedAdminAccountId: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -784,7 +784,7 @@ export const se_EnableDelegatedAdminAccountCommand = async (
  */
 export const se_GetCisScanReportCommand = async (
   input: GetCisScanReportCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -797,7 +797,7 @@ export const se_GetCisScanReportCommand = async (
       reportFormat: [],
       scanArn: [],
       targetAccounts: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -808,7 +808,7 @@ export const se_GetCisScanReportCommand = async (
  */
 export const se_GetCisScanResultDetailsCommand = async (
   input: GetCisScanResultDetailsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -826,7 +826,7 @@ export const se_GetCisScanResultDetailsCommand = async (
       sortBy: [],
       sortOrder: [],
       targetResourceId: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -837,7 +837,7 @@ export const se_GetCisScanResultDetailsCommand = async (
  */
 export const se_GetConfigurationCommand = async (
   input: GetConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -855,7 +855,7 @@ export const se_GetConfigurationCommand = async (
  */
 export const se_GetDelegatedAdminAccountCommand = async (
   input: GetDelegatedAdminAccountCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -873,7 +873,7 @@ export const se_GetDelegatedAdminAccountCommand = async (
  */
 export const se_GetEc2DeepInspectionConfigurationCommand = async (
   input: GetEc2DeepInspectionConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -891,7 +891,7 @@ export const se_GetEc2DeepInspectionConfigurationCommand = async (
  */
 export const se_GetEncryptionKeyCommand = async (
   input: GetEncryptionKeyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -910,7 +910,7 @@ export const se_GetEncryptionKeyCommand = async (
  */
 export const se_GetFindingsReportStatusCommand = async (
   input: GetFindingsReportStatusCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -921,7 +921,7 @@ export const se_GetFindingsReportStatusCommand = async (
   body = JSON.stringify(
     take(input, {
       reportId: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -932,7 +932,7 @@ export const se_GetFindingsReportStatusCommand = async (
  */
 export const se_GetMemberCommand = async (
   input: GetMemberCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -943,7 +943,7 @@ export const se_GetMemberCommand = async (
   body = JSON.stringify(
     take(input, {
       accountId: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -954,7 +954,7 @@ export const se_GetMemberCommand = async (
  */
 export const se_GetSbomExportCommand = async (
   input: GetSbomExportCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -965,7 +965,7 @@ export const se_GetSbomExportCommand = async (
   body = JSON.stringify(
     take(input, {
       reportId: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -976,7 +976,7 @@ export const se_GetSbomExportCommand = async (
  */
 export const se_ListAccountPermissionsCommand = async (
   input: ListAccountPermissionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -989,7 +989,7 @@ export const se_ListAccountPermissionsCommand = async (
       maxResults: [],
       nextToken: [],
       service: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1000,7 +1000,7 @@ export const se_ListAccountPermissionsCommand = async (
  */
 export const se_ListCisScanConfigurationsCommand = async (
   input: ListCisScanConfigurationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1015,7 +1015,7 @@ export const se_ListCisScanConfigurationsCommand = async (
       nextToken: [],
       sortBy: [],
       sortOrder: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1026,7 +1026,7 @@ export const se_ListCisScanConfigurationsCommand = async (
  */
 export const se_ListCisScanResultsAggregatedByChecksCommand = async (
   input: ListCisScanResultsAggregatedByChecksCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1042,7 +1042,7 @@ export const se_ListCisScanResultsAggregatedByChecksCommand = async (
       scanArn: [],
       sortBy: [],
       sortOrder: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1053,7 +1053,7 @@ export const se_ListCisScanResultsAggregatedByChecksCommand = async (
  */
 export const se_ListCisScanResultsAggregatedByTargetResourceCommand = async (
   input: ListCisScanResultsAggregatedByTargetResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1069,7 +1069,7 @@ export const se_ListCisScanResultsAggregatedByTargetResourceCommand = async (
       scanArn: [],
       sortBy: [],
       sortOrder: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1080,7 +1080,7 @@ export const se_ListCisScanResultsAggregatedByTargetResourceCommand = async (
  */
 export const se_ListCisScansCommand = async (
   input: ListCisScansCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1096,7 +1096,7 @@ export const se_ListCisScansCommand = async (
       nextToken: [],
       sortBy: [],
       sortOrder: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1107,7 +1107,7 @@ export const se_ListCisScansCommand = async (
  */
 export const se_ListCoverageCommand = async (
   input: ListCoverageCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1120,7 +1120,7 @@ export const se_ListCoverageCommand = async (
       filterCriteria: (_) => se_CoverageFilterCriteria(_, context),
       maxResults: [],
       nextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1131,7 +1131,7 @@ export const se_ListCoverageCommand = async (
  */
 export const se_ListCoverageStatisticsCommand = async (
   input: ListCoverageStatisticsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1144,7 +1144,7 @@ export const se_ListCoverageStatisticsCommand = async (
       filterCriteria: (_) => se_CoverageFilterCriteria(_, context),
       groupBy: [],
       nextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1155,7 +1155,7 @@ export const se_ListCoverageStatisticsCommand = async (
  */
 export const se_ListDelegatedAdminAccountsCommand = async (
   input: ListDelegatedAdminAccountsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1167,7 +1167,7 @@ export const se_ListDelegatedAdminAccountsCommand = async (
     take(input, {
       maxResults: [],
       nextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1178,7 +1178,7 @@ export const se_ListDelegatedAdminAccountsCommand = async (
  */
 export const se_ListFiltersCommand = async (
   input: ListFiltersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1192,7 +1192,7 @@ export const se_ListFiltersCommand = async (
       arns: (_) => _json(_),
       maxResults: [],
       nextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1203,7 +1203,7 @@ export const se_ListFiltersCommand = async (
  */
 export const se_ListFindingAggregationsCommand = async (
   input: ListFindingAggregationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1218,7 +1218,7 @@ export const se_ListFindingAggregationsCommand = async (
       aggregationType: [],
       maxResults: [],
       nextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1229,7 +1229,7 @@ export const se_ListFindingAggregationsCommand = async (
  */
 export const se_ListFindingsCommand = async (
   input: ListFindingsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1243,7 +1243,7 @@ export const se_ListFindingsCommand = async (
       maxResults: [],
       nextToken: [],
       sortCriteria: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1254,7 +1254,7 @@ export const se_ListFindingsCommand = async (
  */
 export const se_ListMembersCommand = async (
   input: ListMembersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1267,7 +1267,7 @@ export const se_ListMembersCommand = async (
       maxResults: [],
       nextToken: [],
       onlyAssociated: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1278,7 +1278,7 @@ export const se_ListMembersCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1294,7 +1294,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_ListUsageTotalsCommand = async (
   input: ListUsageTotalsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1307,7 +1307,7 @@ export const se_ListUsageTotalsCommand = async (
       accountIds: (_) => _json(_),
       maxResults: [],
       nextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1318,7 +1318,7 @@ export const se_ListUsageTotalsCommand = async (
  */
 export const se_ResetEncryptionKeyCommand = async (
   input: ResetEncryptionKeyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1330,7 +1330,7 @@ export const se_ResetEncryptionKeyCommand = async (
     take(input, {
       resourceType: [],
       scanType: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1341,7 +1341,7 @@ export const se_ResetEncryptionKeyCommand = async (
  */
 export const se_SearchVulnerabilitiesCommand = async (
   input: SearchVulnerabilitiesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1353,7 +1353,7 @@ export const se_SearchVulnerabilitiesCommand = async (
     take(input, {
       filterCriteria: (_) => _json(_),
       nextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1364,7 +1364,7 @@ export const se_SearchVulnerabilitiesCommand = async (
  */
 export const se_SendCisSessionHealthCommand = async (
   input: SendCisSessionHealthCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1376,7 +1376,7 @@ export const se_SendCisSessionHealthCommand = async (
     take(input, {
       scanJobId: [],
       sessionToken: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1387,7 +1387,7 @@ export const se_SendCisSessionHealthCommand = async (
  */
 export const se_SendCisSessionTelemetryCommand = async (
   input: SendCisSessionTelemetryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1400,7 +1400,7 @@ export const se_SendCisSessionTelemetryCommand = async (
       messages: (_) => se_CisSessionMessages(_, context),
       scanJobId: [],
       sessionToken: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1411,7 +1411,7 @@ export const se_SendCisSessionTelemetryCommand = async (
  */
 export const se_StartCisSessionCommand = async (
   input: StartCisSessionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1423,7 +1423,7 @@ export const se_StartCisSessionCommand = async (
     take(input, {
       message: (_) => _json(_),
       scanJobId: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1434,7 +1434,7 @@ export const se_StartCisSessionCommand = async (
  */
 export const se_StopCisSessionCommand = async (
   input: StopCisSessionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1447,7 +1447,7 @@ export const se_StopCisSessionCommand = async (
       message: (_) => _json(_),
       scanJobId: [],
       sessionToken: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1458,7 +1458,7 @@ export const se_StopCisSessionCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1470,7 +1470,7 @@ export const se_TagResourceCommand = async (
   body = JSON.stringify(
     take(input, {
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1481,7 +1481,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1503,7 +1503,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateCisScanConfigurationCommand = async (
   input: UpdateCisScanConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1518,7 +1518,7 @@ export const se_UpdateCisScanConfigurationCommand = async (
       schedule: (_) => _json(_),
       securityLevel: [],
       targets: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1529,7 +1529,7 @@ export const se_UpdateCisScanConfigurationCommand = async (
  */
 export const se_UpdateConfigurationCommand = async (
   input: UpdateConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1541,7 +1541,7 @@ export const se_UpdateConfigurationCommand = async (
     take(input, {
       ec2Configuration: (_) => _json(_),
       ecrConfiguration: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1552,7 +1552,7 @@ export const se_UpdateConfigurationCommand = async (
  */
 export const se_UpdateEc2DeepInspectionConfigurationCommand = async (
   input: UpdateEc2DeepInspectionConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1564,7 +1564,7 @@ export const se_UpdateEc2DeepInspectionConfigurationCommand = async (
     take(input, {
       activateDeepInspection: [],
       packagePaths: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1575,7 +1575,7 @@ export const se_UpdateEc2DeepInspectionConfigurationCommand = async (
  */
 export const se_UpdateEncryptionKeyCommand = async (
   input: UpdateEncryptionKeyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1588,7 +1588,7 @@ export const se_UpdateEncryptionKeyCommand = async (
       kmsKeyId: [],
       resourceType: [],
       scanType: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1599,7 +1599,7 @@ export const se_UpdateEncryptionKeyCommand = async (
  */
 export const se_UpdateFilterCommand = async (
   input: UpdateFilterCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1615,7 +1615,7 @@ export const se_UpdateFilterCommand = async (
       filterCriteria: (_) => se_FilterCriteria(_, context),
       name: [],
       reason: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1626,7 +1626,7 @@ export const se_UpdateFilterCommand = async (
  */
 export const se_UpdateOrganizationConfigurationCommand = async (
   input: UpdateOrganizationConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1637,7 +1637,7 @@ export const se_UpdateOrganizationConfigurationCommand = async (
   body = JSON.stringify(
     take(input, {
       autoEnable: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1648,7 +1648,7 @@ export const se_UpdateOrganizationConfigurationCommand = async (
  */
 export const se_UpdateOrgEc2DeepInspectionConfigurationCommand = async (
   input: UpdateOrgEc2DeepInspectionConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1659,7 +1659,7 @@ export const se_UpdateOrgEc2DeepInspectionConfigurationCommand = async (
   body = JSON.stringify(
     take(input, {
       orgPackagePaths: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1670,7 +1670,7 @@ export const se_UpdateOrgEc2DeepInspectionConfigurationCommand = async (
  */
 export const de_AssociateMemberCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssociateMemberCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1691,7 +1691,7 @@ export const de_AssociateMemberCommand = async (
  */
 export const de_BatchGetAccountStatusCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchGetAccountStatusCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1713,7 +1713,7 @@ export const de_BatchGetAccountStatusCommand = async (
  */
 export const de_BatchGetCodeSnippetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchGetCodeSnippetCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1735,7 +1735,7 @@ export const de_BatchGetCodeSnippetCommand = async (
  */
 export const de_BatchGetFindingDetailsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchGetFindingDetailsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1757,7 +1757,7 @@ export const de_BatchGetFindingDetailsCommand = async (
  */
 export const de_BatchGetFreeTrialInfoCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchGetFreeTrialInfoCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1779,7 +1779,7 @@ export const de_BatchGetFreeTrialInfoCommand = async (
  */
 export const de_BatchGetMemberEc2DeepInspectionStatusCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchGetMemberEc2DeepInspectionStatusCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1801,7 +1801,7 @@ export const de_BatchGetMemberEc2DeepInspectionStatusCommand = async (
  */
 export const de_BatchUpdateMemberEc2DeepInspectionStatusCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchUpdateMemberEc2DeepInspectionStatusCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1823,7 +1823,7 @@ export const de_BatchUpdateMemberEc2DeepInspectionStatusCommand = async (
  */
 export const de_CancelFindingsReportCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CancelFindingsReportCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1844,7 +1844,7 @@ export const de_CancelFindingsReportCommand = async (
  */
 export const de_CancelSbomExportCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CancelSbomExportCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1865,7 +1865,7 @@ export const de_CancelSbomExportCommand = async (
  */
 export const de_CreateCisScanConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateCisScanConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1886,7 +1886,7 @@ export const de_CreateCisScanConfigurationCommand = async (
  */
 export const de_CreateFilterCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateFilterCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1907,7 +1907,7 @@ export const de_CreateFilterCommand = async (
  */
 export const de_CreateFindingsReportCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateFindingsReportCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1928,7 +1928,7 @@ export const de_CreateFindingsReportCommand = async (
  */
 export const de_CreateSbomExportCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateSbomExportCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1949,7 +1949,7 @@ export const de_CreateSbomExportCommand = async (
  */
 export const de_DeleteCisScanConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteCisScanConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1970,7 +1970,7 @@ export const de_DeleteCisScanConfigurationCommand = async (
  */
 export const de_DeleteFilterCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteFilterCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1991,7 +1991,7 @@ export const de_DeleteFilterCommand = async (
  */
 export const de_DescribeOrganizationConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeOrganizationConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2013,7 +2013,7 @@ export const de_DescribeOrganizationConfigurationCommand = async (
  */
 export const de_DisableCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisableCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2035,7 +2035,7 @@ export const de_DisableCommand = async (
  */
 export const de_DisableDelegatedAdminAccountCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisableDelegatedAdminAccountCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2056,7 +2056,7 @@ export const de_DisableDelegatedAdminAccountCommand = async (
  */
 export const de_DisassociateMemberCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisassociateMemberCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2077,7 +2077,7 @@ export const de_DisassociateMemberCommand = async (
  */
 export const de_EnableCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<EnableCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2099,7 +2099,7 @@ export const de_EnableCommand = async (
  */
 export const de_EnableDelegatedAdminAccountCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<EnableDelegatedAdminAccountCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2120,7 +2120,7 @@ export const de_EnableDelegatedAdminAccountCommand = async (
  */
 export const de_GetCisScanReportCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetCisScanReportCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2142,7 +2142,7 @@ export const de_GetCisScanReportCommand = async (
  */
 export const de_GetCisScanResultDetailsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetCisScanResultDetailsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2164,7 +2164,7 @@ export const de_GetCisScanResultDetailsCommand = async (
  */
 export const de_GetConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2186,7 +2186,7 @@ export const de_GetConfigurationCommand = async (
  */
 export const de_GetDelegatedAdminAccountCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetDelegatedAdminAccountCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2207,7 +2207,7 @@ export const de_GetDelegatedAdminAccountCommand = async (
  */
 export const de_GetEc2DeepInspectionConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetEc2DeepInspectionConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2231,7 +2231,7 @@ export const de_GetEc2DeepInspectionConfigurationCommand = async (
  */
 export const de_GetEncryptionKeyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetEncryptionKeyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2252,7 +2252,7 @@ export const de_GetEncryptionKeyCommand = async (
  */
 export const de_GetFindingsReportStatusCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetFindingsReportStatusCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2278,7 +2278,7 @@ export const de_GetFindingsReportStatusCommand = async (
  */
 export const de_GetMemberCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetMemberCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2299,7 +2299,7 @@ export const de_GetMemberCommand = async (
  */
 export const de_GetSbomExportCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetSbomExportCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2326,7 +2326,7 @@ export const de_GetSbomExportCommand = async (
  */
 export const de_ListAccountPermissionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAccountPermissionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2348,7 +2348,7 @@ export const de_ListAccountPermissionsCommand = async (
  */
 export const de_ListCisScanConfigurationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListCisScanConfigurationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2370,7 +2370,7 @@ export const de_ListCisScanConfigurationsCommand = async (
  */
 export const de_ListCisScanResultsAggregatedByChecksCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListCisScanResultsAggregatedByChecksCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2392,7 +2392,7 @@ export const de_ListCisScanResultsAggregatedByChecksCommand = async (
  */
 export const de_ListCisScanResultsAggregatedByTargetResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListCisScanResultsAggregatedByTargetResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2414,7 +2414,7 @@ export const de_ListCisScanResultsAggregatedByTargetResourceCommand = async (
  */
 export const de_ListCisScansCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListCisScansCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2436,7 +2436,7 @@ export const de_ListCisScansCommand = async (
  */
 export const de_ListCoverageCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListCoverageCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2458,7 +2458,7 @@ export const de_ListCoverageCommand = async (
  */
 export const de_ListCoverageStatisticsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListCoverageStatisticsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2481,7 +2481,7 @@ export const de_ListCoverageStatisticsCommand = async (
  */
 export const de_ListDelegatedAdminAccountsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListDelegatedAdminAccountsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2503,7 +2503,7 @@ export const de_ListDelegatedAdminAccountsCommand = async (
  */
 export const de_ListFiltersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListFiltersCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2525,7 +2525,7 @@ export const de_ListFiltersCommand = async (
  */
 export const de_ListFindingAggregationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListFindingAggregationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2548,7 +2548,7 @@ export const de_ListFindingAggregationsCommand = async (
  */
 export const de_ListFindingsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListFindingsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2570,7 +2570,7 @@ export const de_ListFindingsCommand = async (
  */
 export const de_ListMembersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListMembersCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2592,7 +2592,7 @@ export const de_ListMembersCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2613,7 +2613,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_ListUsageTotalsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListUsageTotalsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2635,7 +2635,7 @@ export const de_ListUsageTotalsCommand = async (
  */
 export const de_ResetEncryptionKeyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResetEncryptionKeyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2652,7 +2652,7 @@ export const de_ResetEncryptionKeyCommand = async (
  */
 export const de_SearchVulnerabilitiesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SearchVulnerabilitiesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2674,7 +2674,7 @@ export const de_SearchVulnerabilitiesCommand = async (
  */
 export const de_SendCisSessionHealthCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SendCisSessionHealthCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2691,7 +2691,7 @@ export const de_SendCisSessionHealthCommand = async (
  */
 export const de_SendCisSessionTelemetryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SendCisSessionTelemetryCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2708,7 +2708,7 @@ export const de_SendCisSessionTelemetryCommand = async (
  */
 export const de_StartCisSessionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartCisSessionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2725,7 +2725,7 @@ export const de_StartCisSessionCommand = async (
  */
 export const de_StopCisSessionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StopCisSessionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2742,7 +2742,7 @@ export const de_StopCisSessionCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2759,7 +2759,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2776,7 +2776,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateCisScanConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateCisScanConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2797,7 +2797,7 @@ export const de_UpdateCisScanConfigurationCommand = async (
  */
 export const de_UpdateConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2814,7 +2814,7 @@ export const de_UpdateConfigurationCommand = async (
  */
 export const de_UpdateEc2DeepInspectionConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateEc2DeepInspectionConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2838,7 +2838,7 @@ export const de_UpdateEc2DeepInspectionConfigurationCommand = async (
  */
 export const de_UpdateEncryptionKeyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateEncryptionKeyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2855,7 +2855,7 @@ export const de_UpdateEncryptionKeyCommand = async (
  */
 export const de_UpdateFilterCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateFilterCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2876,7 +2876,7 @@ export const de_UpdateFilterCommand = async (
  */
 export const de_UpdateOrganizationConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateOrganizationConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2897,7 +2897,7 @@ export const de_UpdateOrganizationConfigurationCommand = async (
  */
 export const de_UpdateOrgEc2DeepInspectionConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateOrgEc2DeepInspectionConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2959,7 +2959,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -3015,7 +3015,7 @@ const de_ConflictExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_InternalServerExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerException> => {
   const contents: any = map({
     [_rAS]: [() => void 0 !== parsedOutput.headers[_ra], () => __strictParseInt32(parsedOutput.headers[_ra])],
@@ -3037,7 +3037,7 @@ const de_InternalServerExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -3057,7 +3057,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_ServiceQuotaExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceQuotaExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -4216,7 +4216,7 @@ const de_InspectorScoreDetails = (output: any, context: __SerdeContext): Inspect
  */
 const de_LambdaFunctionAggregationResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): LambdaFunctionAggregationResponse => {
   return take(output, {
     accountId: __expectString,

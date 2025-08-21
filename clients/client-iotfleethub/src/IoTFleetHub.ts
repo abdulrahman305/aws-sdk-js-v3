@@ -57,16 +57,16 @@ export interface IoTFleetHub {
    */
   createApplication(
     args: CreateApplicationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateApplicationCommandOutput>;
   createApplication(
     args: CreateApplicationCommandInput,
-    cb: (err: any, data?: CreateApplicationCommandOutput) => void
+    cb: (err: any, data?: CreateApplicationCommandOutput) => void,
   ): void;
   createApplication(
     args: CreateApplicationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateApplicationCommandOutput) => void
+    cb: (err: any, data?: CreateApplicationCommandOutput) => void,
   ): void;
 
   /**
@@ -74,16 +74,16 @@ export interface IoTFleetHub {
    */
   deleteApplication(
     args: DeleteApplicationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteApplicationCommandOutput>;
   deleteApplication(
     args: DeleteApplicationCommandInput,
-    cb: (err: any, data?: DeleteApplicationCommandOutput) => void
+    cb: (err: any, data?: DeleteApplicationCommandOutput) => void,
   ): void;
   deleteApplication(
     args: DeleteApplicationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteApplicationCommandOutput) => void
+    cb: (err: any, data?: DeleteApplicationCommandOutput) => void,
   ): void;
 
   /**
@@ -91,16 +91,16 @@ export interface IoTFleetHub {
    */
   describeApplication(
     args: DescribeApplicationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeApplicationCommandOutput>;
   describeApplication(
     args: DescribeApplicationCommandInput,
-    cb: (err: any, data?: DescribeApplicationCommandOutput) => void
+    cb: (err: any, data?: DescribeApplicationCommandOutput) => void,
   ): void;
   describeApplication(
     args: DescribeApplicationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeApplicationCommandOutput) => void
+    cb: (err: any, data?: DescribeApplicationCommandOutput) => void,
   ): void;
 
   /**
@@ -109,16 +109,16 @@ export interface IoTFleetHub {
   listApplications(): Promise<ListApplicationsCommandOutput>;
   listApplications(
     args: ListApplicationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListApplicationsCommandOutput>;
   listApplications(
     args: ListApplicationsCommandInput,
-    cb: (err: any, data?: ListApplicationsCommandOutput) => void
+    cb: (err: any, data?: ListApplicationsCommandOutput) => void,
   ): void;
   listApplications(
     args: ListApplicationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListApplicationsCommandOutput) => void
+    cb: (err: any, data?: ListApplicationsCommandOutput) => void,
   ): void;
 
   /**
@@ -126,16 +126,16 @@ export interface IoTFleetHub {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -146,7 +146,7 @@ export interface IoTFleetHub {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -157,7 +157,7 @@ export interface IoTFleetHub {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -165,16 +165,16 @@ export interface IoTFleetHub {
    */
   updateApplication(
     args: UpdateApplicationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateApplicationCommandOutput>;
   updateApplication(
     args: UpdateApplicationCommandInput,
-    cb: (err: any, data?: UpdateApplicationCommandOutput) => void
+    cb: (err: any, data?: UpdateApplicationCommandOutput) => void,
   ): void;
   updateApplication(
     args: UpdateApplicationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateApplicationCommandOutput) => void
+    cb: (err: any, data?: UpdateApplicationCommandOutput) => void,
   ): void;
 }
 

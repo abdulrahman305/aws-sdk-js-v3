@@ -127,7 +127,7 @@ export class PutSipMediaApplicationAlexaSkillConfigurationCommand extends $Comma
   .n("ChimeSDKVoiceClient", "PutSipMediaApplicationAlexaSkillConfigurationCommand")
   .f(
     PutSipMediaApplicationAlexaSkillConfigurationRequestFilterSensitiveLog,
-    PutSipMediaApplicationAlexaSkillConfigurationResponseFilterSensitiveLog
+    PutSipMediaApplicationAlexaSkillConfigurationResponseFilterSensitiveLog,
   )
   .ser(se_PutSipMediaApplicationAlexaSkillConfigurationCommand)
   .de(de_PutSipMediaApplicationAlexaSkillConfigurationCommand)

@@ -469,16 +469,16 @@ export interface WorkMail {
    */
   associateDelegateToResource(
     args: AssociateDelegateToResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AssociateDelegateToResourceCommandOutput>;
   associateDelegateToResource(
     args: AssociateDelegateToResourceCommandInput,
-    cb: (err: any, data?: AssociateDelegateToResourceCommandOutput) => void
+    cb: (err: any, data?: AssociateDelegateToResourceCommandOutput) => void,
   ): void;
   associateDelegateToResource(
     args: AssociateDelegateToResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AssociateDelegateToResourceCommandOutput) => void
+    cb: (err: any, data?: AssociateDelegateToResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -486,16 +486,16 @@ export interface WorkMail {
    */
   associateMemberToGroup(
     args: AssociateMemberToGroupCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AssociateMemberToGroupCommandOutput>;
   associateMemberToGroup(
     args: AssociateMemberToGroupCommandInput,
-    cb: (err: any, data?: AssociateMemberToGroupCommandOutput) => void
+    cb: (err: any, data?: AssociateMemberToGroupCommandOutput) => void,
   ): void;
   associateMemberToGroup(
     args: AssociateMemberToGroupCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AssociateMemberToGroupCommandOutput) => void
+    cb: (err: any, data?: AssociateMemberToGroupCommandOutput) => void,
   ): void;
 
   /**
@@ -503,16 +503,16 @@ export interface WorkMail {
    */
   assumeImpersonationRole(
     args: AssumeImpersonationRoleCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AssumeImpersonationRoleCommandOutput>;
   assumeImpersonationRole(
     args: AssumeImpersonationRoleCommandInput,
-    cb: (err: any, data?: AssumeImpersonationRoleCommandOutput) => void
+    cb: (err: any, data?: AssumeImpersonationRoleCommandOutput) => void,
   ): void;
   assumeImpersonationRole(
     args: AssumeImpersonationRoleCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AssumeImpersonationRoleCommandOutput) => void
+    cb: (err: any, data?: AssumeImpersonationRoleCommandOutput) => void,
   ): void;
 
   /**
@@ -520,16 +520,16 @@ export interface WorkMail {
    */
   cancelMailboxExportJob(
     args: CancelMailboxExportJobCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CancelMailboxExportJobCommandOutput>;
   cancelMailboxExportJob(
     args: CancelMailboxExportJobCommandInput,
-    cb: (err: any, data?: CancelMailboxExportJobCommandOutput) => void
+    cb: (err: any, data?: CancelMailboxExportJobCommandOutput) => void,
   ): void;
   cancelMailboxExportJob(
     args: CancelMailboxExportJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CancelMailboxExportJobCommandOutput) => void
+    cb: (err: any, data?: CancelMailboxExportJobCommandOutput) => void,
   ): void;
 
   /**
@@ -540,7 +540,7 @@ export interface WorkMail {
   createAlias(
     args: CreateAliasCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateAliasCommandOutput) => void
+    cb: (err: any, data?: CreateAliasCommandOutput) => void,
   ): void;
 
   /**
@@ -548,16 +548,16 @@ export interface WorkMail {
    */
   createAvailabilityConfiguration(
     args: CreateAvailabilityConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateAvailabilityConfigurationCommandOutput>;
   createAvailabilityConfiguration(
     args: CreateAvailabilityConfigurationCommandInput,
-    cb: (err: any, data?: CreateAvailabilityConfigurationCommandOutput) => void
+    cb: (err: any, data?: CreateAvailabilityConfigurationCommandOutput) => void,
   ): void;
   createAvailabilityConfiguration(
     args: CreateAvailabilityConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateAvailabilityConfigurationCommandOutput) => void
+    cb: (err: any, data?: CreateAvailabilityConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -568,7 +568,7 @@ export interface WorkMail {
   createGroup(
     args: CreateGroupCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateGroupCommandOutput) => void
+    cb: (err: any, data?: CreateGroupCommandOutput) => void,
   ): void;
 
   /**
@@ -576,16 +576,16 @@ export interface WorkMail {
    */
   createImpersonationRole(
     args: CreateImpersonationRoleCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateImpersonationRoleCommandOutput>;
   createImpersonationRole(
     args: CreateImpersonationRoleCommandInput,
-    cb: (err: any, data?: CreateImpersonationRoleCommandOutput) => void
+    cb: (err: any, data?: CreateImpersonationRoleCommandOutput) => void,
   ): void;
   createImpersonationRole(
     args: CreateImpersonationRoleCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateImpersonationRoleCommandOutput) => void
+    cb: (err: any, data?: CreateImpersonationRoleCommandOutput) => void,
   ): void;
 
   /**
@@ -593,16 +593,16 @@ export interface WorkMail {
    */
   createMobileDeviceAccessRule(
     args: CreateMobileDeviceAccessRuleCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateMobileDeviceAccessRuleCommandOutput>;
   createMobileDeviceAccessRule(
     args: CreateMobileDeviceAccessRuleCommandInput,
-    cb: (err: any, data?: CreateMobileDeviceAccessRuleCommandOutput) => void
+    cb: (err: any, data?: CreateMobileDeviceAccessRuleCommandOutput) => void,
   ): void;
   createMobileDeviceAccessRule(
     args: CreateMobileDeviceAccessRuleCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateMobileDeviceAccessRuleCommandOutput) => void
+    cb: (err: any, data?: CreateMobileDeviceAccessRuleCommandOutput) => void,
   ): void;
 
   /**
@@ -610,16 +610,16 @@ export interface WorkMail {
    */
   createOrganization(
     args: CreateOrganizationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateOrganizationCommandOutput>;
   createOrganization(
     args: CreateOrganizationCommandInput,
-    cb: (err: any, data?: CreateOrganizationCommandOutput) => void
+    cb: (err: any, data?: CreateOrganizationCommandOutput) => void,
   ): void;
   createOrganization(
     args: CreateOrganizationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateOrganizationCommandOutput) => void
+    cb: (err: any, data?: CreateOrganizationCommandOutput) => void,
   ): void;
 
   /**
@@ -627,13 +627,13 @@ export interface WorkMail {
    */
   createResource(
     args: CreateResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateResourceCommandOutput>;
   createResource(args: CreateResourceCommandInput, cb: (err: any, data?: CreateResourceCommandOutput) => void): void;
   createResource(
     args: CreateResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateResourceCommandOutput) => void
+    cb: (err: any, data?: CreateResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -644,7 +644,7 @@ export interface WorkMail {
   createUser(
     args: CreateUserCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateUserCommandOutput) => void
+    cb: (err: any, data?: CreateUserCommandOutput) => void,
   ): void;
 
   /**
@@ -652,16 +652,16 @@ export interface WorkMail {
    */
   deleteAccessControlRule(
     args: DeleteAccessControlRuleCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteAccessControlRuleCommandOutput>;
   deleteAccessControlRule(
     args: DeleteAccessControlRuleCommandInput,
-    cb: (err: any, data?: DeleteAccessControlRuleCommandOutput) => void
+    cb: (err: any, data?: DeleteAccessControlRuleCommandOutput) => void,
   ): void;
   deleteAccessControlRule(
     args: DeleteAccessControlRuleCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteAccessControlRuleCommandOutput) => void
+    cb: (err: any, data?: DeleteAccessControlRuleCommandOutput) => void,
   ): void;
 
   /**
@@ -672,7 +672,7 @@ export interface WorkMail {
   deleteAlias(
     args: DeleteAliasCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteAliasCommandOutput) => void
+    cb: (err: any, data?: DeleteAliasCommandOutput) => void,
   ): void;
 
   /**
@@ -680,16 +680,16 @@ export interface WorkMail {
    */
   deleteAvailabilityConfiguration(
     args: DeleteAvailabilityConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteAvailabilityConfigurationCommandOutput>;
   deleteAvailabilityConfiguration(
     args: DeleteAvailabilityConfigurationCommandInput,
-    cb: (err: any, data?: DeleteAvailabilityConfigurationCommandOutput) => void
+    cb: (err: any, data?: DeleteAvailabilityConfigurationCommandOutput) => void,
   ): void;
   deleteAvailabilityConfiguration(
     args: DeleteAvailabilityConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteAvailabilityConfigurationCommandOutput) => void
+    cb: (err: any, data?: DeleteAvailabilityConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -697,16 +697,16 @@ export interface WorkMail {
    */
   deleteEmailMonitoringConfiguration(
     args: DeleteEmailMonitoringConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteEmailMonitoringConfigurationCommandOutput>;
   deleteEmailMonitoringConfiguration(
     args: DeleteEmailMonitoringConfigurationCommandInput,
-    cb: (err: any, data?: DeleteEmailMonitoringConfigurationCommandOutput) => void
+    cb: (err: any, data?: DeleteEmailMonitoringConfigurationCommandOutput) => void,
   ): void;
   deleteEmailMonitoringConfiguration(
     args: DeleteEmailMonitoringConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteEmailMonitoringConfigurationCommandOutput) => void
+    cb: (err: any, data?: DeleteEmailMonitoringConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -717,7 +717,7 @@ export interface WorkMail {
   deleteGroup(
     args: DeleteGroupCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteGroupCommandOutput) => void
+    cb: (err: any, data?: DeleteGroupCommandOutput) => void,
   ): void;
 
   /**
@@ -725,16 +725,16 @@ export interface WorkMail {
    */
   deleteImpersonationRole(
     args: DeleteImpersonationRoleCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteImpersonationRoleCommandOutput>;
   deleteImpersonationRole(
     args: DeleteImpersonationRoleCommandInput,
-    cb: (err: any, data?: DeleteImpersonationRoleCommandOutput) => void
+    cb: (err: any, data?: DeleteImpersonationRoleCommandOutput) => void,
   ): void;
   deleteImpersonationRole(
     args: DeleteImpersonationRoleCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteImpersonationRoleCommandOutput) => void
+    cb: (err: any, data?: DeleteImpersonationRoleCommandOutput) => void,
   ): void;
 
   /**
@@ -742,16 +742,16 @@ export interface WorkMail {
    */
   deleteMailboxPermissions(
     args: DeleteMailboxPermissionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteMailboxPermissionsCommandOutput>;
   deleteMailboxPermissions(
     args: DeleteMailboxPermissionsCommandInput,
-    cb: (err: any, data?: DeleteMailboxPermissionsCommandOutput) => void
+    cb: (err: any, data?: DeleteMailboxPermissionsCommandOutput) => void,
   ): void;
   deleteMailboxPermissions(
     args: DeleteMailboxPermissionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteMailboxPermissionsCommandOutput) => void
+    cb: (err: any, data?: DeleteMailboxPermissionsCommandOutput) => void,
   ): void;
 
   /**
@@ -759,16 +759,16 @@ export interface WorkMail {
    */
   deleteMobileDeviceAccessOverride(
     args: DeleteMobileDeviceAccessOverrideCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteMobileDeviceAccessOverrideCommandOutput>;
   deleteMobileDeviceAccessOverride(
     args: DeleteMobileDeviceAccessOverrideCommandInput,
-    cb: (err: any, data?: DeleteMobileDeviceAccessOverrideCommandOutput) => void
+    cb: (err: any, data?: DeleteMobileDeviceAccessOverrideCommandOutput) => void,
   ): void;
   deleteMobileDeviceAccessOverride(
     args: DeleteMobileDeviceAccessOverrideCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteMobileDeviceAccessOverrideCommandOutput) => void
+    cb: (err: any, data?: DeleteMobileDeviceAccessOverrideCommandOutput) => void,
   ): void;
 
   /**
@@ -776,16 +776,16 @@ export interface WorkMail {
    */
   deleteMobileDeviceAccessRule(
     args: DeleteMobileDeviceAccessRuleCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteMobileDeviceAccessRuleCommandOutput>;
   deleteMobileDeviceAccessRule(
     args: DeleteMobileDeviceAccessRuleCommandInput,
-    cb: (err: any, data?: DeleteMobileDeviceAccessRuleCommandOutput) => void
+    cb: (err: any, data?: DeleteMobileDeviceAccessRuleCommandOutput) => void,
   ): void;
   deleteMobileDeviceAccessRule(
     args: DeleteMobileDeviceAccessRuleCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteMobileDeviceAccessRuleCommandOutput) => void
+    cb: (err: any, data?: DeleteMobileDeviceAccessRuleCommandOutput) => void,
   ): void;
 
   /**
@@ -793,16 +793,16 @@ export interface WorkMail {
    */
   deleteOrganization(
     args: DeleteOrganizationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteOrganizationCommandOutput>;
   deleteOrganization(
     args: DeleteOrganizationCommandInput,
-    cb: (err: any, data?: DeleteOrganizationCommandOutput) => void
+    cb: (err: any, data?: DeleteOrganizationCommandOutput) => void,
   ): void;
   deleteOrganization(
     args: DeleteOrganizationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteOrganizationCommandOutput) => void
+    cb: (err: any, data?: DeleteOrganizationCommandOutput) => void,
   ): void;
 
   /**
@@ -810,13 +810,13 @@ export interface WorkMail {
    */
   deleteResource(
     args: DeleteResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteResourceCommandOutput>;
   deleteResource(args: DeleteResourceCommandInput, cb: (err: any, data?: DeleteResourceCommandOutput) => void): void;
   deleteResource(
     args: DeleteResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteResourceCommandOutput) => void
+    cb: (err: any, data?: DeleteResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -824,16 +824,16 @@ export interface WorkMail {
    */
   deleteRetentionPolicy(
     args: DeleteRetentionPolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteRetentionPolicyCommandOutput>;
   deleteRetentionPolicy(
     args: DeleteRetentionPolicyCommandInput,
-    cb: (err: any, data?: DeleteRetentionPolicyCommandOutput) => void
+    cb: (err: any, data?: DeleteRetentionPolicyCommandOutput) => void,
   ): void;
   deleteRetentionPolicy(
     args: DeleteRetentionPolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteRetentionPolicyCommandOutput) => void
+    cb: (err: any, data?: DeleteRetentionPolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -844,7 +844,7 @@ export interface WorkMail {
   deleteUser(
     args: DeleteUserCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteUserCommandOutput) => void
+    cb: (err: any, data?: DeleteUserCommandOutput) => void,
   ): void;
 
   /**
@@ -852,16 +852,16 @@ export interface WorkMail {
    */
   deregisterFromWorkMail(
     args: DeregisterFromWorkMailCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeregisterFromWorkMailCommandOutput>;
   deregisterFromWorkMail(
     args: DeregisterFromWorkMailCommandInput,
-    cb: (err: any, data?: DeregisterFromWorkMailCommandOutput) => void
+    cb: (err: any, data?: DeregisterFromWorkMailCommandOutput) => void,
   ): void;
   deregisterFromWorkMail(
     args: DeregisterFromWorkMailCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeregisterFromWorkMailCommandOutput) => void
+    cb: (err: any, data?: DeregisterFromWorkMailCommandOutput) => void,
   ): void;
 
   /**
@@ -869,16 +869,16 @@ export interface WorkMail {
    */
   deregisterMailDomain(
     args: DeregisterMailDomainCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeregisterMailDomainCommandOutput>;
   deregisterMailDomain(
     args: DeregisterMailDomainCommandInput,
-    cb: (err: any, data?: DeregisterMailDomainCommandOutput) => void
+    cb: (err: any, data?: DeregisterMailDomainCommandOutput) => void,
   ): void;
   deregisterMailDomain(
     args: DeregisterMailDomainCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeregisterMailDomainCommandOutput) => void
+    cb: (err: any, data?: DeregisterMailDomainCommandOutput) => void,
   ): void;
 
   /**
@@ -886,16 +886,16 @@ export interface WorkMail {
    */
   describeEmailMonitoringConfiguration(
     args: DescribeEmailMonitoringConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeEmailMonitoringConfigurationCommandOutput>;
   describeEmailMonitoringConfiguration(
     args: DescribeEmailMonitoringConfigurationCommandInput,
-    cb: (err: any, data?: DescribeEmailMonitoringConfigurationCommandOutput) => void
+    cb: (err: any, data?: DescribeEmailMonitoringConfigurationCommandOutput) => void,
   ): void;
   describeEmailMonitoringConfiguration(
     args: DescribeEmailMonitoringConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeEmailMonitoringConfigurationCommandOutput) => void
+    cb: (err: any, data?: DescribeEmailMonitoringConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -903,13 +903,13 @@ export interface WorkMail {
    */
   describeEntity(
     args: DescribeEntityCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeEntityCommandOutput>;
   describeEntity(args: DescribeEntityCommandInput, cb: (err: any, data?: DescribeEntityCommandOutput) => void): void;
   describeEntity(
     args: DescribeEntityCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeEntityCommandOutput) => void
+    cb: (err: any, data?: DescribeEntityCommandOutput) => void,
   ): void;
 
   /**
@@ -920,7 +920,7 @@ export interface WorkMail {
   describeGroup(
     args: DescribeGroupCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeGroupCommandOutput) => void
+    cb: (err: any, data?: DescribeGroupCommandOutput) => void,
   ): void;
 
   /**
@@ -928,16 +928,16 @@ export interface WorkMail {
    */
   describeInboundDmarcSettings(
     args: DescribeInboundDmarcSettingsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeInboundDmarcSettingsCommandOutput>;
   describeInboundDmarcSettings(
     args: DescribeInboundDmarcSettingsCommandInput,
-    cb: (err: any, data?: DescribeInboundDmarcSettingsCommandOutput) => void
+    cb: (err: any, data?: DescribeInboundDmarcSettingsCommandOutput) => void,
   ): void;
   describeInboundDmarcSettings(
     args: DescribeInboundDmarcSettingsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeInboundDmarcSettingsCommandOutput) => void
+    cb: (err: any, data?: DescribeInboundDmarcSettingsCommandOutput) => void,
   ): void;
 
   /**
@@ -945,16 +945,16 @@ export interface WorkMail {
    */
   describeMailboxExportJob(
     args: DescribeMailboxExportJobCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeMailboxExportJobCommandOutput>;
   describeMailboxExportJob(
     args: DescribeMailboxExportJobCommandInput,
-    cb: (err: any, data?: DescribeMailboxExportJobCommandOutput) => void
+    cb: (err: any, data?: DescribeMailboxExportJobCommandOutput) => void,
   ): void;
   describeMailboxExportJob(
     args: DescribeMailboxExportJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeMailboxExportJobCommandOutput) => void
+    cb: (err: any, data?: DescribeMailboxExportJobCommandOutput) => void,
   ): void;
 
   /**
@@ -962,16 +962,16 @@ export interface WorkMail {
    */
   describeOrganization(
     args: DescribeOrganizationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeOrganizationCommandOutput>;
   describeOrganization(
     args: DescribeOrganizationCommandInput,
-    cb: (err: any, data?: DescribeOrganizationCommandOutput) => void
+    cb: (err: any, data?: DescribeOrganizationCommandOutput) => void,
   ): void;
   describeOrganization(
     args: DescribeOrganizationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeOrganizationCommandOutput) => void
+    cb: (err: any, data?: DescribeOrganizationCommandOutput) => void,
   ): void;
 
   /**
@@ -979,16 +979,16 @@ export interface WorkMail {
    */
   describeResource(
     args: DescribeResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeResourceCommandOutput>;
   describeResource(
     args: DescribeResourceCommandInput,
-    cb: (err: any, data?: DescribeResourceCommandOutput) => void
+    cb: (err: any, data?: DescribeResourceCommandOutput) => void,
   ): void;
   describeResource(
     args: DescribeResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeResourceCommandOutput) => void
+    cb: (err: any, data?: DescribeResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -999,7 +999,7 @@ export interface WorkMail {
   describeUser(
     args: DescribeUserCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeUserCommandOutput) => void
+    cb: (err: any, data?: DescribeUserCommandOutput) => void,
   ): void;
 
   /**
@@ -1007,16 +1007,16 @@ export interface WorkMail {
    */
   disassociateDelegateFromResource(
     args: DisassociateDelegateFromResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DisassociateDelegateFromResourceCommandOutput>;
   disassociateDelegateFromResource(
     args: DisassociateDelegateFromResourceCommandInput,
-    cb: (err: any, data?: DisassociateDelegateFromResourceCommandOutput) => void
+    cb: (err: any, data?: DisassociateDelegateFromResourceCommandOutput) => void,
   ): void;
   disassociateDelegateFromResource(
     args: DisassociateDelegateFromResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DisassociateDelegateFromResourceCommandOutput) => void
+    cb: (err: any, data?: DisassociateDelegateFromResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -1024,16 +1024,16 @@ export interface WorkMail {
    */
   disassociateMemberFromGroup(
     args: DisassociateMemberFromGroupCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DisassociateMemberFromGroupCommandOutput>;
   disassociateMemberFromGroup(
     args: DisassociateMemberFromGroupCommandInput,
-    cb: (err: any, data?: DisassociateMemberFromGroupCommandOutput) => void
+    cb: (err: any, data?: DisassociateMemberFromGroupCommandOutput) => void,
   ): void;
   disassociateMemberFromGroup(
     args: DisassociateMemberFromGroupCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DisassociateMemberFromGroupCommandOutput) => void
+    cb: (err: any, data?: DisassociateMemberFromGroupCommandOutput) => void,
   ): void;
 
   /**
@@ -1041,16 +1041,16 @@ export interface WorkMail {
    */
   getAccessControlEffect(
     args: GetAccessControlEffectCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetAccessControlEffectCommandOutput>;
   getAccessControlEffect(
     args: GetAccessControlEffectCommandInput,
-    cb: (err: any, data?: GetAccessControlEffectCommandOutput) => void
+    cb: (err: any, data?: GetAccessControlEffectCommandOutput) => void,
   ): void;
   getAccessControlEffect(
     args: GetAccessControlEffectCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetAccessControlEffectCommandOutput) => void
+    cb: (err: any, data?: GetAccessControlEffectCommandOutput) => void,
   ): void;
 
   /**
@@ -1058,16 +1058,16 @@ export interface WorkMail {
    */
   getDefaultRetentionPolicy(
     args: GetDefaultRetentionPolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetDefaultRetentionPolicyCommandOutput>;
   getDefaultRetentionPolicy(
     args: GetDefaultRetentionPolicyCommandInput,
-    cb: (err: any, data?: GetDefaultRetentionPolicyCommandOutput) => void
+    cb: (err: any, data?: GetDefaultRetentionPolicyCommandOutput) => void,
   ): void;
   getDefaultRetentionPolicy(
     args: GetDefaultRetentionPolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetDefaultRetentionPolicyCommandOutput) => void
+    cb: (err: any, data?: GetDefaultRetentionPolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -1075,16 +1075,16 @@ export interface WorkMail {
    */
   getImpersonationRole(
     args: GetImpersonationRoleCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetImpersonationRoleCommandOutput>;
   getImpersonationRole(
     args: GetImpersonationRoleCommandInput,
-    cb: (err: any, data?: GetImpersonationRoleCommandOutput) => void
+    cb: (err: any, data?: GetImpersonationRoleCommandOutput) => void,
   ): void;
   getImpersonationRole(
     args: GetImpersonationRoleCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetImpersonationRoleCommandOutput) => void
+    cb: (err: any, data?: GetImpersonationRoleCommandOutput) => void,
   ): void;
 
   /**
@@ -1092,16 +1092,16 @@ export interface WorkMail {
    */
   getImpersonationRoleEffect(
     args: GetImpersonationRoleEffectCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetImpersonationRoleEffectCommandOutput>;
   getImpersonationRoleEffect(
     args: GetImpersonationRoleEffectCommandInput,
-    cb: (err: any, data?: GetImpersonationRoleEffectCommandOutput) => void
+    cb: (err: any, data?: GetImpersonationRoleEffectCommandOutput) => void,
   ): void;
   getImpersonationRoleEffect(
     args: GetImpersonationRoleEffectCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetImpersonationRoleEffectCommandOutput) => void
+    cb: (err: any, data?: GetImpersonationRoleEffectCommandOutput) => void,
   ): void;
 
   /**
@@ -1109,16 +1109,16 @@ export interface WorkMail {
    */
   getMailboxDetails(
     args: GetMailboxDetailsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetMailboxDetailsCommandOutput>;
   getMailboxDetails(
     args: GetMailboxDetailsCommandInput,
-    cb: (err: any, data?: GetMailboxDetailsCommandOutput) => void
+    cb: (err: any, data?: GetMailboxDetailsCommandOutput) => void,
   ): void;
   getMailboxDetails(
     args: GetMailboxDetailsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetMailboxDetailsCommandOutput) => void
+    cb: (err: any, data?: GetMailboxDetailsCommandOutput) => void,
   ): void;
 
   /**
@@ -1129,7 +1129,7 @@ export interface WorkMail {
   getMailDomain(
     args: GetMailDomainCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetMailDomainCommandOutput) => void
+    cb: (err: any, data?: GetMailDomainCommandOutput) => void,
   ): void;
 
   /**
@@ -1137,16 +1137,16 @@ export interface WorkMail {
    */
   getMobileDeviceAccessEffect(
     args: GetMobileDeviceAccessEffectCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetMobileDeviceAccessEffectCommandOutput>;
   getMobileDeviceAccessEffect(
     args: GetMobileDeviceAccessEffectCommandInput,
-    cb: (err: any, data?: GetMobileDeviceAccessEffectCommandOutput) => void
+    cb: (err: any, data?: GetMobileDeviceAccessEffectCommandOutput) => void,
   ): void;
   getMobileDeviceAccessEffect(
     args: GetMobileDeviceAccessEffectCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetMobileDeviceAccessEffectCommandOutput) => void
+    cb: (err: any, data?: GetMobileDeviceAccessEffectCommandOutput) => void,
   ): void;
 
   /**
@@ -1154,16 +1154,16 @@ export interface WorkMail {
    */
   getMobileDeviceAccessOverride(
     args: GetMobileDeviceAccessOverrideCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetMobileDeviceAccessOverrideCommandOutput>;
   getMobileDeviceAccessOverride(
     args: GetMobileDeviceAccessOverrideCommandInput,
-    cb: (err: any, data?: GetMobileDeviceAccessOverrideCommandOutput) => void
+    cb: (err: any, data?: GetMobileDeviceAccessOverrideCommandOutput) => void,
   ): void;
   getMobileDeviceAccessOverride(
     args: GetMobileDeviceAccessOverrideCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetMobileDeviceAccessOverrideCommandOutput) => void
+    cb: (err: any, data?: GetMobileDeviceAccessOverrideCommandOutput) => void,
   ): void;
 
   /**
@@ -1171,16 +1171,16 @@ export interface WorkMail {
    */
   listAccessControlRules(
     args: ListAccessControlRulesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListAccessControlRulesCommandOutput>;
   listAccessControlRules(
     args: ListAccessControlRulesCommandInput,
-    cb: (err: any, data?: ListAccessControlRulesCommandOutput) => void
+    cb: (err: any, data?: ListAccessControlRulesCommandOutput) => void,
   ): void;
   listAccessControlRules(
     args: ListAccessControlRulesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListAccessControlRulesCommandOutput) => void
+    cb: (err: any, data?: ListAccessControlRulesCommandOutput) => void,
   ): void;
 
   /**
@@ -1191,7 +1191,7 @@ export interface WorkMail {
   listAliases(
     args: ListAliasesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListAliasesCommandOutput) => void
+    cb: (err: any, data?: ListAliasesCommandOutput) => void,
   ): void;
 
   /**
@@ -1199,16 +1199,16 @@ export interface WorkMail {
    */
   listAvailabilityConfigurations(
     args: ListAvailabilityConfigurationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListAvailabilityConfigurationsCommandOutput>;
   listAvailabilityConfigurations(
     args: ListAvailabilityConfigurationsCommandInput,
-    cb: (err: any, data?: ListAvailabilityConfigurationsCommandOutput) => void
+    cb: (err: any, data?: ListAvailabilityConfigurationsCommandOutput) => void,
   ): void;
   listAvailabilityConfigurations(
     args: ListAvailabilityConfigurationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListAvailabilityConfigurationsCommandOutput) => void
+    cb: (err: any, data?: ListAvailabilityConfigurationsCommandOutput) => void,
   ): void;
 
   /**
@@ -1216,16 +1216,16 @@ export interface WorkMail {
    */
   listGroupMembers(
     args: ListGroupMembersCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListGroupMembersCommandOutput>;
   listGroupMembers(
     args: ListGroupMembersCommandInput,
-    cb: (err: any, data?: ListGroupMembersCommandOutput) => void
+    cb: (err: any, data?: ListGroupMembersCommandOutput) => void,
   ): void;
   listGroupMembers(
     args: ListGroupMembersCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListGroupMembersCommandOutput) => void
+    cb: (err: any, data?: ListGroupMembersCommandOutput) => void,
   ): void;
 
   /**
@@ -1236,7 +1236,7 @@ export interface WorkMail {
   listGroups(
     args: ListGroupsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListGroupsCommandOutput) => void
+    cb: (err: any, data?: ListGroupsCommandOutput) => void,
   ): void;
 
   /**
@@ -1244,16 +1244,16 @@ export interface WorkMail {
    */
   listGroupsForEntity(
     args: ListGroupsForEntityCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListGroupsForEntityCommandOutput>;
   listGroupsForEntity(
     args: ListGroupsForEntityCommandInput,
-    cb: (err: any, data?: ListGroupsForEntityCommandOutput) => void
+    cb: (err: any, data?: ListGroupsForEntityCommandOutput) => void,
   ): void;
   listGroupsForEntity(
     args: ListGroupsForEntityCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListGroupsForEntityCommandOutput) => void
+    cb: (err: any, data?: ListGroupsForEntityCommandOutput) => void,
   ): void;
 
   /**
@@ -1261,16 +1261,16 @@ export interface WorkMail {
    */
   listImpersonationRoles(
     args: ListImpersonationRolesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListImpersonationRolesCommandOutput>;
   listImpersonationRoles(
     args: ListImpersonationRolesCommandInput,
-    cb: (err: any, data?: ListImpersonationRolesCommandOutput) => void
+    cb: (err: any, data?: ListImpersonationRolesCommandOutput) => void,
   ): void;
   listImpersonationRoles(
     args: ListImpersonationRolesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListImpersonationRolesCommandOutput) => void
+    cb: (err: any, data?: ListImpersonationRolesCommandOutput) => void,
   ): void;
 
   /**
@@ -1278,16 +1278,16 @@ export interface WorkMail {
    */
   listMailboxExportJobs(
     args: ListMailboxExportJobsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListMailboxExportJobsCommandOutput>;
   listMailboxExportJobs(
     args: ListMailboxExportJobsCommandInput,
-    cb: (err: any, data?: ListMailboxExportJobsCommandOutput) => void
+    cb: (err: any, data?: ListMailboxExportJobsCommandOutput) => void,
   ): void;
   listMailboxExportJobs(
     args: ListMailboxExportJobsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListMailboxExportJobsCommandOutput) => void
+    cb: (err: any, data?: ListMailboxExportJobsCommandOutput) => void,
   ): void;
 
   /**
@@ -1295,16 +1295,16 @@ export interface WorkMail {
    */
   listMailboxPermissions(
     args: ListMailboxPermissionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListMailboxPermissionsCommandOutput>;
   listMailboxPermissions(
     args: ListMailboxPermissionsCommandInput,
-    cb: (err: any, data?: ListMailboxPermissionsCommandOutput) => void
+    cb: (err: any, data?: ListMailboxPermissionsCommandOutput) => void,
   ): void;
   listMailboxPermissions(
     args: ListMailboxPermissionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListMailboxPermissionsCommandOutput) => void
+    cb: (err: any, data?: ListMailboxPermissionsCommandOutput) => void,
   ): void;
 
   /**
@@ -1312,13 +1312,13 @@ export interface WorkMail {
    */
   listMailDomains(
     args: ListMailDomainsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListMailDomainsCommandOutput>;
   listMailDomains(args: ListMailDomainsCommandInput, cb: (err: any, data?: ListMailDomainsCommandOutput) => void): void;
   listMailDomains(
     args: ListMailDomainsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListMailDomainsCommandOutput) => void
+    cb: (err: any, data?: ListMailDomainsCommandOutput) => void,
   ): void;
 
   /**
@@ -1326,16 +1326,16 @@ export interface WorkMail {
    */
   listMobileDeviceAccessOverrides(
     args: ListMobileDeviceAccessOverridesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListMobileDeviceAccessOverridesCommandOutput>;
   listMobileDeviceAccessOverrides(
     args: ListMobileDeviceAccessOverridesCommandInput,
-    cb: (err: any, data?: ListMobileDeviceAccessOverridesCommandOutput) => void
+    cb: (err: any, data?: ListMobileDeviceAccessOverridesCommandOutput) => void,
   ): void;
   listMobileDeviceAccessOverrides(
     args: ListMobileDeviceAccessOverridesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListMobileDeviceAccessOverridesCommandOutput) => void
+    cb: (err: any, data?: ListMobileDeviceAccessOverridesCommandOutput) => void,
   ): void;
 
   /**
@@ -1343,16 +1343,16 @@ export interface WorkMail {
    */
   listMobileDeviceAccessRules(
     args: ListMobileDeviceAccessRulesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListMobileDeviceAccessRulesCommandOutput>;
   listMobileDeviceAccessRules(
     args: ListMobileDeviceAccessRulesCommandInput,
-    cb: (err: any, data?: ListMobileDeviceAccessRulesCommandOutput) => void
+    cb: (err: any, data?: ListMobileDeviceAccessRulesCommandOutput) => void,
   ): void;
   listMobileDeviceAccessRules(
     args: ListMobileDeviceAccessRulesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListMobileDeviceAccessRulesCommandOutput) => void
+    cb: (err: any, data?: ListMobileDeviceAccessRulesCommandOutput) => void,
   ): void;
 
   /**
@@ -1361,16 +1361,16 @@ export interface WorkMail {
   listOrganizations(): Promise<ListOrganizationsCommandOutput>;
   listOrganizations(
     args: ListOrganizationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListOrganizationsCommandOutput>;
   listOrganizations(
     args: ListOrganizationsCommandInput,
-    cb: (err: any, data?: ListOrganizationsCommandOutput) => void
+    cb: (err: any, data?: ListOrganizationsCommandOutput) => void,
   ): void;
   listOrganizations(
     args: ListOrganizationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListOrganizationsCommandOutput) => void
+    cb: (err: any, data?: ListOrganizationsCommandOutput) => void,
   ): void;
 
   /**
@@ -1378,16 +1378,16 @@ export interface WorkMail {
    */
   listResourceDelegates(
     args: ListResourceDelegatesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListResourceDelegatesCommandOutput>;
   listResourceDelegates(
     args: ListResourceDelegatesCommandInput,
-    cb: (err: any, data?: ListResourceDelegatesCommandOutput) => void
+    cb: (err: any, data?: ListResourceDelegatesCommandOutput) => void,
   ): void;
   listResourceDelegates(
     args: ListResourceDelegatesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListResourceDelegatesCommandOutput) => void
+    cb: (err: any, data?: ListResourceDelegatesCommandOutput) => void,
   ): void;
 
   /**
@@ -1398,7 +1398,7 @@ export interface WorkMail {
   listResources(
     args: ListResourcesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListResourcesCommandOutput) => void
+    cb: (err: any, data?: ListResourcesCommandOutput) => void,
   ): void;
 
   /**
@@ -1406,16 +1406,16 @@ export interface WorkMail {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -1426,7 +1426,7 @@ export interface WorkMail {
   listUsers(
     args: ListUsersCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListUsersCommandOutput) => void
+    cb: (err: any, data?: ListUsersCommandOutput) => void,
   ): void;
 
   /**
@@ -1434,16 +1434,16 @@ export interface WorkMail {
    */
   putAccessControlRule(
     args: PutAccessControlRuleCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutAccessControlRuleCommandOutput>;
   putAccessControlRule(
     args: PutAccessControlRuleCommandInput,
-    cb: (err: any, data?: PutAccessControlRuleCommandOutput) => void
+    cb: (err: any, data?: PutAccessControlRuleCommandOutput) => void,
   ): void;
   putAccessControlRule(
     args: PutAccessControlRuleCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutAccessControlRuleCommandOutput) => void
+    cb: (err: any, data?: PutAccessControlRuleCommandOutput) => void,
   ): void;
 
   /**
@@ -1451,16 +1451,16 @@ export interface WorkMail {
    */
   putEmailMonitoringConfiguration(
     args: PutEmailMonitoringConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutEmailMonitoringConfigurationCommandOutput>;
   putEmailMonitoringConfiguration(
     args: PutEmailMonitoringConfigurationCommandInput,
-    cb: (err: any, data?: PutEmailMonitoringConfigurationCommandOutput) => void
+    cb: (err: any, data?: PutEmailMonitoringConfigurationCommandOutput) => void,
   ): void;
   putEmailMonitoringConfiguration(
     args: PutEmailMonitoringConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutEmailMonitoringConfigurationCommandOutput) => void
+    cb: (err: any, data?: PutEmailMonitoringConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -1468,16 +1468,16 @@ export interface WorkMail {
    */
   putInboundDmarcSettings(
     args: PutInboundDmarcSettingsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutInboundDmarcSettingsCommandOutput>;
   putInboundDmarcSettings(
     args: PutInboundDmarcSettingsCommandInput,
-    cb: (err: any, data?: PutInboundDmarcSettingsCommandOutput) => void
+    cb: (err: any, data?: PutInboundDmarcSettingsCommandOutput) => void,
   ): void;
   putInboundDmarcSettings(
     args: PutInboundDmarcSettingsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutInboundDmarcSettingsCommandOutput) => void
+    cb: (err: any, data?: PutInboundDmarcSettingsCommandOutput) => void,
   ): void;
 
   /**
@@ -1485,16 +1485,16 @@ export interface WorkMail {
    */
   putMailboxPermissions(
     args: PutMailboxPermissionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutMailboxPermissionsCommandOutput>;
   putMailboxPermissions(
     args: PutMailboxPermissionsCommandInput,
-    cb: (err: any, data?: PutMailboxPermissionsCommandOutput) => void
+    cb: (err: any, data?: PutMailboxPermissionsCommandOutput) => void,
   ): void;
   putMailboxPermissions(
     args: PutMailboxPermissionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutMailboxPermissionsCommandOutput) => void
+    cb: (err: any, data?: PutMailboxPermissionsCommandOutput) => void,
   ): void;
 
   /**
@@ -1502,16 +1502,16 @@ export interface WorkMail {
    */
   putMobileDeviceAccessOverride(
     args: PutMobileDeviceAccessOverrideCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutMobileDeviceAccessOverrideCommandOutput>;
   putMobileDeviceAccessOverride(
     args: PutMobileDeviceAccessOverrideCommandInput,
-    cb: (err: any, data?: PutMobileDeviceAccessOverrideCommandOutput) => void
+    cb: (err: any, data?: PutMobileDeviceAccessOverrideCommandOutput) => void,
   ): void;
   putMobileDeviceAccessOverride(
     args: PutMobileDeviceAccessOverrideCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutMobileDeviceAccessOverrideCommandOutput) => void
+    cb: (err: any, data?: PutMobileDeviceAccessOverrideCommandOutput) => void,
   ): void;
 
   /**
@@ -1519,16 +1519,16 @@ export interface WorkMail {
    */
   putRetentionPolicy(
     args: PutRetentionPolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutRetentionPolicyCommandOutput>;
   putRetentionPolicy(
     args: PutRetentionPolicyCommandInput,
-    cb: (err: any, data?: PutRetentionPolicyCommandOutput) => void
+    cb: (err: any, data?: PutRetentionPolicyCommandOutput) => void,
   ): void;
   putRetentionPolicy(
     args: PutRetentionPolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutRetentionPolicyCommandOutput) => void
+    cb: (err: any, data?: PutRetentionPolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -1536,16 +1536,16 @@ export interface WorkMail {
    */
   registerMailDomain(
     args: RegisterMailDomainCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<RegisterMailDomainCommandOutput>;
   registerMailDomain(
     args: RegisterMailDomainCommandInput,
-    cb: (err: any, data?: RegisterMailDomainCommandOutput) => void
+    cb: (err: any, data?: RegisterMailDomainCommandOutput) => void,
   ): void;
   registerMailDomain(
     args: RegisterMailDomainCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RegisterMailDomainCommandOutput) => void
+    cb: (err: any, data?: RegisterMailDomainCommandOutput) => void,
   ): void;
 
   /**
@@ -1553,16 +1553,16 @@ export interface WorkMail {
    */
   registerToWorkMail(
     args: RegisterToWorkMailCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<RegisterToWorkMailCommandOutput>;
   registerToWorkMail(
     args: RegisterToWorkMailCommandInput,
-    cb: (err: any, data?: RegisterToWorkMailCommandOutput) => void
+    cb: (err: any, data?: RegisterToWorkMailCommandOutput) => void,
   ): void;
   registerToWorkMail(
     args: RegisterToWorkMailCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RegisterToWorkMailCommandOutput) => void
+    cb: (err: any, data?: RegisterToWorkMailCommandOutput) => void,
   ): void;
 
   /**
@@ -1573,7 +1573,7 @@ export interface WorkMail {
   resetPassword(
     args: ResetPasswordCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ResetPasswordCommandOutput) => void
+    cb: (err: any, data?: ResetPasswordCommandOutput) => void,
   ): void;
 
   /**
@@ -1581,16 +1581,16 @@ export interface WorkMail {
    */
   startMailboxExportJob(
     args: StartMailboxExportJobCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartMailboxExportJobCommandOutput>;
   startMailboxExportJob(
     args: StartMailboxExportJobCommandInput,
-    cb: (err: any, data?: StartMailboxExportJobCommandOutput) => void
+    cb: (err: any, data?: StartMailboxExportJobCommandOutput) => void,
   ): void;
   startMailboxExportJob(
     args: StartMailboxExportJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartMailboxExportJobCommandOutput) => void
+    cb: (err: any, data?: StartMailboxExportJobCommandOutput) => void,
   ): void;
 
   /**
@@ -1601,7 +1601,7 @@ export interface WorkMail {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -1609,16 +1609,16 @@ export interface WorkMail {
    */
   testAvailabilityConfiguration(
     args: TestAvailabilityConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<TestAvailabilityConfigurationCommandOutput>;
   testAvailabilityConfiguration(
     args: TestAvailabilityConfigurationCommandInput,
-    cb: (err: any, data?: TestAvailabilityConfigurationCommandOutput) => void
+    cb: (err: any, data?: TestAvailabilityConfigurationCommandOutput) => void,
   ): void;
   testAvailabilityConfiguration(
     args: TestAvailabilityConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TestAvailabilityConfigurationCommandOutput) => void
+    cb: (err: any, data?: TestAvailabilityConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -1629,7 +1629,7 @@ export interface WorkMail {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -1637,16 +1637,16 @@ export interface WorkMail {
    */
   updateAvailabilityConfiguration(
     args: UpdateAvailabilityConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateAvailabilityConfigurationCommandOutput>;
   updateAvailabilityConfiguration(
     args: UpdateAvailabilityConfigurationCommandInput,
-    cb: (err: any, data?: UpdateAvailabilityConfigurationCommandOutput) => void
+    cb: (err: any, data?: UpdateAvailabilityConfigurationCommandOutput) => void,
   ): void;
   updateAvailabilityConfiguration(
     args: UpdateAvailabilityConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateAvailabilityConfigurationCommandOutput) => void
+    cb: (err: any, data?: UpdateAvailabilityConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -1654,16 +1654,16 @@ export interface WorkMail {
    */
   updateDefaultMailDomain(
     args: UpdateDefaultMailDomainCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateDefaultMailDomainCommandOutput>;
   updateDefaultMailDomain(
     args: UpdateDefaultMailDomainCommandInput,
-    cb: (err: any, data?: UpdateDefaultMailDomainCommandOutput) => void
+    cb: (err: any, data?: UpdateDefaultMailDomainCommandOutput) => void,
   ): void;
   updateDefaultMailDomain(
     args: UpdateDefaultMailDomainCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateDefaultMailDomainCommandOutput) => void
+    cb: (err: any, data?: UpdateDefaultMailDomainCommandOutput) => void,
   ): void;
 
   /**
@@ -1674,7 +1674,7 @@ export interface WorkMail {
   updateGroup(
     args: UpdateGroupCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateGroupCommandOutput) => void
+    cb: (err: any, data?: UpdateGroupCommandOutput) => void,
   ): void;
 
   /**
@@ -1682,16 +1682,16 @@ export interface WorkMail {
    */
   updateImpersonationRole(
     args: UpdateImpersonationRoleCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateImpersonationRoleCommandOutput>;
   updateImpersonationRole(
     args: UpdateImpersonationRoleCommandInput,
-    cb: (err: any, data?: UpdateImpersonationRoleCommandOutput) => void
+    cb: (err: any, data?: UpdateImpersonationRoleCommandOutput) => void,
   ): void;
   updateImpersonationRole(
     args: UpdateImpersonationRoleCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateImpersonationRoleCommandOutput) => void
+    cb: (err: any, data?: UpdateImpersonationRoleCommandOutput) => void,
   ): void;
 
   /**
@@ -1699,16 +1699,16 @@ export interface WorkMail {
    */
   updateMailboxQuota(
     args: UpdateMailboxQuotaCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateMailboxQuotaCommandOutput>;
   updateMailboxQuota(
     args: UpdateMailboxQuotaCommandInput,
-    cb: (err: any, data?: UpdateMailboxQuotaCommandOutput) => void
+    cb: (err: any, data?: UpdateMailboxQuotaCommandOutput) => void,
   ): void;
   updateMailboxQuota(
     args: UpdateMailboxQuotaCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateMailboxQuotaCommandOutput) => void
+    cb: (err: any, data?: UpdateMailboxQuotaCommandOutput) => void,
   ): void;
 
   /**
@@ -1716,16 +1716,16 @@ export interface WorkMail {
    */
   updateMobileDeviceAccessRule(
     args: UpdateMobileDeviceAccessRuleCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateMobileDeviceAccessRuleCommandOutput>;
   updateMobileDeviceAccessRule(
     args: UpdateMobileDeviceAccessRuleCommandInput,
-    cb: (err: any, data?: UpdateMobileDeviceAccessRuleCommandOutput) => void
+    cb: (err: any, data?: UpdateMobileDeviceAccessRuleCommandOutput) => void,
   ): void;
   updateMobileDeviceAccessRule(
     args: UpdateMobileDeviceAccessRuleCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateMobileDeviceAccessRuleCommandOutput) => void
+    cb: (err: any, data?: UpdateMobileDeviceAccessRuleCommandOutput) => void,
   ): void;
 
   /**
@@ -1733,16 +1733,16 @@ export interface WorkMail {
    */
   updatePrimaryEmailAddress(
     args: UpdatePrimaryEmailAddressCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdatePrimaryEmailAddressCommandOutput>;
   updatePrimaryEmailAddress(
     args: UpdatePrimaryEmailAddressCommandInput,
-    cb: (err: any, data?: UpdatePrimaryEmailAddressCommandOutput) => void
+    cb: (err: any, data?: UpdatePrimaryEmailAddressCommandOutput) => void,
   ): void;
   updatePrimaryEmailAddress(
     args: UpdatePrimaryEmailAddressCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdatePrimaryEmailAddressCommandOutput) => void
+    cb: (err: any, data?: UpdatePrimaryEmailAddressCommandOutput) => void,
   ): void;
 
   /**
@@ -1750,13 +1750,13 @@ export interface WorkMail {
    */
   updateResource(
     args: UpdateResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateResourceCommandOutput>;
   updateResource(args: UpdateResourceCommandInput, cb: (err: any, data?: UpdateResourceCommandOutput) => void): void;
   updateResource(
     args: UpdateResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateResourceCommandOutput) => void
+    cb: (err: any, data?: UpdateResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -1767,7 +1767,7 @@ export interface WorkMail {
   updateUser(
     args: UpdateUserCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateUserCommandOutput) => void
+    cb: (err: any, data?: UpdateUserCommandOutput) => void,
   ): void;
 }
 

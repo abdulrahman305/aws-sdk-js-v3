@@ -106,7 +106,7 @@ import {
  */
 export const se_ConfigureLogsCommand = async (
   input: ConfigureLogsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -118,7 +118,7 @@ export const se_ConfigureLogsCommand = async (
   body = JSON.stringify(
     take(input, {
       egressAccessLogs: [, (_) => se_EgressAccessLogs(_, context), `EgressAccessLogs`],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -129,7 +129,7 @@ export const se_ConfigureLogsCommand = async (
  */
 export const se_CreateAssetCommand = async (
   input: CreateAssetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -145,7 +145,7 @@ export const se_CreateAssetCommand = async (
       sourceArn: [, , `SourceArn`],
       sourceRoleArn: [, , `SourceRoleArn`],
       tags: [, (_) => _json(_), `Tags`],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -156,7 +156,7 @@ export const se_CreateAssetCommand = async (
  */
 export const se_CreatePackagingConfigurationCommand = async (
   input: CreatePackagingConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -173,7 +173,7 @@ export const se_CreatePackagingConfigurationCommand = async (
       mssPackage: [, (_) => se_MssPackage(_, context), `MssPackage`],
       packagingGroupId: [, , `PackagingGroupId`],
       tags: [, (_) => _json(_), `Tags`],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -184,7 +184,7 @@ export const se_CreatePackagingConfigurationCommand = async (
  */
 export const se_CreatePackagingGroupCommand = async (
   input: CreatePackagingGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -198,7 +198,7 @@ export const se_CreatePackagingGroupCommand = async (
       egressAccessLogs: [, (_) => se_EgressAccessLogs(_, context), `EgressAccessLogs`],
       id: [, , `Id`],
       tags: [, (_) => _json(_), `Tags`],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -209,7 +209,7 @@ export const se_CreatePackagingGroupCommand = async (
  */
 export const se_DeleteAssetCommand = async (
   input: DeleteAssetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -225,7 +225,7 @@ export const se_DeleteAssetCommand = async (
  */
 export const se_DeletePackagingConfigurationCommand = async (
   input: DeletePackagingConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -241,7 +241,7 @@ export const se_DeletePackagingConfigurationCommand = async (
  */
 export const se_DeletePackagingGroupCommand = async (
   input: DeletePackagingGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -257,7 +257,7 @@ export const se_DeletePackagingGroupCommand = async (
  */
 export const se_DescribeAssetCommand = async (
   input: DescribeAssetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -273,7 +273,7 @@ export const se_DescribeAssetCommand = async (
  */
 export const se_DescribePackagingConfigurationCommand = async (
   input: DescribePackagingConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -289,7 +289,7 @@ export const se_DescribePackagingConfigurationCommand = async (
  */
 export const se_DescribePackagingGroupCommand = async (
   input: DescribePackagingGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -305,7 +305,7 @@ export const se_DescribePackagingGroupCommand = async (
  */
 export const se_ListAssetsCommand = async (
   input: ListAssetsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -325,7 +325,7 @@ export const se_ListAssetsCommand = async (
  */
 export const se_ListPackagingConfigurationsCommand = async (
   input: ListPackagingConfigurationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -345,7 +345,7 @@ export const se_ListPackagingConfigurationsCommand = async (
  */
 export const se_ListPackagingGroupsCommand = async (
   input: ListPackagingGroupsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -364,7 +364,7 @@ export const se_ListPackagingGroupsCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -380,7 +380,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -392,7 +392,7 @@ export const se_TagResourceCommand = async (
   body = JSON.stringify(
     take(input, {
       tags: [, (_) => _json(_), `Tags`],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -403,7 +403,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -425,7 +425,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdatePackagingGroupCommand = async (
   input: UpdatePackagingGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -437,7 +437,7 @@ export const se_UpdatePackagingGroupCommand = async (
   body = JSON.stringify(
     take(input, {
       authorization: [, (_) => se_Authorization(_, context), `Authorization`],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -448,7 +448,7 @@ export const se_UpdatePackagingGroupCommand = async (
  */
 export const de_ConfigureLogsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ConfigureLogsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -475,7 +475,7 @@ export const de_ConfigureLogsCommand = async (
  */
 export const de_CreateAssetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateAssetCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -504,7 +504,7 @@ export const de_CreateAssetCommand = async (
  */
 export const de_CreatePackagingConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreatePackagingConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -533,7 +533,7 @@ export const de_CreatePackagingConfigurationCommand = async (
  */
 export const de_CreatePackagingGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreatePackagingGroupCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -560,7 +560,7 @@ export const de_CreatePackagingGroupCommand = async (
  */
 export const de_DeleteAssetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteAssetCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -577,7 +577,7 @@ export const de_DeleteAssetCommand = async (
  */
 export const de_DeletePackagingConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeletePackagingConfigurationCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -594,7 +594,7 @@ export const de_DeletePackagingConfigurationCommand = async (
  */
 export const de_DeletePackagingGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeletePackagingGroupCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -611,7 +611,7 @@ export const de_DeletePackagingGroupCommand = async (
  */
 export const de_DescribeAssetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeAssetCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -640,7 +640,7 @@ export const de_DescribeAssetCommand = async (
  */
 export const de_DescribePackagingConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribePackagingConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -669,7 +669,7 @@ export const de_DescribePackagingConfigurationCommand = async (
  */
 export const de_DescribePackagingGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribePackagingGroupCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -697,7 +697,7 @@ export const de_DescribePackagingGroupCommand = async (
  */
 export const de_ListAssetsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAssetsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -719,7 +719,7 @@ export const de_ListAssetsCommand = async (
  */
 export const de_ListPackagingConfigurationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListPackagingConfigurationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -741,7 +741,7 @@ export const de_ListPackagingConfigurationsCommand = async (
  */
 export const de_ListPackagingGroupsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListPackagingGroupsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -763,7 +763,7 @@ export const de_ListPackagingGroupsCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -784,7 +784,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -801,7 +801,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -818,7 +818,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdatePackagingGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdatePackagingGroupCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -902,7 +902,7 @@ const de_ForbiddenExceptionRes = async (parsedOutput: any, context: __SerdeConte
  */
 const de_InternalServerErrorExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerErrorException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -939,7 +939,7 @@ const de_NotFoundExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_ServiceUnavailableExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceUnavailableException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -959,7 +959,7 @@ const de_ServiceUnavailableExceptionRes = async (
  */
 const de_TooManyRequestsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyRequestsException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -979,7 +979,7 @@ const de_TooManyRequestsExceptionRes = async (
  */
 const de_UnprocessableEntityExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UnprocessableEntityException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;

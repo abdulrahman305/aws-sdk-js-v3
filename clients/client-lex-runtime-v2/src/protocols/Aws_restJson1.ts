@@ -80,7 +80,7 @@ import {
  */
 export const se_DeleteSessionCommand = async (
   input: DeleteSessionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -99,7 +99,7 @@ export const se_DeleteSessionCommand = async (
  */
 export const se_GetSessionCommand = async (
   input: GetSessionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -118,7 +118,7 @@ export const se_GetSessionCommand = async (
  */
 export const se_PutSessionCommand = async (
   input: PutSessionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -136,7 +136,7 @@ export const se_PutSessionCommand = async (
       messages: (_) => _json(_),
       requestAttributes: (_) => _json(_),
       sessionState: (_) => se_SessionState(_, context),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -147,7 +147,7 @@ export const se_PutSessionCommand = async (
  */
 export const se_RecognizeTextCommand = async (
   input: RecognizeTextCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -164,7 +164,7 @@ export const se_RecognizeTextCommand = async (
       requestAttributes: (_) => _json(_),
       sessionState: (_) => se_SessionState(_, context),
       text: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -175,7 +175,7 @@ export const se_RecognizeTextCommand = async (
  */
 export const se_RecognizeUtteranceCommand = async (
   input: RecognizeUtteranceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -203,7 +203,7 @@ export const se_RecognizeUtteranceCommand = async (
  */
 export const se_StartConversationCommand = async (
   input: StartConversationCommandInput,
-  context: __SerdeContext & __EventStreamSerdeContext
+  context: __SerdeContext & __EventStreamSerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -227,7 +227,7 @@ export const se_StartConversationCommand = async (
  */
 export const de_DeleteSessionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteSessionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -251,7 +251,7 @@ export const de_DeleteSessionCommand = async (
  */
 export const de_GetSessionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetSessionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -275,7 +275,7 @@ export const de_GetSessionCommand = async (
  */
 export const de_PutSessionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext & __SdkStreamSerdeContext
+  context: __SerdeContext & __SdkStreamSerdeContext,
 ): Promise<PutSessionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -299,7 +299,7 @@ export const de_PutSessionCommand = async (
  */
 export const de_RecognizeTextCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RecognizeTextCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -325,7 +325,7 @@ export const de_RecognizeTextCommand = async (
  */
 export const de_RecognizeUtteranceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext & __SdkStreamSerdeContext
+  context: __SerdeContext & __SdkStreamSerdeContext,
 ): Promise<RecognizeUtteranceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -353,7 +353,7 @@ export const de_RecognizeUtteranceCommand = async (
  */
 export const de_StartConversationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext & __EventStreamSerdeContext
+  context: __SerdeContext & __EventStreamSerdeContext,
 ): Promise<StartConversationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -416,7 +416,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -470,7 +470,7 @@ const de_ConflictExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_DependencyFailedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DependencyFailedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -490,7 +490,7 @@ const de_DependencyFailedExceptionRes = async (
  */
 const de_InternalServerExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -510,7 +510,7 @@ const de_InternalServerExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -564,7 +564,7 @@ const de_ValidationExceptionRes = async (parsedOutput: any, context: __SerdeCont
  */
 const se_StartConversationRequestEventStream = (
   input: any,
-  context: __SerdeContext & __EventStreamSerdeContext
+  context: __SerdeContext & __EventStreamSerdeContext,
 ): any => {
   const eventMarshallingVisitor = (event: any): __Message =>
     StartConversationRequestEventStream.visit(event, {
@@ -649,14 +649,14 @@ const se_TextInputEvent_event = (input: TextInputEvent, context: __SerdeContext)
  */
 const de_StartConversationResponseEventStream = (
   output: any,
-  context: __SerdeContext & __EventStreamSerdeContext
+  context: __SerdeContext & __EventStreamSerdeContext,
 ): AsyncIterable<StartConversationResponseEventStream> => {
   return context.eventStreamMarshaller.deserialize(output, async (event) => {
     if (event["PlaybackInterruptionEvent"] != null) {
       return {
         PlaybackInterruptionEvent: await de_PlaybackInterruptionEvent_event(
           event["PlaybackInterruptionEvent"],
-          context
+          context,
         ),
       };
     }
@@ -694,7 +694,7 @@ const de_StartConversationResponseEventStream = (
       return {
         ResourceNotFoundException: await de_ResourceNotFoundException_event(
           event["ResourceNotFoundException"],
-          context
+          context,
         ),
       };
     }
@@ -722,7 +722,7 @@ const de_StartConversationResponseEventStream = (
       return {
         DependencyFailedException: await de_DependencyFailedException_event(
           event["DependencyFailedException"],
-          context
+          context,
         ),
       };
     }
@@ -763,7 +763,7 @@ const de_ConflictException_event = async (output: any, context: __SerdeContext):
 };
 const de_DependencyFailedException_event = async (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DependencyFailedException> => {
   const parsedOutput: any = {
     ...output,
@@ -785,7 +785,7 @@ const de_IntentResultEvent_event = async (output: any, context: __SerdeContext):
 };
 const de_InternalServerException_event = async (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerException> => {
   const parsedOutput: any = {
     ...output,
@@ -795,7 +795,7 @@ const de_InternalServerException_event = async (
 };
 const de_PlaybackInterruptionEvent_event = async (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PlaybackInterruptionEvent> => {
   const contents: PlaybackInterruptionEvent = {} as any;
   const data: any = await parseBody(output.body, context);
@@ -804,7 +804,7 @@ const de_PlaybackInterruptionEvent_event = async (
 };
 const de_ResourceNotFoundException_event = async (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const parsedOutput: any = {
     ...output,
@@ -977,7 +977,7 @@ const se_Slot = (input: Slot, context: __SerdeContext): any => {
  */
 const se_SlotHintsIntentMap = (
   input: Record<string, Record<string, RuntimeHintDetails>>,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return Object.entries(input).reduce((acc: Record<string, any>, [key, value]: [string, any]) => {
     if (value === null) {
@@ -1226,7 +1226,7 @@ const de_Slot = (output: any, context: __SerdeContext): Slot => {
  */
 const de_SlotHintsIntentMap = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Record<string, Record<string, RuntimeHintDetails>> => {
   return Object.entries(output).reduce(
     (acc: Record<string, Record<string, RuntimeHintDetails>>, [key, value]: [string, any]) => {
@@ -1236,7 +1236,7 @@ const de_SlotHintsIntentMap = (
       acc[key as string] = de_SlotHintsSlotMap(value, context);
       return acc;
     },
-    {} as Record<string, Record<string, RuntimeHintDetails>>
+    {} as Record<string, Record<string, RuntimeHintDetails>>,
   );
 };
 
@@ -1244,26 +1244,32 @@ const de_SlotHintsIntentMap = (
  * deserializeAws_restJson1SlotHintsSlotMap
  */
 const de_SlotHintsSlotMap = (output: any, context: __SerdeContext): Record<string, RuntimeHintDetails> => {
-  return Object.entries(output).reduce((acc: Record<string, RuntimeHintDetails>, [key, value]: [string, any]) => {
-    if (value === null) {
+  return Object.entries(output).reduce(
+    (acc: Record<string, RuntimeHintDetails>, [key, value]: [string, any]) => {
+      if (value === null) {
+        return acc;
+      }
+      acc[key as string] = de_RuntimeHintDetails(value, context);
       return acc;
-    }
-    acc[key as string] = de_RuntimeHintDetails(value, context);
-    return acc;
-  }, {} as Record<string, RuntimeHintDetails>);
+    },
+    {} as Record<string, RuntimeHintDetails>,
+  );
 };
 
 /**
  * deserializeAws_restJson1Slots
  */
 const de_Slots = (output: any, context: __SerdeContext): Record<string, Slot> => {
-  return Object.entries(output).reduce((acc: Record<string, Slot>, [key, value]: [string, any]) => {
-    if (value === null) {
+  return Object.entries(output).reduce(
+    (acc: Record<string, Slot>, [key, value]: [string, any]) => {
+      if (value === null) {
+        return acc;
+      }
+      acc[key as string] = de_Slot(value, context);
       return acc;
-    }
-    acc[key as string] = de_Slot(value, context);
-    return acc;
-  }, {} as Record<string, Slot>);
+    },
+    {} as Record<string, Slot>,
+  );
 };
 
 // de_StringList omitted.

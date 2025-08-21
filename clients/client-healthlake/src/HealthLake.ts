@@ -87,16 +87,16 @@ export interface HealthLake {
    */
   createFHIRDatastore(
     args: CreateFHIRDatastoreCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateFHIRDatastoreCommandOutput>;
   createFHIRDatastore(
     args: CreateFHIRDatastoreCommandInput,
-    cb: (err: any, data?: CreateFHIRDatastoreCommandOutput) => void
+    cb: (err: any, data?: CreateFHIRDatastoreCommandOutput) => void,
   ): void;
   createFHIRDatastore(
     args: CreateFHIRDatastoreCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateFHIRDatastoreCommandOutput) => void
+    cb: (err: any, data?: CreateFHIRDatastoreCommandOutput) => void,
   ): void;
 
   /**
@@ -104,16 +104,16 @@ export interface HealthLake {
    */
   deleteFHIRDatastore(
     args: DeleteFHIRDatastoreCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteFHIRDatastoreCommandOutput>;
   deleteFHIRDatastore(
     args: DeleteFHIRDatastoreCommandInput,
-    cb: (err: any, data?: DeleteFHIRDatastoreCommandOutput) => void
+    cb: (err: any, data?: DeleteFHIRDatastoreCommandOutput) => void,
   ): void;
   deleteFHIRDatastore(
     args: DeleteFHIRDatastoreCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteFHIRDatastoreCommandOutput) => void
+    cb: (err: any, data?: DeleteFHIRDatastoreCommandOutput) => void,
   ): void;
 
   /**
@@ -121,16 +121,16 @@ export interface HealthLake {
    */
   describeFHIRDatastore(
     args: DescribeFHIRDatastoreCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeFHIRDatastoreCommandOutput>;
   describeFHIRDatastore(
     args: DescribeFHIRDatastoreCommandInput,
-    cb: (err: any, data?: DescribeFHIRDatastoreCommandOutput) => void
+    cb: (err: any, data?: DescribeFHIRDatastoreCommandOutput) => void,
   ): void;
   describeFHIRDatastore(
     args: DescribeFHIRDatastoreCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeFHIRDatastoreCommandOutput) => void
+    cb: (err: any, data?: DescribeFHIRDatastoreCommandOutput) => void,
   ): void;
 
   /**
@@ -138,16 +138,16 @@ export interface HealthLake {
    */
   describeFHIRExportJob(
     args: DescribeFHIRExportJobCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeFHIRExportJobCommandOutput>;
   describeFHIRExportJob(
     args: DescribeFHIRExportJobCommandInput,
-    cb: (err: any, data?: DescribeFHIRExportJobCommandOutput) => void
+    cb: (err: any, data?: DescribeFHIRExportJobCommandOutput) => void,
   ): void;
   describeFHIRExportJob(
     args: DescribeFHIRExportJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeFHIRExportJobCommandOutput) => void
+    cb: (err: any, data?: DescribeFHIRExportJobCommandOutput) => void,
   ): void;
 
   /**
@@ -155,16 +155,16 @@ export interface HealthLake {
    */
   describeFHIRImportJob(
     args: DescribeFHIRImportJobCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeFHIRImportJobCommandOutput>;
   describeFHIRImportJob(
     args: DescribeFHIRImportJobCommandInput,
-    cb: (err: any, data?: DescribeFHIRImportJobCommandOutput) => void
+    cb: (err: any, data?: DescribeFHIRImportJobCommandOutput) => void,
   ): void;
   describeFHIRImportJob(
     args: DescribeFHIRImportJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeFHIRImportJobCommandOutput) => void
+    cb: (err: any, data?: DescribeFHIRImportJobCommandOutput) => void,
   ): void;
 
   /**
@@ -173,16 +173,16 @@ export interface HealthLake {
   listFHIRDatastores(): Promise<ListFHIRDatastoresCommandOutput>;
   listFHIRDatastores(
     args: ListFHIRDatastoresCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListFHIRDatastoresCommandOutput>;
   listFHIRDatastores(
     args: ListFHIRDatastoresCommandInput,
-    cb: (err: any, data?: ListFHIRDatastoresCommandOutput) => void
+    cb: (err: any, data?: ListFHIRDatastoresCommandOutput) => void,
   ): void;
   listFHIRDatastores(
     args: ListFHIRDatastoresCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListFHIRDatastoresCommandOutput) => void
+    cb: (err: any, data?: ListFHIRDatastoresCommandOutput) => void,
   ): void;
 
   /**
@@ -190,16 +190,16 @@ export interface HealthLake {
    */
   listFHIRExportJobs(
     args: ListFHIRExportJobsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListFHIRExportJobsCommandOutput>;
   listFHIRExportJobs(
     args: ListFHIRExportJobsCommandInput,
-    cb: (err: any, data?: ListFHIRExportJobsCommandOutput) => void
+    cb: (err: any, data?: ListFHIRExportJobsCommandOutput) => void,
   ): void;
   listFHIRExportJobs(
     args: ListFHIRExportJobsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListFHIRExportJobsCommandOutput) => void
+    cb: (err: any, data?: ListFHIRExportJobsCommandOutput) => void,
   ): void;
 
   /**
@@ -207,16 +207,16 @@ export interface HealthLake {
    */
   listFHIRImportJobs(
     args: ListFHIRImportJobsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListFHIRImportJobsCommandOutput>;
   listFHIRImportJobs(
     args: ListFHIRImportJobsCommandInput,
-    cb: (err: any, data?: ListFHIRImportJobsCommandOutput) => void
+    cb: (err: any, data?: ListFHIRImportJobsCommandOutput) => void,
   ): void;
   listFHIRImportJobs(
     args: ListFHIRImportJobsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListFHIRImportJobsCommandOutput) => void
+    cb: (err: any, data?: ListFHIRImportJobsCommandOutput) => void,
   ): void;
 
   /**
@@ -224,16 +224,16 @@ export interface HealthLake {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -241,16 +241,16 @@ export interface HealthLake {
    */
   startFHIRExportJob(
     args: StartFHIRExportJobCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartFHIRExportJobCommandOutput>;
   startFHIRExportJob(
     args: StartFHIRExportJobCommandInput,
-    cb: (err: any, data?: StartFHIRExportJobCommandOutput) => void
+    cb: (err: any, data?: StartFHIRExportJobCommandOutput) => void,
   ): void;
   startFHIRExportJob(
     args: StartFHIRExportJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartFHIRExportJobCommandOutput) => void
+    cb: (err: any, data?: StartFHIRExportJobCommandOutput) => void,
   ): void;
 
   /**
@@ -258,16 +258,16 @@ export interface HealthLake {
    */
   startFHIRImportJob(
     args: StartFHIRImportJobCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartFHIRImportJobCommandOutput>;
   startFHIRImportJob(
     args: StartFHIRImportJobCommandInput,
-    cb: (err: any, data?: StartFHIRImportJobCommandOutput) => void
+    cb: (err: any, data?: StartFHIRImportJobCommandOutput) => void,
   ): void;
   startFHIRImportJob(
     args: StartFHIRImportJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartFHIRImportJobCommandOutput) => void
+    cb: (err: any, data?: StartFHIRImportJobCommandOutput) => void,
   ): void;
 
   /**
@@ -278,7 +278,7 @@ export interface HealthLake {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -289,7 +289,7 @@ export interface HealthLake {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 }
 

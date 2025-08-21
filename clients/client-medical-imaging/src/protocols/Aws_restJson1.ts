@@ -101,7 +101,7 @@ import {
  */
 export const se_CopyImageSetCommand = async (
   input: CopyImageSetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -135,7 +135,7 @@ export const se_CopyImageSetCommand = async (
  */
 export const se_CreateDatastoreCommand = async (
   input: CreateDatastoreCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -149,7 +149,7 @@ export const se_CreateDatastoreCommand = async (
       datastoreName: [],
       kmsKeyArn: [],
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -160,7 +160,7 @@ export const se_CreateDatastoreCommand = async (
  */
 export const se_DeleteDatastoreCommand = async (
   input: DeleteDatastoreCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -176,7 +176,7 @@ export const se_DeleteDatastoreCommand = async (
  */
 export const se_DeleteImageSetCommand = async (
   input: DeleteImageSetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -201,7 +201,7 @@ export const se_DeleteImageSetCommand = async (
  */
 export const se_GetDatastoreCommand = async (
   input: GetDatastoreCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -217,7 +217,7 @@ export const se_GetDatastoreCommand = async (
  */
 export const se_GetDICOMImportJobCommand = async (
   input: GetDICOMImportJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -234,7 +234,7 @@ export const se_GetDICOMImportJobCommand = async (
  */
 export const se_GetImageFrameCommand = async (
   input: GetImageFrameCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -268,7 +268,7 @@ export const se_GetImageFrameCommand = async (
  */
 export const se_GetImageSetCommand = async (
   input: GetImageSetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -296,7 +296,7 @@ export const se_GetImageSetCommand = async (
  */
 export const se_GetImageSetMetadataCommand = async (
   input: GetImageSetMetadataCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -324,7 +324,7 @@ export const se_GetImageSetMetadataCommand = async (
  */
 export const se_ListDatastoresCommand = async (
   input: ListDatastoresCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -344,7 +344,7 @@ export const se_ListDatastoresCommand = async (
  */
 export const se_ListDICOMImportJobsCommand = async (
   input: ListDICOMImportJobsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -365,7 +365,7 @@ export const se_ListDICOMImportJobsCommand = async (
  */
 export const se_ListImageSetVersionsCommand = async (
   input: ListImageSetVersionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -394,7 +394,7 @@ export const se_ListImageSetVersionsCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -410,7 +410,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_SearchImageSetsCommand = async (
   input: SearchImageSetsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -447,7 +447,7 @@ export const se_SearchImageSetsCommand = async (
  */
 export const se_StartDICOMImportJobCommand = async (
   input: StartDICOMImportJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -464,7 +464,7 @@ export const se_StartDICOMImportJobCommand = async (
       inputS3Uri: [],
       jobName: [],
       outputS3Uri: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -475,7 +475,7 @@ export const se_StartDICOMImportJobCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -487,7 +487,7 @@ export const se_TagResourceCommand = async (
   body = JSON.stringify(
     take(input, {
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -498,7 +498,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -520,7 +520,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateImageSetMetadataCommand = async (
   input: UpdateImageSetMetadataCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -557,7 +557,7 @@ export const se_UpdateImageSetMetadataCommand = async (
  */
 export const de_CopyImageSetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CopyImageSetCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -580,7 +580,7 @@ export const de_CopyImageSetCommand = async (
  */
 export const de_CreateDatastoreCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateDatastoreCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -602,7 +602,7 @@ export const de_CreateDatastoreCommand = async (
  */
 export const de_DeleteDatastoreCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteDatastoreCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -624,7 +624,7 @@ export const de_DeleteDatastoreCommand = async (
  */
 export const de_DeleteImageSetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteImageSetCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -648,7 +648,7 @@ export const de_DeleteImageSetCommand = async (
  */
 export const de_GetDatastoreCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetDatastoreCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -669,7 +669,7 @@ export const de_GetDatastoreCommand = async (
  */
 export const de_GetDICOMImportJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetDICOMImportJobCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -690,7 +690,7 @@ export const de_GetDICOMImportJobCommand = async (
  */
 export const de_GetImageFrameCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext & __SdkStreamSerdeContext
+  context: __SerdeContext & __SdkStreamSerdeContext,
 ): Promise<GetImageFrameCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -710,7 +710,7 @@ export const de_GetImageFrameCommand = async (
  */
 export const de_GetImageSetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetImageSetCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -740,7 +740,7 @@ export const de_GetImageSetCommand = async (
  */
 export const de_GetImageSetMetadataCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext & __SdkStreamSerdeContext
+  context: __SerdeContext & __SdkStreamSerdeContext,
 ): Promise<GetImageSetMetadataCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -761,7 +761,7 @@ export const de_GetImageSetMetadataCommand = async (
  */
 export const de_ListDatastoresCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListDatastoresCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -783,7 +783,7 @@ export const de_ListDatastoresCommand = async (
  */
 export const de_ListDICOMImportJobsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListDICOMImportJobsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -805,7 +805,7 @@ export const de_ListDICOMImportJobsCommand = async (
  */
 export const de_ListImageSetVersionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListImageSetVersionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -827,7 +827,7 @@ export const de_ListImageSetVersionsCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -848,7 +848,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_SearchImageSetsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SearchImageSetsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -871,7 +871,7 @@ export const de_SearchImageSetsCommand = async (
  */
 export const de_StartDICOMImportJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartDICOMImportJobCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -895,7 +895,7 @@ export const de_StartDICOMImportJobCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -912,7 +912,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -929,7 +929,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateImageSetMetadataCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateImageSetMetadataCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -999,7 +999,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1036,7 +1036,7 @@ const de_ConflictExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_InternalServerExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1056,7 +1056,7 @@ const de_InternalServerExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1076,7 +1076,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_ServiceQuotaExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceQuotaExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1151,7 +1151,7 @@ const se_DICOMUpdates = (input: DICOMUpdates, context: __SerdeContext): any => {
 const se_MetadataUpdates = (input: MetadataUpdates, context: __SerdeContext): any => {
   return MetadataUpdates.visit(input, {
     DICOMUpdates: (value) => ({ DICOMUpdates: se_DICOMUpdates(value, context) }),
-    _: (name, value) => ({ name: value } as any),
+    _: (name, value) => ({ name: value }) as any,
   });
 };
 
@@ -1168,7 +1168,7 @@ const se_SearchByAttributeValue = (input: SearchByAttributeValue, context: __Ser
     DICOMStudyInstanceUID: (value) => ({ DICOMStudyInstanceUID: value }),
     createdAt: (value) => ({ createdAt: value.getTime() / 1_000 }),
     updatedAt: (value) => ({ updatedAt: value.getTime() / 1_000 }),
-    _: (name, value) => ({ name: value } as any),
+    _: (name, value) => ({ name: value }) as any,
   });
 };
 
@@ -1223,7 +1223,7 @@ const se_SearchFilters = (input: SearchFilter[], context: __SerdeContext): any =
  */
 const de_CopyDestinationImageSetProperties = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CopyDestinationImageSetProperties => {
   return take(output, {
     createdAt: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),

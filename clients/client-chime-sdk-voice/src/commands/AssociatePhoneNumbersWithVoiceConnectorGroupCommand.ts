@@ -123,7 +123,7 @@ export class AssociatePhoneNumbersWithVoiceConnectorGroupCommand extends $Comman
   .n("ChimeSDKVoiceClient", "AssociatePhoneNumbersWithVoiceConnectorGroupCommand")
   .f(
     AssociatePhoneNumbersWithVoiceConnectorGroupRequestFilterSensitiveLog,
-    AssociatePhoneNumbersWithVoiceConnectorGroupResponseFilterSensitiveLog
+    AssociatePhoneNumbersWithVoiceConnectorGroupResponseFilterSensitiveLog,
   )
   .ser(se_AssociatePhoneNumbersWithVoiceConnectorGroupCommand)
   .de(de_AssociatePhoneNumbersWithVoiceConnectorGroupCommand)

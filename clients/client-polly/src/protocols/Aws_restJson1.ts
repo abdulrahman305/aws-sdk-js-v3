@@ -78,7 +78,7 @@ import { PollyServiceException as __BaseException } from "../models/PollyService
  */
 export const se_DeleteLexiconCommand = async (
   input: DeleteLexiconCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -94,7 +94,7 @@ export const se_DeleteLexiconCommand = async (
  */
 export const se_DescribeVoicesCommand = async (
   input: DescribeVoicesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -115,7 +115,7 @@ export const se_DescribeVoicesCommand = async (
  */
 export const se_GetLexiconCommand = async (
   input: GetLexiconCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -131,7 +131,7 @@ export const se_GetLexiconCommand = async (
  */
 export const se_GetSpeechSynthesisTaskCommand = async (
   input: GetSpeechSynthesisTaskCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -147,7 +147,7 @@ export const se_GetSpeechSynthesisTaskCommand = async (
  */
 export const se_ListLexiconsCommand = async (
   input: ListLexiconsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -165,7 +165,7 @@ export const se_ListLexiconsCommand = async (
  */
 export const se_ListSpeechSynthesisTasksCommand = async (
   input: ListSpeechSynthesisTasksCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -185,7 +185,7 @@ export const se_ListSpeechSynthesisTasksCommand = async (
  */
 export const se_PutLexiconCommand = async (
   input: PutLexiconCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -197,7 +197,7 @@ export const se_PutLexiconCommand = async (
   body = JSON.stringify(
     take(input, {
       Content: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -208,7 +208,7 @@ export const se_PutLexiconCommand = async (
  */
 export const se_StartSpeechSynthesisTaskCommand = async (
   input: StartSpeechSynthesisTaskCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -230,7 +230,7 @@ export const se_StartSpeechSynthesisTaskCommand = async (
       Text: [],
       TextType: [],
       VoiceId: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -241,7 +241,7 @@ export const se_StartSpeechSynthesisTaskCommand = async (
  */
 export const se_SynthesizeSpeechCommand = async (
   input: SynthesizeSpeechCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -260,7 +260,7 @@ export const se_SynthesizeSpeechCommand = async (
       Text: [],
       TextType: [],
       VoiceId: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -271,7 +271,7 @@ export const se_SynthesizeSpeechCommand = async (
  */
 export const de_DeleteLexiconCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteLexiconCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -288,7 +288,7 @@ export const de_DeleteLexiconCommand = async (
  */
 export const de_DescribeVoicesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeVoicesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -310,7 +310,7 @@ export const de_DescribeVoicesCommand = async (
  */
 export const de_GetLexiconCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetLexiconCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -332,7 +332,7 @@ export const de_GetLexiconCommand = async (
  */
 export const de_GetSpeechSynthesisTaskCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetSpeechSynthesisTaskCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -353,7 +353,7 @@ export const de_GetSpeechSynthesisTaskCommand = async (
  */
 export const de_ListLexiconsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListLexiconsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -375,7 +375,7 @@ export const de_ListLexiconsCommand = async (
  */
 export const de_ListSpeechSynthesisTasksCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListSpeechSynthesisTasksCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -397,7 +397,7 @@ export const de_ListSpeechSynthesisTasksCommand = async (
  */
 export const de_PutLexiconCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutLexiconCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -414,7 +414,7 @@ export const de_PutLexiconCommand = async (
  */
 export const de_StartSpeechSynthesisTaskCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartSpeechSynthesisTaskCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -435,7 +435,7 @@ export const de_StartSpeechSynthesisTaskCommand = async (
  */
 export const de_SynthesizeSpeechCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext & __SdkStreamSerdeContext
+  context: __SerdeContext & __SdkStreamSerdeContext,
 ): Promise<SynthesizeSpeechCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -540,7 +540,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_EngineNotSupportedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<EngineNotSupportedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -560,7 +560,7 @@ const de_EngineNotSupportedExceptionRes = async (
  */
 const de_InvalidLexiconExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidLexiconException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -580,7 +580,7 @@ const de_InvalidLexiconExceptionRes = async (
  */
 const de_InvalidNextTokenExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidNextTokenException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -600,7 +600,7 @@ const de_InvalidNextTokenExceptionRes = async (
  */
 const de_InvalidS3BucketExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidS3BucketException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -620,7 +620,7 @@ const de_InvalidS3BucketExceptionRes = async (
  */
 const de_InvalidS3KeyExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidS3KeyException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -640,7 +640,7 @@ const de_InvalidS3KeyExceptionRes = async (
  */
 const de_InvalidSampleRateExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidSampleRateException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -660,7 +660,7 @@ const de_InvalidSampleRateExceptionRes = async (
  */
 const de_InvalidSnsTopicArnExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidSnsTopicArnException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -680,7 +680,7 @@ const de_InvalidSnsTopicArnExceptionRes = async (
  */
 const de_InvalidSsmlExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidSsmlException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -700,7 +700,7 @@ const de_InvalidSsmlExceptionRes = async (
  */
 const de_InvalidTaskIdExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidTaskIdException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -720,7 +720,7 @@ const de_InvalidTaskIdExceptionRes = async (
  */
 const de_LanguageNotSupportedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<LanguageNotSupportedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -740,7 +740,7 @@ const de_LanguageNotSupportedExceptionRes = async (
  */
 const de_LexiconNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<LexiconNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -760,7 +760,7 @@ const de_LexiconNotFoundExceptionRes = async (
  */
 const de_LexiconSizeExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<LexiconSizeExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -780,7 +780,7 @@ const de_LexiconSizeExceededExceptionRes = async (
  */
 const de_MarksNotSupportedForFormatExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<MarksNotSupportedForFormatException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -800,7 +800,7 @@ const de_MarksNotSupportedForFormatExceptionRes = async (
  */
 const de_MaxLexemeLengthExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<MaxLexemeLengthExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -820,7 +820,7 @@ const de_MaxLexemeLengthExceededExceptionRes = async (
  */
 const de_MaxLexiconsNumberExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<MaxLexiconsNumberExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -840,7 +840,7 @@ const de_MaxLexiconsNumberExceededExceptionRes = async (
  */
 const de_ServiceFailureExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceFailureException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -860,7 +860,7 @@ const de_ServiceFailureExceptionRes = async (
  */
 const de_SsmlMarksNotSupportedForTextTypeExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SsmlMarksNotSupportedForTextTypeException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -880,7 +880,7 @@ const de_SsmlMarksNotSupportedForTextTypeExceptionRes = async (
  */
 const de_SynthesisTaskNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SynthesisTaskNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -900,7 +900,7 @@ const de_SynthesisTaskNotFoundExceptionRes = async (
  */
 const de_TextLengthExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TextLengthExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -920,7 +920,7 @@ const de_TextLengthExceededExceptionRes = async (
  */
 const de_UnsupportedPlsAlphabetExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UnsupportedPlsAlphabetException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -940,7 +940,7 @@ const de_UnsupportedPlsAlphabetExceptionRes = async (
  */
 const de_UnsupportedPlsLanguageExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UnsupportedPlsLanguageException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;

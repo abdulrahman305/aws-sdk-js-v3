@@ -113,10 +113,10 @@ describe(updateDiscoveredEndpointInCache.name, () => {
             Object.assign(
               new Error(
                 `The operation to discover endpoint failed.` +
-                  ` Please retry, or provide a custom endpoint and disable endpoint discovery to proceed.`
+                  ` Please retry, or provide a custom endpoint and disable endpoint discovery to proceed.`,
               ),
-              { reason: error }
-            )
+              { reason: error },
+            ),
           );
         }
         verifyCallsOnCacheUndefined();

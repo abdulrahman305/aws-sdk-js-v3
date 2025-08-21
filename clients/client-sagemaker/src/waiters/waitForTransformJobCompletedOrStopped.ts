@@ -47,7 +47,7 @@ const checkState = async (client: SageMakerClient, input: DescribeTransformJobCo
  */
 export const waitForTransformJobCompletedOrStopped = async (
   params: WaiterConfiguration<SageMakerClient>,
-  input: DescribeTransformJobCommandInput
+  input: DescribeTransformJobCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 60, maxDelay: 120 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -59,7 +59,7 @@ export const waitForTransformJobCompletedOrStopped = async (
  */
 export const waitUntilTransformJobCompletedOrStopped = async (
   params: WaiterConfiguration<SageMakerClient>,
-  input: DescribeTransformJobCommandInput
+  input: DescribeTransformJobCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 60, maxDelay: 120 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

@@ -46,7 +46,7 @@ import { QLDBSessionServiceException as __BaseException } from "../models/QLDBSe
  */
 export const se_SendCommandCommand = async (
   input: SendCommandCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("SendCommand");
   let body: any;
@@ -59,7 +59,7 @@ export const se_SendCommandCommand = async (
  */
 export const de_SendCommandCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SendCommandCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -130,7 +130,7 @@ const de_BadRequestExceptionRes = async (parsedOutput: any, context: __SerdeCont
  */
 const de_CapacityExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CapacityExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -146,7 +146,7 @@ const de_CapacityExceededExceptionRes = async (
  */
 const de_InvalidSessionExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidSessionException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -162,7 +162,7 @@ const de_InvalidSessionExceptionRes = async (
  */
 const de_LimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<LimitExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -178,7 +178,7 @@ const de_LimitExceededExceptionRes = async (
  */
 const de_OccConflictExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<OccConflictException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -194,7 +194,7 @@ const de_OccConflictExceptionRes = async (
  */
 const de_RateExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RateExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -396,7 +396,7 @@ const buildHttpRpcRequest = async (
   headers: __HeaderBag,
   path: string,
   resolvedHostname: string | undefined,
-  body: any
+  body: any,
 ): Promise<__HttpRequest> => {
   const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
   const contents: any = {

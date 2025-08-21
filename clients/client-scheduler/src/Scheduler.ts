@@ -77,13 +77,13 @@ export interface Scheduler {
    */
   createSchedule(
     args: CreateScheduleCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateScheduleCommandOutput>;
   createSchedule(args: CreateScheduleCommandInput, cb: (err: any, data?: CreateScheduleCommandOutput) => void): void;
   createSchedule(
     args: CreateScheduleCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateScheduleCommandOutput) => void
+    cb: (err: any, data?: CreateScheduleCommandOutput) => void,
   ): void;
 
   /**
@@ -91,16 +91,16 @@ export interface Scheduler {
    */
   createScheduleGroup(
     args: CreateScheduleGroupCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateScheduleGroupCommandOutput>;
   createScheduleGroup(
     args: CreateScheduleGroupCommandInput,
-    cb: (err: any, data?: CreateScheduleGroupCommandOutput) => void
+    cb: (err: any, data?: CreateScheduleGroupCommandOutput) => void,
   ): void;
   createScheduleGroup(
     args: CreateScheduleGroupCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateScheduleGroupCommandOutput) => void
+    cb: (err: any, data?: CreateScheduleGroupCommandOutput) => void,
   ): void;
 
   /**
@@ -108,13 +108,13 @@ export interface Scheduler {
    */
   deleteSchedule(
     args: DeleteScheduleCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteScheduleCommandOutput>;
   deleteSchedule(args: DeleteScheduleCommandInput, cb: (err: any, data?: DeleteScheduleCommandOutput) => void): void;
   deleteSchedule(
     args: DeleteScheduleCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteScheduleCommandOutput) => void
+    cb: (err: any, data?: DeleteScheduleCommandOutput) => void,
   ): void;
 
   /**
@@ -122,16 +122,16 @@ export interface Scheduler {
    */
   deleteScheduleGroup(
     args: DeleteScheduleGroupCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteScheduleGroupCommandOutput>;
   deleteScheduleGroup(
     args: DeleteScheduleGroupCommandInput,
-    cb: (err: any, data?: DeleteScheduleGroupCommandOutput) => void
+    cb: (err: any, data?: DeleteScheduleGroupCommandOutput) => void,
   ): void;
   deleteScheduleGroup(
     args: DeleteScheduleGroupCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteScheduleGroupCommandOutput) => void
+    cb: (err: any, data?: DeleteScheduleGroupCommandOutput) => void,
   ): void;
 
   /**
@@ -142,7 +142,7 @@ export interface Scheduler {
   getSchedule(
     args: GetScheduleCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetScheduleCommandOutput) => void
+    cb: (err: any, data?: GetScheduleCommandOutput) => void,
   ): void;
 
   /**
@@ -150,16 +150,16 @@ export interface Scheduler {
    */
   getScheduleGroup(
     args: GetScheduleGroupCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetScheduleGroupCommandOutput>;
   getScheduleGroup(
     args: GetScheduleGroupCommandInput,
-    cb: (err: any, data?: GetScheduleGroupCommandOutput) => void
+    cb: (err: any, data?: GetScheduleGroupCommandOutput) => void,
   ): void;
   getScheduleGroup(
     args: GetScheduleGroupCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetScheduleGroupCommandOutput) => void
+    cb: (err: any, data?: GetScheduleGroupCommandOutput) => void,
   ): void;
 
   /**
@@ -168,16 +168,16 @@ export interface Scheduler {
   listScheduleGroups(): Promise<ListScheduleGroupsCommandOutput>;
   listScheduleGroups(
     args: ListScheduleGroupsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListScheduleGroupsCommandOutput>;
   listScheduleGroups(
     args: ListScheduleGroupsCommandInput,
-    cb: (err: any, data?: ListScheduleGroupsCommandOutput) => void
+    cb: (err: any, data?: ListScheduleGroupsCommandOutput) => void,
   ): void;
   listScheduleGroups(
     args: ListScheduleGroupsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListScheduleGroupsCommandOutput) => void
+    cb: (err: any, data?: ListScheduleGroupsCommandOutput) => void,
   ): void;
 
   /**
@@ -189,7 +189,7 @@ export interface Scheduler {
   listSchedules(
     args: ListSchedulesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListSchedulesCommandOutput) => void
+    cb: (err: any, data?: ListSchedulesCommandOutput) => void,
   ): void;
 
   /**
@@ -197,16 +197,16 @@ export interface Scheduler {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -217,7 +217,7 @@ export interface Scheduler {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -228,7 +228,7 @@ export interface Scheduler {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -236,13 +236,13 @@ export interface Scheduler {
    */
   updateSchedule(
     args: UpdateScheduleCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateScheduleCommandOutput>;
   updateSchedule(args: UpdateScheduleCommandInput, cb: (err: any, data?: UpdateScheduleCommandOutput) => void): void;
   updateSchedule(
     args: UpdateScheduleCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateScheduleCommandOutput) => void
+    cb: (err: any, data?: UpdateScheduleCommandOutput) => void,
   ): void;
 }
 

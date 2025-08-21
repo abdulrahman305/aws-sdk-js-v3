@@ -181,7 +181,7 @@ import { WorkDocsServiceException as __BaseException } from "../models/WorkDocsS
  */
 export const se_AbortDocumentVersionUploadCommand = async (
   input: AbortDocumentVersionUploadCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -200,7 +200,7 @@ export const se_AbortDocumentVersionUploadCommand = async (
  */
 export const se_ActivateUserCommand = async (
   input: ActivateUserCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -218,7 +218,7 @@ export const se_ActivateUserCommand = async (
  */
 export const se_AddResourcePermissionsCommand = async (
   input: AddResourcePermissionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -232,7 +232,7 @@ export const se_AddResourcePermissionsCommand = async (
     take(input, {
       NotificationOptions: (_) => _json(_),
       Principals: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -243,7 +243,7 @@ export const se_AddResourcePermissionsCommand = async (
  */
 export const se_CreateCommentCommand = async (
   input: CreateCommentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -261,7 +261,7 @@ export const se_CreateCommentCommand = async (
       Text: [],
       ThreadId: [],
       Visibility: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -272,7 +272,7 @@ export const se_CreateCommentCommand = async (
  */
 export const se_CreateCustomMetadataCommand = async (
   input: CreateCustomMetadataCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -288,7 +288,7 @@ export const se_CreateCustomMetadataCommand = async (
   body = JSON.stringify(
     take(input, {
       CustomMetadata: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).q(query).b(body);
   return b.build();
@@ -299,7 +299,7 @@ export const se_CreateCustomMetadataCommand = async (
  */
 export const se_CreateFolderCommand = async (
   input: CreateFolderCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -312,7 +312,7 @@ export const se_CreateFolderCommand = async (
     take(input, {
       Name: [],
       ParentFolderId: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -323,7 +323,7 @@ export const se_CreateFolderCommand = async (
  */
 export const se_CreateLabelsCommand = async (
   input: CreateLabelsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -336,7 +336,7 @@ export const se_CreateLabelsCommand = async (
   body = JSON.stringify(
     take(input, {
       Labels: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -347,7 +347,7 @@ export const se_CreateLabelsCommand = async (
  */
 export const se_CreateNotificationSubscriptionCommand = async (
   input: CreateNotificationSubscriptionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -361,7 +361,7 @@ export const se_CreateNotificationSubscriptionCommand = async (
       Endpoint: [],
       Protocol: [],
       SubscriptionType: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -372,7 +372,7 @@ export const se_CreateNotificationSubscriptionCommand = async (
  */
 export const se_CreateUserCommand = async (
   input: CreateUserCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -391,7 +391,7 @@ export const se_CreateUserCommand = async (
       Surname: [],
       TimeZoneId: [],
       Username: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -402,7 +402,7 @@ export const se_CreateUserCommand = async (
  */
 export const se_DeactivateUserCommand = async (
   input: DeactivateUserCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -420,7 +420,7 @@ export const se_DeactivateUserCommand = async (
  */
 export const se_DeleteCommentCommand = async (
   input: DeleteCommentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -440,7 +440,7 @@ export const se_DeleteCommentCommand = async (
  */
 export const se_DeleteCustomMetadataCommand = async (
   input: DeleteCustomMetadataCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -463,7 +463,7 @@ export const se_DeleteCustomMetadataCommand = async (
  */
 export const se_DeleteDocumentCommand = async (
   input: DeleteDocumentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -481,7 +481,7 @@ export const se_DeleteDocumentCommand = async (
  */
 export const se_DeleteDocumentVersionCommand = async (
   input: DeleteDocumentVersionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -503,7 +503,7 @@ export const se_DeleteDocumentVersionCommand = async (
  */
 export const se_DeleteFolderCommand = async (
   input: DeleteFolderCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -521,7 +521,7 @@ export const se_DeleteFolderCommand = async (
  */
 export const se_DeleteFolderContentsCommand = async (
   input: DeleteFolderContentsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -539,7 +539,7 @@ export const se_DeleteFolderContentsCommand = async (
  */
 export const se_DeleteLabelsCommand = async (
   input: DeleteLabelsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -561,7 +561,7 @@ export const se_DeleteLabelsCommand = async (
  */
 export const se_DeleteNotificationSubscriptionCommand = async (
   input: DeleteNotificationSubscriptionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -578,7 +578,7 @@ export const se_DeleteNotificationSubscriptionCommand = async (
  */
 export const se_DeleteUserCommand = async (
   input: DeleteUserCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -596,7 +596,7 @@ export const se_DeleteUserCommand = async (
  */
 export const se_DescribeActivitiesCommand = async (
   input: DescribeActivitiesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -624,7 +624,7 @@ export const se_DescribeActivitiesCommand = async (
  */
 export const se_DescribeCommentsCommand = async (
   input: DescribeCommentsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -647,7 +647,7 @@ export const se_DescribeCommentsCommand = async (
  */
 export const se_DescribeDocumentVersionsCommand = async (
   input: DescribeDocumentVersionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -671,7 +671,7 @@ export const se_DescribeDocumentVersionsCommand = async (
  */
 export const se_DescribeFolderContentsCommand = async (
   input: DescribeFolderContentsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -697,7 +697,7 @@ export const se_DescribeFolderContentsCommand = async (
  */
 export const se_DescribeGroupsCommand = async (
   input: DescribeGroupsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -720,7 +720,7 @@ export const se_DescribeGroupsCommand = async (
  */
 export const se_DescribeNotificationSubscriptionsCommand = async (
   input: DescribeNotificationSubscriptionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -740,7 +740,7 @@ export const se_DescribeNotificationSubscriptionsCommand = async (
  */
 export const se_DescribeResourcePermissionsCommand = async (
   input: DescribeResourcePermissionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -763,7 +763,7 @@ export const se_DescribeResourcePermissionsCommand = async (
  */
 export const se_DescribeRootFoldersCommand = async (
   input: DescribeRootFoldersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -784,7 +784,7 @@ export const se_DescribeRootFoldersCommand = async (
  */
 export const se_DescribeUsersCommand = async (
   input: DescribeUsersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -812,7 +812,7 @@ export const se_DescribeUsersCommand = async (
  */
 export const se_GetCurrentUserCommand = async (
   input: GetCurrentUserCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -829,7 +829,7 @@ export const se_GetCurrentUserCommand = async (
  */
 export const se_GetDocumentCommand = async (
   input: GetDocumentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -850,7 +850,7 @@ export const se_GetDocumentCommand = async (
  */
 export const se_GetDocumentPathCommand = async (
   input: GetDocumentPathCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -873,7 +873,7 @@ export const se_GetDocumentPathCommand = async (
  */
 export const se_GetDocumentVersionCommand = async (
   input: GetDocumentVersionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -896,7 +896,7 @@ export const se_GetDocumentVersionCommand = async (
  */
 export const se_GetFolderCommand = async (
   input: GetFolderCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -917,7 +917,7 @@ export const se_GetFolderCommand = async (
  */
 export const se_GetFolderPathCommand = async (
   input: GetFolderPathCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -940,7 +940,7 @@ export const se_GetFolderPathCommand = async (
  */
 export const se_GetResourcesCommand = async (
   input: GetResourcesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -963,7 +963,7 @@ export const se_GetResourcesCommand = async (
  */
 export const se_InitiateDocumentVersionUploadCommand = async (
   input: InitiateDocumentVersionUploadCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -981,7 +981,7 @@ export const se_InitiateDocumentVersionUploadCommand = async (
       Id: [],
       Name: [],
       ParentFolderId: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -992,7 +992,7 @@ export const se_InitiateDocumentVersionUploadCommand = async (
  */
 export const se_RemoveAllResourcePermissionsCommand = async (
   input: RemoveAllResourcePermissionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1010,7 +1010,7 @@ export const se_RemoveAllResourcePermissionsCommand = async (
  */
 export const se_RemoveResourcePermissionCommand = async (
   input: RemoveResourcePermissionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1032,7 +1032,7 @@ export const se_RemoveResourcePermissionCommand = async (
  */
 export const se_RestoreDocumentVersionsCommand = async (
   input: RestoreDocumentVersionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1050,7 +1050,7 @@ export const se_RestoreDocumentVersionsCommand = async (
  */
 export const se_SearchResourcesCommand = async (
   input: SearchResourcesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1069,7 +1069,7 @@ export const se_SearchResourcesCommand = async (
       OrganizationId: [],
       QueryScopes: (_) => _json(_),
       QueryText: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1080,7 +1080,7 @@ export const se_SearchResourcesCommand = async (
  */
 export const se_UpdateDocumentCommand = async (
   input: UpdateDocumentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1095,7 +1095,7 @@ export const se_UpdateDocumentCommand = async (
       Name: [],
       ParentFolderId: [],
       ResourceState: [],
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -1106,7 +1106,7 @@ export const se_UpdateDocumentCommand = async (
  */
 export const se_UpdateDocumentVersionCommand = async (
   input: UpdateDocumentVersionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1120,7 +1120,7 @@ export const se_UpdateDocumentVersionCommand = async (
   body = JSON.stringify(
     take(input, {
       VersionStatus: [],
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -1131,7 +1131,7 @@ export const se_UpdateDocumentVersionCommand = async (
  */
 export const se_UpdateFolderCommand = async (
   input: UpdateFolderCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1146,7 +1146,7 @@ export const se_UpdateFolderCommand = async (
       Name: [],
       ParentFolderId: [],
       ResourceState: [],
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -1157,7 +1157,7 @@ export const se_UpdateFolderCommand = async (
  */
 export const se_UpdateUserCommand = async (
   input: UpdateUserCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1176,7 +1176,7 @@ export const se_UpdateUserCommand = async (
       Surname: [],
       TimeZoneId: [],
       Type: [],
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -1187,7 +1187,7 @@ export const se_UpdateUserCommand = async (
  */
 export const de_AbortDocumentVersionUploadCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AbortDocumentVersionUploadCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1204,7 +1204,7 @@ export const de_AbortDocumentVersionUploadCommand = async (
  */
 export const de_ActivateUserCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ActivateUserCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1225,7 +1225,7 @@ export const de_ActivateUserCommand = async (
  */
 export const de_AddResourcePermissionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AddResourcePermissionsCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1246,7 +1246,7 @@ export const de_AddResourcePermissionsCommand = async (
  */
 export const de_CreateCommentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateCommentCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1267,7 +1267,7 @@ export const de_CreateCommentCommand = async (
  */
 export const de_CreateCustomMetadataCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateCustomMetadataCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1284,7 +1284,7 @@ export const de_CreateCustomMetadataCommand = async (
  */
 export const de_CreateFolderCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateFolderCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1305,7 +1305,7 @@ export const de_CreateFolderCommand = async (
  */
 export const de_CreateLabelsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateLabelsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1322,7 +1322,7 @@ export const de_CreateLabelsCommand = async (
  */
 export const de_CreateNotificationSubscriptionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateNotificationSubscriptionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1343,7 +1343,7 @@ export const de_CreateNotificationSubscriptionCommand = async (
  */
 export const de_CreateUserCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateUserCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1364,7 +1364,7 @@ export const de_CreateUserCommand = async (
  */
 export const de_DeactivateUserCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeactivateUserCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1381,7 +1381,7 @@ export const de_DeactivateUserCommand = async (
  */
 export const de_DeleteCommentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteCommentCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1398,7 +1398,7 @@ export const de_DeleteCommentCommand = async (
  */
 export const de_DeleteCustomMetadataCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteCustomMetadataCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1415,7 +1415,7 @@ export const de_DeleteCustomMetadataCommand = async (
  */
 export const de_DeleteDocumentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteDocumentCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1432,7 +1432,7 @@ export const de_DeleteDocumentCommand = async (
  */
 export const de_DeleteDocumentVersionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteDocumentVersionCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1449,7 +1449,7 @@ export const de_DeleteDocumentVersionCommand = async (
  */
 export const de_DeleteFolderCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteFolderCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1466,7 +1466,7 @@ export const de_DeleteFolderCommand = async (
  */
 export const de_DeleteFolderContentsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteFolderContentsCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1483,7 +1483,7 @@ export const de_DeleteFolderContentsCommand = async (
  */
 export const de_DeleteLabelsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteLabelsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1500,7 +1500,7 @@ export const de_DeleteLabelsCommand = async (
  */
 export const de_DeleteNotificationSubscriptionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteNotificationSubscriptionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1517,7 +1517,7 @@ export const de_DeleteNotificationSubscriptionCommand = async (
  */
 export const de_DeleteUserCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteUserCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1534,7 +1534,7 @@ export const de_DeleteUserCommand = async (
  */
 export const de_DescribeActivitiesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeActivitiesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1556,7 +1556,7 @@ export const de_DescribeActivitiesCommand = async (
  */
 export const de_DescribeCommentsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeCommentsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1578,7 +1578,7 @@ export const de_DescribeCommentsCommand = async (
  */
 export const de_DescribeDocumentVersionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeDocumentVersionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1600,7 +1600,7 @@ export const de_DescribeDocumentVersionsCommand = async (
  */
 export const de_DescribeFolderContentsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeFolderContentsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1623,7 +1623,7 @@ export const de_DescribeFolderContentsCommand = async (
  */
 export const de_DescribeGroupsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeGroupsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1645,7 +1645,7 @@ export const de_DescribeGroupsCommand = async (
  */
 export const de_DescribeNotificationSubscriptionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeNotificationSubscriptionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1667,7 +1667,7 @@ export const de_DescribeNotificationSubscriptionsCommand = async (
  */
 export const de_DescribeResourcePermissionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeResourcePermissionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1689,7 +1689,7 @@ export const de_DescribeResourcePermissionsCommand = async (
  */
 export const de_DescribeRootFoldersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeRootFoldersCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1711,7 +1711,7 @@ export const de_DescribeRootFoldersCommand = async (
  */
 export const de_DescribeUsersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeUsersCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1734,7 +1734,7 @@ export const de_DescribeUsersCommand = async (
  */
 export const de_GetCurrentUserCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetCurrentUserCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1755,7 +1755,7 @@ export const de_GetCurrentUserCommand = async (
  */
 export const de_GetDocumentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetDocumentCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1777,7 +1777,7 @@ export const de_GetDocumentCommand = async (
  */
 export const de_GetDocumentPathCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetDocumentPathCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1798,7 +1798,7 @@ export const de_GetDocumentPathCommand = async (
  */
 export const de_GetDocumentVersionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetDocumentVersionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1820,7 +1820,7 @@ export const de_GetDocumentVersionCommand = async (
  */
 export const de_GetFolderCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetFolderCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1842,7 +1842,7 @@ export const de_GetFolderCommand = async (
  */
 export const de_GetFolderPathCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetFolderPathCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1863,7 +1863,7 @@ export const de_GetFolderPathCommand = async (
  */
 export const de_GetResourcesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetResourcesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1886,7 +1886,7 @@ export const de_GetResourcesCommand = async (
  */
 export const de_InitiateDocumentVersionUploadCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InitiateDocumentVersionUploadCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1908,7 +1908,7 @@ export const de_InitiateDocumentVersionUploadCommand = async (
  */
 export const de_RemoveAllResourcePermissionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RemoveAllResourcePermissionsCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1925,7 +1925,7 @@ export const de_RemoveAllResourcePermissionsCommand = async (
  */
 export const de_RemoveResourcePermissionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RemoveResourcePermissionCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1942,7 +1942,7 @@ export const de_RemoveResourcePermissionCommand = async (
  */
 export const de_RestoreDocumentVersionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RestoreDocumentVersionsCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1959,7 +1959,7 @@ export const de_RestoreDocumentVersionsCommand = async (
  */
 export const de_SearchResourcesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SearchResourcesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1981,7 +1981,7 @@ export const de_SearchResourcesCommand = async (
  */
 export const de_UpdateDocumentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateDocumentCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1998,7 +1998,7 @@ export const de_UpdateDocumentCommand = async (
  */
 export const de_UpdateDocumentVersionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateDocumentVersionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2015,7 +2015,7 @@ export const de_UpdateDocumentVersionCommand = async (
  */
 export const de_UpdateFolderCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateFolderCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2032,7 +2032,7 @@ export const de_UpdateFolderCommand = async (
  */
 export const de_UpdateUserCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateUserCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2149,7 +2149,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_ConcurrentModificationExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ConcurrentModificationException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2169,7 +2169,7 @@ const de_ConcurrentModificationExceptionRes = async (
  */
 const de_ConflictingOperationExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ConflictingOperationException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2189,7 +2189,7 @@ const de_ConflictingOperationExceptionRes = async (
  */
 const de_CustomMetadataLimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CustomMetadataLimitExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2209,7 +2209,7 @@ const de_CustomMetadataLimitExceededExceptionRes = async (
  */
 const de_DeactivatingLastSystemUserExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeactivatingLastSystemUserException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2230,7 +2230,7 @@ const de_DeactivatingLastSystemUserExceptionRes = async (
  */
 const de_DocumentLockedForCommentsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DocumentLockedForCommentsException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2250,7 +2250,7 @@ const de_DocumentLockedForCommentsExceptionRes = async (
  */
 const de_DraftUploadOutOfSyncExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DraftUploadOutOfSyncException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2270,7 +2270,7 @@ const de_DraftUploadOutOfSyncExceptionRes = async (
  */
 const de_EntityAlreadyExistsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<EntityAlreadyExistsException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2290,7 +2290,7 @@ const de_EntityAlreadyExistsExceptionRes = async (
  */
 const de_EntityNotExistsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<EntityNotExistsException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2311,7 +2311,7 @@ const de_EntityNotExistsExceptionRes = async (
  */
 const de_FailedDependencyExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<FailedDependencyException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2331,7 +2331,7 @@ const de_FailedDependencyExceptionRes = async (
  */
 const de_IllegalUserStateExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<IllegalUserStateException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2351,7 +2351,7 @@ const de_IllegalUserStateExceptionRes = async (
  */
 const de_InvalidArgumentExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidArgumentException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2371,7 +2371,7 @@ const de_InvalidArgumentExceptionRes = async (
  */
 const de_InvalidCommentOperationExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidCommentOperationException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2391,7 +2391,7 @@ const de_InvalidCommentOperationExceptionRes = async (
  */
 const de_InvalidOperationExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidOperationException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2411,7 +2411,7 @@ const de_InvalidOperationExceptionRes = async (
  */
 const de_InvalidPasswordExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidPasswordException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2431,7 +2431,7 @@ const de_InvalidPasswordExceptionRes = async (
  */
 const de_LimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<LimitExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2451,7 +2451,7 @@ const de_LimitExceededExceptionRes = async (
  */
 const de_ProhibitedStateExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ProhibitedStateException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2471,7 +2471,7 @@ const de_ProhibitedStateExceptionRes = async (
  */
 const de_RequestedEntityTooLargeExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RequestedEntityTooLargeException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2491,7 +2491,7 @@ const de_RequestedEntityTooLargeExceptionRes = async (
  */
 const de_ResourceAlreadyCheckedOutExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceAlreadyCheckedOutException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2511,7 +2511,7 @@ const de_ResourceAlreadyCheckedOutExceptionRes = async (
  */
 const de_ServiceUnavailableExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceUnavailableException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2531,7 +2531,7 @@ const de_ServiceUnavailableExceptionRes = async (
  */
 const de_StorageLimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StorageLimitExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2551,7 +2551,7 @@ const de_StorageLimitExceededExceptionRes = async (
  */
 const de_StorageLimitWillExceedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StorageLimitWillExceedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2571,7 +2571,7 @@ const de_StorageLimitWillExceedExceptionRes = async (
  */
 const de_TooManyLabelsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyLabelsException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2591,7 +2591,7 @@ const de_TooManyLabelsExceptionRes = async (
  */
 const de_TooManySubscriptionsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManySubscriptionsException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2611,7 +2611,7 @@ const de_TooManySubscriptionsExceptionRes = async (
  */
 const de_UnauthorizedOperationExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UnauthorizedOperationException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2632,7 +2632,7 @@ const de_UnauthorizedOperationExceptionRes = async (
  */
 const de_UnauthorizedResourceAccessExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UnauthorizedResourceAccessException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;

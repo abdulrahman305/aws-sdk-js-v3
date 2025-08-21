@@ -240,7 +240,7 @@ import { NetworkFirewallServiceException as __BaseException } from "../models/Ne
  */
 export const se_AssociateFirewallPolicyCommand = async (
   input: AssociateFirewallPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("AssociateFirewallPolicy");
   let body: any;
@@ -253,7 +253,7 @@ export const se_AssociateFirewallPolicyCommand = async (
  */
 export const se_AssociateSubnetsCommand = async (
   input: AssociateSubnetsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("AssociateSubnets");
   let body: any;
@@ -266,7 +266,7 @@ export const se_AssociateSubnetsCommand = async (
  */
 export const se_CreateFirewallCommand = async (
   input: CreateFirewallCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateFirewall");
   let body: any;
@@ -279,7 +279,7 @@ export const se_CreateFirewallCommand = async (
  */
 export const se_CreateFirewallPolicyCommand = async (
   input: CreateFirewallPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateFirewallPolicy");
   let body: any;
@@ -292,7 +292,7 @@ export const se_CreateFirewallPolicyCommand = async (
  */
 export const se_CreateRuleGroupCommand = async (
   input: CreateRuleGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateRuleGroup");
   let body: any;
@@ -305,7 +305,7 @@ export const se_CreateRuleGroupCommand = async (
  */
 export const se_CreateTLSInspectionConfigurationCommand = async (
   input: CreateTLSInspectionConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateTLSInspectionConfiguration");
   let body: any;
@@ -318,7 +318,7 @@ export const se_CreateTLSInspectionConfigurationCommand = async (
  */
 export const se_DeleteFirewallCommand = async (
   input: DeleteFirewallCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteFirewall");
   let body: any;
@@ -331,7 +331,7 @@ export const se_DeleteFirewallCommand = async (
  */
 export const se_DeleteFirewallPolicyCommand = async (
   input: DeleteFirewallPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteFirewallPolicy");
   let body: any;
@@ -344,7 +344,7 @@ export const se_DeleteFirewallPolicyCommand = async (
  */
 export const se_DeleteResourcePolicyCommand = async (
   input: DeleteResourcePolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteResourcePolicy");
   let body: any;
@@ -357,7 +357,7 @@ export const se_DeleteResourcePolicyCommand = async (
  */
 export const se_DeleteRuleGroupCommand = async (
   input: DeleteRuleGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteRuleGroup");
   let body: any;
@@ -370,7 +370,7 @@ export const se_DeleteRuleGroupCommand = async (
  */
 export const se_DeleteTLSInspectionConfigurationCommand = async (
   input: DeleteTLSInspectionConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteTLSInspectionConfiguration");
   let body: any;
@@ -383,7 +383,7 @@ export const se_DeleteTLSInspectionConfigurationCommand = async (
  */
 export const se_DescribeFirewallCommand = async (
   input: DescribeFirewallCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeFirewall");
   let body: any;
@@ -396,7 +396,7 @@ export const se_DescribeFirewallCommand = async (
  */
 export const se_DescribeFirewallPolicyCommand = async (
   input: DescribeFirewallPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeFirewallPolicy");
   let body: any;
@@ -409,7 +409,7 @@ export const se_DescribeFirewallPolicyCommand = async (
  */
 export const se_DescribeLoggingConfigurationCommand = async (
   input: DescribeLoggingConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeLoggingConfiguration");
   let body: any;
@@ -422,7 +422,7 @@ export const se_DescribeLoggingConfigurationCommand = async (
  */
 export const se_DescribeResourcePolicyCommand = async (
   input: DescribeResourcePolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeResourcePolicy");
   let body: any;
@@ -435,7 +435,7 @@ export const se_DescribeResourcePolicyCommand = async (
  */
 export const se_DescribeRuleGroupCommand = async (
   input: DescribeRuleGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeRuleGroup");
   let body: any;
@@ -448,7 +448,7 @@ export const se_DescribeRuleGroupCommand = async (
  */
 export const se_DescribeRuleGroupMetadataCommand = async (
   input: DescribeRuleGroupMetadataCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeRuleGroupMetadata");
   let body: any;
@@ -461,7 +461,7 @@ export const se_DescribeRuleGroupMetadataCommand = async (
  */
 export const se_DescribeTLSInspectionConfigurationCommand = async (
   input: DescribeTLSInspectionConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeTLSInspectionConfiguration");
   let body: any;
@@ -474,7 +474,7 @@ export const se_DescribeTLSInspectionConfigurationCommand = async (
  */
 export const se_DisassociateSubnetsCommand = async (
   input: DisassociateSubnetsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DisassociateSubnets");
   let body: any;
@@ -487,7 +487,7 @@ export const se_DisassociateSubnetsCommand = async (
  */
 export const se_ListFirewallPoliciesCommand = async (
   input: ListFirewallPoliciesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListFirewallPolicies");
   let body: any;
@@ -500,7 +500,7 @@ export const se_ListFirewallPoliciesCommand = async (
  */
 export const se_ListFirewallsCommand = async (
   input: ListFirewallsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListFirewalls");
   let body: any;
@@ -513,7 +513,7 @@ export const se_ListFirewallsCommand = async (
  */
 export const se_ListRuleGroupsCommand = async (
   input: ListRuleGroupsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListRuleGroups");
   let body: any;
@@ -526,7 +526,7 @@ export const se_ListRuleGroupsCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListTagsForResource");
   let body: any;
@@ -539,7 +539,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_ListTLSInspectionConfigurationsCommand = async (
   input: ListTLSInspectionConfigurationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListTLSInspectionConfigurations");
   let body: any;
@@ -552,7 +552,7 @@ export const se_ListTLSInspectionConfigurationsCommand = async (
  */
 export const se_PutResourcePolicyCommand = async (
   input: PutResourcePolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("PutResourcePolicy");
   let body: any;
@@ -565,7 +565,7 @@ export const se_PutResourcePolicyCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("TagResource");
   let body: any;
@@ -578,7 +578,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UntagResource");
   let body: any;
@@ -591,7 +591,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateFirewallDeleteProtectionCommand = async (
   input: UpdateFirewallDeleteProtectionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateFirewallDeleteProtection");
   let body: any;
@@ -604,7 +604,7 @@ export const se_UpdateFirewallDeleteProtectionCommand = async (
  */
 export const se_UpdateFirewallDescriptionCommand = async (
   input: UpdateFirewallDescriptionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateFirewallDescription");
   let body: any;
@@ -617,7 +617,7 @@ export const se_UpdateFirewallDescriptionCommand = async (
  */
 export const se_UpdateFirewallEncryptionConfigurationCommand = async (
   input: UpdateFirewallEncryptionConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateFirewallEncryptionConfiguration");
   let body: any;
@@ -630,7 +630,7 @@ export const se_UpdateFirewallEncryptionConfigurationCommand = async (
  */
 export const se_UpdateFirewallPolicyCommand = async (
   input: UpdateFirewallPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateFirewallPolicy");
   let body: any;
@@ -643,7 +643,7 @@ export const se_UpdateFirewallPolicyCommand = async (
  */
 export const se_UpdateFirewallPolicyChangeProtectionCommand = async (
   input: UpdateFirewallPolicyChangeProtectionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateFirewallPolicyChangeProtection");
   let body: any;
@@ -656,7 +656,7 @@ export const se_UpdateFirewallPolicyChangeProtectionCommand = async (
  */
 export const se_UpdateLoggingConfigurationCommand = async (
   input: UpdateLoggingConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateLoggingConfiguration");
   let body: any;
@@ -669,7 +669,7 @@ export const se_UpdateLoggingConfigurationCommand = async (
  */
 export const se_UpdateRuleGroupCommand = async (
   input: UpdateRuleGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateRuleGroup");
   let body: any;
@@ -682,7 +682,7 @@ export const se_UpdateRuleGroupCommand = async (
  */
 export const se_UpdateSubnetChangeProtectionCommand = async (
   input: UpdateSubnetChangeProtectionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateSubnetChangeProtection");
   let body: any;
@@ -695,7 +695,7 @@ export const se_UpdateSubnetChangeProtectionCommand = async (
  */
 export const se_UpdateTLSInspectionConfigurationCommand = async (
   input: UpdateTLSInspectionConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateTLSInspectionConfiguration");
   let body: any;
@@ -708,7 +708,7 @@ export const se_UpdateTLSInspectionConfigurationCommand = async (
  */
 export const de_AssociateFirewallPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssociateFirewallPolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -728,7 +728,7 @@ export const de_AssociateFirewallPolicyCommand = async (
  */
 export const de_AssociateSubnetsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssociateSubnetsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -748,7 +748,7 @@ export const de_AssociateSubnetsCommand = async (
  */
 export const de_CreateFirewallCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateFirewallCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -768,7 +768,7 @@ export const de_CreateFirewallCommand = async (
  */
 export const de_CreateFirewallPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateFirewallPolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -788,7 +788,7 @@ export const de_CreateFirewallPolicyCommand = async (
  */
 export const de_CreateRuleGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateRuleGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -808,7 +808,7 @@ export const de_CreateRuleGroupCommand = async (
  */
 export const de_CreateTLSInspectionConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateTLSInspectionConfigurationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -828,7 +828,7 @@ export const de_CreateTLSInspectionConfigurationCommand = async (
  */
 export const de_DeleteFirewallCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteFirewallCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -848,7 +848,7 @@ export const de_DeleteFirewallCommand = async (
  */
 export const de_DeleteFirewallPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteFirewallPolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -868,7 +868,7 @@ export const de_DeleteFirewallPolicyCommand = async (
  */
 export const de_DeleteResourcePolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteResourcePolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -888,7 +888,7 @@ export const de_DeleteResourcePolicyCommand = async (
  */
 export const de_DeleteRuleGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteRuleGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -908,7 +908,7 @@ export const de_DeleteRuleGroupCommand = async (
  */
 export const de_DeleteTLSInspectionConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteTLSInspectionConfigurationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -928,7 +928,7 @@ export const de_DeleteTLSInspectionConfigurationCommand = async (
  */
 export const de_DescribeFirewallCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeFirewallCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -948,7 +948,7 @@ export const de_DescribeFirewallCommand = async (
  */
 export const de_DescribeFirewallPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeFirewallPolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -968,7 +968,7 @@ export const de_DescribeFirewallPolicyCommand = async (
  */
 export const de_DescribeLoggingConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeLoggingConfigurationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -988,7 +988,7 @@ export const de_DescribeLoggingConfigurationCommand = async (
  */
 export const de_DescribeResourcePolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeResourcePolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1008,7 +1008,7 @@ export const de_DescribeResourcePolicyCommand = async (
  */
 export const de_DescribeRuleGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeRuleGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1028,7 +1028,7 @@ export const de_DescribeRuleGroupCommand = async (
  */
 export const de_DescribeRuleGroupMetadataCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeRuleGroupMetadataCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1048,7 +1048,7 @@ export const de_DescribeRuleGroupMetadataCommand = async (
  */
 export const de_DescribeTLSInspectionConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeTLSInspectionConfigurationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1068,7 +1068,7 @@ export const de_DescribeTLSInspectionConfigurationCommand = async (
  */
 export const de_DisassociateSubnetsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisassociateSubnetsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1088,7 +1088,7 @@ export const de_DisassociateSubnetsCommand = async (
  */
 export const de_ListFirewallPoliciesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListFirewallPoliciesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1108,7 +1108,7 @@ export const de_ListFirewallPoliciesCommand = async (
  */
 export const de_ListFirewallsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListFirewallsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1128,7 +1128,7 @@ export const de_ListFirewallsCommand = async (
  */
 export const de_ListRuleGroupsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListRuleGroupsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1148,7 +1148,7 @@ export const de_ListRuleGroupsCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1168,7 +1168,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_ListTLSInspectionConfigurationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTLSInspectionConfigurationsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1188,7 +1188,7 @@ export const de_ListTLSInspectionConfigurationsCommand = async (
  */
 export const de_PutResourcePolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutResourcePolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1208,7 +1208,7 @@ export const de_PutResourcePolicyCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1228,7 +1228,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1248,7 +1248,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateFirewallDeleteProtectionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateFirewallDeleteProtectionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1268,7 +1268,7 @@ export const de_UpdateFirewallDeleteProtectionCommand = async (
  */
 export const de_UpdateFirewallDescriptionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateFirewallDescriptionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1288,7 +1288,7 @@ export const de_UpdateFirewallDescriptionCommand = async (
  */
 export const de_UpdateFirewallEncryptionConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateFirewallEncryptionConfigurationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1308,7 +1308,7 @@ export const de_UpdateFirewallEncryptionConfigurationCommand = async (
  */
 export const de_UpdateFirewallPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateFirewallPolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1328,7 +1328,7 @@ export const de_UpdateFirewallPolicyCommand = async (
  */
 export const de_UpdateFirewallPolicyChangeProtectionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateFirewallPolicyChangeProtectionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1348,7 +1348,7 @@ export const de_UpdateFirewallPolicyChangeProtectionCommand = async (
  */
 export const de_UpdateLoggingConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateLoggingConfigurationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1368,7 +1368,7 @@ export const de_UpdateLoggingConfigurationCommand = async (
  */
 export const de_UpdateRuleGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateRuleGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1388,7 +1388,7 @@ export const de_UpdateRuleGroupCommand = async (
  */
 export const de_UpdateSubnetChangeProtectionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateSubnetChangeProtectionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1408,7 +1408,7 @@ export const de_UpdateSubnetChangeProtectionCommand = async (
  */
 export const de_UpdateTLSInspectionConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateTLSInspectionConfigurationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1484,7 +1484,7 @@ const de_CommandError = async (output: __HttpResponse, context: __SerdeContext):
  */
 const de_InsufficientCapacityExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InsufficientCapacityException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1513,7 +1513,7 @@ const de_InternalServerErrorRes = async (parsedOutput: any, context: __SerdeCont
  */
 const de_InvalidOperationExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidOperationException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1529,7 +1529,7 @@ const de_InvalidOperationExceptionRes = async (
  */
 const de_InvalidRequestExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidRequestException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1545,7 +1545,7 @@ const de_InvalidRequestExceptionRes = async (
  */
 const de_InvalidResourcePolicyExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidResourcePolicyException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1561,7 +1561,7 @@ const de_InvalidResourcePolicyExceptionRes = async (
  */
 const de_InvalidTokenExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidTokenException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1577,7 +1577,7 @@ const de_InvalidTokenExceptionRes = async (
  */
 const de_LimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<LimitExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1593,7 +1593,7 @@ const de_LimitExceededExceptionRes = async (
  */
 const de_LogDestinationPermissionExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<LogDestinationPermissionException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1609,7 +1609,7 @@ const de_LogDestinationPermissionExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1625,7 +1625,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_ResourceOwnerCheckExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceOwnerCheckException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1654,7 +1654,7 @@ const de_ThrottlingExceptionRes = async (parsedOutput: any, context: __SerdeCont
  */
 const de_UnsupportedOperationExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UnsupportedOperationException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1964,7 +1964,7 @@ const de_CreateRuleGroupResponse = (output: any, context: __SerdeContext): Creat
  */
 const de_CreateTLSInspectionConfigurationResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CreateTLSInspectionConfigurationResponse => {
   return take(output, {
     TLSInspectionConfigurationResponse: (_: any) => de_TLSInspectionConfigurationResponse(_, context),
@@ -2003,7 +2003,7 @@ const de_DeleteRuleGroupResponse = (output: any, context: __SerdeContext): Delet
  */
 const de_DeleteTLSInspectionConfigurationResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DeleteTLSInspectionConfigurationResponse => {
   return take(output, {
     TLSInspectionConfigurationResponse: (_: any) => de_TLSInspectionConfigurationResponse(_, context),
@@ -2032,7 +2032,7 @@ const de_DescribeFirewallPolicyResponse = (output: any, context: __SerdeContext)
  */
 const de_DescribeRuleGroupMetadataResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeRuleGroupMetadataResponse => {
   return take(output, {
     Capacity: __expectInt32,
@@ -2061,7 +2061,7 @@ const de_DescribeRuleGroupResponse = (output: any, context: __SerdeContext): Des
  */
 const de_DescribeTLSInspectionConfigurationResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeTLSInspectionConfigurationResponse => {
   return take(output, {
     TLSInspectionConfiguration: _json,
@@ -2311,7 +2311,7 @@ const de_RuleGroupResponse = (output: any, context: __SerdeContext): RuleGroupRe
  */
 const de_TLSInspectionConfigurationResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): TLSInspectionConfigurationResponse => {
   return take(output, {
     CertificateAuthority: _json,
@@ -2371,7 +2371,7 @@ const de_UpdateRuleGroupResponse = (output: any, context: __SerdeContext): Updat
  */
 const de_UpdateTLSInspectionConfigurationResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): UpdateTLSInspectionConfigurationResponse => {
   return take(output, {
     TLSInspectionConfigurationResponse: (_: any) => de_TLSInspectionConfigurationResponse(_, context),
@@ -2399,7 +2399,7 @@ const buildHttpRpcRequest = async (
   headers: __HeaderBag,
   path: string,
   resolvedHostname: string | undefined,
-  body: any
+  body: any,
 ): Promise<__HttpRequest> => {
   const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
   const contents: any = {

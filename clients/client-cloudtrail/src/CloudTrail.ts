@@ -242,7 +242,7 @@ export interface CloudTrail {
   addTags(
     args: AddTagsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AddTagsCommandOutput) => void
+    cb: (err: any, data?: AddTagsCommandOutput) => void,
   ): void;
 
   /**
@@ -253,7 +253,7 @@ export interface CloudTrail {
   cancelQuery(
     args: CancelQueryCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CancelQueryCommandOutput) => void
+    cb: (err: any, data?: CancelQueryCommandOutput) => void,
   ): void;
 
   /**
@@ -264,7 +264,7 @@ export interface CloudTrail {
   createChannel(
     args: CreateChannelCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateChannelCommandOutput) => void
+    cb: (err: any, data?: CreateChannelCommandOutput) => void,
   ): void;
 
   /**
@@ -272,16 +272,16 @@ export interface CloudTrail {
    */
   createEventDataStore(
     args: CreateEventDataStoreCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateEventDataStoreCommandOutput>;
   createEventDataStore(
     args: CreateEventDataStoreCommandInput,
-    cb: (err: any, data?: CreateEventDataStoreCommandOutput) => void
+    cb: (err: any, data?: CreateEventDataStoreCommandOutput) => void,
   ): void;
   createEventDataStore(
     args: CreateEventDataStoreCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateEventDataStoreCommandOutput) => void
+    cb: (err: any, data?: CreateEventDataStoreCommandOutput) => void,
   ): void;
 
   /**
@@ -292,7 +292,7 @@ export interface CloudTrail {
   createTrail(
     args: CreateTrailCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateTrailCommandOutput) => void
+    cb: (err: any, data?: CreateTrailCommandOutput) => void,
   ): void;
 
   /**
@@ -303,7 +303,7 @@ export interface CloudTrail {
   deleteChannel(
     args: DeleteChannelCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteChannelCommandOutput) => void
+    cb: (err: any, data?: DeleteChannelCommandOutput) => void,
   ): void;
 
   /**
@@ -311,16 +311,16 @@ export interface CloudTrail {
    */
   deleteEventDataStore(
     args: DeleteEventDataStoreCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteEventDataStoreCommandOutput>;
   deleteEventDataStore(
     args: DeleteEventDataStoreCommandInput,
-    cb: (err: any, data?: DeleteEventDataStoreCommandOutput) => void
+    cb: (err: any, data?: DeleteEventDataStoreCommandOutput) => void,
   ): void;
   deleteEventDataStore(
     args: DeleteEventDataStoreCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteEventDataStoreCommandOutput) => void
+    cb: (err: any, data?: DeleteEventDataStoreCommandOutput) => void,
   ): void;
 
   /**
@@ -328,16 +328,16 @@ export interface CloudTrail {
    */
   deleteResourcePolicy(
     args: DeleteResourcePolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteResourcePolicyCommandOutput>;
   deleteResourcePolicy(
     args: DeleteResourcePolicyCommandInput,
-    cb: (err: any, data?: DeleteResourcePolicyCommandOutput) => void
+    cb: (err: any, data?: DeleteResourcePolicyCommandOutput) => void,
   ): void;
   deleteResourcePolicy(
     args: DeleteResourcePolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteResourcePolicyCommandOutput) => void
+    cb: (err: any, data?: DeleteResourcePolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -348,7 +348,7 @@ export interface CloudTrail {
   deleteTrail(
     args: DeleteTrailCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteTrailCommandOutput) => void
+    cb: (err: any, data?: DeleteTrailCommandOutput) => void,
   ): void;
 
   /**
@@ -356,16 +356,16 @@ export interface CloudTrail {
    */
   deregisterOrganizationDelegatedAdmin(
     args: DeregisterOrganizationDelegatedAdminCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeregisterOrganizationDelegatedAdminCommandOutput>;
   deregisterOrganizationDelegatedAdmin(
     args: DeregisterOrganizationDelegatedAdminCommandInput,
-    cb: (err: any, data?: DeregisterOrganizationDelegatedAdminCommandOutput) => void
+    cb: (err: any, data?: DeregisterOrganizationDelegatedAdminCommandOutput) => void,
   ): void;
   deregisterOrganizationDelegatedAdmin(
     args: DeregisterOrganizationDelegatedAdminCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeregisterOrganizationDelegatedAdminCommandOutput) => void
+    cb: (err: any, data?: DeregisterOrganizationDelegatedAdminCommandOutput) => void,
   ): void;
 
   /**
@@ -377,7 +377,7 @@ export interface CloudTrail {
   describeQuery(
     args: DescribeQueryCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeQueryCommandOutput) => void
+    cb: (err: any, data?: DescribeQueryCommandOutput) => void,
   ): void;
 
   /**
@@ -386,13 +386,13 @@ export interface CloudTrail {
   describeTrails(): Promise<DescribeTrailsCommandOutput>;
   describeTrails(
     args: DescribeTrailsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeTrailsCommandOutput>;
   describeTrails(args: DescribeTrailsCommandInput, cb: (err: any, data?: DescribeTrailsCommandOutput) => void): void;
   describeTrails(
     args: DescribeTrailsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeTrailsCommandOutput) => void
+    cb: (err: any, data?: DescribeTrailsCommandOutput) => void,
   ): void;
 
   /**
@@ -400,16 +400,16 @@ export interface CloudTrail {
    */
   disableFederation(
     args: DisableFederationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DisableFederationCommandOutput>;
   disableFederation(
     args: DisableFederationCommandInput,
-    cb: (err: any, data?: DisableFederationCommandOutput) => void
+    cb: (err: any, data?: DisableFederationCommandOutput) => void,
   ): void;
   disableFederation(
     args: DisableFederationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DisableFederationCommandOutput) => void
+    cb: (err: any, data?: DisableFederationCommandOutput) => void,
   ): void;
 
   /**
@@ -417,16 +417,16 @@ export interface CloudTrail {
    */
   enableFederation(
     args: EnableFederationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<EnableFederationCommandOutput>;
   enableFederation(
     args: EnableFederationCommandInput,
-    cb: (err: any, data?: EnableFederationCommandOutput) => void
+    cb: (err: any, data?: EnableFederationCommandOutput) => void,
   ): void;
   enableFederation(
     args: EnableFederationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: EnableFederationCommandOutput) => void
+    cb: (err: any, data?: EnableFederationCommandOutput) => void,
   ): void;
 
   /**
@@ -437,7 +437,7 @@ export interface CloudTrail {
   getChannel(
     args: GetChannelCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetChannelCommandOutput) => void
+    cb: (err: any, data?: GetChannelCommandOutput) => void,
   ): void;
 
   /**
@@ -445,16 +445,16 @@ export interface CloudTrail {
    */
   getEventDataStore(
     args: GetEventDataStoreCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetEventDataStoreCommandOutput>;
   getEventDataStore(
     args: GetEventDataStoreCommandInput,
-    cb: (err: any, data?: GetEventDataStoreCommandOutput) => void
+    cb: (err: any, data?: GetEventDataStoreCommandOutput) => void,
   ): void;
   getEventDataStore(
     args: GetEventDataStoreCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetEventDataStoreCommandOutput) => void
+    cb: (err: any, data?: GetEventDataStoreCommandOutput) => void,
   ): void;
 
   /**
@@ -462,16 +462,16 @@ export interface CloudTrail {
    */
   getEventSelectors(
     args: GetEventSelectorsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetEventSelectorsCommandOutput>;
   getEventSelectors(
     args: GetEventSelectorsCommandInput,
-    cb: (err: any, data?: GetEventSelectorsCommandOutput) => void
+    cb: (err: any, data?: GetEventSelectorsCommandOutput) => void,
   ): void;
   getEventSelectors(
     args: GetEventSelectorsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetEventSelectorsCommandOutput) => void
+    cb: (err: any, data?: GetEventSelectorsCommandOutput) => void,
   ): void;
 
   /**
@@ -482,7 +482,7 @@ export interface CloudTrail {
   getImport(
     args: GetImportCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetImportCommandOutput) => void
+    cb: (err: any, data?: GetImportCommandOutput) => void,
   ): void;
 
   /**
@@ -491,16 +491,16 @@ export interface CloudTrail {
   getInsightSelectors(): Promise<GetInsightSelectorsCommandOutput>;
   getInsightSelectors(
     args: GetInsightSelectorsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetInsightSelectorsCommandOutput>;
   getInsightSelectors(
     args: GetInsightSelectorsCommandInput,
-    cb: (err: any, data?: GetInsightSelectorsCommandOutput) => void
+    cb: (err: any, data?: GetInsightSelectorsCommandOutput) => void,
   ): void;
   getInsightSelectors(
     args: GetInsightSelectorsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetInsightSelectorsCommandOutput) => void
+    cb: (err: any, data?: GetInsightSelectorsCommandOutput) => void,
   ): void;
 
   /**
@@ -508,13 +508,13 @@ export interface CloudTrail {
    */
   getQueryResults(
     args: GetQueryResultsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetQueryResultsCommandOutput>;
   getQueryResults(args: GetQueryResultsCommandInput, cb: (err: any, data?: GetQueryResultsCommandOutput) => void): void;
   getQueryResults(
     args: GetQueryResultsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetQueryResultsCommandOutput) => void
+    cb: (err: any, data?: GetQueryResultsCommandOutput) => void,
   ): void;
 
   /**
@@ -522,16 +522,16 @@ export interface CloudTrail {
    */
   getResourcePolicy(
     args: GetResourcePolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetResourcePolicyCommandOutput>;
   getResourcePolicy(
     args: GetResourcePolicyCommandInput,
-    cb: (err: any, data?: GetResourcePolicyCommandOutput) => void
+    cb: (err: any, data?: GetResourcePolicyCommandOutput) => void,
   ): void;
   getResourcePolicy(
     args: GetResourcePolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetResourcePolicyCommandOutput) => void
+    cb: (err: any, data?: GetResourcePolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -542,7 +542,7 @@ export interface CloudTrail {
   getTrail(
     args: GetTrailCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetTrailCommandOutput) => void
+    cb: (err: any, data?: GetTrailCommandOutput) => void,
   ): void;
 
   /**
@@ -550,13 +550,13 @@ export interface CloudTrail {
    */
   getTrailStatus(
     args: GetTrailStatusCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetTrailStatusCommandOutput>;
   getTrailStatus(args: GetTrailStatusCommandInput, cb: (err: any, data?: GetTrailStatusCommandOutput) => void): void;
   getTrailStatus(
     args: GetTrailStatusCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetTrailStatusCommandOutput) => void
+    cb: (err: any, data?: GetTrailStatusCommandOutput) => void,
   ): void;
 
   /**
@@ -568,7 +568,7 @@ export interface CloudTrail {
   listChannels(
     args: ListChannelsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListChannelsCommandOutput) => void
+    cb: (err: any, data?: ListChannelsCommandOutput) => void,
   ): void;
 
   /**
@@ -577,16 +577,16 @@ export interface CloudTrail {
   listEventDataStores(): Promise<ListEventDataStoresCommandOutput>;
   listEventDataStores(
     args: ListEventDataStoresCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListEventDataStoresCommandOutput>;
   listEventDataStores(
     args: ListEventDataStoresCommandInput,
-    cb: (err: any, data?: ListEventDataStoresCommandOutput) => void
+    cb: (err: any, data?: ListEventDataStoresCommandOutput) => void,
   ): void;
   listEventDataStores(
     args: ListEventDataStoresCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListEventDataStoresCommandOutput) => void
+    cb: (err: any, data?: ListEventDataStoresCommandOutput) => void,
   ): void;
 
   /**
@@ -594,16 +594,16 @@ export interface CloudTrail {
    */
   listImportFailures(
     args: ListImportFailuresCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListImportFailuresCommandOutput>;
   listImportFailures(
     args: ListImportFailuresCommandInput,
-    cb: (err: any, data?: ListImportFailuresCommandOutput) => void
+    cb: (err: any, data?: ListImportFailuresCommandOutput) => void,
   ): void;
   listImportFailures(
     args: ListImportFailuresCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListImportFailuresCommandOutput) => void
+    cb: (err: any, data?: ListImportFailuresCommandOutput) => void,
   ): void;
 
   /**
@@ -615,7 +615,7 @@ export interface CloudTrail {
   listImports(
     args: ListImportsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListImportsCommandOutput) => void
+    cb: (err: any, data?: ListImportsCommandOutput) => void,
   ): void;
 
   /**
@@ -623,16 +623,16 @@ export interface CloudTrail {
    */
   listInsightsMetricData(
     args: ListInsightsMetricDataCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListInsightsMetricDataCommandOutput>;
   listInsightsMetricData(
     args: ListInsightsMetricDataCommandInput,
-    cb: (err: any, data?: ListInsightsMetricDataCommandOutput) => void
+    cb: (err: any, data?: ListInsightsMetricDataCommandOutput) => void,
   ): void;
   listInsightsMetricData(
     args: ListInsightsMetricDataCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListInsightsMetricDataCommandOutput) => void
+    cb: (err: any, data?: ListInsightsMetricDataCommandOutput) => void,
   ): void;
 
   /**
@@ -641,13 +641,13 @@ export interface CloudTrail {
   listPublicKeys(): Promise<ListPublicKeysCommandOutput>;
   listPublicKeys(
     args: ListPublicKeysCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListPublicKeysCommandOutput>;
   listPublicKeys(args: ListPublicKeysCommandInput, cb: (err: any, data?: ListPublicKeysCommandOutput) => void): void;
   listPublicKeys(
     args: ListPublicKeysCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListPublicKeysCommandOutput) => void
+    cb: (err: any, data?: ListPublicKeysCommandOutput) => void,
   ): void;
 
   /**
@@ -658,7 +658,7 @@ export interface CloudTrail {
   listQueries(
     args: ListQueriesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListQueriesCommandOutput) => void
+    cb: (err: any, data?: ListQueriesCommandOutput) => void,
   ): void;
 
   /**
@@ -669,7 +669,7 @@ export interface CloudTrail {
   listTags(
     args: ListTagsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsCommandOutput) => void
+    cb: (err: any, data?: ListTagsCommandOutput) => void,
   ): void;
 
   /**
@@ -681,7 +681,7 @@ export interface CloudTrail {
   listTrails(
     args: ListTrailsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTrailsCommandOutput) => void
+    cb: (err: any, data?: ListTrailsCommandOutput) => void,
   ): void;
 
   /**
@@ -693,7 +693,7 @@ export interface CloudTrail {
   lookupEvents(
     args: LookupEventsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: LookupEventsCommandOutput) => void
+    cb: (err: any, data?: LookupEventsCommandOutput) => void,
   ): void;
 
   /**
@@ -701,16 +701,16 @@ export interface CloudTrail {
    */
   putEventSelectors(
     args: PutEventSelectorsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutEventSelectorsCommandOutput>;
   putEventSelectors(
     args: PutEventSelectorsCommandInput,
-    cb: (err: any, data?: PutEventSelectorsCommandOutput) => void
+    cb: (err: any, data?: PutEventSelectorsCommandOutput) => void,
   ): void;
   putEventSelectors(
     args: PutEventSelectorsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutEventSelectorsCommandOutput) => void
+    cb: (err: any, data?: PutEventSelectorsCommandOutput) => void,
   ): void;
 
   /**
@@ -718,16 +718,16 @@ export interface CloudTrail {
    */
   putInsightSelectors(
     args: PutInsightSelectorsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutInsightSelectorsCommandOutput>;
   putInsightSelectors(
     args: PutInsightSelectorsCommandInput,
-    cb: (err: any, data?: PutInsightSelectorsCommandOutput) => void
+    cb: (err: any, data?: PutInsightSelectorsCommandOutput) => void,
   ): void;
   putInsightSelectors(
     args: PutInsightSelectorsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutInsightSelectorsCommandOutput) => void
+    cb: (err: any, data?: PutInsightSelectorsCommandOutput) => void,
   ): void;
 
   /**
@@ -735,16 +735,16 @@ export interface CloudTrail {
    */
   putResourcePolicy(
     args: PutResourcePolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutResourcePolicyCommandOutput>;
   putResourcePolicy(
     args: PutResourcePolicyCommandInput,
-    cb: (err: any, data?: PutResourcePolicyCommandOutput) => void
+    cb: (err: any, data?: PutResourcePolicyCommandOutput) => void,
   ): void;
   putResourcePolicy(
     args: PutResourcePolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutResourcePolicyCommandOutput) => void
+    cb: (err: any, data?: PutResourcePolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -752,16 +752,16 @@ export interface CloudTrail {
    */
   registerOrganizationDelegatedAdmin(
     args: RegisterOrganizationDelegatedAdminCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<RegisterOrganizationDelegatedAdminCommandOutput>;
   registerOrganizationDelegatedAdmin(
     args: RegisterOrganizationDelegatedAdminCommandInput,
-    cb: (err: any, data?: RegisterOrganizationDelegatedAdminCommandOutput) => void
+    cb: (err: any, data?: RegisterOrganizationDelegatedAdminCommandOutput) => void,
   ): void;
   registerOrganizationDelegatedAdmin(
     args: RegisterOrganizationDelegatedAdminCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RegisterOrganizationDelegatedAdminCommandOutput) => void
+    cb: (err: any, data?: RegisterOrganizationDelegatedAdminCommandOutput) => void,
   ): void;
 
   /**
@@ -772,7 +772,7 @@ export interface CloudTrail {
   removeTags(
     args: RemoveTagsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RemoveTagsCommandOutput) => void
+    cb: (err: any, data?: RemoveTagsCommandOutput) => void,
   ): void;
 
   /**
@@ -780,16 +780,16 @@ export interface CloudTrail {
    */
   restoreEventDataStore(
     args: RestoreEventDataStoreCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<RestoreEventDataStoreCommandOutput>;
   restoreEventDataStore(
     args: RestoreEventDataStoreCommandInput,
-    cb: (err: any, data?: RestoreEventDataStoreCommandOutput) => void
+    cb: (err: any, data?: RestoreEventDataStoreCommandOutput) => void,
   ): void;
   restoreEventDataStore(
     args: RestoreEventDataStoreCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RestoreEventDataStoreCommandOutput) => void
+    cb: (err: any, data?: RestoreEventDataStoreCommandOutput) => void,
   ): void;
 
   /**
@@ -797,16 +797,16 @@ export interface CloudTrail {
    */
   startEventDataStoreIngestion(
     args: StartEventDataStoreIngestionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartEventDataStoreIngestionCommandOutput>;
   startEventDataStoreIngestion(
     args: StartEventDataStoreIngestionCommandInput,
-    cb: (err: any, data?: StartEventDataStoreIngestionCommandOutput) => void
+    cb: (err: any, data?: StartEventDataStoreIngestionCommandOutput) => void,
   ): void;
   startEventDataStoreIngestion(
     args: StartEventDataStoreIngestionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartEventDataStoreIngestionCommandOutput) => void
+    cb: (err: any, data?: StartEventDataStoreIngestionCommandOutput) => void,
   ): void;
 
   /**
@@ -818,7 +818,7 @@ export interface CloudTrail {
   startImport(
     args: StartImportCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartImportCommandOutput) => void
+    cb: (err: any, data?: StartImportCommandOutput) => void,
   ): void;
 
   /**
@@ -829,7 +829,7 @@ export interface CloudTrail {
   startLogging(
     args: StartLoggingCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartLoggingCommandOutput) => void
+    cb: (err: any, data?: StartLoggingCommandOutput) => void,
   ): void;
 
   /**
@@ -841,7 +841,7 @@ export interface CloudTrail {
   startQuery(
     args: StartQueryCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartQueryCommandOutput) => void
+    cb: (err: any, data?: StartQueryCommandOutput) => void,
   ): void;
 
   /**
@@ -849,16 +849,16 @@ export interface CloudTrail {
    */
   stopEventDataStoreIngestion(
     args: StopEventDataStoreIngestionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StopEventDataStoreIngestionCommandOutput>;
   stopEventDataStoreIngestion(
     args: StopEventDataStoreIngestionCommandInput,
-    cb: (err: any, data?: StopEventDataStoreIngestionCommandOutput) => void
+    cb: (err: any, data?: StopEventDataStoreIngestionCommandOutput) => void,
   ): void;
   stopEventDataStoreIngestion(
     args: StopEventDataStoreIngestionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StopEventDataStoreIngestionCommandOutput) => void
+    cb: (err: any, data?: StopEventDataStoreIngestionCommandOutput) => void,
   ): void;
 
   /**
@@ -869,7 +869,7 @@ export interface CloudTrail {
   stopImport(
     args: StopImportCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StopImportCommandOutput) => void
+    cb: (err: any, data?: StopImportCommandOutput) => void,
   ): void;
 
   /**
@@ -880,7 +880,7 @@ export interface CloudTrail {
   stopLogging(
     args: StopLoggingCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StopLoggingCommandOutput) => void
+    cb: (err: any, data?: StopLoggingCommandOutput) => void,
   ): void;
 
   /**
@@ -891,7 +891,7 @@ export interface CloudTrail {
   updateChannel(
     args: UpdateChannelCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateChannelCommandOutput) => void
+    cb: (err: any, data?: UpdateChannelCommandOutput) => void,
   ): void;
 
   /**
@@ -899,16 +899,16 @@ export interface CloudTrail {
    */
   updateEventDataStore(
     args: UpdateEventDataStoreCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateEventDataStoreCommandOutput>;
   updateEventDataStore(
     args: UpdateEventDataStoreCommandInput,
-    cb: (err: any, data?: UpdateEventDataStoreCommandOutput) => void
+    cb: (err: any, data?: UpdateEventDataStoreCommandOutput) => void,
   ): void;
   updateEventDataStore(
     args: UpdateEventDataStoreCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateEventDataStoreCommandOutput) => void
+    cb: (err: any, data?: UpdateEventDataStoreCommandOutput) => void,
   ): void;
 
   /**
@@ -919,7 +919,7 @@ export interface CloudTrail {
   updateTrail(
     args: UpdateTrailCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateTrailCommandOutput) => void
+    cb: (err: any, data?: UpdateTrailCommandOutput) => void,
   ): void;
 }
 

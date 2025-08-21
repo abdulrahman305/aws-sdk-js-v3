@@ -16,7 +16,7 @@ export type OptionalCrtSignerV4 = {
       signWithCredentials(
         requestToSign: HttpRequest,
         credentials: AwsCredentialIdentity,
-        options: RequestSigningArguments
+        options: RequestSigningArguments,
       ): Promise<HttpRequest>;
     };
 };

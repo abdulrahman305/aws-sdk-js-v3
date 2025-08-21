@@ -28,7 +28,7 @@ export interface Glacier {
   uploadArchive(
     args: UploadArchiveCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UploadArchiveCommandOutput) => void
+    cb: (err: any, data?: UploadArchiveCommandOutput) => void,
   ): void;
 
   /**
@@ -36,16 +36,16 @@ export interface Glacier {
    */
   uploadMultipartPart(
     args: UploadMultipartPartCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UploadMultipartPartCommandOutput>;
   uploadMultipartPart(
     args: UploadMultipartPartCommandInput,
-    cb: (err: any, data?: UploadMultipartPartCommandOutput) => void
+    cb: (err: any, data?: UploadMultipartPartCommandOutput) => void,
   ): void;
   uploadMultipartPart(
     args: UploadMultipartPartCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UploadMultipartPartCommandOutput) => void
+    cb: (err: any, data?: UploadMultipartPartCommandOutput) => void,
   ): void;
 }
 

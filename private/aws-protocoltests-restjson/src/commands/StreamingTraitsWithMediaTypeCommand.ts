@@ -93,7 +93,7 @@ export class StreamingTraitsWithMediaTypeCommand extends $Command
   .n("RestJsonProtocolClient", "StreamingTraitsWithMediaTypeCommand")
   .f(
     StreamingTraitsWithMediaTypeInputOutputFilterSensitiveLog,
-    StreamingTraitsWithMediaTypeInputOutputFilterSensitiveLog
+    StreamingTraitsWithMediaTypeInputOutputFilterSensitiveLog,
   )
   .ser(se_StreamingTraitsWithMediaTypeCommand)
   .de(de_StreamingTraitsWithMediaTypeCommand)

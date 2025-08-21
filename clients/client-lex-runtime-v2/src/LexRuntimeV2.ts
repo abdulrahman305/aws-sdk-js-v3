@@ -44,7 +44,7 @@ export interface LexRuntimeV2 {
   deleteSession(
     args: DeleteSessionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteSessionCommandOutput) => void
+    cb: (err: any, data?: DeleteSessionCommandOutput) => void,
   ): void;
 
   /**
@@ -55,7 +55,7 @@ export interface LexRuntimeV2 {
   getSession(
     args: GetSessionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetSessionCommandOutput) => void
+    cb: (err: any, data?: GetSessionCommandOutput) => void,
   ): void;
 
   /**
@@ -66,7 +66,7 @@ export interface LexRuntimeV2 {
   putSession(
     args: PutSessionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutSessionCommandOutput) => void
+    cb: (err: any, data?: PutSessionCommandOutput) => void,
   ): void;
 
   /**
@@ -77,7 +77,7 @@ export interface LexRuntimeV2 {
   recognizeText(
     args: RecognizeTextCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RecognizeTextCommandOutput) => void
+    cb: (err: any, data?: RecognizeTextCommandOutput) => void,
   ): void;
 
   /**
@@ -85,16 +85,16 @@ export interface LexRuntimeV2 {
    */
   recognizeUtterance(
     args: RecognizeUtteranceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<RecognizeUtteranceCommandOutput>;
   recognizeUtterance(
     args: RecognizeUtteranceCommandInput,
-    cb: (err: any, data?: RecognizeUtteranceCommandOutput) => void
+    cb: (err: any, data?: RecognizeUtteranceCommandOutput) => void,
   ): void;
   recognizeUtterance(
     args: RecognizeUtteranceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RecognizeUtteranceCommandOutput) => void
+    cb: (err: any, data?: RecognizeUtteranceCommandOutput) => void,
   ): void;
 
   /**
@@ -102,16 +102,16 @@ export interface LexRuntimeV2 {
    */
   startConversation(
     args: StartConversationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartConversationCommandOutput>;
   startConversation(
     args: StartConversationCommandInput,
-    cb: (err: any, data?: StartConversationCommandOutput) => void
+    cb: (err: any, data?: StartConversationCommandOutput) => void,
   ): void;
   startConversation(
     args: StartConversationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartConversationCommandOutput) => void
+    cb: (err: any, data?: StartConversationCommandOutput) => void,
   ): void;
 }
 

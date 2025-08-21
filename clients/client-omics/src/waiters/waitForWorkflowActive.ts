@@ -52,7 +52,7 @@ const checkState = async (client: OmicsClient, input: GetWorkflowCommandInput): 
  */
 export const waitForWorkflowActive = async (
   params: WaiterConfiguration<OmicsClient>,
-  input: GetWorkflowCommandInput
+  input: GetWorkflowCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 3, maxDelay: 30 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -64,7 +64,7 @@ export const waitForWorkflowActive = async (
  */
 export const waitUntilWorkflowActive = async (
   params: WaiterConfiguration<OmicsClient>,
-  input: GetWorkflowCommandInput
+  input: GetWorkflowCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 3, maxDelay: 30 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

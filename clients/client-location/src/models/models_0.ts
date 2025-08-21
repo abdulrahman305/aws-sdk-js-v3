@@ -7625,7 +7625,7 @@ export const SearchPlaceIndexForPositionSummaryFilterSensitiveLog = (obj: Search
  * @internal
  */
 export const SearchPlaceIndexForPositionResponseFilterSensitiveLog = (
-  obj: SearchPlaceIndexForPositionResponse
+  obj: SearchPlaceIndexForPositionResponse,
 ): any => ({
   ...obj,
   ...(obj.Summary && { Summary: SearchPlaceIndexForPositionSummaryFilterSensitiveLog(obj.Summary) }),
@@ -7636,7 +7636,7 @@ export const SearchPlaceIndexForPositionResponseFilterSensitiveLog = (
  * @internal
  */
 export const SearchPlaceIndexForSuggestionsRequestFilterSensitiveLog = (
-  obj: SearchPlaceIndexForSuggestionsRequest
+  obj: SearchPlaceIndexForSuggestionsRequest,
 ): any => ({
   ...obj,
   ...(obj.Text && { Text: SENSITIVE_STRING }),
@@ -7649,7 +7649,7 @@ export const SearchPlaceIndexForSuggestionsRequestFilterSensitiveLog = (
  * @internal
  */
 export const SearchPlaceIndexForSuggestionsSummaryFilterSensitiveLog = (
-  obj: SearchPlaceIndexForSuggestionsSummary
+  obj: SearchPlaceIndexForSuggestionsSummary,
 ): any => ({
   ...obj,
   ...(obj.Text && { Text: SENSITIVE_STRING }),
@@ -7661,7 +7661,7 @@ export const SearchPlaceIndexForSuggestionsSummaryFilterSensitiveLog = (
  * @internal
  */
 export const SearchPlaceIndexForSuggestionsResponseFilterSensitiveLog = (
-  obj: SearchPlaceIndexForSuggestionsResponse
+  obj: SearchPlaceIndexForSuggestionsResponse,
 ): any => ({
   ...obj,
   ...(obj.Summary && { Summary: SearchPlaceIndexForSuggestionsSummaryFilterSensitiveLog(obj.Summary) }),

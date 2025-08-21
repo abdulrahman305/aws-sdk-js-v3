@@ -405,7 +405,7 @@ import { SESv2ServiceException as __BaseException } from "../models/SESv2Service
  */
 export const se_BatchGetMetricDataCommand = async (
   input: BatchGetMetricDataCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -416,7 +416,7 @@ export const se_BatchGetMetricDataCommand = async (
   body = JSON.stringify(
     take(input, {
       Queries: (_) => se_BatchGetMetricDataQueries(_, context),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -427,7 +427,7 @@ export const se_BatchGetMetricDataCommand = async (
  */
 export const se_CancelExportJobCommand = async (
   input: CancelExportJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -443,7 +443,7 @@ export const se_CancelExportJobCommand = async (
  */
 export const se_CreateConfigurationSetCommand = async (
   input: CreateConfigurationSetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -461,7 +461,7 @@ export const se_CreateConfigurationSetCommand = async (
       Tags: (_) => _json(_),
       TrackingOptions: (_) => _json(_),
       VdmOptions: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -472,7 +472,7 @@ export const se_CreateConfigurationSetCommand = async (
  */
 export const se_CreateConfigurationSetEventDestinationCommand = async (
   input: CreateConfigurationSetEventDestinationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -485,7 +485,7 @@ export const se_CreateConfigurationSetEventDestinationCommand = async (
     take(input, {
       EventDestination: (_) => _json(_),
       EventDestinationName: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -496,7 +496,7 @@ export const se_CreateConfigurationSetEventDestinationCommand = async (
  */
 export const se_CreateContactCommand = async (
   input: CreateContactCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -511,7 +511,7 @@ export const se_CreateContactCommand = async (
       EmailAddress: [],
       TopicPreferences: (_) => _json(_),
       UnsubscribeAll: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -522,7 +522,7 @@ export const se_CreateContactCommand = async (
  */
 export const se_CreateContactListCommand = async (
   input: CreateContactListCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -536,7 +536,7 @@ export const se_CreateContactListCommand = async (
       Description: [],
       Tags: (_) => _json(_),
       Topics: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -547,7 +547,7 @@ export const se_CreateContactListCommand = async (
  */
 export const se_CreateCustomVerificationEmailTemplateCommand = async (
   input: CreateCustomVerificationEmailTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -563,7 +563,7 @@ export const se_CreateCustomVerificationEmailTemplateCommand = async (
       TemplateContent: [],
       TemplateName: [],
       TemplateSubject: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -574,7 +574,7 @@ export const se_CreateCustomVerificationEmailTemplateCommand = async (
  */
 export const se_CreateDedicatedIpPoolCommand = async (
   input: CreateDedicatedIpPoolCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -587,7 +587,7 @@ export const se_CreateDedicatedIpPoolCommand = async (
       PoolName: [],
       ScalingMode: [],
       Tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -598,7 +598,7 @@ export const se_CreateDedicatedIpPoolCommand = async (
  */
 export const se_CreateDeliverabilityTestReportCommand = async (
   input: CreateDeliverabilityTestReportCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -612,7 +612,7 @@ export const se_CreateDeliverabilityTestReportCommand = async (
       FromEmailAddress: [],
       ReportName: [],
       Tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -623,7 +623,7 @@ export const se_CreateDeliverabilityTestReportCommand = async (
  */
 export const se_CreateEmailIdentityCommand = async (
   input: CreateEmailIdentityCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -637,7 +637,7 @@ export const se_CreateEmailIdentityCommand = async (
       DkimSigningAttributes: (_) => _json(_),
       EmailIdentity: [],
       Tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -648,7 +648,7 @@ export const se_CreateEmailIdentityCommand = async (
  */
 export const se_CreateEmailIdentityPolicyCommand = async (
   input: CreateEmailIdentityPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -661,7 +661,7 @@ export const se_CreateEmailIdentityPolicyCommand = async (
   body = JSON.stringify(
     take(input, {
       Policy: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -672,7 +672,7 @@ export const se_CreateEmailIdentityPolicyCommand = async (
  */
 export const se_CreateEmailTemplateCommand = async (
   input: CreateEmailTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -684,7 +684,7 @@ export const se_CreateEmailTemplateCommand = async (
     take(input, {
       TemplateContent: (_) => _json(_),
       TemplateName: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -695,7 +695,7 @@ export const se_CreateEmailTemplateCommand = async (
  */
 export const se_CreateExportJobCommand = async (
   input: CreateExportJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -707,7 +707,7 @@ export const se_CreateExportJobCommand = async (
     take(input, {
       ExportDataSource: (_) => se_ExportDataSource(_, context),
       ExportDestination: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -718,7 +718,7 @@ export const se_CreateExportJobCommand = async (
  */
 export const se_CreateImportJobCommand = async (
   input: CreateImportJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -730,7 +730,7 @@ export const se_CreateImportJobCommand = async (
     take(input, {
       ImportDataSource: (_) => _json(_),
       ImportDestination: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -741,7 +741,7 @@ export const se_CreateImportJobCommand = async (
  */
 export const se_DeleteConfigurationSetCommand = async (
   input: DeleteConfigurationSetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -757,7 +757,7 @@ export const se_DeleteConfigurationSetCommand = async (
  */
 export const se_DeleteConfigurationSetEventDestinationCommand = async (
   input: DeleteConfigurationSetEventDestinationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -774,7 +774,7 @@ export const se_DeleteConfigurationSetEventDestinationCommand = async (
  */
 export const se_DeleteContactCommand = async (
   input: DeleteContactCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -791,7 +791,7 @@ export const se_DeleteContactCommand = async (
  */
 export const se_DeleteContactListCommand = async (
   input: DeleteContactListCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -807,7 +807,7 @@ export const se_DeleteContactListCommand = async (
  */
 export const se_DeleteCustomVerificationEmailTemplateCommand = async (
   input: DeleteCustomVerificationEmailTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -823,7 +823,7 @@ export const se_DeleteCustomVerificationEmailTemplateCommand = async (
  */
 export const se_DeleteDedicatedIpPoolCommand = async (
   input: DeleteDedicatedIpPoolCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -839,7 +839,7 @@ export const se_DeleteDedicatedIpPoolCommand = async (
  */
 export const se_DeleteEmailIdentityCommand = async (
   input: DeleteEmailIdentityCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -855,7 +855,7 @@ export const se_DeleteEmailIdentityCommand = async (
  */
 export const se_DeleteEmailIdentityPolicyCommand = async (
   input: DeleteEmailIdentityPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -872,7 +872,7 @@ export const se_DeleteEmailIdentityPolicyCommand = async (
  */
 export const se_DeleteEmailTemplateCommand = async (
   input: DeleteEmailTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -888,7 +888,7 @@ export const se_DeleteEmailTemplateCommand = async (
  */
 export const se_DeleteSuppressedDestinationCommand = async (
   input: DeleteSuppressedDestinationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -904,7 +904,7 @@ export const se_DeleteSuppressedDestinationCommand = async (
  */
 export const se_GetAccountCommand = async (
   input: GetAccountCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -922,7 +922,7 @@ export const se_GetAccountCommand = async (
  */
 export const se_GetBlacklistReportsCommand = async (
   input: GetBlacklistReportsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -943,7 +943,7 @@ export const se_GetBlacklistReportsCommand = async (
  */
 export const se_GetConfigurationSetCommand = async (
   input: GetConfigurationSetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -959,7 +959,7 @@ export const se_GetConfigurationSetCommand = async (
  */
 export const se_GetConfigurationSetEventDestinationsCommand = async (
   input: GetConfigurationSetEventDestinationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -975,7 +975,7 @@ export const se_GetConfigurationSetEventDestinationsCommand = async (
  */
 export const se_GetContactCommand = async (
   input: GetContactCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -992,7 +992,7 @@ export const se_GetContactCommand = async (
  */
 export const se_GetContactListCommand = async (
   input: GetContactListCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1008,7 +1008,7 @@ export const se_GetContactListCommand = async (
  */
 export const se_GetCustomVerificationEmailTemplateCommand = async (
   input: GetCustomVerificationEmailTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1024,7 +1024,7 @@ export const se_GetCustomVerificationEmailTemplateCommand = async (
  */
 export const se_GetDedicatedIpCommand = async (
   input: GetDedicatedIpCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1040,7 +1040,7 @@ export const se_GetDedicatedIpCommand = async (
  */
 export const se_GetDedicatedIpPoolCommand = async (
   input: GetDedicatedIpPoolCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1056,7 +1056,7 @@ export const se_GetDedicatedIpPoolCommand = async (
  */
 export const se_GetDedicatedIpsCommand = async (
   input: GetDedicatedIpsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1076,7 +1076,7 @@ export const se_GetDedicatedIpsCommand = async (
  */
 export const se_GetDeliverabilityDashboardOptionsCommand = async (
   input: GetDeliverabilityDashboardOptionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1094,7 +1094,7 @@ export const se_GetDeliverabilityDashboardOptionsCommand = async (
  */
 export const se_GetDeliverabilityTestReportCommand = async (
   input: GetDeliverabilityTestReportCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1110,7 +1110,7 @@ export const se_GetDeliverabilityTestReportCommand = async (
  */
 export const se_GetDomainDeliverabilityCampaignCommand = async (
   input: GetDomainDeliverabilityCampaignCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1126,7 +1126,7 @@ export const se_GetDomainDeliverabilityCampaignCommand = async (
  */
 export const se_GetDomainStatisticsReportCommand = async (
   input: GetDomainStatisticsReportCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1146,7 +1146,7 @@ export const se_GetDomainStatisticsReportCommand = async (
  */
 export const se_GetEmailIdentityCommand = async (
   input: GetEmailIdentityCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1162,7 +1162,7 @@ export const se_GetEmailIdentityCommand = async (
  */
 export const se_GetEmailIdentityPoliciesCommand = async (
   input: GetEmailIdentityPoliciesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1178,7 +1178,7 @@ export const se_GetEmailIdentityPoliciesCommand = async (
  */
 export const se_GetEmailTemplateCommand = async (
   input: GetEmailTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1194,7 +1194,7 @@ export const se_GetEmailTemplateCommand = async (
  */
 export const se_GetExportJobCommand = async (
   input: GetExportJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1210,7 +1210,7 @@ export const se_GetExportJobCommand = async (
  */
 export const se_GetImportJobCommand = async (
   input: GetImportJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1226,7 +1226,7 @@ export const se_GetImportJobCommand = async (
  */
 export const se_GetMessageInsightsCommand = async (
   input: GetMessageInsightsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1242,7 +1242,7 @@ export const se_GetMessageInsightsCommand = async (
  */
 export const se_GetSuppressedDestinationCommand = async (
   input: GetSuppressedDestinationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1258,7 +1258,7 @@ export const se_GetSuppressedDestinationCommand = async (
  */
 export const se_ListConfigurationSetsCommand = async (
   input: ListConfigurationSetsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1277,7 +1277,7 @@ export const se_ListConfigurationSetsCommand = async (
  */
 export const se_ListContactListsCommand = async (
   input: ListContactListsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1296,7 +1296,7 @@ export const se_ListContactListsCommand = async (
  */
 export const se_ListContactsCommand = async (
   input: ListContactsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1310,7 +1310,7 @@ export const se_ListContactsCommand = async (
       Filter: (_) => _json(_),
       NextToken: [],
       PageSize: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1321,7 +1321,7 @@ export const se_ListContactsCommand = async (
  */
 export const se_ListCustomVerificationEmailTemplatesCommand = async (
   input: ListCustomVerificationEmailTemplatesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1340,7 +1340,7 @@ export const se_ListCustomVerificationEmailTemplatesCommand = async (
  */
 export const se_ListDedicatedIpPoolsCommand = async (
   input: ListDedicatedIpPoolsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1359,7 +1359,7 @@ export const se_ListDedicatedIpPoolsCommand = async (
  */
 export const se_ListDeliverabilityTestReportsCommand = async (
   input: ListDeliverabilityTestReportsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1378,7 +1378,7 @@ export const se_ListDeliverabilityTestReportsCommand = async (
  */
 export const se_ListDomainDeliverabilityCampaignsCommand = async (
   input: ListDomainDeliverabilityCampaignsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1400,7 +1400,7 @@ export const se_ListDomainDeliverabilityCampaignsCommand = async (
  */
 export const se_ListEmailIdentitiesCommand = async (
   input: ListEmailIdentitiesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1419,7 +1419,7 @@ export const se_ListEmailIdentitiesCommand = async (
  */
 export const se_ListEmailTemplatesCommand = async (
   input: ListEmailTemplatesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1438,7 +1438,7 @@ export const se_ListEmailTemplatesCommand = async (
  */
 export const se_ListExportJobsCommand = async (
   input: ListExportJobsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1452,7 +1452,7 @@ export const se_ListExportJobsCommand = async (
       JobStatus: [],
       NextToken: [],
       PageSize: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1463,7 +1463,7 @@ export const se_ListExportJobsCommand = async (
  */
 export const se_ListImportJobsCommand = async (
   input: ListImportJobsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1476,7 +1476,7 @@ export const se_ListImportJobsCommand = async (
       ImportDestinationType: [],
       NextToken: [],
       PageSize: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1487,7 +1487,7 @@ export const se_ListImportJobsCommand = async (
  */
 export const se_ListRecommendationsCommand = async (
   input: ListRecommendationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1500,7 +1500,7 @@ export const se_ListRecommendationsCommand = async (
       Filter: (_) => _json(_),
       NextToken: [],
       PageSize: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1511,7 +1511,7 @@ export const se_ListRecommendationsCommand = async (
  */
 export const se_ListSuppressedDestinationsCommand = async (
   input: ListSuppressedDestinationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1533,7 +1533,7 @@ export const se_ListSuppressedDestinationsCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1551,7 +1551,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_PutAccountDedicatedIpWarmupAttributesCommand = async (
   input: PutAccountDedicatedIpWarmupAttributesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1562,7 +1562,7 @@ export const se_PutAccountDedicatedIpWarmupAttributesCommand = async (
   body = JSON.stringify(
     take(input, {
       AutoWarmupEnabled: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1573,7 +1573,7 @@ export const se_PutAccountDedicatedIpWarmupAttributesCommand = async (
  */
 export const se_PutAccountDetailsCommand = async (
   input: PutAccountDetailsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1589,7 +1589,7 @@ export const se_PutAccountDetailsCommand = async (
       ProductionAccessEnabled: [],
       UseCaseDescription: [],
       WebsiteURL: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1600,7 +1600,7 @@ export const se_PutAccountDetailsCommand = async (
  */
 export const se_PutAccountSendingAttributesCommand = async (
   input: PutAccountSendingAttributesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1611,7 +1611,7 @@ export const se_PutAccountSendingAttributesCommand = async (
   body = JSON.stringify(
     take(input, {
       SendingEnabled: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1622,7 +1622,7 @@ export const se_PutAccountSendingAttributesCommand = async (
  */
 export const se_PutAccountSuppressionAttributesCommand = async (
   input: PutAccountSuppressionAttributesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1633,7 +1633,7 @@ export const se_PutAccountSuppressionAttributesCommand = async (
   body = JSON.stringify(
     take(input, {
       SuppressedReasons: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1644,7 +1644,7 @@ export const se_PutAccountSuppressionAttributesCommand = async (
  */
 export const se_PutAccountVdmAttributesCommand = async (
   input: PutAccountVdmAttributesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1655,7 +1655,7 @@ export const se_PutAccountVdmAttributesCommand = async (
   body = JSON.stringify(
     take(input, {
       VdmAttributes: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1666,7 +1666,7 @@ export const se_PutAccountVdmAttributesCommand = async (
  */
 export const se_PutConfigurationSetDeliveryOptionsCommand = async (
   input: PutConfigurationSetDeliveryOptionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1679,7 +1679,7 @@ export const se_PutConfigurationSetDeliveryOptionsCommand = async (
     take(input, {
       SendingPoolName: [],
       TlsPolicy: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1690,7 +1690,7 @@ export const se_PutConfigurationSetDeliveryOptionsCommand = async (
  */
 export const se_PutConfigurationSetReputationOptionsCommand = async (
   input: PutConfigurationSetReputationOptionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1702,7 +1702,7 @@ export const se_PutConfigurationSetReputationOptionsCommand = async (
   body = JSON.stringify(
     take(input, {
       ReputationMetricsEnabled: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1713,7 +1713,7 @@ export const se_PutConfigurationSetReputationOptionsCommand = async (
  */
 export const se_PutConfigurationSetSendingOptionsCommand = async (
   input: PutConfigurationSetSendingOptionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1725,7 +1725,7 @@ export const se_PutConfigurationSetSendingOptionsCommand = async (
   body = JSON.stringify(
     take(input, {
       SendingEnabled: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1736,7 +1736,7 @@ export const se_PutConfigurationSetSendingOptionsCommand = async (
  */
 export const se_PutConfigurationSetSuppressionOptionsCommand = async (
   input: PutConfigurationSetSuppressionOptionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1748,7 +1748,7 @@ export const se_PutConfigurationSetSuppressionOptionsCommand = async (
   body = JSON.stringify(
     take(input, {
       SuppressedReasons: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1759,7 +1759,7 @@ export const se_PutConfigurationSetSuppressionOptionsCommand = async (
  */
 export const se_PutConfigurationSetTrackingOptionsCommand = async (
   input: PutConfigurationSetTrackingOptionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1771,7 +1771,7 @@ export const se_PutConfigurationSetTrackingOptionsCommand = async (
   body = JSON.stringify(
     take(input, {
       CustomRedirectDomain: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1782,7 +1782,7 @@ export const se_PutConfigurationSetTrackingOptionsCommand = async (
  */
 export const se_PutConfigurationSetVdmOptionsCommand = async (
   input: PutConfigurationSetVdmOptionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1794,7 +1794,7 @@ export const se_PutConfigurationSetVdmOptionsCommand = async (
   body = JSON.stringify(
     take(input, {
       VdmOptions: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1805,7 +1805,7 @@ export const se_PutConfigurationSetVdmOptionsCommand = async (
  */
 export const se_PutDedicatedIpInPoolCommand = async (
   input: PutDedicatedIpInPoolCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1817,7 +1817,7 @@ export const se_PutDedicatedIpInPoolCommand = async (
   body = JSON.stringify(
     take(input, {
       DestinationPoolName: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1828,7 +1828,7 @@ export const se_PutDedicatedIpInPoolCommand = async (
  */
 export const se_PutDedicatedIpPoolScalingAttributesCommand = async (
   input: PutDedicatedIpPoolScalingAttributesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1840,7 +1840,7 @@ export const se_PutDedicatedIpPoolScalingAttributesCommand = async (
   body = JSON.stringify(
     take(input, {
       ScalingMode: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1851,7 +1851,7 @@ export const se_PutDedicatedIpPoolScalingAttributesCommand = async (
  */
 export const se_PutDedicatedIpWarmupAttributesCommand = async (
   input: PutDedicatedIpWarmupAttributesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1863,7 +1863,7 @@ export const se_PutDedicatedIpWarmupAttributesCommand = async (
   body = JSON.stringify(
     take(input, {
       WarmupPercentage: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1874,7 +1874,7 @@ export const se_PutDedicatedIpWarmupAttributesCommand = async (
  */
 export const se_PutDeliverabilityDashboardOptionCommand = async (
   input: PutDeliverabilityDashboardOptionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1886,7 +1886,7 @@ export const se_PutDeliverabilityDashboardOptionCommand = async (
     take(input, {
       DashboardEnabled: [],
       SubscribedDomains: (_) => se_DomainDeliverabilityTrackingOptions(_, context),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1897,7 +1897,7 @@ export const se_PutDeliverabilityDashboardOptionCommand = async (
  */
 export const se_PutEmailIdentityConfigurationSetAttributesCommand = async (
   input: PutEmailIdentityConfigurationSetAttributesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1909,7 +1909,7 @@ export const se_PutEmailIdentityConfigurationSetAttributesCommand = async (
   body = JSON.stringify(
     take(input, {
       ConfigurationSetName: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1920,7 +1920,7 @@ export const se_PutEmailIdentityConfigurationSetAttributesCommand = async (
  */
 export const se_PutEmailIdentityDkimAttributesCommand = async (
   input: PutEmailIdentityDkimAttributesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1932,7 +1932,7 @@ export const se_PutEmailIdentityDkimAttributesCommand = async (
   body = JSON.stringify(
     take(input, {
       SigningEnabled: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1943,7 +1943,7 @@ export const se_PutEmailIdentityDkimAttributesCommand = async (
  */
 export const se_PutEmailIdentityDkimSigningAttributesCommand = async (
   input: PutEmailIdentityDkimSigningAttributesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1956,7 +1956,7 @@ export const se_PutEmailIdentityDkimSigningAttributesCommand = async (
     take(input, {
       SigningAttributes: (_) => _json(_),
       SigningAttributesOrigin: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1967,7 +1967,7 @@ export const se_PutEmailIdentityDkimSigningAttributesCommand = async (
  */
 export const se_PutEmailIdentityFeedbackAttributesCommand = async (
   input: PutEmailIdentityFeedbackAttributesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1979,7 +1979,7 @@ export const se_PutEmailIdentityFeedbackAttributesCommand = async (
   body = JSON.stringify(
     take(input, {
       EmailForwardingEnabled: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1990,7 +1990,7 @@ export const se_PutEmailIdentityFeedbackAttributesCommand = async (
  */
 export const se_PutEmailIdentityMailFromAttributesCommand = async (
   input: PutEmailIdentityMailFromAttributesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2003,7 +2003,7 @@ export const se_PutEmailIdentityMailFromAttributesCommand = async (
     take(input, {
       BehaviorOnMxFailure: [],
       MailFromDomain: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -2014,7 +2014,7 @@ export const se_PutEmailIdentityMailFromAttributesCommand = async (
  */
 export const se_PutSuppressedDestinationCommand = async (
   input: PutSuppressedDestinationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2026,7 +2026,7 @@ export const se_PutSuppressedDestinationCommand = async (
     take(input, {
       EmailAddress: [],
       Reason: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -2037,7 +2037,7 @@ export const se_PutSuppressedDestinationCommand = async (
  */
 export const se_SendBulkEmailCommand = async (
   input: SendBulkEmailCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2056,7 +2056,7 @@ export const se_SendBulkEmailCommand = async (
       FromEmailAddress: [],
       FromEmailAddressIdentityArn: [],
       ReplyToAddresses: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -2067,7 +2067,7 @@ export const se_SendBulkEmailCommand = async (
  */
 export const se_SendCustomVerificationEmailCommand = async (
   input: SendCustomVerificationEmailCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2080,7 +2080,7 @@ export const se_SendCustomVerificationEmailCommand = async (
       ConfigurationSetName: [],
       EmailAddress: [],
       TemplateName: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -2091,7 +2091,7 @@ export const se_SendCustomVerificationEmailCommand = async (
  */
 export const se_SendEmailCommand = async (
   input: SendEmailCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2111,7 +2111,7 @@ export const se_SendEmailCommand = async (
       FromEmailAddressIdentityArn: [],
       ListManagementOptions: (_) => _json(_),
       ReplyToAddresses: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -2122,7 +2122,7 @@ export const se_SendEmailCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2134,7 +2134,7 @@ export const se_TagResourceCommand = async (
     take(input, {
       ResourceArn: [],
       Tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -2145,7 +2145,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_TestRenderEmailTemplateCommand = async (
   input: TestRenderEmailTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2157,7 +2157,7 @@ export const se_TestRenderEmailTemplateCommand = async (
   body = JSON.stringify(
     take(input, {
       TemplateData: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -2168,7 +2168,7 @@ export const se_TestRenderEmailTemplateCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -2190,7 +2190,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateConfigurationSetEventDestinationCommand = async (
   input: UpdateConfigurationSetEventDestinationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2203,7 +2203,7 @@ export const se_UpdateConfigurationSetEventDestinationCommand = async (
   body = JSON.stringify(
     take(input, {
       EventDestination: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -2214,7 +2214,7 @@ export const se_UpdateConfigurationSetEventDestinationCommand = async (
  */
 export const se_UpdateContactCommand = async (
   input: UpdateContactCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2229,7 +2229,7 @@ export const se_UpdateContactCommand = async (
       AttributesData: [],
       TopicPreferences: (_) => _json(_),
       UnsubscribeAll: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -2240,7 +2240,7 @@ export const se_UpdateContactCommand = async (
  */
 export const se_UpdateContactListCommand = async (
   input: UpdateContactListCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2253,7 +2253,7 @@ export const se_UpdateContactListCommand = async (
     take(input, {
       Description: [],
       Topics: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -2264,7 +2264,7 @@ export const se_UpdateContactListCommand = async (
  */
 export const se_UpdateCustomVerificationEmailTemplateCommand = async (
   input: UpdateCustomVerificationEmailTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2280,7 +2280,7 @@ export const se_UpdateCustomVerificationEmailTemplateCommand = async (
       SuccessRedirectionURL: [],
       TemplateContent: [],
       TemplateSubject: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -2291,7 +2291,7 @@ export const se_UpdateCustomVerificationEmailTemplateCommand = async (
  */
 export const se_UpdateEmailIdentityPolicyCommand = async (
   input: UpdateEmailIdentityPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2304,7 +2304,7 @@ export const se_UpdateEmailIdentityPolicyCommand = async (
   body = JSON.stringify(
     take(input, {
       Policy: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -2315,7 +2315,7 @@ export const se_UpdateEmailIdentityPolicyCommand = async (
  */
 export const se_UpdateEmailTemplateCommand = async (
   input: UpdateEmailTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2327,7 +2327,7 @@ export const se_UpdateEmailTemplateCommand = async (
   body = JSON.stringify(
     take(input, {
       TemplateContent: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -2338,7 +2338,7 @@ export const se_UpdateEmailTemplateCommand = async (
  */
 export const de_BatchGetMetricDataCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchGetMetricDataCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2360,7 +2360,7 @@ export const de_BatchGetMetricDataCommand = async (
  */
 export const de_CancelExportJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CancelExportJobCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2377,7 +2377,7 @@ export const de_CancelExportJobCommand = async (
  */
 export const de_CreateConfigurationSetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateConfigurationSetCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2394,7 +2394,7 @@ export const de_CreateConfigurationSetCommand = async (
  */
 export const de_CreateConfigurationSetEventDestinationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateConfigurationSetEventDestinationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2411,7 +2411,7 @@ export const de_CreateConfigurationSetEventDestinationCommand = async (
  */
 export const de_CreateContactCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateContactCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2428,7 +2428,7 @@ export const de_CreateContactCommand = async (
  */
 export const de_CreateContactListCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateContactListCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2445,7 +2445,7 @@ export const de_CreateContactListCommand = async (
  */
 export const de_CreateCustomVerificationEmailTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateCustomVerificationEmailTemplateCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2462,7 +2462,7 @@ export const de_CreateCustomVerificationEmailTemplateCommand = async (
  */
 export const de_CreateDedicatedIpPoolCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateDedicatedIpPoolCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2479,7 +2479,7 @@ export const de_CreateDedicatedIpPoolCommand = async (
  */
 export const de_CreateDeliverabilityTestReportCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateDeliverabilityTestReportCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2501,7 +2501,7 @@ export const de_CreateDeliverabilityTestReportCommand = async (
  */
 export const de_CreateEmailIdentityCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateEmailIdentityCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2524,7 +2524,7 @@ export const de_CreateEmailIdentityCommand = async (
  */
 export const de_CreateEmailIdentityPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateEmailIdentityPolicyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2541,7 +2541,7 @@ export const de_CreateEmailIdentityPolicyCommand = async (
  */
 export const de_CreateEmailTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateEmailTemplateCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2558,7 +2558,7 @@ export const de_CreateEmailTemplateCommand = async (
  */
 export const de_CreateExportJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateExportJobCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2579,7 +2579,7 @@ export const de_CreateExportJobCommand = async (
  */
 export const de_CreateImportJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateImportJobCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2600,7 +2600,7 @@ export const de_CreateImportJobCommand = async (
  */
 export const de_DeleteConfigurationSetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteConfigurationSetCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2617,7 +2617,7 @@ export const de_DeleteConfigurationSetCommand = async (
  */
 export const de_DeleteConfigurationSetEventDestinationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteConfigurationSetEventDestinationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2634,7 +2634,7 @@ export const de_DeleteConfigurationSetEventDestinationCommand = async (
  */
 export const de_DeleteContactCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteContactCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2651,7 +2651,7 @@ export const de_DeleteContactCommand = async (
  */
 export const de_DeleteContactListCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteContactListCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2668,7 +2668,7 @@ export const de_DeleteContactListCommand = async (
  */
 export const de_DeleteCustomVerificationEmailTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteCustomVerificationEmailTemplateCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2685,7 +2685,7 @@ export const de_DeleteCustomVerificationEmailTemplateCommand = async (
  */
 export const de_DeleteDedicatedIpPoolCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteDedicatedIpPoolCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2702,7 +2702,7 @@ export const de_DeleteDedicatedIpPoolCommand = async (
  */
 export const de_DeleteEmailIdentityCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteEmailIdentityCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2719,7 +2719,7 @@ export const de_DeleteEmailIdentityCommand = async (
  */
 export const de_DeleteEmailIdentityPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteEmailIdentityPolicyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2736,7 +2736,7 @@ export const de_DeleteEmailIdentityPolicyCommand = async (
  */
 export const de_DeleteEmailTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteEmailTemplateCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2753,7 +2753,7 @@ export const de_DeleteEmailTemplateCommand = async (
  */
 export const de_DeleteSuppressedDestinationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteSuppressedDestinationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2770,7 +2770,7 @@ export const de_DeleteSuppressedDestinationCommand = async (
  */
 export const de_GetAccountCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetAccountCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2798,7 +2798,7 @@ export const de_GetAccountCommand = async (
  */
 export const de_GetBlacklistReportsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetBlacklistReportsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2819,7 +2819,7 @@ export const de_GetBlacklistReportsCommand = async (
  */
 export const de_GetConfigurationSetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetConfigurationSetCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2847,7 +2847,7 @@ export const de_GetConfigurationSetCommand = async (
  */
 export const de_GetConfigurationSetEventDestinationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetConfigurationSetEventDestinationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2868,7 +2868,7 @@ export const de_GetConfigurationSetEventDestinationsCommand = async (
  */
 export const de_GetContactCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetContactCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2896,7 +2896,7 @@ export const de_GetContactCommand = async (
  */
 export const de_GetContactListCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetContactListCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2922,7 +2922,7 @@ export const de_GetContactListCommand = async (
  */
 export const de_GetCustomVerificationEmailTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetCustomVerificationEmailTemplateCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2948,7 +2948,7 @@ export const de_GetCustomVerificationEmailTemplateCommand = async (
  */
 export const de_GetDedicatedIpCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetDedicatedIpCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2969,7 +2969,7 @@ export const de_GetDedicatedIpCommand = async (
  */
 export const de_GetDedicatedIpPoolCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetDedicatedIpPoolCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2990,7 +2990,7 @@ export const de_GetDedicatedIpPoolCommand = async (
  */
 export const de_GetDedicatedIpsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetDedicatedIpsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3012,7 +3012,7 @@ export const de_GetDedicatedIpsCommand = async (
  */
 export const de_GetDeliverabilityDashboardOptionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetDeliverabilityDashboardOptionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3037,7 +3037,7 @@ export const de_GetDeliverabilityDashboardOptionsCommand = async (
  */
 export const de_GetDeliverabilityTestReportCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetDeliverabilityTestReportCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3062,7 +3062,7 @@ export const de_GetDeliverabilityTestReportCommand = async (
  */
 export const de_GetDomainDeliverabilityCampaignCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetDomainDeliverabilityCampaignCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3083,7 +3083,7 @@ export const de_GetDomainDeliverabilityCampaignCommand = async (
  */
 export const de_GetDomainStatisticsReportCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetDomainStatisticsReportCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3105,7 +3105,7 @@ export const de_GetDomainStatisticsReportCommand = async (
  */
 export const de_GetEmailIdentityCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetEmailIdentityCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3135,7 +3135,7 @@ export const de_GetEmailIdentityCommand = async (
  */
 export const de_GetEmailIdentityPoliciesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetEmailIdentityPoliciesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3156,7 +3156,7 @@ export const de_GetEmailIdentityPoliciesCommand = async (
  */
 export const de_GetEmailTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetEmailTemplateCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3178,7 +3178,7 @@ export const de_GetEmailTemplateCommand = async (
  */
 export const de_GetExportJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetExportJobCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3207,7 +3207,7 @@ export const de_GetExportJobCommand = async (
  */
 export const de_GetImportJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetImportJobCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3236,7 +3236,7 @@ export const de_GetImportJobCommand = async (
  */
 export const de_GetMessageInsightsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetMessageInsightsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3261,7 +3261,7 @@ export const de_GetMessageInsightsCommand = async (
  */
 export const de_GetSuppressedDestinationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetSuppressedDestinationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3282,7 +3282,7 @@ export const de_GetSuppressedDestinationCommand = async (
  */
 export const de_ListConfigurationSetsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListConfigurationSetsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3304,7 +3304,7 @@ export const de_ListConfigurationSetsCommand = async (
  */
 export const de_ListContactListsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListContactListsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3326,7 +3326,7 @@ export const de_ListContactListsCommand = async (
  */
 export const de_ListContactsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListContactsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3348,7 +3348,7 @@ export const de_ListContactsCommand = async (
  */
 export const de_ListCustomVerificationEmailTemplatesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListCustomVerificationEmailTemplatesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3370,7 +3370,7 @@ export const de_ListCustomVerificationEmailTemplatesCommand = async (
  */
 export const de_ListDedicatedIpPoolsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListDedicatedIpPoolsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3392,7 +3392,7 @@ export const de_ListDedicatedIpPoolsCommand = async (
  */
 export const de_ListDeliverabilityTestReportsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListDeliverabilityTestReportsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3414,7 +3414,7 @@ export const de_ListDeliverabilityTestReportsCommand = async (
  */
 export const de_ListDomainDeliverabilityCampaignsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListDomainDeliverabilityCampaignsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3436,7 +3436,7 @@ export const de_ListDomainDeliverabilityCampaignsCommand = async (
  */
 export const de_ListEmailIdentitiesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListEmailIdentitiesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3458,7 +3458,7 @@ export const de_ListEmailIdentitiesCommand = async (
  */
 export const de_ListEmailTemplatesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListEmailTemplatesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3480,7 +3480,7 @@ export const de_ListEmailTemplatesCommand = async (
  */
 export const de_ListExportJobsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListExportJobsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3502,7 +3502,7 @@ export const de_ListExportJobsCommand = async (
  */
 export const de_ListImportJobsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListImportJobsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3524,7 +3524,7 @@ export const de_ListImportJobsCommand = async (
  */
 export const de_ListRecommendationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListRecommendationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3546,7 +3546,7 @@ export const de_ListRecommendationsCommand = async (
  */
 export const de_ListSuppressedDestinationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListSuppressedDestinationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3568,7 +3568,7 @@ export const de_ListSuppressedDestinationsCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3589,7 +3589,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_PutAccountDedicatedIpWarmupAttributesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutAccountDedicatedIpWarmupAttributesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3606,7 +3606,7 @@ export const de_PutAccountDedicatedIpWarmupAttributesCommand = async (
  */
 export const de_PutAccountDetailsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutAccountDetailsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3623,7 +3623,7 @@ export const de_PutAccountDetailsCommand = async (
  */
 export const de_PutAccountSendingAttributesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutAccountSendingAttributesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3640,7 +3640,7 @@ export const de_PutAccountSendingAttributesCommand = async (
  */
 export const de_PutAccountSuppressionAttributesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutAccountSuppressionAttributesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3657,7 +3657,7 @@ export const de_PutAccountSuppressionAttributesCommand = async (
  */
 export const de_PutAccountVdmAttributesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutAccountVdmAttributesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3674,7 +3674,7 @@ export const de_PutAccountVdmAttributesCommand = async (
  */
 export const de_PutConfigurationSetDeliveryOptionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutConfigurationSetDeliveryOptionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3691,7 +3691,7 @@ export const de_PutConfigurationSetDeliveryOptionsCommand = async (
  */
 export const de_PutConfigurationSetReputationOptionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutConfigurationSetReputationOptionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3708,7 +3708,7 @@ export const de_PutConfigurationSetReputationOptionsCommand = async (
  */
 export const de_PutConfigurationSetSendingOptionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutConfigurationSetSendingOptionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3725,7 +3725,7 @@ export const de_PutConfigurationSetSendingOptionsCommand = async (
  */
 export const de_PutConfigurationSetSuppressionOptionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutConfigurationSetSuppressionOptionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3742,7 +3742,7 @@ export const de_PutConfigurationSetSuppressionOptionsCommand = async (
  */
 export const de_PutConfigurationSetTrackingOptionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutConfigurationSetTrackingOptionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3759,7 +3759,7 @@ export const de_PutConfigurationSetTrackingOptionsCommand = async (
  */
 export const de_PutConfigurationSetVdmOptionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutConfigurationSetVdmOptionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3776,7 +3776,7 @@ export const de_PutConfigurationSetVdmOptionsCommand = async (
  */
 export const de_PutDedicatedIpInPoolCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutDedicatedIpInPoolCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3793,7 +3793,7 @@ export const de_PutDedicatedIpInPoolCommand = async (
  */
 export const de_PutDedicatedIpPoolScalingAttributesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutDedicatedIpPoolScalingAttributesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3810,7 +3810,7 @@ export const de_PutDedicatedIpPoolScalingAttributesCommand = async (
  */
 export const de_PutDedicatedIpWarmupAttributesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutDedicatedIpWarmupAttributesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3827,7 +3827,7 @@ export const de_PutDedicatedIpWarmupAttributesCommand = async (
  */
 export const de_PutDeliverabilityDashboardOptionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutDeliverabilityDashboardOptionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3844,7 +3844,7 @@ export const de_PutDeliverabilityDashboardOptionCommand = async (
  */
 export const de_PutEmailIdentityConfigurationSetAttributesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutEmailIdentityConfigurationSetAttributesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3861,7 +3861,7 @@ export const de_PutEmailIdentityConfigurationSetAttributesCommand = async (
  */
 export const de_PutEmailIdentityDkimAttributesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutEmailIdentityDkimAttributesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3878,7 +3878,7 @@ export const de_PutEmailIdentityDkimAttributesCommand = async (
  */
 export const de_PutEmailIdentityDkimSigningAttributesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutEmailIdentityDkimSigningAttributesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3900,7 +3900,7 @@ export const de_PutEmailIdentityDkimSigningAttributesCommand = async (
  */
 export const de_PutEmailIdentityFeedbackAttributesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutEmailIdentityFeedbackAttributesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3917,7 +3917,7 @@ export const de_PutEmailIdentityFeedbackAttributesCommand = async (
  */
 export const de_PutEmailIdentityMailFromAttributesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutEmailIdentityMailFromAttributesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3934,7 +3934,7 @@ export const de_PutEmailIdentityMailFromAttributesCommand = async (
  */
 export const de_PutSuppressedDestinationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutSuppressedDestinationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3951,7 +3951,7 @@ export const de_PutSuppressedDestinationCommand = async (
  */
 export const de_SendBulkEmailCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SendBulkEmailCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3972,7 +3972,7 @@ export const de_SendBulkEmailCommand = async (
  */
 export const de_SendCustomVerificationEmailCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SendCustomVerificationEmailCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3993,7 +3993,7 @@ export const de_SendCustomVerificationEmailCommand = async (
  */
 export const de_SendEmailCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SendEmailCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4014,7 +4014,7 @@ export const de_SendEmailCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4031,7 +4031,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_TestRenderEmailTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TestRenderEmailTemplateCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4052,7 +4052,7 @@ export const de_TestRenderEmailTemplateCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4069,7 +4069,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateConfigurationSetEventDestinationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateConfigurationSetEventDestinationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4086,7 +4086,7 @@ export const de_UpdateConfigurationSetEventDestinationCommand = async (
  */
 export const de_UpdateContactCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateContactCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4103,7 +4103,7 @@ export const de_UpdateContactCommand = async (
  */
 export const de_UpdateContactListCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateContactListCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4120,7 +4120,7 @@ export const de_UpdateContactListCommand = async (
  */
 export const de_UpdateCustomVerificationEmailTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateCustomVerificationEmailTemplateCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4137,7 +4137,7 @@ export const de_UpdateCustomVerificationEmailTemplateCommand = async (
  */
 export const de_UpdateEmailIdentityPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateEmailIdentityPolicyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4154,7 +4154,7 @@ export const de_UpdateEmailIdentityPolicyCommand = async (
  */
 export const de_UpdateEmailTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateEmailTemplateCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4231,7 +4231,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_AccountSuspendedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccountSuspendedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -4251,7 +4251,7 @@ const de_AccountSuspendedExceptionRes = async (
  */
 const de_AlreadyExistsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AlreadyExistsException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -4288,7 +4288,7 @@ const de_BadRequestExceptionRes = async (parsedOutput: any, context: __SerdeCont
  */
 const de_ConcurrentModificationExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ConcurrentModificationException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -4325,7 +4325,7 @@ const de_ConflictExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_InternalServiceErrorExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServiceErrorException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -4345,7 +4345,7 @@ const de_InternalServiceErrorExceptionRes = async (
  */
 const de_InvalidNextTokenExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidNextTokenException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -4365,7 +4365,7 @@ const de_InvalidNextTokenExceptionRes = async (
  */
 const de_LimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<LimitExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -4385,7 +4385,7 @@ const de_LimitExceededExceptionRes = async (
  */
 const de_MailFromDomainNotVerifiedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<MailFromDomainNotVerifiedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -4439,7 +4439,7 @@ const de_NotFoundExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_SendingPausedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SendingPausedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -4459,7 +4459,7 @@ const de_SendingPausedExceptionRes = async (
  */
 const de_TooManyRequestsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyRequestsException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -4536,7 +4536,7 @@ const se_BatchGetMetricDataQuery = (input: BatchGetMetricDataQuery, context: __S
  */
 const se_DomainDeliverabilityTrackingOption = (
   input: DomainDeliverabilityTrackingOption,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     Domain: [],
@@ -4550,7 +4550,7 @@ const se_DomainDeliverabilityTrackingOption = (
  */
 const se_DomainDeliverabilityTrackingOptions = (
   input: DomainDeliverabilityTrackingOption[],
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return input
     .filter((e: any) => e != null)
@@ -4756,13 +4756,16 @@ const de_BlacklistEntry = (output: any, context: __SerdeContext): BlacklistEntry
  * deserializeAws_restJson1BlacklistReport
  */
 const de_BlacklistReport = (output: any, context: __SerdeContext): Record<string, BlacklistEntry[]> => {
-  return Object.entries(output).reduce((acc: Record<string, BlacklistEntry[]>, [key, value]: [string, any]) => {
-    if (value === null) {
+  return Object.entries(output).reduce(
+    (acc: Record<string, BlacklistEntry[]>, [key, value]: [string, any]) => {
+      if (value === null) {
+        return acc;
+      }
+      acc[key as string] = de_BlacklistEntries(value, context);
       return acc;
-    }
-    acc[key as string] = de_BlacklistEntries(value, context);
-    return acc;
-  }, {} as Record<string, BlacklistEntry[]>);
+    },
+    {} as Record<string, BlacklistEntry[]>,
+  );
 };
 
 // de_Bounce omitted.
@@ -4927,7 +4930,7 @@ const de_DomainDeliverabilityCampaignList = (output: any, context: __SerdeContex
  */
 const de_DomainDeliverabilityTrackingOption = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DomainDeliverabilityTrackingOption => {
   return take(output, {
     Domain: __expectString,
@@ -4941,7 +4944,7 @@ const de_DomainDeliverabilityTrackingOption = (
  */
 const de_DomainDeliverabilityTrackingOptions = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DomainDeliverabilityTrackingOption[] => {
   const retVal = (output || [])
     .filter((e: any) => e != null)

@@ -5550,7 +5550,7 @@ export const CreateElasticsearchDomainRequestFilterSensitiveLog = (obj: CreateEl
  * @internal
  */
 export const UpdateElasticsearchDomainConfigRequestFilterSensitiveLog = (
-  obj: UpdateElasticsearchDomainConfigRequest
+  obj: UpdateElasticsearchDomainConfigRequest,
 ): any => ({
   ...obj,
   ...(obj.AdvancedSecurityOptions && {

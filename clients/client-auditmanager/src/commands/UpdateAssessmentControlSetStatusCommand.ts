@@ -153,7 +153,7 @@ export class UpdateAssessmentControlSetStatusCommand extends $Command
   .n("AuditManagerClient", "UpdateAssessmentControlSetStatusCommand")
   .f(
     UpdateAssessmentControlSetStatusRequestFilterSensitiveLog,
-    UpdateAssessmentControlSetStatusResponseFilterSensitiveLog
+    UpdateAssessmentControlSetStatusResponseFilterSensitiveLog,
   )
   .ser(se_UpdateAssessmentControlSetStatusCommand)
   .de(de_UpdateAssessmentControlSetStatusCommand)

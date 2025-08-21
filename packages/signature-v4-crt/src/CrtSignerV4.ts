@@ -97,7 +97,7 @@ export class CrtSignerV4 implements RequestPresigner, RequestSigner {
     viaHeader: Boolean,
     payloadHash: string,
     expiresIn?: number,
-    _credentials?: AwsCredentialIdentity
+    _credentials?: AwsCredentialIdentity,
   ): Promise<crtAuth.AwsSigningConfig> {
     const credentials = _credentials ?? (await this.credentialProvider());
     const region = signingRegion ?? (await this.regionProvider());
@@ -130,7 +130,7 @@ export class CrtSignerV4 implements RequestPresigner, RequestSigner {
   public async presign(originalRequest: HttpRequest, options: RequestPresigningArguments = {}): Promise<HttpRequest> {
     if (options.expiresIn && options.expiresIn > MAX_PRESIGNED_TTL) {
       return Promise.reject(
-        "Signature version 4 presigned URLs" + " must have an expiration date less than one week in" + " the future"
+        "Signature version 4 presigned URLs" + " must have an expiration date less than one week in" + " the future",
       );
     }
     const request = moveHeadersToQuery(prepareRequest(originalRequest));
@@ -141,8 +141,8 @@ export class CrtSignerV4 implements RequestPresigner, RequestSigner {
         options,
         false /* viaHeader */,
         await getPayloadHash(originalRequest, this.sha256),
-        options.expiresIn ? options.expiresIn : 3600
-      )
+        options.expiresIn ? options.expiresIn : 3600,
+      ),
     );
     request.query = this.getQueryParam(crtSignedRequest.path);
     return request;
@@ -152,7 +152,7 @@ export class CrtSignerV4 implements RequestPresigner, RequestSigner {
     const request = prepareRequest(toSign);
     const crtSignedRequest = await this.signRequest(
       request,
-      await this.options2crtConfigure(options, true /* viaHeader */, await getPayloadHash(toSign, this.sha256))
+      await this.options2crtConfigure(options, true /* viaHeader */, await getPayloadHash(toSign, this.sha256)),
     );
     request.headers = crtSignedRequest.headers._flatten().reduce((acc, [key, value]) => ({ ...acc, [key]: value }), {});
     return request;
@@ -164,7 +164,7 @@ export class CrtSignerV4 implements RequestPresigner, RequestSigner {
   public async signWithCredentials(
     toSign: HttpRequest,
     credentials: AwsCredentialIdentity,
-    options?: RequestSigningArguments
+    options?: RequestSigningArguments,
   ): Promise<HttpRequest> {
     const request = prepareRequest(toSign);
     const crtSignedRequest = await this.signRequest(
@@ -174,8 +174,8 @@ export class CrtSignerV4 implements RequestPresigner, RequestSigner {
         true /* viaHeader */,
         await getPayloadHash(toSign, this.sha256),
         undefined,
-        credentials
-      )
+        credentials,
+      ),
     );
     request.headers = crtSignedRequest.headers._flatten().reduce((acc, [key, value]) => ({ ...acc, [key]: value }), {});
     return request;
@@ -196,7 +196,7 @@ export class CrtSignerV4 implements RequestPresigner, RequestSigner {
 
   private async signRequest(
     requestToSign: HttpRequest,
-    crtConfig: crtAuth.AwsSigningConfig
+    crtConfig: crtAuth.AwsSigningConfig,
   ): Promise<crtHttp.HttpRequest> {
     const request = sdkHttpRequest2crtHttpRequest(requestToSign);
     // if (requestToSign.headers[TOKEN_HEADER])
@@ -230,7 +230,7 @@ export class CrtSignerV4 implements RequestPresigner, RequestSigner {
     expectedCanonicalRequest: string,
     eccPubKeyX: string,
     eccPubKeyY: string,
-    options: RequestSigningArguments = {}
+    options: RequestSigningArguments = {},
   ): Promise<boolean> {
     const sdkRequest = prepareRequest(request);
     const crtRequest = sdkHttpRequest2crtHttpRequest(sdkRequest);
@@ -242,7 +242,7 @@ export class CrtSignerV4 implements RequestPresigner, RequestSigner {
       expectedCanonicalRequest,
       signature,
       eccPubKeyX,
-      eccPubKeyY
+      eccPubKeyY,
     );
   }
 
@@ -253,7 +253,7 @@ export class CrtSignerV4 implements RequestPresigner, RequestSigner {
     expectedCanonicalRequest: string,
     eccPubKeyX: string,
     eccPubKeyY: string,
-    options: RequestPresigningArguments = {}
+    options: RequestPresigningArguments = {},
   ): Promise<boolean> {
     if (typeof signature != "string") {
       return false;
@@ -264,7 +264,7 @@ export class CrtSignerV4 implements RequestPresigner, RequestSigner {
       options,
       false /* viaHeader */,
       await getPayloadHash(request, this.sha256),
-      options.expiresIn ? options.expiresIn : 3600
+      options.expiresIn ? options.expiresIn : 3600,
     );
     return crtAuth.aws_verify_sigv4a_signing(
       crtRequest,
@@ -272,7 +272,7 @@ export class CrtSignerV4 implements RequestPresigner, RequestSigner {
       expectedCanonicalRequest,
       signature,
       eccPubKeyX,
-      eccPubKeyY
+      eccPubKeyY,
     );
   }
 }
@@ -281,7 +281,7 @@ function sdk2crtCredentialsProvider(credentials: AwsCredentialIdentity): crtAuth
   return crtAuth.AwsCredentialsProvider.newStatic(
     credentials.accessKeyId,
     credentials.secretAccessKey,
-    credentials.sessionToken
+    credentials.sessionToken,
   );
 }
 

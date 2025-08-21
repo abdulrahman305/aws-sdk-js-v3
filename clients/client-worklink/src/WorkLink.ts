@@ -183,13 +183,13 @@ export interface WorkLink {
    */
   associateDomain(
     args: AssociateDomainCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AssociateDomainCommandOutput>;
   associateDomain(args: AssociateDomainCommandInput, cb: (err: any, data?: AssociateDomainCommandOutput) => void): void;
   associateDomain(
     args: AssociateDomainCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AssociateDomainCommandOutput) => void
+    cb: (err: any, data?: AssociateDomainCommandOutput) => void,
   ): void;
 
   /**
@@ -197,16 +197,16 @@ export interface WorkLink {
    */
   associateWebsiteAuthorizationProvider(
     args: AssociateWebsiteAuthorizationProviderCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AssociateWebsiteAuthorizationProviderCommandOutput>;
   associateWebsiteAuthorizationProvider(
     args: AssociateWebsiteAuthorizationProviderCommandInput,
-    cb: (err: any, data?: AssociateWebsiteAuthorizationProviderCommandOutput) => void
+    cb: (err: any, data?: AssociateWebsiteAuthorizationProviderCommandOutput) => void,
   ): void;
   associateWebsiteAuthorizationProvider(
     args: AssociateWebsiteAuthorizationProviderCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AssociateWebsiteAuthorizationProviderCommandOutput) => void
+    cb: (err: any, data?: AssociateWebsiteAuthorizationProviderCommandOutput) => void,
   ): void;
 
   /**
@@ -214,16 +214,16 @@ export interface WorkLink {
    */
   associateWebsiteCertificateAuthority(
     args: AssociateWebsiteCertificateAuthorityCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AssociateWebsiteCertificateAuthorityCommandOutput>;
   associateWebsiteCertificateAuthority(
     args: AssociateWebsiteCertificateAuthorityCommandInput,
-    cb: (err: any, data?: AssociateWebsiteCertificateAuthorityCommandOutput) => void
+    cb: (err: any, data?: AssociateWebsiteCertificateAuthorityCommandOutput) => void,
   ): void;
   associateWebsiteCertificateAuthority(
     args: AssociateWebsiteCertificateAuthorityCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AssociateWebsiteCertificateAuthorityCommandOutput) => void
+    cb: (err: any, data?: AssociateWebsiteCertificateAuthorityCommandOutput) => void,
   ): void;
 
   /**
@@ -234,7 +234,7 @@ export interface WorkLink {
   createFleet(
     args: CreateFleetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateFleetCommandOutput) => void
+    cb: (err: any, data?: CreateFleetCommandOutput) => void,
   ): void;
 
   /**
@@ -245,7 +245,7 @@ export interface WorkLink {
   deleteFleet(
     args: DeleteFleetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteFleetCommandOutput) => void
+    cb: (err: any, data?: DeleteFleetCommandOutput) => void,
   ): void;
 
   /**
@@ -253,16 +253,16 @@ export interface WorkLink {
    */
   describeAuditStreamConfiguration(
     args: DescribeAuditStreamConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeAuditStreamConfigurationCommandOutput>;
   describeAuditStreamConfiguration(
     args: DescribeAuditStreamConfigurationCommandInput,
-    cb: (err: any, data?: DescribeAuditStreamConfigurationCommandOutput) => void
+    cb: (err: any, data?: DescribeAuditStreamConfigurationCommandOutput) => void,
   ): void;
   describeAuditStreamConfiguration(
     args: DescribeAuditStreamConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeAuditStreamConfigurationCommandOutput) => void
+    cb: (err: any, data?: DescribeAuditStreamConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -270,16 +270,16 @@ export interface WorkLink {
    */
   describeCompanyNetworkConfiguration(
     args: DescribeCompanyNetworkConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeCompanyNetworkConfigurationCommandOutput>;
   describeCompanyNetworkConfiguration(
     args: DescribeCompanyNetworkConfigurationCommandInput,
-    cb: (err: any, data?: DescribeCompanyNetworkConfigurationCommandOutput) => void
+    cb: (err: any, data?: DescribeCompanyNetworkConfigurationCommandOutput) => void,
   ): void;
   describeCompanyNetworkConfiguration(
     args: DescribeCompanyNetworkConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeCompanyNetworkConfigurationCommandOutput) => void
+    cb: (err: any, data?: DescribeCompanyNetworkConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -287,13 +287,13 @@ export interface WorkLink {
    */
   describeDevice(
     args: DescribeDeviceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeDeviceCommandOutput>;
   describeDevice(args: DescribeDeviceCommandInput, cb: (err: any, data?: DescribeDeviceCommandOutput) => void): void;
   describeDevice(
     args: DescribeDeviceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeDeviceCommandOutput) => void
+    cb: (err: any, data?: DescribeDeviceCommandOutput) => void,
   ): void;
 
   /**
@@ -301,16 +301,16 @@ export interface WorkLink {
    */
   describeDevicePolicyConfiguration(
     args: DescribeDevicePolicyConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeDevicePolicyConfigurationCommandOutput>;
   describeDevicePolicyConfiguration(
     args: DescribeDevicePolicyConfigurationCommandInput,
-    cb: (err: any, data?: DescribeDevicePolicyConfigurationCommandOutput) => void
+    cb: (err: any, data?: DescribeDevicePolicyConfigurationCommandOutput) => void,
   ): void;
   describeDevicePolicyConfiguration(
     args: DescribeDevicePolicyConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeDevicePolicyConfigurationCommandOutput) => void
+    cb: (err: any, data?: DescribeDevicePolicyConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -318,13 +318,13 @@ export interface WorkLink {
    */
   describeDomain(
     args: DescribeDomainCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeDomainCommandOutput>;
   describeDomain(args: DescribeDomainCommandInput, cb: (err: any, data?: DescribeDomainCommandOutput) => void): void;
   describeDomain(
     args: DescribeDomainCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeDomainCommandOutput) => void
+    cb: (err: any, data?: DescribeDomainCommandOutput) => void,
   ): void;
 
   /**
@@ -332,16 +332,16 @@ export interface WorkLink {
    */
   describeFleetMetadata(
     args: DescribeFleetMetadataCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeFleetMetadataCommandOutput>;
   describeFleetMetadata(
     args: DescribeFleetMetadataCommandInput,
-    cb: (err: any, data?: DescribeFleetMetadataCommandOutput) => void
+    cb: (err: any, data?: DescribeFleetMetadataCommandOutput) => void,
   ): void;
   describeFleetMetadata(
     args: DescribeFleetMetadataCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeFleetMetadataCommandOutput) => void
+    cb: (err: any, data?: DescribeFleetMetadataCommandOutput) => void,
   ): void;
 
   /**
@@ -349,16 +349,16 @@ export interface WorkLink {
    */
   describeIdentityProviderConfiguration(
     args: DescribeIdentityProviderConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeIdentityProviderConfigurationCommandOutput>;
   describeIdentityProviderConfiguration(
     args: DescribeIdentityProviderConfigurationCommandInput,
-    cb: (err: any, data?: DescribeIdentityProviderConfigurationCommandOutput) => void
+    cb: (err: any, data?: DescribeIdentityProviderConfigurationCommandOutput) => void,
   ): void;
   describeIdentityProviderConfiguration(
     args: DescribeIdentityProviderConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeIdentityProviderConfigurationCommandOutput) => void
+    cb: (err: any, data?: DescribeIdentityProviderConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -366,16 +366,16 @@ export interface WorkLink {
    */
   describeWebsiteCertificateAuthority(
     args: DescribeWebsiteCertificateAuthorityCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeWebsiteCertificateAuthorityCommandOutput>;
   describeWebsiteCertificateAuthority(
     args: DescribeWebsiteCertificateAuthorityCommandInput,
-    cb: (err: any, data?: DescribeWebsiteCertificateAuthorityCommandOutput) => void
+    cb: (err: any, data?: DescribeWebsiteCertificateAuthorityCommandOutput) => void,
   ): void;
   describeWebsiteCertificateAuthority(
     args: DescribeWebsiteCertificateAuthorityCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeWebsiteCertificateAuthorityCommandOutput) => void
+    cb: (err: any, data?: DescribeWebsiteCertificateAuthorityCommandOutput) => void,
   ): void;
 
   /**
@@ -383,16 +383,16 @@ export interface WorkLink {
    */
   disassociateDomain(
     args: DisassociateDomainCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DisassociateDomainCommandOutput>;
   disassociateDomain(
     args: DisassociateDomainCommandInput,
-    cb: (err: any, data?: DisassociateDomainCommandOutput) => void
+    cb: (err: any, data?: DisassociateDomainCommandOutput) => void,
   ): void;
   disassociateDomain(
     args: DisassociateDomainCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DisassociateDomainCommandOutput) => void
+    cb: (err: any, data?: DisassociateDomainCommandOutput) => void,
   ): void;
 
   /**
@@ -400,16 +400,16 @@ export interface WorkLink {
    */
   disassociateWebsiteAuthorizationProvider(
     args: DisassociateWebsiteAuthorizationProviderCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DisassociateWebsiteAuthorizationProviderCommandOutput>;
   disassociateWebsiteAuthorizationProvider(
     args: DisassociateWebsiteAuthorizationProviderCommandInput,
-    cb: (err: any, data?: DisassociateWebsiteAuthorizationProviderCommandOutput) => void
+    cb: (err: any, data?: DisassociateWebsiteAuthorizationProviderCommandOutput) => void,
   ): void;
   disassociateWebsiteAuthorizationProvider(
     args: DisassociateWebsiteAuthorizationProviderCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DisassociateWebsiteAuthorizationProviderCommandOutput) => void
+    cb: (err: any, data?: DisassociateWebsiteAuthorizationProviderCommandOutput) => void,
   ): void;
 
   /**
@@ -417,16 +417,16 @@ export interface WorkLink {
    */
   disassociateWebsiteCertificateAuthority(
     args: DisassociateWebsiteCertificateAuthorityCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DisassociateWebsiteCertificateAuthorityCommandOutput>;
   disassociateWebsiteCertificateAuthority(
     args: DisassociateWebsiteCertificateAuthorityCommandInput,
-    cb: (err: any, data?: DisassociateWebsiteCertificateAuthorityCommandOutput) => void
+    cb: (err: any, data?: DisassociateWebsiteCertificateAuthorityCommandOutput) => void,
   ): void;
   disassociateWebsiteCertificateAuthority(
     args: DisassociateWebsiteCertificateAuthorityCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DisassociateWebsiteCertificateAuthorityCommandOutput) => void
+    cb: (err: any, data?: DisassociateWebsiteCertificateAuthorityCommandOutput) => void,
   ): void;
 
   /**
@@ -437,7 +437,7 @@ export interface WorkLink {
   listDevices(
     args: ListDevicesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListDevicesCommandOutput) => void
+    cb: (err: any, data?: ListDevicesCommandOutput) => void,
   ): void;
 
   /**
@@ -448,7 +448,7 @@ export interface WorkLink {
   listDomains(
     args: ListDomainsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListDomainsCommandOutput) => void
+    cb: (err: any, data?: ListDomainsCommandOutput) => void,
   ): void;
 
   /**
@@ -460,7 +460,7 @@ export interface WorkLink {
   listFleets(
     args: ListFleetsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListFleetsCommandOutput) => void
+    cb: (err: any, data?: ListFleetsCommandOutput) => void,
   ): void;
 
   /**
@@ -468,16 +468,16 @@ export interface WorkLink {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -485,16 +485,16 @@ export interface WorkLink {
    */
   listWebsiteAuthorizationProviders(
     args: ListWebsiteAuthorizationProvidersCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListWebsiteAuthorizationProvidersCommandOutput>;
   listWebsiteAuthorizationProviders(
     args: ListWebsiteAuthorizationProvidersCommandInput,
-    cb: (err: any, data?: ListWebsiteAuthorizationProvidersCommandOutput) => void
+    cb: (err: any, data?: ListWebsiteAuthorizationProvidersCommandOutput) => void,
   ): void;
   listWebsiteAuthorizationProviders(
     args: ListWebsiteAuthorizationProvidersCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListWebsiteAuthorizationProvidersCommandOutput) => void
+    cb: (err: any, data?: ListWebsiteAuthorizationProvidersCommandOutput) => void,
   ): void;
 
   /**
@@ -502,16 +502,16 @@ export interface WorkLink {
    */
   listWebsiteCertificateAuthorities(
     args: ListWebsiteCertificateAuthoritiesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListWebsiteCertificateAuthoritiesCommandOutput>;
   listWebsiteCertificateAuthorities(
     args: ListWebsiteCertificateAuthoritiesCommandInput,
-    cb: (err: any, data?: ListWebsiteCertificateAuthoritiesCommandOutput) => void
+    cb: (err: any, data?: ListWebsiteCertificateAuthoritiesCommandOutput) => void,
   ): void;
   listWebsiteCertificateAuthorities(
     args: ListWebsiteCertificateAuthoritiesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListWebsiteCertificateAuthoritiesCommandOutput) => void
+    cb: (err: any, data?: ListWebsiteCertificateAuthoritiesCommandOutput) => void,
   ): void;
 
   /**
@@ -519,16 +519,16 @@ export interface WorkLink {
    */
   restoreDomainAccess(
     args: RestoreDomainAccessCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<RestoreDomainAccessCommandOutput>;
   restoreDomainAccess(
     args: RestoreDomainAccessCommandInput,
-    cb: (err: any, data?: RestoreDomainAccessCommandOutput) => void
+    cb: (err: any, data?: RestoreDomainAccessCommandOutput) => void,
   ): void;
   restoreDomainAccess(
     args: RestoreDomainAccessCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RestoreDomainAccessCommandOutput) => void
+    cb: (err: any, data?: RestoreDomainAccessCommandOutput) => void,
   ): void;
 
   /**
@@ -536,16 +536,16 @@ export interface WorkLink {
    */
   revokeDomainAccess(
     args: RevokeDomainAccessCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<RevokeDomainAccessCommandOutput>;
   revokeDomainAccess(
     args: RevokeDomainAccessCommandInput,
-    cb: (err: any, data?: RevokeDomainAccessCommandOutput) => void
+    cb: (err: any, data?: RevokeDomainAccessCommandOutput) => void,
   ): void;
   revokeDomainAccess(
     args: RevokeDomainAccessCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RevokeDomainAccessCommandOutput) => void
+    cb: (err: any, data?: RevokeDomainAccessCommandOutput) => void,
   ): void;
 
   /**
@@ -556,7 +556,7 @@ export interface WorkLink {
   signOutUser(
     args: SignOutUserCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SignOutUserCommandOutput) => void
+    cb: (err: any, data?: SignOutUserCommandOutput) => void,
   ): void;
 
   /**
@@ -567,7 +567,7 @@ export interface WorkLink {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -578,7 +578,7 @@ export interface WorkLink {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -586,16 +586,16 @@ export interface WorkLink {
    */
   updateAuditStreamConfiguration(
     args: UpdateAuditStreamConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateAuditStreamConfigurationCommandOutput>;
   updateAuditStreamConfiguration(
     args: UpdateAuditStreamConfigurationCommandInput,
-    cb: (err: any, data?: UpdateAuditStreamConfigurationCommandOutput) => void
+    cb: (err: any, data?: UpdateAuditStreamConfigurationCommandOutput) => void,
   ): void;
   updateAuditStreamConfiguration(
     args: UpdateAuditStreamConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateAuditStreamConfigurationCommandOutput) => void
+    cb: (err: any, data?: UpdateAuditStreamConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -603,16 +603,16 @@ export interface WorkLink {
    */
   updateCompanyNetworkConfiguration(
     args: UpdateCompanyNetworkConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateCompanyNetworkConfigurationCommandOutput>;
   updateCompanyNetworkConfiguration(
     args: UpdateCompanyNetworkConfigurationCommandInput,
-    cb: (err: any, data?: UpdateCompanyNetworkConfigurationCommandOutput) => void
+    cb: (err: any, data?: UpdateCompanyNetworkConfigurationCommandOutput) => void,
   ): void;
   updateCompanyNetworkConfiguration(
     args: UpdateCompanyNetworkConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateCompanyNetworkConfigurationCommandOutput) => void
+    cb: (err: any, data?: UpdateCompanyNetworkConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -620,16 +620,16 @@ export interface WorkLink {
    */
   updateDevicePolicyConfiguration(
     args: UpdateDevicePolicyConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateDevicePolicyConfigurationCommandOutput>;
   updateDevicePolicyConfiguration(
     args: UpdateDevicePolicyConfigurationCommandInput,
-    cb: (err: any, data?: UpdateDevicePolicyConfigurationCommandOutput) => void
+    cb: (err: any, data?: UpdateDevicePolicyConfigurationCommandOutput) => void,
   ): void;
   updateDevicePolicyConfiguration(
     args: UpdateDevicePolicyConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateDevicePolicyConfigurationCommandOutput) => void
+    cb: (err: any, data?: UpdateDevicePolicyConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -637,16 +637,16 @@ export interface WorkLink {
    */
   updateDomainMetadata(
     args: UpdateDomainMetadataCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateDomainMetadataCommandOutput>;
   updateDomainMetadata(
     args: UpdateDomainMetadataCommandInput,
-    cb: (err: any, data?: UpdateDomainMetadataCommandOutput) => void
+    cb: (err: any, data?: UpdateDomainMetadataCommandOutput) => void,
   ): void;
   updateDomainMetadata(
     args: UpdateDomainMetadataCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateDomainMetadataCommandOutput) => void
+    cb: (err: any, data?: UpdateDomainMetadataCommandOutput) => void,
   ): void;
 
   /**
@@ -654,16 +654,16 @@ export interface WorkLink {
    */
   updateFleetMetadata(
     args: UpdateFleetMetadataCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateFleetMetadataCommandOutput>;
   updateFleetMetadata(
     args: UpdateFleetMetadataCommandInput,
-    cb: (err: any, data?: UpdateFleetMetadataCommandOutput) => void
+    cb: (err: any, data?: UpdateFleetMetadataCommandOutput) => void,
   ): void;
   updateFleetMetadata(
     args: UpdateFleetMetadataCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateFleetMetadataCommandOutput) => void
+    cb: (err: any, data?: UpdateFleetMetadataCommandOutput) => void,
   ): void;
 
   /**
@@ -671,16 +671,16 @@ export interface WorkLink {
    */
   updateIdentityProviderConfiguration(
     args: UpdateIdentityProviderConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateIdentityProviderConfigurationCommandOutput>;
   updateIdentityProviderConfiguration(
     args: UpdateIdentityProviderConfigurationCommandInput,
-    cb: (err: any, data?: UpdateIdentityProviderConfigurationCommandOutput) => void
+    cb: (err: any, data?: UpdateIdentityProviderConfigurationCommandOutput) => void,
   ): void;
   updateIdentityProviderConfiguration(
     args: UpdateIdentityProviderConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateIdentityProviderConfigurationCommandOutput) => void
+    cb: (err: any, data?: UpdateIdentityProviderConfigurationCommandOutput) => void,
   ): void;
 }
 

@@ -67,7 +67,7 @@ const checkState = async (client: EC2Client, input: DescribeStoreImageTasksComma
  */
 export const waitForStoreImageTaskComplete = async (
   params: WaiterConfiguration<EC2Client>,
-  input: DescribeStoreImageTasksCommandInput
+  input: DescribeStoreImageTasksCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 5, maxDelay: 120 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -79,7 +79,7 @@ export const waitForStoreImageTaskComplete = async (
  */
 export const waitUntilStoreImageTaskComplete = async (
   params: WaiterConfiguration<EC2Client>,
-  input: DescribeStoreImageTasksCommandInput
+  input: DescribeStoreImageTasksCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 5, maxDelay: 120 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

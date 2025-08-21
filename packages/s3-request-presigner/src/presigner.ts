@@ -26,7 +26,7 @@ export class S3RequestPresigner implements RequestPresigner {
 
   public presign(
     requestToSign: IHttpRequest,
-    { unsignableHeaders = new Set(), unhoistableHeaders = new Set(), ...options }: RequestPresigningArguments = {}
+    { unsignableHeaders = new Set(), unhoistableHeaders = new Set(), ...options }: RequestPresigningArguments = {},
   ): Promise<IHttpRequest> {
     this.prepareRequest(requestToSign, {
       unsignableHeaders,
@@ -43,7 +43,7 @@ export class S3RequestPresigner implements RequestPresigner {
   public presignWithCredentials(
     requestToSign: IHttpRequest,
     credentials: AwsCredentialIdentity,
-    { unsignableHeaders = new Set(), unhoistableHeaders = new Set(), ...options }: RequestPresigningArguments = {}
+    { unsignableHeaders = new Set(), unhoistableHeaders = new Set(), ...options }: RequestPresigningArguments = {},
   ): Promise<IHttpRequest> {
     this.prepareRequest(requestToSign, {
       unsignableHeaders,
@@ -59,7 +59,7 @@ export class S3RequestPresigner implements RequestPresigner {
 
   private prepareRequest(
     requestToSign: IHttpRequest,
-    { unsignableHeaders = new Set(), unhoistableHeaders = new Set() }: RequestPresigningArguments = {}
+    { unsignableHeaders = new Set(), unhoistableHeaders = new Set() }: RequestPresigningArguments = {},
   ) {
     unsignableHeaders.add("content-type");
     Object.keys(requestToSign.headers)

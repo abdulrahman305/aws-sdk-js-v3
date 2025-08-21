@@ -667,13 +667,13 @@ export interface CloudFront {
    */
   associateAlias(
     args: AssociateAliasCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AssociateAliasCommandOutput>;
   associateAlias(args: AssociateAliasCommandInput, cb: (err: any, data?: AssociateAliasCommandOutput) => void): void;
   associateAlias(
     args: AssociateAliasCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AssociateAliasCommandOutput) => void
+    cb: (err: any, data?: AssociateAliasCommandOutput) => void,
   ): void;
 
   /**
@@ -681,16 +681,16 @@ export interface CloudFront {
    */
   copyDistribution(
     args: CopyDistributionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CopyDistributionCommandOutput>;
   copyDistribution(
     args: CopyDistributionCommandInput,
-    cb: (err: any, data?: CopyDistributionCommandOutput) => void
+    cb: (err: any, data?: CopyDistributionCommandOutput) => void,
   ): void;
   copyDistribution(
     args: CopyDistributionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CopyDistributionCommandOutput) => void
+    cb: (err: any, data?: CopyDistributionCommandOutput) => void,
   ): void;
 
   /**
@@ -698,16 +698,16 @@ export interface CloudFront {
    */
   createCachePolicy(
     args: CreateCachePolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateCachePolicyCommandOutput>;
   createCachePolicy(
     args: CreateCachePolicyCommandInput,
-    cb: (err: any, data?: CreateCachePolicyCommandOutput) => void
+    cb: (err: any, data?: CreateCachePolicyCommandOutput) => void,
   ): void;
   createCachePolicy(
     args: CreateCachePolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateCachePolicyCommandOutput) => void
+    cb: (err: any, data?: CreateCachePolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -715,16 +715,16 @@ export interface CloudFront {
    */
   createCloudFrontOriginAccessIdentity(
     args: CreateCloudFrontOriginAccessIdentityCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateCloudFrontOriginAccessIdentityCommandOutput>;
   createCloudFrontOriginAccessIdentity(
     args: CreateCloudFrontOriginAccessIdentityCommandInput,
-    cb: (err: any, data?: CreateCloudFrontOriginAccessIdentityCommandOutput) => void
+    cb: (err: any, data?: CreateCloudFrontOriginAccessIdentityCommandOutput) => void,
   ): void;
   createCloudFrontOriginAccessIdentity(
     args: CreateCloudFrontOriginAccessIdentityCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateCloudFrontOriginAccessIdentityCommandOutput) => void
+    cb: (err: any, data?: CreateCloudFrontOriginAccessIdentityCommandOutput) => void,
   ): void;
 
   /**
@@ -732,16 +732,16 @@ export interface CloudFront {
    */
   createContinuousDeploymentPolicy(
     args: CreateContinuousDeploymentPolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateContinuousDeploymentPolicyCommandOutput>;
   createContinuousDeploymentPolicy(
     args: CreateContinuousDeploymentPolicyCommandInput,
-    cb: (err: any, data?: CreateContinuousDeploymentPolicyCommandOutput) => void
+    cb: (err: any, data?: CreateContinuousDeploymentPolicyCommandOutput) => void,
   ): void;
   createContinuousDeploymentPolicy(
     args: CreateContinuousDeploymentPolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateContinuousDeploymentPolicyCommandOutput) => void
+    cb: (err: any, data?: CreateContinuousDeploymentPolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -749,16 +749,16 @@ export interface CloudFront {
    */
   createDistribution(
     args: CreateDistributionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateDistributionCommandOutput>;
   createDistribution(
     args: CreateDistributionCommandInput,
-    cb: (err: any, data?: CreateDistributionCommandOutput) => void
+    cb: (err: any, data?: CreateDistributionCommandOutput) => void,
   ): void;
   createDistribution(
     args: CreateDistributionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateDistributionCommandOutput) => void
+    cb: (err: any, data?: CreateDistributionCommandOutput) => void,
   ): void;
 
   /**
@@ -766,16 +766,16 @@ export interface CloudFront {
    */
   createDistributionWithTags(
     args: CreateDistributionWithTagsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateDistributionWithTagsCommandOutput>;
   createDistributionWithTags(
     args: CreateDistributionWithTagsCommandInput,
-    cb: (err: any, data?: CreateDistributionWithTagsCommandOutput) => void
+    cb: (err: any, data?: CreateDistributionWithTagsCommandOutput) => void,
   ): void;
   createDistributionWithTags(
     args: CreateDistributionWithTagsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateDistributionWithTagsCommandOutput) => void
+    cb: (err: any, data?: CreateDistributionWithTagsCommandOutput) => void,
   ): void;
 
   /**
@@ -783,16 +783,16 @@ export interface CloudFront {
    */
   createFieldLevelEncryptionConfig(
     args: CreateFieldLevelEncryptionConfigCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateFieldLevelEncryptionConfigCommandOutput>;
   createFieldLevelEncryptionConfig(
     args: CreateFieldLevelEncryptionConfigCommandInput,
-    cb: (err: any, data?: CreateFieldLevelEncryptionConfigCommandOutput) => void
+    cb: (err: any, data?: CreateFieldLevelEncryptionConfigCommandOutput) => void,
   ): void;
   createFieldLevelEncryptionConfig(
     args: CreateFieldLevelEncryptionConfigCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateFieldLevelEncryptionConfigCommandOutput) => void
+    cb: (err: any, data?: CreateFieldLevelEncryptionConfigCommandOutput) => void,
   ): void;
 
   /**
@@ -800,16 +800,16 @@ export interface CloudFront {
    */
   createFieldLevelEncryptionProfile(
     args: CreateFieldLevelEncryptionProfileCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateFieldLevelEncryptionProfileCommandOutput>;
   createFieldLevelEncryptionProfile(
     args: CreateFieldLevelEncryptionProfileCommandInput,
-    cb: (err: any, data?: CreateFieldLevelEncryptionProfileCommandOutput) => void
+    cb: (err: any, data?: CreateFieldLevelEncryptionProfileCommandOutput) => void,
   ): void;
   createFieldLevelEncryptionProfile(
     args: CreateFieldLevelEncryptionProfileCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateFieldLevelEncryptionProfileCommandOutput) => void
+    cb: (err: any, data?: CreateFieldLevelEncryptionProfileCommandOutput) => void,
   ): void;
 
   /**
@@ -817,13 +817,13 @@ export interface CloudFront {
    */
   createFunction(
     args: CreateFunctionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateFunctionCommandOutput>;
   createFunction(args: CreateFunctionCommandInput, cb: (err: any, data?: CreateFunctionCommandOutput) => void): void;
   createFunction(
     args: CreateFunctionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateFunctionCommandOutput) => void
+    cb: (err: any, data?: CreateFunctionCommandOutput) => void,
   ): void;
 
   /**
@@ -831,16 +831,16 @@ export interface CloudFront {
    */
   createInvalidation(
     args: CreateInvalidationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateInvalidationCommandOutput>;
   createInvalidation(
     args: CreateInvalidationCommandInput,
-    cb: (err: any, data?: CreateInvalidationCommandOutput) => void
+    cb: (err: any, data?: CreateInvalidationCommandOutput) => void,
   ): void;
   createInvalidation(
     args: CreateInvalidationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateInvalidationCommandOutput) => void
+    cb: (err: any, data?: CreateInvalidationCommandOutput) => void,
   ): void;
 
   /**
@@ -848,13 +848,13 @@ export interface CloudFront {
    */
   createKeyGroup(
     args: CreateKeyGroupCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateKeyGroupCommandOutput>;
   createKeyGroup(args: CreateKeyGroupCommandInput, cb: (err: any, data?: CreateKeyGroupCommandOutput) => void): void;
   createKeyGroup(
     args: CreateKeyGroupCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateKeyGroupCommandOutput) => void
+    cb: (err: any, data?: CreateKeyGroupCommandOutput) => void,
   ): void;
 
   /**
@@ -862,16 +862,16 @@ export interface CloudFront {
    */
   createKeyValueStore(
     args: CreateKeyValueStoreCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateKeyValueStoreCommandOutput>;
   createKeyValueStore(
     args: CreateKeyValueStoreCommandInput,
-    cb: (err: any, data?: CreateKeyValueStoreCommandOutput) => void
+    cb: (err: any, data?: CreateKeyValueStoreCommandOutput) => void,
   ): void;
   createKeyValueStore(
     args: CreateKeyValueStoreCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateKeyValueStoreCommandOutput) => void
+    cb: (err: any, data?: CreateKeyValueStoreCommandOutput) => void,
   ): void;
 
   /**
@@ -879,16 +879,16 @@ export interface CloudFront {
    */
   createMonitoringSubscription(
     args: CreateMonitoringSubscriptionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateMonitoringSubscriptionCommandOutput>;
   createMonitoringSubscription(
     args: CreateMonitoringSubscriptionCommandInput,
-    cb: (err: any, data?: CreateMonitoringSubscriptionCommandOutput) => void
+    cb: (err: any, data?: CreateMonitoringSubscriptionCommandOutput) => void,
   ): void;
   createMonitoringSubscription(
     args: CreateMonitoringSubscriptionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateMonitoringSubscriptionCommandOutput) => void
+    cb: (err: any, data?: CreateMonitoringSubscriptionCommandOutput) => void,
   ): void;
 
   /**
@@ -896,16 +896,16 @@ export interface CloudFront {
    */
   createOriginAccessControl(
     args: CreateOriginAccessControlCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateOriginAccessControlCommandOutput>;
   createOriginAccessControl(
     args: CreateOriginAccessControlCommandInput,
-    cb: (err: any, data?: CreateOriginAccessControlCommandOutput) => void
+    cb: (err: any, data?: CreateOriginAccessControlCommandOutput) => void,
   ): void;
   createOriginAccessControl(
     args: CreateOriginAccessControlCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateOriginAccessControlCommandOutput) => void
+    cb: (err: any, data?: CreateOriginAccessControlCommandOutput) => void,
   ): void;
 
   /**
@@ -913,16 +913,16 @@ export interface CloudFront {
    */
   createOriginRequestPolicy(
     args: CreateOriginRequestPolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateOriginRequestPolicyCommandOutput>;
   createOriginRequestPolicy(
     args: CreateOriginRequestPolicyCommandInput,
-    cb: (err: any, data?: CreateOriginRequestPolicyCommandOutput) => void
+    cb: (err: any, data?: CreateOriginRequestPolicyCommandOutput) => void,
   ): void;
   createOriginRequestPolicy(
     args: CreateOriginRequestPolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateOriginRequestPolicyCommandOutput) => void
+    cb: (err: any, data?: CreateOriginRequestPolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -930,13 +930,13 @@ export interface CloudFront {
    */
   createPublicKey(
     args: CreatePublicKeyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreatePublicKeyCommandOutput>;
   createPublicKey(args: CreatePublicKeyCommandInput, cb: (err: any, data?: CreatePublicKeyCommandOutput) => void): void;
   createPublicKey(
     args: CreatePublicKeyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreatePublicKeyCommandOutput) => void
+    cb: (err: any, data?: CreatePublicKeyCommandOutput) => void,
   ): void;
 
   /**
@@ -944,16 +944,16 @@ export interface CloudFront {
    */
   createRealtimeLogConfig(
     args: CreateRealtimeLogConfigCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateRealtimeLogConfigCommandOutput>;
   createRealtimeLogConfig(
     args: CreateRealtimeLogConfigCommandInput,
-    cb: (err: any, data?: CreateRealtimeLogConfigCommandOutput) => void
+    cb: (err: any, data?: CreateRealtimeLogConfigCommandOutput) => void,
   ): void;
   createRealtimeLogConfig(
     args: CreateRealtimeLogConfigCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateRealtimeLogConfigCommandOutput) => void
+    cb: (err: any, data?: CreateRealtimeLogConfigCommandOutput) => void,
   ): void;
 
   /**
@@ -961,16 +961,16 @@ export interface CloudFront {
    */
   createResponseHeadersPolicy(
     args: CreateResponseHeadersPolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateResponseHeadersPolicyCommandOutput>;
   createResponseHeadersPolicy(
     args: CreateResponseHeadersPolicyCommandInput,
-    cb: (err: any, data?: CreateResponseHeadersPolicyCommandOutput) => void
+    cb: (err: any, data?: CreateResponseHeadersPolicyCommandOutput) => void,
   ): void;
   createResponseHeadersPolicy(
     args: CreateResponseHeadersPolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateResponseHeadersPolicyCommandOutput) => void
+    cb: (err: any, data?: CreateResponseHeadersPolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -978,16 +978,16 @@ export interface CloudFront {
    */
   createStreamingDistribution(
     args: CreateStreamingDistributionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateStreamingDistributionCommandOutput>;
   createStreamingDistribution(
     args: CreateStreamingDistributionCommandInput,
-    cb: (err: any, data?: CreateStreamingDistributionCommandOutput) => void
+    cb: (err: any, data?: CreateStreamingDistributionCommandOutput) => void,
   ): void;
   createStreamingDistribution(
     args: CreateStreamingDistributionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateStreamingDistributionCommandOutput) => void
+    cb: (err: any, data?: CreateStreamingDistributionCommandOutput) => void,
   ): void;
 
   /**
@@ -995,16 +995,16 @@ export interface CloudFront {
    */
   createStreamingDistributionWithTags(
     args: CreateStreamingDistributionWithTagsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateStreamingDistributionWithTagsCommandOutput>;
   createStreamingDistributionWithTags(
     args: CreateStreamingDistributionWithTagsCommandInput,
-    cb: (err: any, data?: CreateStreamingDistributionWithTagsCommandOutput) => void
+    cb: (err: any, data?: CreateStreamingDistributionWithTagsCommandOutput) => void,
   ): void;
   createStreamingDistributionWithTags(
     args: CreateStreamingDistributionWithTagsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateStreamingDistributionWithTagsCommandOutput) => void
+    cb: (err: any, data?: CreateStreamingDistributionWithTagsCommandOutput) => void,
   ): void;
 
   /**
@@ -1012,16 +1012,16 @@ export interface CloudFront {
    */
   deleteCachePolicy(
     args: DeleteCachePolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteCachePolicyCommandOutput>;
   deleteCachePolicy(
     args: DeleteCachePolicyCommandInput,
-    cb: (err: any, data?: DeleteCachePolicyCommandOutput) => void
+    cb: (err: any, data?: DeleteCachePolicyCommandOutput) => void,
   ): void;
   deleteCachePolicy(
     args: DeleteCachePolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteCachePolicyCommandOutput) => void
+    cb: (err: any, data?: DeleteCachePolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -1029,16 +1029,16 @@ export interface CloudFront {
    */
   deleteCloudFrontOriginAccessIdentity(
     args: DeleteCloudFrontOriginAccessIdentityCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteCloudFrontOriginAccessIdentityCommandOutput>;
   deleteCloudFrontOriginAccessIdentity(
     args: DeleteCloudFrontOriginAccessIdentityCommandInput,
-    cb: (err: any, data?: DeleteCloudFrontOriginAccessIdentityCommandOutput) => void
+    cb: (err: any, data?: DeleteCloudFrontOriginAccessIdentityCommandOutput) => void,
   ): void;
   deleteCloudFrontOriginAccessIdentity(
     args: DeleteCloudFrontOriginAccessIdentityCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteCloudFrontOriginAccessIdentityCommandOutput) => void
+    cb: (err: any, data?: DeleteCloudFrontOriginAccessIdentityCommandOutput) => void,
   ): void;
 
   /**
@@ -1046,16 +1046,16 @@ export interface CloudFront {
    */
   deleteContinuousDeploymentPolicy(
     args: DeleteContinuousDeploymentPolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteContinuousDeploymentPolicyCommandOutput>;
   deleteContinuousDeploymentPolicy(
     args: DeleteContinuousDeploymentPolicyCommandInput,
-    cb: (err: any, data?: DeleteContinuousDeploymentPolicyCommandOutput) => void
+    cb: (err: any, data?: DeleteContinuousDeploymentPolicyCommandOutput) => void,
   ): void;
   deleteContinuousDeploymentPolicy(
     args: DeleteContinuousDeploymentPolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteContinuousDeploymentPolicyCommandOutput) => void
+    cb: (err: any, data?: DeleteContinuousDeploymentPolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -1063,16 +1063,16 @@ export interface CloudFront {
    */
   deleteDistribution(
     args: DeleteDistributionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteDistributionCommandOutput>;
   deleteDistribution(
     args: DeleteDistributionCommandInput,
-    cb: (err: any, data?: DeleteDistributionCommandOutput) => void
+    cb: (err: any, data?: DeleteDistributionCommandOutput) => void,
   ): void;
   deleteDistribution(
     args: DeleteDistributionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteDistributionCommandOutput) => void
+    cb: (err: any, data?: DeleteDistributionCommandOutput) => void,
   ): void;
 
   /**
@@ -1080,16 +1080,16 @@ export interface CloudFront {
    */
   deleteFieldLevelEncryptionConfig(
     args: DeleteFieldLevelEncryptionConfigCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteFieldLevelEncryptionConfigCommandOutput>;
   deleteFieldLevelEncryptionConfig(
     args: DeleteFieldLevelEncryptionConfigCommandInput,
-    cb: (err: any, data?: DeleteFieldLevelEncryptionConfigCommandOutput) => void
+    cb: (err: any, data?: DeleteFieldLevelEncryptionConfigCommandOutput) => void,
   ): void;
   deleteFieldLevelEncryptionConfig(
     args: DeleteFieldLevelEncryptionConfigCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteFieldLevelEncryptionConfigCommandOutput) => void
+    cb: (err: any, data?: DeleteFieldLevelEncryptionConfigCommandOutput) => void,
   ): void;
 
   /**
@@ -1097,16 +1097,16 @@ export interface CloudFront {
    */
   deleteFieldLevelEncryptionProfile(
     args: DeleteFieldLevelEncryptionProfileCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteFieldLevelEncryptionProfileCommandOutput>;
   deleteFieldLevelEncryptionProfile(
     args: DeleteFieldLevelEncryptionProfileCommandInput,
-    cb: (err: any, data?: DeleteFieldLevelEncryptionProfileCommandOutput) => void
+    cb: (err: any, data?: DeleteFieldLevelEncryptionProfileCommandOutput) => void,
   ): void;
   deleteFieldLevelEncryptionProfile(
     args: DeleteFieldLevelEncryptionProfileCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteFieldLevelEncryptionProfileCommandOutput) => void
+    cb: (err: any, data?: DeleteFieldLevelEncryptionProfileCommandOutput) => void,
   ): void;
 
   /**
@@ -1114,13 +1114,13 @@ export interface CloudFront {
    */
   deleteFunction(
     args: DeleteFunctionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteFunctionCommandOutput>;
   deleteFunction(args: DeleteFunctionCommandInput, cb: (err: any, data?: DeleteFunctionCommandOutput) => void): void;
   deleteFunction(
     args: DeleteFunctionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteFunctionCommandOutput) => void
+    cb: (err: any, data?: DeleteFunctionCommandOutput) => void,
   ): void;
 
   /**
@@ -1128,13 +1128,13 @@ export interface CloudFront {
    */
   deleteKeyGroup(
     args: DeleteKeyGroupCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteKeyGroupCommandOutput>;
   deleteKeyGroup(args: DeleteKeyGroupCommandInput, cb: (err: any, data?: DeleteKeyGroupCommandOutput) => void): void;
   deleteKeyGroup(
     args: DeleteKeyGroupCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteKeyGroupCommandOutput) => void
+    cb: (err: any, data?: DeleteKeyGroupCommandOutput) => void,
   ): void;
 
   /**
@@ -1142,16 +1142,16 @@ export interface CloudFront {
    */
   deleteKeyValueStore(
     args: DeleteKeyValueStoreCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteKeyValueStoreCommandOutput>;
   deleteKeyValueStore(
     args: DeleteKeyValueStoreCommandInput,
-    cb: (err: any, data?: DeleteKeyValueStoreCommandOutput) => void
+    cb: (err: any, data?: DeleteKeyValueStoreCommandOutput) => void,
   ): void;
   deleteKeyValueStore(
     args: DeleteKeyValueStoreCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteKeyValueStoreCommandOutput) => void
+    cb: (err: any, data?: DeleteKeyValueStoreCommandOutput) => void,
   ): void;
 
   /**
@@ -1159,16 +1159,16 @@ export interface CloudFront {
    */
   deleteMonitoringSubscription(
     args: DeleteMonitoringSubscriptionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteMonitoringSubscriptionCommandOutput>;
   deleteMonitoringSubscription(
     args: DeleteMonitoringSubscriptionCommandInput,
-    cb: (err: any, data?: DeleteMonitoringSubscriptionCommandOutput) => void
+    cb: (err: any, data?: DeleteMonitoringSubscriptionCommandOutput) => void,
   ): void;
   deleteMonitoringSubscription(
     args: DeleteMonitoringSubscriptionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteMonitoringSubscriptionCommandOutput) => void
+    cb: (err: any, data?: DeleteMonitoringSubscriptionCommandOutput) => void,
   ): void;
 
   /**
@@ -1176,16 +1176,16 @@ export interface CloudFront {
    */
   deleteOriginAccessControl(
     args: DeleteOriginAccessControlCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteOriginAccessControlCommandOutput>;
   deleteOriginAccessControl(
     args: DeleteOriginAccessControlCommandInput,
-    cb: (err: any, data?: DeleteOriginAccessControlCommandOutput) => void
+    cb: (err: any, data?: DeleteOriginAccessControlCommandOutput) => void,
   ): void;
   deleteOriginAccessControl(
     args: DeleteOriginAccessControlCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteOriginAccessControlCommandOutput) => void
+    cb: (err: any, data?: DeleteOriginAccessControlCommandOutput) => void,
   ): void;
 
   /**
@@ -1193,16 +1193,16 @@ export interface CloudFront {
    */
   deleteOriginRequestPolicy(
     args: DeleteOriginRequestPolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteOriginRequestPolicyCommandOutput>;
   deleteOriginRequestPolicy(
     args: DeleteOriginRequestPolicyCommandInput,
-    cb: (err: any, data?: DeleteOriginRequestPolicyCommandOutput) => void
+    cb: (err: any, data?: DeleteOriginRequestPolicyCommandOutput) => void,
   ): void;
   deleteOriginRequestPolicy(
     args: DeleteOriginRequestPolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteOriginRequestPolicyCommandOutput) => void
+    cb: (err: any, data?: DeleteOriginRequestPolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -1210,13 +1210,13 @@ export interface CloudFront {
    */
   deletePublicKey(
     args: DeletePublicKeyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeletePublicKeyCommandOutput>;
   deletePublicKey(args: DeletePublicKeyCommandInput, cb: (err: any, data?: DeletePublicKeyCommandOutput) => void): void;
   deletePublicKey(
     args: DeletePublicKeyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeletePublicKeyCommandOutput) => void
+    cb: (err: any, data?: DeletePublicKeyCommandOutput) => void,
   ): void;
 
   /**
@@ -1225,16 +1225,16 @@ export interface CloudFront {
   deleteRealtimeLogConfig(): Promise<DeleteRealtimeLogConfigCommandOutput>;
   deleteRealtimeLogConfig(
     args: DeleteRealtimeLogConfigCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteRealtimeLogConfigCommandOutput>;
   deleteRealtimeLogConfig(
     args: DeleteRealtimeLogConfigCommandInput,
-    cb: (err: any, data?: DeleteRealtimeLogConfigCommandOutput) => void
+    cb: (err: any, data?: DeleteRealtimeLogConfigCommandOutput) => void,
   ): void;
   deleteRealtimeLogConfig(
     args: DeleteRealtimeLogConfigCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteRealtimeLogConfigCommandOutput) => void
+    cb: (err: any, data?: DeleteRealtimeLogConfigCommandOutput) => void,
   ): void;
 
   /**
@@ -1242,16 +1242,16 @@ export interface CloudFront {
    */
   deleteResponseHeadersPolicy(
     args: DeleteResponseHeadersPolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteResponseHeadersPolicyCommandOutput>;
   deleteResponseHeadersPolicy(
     args: DeleteResponseHeadersPolicyCommandInput,
-    cb: (err: any, data?: DeleteResponseHeadersPolicyCommandOutput) => void
+    cb: (err: any, data?: DeleteResponseHeadersPolicyCommandOutput) => void,
   ): void;
   deleteResponseHeadersPolicy(
     args: DeleteResponseHeadersPolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteResponseHeadersPolicyCommandOutput) => void
+    cb: (err: any, data?: DeleteResponseHeadersPolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -1259,16 +1259,16 @@ export interface CloudFront {
    */
   deleteStreamingDistribution(
     args: DeleteStreamingDistributionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteStreamingDistributionCommandOutput>;
   deleteStreamingDistribution(
     args: DeleteStreamingDistributionCommandInput,
-    cb: (err: any, data?: DeleteStreamingDistributionCommandOutput) => void
+    cb: (err: any, data?: DeleteStreamingDistributionCommandOutput) => void,
   ): void;
   deleteStreamingDistribution(
     args: DeleteStreamingDistributionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteStreamingDistributionCommandOutput) => void
+    cb: (err: any, data?: DeleteStreamingDistributionCommandOutput) => void,
   ): void;
 
   /**
@@ -1276,16 +1276,16 @@ export interface CloudFront {
    */
   describeFunction(
     args: DescribeFunctionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeFunctionCommandOutput>;
   describeFunction(
     args: DescribeFunctionCommandInput,
-    cb: (err: any, data?: DescribeFunctionCommandOutput) => void
+    cb: (err: any, data?: DescribeFunctionCommandOutput) => void,
   ): void;
   describeFunction(
     args: DescribeFunctionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeFunctionCommandOutput) => void
+    cb: (err: any, data?: DescribeFunctionCommandOutput) => void,
   ): void;
 
   /**
@@ -1293,16 +1293,16 @@ export interface CloudFront {
    */
   describeKeyValueStore(
     args: DescribeKeyValueStoreCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeKeyValueStoreCommandOutput>;
   describeKeyValueStore(
     args: DescribeKeyValueStoreCommandInput,
-    cb: (err: any, data?: DescribeKeyValueStoreCommandOutput) => void
+    cb: (err: any, data?: DescribeKeyValueStoreCommandOutput) => void,
   ): void;
   describeKeyValueStore(
     args: DescribeKeyValueStoreCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeKeyValueStoreCommandOutput) => void
+    cb: (err: any, data?: DescribeKeyValueStoreCommandOutput) => void,
   ): void;
 
   /**
@@ -1310,13 +1310,13 @@ export interface CloudFront {
    */
   getCachePolicy(
     args: GetCachePolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetCachePolicyCommandOutput>;
   getCachePolicy(args: GetCachePolicyCommandInput, cb: (err: any, data?: GetCachePolicyCommandOutput) => void): void;
   getCachePolicy(
     args: GetCachePolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetCachePolicyCommandOutput) => void
+    cb: (err: any, data?: GetCachePolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -1324,16 +1324,16 @@ export interface CloudFront {
    */
   getCachePolicyConfig(
     args: GetCachePolicyConfigCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetCachePolicyConfigCommandOutput>;
   getCachePolicyConfig(
     args: GetCachePolicyConfigCommandInput,
-    cb: (err: any, data?: GetCachePolicyConfigCommandOutput) => void
+    cb: (err: any, data?: GetCachePolicyConfigCommandOutput) => void,
   ): void;
   getCachePolicyConfig(
     args: GetCachePolicyConfigCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetCachePolicyConfigCommandOutput) => void
+    cb: (err: any, data?: GetCachePolicyConfigCommandOutput) => void,
   ): void;
 
   /**
@@ -1341,16 +1341,16 @@ export interface CloudFront {
    */
   getCloudFrontOriginAccessIdentity(
     args: GetCloudFrontOriginAccessIdentityCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetCloudFrontOriginAccessIdentityCommandOutput>;
   getCloudFrontOriginAccessIdentity(
     args: GetCloudFrontOriginAccessIdentityCommandInput,
-    cb: (err: any, data?: GetCloudFrontOriginAccessIdentityCommandOutput) => void
+    cb: (err: any, data?: GetCloudFrontOriginAccessIdentityCommandOutput) => void,
   ): void;
   getCloudFrontOriginAccessIdentity(
     args: GetCloudFrontOriginAccessIdentityCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetCloudFrontOriginAccessIdentityCommandOutput) => void
+    cb: (err: any, data?: GetCloudFrontOriginAccessIdentityCommandOutput) => void,
   ): void;
 
   /**
@@ -1358,16 +1358,16 @@ export interface CloudFront {
    */
   getCloudFrontOriginAccessIdentityConfig(
     args: GetCloudFrontOriginAccessIdentityConfigCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetCloudFrontOriginAccessIdentityConfigCommandOutput>;
   getCloudFrontOriginAccessIdentityConfig(
     args: GetCloudFrontOriginAccessIdentityConfigCommandInput,
-    cb: (err: any, data?: GetCloudFrontOriginAccessIdentityConfigCommandOutput) => void
+    cb: (err: any, data?: GetCloudFrontOriginAccessIdentityConfigCommandOutput) => void,
   ): void;
   getCloudFrontOriginAccessIdentityConfig(
     args: GetCloudFrontOriginAccessIdentityConfigCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetCloudFrontOriginAccessIdentityConfigCommandOutput) => void
+    cb: (err: any, data?: GetCloudFrontOriginAccessIdentityConfigCommandOutput) => void,
   ): void;
 
   /**
@@ -1375,16 +1375,16 @@ export interface CloudFront {
    */
   getContinuousDeploymentPolicy(
     args: GetContinuousDeploymentPolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetContinuousDeploymentPolicyCommandOutput>;
   getContinuousDeploymentPolicy(
     args: GetContinuousDeploymentPolicyCommandInput,
-    cb: (err: any, data?: GetContinuousDeploymentPolicyCommandOutput) => void
+    cb: (err: any, data?: GetContinuousDeploymentPolicyCommandOutput) => void,
   ): void;
   getContinuousDeploymentPolicy(
     args: GetContinuousDeploymentPolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetContinuousDeploymentPolicyCommandOutput) => void
+    cb: (err: any, data?: GetContinuousDeploymentPolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -1392,16 +1392,16 @@ export interface CloudFront {
    */
   getContinuousDeploymentPolicyConfig(
     args: GetContinuousDeploymentPolicyConfigCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetContinuousDeploymentPolicyConfigCommandOutput>;
   getContinuousDeploymentPolicyConfig(
     args: GetContinuousDeploymentPolicyConfigCommandInput,
-    cb: (err: any, data?: GetContinuousDeploymentPolicyConfigCommandOutput) => void
+    cb: (err: any, data?: GetContinuousDeploymentPolicyConfigCommandOutput) => void,
   ): void;
   getContinuousDeploymentPolicyConfig(
     args: GetContinuousDeploymentPolicyConfigCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetContinuousDeploymentPolicyConfigCommandOutput) => void
+    cb: (err: any, data?: GetContinuousDeploymentPolicyConfigCommandOutput) => void,
   ): void;
 
   /**
@@ -1409,13 +1409,13 @@ export interface CloudFront {
    */
   getDistribution(
     args: GetDistributionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetDistributionCommandOutput>;
   getDistribution(args: GetDistributionCommandInput, cb: (err: any, data?: GetDistributionCommandOutput) => void): void;
   getDistribution(
     args: GetDistributionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetDistributionCommandOutput) => void
+    cb: (err: any, data?: GetDistributionCommandOutput) => void,
   ): void;
 
   /**
@@ -1423,16 +1423,16 @@ export interface CloudFront {
    */
   getDistributionConfig(
     args: GetDistributionConfigCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetDistributionConfigCommandOutput>;
   getDistributionConfig(
     args: GetDistributionConfigCommandInput,
-    cb: (err: any, data?: GetDistributionConfigCommandOutput) => void
+    cb: (err: any, data?: GetDistributionConfigCommandOutput) => void,
   ): void;
   getDistributionConfig(
     args: GetDistributionConfigCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetDistributionConfigCommandOutput) => void
+    cb: (err: any, data?: GetDistributionConfigCommandOutput) => void,
   ): void;
 
   /**
@@ -1440,16 +1440,16 @@ export interface CloudFront {
    */
   getFieldLevelEncryption(
     args: GetFieldLevelEncryptionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetFieldLevelEncryptionCommandOutput>;
   getFieldLevelEncryption(
     args: GetFieldLevelEncryptionCommandInput,
-    cb: (err: any, data?: GetFieldLevelEncryptionCommandOutput) => void
+    cb: (err: any, data?: GetFieldLevelEncryptionCommandOutput) => void,
   ): void;
   getFieldLevelEncryption(
     args: GetFieldLevelEncryptionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetFieldLevelEncryptionCommandOutput) => void
+    cb: (err: any, data?: GetFieldLevelEncryptionCommandOutput) => void,
   ): void;
 
   /**
@@ -1457,16 +1457,16 @@ export interface CloudFront {
    */
   getFieldLevelEncryptionConfig(
     args: GetFieldLevelEncryptionConfigCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetFieldLevelEncryptionConfigCommandOutput>;
   getFieldLevelEncryptionConfig(
     args: GetFieldLevelEncryptionConfigCommandInput,
-    cb: (err: any, data?: GetFieldLevelEncryptionConfigCommandOutput) => void
+    cb: (err: any, data?: GetFieldLevelEncryptionConfigCommandOutput) => void,
   ): void;
   getFieldLevelEncryptionConfig(
     args: GetFieldLevelEncryptionConfigCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetFieldLevelEncryptionConfigCommandOutput) => void
+    cb: (err: any, data?: GetFieldLevelEncryptionConfigCommandOutput) => void,
   ): void;
 
   /**
@@ -1474,16 +1474,16 @@ export interface CloudFront {
    */
   getFieldLevelEncryptionProfile(
     args: GetFieldLevelEncryptionProfileCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetFieldLevelEncryptionProfileCommandOutput>;
   getFieldLevelEncryptionProfile(
     args: GetFieldLevelEncryptionProfileCommandInput,
-    cb: (err: any, data?: GetFieldLevelEncryptionProfileCommandOutput) => void
+    cb: (err: any, data?: GetFieldLevelEncryptionProfileCommandOutput) => void,
   ): void;
   getFieldLevelEncryptionProfile(
     args: GetFieldLevelEncryptionProfileCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetFieldLevelEncryptionProfileCommandOutput) => void
+    cb: (err: any, data?: GetFieldLevelEncryptionProfileCommandOutput) => void,
   ): void;
 
   /**
@@ -1491,16 +1491,16 @@ export interface CloudFront {
    */
   getFieldLevelEncryptionProfileConfig(
     args: GetFieldLevelEncryptionProfileConfigCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetFieldLevelEncryptionProfileConfigCommandOutput>;
   getFieldLevelEncryptionProfileConfig(
     args: GetFieldLevelEncryptionProfileConfigCommandInput,
-    cb: (err: any, data?: GetFieldLevelEncryptionProfileConfigCommandOutput) => void
+    cb: (err: any, data?: GetFieldLevelEncryptionProfileConfigCommandOutput) => void,
   ): void;
   getFieldLevelEncryptionProfileConfig(
     args: GetFieldLevelEncryptionProfileConfigCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetFieldLevelEncryptionProfileConfigCommandOutput) => void
+    cb: (err: any, data?: GetFieldLevelEncryptionProfileConfigCommandOutput) => void,
   ): void;
 
   /**
@@ -1511,7 +1511,7 @@ export interface CloudFront {
   getFunction(
     args: GetFunctionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetFunctionCommandOutput) => void
+    cb: (err: any, data?: GetFunctionCommandOutput) => void,
   ): void;
 
   /**
@@ -1519,13 +1519,13 @@ export interface CloudFront {
    */
   getInvalidation(
     args: GetInvalidationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetInvalidationCommandOutput>;
   getInvalidation(args: GetInvalidationCommandInput, cb: (err: any, data?: GetInvalidationCommandOutput) => void): void;
   getInvalidation(
     args: GetInvalidationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetInvalidationCommandOutput) => void
+    cb: (err: any, data?: GetInvalidationCommandOutput) => void,
   ): void;
 
   /**
@@ -1536,7 +1536,7 @@ export interface CloudFront {
   getKeyGroup(
     args: GetKeyGroupCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetKeyGroupCommandOutput) => void
+    cb: (err: any, data?: GetKeyGroupCommandOutput) => void,
   ): void;
 
   /**
@@ -1544,16 +1544,16 @@ export interface CloudFront {
    */
   getKeyGroupConfig(
     args: GetKeyGroupConfigCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetKeyGroupConfigCommandOutput>;
   getKeyGroupConfig(
     args: GetKeyGroupConfigCommandInput,
-    cb: (err: any, data?: GetKeyGroupConfigCommandOutput) => void
+    cb: (err: any, data?: GetKeyGroupConfigCommandOutput) => void,
   ): void;
   getKeyGroupConfig(
     args: GetKeyGroupConfigCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetKeyGroupConfigCommandOutput) => void
+    cb: (err: any, data?: GetKeyGroupConfigCommandOutput) => void,
   ): void;
 
   /**
@@ -1561,16 +1561,16 @@ export interface CloudFront {
    */
   getMonitoringSubscription(
     args: GetMonitoringSubscriptionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetMonitoringSubscriptionCommandOutput>;
   getMonitoringSubscription(
     args: GetMonitoringSubscriptionCommandInput,
-    cb: (err: any, data?: GetMonitoringSubscriptionCommandOutput) => void
+    cb: (err: any, data?: GetMonitoringSubscriptionCommandOutput) => void,
   ): void;
   getMonitoringSubscription(
     args: GetMonitoringSubscriptionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetMonitoringSubscriptionCommandOutput) => void
+    cb: (err: any, data?: GetMonitoringSubscriptionCommandOutput) => void,
   ): void;
 
   /**
@@ -1578,16 +1578,16 @@ export interface CloudFront {
    */
   getOriginAccessControl(
     args: GetOriginAccessControlCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetOriginAccessControlCommandOutput>;
   getOriginAccessControl(
     args: GetOriginAccessControlCommandInput,
-    cb: (err: any, data?: GetOriginAccessControlCommandOutput) => void
+    cb: (err: any, data?: GetOriginAccessControlCommandOutput) => void,
   ): void;
   getOriginAccessControl(
     args: GetOriginAccessControlCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetOriginAccessControlCommandOutput) => void
+    cb: (err: any, data?: GetOriginAccessControlCommandOutput) => void,
   ): void;
 
   /**
@@ -1595,16 +1595,16 @@ export interface CloudFront {
    */
   getOriginAccessControlConfig(
     args: GetOriginAccessControlConfigCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetOriginAccessControlConfigCommandOutput>;
   getOriginAccessControlConfig(
     args: GetOriginAccessControlConfigCommandInput,
-    cb: (err: any, data?: GetOriginAccessControlConfigCommandOutput) => void
+    cb: (err: any, data?: GetOriginAccessControlConfigCommandOutput) => void,
   ): void;
   getOriginAccessControlConfig(
     args: GetOriginAccessControlConfigCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetOriginAccessControlConfigCommandOutput) => void
+    cb: (err: any, data?: GetOriginAccessControlConfigCommandOutput) => void,
   ): void;
 
   /**
@@ -1612,16 +1612,16 @@ export interface CloudFront {
    */
   getOriginRequestPolicy(
     args: GetOriginRequestPolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetOriginRequestPolicyCommandOutput>;
   getOriginRequestPolicy(
     args: GetOriginRequestPolicyCommandInput,
-    cb: (err: any, data?: GetOriginRequestPolicyCommandOutput) => void
+    cb: (err: any, data?: GetOriginRequestPolicyCommandOutput) => void,
   ): void;
   getOriginRequestPolicy(
     args: GetOriginRequestPolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetOriginRequestPolicyCommandOutput) => void
+    cb: (err: any, data?: GetOriginRequestPolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -1629,16 +1629,16 @@ export interface CloudFront {
    */
   getOriginRequestPolicyConfig(
     args: GetOriginRequestPolicyConfigCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetOriginRequestPolicyConfigCommandOutput>;
   getOriginRequestPolicyConfig(
     args: GetOriginRequestPolicyConfigCommandInput,
-    cb: (err: any, data?: GetOriginRequestPolicyConfigCommandOutput) => void
+    cb: (err: any, data?: GetOriginRequestPolicyConfigCommandOutput) => void,
   ): void;
   getOriginRequestPolicyConfig(
     args: GetOriginRequestPolicyConfigCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetOriginRequestPolicyConfigCommandOutput) => void
+    cb: (err: any, data?: GetOriginRequestPolicyConfigCommandOutput) => void,
   ): void;
 
   /**
@@ -1649,7 +1649,7 @@ export interface CloudFront {
   getPublicKey(
     args: GetPublicKeyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetPublicKeyCommandOutput) => void
+    cb: (err: any, data?: GetPublicKeyCommandOutput) => void,
   ): void;
 
   /**
@@ -1657,16 +1657,16 @@ export interface CloudFront {
    */
   getPublicKeyConfig(
     args: GetPublicKeyConfigCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetPublicKeyConfigCommandOutput>;
   getPublicKeyConfig(
     args: GetPublicKeyConfigCommandInput,
-    cb: (err: any, data?: GetPublicKeyConfigCommandOutput) => void
+    cb: (err: any, data?: GetPublicKeyConfigCommandOutput) => void,
   ): void;
   getPublicKeyConfig(
     args: GetPublicKeyConfigCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetPublicKeyConfigCommandOutput) => void
+    cb: (err: any, data?: GetPublicKeyConfigCommandOutput) => void,
   ): void;
 
   /**
@@ -1675,16 +1675,16 @@ export interface CloudFront {
   getRealtimeLogConfig(): Promise<GetRealtimeLogConfigCommandOutput>;
   getRealtimeLogConfig(
     args: GetRealtimeLogConfigCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetRealtimeLogConfigCommandOutput>;
   getRealtimeLogConfig(
     args: GetRealtimeLogConfigCommandInput,
-    cb: (err: any, data?: GetRealtimeLogConfigCommandOutput) => void
+    cb: (err: any, data?: GetRealtimeLogConfigCommandOutput) => void,
   ): void;
   getRealtimeLogConfig(
     args: GetRealtimeLogConfigCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetRealtimeLogConfigCommandOutput) => void
+    cb: (err: any, data?: GetRealtimeLogConfigCommandOutput) => void,
   ): void;
 
   /**
@@ -1692,16 +1692,16 @@ export interface CloudFront {
    */
   getResponseHeadersPolicy(
     args: GetResponseHeadersPolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetResponseHeadersPolicyCommandOutput>;
   getResponseHeadersPolicy(
     args: GetResponseHeadersPolicyCommandInput,
-    cb: (err: any, data?: GetResponseHeadersPolicyCommandOutput) => void
+    cb: (err: any, data?: GetResponseHeadersPolicyCommandOutput) => void,
   ): void;
   getResponseHeadersPolicy(
     args: GetResponseHeadersPolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetResponseHeadersPolicyCommandOutput) => void
+    cb: (err: any, data?: GetResponseHeadersPolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -1709,16 +1709,16 @@ export interface CloudFront {
    */
   getResponseHeadersPolicyConfig(
     args: GetResponseHeadersPolicyConfigCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetResponseHeadersPolicyConfigCommandOutput>;
   getResponseHeadersPolicyConfig(
     args: GetResponseHeadersPolicyConfigCommandInput,
-    cb: (err: any, data?: GetResponseHeadersPolicyConfigCommandOutput) => void
+    cb: (err: any, data?: GetResponseHeadersPolicyConfigCommandOutput) => void,
   ): void;
   getResponseHeadersPolicyConfig(
     args: GetResponseHeadersPolicyConfigCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetResponseHeadersPolicyConfigCommandOutput) => void
+    cb: (err: any, data?: GetResponseHeadersPolicyConfigCommandOutput) => void,
   ): void;
 
   /**
@@ -1726,16 +1726,16 @@ export interface CloudFront {
    */
   getStreamingDistribution(
     args: GetStreamingDistributionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetStreamingDistributionCommandOutput>;
   getStreamingDistribution(
     args: GetStreamingDistributionCommandInput,
-    cb: (err: any, data?: GetStreamingDistributionCommandOutput) => void
+    cb: (err: any, data?: GetStreamingDistributionCommandOutput) => void,
   ): void;
   getStreamingDistribution(
     args: GetStreamingDistributionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetStreamingDistributionCommandOutput) => void
+    cb: (err: any, data?: GetStreamingDistributionCommandOutput) => void,
   ): void;
 
   /**
@@ -1743,16 +1743,16 @@ export interface CloudFront {
    */
   getStreamingDistributionConfig(
     args: GetStreamingDistributionConfigCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetStreamingDistributionConfigCommandOutput>;
   getStreamingDistributionConfig(
     args: GetStreamingDistributionConfigCommandInput,
-    cb: (err: any, data?: GetStreamingDistributionConfigCommandOutput) => void
+    cb: (err: any, data?: GetStreamingDistributionConfigCommandOutput) => void,
   ): void;
   getStreamingDistributionConfig(
     args: GetStreamingDistributionConfigCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetStreamingDistributionConfigCommandOutput) => void
+    cb: (err: any, data?: GetStreamingDistributionConfigCommandOutput) => void,
   ): void;
 
   /**
@@ -1761,16 +1761,16 @@ export interface CloudFront {
   listCachePolicies(): Promise<ListCachePoliciesCommandOutput>;
   listCachePolicies(
     args: ListCachePoliciesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListCachePoliciesCommandOutput>;
   listCachePolicies(
     args: ListCachePoliciesCommandInput,
-    cb: (err: any, data?: ListCachePoliciesCommandOutput) => void
+    cb: (err: any, data?: ListCachePoliciesCommandOutput) => void,
   ): void;
   listCachePolicies(
     args: ListCachePoliciesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListCachePoliciesCommandOutput) => void
+    cb: (err: any, data?: ListCachePoliciesCommandOutput) => void,
   ): void;
 
   /**
@@ -1779,16 +1779,16 @@ export interface CloudFront {
   listCloudFrontOriginAccessIdentities(): Promise<ListCloudFrontOriginAccessIdentitiesCommandOutput>;
   listCloudFrontOriginAccessIdentities(
     args: ListCloudFrontOriginAccessIdentitiesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListCloudFrontOriginAccessIdentitiesCommandOutput>;
   listCloudFrontOriginAccessIdentities(
     args: ListCloudFrontOriginAccessIdentitiesCommandInput,
-    cb: (err: any, data?: ListCloudFrontOriginAccessIdentitiesCommandOutput) => void
+    cb: (err: any, data?: ListCloudFrontOriginAccessIdentitiesCommandOutput) => void,
   ): void;
   listCloudFrontOriginAccessIdentities(
     args: ListCloudFrontOriginAccessIdentitiesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListCloudFrontOriginAccessIdentitiesCommandOutput) => void
+    cb: (err: any, data?: ListCloudFrontOriginAccessIdentitiesCommandOutput) => void,
   ): void;
 
   /**
@@ -1796,16 +1796,16 @@ export interface CloudFront {
    */
   listConflictingAliases(
     args: ListConflictingAliasesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListConflictingAliasesCommandOutput>;
   listConflictingAliases(
     args: ListConflictingAliasesCommandInput,
-    cb: (err: any, data?: ListConflictingAliasesCommandOutput) => void
+    cb: (err: any, data?: ListConflictingAliasesCommandOutput) => void,
   ): void;
   listConflictingAliases(
     args: ListConflictingAliasesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListConflictingAliasesCommandOutput) => void
+    cb: (err: any, data?: ListConflictingAliasesCommandOutput) => void,
   ): void;
 
   /**
@@ -1814,16 +1814,16 @@ export interface CloudFront {
   listContinuousDeploymentPolicies(): Promise<ListContinuousDeploymentPoliciesCommandOutput>;
   listContinuousDeploymentPolicies(
     args: ListContinuousDeploymentPoliciesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListContinuousDeploymentPoliciesCommandOutput>;
   listContinuousDeploymentPolicies(
     args: ListContinuousDeploymentPoliciesCommandInput,
-    cb: (err: any, data?: ListContinuousDeploymentPoliciesCommandOutput) => void
+    cb: (err: any, data?: ListContinuousDeploymentPoliciesCommandOutput) => void,
   ): void;
   listContinuousDeploymentPolicies(
     args: ListContinuousDeploymentPoliciesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListContinuousDeploymentPoliciesCommandOutput) => void
+    cb: (err: any, data?: ListContinuousDeploymentPoliciesCommandOutput) => void,
   ): void;
 
   /**
@@ -1832,16 +1832,16 @@ export interface CloudFront {
   listDistributions(): Promise<ListDistributionsCommandOutput>;
   listDistributions(
     args: ListDistributionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListDistributionsCommandOutput>;
   listDistributions(
     args: ListDistributionsCommandInput,
-    cb: (err: any, data?: ListDistributionsCommandOutput) => void
+    cb: (err: any, data?: ListDistributionsCommandOutput) => void,
   ): void;
   listDistributions(
     args: ListDistributionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListDistributionsCommandOutput) => void
+    cb: (err: any, data?: ListDistributionsCommandOutput) => void,
   ): void;
 
   /**
@@ -1849,16 +1849,16 @@ export interface CloudFront {
    */
   listDistributionsByCachePolicyId(
     args: ListDistributionsByCachePolicyIdCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListDistributionsByCachePolicyIdCommandOutput>;
   listDistributionsByCachePolicyId(
     args: ListDistributionsByCachePolicyIdCommandInput,
-    cb: (err: any, data?: ListDistributionsByCachePolicyIdCommandOutput) => void
+    cb: (err: any, data?: ListDistributionsByCachePolicyIdCommandOutput) => void,
   ): void;
   listDistributionsByCachePolicyId(
     args: ListDistributionsByCachePolicyIdCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListDistributionsByCachePolicyIdCommandOutput) => void
+    cb: (err: any, data?: ListDistributionsByCachePolicyIdCommandOutput) => void,
   ): void;
 
   /**
@@ -1866,16 +1866,16 @@ export interface CloudFront {
    */
   listDistributionsByKeyGroup(
     args: ListDistributionsByKeyGroupCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListDistributionsByKeyGroupCommandOutput>;
   listDistributionsByKeyGroup(
     args: ListDistributionsByKeyGroupCommandInput,
-    cb: (err: any, data?: ListDistributionsByKeyGroupCommandOutput) => void
+    cb: (err: any, data?: ListDistributionsByKeyGroupCommandOutput) => void,
   ): void;
   listDistributionsByKeyGroup(
     args: ListDistributionsByKeyGroupCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListDistributionsByKeyGroupCommandOutput) => void
+    cb: (err: any, data?: ListDistributionsByKeyGroupCommandOutput) => void,
   ): void;
 
   /**
@@ -1883,16 +1883,16 @@ export interface CloudFront {
    */
   listDistributionsByOriginRequestPolicyId(
     args: ListDistributionsByOriginRequestPolicyIdCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListDistributionsByOriginRequestPolicyIdCommandOutput>;
   listDistributionsByOriginRequestPolicyId(
     args: ListDistributionsByOriginRequestPolicyIdCommandInput,
-    cb: (err: any, data?: ListDistributionsByOriginRequestPolicyIdCommandOutput) => void
+    cb: (err: any, data?: ListDistributionsByOriginRequestPolicyIdCommandOutput) => void,
   ): void;
   listDistributionsByOriginRequestPolicyId(
     args: ListDistributionsByOriginRequestPolicyIdCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListDistributionsByOriginRequestPolicyIdCommandOutput) => void
+    cb: (err: any, data?: ListDistributionsByOriginRequestPolicyIdCommandOutput) => void,
   ): void;
 
   /**
@@ -1901,16 +1901,16 @@ export interface CloudFront {
   listDistributionsByRealtimeLogConfig(): Promise<ListDistributionsByRealtimeLogConfigCommandOutput>;
   listDistributionsByRealtimeLogConfig(
     args: ListDistributionsByRealtimeLogConfigCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListDistributionsByRealtimeLogConfigCommandOutput>;
   listDistributionsByRealtimeLogConfig(
     args: ListDistributionsByRealtimeLogConfigCommandInput,
-    cb: (err: any, data?: ListDistributionsByRealtimeLogConfigCommandOutput) => void
+    cb: (err: any, data?: ListDistributionsByRealtimeLogConfigCommandOutput) => void,
   ): void;
   listDistributionsByRealtimeLogConfig(
     args: ListDistributionsByRealtimeLogConfigCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListDistributionsByRealtimeLogConfigCommandOutput) => void
+    cb: (err: any, data?: ListDistributionsByRealtimeLogConfigCommandOutput) => void,
   ): void;
 
   /**
@@ -1918,16 +1918,16 @@ export interface CloudFront {
    */
   listDistributionsByResponseHeadersPolicyId(
     args: ListDistributionsByResponseHeadersPolicyIdCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListDistributionsByResponseHeadersPolicyIdCommandOutput>;
   listDistributionsByResponseHeadersPolicyId(
     args: ListDistributionsByResponseHeadersPolicyIdCommandInput,
-    cb: (err: any, data?: ListDistributionsByResponseHeadersPolicyIdCommandOutput) => void
+    cb: (err: any, data?: ListDistributionsByResponseHeadersPolicyIdCommandOutput) => void,
   ): void;
   listDistributionsByResponseHeadersPolicyId(
     args: ListDistributionsByResponseHeadersPolicyIdCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListDistributionsByResponseHeadersPolicyIdCommandOutput) => void
+    cb: (err: any, data?: ListDistributionsByResponseHeadersPolicyIdCommandOutput) => void,
   ): void;
 
   /**
@@ -1935,16 +1935,16 @@ export interface CloudFront {
    */
   listDistributionsByWebACLId(
     args: ListDistributionsByWebACLIdCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListDistributionsByWebACLIdCommandOutput>;
   listDistributionsByWebACLId(
     args: ListDistributionsByWebACLIdCommandInput,
-    cb: (err: any, data?: ListDistributionsByWebACLIdCommandOutput) => void
+    cb: (err: any, data?: ListDistributionsByWebACLIdCommandOutput) => void,
   ): void;
   listDistributionsByWebACLId(
     args: ListDistributionsByWebACLIdCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListDistributionsByWebACLIdCommandOutput) => void
+    cb: (err: any, data?: ListDistributionsByWebACLIdCommandOutput) => void,
   ): void;
 
   /**
@@ -1953,16 +1953,16 @@ export interface CloudFront {
   listFieldLevelEncryptionConfigs(): Promise<ListFieldLevelEncryptionConfigsCommandOutput>;
   listFieldLevelEncryptionConfigs(
     args: ListFieldLevelEncryptionConfigsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListFieldLevelEncryptionConfigsCommandOutput>;
   listFieldLevelEncryptionConfigs(
     args: ListFieldLevelEncryptionConfigsCommandInput,
-    cb: (err: any, data?: ListFieldLevelEncryptionConfigsCommandOutput) => void
+    cb: (err: any, data?: ListFieldLevelEncryptionConfigsCommandOutput) => void,
   ): void;
   listFieldLevelEncryptionConfigs(
     args: ListFieldLevelEncryptionConfigsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListFieldLevelEncryptionConfigsCommandOutput) => void
+    cb: (err: any, data?: ListFieldLevelEncryptionConfigsCommandOutput) => void,
   ): void;
 
   /**
@@ -1971,16 +1971,16 @@ export interface CloudFront {
   listFieldLevelEncryptionProfiles(): Promise<ListFieldLevelEncryptionProfilesCommandOutput>;
   listFieldLevelEncryptionProfiles(
     args: ListFieldLevelEncryptionProfilesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListFieldLevelEncryptionProfilesCommandOutput>;
   listFieldLevelEncryptionProfiles(
     args: ListFieldLevelEncryptionProfilesCommandInput,
-    cb: (err: any, data?: ListFieldLevelEncryptionProfilesCommandOutput) => void
+    cb: (err: any, data?: ListFieldLevelEncryptionProfilesCommandOutput) => void,
   ): void;
   listFieldLevelEncryptionProfiles(
     args: ListFieldLevelEncryptionProfilesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListFieldLevelEncryptionProfilesCommandOutput) => void
+    cb: (err: any, data?: ListFieldLevelEncryptionProfilesCommandOutput) => void,
   ): void;
 
   /**
@@ -1992,7 +1992,7 @@ export interface CloudFront {
   listFunctions(
     args: ListFunctionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListFunctionsCommandOutput) => void
+    cb: (err: any, data?: ListFunctionsCommandOutput) => void,
   ): void;
 
   /**
@@ -2000,16 +2000,16 @@ export interface CloudFront {
    */
   listInvalidations(
     args: ListInvalidationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListInvalidationsCommandOutput>;
   listInvalidations(
     args: ListInvalidationsCommandInput,
-    cb: (err: any, data?: ListInvalidationsCommandOutput) => void
+    cb: (err: any, data?: ListInvalidationsCommandOutput) => void,
   ): void;
   listInvalidations(
     args: ListInvalidationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListInvalidationsCommandOutput) => void
+    cb: (err: any, data?: ListInvalidationsCommandOutput) => void,
   ): void;
 
   /**
@@ -2021,7 +2021,7 @@ export interface CloudFront {
   listKeyGroups(
     args: ListKeyGroupsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListKeyGroupsCommandOutput) => void
+    cb: (err: any, data?: ListKeyGroupsCommandOutput) => void,
   ): void;
 
   /**
@@ -2030,16 +2030,16 @@ export interface CloudFront {
   listKeyValueStores(): Promise<ListKeyValueStoresCommandOutput>;
   listKeyValueStores(
     args: ListKeyValueStoresCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListKeyValueStoresCommandOutput>;
   listKeyValueStores(
     args: ListKeyValueStoresCommandInput,
-    cb: (err: any, data?: ListKeyValueStoresCommandOutput) => void
+    cb: (err: any, data?: ListKeyValueStoresCommandOutput) => void,
   ): void;
   listKeyValueStores(
     args: ListKeyValueStoresCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListKeyValueStoresCommandOutput) => void
+    cb: (err: any, data?: ListKeyValueStoresCommandOutput) => void,
   ): void;
 
   /**
@@ -2048,16 +2048,16 @@ export interface CloudFront {
   listOriginAccessControls(): Promise<ListOriginAccessControlsCommandOutput>;
   listOriginAccessControls(
     args: ListOriginAccessControlsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListOriginAccessControlsCommandOutput>;
   listOriginAccessControls(
     args: ListOriginAccessControlsCommandInput,
-    cb: (err: any, data?: ListOriginAccessControlsCommandOutput) => void
+    cb: (err: any, data?: ListOriginAccessControlsCommandOutput) => void,
   ): void;
   listOriginAccessControls(
     args: ListOriginAccessControlsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListOriginAccessControlsCommandOutput) => void
+    cb: (err: any, data?: ListOriginAccessControlsCommandOutput) => void,
   ): void;
 
   /**
@@ -2066,16 +2066,16 @@ export interface CloudFront {
   listOriginRequestPolicies(): Promise<ListOriginRequestPoliciesCommandOutput>;
   listOriginRequestPolicies(
     args: ListOriginRequestPoliciesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListOriginRequestPoliciesCommandOutput>;
   listOriginRequestPolicies(
     args: ListOriginRequestPoliciesCommandInput,
-    cb: (err: any, data?: ListOriginRequestPoliciesCommandOutput) => void
+    cb: (err: any, data?: ListOriginRequestPoliciesCommandOutput) => void,
   ): void;
   listOriginRequestPolicies(
     args: ListOriginRequestPoliciesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListOriginRequestPoliciesCommandOutput) => void
+    cb: (err: any, data?: ListOriginRequestPoliciesCommandOutput) => void,
   ): void;
 
   /**
@@ -2084,13 +2084,13 @@ export interface CloudFront {
   listPublicKeys(): Promise<ListPublicKeysCommandOutput>;
   listPublicKeys(
     args: ListPublicKeysCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListPublicKeysCommandOutput>;
   listPublicKeys(args: ListPublicKeysCommandInput, cb: (err: any, data?: ListPublicKeysCommandOutput) => void): void;
   listPublicKeys(
     args: ListPublicKeysCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListPublicKeysCommandOutput) => void
+    cb: (err: any, data?: ListPublicKeysCommandOutput) => void,
   ): void;
 
   /**
@@ -2099,16 +2099,16 @@ export interface CloudFront {
   listRealtimeLogConfigs(): Promise<ListRealtimeLogConfigsCommandOutput>;
   listRealtimeLogConfigs(
     args: ListRealtimeLogConfigsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListRealtimeLogConfigsCommandOutput>;
   listRealtimeLogConfigs(
     args: ListRealtimeLogConfigsCommandInput,
-    cb: (err: any, data?: ListRealtimeLogConfigsCommandOutput) => void
+    cb: (err: any, data?: ListRealtimeLogConfigsCommandOutput) => void,
   ): void;
   listRealtimeLogConfigs(
     args: ListRealtimeLogConfigsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListRealtimeLogConfigsCommandOutput) => void
+    cb: (err: any, data?: ListRealtimeLogConfigsCommandOutput) => void,
   ): void;
 
   /**
@@ -2117,16 +2117,16 @@ export interface CloudFront {
   listResponseHeadersPolicies(): Promise<ListResponseHeadersPoliciesCommandOutput>;
   listResponseHeadersPolicies(
     args: ListResponseHeadersPoliciesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListResponseHeadersPoliciesCommandOutput>;
   listResponseHeadersPolicies(
     args: ListResponseHeadersPoliciesCommandInput,
-    cb: (err: any, data?: ListResponseHeadersPoliciesCommandOutput) => void
+    cb: (err: any, data?: ListResponseHeadersPoliciesCommandOutput) => void,
   ): void;
   listResponseHeadersPolicies(
     args: ListResponseHeadersPoliciesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListResponseHeadersPoliciesCommandOutput) => void
+    cb: (err: any, data?: ListResponseHeadersPoliciesCommandOutput) => void,
   ): void;
 
   /**
@@ -2135,16 +2135,16 @@ export interface CloudFront {
   listStreamingDistributions(): Promise<ListStreamingDistributionsCommandOutput>;
   listStreamingDistributions(
     args: ListStreamingDistributionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListStreamingDistributionsCommandOutput>;
   listStreamingDistributions(
     args: ListStreamingDistributionsCommandInput,
-    cb: (err: any, data?: ListStreamingDistributionsCommandOutput) => void
+    cb: (err: any, data?: ListStreamingDistributionsCommandOutput) => void,
   ): void;
   listStreamingDistributions(
     args: ListStreamingDistributionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListStreamingDistributionsCommandOutput) => void
+    cb: (err: any, data?: ListStreamingDistributionsCommandOutput) => void,
   ): void;
 
   /**
@@ -2152,16 +2152,16 @@ export interface CloudFront {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -2169,13 +2169,13 @@ export interface CloudFront {
    */
   publishFunction(
     args: PublishFunctionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PublishFunctionCommandOutput>;
   publishFunction(args: PublishFunctionCommandInput, cb: (err: any, data?: PublishFunctionCommandOutput) => void): void;
   publishFunction(
     args: PublishFunctionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PublishFunctionCommandOutput) => void
+    cb: (err: any, data?: PublishFunctionCommandOutput) => void,
   ): void;
 
   /**
@@ -2186,7 +2186,7 @@ export interface CloudFront {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -2197,7 +2197,7 @@ export interface CloudFront {
   testFunction(
     args: TestFunctionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TestFunctionCommandOutput) => void
+    cb: (err: any, data?: TestFunctionCommandOutput) => void,
   ): void;
 
   /**
@@ -2208,7 +2208,7 @@ export interface CloudFront {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -2216,16 +2216,16 @@ export interface CloudFront {
    */
   updateCachePolicy(
     args: UpdateCachePolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateCachePolicyCommandOutput>;
   updateCachePolicy(
     args: UpdateCachePolicyCommandInput,
-    cb: (err: any, data?: UpdateCachePolicyCommandOutput) => void
+    cb: (err: any, data?: UpdateCachePolicyCommandOutput) => void,
   ): void;
   updateCachePolicy(
     args: UpdateCachePolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateCachePolicyCommandOutput) => void
+    cb: (err: any, data?: UpdateCachePolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -2233,16 +2233,16 @@ export interface CloudFront {
    */
   updateCloudFrontOriginAccessIdentity(
     args: UpdateCloudFrontOriginAccessIdentityCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateCloudFrontOriginAccessIdentityCommandOutput>;
   updateCloudFrontOriginAccessIdentity(
     args: UpdateCloudFrontOriginAccessIdentityCommandInput,
-    cb: (err: any, data?: UpdateCloudFrontOriginAccessIdentityCommandOutput) => void
+    cb: (err: any, data?: UpdateCloudFrontOriginAccessIdentityCommandOutput) => void,
   ): void;
   updateCloudFrontOriginAccessIdentity(
     args: UpdateCloudFrontOriginAccessIdentityCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateCloudFrontOriginAccessIdentityCommandOutput) => void
+    cb: (err: any, data?: UpdateCloudFrontOriginAccessIdentityCommandOutput) => void,
   ): void;
 
   /**
@@ -2250,16 +2250,16 @@ export interface CloudFront {
    */
   updateContinuousDeploymentPolicy(
     args: UpdateContinuousDeploymentPolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateContinuousDeploymentPolicyCommandOutput>;
   updateContinuousDeploymentPolicy(
     args: UpdateContinuousDeploymentPolicyCommandInput,
-    cb: (err: any, data?: UpdateContinuousDeploymentPolicyCommandOutput) => void
+    cb: (err: any, data?: UpdateContinuousDeploymentPolicyCommandOutput) => void,
   ): void;
   updateContinuousDeploymentPolicy(
     args: UpdateContinuousDeploymentPolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateContinuousDeploymentPolicyCommandOutput) => void
+    cb: (err: any, data?: UpdateContinuousDeploymentPolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -2267,16 +2267,16 @@ export interface CloudFront {
    */
   updateDistribution(
     args: UpdateDistributionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateDistributionCommandOutput>;
   updateDistribution(
     args: UpdateDistributionCommandInput,
-    cb: (err: any, data?: UpdateDistributionCommandOutput) => void
+    cb: (err: any, data?: UpdateDistributionCommandOutput) => void,
   ): void;
   updateDistribution(
     args: UpdateDistributionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateDistributionCommandOutput) => void
+    cb: (err: any, data?: UpdateDistributionCommandOutput) => void,
   ): void;
 
   /**
@@ -2284,16 +2284,16 @@ export interface CloudFront {
    */
   updateDistributionWithStagingConfig(
     args: UpdateDistributionWithStagingConfigCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateDistributionWithStagingConfigCommandOutput>;
   updateDistributionWithStagingConfig(
     args: UpdateDistributionWithStagingConfigCommandInput,
-    cb: (err: any, data?: UpdateDistributionWithStagingConfigCommandOutput) => void
+    cb: (err: any, data?: UpdateDistributionWithStagingConfigCommandOutput) => void,
   ): void;
   updateDistributionWithStagingConfig(
     args: UpdateDistributionWithStagingConfigCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateDistributionWithStagingConfigCommandOutput) => void
+    cb: (err: any, data?: UpdateDistributionWithStagingConfigCommandOutput) => void,
   ): void;
 
   /**
@@ -2301,16 +2301,16 @@ export interface CloudFront {
    */
   updateFieldLevelEncryptionConfig(
     args: UpdateFieldLevelEncryptionConfigCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateFieldLevelEncryptionConfigCommandOutput>;
   updateFieldLevelEncryptionConfig(
     args: UpdateFieldLevelEncryptionConfigCommandInput,
-    cb: (err: any, data?: UpdateFieldLevelEncryptionConfigCommandOutput) => void
+    cb: (err: any, data?: UpdateFieldLevelEncryptionConfigCommandOutput) => void,
   ): void;
   updateFieldLevelEncryptionConfig(
     args: UpdateFieldLevelEncryptionConfigCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateFieldLevelEncryptionConfigCommandOutput) => void
+    cb: (err: any, data?: UpdateFieldLevelEncryptionConfigCommandOutput) => void,
   ): void;
 
   /**
@@ -2318,16 +2318,16 @@ export interface CloudFront {
    */
   updateFieldLevelEncryptionProfile(
     args: UpdateFieldLevelEncryptionProfileCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateFieldLevelEncryptionProfileCommandOutput>;
   updateFieldLevelEncryptionProfile(
     args: UpdateFieldLevelEncryptionProfileCommandInput,
-    cb: (err: any, data?: UpdateFieldLevelEncryptionProfileCommandOutput) => void
+    cb: (err: any, data?: UpdateFieldLevelEncryptionProfileCommandOutput) => void,
   ): void;
   updateFieldLevelEncryptionProfile(
     args: UpdateFieldLevelEncryptionProfileCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateFieldLevelEncryptionProfileCommandOutput) => void
+    cb: (err: any, data?: UpdateFieldLevelEncryptionProfileCommandOutput) => void,
   ): void;
 
   /**
@@ -2335,13 +2335,13 @@ export interface CloudFront {
    */
   updateFunction(
     args: UpdateFunctionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateFunctionCommandOutput>;
   updateFunction(args: UpdateFunctionCommandInput, cb: (err: any, data?: UpdateFunctionCommandOutput) => void): void;
   updateFunction(
     args: UpdateFunctionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateFunctionCommandOutput) => void
+    cb: (err: any, data?: UpdateFunctionCommandOutput) => void,
   ): void;
 
   /**
@@ -2349,13 +2349,13 @@ export interface CloudFront {
    */
   updateKeyGroup(
     args: UpdateKeyGroupCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateKeyGroupCommandOutput>;
   updateKeyGroup(args: UpdateKeyGroupCommandInput, cb: (err: any, data?: UpdateKeyGroupCommandOutput) => void): void;
   updateKeyGroup(
     args: UpdateKeyGroupCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateKeyGroupCommandOutput) => void
+    cb: (err: any, data?: UpdateKeyGroupCommandOutput) => void,
   ): void;
 
   /**
@@ -2363,16 +2363,16 @@ export interface CloudFront {
    */
   updateKeyValueStore(
     args: UpdateKeyValueStoreCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateKeyValueStoreCommandOutput>;
   updateKeyValueStore(
     args: UpdateKeyValueStoreCommandInput,
-    cb: (err: any, data?: UpdateKeyValueStoreCommandOutput) => void
+    cb: (err: any, data?: UpdateKeyValueStoreCommandOutput) => void,
   ): void;
   updateKeyValueStore(
     args: UpdateKeyValueStoreCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateKeyValueStoreCommandOutput) => void
+    cb: (err: any, data?: UpdateKeyValueStoreCommandOutput) => void,
   ): void;
 
   /**
@@ -2380,16 +2380,16 @@ export interface CloudFront {
    */
   updateOriginAccessControl(
     args: UpdateOriginAccessControlCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateOriginAccessControlCommandOutput>;
   updateOriginAccessControl(
     args: UpdateOriginAccessControlCommandInput,
-    cb: (err: any, data?: UpdateOriginAccessControlCommandOutput) => void
+    cb: (err: any, data?: UpdateOriginAccessControlCommandOutput) => void,
   ): void;
   updateOriginAccessControl(
     args: UpdateOriginAccessControlCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateOriginAccessControlCommandOutput) => void
+    cb: (err: any, data?: UpdateOriginAccessControlCommandOutput) => void,
   ): void;
 
   /**
@@ -2397,16 +2397,16 @@ export interface CloudFront {
    */
   updateOriginRequestPolicy(
     args: UpdateOriginRequestPolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateOriginRequestPolicyCommandOutput>;
   updateOriginRequestPolicy(
     args: UpdateOriginRequestPolicyCommandInput,
-    cb: (err: any, data?: UpdateOriginRequestPolicyCommandOutput) => void
+    cb: (err: any, data?: UpdateOriginRequestPolicyCommandOutput) => void,
   ): void;
   updateOriginRequestPolicy(
     args: UpdateOriginRequestPolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateOriginRequestPolicyCommandOutput) => void
+    cb: (err: any, data?: UpdateOriginRequestPolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -2414,13 +2414,13 @@ export interface CloudFront {
    */
   updatePublicKey(
     args: UpdatePublicKeyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdatePublicKeyCommandOutput>;
   updatePublicKey(args: UpdatePublicKeyCommandInput, cb: (err: any, data?: UpdatePublicKeyCommandOutput) => void): void;
   updatePublicKey(
     args: UpdatePublicKeyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdatePublicKeyCommandOutput) => void
+    cb: (err: any, data?: UpdatePublicKeyCommandOutput) => void,
   ): void;
 
   /**
@@ -2429,16 +2429,16 @@ export interface CloudFront {
   updateRealtimeLogConfig(): Promise<UpdateRealtimeLogConfigCommandOutput>;
   updateRealtimeLogConfig(
     args: UpdateRealtimeLogConfigCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateRealtimeLogConfigCommandOutput>;
   updateRealtimeLogConfig(
     args: UpdateRealtimeLogConfigCommandInput,
-    cb: (err: any, data?: UpdateRealtimeLogConfigCommandOutput) => void
+    cb: (err: any, data?: UpdateRealtimeLogConfigCommandOutput) => void,
   ): void;
   updateRealtimeLogConfig(
     args: UpdateRealtimeLogConfigCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateRealtimeLogConfigCommandOutput) => void
+    cb: (err: any, data?: UpdateRealtimeLogConfigCommandOutput) => void,
   ): void;
 
   /**
@@ -2446,16 +2446,16 @@ export interface CloudFront {
    */
   updateResponseHeadersPolicy(
     args: UpdateResponseHeadersPolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateResponseHeadersPolicyCommandOutput>;
   updateResponseHeadersPolicy(
     args: UpdateResponseHeadersPolicyCommandInput,
-    cb: (err: any, data?: UpdateResponseHeadersPolicyCommandOutput) => void
+    cb: (err: any, data?: UpdateResponseHeadersPolicyCommandOutput) => void,
   ): void;
   updateResponseHeadersPolicy(
     args: UpdateResponseHeadersPolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateResponseHeadersPolicyCommandOutput) => void
+    cb: (err: any, data?: UpdateResponseHeadersPolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -2463,16 +2463,16 @@ export interface CloudFront {
    */
   updateStreamingDistribution(
     args: UpdateStreamingDistributionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateStreamingDistributionCommandOutput>;
   updateStreamingDistribution(
     args: UpdateStreamingDistributionCommandInput,
-    cb: (err: any, data?: UpdateStreamingDistributionCommandOutput) => void
+    cb: (err: any, data?: UpdateStreamingDistributionCommandOutput) => void,
   ): void;
   updateStreamingDistribution(
     args: UpdateStreamingDistributionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateStreamingDistributionCommandOutput) => void
+    cb: (err: any, data?: UpdateStreamingDistributionCommandOutput) => void,
   ): void;
 }
 

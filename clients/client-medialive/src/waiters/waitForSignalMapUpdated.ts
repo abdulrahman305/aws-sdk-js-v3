@@ -52,7 +52,7 @@ const checkState = async (client: MediaLiveClient, input: GetSignalMapCommandInp
  */
 export const waitForSignalMapUpdated = async (
   params: WaiterConfiguration<MediaLiveClient>,
-  input: GetSignalMapCommandInput
+  input: GetSignalMapCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 5, maxDelay: 120 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -64,7 +64,7 @@ export const waitForSignalMapUpdated = async (
  */
 export const waitUntilSignalMapUpdated = async (
   params: WaiterConfiguration<MediaLiveClient>,
-  input: GetSignalMapCommandInput
+  input: GetSignalMapCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 5, maxDelay: 120 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

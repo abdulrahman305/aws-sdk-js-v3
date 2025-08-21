@@ -50,7 +50,7 @@ export interface FromCognitoIdentityPoolParameters extends Omit<_FromCognitoIden
  * ```
  */
 export const fromCognitoIdentityPool = (
-  options: FromCognitoIdentityPoolParameters
+  options: FromCognitoIdentityPoolParameters,
 ): CognitoIdentityCredentialProvider =>
   _fromCognitoIdentityPool({
     ...options,

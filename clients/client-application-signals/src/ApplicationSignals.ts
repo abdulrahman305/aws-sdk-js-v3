@@ -95,16 +95,16 @@ export interface ApplicationSignals {
    */
   batchGetServiceLevelObjectiveBudgetReport(
     args: BatchGetServiceLevelObjectiveBudgetReportCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<BatchGetServiceLevelObjectiveBudgetReportCommandOutput>;
   batchGetServiceLevelObjectiveBudgetReport(
     args: BatchGetServiceLevelObjectiveBudgetReportCommandInput,
-    cb: (err: any, data?: BatchGetServiceLevelObjectiveBudgetReportCommandOutput) => void
+    cb: (err: any, data?: BatchGetServiceLevelObjectiveBudgetReportCommandOutput) => void,
   ): void;
   batchGetServiceLevelObjectiveBudgetReport(
     args: BatchGetServiceLevelObjectiveBudgetReportCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: BatchGetServiceLevelObjectiveBudgetReportCommandOutput) => void
+    cb: (err: any, data?: BatchGetServiceLevelObjectiveBudgetReportCommandOutput) => void,
   ): void;
 
   /**
@@ -112,16 +112,16 @@ export interface ApplicationSignals {
    */
   createServiceLevelObjective(
     args: CreateServiceLevelObjectiveCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateServiceLevelObjectiveCommandOutput>;
   createServiceLevelObjective(
     args: CreateServiceLevelObjectiveCommandInput,
-    cb: (err: any, data?: CreateServiceLevelObjectiveCommandOutput) => void
+    cb: (err: any, data?: CreateServiceLevelObjectiveCommandOutput) => void,
   ): void;
   createServiceLevelObjective(
     args: CreateServiceLevelObjectiveCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateServiceLevelObjectiveCommandOutput) => void
+    cb: (err: any, data?: CreateServiceLevelObjectiveCommandOutput) => void,
   ): void;
 
   /**
@@ -129,16 +129,16 @@ export interface ApplicationSignals {
    */
   deleteServiceLevelObjective(
     args: DeleteServiceLevelObjectiveCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteServiceLevelObjectiveCommandOutput>;
   deleteServiceLevelObjective(
     args: DeleteServiceLevelObjectiveCommandInput,
-    cb: (err: any, data?: DeleteServiceLevelObjectiveCommandOutput) => void
+    cb: (err: any, data?: DeleteServiceLevelObjectiveCommandOutput) => void,
   ): void;
   deleteServiceLevelObjective(
     args: DeleteServiceLevelObjectiveCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteServiceLevelObjectiveCommandOutput) => void
+    cb: (err: any, data?: DeleteServiceLevelObjectiveCommandOutput) => void,
   ): void;
 
   /**
@@ -149,7 +149,7 @@ export interface ApplicationSignals {
   getService(
     args: GetServiceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetServiceCommandOutput) => void
+    cb: (err: any, data?: GetServiceCommandOutput) => void,
   ): void;
 
   /**
@@ -157,16 +157,16 @@ export interface ApplicationSignals {
    */
   getServiceLevelObjective(
     args: GetServiceLevelObjectiveCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetServiceLevelObjectiveCommandOutput>;
   getServiceLevelObjective(
     args: GetServiceLevelObjectiveCommandInput,
-    cb: (err: any, data?: GetServiceLevelObjectiveCommandOutput) => void
+    cb: (err: any, data?: GetServiceLevelObjectiveCommandOutput) => void,
   ): void;
   getServiceLevelObjective(
     args: GetServiceLevelObjectiveCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetServiceLevelObjectiveCommandOutput) => void
+    cb: (err: any, data?: GetServiceLevelObjectiveCommandOutput) => void,
   ): void;
 
   /**
@@ -174,16 +174,16 @@ export interface ApplicationSignals {
    */
   listServiceDependencies(
     args: ListServiceDependenciesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListServiceDependenciesCommandOutput>;
   listServiceDependencies(
     args: ListServiceDependenciesCommandInput,
-    cb: (err: any, data?: ListServiceDependenciesCommandOutput) => void
+    cb: (err: any, data?: ListServiceDependenciesCommandOutput) => void,
   ): void;
   listServiceDependencies(
     args: ListServiceDependenciesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListServiceDependenciesCommandOutput) => void
+    cb: (err: any, data?: ListServiceDependenciesCommandOutput) => void,
   ): void;
 
   /**
@@ -191,16 +191,16 @@ export interface ApplicationSignals {
    */
   listServiceDependents(
     args: ListServiceDependentsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListServiceDependentsCommandOutput>;
   listServiceDependents(
     args: ListServiceDependentsCommandInput,
-    cb: (err: any, data?: ListServiceDependentsCommandOutput) => void
+    cb: (err: any, data?: ListServiceDependentsCommandOutput) => void,
   ): void;
   listServiceDependents(
     args: ListServiceDependentsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListServiceDependentsCommandOutput) => void
+    cb: (err: any, data?: ListServiceDependentsCommandOutput) => void,
   ): void;
 
   /**
@@ -209,16 +209,16 @@ export interface ApplicationSignals {
   listServiceLevelObjectives(): Promise<ListServiceLevelObjectivesCommandOutput>;
   listServiceLevelObjectives(
     args: ListServiceLevelObjectivesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListServiceLevelObjectivesCommandOutput>;
   listServiceLevelObjectives(
     args: ListServiceLevelObjectivesCommandInput,
-    cb: (err: any, data?: ListServiceLevelObjectivesCommandOutput) => void
+    cb: (err: any, data?: ListServiceLevelObjectivesCommandOutput) => void,
   ): void;
   listServiceLevelObjectives(
     args: ListServiceLevelObjectivesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListServiceLevelObjectivesCommandOutput) => void
+    cb: (err: any, data?: ListServiceLevelObjectivesCommandOutput) => void,
   ): void;
 
   /**
@@ -226,16 +226,16 @@ export interface ApplicationSignals {
    */
   listServiceOperations(
     args: ListServiceOperationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListServiceOperationsCommandOutput>;
   listServiceOperations(
     args: ListServiceOperationsCommandInput,
-    cb: (err: any, data?: ListServiceOperationsCommandOutput) => void
+    cb: (err: any, data?: ListServiceOperationsCommandOutput) => void,
   ): void;
   listServiceOperations(
     args: ListServiceOperationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListServiceOperationsCommandOutput) => void
+    cb: (err: any, data?: ListServiceOperationsCommandOutput) => void,
   ): void;
 
   /**
@@ -246,7 +246,7 @@ export interface ApplicationSignals {
   listServices(
     args: ListServicesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListServicesCommandOutput) => void
+    cb: (err: any, data?: ListServicesCommandOutput) => void,
   ): void;
 
   /**
@@ -254,16 +254,16 @@ export interface ApplicationSignals {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -272,13 +272,13 @@ export interface ApplicationSignals {
   startDiscovery(): Promise<StartDiscoveryCommandOutput>;
   startDiscovery(
     args: StartDiscoveryCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartDiscoveryCommandOutput>;
   startDiscovery(args: StartDiscoveryCommandInput, cb: (err: any, data?: StartDiscoveryCommandOutput) => void): void;
   startDiscovery(
     args: StartDiscoveryCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartDiscoveryCommandOutput) => void
+    cb: (err: any, data?: StartDiscoveryCommandOutput) => void,
   ): void;
 
   /**
@@ -289,7 +289,7 @@ export interface ApplicationSignals {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -300,7 +300,7 @@ export interface ApplicationSignals {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -308,16 +308,16 @@ export interface ApplicationSignals {
    */
   updateServiceLevelObjective(
     args: UpdateServiceLevelObjectiveCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateServiceLevelObjectiveCommandOutput>;
   updateServiceLevelObjective(
     args: UpdateServiceLevelObjectiveCommandInput,
-    cb: (err: any, data?: UpdateServiceLevelObjectiveCommandOutput) => void
+    cb: (err: any, data?: UpdateServiceLevelObjectiveCommandOutput) => void,
   ): void;
   updateServiceLevelObjective(
     args: UpdateServiceLevelObjectiveCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateServiceLevelObjectiveCommandOutput) => void
+    cb: (err: any, data?: UpdateServiceLevelObjectiveCommandOutput) => void,
   ): void;
 }
 

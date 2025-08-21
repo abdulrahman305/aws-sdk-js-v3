@@ -56,7 +56,7 @@ describe(resolveSSOCredentials.name, () => {
   it("throws error if getSSOTokenFromFile fails", async () => {
     const expectedError = new CredentialsProviderError(
       `The SSO session associated with this profile is invalid. ${refreshMessage}`,
-      SHOULD_FAIL_CREDENTIAL_CHAIN
+      SHOULD_FAIL_CREDENTIAL_CHAIN,
     );
     (getSSOTokenFromFile as jest.Mock).mockRejectedValue(new Error("error"));
 
@@ -82,7 +82,7 @@ describe(resolveSSOCredentials.name, () => {
     afterEach(async () => {
       const expectedError = new CredentialsProviderError(
         `The SSO session associated with this profile has expired. ${refreshMessage}`,
-        SHOULD_FAIL_CREDENTIAL_CHAIN
+        SHOULD_FAIL_CREDENTIAL_CHAIN,
       );
 
       try {
@@ -118,7 +118,7 @@ describe(resolveSSOCredentials.name, () => {
         fail(`expected ${expectedError}`);
       } catch (error) {
         expect(error).toStrictEqual(
-          new CredentialsProviderError(expectedError.toString(), SHOULD_FAIL_CREDENTIAL_CHAIN)
+          new CredentialsProviderError(expectedError.toString(), SHOULD_FAIL_CREDENTIAL_CHAIN),
         );
       }
     });
@@ -130,7 +130,7 @@ describe(resolveSSOCredentials.name, () => {
 
         const expectedError = new CredentialsProviderError(
           "SSO returns an invalid temporary credential.",
-          SHOULD_FAIL_CREDENTIAL_CHAIN
+          SHOULD_FAIL_CREDENTIAL_CHAIN,
         );
         try {
           await resolveSSOCredentials(mockOptions);
@@ -138,7 +138,7 @@ describe(resolveSSOCredentials.name, () => {
         } catch (error) {
           expect(error).toStrictEqual(expectedError);
         }
-      }
+      },
     );
   });
 

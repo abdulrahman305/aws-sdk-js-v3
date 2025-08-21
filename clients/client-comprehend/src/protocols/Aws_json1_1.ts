@@ -546,7 +546,7 @@ import {
  */
 export const se_BatchDetectDominantLanguageCommand = async (
   input: BatchDetectDominantLanguageCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("BatchDetectDominantLanguage");
   let body: any;
@@ -559,7 +559,7 @@ export const se_BatchDetectDominantLanguageCommand = async (
  */
 export const se_BatchDetectEntitiesCommand = async (
   input: BatchDetectEntitiesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("BatchDetectEntities");
   let body: any;
@@ -572,7 +572,7 @@ export const se_BatchDetectEntitiesCommand = async (
  */
 export const se_BatchDetectKeyPhrasesCommand = async (
   input: BatchDetectKeyPhrasesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("BatchDetectKeyPhrases");
   let body: any;
@@ -585,7 +585,7 @@ export const se_BatchDetectKeyPhrasesCommand = async (
  */
 export const se_BatchDetectSentimentCommand = async (
   input: BatchDetectSentimentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("BatchDetectSentiment");
   let body: any;
@@ -598,7 +598,7 @@ export const se_BatchDetectSentimentCommand = async (
  */
 export const se_BatchDetectSyntaxCommand = async (
   input: BatchDetectSyntaxCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("BatchDetectSyntax");
   let body: any;
@@ -611,7 +611,7 @@ export const se_BatchDetectSyntaxCommand = async (
  */
 export const se_BatchDetectTargetedSentimentCommand = async (
   input: BatchDetectTargetedSentimentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("BatchDetectTargetedSentiment");
   let body: any;
@@ -624,7 +624,7 @@ export const se_BatchDetectTargetedSentimentCommand = async (
  */
 export const se_ClassifyDocumentCommand = async (
   input: ClassifyDocumentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ClassifyDocument");
   let body: any;
@@ -637,7 +637,7 @@ export const se_ClassifyDocumentCommand = async (
  */
 export const se_ContainsPiiEntitiesCommand = async (
   input: ContainsPiiEntitiesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ContainsPiiEntities");
   let body: any;
@@ -650,7 +650,7 @@ export const se_ContainsPiiEntitiesCommand = async (
  */
 export const se_CreateDatasetCommand = async (
   input: CreateDatasetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateDataset");
   let body: any;
@@ -663,7 +663,7 @@ export const se_CreateDatasetCommand = async (
  */
 export const se_CreateDocumentClassifierCommand = async (
   input: CreateDocumentClassifierCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateDocumentClassifier");
   let body: any;
@@ -676,7 +676,7 @@ export const se_CreateDocumentClassifierCommand = async (
  */
 export const se_CreateEndpointCommand = async (
   input: CreateEndpointCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateEndpoint");
   let body: any;
@@ -689,7 +689,7 @@ export const se_CreateEndpointCommand = async (
  */
 export const se_CreateEntityRecognizerCommand = async (
   input: CreateEntityRecognizerCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateEntityRecognizer");
   let body: any;
@@ -702,7 +702,7 @@ export const se_CreateEntityRecognizerCommand = async (
  */
 export const se_CreateFlywheelCommand = async (
   input: CreateFlywheelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateFlywheel");
   let body: any;
@@ -715,7 +715,7 @@ export const se_CreateFlywheelCommand = async (
  */
 export const se_DeleteDocumentClassifierCommand = async (
   input: DeleteDocumentClassifierCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteDocumentClassifier");
   let body: any;
@@ -728,7 +728,7 @@ export const se_DeleteDocumentClassifierCommand = async (
  */
 export const se_DeleteEndpointCommand = async (
   input: DeleteEndpointCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteEndpoint");
   let body: any;
@@ -741,7 +741,7 @@ export const se_DeleteEndpointCommand = async (
  */
 export const se_DeleteEntityRecognizerCommand = async (
   input: DeleteEntityRecognizerCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteEntityRecognizer");
   let body: any;
@@ -754,7 +754,7 @@ export const se_DeleteEntityRecognizerCommand = async (
  */
 export const se_DeleteFlywheelCommand = async (
   input: DeleteFlywheelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteFlywheel");
   let body: any;
@@ -767,7 +767,7 @@ export const se_DeleteFlywheelCommand = async (
  */
 export const se_DeleteResourcePolicyCommand = async (
   input: DeleteResourcePolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteResourcePolicy");
   let body: any;
@@ -780,7 +780,7 @@ export const se_DeleteResourcePolicyCommand = async (
  */
 export const se_DescribeDatasetCommand = async (
   input: DescribeDatasetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeDataset");
   let body: any;
@@ -793,7 +793,7 @@ export const se_DescribeDatasetCommand = async (
  */
 export const se_DescribeDocumentClassificationJobCommand = async (
   input: DescribeDocumentClassificationJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeDocumentClassificationJob");
   let body: any;
@@ -806,7 +806,7 @@ export const se_DescribeDocumentClassificationJobCommand = async (
  */
 export const se_DescribeDocumentClassifierCommand = async (
   input: DescribeDocumentClassifierCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeDocumentClassifier");
   let body: any;
@@ -819,7 +819,7 @@ export const se_DescribeDocumentClassifierCommand = async (
  */
 export const se_DescribeDominantLanguageDetectionJobCommand = async (
   input: DescribeDominantLanguageDetectionJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeDominantLanguageDetectionJob");
   let body: any;
@@ -832,7 +832,7 @@ export const se_DescribeDominantLanguageDetectionJobCommand = async (
  */
 export const se_DescribeEndpointCommand = async (
   input: DescribeEndpointCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeEndpoint");
   let body: any;
@@ -845,7 +845,7 @@ export const se_DescribeEndpointCommand = async (
  */
 export const se_DescribeEntitiesDetectionJobCommand = async (
   input: DescribeEntitiesDetectionJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeEntitiesDetectionJob");
   let body: any;
@@ -858,7 +858,7 @@ export const se_DescribeEntitiesDetectionJobCommand = async (
  */
 export const se_DescribeEntityRecognizerCommand = async (
   input: DescribeEntityRecognizerCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeEntityRecognizer");
   let body: any;
@@ -871,7 +871,7 @@ export const se_DescribeEntityRecognizerCommand = async (
  */
 export const se_DescribeEventsDetectionJobCommand = async (
   input: DescribeEventsDetectionJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeEventsDetectionJob");
   let body: any;
@@ -884,7 +884,7 @@ export const se_DescribeEventsDetectionJobCommand = async (
  */
 export const se_DescribeFlywheelCommand = async (
   input: DescribeFlywheelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeFlywheel");
   let body: any;
@@ -897,7 +897,7 @@ export const se_DescribeFlywheelCommand = async (
  */
 export const se_DescribeFlywheelIterationCommand = async (
   input: DescribeFlywheelIterationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeFlywheelIteration");
   let body: any;
@@ -910,7 +910,7 @@ export const se_DescribeFlywheelIterationCommand = async (
  */
 export const se_DescribeKeyPhrasesDetectionJobCommand = async (
   input: DescribeKeyPhrasesDetectionJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeKeyPhrasesDetectionJob");
   let body: any;
@@ -923,7 +923,7 @@ export const se_DescribeKeyPhrasesDetectionJobCommand = async (
  */
 export const se_DescribePiiEntitiesDetectionJobCommand = async (
   input: DescribePiiEntitiesDetectionJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribePiiEntitiesDetectionJob");
   let body: any;
@@ -936,7 +936,7 @@ export const se_DescribePiiEntitiesDetectionJobCommand = async (
  */
 export const se_DescribeResourcePolicyCommand = async (
   input: DescribeResourcePolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeResourcePolicy");
   let body: any;
@@ -949,7 +949,7 @@ export const se_DescribeResourcePolicyCommand = async (
  */
 export const se_DescribeSentimentDetectionJobCommand = async (
   input: DescribeSentimentDetectionJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeSentimentDetectionJob");
   let body: any;
@@ -962,7 +962,7 @@ export const se_DescribeSentimentDetectionJobCommand = async (
  */
 export const se_DescribeTargetedSentimentDetectionJobCommand = async (
   input: DescribeTargetedSentimentDetectionJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeTargetedSentimentDetectionJob");
   let body: any;
@@ -975,7 +975,7 @@ export const se_DescribeTargetedSentimentDetectionJobCommand = async (
  */
 export const se_DescribeTopicsDetectionJobCommand = async (
   input: DescribeTopicsDetectionJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeTopicsDetectionJob");
   let body: any;
@@ -988,7 +988,7 @@ export const se_DescribeTopicsDetectionJobCommand = async (
  */
 export const se_DetectDominantLanguageCommand = async (
   input: DetectDominantLanguageCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DetectDominantLanguage");
   let body: any;
@@ -1001,7 +1001,7 @@ export const se_DetectDominantLanguageCommand = async (
  */
 export const se_DetectEntitiesCommand = async (
   input: DetectEntitiesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DetectEntities");
   let body: any;
@@ -1014,7 +1014,7 @@ export const se_DetectEntitiesCommand = async (
  */
 export const se_DetectKeyPhrasesCommand = async (
   input: DetectKeyPhrasesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DetectKeyPhrases");
   let body: any;
@@ -1027,7 +1027,7 @@ export const se_DetectKeyPhrasesCommand = async (
  */
 export const se_DetectPiiEntitiesCommand = async (
   input: DetectPiiEntitiesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DetectPiiEntities");
   let body: any;
@@ -1040,7 +1040,7 @@ export const se_DetectPiiEntitiesCommand = async (
  */
 export const se_DetectSentimentCommand = async (
   input: DetectSentimentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DetectSentiment");
   let body: any;
@@ -1053,7 +1053,7 @@ export const se_DetectSentimentCommand = async (
  */
 export const se_DetectSyntaxCommand = async (
   input: DetectSyntaxCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DetectSyntax");
   let body: any;
@@ -1066,7 +1066,7 @@ export const se_DetectSyntaxCommand = async (
  */
 export const se_DetectTargetedSentimentCommand = async (
   input: DetectTargetedSentimentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DetectTargetedSentiment");
   let body: any;
@@ -1079,7 +1079,7 @@ export const se_DetectTargetedSentimentCommand = async (
  */
 export const se_DetectToxicContentCommand = async (
   input: DetectToxicContentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DetectToxicContent");
   let body: any;
@@ -1092,7 +1092,7 @@ export const se_DetectToxicContentCommand = async (
  */
 export const se_ImportModelCommand = async (
   input: ImportModelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ImportModel");
   let body: any;
@@ -1105,7 +1105,7 @@ export const se_ImportModelCommand = async (
  */
 export const se_ListDatasetsCommand = async (
   input: ListDatasetsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListDatasets");
   let body: any;
@@ -1118,7 +1118,7 @@ export const se_ListDatasetsCommand = async (
  */
 export const se_ListDocumentClassificationJobsCommand = async (
   input: ListDocumentClassificationJobsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListDocumentClassificationJobs");
   let body: any;
@@ -1131,7 +1131,7 @@ export const se_ListDocumentClassificationJobsCommand = async (
  */
 export const se_ListDocumentClassifiersCommand = async (
   input: ListDocumentClassifiersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListDocumentClassifiers");
   let body: any;
@@ -1144,7 +1144,7 @@ export const se_ListDocumentClassifiersCommand = async (
  */
 export const se_ListDocumentClassifierSummariesCommand = async (
   input: ListDocumentClassifierSummariesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListDocumentClassifierSummaries");
   let body: any;
@@ -1157,7 +1157,7 @@ export const se_ListDocumentClassifierSummariesCommand = async (
  */
 export const se_ListDominantLanguageDetectionJobsCommand = async (
   input: ListDominantLanguageDetectionJobsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListDominantLanguageDetectionJobs");
   let body: any;
@@ -1170,7 +1170,7 @@ export const se_ListDominantLanguageDetectionJobsCommand = async (
  */
 export const se_ListEndpointsCommand = async (
   input: ListEndpointsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListEndpoints");
   let body: any;
@@ -1183,7 +1183,7 @@ export const se_ListEndpointsCommand = async (
  */
 export const se_ListEntitiesDetectionJobsCommand = async (
   input: ListEntitiesDetectionJobsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListEntitiesDetectionJobs");
   let body: any;
@@ -1196,7 +1196,7 @@ export const se_ListEntitiesDetectionJobsCommand = async (
  */
 export const se_ListEntityRecognizersCommand = async (
   input: ListEntityRecognizersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListEntityRecognizers");
   let body: any;
@@ -1209,7 +1209,7 @@ export const se_ListEntityRecognizersCommand = async (
  */
 export const se_ListEntityRecognizerSummariesCommand = async (
   input: ListEntityRecognizerSummariesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListEntityRecognizerSummaries");
   let body: any;
@@ -1222,7 +1222,7 @@ export const se_ListEntityRecognizerSummariesCommand = async (
  */
 export const se_ListEventsDetectionJobsCommand = async (
   input: ListEventsDetectionJobsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListEventsDetectionJobs");
   let body: any;
@@ -1235,7 +1235,7 @@ export const se_ListEventsDetectionJobsCommand = async (
  */
 export const se_ListFlywheelIterationHistoryCommand = async (
   input: ListFlywheelIterationHistoryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListFlywheelIterationHistory");
   let body: any;
@@ -1248,7 +1248,7 @@ export const se_ListFlywheelIterationHistoryCommand = async (
  */
 export const se_ListFlywheelsCommand = async (
   input: ListFlywheelsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListFlywheels");
   let body: any;
@@ -1261,7 +1261,7 @@ export const se_ListFlywheelsCommand = async (
  */
 export const se_ListKeyPhrasesDetectionJobsCommand = async (
   input: ListKeyPhrasesDetectionJobsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListKeyPhrasesDetectionJobs");
   let body: any;
@@ -1274,7 +1274,7 @@ export const se_ListKeyPhrasesDetectionJobsCommand = async (
  */
 export const se_ListPiiEntitiesDetectionJobsCommand = async (
   input: ListPiiEntitiesDetectionJobsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListPiiEntitiesDetectionJobs");
   let body: any;
@@ -1287,7 +1287,7 @@ export const se_ListPiiEntitiesDetectionJobsCommand = async (
  */
 export const se_ListSentimentDetectionJobsCommand = async (
   input: ListSentimentDetectionJobsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListSentimentDetectionJobs");
   let body: any;
@@ -1300,7 +1300,7 @@ export const se_ListSentimentDetectionJobsCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListTagsForResource");
   let body: any;
@@ -1313,7 +1313,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_ListTargetedSentimentDetectionJobsCommand = async (
   input: ListTargetedSentimentDetectionJobsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListTargetedSentimentDetectionJobs");
   let body: any;
@@ -1326,7 +1326,7 @@ export const se_ListTargetedSentimentDetectionJobsCommand = async (
  */
 export const se_ListTopicsDetectionJobsCommand = async (
   input: ListTopicsDetectionJobsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListTopicsDetectionJobs");
   let body: any;
@@ -1339,7 +1339,7 @@ export const se_ListTopicsDetectionJobsCommand = async (
  */
 export const se_PutResourcePolicyCommand = async (
   input: PutResourcePolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("PutResourcePolicy");
   let body: any;
@@ -1352,7 +1352,7 @@ export const se_PutResourcePolicyCommand = async (
  */
 export const se_StartDocumentClassificationJobCommand = async (
   input: StartDocumentClassificationJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StartDocumentClassificationJob");
   let body: any;
@@ -1365,7 +1365,7 @@ export const se_StartDocumentClassificationJobCommand = async (
  */
 export const se_StartDominantLanguageDetectionJobCommand = async (
   input: StartDominantLanguageDetectionJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StartDominantLanguageDetectionJob");
   let body: any;
@@ -1378,7 +1378,7 @@ export const se_StartDominantLanguageDetectionJobCommand = async (
  */
 export const se_StartEntitiesDetectionJobCommand = async (
   input: StartEntitiesDetectionJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StartEntitiesDetectionJob");
   let body: any;
@@ -1391,7 +1391,7 @@ export const se_StartEntitiesDetectionJobCommand = async (
  */
 export const se_StartEventsDetectionJobCommand = async (
   input: StartEventsDetectionJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StartEventsDetectionJob");
   let body: any;
@@ -1404,7 +1404,7 @@ export const se_StartEventsDetectionJobCommand = async (
  */
 export const se_StartFlywheelIterationCommand = async (
   input: StartFlywheelIterationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StartFlywheelIteration");
   let body: any;
@@ -1417,7 +1417,7 @@ export const se_StartFlywheelIterationCommand = async (
  */
 export const se_StartKeyPhrasesDetectionJobCommand = async (
   input: StartKeyPhrasesDetectionJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StartKeyPhrasesDetectionJob");
   let body: any;
@@ -1430,7 +1430,7 @@ export const se_StartKeyPhrasesDetectionJobCommand = async (
  */
 export const se_StartPiiEntitiesDetectionJobCommand = async (
   input: StartPiiEntitiesDetectionJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StartPiiEntitiesDetectionJob");
   let body: any;
@@ -1443,7 +1443,7 @@ export const se_StartPiiEntitiesDetectionJobCommand = async (
  */
 export const se_StartSentimentDetectionJobCommand = async (
   input: StartSentimentDetectionJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StartSentimentDetectionJob");
   let body: any;
@@ -1456,7 +1456,7 @@ export const se_StartSentimentDetectionJobCommand = async (
  */
 export const se_StartTargetedSentimentDetectionJobCommand = async (
   input: StartTargetedSentimentDetectionJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StartTargetedSentimentDetectionJob");
   let body: any;
@@ -1469,7 +1469,7 @@ export const se_StartTargetedSentimentDetectionJobCommand = async (
  */
 export const se_StartTopicsDetectionJobCommand = async (
   input: StartTopicsDetectionJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StartTopicsDetectionJob");
   let body: any;
@@ -1482,7 +1482,7 @@ export const se_StartTopicsDetectionJobCommand = async (
  */
 export const se_StopDominantLanguageDetectionJobCommand = async (
   input: StopDominantLanguageDetectionJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StopDominantLanguageDetectionJob");
   let body: any;
@@ -1495,7 +1495,7 @@ export const se_StopDominantLanguageDetectionJobCommand = async (
  */
 export const se_StopEntitiesDetectionJobCommand = async (
   input: StopEntitiesDetectionJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StopEntitiesDetectionJob");
   let body: any;
@@ -1508,7 +1508,7 @@ export const se_StopEntitiesDetectionJobCommand = async (
  */
 export const se_StopEventsDetectionJobCommand = async (
   input: StopEventsDetectionJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StopEventsDetectionJob");
   let body: any;
@@ -1521,7 +1521,7 @@ export const se_StopEventsDetectionJobCommand = async (
  */
 export const se_StopKeyPhrasesDetectionJobCommand = async (
   input: StopKeyPhrasesDetectionJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StopKeyPhrasesDetectionJob");
   let body: any;
@@ -1534,7 +1534,7 @@ export const se_StopKeyPhrasesDetectionJobCommand = async (
  */
 export const se_StopPiiEntitiesDetectionJobCommand = async (
   input: StopPiiEntitiesDetectionJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StopPiiEntitiesDetectionJob");
   let body: any;
@@ -1547,7 +1547,7 @@ export const se_StopPiiEntitiesDetectionJobCommand = async (
  */
 export const se_StopSentimentDetectionJobCommand = async (
   input: StopSentimentDetectionJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StopSentimentDetectionJob");
   let body: any;
@@ -1560,7 +1560,7 @@ export const se_StopSentimentDetectionJobCommand = async (
  */
 export const se_StopTargetedSentimentDetectionJobCommand = async (
   input: StopTargetedSentimentDetectionJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StopTargetedSentimentDetectionJob");
   let body: any;
@@ -1573,7 +1573,7 @@ export const se_StopTargetedSentimentDetectionJobCommand = async (
  */
 export const se_StopTrainingDocumentClassifierCommand = async (
   input: StopTrainingDocumentClassifierCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StopTrainingDocumentClassifier");
   let body: any;
@@ -1586,7 +1586,7 @@ export const se_StopTrainingDocumentClassifierCommand = async (
  */
 export const se_StopTrainingEntityRecognizerCommand = async (
   input: StopTrainingEntityRecognizerCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StopTrainingEntityRecognizer");
   let body: any;
@@ -1599,7 +1599,7 @@ export const se_StopTrainingEntityRecognizerCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("TagResource");
   let body: any;
@@ -1612,7 +1612,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UntagResource");
   let body: any;
@@ -1625,7 +1625,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateEndpointCommand = async (
   input: UpdateEndpointCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateEndpoint");
   let body: any;
@@ -1638,7 +1638,7 @@ export const se_UpdateEndpointCommand = async (
  */
 export const se_UpdateFlywheelCommand = async (
   input: UpdateFlywheelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateFlywheel");
   let body: any;
@@ -1651,7 +1651,7 @@ export const se_UpdateFlywheelCommand = async (
  */
 export const de_BatchDetectDominantLanguageCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchDetectDominantLanguageCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1671,7 +1671,7 @@ export const de_BatchDetectDominantLanguageCommand = async (
  */
 export const de_BatchDetectEntitiesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchDetectEntitiesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1691,7 +1691,7 @@ export const de_BatchDetectEntitiesCommand = async (
  */
 export const de_BatchDetectKeyPhrasesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchDetectKeyPhrasesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1711,7 +1711,7 @@ export const de_BatchDetectKeyPhrasesCommand = async (
  */
 export const de_BatchDetectSentimentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchDetectSentimentCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1731,7 +1731,7 @@ export const de_BatchDetectSentimentCommand = async (
  */
 export const de_BatchDetectSyntaxCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchDetectSyntaxCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1751,7 +1751,7 @@ export const de_BatchDetectSyntaxCommand = async (
  */
 export const de_BatchDetectTargetedSentimentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchDetectTargetedSentimentCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1771,7 +1771,7 @@ export const de_BatchDetectTargetedSentimentCommand = async (
  */
 export const de_ClassifyDocumentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ClassifyDocumentCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1791,7 +1791,7 @@ export const de_ClassifyDocumentCommand = async (
  */
 export const de_ContainsPiiEntitiesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ContainsPiiEntitiesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1811,7 +1811,7 @@ export const de_ContainsPiiEntitiesCommand = async (
  */
 export const de_CreateDatasetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateDatasetCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1831,7 +1831,7 @@ export const de_CreateDatasetCommand = async (
  */
 export const de_CreateDocumentClassifierCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateDocumentClassifierCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1851,7 +1851,7 @@ export const de_CreateDocumentClassifierCommand = async (
  */
 export const de_CreateEndpointCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateEndpointCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1871,7 +1871,7 @@ export const de_CreateEndpointCommand = async (
  */
 export const de_CreateEntityRecognizerCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateEntityRecognizerCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1891,7 +1891,7 @@ export const de_CreateEntityRecognizerCommand = async (
  */
 export const de_CreateFlywheelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateFlywheelCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1911,7 +1911,7 @@ export const de_CreateFlywheelCommand = async (
  */
 export const de_DeleteDocumentClassifierCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteDocumentClassifierCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1931,7 +1931,7 @@ export const de_DeleteDocumentClassifierCommand = async (
  */
 export const de_DeleteEndpointCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteEndpointCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1951,7 +1951,7 @@ export const de_DeleteEndpointCommand = async (
  */
 export const de_DeleteEntityRecognizerCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteEntityRecognizerCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1971,7 +1971,7 @@ export const de_DeleteEntityRecognizerCommand = async (
  */
 export const de_DeleteFlywheelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteFlywheelCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1991,7 +1991,7 @@ export const de_DeleteFlywheelCommand = async (
  */
 export const de_DeleteResourcePolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteResourcePolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2011,7 +2011,7 @@ export const de_DeleteResourcePolicyCommand = async (
  */
 export const de_DescribeDatasetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeDatasetCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2031,7 +2031,7 @@ export const de_DescribeDatasetCommand = async (
  */
 export const de_DescribeDocumentClassificationJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeDocumentClassificationJobCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2051,7 +2051,7 @@ export const de_DescribeDocumentClassificationJobCommand = async (
  */
 export const de_DescribeDocumentClassifierCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeDocumentClassifierCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2071,7 +2071,7 @@ export const de_DescribeDocumentClassifierCommand = async (
  */
 export const de_DescribeDominantLanguageDetectionJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeDominantLanguageDetectionJobCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2091,7 +2091,7 @@ export const de_DescribeDominantLanguageDetectionJobCommand = async (
  */
 export const de_DescribeEndpointCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeEndpointCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2111,7 +2111,7 @@ export const de_DescribeEndpointCommand = async (
  */
 export const de_DescribeEntitiesDetectionJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeEntitiesDetectionJobCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2131,7 +2131,7 @@ export const de_DescribeEntitiesDetectionJobCommand = async (
  */
 export const de_DescribeEntityRecognizerCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeEntityRecognizerCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2151,7 +2151,7 @@ export const de_DescribeEntityRecognizerCommand = async (
  */
 export const de_DescribeEventsDetectionJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeEventsDetectionJobCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2171,7 +2171,7 @@ export const de_DescribeEventsDetectionJobCommand = async (
  */
 export const de_DescribeFlywheelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeFlywheelCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2191,7 +2191,7 @@ export const de_DescribeFlywheelCommand = async (
  */
 export const de_DescribeFlywheelIterationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeFlywheelIterationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2211,7 +2211,7 @@ export const de_DescribeFlywheelIterationCommand = async (
  */
 export const de_DescribeKeyPhrasesDetectionJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeKeyPhrasesDetectionJobCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2231,7 +2231,7 @@ export const de_DescribeKeyPhrasesDetectionJobCommand = async (
  */
 export const de_DescribePiiEntitiesDetectionJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribePiiEntitiesDetectionJobCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2251,7 +2251,7 @@ export const de_DescribePiiEntitiesDetectionJobCommand = async (
  */
 export const de_DescribeResourcePolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeResourcePolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2271,7 +2271,7 @@ export const de_DescribeResourcePolicyCommand = async (
  */
 export const de_DescribeSentimentDetectionJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeSentimentDetectionJobCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2291,7 +2291,7 @@ export const de_DescribeSentimentDetectionJobCommand = async (
  */
 export const de_DescribeTargetedSentimentDetectionJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeTargetedSentimentDetectionJobCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2311,7 +2311,7 @@ export const de_DescribeTargetedSentimentDetectionJobCommand = async (
  */
 export const de_DescribeTopicsDetectionJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeTopicsDetectionJobCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2331,7 +2331,7 @@ export const de_DescribeTopicsDetectionJobCommand = async (
  */
 export const de_DetectDominantLanguageCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DetectDominantLanguageCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2351,7 +2351,7 @@ export const de_DetectDominantLanguageCommand = async (
  */
 export const de_DetectEntitiesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DetectEntitiesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2371,7 +2371,7 @@ export const de_DetectEntitiesCommand = async (
  */
 export const de_DetectKeyPhrasesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DetectKeyPhrasesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2391,7 +2391,7 @@ export const de_DetectKeyPhrasesCommand = async (
  */
 export const de_DetectPiiEntitiesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DetectPiiEntitiesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2411,7 +2411,7 @@ export const de_DetectPiiEntitiesCommand = async (
  */
 export const de_DetectSentimentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DetectSentimentCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2431,7 +2431,7 @@ export const de_DetectSentimentCommand = async (
  */
 export const de_DetectSyntaxCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DetectSyntaxCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2451,7 +2451,7 @@ export const de_DetectSyntaxCommand = async (
  */
 export const de_DetectTargetedSentimentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DetectTargetedSentimentCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2471,7 +2471,7 @@ export const de_DetectTargetedSentimentCommand = async (
  */
 export const de_DetectToxicContentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DetectToxicContentCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2491,7 +2491,7 @@ export const de_DetectToxicContentCommand = async (
  */
 export const de_ImportModelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ImportModelCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2511,7 +2511,7 @@ export const de_ImportModelCommand = async (
  */
 export const de_ListDatasetsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListDatasetsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2531,7 +2531,7 @@ export const de_ListDatasetsCommand = async (
  */
 export const de_ListDocumentClassificationJobsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListDocumentClassificationJobsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2551,7 +2551,7 @@ export const de_ListDocumentClassificationJobsCommand = async (
  */
 export const de_ListDocumentClassifiersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListDocumentClassifiersCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2571,7 +2571,7 @@ export const de_ListDocumentClassifiersCommand = async (
  */
 export const de_ListDocumentClassifierSummariesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListDocumentClassifierSummariesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2591,7 +2591,7 @@ export const de_ListDocumentClassifierSummariesCommand = async (
  */
 export const de_ListDominantLanguageDetectionJobsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListDominantLanguageDetectionJobsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2611,7 +2611,7 @@ export const de_ListDominantLanguageDetectionJobsCommand = async (
  */
 export const de_ListEndpointsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListEndpointsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2631,7 +2631,7 @@ export const de_ListEndpointsCommand = async (
  */
 export const de_ListEntitiesDetectionJobsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListEntitiesDetectionJobsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2651,7 +2651,7 @@ export const de_ListEntitiesDetectionJobsCommand = async (
  */
 export const de_ListEntityRecognizersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListEntityRecognizersCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2671,7 +2671,7 @@ export const de_ListEntityRecognizersCommand = async (
  */
 export const de_ListEntityRecognizerSummariesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListEntityRecognizerSummariesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2691,7 +2691,7 @@ export const de_ListEntityRecognizerSummariesCommand = async (
  */
 export const de_ListEventsDetectionJobsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListEventsDetectionJobsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2711,7 +2711,7 @@ export const de_ListEventsDetectionJobsCommand = async (
  */
 export const de_ListFlywheelIterationHistoryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListFlywheelIterationHistoryCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2731,7 +2731,7 @@ export const de_ListFlywheelIterationHistoryCommand = async (
  */
 export const de_ListFlywheelsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListFlywheelsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2751,7 +2751,7 @@ export const de_ListFlywheelsCommand = async (
  */
 export const de_ListKeyPhrasesDetectionJobsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListKeyPhrasesDetectionJobsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2771,7 +2771,7 @@ export const de_ListKeyPhrasesDetectionJobsCommand = async (
  */
 export const de_ListPiiEntitiesDetectionJobsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListPiiEntitiesDetectionJobsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2791,7 +2791,7 @@ export const de_ListPiiEntitiesDetectionJobsCommand = async (
  */
 export const de_ListSentimentDetectionJobsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListSentimentDetectionJobsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2811,7 +2811,7 @@ export const de_ListSentimentDetectionJobsCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2831,7 +2831,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_ListTargetedSentimentDetectionJobsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTargetedSentimentDetectionJobsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2851,7 +2851,7 @@ export const de_ListTargetedSentimentDetectionJobsCommand = async (
  */
 export const de_ListTopicsDetectionJobsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTopicsDetectionJobsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2871,7 +2871,7 @@ export const de_ListTopicsDetectionJobsCommand = async (
  */
 export const de_PutResourcePolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutResourcePolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2891,7 +2891,7 @@ export const de_PutResourcePolicyCommand = async (
  */
 export const de_StartDocumentClassificationJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartDocumentClassificationJobCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2911,7 +2911,7 @@ export const de_StartDocumentClassificationJobCommand = async (
  */
 export const de_StartDominantLanguageDetectionJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartDominantLanguageDetectionJobCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2931,7 +2931,7 @@ export const de_StartDominantLanguageDetectionJobCommand = async (
  */
 export const de_StartEntitiesDetectionJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartEntitiesDetectionJobCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2951,7 +2951,7 @@ export const de_StartEntitiesDetectionJobCommand = async (
  */
 export const de_StartEventsDetectionJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartEventsDetectionJobCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2971,7 +2971,7 @@ export const de_StartEventsDetectionJobCommand = async (
  */
 export const de_StartFlywheelIterationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartFlywheelIterationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2991,7 +2991,7 @@ export const de_StartFlywheelIterationCommand = async (
  */
 export const de_StartKeyPhrasesDetectionJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartKeyPhrasesDetectionJobCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3011,7 +3011,7 @@ export const de_StartKeyPhrasesDetectionJobCommand = async (
  */
 export const de_StartPiiEntitiesDetectionJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartPiiEntitiesDetectionJobCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3031,7 +3031,7 @@ export const de_StartPiiEntitiesDetectionJobCommand = async (
  */
 export const de_StartSentimentDetectionJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartSentimentDetectionJobCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3051,7 +3051,7 @@ export const de_StartSentimentDetectionJobCommand = async (
  */
 export const de_StartTargetedSentimentDetectionJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartTargetedSentimentDetectionJobCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3071,7 +3071,7 @@ export const de_StartTargetedSentimentDetectionJobCommand = async (
  */
 export const de_StartTopicsDetectionJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartTopicsDetectionJobCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3091,7 +3091,7 @@ export const de_StartTopicsDetectionJobCommand = async (
  */
 export const de_StopDominantLanguageDetectionJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StopDominantLanguageDetectionJobCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3111,7 +3111,7 @@ export const de_StopDominantLanguageDetectionJobCommand = async (
  */
 export const de_StopEntitiesDetectionJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StopEntitiesDetectionJobCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3131,7 +3131,7 @@ export const de_StopEntitiesDetectionJobCommand = async (
  */
 export const de_StopEventsDetectionJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StopEventsDetectionJobCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3151,7 +3151,7 @@ export const de_StopEventsDetectionJobCommand = async (
  */
 export const de_StopKeyPhrasesDetectionJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StopKeyPhrasesDetectionJobCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3171,7 +3171,7 @@ export const de_StopKeyPhrasesDetectionJobCommand = async (
  */
 export const de_StopPiiEntitiesDetectionJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StopPiiEntitiesDetectionJobCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3191,7 +3191,7 @@ export const de_StopPiiEntitiesDetectionJobCommand = async (
  */
 export const de_StopSentimentDetectionJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StopSentimentDetectionJobCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3211,7 +3211,7 @@ export const de_StopSentimentDetectionJobCommand = async (
  */
 export const de_StopTargetedSentimentDetectionJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StopTargetedSentimentDetectionJobCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3231,7 +3231,7 @@ export const de_StopTargetedSentimentDetectionJobCommand = async (
  */
 export const de_StopTrainingDocumentClassifierCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StopTrainingDocumentClassifierCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3251,7 +3251,7 @@ export const de_StopTrainingDocumentClassifierCommand = async (
  */
 export const de_StopTrainingEntityRecognizerCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StopTrainingEntityRecognizerCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3271,7 +3271,7 @@ export const de_StopTrainingEntityRecognizerCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3291,7 +3291,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3311,7 +3311,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateEndpointCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateEndpointCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3331,7 +3331,7 @@ export const de_UpdateEndpointCommand = async (
  */
 export const de_UpdateFlywheelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateFlywheelCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3419,7 +3419,7 @@ const de_CommandError = async (output: __HttpResponse, context: __SerdeContext):
  */
 const de_BatchSizeLimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchSizeLimitExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3435,7 +3435,7 @@ const de_BatchSizeLimitExceededExceptionRes = async (
  */
 const de_ConcurrentModificationExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ConcurrentModificationException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3451,7 +3451,7 @@ const de_ConcurrentModificationExceptionRes = async (
  */
 const de_InternalServerExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3467,7 +3467,7 @@ const de_InternalServerExceptionRes = async (
  */
 const de_InvalidFilterExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidFilterException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3483,7 +3483,7 @@ const de_InvalidFilterExceptionRes = async (
  */
 const de_InvalidRequestExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidRequestException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3499,7 +3499,7 @@ const de_InvalidRequestExceptionRes = async (
  */
 const de_JobNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<JobNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3515,7 +3515,7 @@ const de_JobNotFoundExceptionRes = async (
  */
 const de_KmsKeyValidationExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<KmsKeyValidationException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3531,7 +3531,7 @@ const de_KmsKeyValidationExceptionRes = async (
  */
 const de_ResourceInUseExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceInUseException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3547,7 +3547,7 @@ const de_ResourceInUseExceptionRes = async (
  */
 const de_ResourceLimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceLimitExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3563,7 +3563,7 @@ const de_ResourceLimitExceededExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3579,7 +3579,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_ResourceUnavailableExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceUnavailableException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3595,7 +3595,7 @@ const de_ResourceUnavailableExceptionRes = async (
  */
 const de_TextSizeLimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TextSizeLimitExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3611,7 +3611,7 @@ const de_TextSizeLimitExceededExceptionRes = async (
  */
 const de_TooManyRequestsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyRequestsException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3627,7 +3627,7 @@ const de_TooManyRequestsExceptionRes = async (
  */
 const de_TooManyTagKeysExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyTagKeysException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3643,7 +3643,7 @@ const de_TooManyTagKeysExceptionRes = async (
  */
 const de_TooManyTagsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyTagsException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3659,7 +3659,7 @@ const de_TooManyTagsExceptionRes = async (
  */
 const de_UnsupportedLanguageExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UnsupportedLanguageException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3929,7 +3929,7 @@ const se_DocumentClassifierFilter = (input: DocumentClassifierFilter, context: _
  */
 const se_DominantLanguageDetectionJobFilter = (
   input: DominantLanguageDetectionJobFilter,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     JobName: [],
@@ -4059,7 +4059,7 @@ const se_ListDatasetsRequest = (input: ListDatasetsRequest, context: __SerdeCont
  */
 const se_ListDocumentClassificationJobsRequest = (
   input: ListDocumentClassificationJobsRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     Filter: (_) => se_DocumentClassificationJobFilter(_, context),
@@ -4086,7 +4086,7 @@ const se_ListDocumentClassifiersRequest = (input: ListDocumentClassifiersRequest
  */
 const se_ListDominantLanguageDetectionJobsRequest = (
   input: ListDominantLanguageDetectionJobsRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     Filter: (_) => se_DominantLanguageDetectionJobFilter(_, context),
@@ -4146,7 +4146,7 @@ const se_ListEventsDetectionJobsRequest = (input: ListEventsDetectionJobsRequest
  */
 const se_ListFlywheelIterationHistoryRequest = (
   input: ListFlywheelIterationHistoryRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     Filter: (_) => se_FlywheelIterationFilter(_, context),
@@ -4172,7 +4172,7 @@ const se_ListFlywheelsRequest = (input: ListFlywheelsRequest, context: __SerdeCo
  */
 const se_ListKeyPhrasesDetectionJobsRequest = (
   input: ListKeyPhrasesDetectionJobsRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     Filter: (_) => se_KeyPhrasesDetectionJobFilter(_, context),
@@ -4192,7 +4192,7 @@ const se_ListKeyPhrasesDetectionJobsRequest = (
  */
 const se_ListPiiEntitiesDetectionJobsRequest = (
   input: ListPiiEntitiesDetectionJobsRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     Filter: (_) => se_PiiEntitiesDetectionJobFilter(_, context),
@@ -4206,7 +4206,7 @@ const se_ListPiiEntitiesDetectionJobsRequest = (
  */
 const se_ListSentimentDetectionJobsRequest = (
   input: ListSentimentDetectionJobsRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     Filter: (_) => se_SentimentDetectionJobFilter(_, context),
@@ -4222,7 +4222,7 @@ const se_ListSentimentDetectionJobsRequest = (
  */
 const se_ListTargetedSentimentDetectionJobsRequest = (
   input: ListTargetedSentimentDetectionJobsRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     Filter: (_) => se_TargetedSentimentDetectionJobFilter(_, context),
@@ -4279,7 +4279,7 @@ const se_SentimentDetectionJobFilter = (input: SentimentDetectionJobFilter, cont
  */
 const se_StartDocumentClassificationJobRequest = (
   input: StartDocumentClassificationJobRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     ClientRequestToken: [true, (_) => _ ?? generateIdempotencyToken()],
@@ -4300,7 +4300,7 @@ const se_StartDocumentClassificationJobRequest = (
  */
 const se_StartDominantLanguageDetectionJobRequest = (
   input: StartDominantLanguageDetectionJobRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     ClientRequestToken: [true, (_) => _ ?? generateIdempotencyToken()],
@@ -4356,7 +4356,7 @@ const se_StartEventsDetectionJobRequest = (input: StartEventsDetectionJobRequest
  */
 const se_StartKeyPhrasesDetectionJobRequest = (
   input: StartKeyPhrasesDetectionJobRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     ClientRequestToken: [true, (_) => _ ?? generateIdempotencyToken()],
@@ -4376,7 +4376,7 @@ const se_StartKeyPhrasesDetectionJobRequest = (
  */
 const se_StartPiiEntitiesDetectionJobRequest = (
   input: StartPiiEntitiesDetectionJobRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     ClientRequestToken: [true, (_) => _ ?? generateIdempotencyToken()],
@@ -4396,7 +4396,7 @@ const se_StartPiiEntitiesDetectionJobRequest = (
  */
 const se_StartSentimentDetectionJobRequest = (
   input: StartSentimentDetectionJobRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     ClientRequestToken: [true, (_) => _ ?? generateIdempotencyToken()],
@@ -4416,7 +4416,7 @@ const se_StartSentimentDetectionJobRequest = (
  */
 const se_StartTargetedSentimentDetectionJobRequest = (
   input: StartTargetedSentimentDetectionJobRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     ClientRequestToken: [true, (_) => _ ?? generateIdempotencyToken()],
@@ -4481,7 +4481,7 @@ const se_StartTopicsDetectionJobRequest = (input: StartTopicsDetectionJobRequest
  */
 const se_TargetedSentimentDetectionJobFilter = (
   input: TargetedSentimentDetectionJobFilter,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     JobName: [],
@@ -4528,7 +4528,7 @@ const se_TopicsDetectionJobFilter = (input: TopicsDetectionJobFilter, context: _
  */
 const de_BatchDetectDominantLanguageItemResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): BatchDetectDominantLanguageItemResult => {
   return take(output, {
     Index: __expectInt32,
@@ -4541,7 +4541,7 @@ const de_BatchDetectDominantLanguageItemResult = (
  */
 const de_BatchDetectDominantLanguageResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): BatchDetectDominantLanguageResponse => {
   return take(output, {
     ErrorList: _json,
@@ -4635,7 +4635,7 @@ const de_BatchDetectSyntaxResponse = (output: any, context: __SerdeContext): Bat
  */
 const de_BatchDetectTargetedSentimentItemResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): BatchDetectTargetedSentimentItemResult => {
   return take(output, {
     Entities: (_: any) => de_ListOfTargetedSentimentEntities(_, context),
@@ -4648,7 +4648,7 @@ const de_BatchDetectTargetedSentimentItemResult = (
  */
 const de_BatchDetectTargetedSentimentResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): BatchDetectTargetedSentimentResponse => {
   return take(output, {
     ErrorList: _json,
@@ -4811,7 +4811,7 @@ const de_DescribeDatasetResponse = (output: any, context: __SerdeContext): Descr
  */
 const de_DescribeDocumentClassificationJobResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeDocumentClassificationJobResponse => {
   return take(output, {
     DocumentClassificationJobProperties: (_: any) => de_DocumentClassificationJobProperties(_, context),
@@ -4823,7 +4823,7 @@ const de_DescribeDocumentClassificationJobResponse = (
  */
 const de_DescribeDocumentClassifierResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeDocumentClassifierResponse => {
   return take(output, {
     DocumentClassifierProperties: (_: any) => de_DocumentClassifierProperties(_, context),
@@ -4835,7 +4835,7 @@ const de_DescribeDocumentClassifierResponse = (
  */
 const de_DescribeDominantLanguageDetectionJobResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeDominantLanguageDetectionJobResponse => {
   return take(output, {
     DominantLanguageDetectionJobProperties: (_: any) => de_DominantLanguageDetectionJobProperties(_, context),
@@ -4856,7 +4856,7 @@ const de_DescribeEndpointResponse = (output: any, context: __SerdeContext): Desc
  */
 const de_DescribeEntitiesDetectionJobResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeEntitiesDetectionJobResponse => {
   return take(output, {
     EntitiesDetectionJobProperties: (_: any) => de_EntitiesDetectionJobProperties(_, context),
@@ -4868,7 +4868,7 @@ const de_DescribeEntitiesDetectionJobResponse = (
  */
 const de_DescribeEntityRecognizerResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeEntityRecognizerResponse => {
   return take(output, {
     EntityRecognizerProperties: (_: any) => de_EntityRecognizerProperties(_, context),
@@ -4880,7 +4880,7 @@ const de_DescribeEntityRecognizerResponse = (
  */
 const de_DescribeEventsDetectionJobResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeEventsDetectionJobResponse => {
   return take(output, {
     EventsDetectionJobProperties: (_: any) => de_EventsDetectionJobProperties(_, context),
@@ -4892,7 +4892,7 @@ const de_DescribeEventsDetectionJobResponse = (
  */
 const de_DescribeFlywheelIterationResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeFlywheelIterationResponse => {
   return take(output, {
     FlywheelIterationProperties: (_: any) => de_FlywheelIterationProperties(_, context),
@@ -4913,7 +4913,7 @@ const de_DescribeFlywheelResponse = (output: any, context: __SerdeContext): Desc
  */
 const de_DescribeKeyPhrasesDetectionJobResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeKeyPhrasesDetectionJobResponse => {
   return take(output, {
     KeyPhrasesDetectionJobProperties: (_: any) => de_KeyPhrasesDetectionJobProperties(_, context),
@@ -4925,7 +4925,7 @@ const de_DescribeKeyPhrasesDetectionJobResponse = (
  */
 const de_DescribePiiEntitiesDetectionJobResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribePiiEntitiesDetectionJobResponse => {
   return take(output, {
     PiiEntitiesDetectionJobProperties: (_: any) => de_PiiEntitiesDetectionJobProperties(_, context),
@@ -4949,7 +4949,7 @@ const de_DescribeResourcePolicyResponse = (output: any, context: __SerdeContext)
  */
 const de_DescribeSentimentDetectionJobResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeSentimentDetectionJobResponse => {
   return take(output, {
     SentimentDetectionJobProperties: (_: any) => de_SentimentDetectionJobProperties(_, context),
@@ -4961,7 +4961,7 @@ const de_DescribeSentimentDetectionJobResponse = (
  */
 const de_DescribeTargetedSentimentDetectionJobResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeTargetedSentimentDetectionJobResponse => {
   return take(output, {
     TargetedSentimentDetectionJobProperties: (_: any) => de_TargetedSentimentDetectionJobProperties(_, context),
@@ -4973,7 +4973,7 @@ const de_DescribeTargetedSentimentDetectionJobResponse = (
  */
 const de_DescribeTopicsDetectionJobResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeTopicsDetectionJobResponse => {
   return take(output, {
     TopicsDetectionJobProperties: (_: any) => de_TopicsDetectionJobProperties(_, context),
@@ -5075,7 +5075,7 @@ const de_DocumentClass = (output: any, context: __SerdeContext): DocumentClass =
  */
 const de_DocumentClassificationJobProperties = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DocumentClassificationJobProperties => {
   return take(output, {
     DataAccessRoleArn: __expectString,
@@ -5100,7 +5100,7 @@ const de_DocumentClassificationJobProperties = (
  */
 const de_DocumentClassificationJobPropertiesList = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DocumentClassificationJobProperties[] => {
   const retVal = (output || [])
     .filter((e: any) => e != null)
@@ -5214,7 +5214,7 @@ const de_DominantLanguage = (output: any, context: __SerdeContext): DominantLang
  */
 const de_DominantLanguageDetectionJobProperties = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DominantLanguageDetectionJobProperties => {
   return take(output, {
     DataAccessRoleArn: __expectString,
@@ -5237,7 +5237,7 @@ const de_DominantLanguageDetectionJobProperties = (
  */
 const de_DominantLanguageDetectionJobPropertiesList = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DominantLanguageDetectionJobProperties[] => {
   const retVal = (output || [])
     .filter((e: any) => e != null)
@@ -5307,7 +5307,7 @@ const de_EntitiesDetectionJobProperties = (output: any, context: __SerdeContext)
  */
 const de_EntitiesDetectionJobPropertiesList = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): EntitiesDetectionJobProperties[] => {
   const retVal = (output || [])
     .filter((e: any) => e != null)
@@ -5356,7 +5356,7 @@ const de_EntityLabel = (output: any, context: __SerdeContext): EntityLabel => {
  */
 const de_EntityRecognizerEvaluationMetrics = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): EntityRecognizerEvaluationMetrics => {
   return take(output, {
     F1Score: __limitedParseDouble,
@@ -5384,7 +5384,7 @@ const de_EntityRecognizerMetadata = (output: any, context: __SerdeContext): Enti
  */
 const de_EntityRecognizerMetadataEntityTypesList = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): EntityRecognizerMetadataEntityTypesListItem[] => {
   const retVal = (output || [])
     .filter((e: any) => e != null)
@@ -5399,7 +5399,7 @@ const de_EntityRecognizerMetadataEntityTypesList = (
  */
 const de_EntityRecognizerMetadataEntityTypesListItem = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): EntityRecognizerMetadataEntityTypesListItem => {
   return take(output, {
     EvaluationMetrics: (_: any) => de_EntityTypesEvaluationMetrics(_, context),
@@ -5657,7 +5657,7 @@ const de_KeyPhrase = (output: any, context: __SerdeContext): KeyPhrase => {
  */
 const de_KeyPhrasesDetectionJobProperties = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): KeyPhrasesDetectionJobProperties => {
   return take(output, {
     DataAccessRoleArn: __expectString,
@@ -5681,7 +5681,7 @@ const de_KeyPhrasesDetectionJobProperties = (
  */
 const de_KeyPhrasesDetectionJobPropertiesList = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): KeyPhrasesDetectionJobProperties[] => {
   const retVal = (output || [])
     .filter((e: any) => e != null)
@@ -5710,7 +5710,7 @@ const de_ListDatasetsResponse = (output: any, context: __SerdeContext): ListData
  */
 const de_ListDocumentClassificationJobsResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ListDocumentClassificationJobsResponse => {
   return take(output, {
     DocumentClassificationJobPropertiesList: (_: any) => de_DocumentClassificationJobPropertiesList(_, context),
@@ -5733,7 +5733,7 @@ const de_ListDocumentClassifiersResponse = (output: any, context: __SerdeContext
  */
 const de_ListDocumentClassifierSummariesResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ListDocumentClassifierSummariesResponse => {
   return take(output, {
     DocumentClassifierSummariesList: (_: any) => de_DocumentClassifierSummariesList(_, context),
@@ -5746,7 +5746,7 @@ const de_ListDocumentClassifierSummariesResponse = (
  */
 const de_ListDominantLanguageDetectionJobsResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ListDominantLanguageDetectionJobsResponse => {
   return take(output, {
     DominantLanguageDetectionJobPropertiesList: (_: any) => de_DominantLanguageDetectionJobPropertiesList(_, context),
@@ -5769,7 +5769,7 @@ const de_ListEndpointsResponse = (output: any, context: __SerdeContext): ListEnd
  */
 const de_ListEntitiesDetectionJobsResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ListEntitiesDetectionJobsResponse => {
   return take(output, {
     EntitiesDetectionJobPropertiesList: (_: any) => de_EntitiesDetectionJobPropertiesList(_, context),
@@ -5792,7 +5792,7 @@ const de_ListEntityRecognizersResponse = (output: any, context: __SerdeContext):
  */
 const de_ListEntityRecognizerSummariesResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ListEntityRecognizerSummariesResponse => {
   return take(output, {
     EntityRecognizerSummariesList: (_: any) => de_EntityRecognizerSummariesList(_, context),
@@ -5815,7 +5815,7 @@ const de_ListEventsDetectionJobsResponse = (output: any, context: __SerdeContext
  */
 const de_ListFlywheelIterationHistoryResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ListFlywheelIterationHistoryResponse => {
   return take(output, {
     FlywheelIterationPropertiesList: (_: any) => de_FlywheelIterationPropertiesList(_, context),
@@ -5838,7 +5838,7 @@ const de_ListFlywheelsResponse = (output: any, context: __SerdeContext): ListFly
  */
 const de_ListKeyPhrasesDetectionJobsResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ListKeyPhrasesDetectionJobsResponse => {
   return take(output, {
     KeyPhrasesDetectionJobPropertiesList: (_: any) => de_KeyPhrasesDetectionJobPropertiesList(_, context),
@@ -5881,7 +5881,7 @@ const de_ListOfClasses = (output: any, context: __SerdeContext): DocumentClass[]
  */
 const de_ListOfDetectDominantLanguageResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): BatchDetectDominantLanguageItemResult[] => {
   const retVal = (output || [])
     .filter((e: any) => e != null)
@@ -5944,7 +5944,7 @@ const de_ListOfDetectSyntaxResult = (output: any, context: __SerdeContext): Batc
  */
 const de_ListOfDetectTargetedSentimentResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): BatchDetectTargetedSentimentItemResult[] => {
   const retVal = (output || [])
     .filter((e: any) => e != null)
@@ -6105,7 +6105,7 @@ const de_ListOfToxicLabels = (output: any, context: __SerdeContext): ToxicLabels
  */
 const de_ListPiiEntitiesDetectionJobsResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ListPiiEntitiesDetectionJobsResponse => {
   return take(output, {
     NextToken: __expectString,
@@ -6118,7 +6118,7 @@ const de_ListPiiEntitiesDetectionJobsResponse = (
  */
 const de_ListSentimentDetectionJobsResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ListSentimentDetectionJobsResponse => {
   return take(output, {
     NextToken: __expectString,
@@ -6133,7 +6133,7 @@ const de_ListSentimentDetectionJobsResponse = (
  */
 const de_ListTargetedSentimentDetectionJobsResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ListTargetedSentimentDetectionJobsResponse => {
   return take(output, {
     NextToken: __expectString,
@@ -6178,7 +6178,7 @@ const de_PartOfSpeechTag = (output: any, context: __SerdeContext): PartOfSpeechT
  */
 const de_PiiEntitiesDetectionJobProperties = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): PiiEntitiesDetectionJobProperties => {
   return take(output, {
     DataAccessRoleArn: __expectString,
@@ -6202,7 +6202,7 @@ const de_PiiEntitiesDetectionJobProperties = (
  */
 const de_PiiEntitiesDetectionJobPropertiesList = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): PiiEntitiesDetectionJobProperties[] => {
   const retVal = (output || [])
     .filter((e: any) => e != null)
@@ -6290,7 +6290,7 @@ const de_SentimentDetectionJobProperties = (output: any, context: __SerdeContext
  */
 const de_SentimentDetectionJobPropertiesList = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): SentimentDetectionJobProperties[] => {
   const retVal = (output || [])
     .filter((e: any) => e != null)
@@ -6378,7 +6378,7 @@ const de_SyntaxToken = (output: any, context: __SerdeContext): SyntaxToken => {
  */
 const de_TargetedSentimentDetectionJobProperties = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): TargetedSentimentDetectionJobProperties => {
   return take(output, {
     DataAccessRoleArn: __expectString,
@@ -6402,7 +6402,7 @@ const de_TargetedSentimentDetectionJobProperties = (
  */
 const de_TargetedSentimentDetectionJobPropertiesList = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): TargetedSentimentDetectionJobProperties[] => {
   const retVal = (output || [])
     .filter((e: any) => e != null)
@@ -6539,7 +6539,7 @@ const buildHttpRpcRequest = async (
   headers: __HeaderBag,
   path: string,
   resolvedHostname: string | undefined,
-  body: any
+  body: any,
 ): Promise<__HttpRequest> => {
   const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
   const contents: any = {

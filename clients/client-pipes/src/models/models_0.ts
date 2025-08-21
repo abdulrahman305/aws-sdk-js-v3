@@ -4051,7 +4051,7 @@ export const FilterCriteriaFilterSensitiveLog = (obj: FilterCriteria): any => ({
  * @internal
  */
 export const PipeSourceManagedStreamingKafkaParametersFilterSensitiveLog = (
-  obj: PipeSourceManagedStreamingKafkaParameters
+  obj: PipeSourceManagedStreamingKafkaParameters,
 ): any => ({
   ...obj,
   ...(obj.TopicName && { TopicName: SENSITIVE_STRING }),
@@ -4073,7 +4073,7 @@ export const PipeSourceRabbitMQBrokerParametersFilterSensitiveLog = (obj: PipeSo
  * @internal
  */
 export const SelfManagedKafkaAccessConfigurationVpcFilterSensitiveLog = (
-  obj: SelfManagedKafkaAccessConfigurationVpc
+  obj: SelfManagedKafkaAccessConfigurationVpc,
 ): any => ({
   ...obj,
   ...(obj.Subnets && { Subnets: SENSITIVE_STRING }),
@@ -4084,7 +4084,7 @@ export const SelfManagedKafkaAccessConfigurationVpcFilterSensitiveLog = (
  * @internal
  */
 export const PipeSourceSelfManagedKafkaParametersFilterSensitiveLog = (
-  obj: PipeSourceSelfManagedKafkaParameters
+  obj: PipeSourceSelfManagedKafkaParameters,
 ): any => ({
   ...obj,
   ...(obj.TopicName && { TopicName: SENSITIVE_STRING }),
@@ -4108,7 +4108,7 @@ export const PipeSourceParametersFilterSensitiveLog = (obj: PipeSourceParameters
   }),
   ...(obj.ManagedStreamingKafkaParameters && {
     ManagedStreamingKafkaParameters: PipeSourceManagedStreamingKafkaParametersFilterSensitiveLog(
-      obj.ManagedStreamingKafkaParameters
+      obj.ManagedStreamingKafkaParameters,
     ),
   }),
   ...(obj.SelfManagedKafkaParameters && {
@@ -4160,7 +4160,7 @@ export const PipeTargetEcsTaskParametersFilterSensitiveLog = (obj: PipeTargetEcs
   }),
   ...(obj.CapacityProviderStrategy && {
     CapacityProviderStrategy: obj.CapacityProviderStrategy.map((item) =>
-      CapacityProviderStrategyItemFilterSensitiveLog(item)
+      CapacityProviderStrategyItemFilterSensitiveLog(item),
     ),
   }),
   ...(obj.PlacementConstraints && {
@@ -4177,7 +4177,7 @@ export const PipeTargetEcsTaskParametersFilterSensitiveLog = (obj: PipeTargetEcs
  * @internal
  */
 export const PipeTargetEventBridgeEventBusParametersFilterSensitiveLog = (
-  obj: PipeTargetEventBridgeEventBusParameters
+  obj: PipeTargetEventBridgeEventBusParameters,
 ): any => ({
   ...obj,
   ...(obj.EndpointId && { EndpointId: SENSITIVE_STRING }),
@@ -4227,7 +4227,7 @@ export const SageMakerPipelineParameterFilterSensitiveLog = (obj: SageMakerPipel
  * @internal
  */
 export const PipeTargetSageMakerPipelineParametersFilterSensitiveLog = (
-  obj: PipeTargetSageMakerPipelineParameters
+  obj: PipeTargetSageMakerPipelineParameters,
 ): any => ({
   ...obj,
   ...(obj.PipelineParameterList && {
@@ -4265,12 +4265,12 @@ export const PipeTargetParametersFilterSensitiveLog = (obj: PipeTargetParameters
   }),
   ...(obj.SageMakerPipelineParameters && {
     SageMakerPipelineParameters: PipeTargetSageMakerPipelineParametersFilterSensitiveLog(
-      obj.SageMakerPipelineParameters
+      obj.SageMakerPipelineParameters,
     ),
   }),
   ...(obj.EventBridgeEventBusParameters && {
     EventBridgeEventBusParameters: PipeTargetEventBridgeEventBusParametersFilterSensitiveLog(
-      obj.EventBridgeEventBusParameters
+      obj.EventBridgeEventBusParameters,
     ),
   }),
 });
@@ -4331,7 +4331,7 @@ export const ListTagsForResourceResponseFilterSensitiveLog = (obj: ListTagsForRe
  * @internal
  */
 export const UpdatePipeSourceSelfManagedKafkaParametersFilterSensitiveLog = (
-  obj: UpdatePipeSourceSelfManagedKafkaParameters
+  obj: UpdatePipeSourceSelfManagedKafkaParameters,
 ): any => ({
   ...obj,
   ...(obj.Credentials && { Credentials: obj.Credentials }),
@@ -4349,7 +4349,7 @@ export const UpdatePipeSourceParametersFilterSensitiveLog = (obj: UpdatePipeSour
   ...(obj.ManagedStreamingKafkaParameters && { ManagedStreamingKafkaParameters: obj.ManagedStreamingKafkaParameters }),
   ...(obj.SelfManagedKafkaParameters && {
     SelfManagedKafkaParameters: UpdatePipeSourceSelfManagedKafkaParametersFilterSensitiveLog(
-      obj.SelfManagedKafkaParameters
+      obj.SelfManagedKafkaParameters,
     ),
   }),
 });

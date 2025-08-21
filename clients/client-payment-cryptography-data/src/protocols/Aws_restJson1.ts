@@ -104,7 +104,7 @@ import { PaymentCryptographyDataServiceException as __BaseException } from "../m
  */
 export const se_DecryptDataCommand = async (
   input: DecryptDataCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -117,7 +117,7 @@ export const se_DecryptDataCommand = async (
     take(input, {
       CipherText: [],
       DecryptionAttributes: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -128,7 +128,7 @@ export const se_DecryptDataCommand = async (
  */
 export const se_EncryptDataCommand = async (
   input: EncryptDataCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -141,7 +141,7 @@ export const se_EncryptDataCommand = async (
     take(input, {
       EncryptionAttributes: (_) => _json(_),
       PlainText: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -152,7 +152,7 @@ export const se_EncryptDataCommand = async (
  */
 export const se_GenerateCardValidationDataCommand = async (
   input: GenerateCardValidationDataCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -166,7 +166,7 @@ export const se_GenerateCardValidationDataCommand = async (
       KeyIdentifier: [],
       PrimaryAccountNumber: [],
       ValidationDataLength: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -177,7 +177,7 @@ export const se_GenerateCardValidationDataCommand = async (
  */
 export const se_GenerateMacCommand = async (
   input: GenerateMacCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -191,7 +191,7 @@ export const se_GenerateMacCommand = async (
       KeyIdentifier: [],
       MacLength: [],
       MessageData: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -202,7 +202,7 @@ export const se_GenerateMacCommand = async (
  */
 export const se_GeneratePinDataCommand = async (
   input: GeneratePinDataCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -218,7 +218,7 @@ export const se_GeneratePinDataCommand = async (
       PinBlockFormat: [],
       PinDataLength: [],
       PrimaryAccountNumber: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -229,7 +229,7 @@ export const se_GeneratePinDataCommand = async (
  */
 export const se_ReEncryptDataCommand = async (
   input: ReEncryptDataCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -244,7 +244,7 @@ export const se_ReEncryptDataCommand = async (
       IncomingEncryptionAttributes: (_) => _json(_),
       OutgoingEncryptionAttributes: (_) => _json(_),
       OutgoingKeyIdentifier: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -255,7 +255,7 @@ export const se_ReEncryptDataCommand = async (
  */
 export const se_TranslatePinDataCommand = async (
   input: TranslatePinDataCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -272,7 +272,7 @@ export const se_TranslatePinDataCommand = async (
       OutgoingDukptAttributes: (_) => _json(_),
       OutgoingKeyIdentifier: [],
       OutgoingTranslationAttributes: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -283,7 +283,7 @@ export const se_TranslatePinDataCommand = async (
  */
 export const se_VerifyAuthRequestCryptogramCommand = async (
   input: VerifyAuthRequestCryptogramCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -299,7 +299,7 @@ export const se_VerifyAuthRequestCryptogramCommand = async (
       MajorKeyDerivationMode: [],
       SessionKeyDerivationAttributes: (_) => _json(_),
       TransactionData: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -310,7 +310,7 @@ export const se_VerifyAuthRequestCryptogramCommand = async (
  */
 export const se_VerifyCardValidationDataCommand = async (
   input: VerifyCardValidationDataCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -324,7 +324,7 @@ export const se_VerifyCardValidationDataCommand = async (
       PrimaryAccountNumber: [],
       ValidationData: [],
       VerificationAttributes: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -335,7 +335,7 @@ export const se_VerifyCardValidationDataCommand = async (
  */
 export const se_VerifyMacCommand = async (
   input: VerifyMacCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -350,7 +350,7 @@ export const se_VerifyMacCommand = async (
       MacLength: [],
       MessageData: [],
       VerificationAttributes: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -361,7 +361,7 @@ export const se_VerifyMacCommand = async (
  */
 export const se_VerifyPinDataCommand = async (
   input: VerifyPinDataCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -379,7 +379,7 @@ export const se_VerifyPinDataCommand = async (
       PrimaryAccountNumber: [],
       VerificationAttributes: (_) => _json(_),
       VerificationKeyIdentifier: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -390,7 +390,7 @@ export const se_VerifyPinDataCommand = async (
  */
 export const de_DecryptDataCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DecryptDataCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -413,7 +413,7 @@ export const de_DecryptDataCommand = async (
  */
 export const de_EncryptDataCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<EncryptDataCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -436,7 +436,7 @@ export const de_EncryptDataCommand = async (
  */
 export const de_GenerateCardValidationDataCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GenerateCardValidationDataCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -459,7 +459,7 @@ export const de_GenerateCardValidationDataCommand = async (
  */
 export const de_GenerateMacCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GenerateMacCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -482,7 +482,7 @@ export const de_GenerateMacCommand = async (
  */
 export const de_GeneratePinDataCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GeneratePinDataCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -508,7 +508,7 @@ export const de_GeneratePinDataCommand = async (
  */
 export const de_ReEncryptDataCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ReEncryptDataCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -531,7 +531,7 @@ export const de_ReEncryptDataCommand = async (
  */
 export const de_TranslatePinDataCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TranslatePinDataCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -554,7 +554,7 @@ export const de_TranslatePinDataCommand = async (
  */
 export const de_VerifyAuthRequestCryptogramCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<VerifyAuthRequestCryptogramCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -577,7 +577,7 @@ export const de_VerifyAuthRequestCryptogramCommand = async (
  */
 export const de_VerifyCardValidationDataCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<VerifyCardValidationDataCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -599,7 +599,7 @@ export const de_VerifyCardValidationDataCommand = async (
  */
 export const de_VerifyMacCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<VerifyMacCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -621,7 +621,7 @@ export const de_VerifyMacCommand = async (
  */
 export const de_VerifyPinDataCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<VerifyPinDataCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -684,7 +684,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -704,7 +704,7 @@ const de_AccessDeniedExceptionRes = async (
  */
 const de_InternalServerExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -724,7 +724,7 @@ const de_InternalServerExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -779,7 +779,7 @@ const de_ValidationExceptionRes = async (parsedOutput: any, context: __SerdeCont
  */
 const de_VerificationFailedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<VerificationFailedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;

@@ -155,16 +155,16 @@ export interface BackupGateway {
    */
   associateGatewayToServer(
     args: AssociateGatewayToServerCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AssociateGatewayToServerCommandOutput>;
   associateGatewayToServer(
     args: AssociateGatewayToServerCommandInput,
-    cb: (err: any, data?: AssociateGatewayToServerCommandOutput) => void
+    cb: (err: any, data?: AssociateGatewayToServerCommandOutput) => void,
   ): void;
   associateGatewayToServer(
     args: AssociateGatewayToServerCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AssociateGatewayToServerCommandOutput) => void
+    cb: (err: any, data?: AssociateGatewayToServerCommandOutput) => void,
   ): void;
 
   /**
@@ -175,7 +175,7 @@ export interface BackupGateway {
   createGateway(
     args: CreateGatewayCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateGatewayCommandOutput) => void
+    cb: (err: any, data?: CreateGatewayCommandOutput) => void,
   ): void;
 
   /**
@@ -186,7 +186,7 @@ export interface BackupGateway {
   deleteGateway(
     args: DeleteGatewayCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteGatewayCommandOutput) => void
+    cb: (err: any, data?: DeleteGatewayCommandOutput) => void,
   ): void;
 
   /**
@@ -194,16 +194,16 @@ export interface BackupGateway {
    */
   deleteHypervisor(
     args: DeleteHypervisorCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteHypervisorCommandOutput>;
   deleteHypervisor(
     args: DeleteHypervisorCommandInput,
-    cb: (err: any, data?: DeleteHypervisorCommandOutput) => void
+    cb: (err: any, data?: DeleteHypervisorCommandOutput) => void,
   ): void;
   deleteHypervisor(
     args: DeleteHypervisorCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteHypervisorCommandOutput) => void
+    cb: (err: any, data?: DeleteHypervisorCommandOutput) => void,
   ): void;
 
   /**
@@ -211,16 +211,16 @@ export interface BackupGateway {
    */
   disassociateGatewayFromServer(
     args: DisassociateGatewayFromServerCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DisassociateGatewayFromServerCommandOutput>;
   disassociateGatewayFromServer(
     args: DisassociateGatewayFromServerCommandInput,
-    cb: (err: any, data?: DisassociateGatewayFromServerCommandOutput) => void
+    cb: (err: any, data?: DisassociateGatewayFromServerCommandOutput) => void,
   ): void;
   disassociateGatewayFromServer(
     args: DisassociateGatewayFromServerCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DisassociateGatewayFromServerCommandOutput) => void
+    cb: (err: any, data?: DisassociateGatewayFromServerCommandOutput) => void,
   ): void;
 
   /**
@@ -228,16 +228,16 @@ export interface BackupGateway {
    */
   getBandwidthRateLimitSchedule(
     args: GetBandwidthRateLimitScheduleCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetBandwidthRateLimitScheduleCommandOutput>;
   getBandwidthRateLimitSchedule(
     args: GetBandwidthRateLimitScheduleCommandInput,
-    cb: (err: any, data?: GetBandwidthRateLimitScheduleCommandOutput) => void
+    cb: (err: any, data?: GetBandwidthRateLimitScheduleCommandOutput) => void,
   ): void;
   getBandwidthRateLimitSchedule(
     args: GetBandwidthRateLimitScheduleCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetBandwidthRateLimitScheduleCommandOutput) => void
+    cb: (err: any, data?: GetBandwidthRateLimitScheduleCommandOutput) => void,
   ): void;
 
   /**
@@ -248,7 +248,7 @@ export interface BackupGateway {
   getGateway(
     args: GetGatewayCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetGatewayCommandOutput) => void
+    cb: (err: any, data?: GetGatewayCommandOutput) => void,
   ): void;
 
   /**
@@ -259,7 +259,7 @@ export interface BackupGateway {
   getHypervisor(
     args: GetHypervisorCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetHypervisorCommandOutput) => void
+    cb: (err: any, data?: GetHypervisorCommandOutput) => void,
   ): void;
 
   /**
@@ -267,16 +267,16 @@ export interface BackupGateway {
    */
   getHypervisorPropertyMappings(
     args: GetHypervisorPropertyMappingsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetHypervisorPropertyMappingsCommandOutput>;
   getHypervisorPropertyMappings(
     args: GetHypervisorPropertyMappingsCommandInput,
-    cb: (err: any, data?: GetHypervisorPropertyMappingsCommandOutput) => void
+    cb: (err: any, data?: GetHypervisorPropertyMappingsCommandOutput) => void,
   ): void;
   getHypervisorPropertyMappings(
     args: GetHypervisorPropertyMappingsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetHypervisorPropertyMappingsCommandOutput) => void
+    cb: (err: any, data?: GetHypervisorPropertyMappingsCommandOutput) => void,
   ): void;
 
   /**
@@ -284,16 +284,16 @@ export interface BackupGateway {
    */
   getVirtualMachine(
     args: GetVirtualMachineCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetVirtualMachineCommandOutput>;
   getVirtualMachine(
     args: GetVirtualMachineCommandInput,
-    cb: (err: any, data?: GetVirtualMachineCommandOutput) => void
+    cb: (err: any, data?: GetVirtualMachineCommandOutput) => void,
   ): void;
   getVirtualMachine(
     args: GetVirtualMachineCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetVirtualMachineCommandOutput) => void
+    cb: (err: any, data?: GetVirtualMachineCommandOutput) => void,
   ): void;
 
   /**
@@ -301,16 +301,16 @@ export interface BackupGateway {
    */
   importHypervisorConfiguration(
     args: ImportHypervisorConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ImportHypervisorConfigurationCommandOutput>;
   importHypervisorConfiguration(
     args: ImportHypervisorConfigurationCommandInput,
-    cb: (err: any, data?: ImportHypervisorConfigurationCommandOutput) => void
+    cb: (err: any, data?: ImportHypervisorConfigurationCommandOutput) => void,
   ): void;
   importHypervisorConfiguration(
     args: ImportHypervisorConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ImportHypervisorConfigurationCommandOutput) => void
+    cb: (err: any, data?: ImportHypervisorConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -322,7 +322,7 @@ export interface BackupGateway {
   listGateways(
     args: ListGatewaysCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListGatewaysCommandOutput) => void
+    cb: (err: any, data?: ListGatewaysCommandOutput) => void,
   ): void;
 
   /**
@@ -331,13 +331,13 @@ export interface BackupGateway {
   listHypervisors(): Promise<ListHypervisorsCommandOutput>;
   listHypervisors(
     args: ListHypervisorsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListHypervisorsCommandOutput>;
   listHypervisors(args: ListHypervisorsCommandInput, cb: (err: any, data?: ListHypervisorsCommandOutput) => void): void;
   listHypervisors(
     args: ListHypervisorsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListHypervisorsCommandOutput) => void
+    cb: (err: any, data?: ListHypervisorsCommandOutput) => void,
   ): void;
 
   /**
@@ -345,16 +345,16 @@ export interface BackupGateway {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -363,16 +363,16 @@ export interface BackupGateway {
   listVirtualMachines(): Promise<ListVirtualMachinesCommandOutput>;
   listVirtualMachines(
     args: ListVirtualMachinesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListVirtualMachinesCommandOutput>;
   listVirtualMachines(
     args: ListVirtualMachinesCommandInput,
-    cb: (err: any, data?: ListVirtualMachinesCommandOutput) => void
+    cb: (err: any, data?: ListVirtualMachinesCommandOutput) => void,
   ): void;
   listVirtualMachines(
     args: ListVirtualMachinesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListVirtualMachinesCommandOutput) => void
+    cb: (err: any, data?: ListVirtualMachinesCommandOutput) => void,
   ): void;
 
   /**
@@ -380,16 +380,16 @@ export interface BackupGateway {
    */
   putBandwidthRateLimitSchedule(
     args: PutBandwidthRateLimitScheduleCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutBandwidthRateLimitScheduleCommandOutput>;
   putBandwidthRateLimitSchedule(
     args: PutBandwidthRateLimitScheduleCommandInput,
-    cb: (err: any, data?: PutBandwidthRateLimitScheduleCommandOutput) => void
+    cb: (err: any, data?: PutBandwidthRateLimitScheduleCommandOutput) => void,
   ): void;
   putBandwidthRateLimitSchedule(
     args: PutBandwidthRateLimitScheduleCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutBandwidthRateLimitScheduleCommandOutput) => void
+    cb: (err: any, data?: PutBandwidthRateLimitScheduleCommandOutput) => void,
   ): void;
 
   /**
@@ -397,16 +397,16 @@ export interface BackupGateway {
    */
   putHypervisorPropertyMappings(
     args: PutHypervisorPropertyMappingsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutHypervisorPropertyMappingsCommandOutput>;
   putHypervisorPropertyMappings(
     args: PutHypervisorPropertyMappingsCommandInput,
-    cb: (err: any, data?: PutHypervisorPropertyMappingsCommandOutput) => void
+    cb: (err: any, data?: PutHypervisorPropertyMappingsCommandOutput) => void,
   ): void;
   putHypervisorPropertyMappings(
     args: PutHypervisorPropertyMappingsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutHypervisorPropertyMappingsCommandOutput) => void
+    cb: (err: any, data?: PutHypervisorPropertyMappingsCommandOutput) => void,
   ): void;
 
   /**
@@ -414,16 +414,16 @@ export interface BackupGateway {
    */
   putMaintenanceStartTime(
     args: PutMaintenanceStartTimeCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutMaintenanceStartTimeCommandOutput>;
   putMaintenanceStartTime(
     args: PutMaintenanceStartTimeCommandInput,
-    cb: (err: any, data?: PutMaintenanceStartTimeCommandOutput) => void
+    cb: (err: any, data?: PutMaintenanceStartTimeCommandOutput) => void,
   ): void;
   putMaintenanceStartTime(
     args: PutMaintenanceStartTimeCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutMaintenanceStartTimeCommandOutput) => void
+    cb: (err: any, data?: PutMaintenanceStartTimeCommandOutput) => void,
   ): void;
 
   /**
@@ -431,16 +431,16 @@ export interface BackupGateway {
    */
   startVirtualMachinesMetadataSync(
     args: StartVirtualMachinesMetadataSyncCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartVirtualMachinesMetadataSyncCommandOutput>;
   startVirtualMachinesMetadataSync(
     args: StartVirtualMachinesMetadataSyncCommandInput,
-    cb: (err: any, data?: StartVirtualMachinesMetadataSyncCommandOutput) => void
+    cb: (err: any, data?: StartVirtualMachinesMetadataSyncCommandOutput) => void,
   ): void;
   startVirtualMachinesMetadataSync(
     args: StartVirtualMachinesMetadataSyncCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartVirtualMachinesMetadataSyncCommandOutput) => void
+    cb: (err: any, data?: StartVirtualMachinesMetadataSyncCommandOutput) => void,
   ): void;
 
   /**
@@ -451,7 +451,7 @@ export interface BackupGateway {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -459,16 +459,16 @@ export interface BackupGateway {
    */
   testHypervisorConfiguration(
     args: TestHypervisorConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<TestHypervisorConfigurationCommandOutput>;
   testHypervisorConfiguration(
     args: TestHypervisorConfigurationCommandInput,
-    cb: (err: any, data?: TestHypervisorConfigurationCommandOutput) => void
+    cb: (err: any, data?: TestHypervisorConfigurationCommandOutput) => void,
   ): void;
   testHypervisorConfiguration(
     args: TestHypervisorConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TestHypervisorConfigurationCommandOutput) => void
+    cb: (err: any, data?: TestHypervisorConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -479,7 +479,7 @@ export interface BackupGateway {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -487,16 +487,16 @@ export interface BackupGateway {
    */
   updateGatewayInformation(
     args: UpdateGatewayInformationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateGatewayInformationCommandOutput>;
   updateGatewayInformation(
     args: UpdateGatewayInformationCommandInput,
-    cb: (err: any, data?: UpdateGatewayInformationCommandOutput) => void
+    cb: (err: any, data?: UpdateGatewayInformationCommandOutput) => void,
   ): void;
   updateGatewayInformation(
     args: UpdateGatewayInformationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateGatewayInformationCommandOutput) => void
+    cb: (err: any, data?: UpdateGatewayInformationCommandOutput) => void,
   ): void;
 
   /**
@@ -504,16 +504,16 @@ export interface BackupGateway {
    */
   updateGatewaySoftwareNow(
     args: UpdateGatewaySoftwareNowCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateGatewaySoftwareNowCommandOutput>;
   updateGatewaySoftwareNow(
     args: UpdateGatewaySoftwareNowCommandInput,
-    cb: (err: any, data?: UpdateGatewaySoftwareNowCommandOutput) => void
+    cb: (err: any, data?: UpdateGatewaySoftwareNowCommandOutput) => void,
   ): void;
   updateGatewaySoftwareNow(
     args: UpdateGatewaySoftwareNowCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateGatewaySoftwareNowCommandOutput) => void
+    cb: (err: any, data?: UpdateGatewaySoftwareNowCommandOutput) => void,
   ): void;
 
   /**
@@ -521,16 +521,16 @@ export interface BackupGateway {
    */
   updateHypervisor(
     args: UpdateHypervisorCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateHypervisorCommandOutput>;
   updateHypervisor(
     args: UpdateHypervisorCommandInput,
-    cb: (err: any, data?: UpdateHypervisorCommandOutput) => void
+    cb: (err: any, data?: UpdateHypervisorCommandOutput) => void,
   ): void;
   updateHypervisor(
     args: UpdateHypervisorCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateHypervisorCommandOutput) => void
+    cb: (err: any, data?: UpdateHypervisorCommandOutput) => void,
   ): void;
 }
 

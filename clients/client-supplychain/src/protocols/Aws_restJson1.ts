@@ -49,7 +49,7 @@ import { SupplyChainServiceException as __BaseException } from "../models/Supply
  */
 export const se_CreateBillOfMaterialsImportJobCommand = async (
   input: CreateBillOfMaterialsImportJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -62,7 +62,7 @@ export const se_CreateBillOfMaterialsImportJobCommand = async (
     take(input, {
       clientToken: [true, (_) => _ ?? generateIdempotencyToken()],
       s3uri: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -73,7 +73,7 @@ export const se_CreateBillOfMaterialsImportJobCommand = async (
  */
 export const se_GetBillOfMaterialsImportJobCommand = async (
   input: GetBillOfMaterialsImportJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -90,7 +90,7 @@ export const se_GetBillOfMaterialsImportJobCommand = async (
  */
 export const se_SendDataIntegrationEventCommand = async (
   input: SendDataIntegrationEventCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -106,7 +106,7 @@ export const se_SendDataIntegrationEventCommand = async (
       eventGroupId: [],
       eventTimestamp: (_) => _.getTime() / 1_000,
       eventType: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -117,7 +117,7 @@ export const se_SendDataIntegrationEventCommand = async (
  */
 export const de_CreateBillOfMaterialsImportJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateBillOfMaterialsImportJobCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -138,7 +138,7 @@ export const de_CreateBillOfMaterialsImportJobCommand = async (
  */
 export const de_GetBillOfMaterialsImportJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetBillOfMaterialsImportJobCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -159,7 +159,7 @@ export const de_GetBillOfMaterialsImportJobCommand = async (
  */
 export const de_SendDataIntegrationEventCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SendDataIntegrationEventCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -222,7 +222,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -259,7 +259,7 @@ const de_ConflictExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_InternalServerExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -279,7 +279,7 @@ const de_InternalServerExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -299,7 +299,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_ServiceQuotaExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceQuotaExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;

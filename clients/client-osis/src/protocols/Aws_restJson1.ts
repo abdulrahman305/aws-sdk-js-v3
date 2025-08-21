@@ -80,7 +80,7 @@ import { OSISServiceException as __BaseException } from "../models/OSISServiceEx
  */
 export const se_CreatePipelineCommand = async (
   input: CreatePipelineCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -99,7 +99,7 @@ export const se_CreatePipelineCommand = async (
       PipelineName: [],
       Tags: (_) => _json(_),
       VpcOptions: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -110,7 +110,7 @@ export const se_CreatePipelineCommand = async (
  */
 export const se_DeletePipelineCommand = async (
   input: DeletePipelineCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -126,7 +126,7 @@ export const se_DeletePipelineCommand = async (
  */
 export const se_GetPipelineCommand = async (
   input: GetPipelineCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -142,7 +142,7 @@ export const se_GetPipelineCommand = async (
  */
 export const se_GetPipelineBlueprintCommand = async (
   input: GetPipelineBlueprintCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -161,7 +161,7 @@ export const se_GetPipelineBlueprintCommand = async (
  */
 export const se_GetPipelineChangeProgressCommand = async (
   input: GetPipelineChangeProgressCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -177,7 +177,7 @@ export const se_GetPipelineChangeProgressCommand = async (
  */
 export const se_ListPipelineBlueprintsCommand = async (
   input: ListPipelineBlueprintsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -195,7 +195,7 @@ export const se_ListPipelineBlueprintsCommand = async (
  */
 export const se_ListPipelinesCommand = async (
   input: ListPipelinesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -214,7 +214,7 @@ export const se_ListPipelinesCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -232,7 +232,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_StartPipelineCommand = async (
   input: StartPipelineCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -248,7 +248,7 @@ export const se_StartPipelineCommand = async (
  */
 export const se_StopPipelineCommand = async (
   input: StopPipelineCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -264,7 +264,7 @@ export const se_StopPipelineCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -278,7 +278,7 @@ export const se_TagResourceCommand = async (
   body = JSON.stringify(
     take(input, {
       Tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).q(query).b(body);
   return b.build();
@@ -289,7 +289,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -303,7 +303,7 @@ export const se_UntagResourceCommand = async (
   body = JSON.stringify(
     take(input, {
       TagKeys: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).q(query).b(body);
   return b.build();
@@ -314,7 +314,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdatePipelineCommand = async (
   input: UpdatePipelineCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -331,7 +331,7 @@ export const se_UpdatePipelineCommand = async (
       MaxUnits: [],
       MinUnits: [],
       PipelineConfigurationBody: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -342,7 +342,7 @@ export const se_UpdatePipelineCommand = async (
  */
 export const se_ValidatePipelineCommand = async (
   input: ValidatePipelineCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -353,7 +353,7 @@ export const se_ValidatePipelineCommand = async (
   body = JSON.stringify(
     take(input, {
       PipelineConfigurationBody: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -364,7 +364,7 @@ export const se_ValidatePipelineCommand = async (
  */
 export const de_CreatePipelineCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreatePipelineCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -385,7 +385,7 @@ export const de_CreatePipelineCommand = async (
  */
 export const de_DeletePipelineCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeletePipelineCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -402,7 +402,7 @@ export const de_DeletePipelineCommand = async (
  */
 export const de_GetPipelineCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetPipelineCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -423,7 +423,7 @@ export const de_GetPipelineCommand = async (
  */
 export const de_GetPipelineBlueprintCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetPipelineBlueprintCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -445,7 +445,7 @@ export const de_GetPipelineBlueprintCommand = async (
  */
 export const de_GetPipelineChangeProgressCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetPipelineChangeProgressCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -466,7 +466,7 @@ export const de_GetPipelineChangeProgressCommand = async (
  */
 export const de_ListPipelineBlueprintsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListPipelineBlueprintsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -487,7 +487,7 @@ export const de_ListPipelineBlueprintsCommand = async (
  */
 export const de_ListPipelinesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListPipelinesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -509,7 +509,7 @@ export const de_ListPipelinesCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -530,7 +530,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_StartPipelineCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartPipelineCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -551,7 +551,7 @@ export const de_StartPipelineCommand = async (
  */
 export const de_StopPipelineCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StopPipelineCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -572,7 +572,7 @@ export const de_StopPipelineCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -589,7 +589,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -606,7 +606,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdatePipelineCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdatePipelineCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -627,7 +627,7 @@ export const de_UpdatePipelineCommand = async (
  */
 export const de_ValidatePipelineCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ValidatePipelineCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -697,7 +697,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -734,7 +734,7 @@ const de_ConflictExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_DisabledOperationExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisabledOperationException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -771,7 +771,7 @@ const de_InternalExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_InvalidPaginationTokenExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidPaginationTokenException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -791,7 +791,7 @@ const de_InvalidPaginationTokenExceptionRes = async (
  */
 const de_LimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<LimitExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -811,7 +811,7 @@ const de_LimitExceededExceptionRes = async (
  */
 const de_ResourceAlreadyExistsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceAlreadyExistsException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -831,7 +831,7 @@ const de_ResourceAlreadyExistsExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;

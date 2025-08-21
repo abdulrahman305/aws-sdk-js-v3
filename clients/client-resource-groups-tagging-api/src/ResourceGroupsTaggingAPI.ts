@@ -58,16 +58,16 @@ export interface ResourceGroupsTaggingAPI {
   describeReportCreation(): Promise<DescribeReportCreationCommandOutput>;
   describeReportCreation(
     args: DescribeReportCreationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeReportCreationCommandOutput>;
   describeReportCreation(
     args: DescribeReportCreationCommandInput,
-    cb: (err: any, data?: DescribeReportCreationCommandOutput) => void
+    cb: (err: any, data?: DescribeReportCreationCommandOutput) => void,
   ): void;
   describeReportCreation(
     args: DescribeReportCreationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeReportCreationCommandOutput) => void
+    cb: (err: any, data?: DescribeReportCreationCommandOutput) => void,
   ): void;
 
   /**
@@ -76,16 +76,16 @@ export interface ResourceGroupsTaggingAPI {
   getComplianceSummary(): Promise<GetComplianceSummaryCommandOutput>;
   getComplianceSummary(
     args: GetComplianceSummaryCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetComplianceSummaryCommandOutput>;
   getComplianceSummary(
     args: GetComplianceSummaryCommandInput,
-    cb: (err: any, data?: GetComplianceSummaryCommandOutput) => void
+    cb: (err: any, data?: GetComplianceSummaryCommandOutput) => void,
   ): void;
   getComplianceSummary(
     args: GetComplianceSummaryCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetComplianceSummaryCommandOutput) => void
+    cb: (err: any, data?: GetComplianceSummaryCommandOutput) => void,
   ): void;
 
   /**
@@ -97,7 +97,7 @@ export interface ResourceGroupsTaggingAPI {
   getResources(
     args: GetResourcesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetResourcesCommandOutput) => void
+    cb: (err: any, data?: GetResourcesCommandOutput) => void,
   ): void;
 
   /**
@@ -109,7 +109,7 @@ export interface ResourceGroupsTaggingAPI {
   getTagKeys(
     args: GetTagKeysCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetTagKeysCommandOutput) => void
+    cb: (err: any, data?: GetTagKeysCommandOutput) => void,
   ): void;
 
   /**
@@ -120,7 +120,7 @@ export interface ResourceGroupsTaggingAPI {
   getTagValues(
     args: GetTagValuesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetTagValuesCommandOutput) => void
+    cb: (err: any, data?: GetTagValuesCommandOutput) => void,
   ): void;
 
   /**
@@ -128,16 +128,16 @@ export interface ResourceGroupsTaggingAPI {
    */
   startReportCreation(
     args: StartReportCreationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartReportCreationCommandOutput>;
   startReportCreation(
     args: StartReportCreationCommandInput,
-    cb: (err: any, data?: StartReportCreationCommandOutput) => void
+    cb: (err: any, data?: StartReportCreationCommandOutput) => void,
   ): void;
   startReportCreation(
     args: StartReportCreationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartReportCreationCommandOutput) => void
+    cb: (err: any, data?: StartReportCreationCommandOutput) => void,
   ): void;
 
   /**
@@ -148,7 +148,7 @@ export interface ResourceGroupsTaggingAPI {
   tagResources(
     args: TagResourcesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourcesCommandOutput) => void
+    cb: (err: any, data?: TagResourcesCommandOutput) => void,
   ): void;
 
   /**
@@ -156,13 +156,13 @@ export interface ResourceGroupsTaggingAPI {
    */
   untagResources(
     args: UntagResourcesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UntagResourcesCommandOutput>;
   untagResources(args: UntagResourcesCommandInput, cb: (err: any, data?: UntagResourcesCommandOutput) => void): void;
   untagResources(
     args: UntagResourcesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourcesCommandOutput) => void
+    cb: (err: any, data?: UntagResourcesCommandOutput) => void,
   ): void;
 }
 

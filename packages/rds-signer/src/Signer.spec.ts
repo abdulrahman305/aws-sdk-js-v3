@@ -88,7 +88,7 @@ describe("rds-signer", () => {
       }),
       {
         expiresIn: 900,
-      }
+      },
     );
   });
 

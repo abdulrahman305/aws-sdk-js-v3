@@ -18,13 +18,13 @@ export interface FlexibleChecksumsMiddlewareConfig
 
 export const getFlexibleChecksumsPlugin = (
   config: PreviouslyResolved,
-  middlewareConfig: FlexibleChecksumsMiddlewareConfig
+  middlewareConfig: FlexibleChecksumsMiddlewareConfig,
 ): Pluggable<any, any> => ({
   applyToStack: (clientStack) => {
     clientStack.add(flexibleChecksumsMiddleware(config, middlewareConfig), flexibleChecksumsMiddlewareOptions);
     clientStack.addRelativeTo(
       flexibleChecksumsResponseMiddleware(config, middlewareConfig),
-      flexibleChecksumsResponseMiddlewareOptions
+      flexibleChecksumsResponseMiddlewareOptions,
     );
   },
 });

@@ -69,7 +69,7 @@ import {
  */
 export const se_AcceptPrimaryEmailUpdateCommand = async (
   input: AcceptPrimaryEmailUpdateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -82,7 +82,7 @@ export const se_AcceptPrimaryEmailUpdateCommand = async (
       AccountId: [],
       Otp: [],
       PrimaryEmail: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -93,7 +93,7 @@ export const se_AcceptPrimaryEmailUpdateCommand = async (
  */
 export const se_DeleteAlternateContactCommand = async (
   input: DeleteAlternateContactCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -105,7 +105,7 @@ export const se_DeleteAlternateContactCommand = async (
     take(input, {
       AccountId: [],
       AlternateContactType: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -116,7 +116,7 @@ export const se_DeleteAlternateContactCommand = async (
  */
 export const se_DisableRegionCommand = async (
   input: DisableRegionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -128,7 +128,7 @@ export const se_DisableRegionCommand = async (
     take(input, {
       AccountId: [],
       RegionName: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -139,7 +139,7 @@ export const se_DisableRegionCommand = async (
  */
 export const se_EnableRegionCommand = async (
   input: EnableRegionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -151,7 +151,7 @@ export const se_EnableRegionCommand = async (
     take(input, {
       AccountId: [],
       RegionName: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -162,7 +162,7 @@ export const se_EnableRegionCommand = async (
  */
 export const se_GetAlternateContactCommand = async (
   input: GetAlternateContactCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -174,7 +174,7 @@ export const se_GetAlternateContactCommand = async (
     take(input, {
       AccountId: [],
       AlternateContactType: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -185,7 +185,7 @@ export const se_GetAlternateContactCommand = async (
  */
 export const se_GetContactInformationCommand = async (
   input: GetContactInformationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -196,7 +196,7 @@ export const se_GetContactInformationCommand = async (
   body = JSON.stringify(
     take(input, {
       AccountId: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -207,7 +207,7 @@ export const se_GetContactInformationCommand = async (
  */
 export const se_GetPrimaryEmailCommand = async (
   input: GetPrimaryEmailCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -218,7 +218,7 @@ export const se_GetPrimaryEmailCommand = async (
   body = JSON.stringify(
     take(input, {
       AccountId: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -229,7 +229,7 @@ export const se_GetPrimaryEmailCommand = async (
  */
 export const se_GetRegionOptStatusCommand = async (
   input: GetRegionOptStatusCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -241,7 +241,7 @@ export const se_GetRegionOptStatusCommand = async (
     take(input, {
       AccountId: [],
       RegionName: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -252,7 +252,7 @@ export const se_GetRegionOptStatusCommand = async (
  */
 export const se_ListRegionsCommand = async (
   input: ListRegionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -266,7 +266,7 @@ export const se_ListRegionsCommand = async (
       MaxResults: [],
       NextToken: [],
       RegionOptStatusContains: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -277,7 +277,7 @@ export const se_ListRegionsCommand = async (
  */
 export const se_PutAlternateContactCommand = async (
   input: PutAlternateContactCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -293,7 +293,7 @@ export const se_PutAlternateContactCommand = async (
       Name: [],
       PhoneNumber: [],
       Title: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -304,7 +304,7 @@ export const se_PutAlternateContactCommand = async (
  */
 export const se_PutContactInformationCommand = async (
   input: PutContactInformationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -316,7 +316,7 @@ export const se_PutContactInformationCommand = async (
     take(input, {
       AccountId: [],
       ContactInformation: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -327,7 +327,7 @@ export const se_PutContactInformationCommand = async (
  */
 export const se_StartPrimaryEmailUpdateCommand = async (
   input: StartPrimaryEmailUpdateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -339,7 +339,7 @@ export const se_StartPrimaryEmailUpdateCommand = async (
     take(input, {
       AccountId: [],
       PrimaryEmail: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -350,7 +350,7 @@ export const se_StartPrimaryEmailUpdateCommand = async (
  */
 export const de_AcceptPrimaryEmailUpdateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AcceptPrimaryEmailUpdateCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -371,7 +371,7 @@ export const de_AcceptPrimaryEmailUpdateCommand = async (
  */
 export const de_DeleteAlternateContactCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteAlternateContactCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -388,7 +388,7 @@ export const de_DeleteAlternateContactCommand = async (
  */
 export const de_DisableRegionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisableRegionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -405,7 +405,7 @@ export const de_DisableRegionCommand = async (
  */
 export const de_EnableRegionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<EnableRegionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -422,7 +422,7 @@ export const de_EnableRegionCommand = async (
  */
 export const de_GetAlternateContactCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetAlternateContactCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -443,7 +443,7 @@ export const de_GetAlternateContactCommand = async (
  */
 export const de_GetContactInformationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetContactInformationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -464,7 +464,7 @@ export const de_GetContactInformationCommand = async (
  */
 export const de_GetPrimaryEmailCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetPrimaryEmailCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -485,7 +485,7 @@ export const de_GetPrimaryEmailCommand = async (
  */
 export const de_GetRegionOptStatusCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetRegionOptStatusCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -507,7 +507,7 @@ export const de_GetRegionOptStatusCommand = async (
  */
 export const de_ListRegionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListRegionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -529,7 +529,7 @@ export const de_ListRegionsCommand = async (
  */
 export const de_PutAlternateContactCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutAlternateContactCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -546,7 +546,7 @@ export const de_PutAlternateContactCommand = async (
  */
 export const de_PutContactInformationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutContactInformationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -563,7 +563,7 @@ export const de_PutContactInformationCommand = async (
  */
 export const de_StartPrimaryEmailUpdateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartPrimaryEmailUpdateCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -623,7 +623,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -660,7 +660,7 @@ const de_ConflictExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_InternalServerExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -680,7 +680,7 @@ const de_InternalServerExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -700,7 +700,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_TooManyRequestsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyRequestsException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;

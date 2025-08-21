@@ -270,7 +270,7 @@ import {
  */
 export const se_CreateGatewayRouteCommand = async (
   input: CreateGatewayRouteCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -289,7 +289,7 @@ export const se_CreateGatewayRouteCommand = async (
       gatewayRouteName: [],
       spec: (_) => _json(_),
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).q(query).b(body);
   return b.build();
@@ -300,7 +300,7 @@ export const se_CreateGatewayRouteCommand = async (
  */
 export const se_CreateMeshCommand = async (
   input: CreateMeshCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -314,7 +314,7 @@ export const se_CreateMeshCommand = async (
       meshName: [],
       spec: (_) => _json(_),
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -325,7 +325,7 @@ export const se_CreateMeshCommand = async (
  */
 export const se_CreateRouteCommand = async (
   input: CreateRouteCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -344,7 +344,7 @@ export const se_CreateRouteCommand = async (
       routeName: [],
       spec: (_) => _json(_),
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).q(query).b(body);
   return b.build();
@@ -355,7 +355,7 @@ export const se_CreateRouteCommand = async (
  */
 export const se_CreateVirtualGatewayCommand = async (
   input: CreateVirtualGatewayCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -373,7 +373,7 @@ export const se_CreateVirtualGatewayCommand = async (
       spec: (_) => _json(_),
       tags: (_) => _json(_),
       virtualGatewayName: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).q(query).b(body);
   return b.build();
@@ -384,7 +384,7 @@ export const se_CreateVirtualGatewayCommand = async (
  */
 export const se_CreateVirtualNodeCommand = async (
   input: CreateVirtualNodeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -402,7 +402,7 @@ export const se_CreateVirtualNodeCommand = async (
       spec: (_) => _json(_),
       tags: (_) => _json(_),
       virtualNodeName: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).q(query).b(body);
   return b.build();
@@ -413,7 +413,7 @@ export const se_CreateVirtualNodeCommand = async (
  */
 export const se_CreateVirtualRouterCommand = async (
   input: CreateVirtualRouterCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -431,7 +431,7 @@ export const se_CreateVirtualRouterCommand = async (
       spec: (_) => _json(_),
       tags: (_) => _json(_),
       virtualRouterName: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).q(query).b(body);
   return b.build();
@@ -442,7 +442,7 @@ export const se_CreateVirtualRouterCommand = async (
  */
 export const se_CreateVirtualServiceCommand = async (
   input: CreateVirtualServiceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -460,7 +460,7 @@ export const se_CreateVirtualServiceCommand = async (
       spec: (_) => _json(_),
       tags: (_) => _json(_),
       virtualServiceName: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).q(query).b(body);
   return b.build();
@@ -471,7 +471,7 @@ export const se_CreateVirtualServiceCommand = async (
  */
 export const se_DeleteGatewayRouteCommand = async (
   input: DeleteGatewayRouteCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -492,7 +492,7 @@ export const se_DeleteGatewayRouteCommand = async (
  */
 export const se_DeleteMeshCommand = async (
   input: DeleteMeshCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -508,7 +508,7 @@ export const se_DeleteMeshCommand = async (
  */
 export const se_DeleteRouteCommand = async (
   input: DeleteRouteCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -529,7 +529,7 @@ export const se_DeleteRouteCommand = async (
  */
 export const se_DeleteVirtualGatewayCommand = async (
   input: DeleteVirtualGatewayCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -549,7 +549,7 @@ export const se_DeleteVirtualGatewayCommand = async (
  */
 export const se_DeleteVirtualNodeCommand = async (
   input: DeleteVirtualNodeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -569,7 +569,7 @@ export const se_DeleteVirtualNodeCommand = async (
  */
 export const se_DeleteVirtualRouterCommand = async (
   input: DeleteVirtualRouterCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -589,7 +589,7 @@ export const se_DeleteVirtualRouterCommand = async (
  */
 export const se_DeleteVirtualServiceCommand = async (
   input: DeleteVirtualServiceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -609,7 +609,7 @@ export const se_DeleteVirtualServiceCommand = async (
  */
 export const se_DescribeGatewayRouteCommand = async (
   input: DescribeGatewayRouteCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -630,7 +630,7 @@ export const se_DescribeGatewayRouteCommand = async (
  */
 export const se_DescribeMeshCommand = async (
   input: DescribeMeshCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -649,7 +649,7 @@ export const se_DescribeMeshCommand = async (
  */
 export const se_DescribeRouteCommand = async (
   input: DescribeRouteCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -670,7 +670,7 @@ export const se_DescribeRouteCommand = async (
  */
 export const se_DescribeVirtualGatewayCommand = async (
   input: DescribeVirtualGatewayCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -690,7 +690,7 @@ export const se_DescribeVirtualGatewayCommand = async (
  */
 export const se_DescribeVirtualNodeCommand = async (
   input: DescribeVirtualNodeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -710,7 +710,7 @@ export const se_DescribeVirtualNodeCommand = async (
  */
 export const se_DescribeVirtualRouterCommand = async (
   input: DescribeVirtualRouterCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -730,7 +730,7 @@ export const se_DescribeVirtualRouterCommand = async (
  */
 export const se_DescribeVirtualServiceCommand = async (
   input: DescribeVirtualServiceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -750,7 +750,7 @@ export const se_DescribeVirtualServiceCommand = async (
  */
 export const se_ListGatewayRoutesCommand = async (
   input: ListGatewayRoutesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -772,7 +772,7 @@ export const se_ListGatewayRoutesCommand = async (
  */
 export const se_ListMeshesCommand = async (
   input: ListMeshesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -791,7 +791,7 @@ export const se_ListMeshesCommand = async (
  */
 export const se_ListRoutesCommand = async (
   input: ListRoutesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -813,7 +813,7 @@ export const se_ListRoutesCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -833,7 +833,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_ListVirtualGatewaysCommand = async (
   input: ListVirtualGatewaysCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -854,7 +854,7 @@ export const se_ListVirtualGatewaysCommand = async (
  */
 export const se_ListVirtualNodesCommand = async (
   input: ListVirtualNodesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -875,7 +875,7 @@ export const se_ListVirtualNodesCommand = async (
  */
 export const se_ListVirtualRoutersCommand = async (
   input: ListVirtualRoutersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -896,7 +896,7 @@ export const se_ListVirtualRoutersCommand = async (
  */
 export const se_ListVirtualServicesCommand = async (
   input: ListVirtualServicesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -917,7 +917,7 @@ export const se_ListVirtualServicesCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -931,7 +931,7 @@ export const se_TagResourceCommand = async (
   body = JSON.stringify(
     take(input, {
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).q(query).b(body);
   return b.build();
@@ -942,7 +942,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -956,7 +956,7 @@ export const se_UntagResourceCommand = async (
   body = JSON.stringify(
     take(input, {
       tagKeys: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).q(query).b(body);
   return b.build();
@@ -967,7 +967,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateGatewayRouteCommand = async (
   input: UpdateGatewayRouteCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -985,7 +985,7 @@ export const se_UpdateGatewayRouteCommand = async (
     take(input, {
       clientToken: [true, (_) => _ ?? generateIdempotencyToken()],
       spec: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).q(query).b(body);
   return b.build();
@@ -996,7 +996,7 @@ export const se_UpdateGatewayRouteCommand = async (
  */
 export const se_UpdateMeshCommand = async (
   input: UpdateMeshCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1009,7 +1009,7 @@ export const se_UpdateMeshCommand = async (
     take(input, {
       clientToken: [true, (_) => _ ?? generateIdempotencyToken()],
       spec: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1020,7 +1020,7 @@ export const se_UpdateMeshCommand = async (
  */
 export const se_UpdateRouteCommand = async (
   input: UpdateRouteCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1038,7 +1038,7 @@ export const se_UpdateRouteCommand = async (
     take(input, {
       clientToken: [true, (_) => _ ?? generateIdempotencyToken()],
       spec: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).q(query).b(body);
   return b.build();
@@ -1049,7 +1049,7 @@ export const se_UpdateRouteCommand = async (
  */
 export const se_UpdateVirtualGatewayCommand = async (
   input: UpdateVirtualGatewayCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1066,7 +1066,7 @@ export const se_UpdateVirtualGatewayCommand = async (
     take(input, {
       clientToken: [true, (_) => _ ?? generateIdempotencyToken()],
       spec: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).q(query).b(body);
   return b.build();
@@ -1077,7 +1077,7 @@ export const se_UpdateVirtualGatewayCommand = async (
  */
 export const se_UpdateVirtualNodeCommand = async (
   input: UpdateVirtualNodeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1094,7 +1094,7 @@ export const se_UpdateVirtualNodeCommand = async (
     take(input, {
       clientToken: [true, (_) => _ ?? generateIdempotencyToken()],
       spec: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).q(query).b(body);
   return b.build();
@@ -1105,7 +1105,7 @@ export const se_UpdateVirtualNodeCommand = async (
  */
 export const se_UpdateVirtualRouterCommand = async (
   input: UpdateVirtualRouterCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1122,7 +1122,7 @@ export const se_UpdateVirtualRouterCommand = async (
     take(input, {
       clientToken: [true, (_) => _ ?? generateIdempotencyToken()],
       spec: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).q(query).b(body);
   return b.build();
@@ -1133,7 +1133,7 @@ export const se_UpdateVirtualRouterCommand = async (
  */
 export const se_UpdateVirtualServiceCommand = async (
   input: UpdateVirtualServiceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1150,7 +1150,7 @@ export const se_UpdateVirtualServiceCommand = async (
     take(input, {
       clientToken: [true, (_) => _ ?? generateIdempotencyToken()],
       spec: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).q(query).b(body);
   return b.build();
@@ -1161,7 +1161,7 @@ export const se_UpdateVirtualServiceCommand = async (
  */
 export const de_CreateGatewayRouteCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateGatewayRouteCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1179,7 +1179,7 @@ export const de_CreateGatewayRouteCommand = async (
  */
 export const de_CreateMeshCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateMeshCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1197,7 +1197,7 @@ export const de_CreateMeshCommand = async (
  */
 export const de_CreateRouteCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateRouteCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1215,7 +1215,7 @@ export const de_CreateRouteCommand = async (
  */
 export const de_CreateVirtualGatewayCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateVirtualGatewayCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1233,7 +1233,7 @@ export const de_CreateVirtualGatewayCommand = async (
  */
 export const de_CreateVirtualNodeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateVirtualNodeCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1251,7 +1251,7 @@ export const de_CreateVirtualNodeCommand = async (
  */
 export const de_CreateVirtualRouterCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateVirtualRouterCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1269,7 +1269,7 @@ export const de_CreateVirtualRouterCommand = async (
  */
 export const de_CreateVirtualServiceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateVirtualServiceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1287,7 +1287,7 @@ export const de_CreateVirtualServiceCommand = async (
  */
 export const de_DeleteGatewayRouteCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteGatewayRouteCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1305,7 +1305,7 @@ export const de_DeleteGatewayRouteCommand = async (
  */
 export const de_DeleteMeshCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteMeshCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1323,7 +1323,7 @@ export const de_DeleteMeshCommand = async (
  */
 export const de_DeleteRouteCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteRouteCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1341,7 +1341,7 @@ export const de_DeleteRouteCommand = async (
  */
 export const de_DeleteVirtualGatewayCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteVirtualGatewayCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1359,7 +1359,7 @@ export const de_DeleteVirtualGatewayCommand = async (
  */
 export const de_DeleteVirtualNodeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteVirtualNodeCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1377,7 +1377,7 @@ export const de_DeleteVirtualNodeCommand = async (
  */
 export const de_DeleteVirtualRouterCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteVirtualRouterCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1395,7 +1395,7 @@ export const de_DeleteVirtualRouterCommand = async (
  */
 export const de_DeleteVirtualServiceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteVirtualServiceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1413,7 +1413,7 @@ export const de_DeleteVirtualServiceCommand = async (
  */
 export const de_DescribeGatewayRouteCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeGatewayRouteCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1431,7 +1431,7 @@ export const de_DescribeGatewayRouteCommand = async (
  */
 export const de_DescribeMeshCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeMeshCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1449,7 +1449,7 @@ export const de_DescribeMeshCommand = async (
  */
 export const de_DescribeRouteCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeRouteCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1467,7 +1467,7 @@ export const de_DescribeRouteCommand = async (
  */
 export const de_DescribeVirtualGatewayCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeVirtualGatewayCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1485,7 +1485,7 @@ export const de_DescribeVirtualGatewayCommand = async (
  */
 export const de_DescribeVirtualNodeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeVirtualNodeCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1503,7 +1503,7 @@ export const de_DescribeVirtualNodeCommand = async (
  */
 export const de_DescribeVirtualRouterCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeVirtualRouterCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1521,7 +1521,7 @@ export const de_DescribeVirtualRouterCommand = async (
  */
 export const de_DescribeVirtualServiceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeVirtualServiceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1539,7 +1539,7 @@ export const de_DescribeVirtualServiceCommand = async (
  */
 export const de_ListGatewayRoutesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListGatewayRoutesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1561,7 +1561,7 @@ export const de_ListGatewayRoutesCommand = async (
  */
 export const de_ListMeshesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListMeshesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1583,7 +1583,7 @@ export const de_ListMeshesCommand = async (
  */
 export const de_ListRoutesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListRoutesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1605,7 +1605,7 @@ export const de_ListRoutesCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1627,7 +1627,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_ListVirtualGatewaysCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListVirtualGatewaysCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1649,7 +1649,7 @@ export const de_ListVirtualGatewaysCommand = async (
  */
 export const de_ListVirtualNodesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListVirtualNodesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1671,7 +1671,7 @@ export const de_ListVirtualNodesCommand = async (
  */
 export const de_ListVirtualRoutersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListVirtualRoutersCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1693,7 +1693,7 @@ export const de_ListVirtualRoutersCommand = async (
  */
 export const de_ListVirtualServicesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListVirtualServicesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1715,7 +1715,7 @@ export const de_ListVirtualServicesCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1732,7 +1732,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1749,7 +1749,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateGatewayRouteCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateGatewayRouteCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1767,7 +1767,7 @@ export const de_UpdateGatewayRouteCommand = async (
  */
 export const de_UpdateMeshCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateMeshCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1785,7 +1785,7 @@ export const de_UpdateMeshCommand = async (
  */
 export const de_UpdateRouteCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateRouteCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1803,7 +1803,7 @@ export const de_UpdateRouteCommand = async (
  */
 export const de_UpdateVirtualGatewayCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateVirtualGatewayCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1821,7 +1821,7 @@ export const de_UpdateVirtualGatewayCommand = async (
  */
 export const de_UpdateVirtualNodeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateVirtualNodeCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1839,7 +1839,7 @@ export const de_UpdateVirtualNodeCommand = async (
  */
 export const de_UpdateVirtualRouterCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateVirtualRouterCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1857,7 +1857,7 @@ export const de_UpdateVirtualRouterCommand = async (
  */
 export const de_UpdateVirtualServiceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateVirtualServiceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1977,7 +1977,7 @@ const de_ForbiddenExceptionRes = async (parsedOutput: any, context: __SerdeConte
  */
 const de_InternalServerErrorExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerErrorException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1997,7 +1997,7 @@ const de_InternalServerErrorExceptionRes = async (
  */
 const de_LimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<LimitExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2034,7 +2034,7 @@ const de_NotFoundExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_ResourceInUseExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceInUseException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2054,7 +2054,7 @@ const de_ResourceInUseExceptionRes = async (
  */
 const de_ServiceUnavailableExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceUnavailableException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2074,7 +2074,7 @@ const de_ServiceUnavailableExceptionRes = async (
  */
 const de_TooManyRequestsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyRequestsException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2094,7 +2094,7 @@ const de_TooManyRequestsExceptionRes = async (
  */
 const de_TooManyTagsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyTagsException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;

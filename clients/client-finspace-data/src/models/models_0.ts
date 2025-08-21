@@ -3391,7 +3391,7 @@ export const CreateUserRequestFilterSensitiveLog = (obj: CreateUserRequest): any
  * @internal
  */
 export const GetExternalDataViewAccessDetailsResponseFilterSensitiveLog = (
-  obj: GetExternalDataViewAccessDetailsResponse
+  obj: GetExternalDataViewAccessDetailsResponse,
 ): any => ({
   ...obj,
   ...(obj.credentials && { credentials: SENSITIVE_STRING }),
@@ -3425,7 +3425,7 @@ export const CredentialsFilterSensitiveLog = (obj: Credentials): any => ({
  * @internal
  */
 export const GetProgrammaticAccessCredentialsResponseFilterSensitiveLog = (
-  obj: GetProgrammaticAccessCredentialsResponse
+  obj: GetProgrammaticAccessCredentialsResponse,
 ): any => ({
   ...obj,
   ...(obj.credentials && { credentials: SENSITIVE_STRING }),

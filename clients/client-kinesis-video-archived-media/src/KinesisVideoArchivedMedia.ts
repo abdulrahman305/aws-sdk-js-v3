@@ -47,7 +47,7 @@ export interface KinesisVideoArchivedMedia {
   getClip(
     args: GetClipCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetClipCommandOutput) => void
+    cb: (err: any, data?: GetClipCommandOutput) => void,
   ): void;
 
   /**
@@ -56,16 +56,16 @@ export interface KinesisVideoArchivedMedia {
   getDASHStreamingSessionURL(): Promise<GetDASHStreamingSessionURLCommandOutput>;
   getDASHStreamingSessionURL(
     args: GetDASHStreamingSessionURLCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetDASHStreamingSessionURLCommandOutput>;
   getDASHStreamingSessionURL(
     args: GetDASHStreamingSessionURLCommandInput,
-    cb: (err: any, data?: GetDASHStreamingSessionURLCommandOutput) => void
+    cb: (err: any, data?: GetDASHStreamingSessionURLCommandOutput) => void,
   ): void;
   getDASHStreamingSessionURL(
     args: GetDASHStreamingSessionURLCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetDASHStreamingSessionURLCommandOutput) => void
+    cb: (err: any, data?: GetDASHStreamingSessionURLCommandOutput) => void,
   ): void;
 
   /**
@@ -74,16 +74,16 @@ export interface KinesisVideoArchivedMedia {
   getHLSStreamingSessionURL(): Promise<GetHLSStreamingSessionURLCommandOutput>;
   getHLSStreamingSessionURL(
     args: GetHLSStreamingSessionURLCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetHLSStreamingSessionURLCommandOutput>;
   getHLSStreamingSessionURL(
     args: GetHLSStreamingSessionURLCommandInput,
-    cb: (err: any, data?: GetHLSStreamingSessionURLCommandOutput) => void
+    cb: (err: any, data?: GetHLSStreamingSessionURLCommandOutput) => void,
   ): void;
   getHLSStreamingSessionURL(
     args: GetHLSStreamingSessionURLCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetHLSStreamingSessionURLCommandOutput) => void
+    cb: (err: any, data?: GetHLSStreamingSessionURLCommandOutput) => void,
   ): void;
 
   /**
@@ -94,7 +94,7 @@ export interface KinesisVideoArchivedMedia {
   getImages(
     args: GetImagesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetImagesCommandOutput) => void
+    cb: (err: any, data?: GetImagesCommandOutput) => void,
   ): void;
 
   /**
@@ -102,16 +102,16 @@ export interface KinesisVideoArchivedMedia {
    */
   getMediaForFragmentList(
     args: GetMediaForFragmentListCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetMediaForFragmentListCommandOutput>;
   getMediaForFragmentList(
     args: GetMediaForFragmentListCommandInput,
-    cb: (err: any, data?: GetMediaForFragmentListCommandOutput) => void
+    cb: (err: any, data?: GetMediaForFragmentListCommandOutput) => void,
   ): void;
   getMediaForFragmentList(
     args: GetMediaForFragmentListCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetMediaForFragmentListCommandOutput) => void
+    cb: (err: any, data?: GetMediaForFragmentListCommandOutput) => void,
   ): void;
 
   /**
@@ -123,7 +123,7 @@ export interface KinesisVideoArchivedMedia {
   listFragments(
     args: ListFragmentsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListFragmentsCommandOutput) => void
+    cb: (err: any, data?: ListFragmentsCommandOutput) => void,
   ): void;
 }
 

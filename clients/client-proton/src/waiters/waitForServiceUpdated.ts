@@ -60,7 +60,7 @@ const checkState = async (client: ProtonClient, input: GetServiceCommandInput): 
  */
 export const waitForServiceUpdated = async (
   params: WaiterConfiguration<ProtonClient>,
-  input: GetServiceCommandInput
+  input: GetServiceCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 5, maxDelay: 4999 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -72,7 +72,7 @@ export const waitForServiceUpdated = async (
  */
 export const waitUntilServiceUpdated = async (
   params: WaiterConfiguration<ProtonClient>,
-  input: GetServiceCommandInput
+  input: GetServiceCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 5, maxDelay: 4999 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

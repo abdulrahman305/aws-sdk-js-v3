@@ -177,7 +177,7 @@ import { RAMServiceException as __BaseException } from "../models/RAMServiceExce
  */
 export const se_AcceptResourceShareInvitationCommand = async (
   input: AcceptResourceShareInvitationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -189,7 +189,7 @@ export const se_AcceptResourceShareInvitationCommand = async (
     take(input, {
       clientToken: [],
       resourceShareInvitationArn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -200,7 +200,7 @@ export const se_AcceptResourceShareInvitationCommand = async (
  */
 export const se_AssociateResourceShareCommand = async (
   input: AssociateResourceShareCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -215,7 +215,7 @@ export const se_AssociateResourceShareCommand = async (
       resourceArns: (_) => _json(_),
       resourceShareArn: [],
       sources: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -226,7 +226,7 @@ export const se_AssociateResourceShareCommand = async (
  */
 export const se_AssociateResourceSharePermissionCommand = async (
   input: AssociateResourceSharePermissionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -241,7 +241,7 @@ export const se_AssociateResourceSharePermissionCommand = async (
       permissionVersion: [],
       replace: [],
       resourceShareArn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -252,7 +252,7 @@ export const se_AssociateResourceSharePermissionCommand = async (
  */
 export const se_CreatePermissionCommand = async (
   input: CreatePermissionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -267,7 +267,7 @@ export const se_CreatePermissionCommand = async (
       policyTemplate: [],
       resourceType: [],
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -278,7 +278,7 @@ export const se_CreatePermissionCommand = async (
  */
 export const se_CreatePermissionVersionCommand = async (
   input: CreatePermissionVersionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -291,7 +291,7 @@ export const se_CreatePermissionVersionCommand = async (
       clientToken: [],
       permissionArn: [],
       policyTemplate: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -302,7 +302,7 @@ export const se_CreatePermissionVersionCommand = async (
  */
 export const se_CreateResourceShareCommand = async (
   input: CreateResourceShareCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -320,7 +320,7 @@ export const se_CreateResourceShareCommand = async (
       resourceArns: (_) => _json(_),
       sources: (_) => _json(_),
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -331,7 +331,7 @@ export const se_CreateResourceShareCommand = async (
  */
 export const se_DeletePermissionCommand = async (
   input: DeletePermissionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -350,7 +350,7 @@ export const se_DeletePermissionCommand = async (
  */
 export const se_DeletePermissionVersionCommand = async (
   input: DeletePermissionVersionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -370,7 +370,7 @@ export const se_DeletePermissionVersionCommand = async (
  */
 export const se_DeleteResourceShareCommand = async (
   input: DeleteResourceShareCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -389,7 +389,7 @@ export const se_DeleteResourceShareCommand = async (
  */
 export const se_DisassociateResourceShareCommand = async (
   input: DisassociateResourceShareCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -404,7 +404,7 @@ export const se_DisassociateResourceShareCommand = async (
       resourceArns: (_) => _json(_),
       resourceShareArn: [],
       sources: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -415,7 +415,7 @@ export const se_DisassociateResourceShareCommand = async (
  */
 export const se_DisassociateResourceSharePermissionCommand = async (
   input: DisassociateResourceSharePermissionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -428,7 +428,7 @@ export const se_DisassociateResourceSharePermissionCommand = async (
       clientToken: [],
       permissionArn: [],
       resourceShareArn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -439,7 +439,7 @@ export const se_DisassociateResourceSharePermissionCommand = async (
  */
 export const se_EnableSharingWithAwsOrganizationCommand = async (
   input: EnableSharingWithAwsOrganizationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -457,7 +457,7 @@ export const se_EnableSharingWithAwsOrganizationCommand = async (
  */
 export const se_GetPermissionCommand = async (
   input: GetPermissionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -469,7 +469,7 @@ export const se_GetPermissionCommand = async (
     take(input, {
       permissionArn: [],
       permissionVersion: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -480,7 +480,7 @@ export const se_GetPermissionCommand = async (
  */
 export const se_GetResourcePoliciesCommand = async (
   input: GetResourcePoliciesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -494,7 +494,7 @@ export const se_GetResourcePoliciesCommand = async (
       nextToken: [],
       principal: [],
       resourceArns: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -505,7 +505,7 @@ export const se_GetResourcePoliciesCommand = async (
  */
 export const se_GetResourceShareAssociationsCommand = async (
   input: GetResourceShareAssociationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -522,7 +522,7 @@ export const se_GetResourceShareAssociationsCommand = async (
       principal: [],
       resourceArn: [],
       resourceShareArns: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -533,7 +533,7 @@ export const se_GetResourceShareAssociationsCommand = async (
  */
 export const se_GetResourceShareInvitationsCommand = async (
   input: GetResourceShareInvitationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -547,7 +547,7 @@ export const se_GetResourceShareInvitationsCommand = async (
       nextToken: [],
       resourceShareArns: (_) => _json(_),
       resourceShareInvitationArns: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -558,7 +558,7 @@ export const se_GetResourceShareInvitationsCommand = async (
  */
 export const se_GetResourceSharesCommand = async (
   input: GetResourceSharesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -577,7 +577,7 @@ export const se_GetResourceSharesCommand = async (
       resourceShareArns: (_) => _json(_),
       resourceShareStatus: [],
       tagFilters: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -588,7 +588,7 @@ export const se_GetResourceSharesCommand = async (
  */
 export const se_ListPendingInvitationResourcesCommand = async (
   input: ListPendingInvitationResourcesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -602,7 +602,7 @@ export const se_ListPendingInvitationResourcesCommand = async (
       nextToken: [],
       resourceRegionScope: [],
       resourceShareInvitationArn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -613,7 +613,7 @@ export const se_ListPendingInvitationResourcesCommand = async (
  */
 export const se_ListPermissionAssociationsCommand = async (
   input: ListPermissionAssociationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -631,7 +631,7 @@ export const se_ListPermissionAssociationsCommand = async (
       permissionArn: [],
       permissionVersion: [],
       resourceType: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -642,7 +642,7 @@ export const se_ListPermissionAssociationsCommand = async (
  */
 export const se_ListPermissionsCommand = async (
   input: ListPermissionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -656,7 +656,7 @@ export const se_ListPermissionsCommand = async (
       nextToken: [],
       permissionType: [],
       resourceType: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -667,7 +667,7 @@ export const se_ListPermissionsCommand = async (
  */
 export const se_ListPermissionVersionsCommand = async (
   input: ListPermissionVersionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -680,7 +680,7 @@ export const se_ListPermissionVersionsCommand = async (
       maxResults: [],
       nextToken: [],
       permissionArn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -691,7 +691,7 @@ export const se_ListPermissionVersionsCommand = async (
  */
 export const se_ListPrincipalsCommand = async (
   input: ListPrincipalsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -708,7 +708,7 @@ export const se_ListPrincipalsCommand = async (
       resourceOwner: [],
       resourceShareArns: (_) => _json(_),
       resourceType: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -719,7 +719,7 @@ export const se_ListPrincipalsCommand = async (
  */
 export const se_ListReplacePermissionAssociationsWorkCommand = async (
   input: ListReplacePermissionAssociationsWorkCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -733,7 +733,7 @@ export const se_ListReplacePermissionAssociationsWorkCommand = async (
       nextToken: [],
       status: [],
       workIds: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -744,7 +744,7 @@ export const se_ListReplacePermissionAssociationsWorkCommand = async (
  */
 export const se_ListResourcesCommand = async (
   input: ListResourcesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -762,7 +762,7 @@ export const se_ListResourcesCommand = async (
       resourceRegionScope: [],
       resourceShareArns: (_) => _json(_),
       resourceType: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -773,7 +773,7 @@ export const se_ListResourcesCommand = async (
  */
 export const se_ListResourceSharePermissionsCommand = async (
   input: ListResourceSharePermissionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -786,7 +786,7 @@ export const se_ListResourceSharePermissionsCommand = async (
       maxResults: [],
       nextToken: [],
       resourceShareArn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -797,7 +797,7 @@ export const se_ListResourceSharePermissionsCommand = async (
  */
 export const se_ListResourceTypesCommand = async (
   input: ListResourceTypesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -810,7 +810,7 @@ export const se_ListResourceTypesCommand = async (
       maxResults: [],
       nextToken: [],
       resourceRegionScope: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -821,7 +821,7 @@ export const se_ListResourceTypesCommand = async (
  */
 export const se_PromotePermissionCreatedFromPolicyCommand = async (
   input: PromotePermissionCreatedFromPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -834,7 +834,7 @@ export const se_PromotePermissionCreatedFromPolicyCommand = async (
       clientToken: [],
       name: [],
       permissionArn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -845,7 +845,7 @@ export const se_PromotePermissionCreatedFromPolicyCommand = async (
  */
 export const se_PromoteResourceShareCreatedFromPolicyCommand = async (
   input: PromoteResourceShareCreatedFromPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -863,7 +863,7 @@ export const se_PromoteResourceShareCreatedFromPolicyCommand = async (
  */
 export const se_RejectResourceShareInvitationCommand = async (
   input: RejectResourceShareInvitationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -875,7 +875,7 @@ export const se_RejectResourceShareInvitationCommand = async (
     take(input, {
       clientToken: [],
       resourceShareInvitationArn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -886,7 +886,7 @@ export const se_RejectResourceShareInvitationCommand = async (
  */
 export const se_ReplacePermissionAssociationsCommand = async (
   input: ReplacePermissionAssociationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -900,7 +900,7 @@ export const se_ReplacePermissionAssociationsCommand = async (
       fromPermissionArn: [],
       fromPermissionVersion: [],
       toPermissionArn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -911,7 +911,7 @@ export const se_ReplacePermissionAssociationsCommand = async (
  */
 export const se_SetDefaultPermissionVersionCommand = async (
   input: SetDefaultPermissionVersionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -924,7 +924,7 @@ export const se_SetDefaultPermissionVersionCommand = async (
       clientToken: [],
       permissionArn: [],
       permissionVersion: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -935,7 +935,7 @@ export const se_SetDefaultPermissionVersionCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -948,7 +948,7 @@ export const se_TagResourceCommand = async (
       resourceArn: [],
       resourceShareArn: [],
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -959,7 +959,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -972,7 +972,7 @@ export const se_UntagResourceCommand = async (
       resourceArn: [],
       resourceShareArn: [],
       tagKeys: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -983,7 +983,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateResourceShareCommand = async (
   input: UpdateResourceShareCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -997,7 +997,7 @@ export const se_UpdateResourceShareCommand = async (
       clientToken: [],
       name: [],
       resourceShareArn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1008,7 +1008,7 @@ export const se_UpdateResourceShareCommand = async (
  */
 export const de_AcceptResourceShareInvitationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AcceptResourceShareInvitationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1030,7 +1030,7 @@ export const de_AcceptResourceShareInvitationCommand = async (
  */
 export const de_AssociateResourceShareCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssociateResourceShareCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1052,7 +1052,7 @@ export const de_AssociateResourceShareCommand = async (
  */
 export const de_AssociateResourceSharePermissionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssociateResourceSharePermissionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1074,7 +1074,7 @@ export const de_AssociateResourceSharePermissionCommand = async (
  */
 export const de_CreatePermissionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreatePermissionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1096,7 +1096,7 @@ export const de_CreatePermissionCommand = async (
  */
 export const de_CreatePermissionVersionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreatePermissionVersionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1118,7 +1118,7 @@ export const de_CreatePermissionVersionCommand = async (
  */
 export const de_CreateResourceShareCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateResourceShareCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1140,7 +1140,7 @@ export const de_CreateResourceShareCommand = async (
  */
 export const de_DeletePermissionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeletePermissionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1163,7 +1163,7 @@ export const de_DeletePermissionCommand = async (
  */
 export const de_DeletePermissionVersionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeletePermissionVersionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1186,7 +1186,7 @@ export const de_DeletePermissionVersionCommand = async (
  */
 export const de_DeleteResourceShareCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteResourceShareCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1208,7 +1208,7 @@ export const de_DeleteResourceShareCommand = async (
  */
 export const de_DisassociateResourceShareCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisassociateResourceShareCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1230,7 +1230,7 @@ export const de_DisassociateResourceShareCommand = async (
  */
 export const de_DisassociateResourceSharePermissionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisassociateResourceSharePermissionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1252,7 +1252,7 @@ export const de_DisassociateResourceSharePermissionCommand = async (
  */
 export const de_EnableSharingWithAwsOrganizationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<EnableSharingWithAwsOrganizationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1273,7 +1273,7 @@ export const de_EnableSharingWithAwsOrganizationCommand = async (
  */
 export const de_GetPermissionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetPermissionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1294,7 +1294,7 @@ export const de_GetPermissionCommand = async (
  */
 export const de_GetResourcePoliciesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetResourcePoliciesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1316,7 +1316,7 @@ export const de_GetResourcePoliciesCommand = async (
  */
 export const de_GetResourceShareAssociationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetResourceShareAssociationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1338,7 +1338,7 @@ export const de_GetResourceShareAssociationsCommand = async (
  */
 export const de_GetResourceShareInvitationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetResourceShareInvitationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1360,7 +1360,7 @@ export const de_GetResourceShareInvitationsCommand = async (
  */
 export const de_GetResourceSharesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetResourceSharesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1382,7 +1382,7 @@ export const de_GetResourceSharesCommand = async (
  */
 export const de_ListPendingInvitationResourcesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListPendingInvitationResourcesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1404,7 +1404,7 @@ export const de_ListPendingInvitationResourcesCommand = async (
  */
 export const de_ListPermissionAssociationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListPermissionAssociationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1426,7 +1426,7 @@ export const de_ListPermissionAssociationsCommand = async (
  */
 export const de_ListPermissionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListPermissionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1448,7 +1448,7 @@ export const de_ListPermissionsCommand = async (
  */
 export const de_ListPermissionVersionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListPermissionVersionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1470,7 +1470,7 @@ export const de_ListPermissionVersionsCommand = async (
  */
 export const de_ListPrincipalsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListPrincipalsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1492,7 +1492,7 @@ export const de_ListPrincipalsCommand = async (
  */
 export const de_ListReplacePermissionAssociationsWorkCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListReplacePermissionAssociationsWorkCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1514,7 +1514,7 @@ export const de_ListReplacePermissionAssociationsWorkCommand = async (
  */
 export const de_ListResourcesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListResourcesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1536,7 +1536,7 @@ export const de_ListResourcesCommand = async (
  */
 export const de_ListResourceSharePermissionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListResourceSharePermissionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1558,7 +1558,7 @@ export const de_ListResourceSharePermissionsCommand = async (
  */
 export const de_ListResourceTypesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListResourceTypesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1580,7 +1580,7 @@ export const de_ListResourceTypesCommand = async (
  */
 export const de_PromotePermissionCreatedFromPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PromotePermissionCreatedFromPolicyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1602,7 +1602,7 @@ export const de_PromotePermissionCreatedFromPolicyCommand = async (
  */
 export const de_PromoteResourceShareCreatedFromPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PromoteResourceShareCreatedFromPolicyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1623,7 +1623,7 @@ export const de_PromoteResourceShareCreatedFromPolicyCommand = async (
  */
 export const de_RejectResourceShareInvitationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RejectResourceShareInvitationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1645,7 +1645,7 @@ export const de_RejectResourceShareInvitationCommand = async (
  */
 export const de_ReplacePermissionAssociationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ReplacePermissionAssociationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1667,7 +1667,7 @@ export const de_ReplacePermissionAssociationsCommand = async (
  */
 export const de_SetDefaultPermissionVersionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SetDefaultPermissionVersionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1689,7 +1689,7 @@ export const de_SetDefaultPermissionVersionCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1706,7 +1706,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1723,7 +1723,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateResourceShareCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateResourceShareCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1850,7 +1850,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_IdempotentParameterMismatchExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<IdempotentParameterMismatchException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1870,7 +1870,7 @@ const de_IdempotentParameterMismatchExceptionRes = async (
  */
 const de_InvalidClientTokenExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidClientTokenException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1890,7 +1890,7 @@ const de_InvalidClientTokenExceptionRes = async (
  */
 const de_InvalidMaxResultsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidMaxResultsException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1910,7 +1910,7 @@ const de_InvalidMaxResultsExceptionRes = async (
  */
 const de_InvalidNextTokenExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidNextTokenException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1930,7 +1930,7 @@ const de_InvalidNextTokenExceptionRes = async (
  */
 const de_InvalidParameterExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidParameterException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1950,7 +1950,7 @@ const de_InvalidParameterExceptionRes = async (
  */
 const de_InvalidPolicyExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidPolicyException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1970,7 +1970,7 @@ const de_InvalidPolicyExceptionRes = async (
  */
 const de_InvalidResourceTypeExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidResourceTypeException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1990,7 +1990,7 @@ const de_InvalidResourceTypeExceptionRes = async (
  */
 const de_InvalidStateTransitionExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidStateTransitionException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2010,7 +2010,7 @@ const de_InvalidStateTransitionExceptionRes = async (
  */
 const de_MalformedArnExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<MalformedArnException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2030,7 +2030,7 @@ const de_MalformedArnExceptionRes = async (
  */
 const de_MalformedPolicyTemplateExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<MalformedPolicyTemplateException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2050,7 +2050,7 @@ const de_MalformedPolicyTemplateExceptionRes = async (
  */
 const de_MissingRequiredParameterExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<MissingRequiredParameterException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2070,7 +2070,7 @@ const de_MissingRequiredParameterExceptionRes = async (
  */
 const de_OperationNotPermittedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<OperationNotPermittedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2090,7 +2090,7 @@ const de_OperationNotPermittedExceptionRes = async (
  */
 const de_PermissionAlreadyExistsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PermissionAlreadyExistsException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2110,7 +2110,7 @@ const de_PermissionAlreadyExistsExceptionRes = async (
  */
 const de_PermissionLimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PermissionLimitExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2130,7 +2130,7 @@ const de_PermissionLimitExceededExceptionRes = async (
  */
 const de_PermissionVersionsLimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PermissionVersionsLimitExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2150,7 +2150,7 @@ const de_PermissionVersionsLimitExceededExceptionRes = async (
  */
 const de_ResourceArnNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceArnNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2170,7 +2170,7 @@ const de_ResourceArnNotFoundExceptionRes = async (
  */
 const de_ResourceShareInvitationAlreadyAcceptedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceShareInvitationAlreadyAcceptedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2190,7 +2190,7 @@ const de_ResourceShareInvitationAlreadyAcceptedExceptionRes = async (
  */
 const de_ResourceShareInvitationAlreadyRejectedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceShareInvitationAlreadyRejectedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2210,7 +2210,7 @@ const de_ResourceShareInvitationAlreadyRejectedExceptionRes = async (
  */
 const de_ResourceShareInvitationArnNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceShareInvitationArnNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2230,7 +2230,7 @@ const de_ResourceShareInvitationArnNotFoundExceptionRes = async (
  */
 const de_ResourceShareInvitationExpiredExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceShareInvitationExpiredException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2250,7 +2250,7 @@ const de_ResourceShareInvitationExpiredExceptionRes = async (
  */
 const de_ResourceShareLimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceShareLimitExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2270,7 +2270,7 @@ const de_ResourceShareLimitExceededExceptionRes = async (
  */
 const de_ServerInternalExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServerInternalException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2290,7 +2290,7 @@ const de_ServerInternalExceptionRes = async (
  */
 const de_ServiceUnavailableExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceUnavailableException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2310,7 +2310,7 @@ const de_ServiceUnavailableExceptionRes = async (
  */
 const de_TagLimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagLimitExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2330,7 +2330,7 @@ const de_TagLimitExceededExceptionRes = async (
  */
 const de_TagPolicyViolationExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagPolicyViolationException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2367,7 +2367,7 @@ const de_ThrottlingExceptionRes = async (parsedOutput: any, context: __SerdeCont
  */
 const de_UnknownResourceExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UnknownResourceException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2387,7 +2387,7 @@ const de_UnknownResourceExceptionRes = async (
  */
 const de_UnmatchedPolicyPermissionExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UnmatchedPolicyPermissionException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2488,7 +2488,7 @@ const de_PrincipalList = (output: any, context: __SerdeContext): Principal[] => 
  */
 const de_ReplacePermissionAssociationsWork = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ReplacePermissionAssociationsWork => {
   return take(output, {
     creationTime: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
@@ -2508,7 +2508,7 @@ const de_ReplacePermissionAssociationsWork = (
  */
 const de_ReplacePermissionAssociationsWorkList = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ReplacePermissionAssociationsWork[] => {
   const retVal = (output || [])
     .filter((e: any) => e != null)

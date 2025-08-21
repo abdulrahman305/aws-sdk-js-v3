@@ -7541,7 +7541,7 @@ export const PutAccountDetailsRequestFilterSensitiveLog = (obj: PutAccountDetail
  * @internal
  */
 export const PutEmailIdentityDkimSigningAttributesRequestFilterSensitiveLog = (
-  obj: PutEmailIdentityDkimSigningAttributesRequest
+  obj: PutEmailIdentityDkimSigningAttributesRequest,
 ): any => ({
   ...obj,
   ...(obj.SigningAttributes && { SigningAttributes: DkimSigningAttributesFilterSensitiveLog(obj.SigningAttributes) }),

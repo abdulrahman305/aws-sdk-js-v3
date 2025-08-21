@@ -9383,7 +9383,7 @@ export interface DescribeImportImageTasksResult {
  * @internal
  */
 export const DeleteVerifiedAccessTrustProviderResultFilterSensitiveLog = (
-  obj: DeleteVerifiedAccessTrustProviderResult
+  obj: DeleteVerifiedAccessTrustProviderResult,
 ): any => ({
   ...obj,
   ...(obj.VerifiedAccessTrustProvider && {

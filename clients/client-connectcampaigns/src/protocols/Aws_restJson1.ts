@@ -110,7 +110,7 @@ import {
  */
 export const se_CreateCampaignCommand = async (
   input: CreateCampaignCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -125,7 +125,7 @@ export const se_CreateCampaignCommand = async (
       name: [],
       outboundCallConfig: (_) => _json(_),
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -136,7 +136,7 @@ export const se_CreateCampaignCommand = async (
  */
 export const se_DeleteCampaignCommand = async (
   input: DeleteCampaignCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -152,7 +152,7 @@ export const se_DeleteCampaignCommand = async (
  */
 export const se_DeleteConnectInstanceConfigCommand = async (
   input: DeleteConnectInstanceConfigCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -168,7 +168,7 @@ export const se_DeleteConnectInstanceConfigCommand = async (
  */
 export const se_DeleteInstanceOnboardingJobCommand = async (
   input: DeleteInstanceOnboardingJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -184,7 +184,7 @@ export const se_DeleteInstanceOnboardingJobCommand = async (
  */
 export const se_DescribeCampaignCommand = async (
   input: DescribeCampaignCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -200,7 +200,7 @@ export const se_DescribeCampaignCommand = async (
  */
 export const se_GetCampaignStateCommand = async (
   input: GetCampaignStateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -216,7 +216,7 @@ export const se_GetCampaignStateCommand = async (
  */
 export const se_GetCampaignStateBatchCommand = async (
   input: GetCampaignStateBatchCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -227,7 +227,7 @@ export const se_GetCampaignStateBatchCommand = async (
   body = JSON.stringify(
     take(input, {
       campaignIds: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -238,7 +238,7 @@ export const se_GetCampaignStateBatchCommand = async (
  */
 export const se_GetConnectInstanceConfigCommand = async (
   input: GetConnectInstanceConfigCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -254,7 +254,7 @@ export const se_GetConnectInstanceConfigCommand = async (
  */
 export const se_GetInstanceOnboardingJobStatusCommand = async (
   input: GetInstanceOnboardingJobStatusCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -270,7 +270,7 @@ export const se_GetInstanceOnboardingJobStatusCommand = async (
  */
 export const se_ListCampaignsCommand = async (
   input: ListCampaignsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -283,7 +283,7 @@ export const se_ListCampaignsCommand = async (
       filters: (_) => _json(_),
       maxResults: [],
       nextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -294,7 +294,7 @@ export const se_ListCampaignsCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -310,7 +310,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_PauseCampaignCommand = async (
   input: PauseCampaignCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -326,7 +326,7 @@ export const se_PauseCampaignCommand = async (
  */
 export const se_PutDialRequestBatchCommand = async (
   input: PutDialRequestBatchCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -338,7 +338,7 @@ export const se_PutDialRequestBatchCommand = async (
   body = JSON.stringify(
     take(input, {
       dialRequests: (_) => se_DialRequestList(_, context),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -349,7 +349,7 @@ export const se_PutDialRequestBatchCommand = async (
  */
 export const se_ResumeCampaignCommand = async (
   input: ResumeCampaignCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -365,7 +365,7 @@ export const se_ResumeCampaignCommand = async (
  */
 export const se_StartCampaignCommand = async (
   input: StartCampaignCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -381,7 +381,7 @@ export const se_StartCampaignCommand = async (
  */
 export const se_StartInstanceOnboardingJobCommand = async (
   input: StartInstanceOnboardingJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -393,7 +393,7 @@ export const se_StartInstanceOnboardingJobCommand = async (
   body = JSON.stringify(
     take(input, {
       encryptionConfig: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -404,7 +404,7 @@ export const se_StartInstanceOnboardingJobCommand = async (
  */
 export const se_StopCampaignCommand = async (
   input: StopCampaignCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -420,7 +420,7 @@ export const se_StopCampaignCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -432,7 +432,7 @@ export const se_TagResourceCommand = async (
   body = JSON.stringify(
     take(input, {
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -443,7 +443,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -465,7 +465,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateCampaignDialerConfigCommand = async (
   input: UpdateCampaignDialerConfigCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -477,7 +477,7 @@ export const se_UpdateCampaignDialerConfigCommand = async (
   body = JSON.stringify(
     take(input, {
       dialerConfig: (_) => se_DialerConfig(_, context),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -488,7 +488,7 @@ export const se_UpdateCampaignDialerConfigCommand = async (
  */
 export const se_UpdateCampaignNameCommand = async (
   input: UpdateCampaignNameCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -500,7 +500,7 @@ export const se_UpdateCampaignNameCommand = async (
   body = JSON.stringify(
     take(input, {
       name: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -511,7 +511,7 @@ export const se_UpdateCampaignNameCommand = async (
  */
 export const se_UpdateCampaignOutboundCallConfigCommand = async (
   input: UpdateCampaignOutboundCallConfigCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -525,7 +525,7 @@ export const se_UpdateCampaignOutboundCallConfigCommand = async (
       answerMachineDetectionConfig: (_) => _json(_),
       connectContactFlowId: [],
       connectSourcePhoneNumber: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -536,7 +536,7 @@ export const se_UpdateCampaignOutboundCallConfigCommand = async (
  */
 export const de_CreateCampaignCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateCampaignCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -559,7 +559,7 @@ export const de_CreateCampaignCommand = async (
  */
 export const de_DeleteCampaignCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteCampaignCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -576,7 +576,7 @@ export const de_DeleteCampaignCommand = async (
  */
 export const de_DeleteConnectInstanceConfigCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteConnectInstanceConfigCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -593,7 +593,7 @@ export const de_DeleteConnectInstanceConfigCommand = async (
  */
 export const de_DeleteInstanceOnboardingJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteInstanceOnboardingJobCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -610,7 +610,7 @@ export const de_DeleteInstanceOnboardingJobCommand = async (
  */
 export const de_DescribeCampaignCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeCampaignCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -631,7 +631,7 @@ export const de_DescribeCampaignCommand = async (
  */
 export const de_GetCampaignStateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetCampaignStateCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -652,7 +652,7 @@ export const de_GetCampaignStateCommand = async (
  */
 export const de_GetCampaignStateBatchCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetCampaignStateBatchCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -674,7 +674,7 @@ export const de_GetCampaignStateBatchCommand = async (
  */
 export const de_GetConnectInstanceConfigCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetConnectInstanceConfigCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -695,7 +695,7 @@ export const de_GetConnectInstanceConfigCommand = async (
  */
 export const de_GetInstanceOnboardingJobStatusCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetInstanceOnboardingJobStatusCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -716,7 +716,7 @@ export const de_GetInstanceOnboardingJobStatusCommand = async (
  */
 export const de_ListCampaignsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListCampaignsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -738,7 +738,7 @@ export const de_ListCampaignsCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -759,7 +759,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_PauseCampaignCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PauseCampaignCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -776,7 +776,7 @@ export const de_PauseCampaignCommand = async (
  */
 export const de_PutDialRequestBatchCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutDialRequestBatchCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -798,7 +798,7 @@ export const de_PutDialRequestBatchCommand = async (
  */
 export const de_ResumeCampaignCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResumeCampaignCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -815,7 +815,7 @@ export const de_ResumeCampaignCommand = async (
  */
 export const de_StartCampaignCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartCampaignCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -832,7 +832,7 @@ export const de_StartCampaignCommand = async (
  */
 export const de_StartInstanceOnboardingJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartInstanceOnboardingJobCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -853,7 +853,7 @@ export const de_StartInstanceOnboardingJobCommand = async (
  */
 export const de_StopCampaignCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StopCampaignCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -870,7 +870,7 @@ export const de_StopCampaignCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -887,7 +887,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -904,7 +904,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateCampaignDialerConfigCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateCampaignDialerConfigCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -921,7 +921,7 @@ export const de_UpdateCampaignDialerConfigCommand = async (
  */
 export const de_UpdateCampaignNameCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateCampaignNameCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -938,7 +938,7 @@ export const de_UpdateCampaignNameCommand = async (
  */
 export const de_UpdateCampaignOutboundCallConfigCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateCampaignOutboundCallConfigCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1003,7 +1003,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const contents: any = map({
     [_xAET]: [, parsedOutput.headers[_xae]],
@@ -1044,7 +1044,7 @@ const de_ConflictExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_InternalServerExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerException> => {
   const contents: any = map({
     [_xAET]: [, parsedOutput.headers[_xae]],
@@ -1066,7 +1066,7 @@ const de_InternalServerExceptionRes = async (
  */
 const de_InvalidCampaignStateExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidCampaignStateException> => {
   const contents: any = map({
     [_xAET]: [, parsedOutput.headers[_xae]],
@@ -1089,7 +1089,7 @@ const de_InvalidCampaignStateExceptionRes = async (
  */
 const de_InvalidStateExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidStateException> => {
   const contents: any = map({
     [_xAET]: [, parsedOutput.headers[_xae]],
@@ -1111,7 +1111,7 @@ const de_InvalidStateExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const contents: any = map({
     [_xAET]: [, parsedOutput.headers[_xae]],
@@ -1133,7 +1133,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_ServiceQuotaExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceQuotaExceededException> => {
   const contents: any = map({
     [_xAET]: [, parsedOutput.headers[_xae]],
@@ -1213,7 +1213,7 @@ const se_DialerConfig = (input: DialerConfig, context: __SerdeContext): any => {
     agentlessDialerConfig: (value) => ({ agentlessDialerConfig: se_AgentlessDialerConfig(value, context) }),
     predictiveDialerConfig: (value) => ({ predictiveDialerConfig: se_PredictiveDialerConfig(value, context) }),
     progressiveDialerConfig: (value) => ({ progressiveDialerConfig: se_ProgressiveDialerConfig(value, context) }),
-    _: (name, value) => ({ name: value } as any),
+    _: (name, value) => ({ name: value }) as any,
   });
 };
 

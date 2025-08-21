@@ -180,7 +180,7 @@ import {
  */
 export const se_AssociateAgentKnowledgeBaseCommand = async (
   input: AssociateAgentKnowledgeBaseCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -195,7 +195,7 @@ export const se_AssociateAgentKnowledgeBaseCommand = async (
       description: [],
       knowledgeBaseId: [],
       knowledgeBaseState: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -206,7 +206,7 @@ export const se_AssociateAgentKnowledgeBaseCommand = async (
  */
 export const se_CreateAgentCommand = async (
   input: CreateAgentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -227,7 +227,7 @@ export const se_CreateAgentCommand = async (
       instruction: [],
       promptOverrideConfiguration: (_) => se_PromptOverrideConfiguration(_, context),
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -238,7 +238,7 @@ export const se_CreateAgentCommand = async (
  */
 export const se_CreateAgentActionGroupCommand = async (
   input: CreateAgentActionGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -258,7 +258,7 @@ export const se_CreateAgentActionGroupCommand = async (
       description: [],
       functionSchema: (_) => _json(_),
       parentActionGroupSignature: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -269,7 +269,7 @@ export const se_CreateAgentActionGroupCommand = async (
  */
 export const se_CreateAgentAliasCommand = async (
   input: CreateAgentAliasCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -285,7 +285,7 @@ export const se_CreateAgentAliasCommand = async (
       description: [],
       routingConfiguration: (_) => _json(_),
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -296,7 +296,7 @@ export const se_CreateAgentAliasCommand = async (
  */
 export const se_CreateDataSourceCommand = async (
   input: CreateDataSourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -314,7 +314,7 @@ export const se_CreateDataSourceCommand = async (
       name: [],
       serverSideEncryptionConfiguration: (_) => _json(_),
       vectorIngestionConfiguration: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -325,7 +325,7 @@ export const se_CreateDataSourceCommand = async (
  */
 export const se_CreateKnowledgeBaseCommand = async (
   input: CreateKnowledgeBaseCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -342,7 +342,7 @@ export const se_CreateKnowledgeBaseCommand = async (
       roleArn: [],
       storageConfiguration: (_) => _json(_),
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -353,7 +353,7 @@ export const se_CreateKnowledgeBaseCommand = async (
  */
 export const se_DeleteAgentCommand = async (
   input: DeleteAgentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -372,7 +372,7 @@ export const se_DeleteAgentCommand = async (
  */
 export const se_DeleteAgentActionGroupCommand = async (
   input: DeleteAgentActionGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -393,7 +393,7 @@ export const se_DeleteAgentActionGroupCommand = async (
  */
 export const se_DeleteAgentAliasCommand = async (
   input: DeleteAgentAliasCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -410,7 +410,7 @@ export const se_DeleteAgentAliasCommand = async (
  */
 export const se_DeleteAgentVersionCommand = async (
   input: DeleteAgentVersionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -430,7 +430,7 @@ export const se_DeleteAgentVersionCommand = async (
  */
 export const se_DeleteDataSourceCommand = async (
   input: DeleteDataSourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -447,7 +447,7 @@ export const se_DeleteDataSourceCommand = async (
  */
 export const se_DeleteKnowledgeBaseCommand = async (
   input: DeleteKnowledgeBaseCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -463,7 +463,7 @@ export const se_DeleteKnowledgeBaseCommand = async (
  */
 export const se_DisassociateAgentKnowledgeBaseCommand = async (
   input: DisassociateAgentKnowledgeBaseCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -481,7 +481,7 @@ export const se_DisassociateAgentKnowledgeBaseCommand = async (
  */
 export const se_GetAgentCommand = async (
   input: GetAgentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -497,7 +497,7 @@ export const se_GetAgentCommand = async (
  */
 export const se_GetAgentActionGroupCommand = async (
   input: GetAgentActionGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -515,7 +515,7 @@ export const se_GetAgentActionGroupCommand = async (
  */
 export const se_GetAgentAliasCommand = async (
   input: GetAgentAliasCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -532,7 +532,7 @@ export const se_GetAgentAliasCommand = async (
  */
 export const se_GetAgentKnowledgeBaseCommand = async (
   input: GetAgentKnowledgeBaseCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -550,7 +550,7 @@ export const se_GetAgentKnowledgeBaseCommand = async (
  */
 export const se_GetAgentVersionCommand = async (
   input: GetAgentVersionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -567,7 +567,7 @@ export const se_GetAgentVersionCommand = async (
  */
 export const se_GetDataSourceCommand = async (
   input: GetDataSourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -584,7 +584,7 @@ export const se_GetDataSourceCommand = async (
  */
 export const se_GetIngestionJobCommand = async (
   input: GetIngestionJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -602,7 +602,7 @@ export const se_GetIngestionJobCommand = async (
  */
 export const se_GetKnowledgeBaseCommand = async (
   input: GetKnowledgeBaseCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -618,7 +618,7 @@ export const se_GetKnowledgeBaseCommand = async (
  */
 export const se_ListAgentActionGroupsCommand = async (
   input: ListAgentActionGroupsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -632,7 +632,7 @@ export const se_ListAgentActionGroupsCommand = async (
     take(input, {
       maxResults: [],
       nextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -643,7 +643,7 @@ export const se_ListAgentActionGroupsCommand = async (
  */
 export const se_ListAgentAliasesCommand = async (
   input: ListAgentAliasesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -656,7 +656,7 @@ export const se_ListAgentAliasesCommand = async (
     take(input, {
       maxResults: [],
       nextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -667,7 +667,7 @@ export const se_ListAgentAliasesCommand = async (
  */
 export const se_ListAgentKnowledgeBasesCommand = async (
   input: ListAgentKnowledgeBasesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -681,7 +681,7 @@ export const se_ListAgentKnowledgeBasesCommand = async (
     take(input, {
       maxResults: [],
       nextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -692,7 +692,7 @@ export const se_ListAgentKnowledgeBasesCommand = async (
  */
 export const se_ListAgentsCommand = async (
   input: ListAgentsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -704,7 +704,7 @@ export const se_ListAgentsCommand = async (
     take(input, {
       maxResults: [],
       nextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -715,7 +715,7 @@ export const se_ListAgentsCommand = async (
  */
 export const se_ListAgentVersionsCommand = async (
   input: ListAgentVersionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -728,7 +728,7 @@ export const se_ListAgentVersionsCommand = async (
     take(input, {
       maxResults: [],
       nextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -739,7 +739,7 @@ export const se_ListAgentVersionsCommand = async (
  */
 export const se_ListDataSourcesCommand = async (
   input: ListDataSourcesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -752,7 +752,7 @@ export const se_ListDataSourcesCommand = async (
     take(input, {
       maxResults: [],
       nextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -763,7 +763,7 @@ export const se_ListDataSourcesCommand = async (
  */
 export const se_ListIngestionJobsCommand = async (
   input: ListIngestionJobsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -779,7 +779,7 @@ export const se_ListIngestionJobsCommand = async (
       maxResults: [],
       nextToken: [],
       sortBy: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -790,7 +790,7 @@ export const se_ListIngestionJobsCommand = async (
  */
 export const se_ListKnowledgeBasesCommand = async (
   input: ListKnowledgeBasesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -802,7 +802,7 @@ export const se_ListKnowledgeBasesCommand = async (
     take(input, {
       maxResults: [],
       nextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -813,7 +813,7 @@ export const se_ListKnowledgeBasesCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -829,7 +829,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_PrepareAgentCommand = async (
   input: PrepareAgentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -845,7 +845,7 @@ export const se_PrepareAgentCommand = async (
  */
 export const se_StartIngestionJobCommand = async (
   input: StartIngestionJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -859,7 +859,7 @@ export const se_StartIngestionJobCommand = async (
     take(input, {
       clientToken: [true, (_) => _ ?? generateIdempotencyToken()],
       description: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -870,7 +870,7 @@ export const se_StartIngestionJobCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -882,7 +882,7 @@ export const se_TagResourceCommand = async (
   body = JSON.stringify(
     take(input, {
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -893,7 +893,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -915,7 +915,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateAgentCommand = async (
   input: UpdateAgentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -935,7 +935,7 @@ export const se_UpdateAgentCommand = async (
       idleSessionTTLInSeconds: [],
       instruction: [],
       promptOverrideConfiguration: (_) => se_PromptOverrideConfiguration(_, context),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -946,7 +946,7 @@ export const se_UpdateAgentCommand = async (
  */
 export const se_UpdateAgentActionGroupCommand = async (
   input: UpdateAgentActionGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -966,7 +966,7 @@ export const se_UpdateAgentActionGroupCommand = async (
       description: [],
       functionSchema: (_) => _json(_),
       parentActionGroupSignature: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -977,7 +977,7 @@ export const se_UpdateAgentActionGroupCommand = async (
  */
 export const se_UpdateAgentAliasCommand = async (
   input: UpdateAgentAliasCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -992,7 +992,7 @@ export const se_UpdateAgentAliasCommand = async (
       agentAliasName: [],
       description: [],
       routingConfiguration: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1003,7 +1003,7 @@ export const se_UpdateAgentAliasCommand = async (
  */
 export const se_UpdateAgentKnowledgeBaseCommand = async (
   input: UpdateAgentKnowledgeBaseCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1018,7 +1018,7 @@ export const se_UpdateAgentKnowledgeBaseCommand = async (
     take(input, {
       description: [],
       knowledgeBaseState: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1029,7 +1029,7 @@ export const se_UpdateAgentKnowledgeBaseCommand = async (
  */
 export const se_UpdateDataSourceCommand = async (
   input: UpdateDataSourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1047,7 +1047,7 @@ export const se_UpdateDataSourceCommand = async (
       name: [],
       serverSideEncryptionConfiguration: (_) => _json(_),
       vectorIngestionConfiguration: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1058,7 +1058,7 @@ export const se_UpdateDataSourceCommand = async (
  */
 export const se_UpdateKnowledgeBaseCommand = async (
   input: UpdateKnowledgeBaseCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1074,7 +1074,7 @@ export const se_UpdateKnowledgeBaseCommand = async (
       name: [],
       roleArn: [],
       storageConfiguration: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1085,7 +1085,7 @@ export const se_UpdateKnowledgeBaseCommand = async (
  */
 export const de_AssociateAgentKnowledgeBaseCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssociateAgentKnowledgeBaseCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1106,7 +1106,7 @@ export const de_AssociateAgentKnowledgeBaseCommand = async (
  */
 export const de_CreateAgentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateAgentCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1127,7 +1127,7 @@ export const de_CreateAgentCommand = async (
  */
 export const de_CreateAgentActionGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateAgentActionGroupCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1148,7 +1148,7 @@ export const de_CreateAgentActionGroupCommand = async (
  */
 export const de_CreateAgentAliasCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateAgentAliasCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1169,7 +1169,7 @@ export const de_CreateAgentAliasCommand = async (
  */
 export const de_CreateDataSourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateDataSourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1190,7 +1190,7 @@ export const de_CreateDataSourceCommand = async (
  */
 export const de_CreateKnowledgeBaseCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateKnowledgeBaseCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1211,7 +1211,7 @@ export const de_CreateKnowledgeBaseCommand = async (
  */
 export const de_DeleteAgentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteAgentCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1233,7 +1233,7 @@ export const de_DeleteAgentCommand = async (
  */
 export const de_DeleteAgentActionGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteAgentActionGroupCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1250,7 +1250,7 @@ export const de_DeleteAgentActionGroupCommand = async (
  */
 export const de_DeleteAgentAliasCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteAgentAliasCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1273,7 +1273,7 @@ export const de_DeleteAgentAliasCommand = async (
  */
 export const de_DeleteAgentVersionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteAgentVersionCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1296,7 +1296,7 @@ export const de_DeleteAgentVersionCommand = async (
  */
 export const de_DeleteDataSourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteDataSourceCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1319,7 +1319,7 @@ export const de_DeleteDataSourceCommand = async (
  */
 export const de_DeleteKnowledgeBaseCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteKnowledgeBaseCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1341,7 +1341,7 @@ export const de_DeleteKnowledgeBaseCommand = async (
  */
 export const de_DisassociateAgentKnowledgeBaseCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisassociateAgentKnowledgeBaseCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1358,7 +1358,7 @@ export const de_DisassociateAgentKnowledgeBaseCommand = async (
  */
 export const de_GetAgentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetAgentCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1379,7 +1379,7 @@ export const de_GetAgentCommand = async (
  */
 export const de_GetAgentActionGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetAgentActionGroupCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1400,7 +1400,7 @@ export const de_GetAgentActionGroupCommand = async (
  */
 export const de_GetAgentAliasCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetAgentAliasCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1421,7 +1421,7 @@ export const de_GetAgentAliasCommand = async (
  */
 export const de_GetAgentKnowledgeBaseCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetAgentKnowledgeBaseCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1442,7 +1442,7 @@ export const de_GetAgentKnowledgeBaseCommand = async (
  */
 export const de_GetAgentVersionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetAgentVersionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1463,7 +1463,7 @@ export const de_GetAgentVersionCommand = async (
  */
 export const de_GetDataSourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetDataSourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1484,7 +1484,7 @@ export const de_GetDataSourceCommand = async (
  */
 export const de_GetIngestionJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetIngestionJobCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1505,7 +1505,7 @@ export const de_GetIngestionJobCommand = async (
  */
 export const de_GetKnowledgeBaseCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetKnowledgeBaseCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1526,7 +1526,7 @@ export const de_GetKnowledgeBaseCommand = async (
  */
 export const de_ListAgentActionGroupsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAgentActionGroupsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1548,7 +1548,7 @@ export const de_ListAgentActionGroupsCommand = async (
  */
 export const de_ListAgentAliasesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAgentAliasesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1570,7 +1570,7 @@ export const de_ListAgentAliasesCommand = async (
  */
 export const de_ListAgentKnowledgeBasesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAgentKnowledgeBasesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1592,7 +1592,7 @@ export const de_ListAgentKnowledgeBasesCommand = async (
  */
 export const de_ListAgentsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAgentsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1614,7 +1614,7 @@ export const de_ListAgentsCommand = async (
  */
 export const de_ListAgentVersionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAgentVersionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1636,7 +1636,7 @@ export const de_ListAgentVersionsCommand = async (
  */
 export const de_ListDataSourcesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListDataSourcesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1658,7 +1658,7 @@ export const de_ListDataSourcesCommand = async (
  */
 export const de_ListIngestionJobsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListIngestionJobsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1680,7 +1680,7 @@ export const de_ListIngestionJobsCommand = async (
  */
 export const de_ListKnowledgeBasesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListKnowledgeBasesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1702,7 +1702,7 @@ export const de_ListKnowledgeBasesCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1723,7 +1723,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_PrepareAgentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PrepareAgentCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1747,7 +1747,7 @@ export const de_PrepareAgentCommand = async (
  */
 export const de_StartIngestionJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartIngestionJobCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1768,7 +1768,7 @@ export const de_StartIngestionJobCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1785,7 +1785,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1802,7 +1802,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateAgentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateAgentCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1823,7 +1823,7 @@ export const de_UpdateAgentCommand = async (
  */
 export const de_UpdateAgentActionGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateAgentActionGroupCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1844,7 +1844,7 @@ export const de_UpdateAgentActionGroupCommand = async (
  */
 export const de_UpdateAgentAliasCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateAgentAliasCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1865,7 +1865,7 @@ export const de_UpdateAgentAliasCommand = async (
  */
 export const de_UpdateAgentKnowledgeBaseCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateAgentKnowledgeBaseCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1886,7 +1886,7 @@ export const de_UpdateAgentKnowledgeBaseCommand = async (
  */
 export const de_UpdateDataSourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateDataSourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1907,7 +1907,7 @@ export const de_UpdateDataSourceCommand = async (
  */
 export const de_UpdateKnowledgeBaseCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateKnowledgeBaseCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1970,7 +1970,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2007,7 +2007,7 @@ const de_ConflictExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_InternalServerExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2027,7 +2027,7 @@ const de_InternalServerExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2047,7 +2047,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_ServiceQuotaExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceQuotaExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;

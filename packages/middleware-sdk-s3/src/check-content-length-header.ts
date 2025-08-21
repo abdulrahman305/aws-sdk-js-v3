@@ -22,7 +22,7 @@ const CONTENT_LENGTH_HEADER = "content-length";
 export function checkContentLengthHeader(): FinalizeRequestMiddleware<any, any> {
   return <Output extends MetadataBearer>(
       next: FinalizeHandler<any, Output>,
-      context: HandlerExecutionContext
+      context: HandlerExecutionContext,
     ): FinalizeHandler<any, Output> =>
     async (args: FinalizeHandlerArguments<any>): Promise<FinalizeHandlerOutput<Output>> => {
       const { request } = args;

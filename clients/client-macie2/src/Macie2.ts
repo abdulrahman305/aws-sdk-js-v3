@@ -479,16 +479,16 @@ export interface Macie2 {
    */
   acceptInvitation(
     args: AcceptInvitationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AcceptInvitationCommandOutput>;
   acceptInvitation(
     args: AcceptInvitationCommandInput,
-    cb: (err: any, data?: AcceptInvitationCommandOutput) => void
+    cb: (err: any, data?: AcceptInvitationCommandOutput) => void,
   ): void;
   acceptInvitation(
     args: AcceptInvitationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AcceptInvitationCommandOutput) => void
+    cb: (err: any, data?: AcceptInvitationCommandOutput) => void,
   ): void;
 
   /**
@@ -497,16 +497,16 @@ export interface Macie2 {
   batchGetCustomDataIdentifiers(): Promise<BatchGetCustomDataIdentifiersCommandOutput>;
   batchGetCustomDataIdentifiers(
     args: BatchGetCustomDataIdentifiersCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<BatchGetCustomDataIdentifiersCommandOutput>;
   batchGetCustomDataIdentifiers(
     args: BatchGetCustomDataIdentifiersCommandInput,
-    cb: (err: any, data?: BatchGetCustomDataIdentifiersCommandOutput) => void
+    cb: (err: any, data?: BatchGetCustomDataIdentifiersCommandOutput) => void,
   ): void;
   batchGetCustomDataIdentifiers(
     args: BatchGetCustomDataIdentifiersCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: BatchGetCustomDataIdentifiersCommandOutput) => void
+    cb: (err: any, data?: BatchGetCustomDataIdentifiersCommandOutput) => void,
   ): void;
 
   /**
@@ -515,16 +515,16 @@ export interface Macie2 {
   batchUpdateAutomatedDiscoveryAccounts(): Promise<BatchUpdateAutomatedDiscoveryAccountsCommandOutput>;
   batchUpdateAutomatedDiscoveryAccounts(
     args: BatchUpdateAutomatedDiscoveryAccountsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<BatchUpdateAutomatedDiscoveryAccountsCommandOutput>;
   batchUpdateAutomatedDiscoveryAccounts(
     args: BatchUpdateAutomatedDiscoveryAccountsCommandInput,
-    cb: (err: any, data?: BatchUpdateAutomatedDiscoveryAccountsCommandOutput) => void
+    cb: (err: any, data?: BatchUpdateAutomatedDiscoveryAccountsCommandOutput) => void,
   ): void;
   batchUpdateAutomatedDiscoveryAccounts(
     args: BatchUpdateAutomatedDiscoveryAccountsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: BatchUpdateAutomatedDiscoveryAccountsCommandOutput) => void
+    cb: (err: any, data?: BatchUpdateAutomatedDiscoveryAccountsCommandOutput) => void,
   ): void;
 
   /**
@@ -532,13 +532,13 @@ export interface Macie2 {
    */
   createAllowList(
     args: CreateAllowListCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateAllowListCommandOutput>;
   createAllowList(args: CreateAllowListCommandInput, cb: (err: any, data?: CreateAllowListCommandOutput) => void): void;
   createAllowList(
     args: CreateAllowListCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateAllowListCommandOutput) => void
+    cb: (err: any, data?: CreateAllowListCommandOutput) => void,
   ): void;
 
   /**
@@ -546,16 +546,16 @@ export interface Macie2 {
    */
   createClassificationJob(
     args: CreateClassificationJobCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateClassificationJobCommandOutput>;
   createClassificationJob(
     args: CreateClassificationJobCommandInput,
-    cb: (err: any, data?: CreateClassificationJobCommandOutput) => void
+    cb: (err: any, data?: CreateClassificationJobCommandOutput) => void,
   ): void;
   createClassificationJob(
     args: CreateClassificationJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateClassificationJobCommandOutput) => void
+    cb: (err: any, data?: CreateClassificationJobCommandOutput) => void,
   ): void;
 
   /**
@@ -563,16 +563,16 @@ export interface Macie2 {
    */
   createCustomDataIdentifier(
     args: CreateCustomDataIdentifierCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateCustomDataIdentifierCommandOutput>;
   createCustomDataIdentifier(
     args: CreateCustomDataIdentifierCommandInput,
-    cb: (err: any, data?: CreateCustomDataIdentifierCommandOutput) => void
+    cb: (err: any, data?: CreateCustomDataIdentifierCommandOutput) => void,
   ): void;
   createCustomDataIdentifier(
     args: CreateCustomDataIdentifierCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateCustomDataIdentifierCommandOutput) => void
+    cb: (err: any, data?: CreateCustomDataIdentifierCommandOutput) => void,
   ): void;
 
   /**
@@ -580,16 +580,16 @@ export interface Macie2 {
    */
   createFindingsFilter(
     args: CreateFindingsFilterCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateFindingsFilterCommandOutput>;
   createFindingsFilter(
     args: CreateFindingsFilterCommandInput,
-    cb: (err: any, data?: CreateFindingsFilterCommandOutput) => void
+    cb: (err: any, data?: CreateFindingsFilterCommandOutput) => void,
   ): void;
   createFindingsFilter(
     args: CreateFindingsFilterCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateFindingsFilterCommandOutput) => void
+    cb: (err: any, data?: CreateFindingsFilterCommandOutput) => void,
   ): void;
 
   /**
@@ -597,16 +597,16 @@ export interface Macie2 {
    */
   createInvitations(
     args: CreateInvitationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateInvitationsCommandOutput>;
   createInvitations(
     args: CreateInvitationsCommandInput,
-    cb: (err: any, data?: CreateInvitationsCommandOutput) => void
+    cb: (err: any, data?: CreateInvitationsCommandOutput) => void,
   ): void;
   createInvitations(
     args: CreateInvitationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateInvitationsCommandOutput) => void
+    cb: (err: any, data?: CreateInvitationsCommandOutput) => void,
   ): void;
 
   /**
@@ -617,7 +617,7 @@ export interface Macie2 {
   createMember(
     args: CreateMemberCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateMemberCommandOutput) => void
+    cb: (err: any, data?: CreateMemberCommandOutput) => void,
   ): void;
 
   /**
@@ -626,16 +626,16 @@ export interface Macie2 {
   createSampleFindings(): Promise<CreateSampleFindingsCommandOutput>;
   createSampleFindings(
     args: CreateSampleFindingsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateSampleFindingsCommandOutput>;
   createSampleFindings(
     args: CreateSampleFindingsCommandInput,
-    cb: (err: any, data?: CreateSampleFindingsCommandOutput) => void
+    cb: (err: any, data?: CreateSampleFindingsCommandOutput) => void,
   ): void;
   createSampleFindings(
     args: CreateSampleFindingsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateSampleFindingsCommandOutput) => void
+    cb: (err: any, data?: CreateSampleFindingsCommandOutput) => void,
   ): void;
 
   /**
@@ -643,16 +643,16 @@ export interface Macie2 {
    */
   declineInvitations(
     args: DeclineInvitationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeclineInvitationsCommandOutput>;
   declineInvitations(
     args: DeclineInvitationsCommandInput,
-    cb: (err: any, data?: DeclineInvitationsCommandOutput) => void
+    cb: (err: any, data?: DeclineInvitationsCommandOutput) => void,
   ): void;
   declineInvitations(
     args: DeclineInvitationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeclineInvitationsCommandOutput) => void
+    cb: (err: any, data?: DeclineInvitationsCommandOutput) => void,
   ): void;
 
   /**
@@ -660,13 +660,13 @@ export interface Macie2 {
    */
   deleteAllowList(
     args: DeleteAllowListCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteAllowListCommandOutput>;
   deleteAllowList(args: DeleteAllowListCommandInput, cb: (err: any, data?: DeleteAllowListCommandOutput) => void): void;
   deleteAllowList(
     args: DeleteAllowListCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteAllowListCommandOutput) => void
+    cb: (err: any, data?: DeleteAllowListCommandOutput) => void,
   ): void;
 
   /**
@@ -674,16 +674,16 @@ export interface Macie2 {
    */
   deleteCustomDataIdentifier(
     args: DeleteCustomDataIdentifierCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteCustomDataIdentifierCommandOutput>;
   deleteCustomDataIdentifier(
     args: DeleteCustomDataIdentifierCommandInput,
-    cb: (err: any, data?: DeleteCustomDataIdentifierCommandOutput) => void
+    cb: (err: any, data?: DeleteCustomDataIdentifierCommandOutput) => void,
   ): void;
   deleteCustomDataIdentifier(
     args: DeleteCustomDataIdentifierCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteCustomDataIdentifierCommandOutput) => void
+    cb: (err: any, data?: DeleteCustomDataIdentifierCommandOutput) => void,
   ): void;
 
   /**
@@ -691,16 +691,16 @@ export interface Macie2 {
    */
   deleteFindingsFilter(
     args: DeleteFindingsFilterCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteFindingsFilterCommandOutput>;
   deleteFindingsFilter(
     args: DeleteFindingsFilterCommandInput,
-    cb: (err: any, data?: DeleteFindingsFilterCommandOutput) => void
+    cb: (err: any, data?: DeleteFindingsFilterCommandOutput) => void,
   ): void;
   deleteFindingsFilter(
     args: DeleteFindingsFilterCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteFindingsFilterCommandOutput) => void
+    cb: (err: any, data?: DeleteFindingsFilterCommandOutput) => void,
   ): void;
 
   /**
@@ -708,16 +708,16 @@ export interface Macie2 {
    */
   deleteInvitations(
     args: DeleteInvitationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteInvitationsCommandOutput>;
   deleteInvitations(
     args: DeleteInvitationsCommandInput,
-    cb: (err: any, data?: DeleteInvitationsCommandOutput) => void
+    cb: (err: any, data?: DeleteInvitationsCommandOutput) => void,
   ): void;
   deleteInvitations(
     args: DeleteInvitationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteInvitationsCommandOutput) => void
+    cb: (err: any, data?: DeleteInvitationsCommandOutput) => void,
   ): void;
 
   /**
@@ -728,7 +728,7 @@ export interface Macie2 {
   deleteMember(
     args: DeleteMemberCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteMemberCommandOutput) => void
+    cb: (err: any, data?: DeleteMemberCommandOutput) => void,
   ): void;
 
   /**
@@ -737,13 +737,13 @@ export interface Macie2 {
   describeBuckets(): Promise<DescribeBucketsCommandOutput>;
   describeBuckets(
     args: DescribeBucketsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeBucketsCommandOutput>;
   describeBuckets(args: DescribeBucketsCommandInput, cb: (err: any, data?: DescribeBucketsCommandOutput) => void): void;
   describeBuckets(
     args: DescribeBucketsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeBucketsCommandOutput) => void
+    cb: (err: any, data?: DescribeBucketsCommandOutput) => void,
   ): void;
 
   /**
@@ -751,16 +751,16 @@ export interface Macie2 {
    */
   describeClassificationJob(
     args: DescribeClassificationJobCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeClassificationJobCommandOutput>;
   describeClassificationJob(
     args: DescribeClassificationJobCommandInput,
-    cb: (err: any, data?: DescribeClassificationJobCommandOutput) => void
+    cb: (err: any, data?: DescribeClassificationJobCommandOutput) => void,
   ): void;
   describeClassificationJob(
     args: DescribeClassificationJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeClassificationJobCommandOutput) => void
+    cb: (err: any, data?: DescribeClassificationJobCommandOutput) => void,
   ): void;
 
   /**
@@ -769,16 +769,16 @@ export interface Macie2 {
   describeOrganizationConfiguration(): Promise<DescribeOrganizationConfigurationCommandOutput>;
   describeOrganizationConfiguration(
     args: DescribeOrganizationConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeOrganizationConfigurationCommandOutput>;
   describeOrganizationConfiguration(
     args: DescribeOrganizationConfigurationCommandInput,
-    cb: (err: any, data?: DescribeOrganizationConfigurationCommandOutput) => void
+    cb: (err: any, data?: DescribeOrganizationConfigurationCommandOutput) => void,
   ): void;
   describeOrganizationConfiguration(
     args: DescribeOrganizationConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeOrganizationConfigurationCommandOutput) => void
+    cb: (err: any, data?: DescribeOrganizationConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -790,7 +790,7 @@ export interface Macie2 {
   disableMacie(
     args: DisableMacieCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DisableMacieCommandOutput) => void
+    cb: (err: any, data?: DisableMacieCommandOutput) => void,
   ): void;
 
   /**
@@ -798,16 +798,16 @@ export interface Macie2 {
    */
   disableOrganizationAdminAccount(
     args: DisableOrganizationAdminAccountCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DisableOrganizationAdminAccountCommandOutput>;
   disableOrganizationAdminAccount(
     args: DisableOrganizationAdminAccountCommandInput,
-    cb: (err: any, data?: DisableOrganizationAdminAccountCommandOutput) => void
+    cb: (err: any, data?: DisableOrganizationAdminAccountCommandOutput) => void,
   ): void;
   disableOrganizationAdminAccount(
     args: DisableOrganizationAdminAccountCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DisableOrganizationAdminAccountCommandOutput) => void
+    cb: (err: any, data?: DisableOrganizationAdminAccountCommandOutput) => void,
   ): void;
 
   /**
@@ -816,16 +816,16 @@ export interface Macie2 {
   disassociateFromAdministratorAccount(): Promise<DisassociateFromAdministratorAccountCommandOutput>;
   disassociateFromAdministratorAccount(
     args: DisassociateFromAdministratorAccountCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DisassociateFromAdministratorAccountCommandOutput>;
   disassociateFromAdministratorAccount(
     args: DisassociateFromAdministratorAccountCommandInput,
-    cb: (err: any, data?: DisassociateFromAdministratorAccountCommandOutput) => void
+    cb: (err: any, data?: DisassociateFromAdministratorAccountCommandOutput) => void,
   ): void;
   disassociateFromAdministratorAccount(
     args: DisassociateFromAdministratorAccountCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DisassociateFromAdministratorAccountCommandOutput) => void
+    cb: (err: any, data?: DisassociateFromAdministratorAccountCommandOutput) => void,
   ): void;
 
   /**
@@ -834,16 +834,16 @@ export interface Macie2 {
   disassociateFromMasterAccount(): Promise<DisassociateFromMasterAccountCommandOutput>;
   disassociateFromMasterAccount(
     args: DisassociateFromMasterAccountCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DisassociateFromMasterAccountCommandOutput>;
   disassociateFromMasterAccount(
     args: DisassociateFromMasterAccountCommandInput,
-    cb: (err: any, data?: DisassociateFromMasterAccountCommandOutput) => void
+    cb: (err: any, data?: DisassociateFromMasterAccountCommandOutput) => void,
   ): void;
   disassociateFromMasterAccount(
     args: DisassociateFromMasterAccountCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DisassociateFromMasterAccountCommandOutput) => void
+    cb: (err: any, data?: DisassociateFromMasterAccountCommandOutput) => void,
   ): void;
 
   /**
@@ -851,16 +851,16 @@ export interface Macie2 {
    */
   disassociateMember(
     args: DisassociateMemberCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DisassociateMemberCommandOutput>;
   disassociateMember(
     args: DisassociateMemberCommandInput,
-    cb: (err: any, data?: DisassociateMemberCommandOutput) => void
+    cb: (err: any, data?: DisassociateMemberCommandOutput) => void,
   ): void;
   disassociateMember(
     args: DisassociateMemberCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DisassociateMemberCommandOutput) => void
+    cb: (err: any, data?: DisassociateMemberCommandOutput) => void,
   ): void;
 
   /**
@@ -872,7 +872,7 @@ export interface Macie2 {
   enableMacie(
     args: EnableMacieCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: EnableMacieCommandOutput) => void
+    cb: (err: any, data?: EnableMacieCommandOutput) => void,
   ): void;
 
   /**
@@ -880,16 +880,16 @@ export interface Macie2 {
    */
   enableOrganizationAdminAccount(
     args: EnableOrganizationAdminAccountCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<EnableOrganizationAdminAccountCommandOutput>;
   enableOrganizationAdminAccount(
     args: EnableOrganizationAdminAccountCommandInput,
-    cb: (err: any, data?: EnableOrganizationAdminAccountCommandOutput) => void
+    cb: (err: any, data?: EnableOrganizationAdminAccountCommandOutput) => void,
   ): void;
   enableOrganizationAdminAccount(
     args: EnableOrganizationAdminAccountCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: EnableOrganizationAdminAccountCommandOutput) => void
+    cb: (err: any, data?: EnableOrganizationAdminAccountCommandOutput) => void,
   ): void;
 
   /**
@@ -898,16 +898,16 @@ export interface Macie2 {
   getAdministratorAccount(): Promise<GetAdministratorAccountCommandOutput>;
   getAdministratorAccount(
     args: GetAdministratorAccountCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetAdministratorAccountCommandOutput>;
   getAdministratorAccount(
     args: GetAdministratorAccountCommandInput,
-    cb: (err: any, data?: GetAdministratorAccountCommandOutput) => void
+    cb: (err: any, data?: GetAdministratorAccountCommandOutput) => void,
   ): void;
   getAdministratorAccount(
     args: GetAdministratorAccountCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetAdministratorAccountCommandOutput) => void
+    cb: (err: any, data?: GetAdministratorAccountCommandOutput) => void,
   ): void;
 
   /**
@@ -918,7 +918,7 @@ export interface Macie2 {
   getAllowList(
     args: GetAllowListCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetAllowListCommandOutput) => void
+    cb: (err: any, data?: GetAllowListCommandOutput) => void,
   ): void;
 
   /**
@@ -927,16 +927,16 @@ export interface Macie2 {
   getAutomatedDiscoveryConfiguration(): Promise<GetAutomatedDiscoveryConfigurationCommandOutput>;
   getAutomatedDiscoveryConfiguration(
     args: GetAutomatedDiscoveryConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetAutomatedDiscoveryConfigurationCommandOutput>;
   getAutomatedDiscoveryConfiguration(
     args: GetAutomatedDiscoveryConfigurationCommandInput,
-    cb: (err: any, data?: GetAutomatedDiscoveryConfigurationCommandOutput) => void
+    cb: (err: any, data?: GetAutomatedDiscoveryConfigurationCommandOutput) => void,
   ): void;
   getAutomatedDiscoveryConfiguration(
     args: GetAutomatedDiscoveryConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetAutomatedDiscoveryConfigurationCommandOutput) => void
+    cb: (err: any, data?: GetAutomatedDiscoveryConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -945,16 +945,16 @@ export interface Macie2 {
   getBucketStatistics(): Promise<GetBucketStatisticsCommandOutput>;
   getBucketStatistics(
     args: GetBucketStatisticsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetBucketStatisticsCommandOutput>;
   getBucketStatistics(
     args: GetBucketStatisticsCommandInput,
-    cb: (err: any, data?: GetBucketStatisticsCommandOutput) => void
+    cb: (err: any, data?: GetBucketStatisticsCommandOutput) => void,
   ): void;
   getBucketStatistics(
     args: GetBucketStatisticsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetBucketStatisticsCommandOutput) => void
+    cb: (err: any, data?: GetBucketStatisticsCommandOutput) => void,
   ): void;
 
   /**
@@ -963,16 +963,16 @@ export interface Macie2 {
   getClassificationExportConfiguration(): Promise<GetClassificationExportConfigurationCommandOutput>;
   getClassificationExportConfiguration(
     args: GetClassificationExportConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetClassificationExportConfigurationCommandOutput>;
   getClassificationExportConfiguration(
     args: GetClassificationExportConfigurationCommandInput,
-    cb: (err: any, data?: GetClassificationExportConfigurationCommandOutput) => void
+    cb: (err: any, data?: GetClassificationExportConfigurationCommandOutput) => void,
   ): void;
   getClassificationExportConfiguration(
     args: GetClassificationExportConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetClassificationExportConfigurationCommandOutput) => void
+    cb: (err: any, data?: GetClassificationExportConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -980,16 +980,16 @@ export interface Macie2 {
    */
   getClassificationScope(
     args: GetClassificationScopeCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetClassificationScopeCommandOutput>;
   getClassificationScope(
     args: GetClassificationScopeCommandInput,
-    cb: (err: any, data?: GetClassificationScopeCommandOutput) => void
+    cb: (err: any, data?: GetClassificationScopeCommandOutput) => void,
   ): void;
   getClassificationScope(
     args: GetClassificationScopeCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetClassificationScopeCommandOutput) => void
+    cb: (err: any, data?: GetClassificationScopeCommandOutput) => void,
   ): void;
 
   /**
@@ -997,16 +997,16 @@ export interface Macie2 {
    */
   getCustomDataIdentifier(
     args: GetCustomDataIdentifierCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetCustomDataIdentifierCommandOutput>;
   getCustomDataIdentifier(
     args: GetCustomDataIdentifierCommandInput,
-    cb: (err: any, data?: GetCustomDataIdentifierCommandOutput) => void
+    cb: (err: any, data?: GetCustomDataIdentifierCommandOutput) => void,
   ): void;
   getCustomDataIdentifier(
     args: GetCustomDataIdentifierCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetCustomDataIdentifierCommandOutput) => void
+    cb: (err: any, data?: GetCustomDataIdentifierCommandOutput) => void,
   ): void;
 
   /**
@@ -1017,7 +1017,7 @@ export interface Macie2 {
   getFindings(
     args: GetFindingsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetFindingsCommandOutput) => void
+    cb: (err: any, data?: GetFindingsCommandOutput) => void,
   ): void;
 
   /**
@@ -1025,16 +1025,16 @@ export interface Macie2 {
    */
   getFindingsFilter(
     args: GetFindingsFilterCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetFindingsFilterCommandOutput>;
   getFindingsFilter(
     args: GetFindingsFilterCommandInput,
-    cb: (err: any, data?: GetFindingsFilterCommandOutput) => void
+    cb: (err: any, data?: GetFindingsFilterCommandOutput) => void,
   ): void;
   getFindingsFilter(
     args: GetFindingsFilterCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetFindingsFilterCommandOutput) => void
+    cb: (err: any, data?: GetFindingsFilterCommandOutput) => void,
   ): void;
 
   /**
@@ -1043,16 +1043,16 @@ export interface Macie2 {
   getFindingsPublicationConfiguration(): Promise<GetFindingsPublicationConfigurationCommandOutput>;
   getFindingsPublicationConfiguration(
     args: GetFindingsPublicationConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetFindingsPublicationConfigurationCommandOutput>;
   getFindingsPublicationConfiguration(
     args: GetFindingsPublicationConfigurationCommandInput,
-    cb: (err: any, data?: GetFindingsPublicationConfigurationCommandOutput) => void
+    cb: (err: any, data?: GetFindingsPublicationConfigurationCommandOutput) => void,
   ): void;
   getFindingsPublicationConfiguration(
     args: GetFindingsPublicationConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetFindingsPublicationConfigurationCommandOutput) => void
+    cb: (err: any, data?: GetFindingsPublicationConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -1060,16 +1060,16 @@ export interface Macie2 {
    */
   getFindingStatistics(
     args: GetFindingStatisticsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetFindingStatisticsCommandOutput>;
   getFindingStatistics(
     args: GetFindingStatisticsCommandInput,
-    cb: (err: any, data?: GetFindingStatisticsCommandOutput) => void
+    cb: (err: any, data?: GetFindingStatisticsCommandOutput) => void,
   ): void;
   getFindingStatistics(
     args: GetFindingStatisticsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetFindingStatisticsCommandOutput) => void
+    cb: (err: any, data?: GetFindingStatisticsCommandOutput) => void,
   ): void;
 
   /**
@@ -1078,16 +1078,16 @@ export interface Macie2 {
   getInvitationsCount(): Promise<GetInvitationsCountCommandOutput>;
   getInvitationsCount(
     args: GetInvitationsCountCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetInvitationsCountCommandOutput>;
   getInvitationsCount(
     args: GetInvitationsCountCommandInput,
-    cb: (err: any, data?: GetInvitationsCountCommandOutput) => void
+    cb: (err: any, data?: GetInvitationsCountCommandOutput) => void,
   ): void;
   getInvitationsCount(
     args: GetInvitationsCountCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetInvitationsCountCommandOutput) => void
+    cb: (err: any, data?: GetInvitationsCountCommandOutput) => void,
   ): void;
 
   /**
@@ -1096,13 +1096,13 @@ export interface Macie2 {
   getMacieSession(): Promise<GetMacieSessionCommandOutput>;
   getMacieSession(
     args: GetMacieSessionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetMacieSessionCommandOutput>;
   getMacieSession(args: GetMacieSessionCommandInput, cb: (err: any, data?: GetMacieSessionCommandOutput) => void): void;
   getMacieSession(
     args: GetMacieSessionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetMacieSessionCommandOutput) => void
+    cb: (err: any, data?: GetMacieSessionCommandOutput) => void,
   ): void;
 
   /**
@@ -1111,16 +1111,16 @@ export interface Macie2 {
   getMasterAccount(): Promise<GetMasterAccountCommandOutput>;
   getMasterAccount(
     args: GetMasterAccountCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetMasterAccountCommandOutput>;
   getMasterAccount(
     args: GetMasterAccountCommandInput,
-    cb: (err: any, data?: GetMasterAccountCommandOutput) => void
+    cb: (err: any, data?: GetMasterAccountCommandOutput) => void,
   ): void;
   getMasterAccount(
     args: GetMasterAccountCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetMasterAccountCommandOutput) => void
+    cb: (err: any, data?: GetMasterAccountCommandOutput) => void,
   ): void;
 
   /**
@@ -1131,7 +1131,7 @@ export interface Macie2 {
   getMember(
     args: GetMemberCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetMemberCommandOutput) => void
+    cb: (err: any, data?: GetMemberCommandOutput) => void,
   ): void;
 
   /**
@@ -1139,16 +1139,16 @@ export interface Macie2 {
    */
   getResourceProfile(
     args: GetResourceProfileCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetResourceProfileCommandOutput>;
   getResourceProfile(
     args: GetResourceProfileCommandInput,
-    cb: (err: any, data?: GetResourceProfileCommandOutput) => void
+    cb: (err: any, data?: GetResourceProfileCommandOutput) => void,
   ): void;
   getResourceProfile(
     args: GetResourceProfileCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetResourceProfileCommandOutput) => void
+    cb: (err: any, data?: GetResourceProfileCommandOutput) => void,
   ): void;
 
   /**
@@ -1157,16 +1157,16 @@ export interface Macie2 {
   getRevealConfiguration(): Promise<GetRevealConfigurationCommandOutput>;
   getRevealConfiguration(
     args: GetRevealConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetRevealConfigurationCommandOutput>;
   getRevealConfiguration(
     args: GetRevealConfigurationCommandInput,
-    cb: (err: any, data?: GetRevealConfigurationCommandOutput) => void
+    cb: (err: any, data?: GetRevealConfigurationCommandOutput) => void,
   ): void;
   getRevealConfiguration(
     args: GetRevealConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetRevealConfigurationCommandOutput) => void
+    cb: (err: any, data?: GetRevealConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -1174,16 +1174,16 @@ export interface Macie2 {
    */
   getSensitiveDataOccurrences(
     args: GetSensitiveDataOccurrencesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetSensitiveDataOccurrencesCommandOutput>;
   getSensitiveDataOccurrences(
     args: GetSensitiveDataOccurrencesCommandInput,
-    cb: (err: any, data?: GetSensitiveDataOccurrencesCommandOutput) => void
+    cb: (err: any, data?: GetSensitiveDataOccurrencesCommandOutput) => void,
   ): void;
   getSensitiveDataOccurrences(
     args: GetSensitiveDataOccurrencesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetSensitiveDataOccurrencesCommandOutput) => void
+    cb: (err: any, data?: GetSensitiveDataOccurrencesCommandOutput) => void,
   ): void;
 
   /**
@@ -1191,16 +1191,16 @@ export interface Macie2 {
    */
   getSensitiveDataOccurrencesAvailability(
     args: GetSensitiveDataOccurrencesAvailabilityCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetSensitiveDataOccurrencesAvailabilityCommandOutput>;
   getSensitiveDataOccurrencesAvailability(
     args: GetSensitiveDataOccurrencesAvailabilityCommandInput,
-    cb: (err: any, data?: GetSensitiveDataOccurrencesAvailabilityCommandOutput) => void
+    cb: (err: any, data?: GetSensitiveDataOccurrencesAvailabilityCommandOutput) => void,
   ): void;
   getSensitiveDataOccurrencesAvailability(
     args: GetSensitiveDataOccurrencesAvailabilityCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetSensitiveDataOccurrencesAvailabilityCommandOutput) => void
+    cb: (err: any, data?: GetSensitiveDataOccurrencesAvailabilityCommandOutput) => void,
   ): void;
 
   /**
@@ -1208,16 +1208,16 @@ export interface Macie2 {
    */
   getSensitivityInspectionTemplate(
     args: GetSensitivityInspectionTemplateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetSensitivityInspectionTemplateCommandOutput>;
   getSensitivityInspectionTemplate(
     args: GetSensitivityInspectionTemplateCommandInput,
-    cb: (err: any, data?: GetSensitivityInspectionTemplateCommandOutput) => void
+    cb: (err: any, data?: GetSensitivityInspectionTemplateCommandOutput) => void,
   ): void;
   getSensitivityInspectionTemplate(
     args: GetSensitivityInspectionTemplateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetSensitivityInspectionTemplateCommandOutput) => void
+    cb: (err: any, data?: GetSensitivityInspectionTemplateCommandOutput) => void,
   ): void;
 
   /**
@@ -1226,16 +1226,16 @@ export interface Macie2 {
   getUsageStatistics(): Promise<GetUsageStatisticsCommandOutput>;
   getUsageStatistics(
     args: GetUsageStatisticsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetUsageStatisticsCommandOutput>;
   getUsageStatistics(
     args: GetUsageStatisticsCommandInput,
-    cb: (err: any, data?: GetUsageStatisticsCommandOutput) => void
+    cb: (err: any, data?: GetUsageStatisticsCommandOutput) => void,
   ): void;
   getUsageStatistics(
     args: GetUsageStatisticsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetUsageStatisticsCommandOutput) => void
+    cb: (err: any, data?: GetUsageStatisticsCommandOutput) => void,
   ): void;
 
   /**
@@ -1244,13 +1244,13 @@ export interface Macie2 {
   getUsageTotals(): Promise<GetUsageTotalsCommandOutput>;
   getUsageTotals(
     args: GetUsageTotalsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetUsageTotalsCommandOutput>;
   getUsageTotals(args: GetUsageTotalsCommandInput, cb: (err: any, data?: GetUsageTotalsCommandOutput) => void): void;
   getUsageTotals(
     args: GetUsageTotalsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetUsageTotalsCommandOutput) => void
+    cb: (err: any, data?: GetUsageTotalsCommandOutput) => void,
   ): void;
 
   /**
@@ -1259,13 +1259,13 @@ export interface Macie2 {
   listAllowLists(): Promise<ListAllowListsCommandOutput>;
   listAllowLists(
     args: ListAllowListsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListAllowListsCommandOutput>;
   listAllowLists(args: ListAllowListsCommandInput, cb: (err: any, data?: ListAllowListsCommandOutput) => void): void;
   listAllowLists(
     args: ListAllowListsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListAllowListsCommandOutput) => void
+    cb: (err: any, data?: ListAllowListsCommandOutput) => void,
   ): void;
 
   /**
@@ -1274,16 +1274,16 @@ export interface Macie2 {
   listAutomatedDiscoveryAccounts(): Promise<ListAutomatedDiscoveryAccountsCommandOutput>;
   listAutomatedDiscoveryAccounts(
     args: ListAutomatedDiscoveryAccountsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListAutomatedDiscoveryAccountsCommandOutput>;
   listAutomatedDiscoveryAccounts(
     args: ListAutomatedDiscoveryAccountsCommandInput,
-    cb: (err: any, data?: ListAutomatedDiscoveryAccountsCommandOutput) => void
+    cb: (err: any, data?: ListAutomatedDiscoveryAccountsCommandOutput) => void,
   ): void;
   listAutomatedDiscoveryAccounts(
     args: ListAutomatedDiscoveryAccountsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListAutomatedDiscoveryAccountsCommandOutput) => void
+    cb: (err: any, data?: ListAutomatedDiscoveryAccountsCommandOutput) => void,
   ): void;
 
   /**
@@ -1292,16 +1292,16 @@ export interface Macie2 {
   listClassificationJobs(): Promise<ListClassificationJobsCommandOutput>;
   listClassificationJobs(
     args: ListClassificationJobsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListClassificationJobsCommandOutput>;
   listClassificationJobs(
     args: ListClassificationJobsCommandInput,
-    cb: (err: any, data?: ListClassificationJobsCommandOutput) => void
+    cb: (err: any, data?: ListClassificationJobsCommandOutput) => void,
   ): void;
   listClassificationJobs(
     args: ListClassificationJobsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListClassificationJobsCommandOutput) => void
+    cb: (err: any, data?: ListClassificationJobsCommandOutput) => void,
   ): void;
 
   /**
@@ -1310,16 +1310,16 @@ export interface Macie2 {
   listClassificationScopes(): Promise<ListClassificationScopesCommandOutput>;
   listClassificationScopes(
     args: ListClassificationScopesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListClassificationScopesCommandOutput>;
   listClassificationScopes(
     args: ListClassificationScopesCommandInput,
-    cb: (err: any, data?: ListClassificationScopesCommandOutput) => void
+    cb: (err: any, data?: ListClassificationScopesCommandOutput) => void,
   ): void;
   listClassificationScopes(
     args: ListClassificationScopesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListClassificationScopesCommandOutput) => void
+    cb: (err: any, data?: ListClassificationScopesCommandOutput) => void,
   ): void;
 
   /**
@@ -1328,16 +1328,16 @@ export interface Macie2 {
   listCustomDataIdentifiers(): Promise<ListCustomDataIdentifiersCommandOutput>;
   listCustomDataIdentifiers(
     args: ListCustomDataIdentifiersCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListCustomDataIdentifiersCommandOutput>;
   listCustomDataIdentifiers(
     args: ListCustomDataIdentifiersCommandInput,
-    cb: (err: any, data?: ListCustomDataIdentifiersCommandOutput) => void
+    cb: (err: any, data?: ListCustomDataIdentifiersCommandOutput) => void,
   ): void;
   listCustomDataIdentifiers(
     args: ListCustomDataIdentifiersCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListCustomDataIdentifiersCommandOutput) => void
+    cb: (err: any, data?: ListCustomDataIdentifiersCommandOutput) => void,
   ): void;
 
   /**
@@ -1349,7 +1349,7 @@ export interface Macie2 {
   listFindings(
     args: ListFindingsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListFindingsCommandOutput) => void
+    cb: (err: any, data?: ListFindingsCommandOutput) => void,
   ): void;
 
   /**
@@ -1358,16 +1358,16 @@ export interface Macie2 {
   listFindingsFilters(): Promise<ListFindingsFiltersCommandOutput>;
   listFindingsFilters(
     args: ListFindingsFiltersCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListFindingsFiltersCommandOutput>;
   listFindingsFilters(
     args: ListFindingsFiltersCommandInput,
-    cb: (err: any, data?: ListFindingsFiltersCommandOutput) => void
+    cb: (err: any, data?: ListFindingsFiltersCommandOutput) => void,
   ): void;
   listFindingsFilters(
     args: ListFindingsFiltersCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListFindingsFiltersCommandOutput) => void
+    cb: (err: any, data?: ListFindingsFiltersCommandOutput) => void,
   ): void;
 
   /**
@@ -1376,13 +1376,13 @@ export interface Macie2 {
   listInvitations(): Promise<ListInvitationsCommandOutput>;
   listInvitations(
     args: ListInvitationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListInvitationsCommandOutput>;
   listInvitations(args: ListInvitationsCommandInput, cb: (err: any, data?: ListInvitationsCommandOutput) => void): void;
   listInvitations(
     args: ListInvitationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListInvitationsCommandOutput) => void
+    cb: (err: any, data?: ListInvitationsCommandOutput) => void,
   ): void;
 
   /**
@@ -1391,16 +1391,16 @@ export interface Macie2 {
   listManagedDataIdentifiers(): Promise<ListManagedDataIdentifiersCommandOutput>;
   listManagedDataIdentifiers(
     args: ListManagedDataIdentifiersCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListManagedDataIdentifiersCommandOutput>;
   listManagedDataIdentifiers(
     args: ListManagedDataIdentifiersCommandInput,
-    cb: (err: any, data?: ListManagedDataIdentifiersCommandOutput) => void
+    cb: (err: any, data?: ListManagedDataIdentifiersCommandOutput) => void,
   ): void;
   listManagedDataIdentifiers(
     args: ListManagedDataIdentifiersCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListManagedDataIdentifiersCommandOutput) => void
+    cb: (err: any, data?: ListManagedDataIdentifiersCommandOutput) => void,
   ): void;
 
   /**
@@ -1412,7 +1412,7 @@ export interface Macie2 {
   listMembers(
     args: ListMembersCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListMembersCommandOutput) => void
+    cb: (err: any, data?: ListMembersCommandOutput) => void,
   ): void;
 
   /**
@@ -1421,16 +1421,16 @@ export interface Macie2 {
   listOrganizationAdminAccounts(): Promise<ListOrganizationAdminAccountsCommandOutput>;
   listOrganizationAdminAccounts(
     args: ListOrganizationAdminAccountsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListOrganizationAdminAccountsCommandOutput>;
   listOrganizationAdminAccounts(
     args: ListOrganizationAdminAccountsCommandInput,
-    cb: (err: any, data?: ListOrganizationAdminAccountsCommandOutput) => void
+    cb: (err: any, data?: ListOrganizationAdminAccountsCommandOutput) => void,
   ): void;
   listOrganizationAdminAccounts(
     args: ListOrganizationAdminAccountsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListOrganizationAdminAccountsCommandOutput) => void
+    cb: (err: any, data?: ListOrganizationAdminAccountsCommandOutput) => void,
   ): void;
 
   /**
@@ -1438,16 +1438,16 @@ export interface Macie2 {
    */
   listResourceProfileArtifacts(
     args: ListResourceProfileArtifactsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListResourceProfileArtifactsCommandOutput>;
   listResourceProfileArtifacts(
     args: ListResourceProfileArtifactsCommandInput,
-    cb: (err: any, data?: ListResourceProfileArtifactsCommandOutput) => void
+    cb: (err: any, data?: ListResourceProfileArtifactsCommandOutput) => void,
   ): void;
   listResourceProfileArtifacts(
     args: ListResourceProfileArtifactsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListResourceProfileArtifactsCommandOutput) => void
+    cb: (err: any, data?: ListResourceProfileArtifactsCommandOutput) => void,
   ): void;
 
   /**
@@ -1455,16 +1455,16 @@ export interface Macie2 {
    */
   listResourceProfileDetections(
     args: ListResourceProfileDetectionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListResourceProfileDetectionsCommandOutput>;
   listResourceProfileDetections(
     args: ListResourceProfileDetectionsCommandInput,
-    cb: (err: any, data?: ListResourceProfileDetectionsCommandOutput) => void
+    cb: (err: any, data?: ListResourceProfileDetectionsCommandOutput) => void,
   ): void;
   listResourceProfileDetections(
     args: ListResourceProfileDetectionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListResourceProfileDetectionsCommandOutput) => void
+    cb: (err: any, data?: ListResourceProfileDetectionsCommandOutput) => void,
   ): void;
 
   /**
@@ -1473,16 +1473,16 @@ export interface Macie2 {
   listSensitivityInspectionTemplates(): Promise<ListSensitivityInspectionTemplatesCommandOutput>;
   listSensitivityInspectionTemplates(
     args: ListSensitivityInspectionTemplatesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListSensitivityInspectionTemplatesCommandOutput>;
   listSensitivityInspectionTemplates(
     args: ListSensitivityInspectionTemplatesCommandInput,
-    cb: (err: any, data?: ListSensitivityInspectionTemplatesCommandOutput) => void
+    cb: (err: any, data?: ListSensitivityInspectionTemplatesCommandOutput) => void,
   ): void;
   listSensitivityInspectionTemplates(
     args: ListSensitivityInspectionTemplatesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListSensitivityInspectionTemplatesCommandOutput) => void
+    cb: (err: any, data?: ListSensitivityInspectionTemplatesCommandOutput) => void,
   ): void;
 
   /**
@@ -1490,16 +1490,16 @@ export interface Macie2 {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -1507,16 +1507,16 @@ export interface Macie2 {
    */
   putClassificationExportConfiguration(
     args: PutClassificationExportConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutClassificationExportConfigurationCommandOutput>;
   putClassificationExportConfiguration(
     args: PutClassificationExportConfigurationCommandInput,
-    cb: (err: any, data?: PutClassificationExportConfigurationCommandOutput) => void
+    cb: (err: any, data?: PutClassificationExportConfigurationCommandOutput) => void,
   ): void;
   putClassificationExportConfiguration(
     args: PutClassificationExportConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutClassificationExportConfigurationCommandOutput) => void
+    cb: (err: any, data?: PutClassificationExportConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -1525,16 +1525,16 @@ export interface Macie2 {
   putFindingsPublicationConfiguration(): Promise<PutFindingsPublicationConfigurationCommandOutput>;
   putFindingsPublicationConfiguration(
     args: PutFindingsPublicationConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutFindingsPublicationConfigurationCommandOutput>;
   putFindingsPublicationConfiguration(
     args: PutFindingsPublicationConfigurationCommandInput,
-    cb: (err: any, data?: PutFindingsPublicationConfigurationCommandOutput) => void
+    cb: (err: any, data?: PutFindingsPublicationConfigurationCommandOutput) => void,
   ): void;
   putFindingsPublicationConfiguration(
     args: PutFindingsPublicationConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutFindingsPublicationConfigurationCommandOutput) => void
+    cb: (err: any, data?: PutFindingsPublicationConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -1543,13 +1543,13 @@ export interface Macie2 {
   searchResources(): Promise<SearchResourcesCommandOutput>;
   searchResources(
     args: SearchResourcesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<SearchResourcesCommandOutput>;
   searchResources(args: SearchResourcesCommandInput, cb: (err: any, data?: SearchResourcesCommandOutput) => void): void;
   searchResources(
     args: SearchResourcesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SearchResourcesCommandOutput) => void
+    cb: (err: any, data?: SearchResourcesCommandOutput) => void,
   ): void;
 
   /**
@@ -1560,7 +1560,7 @@ export interface Macie2 {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -1568,16 +1568,16 @@ export interface Macie2 {
    */
   testCustomDataIdentifier(
     args: TestCustomDataIdentifierCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<TestCustomDataIdentifierCommandOutput>;
   testCustomDataIdentifier(
     args: TestCustomDataIdentifierCommandInput,
-    cb: (err: any, data?: TestCustomDataIdentifierCommandOutput) => void
+    cb: (err: any, data?: TestCustomDataIdentifierCommandOutput) => void,
   ): void;
   testCustomDataIdentifier(
     args: TestCustomDataIdentifierCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TestCustomDataIdentifierCommandOutput) => void
+    cb: (err: any, data?: TestCustomDataIdentifierCommandOutput) => void,
   ): void;
 
   /**
@@ -1588,7 +1588,7 @@ export interface Macie2 {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -1596,13 +1596,13 @@ export interface Macie2 {
    */
   updateAllowList(
     args: UpdateAllowListCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateAllowListCommandOutput>;
   updateAllowList(args: UpdateAllowListCommandInput, cb: (err: any, data?: UpdateAllowListCommandOutput) => void): void;
   updateAllowList(
     args: UpdateAllowListCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateAllowListCommandOutput) => void
+    cb: (err: any, data?: UpdateAllowListCommandOutput) => void,
   ): void;
 
   /**
@@ -1610,16 +1610,16 @@ export interface Macie2 {
    */
   updateAutomatedDiscoveryConfiguration(
     args: UpdateAutomatedDiscoveryConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateAutomatedDiscoveryConfigurationCommandOutput>;
   updateAutomatedDiscoveryConfiguration(
     args: UpdateAutomatedDiscoveryConfigurationCommandInput,
-    cb: (err: any, data?: UpdateAutomatedDiscoveryConfigurationCommandOutput) => void
+    cb: (err: any, data?: UpdateAutomatedDiscoveryConfigurationCommandOutput) => void,
   ): void;
   updateAutomatedDiscoveryConfiguration(
     args: UpdateAutomatedDiscoveryConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateAutomatedDiscoveryConfigurationCommandOutput) => void
+    cb: (err: any, data?: UpdateAutomatedDiscoveryConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -1627,16 +1627,16 @@ export interface Macie2 {
    */
   updateClassificationJob(
     args: UpdateClassificationJobCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateClassificationJobCommandOutput>;
   updateClassificationJob(
     args: UpdateClassificationJobCommandInput,
-    cb: (err: any, data?: UpdateClassificationJobCommandOutput) => void
+    cb: (err: any, data?: UpdateClassificationJobCommandOutput) => void,
   ): void;
   updateClassificationJob(
     args: UpdateClassificationJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateClassificationJobCommandOutput) => void
+    cb: (err: any, data?: UpdateClassificationJobCommandOutput) => void,
   ): void;
 
   /**
@@ -1644,16 +1644,16 @@ export interface Macie2 {
    */
   updateClassificationScope(
     args: UpdateClassificationScopeCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateClassificationScopeCommandOutput>;
   updateClassificationScope(
     args: UpdateClassificationScopeCommandInput,
-    cb: (err: any, data?: UpdateClassificationScopeCommandOutput) => void
+    cb: (err: any, data?: UpdateClassificationScopeCommandOutput) => void,
   ): void;
   updateClassificationScope(
     args: UpdateClassificationScopeCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateClassificationScopeCommandOutput) => void
+    cb: (err: any, data?: UpdateClassificationScopeCommandOutput) => void,
   ): void;
 
   /**
@@ -1661,16 +1661,16 @@ export interface Macie2 {
    */
   updateFindingsFilter(
     args: UpdateFindingsFilterCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateFindingsFilterCommandOutput>;
   updateFindingsFilter(
     args: UpdateFindingsFilterCommandInput,
-    cb: (err: any, data?: UpdateFindingsFilterCommandOutput) => void
+    cb: (err: any, data?: UpdateFindingsFilterCommandOutput) => void,
   ): void;
   updateFindingsFilter(
     args: UpdateFindingsFilterCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateFindingsFilterCommandOutput) => void
+    cb: (err: any, data?: UpdateFindingsFilterCommandOutput) => void,
   ): void;
 
   /**
@@ -1679,16 +1679,16 @@ export interface Macie2 {
   updateMacieSession(): Promise<UpdateMacieSessionCommandOutput>;
   updateMacieSession(
     args: UpdateMacieSessionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateMacieSessionCommandOutput>;
   updateMacieSession(
     args: UpdateMacieSessionCommandInput,
-    cb: (err: any, data?: UpdateMacieSessionCommandOutput) => void
+    cb: (err: any, data?: UpdateMacieSessionCommandOutput) => void,
   ): void;
   updateMacieSession(
     args: UpdateMacieSessionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateMacieSessionCommandOutput) => void
+    cb: (err: any, data?: UpdateMacieSessionCommandOutput) => void,
   ): void;
 
   /**
@@ -1696,16 +1696,16 @@ export interface Macie2 {
    */
   updateMemberSession(
     args: UpdateMemberSessionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateMemberSessionCommandOutput>;
   updateMemberSession(
     args: UpdateMemberSessionCommandInput,
-    cb: (err: any, data?: UpdateMemberSessionCommandOutput) => void
+    cb: (err: any, data?: UpdateMemberSessionCommandOutput) => void,
   ): void;
   updateMemberSession(
     args: UpdateMemberSessionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateMemberSessionCommandOutput) => void
+    cb: (err: any, data?: UpdateMemberSessionCommandOutput) => void,
   ): void;
 
   /**
@@ -1713,16 +1713,16 @@ export interface Macie2 {
    */
   updateOrganizationConfiguration(
     args: UpdateOrganizationConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateOrganizationConfigurationCommandOutput>;
   updateOrganizationConfiguration(
     args: UpdateOrganizationConfigurationCommandInput,
-    cb: (err: any, data?: UpdateOrganizationConfigurationCommandOutput) => void
+    cb: (err: any, data?: UpdateOrganizationConfigurationCommandOutput) => void,
   ): void;
   updateOrganizationConfiguration(
     args: UpdateOrganizationConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateOrganizationConfigurationCommandOutput) => void
+    cb: (err: any, data?: UpdateOrganizationConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -1730,16 +1730,16 @@ export interface Macie2 {
    */
   updateResourceProfile(
     args: UpdateResourceProfileCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateResourceProfileCommandOutput>;
   updateResourceProfile(
     args: UpdateResourceProfileCommandInput,
-    cb: (err: any, data?: UpdateResourceProfileCommandOutput) => void
+    cb: (err: any, data?: UpdateResourceProfileCommandOutput) => void,
   ): void;
   updateResourceProfile(
     args: UpdateResourceProfileCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateResourceProfileCommandOutput) => void
+    cb: (err: any, data?: UpdateResourceProfileCommandOutput) => void,
   ): void;
 
   /**
@@ -1747,16 +1747,16 @@ export interface Macie2 {
    */
   updateResourceProfileDetections(
     args: UpdateResourceProfileDetectionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateResourceProfileDetectionsCommandOutput>;
   updateResourceProfileDetections(
     args: UpdateResourceProfileDetectionsCommandInput,
-    cb: (err: any, data?: UpdateResourceProfileDetectionsCommandOutput) => void
+    cb: (err: any, data?: UpdateResourceProfileDetectionsCommandOutput) => void,
   ): void;
   updateResourceProfileDetections(
     args: UpdateResourceProfileDetectionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateResourceProfileDetectionsCommandOutput) => void
+    cb: (err: any, data?: UpdateResourceProfileDetectionsCommandOutput) => void,
   ): void;
 
   /**
@@ -1764,16 +1764,16 @@ export interface Macie2 {
    */
   updateRevealConfiguration(
     args: UpdateRevealConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateRevealConfigurationCommandOutput>;
   updateRevealConfiguration(
     args: UpdateRevealConfigurationCommandInput,
-    cb: (err: any, data?: UpdateRevealConfigurationCommandOutput) => void
+    cb: (err: any, data?: UpdateRevealConfigurationCommandOutput) => void,
   ): void;
   updateRevealConfiguration(
     args: UpdateRevealConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateRevealConfigurationCommandOutput) => void
+    cb: (err: any, data?: UpdateRevealConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -1781,16 +1781,16 @@ export interface Macie2 {
    */
   updateSensitivityInspectionTemplate(
     args: UpdateSensitivityInspectionTemplateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateSensitivityInspectionTemplateCommandOutput>;
   updateSensitivityInspectionTemplate(
     args: UpdateSensitivityInspectionTemplateCommandInput,
-    cb: (err: any, data?: UpdateSensitivityInspectionTemplateCommandOutput) => void
+    cb: (err: any, data?: UpdateSensitivityInspectionTemplateCommandOutput) => void,
   ): void;
   updateSensitivityInspectionTemplate(
     args: UpdateSensitivityInspectionTemplateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateSensitivityInspectionTemplateCommandOutput) => void
+    cb: (err: any, data?: UpdateSensitivityInspectionTemplateCommandOutput) => void,
   ): void;
 }
 

@@ -115,7 +115,7 @@ import { NeptuneGraphServiceException as __BaseException } from "../models/Neptu
  */
 export const se_CancelImportTaskCommand = async (
   input: CancelImportTaskCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -131,7 +131,7 @@ export const se_CancelImportTaskCommand = async (
  */
 export const se_CancelQueryCommand = async (
   input: CancelQueryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -161,7 +161,7 @@ export const se_CancelQueryCommand = async (
  */
 export const se_CreateGraphCommand = async (
   input: CreateGraphCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -179,7 +179,7 @@ export const se_CreateGraphCommand = async (
       replicaCount: [],
       tags: (_) => _json(_),
       vectorSearchConfiguration: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -190,7 +190,7 @@ export const se_CreateGraphCommand = async (
  */
 export const se_CreateGraphSnapshotCommand = async (
   input: CreateGraphSnapshotCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -203,7 +203,7 @@ export const se_CreateGraphSnapshotCommand = async (
       graphIdentifier: [],
       snapshotName: [],
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -214,7 +214,7 @@ export const se_CreateGraphSnapshotCommand = async (
  */
 export const se_CreateGraphUsingImportTaskCommand = async (
   input: CreateGraphUsingImportTaskCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -238,7 +238,7 @@ export const se_CreateGraphUsingImportTaskCommand = async (
       source: [],
       tags: (_) => _json(_),
       vectorSearchConfiguration: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -249,7 +249,7 @@ export const se_CreateGraphUsingImportTaskCommand = async (
  */
 export const se_CreatePrivateGraphEndpointCommand = async (
   input: CreatePrivateGraphEndpointCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -263,7 +263,7 @@ export const se_CreatePrivateGraphEndpointCommand = async (
       subnetIds: (_) => _json(_),
       vpcId: [],
       vpcSecurityGroupIds: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -274,7 +274,7 @@ export const se_CreatePrivateGraphEndpointCommand = async (
  */
 export const se_DeleteGraphCommand = async (
   input: DeleteGraphCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -293,7 +293,7 @@ export const se_DeleteGraphCommand = async (
  */
 export const se_DeleteGraphSnapshotCommand = async (
   input: DeleteGraphSnapshotCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -309,7 +309,7 @@ export const se_DeleteGraphSnapshotCommand = async (
  */
 export const se_DeletePrivateGraphEndpointCommand = async (
   input: DeletePrivateGraphEndpointCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -326,7 +326,7 @@ export const se_DeletePrivateGraphEndpointCommand = async (
  */
 export const se_ExecuteQueryCommand = async (
   input: ExecuteQueryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -343,7 +343,7 @@ export const se_ExecuteQueryCommand = async (
       planCache: [],
       query: [, , `queryString`],
       queryTimeoutMilliseconds: [],
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -366,7 +366,7 @@ export const se_ExecuteQueryCommand = async (
  */
 export const se_GetGraphCommand = async (
   input: GetGraphCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -382,7 +382,7 @@ export const se_GetGraphCommand = async (
  */
 export const se_GetGraphSnapshotCommand = async (
   input: GetGraphSnapshotCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -398,7 +398,7 @@ export const se_GetGraphSnapshotCommand = async (
  */
 export const se_GetGraphSummaryCommand = async (
   input: GetGraphSummaryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -430,7 +430,7 @@ export const se_GetGraphSummaryCommand = async (
  */
 export const se_GetImportTaskCommand = async (
   input: GetImportTaskCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -446,7 +446,7 @@ export const se_GetImportTaskCommand = async (
  */
 export const se_GetPrivateGraphEndpointCommand = async (
   input: GetPrivateGraphEndpointCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -463,7 +463,7 @@ export const se_GetPrivateGraphEndpointCommand = async (
  */
 export const se_GetQueryCommand = async (
   input: GetQueryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -493,7 +493,7 @@ export const se_GetQueryCommand = async (
  */
 export const se_ListGraphsCommand = async (
   input: ListGraphsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -512,7 +512,7 @@ export const se_ListGraphsCommand = async (
  */
 export const se_ListGraphSnapshotsCommand = async (
   input: ListGraphSnapshotsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -532,7 +532,7 @@ export const se_ListGraphSnapshotsCommand = async (
  */
 export const se_ListImportTasksCommand = async (
   input: ListImportTasksCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -551,7 +551,7 @@ export const se_ListImportTasksCommand = async (
  */
 export const se_ListPrivateGraphEndpointsCommand = async (
   input: ListPrivateGraphEndpointsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -571,7 +571,7 @@ export const se_ListPrivateGraphEndpointsCommand = async (
  */
 export const se_ListQueriesCommand = async (
   input: ListQueriesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -604,7 +604,7 @@ export const se_ListQueriesCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -620,7 +620,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_ResetGraphCommand = async (
   input: ResetGraphCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -632,7 +632,7 @@ export const se_ResetGraphCommand = async (
   body = JSON.stringify(
     take(input, {
       skipSnapshot: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -643,7 +643,7 @@ export const se_ResetGraphCommand = async (
  */
 export const se_RestoreGraphFromSnapshotCommand = async (
   input: RestoreGraphFromSnapshotCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -660,7 +660,7 @@ export const se_RestoreGraphFromSnapshotCommand = async (
       publicConnectivity: [],
       replicaCount: [],
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -671,7 +671,7 @@ export const se_RestoreGraphFromSnapshotCommand = async (
  */
 export const se_StartImportTaskCommand = async (
   input: StartImportTaskCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -687,7 +687,7 @@ export const se_StartImportTaskCommand = async (
       importOptions: (_) => _json(_),
       roleArn: [],
       source: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -698,7 +698,7 @@ export const se_StartImportTaskCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -710,7 +710,7 @@ export const se_TagResourceCommand = async (
   body = JSON.stringify(
     take(input, {
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -721,7 +721,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -743,7 +743,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateGraphCommand = async (
   input: UpdateGraphCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -757,7 +757,7 @@ export const se_UpdateGraphCommand = async (
       deletionProtection: [],
       provisionedMemory: [],
       publicConnectivity: [],
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -768,7 +768,7 @@ export const se_UpdateGraphCommand = async (
  */
 export const de_CancelImportTaskCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CancelImportTaskCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -794,7 +794,7 @@ export const de_CancelImportTaskCommand = async (
  */
 export const de_CancelQueryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CancelQueryCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -811,7 +811,7 @@ export const de_CancelQueryCommand = async (
  */
 export const de_CreateGraphCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateGraphCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -846,7 +846,7 @@ export const de_CreateGraphCommand = async (
  */
 export const de_CreateGraphSnapshotCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateGraphSnapshotCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -873,7 +873,7 @@ export const de_CreateGraphSnapshotCommand = async (
  */
 export const de_CreateGraphUsingImportTaskCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateGraphUsingImportTaskCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -900,7 +900,7 @@ export const de_CreateGraphUsingImportTaskCommand = async (
  */
 export const de_CreatePrivateGraphEndpointCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreatePrivateGraphEndpointCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -924,7 +924,7 @@ export const de_CreatePrivateGraphEndpointCommand = async (
  */
 export const de_DeleteGraphCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteGraphCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -959,7 +959,7 @@ export const de_DeleteGraphCommand = async (
  */
 export const de_DeleteGraphSnapshotCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteGraphSnapshotCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -986,7 +986,7 @@ export const de_DeleteGraphSnapshotCommand = async (
  */
 export const de_DeletePrivateGraphEndpointCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeletePrivateGraphEndpointCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1010,7 +1010,7 @@ export const de_DeletePrivateGraphEndpointCommand = async (
  */
 export const de_ExecuteQueryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext & __SdkStreamSerdeContext
+  context: __SerdeContext & __SdkStreamSerdeContext,
 ): Promise<ExecuteQueryCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1029,7 +1029,7 @@ export const de_ExecuteQueryCommand = async (
  */
 export const de_GetGraphCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetGraphCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1064,7 +1064,7 @@ export const de_GetGraphCommand = async (
  */
 export const de_GetGraphSnapshotCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetGraphSnapshotCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1091,7 +1091,7 @@ export const de_GetGraphSnapshotCommand = async (
  */
 export const de_GetGraphSummaryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetGraphSummaryCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1114,7 +1114,7 @@ export const de_GetGraphSummaryCommand = async (
  */
 export const de_GetImportTaskCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetImportTaskCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1144,7 +1144,7 @@ export const de_GetImportTaskCommand = async (
  */
 export const de_GetPrivateGraphEndpointCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetPrivateGraphEndpointCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1168,7 +1168,7 @@ export const de_GetPrivateGraphEndpointCommand = async (
  */
 export const de_GetQueryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetQueryCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1193,7 +1193,7 @@ export const de_GetQueryCommand = async (
  */
 export const de_ListGraphsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListGraphsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1215,7 +1215,7 @@ export const de_ListGraphsCommand = async (
  */
 export const de_ListGraphSnapshotsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListGraphSnapshotsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1237,7 +1237,7 @@ export const de_ListGraphSnapshotsCommand = async (
  */
 export const de_ListImportTasksCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListImportTasksCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1259,7 +1259,7 @@ export const de_ListImportTasksCommand = async (
  */
 export const de_ListPrivateGraphEndpointsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListPrivateGraphEndpointsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1281,7 +1281,7 @@ export const de_ListPrivateGraphEndpointsCommand = async (
  */
 export const de_ListQueriesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListQueriesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1302,7 +1302,7 @@ export const de_ListQueriesCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1323,7 +1323,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_ResetGraphCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResetGraphCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1358,7 +1358,7 @@ export const de_ResetGraphCommand = async (
  */
 export const de_RestoreGraphFromSnapshotCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RestoreGraphFromSnapshotCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1393,7 +1393,7 @@ export const de_RestoreGraphFromSnapshotCommand = async (
  */
 export const de_StartImportTaskCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartImportTaskCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1420,7 +1420,7 @@ export const de_StartImportTaskCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1437,7 +1437,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1454,7 +1454,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateGraphCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateGraphCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1534,7 +1534,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1572,7 +1572,7 @@ const de_ConflictExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_InternalServerExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1592,7 +1592,7 @@ const de_InternalServerExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1612,7 +1612,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_ServiceQuotaExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceQuotaExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1653,7 +1653,7 @@ const de_ThrottlingExceptionRes = async (parsedOutput: any, context: __SerdeCont
  */
 const de_UnprocessableExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UnprocessableException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;

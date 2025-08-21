@@ -211,16 +211,16 @@ export interface AccessAnalyzer {
    */
   applyArchiveRule(
     args: ApplyArchiveRuleCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ApplyArchiveRuleCommandOutput>;
   applyArchiveRule(
     args: ApplyArchiveRuleCommandInput,
-    cb: (err: any, data?: ApplyArchiveRuleCommandOutput) => void
+    cb: (err: any, data?: ApplyArchiveRuleCommandOutput) => void,
   ): void;
   applyArchiveRule(
     args: ApplyArchiveRuleCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ApplyArchiveRuleCommandOutput) => void
+    cb: (err: any, data?: ApplyArchiveRuleCommandOutput) => void,
   ): void;
 
   /**
@@ -228,16 +228,16 @@ export interface AccessAnalyzer {
    */
   cancelPolicyGeneration(
     args: CancelPolicyGenerationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CancelPolicyGenerationCommandOutput>;
   cancelPolicyGeneration(
     args: CancelPolicyGenerationCommandInput,
-    cb: (err: any, data?: CancelPolicyGenerationCommandOutput) => void
+    cb: (err: any, data?: CancelPolicyGenerationCommandOutput) => void,
   ): void;
   cancelPolicyGeneration(
     args: CancelPolicyGenerationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CancelPolicyGenerationCommandOutput) => void
+    cb: (err: any, data?: CancelPolicyGenerationCommandOutput) => void,
   ): void;
 
   /**
@@ -245,16 +245,16 @@ export interface AccessAnalyzer {
    */
   checkAccessNotGranted(
     args: CheckAccessNotGrantedCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CheckAccessNotGrantedCommandOutput>;
   checkAccessNotGranted(
     args: CheckAccessNotGrantedCommandInput,
-    cb: (err: any, data?: CheckAccessNotGrantedCommandOutput) => void
+    cb: (err: any, data?: CheckAccessNotGrantedCommandOutput) => void,
   ): void;
   checkAccessNotGranted(
     args: CheckAccessNotGrantedCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CheckAccessNotGrantedCommandOutput) => void
+    cb: (err: any, data?: CheckAccessNotGrantedCommandOutput) => void,
   ): void;
 
   /**
@@ -262,16 +262,16 @@ export interface AccessAnalyzer {
    */
   checkNoNewAccess(
     args: CheckNoNewAccessCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CheckNoNewAccessCommandOutput>;
   checkNoNewAccess(
     args: CheckNoNewAccessCommandInput,
-    cb: (err: any, data?: CheckNoNewAccessCommandOutput) => void
+    cb: (err: any, data?: CheckNoNewAccessCommandOutput) => void,
   ): void;
   checkNoNewAccess(
     args: CheckNoNewAccessCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CheckNoNewAccessCommandOutput) => void
+    cb: (err: any, data?: CheckNoNewAccessCommandOutput) => void,
   ): void;
 
   /**
@@ -279,16 +279,16 @@ export interface AccessAnalyzer {
    */
   checkNoPublicAccess(
     args: CheckNoPublicAccessCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CheckNoPublicAccessCommandOutput>;
   checkNoPublicAccess(
     args: CheckNoPublicAccessCommandInput,
-    cb: (err: any, data?: CheckNoPublicAccessCommandOutput) => void
+    cb: (err: any, data?: CheckNoPublicAccessCommandOutput) => void,
   ): void;
   checkNoPublicAccess(
     args: CheckNoPublicAccessCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CheckNoPublicAccessCommandOutput) => void
+    cb: (err: any, data?: CheckNoPublicAccessCommandOutput) => void,
   ): void;
 
   /**
@@ -296,16 +296,16 @@ export interface AccessAnalyzer {
    */
   createAccessPreview(
     args: CreateAccessPreviewCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateAccessPreviewCommandOutput>;
   createAccessPreview(
     args: CreateAccessPreviewCommandInput,
-    cb: (err: any, data?: CreateAccessPreviewCommandOutput) => void
+    cb: (err: any, data?: CreateAccessPreviewCommandOutput) => void,
   ): void;
   createAccessPreview(
     args: CreateAccessPreviewCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateAccessPreviewCommandOutput) => void
+    cb: (err: any, data?: CreateAccessPreviewCommandOutput) => void,
   ): void;
 
   /**
@@ -313,13 +313,13 @@ export interface AccessAnalyzer {
    */
   createAnalyzer(
     args: CreateAnalyzerCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateAnalyzerCommandOutput>;
   createAnalyzer(args: CreateAnalyzerCommandInput, cb: (err: any, data?: CreateAnalyzerCommandOutput) => void): void;
   createAnalyzer(
     args: CreateAnalyzerCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateAnalyzerCommandOutput) => void
+    cb: (err: any, data?: CreateAnalyzerCommandOutput) => void,
   ): void;
 
   /**
@@ -327,16 +327,16 @@ export interface AccessAnalyzer {
    */
   createArchiveRule(
     args: CreateArchiveRuleCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateArchiveRuleCommandOutput>;
   createArchiveRule(
     args: CreateArchiveRuleCommandInput,
-    cb: (err: any, data?: CreateArchiveRuleCommandOutput) => void
+    cb: (err: any, data?: CreateArchiveRuleCommandOutput) => void,
   ): void;
   createArchiveRule(
     args: CreateArchiveRuleCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateArchiveRuleCommandOutput) => void
+    cb: (err: any, data?: CreateArchiveRuleCommandOutput) => void,
   ): void;
 
   /**
@@ -344,13 +344,13 @@ export interface AccessAnalyzer {
    */
   deleteAnalyzer(
     args: DeleteAnalyzerCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteAnalyzerCommandOutput>;
   deleteAnalyzer(args: DeleteAnalyzerCommandInput, cb: (err: any, data?: DeleteAnalyzerCommandOutput) => void): void;
   deleteAnalyzer(
     args: DeleteAnalyzerCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteAnalyzerCommandOutput) => void
+    cb: (err: any, data?: DeleteAnalyzerCommandOutput) => void,
   ): void;
 
   /**
@@ -358,16 +358,16 @@ export interface AccessAnalyzer {
    */
   deleteArchiveRule(
     args: DeleteArchiveRuleCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteArchiveRuleCommandOutput>;
   deleteArchiveRule(
     args: DeleteArchiveRuleCommandInput,
-    cb: (err: any, data?: DeleteArchiveRuleCommandOutput) => void
+    cb: (err: any, data?: DeleteArchiveRuleCommandOutput) => void,
   ): void;
   deleteArchiveRule(
     args: DeleteArchiveRuleCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteArchiveRuleCommandOutput) => void
+    cb: (err: any, data?: DeleteArchiveRuleCommandOutput) => void,
   ): void;
 
   /**
@@ -375,16 +375,16 @@ export interface AccessAnalyzer {
    */
   generateFindingRecommendation(
     args: GenerateFindingRecommendationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GenerateFindingRecommendationCommandOutput>;
   generateFindingRecommendation(
     args: GenerateFindingRecommendationCommandInput,
-    cb: (err: any, data?: GenerateFindingRecommendationCommandOutput) => void
+    cb: (err: any, data?: GenerateFindingRecommendationCommandOutput) => void,
   ): void;
   generateFindingRecommendation(
     args: GenerateFindingRecommendationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GenerateFindingRecommendationCommandOutput) => void
+    cb: (err: any, data?: GenerateFindingRecommendationCommandOutput) => void,
   ): void;
 
   /**
@@ -392,16 +392,16 @@ export interface AccessAnalyzer {
    */
   getAccessPreview(
     args: GetAccessPreviewCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetAccessPreviewCommandOutput>;
   getAccessPreview(
     args: GetAccessPreviewCommandInput,
-    cb: (err: any, data?: GetAccessPreviewCommandOutput) => void
+    cb: (err: any, data?: GetAccessPreviewCommandOutput) => void,
   ): void;
   getAccessPreview(
     args: GetAccessPreviewCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetAccessPreviewCommandOutput) => void
+    cb: (err: any, data?: GetAccessPreviewCommandOutput) => void,
   ): void;
 
   /**
@@ -409,16 +409,16 @@ export interface AccessAnalyzer {
    */
   getAnalyzedResource(
     args: GetAnalyzedResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetAnalyzedResourceCommandOutput>;
   getAnalyzedResource(
     args: GetAnalyzedResourceCommandInput,
-    cb: (err: any, data?: GetAnalyzedResourceCommandOutput) => void
+    cb: (err: any, data?: GetAnalyzedResourceCommandOutput) => void,
   ): void;
   getAnalyzedResource(
     args: GetAnalyzedResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetAnalyzedResourceCommandOutput) => void
+    cb: (err: any, data?: GetAnalyzedResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -429,7 +429,7 @@ export interface AccessAnalyzer {
   getAnalyzer(
     args: GetAnalyzerCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetAnalyzerCommandOutput) => void
+    cb: (err: any, data?: GetAnalyzerCommandOutput) => void,
   ): void;
 
   /**
@@ -437,13 +437,13 @@ export interface AccessAnalyzer {
    */
   getArchiveRule(
     args: GetArchiveRuleCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetArchiveRuleCommandOutput>;
   getArchiveRule(args: GetArchiveRuleCommandInput, cb: (err: any, data?: GetArchiveRuleCommandOutput) => void): void;
   getArchiveRule(
     args: GetArchiveRuleCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetArchiveRuleCommandOutput) => void
+    cb: (err: any, data?: GetArchiveRuleCommandOutput) => void,
   ): void;
 
   /**
@@ -454,7 +454,7 @@ export interface AccessAnalyzer {
   getFinding(
     args: GetFindingCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetFindingCommandOutput) => void
+    cb: (err: any, data?: GetFindingCommandOutput) => void,
   ): void;
 
   /**
@@ -462,16 +462,16 @@ export interface AccessAnalyzer {
    */
   getFindingRecommendation(
     args: GetFindingRecommendationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetFindingRecommendationCommandOutput>;
   getFindingRecommendation(
     args: GetFindingRecommendationCommandInput,
-    cb: (err: any, data?: GetFindingRecommendationCommandOutput) => void
+    cb: (err: any, data?: GetFindingRecommendationCommandOutput) => void,
   ): void;
   getFindingRecommendation(
     args: GetFindingRecommendationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetFindingRecommendationCommandOutput) => void
+    cb: (err: any, data?: GetFindingRecommendationCommandOutput) => void,
   ): void;
 
   /**
@@ -482,7 +482,7 @@ export interface AccessAnalyzer {
   getFindingV2(
     args: GetFindingV2CommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetFindingV2CommandOutput) => void
+    cb: (err: any, data?: GetFindingV2CommandOutput) => void,
   ): void;
 
   /**
@@ -490,16 +490,16 @@ export interface AccessAnalyzer {
    */
   getGeneratedPolicy(
     args: GetGeneratedPolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetGeneratedPolicyCommandOutput>;
   getGeneratedPolicy(
     args: GetGeneratedPolicyCommandInput,
-    cb: (err: any, data?: GetGeneratedPolicyCommandOutput) => void
+    cb: (err: any, data?: GetGeneratedPolicyCommandOutput) => void,
   ): void;
   getGeneratedPolicy(
     args: GetGeneratedPolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetGeneratedPolicyCommandOutput) => void
+    cb: (err: any, data?: GetGeneratedPolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -507,16 +507,16 @@ export interface AccessAnalyzer {
    */
   listAccessPreviewFindings(
     args: ListAccessPreviewFindingsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListAccessPreviewFindingsCommandOutput>;
   listAccessPreviewFindings(
     args: ListAccessPreviewFindingsCommandInput,
-    cb: (err: any, data?: ListAccessPreviewFindingsCommandOutput) => void
+    cb: (err: any, data?: ListAccessPreviewFindingsCommandOutput) => void,
   ): void;
   listAccessPreviewFindings(
     args: ListAccessPreviewFindingsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListAccessPreviewFindingsCommandOutput) => void
+    cb: (err: any, data?: ListAccessPreviewFindingsCommandOutput) => void,
   ): void;
 
   /**
@@ -524,16 +524,16 @@ export interface AccessAnalyzer {
    */
   listAccessPreviews(
     args: ListAccessPreviewsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListAccessPreviewsCommandOutput>;
   listAccessPreviews(
     args: ListAccessPreviewsCommandInput,
-    cb: (err: any, data?: ListAccessPreviewsCommandOutput) => void
+    cb: (err: any, data?: ListAccessPreviewsCommandOutput) => void,
   ): void;
   listAccessPreviews(
     args: ListAccessPreviewsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListAccessPreviewsCommandOutput) => void
+    cb: (err: any, data?: ListAccessPreviewsCommandOutput) => void,
   ): void;
 
   /**
@@ -541,16 +541,16 @@ export interface AccessAnalyzer {
    */
   listAnalyzedResources(
     args: ListAnalyzedResourcesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListAnalyzedResourcesCommandOutput>;
   listAnalyzedResources(
     args: ListAnalyzedResourcesCommandInput,
-    cb: (err: any, data?: ListAnalyzedResourcesCommandOutput) => void
+    cb: (err: any, data?: ListAnalyzedResourcesCommandOutput) => void,
   ): void;
   listAnalyzedResources(
     args: ListAnalyzedResourcesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListAnalyzedResourcesCommandOutput) => void
+    cb: (err: any, data?: ListAnalyzedResourcesCommandOutput) => void,
   ): void;
 
   /**
@@ -562,7 +562,7 @@ export interface AccessAnalyzer {
   listAnalyzers(
     args: ListAnalyzersCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListAnalyzersCommandOutput) => void
+    cb: (err: any, data?: ListAnalyzersCommandOutput) => void,
   ): void;
 
   /**
@@ -570,16 +570,16 @@ export interface AccessAnalyzer {
    */
   listArchiveRules(
     args: ListArchiveRulesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListArchiveRulesCommandOutput>;
   listArchiveRules(
     args: ListArchiveRulesCommandInput,
-    cb: (err: any, data?: ListArchiveRulesCommandOutput) => void
+    cb: (err: any, data?: ListArchiveRulesCommandOutput) => void,
   ): void;
   listArchiveRules(
     args: ListArchiveRulesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListArchiveRulesCommandOutput) => void
+    cb: (err: any, data?: ListArchiveRulesCommandOutput) => void,
   ): void;
 
   /**
@@ -590,7 +590,7 @@ export interface AccessAnalyzer {
   listFindings(
     args: ListFindingsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListFindingsCommandOutput) => void
+    cb: (err: any, data?: ListFindingsCommandOutput) => void,
   ): void;
 
   /**
@@ -598,13 +598,13 @@ export interface AccessAnalyzer {
    */
   listFindingsV2(
     args: ListFindingsV2CommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListFindingsV2CommandOutput>;
   listFindingsV2(args: ListFindingsV2CommandInput, cb: (err: any, data?: ListFindingsV2CommandOutput) => void): void;
   listFindingsV2(
     args: ListFindingsV2CommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListFindingsV2CommandOutput) => void
+    cb: (err: any, data?: ListFindingsV2CommandOutput) => void,
   ): void;
 
   /**
@@ -613,16 +613,16 @@ export interface AccessAnalyzer {
   listPolicyGenerations(): Promise<ListPolicyGenerationsCommandOutput>;
   listPolicyGenerations(
     args: ListPolicyGenerationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListPolicyGenerationsCommandOutput>;
   listPolicyGenerations(
     args: ListPolicyGenerationsCommandInput,
-    cb: (err: any, data?: ListPolicyGenerationsCommandOutput) => void
+    cb: (err: any, data?: ListPolicyGenerationsCommandOutput) => void,
   ): void;
   listPolicyGenerations(
     args: ListPolicyGenerationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListPolicyGenerationsCommandOutput) => void
+    cb: (err: any, data?: ListPolicyGenerationsCommandOutput) => void,
   ): void;
 
   /**
@@ -630,16 +630,16 @@ export interface AccessAnalyzer {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -647,16 +647,16 @@ export interface AccessAnalyzer {
    */
   startPolicyGeneration(
     args: StartPolicyGenerationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartPolicyGenerationCommandOutput>;
   startPolicyGeneration(
     args: StartPolicyGenerationCommandInput,
-    cb: (err: any, data?: StartPolicyGenerationCommandOutput) => void
+    cb: (err: any, data?: StartPolicyGenerationCommandOutput) => void,
   ): void;
   startPolicyGeneration(
     args: StartPolicyGenerationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartPolicyGenerationCommandOutput) => void
+    cb: (err: any, data?: StartPolicyGenerationCommandOutput) => void,
   ): void;
 
   /**
@@ -664,16 +664,16 @@ export interface AccessAnalyzer {
    */
   startResourceScan(
     args: StartResourceScanCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartResourceScanCommandOutput>;
   startResourceScan(
     args: StartResourceScanCommandInput,
-    cb: (err: any, data?: StartResourceScanCommandOutput) => void
+    cb: (err: any, data?: StartResourceScanCommandOutput) => void,
   ): void;
   startResourceScan(
     args: StartResourceScanCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartResourceScanCommandOutput) => void
+    cb: (err: any, data?: StartResourceScanCommandOutput) => void,
   ): void;
 
   /**
@@ -684,7 +684,7 @@ export interface AccessAnalyzer {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -695,7 +695,7 @@ export interface AccessAnalyzer {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -703,16 +703,16 @@ export interface AccessAnalyzer {
    */
   updateArchiveRule(
     args: UpdateArchiveRuleCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateArchiveRuleCommandOutput>;
   updateArchiveRule(
     args: UpdateArchiveRuleCommandInput,
-    cb: (err: any, data?: UpdateArchiveRuleCommandOutput) => void
+    cb: (err: any, data?: UpdateArchiveRuleCommandOutput) => void,
   ): void;
   updateArchiveRule(
     args: UpdateArchiveRuleCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateArchiveRuleCommandOutput) => void
+    cb: (err: any, data?: UpdateArchiveRuleCommandOutput) => void,
   ): void;
 
   /**
@@ -720,13 +720,13 @@ export interface AccessAnalyzer {
    */
   updateFindings(
     args: UpdateFindingsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateFindingsCommandOutput>;
   updateFindings(args: UpdateFindingsCommandInput, cb: (err: any, data?: UpdateFindingsCommandOutput) => void): void;
   updateFindings(
     args: UpdateFindingsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateFindingsCommandOutput) => void
+    cb: (err: any, data?: UpdateFindingsCommandOutput) => void,
   ): void;
 
   /**
@@ -734,13 +734,13 @@ export interface AccessAnalyzer {
    */
   validatePolicy(
     args: ValidatePolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ValidatePolicyCommandOutput>;
   validatePolicy(args: ValidatePolicyCommandInput, cb: (err: any, data?: ValidatePolicyCommandOutput) => void): void;
   validatePolicy(
     args: ValidatePolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ValidatePolicyCommandOutput) => void
+    cb: (err: any, data?: ValidatePolicyCommandOutput) => void,
   ): void;
 }
 

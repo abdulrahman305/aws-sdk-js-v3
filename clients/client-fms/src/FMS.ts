@@ -245,16 +245,16 @@ export interface FMS {
    */
   associateAdminAccount(
     args: AssociateAdminAccountCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AssociateAdminAccountCommandOutput>;
   associateAdminAccount(
     args: AssociateAdminAccountCommandInput,
-    cb: (err: any, data?: AssociateAdminAccountCommandOutput) => void
+    cb: (err: any, data?: AssociateAdminAccountCommandOutput) => void,
   ): void;
   associateAdminAccount(
     args: AssociateAdminAccountCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AssociateAdminAccountCommandOutput) => void
+    cb: (err: any, data?: AssociateAdminAccountCommandOutput) => void,
   ): void;
 
   /**
@@ -262,16 +262,16 @@ export interface FMS {
    */
   associateThirdPartyFirewall(
     args: AssociateThirdPartyFirewallCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AssociateThirdPartyFirewallCommandOutput>;
   associateThirdPartyFirewall(
     args: AssociateThirdPartyFirewallCommandInput,
-    cb: (err: any, data?: AssociateThirdPartyFirewallCommandOutput) => void
+    cb: (err: any, data?: AssociateThirdPartyFirewallCommandOutput) => void,
   ): void;
   associateThirdPartyFirewall(
     args: AssociateThirdPartyFirewallCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AssociateThirdPartyFirewallCommandOutput) => void
+    cb: (err: any, data?: AssociateThirdPartyFirewallCommandOutput) => void,
   ): void;
 
   /**
@@ -279,16 +279,16 @@ export interface FMS {
    */
   batchAssociateResource(
     args: BatchAssociateResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<BatchAssociateResourceCommandOutput>;
   batchAssociateResource(
     args: BatchAssociateResourceCommandInput,
-    cb: (err: any, data?: BatchAssociateResourceCommandOutput) => void
+    cb: (err: any, data?: BatchAssociateResourceCommandOutput) => void,
   ): void;
   batchAssociateResource(
     args: BatchAssociateResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: BatchAssociateResourceCommandOutput) => void
+    cb: (err: any, data?: BatchAssociateResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -296,16 +296,16 @@ export interface FMS {
    */
   batchDisassociateResource(
     args: BatchDisassociateResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<BatchDisassociateResourceCommandOutput>;
   batchDisassociateResource(
     args: BatchDisassociateResourceCommandInput,
-    cb: (err: any, data?: BatchDisassociateResourceCommandOutput) => void
+    cb: (err: any, data?: BatchDisassociateResourceCommandOutput) => void,
   ): void;
   batchDisassociateResource(
     args: BatchDisassociateResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: BatchDisassociateResourceCommandOutput) => void
+    cb: (err: any, data?: BatchDisassociateResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -313,13 +313,13 @@ export interface FMS {
    */
   deleteAppsList(
     args: DeleteAppsListCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteAppsListCommandOutput>;
   deleteAppsList(args: DeleteAppsListCommandInput, cb: (err: any, data?: DeleteAppsListCommandOutput) => void): void;
   deleteAppsList(
     args: DeleteAppsListCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteAppsListCommandOutput) => void
+    cb: (err: any, data?: DeleteAppsListCommandOutput) => void,
   ): void;
 
   /**
@@ -328,16 +328,16 @@ export interface FMS {
   deleteNotificationChannel(): Promise<DeleteNotificationChannelCommandOutput>;
   deleteNotificationChannel(
     args: DeleteNotificationChannelCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteNotificationChannelCommandOutput>;
   deleteNotificationChannel(
     args: DeleteNotificationChannelCommandInput,
-    cb: (err: any, data?: DeleteNotificationChannelCommandOutput) => void
+    cb: (err: any, data?: DeleteNotificationChannelCommandOutput) => void,
   ): void;
   deleteNotificationChannel(
     args: DeleteNotificationChannelCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteNotificationChannelCommandOutput) => void
+    cb: (err: any, data?: DeleteNotificationChannelCommandOutput) => void,
   ): void;
 
   /**
@@ -348,7 +348,7 @@ export interface FMS {
   deletePolicy(
     args: DeletePolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeletePolicyCommandOutput) => void
+    cb: (err: any, data?: DeletePolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -356,16 +356,16 @@ export interface FMS {
    */
   deleteProtocolsList(
     args: DeleteProtocolsListCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteProtocolsListCommandOutput>;
   deleteProtocolsList(
     args: DeleteProtocolsListCommandInput,
-    cb: (err: any, data?: DeleteProtocolsListCommandOutput) => void
+    cb: (err: any, data?: DeleteProtocolsListCommandOutput) => void,
   ): void;
   deleteProtocolsList(
     args: DeleteProtocolsListCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteProtocolsListCommandOutput) => void
+    cb: (err: any, data?: DeleteProtocolsListCommandOutput) => void,
   ): void;
 
   /**
@@ -373,16 +373,16 @@ export interface FMS {
    */
   deleteResourceSet(
     args: DeleteResourceSetCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteResourceSetCommandOutput>;
   deleteResourceSet(
     args: DeleteResourceSetCommandInput,
-    cb: (err: any, data?: DeleteResourceSetCommandOutput) => void
+    cb: (err: any, data?: DeleteResourceSetCommandOutput) => void,
   ): void;
   deleteResourceSet(
     args: DeleteResourceSetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteResourceSetCommandOutput) => void
+    cb: (err: any, data?: DeleteResourceSetCommandOutput) => void,
   ): void;
 
   /**
@@ -391,16 +391,16 @@ export interface FMS {
   disassociateAdminAccount(): Promise<DisassociateAdminAccountCommandOutput>;
   disassociateAdminAccount(
     args: DisassociateAdminAccountCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DisassociateAdminAccountCommandOutput>;
   disassociateAdminAccount(
     args: DisassociateAdminAccountCommandInput,
-    cb: (err: any, data?: DisassociateAdminAccountCommandOutput) => void
+    cb: (err: any, data?: DisassociateAdminAccountCommandOutput) => void,
   ): void;
   disassociateAdminAccount(
     args: DisassociateAdminAccountCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DisassociateAdminAccountCommandOutput) => void
+    cb: (err: any, data?: DisassociateAdminAccountCommandOutput) => void,
   ): void;
 
   /**
@@ -408,16 +408,16 @@ export interface FMS {
    */
   disassociateThirdPartyFirewall(
     args: DisassociateThirdPartyFirewallCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DisassociateThirdPartyFirewallCommandOutput>;
   disassociateThirdPartyFirewall(
     args: DisassociateThirdPartyFirewallCommandInput,
-    cb: (err: any, data?: DisassociateThirdPartyFirewallCommandOutput) => void
+    cb: (err: any, data?: DisassociateThirdPartyFirewallCommandOutput) => void,
   ): void;
   disassociateThirdPartyFirewall(
     args: DisassociateThirdPartyFirewallCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DisassociateThirdPartyFirewallCommandOutput) => void
+    cb: (err: any, data?: DisassociateThirdPartyFirewallCommandOutput) => void,
   ): void;
 
   /**
@@ -426,13 +426,13 @@ export interface FMS {
   getAdminAccount(): Promise<GetAdminAccountCommandOutput>;
   getAdminAccount(
     args: GetAdminAccountCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetAdminAccountCommandOutput>;
   getAdminAccount(args: GetAdminAccountCommandInput, cb: (err: any, data?: GetAdminAccountCommandOutput) => void): void;
   getAdminAccount(
     args: GetAdminAccountCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetAdminAccountCommandOutput) => void
+    cb: (err: any, data?: GetAdminAccountCommandOutput) => void,
   ): void;
 
   /**
@@ -443,7 +443,7 @@ export interface FMS {
   getAdminScope(
     args: GetAdminScopeCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetAdminScopeCommandOutput) => void
+    cb: (err: any, data?: GetAdminScopeCommandOutput) => void,
   ): void;
 
   /**
@@ -454,7 +454,7 @@ export interface FMS {
   getAppsList(
     args: GetAppsListCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetAppsListCommandOutput) => void
+    cb: (err: any, data?: GetAppsListCommandOutput) => void,
   ): void;
 
   /**
@@ -462,16 +462,16 @@ export interface FMS {
    */
   getComplianceDetail(
     args: GetComplianceDetailCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetComplianceDetailCommandOutput>;
   getComplianceDetail(
     args: GetComplianceDetailCommandInput,
-    cb: (err: any, data?: GetComplianceDetailCommandOutput) => void
+    cb: (err: any, data?: GetComplianceDetailCommandOutput) => void,
   ): void;
   getComplianceDetail(
     args: GetComplianceDetailCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetComplianceDetailCommandOutput) => void
+    cb: (err: any, data?: GetComplianceDetailCommandOutput) => void,
   ): void;
 
   /**
@@ -480,16 +480,16 @@ export interface FMS {
   getNotificationChannel(): Promise<GetNotificationChannelCommandOutput>;
   getNotificationChannel(
     args: GetNotificationChannelCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetNotificationChannelCommandOutput>;
   getNotificationChannel(
     args: GetNotificationChannelCommandInput,
-    cb: (err: any, data?: GetNotificationChannelCommandOutput) => void
+    cb: (err: any, data?: GetNotificationChannelCommandOutput) => void,
   ): void;
   getNotificationChannel(
     args: GetNotificationChannelCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetNotificationChannelCommandOutput) => void
+    cb: (err: any, data?: GetNotificationChannelCommandOutput) => void,
   ): void;
 
   /**
@@ -500,7 +500,7 @@ export interface FMS {
   getPolicy(
     args: GetPolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetPolicyCommandOutput) => void
+    cb: (err: any, data?: GetPolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -508,16 +508,16 @@ export interface FMS {
    */
   getProtectionStatus(
     args: GetProtectionStatusCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetProtectionStatusCommandOutput>;
   getProtectionStatus(
     args: GetProtectionStatusCommandInput,
-    cb: (err: any, data?: GetProtectionStatusCommandOutput) => void
+    cb: (err: any, data?: GetProtectionStatusCommandOutput) => void,
   ): void;
   getProtectionStatus(
     args: GetProtectionStatusCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetProtectionStatusCommandOutput) => void
+    cb: (err: any, data?: GetProtectionStatusCommandOutput) => void,
   ): void;
 
   /**
@@ -525,16 +525,16 @@ export interface FMS {
    */
   getProtocolsList(
     args: GetProtocolsListCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetProtocolsListCommandOutput>;
   getProtocolsList(
     args: GetProtocolsListCommandInput,
-    cb: (err: any, data?: GetProtocolsListCommandOutput) => void
+    cb: (err: any, data?: GetProtocolsListCommandOutput) => void,
   ): void;
   getProtocolsList(
     args: GetProtocolsListCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetProtocolsListCommandOutput) => void
+    cb: (err: any, data?: GetProtocolsListCommandOutput) => void,
   ): void;
 
   /**
@@ -542,13 +542,13 @@ export interface FMS {
    */
   getResourceSet(
     args: GetResourceSetCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetResourceSetCommandOutput>;
   getResourceSet(args: GetResourceSetCommandInput, cb: (err: any, data?: GetResourceSetCommandOutput) => void): void;
   getResourceSet(
     args: GetResourceSetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetResourceSetCommandOutput) => void
+    cb: (err: any, data?: GetResourceSetCommandOutput) => void,
   ): void;
 
   /**
@@ -556,16 +556,16 @@ export interface FMS {
    */
   getThirdPartyFirewallAssociationStatus(
     args: GetThirdPartyFirewallAssociationStatusCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetThirdPartyFirewallAssociationStatusCommandOutput>;
   getThirdPartyFirewallAssociationStatus(
     args: GetThirdPartyFirewallAssociationStatusCommandInput,
-    cb: (err: any, data?: GetThirdPartyFirewallAssociationStatusCommandOutput) => void
+    cb: (err: any, data?: GetThirdPartyFirewallAssociationStatusCommandOutput) => void,
   ): void;
   getThirdPartyFirewallAssociationStatus(
     args: GetThirdPartyFirewallAssociationStatusCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetThirdPartyFirewallAssociationStatusCommandOutput) => void
+    cb: (err: any, data?: GetThirdPartyFirewallAssociationStatusCommandOutput) => void,
   ): void;
 
   /**
@@ -573,16 +573,16 @@ export interface FMS {
    */
   getViolationDetails(
     args: GetViolationDetailsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetViolationDetailsCommandOutput>;
   getViolationDetails(
     args: GetViolationDetailsCommandInput,
-    cb: (err: any, data?: GetViolationDetailsCommandOutput) => void
+    cb: (err: any, data?: GetViolationDetailsCommandOutput) => void,
   ): void;
   getViolationDetails(
     args: GetViolationDetailsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetViolationDetailsCommandOutput) => void
+    cb: (err: any, data?: GetViolationDetailsCommandOutput) => void,
   ): void;
 
   /**
@@ -591,16 +591,16 @@ export interface FMS {
   listAdminAccountsForOrganization(): Promise<ListAdminAccountsForOrganizationCommandOutput>;
   listAdminAccountsForOrganization(
     args: ListAdminAccountsForOrganizationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListAdminAccountsForOrganizationCommandOutput>;
   listAdminAccountsForOrganization(
     args: ListAdminAccountsForOrganizationCommandInput,
-    cb: (err: any, data?: ListAdminAccountsForOrganizationCommandOutput) => void
+    cb: (err: any, data?: ListAdminAccountsForOrganizationCommandOutput) => void,
   ): void;
   listAdminAccountsForOrganization(
     args: ListAdminAccountsForOrganizationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListAdminAccountsForOrganizationCommandOutput) => void
+    cb: (err: any, data?: ListAdminAccountsForOrganizationCommandOutput) => void,
   ): void;
 
   /**
@@ -609,16 +609,16 @@ export interface FMS {
   listAdminsManagingAccount(): Promise<ListAdminsManagingAccountCommandOutput>;
   listAdminsManagingAccount(
     args: ListAdminsManagingAccountCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListAdminsManagingAccountCommandOutput>;
   listAdminsManagingAccount(
     args: ListAdminsManagingAccountCommandInput,
-    cb: (err: any, data?: ListAdminsManagingAccountCommandOutput) => void
+    cb: (err: any, data?: ListAdminsManagingAccountCommandOutput) => void,
   ): void;
   listAdminsManagingAccount(
     args: ListAdminsManagingAccountCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListAdminsManagingAccountCommandOutput) => void
+    cb: (err: any, data?: ListAdminsManagingAccountCommandOutput) => void,
   ): void;
 
   /**
@@ -629,7 +629,7 @@ export interface FMS {
   listAppsLists(
     args: ListAppsListsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListAppsListsCommandOutput) => void
+    cb: (err: any, data?: ListAppsListsCommandOutput) => void,
   ): void;
 
   /**
@@ -637,16 +637,16 @@ export interface FMS {
    */
   listComplianceStatus(
     args: ListComplianceStatusCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListComplianceStatusCommandOutput>;
   listComplianceStatus(
     args: ListComplianceStatusCommandInput,
-    cb: (err: any, data?: ListComplianceStatusCommandOutput) => void
+    cb: (err: any, data?: ListComplianceStatusCommandOutput) => void,
   ): void;
   listComplianceStatus(
     args: ListComplianceStatusCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListComplianceStatusCommandOutput) => void
+    cb: (err: any, data?: ListComplianceStatusCommandOutput) => void,
   ): void;
 
   /**
@@ -654,16 +654,16 @@ export interface FMS {
    */
   listDiscoveredResources(
     args: ListDiscoveredResourcesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListDiscoveredResourcesCommandOutput>;
   listDiscoveredResources(
     args: ListDiscoveredResourcesCommandInput,
-    cb: (err: any, data?: ListDiscoveredResourcesCommandOutput) => void
+    cb: (err: any, data?: ListDiscoveredResourcesCommandOutput) => void,
   ): void;
   listDiscoveredResources(
     args: ListDiscoveredResourcesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListDiscoveredResourcesCommandOutput) => void
+    cb: (err: any, data?: ListDiscoveredResourcesCommandOutput) => void,
   ): void;
 
   /**
@@ -672,16 +672,16 @@ export interface FMS {
   listMemberAccounts(): Promise<ListMemberAccountsCommandOutput>;
   listMemberAccounts(
     args: ListMemberAccountsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListMemberAccountsCommandOutput>;
   listMemberAccounts(
     args: ListMemberAccountsCommandInput,
-    cb: (err: any, data?: ListMemberAccountsCommandOutput) => void
+    cb: (err: any, data?: ListMemberAccountsCommandOutput) => void,
   ): void;
   listMemberAccounts(
     args: ListMemberAccountsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListMemberAccountsCommandOutput) => void
+    cb: (err: any, data?: ListMemberAccountsCommandOutput) => void,
   ): void;
 
   /**
@@ -693,7 +693,7 @@ export interface FMS {
   listPolicies(
     args: ListPoliciesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListPoliciesCommandOutput) => void
+    cb: (err: any, data?: ListPoliciesCommandOutput) => void,
   ): void;
 
   /**
@@ -701,16 +701,16 @@ export interface FMS {
    */
   listProtocolsLists(
     args: ListProtocolsListsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListProtocolsListsCommandOutput>;
   listProtocolsLists(
     args: ListProtocolsListsCommandInput,
-    cb: (err: any, data?: ListProtocolsListsCommandOutput) => void
+    cb: (err: any, data?: ListProtocolsListsCommandOutput) => void,
   ): void;
   listProtocolsLists(
     args: ListProtocolsListsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListProtocolsListsCommandOutput) => void
+    cb: (err: any, data?: ListProtocolsListsCommandOutput) => void,
   ): void;
 
   /**
@@ -718,16 +718,16 @@ export interface FMS {
    */
   listResourceSetResources(
     args: ListResourceSetResourcesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListResourceSetResourcesCommandOutput>;
   listResourceSetResources(
     args: ListResourceSetResourcesCommandInput,
-    cb: (err: any, data?: ListResourceSetResourcesCommandOutput) => void
+    cb: (err: any, data?: ListResourceSetResourcesCommandOutput) => void,
   ): void;
   listResourceSetResources(
     args: ListResourceSetResourcesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListResourceSetResourcesCommandOutput) => void
+    cb: (err: any, data?: ListResourceSetResourcesCommandOutput) => void,
   ): void;
 
   /**
@@ -736,16 +736,16 @@ export interface FMS {
   listResourceSets(): Promise<ListResourceSetsCommandOutput>;
   listResourceSets(
     args: ListResourceSetsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListResourceSetsCommandOutput>;
   listResourceSets(
     args: ListResourceSetsCommandInput,
-    cb: (err: any, data?: ListResourceSetsCommandOutput) => void
+    cb: (err: any, data?: ListResourceSetsCommandOutput) => void,
   ): void;
   listResourceSets(
     args: ListResourceSetsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListResourceSetsCommandOutput) => void
+    cb: (err: any, data?: ListResourceSetsCommandOutput) => void,
   ): void;
 
   /**
@@ -753,16 +753,16 @@ export interface FMS {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -770,16 +770,16 @@ export interface FMS {
    */
   listThirdPartyFirewallFirewallPolicies(
     args: ListThirdPartyFirewallFirewallPoliciesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListThirdPartyFirewallFirewallPoliciesCommandOutput>;
   listThirdPartyFirewallFirewallPolicies(
     args: ListThirdPartyFirewallFirewallPoliciesCommandInput,
-    cb: (err: any, data?: ListThirdPartyFirewallFirewallPoliciesCommandOutput) => void
+    cb: (err: any, data?: ListThirdPartyFirewallFirewallPoliciesCommandOutput) => void,
   ): void;
   listThirdPartyFirewallFirewallPolicies(
     args: ListThirdPartyFirewallFirewallPoliciesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListThirdPartyFirewallFirewallPoliciesCommandOutput) => void
+    cb: (err: any, data?: ListThirdPartyFirewallFirewallPoliciesCommandOutput) => void,
   ): void;
 
   /**
@@ -787,13 +787,13 @@ export interface FMS {
    */
   putAdminAccount(
     args: PutAdminAccountCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutAdminAccountCommandOutput>;
   putAdminAccount(args: PutAdminAccountCommandInput, cb: (err: any, data?: PutAdminAccountCommandOutput) => void): void;
   putAdminAccount(
     args: PutAdminAccountCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutAdminAccountCommandOutput) => void
+    cb: (err: any, data?: PutAdminAccountCommandOutput) => void,
   ): void;
 
   /**
@@ -804,7 +804,7 @@ export interface FMS {
   putAppsList(
     args: PutAppsListCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutAppsListCommandOutput) => void
+    cb: (err: any, data?: PutAppsListCommandOutput) => void,
   ): void;
 
   /**
@@ -812,16 +812,16 @@ export interface FMS {
    */
   putNotificationChannel(
     args: PutNotificationChannelCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutNotificationChannelCommandOutput>;
   putNotificationChannel(
     args: PutNotificationChannelCommandInput,
-    cb: (err: any, data?: PutNotificationChannelCommandOutput) => void
+    cb: (err: any, data?: PutNotificationChannelCommandOutput) => void,
   ): void;
   putNotificationChannel(
     args: PutNotificationChannelCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutNotificationChannelCommandOutput) => void
+    cb: (err: any, data?: PutNotificationChannelCommandOutput) => void,
   ): void;
 
   /**
@@ -832,7 +832,7 @@ export interface FMS {
   putPolicy(
     args: PutPolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutPolicyCommandOutput) => void
+    cb: (err: any, data?: PutPolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -840,16 +840,16 @@ export interface FMS {
    */
   putProtocolsList(
     args: PutProtocolsListCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutProtocolsListCommandOutput>;
   putProtocolsList(
     args: PutProtocolsListCommandInput,
-    cb: (err: any, data?: PutProtocolsListCommandOutput) => void
+    cb: (err: any, data?: PutProtocolsListCommandOutput) => void,
   ): void;
   putProtocolsList(
     args: PutProtocolsListCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutProtocolsListCommandOutput) => void
+    cb: (err: any, data?: PutProtocolsListCommandOutput) => void,
   ): void;
 
   /**
@@ -857,13 +857,13 @@ export interface FMS {
    */
   putResourceSet(
     args: PutResourceSetCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutResourceSetCommandOutput>;
   putResourceSet(args: PutResourceSetCommandInput, cb: (err: any, data?: PutResourceSetCommandOutput) => void): void;
   putResourceSet(
     args: PutResourceSetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutResourceSetCommandOutput) => void
+    cb: (err: any, data?: PutResourceSetCommandOutput) => void,
   ): void;
 
   /**
@@ -874,7 +874,7 @@ export interface FMS {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -885,7 +885,7 @@ export interface FMS {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 }
 

@@ -738,7 +738,7 @@ export const InvokeEndpointAsyncInputFilterSensitiveLog = (obj: InvokeEndpointAs
  * @internal
  */
 export const InvokeEndpointWithResponseStreamInputFilterSensitiveLog = (
-  obj: InvokeEndpointWithResponseStreamInput
+  obj: InvokeEndpointWithResponseStreamInput,
 ): any => ({
   ...obj,
   ...(obj.Body && { Body: SENSITIVE_STRING }),
@@ -767,7 +767,7 @@ export const ResponseStreamFilterSensitiveLog = (obj: ResponseStream): any => {
  * @internal
  */
 export const InvokeEndpointWithResponseStreamOutputFilterSensitiveLog = (
-  obj: InvokeEndpointWithResponseStreamOutput
+  obj: InvokeEndpointWithResponseStreamOutput,
 ): any => ({
   ...obj,
   ...(obj.Body && { Body: "STREAMING_CONTENT" }),

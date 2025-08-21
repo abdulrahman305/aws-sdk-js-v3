@@ -70,7 +70,7 @@ export interface Braket {
   cancelJob(
     args: CancelJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CancelJobCommandOutput) => void
+    cb: (err: any, data?: CancelJobCommandOutput) => void,
   ): void;
 
   /**
@@ -78,16 +78,16 @@ export interface Braket {
    */
   cancelQuantumTask(
     args: CancelQuantumTaskCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CancelQuantumTaskCommandOutput>;
   cancelQuantumTask(
     args: CancelQuantumTaskCommandInput,
-    cb: (err: any, data?: CancelQuantumTaskCommandOutput) => void
+    cb: (err: any, data?: CancelQuantumTaskCommandOutput) => void,
   ): void;
   cancelQuantumTask(
     args: CancelQuantumTaskCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CancelQuantumTaskCommandOutput) => void
+    cb: (err: any, data?: CancelQuantumTaskCommandOutput) => void,
   ): void;
 
   /**
@@ -98,7 +98,7 @@ export interface Braket {
   createJob(
     args: CreateJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateJobCommandOutput) => void
+    cb: (err: any, data?: CreateJobCommandOutput) => void,
   ): void;
 
   /**
@@ -106,16 +106,16 @@ export interface Braket {
    */
   createQuantumTask(
     args: CreateQuantumTaskCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateQuantumTaskCommandOutput>;
   createQuantumTask(
     args: CreateQuantumTaskCommandInput,
-    cb: (err: any, data?: CreateQuantumTaskCommandOutput) => void
+    cb: (err: any, data?: CreateQuantumTaskCommandOutput) => void,
   ): void;
   createQuantumTask(
     args: CreateQuantumTaskCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateQuantumTaskCommandOutput) => void
+    cb: (err: any, data?: CreateQuantumTaskCommandOutput) => void,
   ): void;
 
   /**
@@ -126,7 +126,7 @@ export interface Braket {
   getDevice(
     args: GetDeviceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetDeviceCommandOutput) => void
+    cb: (err: any, data?: GetDeviceCommandOutput) => void,
   ): void;
 
   /**
@@ -137,7 +137,7 @@ export interface Braket {
   getJob(
     args: GetJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetJobCommandOutput) => void
+    cb: (err: any, data?: GetJobCommandOutput) => void,
   ): void;
 
   /**
@@ -145,13 +145,13 @@ export interface Braket {
    */
   getQuantumTask(
     args: GetQuantumTaskCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetQuantumTaskCommandOutput>;
   getQuantumTask(args: GetQuantumTaskCommandInput, cb: (err: any, data?: GetQuantumTaskCommandOutput) => void): void;
   getQuantumTask(
     args: GetQuantumTaskCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetQuantumTaskCommandOutput) => void
+    cb: (err: any, data?: GetQuantumTaskCommandOutput) => void,
   ): void;
 
   /**
@@ -159,16 +159,16 @@ export interface Braket {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -179,7 +179,7 @@ export interface Braket {
   searchDevices(
     args: SearchDevicesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SearchDevicesCommandOutput) => void
+    cb: (err: any, data?: SearchDevicesCommandOutput) => void,
   ): void;
 
   /**
@@ -190,7 +190,7 @@ export interface Braket {
   searchJobs(
     args: SearchJobsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SearchJobsCommandOutput) => void
+    cb: (err: any, data?: SearchJobsCommandOutput) => void,
   ): void;
 
   /**
@@ -198,16 +198,16 @@ export interface Braket {
    */
   searchQuantumTasks(
     args: SearchQuantumTasksCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<SearchQuantumTasksCommandOutput>;
   searchQuantumTasks(
     args: SearchQuantumTasksCommandInput,
-    cb: (err: any, data?: SearchQuantumTasksCommandOutput) => void
+    cb: (err: any, data?: SearchQuantumTasksCommandOutput) => void,
   ): void;
   searchQuantumTasks(
     args: SearchQuantumTasksCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SearchQuantumTasksCommandOutput) => void
+    cb: (err: any, data?: SearchQuantumTasksCommandOutput) => void,
   ): void;
 
   /**
@@ -218,7 +218,7 @@ export interface Braket {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -229,7 +229,7 @@ export interface Braket {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 }
 

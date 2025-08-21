@@ -143,16 +143,16 @@ export interface CognitoIdentity {
    */
   createIdentityPool(
     args: CreateIdentityPoolCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateIdentityPoolCommandOutput>;
   createIdentityPool(
     args: CreateIdentityPoolCommandInput,
-    cb: (err: any, data?: CreateIdentityPoolCommandOutput) => void
+    cb: (err: any, data?: CreateIdentityPoolCommandOutput) => void,
   ): void;
   createIdentityPool(
     args: CreateIdentityPoolCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateIdentityPoolCommandOutput) => void
+    cb: (err: any, data?: CreateIdentityPoolCommandOutput) => void,
   ): void;
 
   /**
@@ -160,16 +160,16 @@ export interface CognitoIdentity {
    */
   deleteIdentities(
     args: DeleteIdentitiesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteIdentitiesCommandOutput>;
   deleteIdentities(
     args: DeleteIdentitiesCommandInput,
-    cb: (err: any, data?: DeleteIdentitiesCommandOutput) => void
+    cb: (err: any, data?: DeleteIdentitiesCommandOutput) => void,
   ): void;
   deleteIdentities(
     args: DeleteIdentitiesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteIdentitiesCommandOutput) => void
+    cb: (err: any, data?: DeleteIdentitiesCommandOutput) => void,
   ): void;
 
   /**
@@ -177,16 +177,16 @@ export interface CognitoIdentity {
    */
   deleteIdentityPool(
     args: DeleteIdentityPoolCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteIdentityPoolCommandOutput>;
   deleteIdentityPool(
     args: DeleteIdentityPoolCommandInput,
-    cb: (err: any, data?: DeleteIdentityPoolCommandOutput) => void
+    cb: (err: any, data?: DeleteIdentityPoolCommandOutput) => void,
   ): void;
   deleteIdentityPool(
     args: DeleteIdentityPoolCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteIdentityPoolCommandOutput) => void
+    cb: (err: any, data?: DeleteIdentityPoolCommandOutput) => void,
   ): void;
 
   /**
@@ -194,16 +194,16 @@ export interface CognitoIdentity {
    */
   describeIdentity(
     args: DescribeIdentityCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeIdentityCommandOutput>;
   describeIdentity(
     args: DescribeIdentityCommandInput,
-    cb: (err: any, data?: DescribeIdentityCommandOutput) => void
+    cb: (err: any, data?: DescribeIdentityCommandOutput) => void,
   ): void;
   describeIdentity(
     args: DescribeIdentityCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeIdentityCommandOutput) => void
+    cb: (err: any, data?: DescribeIdentityCommandOutput) => void,
   ): void;
 
   /**
@@ -211,16 +211,16 @@ export interface CognitoIdentity {
    */
   describeIdentityPool(
     args: DescribeIdentityPoolCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeIdentityPoolCommandOutput>;
   describeIdentityPool(
     args: DescribeIdentityPoolCommandInput,
-    cb: (err: any, data?: DescribeIdentityPoolCommandOutput) => void
+    cb: (err: any, data?: DescribeIdentityPoolCommandOutput) => void,
   ): void;
   describeIdentityPool(
     args: DescribeIdentityPoolCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeIdentityPoolCommandOutput) => void
+    cb: (err: any, data?: DescribeIdentityPoolCommandOutput) => void,
   ): void;
 
   /**
@@ -228,16 +228,16 @@ export interface CognitoIdentity {
    */
   getCredentialsForIdentity(
     args: GetCredentialsForIdentityCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetCredentialsForIdentityCommandOutput>;
   getCredentialsForIdentity(
     args: GetCredentialsForIdentityCommandInput,
-    cb: (err: any, data?: GetCredentialsForIdentityCommandOutput) => void
+    cb: (err: any, data?: GetCredentialsForIdentityCommandOutput) => void,
   ): void;
   getCredentialsForIdentity(
     args: GetCredentialsForIdentityCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetCredentialsForIdentityCommandOutput) => void
+    cb: (err: any, data?: GetCredentialsForIdentityCommandOutput) => void,
   ): void;
 
   /**
@@ -248,7 +248,7 @@ export interface CognitoIdentity {
   getId(
     args: GetIdCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetIdCommandOutput) => void
+    cb: (err: any, data?: GetIdCommandOutput) => void,
   ): void;
 
   /**
@@ -256,16 +256,16 @@ export interface CognitoIdentity {
    */
   getIdentityPoolRoles(
     args: GetIdentityPoolRolesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetIdentityPoolRolesCommandOutput>;
   getIdentityPoolRoles(
     args: GetIdentityPoolRolesCommandInput,
-    cb: (err: any, data?: GetIdentityPoolRolesCommandOutput) => void
+    cb: (err: any, data?: GetIdentityPoolRolesCommandOutput) => void,
   ): void;
   getIdentityPoolRoles(
     args: GetIdentityPoolRolesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetIdentityPoolRolesCommandOutput) => void
+    cb: (err: any, data?: GetIdentityPoolRolesCommandOutput) => void,
   ): void;
 
   /**
@@ -273,13 +273,13 @@ export interface CognitoIdentity {
    */
   getOpenIdToken(
     args: GetOpenIdTokenCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetOpenIdTokenCommandOutput>;
   getOpenIdToken(args: GetOpenIdTokenCommandInput, cb: (err: any, data?: GetOpenIdTokenCommandOutput) => void): void;
   getOpenIdToken(
     args: GetOpenIdTokenCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetOpenIdTokenCommandOutput) => void
+    cb: (err: any, data?: GetOpenIdTokenCommandOutput) => void,
   ): void;
 
   /**
@@ -287,16 +287,16 @@ export interface CognitoIdentity {
    */
   getOpenIdTokenForDeveloperIdentity(
     args: GetOpenIdTokenForDeveloperIdentityCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetOpenIdTokenForDeveloperIdentityCommandOutput>;
   getOpenIdTokenForDeveloperIdentity(
     args: GetOpenIdTokenForDeveloperIdentityCommandInput,
-    cb: (err: any, data?: GetOpenIdTokenForDeveloperIdentityCommandOutput) => void
+    cb: (err: any, data?: GetOpenIdTokenForDeveloperIdentityCommandOutput) => void,
   ): void;
   getOpenIdTokenForDeveloperIdentity(
     args: GetOpenIdTokenForDeveloperIdentityCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetOpenIdTokenForDeveloperIdentityCommandOutput) => void
+    cb: (err: any, data?: GetOpenIdTokenForDeveloperIdentityCommandOutput) => void,
   ): void;
 
   /**
@@ -304,16 +304,16 @@ export interface CognitoIdentity {
    */
   getPrincipalTagAttributeMap(
     args: GetPrincipalTagAttributeMapCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetPrincipalTagAttributeMapCommandOutput>;
   getPrincipalTagAttributeMap(
     args: GetPrincipalTagAttributeMapCommandInput,
-    cb: (err: any, data?: GetPrincipalTagAttributeMapCommandOutput) => void
+    cb: (err: any, data?: GetPrincipalTagAttributeMapCommandOutput) => void,
   ): void;
   getPrincipalTagAttributeMap(
     args: GetPrincipalTagAttributeMapCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetPrincipalTagAttributeMapCommandOutput) => void
+    cb: (err: any, data?: GetPrincipalTagAttributeMapCommandOutput) => void,
   ): void;
 
   /**
@@ -321,13 +321,13 @@ export interface CognitoIdentity {
    */
   listIdentities(
     args: ListIdentitiesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListIdentitiesCommandOutput>;
   listIdentities(args: ListIdentitiesCommandInput, cb: (err: any, data?: ListIdentitiesCommandOutput) => void): void;
   listIdentities(
     args: ListIdentitiesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListIdentitiesCommandOutput) => void
+    cb: (err: any, data?: ListIdentitiesCommandOutput) => void,
   ): void;
 
   /**
@@ -335,16 +335,16 @@ export interface CognitoIdentity {
    */
   listIdentityPools(
     args: ListIdentityPoolsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListIdentityPoolsCommandOutput>;
   listIdentityPools(
     args: ListIdentityPoolsCommandInput,
-    cb: (err: any, data?: ListIdentityPoolsCommandOutput) => void
+    cb: (err: any, data?: ListIdentityPoolsCommandOutput) => void,
   ): void;
   listIdentityPools(
     args: ListIdentityPoolsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListIdentityPoolsCommandOutput) => void
+    cb: (err: any, data?: ListIdentityPoolsCommandOutput) => void,
   ): void;
 
   /**
@@ -352,16 +352,16 @@ export interface CognitoIdentity {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -369,16 +369,16 @@ export interface CognitoIdentity {
    */
   lookupDeveloperIdentity(
     args: LookupDeveloperIdentityCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<LookupDeveloperIdentityCommandOutput>;
   lookupDeveloperIdentity(
     args: LookupDeveloperIdentityCommandInput,
-    cb: (err: any, data?: LookupDeveloperIdentityCommandOutput) => void
+    cb: (err: any, data?: LookupDeveloperIdentityCommandOutput) => void,
   ): void;
   lookupDeveloperIdentity(
     args: LookupDeveloperIdentityCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: LookupDeveloperIdentityCommandOutput) => void
+    cb: (err: any, data?: LookupDeveloperIdentityCommandOutput) => void,
   ): void;
 
   /**
@@ -386,16 +386,16 @@ export interface CognitoIdentity {
    */
   mergeDeveloperIdentities(
     args: MergeDeveloperIdentitiesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<MergeDeveloperIdentitiesCommandOutput>;
   mergeDeveloperIdentities(
     args: MergeDeveloperIdentitiesCommandInput,
-    cb: (err: any, data?: MergeDeveloperIdentitiesCommandOutput) => void
+    cb: (err: any, data?: MergeDeveloperIdentitiesCommandOutput) => void,
   ): void;
   mergeDeveloperIdentities(
     args: MergeDeveloperIdentitiesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: MergeDeveloperIdentitiesCommandOutput) => void
+    cb: (err: any, data?: MergeDeveloperIdentitiesCommandOutput) => void,
   ): void;
 
   /**
@@ -403,16 +403,16 @@ export interface CognitoIdentity {
    */
   setIdentityPoolRoles(
     args: SetIdentityPoolRolesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<SetIdentityPoolRolesCommandOutput>;
   setIdentityPoolRoles(
     args: SetIdentityPoolRolesCommandInput,
-    cb: (err: any, data?: SetIdentityPoolRolesCommandOutput) => void
+    cb: (err: any, data?: SetIdentityPoolRolesCommandOutput) => void,
   ): void;
   setIdentityPoolRoles(
     args: SetIdentityPoolRolesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SetIdentityPoolRolesCommandOutput) => void
+    cb: (err: any, data?: SetIdentityPoolRolesCommandOutput) => void,
   ): void;
 
   /**
@@ -420,16 +420,16 @@ export interface CognitoIdentity {
    */
   setPrincipalTagAttributeMap(
     args: SetPrincipalTagAttributeMapCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<SetPrincipalTagAttributeMapCommandOutput>;
   setPrincipalTagAttributeMap(
     args: SetPrincipalTagAttributeMapCommandInput,
-    cb: (err: any, data?: SetPrincipalTagAttributeMapCommandOutput) => void
+    cb: (err: any, data?: SetPrincipalTagAttributeMapCommandOutput) => void,
   ): void;
   setPrincipalTagAttributeMap(
     args: SetPrincipalTagAttributeMapCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SetPrincipalTagAttributeMapCommandOutput) => void
+    cb: (err: any, data?: SetPrincipalTagAttributeMapCommandOutput) => void,
   ): void;
 
   /**
@@ -440,7 +440,7 @@ export interface CognitoIdentity {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -448,16 +448,16 @@ export interface CognitoIdentity {
    */
   unlinkDeveloperIdentity(
     args: UnlinkDeveloperIdentityCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UnlinkDeveloperIdentityCommandOutput>;
   unlinkDeveloperIdentity(
     args: UnlinkDeveloperIdentityCommandInput,
-    cb: (err: any, data?: UnlinkDeveloperIdentityCommandOutput) => void
+    cb: (err: any, data?: UnlinkDeveloperIdentityCommandOutput) => void,
   ): void;
   unlinkDeveloperIdentity(
     args: UnlinkDeveloperIdentityCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UnlinkDeveloperIdentityCommandOutput) => void
+    cb: (err: any, data?: UnlinkDeveloperIdentityCommandOutput) => void,
   ): void;
 
   /**
@@ -465,13 +465,13 @@ export interface CognitoIdentity {
    */
   unlinkIdentity(
     args: UnlinkIdentityCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UnlinkIdentityCommandOutput>;
   unlinkIdentity(args: UnlinkIdentityCommandInput, cb: (err: any, data?: UnlinkIdentityCommandOutput) => void): void;
   unlinkIdentity(
     args: UnlinkIdentityCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UnlinkIdentityCommandOutput) => void
+    cb: (err: any, data?: UnlinkIdentityCommandOutput) => void,
   ): void;
 
   /**
@@ -482,7 +482,7 @@ export interface CognitoIdentity {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -490,16 +490,16 @@ export interface CognitoIdentity {
    */
   updateIdentityPool(
     args: UpdateIdentityPoolCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateIdentityPoolCommandOutput>;
   updateIdentityPool(
     args: UpdateIdentityPoolCommandInput,
-    cb: (err: any, data?: UpdateIdentityPoolCommandOutput) => void
+    cb: (err: any, data?: UpdateIdentityPoolCommandOutput) => void,
   ): void;
   updateIdentityPool(
     args: UpdateIdentityPoolCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateIdentityPoolCommandOutput) => void
+    cb: (err: any, data?: UpdateIdentityPoolCommandOutput) => void,
   ): void;
 }
 

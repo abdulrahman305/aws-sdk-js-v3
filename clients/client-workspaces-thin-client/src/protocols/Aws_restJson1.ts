@@ -73,7 +73,7 @@ import { WorkSpacesThinClientServiceException as __BaseException } from "../mode
  */
 export const se_CreateEnvironmentCommand = async (
   input: CreateEnvironmentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -93,7 +93,7 @@ export const se_CreateEnvironmentCommand = async (
       softwareSetUpdateMode: [],
       softwareSetUpdateSchedule: [],
       tags: (_) => _json(_),
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -112,7 +112,7 @@ export const se_CreateEnvironmentCommand = async (
  */
 export const se_DeleteDeviceCommand = async (
   input: DeleteDeviceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -139,7 +139,7 @@ export const se_DeleteDeviceCommand = async (
  */
 export const se_DeleteEnvironmentCommand = async (
   input: DeleteEnvironmentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -166,7 +166,7 @@ export const se_DeleteEnvironmentCommand = async (
  */
 export const se_DeregisterDeviceCommand = async (
   input: DeregisterDeviceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -179,7 +179,7 @@ export const se_DeregisterDeviceCommand = async (
     take(input, {
       clientToken: [true, (_) => _ ?? generateIdempotencyToken()],
       targetDeviceStatus: [],
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -198,7 +198,7 @@ export const se_DeregisterDeviceCommand = async (
  */
 export const se_GetDeviceCommand = async (
   input: GetDeviceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -222,7 +222,7 @@ export const se_GetDeviceCommand = async (
  */
 export const se_GetEnvironmentCommand = async (
   input: GetEnvironmentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -246,7 +246,7 @@ export const se_GetEnvironmentCommand = async (
  */
 export const se_GetSoftwareSetCommand = async (
   input: GetSoftwareSetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -270,7 +270,7 @@ export const se_GetSoftwareSetCommand = async (
  */
 export const se_ListDevicesCommand = async (
   input: ListDevicesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -297,7 +297,7 @@ export const se_ListDevicesCommand = async (
  */
 export const se_ListEnvironmentsCommand = async (
   input: ListEnvironmentsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -324,7 +324,7 @@ export const se_ListEnvironmentsCommand = async (
  */
 export const se_ListSoftwareSetsCommand = async (
   input: ListSoftwareSetsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -351,7 +351,7 @@ export const se_ListSoftwareSetsCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -375,7 +375,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -387,7 +387,7 @@ export const se_TagResourceCommand = async (
   body = JSON.stringify(
     take(input, {
       tags: (_) => _json(_),
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -406,7 +406,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -436,7 +436,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateDeviceCommand = async (
   input: UpdateDeviceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -450,7 +450,7 @@ export const se_UpdateDeviceCommand = async (
       desiredSoftwareSetId: [],
       name: [],
       softwareSetUpdateSchedule: [],
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -469,7 +469,7 @@ export const se_UpdateDeviceCommand = async (
  */
 export const se_UpdateEnvironmentCommand = async (
   input: UpdateEnvironmentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -487,7 +487,7 @@ export const se_UpdateEnvironmentCommand = async (
       name: [],
       softwareSetUpdateMode: [],
       softwareSetUpdateSchedule: [],
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -506,7 +506,7 @@ export const se_UpdateEnvironmentCommand = async (
  */
 export const se_UpdateSoftwareSetCommand = async (
   input: UpdateSoftwareSetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -518,7 +518,7 @@ export const se_UpdateSoftwareSetCommand = async (
   body = JSON.stringify(
     take(input, {
       validationStatus: [],
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -537,7 +537,7 @@ export const se_UpdateSoftwareSetCommand = async (
  */
 export const de_CreateEnvironmentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateEnvironmentCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -558,7 +558,7 @@ export const de_CreateEnvironmentCommand = async (
  */
 export const de_DeleteDeviceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteDeviceCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -575,7 +575,7 @@ export const de_DeleteDeviceCommand = async (
  */
 export const de_DeleteEnvironmentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteEnvironmentCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -592,7 +592,7 @@ export const de_DeleteEnvironmentCommand = async (
  */
 export const de_DeregisterDeviceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeregisterDeviceCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -609,7 +609,7 @@ export const de_DeregisterDeviceCommand = async (
  */
 export const de_GetDeviceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetDeviceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -630,7 +630,7 @@ export const de_GetDeviceCommand = async (
  */
 export const de_GetEnvironmentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetEnvironmentCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -651,7 +651,7 @@ export const de_GetEnvironmentCommand = async (
  */
 export const de_GetSoftwareSetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetSoftwareSetCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -672,7 +672,7 @@ export const de_GetSoftwareSetCommand = async (
  */
 export const de_ListDevicesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListDevicesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -694,7 +694,7 @@ export const de_ListDevicesCommand = async (
  */
 export const de_ListEnvironmentsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListEnvironmentsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -716,7 +716,7 @@ export const de_ListEnvironmentsCommand = async (
  */
 export const de_ListSoftwareSetsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListSoftwareSetsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -738,7 +738,7 @@ export const de_ListSoftwareSetsCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -759,7 +759,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -776,7 +776,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -793,7 +793,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateDeviceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateDeviceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -814,7 +814,7 @@ export const de_UpdateDeviceCommand = async (
  */
 export const de_UpdateEnvironmentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateEnvironmentCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -835,7 +835,7 @@ export const de_UpdateEnvironmentCommand = async (
  */
 export const de_UpdateSoftwareSetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateSoftwareSetCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -894,7 +894,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -933,7 +933,7 @@ const de_ConflictExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_InternalServerExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerException> => {
   const contents: any = map({
     [_rAS]: [() => void 0 !== parsedOutput.headers[_ra], () => __strictParseInt32(parsedOutput.headers[_ra])],
@@ -955,7 +955,7 @@ const de_InternalServerExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -977,7 +977,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_ServiceQuotaExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceQuotaExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;

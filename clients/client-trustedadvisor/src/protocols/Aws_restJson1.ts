@@ -87,7 +87,7 @@ import { TrustedAdvisorServiceException as __BaseException } from "../models/Tru
  */
 export const se_BatchUpdateRecommendationResourceExclusionCommand = async (
   input: BatchUpdateRecommendationResourceExclusionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -98,7 +98,7 @@ export const se_BatchUpdateRecommendationResourceExclusionCommand = async (
   body = JSON.stringify(
     take(input, {
       recommendationResourceExclusions: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -109,7 +109,7 @@ export const se_BatchUpdateRecommendationResourceExclusionCommand = async (
  */
 export const se_GetOrganizationRecommendationCommand = async (
   input: GetOrganizationRecommendationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -118,7 +118,7 @@ export const se_GetOrganizationRecommendationCommand = async (
     "organizationRecommendationIdentifier",
     () => input.organizationRecommendationIdentifier!,
     "{organizationRecommendationIdentifier}",
-    false
+    false,
   );
   let body: any;
   b.m("GET").h(headers).b(body);
@@ -130,7 +130,7 @@ export const se_GetOrganizationRecommendationCommand = async (
  */
 export const se_GetRecommendationCommand = async (
   input: GetRecommendationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -146,7 +146,7 @@ export const se_GetRecommendationCommand = async (
  */
 export const se_ListChecksCommand = async (
   input: ListChecksCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -169,7 +169,7 @@ export const se_ListChecksCommand = async (
  */
 export const se_ListOrganizationRecommendationAccountsCommand = async (
   input: ListOrganizationRecommendationAccountsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -178,7 +178,7 @@ export const se_ListOrganizationRecommendationAccountsCommand = async (
     "organizationRecommendationIdentifier",
     () => input.organizationRecommendationIdentifier!,
     "{organizationRecommendationIdentifier}",
-    false
+    false,
   );
   const query: any = map({
     [_nT]: [, input[_nT]!],
@@ -195,7 +195,7 @@ export const se_ListOrganizationRecommendationAccountsCommand = async (
  */
 export const se_ListOrganizationRecommendationResourcesCommand = async (
   input: ListOrganizationRecommendationResourcesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -204,7 +204,7 @@ export const se_ListOrganizationRecommendationResourcesCommand = async (
     "organizationRecommendationIdentifier",
     () => input.organizationRecommendationIdentifier!,
     "{organizationRecommendationIdentifier}",
-    false
+    false,
   );
   const query: any = map({
     [_nT]: [, input[_nT]!],
@@ -224,7 +224,7 @@ export const se_ListOrganizationRecommendationResourcesCommand = async (
  */
 export const se_ListOrganizationRecommendationsCommand = async (
   input: ListOrganizationRecommendationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -251,7 +251,7 @@ export const se_ListOrganizationRecommendationsCommand = async (
  */
 export const se_ListRecommendationResourcesCommand = async (
   input: ListRecommendationResourcesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -274,7 +274,7 @@ export const se_ListRecommendationResourcesCommand = async (
  */
 export const se_ListRecommendationsCommand = async (
   input: ListRecommendationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -301,7 +301,7 @@ export const se_ListRecommendationsCommand = async (
  */
 export const se_UpdateOrganizationRecommendationLifecycleCommand = async (
   input: UpdateOrganizationRecommendationLifecycleCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -312,7 +312,7 @@ export const se_UpdateOrganizationRecommendationLifecycleCommand = async (
     "organizationRecommendationIdentifier",
     () => input.organizationRecommendationIdentifier!,
     "{organizationRecommendationIdentifier}",
-    false
+    false,
   );
   let body: any;
   body = JSON.stringify(
@@ -320,7 +320,7 @@ export const se_UpdateOrganizationRecommendationLifecycleCommand = async (
       lifecycleStage: [],
       updateReason: [],
       updateReasonCode: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -331,7 +331,7 @@ export const se_UpdateOrganizationRecommendationLifecycleCommand = async (
  */
 export const se_UpdateRecommendationLifecycleCommand = async (
   input: UpdateRecommendationLifecycleCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -345,7 +345,7 @@ export const se_UpdateRecommendationLifecycleCommand = async (
       lifecycleStage: [],
       updateReason: [],
       updateReasonCode: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -356,7 +356,7 @@ export const se_UpdateRecommendationLifecycleCommand = async (
  */
 export const de_BatchUpdateRecommendationResourceExclusionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchUpdateRecommendationResourceExclusionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -377,7 +377,7 @@ export const de_BatchUpdateRecommendationResourceExclusionCommand = async (
  */
 export const de_GetOrganizationRecommendationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetOrganizationRecommendationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -398,7 +398,7 @@ export const de_GetOrganizationRecommendationCommand = async (
  */
 export const de_GetRecommendationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetRecommendationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -419,7 +419,7 @@ export const de_GetRecommendationCommand = async (
  */
 export const de_ListChecksCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListChecksCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -441,7 +441,7 @@ export const de_ListChecksCommand = async (
  */
 export const de_ListOrganizationRecommendationAccountsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListOrganizationRecommendationAccountsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -463,7 +463,7 @@ export const de_ListOrganizationRecommendationAccountsCommand = async (
  */
 export const de_ListOrganizationRecommendationResourcesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListOrganizationRecommendationResourcesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -485,7 +485,7 @@ export const de_ListOrganizationRecommendationResourcesCommand = async (
  */
 export const de_ListOrganizationRecommendationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListOrganizationRecommendationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -507,7 +507,7 @@ export const de_ListOrganizationRecommendationsCommand = async (
  */
 export const de_ListRecommendationResourcesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListRecommendationResourcesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -529,7 +529,7 @@ export const de_ListRecommendationResourcesCommand = async (
  */
 export const de_ListRecommendationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListRecommendationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -551,7 +551,7 @@ export const de_ListRecommendationsCommand = async (
  */
 export const de_UpdateOrganizationRecommendationLifecycleCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateOrganizationRecommendationLifecycleCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -568,7 +568,7 @@ export const de_UpdateOrganizationRecommendationLifecycleCommand = async (
  */
 export const de_UpdateRecommendationLifecycleCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateRecommendationLifecycleCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -624,7 +624,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -661,7 +661,7 @@ const de_ConflictExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_InternalServerExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -681,7 +681,7 @@ const de_InternalServerExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -739,7 +739,7 @@ const de_ValidationExceptionRes = async (parsedOutput: any, context: __SerdeCont
  */
 const de_AccountRecommendationLifecycleSummary = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): AccountRecommendationLifecycleSummary => {
   return take(output, {
     accountId: __expectString,
@@ -758,7 +758,7 @@ const de_AccountRecommendationLifecycleSummary = (
  */
 const de_AccountRecommendationLifecycleSummaryList = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): AccountRecommendationLifecycleSummary[] => {
   const retVal = (output || [])
     .filter((e: any) => e != null)
@@ -806,7 +806,7 @@ const de_OrganizationRecommendation = (output: any, context: __SerdeContext): Or
  */
 const de_OrganizationRecommendationResourceSummary = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): OrganizationRecommendationResourceSummary => {
   return take(output, {
     accountId: __expectString,
@@ -827,7 +827,7 @@ const de_OrganizationRecommendationResourceSummary = (
  */
 const de_OrganizationRecommendationResourceSummaryList = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): OrganizationRecommendationResourceSummary[] => {
   const retVal = (output || [])
     .filter((e: any) => e != null)
@@ -842,7 +842,7 @@ const de_OrganizationRecommendationResourceSummaryList = (
  */
 const de_OrganizationRecommendationSummary = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): OrganizationRecommendationSummary => {
   return take(output, {
     arn: __expectString,
@@ -867,7 +867,7 @@ const de_OrganizationRecommendationSummary = (
  */
 const de_OrganizationRecommendationSummaryList = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): OrganizationRecommendationSummary[] => {
   const retVal = (output || [])
     .filter((e: any) => e != null)
@@ -913,7 +913,7 @@ const de_Recommendation = (output: any, context: __SerdeContext): Recommendation
  */
 const de_RecommendationCostOptimizingAggregates = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): RecommendationCostOptimizingAggregates => {
   return take(output, {
     estimatedMonthlySavings: __limitedParseDouble,
@@ -928,7 +928,7 @@ const de_RecommendationCostOptimizingAggregates = (
  */
 const de_RecommendationPillarSpecificAggregates = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): RecommendationPillarSpecificAggregates => {
   return take(output, {
     costOptimizing: (_: any) => de_RecommendationCostOptimizingAggregates(_, context),
@@ -959,7 +959,7 @@ const de_RecommendationResourceSummary = (output: any, context: __SerdeContext):
  */
 const de_RecommendationResourceSummaryList = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): RecommendationResourceSummary[] => {
   const retVal = (output || [])
     .filter((e: any) => e != null)

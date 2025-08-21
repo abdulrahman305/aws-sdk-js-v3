@@ -36,7 +36,7 @@ const checkState = async (client: EC2Client, input: DescribeSubnetsCommandInput)
  */
 export const waitForSubnetAvailable = async (
   params: WaiterConfiguration<EC2Client>,
-  input: DescribeSubnetsCommandInput
+  input: DescribeSubnetsCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 15, maxDelay: 120 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -48,7 +48,7 @@ export const waitForSubnetAvailable = async (
  */
 export const waitUntilSubnetAvailable = async (
   params: WaiterConfiguration<EC2Client>,
-  input: DescribeSubnetsCommandInput
+  input: DescribeSubnetsCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 15, maxDelay: 120 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

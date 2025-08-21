@@ -155,14 +155,14 @@ describe("object with function property", () => {
 
   it("should remove functions", () => {
     expect(
-      marshallInput(nativeAttrObj, keyNodes, { convertTopLevelContainer: true, convertClassInstanceToMap: true })
+      marshallInput(nativeAttrObj, keyNodes, { convertTopLevelContainer: true, convertClassInstanceToMap: true }),
     ).toEqual(attrObj);
   });
 
   it("should remove functions from lists", () => {
     const listOfFunctions = { Item: { id: 1, funcs: [() => {}, () => {}] }, ...notAttrValue };
     expect(
-      marshallInput(listOfFunctions, keyNodes, { convertTopLevelContainer: true, convertClassInstanceToMap: true })
+      marshallInput(listOfFunctions, keyNodes, { convertTopLevelContainer: true, convertClassInstanceToMap: true }),
     ).toEqual({ Item: { id: { N: "1" }, funcs: { L: [] } }, ...notAttrValue });
   });
 
@@ -181,7 +181,7 @@ describe("object with function property", () => {
       marshallInput(nestedListOfFunctions, keyNodes, {
         convertTopLevelContainer: true,
         convertClassInstanceToMap: true,
-      })
+      }),
     ).toEqual({ Item: { id: { N: "1" }, funcs: { L: [{ L: [] }, { L: [] }] } }, ...notAttrValue });
   });
 
@@ -220,7 +220,7 @@ describe("object with function property", () => {
       marshallInput(nestedListOfFunctions3Levels, keyNodes, {
         convertTopLevelContainer: true,
         convertClassInstanceToMap: true,
-      })
+      }),
     ).toEqual({
       Item: {
         id: { N: "1" },
@@ -286,7 +286,7 @@ describe("object with function property", () => {
       marshallInput(nestedListOfFunctions3Levels, keyNodes, {
         convertTopLevelContainer: true,
         convertClassInstanceToMap: true,
-      })
+      }),
     ).toEqual({
       Item: {
         id: { N: "1" },

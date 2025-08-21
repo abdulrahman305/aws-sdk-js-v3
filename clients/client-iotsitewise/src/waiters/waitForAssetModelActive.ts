@@ -36,7 +36,7 @@ const checkState = async (client: IoTSiteWiseClient, input: DescribeAssetModelCo
  */
 export const waitForAssetModelActive = async (
   params: WaiterConfiguration<IoTSiteWiseClient>,
-  input: DescribeAssetModelCommandInput
+  input: DescribeAssetModelCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 3, maxDelay: 120 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -48,7 +48,7 @@ export const waitForAssetModelActive = async (
  */
 export const waitUntilAssetModelActive = async (
   params: WaiterConfiguration<IoTSiteWiseClient>,
-  input: DescribeAssetModelCommandInput
+  input: DescribeAssetModelCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 3, maxDelay: 120 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

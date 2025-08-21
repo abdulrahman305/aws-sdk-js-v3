@@ -41,7 +41,7 @@ export interface SageMakerRuntimeHttpAuthSchemeParametersProvider
 export const defaultSageMakerRuntimeHttpAuthSchemeParametersProvider = async (
   config: SageMakerRuntimeClientResolvedConfig,
   context: HandlerExecutionContext,
-  input: object
+  input: object,
 ): Promise<SageMakerRuntimeHttpAuthSchemeParameters> => {
   return {
     operation: getSmithyContext(context).operation as string,
@@ -82,7 +82,7 @@ export interface SageMakerRuntimeHttpAuthSchemeProvider
  * @internal
  */
 export const defaultSageMakerRuntimeHttpAuthSchemeProvider: SageMakerRuntimeHttpAuthSchemeProvider = (
-  authParameters
+  authParameters,
 ) => {
   const options: HttpAuthOption[] = [];
   switch (authParameters.operation) {
@@ -131,7 +131,7 @@ export interface HttpAuthSchemeResolvedConfig extends AwsSdkSigV4AuthResolvedCon
  * @internal
  */
 export const resolveHttpAuthSchemeConfig = <T>(
-  config: T & HttpAuthSchemeInputConfig & AwsSdkSigV4PreviouslyResolved
+  config: T & HttpAuthSchemeInputConfig & AwsSdkSigV4PreviouslyResolved,
 ): T & HttpAuthSchemeResolvedConfig => {
   const config_0 = resolveAwsSdkSigV4Config(config);
   return {

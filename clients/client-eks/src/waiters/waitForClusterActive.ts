@@ -44,7 +44,7 @@ const checkState = async (client: EKSClient, input: DescribeClusterCommandInput)
  */
 export const waitForClusterActive = async (
   params: WaiterConfiguration<EKSClient>,
-  input: DescribeClusterCommandInput
+  input: DescribeClusterCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 30, maxDelay: 120 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -56,7 +56,7 @@ export const waitForClusterActive = async (
  */
 export const waitUntilClusterActive = async (
   params: WaiterConfiguration<EKSClient>,
-  input: DescribeClusterCommandInput
+  input: DescribeClusterCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 30, maxDelay: 120 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

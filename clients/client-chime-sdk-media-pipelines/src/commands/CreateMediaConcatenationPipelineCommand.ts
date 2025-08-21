@@ -207,7 +207,7 @@ export class CreateMediaConcatenationPipelineCommand extends $Command
   .n("ChimeSDKMediaPipelinesClient", "CreateMediaConcatenationPipelineCommand")
   .f(
     CreateMediaConcatenationPipelineRequestFilterSensitiveLog,
-    CreateMediaConcatenationPipelineResponseFilterSensitiveLog
+    CreateMediaConcatenationPipelineResponseFilterSensitiveLog,
   )
   .ser(se_CreateMediaConcatenationPipelineCommand)
   .de(de_CreateMediaConcatenationPipelineCommand)

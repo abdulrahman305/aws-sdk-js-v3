@@ -9,7 +9,7 @@ import {
 
 const checkState = async (
   client: CloudFrontClient,
-  input: GetStreamingDistributionCommandInput
+  input: GetStreamingDistributionCommandInput,
 ): Promise<WaiterResult> => {
   let reason;
   try {
@@ -34,7 +34,7 @@ const checkState = async (
  */
 export const waitForStreamingDistributionDeployed = async (
   params: WaiterConfiguration<CloudFrontClient>,
-  input: GetStreamingDistributionCommandInput
+  input: GetStreamingDistributionCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 60, maxDelay: 120 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -46,7 +46,7 @@ export const waitForStreamingDistributionDeployed = async (
  */
 export const waitUntilStreamingDistributionDeployed = async (
   params: WaiterConfiguration<CloudFrontClient>,
-  input: GetStreamingDistributionCommandInput
+  input: GetStreamingDistributionCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 60, maxDelay: 120 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

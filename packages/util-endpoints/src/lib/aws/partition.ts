@@ -70,7 +70,7 @@ export const partition = (value: string): EndpointPartition => {
   if (!DEFAULT_PARTITION) {
     throw new Error(
       "Provided region was not found in the partition array or regex," +
-        " and default partition with id 'aws' doesn't exist."
+        " and default partition with id 'aws' doesn't exist.",
     );
   }
 

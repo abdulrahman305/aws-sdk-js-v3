@@ -11,7 +11,7 @@ export interface GetChecksumDigestOptions {
 
 export const getChecksum = async (
   body: unknown,
-  { streamHasher, checksumAlgorithmFn, base64Encoder }: GetChecksumDigestOptions
+  { streamHasher, checksumAlgorithmFn, base64Encoder }: GetChecksumDigestOptions,
 ) => {
   const digest = isStreaming(body) ? streamHasher(checksumAlgorithmFn, body) : stringHasher(checksumAlgorithmFn, body);
   return base64Encoder(await digest);

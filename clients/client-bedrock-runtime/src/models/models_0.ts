@@ -2699,7 +2699,7 @@ export const InvokeModelResponseFilterSensitiveLog = (obj: InvokeModelResponse):
  * @internal
  */
 export const InvokeModelWithResponseStreamRequestFilterSensitiveLog = (
-  obj: InvokeModelWithResponseStreamRequest
+  obj: InvokeModelWithResponseStreamRequest,
 ): any => ({
   ...obj,
   ...(obj.body && { body: SENSITIVE_STRING }),
@@ -2730,7 +2730,7 @@ export const ResponseStreamFilterSensitiveLog = (obj: ResponseStream): any => {
  * @internal
  */
 export const InvokeModelWithResponseStreamResponseFilterSensitiveLog = (
-  obj: InvokeModelWithResponseStreamResponse
+  obj: InvokeModelWithResponseStreamResponse,
 ): any => ({
   ...obj,
   ...(obj.body && { body: "STREAMING_CONTENT" }),

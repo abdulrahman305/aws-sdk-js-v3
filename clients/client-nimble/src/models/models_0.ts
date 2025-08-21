@@ -4759,7 +4759,7 @@ export const StreamingSessionStreamFilterSensitiveLog = (obj: StreamingSessionSt
  * @internal
  */
 export const CreateStreamingSessionStreamResponseFilterSensitiveLog = (
-  obj: CreateStreamingSessionStreamResponse
+  obj: CreateStreamingSessionStreamResponse,
 ): any => ({
   ...obj,
   ...(obj.stream && { stream: StreamingSessionStreamFilterSensitiveLog(obj.stream) }),
@@ -4830,7 +4830,7 @@ export const StudioComponentConfigurationFilterSensitiveLog = (obj: StudioCompon
  * @internal
  */
 export const StudioComponentInitializationScriptFilterSensitiveLog = (
-  obj: StudioComponentInitializationScript
+  obj: StudioComponentInitializationScript,
 ): any => ({
   ...obj,
   ...(obj.script && { script: SENSITIVE_STRING }),
@@ -4845,7 +4845,7 @@ export const CreateStudioComponentRequestFilterSensitiveLog = (obj: CreateStudio
   ...(obj.description && { description: SENSITIVE_STRING }),
   ...(obj.initializationScripts && {
     initializationScripts: obj.initializationScripts.map((item) =>
-      StudioComponentInitializationScriptFilterSensitiveLog(item)
+      StudioComponentInitializationScriptFilterSensitiveLog(item),
     ),
   }),
   ...(obj.name && { name: SENSITIVE_STRING }),
@@ -4861,7 +4861,7 @@ export const StudioComponentFilterSensitiveLog = (obj: StudioComponent): any => 
   ...(obj.description && { description: SENSITIVE_STRING }),
   ...(obj.initializationScripts && {
     initializationScripts: obj.initializationScripts.map((item) =>
-      StudioComponentInitializationScriptFilterSensitiveLog(item)
+      StudioComponentInitializationScriptFilterSensitiveLog(item),
     ),
   }),
   ...(obj.name && { name: SENSITIVE_STRING }),
@@ -4936,7 +4936,7 @@ export const GetLaunchProfileDetailsResponseFilterSensitiveLog = (obj: GetLaunch
   }),
   ...(obj.studioComponentSummaries && {
     studioComponentSummaries: obj.studioComponentSummaries.map((item) =>
-      StudioComponentSummaryFilterSensitiveLog(item)
+      StudioComponentSummaryFilterSensitiveLog(item),
     ),
   }),
 });
@@ -4945,7 +4945,7 @@ export const GetLaunchProfileDetailsResponseFilterSensitiveLog = (obj: GetLaunch
  * @internal
  */
 export const LaunchProfileInitializationActiveDirectoryFilterSensitiveLog = (
-  obj: LaunchProfileInitializationActiveDirectory
+  obj: LaunchProfileInitializationActiveDirectory,
 ): any => ({
   ...obj,
   ...(obj.computerAttributes && { computerAttributes: SENSITIVE_STRING }),
@@ -4972,12 +4972,12 @@ export const LaunchProfileInitializationFilterSensitiveLog = (obj: LaunchProfile
   ...(obj.name && { name: SENSITIVE_STRING }),
   ...(obj.systemInitializationScripts && {
     systemInitializationScripts: obj.systemInitializationScripts.map((item) =>
-      LaunchProfileInitializationScriptFilterSensitiveLog(item)
+      LaunchProfileInitializationScriptFilterSensitiveLog(item),
     ),
   }),
   ...(obj.userInitializationScripts && {
     userInitializationScripts: obj.userInitializationScripts.map((item) =>
-      LaunchProfileInitializationScriptFilterSensitiveLog(item)
+      LaunchProfileInitializationScriptFilterSensitiveLog(item),
     ),
   }),
 });
@@ -4986,7 +4986,7 @@ export const LaunchProfileInitializationFilterSensitiveLog = (obj: LaunchProfile
  * @internal
  */
 export const GetLaunchProfileInitializationResponseFilterSensitiveLog = (
-  obj: GetLaunchProfileInitializationResponse
+  obj: GetLaunchProfileInitializationResponse,
 ): any => ({
   ...obj,
   ...(obj.launchProfileInitialization && {
@@ -5110,7 +5110,7 @@ export const UpdateStudioComponentRequestFilterSensitiveLog = (obj: UpdateStudio
   ...(obj.description && { description: SENSITIVE_STRING }),
   ...(obj.initializationScripts && {
     initializationScripts: obj.initializationScripts.map((item) =>
-      StudioComponentInitializationScriptFilterSensitiveLog(item)
+      StudioComponentInitializationScriptFilterSensitiveLog(item),
     ),
   }),
   ...(obj.name && { name: SENSITIVE_STRING }),
@@ -5129,7 +5129,7 @@ export const UpdateStudioComponentResponseFilterSensitiveLog = (obj: UpdateStudi
  * @internal
  */
 export const StartStudioSSOConfigurationRepairResponseFilterSensitiveLog = (
-  obj: StartStudioSSOConfigurationRepairResponse
+  obj: StartStudioSSOConfigurationRepairResponse,
 ): any => ({
   ...obj,
   ...(obj.studio && { studio: StudioFilterSensitiveLog(obj.studio) }),

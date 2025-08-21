@@ -39,7 +39,7 @@ const checkState = async (client: SSMIncidentsClient, input: GetReplicationSetCo
  */
 export const waitForWaitForReplicationSetDeleted = async (
   params: WaiterConfiguration<SSMIncidentsClient>,
-  input: GetReplicationSetCommandInput
+  input: GetReplicationSetCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 30, maxDelay: 30 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -51,7 +51,7 @@ export const waitForWaitForReplicationSetDeleted = async (
  */
 export const waitUntilWaitForReplicationSetDeleted = async (
   params: WaiterConfiguration<SSMIncidentsClient>,
-  input: GetReplicationSetCommandInput
+  input: GetReplicationSetCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 30, maxDelay: 30 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

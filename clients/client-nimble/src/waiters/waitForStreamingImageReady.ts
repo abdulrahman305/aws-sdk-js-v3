@@ -44,7 +44,7 @@ const checkState = async (client: NimbleClient, input: GetStreamingImageCommandI
  */
 export const waitForStreamingImageReady = async (
   params: WaiterConfiguration<NimbleClient>,
-  input: GetStreamingImageCommandInput
+  input: GetStreamingImageCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 2, maxDelay: 120 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -56,7 +56,7 @@ export const waitForStreamingImageReady = async (
  */
 export const waitUntilStreamingImageReady = async (
   params: WaiterConfiguration<NimbleClient>,
-  input: GetStreamingImageCommandInput
+  input: GetStreamingImageCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 2, maxDelay: 120 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

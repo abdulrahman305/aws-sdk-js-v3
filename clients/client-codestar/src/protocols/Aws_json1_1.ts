@@ -98,7 +98,7 @@ import {
  */
 export const se_AssociateTeamMemberCommand = async (
   input: AssociateTeamMemberCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("AssociateTeamMember");
   let body: any;
@@ -111,7 +111,7 @@ export const se_AssociateTeamMemberCommand = async (
  */
 export const se_CreateProjectCommand = async (
   input: CreateProjectCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateProject");
   let body: any;
@@ -124,7 +124,7 @@ export const se_CreateProjectCommand = async (
  */
 export const se_CreateUserProfileCommand = async (
   input: CreateUserProfileCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateUserProfile");
   let body: any;
@@ -137,7 +137,7 @@ export const se_CreateUserProfileCommand = async (
  */
 export const se_DeleteProjectCommand = async (
   input: DeleteProjectCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteProject");
   let body: any;
@@ -150,7 +150,7 @@ export const se_DeleteProjectCommand = async (
  */
 export const se_DeleteUserProfileCommand = async (
   input: DeleteUserProfileCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteUserProfile");
   let body: any;
@@ -163,7 +163,7 @@ export const se_DeleteUserProfileCommand = async (
  */
 export const se_DescribeProjectCommand = async (
   input: DescribeProjectCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeProject");
   let body: any;
@@ -176,7 +176,7 @@ export const se_DescribeProjectCommand = async (
  */
 export const se_DescribeUserProfileCommand = async (
   input: DescribeUserProfileCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeUserProfile");
   let body: any;
@@ -189,7 +189,7 @@ export const se_DescribeUserProfileCommand = async (
  */
 export const se_DisassociateTeamMemberCommand = async (
   input: DisassociateTeamMemberCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DisassociateTeamMember");
   let body: any;
@@ -202,7 +202,7 @@ export const se_DisassociateTeamMemberCommand = async (
  */
 export const se_ListProjectsCommand = async (
   input: ListProjectsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListProjects");
   let body: any;
@@ -215,7 +215,7 @@ export const se_ListProjectsCommand = async (
  */
 export const se_ListResourcesCommand = async (
   input: ListResourcesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListResources");
   let body: any;
@@ -228,7 +228,7 @@ export const se_ListResourcesCommand = async (
  */
 export const se_ListTagsForProjectCommand = async (
   input: ListTagsForProjectCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListTagsForProject");
   let body: any;
@@ -241,7 +241,7 @@ export const se_ListTagsForProjectCommand = async (
  */
 export const se_ListTeamMembersCommand = async (
   input: ListTeamMembersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListTeamMembers");
   let body: any;
@@ -254,7 +254,7 @@ export const se_ListTeamMembersCommand = async (
  */
 export const se_ListUserProfilesCommand = async (
   input: ListUserProfilesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListUserProfiles");
   let body: any;
@@ -267,7 +267,7 @@ export const se_ListUserProfilesCommand = async (
  */
 export const se_TagProjectCommand = async (
   input: TagProjectCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("TagProject");
   let body: any;
@@ -280,7 +280,7 @@ export const se_TagProjectCommand = async (
  */
 export const se_UntagProjectCommand = async (
   input: UntagProjectCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UntagProject");
   let body: any;
@@ -293,7 +293,7 @@ export const se_UntagProjectCommand = async (
  */
 export const se_UpdateProjectCommand = async (
   input: UpdateProjectCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateProject");
   let body: any;
@@ -306,7 +306,7 @@ export const se_UpdateProjectCommand = async (
  */
 export const se_UpdateTeamMemberCommand = async (
   input: UpdateTeamMemberCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateTeamMember");
   let body: any;
@@ -319,7 +319,7 @@ export const se_UpdateTeamMemberCommand = async (
  */
 export const se_UpdateUserProfileCommand = async (
   input: UpdateUserProfileCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateUserProfile");
   let body: any;
@@ -332,7 +332,7 @@ export const se_UpdateUserProfileCommand = async (
  */
 export const de_AssociateTeamMemberCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssociateTeamMemberCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -352,7 +352,7 @@ export const de_AssociateTeamMemberCommand = async (
  */
 export const de_CreateProjectCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateProjectCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -372,7 +372,7 @@ export const de_CreateProjectCommand = async (
  */
 export const de_CreateUserProfileCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateUserProfileCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -392,7 +392,7 @@ export const de_CreateUserProfileCommand = async (
  */
 export const de_DeleteProjectCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteProjectCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -412,7 +412,7 @@ export const de_DeleteProjectCommand = async (
  */
 export const de_DeleteUserProfileCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteUserProfileCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -432,7 +432,7 @@ export const de_DeleteUserProfileCommand = async (
  */
 export const de_DescribeProjectCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeProjectCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -452,7 +452,7 @@ export const de_DescribeProjectCommand = async (
  */
 export const de_DescribeUserProfileCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeUserProfileCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -472,7 +472,7 @@ export const de_DescribeUserProfileCommand = async (
  */
 export const de_DisassociateTeamMemberCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisassociateTeamMemberCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -492,7 +492,7 @@ export const de_DisassociateTeamMemberCommand = async (
  */
 export const de_ListProjectsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListProjectsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -512,7 +512,7 @@ export const de_ListProjectsCommand = async (
  */
 export const de_ListResourcesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListResourcesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -532,7 +532,7 @@ export const de_ListResourcesCommand = async (
  */
 export const de_ListTagsForProjectCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForProjectCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -552,7 +552,7 @@ export const de_ListTagsForProjectCommand = async (
  */
 export const de_ListTeamMembersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTeamMembersCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -572,7 +572,7 @@ export const de_ListTeamMembersCommand = async (
  */
 export const de_ListUserProfilesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListUserProfilesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -592,7 +592,7 @@ export const de_ListUserProfilesCommand = async (
  */
 export const de_TagProjectCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagProjectCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -612,7 +612,7 @@ export const de_TagProjectCommand = async (
  */
 export const de_UntagProjectCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagProjectCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -632,7 +632,7 @@ export const de_UntagProjectCommand = async (
  */
 export const de_UpdateProjectCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateProjectCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -652,7 +652,7 @@ export const de_UpdateProjectCommand = async (
  */
 export const de_UpdateTeamMemberCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateTeamMemberCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -672,7 +672,7 @@ export const de_UpdateTeamMemberCommand = async (
  */
 export const de_UpdateUserProfileCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateUserProfileCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -751,7 +751,7 @@ const de_CommandError = async (output: __HttpResponse, context: __SerdeContext):
  */
 const de_ConcurrentModificationExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ConcurrentModificationException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -767,7 +767,7 @@ const de_ConcurrentModificationExceptionRes = async (
  */
 const de_InvalidNextTokenExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidNextTokenException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -783,7 +783,7 @@ const de_InvalidNextTokenExceptionRes = async (
  */
 const de_InvalidServiceRoleExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidServiceRoleException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -799,7 +799,7 @@ const de_InvalidServiceRoleExceptionRes = async (
  */
 const de_LimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<LimitExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -815,7 +815,7 @@ const de_LimitExceededExceptionRes = async (
  */
 const de_ProjectAlreadyExistsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ProjectAlreadyExistsException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -831,7 +831,7 @@ const de_ProjectAlreadyExistsExceptionRes = async (
  */
 const de_ProjectConfigurationExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ProjectConfigurationException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -847,7 +847,7 @@ const de_ProjectConfigurationExceptionRes = async (
  */
 const de_ProjectCreationFailedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ProjectCreationFailedException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -863,7 +863,7 @@ const de_ProjectCreationFailedExceptionRes = async (
  */
 const de_ProjectNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ProjectNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -879,7 +879,7 @@ const de_ProjectNotFoundExceptionRes = async (
  */
 const de_TeamMemberAlreadyAssociatedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TeamMemberAlreadyAssociatedException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -895,7 +895,7 @@ const de_TeamMemberAlreadyAssociatedExceptionRes = async (
  */
 const de_TeamMemberNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TeamMemberNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -911,7 +911,7 @@ const de_TeamMemberNotFoundExceptionRes = async (
  */
 const de_UserProfileAlreadyExistsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UserProfileAlreadyExistsException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -927,7 +927,7 @@ const de_UserProfileAlreadyExistsExceptionRes = async (
  */
 const de_UserProfileNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UserProfileNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1162,7 +1162,7 @@ const buildHttpRpcRequest = async (
   headers: __HeaderBag,
   path: string,
   resolvedHostname: string | undefined,
-  body: any
+  body: any,
 ): Promise<__HttpRequest> => {
   const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
   const contents: any = {

@@ -5273,18 +5273,18 @@ export const UpdateDataSetRequestFilterSensitiveLog = (obj: UpdateDataSetRequest
   ...(obj.PhysicalTableMap && {
     PhysicalTableMap: Object.entries(obj.PhysicalTableMap).reduce(
       (acc: any, [key, value]: [string, PhysicalTable]) => ((acc[key] = value), acc),
-      {}
+      {},
     ),
   }),
   ...(obj.LogicalTableMap && {
     LogicalTableMap: Object.entries(obj.LogicalTableMap).reduce(
       (acc: any, [key, value]: [string, LogicalTable]) => ((acc[key] = LogicalTableFilterSensitiveLog(value)), acc),
-      {}
+      {},
     ),
   }),
   ...(obj.RowLevelPermissionTagConfiguration && {
     RowLevelPermissionTagConfiguration: RowLevelPermissionTagConfigurationFilterSensitiveLog(
-      obj.RowLevelPermissionTagConfiguration
+      obj.RowLevelPermissionTagConfiguration,
     ),
   }),
 });

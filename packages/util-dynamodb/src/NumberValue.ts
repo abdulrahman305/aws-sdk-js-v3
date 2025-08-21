@@ -37,7 +37,7 @@ export class NumberValue implements INumberValue {
 
     if (imprecise) {
       throw new Error(
-        `NumberValue should not be initialized with an imprecise number=${valueOf}. Use a string instead.`
+        `NumberValue should not be initialized with an imprecise number=${valueOf}. Use a string instead.`,
       );
     }
   }

@@ -303,7 +303,7 @@ import {
  */
 export const se_AddStorageSystemCommand = async (
   input: AddStorageSystemCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("AddStorageSystem");
   let body: any;
@@ -323,7 +323,7 @@ export const se_AddStorageSystemCommand = async (
  */
 export const se_CancelTaskExecutionCommand = async (
   input: CancelTaskExecutionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CancelTaskExecution");
   let body: any;
@@ -336,7 +336,7 @@ export const se_CancelTaskExecutionCommand = async (
  */
 export const se_CreateAgentCommand = async (
   input: CreateAgentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateAgent");
   let body: any;
@@ -349,7 +349,7 @@ export const se_CreateAgentCommand = async (
  */
 export const se_CreateLocationAzureBlobCommand = async (
   input: CreateLocationAzureBlobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateLocationAzureBlob");
   let body: any;
@@ -362,7 +362,7 @@ export const se_CreateLocationAzureBlobCommand = async (
  */
 export const se_CreateLocationEfsCommand = async (
   input: CreateLocationEfsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateLocationEfs");
   let body: any;
@@ -375,7 +375,7 @@ export const se_CreateLocationEfsCommand = async (
  */
 export const se_CreateLocationFsxLustreCommand = async (
   input: CreateLocationFsxLustreCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateLocationFsxLustre");
   let body: any;
@@ -388,7 +388,7 @@ export const se_CreateLocationFsxLustreCommand = async (
  */
 export const se_CreateLocationFsxOntapCommand = async (
   input: CreateLocationFsxOntapCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateLocationFsxOntap");
   let body: any;
@@ -401,7 +401,7 @@ export const se_CreateLocationFsxOntapCommand = async (
  */
 export const se_CreateLocationFsxOpenZfsCommand = async (
   input: CreateLocationFsxOpenZfsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateLocationFsxOpenZfs");
   let body: any;
@@ -414,7 +414,7 @@ export const se_CreateLocationFsxOpenZfsCommand = async (
  */
 export const se_CreateLocationFsxWindowsCommand = async (
   input: CreateLocationFsxWindowsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateLocationFsxWindows");
   let body: any;
@@ -427,7 +427,7 @@ export const se_CreateLocationFsxWindowsCommand = async (
  */
 export const se_CreateLocationHdfsCommand = async (
   input: CreateLocationHdfsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateLocationHdfs");
   let body: any;
@@ -440,7 +440,7 @@ export const se_CreateLocationHdfsCommand = async (
  */
 export const se_CreateLocationNfsCommand = async (
   input: CreateLocationNfsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateLocationNfs");
   let body: any;
@@ -453,7 +453,7 @@ export const se_CreateLocationNfsCommand = async (
  */
 export const se_CreateLocationObjectStorageCommand = async (
   input: CreateLocationObjectStorageCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateLocationObjectStorage");
   let body: any;
@@ -466,7 +466,7 @@ export const se_CreateLocationObjectStorageCommand = async (
  */
 export const se_CreateLocationS3Command = async (
   input: CreateLocationS3CommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateLocationS3");
   let body: any;
@@ -479,7 +479,7 @@ export const se_CreateLocationS3Command = async (
  */
 export const se_CreateLocationSmbCommand = async (
   input: CreateLocationSmbCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateLocationSmb");
   let body: any;
@@ -492,7 +492,7 @@ export const se_CreateLocationSmbCommand = async (
  */
 export const se_CreateTaskCommand = async (
   input: CreateTaskCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateTask");
   let body: any;
@@ -505,7 +505,7 @@ export const se_CreateTaskCommand = async (
  */
 export const se_DeleteAgentCommand = async (
   input: DeleteAgentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteAgent");
   let body: any;
@@ -518,7 +518,7 @@ export const se_DeleteAgentCommand = async (
  */
 export const se_DeleteLocationCommand = async (
   input: DeleteLocationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteLocation");
   let body: any;
@@ -531,7 +531,7 @@ export const se_DeleteLocationCommand = async (
  */
 export const se_DeleteTaskCommand = async (
   input: DeleteTaskCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteTask");
   let body: any;
@@ -544,7 +544,7 @@ export const se_DeleteTaskCommand = async (
  */
 export const se_DescribeAgentCommand = async (
   input: DescribeAgentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeAgent");
   let body: any;
@@ -557,7 +557,7 @@ export const se_DescribeAgentCommand = async (
  */
 export const se_DescribeDiscoveryJobCommand = async (
   input: DescribeDiscoveryJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeDiscoveryJob");
   let body: any;
@@ -577,7 +577,7 @@ export const se_DescribeDiscoveryJobCommand = async (
  */
 export const se_DescribeLocationAzureBlobCommand = async (
   input: DescribeLocationAzureBlobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeLocationAzureBlob");
   let body: any;
@@ -590,7 +590,7 @@ export const se_DescribeLocationAzureBlobCommand = async (
  */
 export const se_DescribeLocationEfsCommand = async (
   input: DescribeLocationEfsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeLocationEfs");
   let body: any;
@@ -603,7 +603,7 @@ export const se_DescribeLocationEfsCommand = async (
  */
 export const se_DescribeLocationFsxLustreCommand = async (
   input: DescribeLocationFsxLustreCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeLocationFsxLustre");
   let body: any;
@@ -616,7 +616,7 @@ export const se_DescribeLocationFsxLustreCommand = async (
  */
 export const se_DescribeLocationFsxOntapCommand = async (
   input: DescribeLocationFsxOntapCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeLocationFsxOntap");
   let body: any;
@@ -629,7 +629,7 @@ export const se_DescribeLocationFsxOntapCommand = async (
  */
 export const se_DescribeLocationFsxOpenZfsCommand = async (
   input: DescribeLocationFsxOpenZfsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeLocationFsxOpenZfs");
   let body: any;
@@ -642,7 +642,7 @@ export const se_DescribeLocationFsxOpenZfsCommand = async (
  */
 export const se_DescribeLocationFsxWindowsCommand = async (
   input: DescribeLocationFsxWindowsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeLocationFsxWindows");
   let body: any;
@@ -655,7 +655,7 @@ export const se_DescribeLocationFsxWindowsCommand = async (
  */
 export const se_DescribeLocationHdfsCommand = async (
   input: DescribeLocationHdfsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeLocationHdfs");
   let body: any;
@@ -668,7 +668,7 @@ export const se_DescribeLocationHdfsCommand = async (
  */
 export const se_DescribeLocationNfsCommand = async (
   input: DescribeLocationNfsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeLocationNfs");
   let body: any;
@@ -681,7 +681,7 @@ export const se_DescribeLocationNfsCommand = async (
  */
 export const se_DescribeLocationObjectStorageCommand = async (
   input: DescribeLocationObjectStorageCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeLocationObjectStorage");
   let body: any;
@@ -694,7 +694,7 @@ export const se_DescribeLocationObjectStorageCommand = async (
  */
 export const se_DescribeLocationS3Command = async (
   input: DescribeLocationS3CommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeLocationS3");
   let body: any;
@@ -707,7 +707,7 @@ export const se_DescribeLocationS3Command = async (
  */
 export const se_DescribeLocationSmbCommand = async (
   input: DescribeLocationSmbCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeLocationSmb");
   let body: any;
@@ -720,7 +720,7 @@ export const se_DescribeLocationSmbCommand = async (
  */
 export const se_DescribeStorageSystemCommand = async (
   input: DescribeStorageSystemCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeStorageSystem");
   let body: any;
@@ -740,7 +740,7 @@ export const se_DescribeStorageSystemCommand = async (
  */
 export const se_DescribeStorageSystemResourceMetricsCommand = async (
   input: DescribeStorageSystemResourceMetricsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeStorageSystemResourceMetrics");
   let body: any;
@@ -760,7 +760,7 @@ export const se_DescribeStorageSystemResourceMetricsCommand = async (
  */
 export const se_DescribeStorageSystemResourcesCommand = async (
   input: DescribeStorageSystemResourcesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeStorageSystemResources");
   let body: any;
@@ -780,7 +780,7 @@ export const se_DescribeStorageSystemResourcesCommand = async (
  */
 export const se_DescribeTaskCommand = async (
   input: DescribeTaskCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeTask");
   let body: any;
@@ -793,7 +793,7 @@ export const se_DescribeTaskCommand = async (
  */
 export const se_DescribeTaskExecutionCommand = async (
   input: DescribeTaskExecutionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeTaskExecution");
   let body: any;
@@ -806,7 +806,7 @@ export const se_DescribeTaskExecutionCommand = async (
  */
 export const se_GenerateRecommendationsCommand = async (
   input: GenerateRecommendationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GenerateRecommendations");
   let body: any;
@@ -826,7 +826,7 @@ export const se_GenerateRecommendationsCommand = async (
  */
 export const se_ListAgentsCommand = async (
   input: ListAgentsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListAgents");
   let body: any;
@@ -839,7 +839,7 @@ export const se_ListAgentsCommand = async (
  */
 export const se_ListDiscoveryJobsCommand = async (
   input: ListDiscoveryJobsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListDiscoveryJobs");
   let body: any;
@@ -859,7 +859,7 @@ export const se_ListDiscoveryJobsCommand = async (
  */
 export const se_ListLocationsCommand = async (
   input: ListLocationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListLocations");
   let body: any;
@@ -872,7 +872,7 @@ export const se_ListLocationsCommand = async (
  */
 export const se_ListStorageSystemsCommand = async (
   input: ListStorageSystemsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListStorageSystems");
   let body: any;
@@ -892,7 +892,7 @@ export const se_ListStorageSystemsCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListTagsForResource");
   let body: any;
@@ -905,7 +905,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_ListTaskExecutionsCommand = async (
   input: ListTaskExecutionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListTaskExecutions");
   let body: any;
@@ -918,7 +918,7 @@ export const se_ListTaskExecutionsCommand = async (
  */
 export const se_ListTasksCommand = async (
   input: ListTasksCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListTasks");
   let body: any;
@@ -931,7 +931,7 @@ export const se_ListTasksCommand = async (
  */
 export const se_RemoveStorageSystemCommand = async (
   input: RemoveStorageSystemCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("RemoveStorageSystem");
   let body: any;
@@ -951,7 +951,7 @@ export const se_RemoveStorageSystemCommand = async (
  */
 export const se_StartDiscoveryJobCommand = async (
   input: StartDiscoveryJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StartDiscoveryJob");
   let body: any;
@@ -971,7 +971,7 @@ export const se_StartDiscoveryJobCommand = async (
  */
 export const se_StartTaskExecutionCommand = async (
   input: StartTaskExecutionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StartTaskExecution");
   let body: any;
@@ -984,7 +984,7 @@ export const se_StartTaskExecutionCommand = async (
  */
 export const se_StopDiscoveryJobCommand = async (
   input: StopDiscoveryJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StopDiscoveryJob");
   let body: any;
@@ -1004,7 +1004,7 @@ export const se_StopDiscoveryJobCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("TagResource");
   let body: any;
@@ -1017,7 +1017,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UntagResource");
   let body: any;
@@ -1030,7 +1030,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateAgentCommand = async (
   input: UpdateAgentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateAgent");
   let body: any;
@@ -1043,7 +1043,7 @@ export const se_UpdateAgentCommand = async (
  */
 export const se_UpdateDiscoveryJobCommand = async (
   input: UpdateDiscoveryJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateDiscoveryJob");
   let body: any;
@@ -1063,7 +1063,7 @@ export const se_UpdateDiscoveryJobCommand = async (
  */
 export const se_UpdateLocationAzureBlobCommand = async (
   input: UpdateLocationAzureBlobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateLocationAzureBlob");
   let body: any;
@@ -1076,7 +1076,7 @@ export const se_UpdateLocationAzureBlobCommand = async (
  */
 export const se_UpdateLocationHdfsCommand = async (
   input: UpdateLocationHdfsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateLocationHdfs");
   let body: any;
@@ -1089,7 +1089,7 @@ export const se_UpdateLocationHdfsCommand = async (
  */
 export const se_UpdateLocationNfsCommand = async (
   input: UpdateLocationNfsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateLocationNfs");
   let body: any;
@@ -1102,7 +1102,7 @@ export const se_UpdateLocationNfsCommand = async (
  */
 export const se_UpdateLocationObjectStorageCommand = async (
   input: UpdateLocationObjectStorageCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateLocationObjectStorage");
   let body: any;
@@ -1115,7 +1115,7 @@ export const se_UpdateLocationObjectStorageCommand = async (
  */
 export const se_UpdateLocationSmbCommand = async (
   input: UpdateLocationSmbCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateLocationSmb");
   let body: any;
@@ -1128,7 +1128,7 @@ export const se_UpdateLocationSmbCommand = async (
  */
 export const se_UpdateStorageSystemCommand = async (
   input: UpdateStorageSystemCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateStorageSystem");
   let body: any;
@@ -1148,7 +1148,7 @@ export const se_UpdateStorageSystemCommand = async (
  */
 export const se_UpdateTaskCommand = async (
   input: UpdateTaskCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateTask");
   let body: any;
@@ -1161,7 +1161,7 @@ export const se_UpdateTaskCommand = async (
  */
 export const se_UpdateTaskExecutionCommand = async (
   input: UpdateTaskExecutionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateTaskExecution");
   let body: any;
@@ -1174,7 +1174,7 @@ export const se_UpdateTaskExecutionCommand = async (
  */
 export const de_AddStorageSystemCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AddStorageSystemCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1194,7 +1194,7 @@ export const de_AddStorageSystemCommand = async (
  */
 export const de_CancelTaskExecutionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CancelTaskExecutionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1214,7 +1214,7 @@ export const de_CancelTaskExecutionCommand = async (
  */
 export const de_CreateAgentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateAgentCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1234,7 +1234,7 @@ export const de_CreateAgentCommand = async (
  */
 export const de_CreateLocationAzureBlobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateLocationAzureBlobCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1254,7 +1254,7 @@ export const de_CreateLocationAzureBlobCommand = async (
  */
 export const de_CreateLocationEfsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateLocationEfsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1274,7 +1274,7 @@ export const de_CreateLocationEfsCommand = async (
  */
 export const de_CreateLocationFsxLustreCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateLocationFsxLustreCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1294,7 +1294,7 @@ export const de_CreateLocationFsxLustreCommand = async (
  */
 export const de_CreateLocationFsxOntapCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateLocationFsxOntapCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1314,7 +1314,7 @@ export const de_CreateLocationFsxOntapCommand = async (
  */
 export const de_CreateLocationFsxOpenZfsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateLocationFsxOpenZfsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1334,7 +1334,7 @@ export const de_CreateLocationFsxOpenZfsCommand = async (
  */
 export const de_CreateLocationFsxWindowsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateLocationFsxWindowsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1354,7 +1354,7 @@ export const de_CreateLocationFsxWindowsCommand = async (
  */
 export const de_CreateLocationHdfsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateLocationHdfsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1374,7 +1374,7 @@ export const de_CreateLocationHdfsCommand = async (
  */
 export const de_CreateLocationNfsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateLocationNfsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1394,7 +1394,7 @@ export const de_CreateLocationNfsCommand = async (
  */
 export const de_CreateLocationObjectStorageCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateLocationObjectStorageCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1414,7 +1414,7 @@ export const de_CreateLocationObjectStorageCommand = async (
  */
 export const de_CreateLocationS3Command = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateLocationS3CommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1434,7 +1434,7 @@ export const de_CreateLocationS3Command = async (
  */
 export const de_CreateLocationSmbCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateLocationSmbCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1454,7 +1454,7 @@ export const de_CreateLocationSmbCommand = async (
  */
 export const de_CreateTaskCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateTaskCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1474,7 +1474,7 @@ export const de_CreateTaskCommand = async (
  */
 export const de_DeleteAgentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteAgentCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1494,7 +1494,7 @@ export const de_DeleteAgentCommand = async (
  */
 export const de_DeleteLocationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteLocationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1514,7 +1514,7 @@ export const de_DeleteLocationCommand = async (
  */
 export const de_DeleteTaskCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteTaskCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1534,7 +1534,7 @@ export const de_DeleteTaskCommand = async (
  */
 export const de_DescribeAgentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeAgentCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1554,7 +1554,7 @@ export const de_DescribeAgentCommand = async (
  */
 export const de_DescribeDiscoveryJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeDiscoveryJobCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1574,7 +1574,7 @@ export const de_DescribeDiscoveryJobCommand = async (
  */
 export const de_DescribeLocationAzureBlobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeLocationAzureBlobCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1594,7 +1594,7 @@ export const de_DescribeLocationAzureBlobCommand = async (
  */
 export const de_DescribeLocationEfsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeLocationEfsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1614,7 +1614,7 @@ export const de_DescribeLocationEfsCommand = async (
  */
 export const de_DescribeLocationFsxLustreCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeLocationFsxLustreCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1634,7 +1634,7 @@ export const de_DescribeLocationFsxLustreCommand = async (
  */
 export const de_DescribeLocationFsxOntapCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeLocationFsxOntapCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1654,7 +1654,7 @@ export const de_DescribeLocationFsxOntapCommand = async (
  */
 export const de_DescribeLocationFsxOpenZfsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeLocationFsxOpenZfsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1674,7 +1674,7 @@ export const de_DescribeLocationFsxOpenZfsCommand = async (
  */
 export const de_DescribeLocationFsxWindowsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeLocationFsxWindowsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1694,7 +1694,7 @@ export const de_DescribeLocationFsxWindowsCommand = async (
  */
 export const de_DescribeLocationHdfsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeLocationHdfsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1714,7 +1714,7 @@ export const de_DescribeLocationHdfsCommand = async (
  */
 export const de_DescribeLocationNfsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeLocationNfsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1734,7 +1734,7 @@ export const de_DescribeLocationNfsCommand = async (
  */
 export const de_DescribeLocationObjectStorageCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeLocationObjectStorageCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1754,7 +1754,7 @@ export const de_DescribeLocationObjectStorageCommand = async (
  */
 export const de_DescribeLocationS3Command = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeLocationS3CommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1774,7 +1774,7 @@ export const de_DescribeLocationS3Command = async (
  */
 export const de_DescribeLocationSmbCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeLocationSmbCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1794,7 +1794,7 @@ export const de_DescribeLocationSmbCommand = async (
  */
 export const de_DescribeStorageSystemCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeStorageSystemCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1814,7 +1814,7 @@ export const de_DescribeStorageSystemCommand = async (
  */
 export const de_DescribeStorageSystemResourceMetricsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeStorageSystemResourceMetricsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1834,7 +1834,7 @@ export const de_DescribeStorageSystemResourceMetricsCommand = async (
  */
 export const de_DescribeStorageSystemResourcesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeStorageSystemResourcesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1854,7 +1854,7 @@ export const de_DescribeStorageSystemResourcesCommand = async (
  */
 export const de_DescribeTaskCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeTaskCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1874,7 +1874,7 @@ export const de_DescribeTaskCommand = async (
  */
 export const de_DescribeTaskExecutionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeTaskExecutionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1894,7 +1894,7 @@ export const de_DescribeTaskExecutionCommand = async (
  */
 export const de_GenerateRecommendationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GenerateRecommendationsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1914,7 +1914,7 @@ export const de_GenerateRecommendationsCommand = async (
  */
 export const de_ListAgentsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAgentsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1934,7 +1934,7 @@ export const de_ListAgentsCommand = async (
  */
 export const de_ListDiscoveryJobsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListDiscoveryJobsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1954,7 +1954,7 @@ export const de_ListDiscoveryJobsCommand = async (
  */
 export const de_ListLocationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListLocationsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1974,7 +1974,7 @@ export const de_ListLocationsCommand = async (
  */
 export const de_ListStorageSystemsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListStorageSystemsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1994,7 +1994,7 @@ export const de_ListStorageSystemsCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2014,7 +2014,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_ListTaskExecutionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTaskExecutionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2034,7 +2034,7 @@ export const de_ListTaskExecutionsCommand = async (
  */
 export const de_ListTasksCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTasksCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2054,7 +2054,7 @@ export const de_ListTasksCommand = async (
  */
 export const de_RemoveStorageSystemCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RemoveStorageSystemCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2074,7 +2074,7 @@ export const de_RemoveStorageSystemCommand = async (
  */
 export const de_StartDiscoveryJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartDiscoveryJobCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2094,7 +2094,7 @@ export const de_StartDiscoveryJobCommand = async (
  */
 export const de_StartTaskExecutionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartTaskExecutionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2114,7 +2114,7 @@ export const de_StartTaskExecutionCommand = async (
  */
 export const de_StopDiscoveryJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StopDiscoveryJobCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2134,7 +2134,7 @@ export const de_StopDiscoveryJobCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2154,7 +2154,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2174,7 +2174,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateAgentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateAgentCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2194,7 +2194,7 @@ export const de_UpdateAgentCommand = async (
  */
 export const de_UpdateDiscoveryJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateDiscoveryJobCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2214,7 +2214,7 @@ export const de_UpdateDiscoveryJobCommand = async (
  */
 export const de_UpdateLocationAzureBlobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateLocationAzureBlobCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2234,7 +2234,7 @@ export const de_UpdateLocationAzureBlobCommand = async (
  */
 export const de_UpdateLocationHdfsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateLocationHdfsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2254,7 +2254,7 @@ export const de_UpdateLocationHdfsCommand = async (
  */
 export const de_UpdateLocationNfsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateLocationNfsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2274,7 +2274,7 @@ export const de_UpdateLocationNfsCommand = async (
  */
 export const de_UpdateLocationObjectStorageCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateLocationObjectStorageCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2294,7 +2294,7 @@ export const de_UpdateLocationObjectStorageCommand = async (
  */
 export const de_UpdateLocationSmbCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateLocationSmbCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2314,7 +2314,7 @@ export const de_UpdateLocationSmbCommand = async (
  */
 export const de_UpdateStorageSystemCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateStorageSystemCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2334,7 +2334,7 @@ export const de_UpdateStorageSystemCommand = async (
  */
 export const de_UpdateTaskCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateTaskCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2354,7 +2354,7 @@ export const de_UpdateTaskCommand = async (
  */
 export const de_UpdateTaskExecutionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateTaskExecutionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2413,7 +2413,7 @@ const de_InternalExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_InvalidRequestExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidRequestException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2488,7 +2488,7 @@ const se_CreateLocationHdfsRequest = (input: CreateLocationHdfsRequest, context:
  */
 const se_CreateLocationObjectStorageRequest = (
   input: CreateLocationObjectStorageRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     AccessKey: [],
@@ -2551,7 +2551,7 @@ const se_CreateLocationObjectStorageRequest = (
  */
 const se_DescribeStorageSystemResourceMetricsRequest = (
   input: DescribeStorageSystemResourceMetricsRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     DiscoveryJobArn: [],
@@ -2720,7 +2720,7 @@ const se_UpdateLocationHdfsRequest = (input: UpdateLocationHdfsRequest, context:
  */
 const se_UpdateLocationObjectStorageRequest = (
   input: UpdateLocationObjectStorageRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     AccessKey: [],
@@ -2821,7 +2821,7 @@ const de_DescribeDiscoveryJobResponse = (output: any, context: __SerdeContext): 
  */
 const de_DescribeLocationAzureBlobResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeLocationAzureBlobResponse => {
   return take(output, {
     AccessTier: __expectString,
@@ -2854,7 +2854,7 @@ const de_DescribeLocationEfsResponse = (output: any, context: __SerdeContext): D
  */
 const de_DescribeLocationFsxLustreResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeLocationFsxLustreResponse => {
   return take(output, {
     CreationTime: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
@@ -2869,7 +2869,7 @@ const de_DescribeLocationFsxLustreResponse = (
  */
 const de_DescribeLocationFsxOntapResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeLocationFsxOntapResponse => {
   return take(output, {
     CreationTime: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
@@ -2887,7 +2887,7 @@ const de_DescribeLocationFsxOntapResponse = (
  */
 const de_DescribeLocationFsxOpenZfsResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeLocationFsxOpenZfsResponse => {
   return take(output, {
     CreationTime: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
@@ -2903,7 +2903,7 @@ const de_DescribeLocationFsxOpenZfsResponse = (
  */
 const de_DescribeLocationFsxWindowsResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeLocationFsxWindowsResponse => {
   return take(output, {
     CreationTime: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
@@ -2953,7 +2953,7 @@ const de_DescribeLocationNfsResponse = (output: any, context: __SerdeContext): D
  */
 const de_DescribeLocationObjectStorageResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeLocationObjectStorageResponse => {
   return take(output, {
     AccessKey: __expectString,
@@ -3001,7 +3001,7 @@ const de_DescribeLocationSmbResponse = (output: any, context: __SerdeContext): D
  */
 const de_DescribeStorageSystemResourceMetricsResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeStorageSystemResourceMetricsResponse => {
   return take(output, {
     Metrics: (_: any) => de_Metrics(_, context),
@@ -3014,7 +3014,7 @@ const de_DescribeStorageSystemResourceMetricsResponse = (
  */
 const de_DescribeStorageSystemResourcesResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeStorageSystemResourcesResponse => {
   return take(output, {
     NextToken: __expectString,
@@ -3478,7 +3478,7 @@ const buildHttpRpcRequest = async (
   headers: __HeaderBag,
   path: string,
   resolvedHostname: string | undefined,
-  body: any
+  body: any,
 ): Promise<__HttpRequest> => {
   const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
   const contents: any = {

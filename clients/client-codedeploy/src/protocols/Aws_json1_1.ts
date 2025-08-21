@@ -408,7 +408,7 @@ import {
  */
 export const se_AddTagsToOnPremisesInstancesCommand = async (
   input: AddTagsToOnPremisesInstancesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("AddTagsToOnPremisesInstances");
   let body: any;
@@ -421,7 +421,7 @@ export const se_AddTagsToOnPremisesInstancesCommand = async (
  */
 export const se_BatchGetApplicationRevisionsCommand = async (
   input: BatchGetApplicationRevisionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("BatchGetApplicationRevisions");
   let body: any;
@@ -434,7 +434,7 @@ export const se_BatchGetApplicationRevisionsCommand = async (
  */
 export const se_BatchGetApplicationsCommand = async (
   input: BatchGetApplicationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("BatchGetApplications");
   let body: any;
@@ -447,7 +447,7 @@ export const se_BatchGetApplicationsCommand = async (
  */
 export const se_BatchGetDeploymentGroupsCommand = async (
   input: BatchGetDeploymentGroupsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("BatchGetDeploymentGroups");
   let body: any;
@@ -460,7 +460,7 @@ export const se_BatchGetDeploymentGroupsCommand = async (
  */
 export const se_BatchGetDeploymentInstancesCommand = async (
   input: BatchGetDeploymentInstancesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("BatchGetDeploymentInstances");
   let body: any;
@@ -473,7 +473,7 @@ export const se_BatchGetDeploymentInstancesCommand = async (
  */
 export const se_BatchGetDeploymentsCommand = async (
   input: BatchGetDeploymentsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("BatchGetDeployments");
   let body: any;
@@ -486,7 +486,7 @@ export const se_BatchGetDeploymentsCommand = async (
  */
 export const se_BatchGetDeploymentTargetsCommand = async (
   input: BatchGetDeploymentTargetsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("BatchGetDeploymentTargets");
   let body: any;
@@ -499,7 +499,7 @@ export const se_BatchGetDeploymentTargetsCommand = async (
  */
 export const se_BatchGetOnPremisesInstancesCommand = async (
   input: BatchGetOnPremisesInstancesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("BatchGetOnPremisesInstances");
   let body: any;
@@ -512,7 +512,7 @@ export const se_BatchGetOnPremisesInstancesCommand = async (
  */
 export const se_ContinueDeploymentCommand = async (
   input: ContinueDeploymentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ContinueDeployment");
   let body: any;
@@ -525,7 +525,7 @@ export const se_ContinueDeploymentCommand = async (
  */
 export const se_CreateApplicationCommand = async (
   input: CreateApplicationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateApplication");
   let body: any;
@@ -538,7 +538,7 @@ export const se_CreateApplicationCommand = async (
  */
 export const se_CreateDeploymentCommand = async (
   input: CreateDeploymentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateDeployment");
   let body: any;
@@ -551,7 +551,7 @@ export const se_CreateDeploymentCommand = async (
  */
 export const se_CreateDeploymentConfigCommand = async (
   input: CreateDeploymentConfigCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateDeploymentConfig");
   let body: any;
@@ -564,7 +564,7 @@ export const se_CreateDeploymentConfigCommand = async (
  */
 export const se_CreateDeploymentGroupCommand = async (
   input: CreateDeploymentGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateDeploymentGroup");
   let body: any;
@@ -577,7 +577,7 @@ export const se_CreateDeploymentGroupCommand = async (
  */
 export const se_DeleteApplicationCommand = async (
   input: DeleteApplicationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteApplication");
   let body: any;
@@ -590,7 +590,7 @@ export const se_DeleteApplicationCommand = async (
  */
 export const se_DeleteDeploymentConfigCommand = async (
   input: DeleteDeploymentConfigCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteDeploymentConfig");
   let body: any;
@@ -603,7 +603,7 @@ export const se_DeleteDeploymentConfigCommand = async (
  */
 export const se_DeleteDeploymentGroupCommand = async (
   input: DeleteDeploymentGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteDeploymentGroup");
   let body: any;
@@ -616,7 +616,7 @@ export const se_DeleteDeploymentGroupCommand = async (
  */
 export const se_DeleteGitHubAccountTokenCommand = async (
   input: DeleteGitHubAccountTokenCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteGitHubAccountToken");
   let body: any;
@@ -629,7 +629,7 @@ export const se_DeleteGitHubAccountTokenCommand = async (
  */
 export const se_DeleteResourcesByExternalIdCommand = async (
   input: DeleteResourcesByExternalIdCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteResourcesByExternalId");
   let body: any;
@@ -642,7 +642,7 @@ export const se_DeleteResourcesByExternalIdCommand = async (
  */
 export const se_DeregisterOnPremisesInstanceCommand = async (
   input: DeregisterOnPremisesInstanceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeregisterOnPremisesInstance");
   let body: any;
@@ -655,7 +655,7 @@ export const se_DeregisterOnPremisesInstanceCommand = async (
  */
 export const se_GetApplicationCommand = async (
   input: GetApplicationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetApplication");
   let body: any;
@@ -668,7 +668,7 @@ export const se_GetApplicationCommand = async (
  */
 export const se_GetApplicationRevisionCommand = async (
   input: GetApplicationRevisionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetApplicationRevision");
   let body: any;
@@ -681,7 +681,7 @@ export const se_GetApplicationRevisionCommand = async (
  */
 export const se_GetDeploymentCommand = async (
   input: GetDeploymentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetDeployment");
   let body: any;
@@ -694,7 +694,7 @@ export const se_GetDeploymentCommand = async (
  */
 export const se_GetDeploymentConfigCommand = async (
   input: GetDeploymentConfigCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetDeploymentConfig");
   let body: any;
@@ -707,7 +707,7 @@ export const se_GetDeploymentConfigCommand = async (
  */
 export const se_GetDeploymentGroupCommand = async (
   input: GetDeploymentGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetDeploymentGroup");
   let body: any;
@@ -720,7 +720,7 @@ export const se_GetDeploymentGroupCommand = async (
  */
 export const se_GetDeploymentInstanceCommand = async (
   input: GetDeploymentInstanceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetDeploymentInstance");
   let body: any;
@@ -733,7 +733,7 @@ export const se_GetDeploymentInstanceCommand = async (
  */
 export const se_GetDeploymentTargetCommand = async (
   input: GetDeploymentTargetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetDeploymentTarget");
   let body: any;
@@ -746,7 +746,7 @@ export const se_GetDeploymentTargetCommand = async (
  */
 export const se_GetOnPremisesInstanceCommand = async (
   input: GetOnPremisesInstanceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetOnPremisesInstance");
   let body: any;
@@ -759,7 +759,7 @@ export const se_GetOnPremisesInstanceCommand = async (
  */
 export const se_ListApplicationRevisionsCommand = async (
   input: ListApplicationRevisionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListApplicationRevisions");
   let body: any;
@@ -772,7 +772,7 @@ export const se_ListApplicationRevisionsCommand = async (
  */
 export const se_ListApplicationsCommand = async (
   input: ListApplicationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListApplications");
   let body: any;
@@ -785,7 +785,7 @@ export const se_ListApplicationsCommand = async (
  */
 export const se_ListDeploymentConfigsCommand = async (
   input: ListDeploymentConfigsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListDeploymentConfigs");
   let body: any;
@@ -798,7 +798,7 @@ export const se_ListDeploymentConfigsCommand = async (
  */
 export const se_ListDeploymentGroupsCommand = async (
   input: ListDeploymentGroupsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListDeploymentGroups");
   let body: any;
@@ -811,7 +811,7 @@ export const se_ListDeploymentGroupsCommand = async (
  */
 export const se_ListDeploymentInstancesCommand = async (
   input: ListDeploymentInstancesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListDeploymentInstances");
   let body: any;
@@ -824,7 +824,7 @@ export const se_ListDeploymentInstancesCommand = async (
  */
 export const se_ListDeploymentsCommand = async (
   input: ListDeploymentsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListDeployments");
   let body: any;
@@ -837,7 +837,7 @@ export const se_ListDeploymentsCommand = async (
  */
 export const se_ListDeploymentTargetsCommand = async (
   input: ListDeploymentTargetsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListDeploymentTargets");
   let body: any;
@@ -850,7 +850,7 @@ export const se_ListDeploymentTargetsCommand = async (
  */
 export const se_ListGitHubAccountTokenNamesCommand = async (
   input: ListGitHubAccountTokenNamesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListGitHubAccountTokenNames");
   let body: any;
@@ -863,7 +863,7 @@ export const se_ListGitHubAccountTokenNamesCommand = async (
  */
 export const se_ListOnPremisesInstancesCommand = async (
   input: ListOnPremisesInstancesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListOnPremisesInstances");
   let body: any;
@@ -876,7 +876,7 @@ export const se_ListOnPremisesInstancesCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListTagsForResource");
   let body: any;
@@ -889,7 +889,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_PutLifecycleEventHookExecutionStatusCommand = async (
   input: PutLifecycleEventHookExecutionStatusCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("PutLifecycleEventHookExecutionStatus");
   let body: any;
@@ -902,7 +902,7 @@ export const se_PutLifecycleEventHookExecutionStatusCommand = async (
  */
 export const se_RegisterApplicationRevisionCommand = async (
   input: RegisterApplicationRevisionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("RegisterApplicationRevision");
   let body: any;
@@ -915,7 +915,7 @@ export const se_RegisterApplicationRevisionCommand = async (
  */
 export const se_RegisterOnPremisesInstanceCommand = async (
   input: RegisterOnPremisesInstanceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("RegisterOnPremisesInstance");
   let body: any;
@@ -928,7 +928,7 @@ export const se_RegisterOnPremisesInstanceCommand = async (
  */
 export const se_RemoveTagsFromOnPremisesInstancesCommand = async (
   input: RemoveTagsFromOnPremisesInstancesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("RemoveTagsFromOnPremisesInstances");
   let body: any;
@@ -941,7 +941,7 @@ export const se_RemoveTagsFromOnPremisesInstancesCommand = async (
  */
 export const se_SkipWaitTimeForInstanceTerminationCommand = async (
   input: SkipWaitTimeForInstanceTerminationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("SkipWaitTimeForInstanceTermination");
   let body: any;
@@ -954,7 +954,7 @@ export const se_SkipWaitTimeForInstanceTerminationCommand = async (
  */
 export const se_StopDeploymentCommand = async (
   input: StopDeploymentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StopDeployment");
   let body: any;
@@ -967,7 +967,7 @@ export const se_StopDeploymentCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("TagResource");
   let body: any;
@@ -980,7 +980,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UntagResource");
   let body: any;
@@ -993,7 +993,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateApplicationCommand = async (
   input: UpdateApplicationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateApplication");
   let body: any;
@@ -1006,7 +1006,7 @@ export const se_UpdateApplicationCommand = async (
  */
 export const se_UpdateDeploymentGroupCommand = async (
   input: UpdateDeploymentGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateDeploymentGroup");
   let body: any;
@@ -1019,7 +1019,7 @@ export const se_UpdateDeploymentGroupCommand = async (
  */
 export const de_AddTagsToOnPremisesInstancesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AddTagsToOnPremisesInstancesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1036,7 +1036,7 @@ export const de_AddTagsToOnPremisesInstancesCommand = async (
  */
 export const de_BatchGetApplicationRevisionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchGetApplicationRevisionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1056,7 +1056,7 @@ export const de_BatchGetApplicationRevisionsCommand = async (
  */
 export const de_BatchGetApplicationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchGetApplicationsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1076,7 +1076,7 @@ export const de_BatchGetApplicationsCommand = async (
  */
 export const de_BatchGetDeploymentGroupsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchGetDeploymentGroupsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1096,7 +1096,7 @@ export const de_BatchGetDeploymentGroupsCommand = async (
  */
 export const de_BatchGetDeploymentInstancesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchGetDeploymentInstancesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1116,7 +1116,7 @@ export const de_BatchGetDeploymentInstancesCommand = async (
  */
 export const de_BatchGetDeploymentsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchGetDeploymentsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1136,7 +1136,7 @@ export const de_BatchGetDeploymentsCommand = async (
  */
 export const de_BatchGetDeploymentTargetsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchGetDeploymentTargetsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1156,7 +1156,7 @@ export const de_BatchGetDeploymentTargetsCommand = async (
  */
 export const de_BatchGetOnPremisesInstancesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchGetOnPremisesInstancesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1176,7 +1176,7 @@ export const de_BatchGetOnPremisesInstancesCommand = async (
  */
 export const de_ContinueDeploymentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ContinueDeploymentCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1193,7 +1193,7 @@ export const de_ContinueDeploymentCommand = async (
  */
 export const de_CreateApplicationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateApplicationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1213,7 +1213,7 @@ export const de_CreateApplicationCommand = async (
  */
 export const de_CreateDeploymentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateDeploymentCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1233,7 +1233,7 @@ export const de_CreateDeploymentCommand = async (
  */
 export const de_CreateDeploymentConfigCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateDeploymentConfigCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1253,7 +1253,7 @@ export const de_CreateDeploymentConfigCommand = async (
  */
 export const de_CreateDeploymentGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateDeploymentGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1273,7 +1273,7 @@ export const de_CreateDeploymentGroupCommand = async (
  */
 export const de_DeleteApplicationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteApplicationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1290,7 +1290,7 @@ export const de_DeleteApplicationCommand = async (
  */
 export const de_DeleteDeploymentConfigCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteDeploymentConfigCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1307,7 +1307,7 @@ export const de_DeleteDeploymentConfigCommand = async (
  */
 export const de_DeleteDeploymentGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteDeploymentGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1327,7 +1327,7 @@ export const de_DeleteDeploymentGroupCommand = async (
  */
 export const de_DeleteGitHubAccountTokenCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteGitHubAccountTokenCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1347,7 +1347,7 @@ export const de_DeleteGitHubAccountTokenCommand = async (
  */
 export const de_DeleteResourcesByExternalIdCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteResourcesByExternalIdCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1367,7 +1367,7 @@ export const de_DeleteResourcesByExternalIdCommand = async (
  */
 export const de_DeregisterOnPremisesInstanceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeregisterOnPremisesInstanceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1384,7 +1384,7 @@ export const de_DeregisterOnPremisesInstanceCommand = async (
  */
 export const de_GetApplicationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetApplicationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1404,7 +1404,7 @@ export const de_GetApplicationCommand = async (
  */
 export const de_GetApplicationRevisionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetApplicationRevisionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1424,7 +1424,7 @@ export const de_GetApplicationRevisionCommand = async (
  */
 export const de_GetDeploymentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetDeploymentCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1444,7 +1444,7 @@ export const de_GetDeploymentCommand = async (
  */
 export const de_GetDeploymentConfigCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetDeploymentConfigCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1464,7 +1464,7 @@ export const de_GetDeploymentConfigCommand = async (
  */
 export const de_GetDeploymentGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetDeploymentGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1484,7 +1484,7 @@ export const de_GetDeploymentGroupCommand = async (
  */
 export const de_GetDeploymentInstanceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetDeploymentInstanceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1504,7 +1504,7 @@ export const de_GetDeploymentInstanceCommand = async (
  */
 export const de_GetDeploymentTargetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetDeploymentTargetCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1524,7 +1524,7 @@ export const de_GetDeploymentTargetCommand = async (
  */
 export const de_GetOnPremisesInstanceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetOnPremisesInstanceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1544,7 +1544,7 @@ export const de_GetOnPremisesInstanceCommand = async (
  */
 export const de_ListApplicationRevisionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListApplicationRevisionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1564,7 +1564,7 @@ export const de_ListApplicationRevisionsCommand = async (
  */
 export const de_ListApplicationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListApplicationsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1584,7 +1584,7 @@ export const de_ListApplicationsCommand = async (
  */
 export const de_ListDeploymentConfigsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListDeploymentConfigsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1604,7 +1604,7 @@ export const de_ListDeploymentConfigsCommand = async (
  */
 export const de_ListDeploymentGroupsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListDeploymentGroupsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1624,7 +1624,7 @@ export const de_ListDeploymentGroupsCommand = async (
  */
 export const de_ListDeploymentInstancesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListDeploymentInstancesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1644,7 +1644,7 @@ export const de_ListDeploymentInstancesCommand = async (
  */
 export const de_ListDeploymentsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListDeploymentsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1664,7 +1664,7 @@ export const de_ListDeploymentsCommand = async (
  */
 export const de_ListDeploymentTargetsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListDeploymentTargetsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1684,7 +1684,7 @@ export const de_ListDeploymentTargetsCommand = async (
  */
 export const de_ListGitHubAccountTokenNamesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListGitHubAccountTokenNamesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1704,7 +1704,7 @@ export const de_ListGitHubAccountTokenNamesCommand = async (
  */
 export const de_ListOnPremisesInstancesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListOnPremisesInstancesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1724,7 +1724,7 @@ export const de_ListOnPremisesInstancesCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1744,7 +1744,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_PutLifecycleEventHookExecutionStatusCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutLifecycleEventHookExecutionStatusCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1764,7 +1764,7 @@ export const de_PutLifecycleEventHookExecutionStatusCommand = async (
  */
 export const de_RegisterApplicationRevisionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RegisterApplicationRevisionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1781,7 +1781,7 @@ export const de_RegisterApplicationRevisionCommand = async (
  */
 export const de_RegisterOnPremisesInstanceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RegisterOnPremisesInstanceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1798,7 +1798,7 @@ export const de_RegisterOnPremisesInstanceCommand = async (
  */
 export const de_RemoveTagsFromOnPremisesInstancesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RemoveTagsFromOnPremisesInstancesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1815,7 +1815,7 @@ export const de_RemoveTagsFromOnPremisesInstancesCommand = async (
  */
 export const de_SkipWaitTimeForInstanceTerminationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SkipWaitTimeForInstanceTerminationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1832,7 +1832,7 @@ export const de_SkipWaitTimeForInstanceTerminationCommand = async (
  */
 export const de_StopDeploymentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StopDeploymentCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1852,7 +1852,7 @@ export const de_StopDeploymentCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1872,7 +1872,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1892,7 +1892,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateApplicationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateApplicationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1909,7 +1909,7 @@ export const de_UpdateApplicationCommand = async (
  */
 export const de_UpdateDeploymentGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateDeploymentGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2279,7 +2279,7 @@ const de_CommandError = async (output: __HttpResponse, context: __SerdeContext):
  */
 const de_AlarmsLimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AlarmsLimitExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2295,7 +2295,7 @@ const de_AlarmsLimitExceededExceptionRes = async (
  */
 const de_ApplicationAlreadyExistsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ApplicationAlreadyExistsException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2311,7 +2311,7 @@ const de_ApplicationAlreadyExistsExceptionRes = async (
  */
 const de_ApplicationDoesNotExistExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ApplicationDoesNotExistException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2327,7 +2327,7 @@ const de_ApplicationDoesNotExistExceptionRes = async (
  */
 const de_ApplicationLimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ApplicationLimitExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2343,7 +2343,7 @@ const de_ApplicationLimitExceededExceptionRes = async (
  */
 const de_ApplicationNameRequiredExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ApplicationNameRequiredException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2359,7 +2359,7 @@ const de_ApplicationNameRequiredExceptionRes = async (
  */
 const de_ArnNotSupportedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ArnNotSupportedException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2375,7 +2375,7 @@ const de_ArnNotSupportedExceptionRes = async (
  */
 const de_BatchLimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchLimitExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2391,7 +2391,7 @@ const de_BatchLimitExceededExceptionRes = async (
  */
 const de_BucketNameFilterRequiredExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BucketNameFilterRequiredException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2407,7 +2407,7 @@ const de_BucketNameFilterRequiredExceptionRes = async (
  */
 const de_DeploymentAlreadyCompletedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeploymentAlreadyCompletedException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2423,7 +2423,7 @@ const de_DeploymentAlreadyCompletedExceptionRes = async (
  */
 const de_DeploymentConfigAlreadyExistsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeploymentConfigAlreadyExistsException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2439,7 +2439,7 @@ const de_DeploymentConfigAlreadyExistsExceptionRes = async (
  */
 const de_DeploymentConfigDoesNotExistExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeploymentConfigDoesNotExistException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2455,7 +2455,7 @@ const de_DeploymentConfigDoesNotExistExceptionRes = async (
  */
 const de_DeploymentConfigInUseExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeploymentConfigInUseException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2471,7 +2471,7 @@ const de_DeploymentConfigInUseExceptionRes = async (
  */
 const de_DeploymentConfigLimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeploymentConfigLimitExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2487,7 +2487,7 @@ const de_DeploymentConfigLimitExceededExceptionRes = async (
  */
 const de_DeploymentConfigNameRequiredExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeploymentConfigNameRequiredException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2503,7 +2503,7 @@ const de_DeploymentConfigNameRequiredExceptionRes = async (
  */
 const de_DeploymentDoesNotExistExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeploymentDoesNotExistException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2519,7 +2519,7 @@ const de_DeploymentDoesNotExistExceptionRes = async (
  */
 const de_DeploymentGroupAlreadyExistsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeploymentGroupAlreadyExistsException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2535,7 +2535,7 @@ const de_DeploymentGroupAlreadyExistsExceptionRes = async (
  */
 const de_DeploymentGroupDoesNotExistExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeploymentGroupDoesNotExistException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2551,7 +2551,7 @@ const de_DeploymentGroupDoesNotExistExceptionRes = async (
  */
 const de_DeploymentGroupLimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeploymentGroupLimitExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2567,7 +2567,7 @@ const de_DeploymentGroupLimitExceededExceptionRes = async (
  */
 const de_DeploymentGroupNameRequiredExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeploymentGroupNameRequiredException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2583,7 +2583,7 @@ const de_DeploymentGroupNameRequiredExceptionRes = async (
  */
 const de_DeploymentIdRequiredExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeploymentIdRequiredException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2599,7 +2599,7 @@ const de_DeploymentIdRequiredExceptionRes = async (
  */
 const de_DeploymentIsNotInReadyStateExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeploymentIsNotInReadyStateException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2615,7 +2615,7 @@ const de_DeploymentIsNotInReadyStateExceptionRes = async (
  */
 const de_DeploymentLimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeploymentLimitExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2631,7 +2631,7 @@ const de_DeploymentLimitExceededExceptionRes = async (
  */
 const de_DeploymentNotStartedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeploymentNotStartedException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2647,7 +2647,7 @@ const de_DeploymentNotStartedExceptionRes = async (
  */
 const de_DeploymentTargetDoesNotExistExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeploymentTargetDoesNotExistException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2663,7 +2663,7 @@ const de_DeploymentTargetDoesNotExistExceptionRes = async (
  */
 const de_DeploymentTargetIdRequiredExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeploymentTargetIdRequiredException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2679,7 +2679,7 @@ const de_DeploymentTargetIdRequiredExceptionRes = async (
  */
 const de_DeploymentTargetListSizeExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeploymentTargetListSizeExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2695,7 +2695,7 @@ const de_DeploymentTargetListSizeExceededExceptionRes = async (
  */
 const de_DescriptionTooLongExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescriptionTooLongException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2711,7 +2711,7 @@ const de_DescriptionTooLongExceptionRes = async (
  */
 const de_ECSServiceMappingLimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ECSServiceMappingLimitExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2727,7 +2727,7 @@ const de_ECSServiceMappingLimitExceededExceptionRes = async (
  */
 const de_GitHubAccountTokenDoesNotExistExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GitHubAccountTokenDoesNotExistException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2743,7 +2743,7 @@ const de_GitHubAccountTokenDoesNotExistExceptionRes = async (
  */
 const de_GitHubAccountTokenNameRequiredExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GitHubAccountTokenNameRequiredException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2759,7 +2759,7 @@ const de_GitHubAccountTokenNameRequiredExceptionRes = async (
  */
 const de_IamArnRequiredExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<IamArnRequiredException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2775,7 +2775,7 @@ const de_IamArnRequiredExceptionRes = async (
  */
 const de_IamSessionArnAlreadyRegisteredExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<IamSessionArnAlreadyRegisteredException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2791,7 +2791,7 @@ const de_IamSessionArnAlreadyRegisteredExceptionRes = async (
  */
 const de_IamUserArnAlreadyRegisteredExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<IamUserArnAlreadyRegisteredException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2807,7 +2807,7 @@ const de_IamUserArnAlreadyRegisteredExceptionRes = async (
  */
 const de_IamUserArnRequiredExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<IamUserArnRequiredException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2823,7 +2823,7 @@ const de_IamUserArnRequiredExceptionRes = async (
  */
 const de_InstanceDoesNotExistExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InstanceDoesNotExistException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2839,7 +2839,7 @@ const de_InstanceDoesNotExistExceptionRes = async (
  */
 const de_InstanceIdRequiredExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InstanceIdRequiredException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2855,7 +2855,7 @@ const de_InstanceIdRequiredExceptionRes = async (
  */
 const de_InstanceLimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InstanceLimitExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2871,7 +2871,7 @@ const de_InstanceLimitExceededExceptionRes = async (
  */
 const de_InstanceNameAlreadyRegisteredExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InstanceNameAlreadyRegisteredException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2887,7 +2887,7 @@ const de_InstanceNameAlreadyRegisteredExceptionRes = async (
  */
 const de_InstanceNameRequiredExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InstanceNameRequiredException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2903,7 +2903,7 @@ const de_InstanceNameRequiredExceptionRes = async (
  */
 const de_InstanceNotRegisteredExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InstanceNotRegisteredException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2919,7 +2919,7 @@ const de_InstanceNotRegisteredExceptionRes = async (
  */
 const de_InvalidAlarmConfigExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidAlarmConfigException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2935,7 +2935,7 @@ const de_InvalidAlarmConfigExceptionRes = async (
  */
 const de_InvalidApplicationNameExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidApplicationNameException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2964,7 +2964,7 @@ const de_InvalidArnExceptionRes = async (parsedOutput: any, context: __SerdeCont
  */
 const de_InvalidAutoRollbackConfigExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidAutoRollbackConfigException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2980,7 +2980,7 @@ const de_InvalidAutoRollbackConfigExceptionRes = async (
  */
 const de_InvalidAutoScalingGroupExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidAutoScalingGroupException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2996,7 +2996,7 @@ const de_InvalidAutoScalingGroupExceptionRes = async (
  */
 const de_InvalidBlueGreenDeploymentConfigurationExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidBlueGreenDeploymentConfigurationException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3012,7 +3012,7 @@ const de_InvalidBlueGreenDeploymentConfigurationExceptionRes = async (
  */
 const de_InvalidBucketNameFilterExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidBucketNameFilterException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3028,7 +3028,7 @@ const de_InvalidBucketNameFilterExceptionRes = async (
  */
 const de_InvalidComputePlatformExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidComputePlatformException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3044,7 +3044,7 @@ const de_InvalidComputePlatformExceptionRes = async (
  */
 const de_InvalidDeployedStateFilterExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidDeployedStateFilterException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3060,7 +3060,7 @@ const de_InvalidDeployedStateFilterExceptionRes = async (
  */
 const de_InvalidDeploymentConfigNameExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidDeploymentConfigNameException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3076,7 +3076,7 @@ const de_InvalidDeploymentConfigNameExceptionRes = async (
  */
 const de_InvalidDeploymentGroupNameExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidDeploymentGroupNameException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3092,7 +3092,7 @@ const de_InvalidDeploymentGroupNameExceptionRes = async (
  */
 const de_InvalidDeploymentIdExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidDeploymentIdException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3108,7 +3108,7 @@ const de_InvalidDeploymentIdExceptionRes = async (
  */
 const de_InvalidDeploymentInstanceTypeExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidDeploymentInstanceTypeException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3124,7 +3124,7 @@ const de_InvalidDeploymentInstanceTypeExceptionRes = async (
  */
 const de_InvalidDeploymentStatusExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidDeploymentStatusException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3140,7 +3140,7 @@ const de_InvalidDeploymentStatusExceptionRes = async (
  */
 const de_InvalidDeploymentStyleExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidDeploymentStyleException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3156,7 +3156,7 @@ const de_InvalidDeploymentStyleExceptionRes = async (
  */
 const de_InvalidDeploymentTargetIdExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidDeploymentTargetIdException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3172,7 +3172,7 @@ const de_InvalidDeploymentTargetIdExceptionRes = async (
  */
 const de_InvalidDeploymentWaitTypeExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidDeploymentWaitTypeException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3188,7 +3188,7 @@ const de_InvalidDeploymentWaitTypeExceptionRes = async (
  */
 const de_InvalidEC2TagCombinationExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidEC2TagCombinationException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3204,7 +3204,7 @@ const de_InvalidEC2TagCombinationExceptionRes = async (
  */
 const de_InvalidEC2TagExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidEC2TagException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3220,7 +3220,7 @@ const de_InvalidEC2TagExceptionRes = async (
  */
 const de_InvalidECSServiceExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidECSServiceException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3236,7 +3236,7 @@ const de_InvalidECSServiceExceptionRes = async (
  */
 const de_InvalidExternalIdExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidExternalIdException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3252,7 +3252,7 @@ const de_InvalidExternalIdExceptionRes = async (
  */
 const de_InvalidFileExistsBehaviorExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidFileExistsBehaviorException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3268,7 +3268,7 @@ const de_InvalidFileExistsBehaviorExceptionRes = async (
  */
 const de_InvalidGitHubAccountTokenExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidGitHubAccountTokenException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3284,7 +3284,7 @@ const de_InvalidGitHubAccountTokenExceptionRes = async (
  */
 const de_InvalidGitHubAccountTokenNameExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidGitHubAccountTokenNameException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3300,7 +3300,7 @@ const de_InvalidGitHubAccountTokenNameExceptionRes = async (
  */
 const de_InvalidIamSessionArnExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidIamSessionArnException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3316,7 +3316,7 @@ const de_InvalidIamSessionArnExceptionRes = async (
  */
 const de_InvalidIamUserArnExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidIamUserArnException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3332,7 +3332,7 @@ const de_InvalidIamUserArnExceptionRes = async (
  */
 const de_InvalidIgnoreApplicationStopFailuresValueExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidIgnoreApplicationStopFailuresValueException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3348,7 +3348,7 @@ const de_InvalidIgnoreApplicationStopFailuresValueExceptionRes = async (
  */
 const de_InvalidInputExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidInputException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3364,7 +3364,7 @@ const de_InvalidInputExceptionRes = async (
  */
 const de_InvalidInstanceNameExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidInstanceNameException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3380,7 +3380,7 @@ const de_InvalidInstanceNameExceptionRes = async (
  */
 const de_InvalidInstanceStatusExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidInstanceStatusException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3396,7 +3396,7 @@ const de_InvalidInstanceStatusExceptionRes = async (
  */
 const de_InvalidInstanceTypeExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidInstanceTypeException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3412,7 +3412,7 @@ const de_InvalidInstanceTypeExceptionRes = async (
  */
 const de_InvalidKeyPrefixFilterExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidKeyPrefixFilterException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3428,7 +3428,7 @@ const de_InvalidKeyPrefixFilterExceptionRes = async (
  */
 const de_InvalidLifecycleEventHookExecutionIdExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidLifecycleEventHookExecutionIdException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3444,7 +3444,7 @@ const de_InvalidLifecycleEventHookExecutionIdExceptionRes = async (
  */
 const de_InvalidLifecycleEventHookExecutionStatusExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidLifecycleEventHookExecutionStatusException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3460,7 +3460,7 @@ const de_InvalidLifecycleEventHookExecutionStatusExceptionRes = async (
  */
 const de_InvalidLoadBalancerInfoExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidLoadBalancerInfoException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3476,7 +3476,7 @@ const de_InvalidLoadBalancerInfoExceptionRes = async (
  */
 const de_InvalidMinimumHealthyHostValueExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidMinimumHealthyHostValueException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3492,7 +3492,7 @@ const de_InvalidMinimumHealthyHostValueExceptionRes = async (
  */
 const de_InvalidNextTokenExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidNextTokenException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3508,7 +3508,7 @@ const de_InvalidNextTokenExceptionRes = async (
  */
 const de_InvalidOnPremisesTagCombinationExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidOnPremisesTagCombinationException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3524,7 +3524,7 @@ const de_InvalidOnPremisesTagCombinationExceptionRes = async (
  */
 const de_InvalidOperationExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidOperationException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3540,7 +3540,7 @@ const de_InvalidOperationExceptionRes = async (
  */
 const de_InvalidRegistrationStatusExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidRegistrationStatusException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3556,7 +3556,7 @@ const de_InvalidRegistrationStatusExceptionRes = async (
  */
 const de_InvalidRevisionExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidRevisionException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3572,7 +3572,7 @@ const de_InvalidRevisionExceptionRes = async (
  */
 const de_InvalidRoleExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidRoleException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3588,7 +3588,7 @@ const de_InvalidRoleExceptionRes = async (
  */
 const de_InvalidSortByExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidSortByException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3604,7 +3604,7 @@ const de_InvalidSortByExceptionRes = async (
  */
 const de_InvalidSortOrderExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidSortOrderException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3633,7 +3633,7 @@ const de_InvalidTagExceptionRes = async (parsedOutput: any, context: __SerdeCont
  */
 const de_InvalidTagFilterExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidTagFilterException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3649,7 +3649,7 @@ const de_InvalidTagFilterExceptionRes = async (
  */
 const de_InvalidTagsToAddExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidTagsToAddException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3665,7 +3665,7 @@ const de_InvalidTagsToAddExceptionRes = async (
  */
 const de_InvalidTargetFilterNameExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidTargetFilterNameException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3681,7 +3681,7 @@ const de_InvalidTargetFilterNameExceptionRes = async (
  */
 const de_InvalidTargetGroupPairExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidTargetGroupPairException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3697,7 +3697,7 @@ const de_InvalidTargetGroupPairExceptionRes = async (
  */
 const de_InvalidTargetInstancesExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidTargetInstancesException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3713,7 +3713,7 @@ const de_InvalidTargetInstancesExceptionRes = async (
  */
 const de_InvalidTimeRangeExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidTimeRangeException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3729,7 +3729,7 @@ const de_InvalidTimeRangeExceptionRes = async (
  */
 const de_InvalidTrafficRoutingConfigurationExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidTrafficRoutingConfigurationException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3745,7 +3745,7 @@ const de_InvalidTrafficRoutingConfigurationExceptionRes = async (
  */
 const de_InvalidTriggerConfigExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidTriggerConfigException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3761,7 +3761,7 @@ const de_InvalidTriggerConfigExceptionRes = async (
  */
 const de_InvalidUpdateOutdatedInstancesOnlyValueExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidUpdateOutdatedInstancesOnlyValueException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3777,7 +3777,7 @@ const de_InvalidUpdateOutdatedInstancesOnlyValueExceptionRes = async (
  */
 const de_InvalidZonalDeploymentConfigurationExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidZonalDeploymentConfigurationException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3793,7 +3793,7 @@ const de_InvalidZonalDeploymentConfigurationExceptionRes = async (
  */
 const de_LifecycleEventAlreadyCompletedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<LifecycleEventAlreadyCompletedException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3809,7 +3809,7 @@ const de_LifecycleEventAlreadyCompletedExceptionRes = async (
  */
 const de_LifecycleHookLimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<LifecycleHookLimitExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3825,7 +3825,7 @@ const de_LifecycleHookLimitExceededExceptionRes = async (
  */
 const de_MultipleIamArnsProvidedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<MultipleIamArnsProvidedException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3841,7 +3841,7 @@ const de_MultipleIamArnsProvidedExceptionRes = async (
  */
 const de_OperationNotSupportedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<OperationNotSupportedException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3857,7 +3857,7 @@ const de_OperationNotSupportedExceptionRes = async (
  */
 const de_ResourceArnRequiredExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceArnRequiredException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3873,7 +3873,7 @@ const de_ResourceArnRequiredExceptionRes = async (
  */
 const de_ResourceValidationExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceValidationException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3889,7 +3889,7 @@ const de_ResourceValidationExceptionRes = async (
  */
 const de_RevisionDoesNotExistExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RevisionDoesNotExistException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3905,7 +3905,7 @@ const de_RevisionDoesNotExistExceptionRes = async (
  */
 const de_RevisionRequiredExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RevisionRequiredException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3921,7 +3921,7 @@ const de_RevisionRequiredExceptionRes = async (
  */
 const de_RoleRequiredExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RoleRequiredException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3937,7 +3937,7 @@ const de_RoleRequiredExceptionRes = async (
  */
 const de_TagLimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagLimitExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3953,7 +3953,7 @@ const de_TagLimitExceededExceptionRes = async (
  */
 const de_TagRequiredExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagRequiredException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3969,7 +3969,7 @@ const de_TagRequiredExceptionRes = async (
  */
 const de_TagSetListLimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagSetListLimitExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3998,7 +3998,7 @@ const de_ThrottlingExceptionRes = async (parsedOutput: any, context: __SerdeCont
  */
 const de_TriggerTargetsLimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TriggerTargetsLimitExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -4014,7 +4014,7 @@ const de_TriggerTargetsLimitExceededExceptionRes = async (
  */
 const de_UnsupportedActionForDeploymentTypeExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UnsupportedActionForDeploymentTypeException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -4324,7 +4324,7 @@ const de_ApplicationsInfoList = (output: any, context: __SerdeContext): Applicat
  */
 const de_BatchGetApplicationRevisionsOutput = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): BatchGetApplicationRevisionsOutput => {
   return take(output, {
     applicationName: __expectString,
@@ -4357,7 +4357,7 @@ const de_BatchGetDeploymentGroupsOutput = (output: any, context: __SerdeContext)
  */
 const de_BatchGetDeploymentInstancesOutput = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): BatchGetDeploymentInstancesOutput => {
   return take(output, {
     errorMessage: __expectString,
@@ -4388,7 +4388,7 @@ const de_BatchGetDeploymentTargetsOutput = (output: any, context: __SerdeContext
  */
 const de_BatchGetOnPremisesInstancesOutput = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): BatchGetOnPremisesInstancesOutput => {
   return take(output, {
     instanceInfos: (_: any) => de_InstanceInfoList(_, context),
@@ -5206,7 +5206,7 @@ const buildHttpRpcRequest = async (
   headers: __HeaderBag,
   path: string,
   resolvedHostname: string | undefined,
-  body: any
+  body: any,
 ): Promise<__HttpRequest> => {
   const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
   const contents: any = {

@@ -181,7 +181,7 @@ import { TnbServiceException as __BaseException } from "../models/TnbServiceExce
  */
 export const se_CancelSolNetworkOperationCommand = async (
   input: CancelSolNetworkOperationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -197,7 +197,7 @@ export const se_CancelSolNetworkOperationCommand = async (
  */
 export const se_CreateSolFunctionPackageCommand = async (
   input: CreateSolFunctionPackageCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -208,7 +208,7 @@ export const se_CreateSolFunctionPackageCommand = async (
   body = JSON.stringify(
     take(input, {
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -219,7 +219,7 @@ export const se_CreateSolFunctionPackageCommand = async (
  */
 export const se_CreateSolNetworkInstanceCommand = async (
   input: CreateSolNetworkInstanceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -233,7 +233,7 @@ export const se_CreateSolNetworkInstanceCommand = async (
       nsName: [],
       nsdInfoId: [],
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -244,7 +244,7 @@ export const se_CreateSolNetworkInstanceCommand = async (
  */
 export const se_CreateSolNetworkPackageCommand = async (
   input: CreateSolNetworkPackageCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -255,7 +255,7 @@ export const se_CreateSolNetworkPackageCommand = async (
   body = JSON.stringify(
     take(input, {
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -266,7 +266,7 @@ export const se_CreateSolNetworkPackageCommand = async (
  */
 export const se_DeleteSolFunctionPackageCommand = async (
   input: DeleteSolFunctionPackageCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -282,7 +282,7 @@ export const se_DeleteSolFunctionPackageCommand = async (
  */
 export const se_DeleteSolNetworkInstanceCommand = async (
   input: DeleteSolNetworkInstanceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -298,7 +298,7 @@ export const se_DeleteSolNetworkInstanceCommand = async (
  */
 export const se_DeleteSolNetworkPackageCommand = async (
   input: DeleteSolNetworkPackageCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -314,7 +314,7 @@ export const se_DeleteSolNetworkPackageCommand = async (
  */
 export const se_GetSolFunctionInstanceCommand = async (
   input: GetSolFunctionInstanceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -330,7 +330,7 @@ export const se_GetSolFunctionInstanceCommand = async (
  */
 export const se_GetSolFunctionPackageCommand = async (
   input: GetSolFunctionPackageCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -346,7 +346,7 @@ export const se_GetSolFunctionPackageCommand = async (
  */
 export const se_GetSolFunctionPackageContentCommand = async (
   input: GetSolFunctionPackageContentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -364,7 +364,7 @@ export const se_GetSolFunctionPackageContentCommand = async (
  */
 export const se_GetSolFunctionPackageDescriptorCommand = async (
   input: GetSolFunctionPackageDescriptorCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -382,7 +382,7 @@ export const se_GetSolFunctionPackageDescriptorCommand = async (
  */
 export const se_GetSolNetworkInstanceCommand = async (
   input: GetSolNetworkInstanceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -398,7 +398,7 @@ export const se_GetSolNetworkInstanceCommand = async (
  */
 export const se_GetSolNetworkOperationCommand = async (
   input: GetSolNetworkOperationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -414,7 +414,7 @@ export const se_GetSolNetworkOperationCommand = async (
  */
 export const se_GetSolNetworkPackageCommand = async (
   input: GetSolNetworkPackageCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -430,7 +430,7 @@ export const se_GetSolNetworkPackageCommand = async (
  */
 export const se_GetSolNetworkPackageContentCommand = async (
   input: GetSolNetworkPackageContentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -448,7 +448,7 @@ export const se_GetSolNetworkPackageContentCommand = async (
  */
 export const se_GetSolNetworkPackageDescriptorCommand = async (
   input: GetSolNetworkPackageDescriptorCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -464,7 +464,7 @@ export const se_GetSolNetworkPackageDescriptorCommand = async (
  */
 export const se_InstantiateSolNetworkInstanceCommand = async (
   input: InstantiateSolNetworkInstanceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -480,7 +480,7 @@ export const se_InstantiateSolNetworkInstanceCommand = async (
     take(input, {
       additionalParamsForNs: (_) => se_Document(_, context),
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).q(query).b(body);
   return b.build();
@@ -491,7 +491,7 @@ export const se_InstantiateSolNetworkInstanceCommand = async (
  */
 export const se_ListSolFunctionInstancesCommand = async (
   input: ListSolFunctionInstancesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -510,7 +510,7 @@ export const se_ListSolFunctionInstancesCommand = async (
  */
 export const se_ListSolFunctionPackagesCommand = async (
   input: ListSolFunctionPackagesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -529,7 +529,7 @@ export const se_ListSolFunctionPackagesCommand = async (
  */
 export const se_ListSolNetworkInstancesCommand = async (
   input: ListSolNetworkInstancesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -548,7 +548,7 @@ export const se_ListSolNetworkInstancesCommand = async (
  */
 export const se_ListSolNetworkOperationsCommand = async (
   input: ListSolNetworkOperationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -567,7 +567,7 @@ export const se_ListSolNetworkOperationsCommand = async (
  */
 export const se_ListSolNetworkPackagesCommand = async (
   input: ListSolNetworkPackagesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -586,7 +586,7 @@ export const se_ListSolNetworkPackagesCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -602,7 +602,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_PutSolFunctionPackageContentCommand = async (
   input: PutSolFunctionPackageContentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -623,7 +623,7 @@ export const se_PutSolFunctionPackageContentCommand = async (
  */
 export const se_PutSolNetworkPackageContentCommand = async (
   input: PutSolNetworkPackageContentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -644,7 +644,7 @@ export const se_PutSolNetworkPackageContentCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -656,7 +656,7 @@ export const se_TagResourceCommand = async (
   body = JSON.stringify(
     take(input, {
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -667,7 +667,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_TerminateSolNetworkInstanceCommand = async (
   input: TerminateSolNetworkInstanceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -679,7 +679,7 @@ export const se_TerminateSolNetworkInstanceCommand = async (
   body = JSON.stringify(
     take(input, {
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -690,7 +690,7 @@ export const se_TerminateSolNetworkInstanceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -712,7 +712,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateSolFunctionPackageCommand = async (
   input: UpdateSolFunctionPackageCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -724,7 +724,7 @@ export const se_UpdateSolFunctionPackageCommand = async (
   body = JSON.stringify(
     take(input, {
       operationalState: [],
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -735,7 +735,7 @@ export const se_UpdateSolFunctionPackageCommand = async (
  */
 export const se_UpdateSolNetworkInstanceCommand = async (
   input: UpdateSolNetworkInstanceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -749,7 +749,7 @@ export const se_UpdateSolNetworkInstanceCommand = async (
       modifyVnfInfoData: (_) => se_UpdateSolNetworkModify(_, context),
       tags: (_) => _json(_),
       updateType: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -760,7 +760,7 @@ export const se_UpdateSolNetworkInstanceCommand = async (
  */
 export const se_UpdateSolNetworkPackageCommand = async (
   input: UpdateSolNetworkPackageCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -772,7 +772,7 @@ export const se_UpdateSolNetworkPackageCommand = async (
   body = JSON.stringify(
     take(input, {
       nsdOperationalState: [],
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -783,7 +783,7 @@ export const se_UpdateSolNetworkPackageCommand = async (
  */
 export const se_ValidateSolFunctionPackageContentCommand = async (
   input: ValidateSolFunctionPackageContentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -804,7 +804,7 @@ export const se_ValidateSolFunctionPackageContentCommand = async (
  */
 export const se_ValidateSolNetworkPackageContentCommand = async (
   input: ValidateSolNetworkPackageContentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -825,7 +825,7 @@ export const se_ValidateSolNetworkPackageContentCommand = async (
  */
 export const de_CancelSolNetworkOperationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CancelSolNetworkOperationCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -842,7 +842,7 @@ export const de_CancelSolNetworkOperationCommand = async (
  */
 export const de_CreateSolFunctionPackageCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateSolFunctionPackageCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -868,7 +868,7 @@ export const de_CreateSolFunctionPackageCommand = async (
  */
 export const de_CreateSolNetworkInstanceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateSolNetworkInstanceCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -893,7 +893,7 @@ export const de_CreateSolNetworkInstanceCommand = async (
  */
 export const de_CreateSolNetworkPackageCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateSolNetworkPackageCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -919,7 +919,7 @@ export const de_CreateSolNetworkPackageCommand = async (
  */
 export const de_DeleteSolFunctionPackageCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteSolFunctionPackageCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -936,7 +936,7 @@ export const de_DeleteSolFunctionPackageCommand = async (
  */
 export const de_DeleteSolNetworkInstanceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteSolNetworkInstanceCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -953,7 +953,7 @@ export const de_DeleteSolNetworkInstanceCommand = async (
  */
 export const de_DeleteSolNetworkPackageCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteSolNetworkPackageCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -970,7 +970,7 @@ export const de_DeleteSolNetworkPackageCommand = async (
  */
 export const de_GetSolFunctionInstanceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetSolFunctionInstanceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1002,7 +1002,7 @@ export const de_GetSolFunctionInstanceCommand = async (
  */
 export const de_GetSolFunctionPackageCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetSolFunctionPackageCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1033,7 +1033,7 @@ export const de_GetSolFunctionPackageCommand = async (
  */
 export const de_GetSolFunctionPackageContentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetSolFunctionPackageContentCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1052,7 +1052,7 @@ export const de_GetSolFunctionPackageContentCommand = async (
  */
 export const de_GetSolFunctionPackageDescriptorCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetSolFunctionPackageDescriptorCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1071,7 +1071,7 @@ export const de_GetSolFunctionPackageDescriptorCommand = async (
  */
 export const de_GetSolNetworkInstanceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetSolNetworkInstanceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1101,7 +1101,7 @@ export const de_GetSolNetworkInstanceCommand = async (
  */
 export const de_GetSolNetworkOperationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetSolNetworkOperationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1130,7 +1130,7 @@ export const de_GetSolNetworkOperationCommand = async (
  */
 export const de_GetSolNetworkPackageCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetSolNetworkPackageCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1161,7 +1161,7 @@ export const de_GetSolNetworkPackageCommand = async (
  */
 export const de_GetSolNetworkPackageContentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetSolNetworkPackageContentCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1180,7 +1180,7 @@ export const de_GetSolNetworkPackageContentCommand = async (
  */
 export const de_GetSolNetworkPackageDescriptorCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetSolNetworkPackageDescriptorCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1199,7 +1199,7 @@ export const de_GetSolNetworkPackageDescriptorCommand = async (
  */
 export const de_InstantiateSolNetworkInstanceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InstantiateSolNetworkInstanceCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1221,7 +1221,7 @@ export const de_InstantiateSolNetworkInstanceCommand = async (
  */
 export const de_ListSolFunctionInstancesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListSolFunctionInstancesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1243,7 +1243,7 @@ export const de_ListSolFunctionInstancesCommand = async (
  */
 export const de_ListSolFunctionPackagesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListSolFunctionPackagesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1265,7 +1265,7 @@ export const de_ListSolFunctionPackagesCommand = async (
  */
 export const de_ListSolNetworkInstancesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListSolNetworkInstancesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1287,7 +1287,7 @@ export const de_ListSolNetworkInstancesCommand = async (
  */
 export const de_ListSolNetworkOperationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListSolNetworkOperationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1309,7 +1309,7 @@ export const de_ListSolNetworkOperationsCommand = async (
  */
 export const de_ListSolNetworkPackagesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListSolNetworkPackagesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1331,7 +1331,7 @@ export const de_ListSolNetworkPackagesCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1352,7 +1352,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_PutSolFunctionPackageContentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutSolFunctionPackageContentCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1378,7 +1378,7 @@ export const de_PutSolFunctionPackageContentCommand = async (
  */
 export const de_PutSolNetworkPackageContentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutSolNetworkPackageContentCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1405,7 +1405,7 @@ export const de_PutSolNetworkPackageContentCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1422,7 +1422,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_TerminateSolNetworkInstanceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TerminateSolNetworkInstanceCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1444,7 +1444,7 @@ export const de_TerminateSolNetworkInstanceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1461,7 +1461,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateSolFunctionPackageCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateSolFunctionPackageCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1482,7 +1482,7 @@ export const de_UpdateSolFunctionPackageCommand = async (
  */
 export const de_UpdateSolNetworkInstanceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateSolNetworkInstanceCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1504,7 +1504,7 @@ export const de_UpdateSolNetworkInstanceCommand = async (
  */
 export const de_UpdateSolNetworkPackageCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateSolNetworkPackageCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1525,7 +1525,7 @@ export const de_UpdateSolNetworkPackageCommand = async (
  */
 export const de_ValidateSolFunctionPackageContentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ValidateSolFunctionPackageContentCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1551,7 +1551,7 @@ export const de_ValidateSolFunctionPackageContentCommand = async (
  */
 export const de_ValidateSolNetworkPackageContentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ValidateSolNetworkPackageContentCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1617,7 +1617,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1637,7 +1637,7 @@ const de_AccessDeniedExceptionRes = async (
  */
 const de_InternalServerExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1657,7 +1657,7 @@ const de_InternalServerExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1677,7 +1677,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_ServiceQuotaExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceQuotaExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1797,7 +1797,7 @@ const de_GetSolNetworkOperationMetadata = (output: any, context: __SerdeContext)
  */
 const de_GetSolNetworkOperationTaskDetails = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): GetSolNetworkOperationTaskDetails => {
   return take(output, {
     taskContext: _json,
@@ -1814,7 +1814,7 @@ const de_GetSolNetworkOperationTaskDetails = (
  */
 const de_GetSolNetworkOperationTasksList = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): GetSolNetworkOperationTaskDetails[] => {
   const retVal = (output || [])
     .filter((e: any) => e != null)
@@ -1981,7 +1981,7 @@ const de_ListSolNetworkOperationsInfo = (output: any, context: __SerdeContext): 
  */
 const de_ListSolNetworkOperationsMetadata = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ListSolNetworkOperationsMetadata => {
   return take(output, {
     createdAt: (_: any) => __expectNonNull(__parseRfc3339DateTimeWithOffset(_)),

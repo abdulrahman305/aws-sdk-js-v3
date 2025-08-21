@@ -10,7 +10,7 @@ const spawnProcess = async (command, args = [], options = {}) => {
   return new Promise((resolve, reject) => {
     childProcess.on("error", reject);
     childProcess.on("exit", (code, signal) =>
-      code === 0 ? resolve(0) : reject(`${command} failed with { code: ${code}, signal: ${signal} }`)
+      code === 0 ? resolve(0) : reject(`${command} failed with { code: ${code}, signal: ${signal} }`),
     );
   });
 };

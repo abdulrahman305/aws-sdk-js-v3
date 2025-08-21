@@ -4,7 +4,7 @@ exports.deleteStaleChangesets = async (client, stackName) => {
   const changesets = await client.send(
     new ListChangeSetsCommand({
       StackName: stackName,
-    })
+    }),
   );
 
   try {
@@ -20,7 +20,7 @@ exports.deleteStaleChangesets = async (client, stackName) => {
           new DeleteChangeSetCommand({
             StackName: stackName,
             ChangeSetName: changeset.ChangeSetId,
-          })
+          }),
         );
       }
     }

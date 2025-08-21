@@ -205,16 +205,16 @@ export interface LexModelBuildingService {
    */
   createBotVersion(
     args: CreateBotVersionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateBotVersionCommandOutput>;
   createBotVersion(
     args: CreateBotVersionCommandInput,
-    cb: (err: any, data?: CreateBotVersionCommandOutput) => void
+    cb: (err: any, data?: CreateBotVersionCommandOutput) => void,
   ): void;
   createBotVersion(
     args: CreateBotVersionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateBotVersionCommandOutput) => void
+    cb: (err: any, data?: CreateBotVersionCommandOutput) => void,
   ): void;
 
   /**
@@ -222,16 +222,16 @@ export interface LexModelBuildingService {
    */
   createIntentVersion(
     args: CreateIntentVersionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateIntentVersionCommandOutput>;
   createIntentVersion(
     args: CreateIntentVersionCommandInput,
-    cb: (err: any, data?: CreateIntentVersionCommandOutput) => void
+    cb: (err: any, data?: CreateIntentVersionCommandOutput) => void,
   ): void;
   createIntentVersion(
     args: CreateIntentVersionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateIntentVersionCommandOutput) => void
+    cb: (err: any, data?: CreateIntentVersionCommandOutput) => void,
   ): void;
 
   /**
@@ -239,16 +239,16 @@ export interface LexModelBuildingService {
    */
   createSlotTypeVersion(
     args: CreateSlotTypeVersionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateSlotTypeVersionCommandOutput>;
   createSlotTypeVersion(
     args: CreateSlotTypeVersionCommandInput,
-    cb: (err: any, data?: CreateSlotTypeVersionCommandOutput) => void
+    cb: (err: any, data?: CreateSlotTypeVersionCommandOutput) => void,
   ): void;
   createSlotTypeVersion(
     args: CreateSlotTypeVersionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateSlotTypeVersionCommandOutput) => void
+    cb: (err: any, data?: CreateSlotTypeVersionCommandOutput) => void,
   ): void;
 
   /**
@@ -259,7 +259,7 @@ export interface LexModelBuildingService {
   deleteBot(
     args: DeleteBotCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteBotCommandOutput) => void
+    cb: (err: any, data?: DeleteBotCommandOutput) => void,
   ): void;
 
   /**
@@ -267,13 +267,13 @@ export interface LexModelBuildingService {
    */
   deleteBotAlias(
     args: DeleteBotAliasCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteBotAliasCommandOutput>;
   deleteBotAlias(args: DeleteBotAliasCommandInput, cb: (err: any, data?: DeleteBotAliasCommandOutput) => void): void;
   deleteBotAlias(
     args: DeleteBotAliasCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteBotAliasCommandOutput) => void
+    cb: (err: any, data?: DeleteBotAliasCommandOutput) => void,
   ): void;
 
   /**
@@ -281,16 +281,16 @@ export interface LexModelBuildingService {
    */
   deleteBotChannelAssociation(
     args: DeleteBotChannelAssociationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteBotChannelAssociationCommandOutput>;
   deleteBotChannelAssociation(
     args: DeleteBotChannelAssociationCommandInput,
-    cb: (err: any, data?: DeleteBotChannelAssociationCommandOutput) => void
+    cb: (err: any, data?: DeleteBotChannelAssociationCommandOutput) => void,
   ): void;
   deleteBotChannelAssociation(
     args: DeleteBotChannelAssociationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteBotChannelAssociationCommandOutput) => void
+    cb: (err: any, data?: DeleteBotChannelAssociationCommandOutput) => void,
   ): void;
 
   /**
@@ -298,16 +298,16 @@ export interface LexModelBuildingService {
    */
   deleteBotVersion(
     args: DeleteBotVersionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteBotVersionCommandOutput>;
   deleteBotVersion(
     args: DeleteBotVersionCommandInput,
-    cb: (err: any, data?: DeleteBotVersionCommandOutput) => void
+    cb: (err: any, data?: DeleteBotVersionCommandOutput) => void,
   ): void;
   deleteBotVersion(
     args: DeleteBotVersionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteBotVersionCommandOutput) => void
+    cb: (err: any, data?: DeleteBotVersionCommandOutput) => void,
   ): void;
 
   /**
@@ -318,7 +318,7 @@ export interface LexModelBuildingService {
   deleteIntent(
     args: DeleteIntentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteIntentCommandOutput) => void
+    cb: (err: any, data?: DeleteIntentCommandOutput) => void,
   ): void;
 
   /**
@@ -326,16 +326,16 @@ export interface LexModelBuildingService {
    */
   deleteIntentVersion(
     args: DeleteIntentVersionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteIntentVersionCommandOutput>;
   deleteIntentVersion(
     args: DeleteIntentVersionCommandInput,
-    cb: (err: any, data?: DeleteIntentVersionCommandOutput) => void
+    cb: (err: any, data?: DeleteIntentVersionCommandOutput) => void,
   ): void;
   deleteIntentVersion(
     args: DeleteIntentVersionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteIntentVersionCommandOutput) => void
+    cb: (err: any, data?: DeleteIntentVersionCommandOutput) => void,
   ): void;
 
   /**
@@ -343,13 +343,13 @@ export interface LexModelBuildingService {
    */
   deleteSlotType(
     args: DeleteSlotTypeCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteSlotTypeCommandOutput>;
   deleteSlotType(args: DeleteSlotTypeCommandInput, cb: (err: any, data?: DeleteSlotTypeCommandOutput) => void): void;
   deleteSlotType(
     args: DeleteSlotTypeCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteSlotTypeCommandOutput) => void
+    cb: (err: any, data?: DeleteSlotTypeCommandOutput) => void,
   ): void;
 
   /**
@@ -357,16 +357,16 @@ export interface LexModelBuildingService {
    */
   deleteSlotTypeVersion(
     args: DeleteSlotTypeVersionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteSlotTypeVersionCommandOutput>;
   deleteSlotTypeVersion(
     args: DeleteSlotTypeVersionCommandInput,
-    cb: (err: any, data?: DeleteSlotTypeVersionCommandOutput) => void
+    cb: (err: any, data?: DeleteSlotTypeVersionCommandOutput) => void,
   ): void;
   deleteSlotTypeVersion(
     args: DeleteSlotTypeVersionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteSlotTypeVersionCommandOutput) => void
+    cb: (err: any, data?: DeleteSlotTypeVersionCommandOutput) => void,
   ): void;
 
   /**
@@ -374,16 +374,16 @@ export interface LexModelBuildingService {
    */
   deleteUtterances(
     args: DeleteUtterancesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteUtterancesCommandOutput>;
   deleteUtterances(
     args: DeleteUtterancesCommandInput,
-    cb: (err: any, data?: DeleteUtterancesCommandOutput) => void
+    cb: (err: any, data?: DeleteUtterancesCommandOutput) => void,
   ): void;
   deleteUtterances(
     args: DeleteUtterancesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteUtterancesCommandOutput) => void
+    cb: (err: any, data?: DeleteUtterancesCommandOutput) => void,
   ): void;
 
   /**
@@ -394,7 +394,7 @@ export interface LexModelBuildingService {
   getBot(
     args: GetBotCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetBotCommandOutput) => void
+    cb: (err: any, data?: GetBotCommandOutput) => void,
   ): void;
 
   /**
@@ -405,7 +405,7 @@ export interface LexModelBuildingService {
   getBotAlias(
     args: GetBotAliasCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetBotAliasCommandOutput) => void
+    cb: (err: any, data?: GetBotAliasCommandOutput) => void,
   ): void;
 
   /**
@@ -416,7 +416,7 @@ export interface LexModelBuildingService {
   getBotAliases(
     args: GetBotAliasesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetBotAliasesCommandOutput) => void
+    cb: (err: any, data?: GetBotAliasesCommandOutput) => void,
   ): void;
 
   /**
@@ -424,16 +424,16 @@ export interface LexModelBuildingService {
    */
   getBotChannelAssociation(
     args: GetBotChannelAssociationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetBotChannelAssociationCommandOutput>;
   getBotChannelAssociation(
     args: GetBotChannelAssociationCommandInput,
-    cb: (err: any, data?: GetBotChannelAssociationCommandOutput) => void
+    cb: (err: any, data?: GetBotChannelAssociationCommandOutput) => void,
   ): void;
   getBotChannelAssociation(
     args: GetBotChannelAssociationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetBotChannelAssociationCommandOutput) => void
+    cb: (err: any, data?: GetBotChannelAssociationCommandOutput) => void,
   ): void;
 
   /**
@@ -441,16 +441,16 @@ export interface LexModelBuildingService {
    */
   getBotChannelAssociations(
     args: GetBotChannelAssociationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetBotChannelAssociationsCommandOutput>;
   getBotChannelAssociations(
     args: GetBotChannelAssociationsCommandInput,
-    cb: (err: any, data?: GetBotChannelAssociationsCommandOutput) => void
+    cb: (err: any, data?: GetBotChannelAssociationsCommandOutput) => void,
   ): void;
   getBotChannelAssociations(
     args: GetBotChannelAssociationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetBotChannelAssociationsCommandOutput) => void
+    cb: (err: any, data?: GetBotChannelAssociationsCommandOutput) => void,
   ): void;
 
   /**
@@ -462,7 +462,7 @@ export interface LexModelBuildingService {
   getBots(
     args: GetBotsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetBotsCommandOutput) => void
+    cb: (err: any, data?: GetBotsCommandOutput) => void,
   ): void;
 
   /**
@@ -470,13 +470,13 @@ export interface LexModelBuildingService {
    */
   getBotVersions(
     args: GetBotVersionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetBotVersionsCommandOutput>;
   getBotVersions(args: GetBotVersionsCommandInput, cb: (err: any, data?: GetBotVersionsCommandOutput) => void): void;
   getBotVersions(
     args: GetBotVersionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetBotVersionsCommandOutput) => void
+    cb: (err: any, data?: GetBotVersionsCommandOutput) => void,
   ): void;
 
   /**
@@ -484,16 +484,16 @@ export interface LexModelBuildingService {
    */
   getBuiltinIntent(
     args: GetBuiltinIntentCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetBuiltinIntentCommandOutput>;
   getBuiltinIntent(
     args: GetBuiltinIntentCommandInput,
-    cb: (err: any, data?: GetBuiltinIntentCommandOutput) => void
+    cb: (err: any, data?: GetBuiltinIntentCommandOutput) => void,
   ): void;
   getBuiltinIntent(
     args: GetBuiltinIntentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetBuiltinIntentCommandOutput) => void
+    cb: (err: any, data?: GetBuiltinIntentCommandOutput) => void,
   ): void;
 
   /**
@@ -502,16 +502,16 @@ export interface LexModelBuildingService {
   getBuiltinIntents(): Promise<GetBuiltinIntentsCommandOutput>;
   getBuiltinIntents(
     args: GetBuiltinIntentsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetBuiltinIntentsCommandOutput>;
   getBuiltinIntents(
     args: GetBuiltinIntentsCommandInput,
-    cb: (err: any, data?: GetBuiltinIntentsCommandOutput) => void
+    cb: (err: any, data?: GetBuiltinIntentsCommandOutput) => void,
   ): void;
   getBuiltinIntents(
     args: GetBuiltinIntentsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetBuiltinIntentsCommandOutput) => void
+    cb: (err: any, data?: GetBuiltinIntentsCommandOutput) => void,
   ): void;
 
   /**
@@ -520,16 +520,16 @@ export interface LexModelBuildingService {
   getBuiltinSlotTypes(): Promise<GetBuiltinSlotTypesCommandOutput>;
   getBuiltinSlotTypes(
     args: GetBuiltinSlotTypesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetBuiltinSlotTypesCommandOutput>;
   getBuiltinSlotTypes(
     args: GetBuiltinSlotTypesCommandInput,
-    cb: (err: any, data?: GetBuiltinSlotTypesCommandOutput) => void
+    cb: (err: any, data?: GetBuiltinSlotTypesCommandOutput) => void,
   ): void;
   getBuiltinSlotTypes(
     args: GetBuiltinSlotTypesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetBuiltinSlotTypesCommandOutput) => void
+    cb: (err: any, data?: GetBuiltinSlotTypesCommandOutput) => void,
   ): void;
 
   /**
@@ -540,7 +540,7 @@ export interface LexModelBuildingService {
   getExport(
     args: GetExportCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetExportCommandOutput) => void
+    cb: (err: any, data?: GetExportCommandOutput) => void,
   ): void;
 
   /**
@@ -551,7 +551,7 @@ export interface LexModelBuildingService {
   getImport(
     args: GetImportCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetImportCommandOutput) => void
+    cb: (err: any, data?: GetImportCommandOutput) => void,
   ): void;
 
   /**
@@ -562,7 +562,7 @@ export interface LexModelBuildingService {
   getIntent(
     args: GetIntentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetIntentCommandOutput) => void
+    cb: (err: any, data?: GetIntentCommandOutput) => void,
   ): void;
 
   /**
@@ -574,7 +574,7 @@ export interface LexModelBuildingService {
   getIntents(
     args: GetIntentsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetIntentsCommandOutput) => void
+    cb: (err: any, data?: GetIntentsCommandOutput) => void,
   ): void;
 
   /**
@@ -582,16 +582,16 @@ export interface LexModelBuildingService {
    */
   getIntentVersions(
     args: GetIntentVersionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetIntentVersionsCommandOutput>;
   getIntentVersions(
     args: GetIntentVersionsCommandInput,
-    cb: (err: any, data?: GetIntentVersionsCommandOutput) => void
+    cb: (err: any, data?: GetIntentVersionsCommandOutput) => void,
   ): void;
   getIntentVersions(
     args: GetIntentVersionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetIntentVersionsCommandOutput) => void
+    cb: (err: any, data?: GetIntentVersionsCommandOutput) => void,
   ): void;
 
   /**
@@ -602,7 +602,7 @@ export interface LexModelBuildingService {
   getMigration(
     args: GetMigrationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetMigrationCommandOutput) => void
+    cb: (err: any, data?: GetMigrationCommandOutput) => void,
   ): void;
 
   /**
@@ -614,7 +614,7 @@ export interface LexModelBuildingService {
   getMigrations(
     args: GetMigrationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetMigrationsCommandOutput) => void
+    cb: (err: any, data?: GetMigrationsCommandOutput) => void,
   ): void;
 
   /**
@@ -625,7 +625,7 @@ export interface LexModelBuildingService {
   getSlotType(
     args: GetSlotTypeCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetSlotTypeCommandOutput) => void
+    cb: (err: any, data?: GetSlotTypeCommandOutput) => void,
   ): void;
 
   /**
@@ -637,7 +637,7 @@ export interface LexModelBuildingService {
   getSlotTypes(
     args: GetSlotTypesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetSlotTypesCommandOutput) => void
+    cb: (err: any, data?: GetSlotTypesCommandOutput) => void,
   ): void;
 
   /**
@@ -645,16 +645,16 @@ export interface LexModelBuildingService {
    */
   getSlotTypeVersions(
     args: GetSlotTypeVersionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetSlotTypeVersionsCommandOutput>;
   getSlotTypeVersions(
     args: GetSlotTypeVersionsCommandInput,
-    cb: (err: any, data?: GetSlotTypeVersionsCommandOutput) => void
+    cb: (err: any, data?: GetSlotTypeVersionsCommandOutput) => void,
   ): void;
   getSlotTypeVersions(
     args: GetSlotTypeVersionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetSlotTypeVersionsCommandOutput) => void
+    cb: (err: any, data?: GetSlotTypeVersionsCommandOutput) => void,
   ): void;
 
   /**
@@ -662,16 +662,16 @@ export interface LexModelBuildingService {
    */
   getUtterancesView(
     args: GetUtterancesViewCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetUtterancesViewCommandOutput>;
   getUtterancesView(
     args: GetUtterancesViewCommandInput,
-    cb: (err: any, data?: GetUtterancesViewCommandOutput) => void
+    cb: (err: any, data?: GetUtterancesViewCommandOutput) => void,
   ): void;
   getUtterancesView(
     args: GetUtterancesViewCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetUtterancesViewCommandOutput) => void
+    cb: (err: any, data?: GetUtterancesViewCommandOutput) => void,
   ): void;
 
   /**
@@ -679,16 +679,16 @@ export interface LexModelBuildingService {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -699,7 +699,7 @@ export interface LexModelBuildingService {
   putBot(
     args: PutBotCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutBotCommandOutput) => void
+    cb: (err: any, data?: PutBotCommandOutput) => void,
   ): void;
 
   /**
@@ -710,7 +710,7 @@ export interface LexModelBuildingService {
   putBotAlias(
     args: PutBotAliasCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutBotAliasCommandOutput) => void
+    cb: (err: any, data?: PutBotAliasCommandOutput) => void,
   ): void;
 
   /**
@@ -721,7 +721,7 @@ export interface LexModelBuildingService {
   putIntent(
     args: PutIntentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutIntentCommandOutput) => void
+    cb: (err: any, data?: PutIntentCommandOutput) => void,
   ): void;
 
   /**
@@ -732,7 +732,7 @@ export interface LexModelBuildingService {
   putSlotType(
     args: PutSlotTypeCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutSlotTypeCommandOutput) => void
+    cb: (err: any, data?: PutSlotTypeCommandOutput) => void,
   ): void;
 
   /**
@@ -743,7 +743,7 @@ export interface LexModelBuildingService {
   startImport(
     args: StartImportCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartImportCommandOutput) => void
+    cb: (err: any, data?: StartImportCommandOutput) => void,
   ): void;
 
   /**
@@ -751,13 +751,13 @@ export interface LexModelBuildingService {
    */
   startMigration(
     args: StartMigrationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartMigrationCommandOutput>;
   startMigration(args: StartMigrationCommandInput, cb: (err: any, data?: StartMigrationCommandOutput) => void): void;
   startMigration(
     args: StartMigrationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartMigrationCommandOutput) => void
+    cb: (err: any, data?: StartMigrationCommandOutput) => void,
   ): void;
 
   /**
@@ -768,7 +768,7 @@ export interface LexModelBuildingService {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -779,7 +779,7 @@ export interface LexModelBuildingService {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 }
 

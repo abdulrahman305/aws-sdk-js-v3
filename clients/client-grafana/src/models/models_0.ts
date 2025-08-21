@@ -2644,7 +2644,7 @@ export const AuthenticationDescriptionFilterSensitiveLog = (obj: AuthenticationD
  * @internal
  */
 export const DescribeWorkspaceAuthenticationResponseFilterSensitiveLog = (
-  obj: DescribeWorkspaceAuthenticationResponse
+  obj: DescribeWorkspaceAuthenticationResponse,
 ): any => ({
   ...obj,
   ...(obj.authentication && { authentication: AuthenticationDescriptionFilterSensitiveLog(obj.authentication) }),
@@ -2654,7 +2654,7 @@ export const DescribeWorkspaceAuthenticationResponseFilterSensitiveLog = (
  * @internal
  */
 export const UpdateWorkspaceAuthenticationRequestFilterSensitiveLog = (
-  obj: UpdateWorkspaceAuthenticationRequest
+  obj: UpdateWorkspaceAuthenticationRequest,
 ): any => ({
   ...obj,
   ...(obj.samlConfiguration && { samlConfiguration: SamlConfigurationFilterSensitiveLog(obj.samlConfiguration) }),
@@ -2664,7 +2664,7 @@ export const UpdateWorkspaceAuthenticationRequestFilterSensitiveLog = (
  * @internal
  */
 export const UpdateWorkspaceAuthenticationResponseFilterSensitiveLog = (
-  obj: UpdateWorkspaceAuthenticationResponse
+  obj: UpdateWorkspaceAuthenticationResponse,
 ): any => ({
   ...obj,
   ...(obj.authentication && { authentication: AuthenticationDescriptionFilterSensitiveLog(obj.authentication) }),
@@ -2690,7 +2690,7 @@ export const ServiceAccountTokenSummaryWithKeyFilterSensitiveLog = (obj: Service
  * @internal
  */
 export const CreateWorkspaceServiceAccountTokenResponseFilterSensitiveLog = (
-  obj: CreateWorkspaceServiceAccountTokenResponse
+  obj: CreateWorkspaceServiceAccountTokenResponse,
 ): any => ({
   ...obj,
   ...(obj.serviceAccountToken && {

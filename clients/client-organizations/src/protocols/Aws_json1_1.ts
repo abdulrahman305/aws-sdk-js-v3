@@ -292,7 +292,7 @@ import { OrganizationsServiceException as __BaseException } from "../models/Orga
  */
 export const se_AcceptHandshakeCommand = async (
   input: AcceptHandshakeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("AcceptHandshake");
   let body: any;
@@ -305,7 +305,7 @@ export const se_AcceptHandshakeCommand = async (
  */
 export const se_AttachPolicyCommand = async (
   input: AttachPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("AttachPolicy");
   let body: any;
@@ -318,7 +318,7 @@ export const se_AttachPolicyCommand = async (
  */
 export const se_CancelHandshakeCommand = async (
   input: CancelHandshakeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CancelHandshake");
   let body: any;
@@ -331,7 +331,7 @@ export const se_CancelHandshakeCommand = async (
  */
 export const se_CloseAccountCommand = async (
   input: CloseAccountCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CloseAccount");
   let body: any;
@@ -344,7 +344,7 @@ export const se_CloseAccountCommand = async (
  */
 export const se_CreateAccountCommand = async (
   input: CreateAccountCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateAccount");
   let body: any;
@@ -357,7 +357,7 @@ export const se_CreateAccountCommand = async (
  */
 export const se_CreateGovCloudAccountCommand = async (
   input: CreateGovCloudAccountCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateGovCloudAccount");
   let body: any;
@@ -370,7 +370,7 @@ export const se_CreateGovCloudAccountCommand = async (
  */
 export const se_CreateOrganizationCommand = async (
   input: CreateOrganizationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateOrganization");
   let body: any;
@@ -383,7 +383,7 @@ export const se_CreateOrganizationCommand = async (
  */
 export const se_CreateOrganizationalUnitCommand = async (
   input: CreateOrganizationalUnitCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateOrganizationalUnit");
   let body: any;
@@ -396,7 +396,7 @@ export const se_CreateOrganizationalUnitCommand = async (
  */
 export const se_CreatePolicyCommand = async (
   input: CreatePolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreatePolicy");
   let body: any;
@@ -409,7 +409,7 @@ export const se_CreatePolicyCommand = async (
  */
 export const se_DeclineHandshakeCommand = async (
   input: DeclineHandshakeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeclineHandshake");
   let body: any;
@@ -422,7 +422,7 @@ export const se_DeclineHandshakeCommand = async (
  */
 export const se_DeleteOrganizationCommand = async (
   input: DeleteOrganizationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteOrganization");
   const body = "{}";
@@ -434,7 +434,7 @@ export const se_DeleteOrganizationCommand = async (
  */
 export const se_DeleteOrganizationalUnitCommand = async (
   input: DeleteOrganizationalUnitCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteOrganizationalUnit");
   let body: any;
@@ -447,7 +447,7 @@ export const se_DeleteOrganizationalUnitCommand = async (
  */
 export const se_DeletePolicyCommand = async (
   input: DeletePolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeletePolicy");
   let body: any;
@@ -460,7 +460,7 @@ export const se_DeletePolicyCommand = async (
  */
 export const se_DeleteResourcePolicyCommand = async (
   input: DeleteResourcePolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteResourcePolicy");
   const body = "{}";
@@ -472,7 +472,7 @@ export const se_DeleteResourcePolicyCommand = async (
  */
 export const se_DeregisterDelegatedAdministratorCommand = async (
   input: DeregisterDelegatedAdministratorCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeregisterDelegatedAdministrator");
   let body: any;
@@ -485,7 +485,7 @@ export const se_DeregisterDelegatedAdministratorCommand = async (
  */
 export const se_DescribeAccountCommand = async (
   input: DescribeAccountCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeAccount");
   let body: any;
@@ -498,7 +498,7 @@ export const se_DescribeAccountCommand = async (
  */
 export const se_DescribeCreateAccountStatusCommand = async (
   input: DescribeCreateAccountStatusCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeCreateAccountStatus");
   let body: any;
@@ -511,7 +511,7 @@ export const se_DescribeCreateAccountStatusCommand = async (
  */
 export const se_DescribeEffectivePolicyCommand = async (
   input: DescribeEffectivePolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeEffectivePolicy");
   let body: any;
@@ -524,7 +524,7 @@ export const se_DescribeEffectivePolicyCommand = async (
  */
 export const se_DescribeHandshakeCommand = async (
   input: DescribeHandshakeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeHandshake");
   let body: any;
@@ -537,7 +537,7 @@ export const se_DescribeHandshakeCommand = async (
  */
 export const se_DescribeOrganizationCommand = async (
   input: DescribeOrganizationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeOrganization");
   const body = "{}";
@@ -549,7 +549,7 @@ export const se_DescribeOrganizationCommand = async (
  */
 export const se_DescribeOrganizationalUnitCommand = async (
   input: DescribeOrganizationalUnitCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeOrganizationalUnit");
   let body: any;
@@ -562,7 +562,7 @@ export const se_DescribeOrganizationalUnitCommand = async (
  */
 export const se_DescribePolicyCommand = async (
   input: DescribePolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribePolicy");
   let body: any;
@@ -575,7 +575,7 @@ export const se_DescribePolicyCommand = async (
  */
 export const se_DescribeResourcePolicyCommand = async (
   input: DescribeResourcePolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeResourcePolicy");
   const body = "{}";
@@ -587,7 +587,7 @@ export const se_DescribeResourcePolicyCommand = async (
  */
 export const se_DetachPolicyCommand = async (
   input: DetachPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DetachPolicy");
   let body: any;
@@ -600,7 +600,7 @@ export const se_DetachPolicyCommand = async (
  */
 export const se_DisableAWSServiceAccessCommand = async (
   input: DisableAWSServiceAccessCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DisableAWSServiceAccess");
   let body: any;
@@ -613,7 +613,7 @@ export const se_DisableAWSServiceAccessCommand = async (
  */
 export const se_DisablePolicyTypeCommand = async (
   input: DisablePolicyTypeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DisablePolicyType");
   let body: any;
@@ -626,7 +626,7 @@ export const se_DisablePolicyTypeCommand = async (
  */
 export const se_EnableAllFeaturesCommand = async (
   input: EnableAllFeaturesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("EnableAllFeatures");
   let body: any;
@@ -639,7 +639,7 @@ export const se_EnableAllFeaturesCommand = async (
  */
 export const se_EnableAWSServiceAccessCommand = async (
   input: EnableAWSServiceAccessCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("EnableAWSServiceAccess");
   let body: any;
@@ -652,7 +652,7 @@ export const se_EnableAWSServiceAccessCommand = async (
  */
 export const se_EnablePolicyTypeCommand = async (
   input: EnablePolicyTypeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("EnablePolicyType");
   let body: any;
@@ -665,7 +665,7 @@ export const se_EnablePolicyTypeCommand = async (
  */
 export const se_InviteAccountToOrganizationCommand = async (
   input: InviteAccountToOrganizationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("InviteAccountToOrganization");
   let body: any;
@@ -678,7 +678,7 @@ export const se_InviteAccountToOrganizationCommand = async (
  */
 export const se_LeaveOrganizationCommand = async (
   input: LeaveOrganizationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("LeaveOrganization");
   const body = "{}";
@@ -690,7 +690,7 @@ export const se_LeaveOrganizationCommand = async (
  */
 export const se_ListAccountsCommand = async (
   input: ListAccountsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListAccounts");
   let body: any;
@@ -703,7 +703,7 @@ export const se_ListAccountsCommand = async (
  */
 export const se_ListAccountsForParentCommand = async (
   input: ListAccountsForParentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListAccountsForParent");
   let body: any;
@@ -716,7 +716,7 @@ export const se_ListAccountsForParentCommand = async (
  */
 export const se_ListAWSServiceAccessForOrganizationCommand = async (
   input: ListAWSServiceAccessForOrganizationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListAWSServiceAccessForOrganization");
   let body: any;
@@ -729,7 +729,7 @@ export const se_ListAWSServiceAccessForOrganizationCommand = async (
  */
 export const se_ListChildrenCommand = async (
   input: ListChildrenCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListChildren");
   let body: any;
@@ -742,7 +742,7 @@ export const se_ListChildrenCommand = async (
  */
 export const se_ListCreateAccountStatusCommand = async (
   input: ListCreateAccountStatusCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListCreateAccountStatus");
   let body: any;
@@ -755,7 +755,7 @@ export const se_ListCreateAccountStatusCommand = async (
  */
 export const se_ListDelegatedAdministratorsCommand = async (
   input: ListDelegatedAdministratorsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListDelegatedAdministrators");
   let body: any;
@@ -768,7 +768,7 @@ export const se_ListDelegatedAdministratorsCommand = async (
  */
 export const se_ListDelegatedServicesForAccountCommand = async (
   input: ListDelegatedServicesForAccountCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListDelegatedServicesForAccount");
   let body: any;
@@ -781,7 +781,7 @@ export const se_ListDelegatedServicesForAccountCommand = async (
  */
 export const se_ListHandshakesForAccountCommand = async (
   input: ListHandshakesForAccountCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListHandshakesForAccount");
   let body: any;
@@ -794,7 +794,7 @@ export const se_ListHandshakesForAccountCommand = async (
  */
 export const se_ListHandshakesForOrganizationCommand = async (
   input: ListHandshakesForOrganizationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListHandshakesForOrganization");
   let body: any;
@@ -807,7 +807,7 @@ export const se_ListHandshakesForOrganizationCommand = async (
  */
 export const se_ListOrganizationalUnitsForParentCommand = async (
   input: ListOrganizationalUnitsForParentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListOrganizationalUnitsForParent");
   let body: any;
@@ -820,7 +820,7 @@ export const se_ListOrganizationalUnitsForParentCommand = async (
  */
 export const se_ListParentsCommand = async (
   input: ListParentsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListParents");
   let body: any;
@@ -833,7 +833,7 @@ export const se_ListParentsCommand = async (
  */
 export const se_ListPoliciesCommand = async (
   input: ListPoliciesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListPolicies");
   let body: any;
@@ -846,7 +846,7 @@ export const se_ListPoliciesCommand = async (
  */
 export const se_ListPoliciesForTargetCommand = async (
   input: ListPoliciesForTargetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListPoliciesForTarget");
   let body: any;
@@ -859,7 +859,7 @@ export const se_ListPoliciesForTargetCommand = async (
  */
 export const se_ListRootsCommand = async (
   input: ListRootsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListRoots");
   let body: any;
@@ -872,7 +872,7 @@ export const se_ListRootsCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListTagsForResource");
   let body: any;
@@ -885,7 +885,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_ListTargetsForPolicyCommand = async (
   input: ListTargetsForPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListTargetsForPolicy");
   let body: any;
@@ -898,7 +898,7 @@ export const se_ListTargetsForPolicyCommand = async (
  */
 export const se_MoveAccountCommand = async (
   input: MoveAccountCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("MoveAccount");
   let body: any;
@@ -911,7 +911,7 @@ export const se_MoveAccountCommand = async (
  */
 export const se_PutResourcePolicyCommand = async (
   input: PutResourcePolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("PutResourcePolicy");
   let body: any;
@@ -924,7 +924,7 @@ export const se_PutResourcePolicyCommand = async (
  */
 export const se_RegisterDelegatedAdministratorCommand = async (
   input: RegisterDelegatedAdministratorCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("RegisterDelegatedAdministrator");
   let body: any;
@@ -937,7 +937,7 @@ export const se_RegisterDelegatedAdministratorCommand = async (
  */
 export const se_RemoveAccountFromOrganizationCommand = async (
   input: RemoveAccountFromOrganizationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("RemoveAccountFromOrganization");
   let body: any;
@@ -950,7 +950,7 @@ export const se_RemoveAccountFromOrganizationCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("TagResource");
   let body: any;
@@ -963,7 +963,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UntagResource");
   let body: any;
@@ -976,7 +976,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateOrganizationalUnitCommand = async (
   input: UpdateOrganizationalUnitCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateOrganizationalUnit");
   let body: any;
@@ -989,7 +989,7 @@ export const se_UpdateOrganizationalUnitCommand = async (
  */
 export const se_UpdatePolicyCommand = async (
   input: UpdatePolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdatePolicy");
   let body: any;
@@ -1002,7 +1002,7 @@ export const se_UpdatePolicyCommand = async (
  */
 export const de_AcceptHandshakeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AcceptHandshakeCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1022,7 +1022,7 @@ export const de_AcceptHandshakeCommand = async (
  */
 export const de_AttachPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AttachPolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1039,7 +1039,7 @@ export const de_AttachPolicyCommand = async (
  */
 export const de_CancelHandshakeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CancelHandshakeCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1059,7 +1059,7 @@ export const de_CancelHandshakeCommand = async (
  */
 export const de_CloseAccountCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CloseAccountCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1076,7 +1076,7 @@ export const de_CloseAccountCommand = async (
  */
 export const de_CreateAccountCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateAccountCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1096,7 +1096,7 @@ export const de_CreateAccountCommand = async (
  */
 export const de_CreateGovCloudAccountCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateGovCloudAccountCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1116,7 +1116,7 @@ export const de_CreateGovCloudAccountCommand = async (
  */
 export const de_CreateOrganizationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateOrganizationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1136,7 +1136,7 @@ export const de_CreateOrganizationCommand = async (
  */
 export const de_CreateOrganizationalUnitCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateOrganizationalUnitCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1156,7 +1156,7 @@ export const de_CreateOrganizationalUnitCommand = async (
  */
 export const de_CreatePolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreatePolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1176,7 +1176,7 @@ export const de_CreatePolicyCommand = async (
  */
 export const de_DeclineHandshakeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeclineHandshakeCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1196,7 +1196,7 @@ export const de_DeclineHandshakeCommand = async (
  */
 export const de_DeleteOrganizationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteOrganizationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1213,7 +1213,7 @@ export const de_DeleteOrganizationCommand = async (
  */
 export const de_DeleteOrganizationalUnitCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteOrganizationalUnitCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1230,7 +1230,7 @@ export const de_DeleteOrganizationalUnitCommand = async (
  */
 export const de_DeletePolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeletePolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1247,7 +1247,7 @@ export const de_DeletePolicyCommand = async (
  */
 export const de_DeleteResourcePolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteResourcePolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1264,7 +1264,7 @@ export const de_DeleteResourcePolicyCommand = async (
  */
 export const de_DeregisterDelegatedAdministratorCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeregisterDelegatedAdministratorCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1281,7 +1281,7 @@ export const de_DeregisterDelegatedAdministratorCommand = async (
  */
 export const de_DescribeAccountCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeAccountCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1301,7 +1301,7 @@ export const de_DescribeAccountCommand = async (
  */
 export const de_DescribeCreateAccountStatusCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeCreateAccountStatusCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1321,7 +1321,7 @@ export const de_DescribeCreateAccountStatusCommand = async (
  */
 export const de_DescribeEffectivePolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeEffectivePolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1341,7 +1341,7 @@ export const de_DescribeEffectivePolicyCommand = async (
  */
 export const de_DescribeHandshakeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeHandshakeCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1361,7 +1361,7 @@ export const de_DescribeHandshakeCommand = async (
  */
 export const de_DescribeOrganizationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeOrganizationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1381,7 +1381,7 @@ export const de_DescribeOrganizationCommand = async (
  */
 export const de_DescribeOrganizationalUnitCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeOrganizationalUnitCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1401,7 +1401,7 @@ export const de_DescribeOrganizationalUnitCommand = async (
  */
 export const de_DescribePolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribePolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1421,7 +1421,7 @@ export const de_DescribePolicyCommand = async (
  */
 export const de_DescribeResourcePolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeResourcePolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1441,7 +1441,7 @@ export const de_DescribeResourcePolicyCommand = async (
  */
 export const de_DetachPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DetachPolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1458,7 +1458,7 @@ export const de_DetachPolicyCommand = async (
  */
 export const de_DisableAWSServiceAccessCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisableAWSServiceAccessCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1475,7 +1475,7 @@ export const de_DisableAWSServiceAccessCommand = async (
  */
 export const de_DisablePolicyTypeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisablePolicyTypeCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1495,7 +1495,7 @@ export const de_DisablePolicyTypeCommand = async (
  */
 export const de_EnableAllFeaturesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<EnableAllFeaturesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1515,7 +1515,7 @@ export const de_EnableAllFeaturesCommand = async (
  */
 export const de_EnableAWSServiceAccessCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<EnableAWSServiceAccessCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1532,7 +1532,7 @@ export const de_EnableAWSServiceAccessCommand = async (
  */
 export const de_EnablePolicyTypeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<EnablePolicyTypeCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1552,7 +1552,7 @@ export const de_EnablePolicyTypeCommand = async (
  */
 export const de_InviteAccountToOrganizationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InviteAccountToOrganizationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1572,7 +1572,7 @@ export const de_InviteAccountToOrganizationCommand = async (
  */
 export const de_LeaveOrganizationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<LeaveOrganizationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1589,7 +1589,7 @@ export const de_LeaveOrganizationCommand = async (
  */
 export const de_ListAccountsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAccountsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1609,7 +1609,7 @@ export const de_ListAccountsCommand = async (
  */
 export const de_ListAccountsForParentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAccountsForParentCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1629,7 +1629,7 @@ export const de_ListAccountsForParentCommand = async (
  */
 export const de_ListAWSServiceAccessForOrganizationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAWSServiceAccessForOrganizationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1649,7 +1649,7 @@ export const de_ListAWSServiceAccessForOrganizationCommand = async (
  */
 export const de_ListChildrenCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListChildrenCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1669,7 +1669,7 @@ export const de_ListChildrenCommand = async (
  */
 export const de_ListCreateAccountStatusCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListCreateAccountStatusCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1689,7 +1689,7 @@ export const de_ListCreateAccountStatusCommand = async (
  */
 export const de_ListDelegatedAdministratorsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListDelegatedAdministratorsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1709,7 +1709,7 @@ export const de_ListDelegatedAdministratorsCommand = async (
  */
 export const de_ListDelegatedServicesForAccountCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListDelegatedServicesForAccountCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1729,7 +1729,7 @@ export const de_ListDelegatedServicesForAccountCommand = async (
  */
 export const de_ListHandshakesForAccountCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListHandshakesForAccountCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1749,7 +1749,7 @@ export const de_ListHandshakesForAccountCommand = async (
  */
 export const de_ListHandshakesForOrganizationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListHandshakesForOrganizationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1769,7 +1769,7 @@ export const de_ListHandshakesForOrganizationCommand = async (
  */
 export const de_ListOrganizationalUnitsForParentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListOrganizationalUnitsForParentCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1789,7 +1789,7 @@ export const de_ListOrganizationalUnitsForParentCommand = async (
  */
 export const de_ListParentsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListParentsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1809,7 +1809,7 @@ export const de_ListParentsCommand = async (
  */
 export const de_ListPoliciesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListPoliciesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1829,7 +1829,7 @@ export const de_ListPoliciesCommand = async (
  */
 export const de_ListPoliciesForTargetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListPoliciesForTargetCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1849,7 +1849,7 @@ export const de_ListPoliciesForTargetCommand = async (
  */
 export const de_ListRootsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListRootsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1869,7 +1869,7 @@ export const de_ListRootsCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1889,7 +1889,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_ListTargetsForPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTargetsForPolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1909,7 +1909,7 @@ export const de_ListTargetsForPolicyCommand = async (
  */
 export const de_MoveAccountCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<MoveAccountCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1926,7 +1926,7 @@ export const de_MoveAccountCommand = async (
  */
 export const de_PutResourcePolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutResourcePolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1946,7 +1946,7 @@ export const de_PutResourcePolicyCommand = async (
  */
 export const de_RegisterDelegatedAdministratorCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RegisterDelegatedAdministratorCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1963,7 +1963,7 @@ export const de_RegisterDelegatedAdministratorCommand = async (
  */
 export const de_RemoveAccountFromOrganizationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RemoveAccountFromOrganizationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1980,7 +1980,7 @@ export const de_RemoveAccountFromOrganizationCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1997,7 +1997,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2014,7 +2014,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateOrganizationalUnitCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateOrganizationalUnitCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2034,7 +2034,7 @@ export const de_UpdateOrganizationalUnitCommand = async (
  */
 export const de_UpdatePolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdatePolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2215,7 +2215,7 @@ const de_CommandError = async (output: __HttpResponse, context: __SerdeContext):
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2231,7 +2231,7 @@ const de_AccessDeniedExceptionRes = async (
  */
 const de_AccessDeniedForDependencyExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedForDependencyException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2247,7 +2247,7 @@ const de_AccessDeniedForDependencyExceptionRes = async (
  */
 const de_AccountAlreadyClosedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccountAlreadyClosedException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2263,7 +2263,7 @@ const de_AccountAlreadyClosedExceptionRes = async (
  */
 const de_AccountAlreadyRegisteredExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccountAlreadyRegisteredException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2279,7 +2279,7 @@ const de_AccountAlreadyRegisteredExceptionRes = async (
  */
 const de_AccountNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccountNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2295,7 +2295,7 @@ const de_AccountNotFoundExceptionRes = async (
  */
 const de_AccountNotRegisteredExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccountNotRegisteredException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2311,7 +2311,7 @@ const de_AccountNotRegisteredExceptionRes = async (
  */
 const de_AccountOwnerNotVerifiedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccountOwnerNotVerifiedException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2327,7 +2327,7 @@ const de_AccountOwnerNotVerifiedExceptionRes = async (
  */
 const de_AlreadyInOrganizationExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AlreadyInOrganizationException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2343,7 +2343,7 @@ const de_AlreadyInOrganizationExceptionRes = async (
  */
 const de_AWSOrganizationsNotInUseExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AWSOrganizationsNotInUseException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2359,7 +2359,7 @@ const de_AWSOrganizationsNotInUseExceptionRes = async (
  */
 const de_ChildNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ChildNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2375,7 +2375,7 @@ const de_ChildNotFoundExceptionRes = async (
  */
 const de_ConcurrentModificationExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ConcurrentModificationException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2404,7 +2404,7 @@ const de_ConflictExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_ConstraintViolationExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ConstraintViolationException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2420,7 +2420,7 @@ const de_ConstraintViolationExceptionRes = async (
  */
 const de_CreateAccountStatusNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateAccountStatusNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2436,7 +2436,7 @@ const de_CreateAccountStatusNotFoundExceptionRes = async (
  */
 const de_DestinationParentNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DestinationParentNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2452,7 +2452,7 @@ const de_DestinationParentNotFoundExceptionRes = async (
  */
 const de_DuplicateAccountExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DuplicateAccountException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2468,7 +2468,7 @@ const de_DuplicateAccountExceptionRes = async (
  */
 const de_DuplicateHandshakeExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DuplicateHandshakeException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2484,7 +2484,7 @@ const de_DuplicateHandshakeExceptionRes = async (
  */
 const de_DuplicateOrganizationalUnitExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DuplicateOrganizationalUnitException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2500,7 +2500,7 @@ const de_DuplicateOrganizationalUnitExceptionRes = async (
  */
 const de_DuplicatePolicyAttachmentExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DuplicatePolicyAttachmentException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2516,7 +2516,7 @@ const de_DuplicatePolicyAttachmentExceptionRes = async (
  */
 const de_DuplicatePolicyExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DuplicatePolicyException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2532,7 +2532,7 @@ const de_DuplicatePolicyExceptionRes = async (
  */
 const de_EffectivePolicyNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<EffectivePolicyNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2548,7 +2548,7 @@ const de_EffectivePolicyNotFoundExceptionRes = async (
  */
 const de_FinalizingOrganizationExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<FinalizingOrganizationException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2564,7 +2564,7 @@ const de_FinalizingOrganizationExceptionRes = async (
  */
 const de_HandshakeAlreadyInStateExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<HandshakeAlreadyInStateException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2580,7 +2580,7 @@ const de_HandshakeAlreadyInStateExceptionRes = async (
  */
 const de_HandshakeConstraintViolationExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<HandshakeConstraintViolationException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2596,7 +2596,7 @@ const de_HandshakeConstraintViolationExceptionRes = async (
  */
 const de_HandshakeNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<HandshakeNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2612,7 +2612,7 @@ const de_HandshakeNotFoundExceptionRes = async (
  */
 const de_InvalidHandshakeTransitionExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidHandshakeTransitionException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2628,7 +2628,7 @@ const de_InvalidHandshakeTransitionExceptionRes = async (
  */
 const de_InvalidInputExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidInputException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2644,7 +2644,7 @@ const de_InvalidInputExceptionRes = async (
  */
 const de_MalformedPolicyDocumentExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<MalformedPolicyDocumentException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2660,7 +2660,7 @@ const de_MalformedPolicyDocumentExceptionRes = async (
  */
 const de_MasterCannotLeaveOrganizationExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<MasterCannotLeaveOrganizationException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2676,7 +2676,7 @@ const de_MasterCannotLeaveOrganizationExceptionRes = async (
  */
 const de_OrganizationalUnitNotEmptyExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<OrganizationalUnitNotEmptyException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2692,7 +2692,7 @@ const de_OrganizationalUnitNotEmptyExceptionRes = async (
  */
 const de_OrganizationalUnitNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<OrganizationalUnitNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2708,7 +2708,7 @@ const de_OrganizationalUnitNotFoundExceptionRes = async (
  */
 const de_OrganizationNotEmptyExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<OrganizationNotEmptyException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2724,7 +2724,7 @@ const de_OrganizationNotEmptyExceptionRes = async (
  */
 const de_ParentNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ParentNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2740,7 +2740,7 @@ const de_ParentNotFoundExceptionRes = async (
  */
 const de_PolicyChangesInProgressExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PolicyChangesInProgressException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2756,7 +2756,7 @@ const de_PolicyChangesInProgressExceptionRes = async (
  */
 const de_PolicyInUseExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PolicyInUseException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2772,7 +2772,7 @@ const de_PolicyInUseExceptionRes = async (
  */
 const de_PolicyNotAttachedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PolicyNotAttachedException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2788,7 +2788,7 @@ const de_PolicyNotAttachedExceptionRes = async (
  */
 const de_PolicyNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PolicyNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2804,7 +2804,7 @@ const de_PolicyNotFoundExceptionRes = async (
  */
 const de_PolicyTypeAlreadyEnabledExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PolicyTypeAlreadyEnabledException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2820,7 +2820,7 @@ const de_PolicyTypeAlreadyEnabledExceptionRes = async (
  */
 const de_PolicyTypeNotAvailableForOrganizationExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PolicyTypeNotAvailableForOrganizationException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2836,7 +2836,7 @@ const de_PolicyTypeNotAvailableForOrganizationExceptionRes = async (
  */
 const de_PolicyTypeNotEnabledExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PolicyTypeNotEnabledException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2852,7 +2852,7 @@ const de_PolicyTypeNotEnabledExceptionRes = async (
  */
 const de_ResourcePolicyNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourcePolicyNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2868,7 +2868,7 @@ const de_ResourcePolicyNotFoundExceptionRes = async (
  */
 const de_RootNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RootNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2897,7 +2897,7 @@ const de_ServiceExceptionRes = async (parsedOutput: any, context: __SerdeContext
  */
 const de_SourceParentNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SourceParentNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2913,7 +2913,7 @@ const de_SourceParentNotFoundExceptionRes = async (
  */
 const de_TargetNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TargetNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2929,7 +2929,7 @@ const de_TargetNotFoundExceptionRes = async (
  */
 const de_TooManyRequestsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyRequestsException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2945,7 +2945,7 @@ const de_TooManyRequestsExceptionRes = async (
  */
 const de_UnsupportedAPIEndpointExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UnsupportedAPIEndpointException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3270,7 +3270,7 @@ const de_DescribeAccountResponse = (output: any, context: __SerdeContext): Descr
  */
 const de_DescribeCreateAccountStatusResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeCreateAccountStatusResponse => {
   return take(output, {
     CreateAccountStatus: (_: any) => de_CreateAccountStatus(_, context),
@@ -3436,7 +3436,7 @@ const de_Handshakes = (output: any, context: __SerdeContext): Handshake[] => {
  */
 const de_InviteAccountToOrganizationResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): InviteAccountToOrganizationResponse => {
   return take(output, {
     Handshake: (_: any) => de_Handshake(_, context),
@@ -3468,7 +3468,7 @@ const de_ListAccountsResponse = (output: any, context: __SerdeContext): ListAcco
  */
 const de_ListAWSServiceAccessForOrganizationResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ListAWSServiceAccessForOrganizationResponse => {
   return take(output, {
     EnabledServicePrincipals: (_: any) => de_EnabledServicePrincipals(_, context),
@@ -3493,7 +3493,7 @@ const de_ListCreateAccountStatusResponse = (output: any, context: __SerdeContext
  */
 const de_ListDelegatedAdministratorsResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ListDelegatedAdministratorsResponse => {
   return take(output, {
     DelegatedAdministrators: (_: any) => de_DelegatedAdministrators(_, context),
@@ -3506,7 +3506,7 @@ const de_ListDelegatedAdministratorsResponse = (
  */
 const de_ListDelegatedServicesForAccountResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ListDelegatedServicesForAccountResponse => {
   return take(output, {
     DelegatedServices: (_: any) => de_DelegatedServices(_, context),
@@ -3519,7 +3519,7 @@ const de_ListDelegatedServicesForAccountResponse = (
  */
 const de_ListHandshakesForAccountResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ListHandshakesForAccountResponse => {
   return take(output, {
     Handshakes: (_: any) => de_Handshakes(_, context),
@@ -3532,7 +3532,7 @@ const de_ListHandshakesForAccountResponse = (
  */
 const de_ListHandshakesForOrganizationResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ListHandshakesForOrganizationResponse => {
   return take(output, {
     Handshakes: (_: any) => de_Handshakes(_, context),
@@ -3654,7 +3654,7 @@ const buildHttpRpcRequest = async (
   headers: __HeaderBag,
   path: string,
   resolvedHostname: string | undefined,
-  body: any
+  body: any,
 ): Promise<__HttpRequest> => {
   const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
   const contents: any = {

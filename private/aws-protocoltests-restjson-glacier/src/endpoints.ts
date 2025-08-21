@@ -223,7 +223,7 @@ const partitionHash: PartitionHash = {
 
 export const defaultRegionInfoProvider: RegionInfoProvider = async (
   region: string,
-  options?: RegionInfoProviderOptions
+  options?: RegionInfoProviderOptions,
 ) =>
   getRegionInfo(region, {
     ...options,

@@ -157,7 +157,7 @@ export class CreateVerifiedAccessTrustProviderCommand extends $Command
   .n("EC2Client", "CreateVerifiedAccessTrustProviderCommand")
   .f(
     CreateVerifiedAccessTrustProviderRequestFilterSensitiveLog,
-    CreateVerifiedAccessTrustProviderResultFilterSensitiveLog
+    CreateVerifiedAccessTrustProviderResultFilterSensitiveLog,
   )
   .ser(se_CreateVerifiedAccessTrustProviderCommand)
   .de(de_CreateVerifiedAccessTrustProviderCommand)

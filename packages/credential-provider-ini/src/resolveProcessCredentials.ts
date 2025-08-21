@@ -23,5 +23,5 @@ export const resolveProcessCredentials = async (options: FromIniInit, profile: s
     fromProcess({
       ...options,
       profile,
-    })()
+    })(),
   );

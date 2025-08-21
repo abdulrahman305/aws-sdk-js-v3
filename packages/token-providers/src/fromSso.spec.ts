@@ -75,7 +75,7 @@ describe(fromSso.name, () => {
       (parseKnownFiles as jest.Mock).mockReturnValue({});
       const expectedError = new TokenProviderError(
         `Profile '${mockProfileName}' could not be found in shared credentials file.`,
-        false
+        false,
       );
       await expect(fromSso(mockInit)()).rejects.toStrictEqual(expectedError);
     });
@@ -84,7 +84,7 @@ describe(fromSso.name, () => {
       const { sso_session, ...mockSsoProfileWithoutSsoSession } = mockSsoProfile;
       (parseKnownFiles as jest.Mock).mockReturnValue({ [mockProfileName]: mockSsoProfileWithoutSsoSession });
       const expectedError = new TokenProviderError(
-        `Profile '${mockProfileName}' is missing required property 'sso_session'.`
+        `Profile '${mockProfileName}' is missing required property 'sso_session'.`,
       );
       await expect(fromSso(mockInit)()).rejects.toStrictEqual(expectedError);
     });
@@ -93,7 +93,7 @@ describe(fromSso.name, () => {
       (loadSsoSessionData as jest.Mock).mockResolvedValue({});
       const expectedError = new TokenProviderError(
         `Sso session '${mockSsoSessionName}' could not be found in shared credentials file.`,
-        false
+        false,
       );
       await expect(fromSso(mockInit)()).rejects.toStrictEqual(expectedError);
     });
@@ -103,7 +103,7 @@ describe(fromSso.name, () => {
       (loadSsoSessionData as jest.Mock).mockResolvedValue({ [mockSsoSessionName]: mockSsoSessionWithoutSsoStartUrl });
       const expectedError = new TokenProviderError(
         `Sso session '${mockSsoSessionName}' is missing required property 'sso_start_url'.`,
-        false
+        false,
       );
       await expect(fromSso(mockInit)()).rejects.toStrictEqual(expectedError);
     });
@@ -113,7 +113,7 @@ describe(fromSso.name, () => {
       (loadSsoSessionData as jest.Mock).mockResolvedValue({ [mockSsoSessionName]: mockSsoSessionWithoutSsoStartUrl });
       const expectedError = new TokenProviderError(
         `Sso session '${mockSsoSessionName}' is missing required property 'sso_region'.`,
-        false
+        false,
       );
       await expect(fromSso(mockInit)()).rejects.toStrictEqual(expectedError);
     });
@@ -125,7 +125,7 @@ describe(fromSso.name, () => {
     const expectedError = new TokenProviderError(
       `The SSO session token associated with profile=mockProfileName was not found or is invalid. ` +
         `${REFRESH_MESSAGE}`,
-      false
+      false,
     );
     await expect(fromSso(mockInit)()).rejects.toStrictEqual(expectedError);
   });
@@ -142,7 +142,7 @@ describe(fromSso.name, () => {
       (validateTokenKey as jest.Mock).mock.calls.length,
       key,
       // @ts-ignore Element implicitly has an 'any' type
-      mockSsoToken[key]
+      mockSsoToken[key],
     );
   });
 
@@ -218,9 +218,9 @@ describe(fromSso.name, () => {
         key,
         // @ts-ignore Element implicitly has an 'any' type
         mockSsoToken[key],
-        true
+        true,
       );
-    }
+    },
   );
 
   describe("failure wrt token from ssoOidc.createToken()", () => {

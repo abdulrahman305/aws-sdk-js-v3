@@ -180,7 +180,7 @@ export interface ClientDefaults extends Partial<__SmithyConfiguration<__HttpHand
    */
   bodyChecksumGenerator?: (
     request: __HttpRequest,
-    options: { sha256: __ChecksumConstructor | __HashConstructor; utf8Decoder: __Decoder }
+    options: { sha256: __ChecksumConstructor | __HashConstructor; utf8Decoder: __Decoder },
   ) => Promise<[string, string]>;
 
   /**
@@ -297,7 +297,7 @@ export class GlacierClient extends __Client<
       getHttpAuthSchemePlugin(this.config, {
         httpAuthSchemeParametersProvider: this.getDefaultHttpAuthSchemeParametersProvider(),
         identityProviderConfigProvider: this.getIdentityProviderConfigProvider(),
-      })
+      }),
     );
     this.middlewareStack.use(getHttpSigningPlugin(this.config));
   }

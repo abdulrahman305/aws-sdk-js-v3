@@ -19,7 +19,7 @@ import { getUpdatedSystemClockOffset } from "./utils/getUpdatedSystemClockOffset
 
 export const awsAuthMiddleware =
   <Input extends object, Output extends object>(
-    options: AwsAuthResolvedConfig
+    options: AwsAuthResolvedConfig,
   ): FinalizeRequestMiddleware<Input, Output> =>
   (next: FinalizeHandler<Input, Output>, context: HandlerExecutionContext): FinalizeHandler<Input, Output> =>
     async function (args: FinalizeHandlerArguments<Input>): Promise<FinalizeHandlerOutput<Output>> {
@@ -72,14 +72,14 @@ export const awsAuthMiddleware =
           signWithCredentials(
             req: IHttpRequest,
             identity: AwsCredentialIdentity,
-            opts?: Partial<typeof signingOptions>
+            opts?: Partial<typeof signingOptions>,
           ): Promise<IHttpRequest>;
         };
 
         signedRequest = await sigV4MultiRegion.signWithCredentials(
           args.request,
           context.s3ExpressIdentity,
-          signingOptions
+          signingOptions,
         );
 
         if (signedRequest.headers["X-Amz-Security-Token"] || signedRequest.headers["x-amz-security-token"]) {
@@ -109,7 +109,7 @@ export const awsAuthMiddleware =
     };
 
 const getDateHeader = (response: unknown): string | undefined =>
-  HttpResponse.isInstance(response) ? response.headers?.date ?? response.headers?.Date : undefined;
+  HttpResponse.isInstance(response) ? (response.headers?.date ?? response.headers?.Date) : undefined;
 
 export const awsAuthMiddlewareOptions: RelativeMiddlewareOptions = {
   name: "awsAuthMiddleware",

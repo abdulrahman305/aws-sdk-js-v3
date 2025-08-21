@@ -630,7 +630,7 @@ import {
  */
 export const se_BatchGetAggregateResourceConfigCommand = async (
   input: BatchGetAggregateResourceConfigCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("BatchGetAggregateResourceConfig");
   let body: any;
@@ -643,7 +643,7 @@ export const se_BatchGetAggregateResourceConfigCommand = async (
  */
 export const se_BatchGetResourceConfigCommand = async (
   input: BatchGetResourceConfigCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("BatchGetResourceConfig");
   let body: any;
@@ -656,7 +656,7 @@ export const se_BatchGetResourceConfigCommand = async (
  */
 export const se_DeleteAggregationAuthorizationCommand = async (
   input: DeleteAggregationAuthorizationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteAggregationAuthorization");
   let body: any;
@@ -669,7 +669,7 @@ export const se_DeleteAggregationAuthorizationCommand = async (
  */
 export const se_DeleteConfigRuleCommand = async (
   input: DeleteConfigRuleCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteConfigRule");
   let body: any;
@@ -682,7 +682,7 @@ export const se_DeleteConfigRuleCommand = async (
  */
 export const se_DeleteConfigurationAggregatorCommand = async (
   input: DeleteConfigurationAggregatorCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteConfigurationAggregator");
   let body: any;
@@ -695,7 +695,7 @@ export const se_DeleteConfigurationAggregatorCommand = async (
  */
 export const se_DeleteConfigurationRecorderCommand = async (
   input: DeleteConfigurationRecorderCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteConfigurationRecorder");
   let body: any;
@@ -708,7 +708,7 @@ export const se_DeleteConfigurationRecorderCommand = async (
  */
 export const se_DeleteConformancePackCommand = async (
   input: DeleteConformancePackCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteConformancePack");
   let body: any;
@@ -721,7 +721,7 @@ export const se_DeleteConformancePackCommand = async (
  */
 export const se_DeleteDeliveryChannelCommand = async (
   input: DeleteDeliveryChannelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteDeliveryChannel");
   let body: any;
@@ -734,7 +734,7 @@ export const se_DeleteDeliveryChannelCommand = async (
  */
 export const se_DeleteEvaluationResultsCommand = async (
   input: DeleteEvaluationResultsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteEvaluationResults");
   let body: any;
@@ -747,7 +747,7 @@ export const se_DeleteEvaluationResultsCommand = async (
  */
 export const se_DeleteOrganizationConfigRuleCommand = async (
   input: DeleteOrganizationConfigRuleCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteOrganizationConfigRule");
   let body: any;
@@ -760,7 +760,7 @@ export const se_DeleteOrganizationConfigRuleCommand = async (
  */
 export const se_DeleteOrganizationConformancePackCommand = async (
   input: DeleteOrganizationConformancePackCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteOrganizationConformancePack");
   let body: any;
@@ -773,7 +773,7 @@ export const se_DeleteOrganizationConformancePackCommand = async (
  */
 export const se_DeletePendingAggregationRequestCommand = async (
   input: DeletePendingAggregationRequestCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeletePendingAggregationRequest");
   let body: any;
@@ -786,7 +786,7 @@ export const se_DeletePendingAggregationRequestCommand = async (
  */
 export const se_DeleteRemediationConfigurationCommand = async (
   input: DeleteRemediationConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteRemediationConfiguration");
   let body: any;
@@ -799,7 +799,7 @@ export const se_DeleteRemediationConfigurationCommand = async (
  */
 export const se_DeleteRemediationExceptionsCommand = async (
   input: DeleteRemediationExceptionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteRemediationExceptions");
   let body: any;
@@ -812,7 +812,7 @@ export const se_DeleteRemediationExceptionsCommand = async (
  */
 export const se_DeleteResourceConfigCommand = async (
   input: DeleteResourceConfigCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteResourceConfig");
   let body: any;
@@ -825,7 +825,7 @@ export const se_DeleteResourceConfigCommand = async (
  */
 export const se_DeleteRetentionConfigurationCommand = async (
   input: DeleteRetentionConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteRetentionConfiguration");
   let body: any;
@@ -838,7 +838,7 @@ export const se_DeleteRetentionConfigurationCommand = async (
  */
 export const se_DeleteStoredQueryCommand = async (
   input: DeleteStoredQueryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteStoredQuery");
   let body: any;
@@ -851,7 +851,7 @@ export const se_DeleteStoredQueryCommand = async (
  */
 export const se_DeliverConfigSnapshotCommand = async (
   input: DeliverConfigSnapshotCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeliverConfigSnapshot");
   let body: any;
@@ -864,7 +864,7 @@ export const se_DeliverConfigSnapshotCommand = async (
  */
 export const se_DescribeAggregateComplianceByConfigRulesCommand = async (
   input: DescribeAggregateComplianceByConfigRulesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeAggregateComplianceByConfigRules");
   let body: any;
@@ -877,7 +877,7 @@ export const se_DescribeAggregateComplianceByConfigRulesCommand = async (
  */
 export const se_DescribeAggregateComplianceByConformancePacksCommand = async (
   input: DescribeAggregateComplianceByConformancePacksCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeAggregateComplianceByConformancePacks");
   let body: any;
@@ -890,7 +890,7 @@ export const se_DescribeAggregateComplianceByConformancePacksCommand = async (
  */
 export const se_DescribeAggregationAuthorizationsCommand = async (
   input: DescribeAggregationAuthorizationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeAggregationAuthorizations");
   let body: any;
@@ -903,7 +903,7 @@ export const se_DescribeAggregationAuthorizationsCommand = async (
  */
 export const se_DescribeComplianceByConfigRuleCommand = async (
   input: DescribeComplianceByConfigRuleCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeComplianceByConfigRule");
   let body: any;
@@ -916,7 +916,7 @@ export const se_DescribeComplianceByConfigRuleCommand = async (
  */
 export const se_DescribeComplianceByResourceCommand = async (
   input: DescribeComplianceByResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeComplianceByResource");
   let body: any;
@@ -929,7 +929,7 @@ export const se_DescribeComplianceByResourceCommand = async (
  */
 export const se_DescribeConfigRuleEvaluationStatusCommand = async (
   input: DescribeConfigRuleEvaluationStatusCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeConfigRuleEvaluationStatus");
   let body: any;
@@ -942,7 +942,7 @@ export const se_DescribeConfigRuleEvaluationStatusCommand = async (
  */
 export const se_DescribeConfigRulesCommand = async (
   input: DescribeConfigRulesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeConfigRules");
   let body: any;
@@ -955,7 +955,7 @@ export const se_DescribeConfigRulesCommand = async (
  */
 export const se_DescribeConfigurationAggregatorsCommand = async (
   input: DescribeConfigurationAggregatorsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeConfigurationAggregators");
   let body: any;
@@ -968,7 +968,7 @@ export const se_DescribeConfigurationAggregatorsCommand = async (
  */
 export const se_DescribeConfigurationAggregatorSourcesStatusCommand = async (
   input: DescribeConfigurationAggregatorSourcesStatusCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeConfigurationAggregatorSourcesStatus");
   let body: any;
@@ -981,7 +981,7 @@ export const se_DescribeConfigurationAggregatorSourcesStatusCommand = async (
  */
 export const se_DescribeConfigurationRecordersCommand = async (
   input: DescribeConfigurationRecordersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeConfigurationRecorders");
   let body: any;
@@ -994,7 +994,7 @@ export const se_DescribeConfigurationRecordersCommand = async (
  */
 export const se_DescribeConfigurationRecorderStatusCommand = async (
   input: DescribeConfigurationRecorderStatusCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeConfigurationRecorderStatus");
   let body: any;
@@ -1007,7 +1007,7 @@ export const se_DescribeConfigurationRecorderStatusCommand = async (
  */
 export const se_DescribeConformancePackComplianceCommand = async (
   input: DescribeConformancePackComplianceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeConformancePackCompliance");
   let body: any;
@@ -1020,7 +1020,7 @@ export const se_DescribeConformancePackComplianceCommand = async (
  */
 export const se_DescribeConformancePacksCommand = async (
   input: DescribeConformancePacksCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeConformancePacks");
   let body: any;
@@ -1033,7 +1033,7 @@ export const se_DescribeConformancePacksCommand = async (
  */
 export const se_DescribeConformancePackStatusCommand = async (
   input: DescribeConformancePackStatusCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeConformancePackStatus");
   let body: any;
@@ -1046,7 +1046,7 @@ export const se_DescribeConformancePackStatusCommand = async (
  */
 export const se_DescribeDeliveryChannelsCommand = async (
   input: DescribeDeliveryChannelsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeDeliveryChannels");
   let body: any;
@@ -1059,7 +1059,7 @@ export const se_DescribeDeliveryChannelsCommand = async (
  */
 export const se_DescribeDeliveryChannelStatusCommand = async (
   input: DescribeDeliveryChannelStatusCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeDeliveryChannelStatus");
   let body: any;
@@ -1072,7 +1072,7 @@ export const se_DescribeDeliveryChannelStatusCommand = async (
  */
 export const se_DescribeOrganizationConfigRulesCommand = async (
   input: DescribeOrganizationConfigRulesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeOrganizationConfigRules");
   let body: any;
@@ -1085,7 +1085,7 @@ export const se_DescribeOrganizationConfigRulesCommand = async (
  */
 export const se_DescribeOrganizationConfigRuleStatusesCommand = async (
   input: DescribeOrganizationConfigRuleStatusesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeOrganizationConfigRuleStatuses");
   let body: any;
@@ -1098,7 +1098,7 @@ export const se_DescribeOrganizationConfigRuleStatusesCommand = async (
  */
 export const se_DescribeOrganizationConformancePacksCommand = async (
   input: DescribeOrganizationConformancePacksCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeOrganizationConformancePacks");
   let body: any;
@@ -1111,7 +1111,7 @@ export const se_DescribeOrganizationConformancePacksCommand = async (
  */
 export const se_DescribeOrganizationConformancePackStatusesCommand = async (
   input: DescribeOrganizationConformancePackStatusesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeOrganizationConformancePackStatuses");
   let body: any;
@@ -1124,7 +1124,7 @@ export const se_DescribeOrganizationConformancePackStatusesCommand = async (
  */
 export const se_DescribePendingAggregationRequestsCommand = async (
   input: DescribePendingAggregationRequestsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribePendingAggregationRequests");
   let body: any;
@@ -1137,7 +1137,7 @@ export const se_DescribePendingAggregationRequestsCommand = async (
  */
 export const se_DescribeRemediationConfigurationsCommand = async (
   input: DescribeRemediationConfigurationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeRemediationConfigurations");
   let body: any;
@@ -1150,7 +1150,7 @@ export const se_DescribeRemediationConfigurationsCommand = async (
  */
 export const se_DescribeRemediationExceptionsCommand = async (
   input: DescribeRemediationExceptionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeRemediationExceptions");
   let body: any;
@@ -1163,7 +1163,7 @@ export const se_DescribeRemediationExceptionsCommand = async (
  */
 export const se_DescribeRemediationExecutionStatusCommand = async (
   input: DescribeRemediationExecutionStatusCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeRemediationExecutionStatus");
   let body: any;
@@ -1176,7 +1176,7 @@ export const se_DescribeRemediationExecutionStatusCommand = async (
  */
 export const se_DescribeRetentionConfigurationsCommand = async (
   input: DescribeRetentionConfigurationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeRetentionConfigurations");
   let body: any;
@@ -1189,7 +1189,7 @@ export const se_DescribeRetentionConfigurationsCommand = async (
  */
 export const se_GetAggregateComplianceDetailsByConfigRuleCommand = async (
   input: GetAggregateComplianceDetailsByConfigRuleCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetAggregateComplianceDetailsByConfigRule");
   let body: any;
@@ -1202,7 +1202,7 @@ export const se_GetAggregateComplianceDetailsByConfigRuleCommand = async (
  */
 export const se_GetAggregateConfigRuleComplianceSummaryCommand = async (
   input: GetAggregateConfigRuleComplianceSummaryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetAggregateConfigRuleComplianceSummary");
   let body: any;
@@ -1215,7 +1215,7 @@ export const se_GetAggregateConfigRuleComplianceSummaryCommand = async (
  */
 export const se_GetAggregateConformancePackComplianceSummaryCommand = async (
   input: GetAggregateConformancePackComplianceSummaryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetAggregateConformancePackComplianceSummary");
   let body: any;
@@ -1228,7 +1228,7 @@ export const se_GetAggregateConformancePackComplianceSummaryCommand = async (
  */
 export const se_GetAggregateDiscoveredResourceCountsCommand = async (
   input: GetAggregateDiscoveredResourceCountsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetAggregateDiscoveredResourceCounts");
   let body: any;
@@ -1241,7 +1241,7 @@ export const se_GetAggregateDiscoveredResourceCountsCommand = async (
  */
 export const se_GetAggregateResourceConfigCommand = async (
   input: GetAggregateResourceConfigCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetAggregateResourceConfig");
   let body: any;
@@ -1254,7 +1254,7 @@ export const se_GetAggregateResourceConfigCommand = async (
  */
 export const se_GetComplianceDetailsByConfigRuleCommand = async (
   input: GetComplianceDetailsByConfigRuleCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetComplianceDetailsByConfigRule");
   let body: any;
@@ -1267,7 +1267,7 @@ export const se_GetComplianceDetailsByConfigRuleCommand = async (
  */
 export const se_GetComplianceDetailsByResourceCommand = async (
   input: GetComplianceDetailsByResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetComplianceDetailsByResource");
   let body: any;
@@ -1280,7 +1280,7 @@ export const se_GetComplianceDetailsByResourceCommand = async (
  */
 export const se_GetComplianceSummaryByConfigRuleCommand = async (
   input: GetComplianceSummaryByConfigRuleCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetComplianceSummaryByConfigRule");
   const body = "{}";
@@ -1292,7 +1292,7 @@ export const se_GetComplianceSummaryByConfigRuleCommand = async (
  */
 export const se_GetComplianceSummaryByResourceTypeCommand = async (
   input: GetComplianceSummaryByResourceTypeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetComplianceSummaryByResourceType");
   let body: any;
@@ -1305,7 +1305,7 @@ export const se_GetComplianceSummaryByResourceTypeCommand = async (
  */
 export const se_GetConformancePackComplianceDetailsCommand = async (
   input: GetConformancePackComplianceDetailsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetConformancePackComplianceDetails");
   let body: any;
@@ -1318,7 +1318,7 @@ export const se_GetConformancePackComplianceDetailsCommand = async (
  */
 export const se_GetConformancePackComplianceSummaryCommand = async (
   input: GetConformancePackComplianceSummaryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetConformancePackComplianceSummary");
   let body: any;
@@ -1331,7 +1331,7 @@ export const se_GetConformancePackComplianceSummaryCommand = async (
  */
 export const se_GetCustomRulePolicyCommand = async (
   input: GetCustomRulePolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetCustomRulePolicy");
   let body: any;
@@ -1344,7 +1344,7 @@ export const se_GetCustomRulePolicyCommand = async (
  */
 export const se_GetDiscoveredResourceCountsCommand = async (
   input: GetDiscoveredResourceCountsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetDiscoveredResourceCounts");
   let body: any;
@@ -1357,7 +1357,7 @@ export const se_GetDiscoveredResourceCountsCommand = async (
  */
 export const se_GetOrganizationConfigRuleDetailedStatusCommand = async (
   input: GetOrganizationConfigRuleDetailedStatusCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetOrganizationConfigRuleDetailedStatus");
   let body: any;
@@ -1370,7 +1370,7 @@ export const se_GetOrganizationConfigRuleDetailedStatusCommand = async (
  */
 export const se_GetOrganizationConformancePackDetailedStatusCommand = async (
   input: GetOrganizationConformancePackDetailedStatusCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetOrganizationConformancePackDetailedStatus");
   let body: any;
@@ -1383,7 +1383,7 @@ export const se_GetOrganizationConformancePackDetailedStatusCommand = async (
  */
 export const se_GetOrganizationCustomRulePolicyCommand = async (
   input: GetOrganizationCustomRulePolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetOrganizationCustomRulePolicy");
   let body: any;
@@ -1396,7 +1396,7 @@ export const se_GetOrganizationCustomRulePolicyCommand = async (
  */
 export const se_GetResourceConfigHistoryCommand = async (
   input: GetResourceConfigHistoryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetResourceConfigHistory");
   let body: any;
@@ -1409,7 +1409,7 @@ export const se_GetResourceConfigHistoryCommand = async (
  */
 export const se_GetResourceEvaluationSummaryCommand = async (
   input: GetResourceEvaluationSummaryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetResourceEvaluationSummary");
   let body: any;
@@ -1422,7 +1422,7 @@ export const se_GetResourceEvaluationSummaryCommand = async (
  */
 export const se_GetStoredQueryCommand = async (
   input: GetStoredQueryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetStoredQuery");
   let body: any;
@@ -1435,7 +1435,7 @@ export const se_GetStoredQueryCommand = async (
  */
 export const se_ListAggregateDiscoveredResourcesCommand = async (
   input: ListAggregateDiscoveredResourcesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListAggregateDiscoveredResources");
   let body: any;
@@ -1448,7 +1448,7 @@ export const se_ListAggregateDiscoveredResourcesCommand = async (
  */
 export const se_ListConformancePackComplianceScoresCommand = async (
   input: ListConformancePackComplianceScoresCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListConformancePackComplianceScores");
   let body: any;
@@ -1461,7 +1461,7 @@ export const se_ListConformancePackComplianceScoresCommand = async (
  */
 export const se_ListDiscoveredResourcesCommand = async (
   input: ListDiscoveredResourcesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListDiscoveredResources");
   let body: any;
@@ -1474,7 +1474,7 @@ export const se_ListDiscoveredResourcesCommand = async (
  */
 export const se_ListResourceEvaluationsCommand = async (
   input: ListResourceEvaluationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListResourceEvaluations");
   let body: any;
@@ -1487,7 +1487,7 @@ export const se_ListResourceEvaluationsCommand = async (
  */
 export const se_ListStoredQueriesCommand = async (
   input: ListStoredQueriesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListStoredQueries");
   let body: any;
@@ -1500,7 +1500,7 @@ export const se_ListStoredQueriesCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListTagsForResource");
   let body: any;
@@ -1513,7 +1513,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_PutAggregationAuthorizationCommand = async (
   input: PutAggregationAuthorizationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("PutAggregationAuthorization");
   let body: any;
@@ -1526,7 +1526,7 @@ export const se_PutAggregationAuthorizationCommand = async (
  */
 export const se_PutConfigRuleCommand = async (
   input: PutConfigRuleCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("PutConfigRule");
   let body: any;
@@ -1539,7 +1539,7 @@ export const se_PutConfigRuleCommand = async (
  */
 export const se_PutConfigurationAggregatorCommand = async (
   input: PutConfigurationAggregatorCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("PutConfigurationAggregator");
   let body: any;
@@ -1552,7 +1552,7 @@ export const se_PutConfigurationAggregatorCommand = async (
  */
 export const se_PutConfigurationRecorderCommand = async (
   input: PutConfigurationRecorderCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("PutConfigurationRecorder");
   let body: any;
@@ -1565,7 +1565,7 @@ export const se_PutConfigurationRecorderCommand = async (
  */
 export const se_PutConformancePackCommand = async (
   input: PutConformancePackCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("PutConformancePack");
   let body: any;
@@ -1578,7 +1578,7 @@ export const se_PutConformancePackCommand = async (
  */
 export const se_PutDeliveryChannelCommand = async (
   input: PutDeliveryChannelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("PutDeliveryChannel");
   let body: any;
@@ -1591,7 +1591,7 @@ export const se_PutDeliveryChannelCommand = async (
  */
 export const se_PutEvaluationsCommand = async (
   input: PutEvaluationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("PutEvaluations");
   let body: any;
@@ -1604,7 +1604,7 @@ export const se_PutEvaluationsCommand = async (
  */
 export const se_PutExternalEvaluationCommand = async (
   input: PutExternalEvaluationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("PutExternalEvaluation");
   let body: any;
@@ -1617,7 +1617,7 @@ export const se_PutExternalEvaluationCommand = async (
  */
 export const se_PutOrganizationConfigRuleCommand = async (
   input: PutOrganizationConfigRuleCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("PutOrganizationConfigRule");
   let body: any;
@@ -1630,7 +1630,7 @@ export const se_PutOrganizationConfigRuleCommand = async (
  */
 export const se_PutOrganizationConformancePackCommand = async (
   input: PutOrganizationConformancePackCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("PutOrganizationConformancePack");
   let body: any;
@@ -1643,7 +1643,7 @@ export const se_PutOrganizationConformancePackCommand = async (
  */
 export const se_PutRemediationConfigurationsCommand = async (
   input: PutRemediationConfigurationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("PutRemediationConfigurations");
   let body: any;
@@ -1656,7 +1656,7 @@ export const se_PutRemediationConfigurationsCommand = async (
  */
 export const se_PutRemediationExceptionsCommand = async (
   input: PutRemediationExceptionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("PutRemediationExceptions");
   let body: any;
@@ -1669,7 +1669,7 @@ export const se_PutRemediationExceptionsCommand = async (
  */
 export const se_PutResourceConfigCommand = async (
   input: PutResourceConfigCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("PutResourceConfig");
   let body: any;
@@ -1682,7 +1682,7 @@ export const se_PutResourceConfigCommand = async (
  */
 export const se_PutRetentionConfigurationCommand = async (
   input: PutRetentionConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("PutRetentionConfiguration");
   let body: any;
@@ -1695,7 +1695,7 @@ export const se_PutRetentionConfigurationCommand = async (
  */
 export const se_PutStoredQueryCommand = async (
   input: PutStoredQueryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("PutStoredQuery");
   let body: any;
@@ -1708,7 +1708,7 @@ export const se_PutStoredQueryCommand = async (
  */
 export const se_SelectAggregateResourceConfigCommand = async (
   input: SelectAggregateResourceConfigCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("SelectAggregateResourceConfig");
   let body: any;
@@ -1721,7 +1721,7 @@ export const se_SelectAggregateResourceConfigCommand = async (
  */
 export const se_SelectResourceConfigCommand = async (
   input: SelectResourceConfigCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("SelectResourceConfig");
   let body: any;
@@ -1734,7 +1734,7 @@ export const se_SelectResourceConfigCommand = async (
  */
 export const se_StartConfigRulesEvaluationCommand = async (
   input: StartConfigRulesEvaluationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StartConfigRulesEvaluation");
   let body: any;
@@ -1747,7 +1747,7 @@ export const se_StartConfigRulesEvaluationCommand = async (
  */
 export const se_StartConfigurationRecorderCommand = async (
   input: StartConfigurationRecorderCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StartConfigurationRecorder");
   let body: any;
@@ -1760,7 +1760,7 @@ export const se_StartConfigurationRecorderCommand = async (
  */
 export const se_StartRemediationExecutionCommand = async (
   input: StartRemediationExecutionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StartRemediationExecution");
   let body: any;
@@ -1773,7 +1773,7 @@ export const se_StartRemediationExecutionCommand = async (
  */
 export const se_StartResourceEvaluationCommand = async (
   input: StartResourceEvaluationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StartResourceEvaluation");
   let body: any;
@@ -1786,7 +1786,7 @@ export const se_StartResourceEvaluationCommand = async (
  */
 export const se_StopConfigurationRecorderCommand = async (
   input: StopConfigurationRecorderCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StopConfigurationRecorder");
   let body: any;
@@ -1799,7 +1799,7 @@ export const se_StopConfigurationRecorderCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("TagResource");
   let body: any;
@@ -1812,7 +1812,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UntagResource");
   let body: any;
@@ -1825,7 +1825,7 @@ export const se_UntagResourceCommand = async (
  */
 export const de_BatchGetAggregateResourceConfigCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchGetAggregateResourceConfigCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1845,7 +1845,7 @@ export const de_BatchGetAggregateResourceConfigCommand = async (
  */
 export const de_BatchGetResourceConfigCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchGetResourceConfigCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1865,7 +1865,7 @@ export const de_BatchGetResourceConfigCommand = async (
  */
 export const de_DeleteAggregationAuthorizationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteAggregationAuthorizationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1882,7 +1882,7 @@ export const de_DeleteAggregationAuthorizationCommand = async (
  */
 export const de_DeleteConfigRuleCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteConfigRuleCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1899,7 +1899,7 @@ export const de_DeleteConfigRuleCommand = async (
  */
 export const de_DeleteConfigurationAggregatorCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteConfigurationAggregatorCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1916,7 +1916,7 @@ export const de_DeleteConfigurationAggregatorCommand = async (
  */
 export const de_DeleteConfigurationRecorderCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteConfigurationRecorderCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1933,7 +1933,7 @@ export const de_DeleteConfigurationRecorderCommand = async (
  */
 export const de_DeleteConformancePackCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteConformancePackCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1950,7 +1950,7 @@ export const de_DeleteConformancePackCommand = async (
  */
 export const de_DeleteDeliveryChannelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteDeliveryChannelCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1967,7 +1967,7 @@ export const de_DeleteDeliveryChannelCommand = async (
  */
 export const de_DeleteEvaluationResultsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteEvaluationResultsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1987,7 +1987,7 @@ export const de_DeleteEvaluationResultsCommand = async (
  */
 export const de_DeleteOrganizationConfigRuleCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteOrganizationConfigRuleCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2004,7 +2004,7 @@ export const de_DeleteOrganizationConfigRuleCommand = async (
  */
 export const de_DeleteOrganizationConformancePackCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteOrganizationConformancePackCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2021,7 +2021,7 @@ export const de_DeleteOrganizationConformancePackCommand = async (
  */
 export const de_DeletePendingAggregationRequestCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeletePendingAggregationRequestCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2038,7 +2038,7 @@ export const de_DeletePendingAggregationRequestCommand = async (
  */
 export const de_DeleteRemediationConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteRemediationConfigurationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2058,7 +2058,7 @@ export const de_DeleteRemediationConfigurationCommand = async (
  */
 export const de_DeleteRemediationExceptionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteRemediationExceptionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2078,7 +2078,7 @@ export const de_DeleteRemediationExceptionsCommand = async (
  */
 export const de_DeleteResourceConfigCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteResourceConfigCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2095,7 +2095,7 @@ export const de_DeleteResourceConfigCommand = async (
  */
 export const de_DeleteRetentionConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteRetentionConfigurationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2112,7 +2112,7 @@ export const de_DeleteRetentionConfigurationCommand = async (
  */
 export const de_DeleteStoredQueryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteStoredQueryCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2132,7 +2132,7 @@ export const de_DeleteStoredQueryCommand = async (
  */
 export const de_DeliverConfigSnapshotCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeliverConfigSnapshotCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2152,7 +2152,7 @@ export const de_DeliverConfigSnapshotCommand = async (
  */
 export const de_DescribeAggregateComplianceByConfigRulesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeAggregateComplianceByConfigRulesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2172,7 +2172,7 @@ export const de_DescribeAggregateComplianceByConfigRulesCommand = async (
  */
 export const de_DescribeAggregateComplianceByConformancePacksCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeAggregateComplianceByConformancePacksCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2192,7 +2192,7 @@ export const de_DescribeAggregateComplianceByConformancePacksCommand = async (
  */
 export const de_DescribeAggregationAuthorizationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeAggregationAuthorizationsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2212,7 +2212,7 @@ export const de_DescribeAggregationAuthorizationsCommand = async (
  */
 export const de_DescribeComplianceByConfigRuleCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeComplianceByConfigRuleCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2232,7 +2232,7 @@ export const de_DescribeComplianceByConfigRuleCommand = async (
  */
 export const de_DescribeComplianceByResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeComplianceByResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2252,7 +2252,7 @@ export const de_DescribeComplianceByResourceCommand = async (
  */
 export const de_DescribeConfigRuleEvaluationStatusCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeConfigRuleEvaluationStatusCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2272,7 +2272,7 @@ export const de_DescribeConfigRuleEvaluationStatusCommand = async (
  */
 export const de_DescribeConfigRulesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeConfigRulesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2292,7 +2292,7 @@ export const de_DescribeConfigRulesCommand = async (
  */
 export const de_DescribeConfigurationAggregatorsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeConfigurationAggregatorsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2312,7 +2312,7 @@ export const de_DescribeConfigurationAggregatorsCommand = async (
  */
 export const de_DescribeConfigurationAggregatorSourcesStatusCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeConfigurationAggregatorSourcesStatusCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2332,7 +2332,7 @@ export const de_DescribeConfigurationAggregatorSourcesStatusCommand = async (
  */
 export const de_DescribeConfigurationRecordersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeConfigurationRecordersCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2352,7 +2352,7 @@ export const de_DescribeConfigurationRecordersCommand = async (
  */
 export const de_DescribeConfigurationRecorderStatusCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeConfigurationRecorderStatusCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2372,7 +2372,7 @@ export const de_DescribeConfigurationRecorderStatusCommand = async (
  */
 export const de_DescribeConformancePackComplianceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeConformancePackComplianceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2392,7 +2392,7 @@ export const de_DescribeConformancePackComplianceCommand = async (
  */
 export const de_DescribeConformancePacksCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeConformancePacksCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2412,7 +2412,7 @@ export const de_DescribeConformancePacksCommand = async (
  */
 export const de_DescribeConformancePackStatusCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeConformancePackStatusCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2432,7 +2432,7 @@ export const de_DescribeConformancePackStatusCommand = async (
  */
 export const de_DescribeDeliveryChannelsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeDeliveryChannelsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2452,7 +2452,7 @@ export const de_DescribeDeliveryChannelsCommand = async (
  */
 export const de_DescribeDeliveryChannelStatusCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeDeliveryChannelStatusCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2472,7 +2472,7 @@ export const de_DescribeDeliveryChannelStatusCommand = async (
  */
 export const de_DescribeOrganizationConfigRulesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeOrganizationConfigRulesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2492,7 +2492,7 @@ export const de_DescribeOrganizationConfigRulesCommand = async (
  */
 export const de_DescribeOrganizationConfigRuleStatusesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeOrganizationConfigRuleStatusesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2512,7 +2512,7 @@ export const de_DescribeOrganizationConfigRuleStatusesCommand = async (
  */
 export const de_DescribeOrganizationConformancePacksCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeOrganizationConformancePacksCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2532,7 +2532,7 @@ export const de_DescribeOrganizationConformancePacksCommand = async (
  */
 export const de_DescribeOrganizationConformancePackStatusesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeOrganizationConformancePackStatusesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2552,7 +2552,7 @@ export const de_DescribeOrganizationConformancePackStatusesCommand = async (
  */
 export const de_DescribePendingAggregationRequestsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribePendingAggregationRequestsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2572,7 +2572,7 @@ export const de_DescribePendingAggregationRequestsCommand = async (
  */
 export const de_DescribeRemediationConfigurationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeRemediationConfigurationsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2592,7 +2592,7 @@ export const de_DescribeRemediationConfigurationsCommand = async (
  */
 export const de_DescribeRemediationExceptionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeRemediationExceptionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2612,7 +2612,7 @@ export const de_DescribeRemediationExceptionsCommand = async (
  */
 export const de_DescribeRemediationExecutionStatusCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeRemediationExecutionStatusCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2632,7 +2632,7 @@ export const de_DescribeRemediationExecutionStatusCommand = async (
  */
 export const de_DescribeRetentionConfigurationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeRetentionConfigurationsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2652,7 +2652,7 @@ export const de_DescribeRetentionConfigurationsCommand = async (
  */
 export const de_GetAggregateComplianceDetailsByConfigRuleCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetAggregateComplianceDetailsByConfigRuleCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2672,7 +2672,7 @@ export const de_GetAggregateComplianceDetailsByConfigRuleCommand = async (
  */
 export const de_GetAggregateConfigRuleComplianceSummaryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetAggregateConfigRuleComplianceSummaryCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2692,7 +2692,7 @@ export const de_GetAggregateConfigRuleComplianceSummaryCommand = async (
  */
 export const de_GetAggregateConformancePackComplianceSummaryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetAggregateConformancePackComplianceSummaryCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2712,7 +2712,7 @@ export const de_GetAggregateConformancePackComplianceSummaryCommand = async (
  */
 export const de_GetAggregateDiscoveredResourceCountsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetAggregateDiscoveredResourceCountsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2732,7 +2732,7 @@ export const de_GetAggregateDiscoveredResourceCountsCommand = async (
  */
 export const de_GetAggregateResourceConfigCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetAggregateResourceConfigCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2752,7 +2752,7 @@ export const de_GetAggregateResourceConfigCommand = async (
  */
 export const de_GetComplianceDetailsByConfigRuleCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetComplianceDetailsByConfigRuleCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2772,7 +2772,7 @@ export const de_GetComplianceDetailsByConfigRuleCommand = async (
  */
 export const de_GetComplianceDetailsByResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetComplianceDetailsByResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2792,7 +2792,7 @@ export const de_GetComplianceDetailsByResourceCommand = async (
  */
 export const de_GetComplianceSummaryByConfigRuleCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetComplianceSummaryByConfigRuleCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2812,7 +2812,7 @@ export const de_GetComplianceSummaryByConfigRuleCommand = async (
  */
 export const de_GetComplianceSummaryByResourceTypeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetComplianceSummaryByResourceTypeCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2832,7 +2832,7 @@ export const de_GetComplianceSummaryByResourceTypeCommand = async (
  */
 export const de_GetConformancePackComplianceDetailsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetConformancePackComplianceDetailsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2852,7 +2852,7 @@ export const de_GetConformancePackComplianceDetailsCommand = async (
  */
 export const de_GetConformancePackComplianceSummaryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetConformancePackComplianceSummaryCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2872,7 +2872,7 @@ export const de_GetConformancePackComplianceSummaryCommand = async (
  */
 export const de_GetCustomRulePolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetCustomRulePolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2892,7 +2892,7 @@ export const de_GetCustomRulePolicyCommand = async (
  */
 export const de_GetDiscoveredResourceCountsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetDiscoveredResourceCountsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2912,7 +2912,7 @@ export const de_GetDiscoveredResourceCountsCommand = async (
  */
 export const de_GetOrganizationConfigRuleDetailedStatusCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetOrganizationConfigRuleDetailedStatusCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2932,7 +2932,7 @@ export const de_GetOrganizationConfigRuleDetailedStatusCommand = async (
  */
 export const de_GetOrganizationConformancePackDetailedStatusCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetOrganizationConformancePackDetailedStatusCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2952,7 +2952,7 @@ export const de_GetOrganizationConformancePackDetailedStatusCommand = async (
  */
 export const de_GetOrganizationCustomRulePolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetOrganizationCustomRulePolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2972,7 +2972,7 @@ export const de_GetOrganizationCustomRulePolicyCommand = async (
  */
 export const de_GetResourceConfigHistoryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetResourceConfigHistoryCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2992,7 +2992,7 @@ export const de_GetResourceConfigHistoryCommand = async (
  */
 export const de_GetResourceEvaluationSummaryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetResourceEvaluationSummaryCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3012,7 +3012,7 @@ export const de_GetResourceEvaluationSummaryCommand = async (
  */
 export const de_GetStoredQueryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetStoredQueryCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3032,7 +3032,7 @@ export const de_GetStoredQueryCommand = async (
  */
 export const de_ListAggregateDiscoveredResourcesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAggregateDiscoveredResourcesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3052,7 +3052,7 @@ export const de_ListAggregateDiscoveredResourcesCommand = async (
  */
 export const de_ListConformancePackComplianceScoresCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListConformancePackComplianceScoresCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3072,7 +3072,7 @@ export const de_ListConformancePackComplianceScoresCommand = async (
  */
 export const de_ListDiscoveredResourcesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListDiscoveredResourcesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3092,7 +3092,7 @@ export const de_ListDiscoveredResourcesCommand = async (
  */
 export const de_ListResourceEvaluationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListResourceEvaluationsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3112,7 +3112,7 @@ export const de_ListResourceEvaluationsCommand = async (
  */
 export const de_ListStoredQueriesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListStoredQueriesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3132,7 +3132,7 @@ export const de_ListStoredQueriesCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3152,7 +3152,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_PutAggregationAuthorizationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutAggregationAuthorizationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3172,7 +3172,7 @@ export const de_PutAggregationAuthorizationCommand = async (
  */
 export const de_PutConfigRuleCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutConfigRuleCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3189,7 +3189,7 @@ export const de_PutConfigRuleCommand = async (
  */
 export const de_PutConfigurationAggregatorCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutConfigurationAggregatorCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3209,7 +3209,7 @@ export const de_PutConfigurationAggregatorCommand = async (
  */
 export const de_PutConfigurationRecorderCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutConfigurationRecorderCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3226,7 +3226,7 @@ export const de_PutConfigurationRecorderCommand = async (
  */
 export const de_PutConformancePackCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutConformancePackCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3246,7 +3246,7 @@ export const de_PutConformancePackCommand = async (
  */
 export const de_PutDeliveryChannelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutDeliveryChannelCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3263,7 +3263,7 @@ export const de_PutDeliveryChannelCommand = async (
  */
 export const de_PutEvaluationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutEvaluationsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3283,7 +3283,7 @@ export const de_PutEvaluationsCommand = async (
  */
 export const de_PutExternalEvaluationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutExternalEvaluationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3303,7 +3303,7 @@ export const de_PutExternalEvaluationCommand = async (
  */
 export const de_PutOrganizationConfigRuleCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutOrganizationConfigRuleCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3323,7 +3323,7 @@ export const de_PutOrganizationConfigRuleCommand = async (
  */
 export const de_PutOrganizationConformancePackCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutOrganizationConformancePackCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3343,7 +3343,7 @@ export const de_PutOrganizationConformancePackCommand = async (
  */
 export const de_PutRemediationConfigurationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutRemediationConfigurationsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3363,7 +3363,7 @@ export const de_PutRemediationConfigurationsCommand = async (
  */
 export const de_PutRemediationExceptionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutRemediationExceptionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3383,7 +3383,7 @@ export const de_PutRemediationExceptionsCommand = async (
  */
 export const de_PutResourceConfigCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutResourceConfigCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3400,7 +3400,7 @@ export const de_PutResourceConfigCommand = async (
  */
 export const de_PutRetentionConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutRetentionConfigurationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3420,7 +3420,7 @@ export const de_PutRetentionConfigurationCommand = async (
  */
 export const de_PutStoredQueryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutStoredQueryCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3440,7 +3440,7 @@ export const de_PutStoredQueryCommand = async (
  */
 export const de_SelectAggregateResourceConfigCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SelectAggregateResourceConfigCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3460,7 +3460,7 @@ export const de_SelectAggregateResourceConfigCommand = async (
  */
 export const de_SelectResourceConfigCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SelectResourceConfigCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3480,7 +3480,7 @@ export const de_SelectResourceConfigCommand = async (
  */
 export const de_StartConfigRulesEvaluationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartConfigRulesEvaluationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3500,7 +3500,7 @@ export const de_StartConfigRulesEvaluationCommand = async (
  */
 export const de_StartConfigurationRecorderCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartConfigurationRecorderCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3517,7 +3517,7 @@ export const de_StartConfigurationRecorderCommand = async (
  */
 export const de_StartRemediationExecutionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartRemediationExecutionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3537,7 +3537,7 @@ export const de_StartRemediationExecutionCommand = async (
  */
 export const de_StartResourceEvaluationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartResourceEvaluationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3557,7 +3557,7 @@ export const de_StartResourceEvaluationCommand = async (
  */
 export const de_StopConfigurationRecorderCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StopConfigurationRecorderCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3574,7 +3574,7 @@ export const de_StopConfigurationRecorderCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3591,7 +3591,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3790,7 +3790,7 @@ const de_CommandError = async (output: __HttpResponse, context: __SerdeContext):
  */
 const de_ConformancePackTemplateValidationExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ConformancePackTemplateValidationException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3806,7 +3806,7 @@ const de_ConformancePackTemplateValidationExceptionRes = async (
  */
 const de_IdempotentParameterMismatchRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<IdempotentParameterMismatch> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3822,7 +3822,7 @@ const de_IdempotentParameterMismatchRes = async (
  */
 const de_InsufficientDeliveryPolicyExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InsufficientDeliveryPolicyException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3838,7 +3838,7 @@ const de_InsufficientDeliveryPolicyExceptionRes = async (
  */
 const de_InsufficientPermissionsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InsufficientPermissionsException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3854,7 +3854,7 @@ const de_InsufficientPermissionsExceptionRes = async (
  */
 const de_InvalidConfigurationRecorderNameExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidConfigurationRecorderNameException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3870,7 +3870,7 @@ const de_InvalidConfigurationRecorderNameExceptionRes = async (
  */
 const de_InvalidDeliveryChannelNameExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidDeliveryChannelNameException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3886,7 +3886,7 @@ const de_InvalidDeliveryChannelNameExceptionRes = async (
  */
 const de_InvalidExpressionExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidExpressionException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3902,7 +3902,7 @@ const de_InvalidExpressionExceptionRes = async (
  */
 const de_InvalidLimitExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidLimitException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3918,7 +3918,7 @@ const de_InvalidLimitExceptionRes = async (
  */
 const de_InvalidNextTokenExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidNextTokenException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3934,7 +3934,7 @@ const de_InvalidNextTokenExceptionRes = async (
  */
 const de_InvalidParameterValueExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidParameterValueException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3950,7 +3950,7 @@ const de_InvalidParameterValueExceptionRes = async (
  */
 const de_InvalidRecordingGroupExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidRecordingGroupException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3966,7 +3966,7 @@ const de_InvalidRecordingGroupExceptionRes = async (
  */
 const de_InvalidResultTokenExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidResultTokenException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3982,7 +3982,7 @@ const de_InvalidResultTokenExceptionRes = async (
  */
 const de_InvalidRoleExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidRoleException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3998,7 +3998,7 @@ const de_InvalidRoleExceptionRes = async (
  */
 const de_InvalidS3KeyPrefixExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidS3KeyPrefixException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -4014,7 +4014,7 @@ const de_InvalidS3KeyPrefixExceptionRes = async (
  */
 const de_InvalidS3KmsKeyArnExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidS3KmsKeyArnException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -4030,7 +4030,7 @@ const de_InvalidS3KmsKeyArnExceptionRes = async (
  */
 const de_InvalidSNSTopicARNExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidSNSTopicARNException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -4046,7 +4046,7 @@ const de_InvalidSNSTopicARNExceptionRes = async (
  */
 const de_InvalidTimeRangeExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidTimeRangeException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -4062,7 +4062,7 @@ const de_InvalidTimeRangeExceptionRes = async (
  */
 const de_LastDeliveryChannelDeleteFailedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<LastDeliveryChannelDeleteFailedException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -4078,7 +4078,7 @@ const de_LastDeliveryChannelDeleteFailedExceptionRes = async (
  */
 const de_LimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<LimitExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -4094,7 +4094,7 @@ const de_LimitExceededExceptionRes = async (
  */
 const de_MaxActiveResourcesExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<MaxActiveResourcesExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -4110,7 +4110,7 @@ const de_MaxActiveResourcesExceededExceptionRes = async (
  */
 const de_MaxNumberOfConfigRulesExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<MaxNumberOfConfigRulesExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -4126,7 +4126,7 @@ const de_MaxNumberOfConfigRulesExceededExceptionRes = async (
  */
 const de_MaxNumberOfConfigurationRecordersExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<MaxNumberOfConfigurationRecordersExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -4142,7 +4142,7 @@ const de_MaxNumberOfConfigurationRecordersExceededExceptionRes = async (
  */
 const de_MaxNumberOfConformancePacksExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<MaxNumberOfConformancePacksExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -4158,7 +4158,7 @@ const de_MaxNumberOfConformancePacksExceededExceptionRes = async (
  */
 const de_MaxNumberOfDeliveryChannelsExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<MaxNumberOfDeliveryChannelsExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -4174,7 +4174,7 @@ const de_MaxNumberOfDeliveryChannelsExceededExceptionRes = async (
  */
 const de_MaxNumberOfOrganizationConfigRulesExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<MaxNumberOfOrganizationConfigRulesExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -4190,7 +4190,7 @@ const de_MaxNumberOfOrganizationConfigRulesExceededExceptionRes = async (
  */
 const de_MaxNumberOfOrganizationConformancePacksExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<MaxNumberOfOrganizationConformancePacksExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -4206,7 +4206,7 @@ const de_MaxNumberOfOrganizationConformancePacksExceededExceptionRes = async (
  */
 const de_MaxNumberOfRetentionConfigurationsExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<MaxNumberOfRetentionConfigurationsExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -4222,7 +4222,7 @@ const de_MaxNumberOfRetentionConfigurationsExceededExceptionRes = async (
  */
 const de_NoAvailableConfigurationRecorderExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<NoAvailableConfigurationRecorderException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -4238,7 +4238,7 @@ const de_NoAvailableConfigurationRecorderExceptionRes = async (
  */
 const de_NoAvailableDeliveryChannelExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<NoAvailableDeliveryChannelException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -4254,7 +4254,7 @@ const de_NoAvailableDeliveryChannelExceptionRes = async (
  */
 const de_NoAvailableOrganizationExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<NoAvailableOrganizationException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -4270,7 +4270,7 @@ const de_NoAvailableOrganizationExceptionRes = async (
  */
 const de_NoRunningConfigurationRecorderExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<NoRunningConfigurationRecorderException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -4286,7 +4286,7 @@ const de_NoRunningConfigurationRecorderExceptionRes = async (
  */
 const de_NoSuchBucketExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<NoSuchBucketException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -4302,7 +4302,7 @@ const de_NoSuchBucketExceptionRes = async (
  */
 const de_NoSuchConfigRuleExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<NoSuchConfigRuleException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -4318,7 +4318,7 @@ const de_NoSuchConfigRuleExceptionRes = async (
  */
 const de_NoSuchConfigRuleInConformancePackExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<NoSuchConfigRuleInConformancePackException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -4334,7 +4334,7 @@ const de_NoSuchConfigRuleInConformancePackExceptionRes = async (
  */
 const de_NoSuchConfigurationAggregatorExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<NoSuchConfigurationAggregatorException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -4350,7 +4350,7 @@ const de_NoSuchConfigurationAggregatorExceptionRes = async (
  */
 const de_NoSuchConfigurationRecorderExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<NoSuchConfigurationRecorderException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -4366,7 +4366,7 @@ const de_NoSuchConfigurationRecorderExceptionRes = async (
  */
 const de_NoSuchConformancePackExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<NoSuchConformancePackException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -4382,7 +4382,7 @@ const de_NoSuchConformancePackExceptionRes = async (
  */
 const de_NoSuchDeliveryChannelExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<NoSuchDeliveryChannelException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -4398,7 +4398,7 @@ const de_NoSuchDeliveryChannelExceptionRes = async (
  */
 const de_NoSuchOrganizationConfigRuleExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<NoSuchOrganizationConfigRuleException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -4414,7 +4414,7 @@ const de_NoSuchOrganizationConfigRuleExceptionRes = async (
  */
 const de_NoSuchOrganizationConformancePackExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<NoSuchOrganizationConformancePackException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -4430,7 +4430,7 @@ const de_NoSuchOrganizationConformancePackExceptionRes = async (
  */
 const de_NoSuchRemediationConfigurationExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<NoSuchRemediationConfigurationException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -4446,7 +4446,7 @@ const de_NoSuchRemediationConfigurationExceptionRes = async (
  */
 const de_NoSuchRemediationExceptionExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<NoSuchRemediationExceptionException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -4462,7 +4462,7 @@ const de_NoSuchRemediationExceptionExceptionRes = async (
  */
 const de_NoSuchRetentionConfigurationExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<NoSuchRetentionConfigurationException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -4478,7 +4478,7 @@ const de_NoSuchRetentionConfigurationExceptionRes = async (
  */
 const de_OrganizationAccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<OrganizationAccessDeniedException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -4494,7 +4494,7 @@ const de_OrganizationAccessDeniedExceptionRes = async (
  */
 const de_OrganizationAllFeaturesNotEnabledExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<OrganizationAllFeaturesNotEnabledException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -4510,7 +4510,7 @@ const de_OrganizationAllFeaturesNotEnabledExceptionRes = async (
  */
 const de_OrganizationConformancePackTemplateValidationExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<OrganizationConformancePackTemplateValidationException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -4526,7 +4526,7 @@ const de_OrganizationConformancePackTemplateValidationExceptionRes = async (
  */
 const de_OversizedConfigurationItemExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<OversizedConfigurationItemException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -4542,7 +4542,7 @@ const de_OversizedConfigurationItemExceptionRes = async (
  */
 const de_RemediationInProgressExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RemediationInProgressException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -4558,7 +4558,7 @@ const de_RemediationInProgressExceptionRes = async (
  */
 const de_ResourceConcurrentModificationExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceConcurrentModificationException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -4574,7 +4574,7 @@ const de_ResourceConcurrentModificationExceptionRes = async (
  */
 const de_ResourceInUseExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceInUseException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -4590,7 +4590,7 @@ const de_ResourceInUseExceptionRes = async (
  */
 const de_ResourceNotDiscoveredExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotDiscoveredException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -4606,7 +4606,7 @@ const de_ResourceNotDiscoveredExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -4622,7 +4622,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_TooManyTagsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyTagsException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -5278,7 +5278,7 @@ const de_BaseConfigurationItems = (output: any, context: __SerdeContext): BaseCo
  */
 const de_BatchGetAggregateResourceConfigResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): BatchGetAggregateResourceConfigResponse => {
   return take(output, {
     BaseConfigurationItems: (_: any) => de_BaseConfigurationItems(_, context),
@@ -5315,7 +5315,7 @@ const de_BatchGetResourceConfigResponse = (output: any, context: __SerdeContext)
  */
 const de_ComplianceSummariesByResourceType = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ComplianceSummaryByResourceType[] => {
   const retVal = (output || [])
     .filter((e: any) => e != null)
@@ -5594,7 +5594,7 @@ const de_ConformancePackEvaluationResult = (output: any, context: __SerdeContext
  */
 const de_ConformancePackRuleEvaluationResultsList = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ConformancePackEvaluationResult[] => {
   const retVal = (output || [])
     .filter((e: any) => e != null)
@@ -5687,7 +5687,7 @@ const de_DeliveryChannelStatusList = (output: any, context: __SerdeContext): Del
  */
 const de_DescribeAggregationAuthorizationsResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeAggregationAuthorizationsResponse => {
   return take(output, {
     AggregationAuthorizations: (_: any) => de_AggregationAuthorizationList(_, context),
@@ -5704,7 +5704,7 @@ const de_DescribeAggregationAuthorizationsResponse = (
  */
 const de_DescribeConfigRuleEvaluationStatusResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeConfigRuleEvaluationStatusResponse => {
   return take(output, {
     ConfigRulesEvaluationStatus: (_: any) => de_ConfigRuleEvaluationStatusList(_, context),
@@ -5719,7 +5719,7 @@ const de_DescribeConfigRuleEvaluationStatusResponse = (
  */
 const de_DescribeConfigurationAggregatorSourcesStatusResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeConfigurationAggregatorSourcesStatusResponse => {
   return take(output, {
     AggregatedSourceStatusList: (_: any) => de_AggregatedSourceStatusList(_, context),
@@ -5732,7 +5732,7 @@ const de_DescribeConfigurationAggregatorSourcesStatusResponse = (
  */
 const de_DescribeConfigurationAggregatorsResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeConfigurationAggregatorsResponse => {
   return take(output, {
     ConfigurationAggregators: (_: any) => de_ConfigurationAggregatorList(_, context),
@@ -5747,7 +5747,7 @@ const de_DescribeConfigurationAggregatorsResponse = (
  */
 const de_DescribeConfigurationRecorderStatusResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeConfigurationRecorderStatusResponse => {
   return take(output, {
     ConfigurationRecordersStatus: (_: any) => de_ConfigurationRecorderStatusList(_, context),
@@ -5761,7 +5761,7 @@ const de_DescribeConfigurationRecorderStatusResponse = (
  */
 const de_DescribeConformancePacksResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeConformancePacksResponse => {
   return take(output, {
     ConformancePackDetails: (_: any) => de_ConformancePackDetailList(_, context),
@@ -5774,7 +5774,7 @@ const de_DescribeConformancePacksResponse = (
  */
 const de_DescribeConformancePackStatusResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeConformancePackStatusResponse => {
   return take(output, {
     ConformancePackStatusDetails: (_: any) => de_ConformancePackStatusDetailsList(_, context),
@@ -5789,7 +5789,7 @@ const de_DescribeConformancePackStatusResponse = (
  */
 const de_DescribeDeliveryChannelStatusResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeDeliveryChannelStatusResponse => {
   return take(output, {
     DeliveryChannelsStatus: (_: any) => de_DeliveryChannelStatusList(_, context),
@@ -5801,7 +5801,7 @@ const de_DescribeDeliveryChannelStatusResponse = (
  */
 const de_DescribeOrganizationConfigRulesResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeOrganizationConfigRulesResponse => {
   return take(output, {
     NextToken: __expectString,
@@ -5814,7 +5814,7 @@ const de_DescribeOrganizationConfigRulesResponse = (
  */
 const de_DescribeOrganizationConfigRuleStatusesResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeOrganizationConfigRuleStatusesResponse => {
   return take(output, {
     NextToken: __expectString,
@@ -5827,7 +5827,7 @@ const de_DescribeOrganizationConfigRuleStatusesResponse = (
  */
 const de_DescribeOrganizationConformancePacksResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeOrganizationConformancePacksResponse => {
   return take(output, {
     NextToken: __expectString,
@@ -5840,7 +5840,7 @@ const de_DescribeOrganizationConformancePacksResponse = (
  */
 const de_DescribeOrganizationConformancePackStatusesResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeOrganizationConformancePackStatusesResponse => {
   return take(output, {
     NextToken: __expectString,
@@ -5857,7 +5857,7 @@ const de_DescribeOrganizationConformancePackStatusesResponse = (
  */
 const de_DescribeRemediationExceptionsResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeRemediationExceptionsResponse => {
   return take(output, {
     NextToken: __expectString,
@@ -5870,7 +5870,7 @@ const de_DescribeRemediationExceptionsResponse = (
  */
 const de_DescribeRemediationExecutionStatusResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeRemediationExecutionStatusResponse => {
   return take(output, {
     NextToken: __expectString,
@@ -5983,7 +5983,7 @@ const de_FailedRemediationExceptionBatch = (output: any, context: __SerdeContext
  */
 const de_FailedRemediationExceptionBatches = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): FailedRemediationExceptionBatch[] => {
   const retVal = (output || [])
     .filter((e: any) => e != null)
@@ -6002,7 +6002,7 @@ const de_FailedRemediationExceptionBatches = (
  */
 const de_GetAggregateComplianceDetailsByConfigRuleResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): GetAggregateComplianceDetailsByConfigRuleResponse => {
   return take(output, {
     AggregateEvaluationResults: (_: any) => de_AggregateEvaluationResultList(_, context),
@@ -6015,7 +6015,7 @@ const de_GetAggregateComplianceDetailsByConfigRuleResponse = (
  */
 const de_GetAggregateConfigRuleComplianceSummaryResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): GetAggregateConfigRuleComplianceSummaryResponse => {
   return take(output, {
     AggregateComplianceCounts: (_: any) => de_AggregateComplianceCountList(_, context),
@@ -6033,7 +6033,7 @@ const de_GetAggregateConfigRuleComplianceSummaryResponse = (
  */
 const de_GetAggregateResourceConfigResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): GetAggregateResourceConfigResponse => {
   return take(output, {
     ConfigurationItem: (_: any) => de_ConfigurationItem(_, context),
@@ -6045,7 +6045,7 @@ const de_GetAggregateResourceConfigResponse = (
  */
 const de_GetComplianceDetailsByConfigRuleResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): GetComplianceDetailsByConfigRuleResponse => {
   return take(output, {
     EvaluationResults: (_: any) => de_EvaluationResults(_, context),
@@ -6058,7 +6058,7 @@ const de_GetComplianceDetailsByConfigRuleResponse = (
  */
 const de_GetComplianceDetailsByResourceResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): GetComplianceDetailsByResourceResponse => {
   return take(output, {
     EvaluationResults: (_: any) => de_EvaluationResults(_, context),
@@ -6071,7 +6071,7 @@ const de_GetComplianceDetailsByResourceResponse = (
  */
 const de_GetComplianceSummaryByConfigRuleResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): GetComplianceSummaryByConfigRuleResponse => {
   return take(output, {
     ComplianceSummary: (_: any) => de_ComplianceSummary(_, context),
@@ -6083,7 +6083,7 @@ const de_GetComplianceSummaryByConfigRuleResponse = (
  */
 const de_GetComplianceSummaryByResourceTypeResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): GetComplianceSummaryByResourceTypeResponse => {
   return take(output, {
     ComplianceSummariesByResourceType: (_: any) => de_ComplianceSummariesByResourceType(_, context),
@@ -6095,7 +6095,7 @@ const de_GetComplianceSummaryByResourceTypeResponse = (
  */
 const de_GetConformancePackComplianceDetailsResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): GetConformancePackComplianceDetailsResponse => {
   return take(output, {
     ConformancePackName: __expectString,
@@ -6115,7 +6115,7 @@ const de_GetConformancePackComplianceDetailsResponse = (
  */
 const de_GetOrganizationConfigRuleDetailedStatusResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): GetOrganizationConfigRuleDetailedStatusResponse => {
   return take(output, {
     NextToken: __expectString,
@@ -6128,7 +6128,7 @@ const de_GetOrganizationConfigRuleDetailedStatusResponse = (
  */
 const de_GetOrganizationConformancePackDetailedStatusResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): GetOrganizationConformancePackDetailedStatusResponse => {
   return take(output, {
     NextToken: __expectString,
@@ -6143,7 +6143,7 @@ const de_GetOrganizationConformancePackDetailedStatusResponse = (
  */
 const de_GetResourceConfigHistoryResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): GetResourceConfigHistoryResponse => {
   return take(output, {
     configurationItems: (_: any) => de_ConfigurationItemList(_, context),
@@ -6156,7 +6156,7 @@ const de_GetResourceConfigHistoryResponse = (
  */
 const de_GetResourceEvaluationSummaryResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): GetResourceEvaluationSummaryResponse => {
   return take(output, {
     Compliance: __expectString,
@@ -6218,7 +6218,7 @@ const de_GetResourceEvaluationSummaryResponse = (
  */
 const de_ListConformancePackComplianceScoresResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ListConformancePackComplianceScoresResponse => {
   return take(output, {
     ConformancePackComplianceScores: (_: any) => de_ConformancePackComplianceScores(_, context),
@@ -6406,7 +6406,7 @@ const de_OrganizationConformancePack = (output: any, context: __SerdeContext): O
  */
 const de_OrganizationConformancePackDetailedStatus = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): OrganizationConformancePackDetailedStatus => {
   return take(output, {
     AccountId: __expectString,
@@ -6423,7 +6423,7 @@ const de_OrganizationConformancePackDetailedStatus = (
  */
 const de_OrganizationConformancePackDetailedStatuses = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): OrganizationConformancePackDetailedStatus[] => {
   const retVal = (output || [])
     .filter((e: any) => e != null)
@@ -6450,7 +6450,7 @@ const de_OrganizationConformancePacks = (output: any, context: __SerdeContext): 
  */
 const de_OrganizationConformancePackStatus = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): OrganizationConformancePackStatus => {
   return take(output, {
     ErrorCode: __expectString,
@@ -6466,7 +6466,7 @@ const de_OrganizationConformancePackStatus = (
  */
 const de_OrganizationConformancePackStatuses = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): OrganizationConformancePackStatus[] => {
   const retVal = (output || [])
     .filter((e: any) => e != null)
@@ -6495,7 +6495,7 @@ const de_OrganizationConformancePackStatuses = (
  */
 const de_PutAggregationAuthorizationResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): PutAggregationAuthorizationResponse => {
   return take(output, {
     AggregationAuthorization: (_: any) => de_AggregationAuthorization(_, context),
@@ -6507,7 +6507,7 @@ const de_PutAggregationAuthorizationResponse = (
  */
 const de_PutConfigurationAggregatorResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): PutConfigurationAggregatorResponse => {
   return take(output, {
     ConfigurationAggregator: (_: any) => de_ConfigurationAggregator(_, context),
@@ -6538,7 +6538,7 @@ const de_PutEvaluationsResponse = (output: any, context: __SerdeContext): PutEva
  */
 const de_PutRemediationExceptionsResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): PutRemediationExceptionsResponse => {
   return take(output, {
     FailedBatches: (_: any) => de_FailedRemediationExceptionBatches(_, context),
@@ -6799,7 +6799,7 @@ const buildHttpRpcRequest = async (
   headers: __HeaderBag,
   path: string,
   resolvedHostname: string | undefined,
-  body: any
+  body: any,
 ): Promise<__HttpRequest> => {
   const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
   const contents: any = {

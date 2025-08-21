@@ -149,16 +149,16 @@ export interface IoTEvents {
    */
   createAlarmModel(
     args: CreateAlarmModelCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateAlarmModelCommandOutput>;
   createAlarmModel(
     args: CreateAlarmModelCommandInput,
-    cb: (err: any, data?: CreateAlarmModelCommandOutput) => void
+    cb: (err: any, data?: CreateAlarmModelCommandOutput) => void,
   ): void;
   createAlarmModel(
     args: CreateAlarmModelCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateAlarmModelCommandOutput) => void
+    cb: (err: any, data?: CreateAlarmModelCommandOutput) => void,
   ): void;
 
   /**
@@ -166,16 +166,16 @@ export interface IoTEvents {
    */
   createDetectorModel(
     args: CreateDetectorModelCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateDetectorModelCommandOutput>;
   createDetectorModel(
     args: CreateDetectorModelCommandInput,
-    cb: (err: any, data?: CreateDetectorModelCommandOutput) => void
+    cb: (err: any, data?: CreateDetectorModelCommandOutput) => void,
   ): void;
   createDetectorModel(
     args: CreateDetectorModelCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateDetectorModelCommandOutput) => void
+    cb: (err: any, data?: CreateDetectorModelCommandOutput) => void,
   ): void;
 
   /**
@@ -186,7 +186,7 @@ export interface IoTEvents {
   createInput(
     args: CreateInputCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateInputCommandOutput) => void
+    cb: (err: any, data?: CreateInputCommandOutput) => void,
   ): void;
 
   /**
@@ -194,16 +194,16 @@ export interface IoTEvents {
    */
   deleteAlarmModel(
     args: DeleteAlarmModelCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteAlarmModelCommandOutput>;
   deleteAlarmModel(
     args: DeleteAlarmModelCommandInput,
-    cb: (err: any, data?: DeleteAlarmModelCommandOutput) => void
+    cb: (err: any, data?: DeleteAlarmModelCommandOutput) => void,
   ): void;
   deleteAlarmModel(
     args: DeleteAlarmModelCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteAlarmModelCommandOutput) => void
+    cb: (err: any, data?: DeleteAlarmModelCommandOutput) => void,
   ): void;
 
   /**
@@ -211,16 +211,16 @@ export interface IoTEvents {
    */
   deleteDetectorModel(
     args: DeleteDetectorModelCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteDetectorModelCommandOutput>;
   deleteDetectorModel(
     args: DeleteDetectorModelCommandInput,
-    cb: (err: any, data?: DeleteDetectorModelCommandOutput) => void
+    cb: (err: any, data?: DeleteDetectorModelCommandOutput) => void,
   ): void;
   deleteDetectorModel(
     args: DeleteDetectorModelCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteDetectorModelCommandOutput) => void
+    cb: (err: any, data?: DeleteDetectorModelCommandOutput) => void,
   ): void;
 
   /**
@@ -231,7 +231,7 @@ export interface IoTEvents {
   deleteInput(
     args: DeleteInputCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteInputCommandOutput) => void
+    cb: (err: any, data?: DeleteInputCommandOutput) => void,
   ): void;
 
   /**
@@ -239,16 +239,16 @@ export interface IoTEvents {
    */
   describeAlarmModel(
     args: DescribeAlarmModelCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeAlarmModelCommandOutput>;
   describeAlarmModel(
     args: DescribeAlarmModelCommandInput,
-    cb: (err: any, data?: DescribeAlarmModelCommandOutput) => void
+    cb: (err: any, data?: DescribeAlarmModelCommandOutput) => void,
   ): void;
   describeAlarmModel(
     args: DescribeAlarmModelCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeAlarmModelCommandOutput) => void
+    cb: (err: any, data?: DescribeAlarmModelCommandOutput) => void,
   ): void;
 
   /**
@@ -256,16 +256,16 @@ export interface IoTEvents {
    */
   describeDetectorModel(
     args: DescribeDetectorModelCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeDetectorModelCommandOutput>;
   describeDetectorModel(
     args: DescribeDetectorModelCommandInput,
-    cb: (err: any, data?: DescribeDetectorModelCommandOutput) => void
+    cb: (err: any, data?: DescribeDetectorModelCommandOutput) => void,
   ): void;
   describeDetectorModel(
     args: DescribeDetectorModelCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeDetectorModelCommandOutput) => void
+    cb: (err: any, data?: DescribeDetectorModelCommandOutput) => void,
   ): void;
 
   /**
@@ -273,16 +273,16 @@ export interface IoTEvents {
    */
   describeDetectorModelAnalysis(
     args: DescribeDetectorModelAnalysisCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeDetectorModelAnalysisCommandOutput>;
   describeDetectorModelAnalysis(
     args: DescribeDetectorModelAnalysisCommandInput,
-    cb: (err: any, data?: DescribeDetectorModelAnalysisCommandOutput) => void
+    cb: (err: any, data?: DescribeDetectorModelAnalysisCommandOutput) => void,
   ): void;
   describeDetectorModelAnalysis(
     args: DescribeDetectorModelAnalysisCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeDetectorModelAnalysisCommandOutput) => void
+    cb: (err: any, data?: DescribeDetectorModelAnalysisCommandOutput) => void,
   ): void;
 
   /**
@@ -293,7 +293,7 @@ export interface IoTEvents {
   describeInput(
     args: DescribeInputCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeInputCommandOutput) => void
+    cb: (err: any, data?: DescribeInputCommandOutput) => void,
   ): void;
 
   /**
@@ -302,16 +302,16 @@ export interface IoTEvents {
   describeLoggingOptions(): Promise<DescribeLoggingOptionsCommandOutput>;
   describeLoggingOptions(
     args: DescribeLoggingOptionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeLoggingOptionsCommandOutput>;
   describeLoggingOptions(
     args: DescribeLoggingOptionsCommandInput,
-    cb: (err: any, data?: DescribeLoggingOptionsCommandOutput) => void
+    cb: (err: any, data?: DescribeLoggingOptionsCommandOutput) => void,
   ): void;
   describeLoggingOptions(
     args: DescribeLoggingOptionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeLoggingOptionsCommandOutput) => void
+    cb: (err: any, data?: DescribeLoggingOptionsCommandOutput) => void,
   ): void;
 
   /**
@@ -319,16 +319,16 @@ export interface IoTEvents {
    */
   getDetectorModelAnalysisResults(
     args: GetDetectorModelAnalysisResultsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetDetectorModelAnalysisResultsCommandOutput>;
   getDetectorModelAnalysisResults(
     args: GetDetectorModelAnalysisResultsCommandInput,
-    cb: (err: any, data?: GetDetectorModelAnalysisResultsCommandOutput) => void
+    cb: (err: any, data?: GetDetectorModelAnalysisResultsCommandOutput) => void,
   ): void;
   getDetectorModelAnalysisResults(
     args: GetDetectorModelAnalysisResultsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetDetectorModelAnalysisResultsCommandOutput) => void
+    cb: (err: any, data?: GetDetectorModelAnalysisResultsCommandOutput) => void,
   ): void;
 
   /**
@@ -337,13 +337,13 @@ export interface IoTEvents {
   listAlarmModels(): Promise<ListAlarmModelsCommandOutput>;
   listAlarmModels(
     args: ListAlarmModelsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListAlarmModelsCommandOutput>;
   listAlarmModels(args: ListAlarmModelsCommandInput, cb: (err: any, data?: ListAlarmModelsCommandOutput) => void): void;
   listAlarmModels(
     args: ListAlarmModelsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListAlarmModelsCommandOutput) => void
+    cb: (err: any, data?: ListAlarmModelsCommandOutput) => void,
   ): void;
 
   /**
@@ -351,16 +351,16 @@ export interface IoTEvents {
    */
   listAlarmModelVersions(
     args: ListAlarmModelVersionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListAlarmModelVersionsCommandOutput>;
   listAlarmModelVersions(
     args: ListAlarmModelVersionsCommandInput,
-    cb: (err: any, data?: ListAlarmModelVersionsCommandOutput) => void
+    cb: (err: any, data?: ListAlarmModelVersionsCommandOutput) => void,
   ): void;
   listAlarmModelVersions(
     args: ListAlarmModelVersionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListAlarmModelVersionsCommandOutput) => void
+    cb: (err: any, data?: ListAlarmModelVersionsCommandOutput) => void,
   ): void;
 
   /**
@@ -369,16 +369,16 @@ export interface IoTEvents {
   listDetectorModels(): Promise<ListDetectorModelsCommandOutput>;
   listDetectorModels(
     args: ListDetectorModelsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListDetectorModelsCommandOutput>;
   listDetectorModels(
     args: ListDetectorModelsCommandInput,
-    cb: (err: any, data?: ListDetectorModelsCommandOutput) => void
+    cb: (err: any, data?: ListDetectorModelsCommandOutput) => void,
   ): void;
   listDetectorModels(
     args: ListDetectorModelsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListDetectorModelsCommandOutput) => void
+    cb: (err: any, data?: ListDetectorModelsCommandOutput) => void,
   ): void;
 
   /**
@@ -386,16 +386,16 @@ export interface IoTEvents {
    */
   listDetectorModelVersions(
     args: ListDetectorModelVersionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListDetectorModelVersionsCommandOutput>;
   listDetectorModelVersions(
     args: ListDetectorModelVersionsCommandInput,
-    cb: (err: any, data?: ListDetectorModelVersionsCommandOutput) => void
+    cb: (err: any, data?: ListDetectorModelVersionsCommandOutput) => void,
   ): void;
   listDetectorModelVersions(
     args: ListDetectorModelVersionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListDetectorModelVersionsCommandOutput) => void
+    cb: (err: any, data?: ListDetectorModelVersionsCommandOutput) => void,
   ): void;
 
   /**
@@ -403,16 +403,16 @@ export interface IoTEvents {
    */
   listInputRoutings(
     args: ListInputRoutingsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListInputRoutingsCommandOutput>;
   listInputRoutings(
     args: ListInputRoutingsCommandInput,
-    cb: (err: any, data?: ListInputRoutingsCommandOutput) => void
+    cb: (err: any, data?: ListInputRoutingsCommandOutput) => void,
   ): void;
   listInputRoutings(
     args: ListInputRoutingsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListInputRoutingsCommandOutput) => void
+    cb: (err: any, data?: ListInputRoutingsCommandOutput) => void,
   ): void;
 
   /**
@@ -424,7 +424,7 @@ export interface IoTEvents {
   listInputs(
     args: ListInputsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListInputsCommandOutput) => void
+    cb: (err: any, data?: ListInputsCommandOutput) => void,
   ): void;
 
   /**
@@ -432,16 +432,16 @@ export interface IoTEvents {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -449,16 +449,16 @@ export interface IoTEvents {
    */
   putLoggingOptions(
     args: PutLoggingOptionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutLoggingOptionsCommandOutput>;
   putLoggingOptions(
     args: PutLoggingOptionsCommandInput,
-    cb: (err: any, data?: PutLoggingOptionsCommandOutput) => void
+    cb: (err: any, data?: PutLoggingOptionsCommandOutput) => void,
   ): void;
   putLoggingOptions(
     args: PutLoggingOptionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutLoggingOptionsCommandOutput) => void
+    cb: (err: any, data?: PutLoggingOptionsCommandOutput) => void,
   ): void;
 
   /**
@@ -466,16 +466,16 @@ export interface IoTEvents {
    */
   startDetectorModelAnalysis(
     args: StartDetectorModelAnalysisCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartDetectorModelAnalysisCommandOutput>;
   startDetectorModelAnalysis(
     args: StartDetectorModelAnalysisCommandInput,
-    cb: (err: any, data?: StartDetectorModelAnalysisCommandOutput) => void
+    cb: (err: any, data?: StartDetectorModelAnalysisCommandOutput) => void,
   ): void;
   startDetectorModelAnalysis(
     args: StartDetectorModelAnalysisCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartDetectorModelAnalysisCommandOutput) => void
+    cb: (err: any, data?: StartDetectorModelAnalysisCommandOutput) => void,
   ): void;
 
   /**
@@ -486,7 +486,7 @@ export interface IoTEvents {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -497,7 +497,7 @@ export interface IoTEvents {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -505,16 +505,16 @@ export interface IoTEvents {
    */
   updateAlarmModel(
     args: UpdateAlarmModelCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateAlarmModelCommandOutput>;
   updateAlarmModel(
     args: UpdateAlarmModelCommandInput,
-    cb: (err: any, data?: UpdateAlarmModelCommandOutput) => void
+    cb: (err: any, data?: UpdateAlarmModelCommandOutput) => void,
   ): void;
   updateAlarmModel(
     args: UpdateAlarmModelCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateAlarmModelCommandOutput) => void
+    cb: (err: any, data?: UpdateAlarmModelCommandOutput) => void,
   ): void;
 
   /**
@@ -522,16 +522,16 @@ export interface IoTEvents {
    */
   updateDetectorModel(
     args: UpdateDetectorModelCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateDetectorModelCommandOutput>;
   updateDetectorModel(
     args: UpdateDetectorModelCommandInput,
-    cb: (err: any, data?: UpdateDetectorModelCommandOutput) => void
+    cb: (err: any, data?: UpdateDetectorModelCommandOutput) => void,
   ): void;
   updateDetectorModel(
     args: UpdateDetectorModelCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateDetectorModelCommandOutput) => void
+    cb: (err: any, data?: UpdateDetectorModelCommandOutput) => void,
   ): void;
 
   /**
@@ -542,7 +542,7 @@ export interface IoTEvents {
   updateInput(
     args: UpdateInputCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateInputCommandOutput) => void
+    cb: (err: any, data?: UpdateInputCommandOutput) => void,
   ): void;
 }
 

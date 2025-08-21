@@ -50,7 +50,7 @@ const checkState = async (client: OpsWorksClient, input: DescribeDeploymentsComm
  */
 export const waitForDeploymentSuccessful = async (
   params: WaiterConfiguration<OpsWorksClient>,
-  input: DescribeDeploymentsCommandInput
+  input: DescribeDeploymentsCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 15, maxDelay: 120 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -62,7 +62,7 @@ export const waitForDeploymentSuccessful = async (
  */
 export const waitUntilDeploymentSuccessful = async (
   params: WaiterConfiguration<OpsWorksClient>,
-  input: DescribeDeploymentsCommandInput
+  input: DescribeDeploymentsCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 15, maxDelay: 120 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

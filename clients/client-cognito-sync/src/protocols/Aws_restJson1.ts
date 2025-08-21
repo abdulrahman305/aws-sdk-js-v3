@@ -93,7 +93,7 @@ import {
  */
 export const se_BulkPublishCommand = async (
   input: BulkPublishCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -109,7 +109,7 @@ export const se_BulkPublishCommand = async (
  */
 export const se_DeleteDatasetCommand = async (
   input: DeleteDatasetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -127,7 +127,7 @@ export const se_DeleteDatasetCommand = async (
  */
 export const se_DescribeDatasetCommand = async (
   input: DescribeDatasetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -145,7 +145,7 @@ export const se_DescribeDatasetCommand = async (
  */
 export const se_DescribeIdentityPoolUsageCommand = async (
   input: DescribeIdentityPoolUsageCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -161,7 +161,7 @@ export const se_DescribeIdentityPoolUsageCommand = async (
  */
 export const se_DescribeIdentityUsageCommand = async (
   input: DescribeIdentityUsageCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -178,7 +178,7 @@ export const se_DescribeIdentityUsageCommand = async (
  */
 export const se_GetBulkPublishDetailsCommand = async (
   input: GetBulkPublishDetailsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -194,7 +194,7 @@ export const se_GetBulkPublishDetailsCommand = async (
  */
 export const se_GetCognitoEventsCommand = async (
   input: GetCognitoEventsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -210,7 +210,7 @@ export const se_GetCognitoEventsCommand = async (
  */
 export const se_GetIdentityPoolConfigurationCommand = async (
   input: GetIdentityPoolConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -226,7 +226,7 @@ export const se_GetIdentityPoolConfigurationCommand = async (
  */
 export const se_ListDatasetsCommand = async (
   input: ListDatasetsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -247,7 +247,7 @@ export const se_ListDatasetsCommand = async (
  */
 export const se_ListIdentityPoolUsageCommand = async (
   input: ListIdentityPoolUsageCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -266,7 +266,7 @@ export const se_ListIdentityPoolUsageCommand = async (
  */
 export const se_ListRecordsCommand = async (
   input: ListRecordsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -290,7 +290,7 @@ export const se_ListRecordsCommand = async (
  */
 export const se_RegisterDeviceCommand = async (
   input: RegisterDeviceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -304,7 +304,7 @@ export const se_RegisterDeviceCommand = async (
     take(input, {
       Platform: [],
       Token: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -315,7 +315,7 @@ export const se_RegisterDeviceCommand = async (
  */
 export const se_SetCognitoEventsCommand = async (
   input: SetCognitoEventsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -327,7 +327,7 @@ export const se_SetCognitoEventsCommand = async (
   body = JSON.stringify(
     take(input, {
       Events: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -338,7 +338,7 @@ export const se_SetCognitoEventsCommand = async (
  */
 export const se_SetIdentityPoolConfigurationCommand = async (
   input: SetIdentityPoolConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -351,7 +351,7 @@ export const se_SetIdentityPoolConfigurationCommand = async (
     take(input, {
       CognitoStreams: (_) => _json(_),
       PushSync: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -362,7 +362,7 @@ export const se_SetIdentityPoolConfigurationCommand = async (
  */
 export const se_SubscribeToDatasetCommand = async (
   input: SubscribeToDatasetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -381,7 +381,7 @@ export const se_SubscribeToDatasetCommand = async (
  */
 export const se_UnsubscribeFromDatasetCommand = async (
   input: UnsubscribeFromDatasetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -400,7 +400,7 @@ export const se_UnsubscribeFromDatasetCommand = async (
  */
 export const se_UpdateRecordsCommand = async (
   input: UpdateRecordsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -417,7 +417,7 @@ export const se_UpdateRecordsCommand = async (
       DeviceId: [],
       RecordPatches: (_) => se_RecordPatchList(_, context),
       SyncSessionToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -428,7 +428,7 @@ export const se_UpdateRecordsCommand = async (
  */
 export const de_BulkPublishCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BulkPublishCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -449,7 +449,7 @@ export const de_BulkPublishCommand = async (
  */
 export const de_DeleteDatasetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteDatasetCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -470,7 +470,7 @@ export const de_DeleteDatasetCommand = async (
  */
 export const de_DescribeDatasetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeDatasetCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -491,7 +491,7 @@ export const de_DescribeDatasetCommand = async (
  */
 export const de_DescribeIdentityPoolUsageCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeIdentityPoolUsageCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -512,7 +512,7 @@ export const de_DescribeIdentityPoolUsageCommand = async (
  */
 export const de_DescribeIdentityUsageCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeIdentityUsageCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -533,7 +533,7 @@ export const de_DescribeIdentityUsageCommand = async (
  */
 export const de_GetBulkPublishDetailsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetBulkPublishDetailsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -558,7 +558,7 @@ export const de_GetBulkPublishDetailsCommand = async (
  */
 export const de_GetCognitoEventsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetCognitoEventsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -579,7 +579,7 @@ export const de_GetCognitoEventsCommand = async (
  */
 export const de_GetIdentityPoolConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetIdentityPoolConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -602,7 +602,7 @@ export const de_GetIdentityPoolConfigurationCommand = async (
  */
 export const de_ListDatasetsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListDatasetsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -625,7 +625,7 @@ export const de_ListDatasetsCommand = async (
  */
 export const de_ListIdentityPoolUsageCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListIdentityPoolUsageCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -649,7 +649,7 @@ export const de_ListIdentityPoolUsageCommand = async (
  */
 export const de_ListRecordsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListRecordsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -678,7 +678,7 @@ export const de_ListRecordsCommand = async (
  */
 export const de_RegisterDeviceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RegisterDeviceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -699,7 +699,7 @@ export const de_RegisterDeviceCommand = async (
  */
 export const de_SetCognitoEventsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SetCognitoEventsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -716,7 +716,7 @@ export const de_SetCognitoEventsCommand = async (
  */
 export const de_SetIdentityPoolConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SetIdentityPoolConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -739,7 +739,7 @@ export const de_SetIdentityPoolConfigurationCommand = async (
  */
 export const de_SubscribeToDatasetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SubscribeToDatasetCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -756,7 +756,7 @@ export const de_SubscribeToDatasetCommand = async (
  */
 export const de_UnsubscribeFromDatasetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UnsubscribeFromDatasetCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -773,7 +773,7 @@ export const de_UnsubscribeFromDatasetCommand = async (
  */
 export const de_UpdateRecordsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateRecordsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -854,7 +854,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_AlreadyStreamedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AlreadyStreamedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -874,7 +874,7 @@ const de_AlreadyStreamedExceptionRes = async (
  */
 const de_ConcurrentModificationExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ConcurrentModificationException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -894,7 +894,7 @@ const de_ConcurrentModificationExceptionRes = async (
  */
 const de_DuplicateRequestExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DuplicateRequestException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -914,7 +914,7 @@ const de_DuplicateRequestExceptionRes = async (
  */
 const de_InternalErrorExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalErrorException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -934,7 +934,7 @@ const de_InternalErrorExceptionRes = async (
  */
 const de_InvalidConfigurationExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidConfigurationException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -954,7 +954,7 @@ const de_InvalidConfigurationExceptionRes = async (
  */
 const de_InvalidLambdaFunctionOutputExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidLambdaFunctionOutputException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -974,7 +974,7 @@ const de_InvalidLambdaFunctionOutputExceptionRes = async (
  */
 const de_InvalidParameterExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidParameterException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -994,7 +994,7 @@ const de_InvalidParameterExceptionRes = async (
  */
 const de_LambdaThrottledExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<LambdaThrottledException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1014,7 +1014,7 @@ const de_LambdaThrottledExceptionRes = async (
  */
 const de_LimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<LimitExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1034,7 +1034,7 @@ const de_LimitExceededExceptionRes = async (
  */
 const de_NotAuthorizedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<NotAuthorizedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1054,7 +1054,7 @@ const de_NotAuthorizedExceptionRes = async (
  */
 const de_ResourceConflictExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceConflictException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1074,7 +1074,7 @@ const de_ResourceConflictExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1094,7 +1094,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_TooManyRequestsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyRequestsException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;

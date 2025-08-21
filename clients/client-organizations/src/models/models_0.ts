@@ -5330,7 +5330,7 @@ export const DescribeAccountResponseFilterSensitiveLog = (obj: DescribeAccountRe
  * @internal
  */
 export const DescribeCreateAccountStatusResponseFilterSensitiveLog = (
-  obj: DescribeCreateAccountStatusResponse
+  obj: DescribeCreateAccountStatusResponse,
 ): any => ({
   ...obj,
   ...(obj.CreateAccountStatus && {
@@ -5394,7 +5394,7 @@ export const DelegatedAdministratorFilterSensitiveLog = (obj: DelegatedAdministr
  * @internal
  */
 export const ListDelegatedAdministratorsResponseFilterSensitiveLog = (
-  obj: ListDelegatedAdministratorsResponse
+  obj: ListDelegatedAdministratorsResponse,
 ): any => ({
   ...obj,
   ...(obj.DelegatedAdministrators && {
@@ -5464,7 +5464,7 @@ export const EnableAllFeaturesResponseFilterSensitiveLog = (obj: EnableAllFeatur
  * @internal
  */
 export const InviteAccountToOrganizationResponseFilterSensitiveLog = (
-  obj: InviteAccountToOrganizationResponse
+  obj: InviteAccountToOrganizationResponse,
 ): any => ({
   ...obj,
   ...(obj.Handshake && { Handshake: HandshakeFilterSensitiveLog(obj.Handshake) }),
@@ -5481,7 +5481,7 @@ export const ListHandshakesForAccountResponseFilterSensitiveLog = (obj: ListHand
  * @internal
  */
 export const ListHandshakesForOrganizationResponseFilterSensitiveLog = (
-  obj: ListHandshakesForOrganizationResponse
+  obj: ListHandshakesForOrganizationResponse,
 ): any => ({
   ...obj,
 });

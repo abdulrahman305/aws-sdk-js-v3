@@ -84,7 +84,7 @@ export interface BucketEndpointResolvedConfig {
 }
 
 export function resolveBucketEndpointConfig<T>(
-  input: T & PreviouslyResolved & BucketEndpointInputConfig
+  input: T & PreviouslyResolved & BucketEndpointInputConfig,
 ): T & BucketEndpointResolvedConfig {
   const {
     bucketEndpoint = false,

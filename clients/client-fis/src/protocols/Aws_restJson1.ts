@@ -129,7 +129,7 @@ import {
  */
 export const se_CreateExperimentTemplateCommand = async (
   input: CreateExperimentTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -148,7 +148,7 @@ export const se_CreateExperimentTemplateCommand = async (
       stopConditions: (_) => _json(_),
       tags: (_) => _json(_),
       targets: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -159,7 +159,7 @@ export const se_CreateExperimentTemplateCommand = async (
  */
 export const se_CreateTargetAccountConfigurationCommand = async (
   input: CreateTargetAccountConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -174,7 +174,7 @@ export const se_CreateTargetAccountConfigurationCommand = async (
       clientToken: [true, (_) => _ ?? generateIdempotencyToken()],
       description: [],
       roleArn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -185,7 +185,7 @@ export const se_CreateTargetAccountConfigurationCommand = async (
  */
 export const se_DeleteExperimentTemplateCommand = async (
   input: DeleteExperimentTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -201,7 +201,7 @@ export const se_DeleteExperimentTemplateCommand = async (
  */
 export const se_DeleteTargetAccountConfigurationCommand = async (
   input: DeleteTargetAccountConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -218,7 +218,7 @@ export const se_DeleteTargetAccountConfigurationCommand = async (
  */
 export const se_GetActionCommand = async (
   input: GetActionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -234,7 +234,7 @@ export const se_GetActionCommand = async (
  */
 export const se_GetExperimentCommand = async (
   input: GetExperimentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -250,7 +250,7 @@ export const se_GetExperimentCommand = async (
  */
 export const se_GetExperimentTargetAccountConfigurationCommand = async (
   input: GetExperimentTargetAccountConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -267,7 +267,7 @@ export const se_GetExperimentTargetAccountConfigurationCommand = async (
  */
 export const se_GetExperimentTemplateCommand = async (
   input: GetExperimentTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -283,7 +283,7 @@ export const se_GetExperimentTemplateCommand = async (
  */
 export const se_GetTargetAccountConfigurationCommand = async (
   input: GetTargetAccountConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -300,7 +300,7 @@ export const se_GetTargetAccountConfigurationCommand = async (
  */
 export const se_GetTargetResourceTypeCommand = async (
   input: GetTargetResourceTypeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -316,7 +316,7 @@ export const se_GetTargetResourceTypeCommand = async (
  */
 export const se_ListActionsCommand = async (
   input: ListActionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -335,7 +335,7 @@ export const se_ListActionsCommand = async (
  */
 export const se_ListExperimentResolvedTargetsCommand = async (
   input: ListExperimentResolvedTargetsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -356,7 +356,7 @@ export const se_ListExperimentResolvedTargetsCommand = async (
  */
 export const se_ListExperimentsCommand = async (
   input: ListExperimentsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -376,7 +376,7 @@ export const se_ListExperimentsCommand = async (
  */
 export const se_ListExperimentTargetAccountConfigurationsCommand = async (
   input: ListExperimentTargetAccountConfigurationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -395,7 +395,7 @@ export const se_ListExperimentTargetAccountConfigurationsCommand = async (
  */
 export const se_ListExperimentTemplatesCommand = async (
   input: ListExperimentTemplatesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -414,7 +414,7 @@ export const se_ListExperimentTemplatesCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -430,7 +430,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_ListTargetAccountConfigurationsCommand = async (
   input: ListTargetAccountConfigurationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -450,7 +450,7 @@ export const se_ListTargetAccountConfigurationsCommand = async (
  */
 export const se_ListTargetResourceTypesCommand = async (
   input: ListTargetResourceTypesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -469,7 +469,7 @@ export const se_ListTargetResourceTypesCommand = async (
  */
 export const se_StartExperimentCommand = async (
   input: StartExperimentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -483,7 +483,7 @@ export const se_StartExperimentCommand = async (
       experimentOptions: (_) => _json(_),
       experimentTemplateId: [],
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -494,7 +494,7 @@ export const se_StartExperimentCommand = async (
  */
 export const se_StopExperimentCommand = async (
   input: StopExperimentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -510,7 +510,7 @@ export const se_StopExperimentCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -522,7 +522,7 @@ export const se_TagResourceCommand = async (
   body = JSON.stringify(
     take(input, {
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -533,7 +533,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -552,7 +552,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateExperimentTemplateCommand = async (
   input: UpdateExperimentTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -570,7 +570,7 @@ export const se_UpdateExperimentTemplateCommand = async (
       roleArn: [],
       stopConditions: (_) => _json(_),
       targets: (_) => _json(_),
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -581,7 +581,7 @@ export const se_UpdateExperimentTemplateCommand = async (
  */
 export const se_UpdateTargetAccountConfigurationCommand = async (
   input: UpdateTargetAccountConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -595,7 +595,7 @@ export const se_UpdateTargetAccountConfigurationCommand = async (
     take(input, {
       description: [],
       roleArn: [],
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -606,7 +606,7 @@ export const se_UpdateTargetAccountConfigurationCommand = async (
  */
 export const de_CreateExperimentTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateExperimentTemplateCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -627,7 +627,7 @@ export const de_CreateExperimentTemplateCommand = async (
  */
 export const de_CreateTargetAccountConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateTargetAccountConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -648,7 +648,7 @@ export const de_CreateTargetAccountConfigurationCommand = async (
  */
 export const de_DeleteExperimentTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteExperimentTemplateCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -669,7 +669,7 @@ export const de_DeleteExperimentTemplateCommand = async (
  */
 export const de_DeleteTargetAccountConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteTargetAccountConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -690,7 +690,7 @@ export const de_DeleteTargetAccountConfigurationCommand = async (
  */
 export const de_GetActionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetActionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -711,7 +711,7 @@ export const de_GetActionCommand = async (
  */
 export const de_GetExperimentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetExperimentCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -732,7 +732,7 @@ export const de_GetExperimentCommand = async (
  */
 export const de_GetExperimentTargetAccountConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetExperimentTargetAccountConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -753,7 +753,7 @@ export const de_GetExperimentTargetAccountConfigurationCommand = async (
  */
 export const de_GetExperimentTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetExperimentTemplateCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -774,7 +774,7 @@ export const de_GetExperimentTemplateCommand = async (
  */
 export const de_GetTargetAccountConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetTargetAccountConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -795,7 +795,7 @@ export const de_GetTargetAccountConfigurationCommand = async (
  */
 export const de_GetTargetResourceTypeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetTargetResourceTypeCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -816,7 +816,7 @@ export const de_GetTargetResourceTypeCommand = async (
  */
 export const de_ListActionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListActionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -838,7 +838,7 @@ export const de_ListActionsCommand = async (
  */
 export const de_ListExperimentResolvedTargetsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListExperimentResolvedTargetsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -860,7 +860,7 @@ export const de_ListExperimentResolvedTargetsCommand = async (
  */
 export const de_ListExperimentsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListExperimentsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -882,7 +882,7 @@ export const de_ListExperimentsCommand = async (
  */
 export const de_ListExperimentTargetAccountConfigurationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListExperimentTargetAccountConfigurationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -904,7 +904,7 @@ export const de_ListExperimentTargetAccountConfigurationsCommand = async (
  */
 export const de_ListExperimentTemplatesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListExperimentTemplatesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -926,7 +926,7 @@ export const de_ListExperimentTemplatesCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -947,7 +947,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_ListTargetAccountConfigurationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTargetAccountConfigurationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -969,7 +969,7 @@ export const de_ListTargetAccountConfigurationsCommand = async (
  */
 export const de_ListTargetResourceTypesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTargetResourceTypesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -991,7 +991,7 @@ export const de_ListTargetResourceTypesCommand = async (
  */
 export const de_StartExperimentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartExperimentCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1012,7 +1012,7 @@ export const de_StartExperimentCommand = async (
  */
 export const de_StopExperimentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StopExperimentCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1033,7 +1033,7 @@ export const de_StopExperimentCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1050,7 +1050,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1067,7 +1067,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateExperimentTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateExperimentTemplateCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1088,7 +1088,7 @@ export const de_UpdateExperimentTemplateCommand = async (
  */
 export const de_UpdateTargetAccountConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateTargetAccountConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1159,7 +1159,7 @@ const de_ConflictExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1179,7 +1179,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_ServiceQuotaExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceQuotaExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1324,13 +1324,16 @@ const de_ExperimentAction = (output: any, context: __SerdeContext): ExperimentAc
  * deserializeAws_restJson1ExperimentActionMap
  */
 const de_ExperimentActionMap = (output: any, context: __SerdeContext): Record<string, ExperimentAction> => {
-  return Object.entries(output).reduce((acc: Record<string, ExperimentAction>, [key, value]: [string, any]) => {
-    if (value === null) {
+  return Object.entries(output).reduce(
+    (acc: Record<string, ExperimentAction>, [key, value]: [string, any]) => {
+      if (value === null) {
+        return acc;
+      }
+      acc[key as string] = de_ExperimentAction(value, context);
       return acc;
-    }
-    acc[key as string] = de_ExperimentAction(value, context);
-    return acc;
-  }, {} as Record<string, ExperimentAction>);
+    },
+    {} as Record<string, ExperimentAction>,
+  );
 };
 
 // de_ExperimentActionParameterMap omitted.

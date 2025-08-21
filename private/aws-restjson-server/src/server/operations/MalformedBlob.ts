@@ -61,14 +61,14 @@ export class MalformedBlobSerializer
 
 export const getMalformedBlobHandler = <Context>(
   operation: __Operation<MalformedBlobServerInput, MalformedBlobServerOutput, Context>,
-  customizer: __ValidationCustomizer<"MalformedBlob">
+  customizer: __ValidationCustomizer<"MalformedBlob">,
 ): __ServiceHandler<Context, __HttpRequest, __HttpResponse> => {
   const mux = new httpbinding.HttpBindingMux<"RestJson", "MalformedBlob">([
     new httpbinding.UriSpec<"RestJson", "MalformedBlob">(
       "POST",
       [{ type: "path_literal", value: "MalformedBlob" }],
       [],
-      { service: "RestJson", operation: "MalformedBlob" }
+      { service: "RestJson", operation: "MalformedBlob" },
     ),
   ]);
   return new MalformedBlobHandler(
@@ -76,7 +76,7 @@ export const getMalformedBlobHandler = <Context>(
     mux,
     new MalformedBlobSerializer(),
     serializeFrameworkException,
-    customizer
+    customizer,
   );
 };
 
@@ -97,7 +97,7 @@ async function handle<S, O extends keyof S & string, Context>(
   operation: __Operation<__OperationInput<S[O]>, __OperationOutput<S[O]>, Context>,
   serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
   validationFn: (input: __OperationInput<S[O]>) => __ValidationFailure[],
-  validationCustomizer: __ValidationCustomizer<O>
+  validationCustomizer: __ValidationCustomizer<O>,
 ): Promise<__HttpResponse> {
   let input;
   try {
@@ -135,7 +135,7 @@ export class MalformedBlobHandler<Context> implements __ServiceHandler<Context> 
   private readonly serializer: __OperationSerializer<RestJsonService<Context>, "MalformedBlob", MalformedBlobErrors>;
   private readonly serializeFrameworkException: (
     e: __SmithyFrameworkException,
-    ctx: __ServerSerdeContext
+    ctx: __ServerSerdeContext,
   ) => Promise<__HttpResponse>;
   private readonly validationCustomizer: __ValidationCustomizer<"MalformedBlob">;
   /**
@@ -152,7 +152,7 @@ export class MalformedBlobHandler<Context> implements __ServiceHandler<Context> 
     mux: __Mux<"RestJson", "MalformedBlob">,
     serializer: __OperationSerializer<RestJsonService<Context>, "MalformedBlob", MalformedBlobErrors>,
     serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
-    validationCustomizer: __ValidationCustomizer<"MalformedBlob">
+    validationCustomizer: __ValidationCustomizer<"MalformedBlob">,
   ) {
     this.operation = operation;
     this.mux = mux;
@@ -164,7 +164,7 @@ export class MalformedBlobHandler<Context> implements __ServiceHandler<Context> 
     const target = this.mux.match(request);
     if (target === undefined) {
       console.log(
-        "Received a request that did not match aws.protocoltests.restjson#RestJson.MalformedBlob. This indicates a misconfiguration."
+        "Received a request that did not match aws.protocoltests.restjson#RestJson.MalformedBlob. This indicates a misconfiguration.",
       );
       return this.serializeFrameworkException(new __InternalFailureException(), serdeContextBase);
     }
@@ -176,7 +176,7 @@ export class MalformedBlobHandler<Context> implements __ServiceHandler<Context> 
       this.operation,
       this.serializeFrameworkException,
       MalformedBlobServerInput.validate,
-      this.validationCustomizer
+      this.validationCustomizer,
     );
   }
 }

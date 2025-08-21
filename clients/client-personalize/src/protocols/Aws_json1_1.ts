@@ -371,7 +371,7 @@ import { PersonalizeServiceException as __BaseException } from "../models/Person
  */
 export const se_CreateBatchInferenceJobCommand = async (
   input: CreateBatchInferenceJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateBatchInferenceJob");
   let body: any;
@@ -384,7 +384,7 @@ export const se_CreateBatchInferenceJobCommand = async (
  */
 export const se_CreateBatchSegmentJobCommand = async (
   input: CreateBatchSegmentJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateBatchSegmentJob");
   let body: any;
@@ -397,7 +397,7 @@ export const se_CreateBatchSegmentJobCommand = async (
  */
 export const se_CreateCampaignCommand = async (
   input: CreateCampaignCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateCampaign");
   let body: any;
@@ -410,7 +410,7 @@ export const se_CreateCampaignCommand = async (
  */
 export const se_CreateDataDeletionJobCommand = async (
   input: CreateDataDeletionJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateDataDeletionJob");
   let body: any;
@@ -423,7 +423,7 @@ export const se_CreateDataDeletionJobCommand = async (
  */
 export const se_CreateDatasetCommand = async (
   input: CreateDatasetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateDataset");
   let body: any;
@@ -436,7 +436,7 @@ export const se_CreateDatasetCommand = async (
  */
 export const se_CreateDatasetExportJobCommand = async (
   input: CreateDatasetExportJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateDatasetExportJob");
   let body: any;
@@ -449,7 +449,7 @@ export const se_CreateDatasetExportJobCommand = async (
  */
 export const se_CreateDatasetGroupCommand = async (
   input: CreateDatasetGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateDatasetGroup");
   let body: any;
@@ -462,7 +462,7 @@ export const se_CreateDatasetGroupCommand = async (
  */
 export const se_CreateDatasetImportJobCommand = async (
   input: CreateDatasetImportJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateDatasetImportJob");
   let body: any;
@@ -475,7 +475,7 @@ export const se_CreateDatasetImportJobCommand = async (
  */
 export const se_CreateEventTrackerCommand = async (
   input: CreateEventTrackerCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateEventTracker");
   let body: any;
@@ -488,7 +488,7 @@ export const se_CreateEventTrackerCommand = async (
  */
 export const se_CreateFilterCommand = async (
   input: CreateFilterCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateFilter");
   let body: any;
@@ -501,7 +501,7 @@ export const se_CreateFilterCommand = async (
  */
 export const se_CreateMetricAttributionCommand = async (
   input: CreateMetricAttributionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateMetricAttribution");
   let body: any;
@@ -514,7 +514,7 @@ export const se_CreateMetricAttributionCommand = async (
  */
 export const se_CreateRecommenderCommand = async (
   input: CreateRecommenderCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateRecommender");
   let body: any;
@@ -527,7 +527,7 @@ export const se_CreateRecommenderCommand = async (
  */
 export const se_CreateSchemaCommand = async (
   input: CreateSchemaCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateSchema");
   let body: any;
@@ -540,7 +540,7 @@ export const se_CreateSchemaCommand = async (
  */
 export const se_CreateSolutionCommand = async (
   input: CreateSolutionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateSolution");
   let body: any;
@@ -553,7 +553,7 @@ export const se_CreateSolutionCommand = async (
  */
 export const se_CreateSolutionVersionCommand = async (
   input: CreateSolutionVersionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateSolutionVersion");
   let body: any;
@@ -566,7 +566,7 @@ export const se_CreateSolutionVersionCommand = async (
  */
 export const se_DeleteCampaignCommand = async (
   input: DeleteCampaignCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteCampaign");
   let body: any;
@@ -579,7 +579,7 @@ export const se_DeleteCampaignCommand = async (
  */
 export const se_DeleteDatasetCommand = async (
   input: DeleteDatasetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteDataset");
   let body: any;
@@ -592,7 +592,7 @@ export const se_DeleteDatasetCommand = async (
  */
 export const se_DeleteDatasetGroupCommand = async (
   input: DeleteDatasetGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteDatasetGroup");
   let body: any;
@@ -605,7 +605,7 @@ export const se_DeleteDatasetGroupCommand = async (
  */
 export const se_DeleteEventTrackerCommand = async (
   input: DeleteEventTrackerCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteEventTracker");
   let body: any;
@@ -618,7 +618,7 @@ export const se_DeleteEventTrackerCommand = async (
  */
 export const se_DeleteFilterCommand = async (
   input: DeleteFilterCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteFilter");
   let body: any;
@@ -631,7 +631,7 @@ export const se_DeleteFilterCommand = async (
  */
 export const se_DeleteMetricAttributionCommand = async (
   input: DeleteMetricAttributionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteMetricAttribution");
   let body: any;
@@ -644,7 +644,7 @@ export const se_DeleteMetricAttributionCommand = async (
  */
 export const se_DeleteRecommenderCommand = async (
   input: DeleteRecommenderCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteRecommender");
   let body: any;
@@ -657,7 +657,7 @@ export const se_DeleteRecommenderCommand = async (
  */
 export const se_DeleteSchemaCommand = async (
   input: DeleteSchemaCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteSchema");
   let body: any;
@@ -670,7 +670,7 @@ export const se_DeleteSchemaCommand = async (
  */
 export const se_DeleteSolutionCommand = async (
   input: DeleteSolutionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteSolution");
   let body: any;
@@ -683,7 +683,7 @@ export const se_DeleteSolutionCommand = async (
  */
 export const se_DescribeAlgorithmCommand = async (
   input: DescribeAlgorithmCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeAlgorithm");
   let body: any;
@@ -696,7 +696,7 @@ export const se_DescribeAlgorithmCommand = async (
  */
 export const se_DescribeBatchInferenceJobCommand = async (
   input: DescribeBatchInferenceJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeBatchInferenceJob");
   let body: any;
@@ -709,7 +709,7 @@ export const se_DescribeBatchInferenceJobCommand = async (
  */
 export const se_DescribeBatchSegmentJobCommand = async (
   input: DescribeBatchSegmentJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeBatchSegmentJob");
   let body: any;
@@ -722,7 +722,7 @@ export const se_DescribeBatchSegmentJobCommand = async (
  */
 export const se_DescribeCampaignCommand = async (
   input: DescribeCampaignCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeCampaign");
   let body: any;
@@ -735,7 +735,7 @@ export const se_DescribeCampaignCommand = async (
  */
 export const se_DescribeDataDeletionJobCommand = async (
   input: DescribeDataDeletionJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeDataDeletionJob");
   let body: any;
@@ -748,7 +748,7 @@ export const se_DescribeDataDeletionJobCommand = async (
  */
 export const se_DescribeDatasetCommand = async (
   input: DescribeDatasetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeDataset");
   let body: any;
@@ -761,7 +761,7 @@ export const se_DescribeDatasetCommand = async (
  */
 export const se_DescribeDatasetExportJobCommand = async (
   input: DescribeDatasetExportJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeDatasetExportJob");
   let body: any;
@@ -774,7 +774,7 @@ export const se_DescribeDatasetExportJobCommand = async (
  */
 export const se_DescribeDatasetGroupCommand = async (
   input: DescribeDatasetGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeDatasetGroup");
   let body: any;
@@ -787,7 +787,7 @@ export const se_DescribeDatasetGroupCommand = async (
  */
 export const se_DescribeDatasetImportJobCommand = async (
   input: DescribeDatasetImportJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeDatasetImportJob");
   let body: any;
@@ -800,7 +800,7 @@ export const se_DescribeDatasetImportJobCommand = async (
  */
 export const se_DescribeEventTrackerCommand = async (
   input: DescribeEventTrackerCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeEventTracker");
   let body: any;
@@ -813,7 +813,7 @@ export const se_DescribeEventTrackerCommand = async (
  */
 export const se_DescribeFeatureTransformationCommand = async (
   input: DescribeFeatureTransformationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeFeatureTransformation");
   let body: any;
@@ -826,7 +826,7 @@ export const se_DescribeFeatureTransformationCommand = async (
  */
 export const se_DescribeFilterCommand = async (
   input: DescribeFilterCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeFilter");
   let body: any;
@@ -839,7 +839,7 @@ export const se_DescribeFilterCommand = async (
  */
 export const se_DescribeMetricAttributionCommand = async (
   input: DescribeMetricAttributionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeMetricAttribution");
   let body: any;
@@ -852,7 +852,7 @@ export const se_DescribeMetricAttributionCommand = async (
  */
 export const se_DescribeRecipeCommand = async (
   input: DescribeRecipeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeRecipe");
   let body: any;
@@ -865,7 +865,7 @@ export const se_DescribeRecipeCommand = async (
  */
 export const se_DescribeRecommenderCommand = async (
   input: DescribeRecommenderCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeRecommender");
   let body: any;
@@ -878,7 +878,7 @@ export const se_DescribeRecommenderCommand = async (
  */
 export const se_DescribeSchemaCommand = async (
   input: DescribeSchemaCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeSchema");
   let body: any;
@@ -891,7 +891,7 @@ export const se_DescribeSchemaCommand = async (
  */
 export const se_DescribeSolutionCommand = async (
   input: DescribeSolutionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeSolution");
   let body: any;
@@ -904,7 +904,7 @@ export const se_DescribeSolutionCommand = async (
  */
 export const se_DescribeSolutionVersionCommand = async (
   input: DescribeSolutionVersionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeSolutionVersion");
   let body: any;
@@ -917,7 +917,7 @@ export const se_DescribeSolutionVersionCommand = async (
  */
 export const se_GetSolutionMetricsCommand = async (
   input: GetSolutionMetricsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetSolutionMetrics");
   let body: any;
@@ -930,7 +930,7 @@ export const se_GetSolutionMetricsCommand = async (
  */
 export const se_ListBatchInferenceJobsCommand = async (
   input: ListBatchInferenceJobsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListBatchInferenceJobs");
   let body: any;
@@ -943,7 +943,7 @@ export const se_ListBatchInferenceJobsCommand = async (
  */
 export const se_ListBatchSegmentJobsCommand = async (
   input: ListBatchSegmentJobsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListBatchSegmentJobs");
   let body: any;
@@ -956,7 +956,7 @@ export const se_ListBatchSegmentJobsCommand = async (
  */
 export const se_ListCampaignsCommand = async (
   input: ListCampaignsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListCampaigns");
   let body: any;
@@ -969,7 +969,7 @@ export const se_ListCampaignsCommand = async (
  */
 export const se_ListDataDeletionJobsCommand = async (
   input: ListDataDeletionJobsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListDataDeletionJobs");
   let body: any;
@@ -982,7 +982,7 @@ export const se_ListDataDeletionJobsCommand = async (
  */
 export const se_ListDatasetExportJobsCommand = async (
   input: ListDatasetExportJobsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListDatasetExportJobs");
   let body: any;
@@ -995,7 +995,7 @@ export const se_ListDatasetExportJobsCommand = async (
  */
 export const se_ListDatasetGroupsCommand = async (
   input: ListDatasetGroupsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListDatasetGroups");
   let body: any;
@@ -1008,7 +1008,7 @@ export const se_ListDatasetGroupsCommand = async (
  */
 export const se_ListDatasetImportJobsCommand = async (
   input: ListDatasetImportJobsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListDatasetImportJobs");
   let body: any;
@@ -1021,7 +1021,7 @@ export const se_ListDatasetImportJobsCommand = async (
  */
 export const se_ListDatasetsCommand = async (
   input: ListDatasetsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListDatasets");
   let body: any;
@@ -1034,7 +1034,7 @@ export const se_ListDatasetsCommand = async (
  */
 export const se_ListEventTrackersCommand = async (
   input: ListEventTrackersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListEventTrackers");
   let body: any;
@@ -1047,7 +1047,7 @@ export const se_ListEventTrackersCommand = async (
  */
 export const se_ListFiltersCommand = async (
   input: ListFiltersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListFilters");
   let body: any;
@@ -1060,7 +1060,7 @@ export const se_ListFiltersCommand = async (
  */
 export const se_ListMetricAttributionMetricsCommand = async (
   input: ListMetricAttributionMetricsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListMetricAttributionMetrics");
   let body: any;
@@ -1073,7 +1073,7 @@ export const se_ListMetricAttributionMetricsCommand = async (
  */
 export const se_ListMetricAttributionsCommand = async (
   input: ListMetricAttributionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListMetricAttributions");
   let body: any;
@@ -1086,7 +1086,7 @@ export const se_ListMetricAttributionsCommand = async (
  */
 export const se_ListRecipesCommand = async (
   input: ListRecipesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListRecipes");
   let body: any;
@@ -1099,7 +1099,7 @@ export const se_ListRecipesCommand = async (
  */
 export const se_ListRecommendersCommand = async (
   input: ListRecommendersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListRecommenders");
   let body: any;
@@ -1112,7 +1112,7 @@ export const se_ListRecommendersCommand = async (
  */
 export const se_ListSchemasCommand = async (
   input: ListSchemasCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListSchemas");
   let body: any;
@@ -1125,7 +1125,7 @@ export const se_ListSchemasCommand = async (
  */
 export const se_ListSolutionsCommand = async (
   input: ListSolutionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListSolutions");
   let body: any;
@@ -1138,7 +1138,7 @@ export const se_ListSolutionsCommand = async (
  */
 export const se_ListSolutionVersionsCommand = async (
   input: ListSolutionVersionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListSolutionVersions");
   let body: any;
@@ -1151,7 +1151,7 @@ export const se_ListSolutionVersionsCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListTagsForResource");
   let body: any;
@@ -1164,7 +1164,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_StartRecommenderCommand = async (
   input: StartRecommenderCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StartRecommender");
   let body: any;
@@ -1177,7 +1177,7 @@ export const se_StartRecommenderCommand = async (
  */
 export const se_StopRecommenderCommand = async (
   input: StopRecommenderCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StopRecommender");
   let body: any;
@@ -1190,7 +1190,7 @@ export const se_StopRecommenderCommand = async (
  */
 export const se_StopSolutionVersionCreationCommand = async (
   input: StopSolutionVersionCreationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StopSolutionVersionCreation");
   let body: any;
@@ -1203,7 +1203,7 @@ export const se_StopSolutionVersionCreationCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("TagResource");
   let body: any;
@@ -1216,7 +1216,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UntagResource");
   let body: any;
@@ -1229,7 +1229,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateCampaignCommand = async (
   input: UpdateCampaignCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateCampaign");
   let body: any;
@@ -1242,7 +1242,7 @@ export const se_UpdateCampaignCommand = async (
  */
 export const se_UpdateDatasetCommand = async (
   input: UpdateDatasetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateDataset");
   let body: any;
@@ -1255,7 +1255,7 @@ export const se_UpdateDatasetCommand = async (
  */
 export const se_UpdateMetricAttributionCommand = async (
   input: UpdateMetricAttributionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateMetricAttribution");
   let body: any;
@@ -1268,7 +1268,7 @@ export const se_UpdateMetricAttributionCommand = async (
  */
 export const se_UpdateRecommenderCommand = async (
   input: UpdateRecommenderCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateRecommender");
   let body: any;
@@ -1281,7 +1281,7 @@ export const se_UpdateRecommenderCommand = async (
  */
 export const de_CreateBatchInferenceJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateBatchInferenceJobCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1301,7 +1301,7 @@ export const de_CreateBatchInferenceJobCommand = async (
  */
 export const de_CreateBatchSegmentJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateBatchSegmentJobCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1321,7 +1321,7 @@ export const de_CreateBatchSegmentJobCommand = async (
  */
 export const de_CreateCampaignCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateCampaignCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1341,7 +1341,7 @@ export const de_CreateCampaignCommand = async (
  */
 export const de_CreateDataDeletionJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateDataDeletionJobCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1361,7 +1361,7 @@ export const de_CreateDataDeletionJobCommand = async (
  */
 export const de_CreateDatasetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateDatasetCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1381,7 +1381,7 @@ export const de_CreateDatasetCommand = async (
  */
 export const de_CreateDatasetExportJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateDatasetExportJobCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1401,7 +1401,7 @@ export const de_CreateDatasetExportJobCommand = async (
  */
 export const de_CreateDatasetGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateDatasetGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1421,7 +1421,7 @@ export const de_CreateDatasetGroupCommand = async (
  */
 export const de_CreateDatasetImportJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateDatasetImportJobCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1441,7 +1441,7 @@ export const de_CreateDatasetImportJobCommand = async (
  */
 export const de_CreateEventTrackerCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateEventTrackerCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1461,7 +1461,7 @@ export const de_CreateEventTrackerCommand = async (
  */
 export const de_CreateFilterCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateFilterCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1481,7 +1481,7 @@ export const de_CreateFilterCommand = async (
  */
 export const de_CreateMetricAttributionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateMetricAttributionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1501,7 +1501,7 @@ export const de_CreateMetricAttributionCommand = async (
  */
 export const de_CreateRecommenderCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateRecommenderCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1521,7 +1521,7 @@ export const de_CreateRecommenderCommand = async (
  */
 export const de_CreateSchemaCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateSchemaCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1541,7 +1541,7 @@ export const de_CreateSchemaCommand = async (
  */
 export const de_CreateSolutionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateSolutionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1561,7 +1561,7 @@ export const de_CreateSolutionCommand = async (
  */
 export const de_CreateSolutionVersionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateSolutionVersionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1581,7 +1581,7 @@ export const de_CreateSolutionVersionCommand = async (
  */
 export const de_DeleteCampaignCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteCampaignCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1598,7 +1598,7 @@ export const de_DeleteCampaignCommand = async (
  */
 export const de_DeleteDatasetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteDatasetCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1615,7 +1615,7 @@ export const de_DeleteDatasetCommand = async (
  */
 export const de_DeleteDatasetGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteDatasetGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1632,7 +1632,7 @@ export const de_DeleteDatasetGroupCommand = async (
  */
 export const de_DeleteEventTrackerCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteEventTrackerCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1649,7 +1649,7 @@ export const de_DeleteEventTrackerCommand = async (
  */
 export const de_DeleteFilterCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteFilterCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1666,7 +1666,7 @@ export const de_DeleteFilterCommand = async (
  */
 export const de_DeleteMetricAttributionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteMetricAttributionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1683,7 +1683,7 @@ export const de_DeleteMetricAttributionCommand = async (
  */
 export const de_DeleteRecommenderCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteRecommenderCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1700,7 +1700,7 @@ export const de_DeleteRecommenderCommand = async (
  */
 export const de_DeleteSchemaCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteSchemaCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1717,7 +1717,7 @@ export const de_DeleteSchemaCommand = async (
  */
 export const de_DeleteSolutionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteSolutionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1734,7 +1734,7 @@ export const de_DeleteSolutionCommand = async (
  */
 export const de_DescribeAlgorithmCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeAlgorithmCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1754,7 +1754,7 @@ export const de_DescribeAlgorithmCommand = async (
  */
 export const de_DescribeBatchInferenceJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeBatchInferenceJobCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1774,7 +1774,7 @@ export const de_DescribeBatchInferenceJobCommand = async (
  */
 export const de_DescribeBatchSegmentJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeBatchSegmentJobCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1794,7 +1794,7 @@ export const de_DescribeBatchSegmentJobCommand = async (
  */
 export const de_DescribeCampaignCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeCampaignCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1814,7 +1814,7 @@ export const de_DescribeCampaignCommand = async (
  */
 export const de_DescribeDataDeletionJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeDataDeletionJobCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1834,7 +1834,7 @@ export const de_DescribeDataDeletionJobCommand = async (
  */
 export const de_DescribeDatasetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeDatasetCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1854,7 +1854,7 @@ export const de_DescribeDatasetCommand = async (
  */
 export const de_DescribeDatasetExportJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeDatasetExportJobCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1874,7 +1874,7 @@ export const de_DescribeDatasetExportJobCommand = async (
  */
 export const de_DescribeDatasetGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeDatasetGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1894,7 +1894,7 @@ export const de_DescribeDatasetGroupCommand = async (
  */
 export const de_DescribeDatasetImportJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeDatasetImportJobCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1914,7 +1914,7 @@ export const de_DescribeDatasetImportJobCommand = async (
  */
 export const de_DescribeEventTrackerCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeEventTrackerCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1934,7 +1934,7 @@ export const de_DescribeEventTrackerCommand = async (
  */
 export const de_DescribeFeatureTransformationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeFeatureTransformationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1954,7 +1954,7 @@ export const de_DescribeFeatureTransformationCommand = async (
  */
 export const de_DescribeFilterCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeFilterCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1974,7 +1974,7 @@ export const de_DescribeFilterCommand = async (
  */
 export const de_DescribeMetricAttributionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeMetricAttributionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1994,7 +1994,7 @@ export const de_DescribeMetricAttributionCommand = async (
  */
 export const de_DescribeRecipeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeRecipeCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2014,7 +2014,7 @@ export const de_DescribeRecipeCommand = async (
  */
 export const de_DescribeRecommenderCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeRecommenderCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2034,7 +2034,7 @@ export const de_DescribeRecommenderCommand = async (
  */
 export const de_DescribeSchemaCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeSchemaCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2054,7 +2054,7 @@ export const de_DescribeSchemaCommand = async (
  */
 export const de_DescribeSolutionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeSolutionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2074,7 +2074,7 @@ export const de_DescribeSolutionCommand = async (
  */
 export const de_DescribeSolutionVersionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeSolutionVersionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2094,7 +2094,7 @@ export const de_DescribeSolutionVersionCommand = async (
  */
 export const de_GetSolutionMetricsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetSolutionMetricsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2114,7 +2114,7 @@ export const de_GetSolutionMetricsCommand = async (
  */
 export const de_ListBatchInferenceJobsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListBatchInferenceJobsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2134,7 +2134,7 @@ export const de_ListBatchInferenceJobsCommand = async (
  */
 export const de_ListBatchSegmentJobsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListBatchSegmentJobsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2154,7 +2154,7 @@ export const de_ListBatchSegmentJobsCommand = async (
  */
 export const de_ListCampaignsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListCampaignsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2174,7 +2174,7 @@ export const de_ListCampaignsCommand = async (
  */
 export const de_ListDataDeletionJobsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListDataDeletionJobsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2194,7 +2194,7 @@ export const de_ListDataDeletionJobsCommand = async (
  */
 export const de_ListDatasetExportJobsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListDatasetExportJobsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2214,7 +2214,7 @@ export const de_ListDatasetExportJobsCommand = async (
  */
 export const de_ListDatasetGroupsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListDatasetGroupsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2234,7 +2234,7 @@ export const de_ListDatasetGroupsCommand = async (
  */
 export const de_ListDatasetImportJobsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListDatasetImportJobsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2254,7 +2254,7 @@ export const de_ListDatasetImportJobsCommand = async (
  */
 export const de_ListDatasetsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListDatasetsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2274,7 +2274,7 @@ export const de_ListDatasetsCommand = async (
  */
 export const de_ListEventTrackersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListEventTrackersCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2294,7 +2294,7 @@ export const de_ListEventTrackersCommand = async (
  */
 export const de_ListFiltersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListFiltersCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2314,7 +2314,7 @@ export const de_ListFiltersCommand = async (
  */
 export const de_ListMetricAttributionMetricsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListMetricAttributionMetricsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2334,7 +2334,7 @@ export const de_ListMetricAttributionMetricsCommand = async (
  */
 export const de_ListMetricAttributionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListMetricAttributionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2354,7 +2354,7 @@ export const de_ListMetricAttributionsCommand = async (
  */
 export const de_ListRecipesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListRecipesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2374,7 +2374,7 @@ export const de_ListRecipesCommand = async (
  */
 export const de_ListRecommendersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListRecommendersCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2394,7 +2394,7 @@ export const de_ListRecommendersCommand = async (
  */
 export const de_ListSchemasCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListSchemasCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2414,7 +2414,7 @@ export const de_ListSchemasCommand = async (
  */
 export const de_ListSolutionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListSolutionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2434,7 +2434,7 @@ export const de_ListSolutionsCommand = async (
  */
 export const de_ListSolutionVersionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListSolutionVersionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2454,7 +2454,7 @@ export const de_ListSolutionVersionsCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2474,7 +2474,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_StartRecommenderCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartRecommenderCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2494,7 +2494,7 @@ export const de_StartRecommenderCommand = async (
  */
 export const de_StopRecommenderCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StopRecommenderCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2514,7 +2514,7 @@ export const de_StopRecommenderCommand = async (
  */
 export const de_StopSolutionVersionCreationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StopSolutionVersionCreationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2531,7 +2531,7 @@ export const de_StopSolutionVersionCreationCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2551,7 +2551,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2571,7 +2571,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateCampaignCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateCampaignCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2591,7 +2591,7 @@ export const de_UpdateCampaignCommand = async (
  */
 export const de_UpdateDatasetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateDatasetCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2611,7 +2611,7 @@ export const de_UpdateDatasetCommand = async (
  */
 export const de_UpdateMetricAttributionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateMetricAttributionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2631,7 +2631,7 @@ export const de_UpdateMetricAttributionCommand = async (
  */
 export const de_UpdateRecommenderCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateRecommenderCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2695,7 +2695,7 @@ const de_CommandError = async (output: __HttpResponse, context: __SerdeContext):
  */
 const de_InvalidInputExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidInputException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2711,7 +2711,7 @@ const de_InvalidInputExceptionRes = async (
  */
 const de_InvalidNextTokenExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidNextTokenException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2727,7 +2727,7 @@ const de_InvalidNextTokenExceptionRes = async (
  */
 const de_LimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<LimitExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2743,7 +2743,7 @@ const de_LimitExceededExceptionRes = async (
  */
 const de_ResourceAlreadyExistsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceAlreadyExistsException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2759,7 +2759,7 @@ const de_ResourceAlreadyExistsExceptionRes = async (
  */
 const de_ResourceInUseExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceInUseException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2775,7 +2775,7 @@ const de_ResourceInUseExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2791,7 +2791,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_TooManyTagKeysExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyTagKeysException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2807,7 +2807,7 @@ const de_TooManyTagKeysExceptionRes = async (
  */
 const de_TooManyTagsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyTagsException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3637,7 +3637,7 @@ const de_DatasetUpdateSummary = (output: any, context: __SerdeContext): DatasetU
  */
 const de_DefaultContinuousHyperParameterRange = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DefaultContinuousHyperParameterRange => {
   return take(output, {
     isTunable: __expectBoolean,
@@ -3652,7 +3652,7 @@ const de_DefaultContinuousHyperParameterRange = (
  */
 const de_DefaultContinuousHyperParameterRanges = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DefaultContinuousHyperParameterRange[] => {
   const retVal = (output || [])
     .filter((e: any) => e != null)
@@ -3691,7 +3691,7 @@ const de_DescribeAlgorithmResponse = (output: any, context: __SerdeContext): Des
  */
 const de_DescribeBatchInferenceJobResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeBatchInferenceJobResponse => {
   return take(output, {
     batchInferenceJob: (_: any) => de_BatchInferenceJob(_, context),
@@ -3730,7 +3730,7 @@ const de_DescribeDataDeletionJobResponse = (output: any, context: __SerdeContext
  */
 const de_DescribeDatasetExportJobResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeDatasetExportJobResponse => {
   return take(output, {
     datasetExportJob: (_: any) => de_DatasetExportJob(_, context),
@@ -3751,7 +3751,7 @@ const de_DescribeDatasetGroupResponse = (output: any, context: __SerdeContext): 
  */
 const de_DescribeDatasetImportJobResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeDatasetImportJobResponse => {
   return take(output, {
     datasetImportJob: (_: any) => de_DatasetImportJob(_, context),
@@ -3781,7 +3781,7 @@ const de_DescribeEventTrackerResponse = (output: any, context: __SerdeContext): 
  */
 const de_DescribeFeatureTransformationResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeFeatureTransformationResponse => {
   return take(output, {
     featureTransformation: (_: any) => de_FeatureTransformation(_, context),
@@ -3802,7 +3802,7 @@ const de_DescribeFilterResponse = (output: any, context: __SerdeContext): Descri
  */
 const de_DescribeMetricAttributionResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeMetricAttributionResponse => {
   return take(output, {
     metricAttribution: (_: any) => de_MetricAttribution(_, context),
@@ -4224,13 +4224,16 @@ const de_MetricAttributionSummary = (output: any, context: __SerdeContext): Metr
  * deserializeAws_json1_1Metrics
  */
 const de_Metrics = (output: any, context: __SerdeContext): Record<string, number> => {
-  return Object.entries(output).reduce((acc: Record<string, number>, [key, value]: [string, any]) => {
-    if (value === null) {
+  return Object.entries(output).reduce(
+    (acc: Record<string, number>, [key, value]: [string, any]) => {
+      if (value === null) {
+        return acc;
+      }
+      acc[key as string] = __limitedParseDouble(value) as any;
       return acc;
-    }
-    acc[key as string] = __limitedParseDouble(value) as any;
-    return acc;
-  }, {} as Record<string, number>);
+    },
+    {} as Record<string, number>,
+  );
 };
 
 // de_OptimizationObjective omitted.
@@ -4526,7 +4529,7 @@ const buildHttpRpcRequest = async (
   headers: __HeaderBag,
   path: string,
   resolvedHostname: string | undefined,
-  body: any
+  body: any,
 ): Promise<__HttpRequest> => {
   const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
   const contents: any = {

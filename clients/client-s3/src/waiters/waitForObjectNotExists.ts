@@ -23,7 +23,7 @@ const checkState = async (client: S3Client, input: HeadObjectCommandInput): Prom
  */
 export const waitForObjectNotExists = async (
   params: WaiterConfiguration<S3Client>,
-  input: HeadObjectCommandInput
+  input: HeadObjectCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 5, maxDelay: 120 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -35,7 +35,7 @@ export const waitForObjectNotExists = async (
  */
 export const waitUntilObjectNotExists = async (
   params: WaiterConfiguration<S3Client>,
-  input: HeadObjectCommandInput
+  input: HeadObjectCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 5, maxDelay: 120 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

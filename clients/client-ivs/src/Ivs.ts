@@ -199,13 +199,13 @@ export interface Ivs {
    */
   batchGetChannel(
     args: BatchGetChannelCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<BatchGetChannelCommandOutput>;
   batchGetChannel(args: BatchGetChannelCommandInput, cb: (err: any, data?: BatchGetChannelCommandOutput) => void): void;
   batchGetChannel(
     args: BatchGetChannelCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: BatchGetChannelCommandOutput) => void
+    cb: (err: any, data?: BatchGetChannelCommandOutput) => void,
   ): void;
 
   /**
@@ -213,16 +213,16 @@ export interface Ivs {
    */
   batchGetStreamKey(
     args: BatchGetStreamKeyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<BatchGetStreamKeyCommandOutput>;
   batchGetStreamKey(
     args: BatchGetStreamKeyCommandInput,
-    cb: (err: any, data?: BatchGetStreamKeyCommandOutput) => void
+    cb: (err: any, data?: BatchGetStreamKeyCommandOutput) => void,
   ): void;
   batchGetStreamKey(
     args: BatchGetStreamKeyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: BatchGetStreamKeyCommandOutput) => void
+    cb: (err: any, data?: BatchGetStreamKeyCommandOutput) => void,
   ): void;
 
   /**
@@ -230,16 +230,16 @@ export interface Ivs {
    */
   batchStartViewerSessionRevocation(
     args: BatchStartViewerSessionRevocationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<BatchStartViewerSessionRevocationCommandOutput>;
   batchStartViewerSessionRevocation(
     args: BatchStartViewerSessionRevocationCommandInput,
-    cb: (err: any, data?: BatchStartViewerSessionRevocationCommandOutput) => void
+    cb: (err: any, data?: BatchStartViewerSessionRevocationCommandOutput) => void,
   ): void;
   batchStartViewerSessionRevocation(
     args: BatchStartViewerSessionRevocationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: BatchStartViewerSessionRevocationCommandOutput) => void
+    cb: (err: any, data?: BatchStartViewerSessionRevocationCommandOutput) => void,
   ): void;
 
   /**
@@ -251,7 +251,7 @@ export interface Ivs {
   createChannel(
     args: CreateChannelCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateChannelCommandOutput) => void
+    cb: (err: any, data?: CreateChannelCommandOutput) => void,
   ): void;
 
   /**
@@ -260,16 +260,16 @@ export interface Ivs {
   createPlaybackRestrictionPolicy(): Promise<CreatePlaybackRestrictionPolicyCommandOutput>;
   createPlaybackRestrictionPolicy(
     args: CreatePlaybackRestrictionPolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreatePlaybackRestrictionPolicyCommandOutput>;
   createPlaybackRestrictionPolicy(
     args: CreatePlaybackRestrictionPolicyCommandInput,
-    cb: (err: any, data?: CreatePlaybackRestrictionPolicyCommandOutput) => void
+    cb: (err: any, data?: CreatePlaybackRestrictionPolicyCommandOutput) => void,
   ): void;
   createPlaybackRestrictionPolicy(
     args: CreatePlaybackRestrictionPolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreatePlaybackRestrictionPolicyCommandOutput) => void
+    cb: (err: any, data?: CreatePlaybackRestrictionPolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -277,16 +277,16 @@ export interface Ivs {
    */
   createRecordingConfiguration(
     args: CreateRecordingConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateRecordingConfigurationCommandOutput>;
   createRecordingConfiguration(
     args: CreateRecordingConfigurationCommandInput,
-    cb: (err: any, data?: CreateRecordingConfigurationCommandOutput) => void
+    cb: (err: any, data?: CreateRecordingConfigurationCommandOutput) => void,
   ): void;
   createRecordingConfiguration(
     args: CreateRecordingConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateRecordingConfigurationCommandOutput) => void
+    cb: (err: any, data?: CreateRecordingConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -294,13 +294,13 @@ export interface Ivs {
    */
   createStreamKey(
     args: CreateStreamKeyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateStreamKeyCommandOutput>;
   createStreamKey(args: CreateStreamKeyCommandInput, cb: (err: any, data?: CreateStreamKeyCommandOutput) => void): void;
   createStreamKey(
     args: CreateStreamKeyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateStreamKeyCommandOutput) => void
+    cb: (err: any, data?: CreateStreamKeyCommandOutput) => void,
   ): void;
 
   /**
@@ -311,7 +311,7 @@ export interface Ivs {
   deleteChannel(
     args: DeleteChannelCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteChannelCommandOutput) => void
+    cb: (err: any, data?: DeleteChannelCommandOutput) => void,
   ): void;
 
   /**
@@ -319,16 +319,16 @@ export interface Ivs {
    */
   deletePlaybackKeyPair(
     args: DeletePlaybackKeyPairCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeletePlaybackKeyPairCommandOutput>;
   deletePlaybackKeyPair(
     args: DeletePlaybackKeyPairCommandInput,
-    cb: (err: any, data?: DeletePlaybackKeyPairCommandOutput) => void
+    cb: (err: any, data?: DeletePlaybackKeyPairCommandOutput) => void,
   ): void;
   deletePlaybackKeyPair(
     args: DeletePlaybackKeyPairCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeletePlaybackKeyPairCommandOutput) => void
+    cb: (err: any, data?: DeletePlaybackKeyPairCommandOutput) => void,
   ): void;
 
   /**
@@ -336,16 +336,16 @@ export interface Ivs {
    */
   deletePlaybackRestrictionPolicy(
     args: DeletePlaybackRestrictionPolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeletePlaybackRestrictionPolicyCommandOutput>;
   deletePlaybackRestrictionPolicy(
     args: DeletePlaybackRestrictionPolicyCommandInput,
-    cb: (err: any, data?: DeletePlaybackRestrictionPolicyCommandOutput) => void
+    cb: (err: any, data?: DeletePlaybackRestrictionPolicyCommandOutput) => void,
   ): void;
   deletePlaybackRestrictionPolicy(
     args: DeletePlaybackRestrictionPolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeletePlaybackRestrictionPolicyCommandOutput) => void
+    cb: (err: any, data?: DeletePlaybackRestrictionPolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -353,16 +353,16 @@ export interface Ivs {
    */
   deleteRecordingConfiguration(
     args: DeleteRecordingConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteRecordingConfigurationCommandOutput>;
   deleteRecordingConfiguration(
     args: DeleteRecordingConfigurationCommandInput,
-    cb: (err: any, data?: DeleteRecordingConfigurationCommandOutput) => void
+    cb: (err: any, data?: DeleteRecordingConfigurationCommandOutput) => void,
   ): void;
   deleteRecordingConfiguration(
     args: DeleteRecordingConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteRecordingConfigurationCommandOutput) => void
+    cb: (err: any, data?: DeleteRecordingConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -370,13 +370,13 @@ export interface Ivs {
    */
   deleteStreamKey(
     args: DeleteStreamKeyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteStreamKeyCommandOutput>;
   deleteStreamKey(args: DeleteStreamKeyCommandInput, cb: (err: any, data?: DeleteStreamKeyCommandOutput) => void): void;
   deleteStreamKey(
     args: DeleteStreamKeyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteStreamKeyCommandOutput) => void
+    cb: (err: any, data?: DeleteStreamKeyCommandOutput) => void,
   ): void;
 
   /**
@@ -387,7 +387,7 @@ export interface Ivs {
   getChannel(
     args: GetChannelCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetChannelCommandOutput) => void
+    cb: (err: any, data?: GetChannelCommandOutput) => void,
   ): void;
 
   /**
@@ -395,16 +395,16 @@ export interface Ivs {
    */
   getPlaybackKeyPair(
     args: GetPlaybackKeyPairCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetPlaybackKeyPairCommandOutput>;
   getPlaybackKeyPair(
     args: GetPlaybackKeyPairCommandInput,
-    cb: (err: any, data?: GetPlaybackKeyPairCommandOutput) => void
+    cb: (err: any, data?: GetPlaybackKeyPairCommandOutput) => void,
   ): void;
   getPlaybackKeyPair(
     args: GetPlaybackKeyPairCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetPlaybackKeyPairCommandOutput) => void
+    cb: (err: any, data?: GetPlaybackKeyPairCommandOutput) => void,
   ): void;
 
   /**
@@ -412,16 +412,16 @@ export interface Ivs {
    */
   getPlaybackRestrictionPolicy(
     args: GetPlaybackRestrictionPolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetPlaybackRestrictionPolicyCommandOutput>;
   getPlaybackRestrictionPolicy(
     args: GetPlaybackRestrictionPolicyCommandInput,
-    cb: (err: any, data?: GetPlaybackRestrictionPolicyCommandOutput) => void
+    cb: (err: any, data?: GetPlaybackRestrictionPolicyCommandOutput) => void,
   ): void;
   getPlaybackRestrictionPolicy(
     args: GetPlaybackRestrictionPolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetPlaybackRestrictionPolicyCommandOutput) => void
+    cb: (err: any, data?: GetPlaybackRestrictionPolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -429,16 +429,16 @@ export interface Ivs {
    */
   getRecordingConfiguration(
     args: GetRecordingConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetRecordingConfigurationCommandOutput>;
   getRecordingConfiguration(
     args: GetRecordingConfigurationCommandInput,
-    cb: (err: any, data?: GetRecordingConfigurationCommandOutput) => void
+    cb: (err: any, data?: GetRecordingConfigurationCommandOutput) => void,
   ): void;
   getRecordingConfiguration(
     args: GetRecordingConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetRecordingConfigurationCommandOutput) => void
+    cb: (err: any, data?: GetRecordingConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -449,7 +449,7 @@ export interface Ivs {
   getStream(
     args: GetStreamCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetStreamCommandOutput) => void
+    cb: (err: any, data?: GetStreamCommandOutput) => void,
   ): void;
 
   /**
@@ -460,7 +460,7 @@ export interface Ivs {
   getStreamKey(
     args: GetStreamKeyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetStreamKeyCommandOutput) => void
+    cb: (err: any, data?: GetStreamKeyCommandOutput) => void,
   ): void;
 
   /**
@@ -468,16 +468,16 @@ export interface Ivs {
    */
   getStreamSession(
     args: GetStreamSessionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetStreamSessionCommandOutput>;
   getStreamSession(
     args: GetStreamSessionCommandInput,
-    cb: (err: any, data?: GetStreamSessionCommandOutput) => void
+    cb: (err: any, data?: GetStreamSessionCommandOutput) => void,
   ): void;
   getStreamSession(
     args: GetStreamSessionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetStreamSessionCommandOutput) => void
+    cb: (err: any, data?: GetStreamSessionCommandOutput) => void,
   ): void;
 
   /**
@@ -485,16 +485,16 @@ export interface Ivs {
    */
   importPlaybackKeyPair(
     args: ImportPlaybackKeyPairCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ImportPlaybackKeyPairCommandOutput>;
   importPlaybackKeyPair(
     args: ImportPlaybackKeyPairCommandInput,
-    cb: (err: any, data?: ImportPlaybackKeyPairCommandOutput) => void
+    cb: (err: any, data?: ImportPlaybackKeyPairCommandOutput) => void,
   ): void;
   importPlaybackKeyPair(
     args: ImportPlaybackKeyPairCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ImportPlaybackKeyPairCommandOutput) => void
+    cb: (err: any, data?: ImportPlaybackKeyPairCommandOutput) => void,
   ): void;
 
   /**
@@ -506,7 +506,7 @@ export interface Ivs {
   listChannels(
     args: ListChannelsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListChannelsCommandOutput) => void
+    cb: (err: any, data?: ListChannelsCommandOutput) => void,
   ): void;
 
   /**
@@ -515,16 +515,16 @@ export interface Ivs {
   listPlaybackKeyPairs(): Promise<ListPlaybackKeyPairsCommandOutput>;
   listPlaybackKeyPairs(
     args: ListPlaybackKeyPairsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListPlaybackKeyPairsCommandOutput>;
   listPlaybackKeyPairs(
     args: ListPlaybackKeyPairsCommandInput,
-    cb: (err: any, data?: ListPlaybackKeyPairsCommandOutput) => void
+    cb: (err: any, data?: ListPlaybackKeyPairsCommandOutput) => void,
   ): void;
   listPlaybackKeyPairs(
     args: ListPlaybackKeyPairsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListPlaybackKeyPairsCommandOutput) => void
+    cb: (err: any, data?: ListPlaybackKeyPairsCommandOutput) => void,
   ): void;
 
   /**
@@ -533,16 +533,16 @@ export interface Ivs {
   listPlaybackRestrictionPolicies(): Promise<ListPlaybackRestrictionPoliciesCommandOutput>;
   listPlaybackRestrictionPolicies(
     args: ListPlaybackRestrictionPoliciesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListPlaybackRestrictionPoliciesCommandOutput>;
   listPlaybackRestrictionPolicies(
     args: ListPlaybackRestrictionPoliciesCommandInput,
-    cb: (err: any, data?: ListPlaybackRestrictionPoliciesCommandOutput) => void
+    cb: (err: any, data?: ListPlaybackRestrictionPoliciesCommandOutput) => void,
   ): void;
   listPlaybackRestrictionPolicies(
     args: ListPlaybackRestrictionPoliciesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListPlaybackRestrictionPoliciesCommandOutput) => void
+    cb: (err: any, data?: ListPlaybackRestrictionPoliciesCommandOutput) => void,
   ): void;
 
   /**
@@ -551,16 +551,16 @@ export interface Ivs {
   listRecordingConfigurations(): Promise<ListRecordingConfigurationsCommandOutput>;
   listRecordingConfigurations(
     args: ListRecordingConfigurationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListRecordingConfigurationsCommandOutput>;
   listRecordingConfigurations(
     args: ListRecordingConfigurationsCommandInput,
-    cb: (err: any, data?: ListRecordingConfigurationsCommandOutput) => void
+    cb: (err: any, data?: ListRecordingConfigurationsCommandOutput) => void,
   ): void;
   listRecordingConfigurations(
     args: ListRecordingConfigurationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListRecordingConfigurationsCommandOutput) => void
+    cb: (err: any, data?: ListRecordingConfigurationsCommandOutput) => void,
   ): void;
 
   /**
@@ -568,13 +568,13 @@ export interface Ivs {
    */
   listStreamKeys(
     args: ListStreamKeysCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListStreamKeysCommandOutput>;
   listStreamKeys(args: ListStreamKeysCommandInput, cb: (err: any, data?: ListStreamKeysCommandOutput) => void): void;
   listStreamKeys(
     args: ListStreamKeysCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListStreamKeysCommandOutput) => void
+    cb: (err: any, data?: ListStreamKeysCommandOutput) => void,
   ): void;
 
   /**
@@ -586,7 +586,7 @@ export interface Ivs {
   listStreams(
     args: ListStreamsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListStreamsCommandOutput) => void
+    cb: (err: any, data?: ListStreamsCommandOutput) => void,
   ): void;
 
   /**
@@ -594,16 +594,16 @@ export interface Ivs {
    */
   listStreamSessions(
     args: ListStreamSessionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListStreamSessionsCommandOutput>;
   listStreamSessions(
     args: ListStreamSessionsCommandInput,
-    cb: (err: any, data?: ListStreamSessionsCommandOutput) => void
+    cb: (err: any, data?: ListStreamSessionsCommandOutput) => void,
   ): void;
   listStreamSessions(
     args: ListStreamSessionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListStreamSessionsCommandOutput) => void
+    cb: (err: any, data?: ListStreamSessionsCommandOutput) => void,
   ): void;
 
   /**
@@ -611,16 +611,16 @@ export interface Ivs {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -631,7 +631,7 @@ export interface Ivs {
   putMetadata(
     args: PutMetadataCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutMetadataCommandOutput) => void
+    cb: (err: any, data?: PutMetadataCommandOutput) => void,
   ): void;
 
   /**
@@ -639,16 +639,16 @@ export interface Ivs {
    */
   startViewerSessionRevocation(
     args: StartViewerSessionRevocationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartViewerSessionRevocationCommandOutput>;
   startViewerSessionRevocation(
     args: StartViewerSessionRevocationCommandInput,
-    cb: (err: any, data?: StartViewerSessionRevocationCommandOutput) => void
+    cb: (err: any, data?: StartViewerSessionRevocationCommandOutput) => void,
   ): void;
   startViewerSessionRevocation(
     args: StartViewerSessionRevocationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartViewerSessionRevocationCommandOutput) => void
+    cb: (err: any, data?: StartViewerSessionRevocationCommandOutput) => void,
   ): void;
 
   /**
@@ -659,7 +659,7 @@ export interface Ivs {
   stopStream(
     args: StopStreamCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StopStreamCommandOutput) => void
+    cb: (err: any, data?: StopStreamCommandOutput) => void,
   ): void;
 
   /**
@@ -670,7 +670,7 @@ export interface Ivs {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -681,7 +681,7 @@ export interface Ivs {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -692,7 +692,7 @@ export interface Ivs {
   updateChannel(
     args: UpdateChannelCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateChannelCommandOutput) => void
+    cb: (err: any, data?: UpdateChannelCommandOutput) => void,
   ): void;
 
   /**
@@ -700,16 +700,16 @@ export interface Ivs {
    */
   updatePlaybackRestrictionPolicy(
     args: UpdatePlaybackRestrictionPolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdatePlaybackRestrictionPolicyCommandOutput>;
   updatePlaybackRestrictionPolicy(
     args: UpdatePlaybackRestrictionPolicyCommandInput,
-    cb: (err: any, data?: UpdatePlaybackRestrictionPolicyCommandOutput) => void
+    cb: (err: any, data?: UpdatePlaybackRestrictionPolicyCommandOutput) => void,
   ): void;
   updatePlaybackRestrictionPolicy(
     args: UpdatePlaybackRestrictionPolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdatePlaybackRestrictionPolicyCommandOutput) => void
+    cb: (err: any, data?: UpdatePlaybackRestrictionPolicyCommandOutput) => void,
   ): void;
 }
 

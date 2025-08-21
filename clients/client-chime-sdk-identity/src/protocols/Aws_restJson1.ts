@@ -157,7 +157,7 @@ import {
  */
 export const se_CreateAppInstanceCommand = async (
   input: CreateAppInstanceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -171,7 +171,7 @@ export const se_CreateAppInstanceCommand = async (
       Metadata: [],
       Name: [],
       Tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -182,7 +182,7 @@ export const se_CreateAppInstanceCommand = async (
  */
 export const se_CreateAppInstanceAdminCommand = async (
   input: CreateAppInstanceAdminCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -194,7 +194,7 @@ export const se_CreateAppInstanceAdminCommand = async (
   body = JSON.stringify(
     take(input, {
       AppInstanceAdminArn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -205,7 +205,7 @@ export const se_CreateAppInstanceAdminCommand = async (
  */
 export const se_CreateAppInstanceBotCommand = async (
   input: CreateAppInstanceBotCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -221,7 +221,7 @@ export const se_CreateAppInstanceBotCommand = async (
       Metadata: [],
       Name: [],
       Tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -232,7 +232,7 @@ export const se_CreateAppInstanceBotCommand = async (
  */
 export const se_CreateAppInstanceUserCommand = async (
   input: CreateAppInstanceUserCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -249,7 +249,7 @@ export const se_CreateAppInstanceUserCommand = async (
       Metadata: [],
       Name: [],
       Tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -260,7 +260,7 @@ export const se_CreateAppInstanceUserCommand = async (
  */
 export const se_DeleteAppInstanceCommand = async (
   input: DeleteAppInstanceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -276,7 +276,7 @@ export const se_DeleteAppInstanceCommand = async (
  */
 export const se_DeleteAppInstanceAdminCommand = async (
   input: DeleteAppInstanceAdminCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -293,7 +293,7 @@ export const se_DeleteAppInstanceAdminCommand = async (
  */
 export const se_DeleteAppInstanceBotCommand = async (
   input: DeleteAppInstanceBotCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -309,7 +309,7 @@ export const se_DeleteAppInstanceBotCommand = async (
  */
 export const se_DeleteAppInstanceUserCommand = async (
   input: DeleteAppInstanceUserCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -325,7 +325,7 @@ export const se_DeleteAppInstanceUserCommand = async (
  */
 export const se_DeregisterAppInstanceUserEndpointCommand = async (
   input: DeregisterAppInstanceUserEndpointCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -342,7 +342,7 @@ export const se_DeregisterAppInstanceUserEndpointCommand = async (
  */
 export const se_DescribeAppInstanceCommand = async (
   input: DescribeAppInstanceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -358,7 +358,7 @@ export const se_DescribeAppInstanceCommand = async (
  */
 export const se_DescribeAppInstanceAdminCommand = async (
   input: DescribeAppInstanceAdminCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -375,7 +375,7 @@ export const se_DescribeAppInstanceAdminCommand = async (
  */
 export const se_DescribeAppInstanceBotCommand = async (
   input: DescribeAppInstanceBotCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -391,7 +391,7 @@ export const se_DescribeAppInstanceBotCommand = async (
  */
 export const se_DescribeAppInstanceUserCommand = async (
   input: DescribeAppInstanceUserCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -407,7 +407,7 @@ export const se_DescribeAppInstanceUserCommand = async (
  */
 export const se_DescribeAppInstanceUserEndpointCommand = async (
   input: DescribeAppInstanceUserEndpointCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -424,7 +424,7 @@ export const se_DescribeAppInstanceUserEndpointCommand = async (
  */
 export const se_GetAppInstanceRetentionSettingsCommand = async (
   input: GetAppInstanceRetentionSettingsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -440,7 +440,7 @@ export const se_GetAppInstanceRetentionSettingsCommand = async (
  */
 export const se_ListAppInstanceAdminsCommand = async (
   input: ListAppInstanceAdminsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -460,7 +460,7 @@ export const se_ListAppInstanceAdminsCommand = async (
  */
 export const se_ListAppInstanceBotsCommand = async (
   input: ListAppInstanceBotsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -480,7 +480,7 @@ export const se_ListAppInstanceBotsCommand = async (
  */
 export const se_ListAppInstancesCommand = async (
   input: ListAppInstancesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -499,7 +499,7 @@ export const se_ListAppInstancesCommand = async (
  */
 export const se_ListAppInstanceUserEndpointsCommand = async (
   input: ListAppInstanceUserEndpointsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -519,7 +519,7 @@ export const se_ListAppInstanceUserEndpointsCommand = async (
  */
 export const se_ListAppInstanceUsersCommand = async (
   input: ListAppInstanceUsersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -539,7 +539,7 @@ export const se_ListAppInstanceUsersCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -557,7 +557,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_PutAppInstanceRetentionSettingsCommand = async (
   input: PutAppInstanceRetentionSettingsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -569,7 +569,7 @@ export const se_PutAppInstanceRetentionSettingsCommand = async (
   body = JSON.stringify(
     take(input, {
       AppInstanceRetentionSettings: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -580,7 +580,7 @@ export const se_PutAppInstanceRetentionSettingsCommand = async (
  */
 export const se_PutAppInstanceUserExpirationSettingsCommand = async (
   input: PutAppInstanceUserExpirationSettingsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -592,7 +592,7 @@ export const se_PutAppInstanceUserExpirationSettingsCommand = async (
   body = JSON.stringify(
     take(input, {
       ExpirationSettings: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -603,7 +603,7 @@ export const se_PutAppInstanceUserExpirationSettingsCommand = async (
  */
 export const se_RegisterAppInstanceUserEndpointCommand = async (
   input: RegisterAppInstanceUserEndpointCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -620,7 +620,7 @@ export const se_RegisterAppInstanceUserEndpointCommand = async (
       Name: [],
       ResourceArn: [],
       Type: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -631,7 +631,7 @@ export const se_RegisterAppInstanceUserEndpointCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -646,7 +646,7 @@ export const se_TagResourceCommand = async (
     take(input, {
       ResourceARN: [],
       Tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).q(query).b(body);
   return b.build();
@@ -657,7 +657,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -672,7 +672,7 @@ export const se_UntagResourceCommand = async (
     take(input, {
       ResourceARN: [],
       TagKeys: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).q(query).b(body);
   return b.build();
@@ -683,7 +683,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateAppInstanceCommand = async (
   input: UpdateAppInstanceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -696,7 +696,7 @@ export const se_UpdateAppInstanceCommand = async (
     take(input, {
       Metadata: [],
       Name: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -707,7 +707,7 @@ export const se_UpdateAppInstanceCommand = async (
  */
 export const se_UpdateAppInstanceBotCommand = async (
   input: UpdateAppInstanceBotCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -721,7 +721,7 @@ export const se_UpdateAppInstanceBotCommand = async (
       Configuration: (_) => _json(_),
       Metadata: [],
       Name: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -732,7 +732,7 @@ export const se_UpdateAppInstanceBotCommand = async (
  */
 export const se_UpdateAppInstanceUserCommand = async (
   input: UpdateAppInstanceUserCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -745,7 +745,7 @@ export const se_UpdateAppInstanceUserCommand = async (
     take(input, {
       Metadata: [],
       Name: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -756,7 +756,7 @@ export const se_UpdateAppInstanceUserCommand = async (
  */
 export const se_UpdateAppInstanceUserEndpointCommand = async (
   input: UpdateAppInstanceUserEndpointCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -770,7 +770,7 @@ export const se_UpdateAppInstanceUserEndpointCommand = async (
     take(input, {
       AllowMessages: [],
       Name: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -781,7 +781,7 @@ export const se_UpdateAppInstanceUserEndpointCommand = async (
  */
 export const de_CreateAppInstanceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateAppInstanceCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -802,7 +802,7 @@ export const de_CreateAppInstanceCommand = async (
  */
 export const de_CreateAppInstanceAdminCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateAppInstanceAdminCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -824,7 +824,7 @@ export const de_CreateAppInstanceAdminCommand = async (
  */
 export const de_CreateAppInstanceBotCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateAppInstanceBotCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -845,7 +845,7 @@ export const de_CreateAppInstanceBotCommand = async (
  */
 export const de_CreateAppInstanceUserCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateAppInstanceUserCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -866,7 +866,7 @@ export const de_CreateAppInstanceUserCommand = async (
  */
 export const de_DeleteAppInstanceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteAppInstanceCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -883,7 +883,7 @@ export const de_DeleteAppInstanceCommand = async (
  */
 export const de_DeleteAppInstanceAdminCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteAppInstanceAdminCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -900,7 +900,7 @@ export const de_DeleteAppInstanceAdminCommand = async (
  */
 export const de_DeleteAppInstanceBotCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteAppInstanceBotCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -917,7 +917,7 @@ export const de_DeleteAppInstanceBotCommand = async (
  */
 export const de_DeleteAppInstanceUserCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteAppInstanceUserCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -934,7 +934,7 @@ export const de_DeleteAppInstanceUserCommand = async (
  */
 export const de_DeregisterAppInstanceUserEndpointCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeregisterAppInstanceUserEndpointCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -951,7 +951,7 @@ export const de_DeregisterAppInstanceUserEndpointCommand = async (
  */
 export const de_DescribeAppInstanceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeAppInstanceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -972,7 +972,7 @@ export const de_DescribeAppInstanceCommand = async (
  */
 export const de_DescribeAppInstanceAdminCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeAppInstanceAdminCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -993,7 +993,7 @@ export const de_DescribeAppInstanceAdminCommand = async (
  */
 export const de_DescribeAppInstanceBotCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeAppInstanceBotCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1014,7 +1014,7 @@ export const de_DescribeAppInstanceBotCommand = async (
  */
 export const de_DescribeAppInstanceUserCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeAppInstanceUserCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1035,7 +1035,7 @@ export const de_DescribeAppInstanceUserCommand = async (
  */
 export const de_DescribeAppInstanceUserEndpointCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeAppInstanceUserEndpointCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1056,7 +1056,7 @@ export const de_DescribeAppInstanceUserEndpointCommand = async (
  */
 export const de_GetAppInstanceRetentionSettingsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetAppInstanceRetentionSettingsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1078,7 +1078,7 @@ export const de_GetAppInstanceRetentionSettingsCommand = async (
  */
 export const de_ListAppInstanceAdminsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAppInstanceAdminsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1101,7 +1101,7 @@ export const de_ListAppInstanceAdminsCommand = async (
  */
 export const de_ListAppInstanceBotsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAppInstanceBotsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1124,7 +1124,7 @@ export const de_ListAppInstanceBotsCommand = async (
  */
 export const de_ListAppInstancesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAppInstancesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1146,7 +1146,7 @@ export const de_ListAppInstancesCommand = async (
  */
 export const de_ListAppInstanceUserEndpointsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAppInstanceUserEndpointsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1168,7 +1168,7 @@ export const de_ListAppInstanceUserEndpointsCommand = async (
  */
 export const de_ListAppInstanceUsersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAppInstanceUsersCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1191,7 +1191,7 @@ export const de_ListAppInstanceUsersCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1212,7 +1212,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_PutAppInstanceRetentionSettingsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutAppInstanceRetentionSettingsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1234,7 +1234,7 @@ export const de_PutAppInstanceRetentionSettingsCommand = async (
  */
 export const de_PutAppInstanceUserExpirationSettingsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutAppInstanceUserExpirationSettingsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1256,7 +1256,7 @@ export const de_PutAppInstanceUserExpirationSettingsCommand = async (
  */
 export const de_RegisterAppInstanceUserEndpointCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RegisterAppInstanceUserEndpointCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1278,7 +1278,7 @@ export const de_RegisterAppInstanceUserEndpointCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1295,7 +1295,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1312,7 +1312,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateAppInstanceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateAppInstanceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1333,7 +1333,7 @@ export const de_UpdateAppInstanceCommand = async (
  */
 export const de_UpdateAppInstanceBotCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateAppInstanceBotCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1354,7 +1354,7 @@ export const de_UpdateAppInstanceBotCommand = async (
  */
 export const de_UpdateAppInstanceUserCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateAppInstanceUserCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1375,7 +1375,7 @@ export const de_UpdateAppInstanceUserCommand = async (
  */
 export const de_UpdateAppInstanceUserEndpointCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateAppInstanceUserEndpointCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1517,7 +1517,7 @@ const de_NotFoundExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_ResourceLimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceLimitExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1538,7 +1538,7 @@ const de_ResourceLimitExceededExceptionRes = async (
  */
 const de_ServiceFailureExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceFailureException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1559,7 +1559,7 @@ const de_ServiceFailureExceptionRes = async (
  */
 const de_ServiceUnavailableExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceUnavailableException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1580,7 +1580,7 @@ const de_ServiceUnavailableExceptionRes = async (
  */
 const de_ThrottledClientExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ThrottledClientException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1601,7 +1601,7 @@ const de_ThrottledClientExceptionRes = async (
  */
 const de_UnauthorizedClientExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UnauthorizedClientException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;

@@ -9386,7 +9386,7 @@ export const SessionFilterSensitiveLog = (obj: Session): any => ({
  * @internal
  */
 export const CreateGUISessionAccessDetailsResultFilterSensitiveLog = (
-  obj: CreateGUISessionAccessDetailsResult
+  obj: CreateGUISessionAccessDetailsResult,
 ): any => ({
   ...obj,
   ...(obj.sessions && { sessions: obj.sessions.map((item) => SessionFilterSensitiveLog(item)) }),

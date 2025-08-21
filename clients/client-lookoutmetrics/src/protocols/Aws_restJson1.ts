@@ -158,7 +158,7 @@ import {
  */
 export const se_ActivateAnomalyDetectorCommand = async (
   input: ActivateAnomalyDetectorCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -169,7 +169,7 @@ export const se_ActivateAnomalyDetectorCommand = async (
   body = JSON.stringify(
     take(input, {
       AnomalyDetectorArn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -180,7 +180,7 @@ export const se_ActivateAnomalyDetectorCommand = async (
  */
 export const se_BackTestAnomalyDetectorCommand = async (
   input: BackTestAnomalyDetectorCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -191,7 +191,7 @@ export const se_BackTestAnomalyDetectorCommand = async (
   body = JSON.stringify(
     take(input, {
       AnomalyDetectorArn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -202,7 +202,7 @@ export const se_BackTestAnomalyDetectorCommand = async (
  */
 export const se_CreateAlertCommand = async (
   input: CreateAlertCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -219,7 +219,7 @@ export const se_CreateAlertCommand = async (
       AlertSensitivityThreshold: [],
       AnomalyDetectorArn: [],
       Tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -230,7 +230,7 @@ export const se_CreateAlertCommand = async (
  */
 export const se_CreateAnomalyDetectorCommand = async (
   input: CreateAnomalyDetectorCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -245,7 +245,7 @@ export const se_CreateAnomalyDetectorCommand = async (
       AnomalyDetectorName: [],
       KmsKeyArn: [],
       Tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -256,7 +256,7 @@ export const se_CreateAnomalyDetectorCommand = async (
  */
 export const se_CreateMetricSetCommand = async (
   input: CreateMetricSetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -278,7 +278,7 @@ export const se_CreateMetricSetCommand = async (
       Tags: (_) => _json(_),
       TimestampColumn: (_) => _json(_),
       Timezone: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -289,7 +289,7 @@ export const se_CreateMetricSetCommand = async (
  */
 export const se_DeactivateAnomalyDetectorCommand = async (
   input: DeactivateAnomalyDetectorCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -300,7 +300,7 @@ export const se_DeactivateAnomalyDetectorCommand = async (
   body = JSON.stringify(
     take(input, {
       AnomalyDetectorArn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -311,7 +311,7 @@ export const se_DeactivateAnomalyDetectorCommand = async (
  */
 export const se_DeleteAlertCommand = async (
   input: DeleteAlertCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -322,7 +322,7 @@ export const se_DeleteAlertCommand = async (
   body = JSON.stringify(
     take(input, {
       AlertArn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -333,7 +333,7 @@ export const se_DeleteAlertCommand = async (
  */
 export const se_DeleteAnomalyDetectorCommand = async (
   input: DeleteAnomalyDetectorCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -344,7 +344,7 @@ export const se_DeleteAnomalyDetectorCommand = async (
   body = JSON.stringify(
     take(input, {
       AnomalyDetectorArn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -355,7 +355,7 @@ export const se_DeleteAnomalyDetectorCommand = async (
  */
 export const se_DescribeAlertCommand = async (
   input: DescribeAlertCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -366,7 +366,7 @@ export const se_DescribeAlertCommand = async (
   body = JSON.stringify(
     take(input, {
       AlertArn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -377,7 +377,7 @@ export const se_DescribeAlertCommand = async (
  */
 export const se_DescribeAnomalyDetectionExecutionsCommand = async (
   input: DescribeAnomalyDetectionExecutionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -391,7 +391,7 @@ export const se_DescribeAnomalyDetectionExecutionsCommand = async (
       MaxResults: [],
       NextToken: [],
       Timestamp: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -402,7 +402,7 @@ export const se_DescribeAnomalyDetectionExecutionsCommand = async (
  */
 export const se_DescribeAnomalyDetectorCommand = async (
   input: DescribeAnomalyDetectorCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -413,7 +413,7 @@ export const se_DescribeAnomalyDetectorCommand = async (
   body = JSON.stringify(
     take(input, {
       AnomalyDetectorArn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -424,7 +424,7 @@ export const se_DescribeAnomalyDetectorCommand = async (
  */
 export const se_DescribeMetricSetCommand = async (
   input: DescribeMetricSetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -435,7 +435,7 @@ export const se_DescribeMetricSetCommand = async (
   body = JSON.stringify(
     take(input, {
       MetricSetArn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -446,7 +446,7 @@ export const se_DescribeMetricSetCommand = async (
  */
 export const se_DetectMetricSetConfigCommand = async (
   input: DetectMetricSetConfigCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -458,7 +458,7 @@ export const se_DetectMetricSetConfigCommand = async (
     take(input, {
       AnomalyDetectorArn: [],
       AutoDetectionMetricSource: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -469,7 +469,7 @@ export const se_DetectMetricSetConfigCommand = async (
  */
 export const se_GetAnomalyGroupCommand = async (
   input: GetAnomalyGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -481,7 +481,7 @@ export const se_GetAnomalyGroupCommand = async (
     take(input, {
       AnomalyDetectorArn: [],
       AnomalyGroupId: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -492,7 +492,7 @@ export const se_GetAnomalyGroupCommand = async (
  */
 export const se_GetDataQualityMetricsCommand = async (
   input: GetDataQualityMetricsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -504,7 +504,7 @@ export const se_GetDataQualityMetricsCommand = async (
     take(input, {
       AnomalyDetectorArn: [],
       MetricSetArn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -515,7 +515,7 @@ export const se_GetDataQualityMetricsCommand = async (
  */
 export const se_GetFeedbackCommand = async (
   input: GetFeedbackCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -529,7 +529,7 @@ export const se_GetFeedbackCommand = async (
       AnomalyGroupTimeSeriesFeedback: (_) => _json(_),
       MaxResults: [],
       NextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -540,7 +540,7 @@ export const se_GetFeedbackCommand = async (
  */
 export const se_GetSampleDataCommand = async (
   input: GetSampleDataCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -551,7 +551,7 @@ export const se_GetSampleDataCommand = async (
   body = JSON.stringify(
     take(input, {
       S3SourceConfig: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -562,7 +562,7 @@ export const se_GetSampleDataCommand = async (
  */
 export const se_ListAlertsCommand = async (
   input: ListAlertsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -575,7 +575,7 @@ export const se_ListAlertsCommand = async (
       AnomalyDetectorArn: [],
       MaxResults: [],
       NextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -586,7 +586,7 @@ export const se_ListAlertsCommand = async (
  */
 export const se_ListAnomalyDetectorsCommand = async (
   input: ListAnomalyDetectorsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -598,7 +598,7 @@ export const se_ListAnomalyDetectorsCommand = async (
     take(input, {
       MaxResults: [],
       NextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -609,7 +609,7 @@ export const se_ListAnomalyDetectorsCommand = async (
  */
 export const se_ListAnomalyGroupRelatedMetricsCommand = async (
   input: ListAnomalyGroupRelatedMetricsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -624,7 +624,7 @@ export const se_ListAnomalyGroupRelatedMetricsCommand = async (
       MaxResults: [],
       NextToken: [],
       RelationshipTypeFilter: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -635,7 +635,7 @@ export const se_ListAnomalyGroupRelatedMetricsCommand = async (
  */
 export const se_ListAnomalyGroupSummariesCommand = async (
   input: ListAnomalyGroupSummariesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -649,7 +649,7 @@ export const se_ListAnomalyGroupSummariesCommand = async (
       MaxResults: [],
       NextToken: [],
       SensitivityThreshold: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -660,7 +660,7 @@ export const se_ListAnomalyGroupSummariesCommand = async (
  */
 export const se_ListAnomalyGroupTimeSeriesCommand = async (
   input: ListAnomalyGroupTimeSeriesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -675,7 +675,7 @@ export const se_ListAnomalyGroupTimeSeriesCommand = async (
       MaxResults: [],
       MetricName: [],
       NextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -686,7 +686,7 @@ export const se_ListAnomalyGroupTimeSeriesCommand = async (
  */
 export const se_ListMetricSetsCommand = async (
   input: ListMetricSetsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -699,7 +699,7 @@ export const se_ListMetricSetsCommand = async (
       AnomalyDetectorArn: [],
       MaxResults: [],
       NextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -710,7 +710,7 @@ export const se_ListMetricSetsCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -726,7 +726,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_PutFeedbackCommand = async (
   input: PutFeedbackCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -738,7 +738,7 @@ export const se_PutFeedbackCommand = async (
     take(input, {
       AnomalyDetectorArn: [],
       AnomalyGroupTimeSeriesFeedback: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -749,7 +749,7 @@ export const se_PutFeedbackCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -761,7 +761,7 @@ export const se_TagResourceCommand = async (
   body = JSON.stringify(
     take(input, {
       tags: [, (_) => _json(_), `Tags`],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -772,7 +772,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -794,7 +794,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateAlertCommand = async (
   input: UpdateAlertCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -809,7 +809,7 @@ export const se_UpdateAlertCommand = async (
       AlertDescription: [],
       AlertFilters: (_) => _json(_),
       AlertSensitivityThreshold: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -820,7 +820,7 @@ export const se_UpdateAlertCommand = async (
  */
 export const se_UpdateAnomalyDetectorCommand = async (
   input: UpdateAnomalyDetectorCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -834,7 +834,7 @@ export const se_UpdateAnomalyDetectorCommand = async (
       AnomalyDetectorConfig: (_) => _json(_),
       AnomalyDetectorDescription: [],
       KmsKeyArn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -845,7 +845,7 @@ export const se_UpdateAnomalyDetectorCommand = async (
  */
 export const se_UpdateMetricSetCommand = async (
   input: UpdateMetricSetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -864,7 +864,7 @@ export const se_UpdateMetricSetCommand = async (
       MetricSource: (_) => _json(_),
       Offset: [],
       TimestampColumn: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -875,7 +875,7 @@ export const se_UpdateMetricSetCommand = async (
  */
 export const de_ActivateAnomalyDetectorCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ActivateAnomalyDetectorCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -892,7 +892,7 @@ export const de_ActivateAnomalyDetectorCommand = async (
  */
 export const de_BackTestAnomalyDetectorCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BackTestAnomalyDetectorCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -909,7 +909,7 @@ export const de_BackTestAnomalyDetectorCommand = async (
  */
 export const de_CreateAlertCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateAlertCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -930,7 +930,7 @@ export const de_CreateAlertCommand = async (
  */
 export const de_CreateAnomalyDetectorCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateAnomalyDetectorCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -951,7 +951,7 @@ export const de_CreateAnomalyDetectorCommand = async (
  */
 export const de_CreateMetricSetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateMetricSetCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -972,7 +972,7 @@ export const de_CreateMetricSetCommand = async (
  */
 export const de_DeactivateAnomalyDetectorCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeactivateAnomalyDetectorCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -989,7 +989,7 @@ export const de_DeactivateAnomalyDetectorCommand = async (
  */
 export const de_DeleteAlertCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteAlertCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1006,7 +1006,7 @@ export const de_DeleteAlertCommand = async (
  */
 export const de_DeleteAnomalyDetectorCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteAnomalyDetectorCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1023,7 +1023,7 @@ export const de_DeleteAnomalyDetectorCommand = async (
  */
 export const de_DescribeAlertCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeAlertCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1044,7 +1044,7 @@ export const de_DescribeAlertCommand = async (
  */
 export const de_DescribeAnomalyDetectionExecutionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeAnomalyDetectionExecutionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1066,7 +1066,7 @@ export const de_DescribeAnomalyDetectionExecutionsCommand = async (
  */
 export const de_DescribeAnomalyDetectorCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeAnomalyDetectorCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1096,7 +1096,7 @@ export const de_DescribeAnomalyDetectorCommand = async (
  */
 export const de_DescribeMetricSetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeMetricSetCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1130,7 +1130,7 @@ export const de_DescribeMetricSetCommand = async (
  */
 export const de_DetectMetricSetConfigCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DetectMetricSetConfigCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1151,7 +1151,7 @@ export const de_DetectMetricSetConfigCommand = async (
  */
 export const de_GetAnomalyGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetAnomalyGroupCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1172,7 +1172,7 @@ export const de_GetAnomalyGroupCommand = async (
  */
 export const de_GetDataQualityMetricsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetDataQualityMetricsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1193,7 +1193,7 @@ export const de_GetDataQualityMetricsCommand = async (
  */
 export const de_GetFeedbackCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetFeedbackCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1215,7 +1215,7 @@ export const de_GetFeedbackCommand = async (
  */
 export const de_GetSampleDataCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetSampleDataCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1237,7 +1237,7 @@ export const de_GetSampleDataCommand = async (
  */
 export const de_ListAlertsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAlertsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1259,7 +1259,7 @@ export const de_ListAlertsCommand = async (
  */
 export const de_ListAnomalyDetectorsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAnomalyDetectorsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1281,7 +1281,7 @@ export const de_ListAnomalyDetectorsCommand = async (
  */
 export const de_ListAnomalyGroupRelatedMetricsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAnomalyGroupRelatedMetricsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1303,7 +1303,7 @@ export const de_ListAnomalyGroupRelatedMetricsCommand = async (
  */
 export const de_ListAnomalyGroupSummariesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAnomalyGroupSummariesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1326,7 +1326,7 @@ export const de_ListAnomalyGroupSummariesCommand = async (
  */
 export const de_ListAnomalyGroupTimeSeriesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAnomalyGroupTimeSeriesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1351,7 +1351,7 @@ export const de_ListAnomalyGroupTimeSeriesCommand = async (
  */
 export const de_ListMetricSetsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListMetricSetsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1373,7 +1373,7 @@ export const de_ListMetricSetsCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1394,7 +1394,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_PutFeedbackCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutFeedbackCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1411,7 +1411,7 @@ export const de_PutFeedbackCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1428,7 +1428,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1445,7 +1445,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateAlertCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateAlertCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1466,7 +1466,7 @@ export const de_UpdateAlertCommand = async (
  */
 export const de_UpdateAnomalyDetectorCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateAnomalyDetectorCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1487,7 +1487,7 @@ export const de_UpdateAnomalyDetectorCommand = async (
  */
 export const de_UpdateMetricSetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateMetricSetCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1550,7 +1550,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1589,7 +1589,7 @@ const de_ConflictExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_InternalServerExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1609,7 +1609,7 @@ const de_InternalServerExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1631,7 +1631,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_ServiceQuotaExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceQuotaExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1655,7 +1655,7 @@ const de_ServiceQuotaExceededExceptionRes = async (
  */
 const de_TooManyRequestsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyRequestsException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1828,7 +1828,7 @@ const de_AlertSummaryList = (output: any, context: __SerdeContext): AlertSummary
  */
 const de_AnomalyDetectorDataQualityMetric = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): AnomalyDetectorDataQualityMetric => {
   return take(output, {
     MetricSetDataQualityMetricList: (_: any) => de_MetricSetDataQualityMetricList(_, context),
@@ -1841,7 +1841,7 @@ const de_AnomalyDetectorDataQualityMetric = (
  */
 const de_AnomalyDetectorDataQualityMetricList = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): AnomalyDetectorDataQualityMetric[] => {
   const retVal = (output || [])
     .filter((e: any) => e != null)

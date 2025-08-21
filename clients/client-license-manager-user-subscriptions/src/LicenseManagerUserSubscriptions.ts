@@ -85,7 +85,7 @@ export interface LicenseManagerUserSubscriptions {
   associateUser(
     args: AssociateUserCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AssociateUserCommandOutput) => void
+    cb: (err: any, data?: AssociateUserCommandOutput) => void,
   ): void;
 
   /**
@@ -93,16 +93,16 @@ export interface LicenseManagerUserSubscriptions {
    */
   deregisterIdentityProvider(
     args: DeregisterIdentityProviderCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeregisterIdentityProviderCommandOutput>;
   deregisterIdentityProvider(
     args: DeregisterIdentityProviderCommandInput,
-    cb: (err: any, data?: DeregisterIdentityProviderCommandOutput) => void
+    cb: (err: any, data?: DeregisterIdentityProviderCommandOutput) => void,
   ): void;
   deregisterIdentityProvider(
     args: DeregisterIdentityProviderCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeregisterIdentityProviderCommandOutput) => void
+    cb: (err: any, data?: DeregisterIdentityProviderCommandOutput) => void,
   ): void;
 
   /**
@@ -110,16 +110,16 @@ export interface LicenseManagerUserSubscriptions {
    */
   disassociateUser(
     args: DisassociateUserCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DisassociateUserCommandOutput>;
   disassociateUser(
     args: DisassociateUserCommandInput,
-    cb: (err: any, data?: DisassociateUserCommandOutput) => void
+    cb: (err: any, data?: DisassociateUserCommandOutput) => void,
   ): void;
   disassociateUser(
     args: DisassociateUserCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DisassociateUserCommandOutput) => void
+    cb: (err: any, data?: DisassociateUserCommandOutput) => void,
   ): void;
 
   /**
@@ -128,16 +128,16 @@ export interface LicenseManagerUserSubscriptions {
   listIdentityProviders(): Promise<ListIdentityProvidersCommandOutput>;
   listIdentityProviders(
     args: ListIdentityProvidersCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListIdentityProvidersCommandOutput>;
   listIdentityProviders(
     args: ListIdentityProvidersCommandInput,
-    cb: (err: any, data?: ListIdentityProvidersCommandOutput) => void
+    cb: (err: any, data?: ListIdentityProvidersCommandOutput) => void,
   ): void;
   listIdentityProviders(
     args: ListIdentityProvidersCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListIdentityProvidersCommandOutput) => void
+    cb: (err: any, data?: ListIdentityProvidersCommandOutput) => void,
   ): void;
 
   /**
@@ -149,7 +149,7 @@ export interface LicenseManagerUserSubscriptions {
   listInstances(
     args: ListInstancesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListInstancesCommandOutput) => void
+    cb: (err: any, data?: ListInstancesCommandOutput) => void,
   ): void;
 
   /**
@@ -157,16 +157,16 @@ export interface LicenseManagerUserSubscriptions {
    */
   listProductSubscriptions(
     args: ListProductSubscriptionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListProductSubscriptionsCommandOutput>;
   listProductSubscriptions(
     args: ListProductSubscriptionsCommandInput,
-    cb: (err: any, data?: ListProductSubscriptionsCommandOutput) => void
+    cb: (err: any, data?: ListProductSubscriptionsCommandOutput) => void,
   ): void;
   listProductSubscriptions(
     args: ListProductSubscriptionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListProductSubscriptionsCommandOutput) => void
+    cb: (err: any, data?: ListProductSubscriptionsCommandOutput) => void,
   ): void;
 
   /**
@@ -174,16 +174,16 @@ export interface LicenseManagerUserSubscriptions {
    */
   listUserAssociations(
     args: ListUserAssociationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListUserAssociationsCommandOutput>;
   listUserAssociations(
     args: ListUserAssociationsCommandInput,
-    cb: (err: any, data?: ListUserAssociationsCommandOutput) => void
+    cb: (err: any, data?: ListUserAssociationsCommandOutput) => void,
   ): void;
   listUserAssociations(
     args: ListUserAssociationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListUserAssociationsCommandOutput) => void
+    cb: (err: any, data?: ListUserAssociationsCommandOutput) => void,
   ): void;
 
   /**
@@ -191,16 +191,16 @@ export interface LicenseManagerUserSubscriptions {
    */
   registerIdentityProvider(
     args: RegisterIdentityProviderCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<RegisterIdentityProviderCommandOutput>;
   registerIdentityProvider(
     args: RegisterIdentityProviderCommandInput,
-    cb: (err: any, data?: RegisterIdentityProviderCommandOutput) => void
+    cb: (err: any, data?: RegisterIdentityProviderCommandOutput) => void,
   ): void;
   registerIdentityProvider(
     args: RegisterIdentityProviderCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RegisterIdentityProviderCommandOutput) => void
+    cb: (err: any, data?: RegisterIdentityProviderCommandOutput) => void,
   ): void;
 
   /**
@@ -208,16 +208,16 @@ export interface LicenseManagerUserSubscriptions {
    */
   startProductSubscription(
     args: StartProductSubscriptionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartProductSubscriptionCommandOutput>;
   startProductSubscription(
     args: StartProductSubscriptionCommandInput,
-    cb: (err: any, data?: StartProductSubscriptionCommandOutput) => void
+    cb: (err: any, data?: StartProductSubscriptionCommandOutput) => void,
   ): void;
   startProductSubscription(
     args: StartProductSubscriptionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartProductSubscriptionCommandOutput) => void
+    cb: (err: any, data?: StartProductSubscriptionCommandOutput) => void,
   ): void;
 
   /**
@@ -225,16 +225,16 @@ export interface LicenseManagerUserSubscriptions {
    */
   stopProductSubscription(
     args: StopProductSubscriptionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StopProductSubscriptionCommandOutput>;
   stopProductSubscription(
     args: StopProductSubscriptionCommandInput,
-    cb: (err: any, data?: StopProductSubscriptionCommandOutput) => void
+    cb: (err: any, data?: StopProductSubscriptionCommandOutput) => void,
   ): void;
   stopProductSubscription(
     args: StopProductSubscriptionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StopProductSubscriptionCommandOutput) => void
+    cb: (err: any, data?: StopProductSubscriptionCommandOutput) => void,
   ): void;
 
   /**
@@ -242,16 +242,16 @@ export interface LicenseManagerUserSubscriptions {
    */
   updateIdentityProviderSettings(
     args: UpdateIdentityProviderSettingsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateIdentityProviderSettingsCommandOutput>;
   updateIdentityProviderSettings(
     args: UpdateIdentityProviderSettingsCommandInput,
-    cb: (err: any, data?: UpdateIdentityProviderSettingsCommandOutput) => void
+    cb: (err: any, data?: UpdateIdentityProviderSettingsCommandOutput) => void,
   ): void;
   updateIdentityProviderSettings(
     args: UpdateIdentityProviderSettingsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateIdentityProviderSettingsCommandOutput) => void
+    cb: (err: any, data?: UpdateIdentityProviderSettingsCommandOutput) => void,
   ): void;
 }
 

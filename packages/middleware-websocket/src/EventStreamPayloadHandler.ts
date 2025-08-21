@@ -41,7 +41,7 @@ export class EventStreamPayloadHandler implements IEventStreamPayloadHandler {
     next: FinalizeHandler<any, T>,
     args: FinalizeHandlerArguments<any>,
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    context: HandlerExecutionContext = {} as any
+    context: HandlerExecutionContext = {} as any,
   ): Promise<FinalizeHandlerOutput<T>> {
     const request = args.request as HttpRequest;
     const { body: payload, headers, query } = request;
@@ -69,7 +69,7 @@ export class EventStreamPayloadHandler implements IEventStreamPayloadHandler {
     const signingStream = getEventSigningTransformStream(
       priorSignature,
       await this.messageSigner(),
-      this.eventStreamCodec
+      this.eventStreamCodec,
     );
 
     const signedPayload = payload.pipeThrough(signingStream);

@@ -114,7 +114,7 @@ import {
  */
 export const se_CreateLandingZoneCommand = async (
   input: CreateLandingZoneCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -127,7 +127,7 @@ export const se_CreateLandingZoneCommand = async (
       manifest: (_) => se_Manifest(_, context),
       tags: (_) => _json(_),
       version: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -138,7 +138,7 @@ export const se_CreateLandingZoneCommand = async (
  */
 export const se_DeleteLandingZoneCommand = async (
   input: DeleteLandingZoneCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -149,7 +149,7 @@ export const se_DeleteLandingZoneCommand = async (
   body = JSON.stringify(
     take(input, {
       landingZoneIdentifier: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -160,7 +160,7 @@ export const se_DeleteLandingZoneCommand = async (
  */
 export const se_DisableBaselineCommand = async (
   input: DisableBaselineCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -171,7 +171,7 @@ export const se_DisableBaselineCommand = async (
   body = JSON.stringify(
     take(input, {
       enabledBaselineIdentifier: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -182,7 +182,7 @@ export const se_DisableBaselineCommand = async (
  */
 export const se_DisableControlCommand = async (
   input: DisableControlCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -194,7 +194,7 @@ export const se_DisableControlCommand = async (
     take(input, {
       controlIdentifier: [],
       targetIdentifier: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -205,7 +205,7 @@ export const se_DisableControlCommand = async (
  */
 export const se_EnableBaselineCommand = async (
   input: EnableBaselineCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -220,7 +220,7 @@ export const se_EnableBaselineCommand = async (
       parameters: (_) => se_EnabledBaselineParameters(_, context),
       tags: (_) => _json(_),
       targetIdentifier: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -231,7 +231,7 @@ export const se_EnableBaselineCommand = async (
  */
 export const se_EnableControlCommand = async (
   input: EnableControlCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -245,7 +245,7 @@ export const se_EnableControlCommand = async (
       parameters: (_) => se_EnabledControlParameters(_, context),
       tags: (_) => _json(_),
       targetIdentifier: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -256,7 +256,7 @@ export const se_EnableControlCommand = async (
  */
 export const se_GetBaselineCommand = async (
   input: GetBaselineCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -267,7 +267,7 @@ export const se_GetBaselineCommand = async (
   body = JSON.stringify(
     take(input, {
       baselineIdentifier: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -278,7 +278,7 @@ export const se_GetBaselineCommand = async (
  */
 export const se_GetBaselineOperationCommand = async (
   input: GetBaselineOperationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -289,7 +289,7 @@ export const se_GetBaselineOperationCommand = async (
   body = JSON.stringify(
     take(input, {
       operationIdentifier: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -300,7 +300,7 @@ export const se_GetBaselineOperationCommand = async (
  */
 export const se_GetControlOperationCommand = async (
   input: GetControlOperationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -311,7 +311,7 @@ export const se_GetControlOperationCommand = async (
   body = JSON.stringify(
     take(input, {
       operationIdentifier: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -322,7 +322,7 @@ export const se_GetControlOperationCommand = async (
  */
 export const se_GetEnabledBaselineCommand = async (
   input: GetEnabledBaselineCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -333,7 +333,7 @@ export const se_GetEnabledBaselineCommand = async (
   body = JSON.stringify(
     take(input, {
       enabledBaselineIdentifier: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -344,7 +344,7 @@ export const se_GetEnabledBaselineCommand = async (
  */
 export const se_GetEnabledControlCommand = async (
   input: GetEnabledControlCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -355,7 +355,7 @@ export const se_GetEnabledControlCommand = async (
   body = JSON.stringify(
     take(input, {
       enabledControlIdentifier: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -366,7 +366,7 @@ export const se_GetEnabledControlCommand = async (
  */
 export const se_GetLandingZoneCommand = async (
   input: GetLandingZoneCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -377,7 +377,7 @@ export const se_GetLandingZoneCommand = async (
   body = JSON.stringify(
     take(input, {
       landingZoneIdentifier: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -388,7 +388,7 @@ export const se_GetLandingZoneCommand = async (
  */
 export const se_GetLandingZoneOperationCommand = async (
   input: GetLandingZoneOperationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -399,7 +399,7 @@ export const se_GetLandingZoneOperationCommand = async (
   body = JSON.stringify(
     take(input, {
       operationIdentifier: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -410,7 +410,7 @@ export const se_GetLandingZoneOperationCommand = async (
  */
 export const se_ListBaselinesCommand = async (
   input: ListBaselinesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -422,7 +422,7 @@ export const se_ListBaselinesCommand = async (
     take(input, {
       maxResults: [],
       nextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -433,7 +433,7 @@ export const se_ListBaselinesCommand = async (
  */
 export const se_ListControlOperationsCommand = async (
   input: ListControlOperationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -446,7 +446,7 @@ export const se_ListControlOperationsCommand = async (
       filter: (_) => _json(_),
       maxResults: [],
       nextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -457,7 +457,7 @@ export const se_ListControlOperationsCommand = async (
  */
 export const se_ListEnabledBaselinesCommand = async (
   input: ListEnabledBaselinesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -470,7 +470,7 @@ export const se_ListEnabledBaselinesCommand = async (
       filter: (_) => _json(_),
       maxResults: [],
       nextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -481,7 +481,7 @@ export const se_ListEnabledBaselinesCommand = async (
  */
 export const se_ListEnabledControlsCommand = async (
   input: ListEnabledControlsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -495,7 +495,7 @@ export const se_ListEnabledControlsCommand = async (
       maxResults: [],
       nextToken: [],
       targetIdentifier: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -506,7 +506,7 @@ export const se_ListEnabledControlsCommand = async (
  */
 export const se_ListLandingZonesCommand = async (
   input: ListLandingZonesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -518,7 +518,7 @@ export const se_ListLandingZonesCommand = async (
     take(input, {
       maxResults: [],
       nextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -529,7 +529,7 @@ export const se_ListLandingZonesCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -545,7 +545,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_ResetEnabledBaselineCommand = async (
   input: ResetEnabledBaselineCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -556,7 +556,7 @@ export const se_ResetEnabledBaselineCommand = async (
   body = JSON.stringify(
     take(input, {
       enabledBaselineIdentifier: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -567,7 +567,7 @@ export const se_ResetEnabledBaselineCommand = async (
  */
 export const se_ResetLandingZoneCommand = async (
   input: ResetLandingZoneCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -578,7 +578,7 @@ export const se_ResetLandingZoneCommand = async (
   body = JSON.stringify(
     take(input, {
       landingZoneIdentifier: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -589,7 +589,7 @@ export const se_ResetLandingZoneCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -601,7 +601,7 @@ export const se_TagResourceCommand = async (
   body = JSON.stringify(
     take(input, {
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -612,7 +612,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -634,7 +634,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateEnabledBaselineCommand = async (
   input: UpdateEnabledBaselineCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -647,7 +647,7 @@ export const se_UpdateEnabledBaselineCommand = async (
       baselineVersion: [],
       enabledBaselineIdentifier: [],
       parameters: (_) => se_EnabledBaselineParameters(_, context),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -658,7 +658,7 @@ export const se_UpdateEnabledBaselineCommand = async (
  */
 export const se_UpdateEnabledControlCommand = async (
   input: UpdateEnabledControlCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -670,7 +670,7 @@ export const se_UpdateEnabledControlCommand = async (
     take(input, {
       enabledControlIdentifier: [],
       parameters: (_) => se_EnabledControlParameters(_, context),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -681,7 +681,7 @@ export const se_UpdateEnabledControlCommand = async (
  */
 export const se_UpdateLandingZoneCommand = async (
   input: UpdateLandingZoneCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -694,7 +694,7 @@ export const se_UpdateLandingZoneCommand = async (
       landingZoneIdentifier: [],
       manifest: (_) => se_Manifest(_, context),
       version: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -705,7 +705,7 @@ export const se_UpdateLandingZoneCommand = async (
  */
 export const de_CreateLandingZoneCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateLandingZoneCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -727,7 +727,7 @@ export const de_CreateLandingZoneCommand = async (
  */
 export const de_DeleteLandingZoneCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteLandingZoneCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -748,7 +748,7 @@ export const de_DeleteLandingZoneCommand = async (
  */
 export const de_DisableBaselineCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisableBaselineCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -769,7 +769,7 @@ export const de_DisableBaselineCommand = async (
  */
 export const de_DisableControlCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisableControlCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -790,7 +790,7 @@ export const de_DisableControlCommand = async (
  */
 export const de_EnableBaselineCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<EnableBaselineCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -812,7 +812,7 @@ export const de_EnableBaselineCommand = async (
  */
 export const de_EnableControlCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<EnableControlCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -834,7 +834,7 @@ export const de_EnableControlCommand = async (
  */
 export const de_GetBaselineCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetBaselineCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -857,7 +857,7 @@ export const de_GetBaselineCommand = async (
  */
 export const de_GetBaselineOperationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetBaselineOperationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -878,7 +878,7 @@ export const de_GetBaselineOperationCommand = async (
  */
 export const de_GetControlOperationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetControlOperationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -899,7 +899,7 @@ export const de_GetControlOperationCommand = async (
  */
 export const de_GetEnabledBaselineCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetEnabledBaselineCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -920,7 +920,7 @@ export const de_GetEnabledBaselineCommand = async (
  */
 export const de_GetEnabledControlCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetEnabledControlCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -941,7 +941,7 @@ export const de_GetEnabledControlCommand = async (
  */
 export const de_GetLandingZoneCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetLandingZoneCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -962,7 +962,7 @@ export const de_GetLandingZoneCommand = async (
  */
 export const de_GetLandingZoneOperationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetLandingZoneOperationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -983,7 +983,7 @@ export const de_GetLandingZoneOperationCommand = async (
  */
 export const de_ListBaselinesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListBaselinesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1005,7 +1005,7 @@ export const de_ListBaselinesCommand = async (
  */
 export const de_ListControlOperationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListControlOperationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1027,7 +1027,7 @@ export const de_ListControlOperationsCommand = async (
  */
 export const de_ListEnabledBaselinesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListEnabledBaselinesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1049,7 +1049,7 @@ export const de_ListEnabledBaselinesCommand = async (
  */
 export const de_ListEnabledControlsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListEnabledControlsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1071,7 +1071,7 @@ export const de_ListEnabledControlsCommand = async (
  */
 export const de_ListLandingZonesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListLandingZonesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1093,7 +1093,7 @@ export const de_ListLandingZonesCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1114,7 +1114,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_ResetEnabledBaselineCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResetEnabledBaselineCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1135,7 +1135,7 @@ export const de_ResetEnabledBaselineCommand = async (
  */
 export const de_ResetLandingZoneCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResetLandingZoneCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1156,7 +1156,7 @@ export const de_ResetLandingZoneCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1173,7 +1173,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1190,7 +1190,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateEnabledBaselineCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateEnabledBaselineCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1211,7 +1211,7 @@ export const de_UpdateEnabledBaselineCommand = async (
  */
 export const de_UpdateEnabledControlCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateEnabledControlCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1232,7 +1232,7 @@ export const de_UpdateEnabledControlCommand = async (
  */
 export const de_UpdateLandingZoneCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateLandingZoneCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1295,7 +1295,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1332,7 +1332,7 @@ const de_ConflictExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_InternalServerExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1352,7 +1352,7 @@ const de_InternalServerExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1372,7 +1372,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_ServiceQuotaExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceQuotaExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1606,7 +1606,7 @@ const de_EnabledBaselineParameterDocument = (output: any, context: __SerdeContex
  */
 const de_EnabledBaselineParameterSummaries = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): EnabledBaselineParameterSummary[] => {
   const retVal = (output || [])
     .filter((e: any) => e != null)
@@ -1650,7 +1650,7 @@ const de_EnabledControlDetails = (output: any, context: __SerdeContext): Enabled
  */
 const de_EnabledControlParameterSummaries = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): EnabledControlParameterSummary[] => {
   const retVal = (output || [])
     .filter((e: any) => e != null)

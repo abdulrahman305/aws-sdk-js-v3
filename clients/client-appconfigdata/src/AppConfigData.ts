@@ -25,16 +25,16 @@ export interface AppConfigData {
    */
   getLatestConfiguration(
     args: GetLatestConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetLatestConfigurationCommandOutput>;
   getLatestConfiguration(
     args: GetLatestConfigurationCommandInput,
-    cb: (err: any, data?: GetLatestConfigurationCommandOutput) => void
+    cb: (err: any, data?: GetLatestConfigurationCommandOutput) => void,
   ): void;
   getLatestConfiguration(
     args: GetLatestConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetLatestConfigurationCommandOutput) => void
+    cb: (err: any, data?: GetLatestConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -42,16 +42,16 @@ export interface AppConfigData {
    */
   startConfigurationSession(
     args: StartConfigurationSessionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartConfigurationSessionCommandOutput>;
   startConfigurationSession(
     args: StartConfigurationSessionCommandInput,
-    cb: (err: any, data?: StartConfigurationSessionCommandOutput) => void
+    cb: (err: any, data?: StartConfigurationSessionCommandOutput) => void,
   ): void;
   startConfigurationSession(
     args: StartConfigurationSessionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartConfigurationSessionCommandOutput) => void
+    cb: (err: any, data?: StartConfigurationSessionCommandOutput) => void,
   ): void;
 }
 

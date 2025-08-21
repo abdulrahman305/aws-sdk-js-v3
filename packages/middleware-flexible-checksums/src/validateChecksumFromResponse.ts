@@ -19,7 +19,7 @@ export interface ValidateChecksumFromResponseOptions {
 
 export const validateChecksumFromResponse = async (
   response: HttpResponse,
-  { config, responseAlgorithms }: ValidateChecksumFromResponseOptions
+  { config, responseAlgorithms }: ValidateChecksumFromResponseOptions,
 ) => {
   // Verify checksum in response header.
   const checksumAlgorithms = getChecksumAlgorithmListForResponse(responseAlgorithms);
@@ -38,7 +38,7 @@ export const validateChecksumFromResponse = async (
       }
       throw new Error(
         `Checksum mismatch: expected "${checksum}" but received "${checksumFromResponse}"` +
-          ` in response header "${responseHeader}".`
+          ` in response header "${responseHeader}".`,
       );
     }
   }

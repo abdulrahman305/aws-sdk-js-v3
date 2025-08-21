@@ -142,7 +142,7 @@ export interface EMRContainers {
   cancelJobRun(
     args: CancelJobRunCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CancelJobRunCommandOutput) => void
+    cb: (err: any, data?: CancelJobRunCommandOutput) => void,
   ): void;
 
   /**
@@ -150,16 +150,16 @@ export interface EMRContainers {
    */
   createJobTemplate(
     args: CreateJobTemplateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateJobTemplateCommandOutput>;
   createJobTemplate(
     args: CreateJobTemplateCommandInput,
-    cb: (err: any, data?: CreateJobTemplateCommandOutput) => void
+    cb: (err: any, data?: CreateJobTemplateCommandOutput) => void,
   ): void;
   createJobTemplate(
     args: CreateJobTemplateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateJobTemplateCommandOutput) => void
+    cb: (err: any, data?: CreateJobTemplateCommandOutput) => void,
   ): void;
 
   /**
@@ -167,16 +167,16 @@ export interface EMRContainers {
    */
   createManagedEndpoint(
     args: CreateManagedEndpointCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateManagedEndpointCommandOutput>;
   createManagedEndpoint(
     args: CreateManagedEndpointCommandInput,
-    cb: (err: any, data?: CreateManagedEndpointCommandOutput) => void
+    cb: (err: any, data?: CreateManagedEndpointCommandOutput) => void,
   ): void;
   createManagedEndpoint(
     args: CreateManagedEndpointCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateManagedEndpointCommandOutput) => void
+    cb: (err: any, data?: CreateManagedEndpointCommandOutput) => void,
   ): void;
 
   /**
@@ -184,16 +184,16 @@ export interface EMRContainers {
    */
   createSecurityConfiguration(
     args: CreateSecurityConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateSecurityConfigurationCommandOutput>;
   createSecurityConfiguration(
     args: CreateSecurityConfigurationCommandInput,
-    cb: (err: any, data?: CreateSecurityConfigurationCommandOutput) => void
+    cb: (err: any, data?: CreateSecurityConfigurationCommandOutput) => void,
   ): void;
   createSecurityConfiguration(
     args: CreateSecurityConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateSecurityConfigurationCommandOutput) => void
+    cb: (err: any, data?: CreateSecurityConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -201,16 +201,16 @@ export interface EMRContainers {
    */
   createVirtualCluster(
     args: CreateVirtualClusterCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateVirtualClusterCommandOutput>;
   createVirtualCluster(
     args: CreateVirtualClusterCommandInput,
-    cb: (err: any, data?: CreateVirtualClusterCommandOutput) => void
+    cb: (err: any, data?: CreateVirtualClusterCommandOutput) => void,
   ): void;
   createVirtualCluster(
     args: CreateVirtualClusterCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateVirtualClusterCommandOutput) => void
+    cb: (err: any, data?: CreateVirtualClusterCommandOutput) => void,
   ): void;
 
   /**
@@ -218,16 +218,16 @@ export interface EMRContainers {
    */
   deleteJobTemplate(
     args: DeleteJobTemplateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteJobTemplateCommandOutput>;
   deleteJobTemplate(
     args: DeleteJobTemplateCommandInput,
-    cb: (err: any, data?: DeleteJobTemplateCommandOutput) => void
+    cb: (err: any, data?: DeleteJobTemplateCommandOutput) => void,
   ): void;
   deleteJobTemplate(
     args: DeleteJobTemplateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteJobTemplateCommandOutput) => void
+    cb: (err: any, data?: DeleteJobTemplateCommandOutput) => void,
   ): void;
 
   /**
@@ -235,16 +235,16 @@ export interface EMRContainers {
    */
   deleteManagedEndpoint(
     args: DeleteManagedEndpointCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteManagedEndpointCommandOutput>;
   deleteManagedEndpoint(
     args: DeleteManagedEndpointCommandInput,
-    cb: (err: any, data?: DeleteManagedEndpointCommandOutput) => void
+    cb: (err: any, data?: DeleteManagedEndpointCommandOutput) => void,
   ): void;
   deleteManagedEndpoint(
     args: DeleteManagedEndpointCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteManagedEndpointCommandOutput) => void
+    cb: (err: any, data?: DeleteManagedEndpointCommandOutput) => void,
   ): void;
 
   /**
@@ -252,16 +252,16 @@ export interface EMRContainers {
    */
   deleteVirtualCluster(
     args: DeleteVirtualClusterCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteVirtualClusterCommandOutput>;
   deleteVirtualCluster(
     args: DeleteVirtualClusterCommandInput,
-    cb: (err: any, data?: DeleteVirtualClusterCommandOutput) => void
+    cb: (err: any, data?: DeleteVirtualClusterCommandOutput) => void,
   ): void;
   deleteVirtualCluster(
     args: DeleteVirtualClusterCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteVirtualClusterCommandOutput) => void
+    cb: (err: any, data?: DeleteVirtualClusterCommandOutput) => void,
   ): void;
 
   /**
@@ -269,13 +269,13 @@ export interface EMRContainers {
    */
   describeJobRun(
     args: DescribeJobRunCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeJobRunCommandOutput>;
   describeJobRun(args: DescribeJobRunCommandInput, cb: (err: any, data?: DescribeJobRunCommandOutput) => void): void;
   describeJobRun(
     args: DescribeJobRunCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeJobRunCommandOutput) => void
+    cb: (err: any, data?: DescribeJobRunCommandOutput) => void,
   ): void;
 
   /**
@@ -283,16 +283,16 @@ export interface EMRContainers {
    */
   describeJobTemplate(
     args: DescribeJobTemplateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeJobTemplateCommandOutput>;
   describeJobTemplate(
     args: DescribeJobTemplateCommandInput,
-    cb: (err: any, data?: DescribeJobTemplateCommandOutput) => void
+    cb: (err: any, data?: DescribeJobTemplateCommandOutput) => void,
   ): void;
   describeJobTemplate(
     args: DescribeJobTemplateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeJobTemplateCommandOutput) => void
+    cb: (err: any, data?: DescribeJobTemplateCommandOutput) => void,
   ): void;
 
   /**
@@ -300,16 +300,16 @@ export interface EMRContainers {
    */
   describeManagedEndpoint(
     args: DescribeManagedEndpointCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeManagedEndpointCommandOutput>;
   describeManagedEndpoint(
     args: DescribeManagedEndpointCommandInput,
-    cb: (err: any, data?: DescribeManagedEndpointCommandOutput) => void
+    cb: (err: any, data?: DescribeManagedEndpointCommandOutput) => void,
   ): void;
   describeManagedEndpoint(
     args: DescribeManagedEndpointCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeManagedEndpointCommandOutput) => void
+    cb: (err: any, data?: DescribeManagedEndpointCommandOutput) => void,
   ): void;
 
   /**
@@ -317,16 +317,16 @@ export interface EMRContainers {
    */
   describeSecurityConfiguration(
     args: DescribeSecurityConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeSecurityConfigurationCommandOutput>;
   describeSecurityConfiguration(
     args: DescribeSecurityConfigurationCommandInput,
-    cb: (err: any, data?: DescribeSecurityConfigurationCommandOutput) => void
+    cb: (err: any, data?: DescribeSecurityConfigurationCommandOutput) => void,
   ): void;
   describeSecurityConfiguration(
     args: DescribeSecurityConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeSecurityConfigurationCommandOutput) => void
+    cb: (err: any, data?: DescribeSecurityConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -334,16 +334,16 @@ export interface EMRContainers {
    */
   describeVirtualCluster(
     args: DescribeVirtualClusterCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeVirtualClusterCommandOutput>;
   describeVirtualCluster(
     args: DescribeVirtualClusterCommandInput,
-    cb: (err: any, data?: DescribeVirtualClusterCommandOutput) => void
+    cb: (err: any, data?: DescribeVirtualClusterCommandOutput) => void,
   ): void;
   describeVirtualCluster(
     args: DescribeVirtualClusterCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeVirtualClusterCommandOutput) => void
+    cb: (err: any, data?: DescribeVirtualClusterCommandOutput) => void,
   ): void;
 
   /**
@@ -351,16 +351,16 @@ export interface EMRContainers {
    */
   getManagedEndpointSessionCredentials(
     args: GetManagedEndpointSessionCredentialsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetManagedEndpointSessionCredentialsCommandOutput>;
   getManagedEndpointSessionCredentials(
     args: GetManagedEndpointSessionCredentialsCommandInput,
-    cb: (err: any, data?: GetManagedEndpointSessionCredentialsCommandOutput) => void
+    cb: (err: any, data?: GetManagedEndpointSessionCredentialsCommandOutput) => void,
   ): void;
   getManagedEndpointSessionCredentials(
     args: GetManagedEndpointSessionCredentialsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetManagedEndpointSessionCredentialsCommandOutput) => void
+    cb: (err: any, data?: GetManagedEndpointSessionCredentialsCommandOutput) => void,
   ): void;
 
   /**
@@ -371,7 +371,7 @@ export interface EMRContainers {
   listJobRuns(
     args: ListJobRunsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListJobRunsCommandOutput) => void
+    cb: (err: any, data?: ListJobRunsCommandOutput) => void,
   ): void;
 
   /**
@@ -380,16 +380,16 @@ export interface EMRContainers {
   listJobTemplates(): Promise<ListJobTemplatesCommandOutput>;
   listJobTemplates(
     args: ListJobTemplatesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListJobTemplatesCommandOutput>;
   listJobTemplates(
     args: ListJobTemplatesCommandInput,
-    cb: (err: any, data?: ListJobTemplatesCommandOutput) => void
+    cb: (err: any, data?: ListJobTemplatesCommandOutput) => void,
   ): void;
   listJobTemplates(
     args: ListJobTemplatesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListJobTemplatesCommandOutput) => void
+    cb: (err: any, data?: ListJobTemplatesCommandOutput) => void,
   ): void;
 
   /**
@@ -397,16 +397,16 @@ export interface EMRContainers {
    */
   listManagedEndpoints(
     args: ListManagedEndpointsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListManagedEndpointsCommandOutput>;
   listManagedEndpoints(
     args: ListManagedEndpointsCommandInput,
-    cb: (err: any, data?: ListManagedEndpointsCommandOutput) => void
+    cb: (err: any, data?: ListManagedEndpointsCommandOutput) => void,
   ): void;
   listManagedEndpoints(
     args: ListManagedEndpointsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListManagedEndpointsCommandOutput) => void
+    cb: (err: any, data?: ListManagedEndpointsCommandOutput) => void,
   ): void;
 
   /**
@@ -415,16 +415,16 @@ export interface EMRContainers {
   listSecurityConfigurations(): Promise<ListSecurityConfigurationsCommandOutput>;
   listSecurityConfigurations(
     args: ListSecurityConfigurationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListSecurityConfigurationsCommandOutput>;
   listSecurityConfigurations(
     args: ListSecurityConfigurationsCommandInput,
-    cb: (err: any, data?: ListSecurityConfigurationsCommandOutput) => void
+    cb: (err: any, data?: ListSecurityConfigurationsCommandOutput) => void,
   ): void;
   listSecurityConfigurations(
     args: ListSecurityConfigurationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListSecurityConfigurationsCommandOutput) => void
+    cb: (err: any, data?: ListSecurityConfigurationsCommandOutput) => void,
   ): void;
 
   /**
@@ -432,16 +432,16 @@ export interface EMRContainers {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -450,16 +450,16 @@ export interface EMRContainers {
   listVirtualClusters(): Promise<ListVirtualClustersCommandOutput>;
   listVirtualClusters(
     args: ListVirtualClustersCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListVirtualClustersCommandOutput>;
   listVirtualClusters(
     args: ListVirtualClustersCommandInput,
-    cb: (err: any, data?: ListVirtualClustersCommandOutput) => void
+    cb: (err: any, data?: ListVirtualClustersCommandOutput) => void,
   ): void;
   listVirtualClusters(
     args: ListVirtualClustersCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListVirtualClustersCommandOutput) => void
+    cb: (err: any, data?: ListVirtualClustersCommandOutput) => void,
   ): void;
 
   /**
@@ -470,7 +470,7 @@ export interface EMRContainers {
   startJobRun(
     args: StartJobRunCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartJobRunCommandOutput) => void
+    cb: (err: any, data?: StartJobRunCommandOutput) => void,
   ): void;
 
   /**
@@ -481,7 +481,7 @@ export interface EMRContainers {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -492,7 +492,7 @@ export interface EMRContainers {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 }
 

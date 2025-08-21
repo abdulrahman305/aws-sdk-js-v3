@@ -19,7 +19,7 @@ export interface QLDBSession {
   sendCommand(
     args: SendCommandCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SendCommandCommandOutput) => void
+    cb: (err: any, data?: SendCommandCommandOutput) => void,
   ): void;
 }
 

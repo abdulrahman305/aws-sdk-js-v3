@@ -97,7 +97,7 @@ import { RUMServiceException as __BaseException } from "../models/RUMServiceExce
  */
 export const se_BatchCreateRumMetricDefinitionsCommand = async (
   input: BatchCreateRumMetricDefinitionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -111,7 +111,7 @@ export const se_BatchCreateRumMetricDefinitionsCommand = async (
       Destination: [],
       DestinationArn: [],
       MetricDefinitions: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -122,7 +122,7 @@ export const se_BatchCreateRumMetricDefinitionsCommand = async (
  */
 export const se_BatchDeleteRumMetricDefinitionsCommand = async (
   input: BatchDeleteRumMetricDefinitionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -146,7 +146,7 @@ export const se_BatchDeleteRumMetricDefinitionsCommand = async (
  */
 export const se_BatchGetRumMetricDefinitionsCommand = async (
   input: BatchGetRumMetricDefinitionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -168,7 +168,7 @@ export const se_BatchGetRumMetricDefinitionsCommand = async (
  */
 export const se_CreateAppMonitorCommand = async (
   input: CreateAppMonitorCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -184,7 +184,7 @@ export const se_CreateAppMonitorCommand = async (
       Domain: [],
       Name: [],
       Tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -195,7 +195,7 @@ export const se_CreateAppMonitorCommand = async (
  */
 export const se_DeleteAppMonitorCommand = async (
   input: DeleteAppMonitorCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -211,7 +211,7 @@ export const se_DeleteAppMonitorCommand = async (
  */
 export const se_DeleteRumMetricsDestinationCommand = async (
   input: DeleteRumMetricsDestinationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -231,7 +231,7 @@ export const se_DeleteRumMetricsDestinationCommand = async (
  */
 export const se_GetAppMonitorCommand = async (
   input: GetAppMonitorCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -247,7 +247,7 @@ export const se_GetAppMonitorCommand = async (
  */
 export const se_GetAppMonitorDataCommand = async (
   input: GetAppMonitorDataCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -262,7 +262,7 @@ export const se_GetAppMonitorDataCommand = async (
       MaxResults: [],
       NextToken: [],
       TimeRange: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -273,7 +273,7 @@ export const se_GetAppMonitorDataCommand = async (
  */
 export const se_ListAppMonitorsCommand = async (
   input: ListAppMonitorsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -292,7 +292,7 @@ export const se_ListAppMonitorsCommand = async (
  */
 export const se_ListRumMetricsDestinationsCommand = async (
   input: ListRumMetricsDestinationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -312,7 +312,7 @@ export const se_ListRumMetricsDestinationsCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -328,7 +328,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_PutRumEventsCommand = async (
   input: PutRumEventsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -343,7 +343,7 @@ export const se_PutRumEventsCommand = async (
       BatchId: [],
       RumEvents: (_) => se_RumEventList(_, context),
       UserDetails: (_) => _json(_),
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -362,7 +362,7 @@ export const se_PutRumEventsCommand = async (
  */
 export const se_PutRumMetricsDestinationCommand = async (
   input: PutRumMetricsDestinationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -376,7 +376,7 @@ export const se_PutRumMetricsDestinationCommand = async (
       Destination: [],
       DestinationArn: [],
       IamRoleArn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -387,7 +387,7 @@ export const se_PutRumMetricsDestinationCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -399,7 +399,7 @@ export const se_TagResourceCommand = async (
   body = JSON.stringify(
     take(input, {
       Tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -410,7 +410,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -432,7 +432,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateAppMonitorCommand = async (
   input: UpdateAppMonitorCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -447,7 +447,7 @@ export const se_UpdateAppMonitorCommand = async (
       CustomEvents: (_) => _json(_),
       CwLogEnabled: [],
       Domain: [],
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -458,7 +458,7 @@ export const se_UpdateAppMonitorCommand = async (
  */
 export const se_UpdateRumMetricDefinitionCommand = async (
   input: UpdateRumMetricDefinitionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -473,7 +473,7 @@ export const se_UpdateRumMetricDefinitionCommand = async (
       DestinationArn: [],
       MetricDefinition: (_) => _json(_),
       MetricDefinitionId: [],
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -484,7 +484,7 @@ export const se_UpdateRumMetricDefinitionCommand = async (
  */
 export const de_BatchCreateRumMetricDefinitionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchCreateRumMetricDefinitionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -506,7 +506,7 @@ export const de_BatchCreateRumMetricDefinitionsCommand = async (
  */
 export const de_BatchDeleteRumMetricDefinitionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchDeleteRumMetricDefinitionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -528,7 +528,7 @@ export const de_BatchDeleteRumMetricDefinitionsCommand = async (
  */
 export const de_BatchGetRumMetricDefinitionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchGetRumMetricDefinitionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -550,7 +550,7 @@ export const de_BatchGetRumMetricDefinitionsCommand = async (
  */
 export const de_CreateAppMonitorCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateAppMonitorCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -571,7 +571,7 @@ export const de_CreateAppMonitorCommand = async (
  */
 export const de_DeleteAppMonitorCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteAppMonitorCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -588,7 +588,7 @@ export const de_DeleteAppMonitorCommand = async (
  */
 export const de_DeleteRumMetricsDestinationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteRumMetricsDestinationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -605,7 +605,7 @@ export const de_DeleteRumMetricsDestinationCommand = async (
  */
 export const de_GetAppMonitorCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetAppMonitorCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -626,7 +626,7 @@ export const de_GetAppMonitorCommand = async (
  */
 export const de_GetAppMonitorDataCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetAppMonitorDataCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -648,7 +648,7 @@ export const de_GetAppMonitorDataCommand = async (
  */
 export const de_ListAppMonitorsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAppMonitorsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -670,7 +670,7 @@ export const de_ListAppMonitorsCommand = async (
  */
 export const de_ListRumMetricsDestinationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListRumMetricsDestinationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -692,7 +692,7 @@ export const de_ListRumMetricsDestinationsCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -714,7 +714,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_PutRumEventsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutRumEventsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -731,7 +731,7 @@ export const de_PutRumEventsCommand = async (
  */
 export const de_PutRumMetricsDestinationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutRumMetricsDestinationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -748,7 +748,7 @@ export const de_PutRumMetricsDestinationCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -765,7 +765,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -782,7 +782,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateAppMonitorCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateAppMonitorCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -799,7 +799,7 @@ export const de_UpdateAppMonitorCommand = async (
  */
 export const de_UpdateRumMetricDefinitionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateRumMetricDefinitionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -858,7 +858,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -897,7 +897,7 @@ const de_ConflictExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_InternalServerExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerException> => {
   const contents: any = map({
     [_rAS]: [() => void 0 !== parsedOutput.headers[_ra], () => __strictParseInt32(parsedOutput.headers[_ra])],
@@ -919,7 +919,7 @@ const de_InternalServerExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -941,7 +941,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_ServiceQuotaExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceQuotaExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;

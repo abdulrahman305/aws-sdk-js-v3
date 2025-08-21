@@ -340,7 +340,7 @@ export interface ApiGatewayV2 {
   createApi(
     args: CreateApiCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateApiCommandOutput) => void
+    cb: (err: any, data?: CreateApiCommandOutput) => void,
   ): void;
 
   /**
@@ -348,16 +348,16 @@ export interface ApiGatewayV2 {
    */
   createApiMapping(
     args: CreateApiMappingCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateApiMappingCommandOutput>;
   createApiMapping(
     args: CreateApiMappingCommandInput,
-    cb: (err: any, data?: CreateApiMappingCommandOutput) => void
+    cb: (err: any, data?: CreateApiMappingCommandOutput) => void,
   ): void;
   createApiMapping(
     args: CreateApiMappingCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateApiMappingCommandOutput) => void
+    cb: (err: any, data?: CreateApiMappingCommandOutput) => void,
   ): void;
 
   /**
@@ -365,16 +365,16 @@ export interface ApiGatewayV2 {
    */
   createAuthorizer(
     args: CreateAuthorizerCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateAuthorizerCommandOutput>;
   createAuthorizer(
     args: CreateAuthorizerCommandInput,
-    cb: (err: any, data?: CreateAuthorizerCommandOutput) => void
+    cb: (err: any, data?: CreateAuthorizerCommandOutput) => void,
   ): void;
   createAuthorizer(
     args: CreateAuthorizerCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateAuthorizerCommandOutput) => void
+    cb: (err: any, data?: CreateAuthorizerCommandOutput) => void,
   ): void;
 
   /**
@@ -382,16 +382,16 @@ export interface ApiGatewayV2 {
    */
   createDeployment(
     args: CreateDeploymentCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateDeploymentCommandOutput>;
   createDeployment(
     args: CreateDeploymentCommandInput,
-    cb: (err: any, data?: CreateDeploymentCommandOutput) => void
+    cb: (err: any, data?: CreateDeploymentCommandOutput) => void,
   ): void;
   createDeployment(
     args: CreateDeploymentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateDeploymentCommandOutput) => void
+    cb: (err: any, data?: CreateDeploymentCommandOutput) => void,
   ): void;
 
   /**
@@ -399,16 +399,16 @@ export interface ApiGatewayV2 {
    */
   createDomainName(
     args: CreateDomainNameCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateDomainNameCommandOutput>;
   createDomainName(
     args: CreateDomainNameCommandInput,
-    cb: (err: any, data?: CreateDomainNameCommandOutput) => void
+    cb: (err: any, data?: CreateDomainNameCommandOutput) => void,
   ): void;
   createDomainName(
     args: CreateDomainNameCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateDomainNameCommandOutput) => void
+    cb: (err: any, data?: CreateDomainNameCommandOutput) => void,
   ): void;
 
   /**
@@ -416,16 +416,16 @@ export interface ApiGatewayV2 {
    */
   createIntegration(
     args: CreateIntegrationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateIntegrationCommandOutput>;
   createIntegration(
     args: CreateIntegrationCommandInput,
-    cb: (err: any, data?: CreateIntegrationCommandOutput) => void
+    cb: (err: any, data?: CreateIntegrationCommandOutput) => void,
   ): void;
   createIntegration(
     args: CreateIntegrationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateIntegrationCommandOutput) => void
+    cb: (err: any, data?: CreateIntegrationCommandOutput) => void,
   ): void;
 
   /**
@@ -433,16 +433,16 @@ export interface ApiGatewayV2 {
    */
   createIntegrationResponse(
     args: CreateIntegrationResponseCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateIntegrationResponseCommandOutput>;
   createIntegrationResponse(
     args: CreateIntegrationResponseCommandInput,
-    cb: (err: any, data?: CreateIntegrationResponseCommandOutput) => void
+    cb: (err: any, data?: CreateIntegrationResponseCommandOutput) => void,
   ): void;
   createIntegrationResponse(
     args: CreateIntegrationResponseCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateIntegrationResponseCommandOutput) => void
+    cb: (err: any, data?: CreateIntegrationResponseCommandOutput) => void,
   ): void;
 
   /**
@@ -453,7 +453,7 @@ export interface ApiGatewayV2 {
   createModel(
     args: CreateModelCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateModelCommandOutput) => void
+    cb: (err: any, data?: CreateModelCommandOutput) => void,
   ): void;
 
   /**
@@ -464,7 +464,7 @@ export interface ApiGatewayV2 {
   createRoute(
     args: CreateRouteCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateRouteCommandOutput) => void
+    cb: (err: any, data?: CreateRouteCommandOutput) => void,
   ): void;
 
   /**
@@ -472,16 +472,16 @@ export interface ApiGatewayV2 {
    */
   createRouteResponse(
     args: CreateRouteResponseCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateRouteResponseCommandOutput>;
   createRouteResponse(
     args: CreateRouteResponseCommandInput,
-    cb: (err: any, data?: CreateRouteResponseCommandOutput) => void
+    cb: (err: any, data?: CreateRouteResponseCommandOutput) => void,
   ): void;
   createRouteResponse(
     args: CreateRouteResponseCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateRouteResponseCommandOutput) => void
+    cb: (err: any, data?: CreateRouteResponseCommandOutput) => void,
   ): void;
 
   /**
@@ -492,7 +492,7 @@ export interface ApiGatewayV2 {
   createStage(
     args: CreateStageCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateStageCommandOutput) => void
+    cb: (err: any, data?: CreateStageCommandOutput) => void,
   ): void;
 
   /**
@@ -503,7 +503,7 @@ export interface ApiGatewayV2 {
   createVpcLink(
     args: CreateVpcLinkCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateVpcLinkCommandOutput) => void
+    cb: (err: any, data?: CreateVpcLinkCommandOutput) => void,
   ): void;
 
   /**
@@ -511,16 +511,16 @@ export interface ApiGatewayV2 {
    */
   deleteAccessLogSettings(
     args: DeleteAccessLogSettingsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteAccessLogSettingsCommandOutput>;
   deleteAccessLogSettings(
     args: DeleteAccessLogSettingsCommandInput,
-    cb: (err: any, data?: DeleteAccessLogSettingsCommandOutput) => void
+    cb: (err: any, data?: DeleteAccessLogSettingsCommandOutput) => void,
   ): void;
   deleteAccessLogSettings(
     args: DeleteAccessLogSettingsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteAccessLogSettingsCommandOutput) => void
+    cb: (err: any, data?: DeleteAccessLogSettingsCommandOutput) => void,
   ): void;
 
   /**
@@ -531,7 +531,7 @@ export interface ApiGatewayV2 {
   deleteApi(
     args: DeleteApiCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteApiCommandOutput) => void
+    cb: (err: any, data?: DeleteApiCommandOutput) => void,
   ): void;
 
   /**
@@ -539,16 +539,16 @@ export interface ApiGatewayV2 {
    */
   deleteApiMapping(
     args: DeleteApiMappingCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteApiMappingCommandOutput>;
   deleteApiMapping(
     args: DeleteApiMappingCommandInput,
-    cb: (err: any, data?: DeleteApiMappingCommandOutput) => void
+    cb: (err: any, data?: DeleteApiMappingCommandOutput) => void,
   ): void;
   deleteApiMapping(
     args: DeleteApiMappingCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteApiMappingCommandOutput) => void
+    cb: (err: any, data?: DeleteApiMappingCommandOutput) => void,
   ): void;
 
   /**
@@ -556,16 +556,16 @@ export interface ApiGatewayV2 {
    */
   deleteAuthorizer(
     args: DeleteAuthorizerCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteAuthorizerCommandOutput>;
   deleteAuthorizer(
     args: DeleteAuthorizerCommandInput,
-    cb: (err: any, data?: DeleteAuthorizerCommandOutput) => void
+    cb: (err: any, data?: DeleteAuthorizerCommandOutput) => void,
   ): void;
   deleteAuthorizer(
     args: DeleteAuthorizerCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteAuthorizerCommandOutput) => void
+    cb: (err: any, data?: DeleteAuthorizerCommandOutput) => void,
   ): void;
 
   /**
@@ -573,16 +573,16 @@ export interface ApiGatewayV2 {
    */
   deleteCorsConfiguration(
     args: DeleteCorsConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteCorsConfigurationCommandOutput>;
   deleteCorsConfiguration(
     args: DeleteCorsConfigurationCommandInput,
-    cb: (err: any, data?: DeleteCorsConfigurationCommandOutput) => void
+    cb: (err: any, data?: DeleteCorsConfigurationCommandOutput) => void,
   ): void;
   deleteCorsConfiguration(
     args: DeleteCorsConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteCorsConfigurationCommandOutput) => void
+    cb: (err: any, data?: DeleteCorsConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -590,16 +590,16 @@ export interface ApiGatewayV2 {
    */
   deleteDeployment(
     args: DeleteDeploymentCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteDeploymentCommandOutput>;
   deleteDeployment(
     args: DeleteDeploymentCommandInput,
-    cb: (err: any, data?: DeleteDeploymentCommandOutput) => void
+    cb: (err: any, data?: DeleteDeploymentCommandOutput) => void,
   ): void;
   deleteDeployment(
     args: DeleteDeploymentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteDeploymentCommandOutput) => void
+    cb: (err: any, data?: DeleteDeploymentCommandOutput) => void,
   ): void;
 
   /**
@@ -607,16 +607,16 @@ export interface ApiGatewayV2 {
    */
   deleteDomainName(
     args: DeleteDomainNameCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteDomainNameCommandOutput>;
   deleteDomainName(
     args: DeleteDomainNameCommandInput,
-    cb: (err: any, data?: DeleteDomainNameCommandOutput) => void
+    cb: (err: any, data?: DeleteDomainNameCommandOutput) => void,
   ): void;
   deleteDomainName(
     args: DeleteDomainNameCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteDomainNameCommandOutput) => void
+    cb: (err: any, data?: DeleteDomainNameCommandOutput) => void,
   ): void;
 
   /**
@@ -624,16 +624,16 @@ export interface ApiGatewayV2 {
    */
   deleteIntegration(
     args: DeleteIntegrationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteIntegrationCommandOutput>;
   deleteIntegration(
     args: DeleteIntegrationCommandInput,
-    cb: (err: any, data?: DeleteIntegrationCommandOutput) => void
+    cb: (err: any, data?: DeleteIntegrationCommandOutput) => void,
   ): void;
   deleteIntegration(
     args: DeleteIntegrationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteIntegrationCommandOutput) => void
+    cb: (err: any, data?: DeleteIntegrationCommandOutput) => void,
   ): void;
 
   /**
@@ -641,16 +641,16 @@ export interface ApiGatewayV2 {
    */
   deleteIntegrationResponse(
     args: DeleteIntegrationResponseCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteIntegrationResponseCommandOutput>;
   deleteIntegrationResponse(
     args: DeleteIntegrationResponseCommandInput,
-    cb: (err: any, data?: DeleteIntegrationResponseCommandOutput) => void
+    cb: (err: any, data?: DeleteIntegrationResponseCommandOutput) => void,
   ): void;
   deleteIntegrationResponse(
     args: DeleteIntegrationResponseCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteIntegrationResponseCommandOutput) => void
+    cb: (err: any, data?: DeleteIntegrationResponseCommandOutput) => void,
   ): void;
 
   /**
@@ -661,7 +661,7 @@ export interface ApiGatewayV2 {
   deleteModel(
     args: DeleteModelCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteModelCommandOutput) => void
+    cb: (err: any, data?: DeleteModelCommandOutput) => void,
   ): void;
 
   /**
@@ -672,7 +672,7 @@ export interface ApiGatewayV2 {
   deleteRoute(
     args: DeleteRouteCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteRouteCommandOutput) => void
+    cb: (err: any, data?: DeleteRouteCommandOutput) => void,
   ): void;
 
   /**
@@ -680,16 +680,16 @@ export interface ApiGatewayV2 {
    */
   deleteRouteRequestParameter(
     args: DeleteRouteRequestParameterCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteRouteRequestParameterCommandOutput>;
   deleteRouteRequestParameter(
     args: DeleteRouteRequestParameterCommandInput,
-    cb: (err: any, data?: DeleteRouteRequestParameterCommandOutput) => void
+    cb: (err: any, data?: DeleteRouteRequestParameterCommandOutput) => void,
   ): void;
   deleteRouteRequestParameter(
     args: DeleteRouteRequestParameterCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteRouteRequestParameterCommandOutput) => void
+    cb: (err: any, data?: DeleteRouteRequestParameterCommandOutput) => void,
   ): void;
 
   /**
@@ -697,16 +697,16 @@ export interface ApiGatewayV2 {
    */
   deleteRouteResponse(
     args: DeleteRouteResponseCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteRouteResponseCommandOutput>;
   deleteRouteResponse(
     args: DeleteRouteResponseCommandInput,
-    cb: (err: any, data?: DeleteRouteResponseCommandOutput) => void
+    cb: (err: any, data?: DeleteRouteResponseCommandOutput) => void,
   ): void;
   deleteRouteResponse(
     args: DeleteRouteResponseCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteRouteResponseCommandOutput) => void
+    cb: (err: any, data?: DeleteRouteResponseCommandOutput) => void,
   ): void;
 
   /**
@@ -714,16 +714,16 @@ export interface ApiGatewayV2 {
    */
   deleteRouteSettings(
     args: DeleteRouteSettingsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteRouteSettingsCommandOutput>;
   deleteRouteSettings(
     args: DeleteRouteSettingsCommandInput,
-    cb: (err: any, data?: DeleteRouteSettingsCommandOutput) => void
+    cb: (err: any, data?: DeleteRouteSettingsCommandOutput) => void,
   ): void;
   deleteRouteSettings(
     args: DeleteRouteSettingsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteRouteSettingsCommandOutput) => void
+    cb: (err: any, data?: DeleteRouteSettingsCommandOutput) => void,
   ): void;
 
   /**
@@ -734,7 +734,7 @@ export interface ApiGatewayV2 {
   deleteStage(
     args: DeleteStageCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteStageCommandOutput) => void
+    cb: (err: any, data?: DeleteStageCommandOutput) => void,
   ): void;
 
   /**
@@ -745,7 +745,7 @@ export interface ApiGatewayV2 {
   deleteVpcLink(
     args: DeleteVpcLinkCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteVpcLinkCommandOutput) => void
+    cb: (err: any, data?: DeleteVpcLinkCommandOutput) => void,
   ): void;
 
   /**
@@ -756,7 +756,7 @@ export interface ApiGatewayV2 {
   exportApi(
     args: ExportApiCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ExportApiCommandOutput) => void
+    cb: (err: any, data?: ExportApiCommandOutput) => void,
   ): void;
 
   /**
@@ -767,7 +767,7 @@ export interface ApiGatewayV2 {
   getApi(
     args: GetApiCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetApiCommandOutput) => void
+    cb: (err: any, data?: GetApiCommandOutput) => void,
   ): void;
 
   /**
@@ -778,7 +778,7 @@ export interface ApiGatewayV2 {
   getApiMapping(
     args: GetApiMappingCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetApiMappingCommandOutput) => void
+    cb: (err: any, data?: GetApiMappingCommandOutput) => void,
   ): void;
 
   /**
@@ -786,13 +786,13 @@ export interface ApiGatewayV2 {
    */
   getApiMappings(
     args: GetApiMappingsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetApiMappingsCommandOutput>;
   getApiMappings(args: GetApiMappingsCommandInput, cb: (err: any, data?: GetApiMappingsCommandOutput) => void): void;
   getApiMappings(
     args: GetApiMappingsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetApiMappingsCommandOutput) => void
+    cb: (err: any, data?: GetApiMappingsCommandOutput) => void,
   ): void;
 
   /**
@@ -804,7 +804,7 @@ export interface ApiGatewayV2 {
   getApis(
     args: GetApisCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetApisCommandOutput) => void
+    cb: (err: any, data?: GetApisCommandOutput) => void,
   ): void;
 
   /**
@@ -815,7 +815,7 @@ export interface ApiGatewayV2 {
   getAuthorizer(
     args: GetAuthorizerCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetAuthorizerCommandOutput) => void
+    cb: (err: any, data?: GetAuthorizerCommandOutput) => void,
   ): void;
 
   /**
@@ -823,13 +823,13 @@ export interface ApiGatewayV2 {
    */
   getAuthorizers(
     args: GetAuthorizersCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetAuthorizersCommandOutput>;
   getAuthorizers(args: GetAuthorizersCommandInput, cb: (err: any, data?: GetAuthorizersCommandOutput) => void): void;
   getAuthorizers(
     args: GetAuthorizersCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetAuthorizersCommandOutput) => void
+    cb: (err: any, data?: GetAuthorizersCommandOutput) => void,
   ): void;
 
   /**
@@ -840,7 +840,7 @@ export interface ApiGatewayV2 {
   getDeployment(
     args: GetDeploymentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetDeploymentCommandOutput) => void
+    cb: (err: any, data?: GetDeploymentCommandOutput) => void,
   ): void;
 
   /**
@@ -848,13 +848,13 @@ export interface ApiGatewayV2 {
    */
   getDeployments(
     args: GetDeploymentsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetDeploymentsCommandOutput>;
   getDeployments(args: GetDeploymentsCommandInput, cb: (err: any, data?: GetDeploymentsCommandOutput) => void): void;
   getDeployments(
     args: GetDeploymentsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetDeploymentsCommandOutput) => void
+    cb: (err: any, data?: GetDeploymentsCommandOutput) => void,
   ): void;
 
   /**
@@ -865,7 +865,7 @@ export interface ApiGatewayV2 {
   getDomainName(
     args: GetDomainNameCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetDomainNameCommandOutput) => void
+    cb: (err: any, data?: GetDomainNameCommandOutput) => void,
   ): void;
 
   /**
@@ -874,13 +874,13 @@ export interface ApiGatewayV2 {
   getDomainNames(): Promise<GetDomainNamesCommandOutput>;
   getDomainNames(
     args: GetDomainNamesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetDomainNamesCommandOutput>;
   getDomainNames(args: GetDomainNamesCommandInput, cb: (err: any, data?: GetDomainNamesCommandOutput) => void): void;
   getDomainNames(
     args: GetDomainNamesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetDomainNamesCommandOutput) => void
+    cb: (err: any, data?: GetDomainNamesCommandOutput) => void,
   ): void;
 
   /**
@@ -888,13 +888,13 @@ export interface ApiGatewayV2 {
    */
   getIntegration(
     args: GetIntegrationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetIntegrationCommandOutput>;
   getIntegration(args: GetIntegrationCommandInput, cb: (err: any, data?: GetIntegrationCommandOutput) => void): void;
   getIntegration(
     args: GetIntegrationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetIntegrationCommandOutput) => void
+    cb: (err: any, data?: GetIntegrationCommandOutput) => void,
   ): void;
 
   /**
@@ -902,16 +902,16 @@ export interface ApiGatewayV2 {
    */
   getIntegrationResponse(
     args: GetIntegrationResponseCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetIntegrationResponseCommandOutput>;
   getIntegrationResponse(
     args: GetIntegrationResponseCommandInput,
-    cb: (err: any, data?: GetIntegrationResponseCommandOutput) => void
+    cb: (err: any, data?: GetIntegrationResponseCommandOutput) => void,
   ): void;
   getIntegrationResponse(
     args: GetIntegrationResponseCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetIntegrationResponseCommandOutput) => void
+    cb: (err: any, data?: GetIntegrationResponseCommandOutput) => void,
   ): void;
 
   /**
@@ -919,16 +919,16 @@ export interface ApiGatewayV2 {
    */
   getIntegrationResponses(
     args: GetIntegrationResponsesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetIntegrationResponsesCommandOutput>;
   getIntegrationResponses(
     args: GetIntegrationResponsesCommandInput,
-    cb: (err: any, data?: GetIntegrationResponsesCommandOutput) => void
+    cb: (err: any, data?: GetIntegrationResponsesCommandOutput) => void,
   ): void;
   getIntegrationResponses(
     args: GetIntegrationResponsesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetIntegrationResponsesCommandOutput) => void
+    cb: (err: any, data?: GetIntegrationResponsesCommandOutput) => void,
   ): void;
 
   /**
@@ -936,13 +936,13 @@ export interface ApiGatewayV2 {
    */
   getIntegrations(
     args: GetIntegrationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetIntegrationsCommandOutput>;
   getIntegrations(args: GetIntegrationsCommandInput, cb: (err: any, data?: GetIntegrationsCommandOutput) => void): void;
   getIntegrations(
     args: GetIntegrationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetIntegrationsCommandOutput) => void
+    cb: (err: any, data?: GetIntegrationsCommandOutput) => void,
   ): void;
 
   /**
@@ -953,7 +953,7 @@ export interface ApiGatewayV2 {
   getModel(
     args: GetModelCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetModelCommandOutput) => void
+    cb: (err: any, data?: GetModelCommandOutput) => void,
   ): void;
 
   /**
@@ -964,7 +964,7 @@ export interface ApiGatewayV2 {
   getModels(
     args: GetModelsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetModelsCommandOutput) => void
+    cb: (err: any, data?: GetModelsCommandOutput) => void,
   ): void;
 
   /**
@@ -972,16 +972,16 @@ export interface ApiGatewayV2 {
    */
   getModelTemplate(
     args: GetModelTemplateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetModelTemplateCommandOutput>;
   getModelTemplate(
     args: GetModelTemplateCommandInput,
-    cb: (err: any, data?: GetModelTemplateCommandOutput) => void
+    cb: (err: any, data?: GetModelTemplateCommandOutput) => void,
   ): void;
   getModelTemplate(
     args: GetModelTemplateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetModelTemplateCommandOutput) => void
+    cb: (err: any, data?: GetModelTemplateCommandOutput) => void,
   ): void;
 
   /**
@@ -992,7 +992,7 @@ export interface ApiGatewayV2 {
   getRoute(
     args: GetRouteCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetRouteCommandOutput) => void
+    cb: (err: any, data?: GetRouteCommandOutput) => void,
   ): void;
 
   /**
@@ -1000,16 +1000,16 @@ export interface ApiGatewayV2 {
    */
   getRouteResponse(
     args: GetRouteResponseCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetRouteResponseCommandOutput>;
   getRouteResponse(
     args: GetRouteResponseCommandInput,
-    cb: (err: any, data?: GetRouteResponseCommandOutput) => void
+    cb: (err: any, data?: GetRouteResponseCommandOutput) => void,
   ): void;
   getRouteResponse(
     args: GetRouteResponseCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetRouteResponseCommandOutput) => void
+    cb: (err: any, data?: GetRouteResponseCommandOutput) => void,
   ): void;
 
   /**
@@ -1017,16 +1017,16 @@ export interface ApiGatewayV2 {
    */
   getRouteResponses(
     args: GetRouteResponsesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetRouteResponsesCommandOutput>;
   getRouteResponses(
     args: GetRouteResponsesCommandInput,
-    cb: (err: any, data?: GetRouteResponsesCommandOutput) => void
+    cb: (err: any, data?: GetRouteResponsesCommandOutput) => void,
   ): void;
   getRouteResponses(
     args: GetRouteResponsesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetRouteResponsesCommandOutput) => void
+    cb: (err: any, data?: GetRouteResponsesCommandOutput) => void,
   ): void;
 
   /**
@@ -1037,7 +1037,7 @@ export interface ApiGatewayV2 {
   getRoutes(
     args: GetRoutesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetRoutesCommandOutput) => void
+    cb: (err: any, data?: GetRoutesCommandOutput) => void,
   ): void;
 
   /**
@@ -1048,7 +1048,7 @@ export interface ApiGatewayV2 {
   getStage(
     args: GetStageCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetStageCommandOutput) => void
+    cb: (err: any, data?: GetStageCommandOutput) => void,
   ): void;
 
   /**
@@ -1059,7 +1059,7 @@ export interface ApiGatewayV2 {
   getStages(
     args: GetStagesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetStagesCommandOutput) => void
+    cb: (err: any, data?: GetStagesCommandOutput) => void,
   ): void;
 
   /**
@@ -1070,7 +1070,7 @@ export interface ApiGatewayV2 {
   getTags(
     args: GetTagsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetTagsCommandOutput) => void
+    cb: (err: any, data?: GetTagsCommandOutput) => void,
   ): void;
 
   /**
@@ -1081,7 +1081,7 @@ export interface ApiGatewayV2 {
   getVpcLink(
     args: GetVpcLinkCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetVpcLinkCommandOutput) => void
+    cb: (err: any, data?: GetVpcLinkCommandOutput) => void,
   ): void;
 
   /**
@@ -1093,7 +1093,7 @@ export interface ApiGatewayV2 {
   getVpcLinks(
     args: GetVpcLinksCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetVpcLinksCommandOutput) => void
+    cb: (err: any, data?: GetVpcLinksCommandOutput) => void,
   ): void;
 
   /**
@@ -1104,7 +1104,7 @@ export interface ApiGatewayV2 {
   importApi(
     args: ImportApiCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ImportApiCommandOutput) => void
+    cb: (err: any, data?: ImportApiCommandOutput) => void,
   ): void;
 
   /**
@@ -1115,7 +1115,7 @@ export interface ApiGatewayV2 {
   reimportApi(
     args: ReimportApiCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ReimportApiCommandOutput) => void
+    cb: (err: any, data?: ReimportApiCommandOutput) => void,
   ): void;
 
   /**
@@ -1123,16 +1123,16 @@ export interface ApiGatewayV2 {
    */
   resetAuthorizersCache(
     args: ResetAuthorizersCacheCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ResetAuthorizersCacheCommandOutput>;
   resetAuthorizersCache(
     args: ResetAuthorizersCacheCommandInput,
-    cb: (err: any, data?: ResetAuthorizersCacheCommandOutput) => void
+    cb: (err: any, data?: ResetAuthorizersCacheCommandOutput) => void,
   ): void;
   resetAuthorizersCache(
     args: ResetAuthorizersCacheCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ResetAuthorizersCacheCommandOutput) => void
+    cb: (err: any, data?: ResetAuthorizersCacheCommandOutput) => void,
   ): void;
 
   /**
@@ -1143,7 +1143,7 @@ export interface ApiGatewayV2 {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -1154,7 +1154,7 @@ export interface ApiGatewayV2 {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -1165,7 +1165,7 @@ export interface ApiGatewayV2 {
   updateApi(
     args: UpdateApiCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateApiCommandOutput) => void
+    cb: (err: any, data?: UpdateApiCommandOutput) => void,
   ): void;
 
   /**
@@ -1173,16 +1173,16 @@ export interface ApiGatewayV2 {
    */
   updateApiMapping(
     args: UpdateApiMappingCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateApiMappingCommandOutput>;
   updateApiMapping(
     args: UpdateApiMappingCommandInput,
-    cb: (err: any, data?: UpdateApiMappingCommandOutput) => void
+    cb: (err: any, data?: UpdateApiMappingCommandOutput) => void,
   ): void;
   updateApiMapping(
     args: UpdateApiMappingCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateApiMappingCommandOutput) => void
+    cb: (err: any, data?: UpdateApiMappingCommandOutput) => void,
   ): void;
 
   /**
@@ -1190,16 +1190,16 @@ export interface ApiGatewayV2 {
    */
   updateAuthorizer(
     args: UpdateAuthorizerCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateAuthorizerCommandOutput>;
   updateAuthorizer(
     args: UpdateAuthorizerCommandInput,
-    cb: (err: any, data?: UpdateAuthorizerCommandOutput) => void
+    cb: (err: any, data?: UpdateAuthorizerCommandOutput) => void,
   ): void;
   updateAuthorizer(
     args: UpdateAuthorizerCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateAuthorizerCommandOutput) => void
+    cb: (err: any, data?: UpdateAuthorizerCommandOutput) => void,
   ): void;
 
   /**
@@ -1207,16 +1207,16 @@ export interface ApiGatewayV2 {
    */
   updateDeployment(
     args: UpdateDeploymentCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateDeploymentCommandOutput>;
   updateDeployment(
     args: UpdateDeploymentCommandInput,
-    cb: (err: any, data?: UpdateDeploymentCommandOutput) => void
+    cb: (err: any, data?: UpdateDeploymentCommandOutput) => void,
   ): void;
   updateDeployment(
     args: UpdateDeploymentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateDeploymentCommandOutput) => void
+    cb: (err: any, data?: UpdateDeploymentCommandOutput) => void,
   ): void;
 
   /**
@@ -1224,16 +1224,16 @@ export interface ApiGatewayV2 {
    */
   updateDomainName(
     args: UpdateDomainNameCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateDomainNameCommandOutput>;
   updateDomainName(
     args: UpdateDomainNameCommandInput,
-    cb: (err: any, data?: UpdateDomainNameCommandOutput) => void
+    cb: (err: any, data?: UpdateDomainNameCommandOutput) => void,
   ): void;
   updateDomainName(
     args: UpdateDomainNameCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateDomainNameCommandOutput) => void
+    cb: (err: any, data?: UpdateDomainNameCommandOutput) => void,
   ): void;
 
   /**
@@ -1241,16 +1241,16 @@ export interface ApiGatewayV2 {
    */
   updateIntegration(
     args: UpdateIntegrationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateIntegrationCommandOutput>;
   updateIntegration(
     args: UpdateIntegrationCommandInput,
-    cb: (err: any, data?: UpdateIntegrationCommandOutput) => void
+    cb: (err: any, data?: UpdateIntegrationCommandOutput) => void,
   ): void;
   updateIntegration(
     args: UpdateIntegrationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateIntegrationCommandOutput) => void
+    cb: (err: any, data?: UpdateIntegrationCommandOutput) => void,
   ): void;
 
   /**
@@ -1258,16 +1258,16 @@ export interface ApiGatewayV2 {
    */
   updateIntegrationResponse(
     args: UpdateIntegrationResponseCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateIntegrationResponseCommandOutput>;
   updateIntegrationResponse(
     args: UpdateIntegrationResponseCommandInput,
-    cb: (err: any, data?: UpdateIntegrationResponseCommandOutput) => void
+    cb: (err: any, data?: UpdateIntegrationResponseCommandOutput) => void,
   ): void;
   updateIntegrationResponse(
     args: UpdateIntegrationResponseCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateIntegrationResponseCommandOutput) => void
+    cb: (err: any, data?: UpdateIntegrationResponseCommandOutput) => void,
   ): void;
 
   /**
@@ -1278,7 +1278,7 @@ export interface ApiGatewayV2 {
   updateModel(
     args: UpdateModelCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateModelCommandOutput) => void
+    cb: (err: any, data?: UpdateModelCommandOutput) => void,
   ): void;
 
   /**
@@ -1289,7 +1289,7 @@ export interface ApiGatewayV2 {
   updateRoute(
     args: UpdateRouteCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateRouteCommandOutput) => void
+    cb: (err: any, data?: UpdateRouteCommandOutput) => void,
   ): void;
 
   /**
@@ -1297,16 +1297,16 @@ export interface ApiGatewayV2 {
    */
   updateRouteResponse(
     args: UpdateRouteResponseCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateRouteResponseCommandOutput>;
   updateRouteResponse(
     args: UpdateRouteResponseCommandInput,
-    cb: (err: any, data?: UpdateRouteResponseCommandOutput) => void
+    cb: (err: any, data?: UpdateRouteResponseCommandOutput) => void,
   ): void;
   updateRouteResponse(
     args: UpdateRouteResponseCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateRouteResponseCommandOutput) => void
+    cb: (err: any, data?: UpdateRouteResponseCommandOutput) => void,
   ): void;
 
   /**
@@ -1317,7 +1317,7 @@ export interface ApiGatewayV2 {
   updateStage(
     args: UpdateStageCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateStageCommandOutput) => void
+    cb: (err: any, data?: UpdateStageCommandOutput) => void,
   ): void;
 
   /**
@@ -1328,7 +1328,7 @@ export interface ApiGatewayV2 {
   updateVpcLink(
     args: UpdateVpcLinkCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateVpcLinkCommandOutput) => void
+    cb: (err: any, data?: UpdateVpcLinkCommandOutput) => void,
   ): void;
 }
 

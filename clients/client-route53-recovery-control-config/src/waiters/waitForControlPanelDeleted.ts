@@ -6,7 +6,7 @@ import { Route53RecoveryControlConfigClient } from "../Route53RecoveryControlCon
 
 const checkState = async (
   client: Route53RecoveryControlConfigClient,
-  input: DescribeControlPanelCommandInput
+  input: DescribeControlPanelCommandInput,
 ): Promise<WaiterResult> => {
   let reason;
   try {
@@ -37,7 +37,7 @@ const checkState = async (
  */
 export const waitForControlPanelDeleted = async (
   params: WaiterConfiguration<Route53RecoveryControlConfigClient>,
-  input: DescribeControlPanelCommandInput
+  input: DescribeControlPanelCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 5, maxDelay: 120 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -49,7 +49,7 @@ export const waitForControlPanelDeleted = async (
  */
 export const waitUntilControlPanelDeleted = async (
   params: WaiterConfiguration<Route53RecoveryControlConfigClient>,
-  input: DescribeControlPanelCommandInput
+  input: DescribeControlPanelCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 5, maxDelay: 120 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

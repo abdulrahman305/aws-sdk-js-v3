@@ -26,5 +26,5 @@ export const paginateDescribeReplicationTaskIndividualAssessments: (
   DescribeReplicationTaskIndividualAssessmentsCommand,
   "Marker",
   "Marker",
-  "MaxRecords"
+  "MaxRecords",
 );

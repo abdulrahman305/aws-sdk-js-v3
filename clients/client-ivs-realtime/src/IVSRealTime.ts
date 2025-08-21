@@ -152,16 +152,16 @@ export interface IVSRealTime {
   createEncoderConfiguration(): Promise<CreateEncoderConfigurationCommandOutput>;
   createEncoderConfiguration(
     args: CreateEncoderConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateEncoderConfigurationCommandOutput>;
   createEncoderConfiguration(
     args: CreateEncoderConfigurationCommandInput,
-    cb: (err: any, data?: CreateEncoderConfigurationCommandOutput) => void
+    cb: (err: any, data?: CreateEncoderConfigurationCommandOutput) => void,
   ): void;
   createEncoderConfiguration(
     args: CreateEncoderConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateEncoderConfigurationCommandOutput) => void
+    cb: (err: any, data?: CreateEncoderConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -169,16 +169,16 @@ export interface IVSRealTime {
    */
   createParticipantToken(
     args: CreateParticipantTokenCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateParticipantTokenCommandOutput>;
   createParticipantToken(
     args: CreateParticipantTokenCommandInput,
-    cb: (err: any, data?: CreateParticipantTokenCommandOutput) => void
+    cb: (err: any, data?: CreateParticipantTokenCommandOutput) => void,
   ): void;
   createParticipantToken(
     args: CreateParticipantTokenCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateParticipantTokenCommandOutput) => void
+    cb: (err: any, data?: CreateParticipantTokenCommandOutput) => void,
   ): void;
 
   /**
@@ -190,7 +190,7 @@ export interface IVSRealTime {
   createStage(
     args: CreateStageCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateStageCommandOutput) => void
+    cb: (err: any, data?: CreateStageCommandOutput) => void,
   ): void;
 
   /**
@@ -198,16 +198,16 @@ export interface IVSRealTime {
    */
   createStorageConfiguration(
     args: CreateStorageConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateStorageConfigurationCommandOutput>;
   createStorageConfiguration(
     args: CreateStorageConfigurationCommandInput,
-    cb: (err: any, data?: CreateStorageConfigurationCommandOutput) => void
+    cb: (err: any, data?: CreateStorageConfigurationCommandOutput) => void,
   ): void;
   createStorageConfiguration(
     args: CreateStorageConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateStorageConfigurationCommandOutput) => void
+    cb: (err: any, data?: CreateStorageConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -215,16 +215,16 @@ export interface IVSRealTime {
    */
   deleteEncoderConfiguration(
     args: DeleteEncoderConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteEncoderConfigurationCommandOutput>;
   deleteEncoderConfiguration(
     args: DeleteEncoderConfigurationCommandInput,
-    cb: (err: any, data?: DeleteEncoderConfigurationCommandOutput) => void
+    cb: (err: any, data?: DeleteEncoderConfigurationCommandOutput) => void,
   ): void;
   deleteEncoderConfiguration(
     args: DeleteEncoderConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteEncoderConfigurationCommandOutput) => void
+    cb: (err: any, data?: DeleteEncoderConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -235,7 +235,7 @@ export interface IVSRealTime {
   deleteStage(
     args: DeleteStageCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteStageCommandOutput) => void
+    cb: (err: any, data?: DeleteStageCommandOutput) => void,
   ): void;
 
   /**
@@ -243,16 +243,16 @@ export interface IVSRealTime {
    */
   deleteStorageConfiguration(
     args: DeleteStorageConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteStorageConfigurationCommandOutput>;
   deleteStorageConfiguration(
     args: DeleteStorageConfigurationCommandInput,
-    cb: (err: any, data?: DeleteStorageConfigurationCommandOutput) => void
+    cb: (err: any, data?: DeleteStorageConfigurationCommandOutput) => void,
   ): void;
   deleteStorageConfiguration(
     args: DeleteStorageConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteStorageConfigurationCommandOutput) => void
+    cb: (err: any, data?: DeleteStorageConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -260,16 +260,16 @@ export interface IVSRealTime {
    */
   disconnectParticipant(
     args: DisconnectParticipantCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DisconnectParticipantCommandOutput>;
   disconnectParticipant(
     args: DisconnectParticipantCommandInput,
-    cb: (err: any, data?: DisconnectParticipantCommandOutput) => void
+    cb: (err: any, data?: DisconnectParticipantCommandOutput) => void,
   ): void;
   disconnectParticipant(
     args: DisconnectParticipantCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DisconnectParticipantCommandOutput) => void
+    cb: (err: any, data?: DisconnectParticipantCommandOutput) => void,
   ): void;
 
   /**
@@ -277,13 +277,13 @@ export interface IVSRealTime {
    */
   getComposition(
     args: GetCompositionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetCompositionCommandOutput>;
   getComposition(args: GetCompositionCommandInput, cb: (err: any, data?: GetCompositionCommandOutput) => void): void;
   getComposition(
     args: GetCompositionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetCompositionCommandOutput) => void
+    cb: (err: any, data?: GetCompositionCommandOutput) => void,
   ): void;
 
   /**
@@ -291,16 +291,16 @@ export interface IVSRealTime {
    */
   getEncoderConfiguration(
     args: GetEncoderConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetEncoderConfigurationCommandOutput>;
   getEncoderConfiguration(
     args: GetEncoderConfigurationCommandInput,
-    cb: (err: any, data?: GetEncoderConfigurationCommandOutput) => void
+    cb: (err: any, data?: GetEncoderConfigurationCommandOutput) => void,
   ): void;
   getEncoderConfiguration(
     args: GetEncoderConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetEncoderConfigurationCommandOutput) => void
+    cb: (err: any, data?: GetEncoderConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -308,13 +308,13 @@ export interface IVSRealTime {
    */
   getParticipant(
     args: GetParticipantCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetParticipantCommandOutput>;
   getParticipant(args: GetParticipantCommandInput, cb: (err: any, data?: GetParticipantCommandOutput) => void): void;
   getParticipant(
     args: GetParticipantCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetParticipantCommandOutput) => void
+    cb: (err: any, data?: GetParticipantCommandOutput) => void,
   ): void;
 
   /**
@@ -325,7 +325,7 @@ export interface IVSRealTime {
   getStage(
     args: GetStageCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetStageCommandOutput) => void
+    cb: (err: any, data?: GetStageCommandOutput) => void,
   ): void;
 
   /**
@@ -333,13 +333,13 @@ export interface IVSRealTime {
    */
   getStageSession(
     args: GetStageSessionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetStageSessionCommandOutput>;
   getStageSession(args: GetStageSessionCommandInput, cb: (err: any, data?: GetStageSessionCommandOutput) => void): void;
   getStageSession(
     args: GetStageSessionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetStageSessionCommandOutput) => void
+    cb: (err: any, data?: GetStageSessionCommandOutput) => void,
   ): void;
 
   /**
@@ -347,16 +347,16 @@ export interface IVSRealTime {
    */
   getStorageConfiguration(
     args: GetStorageConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetStorageConfigurationCommandOutput>;
   getStorageConfiguration(
     args: GetStorageConfigurationCommandInput,
-    cb: (err: any, data?: GetStorageConfigurationCommandOutput) => void
+    cb: (err: any, data?: GetStorageConfigurationCommandOutput) => void,
   ): void;
   getStorageConfiguration(
     args: GetStorageConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetStorageConfigurationCommandOutput) => void
+    cb: (err: any, data?: GetStorageConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -365,16 +365,16 @@ export interface IVSRealTime {
   listCompositions(): Promise<ListCompositionsCommandOutput>;
   listCompositions(
     args: ListCompositionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListCompositionsCommandOutput>;
   listCompositions(
     args: ListCompositionsCommandInput,
-    cb: (err: any, data?: ListCompositionsCommandOutput) => void
+    cb: (err: any, data?: ListCompositionsCommandOutput) => void,
   ): void;
   listCompositions(
     args: ListCompositionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListCompositionsCommandOutput) => void
+    cb: (err: any, data?: ListCompositionsCommandOutput) => void,
   ): void;
 
   /**
@@ -383,16 +383,16 @@ export interface IVSRealTime {
   listEncoderConfigurations(): Promise<ListEncoderConfigurationsCommandOutput>;
   listEncoderConfigurations(
     args: ListEncoderConfigurationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListEncoderConfigurationsCommandOutput>;
   listEncoderConfigurations(
     args: ListEncoderConfigurationsCommandInput,
-    cb: (err: any, data?: ListEncoderConfigurationsCommandOutput) => void
+    cb: (err: any, data?: ListEncoderConfigurationsCommandOutput) => void,
   ): void;
   listEncoderConfigurations(
     args: ListEncoderConfigurationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListEncoderConfigurationsCommandOutput) => void
+    cb: (err: any, data?: ListEncoderConfigurationsCommandOutput) => void,
   ): void;
 
   /**
@@ -400,16 +400,16 @@ export interface IVSRealTime {
    */
   listParticipantEvents(
     args: ListParticipantEventsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListParticipantEventsCommandOutput>;
   listParticipantEvents(
     args: ListParticipantEventsCommandInput,
-    cb: (err: any, data?: ListParticipantEventsCommandOutput) => void
+    cb: (err: any, data?: ListParticipantEventsCommandOutput) => void,
   ): void;
   listParticipantEvents(
     args: ListParticipantEventsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListParticipantEventsCommandOutput) => void
+    cb: (err: any, data?: ListParticipantEventsCommandOutput) => void,
   ): void;
 
   /**
@@ -417,16 +417,16 @@ export interface IVSRealTime {
    */
   listParticipants(
     args: ListParticipantsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListParticipantsCommandOutput>;
   listParticipants(
     args: ListParticipantsCommandInput,
-    cb: (err: any, data?: ListParticipantsCommandOutput) => void
+    cb: (err: any, data?: ListParticipantsCommandOutput) => void,
   ): void;
   listParticipants(
     args: ListParticipantsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListParticipantsCommandOutput) => void
+    cb: (err: any, data?: ListParticipantsCommandOutput) => void,
   ): void;
 
   /**
@@ -438,7 +438,7 @@ export interface IVSRealTime {
   listStages(
     args: ListStagesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListStagesCommandOutput) => void
+    cb: (err: any, data?: ListStagesCommandOutput) => void,
   ): void;
 
   /**
@@ -446,16 +446,16 @@ export interface IVSRealTime {
    */
   listStageSessions(
     args: ListStageSessionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListStageSessionsCommandOutput>;
   listStageSessions(
     args: ListStageSessionsCommandInput,
-    cb: (err: any, data?: ListStageSessionsCommandOutput) => void
+    cb: (err: any, data?: ListStageSessionsCommandOutput) => void,
   ): void;
   listStageSessions(
     args: ListStageSessionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListStageSessionsCommandOutput) => void
+    cb: (err: any, data?: ListStageSessionsCommandOutput) => void,
   ): void;
 
   /**
@@ -464,16 +464,16 @@ export interface IVSRealTime {
   listStorageConfigurations(): Promise<ListStorageConfigurationsCommandOutput>;
   listStorageConfigurations(
     args: ListStorageConfigurationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListStorageConfigurationsCommandOutput>;
   listStorageConfigurations(
     args: ListStorageConfigurationsCommandInput,
-    cb: (err: any, data?: ListStorageConfigurationsCommandOutput) => void
+    cb: (err: any, data?: ListStorageConfigurationsCommandOutput) => void,
   ): void;
   listStorageConfigurations(
     args: ListStorageConfigurationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListStorageConfigurationsCommandOutput) => void
+    cb: (err: any, data?: ListStorageConfigurationsCommandOutput) => void,
   ): void;
 
   /**
@@ -481,16 +481,16 @@ export interface IVSRealTime {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -498,16 +498,16 @@ export interface IVSRealTime {
    */
   startComposition(
     args: StartCompositionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartCompositionCommandOutput>;
   startComposition(
     args: StartCompositionCommandInput,
-    cb: (err: any, data?: StartCompositionCommandOutput) => void
+    cb: (err: any, data?: StartCompositionCommandOutput) => void,
   ): void;
   startComposition(
     args: StartCompositionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartCompositionCommandOutput) => void
+    cb: (err: any, data?: StartCompositionCommandOutput) => void,
   ): void;
 
   /**
@@ -515,13 +515,13 @@ export interface IVSRealTime {
    */
   stopComposition(
     args: StopCompositionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StopCompositionCommandOutput>;
   stopComposition(args: StopCompositionCommandInput, cb: (err: any, data?: StopCompositionCommandOutput) => void): void;
   stopComposition(
     args: StopCompositionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StopCompositionCommandOutput) => void
+    cb: (err: any, data?: StopCompositionCommandOutput) => void,
   ): void;
 
   /**
@@ -532,7 +532,7 @@ export interface IVSRealTime {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -543,7 +543,7 @@ export interface IVSRealTime {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -554,7 +554,7 @@ export interface IVSRealTime {
   updateStage(
     args: UpdateStageCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateStageCommandOutput) => void
+    cb: (err: any, data?: UpdateStageCommandOutput) => void,
   ): void;
 }
 

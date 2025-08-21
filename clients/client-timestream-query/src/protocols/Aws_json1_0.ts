@@ -125,7 +125,7 @@ import { TimestreamQueryServiceException as __BaseException } from "../models/Ti
  */
 export const se_CancelQueryCommand = async (
   input: CancelQueryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CancelQuery");
   let body: any;
@@ -138,7 +138,7 @@ export const se_CancelQueryCommand = async (
  */
 export const se_CreateScheduledQueryCommand = async (
   input: CreateScheduledQueryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateScheduledQuery");
   let body: any;
@@ -151,7 +151,7 @@ export const se_CreateScheduledQueryCommand = async (
  */
 export const se_DeleteScheduledQueryCommand = async (
   input: DeleteScheduledQueryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteScheduledQuery");
   let body: any;
@@ -164,7 +164,7 @@ export const se_DeleteScheduledQueryCommand = async (
  */
 export const se_DescribeAccountSettingsCommand = async (
   input: DescribeAccountSettingsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeAccountSettings");
   let body: any;
@@ -177,7 +177,7 @@ export const se_DescribeAccountSettingsCommand = async (
  */
 export const se_DescribeEndpointsCommand = async (
   input: DescribeEndpointsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeEndpoints");
   let body: any;
@@ -190,7 +190,7 @@ export const se_DescribeEndpointsCommand = async (
  */
 export const se_DescribeScheduledQueryCommand = async (
   input: DescribeScheduledQueryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeScheduledQuery");
   let body: any;
@@ -203,7 +203,7 @@ export const se_DescribeScheduledQueryCommand = async (
  */
 export const se_ExecuteScheduledQueryCommand = async (
   input: ExecuteScheduledQueryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ExecuteScheduledQuery");
   let body: any;
@@ -216,7 +216,7 @@ export const se_ExecuteScheduledQueryCommand = async (
  */
 export const se_ListScheduledQueriesCommand = async (
   input: ListScheduledQueriesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListScheduledQueries");
   let body: any;
@@ -229,7 +229,7 @@ export const se_ListScheduledQueriesCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListTagsForResource");
   let body: any;
@@ -242,7 +242,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_PrepareQueryCommand = async (
   input: PrepareQueryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("PrepareQuery");
   let body: any;
@@ -265,7 +265,7 @@ export const se_QueryCommand = async (input: QueryCommandInput, context: __Serde
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("TagResource");
   let body: any;
@@ -278,7 +278,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UntagResource");
   let body: any;
@@ -291,7 +291,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateAccountSettingsCommand = async (
   input: UpdateAccountSettingsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateAccountSettings");
   let body: any;
@@ -304,7 +304,7 @@ export const se_UpdateAccountSettingsCommand = async (
  */
 export const se_UpdateScheduledQueryCommand = async (
   input: UpdateScheduledQueryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateScheduledQuery");
   let body: any;
@@ -317,7 +317,7 @@ export const se_UpdateScheduledQueryCommand = async (
  */
 export const de_CancelQueryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CancelQueryCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -337,7 +337,7 @@ export const de_CancelQueryCommand = async (
  */
 export const de_CreateScheduledQueryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateScheduledQueryCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -357,7 +357,7 @@ export const de_CreateScheduledQueryCommand = async (
  */
 export const de_DeleteScheduledQueryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteScheduledQueryCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -374,7 +374,7 @@ export const de_DeleteScheduledQueryCommand = async (
  */
 export const de_DescribeAccountSettingsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeAccountSettingsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -394,7 +394,7 @@ export const de_DescribeAccountSettingsCommand = async (
  */
 export const de_DescribeEndpointsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeEndpointsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -414,7 +414,7 @@ export const de_DescribeEndpointsCommand = async (
  */
 export const de_DescribeScheduledQueryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeScheduledQueryCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -434,7 +434,7 @@ export const de_DescribeScheduledQueryCommand = async (
  */
 export const de_ExecuteScheduledQueryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ExecuteScheduledQueryCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -451,7 +451,7 @@ export const de_ExecuteScheduledQueryCommand = async (
  */
 export const de_ListScheduledQueriesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListScheduledQueriesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -471,7 +471,7 @@ export const de_ListScheduledQueriesCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -491,7 +491,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_PrepareQueryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PrepareQueryCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -528,7 +528,7 @@ export const de_QueryCommand = async (output: __HttpResponse, context: __SerdeCo
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -548,7 +548,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -568,7 +568,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateAccountSettingsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateAccountSettingsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -588,7 +588,7 @@ export const de_UpdateAccountSettingsCommand = async (
  */
 export const de_UpdateScheduledQueryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateScheduledQueryCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -652,7 +652,7 @@ const de_CommandError = async (output: __HttpResponse, context: __SerdeContext):
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -681,7 +681,7 @@ const de_ConflictExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_InternalServerExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -697,7 +697,7 @@ const de_InternalServerExceptionRes = async (
  */
 const de_InvalidEndpointExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidEndpointException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -713,7 +713,7 @@ const de_InvalidEndpointExceptionRes = async (
  */
 const de_QueryExecutionExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<QueryExecutionException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -729,7 +729,7 @@ const de_QueryExecutionExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -745,7 +745,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_ServiceQuotaExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceQuotaExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1260,7 +1260,7 @@ const buildHttpRpcRequest = async (
   headers: __HeaderBag,
   path: string,
   resolvedHostname: string | undefined,
-  body: any
+  body: any,
 ): Promise<__HttpRequest> => {
   const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
   const contents: any = {

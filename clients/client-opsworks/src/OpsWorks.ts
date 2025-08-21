@@ -397,13 +397,13 @@ export interface OpsWorks {
    */
   assignInstance(
     args: AssignInstanceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AssignInstanceCommandOutput>;
   assignInstance(args: AssignInstanceCommandInput, cb: (err: any, data?: AssignInstanceCommandOutput) => void): void;
   assignInstance(
     args: AssignInstanceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AssignInstanceCommandOutput) => void
+    cb: (err: any, data?: AssignInstanceCommandOutput) => void,
   ): void;
 
   /**
@@ -414,7 +414,7 @@ export interface OpsWorks {
   assignVolume(
     args: AssignVolumeCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AssignVolumeCommandOutput) => void
+    cb: (err: any, data?: AssignVolumeCommandOutput) => void,
   ): void;
 
   /**
@@ -422,16 +422,16 @@ export interface OpsWorks {
    */
   associateElasticIp(
     args: AssociateElasticIpCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AssociateElasticIpCommandOutput>;
   associateElasticIp(
     args: AssociateElasticIpCommandInput,
-    cb: (err: any, data?: AssociateElasticIpCommandOutput) => void
+    cb: (err: any, data?: AssociateElasticIpCommandOutput) => void,
   ): void;
   associateElasticIp(
     args: AssociateElasticIpCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AssociateElasticIpCommandOutput) => void
+    cb: (err: any, data?: AssociateElasticIpCommandOutput) => void,
   ): void;
 
   /**
@@ -439,16 +439,16 @@ export interface OpsWorks {
    */
   attachElasticLoadBalancer(
     args: AttachElasticLoadBalancerCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AttachElasticLoadBalancerCommandOutput>;
   attachElasticLoadBalancer(
     args: AttachElasticLoadBalancerCommandInput,
-    cb: (err: any, data?: AttachElasticLoadBalancerCommandOutput) => void
+    cb: (err: any, data?: AttachElasticLoadBalancerCommandOutput) => void,
   ): void;
   attachElasticLoadBalancer(
     args: AttachElasticLoadBalancerCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AttachElasticLoadBalancerCommandOutput) => void
+    cb: (err: any, data?: AttachElasticLoadBalancerCommandOutput) => void,
   ): void;
 
   /**
@@ -459,7 +459,7 @@ export interface OpsWorks {
   cloneStack(
     args: CloneStackCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CloneStackCommandOutput) => void
+    cb: (err: any, data?: CloneStackCommandOutput) => void,
   ): void;
 
   /**
@@ -470,7 +470,7 @@ export interface OpsWorks {
   createApp(
     args: CreateAppCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateAppCommandOutput) => void
+    cb: (err: any, data?: CreateAppCommandOutput) => void,
   ): void;
 
   /**
@@ -478,16 +478,16 @@ export interface OpsWorks {
    */
   createDeployment(
     args: CreateDeploymentCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateDeploymentCommandOutput>;
   createDeployment(
     args: CreateDeploymentCommandInput,
-    cb: (err: any, data?: CreateDeploymentCommandOutput) => void
+    cb: (err: any, data?: CreateDeploymentCommandOutput) => void,
   ): void;
   createDeployment(
     args: CreateDeploymentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateDeploymentCommandOutput) => void
+    cb: (err: any, data?: CreateDeploymentCommandOutput) => void,
   ): void;
 
   /**
@@ -495,13 +495,13 @@ export interface OpsWorks {
    */
   createInstance(
     args: CreateInstanceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateInstanceCommandOutput>;
   createInstance(args: CreateInstanceCommandInput, cb: (err: any, data?: CreateInstanceCommandOutput) => void): void;
   createInstance(
     args: CreateInstanceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateInstanceCommandOutput) => void
+    cb: (err: any, data?: CreateInstanceCommandOutput) => void,
   ): void;
 
   /**
@@ -512,7 +512,7 @@ export interface OpsWorks {
   createLayer(
     args: CreateLayerCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateLayerCommandOutput) => void
+    cb: (err: any, data?: CreateLayerCommandOutput) => void,
   ): void;
 
   /**
@@ -523,7 +523,7 @@ export interface OpsWorks {
   createStack(
     args: CreateStackCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateStackCommandOutput) => void
+    cb: (err: any, data?: CreateStackCommandOutput) => void,
   ): void;
 
   /**
@@ -531,16 +531,16 @@ export interface OpsWorks {
    */
   createUserProfile(
     args: CreateUserProfileCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateUserProfileCommandOutput>;
   createUserProfile(
     args: CreateUserProfileCommandInput,
-    cb: (err: any, data?: CreateUserProfileCommandOutput) => void
+    cb: (err: any, data?: CreateUserProfileCommandOutput) => void,
   ): void;
   createUserProfile(
     args: CreateUserProfileCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateUserProfileCommandOutput) => void
+    cb: (err: any, data?: CreateUserProfileCommandOutput) => void,
   ): void;
 
   /**
@@ -551,7 +551,7 @@ export interface OpsWorks {
   deleteApp(
     args: DeleteAppCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteAppCommandOutput) => void
+    cb: (err: any, data?: DeleteAppCommandOutput) => void,
   ): void;
 
   /**
@@ -559,13 +559,13 @@ export interface OpsWorks {
    */
   deleteInstance(
     args: DeleteInstanceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteInstanceCommandOutput>;
   deleteInstance(args: DeleteInstanceCommandInput, cb: (err: any, data?: DeleteInstanceCommandOutput) => void): void;
   deleteInstance(
     args: DeleteInstanceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteInstanceCommandOutput) => void
+    cb: (err: any, data?: DeleteInstanceCommandOutput) => void,
   ): void;
 
   /**
@@ -576,7 +576,7 @@ export interface OpsWorks {
   deleteLayer(
     args: DeleteLayerCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteLayerCommandOutput) => void
+    cb: (err: any, data?: DeleteLayerCommandOutput) => void,
   ): void;
 
   /**
@@ -587,7 +587,7 @@ export interface OpsWorks {
   deleteStack(
     args: DeleteStackCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteStackCommandOutput) => void
+    cb: (err: any, data?: DeleteStackCommandOutput) => void,
   ): void;
 
   /**
@@ -595,16 +595,16 @@ export interface OpsWorks {
    */
   deleteUserProfile(
     args: DeleteUserProfileCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteUserProfileCommandOutput>;
   deleteUserProfile(
     args: DeleteUserProfileCommandInput,
-    cb: (err: any, data?: DeleteUserProfileCommandOutput) => void
+    cb: (err: any, data?: DeleteUserProfileCommandOutput) => void,
   ): void;
   deleteUserProfile(
     args: DeleteUserProfileCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteUserProfileCommandOutput) => void
+    cb: (err: any, data?: DeleteUserProfileCommandOutput) => void,
   ): void;
 
   /**
@@ -612,16 +612,16 @@ export interface OpsWorks {
    */
   deregisterEcsCluster(
     args: DeregisterEcsClusterCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeregisterEcsClusterCommandOutput>;
   deregisterEcsCluster(
     args: DeregisterEcsClusterCommandInput,
-    cb: (err: any, data?: DeregisterEcsClusterCommandOutput) => void
+    cb: (err: any, data?: DeregisterEcsClusterCommandOutput) => void,
   ): void;
   deregisterEcsCluster(
     args: DeregisterEcsClusterCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeregisterEcsClusterCommandOutput) => void
+    cb: (err: any, data?: DeregisterEcsClusterCommandOutput) => void,
   ): void;
 
   /**
@@ -629,16 +629,16 @@ export interface OpsWorks {
    */
   deregisterElasticIp(
     args: DeregisterElasticIpCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeregisterElasticIpCommandOutput>;
   deregisterElasticIp(
     args: DeregisterElasticIpCommandInput,
-    cb: (err: any, data?: DeregisterElasticIpCommandOutput) => void
+    cb: (err: any, data?: DeregisterElasticIpCommandOutput) => void,
   ): void;
   deregisterElasticIp(
     args: DeregisterElasticIpCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeregisterElasticIpCommandOutput) => void
+    cb: (err: any, data?: DeregisterElasticIpCommandOutput) => void,
   ): void;
 
   /**
@@ -646,16 +646,16 @@ export interface OpsWorks {
    */
   deregisterInstance(
     args: DeregisterInstanceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeregisterInstanceCommandOutput>;
   deregisterInstance(
     args: DeregisterInstanceCommandInput,
-    cb: (err: any, data?: DeregisterInstanceCommandOutput) => void
+    cb: (err: any, data?: DeregisterInstanceCommandOutput) => void,
   ): void;
   deregisterInstance(
     args: DeregisterInstanceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeregisterInstanceCommandOutput) => void
+    cb: (err: any, data?: DeregisterInstanceCommandOutput) => void,
   ): void;
 
   /**
@@ -663,16 +663,16 @@ export interface OpsWorks {
    */
   deregisterRdsDbInstance(
     args: DeregisterRdsDbInstanceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeregisterRdsDbInstanceCommandOutput>;
   deregisterRdsDbInstance(
     args: DeregisterRdsDbInstanceCommandInput,
-    cb: (err: any, data?: DeregisterRdsDbInstanceCommandOutput) => void
+    cb: (err: any, data?: DeregisterRdsDbInstanceCommandOutput) => void,
   ): void;
   deregisterRdsDbInstance(
     args: DeregisterRdsDbInstanceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeregisterRdsDbInstanceCommandOutput) => void
+    cb: (err: any, data?: DeregisterRdsDbInstanceCommandOutput) => void,
   ): void;
 
   /**
@@ -680,16 +680,16 @@ export interface OpsWorks {
    */
   deregisterVolume(
     args: DeregisterVolumeCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeregisterVolumeCommandOutput>;
   deregisterVolume(
     args: DeregisterVolumeCommandInput,
-    cb: (err: any, data?: DeregisterVolumeCommandOutput) => void
+    cb: (err: any, data?: DeregisterVolumeCommandOutput) => void,
   ): void;
   deregisterVolume(
     args: DeregisterVolumeCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeregisterVolumeCommandOutput) => void
+    cb: (err: any, data?: DeregisterVolumeCommandOutput) => void,
   ): void;
 
   /**
@@ -698,16 +698,16 @@ export interface OpsWorks {
   describeAgentVersions(): Promise<DescribeAgentVersionsCommandOutput>;
   describeAgentVersions(
     args: DescribeAgentVersionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeAgentVersionsCommandOutput>;
   describeAgentVersions(
     args: DescribeAgentVersionsCommandInput,
-    cb: (err: any, data?: DescribeAgentVersionsCommandOutput) => void
+    cb: (err: any, data?: DescribeAgentVersionsCommandOutput) => void,
   ): void;
   describeAgentVersions(
     args: DescribeAgentVersionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeAgentVersionsCommandOutput) => void
+    cb: (err: any, data?: DescribeAgentVersionsCommandOutput) => void,
   ): void;
 
   /**
@@ -719,7 +719,7 @@ export interface OpsWorks {
   describeApps(
     args: DescribeAppsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeAppsCommandOutput) => void
+    cb: (err: any, data?: DescribeAppsCommandOutput) => void,
   ): void;
 
   /**
@@ -728,16 +728,16 @@ export interface OpsWorks {
   describeCommands(): Promise<DescribeCommandsCommandOutput>;
   describeCommands(
     args: DescribeCommandsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeCommandsCommandOutput>;
   describeCommands(
     args: DescribeCommandsCommandInput,
-    cb: (err: any, data?: DescribeCommandsCommandOutput) => void
+    cb: (err: any, data?: DescribeCommandsCommandOutput) => void,
   ): void;
   describeCommands(
     args: DescribeCommandsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeCommandsCommandOutput) => void
+    cb: (err: any, data?: DescribeCommandsCommandOutput) => void,
   ): void;
 
   /**
@@ -746,16 +746,16 @@ export interface OpsWorks {
   describeDeployments(): Promise<DescribeDeploymentsCommandOutput>;
   describeDeployments(
     args: DescribeDeploymentsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeDeploymentsCommandOutput>;
   describeDeployments(
     args: DescribeDeploymentsCommandInput,
-    cb: (err: any, data?: DescribeDeploymentsCommandOutput) => void
+    cb: (err: any, data?: DescribeDeploymentsCommandOutput) => void,
   ): void;
   describeDeployments(
     args: DescribeDeploymentsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeDeploymentsCommandOutput) => void
+    cb: (err: any, data?: DescribeDeploymentsCommandOutput) => void,
   ): void;
 
   /**
@@ -764,16 +764,16 @@ export interface OpsWorks {
   describeEcsClusters(): Promise<DescribeEcsClustersCommandOutput>;
   describeEcsClusters(
     args: DescribeEcsClustersCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeEcsClustersCommandOutput>;
   describeEcsClusters(
     args: DescribeEcsClustersCommandInput,
-    cb: (err: any, data?: DescribeEcsClustersCommandOutput) => void
+    cb: (err: any, data?: DescribeEcsClustersCommandOutput) => void,
   ): void;
   describeEcsClusters(
     args: DescribeEcsClustersCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeEcsClustersCommandOutput) => void
+    cb: (err: any, data?: DescribeEcsClustersCommandOutput) => void,
   ): void;
 
   /**
@@ -782,16 +782,16 @@ export interface OpsWorks {
   describeElasticIps(): Promise<DescribeElasticIpsCommandOutput>;
   describeElasticIps(
     args: DescribeElasticIpsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeElasticIpsCommandOutput>;
   describeElasticIps(
     args: DescribeElasticIpsCommandInput,
-    cb: (err: any, data?: DescribeElasticIpsCommandOutput) => void
+    cb: (err: any, data?: DescribeElasticIpsCommandOutput) => void,
   ): void;
   describeElasticIps(
     args: DescribeElasticIpsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeElasticIpsCommandOutput) => void
+    cb: (err: any, data?: DescribeElasticIpsCommandOutput) => void,
   ): void;
 
   /**
@@ -800,16 +800,16 @@ export interface OpsWorks {
   describeElasticLoadBalancers(): Promise<DescribeElasticLoadBalancersCommandOutput>;
   describeElasticLoadBalancers(
     args: DescribeElasticLoadBalancersCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeElasticLoadBalancersCommandOutput>;
   describeElasticLoadBalancers(
     args: DescribeElasticLoadBalancersCommandInput,
-    cb: (err: any, data?: DescribeElasticLoadBalancersCommandOutput) => void
+    cb: (err: any, data?: DescribeElasticLoadBalancersCommandOutput) => void,
   ): void;
   describeElasticLoadBalancers(
     args: DescribeElasticLoadBalancersCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeElasticLoadBalancersCommandOutput) => void
+    cb: (err: any, data?: DescribeElasticLoadBalancersCommandOutput) => void,
   ): void;
 
   /**
@@ -818,16 +818,16 @@ export interface OpsWorks {
   describeInstances(): Promise<DescribeInstancesCommandOutput>;
   describeInstances(
     args: DescribeInstancesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeInstancesCommandOutput>;
   describeInstances(
     args: DescribeInstancesCommandInput,
-    cb: (err: any, data?: DescribeInstancesCommandOutput) => void
+    cb: (err: any, data?: DescribeInstancesCommandOutput) => void,
   ): void;
   describeInstances(
     args: DescribeInstancesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeInstancesCommandOutput) => void
+    cb: (err: any, data?: DescribeInstancesCommandOutput) => void,
   ): void;
 
   /**
@@ -836,13 +836,13 @@ export interface OpsWorks {
   describeLayers(): Promise<DescribeLayersCommandOutput>;
   describeLayers(
     args: DescribeLayersCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeLayersCommandOutput>;
   describeLayers(args: DescribeLayersCommandInput, cb: (err: any, data?: DescribeLayersCommandOutput) => void): void;
   describeLayers(
     args: DescribeLayersCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeLayersCommandOutput) => void
+    cb: (err: any, data?: DescribeLayersCommandOutput) => void,
   ): void;
 
   /**
@@ -850,16 +850,16 @@ export interface OpsWorks {
    */
   describeLoadBasedAutoScaling(
     args: DescribeLoadBasedAutoScalingCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeLoadBasedAutoScalingCommandOutput>;
   describeLoadBasedAutoScaling(
     args: DescribeLoadBasedAutoScalingCommandInput,
-    cb: (err: any, data?: DescribeLoadBasedAutoScalingCommandOutput) => void
+    cb: (err: any, data?: DescribeLoadBasedAutoScalingCommandOutput) => void,
   ): void;
   describeLoadBasedAutoScaling(
     args: DescribeLoadBasedAutoScalingCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeLoadBasedAutoScalingCommandOutput) => void
+    cb: (err: any, data?: DescribeLoadBasedAutoScalingCommandOutput) => void,
   ): void;
 
   /**
@@ -868,16 +868,16 @@ export interface OpsWorks {
   describeMyUserProfile(): Promise<DescribeMyUserProfileCommandOutput>;
   describeMyUserProfile(
     args: DescribeMyUserProfileCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeMyUserProfileCommandOutput>;
   describeMyUserProfile(
     args: DescribeMyUserProfileCommandInput,
-    cb: (err: any, data?: DescribeMyUserProfileCommandOutput) => void
+    cb: (err: any, data?: DescribeMyUserProfileCommandOutput) => void,
   ): void;
   describeMyUserProfile(
     args: DescribeMyUserProfileCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeMyUserProfileCommandOutput) => void
+    cb: (err: any, data?: DescribeMyUserProfileCommandOutput) => void,
   ): void;
 
   /**
@@ -886,16 +886,16 @@ export interface OpsWorks {
   describeOperatingSystems(): Promise<DescribeOperatingSystemsCommandOutput>;
   describeOperatingSystems(
     args: DescribeOperatingSystemsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeOperatingSystemsCommandOutput>;
   describeOperatingSystems(
     args: DescribeOperatingSystemsCommandInput,
-    cb: (err: any, data?: DescribeOperatingSystemsCommandOutput) => void
+    cb: (err: any, data?: DescribeOperatingSystemsCommandOutput) => void,
   ): void;
   describeOperatingSystems(
     args: DescribeOperatingSystemsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeOperatingSystemsCommandOutput) => void
+    cb: (err: any, data?: DescribeOperatingSystemsCommandOutput) => void,
   ): void;
 
   /**
@@ -904,16 +904,16 @@ export interface OpsWorks {
   describePermissions(): Promise<DescribePermissionsCommandOutput>;
   describePermissions(
     args: DescribePermissionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribePermissionsCommandOutput>;
   describePermissions(
     args: DescribePermissionsCommandInput,
-    cb: (err: any, data?: DescribePermissionsCommandOutput) => void
+    cb: (err: any, data?: DescribePermissionsCommandOutput) => void,
   ): void;
   describePermissions(
     args: DescribePermissionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribePermissionsCommandOutput) => void
+    cb: (err: any, data?: DescribePermissionsCommandOutput) => void,
   ): void;
 
   /**
@@ -922,16 +922,16 @@ export interface OpsWorks {
   describeRaidArrays(): Promise<DescribeRaidArraysCommandOutput>;
   describeRaidArrays(
     args: DescribeRaidArraysCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeRaidArraysCommandOutput>;
   describeRaidArrays(
     args: DescribeRaidArraysCommandInput,
-    cb: (err: any, data?: DescribeRaidArraysCommandOutput) => void
+    cb: (err: any, data?: DescribeRaidArraysCommandOutput) => void,
   ): void;
   describeRaidArrays(
     args: DescribeRaidArraysCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeRaidArraysCommandOutput) => void
+    cb: (err: any, data?: DescribeRaidArraysCommandOutput) => void,
   ): void;
 
   /**
@@ -939,16 +939,16 @@ export interface OpsWorks {
    */
   describeRdsDbInstances(
     args: DescribeRdsDbInstancesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeRdsDbInstancesCommandOutput>;
   describeRdsDbInstances(
     args: DescribeRdsDbInstancesCommandInput,
-    cb: (err: any, data?: DescribeRdsDbInstancesCommandOutput) => void
+    cb: (err: any, data?: DescribeRdsDbInstancesCommandOutput) => void,
   ): void;
   describeRdsDbInstances(
     args: DescribeRdsDbInstancesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeRdsDbInstancesCommandOutput) => void
+    cb: (err: any, data?: DescribeRdsDbInstancesCommandOutput) => void,
   ): void;
 
   /**
@@ -957,16 +957,16 @@ export interface OpsWorks {
   describeServiceErrors(): Promise<DescribeServiceErrorsCommandOutput>;
   describeServiceErrors(
     args: DescribeServiceErrorsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeServiceErrorsCommandOutput>;
   describeServiceErrors(
     args: DescribeServiceErrorsCommandInput,
-    cb: (err: any, data?: DescribeServiceErrorsCommandOutput) => void
+    cb: (err: any, data?: DescribeServiceErrorsCommandOutput) => void,
   ): void;
   describeServiceErrors(
     args: DescribeServiceErrorsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeServiceErrorsCommandOutput) => void
+    cb: (err: any, data?: DescribeServiceErrorsCommandOutput) => void,
   ): void;
 
   /**
@@ -974,16 +974,16 @@ export interface OpsWorks {
    */
   describeStackProvisioningParameters(
     args: DescribeStackProvisioningParametersCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeStackProvisioningParametersCommandOutput>;
   describeStackProvisioningParameters(
     args: DescribeStackProvisioningParametersCommandInput,
-    cb: (err: any, data?: DescribeStackProvisioningParametersCommandOutput) => void
+    cb: (err: any, data?: DescribeStackProvisioningParametersCommandOutput) => void,
   ): void;
   describeStackProvisioningParameters(
     args: DescribeStackProvisioningParametersCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeStackProvisioningParametersCommandOutput) => void
+    cb: (err: any, data?: DescribeStackProvisioningParametersCommandOutput) => void,
   ): void;
 
   /**
@@ -992,13 +992,13 @@ export interface OpsWorks {
   describeStacks(): Promise<DescribeStacksCommandOutput>;
   describeStacks(
     args: DescribeStacksCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeStacksCommandOutput>;
   describeStacks(args: DescribeStacksCommandInput, cb: (err: any, data?: DescribeStacksCommandOutput) => void): void;
   describeStacks(
     args: DescribeStacksCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeStacksCommandOutput) => void
+    cb: (err: any, data?: DescribeStacksCommandOutput) => void,
   ): void;
 
   /**
@@ -1006,16 +1006,16 @@ export interface OpsWorks {
    */
   describeStackSummary(
     args: DescribeStackSummaryCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeStackSummaryCommandOutput>;
   describeStackSummary(
     args: DescribeStackSummaryCommandInput,
-    cb: (err: any, data?: DescribeStackSummaryCommandOutput) => void
+    cb: (err: any, data?: DescribeStackSummaryCommandOutput) => void,
   ): void;
   describeStackSummary(
     args: DescribeStackSummaryCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeStackSummaryCommandOutput) => void
+    cb: (err: any, data?: DescribeStackSummaryCommandOutput) => void,
   ): void;
 
   /**
@@ -1023,16 +1023,16 @@ export interface OpsWorks {
    */
   describeTimeBasedAutoScaling(
     args: DescribeTimeBasedAutoScalingCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeTimeBasedAutoScalingCommandOutput>;
   describeTimeBasedAutoScaling(
     args: DescribeTimeBasedAutoScalingCommandInput,
-    cb: (err: any, data?: DescribeTimeBasedAutoScalingCommandOutput) => void
+    cb: (err: any, data?: DescribeTimeBasedAutoScalingCommandOutput) => void,
   ): void;
   describeTimeBasedAutoScaling(
     args: DescribeTimeBasedAutoScalingCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeTimeBasedAutoScalingCommandOutput) => void
+    cb: (err: any, data?: DescribeTimeBasedAutoScalingCommandOutput) => void,
   ): void;
 
   /**
@@ -1041,16 +1041,16 @@ export interface OpsWorks {
   describeUserProfiles(): Promise<DescribeUserProfilesCommandOutput>;
   describeUserProfiles(
     args: DescribeUserProfilesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeUserProfilesCommandOutput>;
   describeUserProfiles(
     args: DescribeUserProfilesCommandInput,
-    cb: (err: any, data?: DescribeUserProfilesCommandOutput) => void
+    cb: (err: any, data?: DescribeUserProfilesCommandOutput) => void,
   ): void;
   describeUserProfiles(
     args: DescribeUserProfilesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeUserProfilesCommandOutput) => void
+    cb: (err: any, data?: DescribeUserProfilesCommandOutput) => void,
   ): void;
 
   /**
@@ -1059,13 +1059,13 @@ export interface OpsWorks {
   describeVolumes(): Promise<DescribeVolumesCommandOutput>;
   describeVolumes(
     args: DescribeVolumesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeVolumesCommandOutput>;
   describeVolumes(args: DescribeVolumesCommandInput, cb: (err: any, data?: DescribeVolumesCommandOutput) => void): void;
   describeVolumes(
     args: DescribeVolumesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeVolumesCommandOutput) => void
+    cb: (err: any, data?: DescribeVolumesCommandOutput) => void,
   ): void;
 
   /**
@@ -1073,16 +1073,16 @@ export interface OpsWorks {
    */
   detachElasticLoadBalancer(
     args: DetachElasticLoadBalancerCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DetachElasticLoadBalancerCommandOutput>;
   detachElasticLoadBalancer(
     args: DetachElasticLoadBalancerCommandInput,
-    cb: (err: any, data?: DetachElasticLoadBalancerCommandOutput) => void
+    cb: (err: any, data?: DetachElasticLoadBalancerCommandOutput) => void,
   ): void;
   detachElasticLoadBalancer(
     args: DetachElasticLoadBalancerCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DetachElasticLoadBalancerCommandOutput) => void
+    cb: (err: any, data?: DetachElasticLoadBalancerCommandOutput) => void,
   ): void;
 
   /**
@@ -1090,16 +1090,16 @@ export interface OpsWorks {
    */
   disassociateElasticIp(
     args: DisassociateElasticIpCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DisassociateElasticIpCommandOutput>;
   disassociateElasticIp(
     args: DisassociateElasticIpCommandInput,
-    cb: (err: any, data?: DisassociateElasticIpCommandOutput) => void
+    cb: (err: any, data?: DisassociateElasticIpCommandOutput) => void,
   ): void;
   disassociateElasticIp(
     args: DisassociateElasticIpCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DisassociateElasticIpCommandOutput) => void
+    cb: (err: any, data?: DisassociateElasticIpCommandOutput) => void,
   ): void;
 
   /**
@@ -1107,16 +1107,16 @@ export interface OpsWorks {
    */
   getHostnameSuggestion(
     args: GetHostnameSuggestionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetHostnameSuggestionCommandOutput>;
   getHostnameSuggestion(
     args: GetHostnameSuggestionCommandInput,
-    cb: (err: any, data?: GetHostnameSuggestionCommandOutput) => void
+    cb: (err: any, data?: GetHostnameSuggestionCommandOutput) => void,
   ): void;
   getHostnameSuggestion(
     args: GetHostnameSuggestionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetHostnameSuggestionCommandOutput) => void
+    cb: (err: any, data?: GetHostnameSuggestionCommandOutput) => void,
   ): void;
 
   /**
@@ -1127,7 +1127,7 @@ export interface OpsWorks {
   grantAccess(
     args: GrantAccessCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GrantAccessCommandOutput) => void
+    cb: (err: any, data?: GrantAccessCommandOutput) => void,
   ): void;
 
   /**
@@ -1138,7 +1138,7 @@ export interface OpsWorks {
   listTags(
     args: ListTagsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsCommandOutput) => void
+    cb: (err: any, data?: ListTagsCommandOutput) => void,
   ): void;
 
   /**
@@ -1146,13 +1146,13 @@ export interface OpsWorks {
    */
   rebootInstance(
     args: RebootInstanceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<RebootInstanceCommandOutput>;
   rebootInstance(args: RebootInstanceCommandInput, cb: (err: any, data?: RebootInstanceCommandOutput) => void): void;
   rebootInstance(
     args: RebootInstanceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RebootInstanceCommandOutput) => void
+    cb: (err: any, data?: RebootInstanceCommandOutput) => void,
   ): void;
 
   /**
@@ -1160,16 +1160,16 @@ export interface OpsWorks {
    */
   registerEcsCluster(
     args: RegisterEcsClusterCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<RegisterEcsClusterCommandOutput>;
   registerEcsCluster(
     args: RegisterEcsClusterCommandInput,
-    cb: (err: any, data?: RegisterEcsClusterCommandOutput) => void
+    cb: (err: any, data?: RegisterEcsClusterCommandOutput) => void,
   ): void;
   registerEcsCluster(
     args: RegisterEcsClusterCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RegisterEcsClusterCommandOutput) => void
+    cb: (err: any, data?: RegisterEcsClusterCommandOutput) => void,
   ): void;
 
   /**
@@ -1177,16 +1177,16 @@ export interface OpsWorks {
    */
   registerElasticIp(
     args: RegisterElasticIpCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<RegisterElasticIpCommandOutput>;
   registerElasticIp(
     args: RegisterElasticIpCommandInput,
-    cb: (err: any, data?: RegisterElasticIpCommandOutput) => void
+    cb: (err: any, data?: RegisterElasticIpCommandOutput) => void,
   ): void;
   registerElasticIp(
     args: RegisterElasticIpCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RegisterElasticIpCommandOutput) => void
+    cb: (err: any, data?: RegisterElasticIpCommandOutput) => void,
   ): void;
 
   /**
@@ -1194,16 +1194,16 @@ export interface OpsWorks {
    */
   registerInstance(
     args: RegisterInstanceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<RegisterInstanceCommandOutput>;
   registerInstance(
     args: RegisterInstanceCommandInput,
-    cb: (err: any, data?: RegisterInstanceCommandOutput) => void
+    cb: (err: any, data?: RegisterInstanceCommandOutput) => void,
   ): void;
   registerInstance(
     args: RegisterInstanceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RegisterInstanceCommandOutput) => void
+    cb: (err: any, data?: RegisterInstanceCommandOutput) => void,
   ): void;
 
   /**
@@ -1211,16 +1211,16 @@ export interface OpsWorks {
    */
   registerRdsDbInstance(
     args: RegisterRdsDbInstanceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<RegisterRdsDbInstanceCommandOutput>;
   registerRdsDbInstance(
     args: RegisterRdsDbInstanceCommandInput,
-    cb: (err: any, data?: RegisterRdsDbInstanceCommandOutput) => void
+    cb: (err: any, data?: RegisterRdsDbInstanceCommandOutput) => void,
   ): void;
   registerRdsDbInstance(
     args: RegisterRdsDbInstanceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RegisterRdsDbInstanceCommandOutput) => void
+    cb: (err: any, data?: RegisterRdsDbInstanceCommandOutput) => void,
   ): void;
 
   /**
@@ -1228,13 +1228,13 @@ export interface OpsWorks {
    */
   registerVolume(
     args: RegisterVolumeCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<RegisterVolumeCommandOutput>;
   registerVolume(args: RegisterVolumeCommandInput, cb: (err: any, data?: RegisterVolumeCommandOutput) => void): void;
   registerVolume(
     args: RegisterVolumeCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RegisterVolumeCommandOutput) => void
+    cb: (err: any, data?: RegisterVolumeCommandOutput) => void,
   ): void;
 
   /**
@@ -1242,16 +1242,16 @@ export interface OpsWorks {
    */
   setLoadBasedAutoScaling(
     args: SetLoadBasedAutoScalingCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<SetLoadBasedAutoScalingCommandOutput>;
   setLoadBasedAutoScaling(
     args: SetLoadBasedAutoScalingCommandInput,
-    cb: (err: any, data?: SetLoadBasedAutoScalingCommandOutput) => void
+    cb: (err: any, data?: SetLoadBasedAutoScalingCommandOutput) => void,
   ): void;
   setLoadBasedAutoScaling(
     args: SetLoadBasedAutoScalingCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SetLoadBasedAutoScalingCommandOutput) => void
+    cb: (err: any, data?: SetLoadBasedAutoScalingCommandOutput) => void,
   ): void;
 
   /**
@@ -1262,7 +1262,7 @@ export interface OpsWorks {
   setPermission(
     args: SetPermissionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SetPermissionCommandOutput) => void
+    cb: (err: any, data?: SetPermissionCommandOutput) => void,
   ): void;
 
   /**
@@ -1270,16 +1270,16 @@ export interface OpsWorks {
    */
   setTimeBasedAutoScaling(
     args: SetTimeBasedAutoScalingCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<SetTimeBasedAutoScalingCommandOutput>;
   setTimeBasedAutoScaling(
     args: SetTimeBasedAutoScalingCommandInput,
-    cb: (err: any, data?: SetTimeBasedAutoScalingCommandOutput) => void
+    cb: (err: any, data?: SetTimeBasedAutoScalingCommandOutput) => void,
   ): void;
   setTimeBasedAutoScaling(
     args: SetTimeBasedAutoScalingCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SetTimeBasedAutoScalingCommandOutput) => void
+    cb: (err: any, data?: SetTimeBasedAutoScalingCommandOutput) => void,
   ): void;
 
   /**
@@ -1290,7 +1290,7 @@ export interface OpsWorks {
   startInstance(
     args: StartInstanceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartInstanceCommandOutput) => void
+    cb: (err: any, data?: StartInstanceCommandOutput) => void,
   ): void;
 
   /**
@@ -1301,7 +1301,7 @@ export interface OpsWorks {
   startStack(
     args: StartStackCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartStackCommandOutput) => void
+    cb: (err: any, data?: StartStackCommandOutput) => void,
   ): void;
 
   /**
@@ -1312,7 +1312,7 @@ export interface OpsWorks {
   stopInstance(
     args: StopInstanceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StopInstanceCommandOutput) => void
+    cb: (err: any, data?: StopInstanceCommandOutput) => void,
   ): void;
 
   /**
@@ -1323,7 +1323,7 @@ export interface OpsWorks {
   stopStack(
     args: StopStackCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StopStackCommandOutput) => void
+    cb: (err: any, data?: StopStackCommandOutput) => void,
   ): void;
 
   /**
@@ -1334,7 +1334,7 @@ export interface OpsWorks {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -1342,16 +1342,16 @@ export interface OpsWorks {
    */
   unassignInstance(
     args: UnassignInstanceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UnassignInstanceCommandOutput>;
   unassignInstance(
     args: UnassignInstanceCommandInput,
-    cb: (err: any, data?: UnassignInstanceCommandOutput) => void
+    cb: (err: any, data?: UnassignInstanceCommandOutput) => void,
   ): void;
   unassignInstance(
     args: UnassignInstanceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UnassignInstanceCommandOutput) => void
+    cb: (err: any, data?: UnassignInstanceCommandOutput) => void,
   ): void;
 
   /**
@@ -1359,13 +1359,13 @@ export interface OpsWorks {
    */
   unassignVolume(
     args: UnassignVolumeCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UnassignVolumeCommandOutput>;
   unassignVolume(args: UnassignVolumeCommandInput, cb: (err: any, data?: UnassignVolumeCommandOutput) => void): void;
   unassignVolume(
     args: UnassignVolumeCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UnassignVolumeCommandOutput) => void
+    cb: (err: any, data?: UnassignVolumeCommandOutput) => void,
   ): void;
 
   /**
@@ -1376,7 +1376,7 @@ export interface OpsWorks {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -1387,7 +1387,7 @@ export interface OpsWorks {
   updateApp(
     args: UpdateAppCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateAppCommandOutput) => void
+    cb: (err: any, data?: UpdateAppCommandOutput) => void,
   ): void;
 
   /**
@@ -1395,13 +1395,13 @@ export interface OpsWorks {
    */
   updateElasticIp(
     args: UpdateElasticIpCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateElasticIpCommandOutput>;
   updateElasticIp(args: UpdateElasticIpCommandInput, cb: (err: any, data?: UpdateElasticIpCommandOutput) => void): void;
   updateElasticIp(
     args: UpdateElasticIpCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateElasticIpCommandOutput) => void
+    cb: (err: any, data?: UpdateElasticIpCommandOutput) => void,
   ): void;
 
   /**
@@ -1409,13 +1409,13 @@ export interface OpsWorks {
    */
   updateInstance(
     args: UpdateInstanceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateInstanceCommandOutput>;
   updateInstance(args: UpdateInstanceCommandInput, cb: (err: any, data?: UpdateInstanceCommandOutput) => void): void;
   updateInstance(
     args: UpdateInstanceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateInstanceCommandOutput) => void
+    cb: (err: any, data?: UpdateInstanceCommandOutput) => void,
   ): void;
 
   /**
@@ -1426,7 +1426,7 @@ export interface OpsWorks {
   updateLayer(
     args: UpdateLayerCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateLayerCommandOutput) => void
+    cb: (err: any, data?: UpdateLayerCommandOutput) => void,
   ): void;
 
   /**
@@ -1435,16 +1435,16 @@ export interface OpsWorks {
   updateMyUserProfile(): Promise<UpdateMyUserProfileCommandOutput>;
   updateMyUserProfile(
     args: UpdateMyUserProfileCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateMyUserProfileCommandOutput>;
   updateMyUserProfile(
     args: UpdateMyUserProfileCommandInput,
-    cb: (err: any, data?: UpdateMyUserProfileCommandOutput) => void
+    cb: (err: any, data?: UpdateMyUserProfileCommandOutput) => void,
   ): void;
   updateMyUserProfile(
     args: UpdateMyUserProfileCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateMyUserProfileCommandOutput) => void
+    cb: (err: any, data?: UpdateMyUserProfileCommandOutput) => void,
   ): void;
 
   /**
@@ -1452,16 +1452,16 @@ export interface OpsWorks {
    */
   updateRdsDbInstance(
     args: UpdateRdsDbInstanceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateRdsDbInstanceCommandOutput>;
   updateRdsDbInstance(
     args: UpdateRdsDbInstanceCommandInput,
-    cb: (err: any, data?: UpdateRdsDbInstanceCommandOutput) => void
+    cb: (err: any, data?: UpdateRdsDbInstanceCommandOutput) => void,
   ): void;
   updateRdsDbInstance(
     args: UpdateRdsDbInstanceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateRdsDbInstanceCommandOutput) => void
+    cb: (err: any, data?: UpdateRdsDbInstanceCommandOutput) => void,
   ): void;
 
   /**
@@ -1472,7 +1472,7 @@ export interface OpsWorks {
   updateStack(
     args: UpdateStackCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateStackCommandOutput) => void
+    cb: (err: any, data?: UpdateStackCommandOutput) => void,
   ): void;
 
   /**
@@ -1480,16 +1480,16 @@ export interface OpsWorks {
    */
   updateUserProfile(
     args: UpdateUserProfileCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateUserProfileCommandOutput>;
   updateUserProfile(
     args: UpdateUserProfileCommandInput,
-    cb: (err: any, data?: UpdateUserProfileCommandOutput) => void
+    cb: (err: any, data?: UpdateUserProfileCommandOutput) => void,
   ): void;
   updateUserProfile(
     args: UpdateUserProfileCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateUserProfileCommandOutput) => void
+    cb: (err: any, data?: UpdateUserProfileCommandOutput) => void,
   ): void;
 
   /**
@@ -1500,7 +1500,7 @@ export interface OpsWorks {
   updateVolume(
     args: UpdateVolumeCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateVolumeCommandOutput) => void
+    cb: (err: any, data?: UpdateVolumeCommandOutput) => void,
   ): void;
 }
 

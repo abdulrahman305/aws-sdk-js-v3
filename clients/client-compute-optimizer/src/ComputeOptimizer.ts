@@ -151,16 +151,16 @@ export interface ComputeOptimizer {
    */
   deleteRecommendationPreferences(
     args: DeleteRecommendationPreferencesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteRecommendationPreferencesCommandOutput>;
   deleteRecommendationPreferences(
     args: DeleteRecommendationPreferencesCommandInput,
-    cb: (err: any, data?: DeleteRecommendationPreferencesCommandOutput) => void
+    cb: (err: any, data?: DeleteRecommendationPreferencesCommandOutput) => void,
   ): void;
   deleteRecommendationPreferences(
     args: DeleteRecommendationPreferencesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteRecommendationPreferencesCommandOutput) => void
+    cb: (err: any, data?: DeleteRecommendationPreferencesCommandOutput) => void,
   ): void;
 
   /**
@@ -169,16 +169,16 @@ export interface ComputeOptimizer {
   describeRecommendationExportJobs(): Promise<DescribeRecommendationExportJobsCommandOutput>;
   describeRecommendationExportJobs(
     args: DescribeRecommendationExportJobsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeRecommendationExportJobsCommandOutput>;
   describeRecommendationExportJobs(
     args: DescribeRecommendationExportJobsCommandInput,
-    cb: (err: any, data?: DescribeRecommendationExportJobsCommandOutput) => void
+    cb: (err: any, data?: DescribeRecommendationExportJobsCommandOutput) => void,
   ): void;
   describeRecommendationExportJobs(
     args: DescribeRecommendationExportJobsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeRecommendationExportJobsCommandOutput) => void
+    cb: (err: any, data?: DescribeRecommendationExportJobsCommandOutput) => void,
   ): void;
 
   /**
@@ -186,16 +186,16 @@ export interface ComputeOptimizer {
    */
   exportAutoScalingGroupRecommendations(
     args: ExportAutoScalingGroupRecommendationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ExportAutoScalingGroupRecommendationsCommandOutput>;
   exportAutoScalingGroupRecommendations(
     args: ExportAutoScalingGroupRecommendationsCommandInput,
-    cb: (err: any, data?: ExportAutoScalingGroupRecommendationsCommandOutput) => void
+    cb: (err: any, data?: ExportAutoScalingGroupRecommendationsCommandOutput) => void,
   ): void;
   exportAutoScalingGroupRecommendations(
     args: ExportAutoScalingGroupRecommendationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ExportAutoScalingGroupRecommendationsCommandOutput) => void
+    cb: (err: any, data?: ExportAutoScalingGroupRecommendationsCommandOutput) => void,
   ): void;
 
   /**
@@ -203,16 +203,16 @@ export interface ComputeOptimizer {
    */
   exportEBSVolumeRecommendations(
     args: ExportEBSVolumeRecommendationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ExportEBSVolumeRecommendationsCommandOutput>;
   exportEBSVolumeRecommendations(
     args: ExportEBSVolumeRecommendationsCommandInput,
-    cb: (err: any, data?: ExportEBSVolumeRecommendationsCommandOutput) => void
+    cb: (err: any, data?: ExportEBSVolumeRecommendationsCommandOutput) => void,
   ): void;
   exportEBSVolumeRecommendations(
     args: ExportEBSVolumeRecommendationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ExportEBSVolumeRecommendationsCommandOutput) => void
+    cb: (err: any, data?: ExportEBSVolumeRecommendationsCommandOutput) => void,
   ): void;
 
   /**
@@ -220,16 +220,16 @@ export interface ComputeOptimizer {
    */
   exportEC2InstanceRecommendations(
     args: ExportEC2InstanceRecommendationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ExportEC2InstanceRecommendationsCommandOutput>;
   exportEC2InstanceRecommendations(
     args: ExportEC2InstanceRecommendationsCommandInput,
-    cb: (err: any, data?: ExportEC2InstanceRecommendationsCommandOutput) => void
+    cb: (err: any, data?: ExportEC2InstanceRecommendationsCommandOutput) => void,
   ): void;
   exportEC2InstanceRecommendations(
     args: ExportEC2InstanceRecommendationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ExportEC2InstanceRecommendationsCommandOutput) => void
+    cb: (err: any, data?: ExportEC2InstanceRecommendationsCommandOutput) => void,
   ): void;
 
   /**
@@ -237,16 +237,16 @@ export interface ComputeOptimizer {
    */
   exportECSServiceRecommendations(
     args: ExportECSServiceRecommendationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ExportECSServiceRecommendationsCommandOutput>;
   exportECSServiceRecommendations(
     args: ExportECSServiceRecommendationsCommandInput,
-    cb: (err: any, data?: ExportECSServiceRecommendationsCommandOutput) => void
+    cb: (err: any, data?: ExportECSServiceRecommendationsCommandOutput) => void,
   ): void;
   exportECSServiceRecommendations(
     args: ExportECSServiceRecommendationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ExportECSServiceRecommendationsCommandOutput) => void
+    cb: (err: any, data?: ExportECSServiceRecommendationsCommandOutput) => void,
   ): void;
 
   /**
@@ -254,16 +254,16 @@ export interface ComputeOptimizer {
    */
   exportLambdaFunctionRecommendations(
     args: ExportLambdaFunctionRecommendationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ExportLambdaFunctionRecommendationsCommandOutput>;
   exportLambdaFunctionRecommendations(
     args: ExportLambdaFunctionRecommendationsCommandInput,
-    cb: (err: any, data?: ExportLambdaFunctionRecommendationsCommandOutput) => void
+    cb: (err: any, data?: ExportLambdaFunctionRecommendationsCommandOutput) => void,
   ): void;
   exportLambdaFunctionRecommendations(
     args: ExportLambdaFunctionRecommendationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ExportLambdaFunctionRecommendationsCommandOutput) => void
+    cb: (err: any, data?: ExportLambdaFunctionRecommendationsCommandOutput) => void,
   ): void;
 
   /**
@@ -271,16 +271,16 @@ export interface ComputeOptimizer {
    */
   exportLicenseRecommendations(
     args: ExportLicenseRecommendationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ExportLicenseRecommendationsCommandOutput>;
   exportLicenseRecommendations(
     args: ExportLicenseRecommendationsCommandInput,
-    cb: (err: any, data?: ExportLicenseRecommendationsCommandOutput) => void
+    cb: (err: any, data?: ExportLicenseRecommendationsCommandOutput) => void,
   ): void;
   exportLicenseRecommendations(
     args: ExportLicenseRecommendationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ExportLicenseRecommendationsCommandOutput) => void
+    cb: (err: any, data?: ExportLicenseRecommendationsCommandOutput) => void,
   ): void;
 
   /**
@@ -289,16 +289,16 @@ export interface ComputeOptimizer {
   getAutoScalingGroupRecommendations(): Promise<GetAutoScalingGroupRecommendationsCommandOutput>;
   getAutoScalingGroupRecommendations(
     args: GetAutoScalingGroupRecommendationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetAutoScalingGroupRecommendationsCommandOutput>;
   getAutoScalingGroupRecommendations(
     args: GetAutoScalingGroupRecommendationsCommandInput,
-    cb: (err: any, data?: GetAutoScalingGroupRecommendationsCommandOutput) => void
+    cb: (err: any, data?: GetAutoScalingGroupRecommendationsCommandOutput) => void,
   ): void;
   getAutoScalingGroupRecommendations(
     args: GetAutoScalingGroupRecommendationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetAutoScalingGroupRecommendationsCommandOutput) => void
+    cb: (err: any, data?: GetAutoScalingGroupRecommendationsCommandOutput) => void,
   ): void;
 
   /**
@@ -307,16 +307,16 @@ export interface ComputeOptimizer {
   getEBSVolumeRecommendations(): Promise<GetEBSVolumeRecommendationsCommandOutput>;
   getEBSVolumeRecommendations(
     args: GetEBSVolumeRecommendationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetEBSVolumeRecommendationsCommandOutput>;
   getEBSVolumeRecommendations(
     args: GetEBSVolumeRecommendationsCommandInput,
-    cb: (err: any, data?: GetEBSVolumeRecommendationsCommandOutput) => void
+    cb: (err: any, data?: GetEBSVolumeRecommendationsCommandOutput) => void,
   ): void;
   getEBSVolumeRecommendations(
     args: GetEBSVolumeRecommendationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetEBSVolumeRecommendationsCommandOutput) => void
+    cb: (err: any, data?: GetEBSVolumeRecommendationsCommandOutput) => void,
   ): void;
 
   /**
@@ -325,16 +325,16 @@ export interface ComputeOptimizer {
   getEC2InstanceRecommendations(): Promise<GetEC2InstanceRecommendationsCommandOutput>;
   getEC2InstanceRecommendations(
     args: GetEC2InstanceRecommendationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetEC2InstanceRecommendationsCommandOutput>;
   getEC2InstanceRecommendations(
     args: GetEC2InstanceRecommendationsCommandInput,
-    cb: (err: any, data?: GetEC2InstanceRecommendationsCommandOutput) => void
+    cb: (err: any, data?: GetEC2InstanceRecommendationsCommandOutput) => void,
   ): void;
   getEC2InstanceRecommendations(
     args: GetEC2InstanceRecommendationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetEC2InstanceRecommendationsCommandOutput) => void
+    cb: (err: any, data?: GetEC2InstanceRecommendationsCommandOutput) => void,
   ): void;
 
   /**
@@ -342,16 +342,16 @@ export interface ComputeOptimizer {
    */
   getEC2RecommendationProjectedMetrics(
     args: GetEC2RecommendationProjectedMetricsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetEC2RecommendationProjectedMetricsCommandOutput>;
   getEC2RecommendationProjectedMetrics(
     args: GetEC2RecommendationProjectedMetricsCommandInput,
-    cb: (err: any, data?: GetEC2RecommendationProjectedMetricsCommandOutput) => void
+    cb: (err: any, data?: GetEC2RecommendationProjectedMetricsCommandOutput) => void,
   ): void;
   getEC2RecommendationProjectedMetrics(
     args: GetEC2RecommendationProjectedMetricsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetEC2RecommendationProjectedMetricsCommandOutput) => void
+    cb: (err: any, data?: GetEC2RecommendationProjectedMetricsCommandOutput) => void,
   ): void;
 
   /**
@@ -359,16 +359,16 @@ export interface ComputeOptimizer {
    */
   getECSServiceRecommendationProjectedMetrics(
     args: GetECSServiceRecommendationProjectedMetricsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetECSServiceRecommendationProjectedMetricsCommandOutput>;
   getECSServiceRecommendationProjectedMetrics(
     args: GetECSServiceRecommendationProjectedMetricsCommandInput,
-    cb: (err: any, data?: GetECSServiceRecommendationProjectedMetricsCommandOutput) => void
+    cb: (err: any, data?: GetECSServiceRecommendationProjectedMetricsCommandOutput) => void,
   ): void;
   getECSServiceRecommendationProjectedMetrics(
     args: GetECSServiceRecommendationProjectedMetricsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetECSServiceRecommendationProjectedMetricsCommandOutput) => void
+    cb: (err: any, data?: GetECSServiceRecommendationProjectedMetricsCommandOutput) => void,
   ): void;
 
   /**
@@ -377,16 +377,16 @@ export interface ComputeOptimizer {
   getECSServiceRecommendations(): Promise<GetECSServiceRecommendationsCommandOutput>;
   getECSServiceRecommendations(
     args: GetECSServiceRecommendationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetECSServiceRecommendationsCommandOutput>;
   getECSServiceRecommendations(
     args: GetECSServiceRecommendationsCommandInput,
-    cb: (err: any, data?: GetECSServiceRecommendationsCommandOutput) => void
+    cb: (err: any, data?: GetECSServiceRecommendationsCommandOutput) => void,
   ): void;
   getECSServiceRecommendations(
     args: GetECSServiceRecommendationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetECSServiceRecommendationsCommandOutput) => void
+    cb: (err: any, data?: GetECSServiceRecommendationsCommandOutput) => void,
   ): void;
 
   /**
@@ -394,16 +394,16 @@ export interface ComputeOptimizer {
    */
   getEffectiveRecommendationPreferences(
     args: GetEffectiveRecommendationPreferencesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetEffectiveRecommendationPreferencesCommandOutput>;
   getEffectiveRecommendationPreferences(
     args: GetEffectiveRecommendationPreferencesCommandInput,
-    cb: (err: any, data?: GetEffectiveRecommendationPreferencesCommandOutput) => void
+    cb: (err: any, data?: GetEffectiveRecommendationPreferencesCommandOutput) => void,
   ): void;
   getEffectiveRecommendationPreferences(
     args: GetEffectiveRecommendationPreferencesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetEffectiveRecommendationPreferencesCommandOutput) => void
+    cb: (err: any, data?: GetEffectiveRecommendationPreferencesCommandOutput) => void,
   ): void;
 
   /**
@@ -412,16 +412,16 @@ export interface ComputeOptimizer {
   getEnrollmentStatus(): Promise<GetEnrollmentStatusCommandOutput>;
   getEnrollmentStatus(
     args: GetEnrollmentStatusCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetEnrollmentStatusCommandOutput>;
   getEnrollmentStatus(
     args: GetEnrollmentStatusCommandInput,
-    cb: (err: any, data?: GetEnrollmentStatusCommandOutput) => void
+    cb: (err: any, data?: GetEnrollmentStatusCommandOutput) => void,
   ): void;
   getEnrollmentStatus(
     args: GetEnrollmentStatusCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetEnrollmentStatusCommandOutput) => void
+    cb: (err: any, data?: GetEnrollmentStatusCommandOutput) => void,
   ): void;
 
   /**
@@ -430,16 +430,16 @@ export interface ComputeOptimizer {
   getEnrollmentStatusesForOrganization(): Promise<GetEnrollmentStatusesForOrganizationCommandOutput>;
   getEnrollmentStatusesForOrganization(
     args: GetEnrollmentStatusesForOrganizationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetEnrollmentStatusesForOrganizationCommandOutput>;
   getEnrollmentStatusesForOrganization(
     args: GetEnrollmentStatusesForOrganizationCommandInput,
-    cb: (err: any, data?: GetEnrollmentStatusesForOrganizationCommandOutput) => void
+    cb: (err: any, data?: GetEnrollmentStatusesForOrganizationCommandOutput) => void,
   ): void;
   getEnrollmentStatusesForOrganization(
     args: GetEnrollmentStatusesForOrganizationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetEnrollmentStatusesForOrganizationCommandOutput) => void
+    cb: (err: any, data?: GetEnrollmentStatusesForOrganizationCommandOutput) => void,
   ): void;
 
   /**
@@ -448,16 +448,16 @@ export interface ComputeOptimizer {
   getLambdaFunctionRecommendations(): Promise<GetLambdaFunctionRecommendationsCommandOutput>;
   getLambdaFunctionRecommendations(
     args: GetLambdaFunctionRecommendationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetLambdaFunctionRecommendationsCommandOutput>;
   getLambdaFunctionRecommendations(
     args: GetLambdaFunctionRecommendationsCommandInput,
-    cb: (err: any, data?: GetLambdaFunctionRecommendationsCommandOutput) => void
+    cb: (err: any, data?: GetLambdaFunctionRecommendationsCommandOutput) => void,
   ): void;
   getLambdaFunctionRecommendations(
     args: GetLambdaFunctionRecommendationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetLambdaFunctionRecommendationsCommandOutput) => void
+    cb: (err: any, data?: GetLambdaFunctionRecommendationsCommandOutput) => void,
   ): void;
 
   /**
@@ -466,16 +466,16 @@ export interface ComputeOptimizer {
   getLicenseRecommendations(): Promise<GetLicenseRecommendationsCommandOutput>;
   getLicenseRecommendations(
     args: GetLicenseRecommendationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetLicenseRecommendationsCommandOutput>;
   getLicenseRecommendations(
     args: GetLicenseRecommendationsCommandInput,
-    cb: (err: any, data?: GetLicenseRecommendationsCommandOutput) => void
+    cb: (err: any, data?: GetLicenseRecommendationsCommandOutput) => void,
   ): void;
   getLicenseRecommendations(
     args: GetLicenseRecommendationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetLicenseRecommendationsCommandOutput) => void
+    cb: (err: any, data?: GetLicenseRecommendationsCommandOutput) => void,
   ): void;
 
   /**
@@ -483,16 +483,16 @@ export interface ComputeOptimizer {
    */
   getRecommendationPreferences(
     args: GetRecommendationPreferencesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetRecommendationPreferencesCommandOutput>;
   getRecommendationPreferences(
     args: GetRecommendationPreferencesCommandInput,
-    cb: (err: any, data?: GetRecommendationPreferencesCommandOutput) => void
+    cb: (err: any, data?: GetRecommendationPreferencesCommandOutput) => void,
   ): void;
   getRecommendationPreferences(
     args: GetRecommendationPreferencesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetRecommendationPreferencesCommandOutput) => void
+    cb: (err: any, data?: GetRecommendationPreferencesCommandOutput) => void,
   ): void;
 
   /**
@@ -501,16 +501,16 @@ export interface ComputeOptimizer {
   getRecommendationSummaries(): Promise<GetRecommendationSummariesCommandOutput>;
   getRecommendationSummaries(
     args: GetRecommendationSummariesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetRecommendationSummariesCommandOutput>;
   getRecommendationSummaries(
     args: GetRecommendationSummariesCommandInput,
-    cb: (err: any, data?: GetRecommendationSummariesCommandOutput) => void
+    cb: (err: any, data?: GetRecommendationSummariesCommandOutput) => void,
   ): void;
   getRecommendationSummaries(
     args: GetRecommendationSummariesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetRecommendationSummariesCommandOutput) => void
+    cb: (err: any, data?: GetRecommendationSummariesCommandOutput) => void,
   ): void;
 
   /**
@@ -518,16 +518,16 @@ export interface ComputeOptimizer {
    */
   putRecommendationPreferences(
     args: PutRecommendationPreferencesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutRecommendationPreferencesCommandOutput>;
   putRecommendationPreferences(
     args: PutRecommendationPreferencesCommandInput,
-    cb: (err: any, data?: PutRecommendationPreferencesCommandOutput) => void
+    cb: (err: any, data?: PutRecommendationPreferencesCommandOutput) => void,
   ): void;
   putRecommendationPreferences(
     args: PutRecommendationPreferencesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutRecommendationPreferencesCommandOutput) => void
+    cb: (err: any, data?: PutRecommendationPreferencesCommandOutput) => void,
   ): void;
 
   /**
@@ -535,16 +535,16 @@ export interface ComputeOptimizer {
    */
   updateEnrollmentStatus(
     args: UpdateEnrollmentStatusCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateEnrollmentStatusCommandOutput>;
   updateEnrollmentStatus(
     args: UpdateEnrollmentStatusCommandInput,
-    cb: (err: any, data?: UpdateEnrollmentStatusCommandOutput) => void
+    cb: (err: any, data?: UpdateEnrollmentStatusCommandOutput) => void,
   ): void;
   updateEnrollmentStatus(
     args: UpdateEnrollmentStatusCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateEnrollmentStatusCommandOutput) => void
+    cb: (err: any, data?: UpdateEnrollmentStatusCommandOutput) => void,
   ): void;
 }
 

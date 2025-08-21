@@ -32,7 +32,7 @@ export interface BedrockRuntime {
   converse(
     args: ConverseCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ConverseCommandOutput) => void
+    cb: (err: any, data?: ConverseCommandOutput) => void,
   ): void;
 
   /**
@@ -40,13 +40,13 @@ export interface BedrockRuntime {
    */
   converseStream(
     args: ConverseStreamCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ConverseStreamCommandOutput>;
   converseStream(args: ConverseStreamCommandInput, cb: (err: any, data?: ConverseStreamCommandOutput) => void): void;
   converseStream(
     args: ConverseStreamCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ConverseStreamCommandOutput) => void
+    cb: (err: any, data?: ConverseStreamCommandOutput) => void,
   ): void;
 
   /**
@@ -57,7 +57,7 @@ export interface BedrockRuntime {
   invokeModel(
     args: InvokeModelCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: InvokeModelCommandOutput) => void
+    cb: (err: any, data?: InvokeModelCommandOutput) => void,
   ): void;
 
   /**
@@ -65,16 +65,16 @@ export interface BedrockRuntime {
    */
   invokeModelWithResponseStream(
     args: InvokeModelWithResponseStreamCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<InvokeModelWithResponseStreamCommandOutput>;
   invokeModelWithResponseStream(
     args: InvokeModelWithResponseStreamCommandInput,
-    cb: (err: any, data?: InvokeModelWithResponseStreamCommandOutput) => void
+    cb: (err: any, data?: InvokeModelWithResponseStreamCommandOutput) => void,
   ): void;
   invokeModelWithResponseStream(
     args: InvokeModelWithResponseStreamCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: InvokeModelWithResponseStreamCommandOutput) => void
+    cb: (err: any, data?: InvokeModelWithResponseStreamCommandOutput) => void,
   ): void;
 }
 

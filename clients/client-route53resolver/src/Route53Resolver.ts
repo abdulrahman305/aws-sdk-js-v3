@@ -417,16 +417,16 @@ export interface Route53Resolver {
    */
   associateFirewallRuleGroup(
     args: AssociateFirewallRuleGroupCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AssociateFirewallRuleGroupCommandOutput>;
   associateFirewallRuleGroup(
     args: AssociateFirewallRuleGroupCommandInput,
-    cb: (err: any, data?: AssociateFirewallRuleGroupCommandOutput) => void
+    cb: (err: any, data?: AssociateFirewallRuleGroupCommandOutput) => void,
   ): void;
   associateFirewallRuleGroup(
     args: AssociateFirewallRuleGroupCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AssociateFirewallRuleGroupCommandOutput) => void
+    cb: (err: any, data?: AssociateFirewallRuleGroupCommandOutput) => void,
   ): void;
 
   /**
@@ -434,16 +434,16 @@ export interface Route53Resolver {
    */
   associateResolverEndpointIpAddress(
     args: AssociateResolverEndpointIpAddressCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AssociateResolverEndpointIpAddressCommandOutput>;
   associateResolverEndpointIpAddress(
     args: AssociateResolverEndpointIpAddressCommandInput,
-    cb: (err: any, data?: AssociateResolverEndpointIpAddressCommandOutput) => void
+    cb: (err: any, data?: AssociateResolverEndpointIpAddressCommandOutput) => void,
   ): void;
   associateResolverEndpointIpAddress(
     args: AssociateResolverEndpointIpAddressCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AssociateResolverEndpointIpAddressCommandOutput) => void
+    cb: (err: any, data?: AssociateResolverEndpointIpAddressCommandOutput) => void,
   ): void;
 
   /**
@@ -451,16 +451,16 @@ export interface Route53Resolver {
    */
   associateResolverQueryLogConfig(
     args: AssociateResolverQueryLogConfigCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AssociateResolverQueryLogConfigCommandOutput>;
   associateResolverQueryLogConfig(
     args: AssociateResolverQueryLogConfigCommandInput,
-    cb: (err: any, data?: AssociateResolverQueryLogConfigCommandOutput) => void
+    cb: (err: any, data?: AssociateResolverQueryLogConfigCommandOutput) => void,
   ): void;
   associateResolverQueryLogConfig(
     args: AssociateResolverQueryLogConfigCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AssociateResolverQueryLogConfigCommandOutput) => void
+    cb: (err: any, data?: AssociateResolverQueryLogConfigCommandOutput) => void,
   ): void;
 
   /**
@@ -468,16 +468,16 @@ export interface Route53Resolver {
    */
   associateResolverRule(
     args: AssociateResolverRuleCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AssociateResolverRuleCommandOutput>;
   associateResolverRule(
     args: AssociateResolverRuleCommandInput,
-    cb: (err: any, data?: AssociateResolverRuleCommandOutput) => void
+    cb: (err: any, data?: AssociateResolverRuleCommandOutput) => void,
   ): void;
   associateResolverRule(
     args: AssociateResolverRuleCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AssociateResolverRuleCommandOutput) => void
+    cb: (err: any, data?: AssociateResolverRuleCommandOutput) => void,
   ): void;
 
   /**
@@ -485,16 +485,16 @@ export interface Route53Resolver {
    */
   createFirewallDomainList(
     args: CreateFirewallDomainListCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateFirewallDomainListCommandOutput>;
   createFirewallDomainList(
     args: CreateFirewallDomainListCommandInput,
-    cb: (err: any, data?: CreateFirewallDomainListCommandOutput) => void
+    cb: (err: any, data?: CreateFirewallDomainListCommandOutput) => void,
   ): void;
   createFirewallDomainList(
     args: CreateFirewallDomainListCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateFirewallDomainListCommandOutput) => void
+    cb: (err: any, data?: CreateFirewallDomainListCommandOutput) => void,
   ): void;
 
   /**
@@ -502,16 +502,16 @@ export interface Route53Resolver {
    */
   createFirewallRule(
     args: CreateFirewallRuleCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateFirewallRuleCommandOutput>;
   createFirewallRule(
     args: CreateFirewallRuleCommandInput,
-    cb: (err: any, data?: CreateFirewallRuleCommandOutput) => void
+    cb: (err: any, data?: CreateFirewallRuleCommandOutput) => void,
   ): void;
   createFirewallRule(
     args: CreateFirewallRuleCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateFirewallRuleCommandOutput) => void
+    cb: (err: any, data?: CreateFirewallRuleCommandOutput) => void,
   ): void;
 
   /**
@@ -519,16 +519,16 @@ export interface Route53Resolver {
    */
   createFirewallRuleGroup(
     args: CreateFirewallRuleGroupCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateFirewallRuleGroupCommandOutput>;
   createFirewallRuleGroup(
     args: CreateFirewallRuleGroupCommandInput,
-    cb: (err: any, data?: CreateFirewallRuleGroupCommandOutput) => void
+    cb: (err: any, data?: CreateFirewallRuleGroupCommandOutput) => void,
   ): void;
   createFirewallRuleGroup(
     args: CreateFirewallRuleGroupCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateFirewallRuleGroupCommandOutput) => void
+    cb: (err: any, data?: CreateFirewallRuleGroupCommandOutput) => void,
   ): void;
 
   /**
@@ -536,16 +536,16 @@ export interface Route53Resolver {
    */
   createOutpostResolver(
     args: CreateOutpostResolverCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateOutpostResolverCommandOutput>;
   createOutpostResolver(
     args: CreateOutpostResolverCommandInput,
-    cb: (err: any, data?: CreateOutpostResolverCommandOutput) => void
+    cb: (err: any, data?: CreateOutpostResolverCommandOutput) => void,
   ): void;
   createOutpostResolver(
     args: CreateOutpostResolverCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateOutpostResolverCommandOutput) => void
+    cb: (err: any, data?: CreateOutpostResolverCommandOutput) => void,
   ): void;
 
   /**
@@ -553,16 +553,16 @@ export interface Route53Resolver {
    */
   createResolverEndpoint(
     args: CreateResolverEndpointCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateResolverEndpointCommandOutput>;
   createResolverEndpoint(
     args: CreateResolverEndpointCommandInput,
-    cb: (err: any, data?: CreateResolverEndpointCommandOutput) => void
+    cb: (err: any, data?: CreateResolverEndpointCommandOutput) => void,
   ): void;
   createResolverEndpoint(
     args: CreateResolverEndpointCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateResolverEndpointCommandOutput) => void
+    cb: (err: any, data?: CreateResolverEndpointCommandOutput) => void,
   ): void;
 
   /**
@@ -570,16 +570,16 @@ export interface Route53Resolver {
    */
   createResolverQueryLogConfig(
     args: CreateResolverQueryLogConfigCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateResolverQueryLogConfigCommandOutput>;
   createResolverQueryLogConfig(
     args: CreateResolverQueryLogConfigCommandInput,
-    cb: (err: any, data?: CreateResolverQueryLogConfigCommandOutput) => void
+    cb: (err: any, data?: CreateResolverQueryLogConfigCommandOutput) => void,
   ): void;
   createResolverQueryLogConfig(
     args: CreateResolverQueryLogConfigCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateResolverQueryLogConfigCommandOutput) => void
+    cb: (err: any, data?: CreateResolverQueryLogConfigCommandOutput) => void,
   ): void;
 
   /**
@@ -587,16 +587,16 @@ export interface Route53Resolver {
    */
   createResolverRule(
     args: CreateResolverRuleCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateResolverRuleCommandOutput>;
   createResolverRule(
     args: CreateResolverRuleCommandInput,
-    cb: (err: any, data?: CreateResolverRuleCommandOutput) => void
+    cb: (err: any, data?: CreateResolverRuleCommandOutput) => void,
   ): void;
   createResolverRule(
     args: CreateResolverRuleCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateResolverRuleCommandOutput) => void
+    cb: (err: any, data?: CreateResolverRuleCommandOutput) => void,
   ): void;
 
   /**
@@ -604,16 +604,16 @@ export interface Route53Resolver {
    */
   deleteFirewallDomainList(
     args: DeleteFirewallDomainListCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteFirewallDomainListCommandOutput>;
   deleteFirewallDomainList(
     args: DeleteFirewallDomainListCommandInput,
-    cb: (err: any, data?: DeleteFirewallDomainListCommandOutput) => void
+    cb: (err: any, data?: DeleteFirewallDomainListCommandOutput) => void,
   ): void;
   deleteFirewallDomainList(
     args: DeleteFirewallDomainListCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteFirewallDomainListCommandOutput) => void
+    cb: (err: any, data?: DeleteFirewallDomainListCommandOutput) => void,
   ): void;
 
   /**
@@ -621,16 +621,16 @@ export interface Route53Resolver {
    */
   deleteFirewallRule(
     args: DeleteFirewallRuleCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteFirewallRuleCommandOutput>;
   deleteFirewallRule(
     args: DeleteFirewallRuleCommandInput,
-    cb: (err: any, data?: DeleteFirewallRuleCommandOutput) => void
+    cb: (err: any, data?: DeleteFirewallRuleCommandOutput) => void,
   ): void;
   deleteFirewallRule(
     args: DeleteFirewallRuleCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteFirewallRuleCommandOutput) => void
+    cb: (err: any, data?: DeleteFirewallRuleCommandOutput) => void,
   ): void;
 
   /**
@@ -638,16 +638,16 @@ export interface Route53Resolver {
    */
   deleteFirewallRuleGroup(
     args: DeleteFirewallRuleGroupCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteFirewallRuleGroupCommandOutput>;
   deleteFirewallRuleGroup(
     args: DeleteFirewallRuleGroupCommandInput,
-    cb: (err: any, data?: DeleteFirewallRuleGroupCommandOutput) => void
+    cb: (err: any, data?: DeleteFirewallRuleGroupCommandOutput) => void,
   ): void;
   deleteFirewallRuleGroup(
     args: DeleteFirewallRuleGroupCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteFirewallRuleGroupCommandOutput) => void
+    cb: (err: any, data?: DeleteFirewallRuleGroupCommandOutput) => void,
   ): void;
 
   /**
@@ -655,16 +655,16 @@ export interface Route53Resolver {
    */
   deleteOutpostResolver(
     args: DeleteOutpostResolverCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteOutpostResolverCommandOutput>;
   deleteOutpostResolver(
     args: DeleteOutpostResolverCommandInput,
-    cb: (err: any, data?: DeleteOutpostResolverCommandOutput) => void
+    cb: (err: any, data?: DeleteOutpostResolverCommandOutput) => void,
   ): void;
   deleteOutpostResolver(
     args: DeleteOutpostResolverCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteOutpostResolverCommandOutput) => void
+    cb: (err: any, data?: DeleteOutpostResolverCommandOutput) => void,
   ): void;
 
   /**
@@ -672,16 +672,16 @@ export interface Route53Resolver {
    */
   deleteResolverEndpoint(
     args: DeleteResolverEndpointCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteResolverEndpointCommandOutput>;
   deleteResolverEndpoint(
     args: DeleteResolverEndpointCommandInput,
-    cb: (err: any, data?: DeleteResolverEndpointCommandOutput) => void
+    cb: (err: any, data?: DeleteResolverEndpointCommandOutput) => void,
   ): void;
   deleteResolverEndpoint(
     args: DeleteResolverEndpointCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteResolverEndpointCommandOutput) => void
+    cb: (err: any, data?: DeleteResolverEndpointCommandOutput) => void,
   ): void;
 
   /**
@@ -689,16 +689,16 @@ export interface Route53Resolver {
    */
   deleteResolverQueryLogConfig(
     args: DeleteResolverQueryLogConfigCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteResolverQueryLogConfigCommandOutput>;
   deleteResolverQueryLogConfig(
     args: DeleteResolverQueryLogConfigCommandInput,
-    cb: (err: any, data?: DeleteResolverQueryLogConfigCommandOutput) => void
+    cb: (err: any, data?: DeleteResolverQueryLogConfigCommandOutput) => void,
   ): void;
   deleteResolverQueryLogConfig(
     args: DeleteResolverQueryLogConfigCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteResolverQueryLogConfigCommandOutput) => void
+    cb: (err: any, data?: DeleteResolverQueryLogConfigCommandOutput) => void,
   ): void;
 
   /**
@@ -706,16 +706,16 @@ export interface Route53Resolver {
    */
   deleteResolverRule(
     args: DeleteResolverRuleCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteResolverRuleCommandOutput>;
   deleteResolverRule(
     args: DeleteResolverRuleCommandInput,
-    cb: (err: any, data?: DeleteResolverRuleCommandOutput) => void
+    cb: (err: any, data?: DeleteResolverRuleCommandOutput) => void,
   ): void;
   deleteResolverRule(
     args: DeleteResolverRuleCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteResolverRuleCommandOutput) => void
+    cb: (err: any, data?: DeleteResolverRuleCommandOutput) => void,
   ): void;
 
   /**
@@ -723,16 +723,16 @@ export interface Route53Resolver {
    */
   disassociateFirewallRuleGroup(
     args: DisassociateFirewallRuleGroupCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DisassociateFirewallRuleGroupCommandOutput>;
   disassociateFirewallRuleGroup(
     args: DisassociateFirewallRuleGroupCommandInput,
-    cb: (err: any, data?: DisassociateFirewallRuleGroupCommandOutput) => void
+    cb: (err: any, data?: DisassociateFirewallRuleGroupCommandOutput) => void,
   ): void;
   disassociateFirewallRuleGroup(
     args: DisassociateFirewallRuleGroupCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DisassociateFirewallRuleGroupCommandOutput) => void
+    cb: (err: any, data?: DisassociateFirewallRuleGroupCommandOutput) => void,
   ): void;
 
   /**
@@ -740,16 +740,16 @@ export interface Route53Resolver {
    */
   disassociateResolverEndpointIpAddress(
     args: DisassociateResolverEndpointIpAddressCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DisassociateResolverEndpointIpAddressCommandOutput>;
   disassociateResolverEndpointIpAddress(
     args: DisassociateResolverEndpointIpAddressCommandInput,
-    cb: (err: any, data?: DisassociateResolverEndpointIpAddressCommandOutput) => void
+    cb: (err: any, data?: DisassociateResolverEndpointIpAddressCommandOutput) => void,
   ): void;
   disassociateResolverEndpointIpAddress(
     args: DisassociateResolverEndpointIpAddressCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DisassociateResolverEndpointIpAddressCommandOutput) => void
+    cb: (err: any, data?: DisassociateResolverEndpointIpAddressCommandOutput) => void,
   ): void;
 
   /**
@@ -757,16 +757,16 @@ export interface Route53Resolver {
    */
   disassociateResolverQueryLogConfig(
     args: DisassociateResolverQueryLogConfigCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DisassociateResolverQueryLogConfigCommandOutput>;
   disassociateResolverQueryLogConfig(
     args: DisassociateResolverQueryLogConfigCommandInput,
-    cb: (err: any, data?: DisassociateResolverQueryLogConfigCommandOutput) => void
+    cb: (err: any, data?: DisassociateResolverQueryLogConfigCommandOutput) => void,
   ): void;
   disassociateResolverQueryLogConfig(
     args: DisassociateResolverQueryLogConfigCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DisassociateResolverQueryLogConfigCommandOutput) => void
+    cb: (err: any, data?: DisassociateResolverQueryLogConfigCommandOutput) => void,
   ): void;
 
   /**
@@ -774,16 +774,16 @@ export interface Route53Resolver {
    */
   disassociateResolverRule(
     args: DisassociateResolverRuleCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DisassociateResolverRuleCommandOutput>;
   disassociateResolverRule(
     args: DisassociateResolverRuleCommandInput,
-    cb: (err: any, data?: DisassociateResolverRuleCommandOutput) => void
+    cb: (err: any, data?: DisassociateResolverRuleCommandOutput) => void,
   ): void;
   disassociateResolverRule(
     args: DisassociateResolverRuleCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DisassociateResolverRuleCommandOutput) => void
+    cb: (err: any, data?: DisassociateResolverRuleCommandOutput) => void,
   ): void;
 
   /**
@@ -791,16 +791,16 @@ export interface Route53Resolver {
    */
   getFirewallConfig(
     args: GetFirewallConfigCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetFirewallConfigCommandOutput>;
   getFirewallConfig(
     args: GetFirewallConfigCommandInput,
-    cb: (err: any, data?: GetFirewallConfigCommandOutput) => void
+    cb: (err: any, data?: GetFirewallConfigCommandOutput) => void,
   ): void;
   getFirewallConfig(
     args: GetFirewallConfigCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetFirewallConfigCommandOutput) => void
+    cb: (err: any, data?: GetFirewallConfigCommandOutput) => void,
   ): void;
 
   /**
@@ -808,16 +808,16 @@ export interface Route53Resolver {
    */
   getFirewallDomainList(
     args: GetFirewallDomainListCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetFirewallDomainListCommandOutput>;
   getFirewallDomainList(
     args: GetFirewallDomainListCommandInput,
-    cb: (err: any, data?: GetFirewallDomainListCommandOutput) => void
+    cb: (err: any, data?: GetFirewallDomainListCommandOutput) => void,
   ): void;
   getFirewallDomainList(
     args: GetFirewallDomainListCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetFirewallDomainListCommandOutput) => void
+    cb: (err: any, data?: GetFirewallDomainListCommandOutput) => void,
   ): void;
 
   /**
@@ -825,16 +825,16 @@ export interface Route53Resolver {
    */
   getFirewallRuleGroup(
     args: GetFirewallRuleGroupCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetFirewallRuleGroupCommandOutput>;
   getFirewallRuleGroup(
     args: GetFirewallRuleGroupCommandInput,
-    cb: (err: any, data?: GetFirewallRuleGroupCommandOutput) => void
+    cb: (err: any, data?: GetFirewallRuleGroupCommandOutput) => void,
   ): void;
   getFirewallRuleGroup(
     args: GetFirewallRuleGroupCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetFirewallRuleGroupCommandOutput) => void
+    cb: (err: any, data?: GetFirewallRuleGroupCommandOutput) => void,
   ): void;
 
   /**
@@ -842,16 +842,16 @@ export interface Route53Resolver {
    */
   getFirewallRuleGroupAssociation(
     args: GetFirewallRuleGroupAssociationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetFirewallRuleGroupAssociationCommandOutput>;
   getFirewallRuleGroupAssociation(
     args: GetFirewallRuleGroupAssociationCommandInput,
-    cb: (err: any, data?: GetFirewallRuleGroupAssociationCommandOutput) => void
+    cb: (err: any, data?: GetFirewallRuleGroupAssociationCommandOutput) => void,
   ): void;
   getFirewallRuleGroupAssociation(
     args: GetFirewallRuleGroupAssociationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetFirewallRuleGroupAssociationCommandOutput) => void
+    cb: (err: any, data?: GetFirewallRuleGroupAssociationCommandOutput) => void,
   ): void;
 
   /**
@@ -859,16 +859,16 @@ export interface Route53Resolver {
    */
   getFirewallRuleGroupPolicy(
     args: GetFirewallRuleGroupPolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetFirewallRuleGroupPolicyCommandOutput>;
   getFirewallRuleGroupPolicy(
     args: GetFirewallRuleGroupPolicyCommandInput,
-    cb: (err: any, data?: GetFirewallRuleGroupPolicyCommandOutput) => void
+    cb: (err: any, data?: GetFirewallRuleGroupPolicyCommandOutput) => void,
   ): void;
   getFirewallRuleGroupPolicy(
     args: GetFirewallRuleGroupPolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetFirewallRuleGroupPolicyCommandOutput) => void
+    cb: (err: any, data?: GetFirewallRuleGroupPolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -876,16 +876,16 @@ export interface Route53Resolver {
    */
   getOutpostResolver(
     args: GetOutpostResolverCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetOutpostResolverCommandOutput>;
   getOutpostResolver(
     args: GetOutpostResolverCommandInput,
-    cb: (err: any, data?: GetOutpostResolverCommandOutput) => void
+    cb: (err: any, data?: GetOutpostResolverCommandOutput) => void,
   ): void;
   getOutpostResolver(
     args: GetOutpostResolverCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetOutpostResolverCommandOutput) => void
+    cb: (err: any, data?: GetOutpostResolverCommandOutput) => void,
   ): void;
 
   /**
@@ -893,16 +893,16 @@ export interface Route53Resolver {
    */
   getResolverConfig(
     args: GetResolverConfigCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetResolverConfigCommandOutput>;
   getResolverConfig(
     args: GetResolverConfigCommandInput,
-    cb: (err: any, data?: GetResolverConfigCommandOutput) => void
+    cb: (err: any, data?: GetResolverConfigCommandOutput) => void,
   ): void;
   getResolverConfig(
     args: GetResolverConfigCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetResolverConfigCommandOutput) => void
+    cb: (err: any, data?: GetResolverConfigCommandOutput) => void,
   ): void;
 
   /**
@@ -910,16 +910,16 @@ export interface Route53Resolver {
    */
   getResolverDnssecConfig(
     args: GetResolverDnssecConfigCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetResolverDnssecConfigCommandOutput>;
   getResolverDnssecConfig(
     args: GetResolverDnssecConfigCommandInput,
-    cb: (err: any, data?: GetResolverDnssecConfigCommandOutput) => void
+    cb: (err: any, data?: GetResolverDnssecConfigCommandOutput) => void,
   ): void;
   getResolverDnssecConfig(
     args: GetResolverDnssecConfigCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetResolverDnssecConfigCommandOutput) => void
+    cb: (err: any, data?: GetResolverDnssecConfigCommandOutput) => void,
   ): void;
 
   /**
@@ -927,16 +927,16 @@ export interface Route53Resolver {
    */
   getResolverEndpoint(
     args: GetResolverEndpointCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetResolverEndpointCommandOutput>;
   getResolverEndpoint(
     args: GetResolverEndpointCommandInput,
-    cb: (err: any, data?: GetResolverEndpointCommandOutput) => void
+    cb: (err: any, data?: GetResolverEndpointCommandOutput) => void,
   ): void;
   getResolverEndpoint(
     args: GetResolverEndpointCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetResolverEndpointCommandOutput) => void
+    cb: (err: any, data?: GetResolverEndpointCommandOutput) => void,
   ): void;
 
   /**
@@ -944,16 +944,16 @@ export interface Route53Resolver {
    */
   getResolverQueryLogConfig(
     args: GetResolverQueryLogConfigCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetResolverQueryLogConfigCommandOutput>;
   getResolverQueryLogConfig(
     args: GetResolverQueryLogConfigCommandInput,
-    cb: (err: any, data?: GetResolverQueryLogConfigCommandOutput) => void
+    cb: (err: any, data?: GetResolverQueryLogConfigCommandOutput) => void,
   ): void;
   getResolverQueryLogConfig(
     args: GetResolverQueryLogConfigCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetResolverQueryLogConfigCommandOutput) => void
+    cb: (err: any, data?: GetResolverQueryLogConfigCommandOutput) => void,
   ): void;
 
   /**
@@ -961,16 +961,16 @@ export interface Route53Resolver {
    */
   getResolverQueryLogConfigAssociation(
     args: GetResolverQueryLogConfigAssociationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetResolverQueryLogConfigAssociationCommandOutput>;
   getResolverQueryLogConfigAssociation(
     args: GetResolverQueryLogConfigAssociationCommandInput,
-    cb: (err: any, data?: GetResolverQueryLogConfigAssociationCommandOutput) => void
+    cb: (err: any, data?: GetResolverQueryLogConfigAssociationCommandOutput) => void,
   ): void;
   getResolverQueryLogConfigAssociation(
     args: GetResolverQueryLogConfigAssociationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetResolverQueryLogConfigAssociationCommandOutput) => void
+    cb: (err: any, data?: GetResolverQueryLogConfigAssociationCommandOutput) => void,
   ): void;
 
   /**
@@ -978,16 +978,16 @@ export interface Route53Resolver {
    */
   getResolverQueryLogConfigPolicy(
     args: GetResolverQueryLogConfigPolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetResolverQueryLogConfigPolicyCommandOutput>;
   getResolverQueryLogConfigPolicy(
     args: GetResolverQueryLogConfigPolicyCommandInput,
-    cb: (err: any, data?: GetResolverQueryLogConfigPolicyCommandOutput) => void
+    cb: (err: any, data?: GetResolverQueryLogConfigPolicyCommandOutput) => void,
   ): void;
   getResolverQueryLogConfigPolicy(
     args: GetResolverQueryLogConfigPolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetResolverQueryLogConfigPolicyCommandOutput) => void
+    cb: (err: any, data?: GetResolverQueryLogConfigPolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -995,13 +995,13 @@ export interface Route53Resolver {
    */
   getResolverRule(
     args: GetResolverRuleCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetResolverRuleCommandOutput>;
   getResolverRule(args: GetResolverRuleCommandInput, cb: (err: any, data?: GetResolverRuleCommandOutput) => void): void;
   getResolverRule(
     args: GetResolverRuleCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetResolverRuleCommandOutput) => void
+    cb: (err: any, data?: GetResolverRuleCommandOutput) => void,
   ): void;
 
   /**
@@ -1009,16 +1009,16 @@ export interface Route53Resolver {
    */
   getResolverRuleAssociation(
     args: GetResolverRuleAssociationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetResolverRuleAssociationCommandOutput>;
   getResolverRuleAssociation(
     args: GetResolverRuleAssociationCommandInput,
-    cb: (err: any, data?: GetResolverRuleAssociationCommandOutput) => void
+    cb: (err: any, data?: GetResolverRuleAssociationCommandOutput) => void,
   ): void;
   getResolverRuleAssociation(
     args: GetResolverRuleAssociationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetResolverRuleAssociationCommandOutput) => void
+    cb: (err: any, data?: GetResolverRuleAssociationCommandOutput) => void,
   ): void;
 
   /**
@@ -1026,16 +1026,16 @@ export interface Route53Resolver {
    */
   getResolverRulePolicy(
     args: GetResolverRulePolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetResolverRulePolicyCommandOutput>;
   getResolverRulePolicy(
     args: GetResolverRulePolicyCommandInput,
-    cb: (err: any, data?: GetResolverRulePolicyCommandOutput) => void
+    cb: (err: any, data?: GetResolverRulePolicyCommandOutput) => void,
   ): void;
   getResolverRulePolicy(
     args: GetResolverRulePolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetResolverRulePolicyCommandOutput) => void
+    cb: (err: any, data?: GetResolverRulePolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -1043,16 +1043,16 @@ export interface Route53Resolver {
    */
   importFirewallDomains(
     args: ImportFirewallDomainsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ImportFirewallDomainsCommandOutput>;
   importFirewallDomains(
     args: ImportFirewallDomainsCommandInput,
-    cb: (err: any, data?: ImportFirewallDomainsCommandOutput) => void
+    cb: (err: any, data?: ImportFirewallDomainsCommandOutput) => void,
   ): void;
   importFirewallDomains(
     args: ImportFirewallDomainsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ImportFirewallDomainsCommandOutput) => void
+    cb: (err: any, data?: ImportFirewallDomainsCommandOutput) => void,
   ): void;
 
   /**
@@ -1061,16 +1061,16 @@ export interface Route53Resolver {
   listFirewallConfigs(): Promise<ListFirewallConfigsCommandOutput>;
   listFirewallConfigs(
     args: ListFirewallConfigsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListFirewallConfigsCommandOutput>;
   listFirewallConfigs(
     args: ListFirewallConfigsCommandInput,
-    cb: (err: any, data?: ListFirewallConfigsCommandOutput) => void
+    cb: (err: any, data?: ListFirewallConfigsCommandOutput) => void,
   ): void;
   listFirewallConfigs(
     args: ListFirewallConfigsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListFirewallConfigsCommandOutput) => void
+    cb: (err: any, data?: ListFirewallConfigsCommandOutput) => void,
   ): void;
 
   /**
@@ -1079,16 +1079,16 @@ export interface Route53Resolver {
   listFirewallDomainLists(): Promise<ListFirewallDomainListsCommandOutput>;
   listFirewallDomainLists(
     args: ListFirewallDomainListsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListFirewallDomainListsCommandOutput>;
   listFirewallDomainLists(
     args: ListFirewallDomainListsCommandInput,
-    cb: (err: any, data?: ListFirewallDomainListsCommandOutput) => void
+    cb: (err: any, data?: ListFirewallDomainListsCommandOutput) => void,
   ): void;
   listFirewallDomainLists(
     args: ListFirewallDomainListsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListFirewallDomainListsCommandOutput) => void
+    cb: (err: any, data?: ListFirewallDomainListsCommandOutput) => void,
   ): void;
 
   /**
@@ -1096,16 +1096,16 @@ export interface Route53Resolver {
    */
   listFirewallDomains(
     args: ListFirewallDomainsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListFirewallDomainsCommandOutput>;
   listFirewallDomains(
     args: ListFirewallDomainsCommandInput,
-    cb: (err: any, data?: ListFirewallDomainsCommandOutput) => void
+    cb: (err: any, data?: ListFirewallDomainsCommandOutput) => void,
   ): void;
   listFirewallDomains(
     args: ListFirewallDomainsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListFirewallDomainsCommandOutput) => void
+    cb: (err: any, data?: ListFirewallDomainsCommandOutput) => void,
   ): void;
 
   /**
@@ -1114,16 +1114,16 @@ export interface Route53Resolver {
   listFirewallRuleGroupAssociations(): Promise<ListFirewallRuleGroupAssociationsCommandOutput>;
   listFirewallRuleGroupAssociations(
     args: ListFirewallRuleGroupAssociationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListFirewallRuleGroupAssociationsCommandOutput>;
   listFirewallRuleGroupAssociations(
     args: ListFirewallRuleGroupAssociationsCommandInput,
-    cb: (err: any, data?: ListFirewallRuleGroupAssociationsCommandOutput) => void
+    cb: (err: any, data?: ListFirewallRuleGroupAssociationsCommandOutput) => void,
   ): void;
   listFirewallRuleGroupAssociations(
     args: ListFirewallRuleGroupAssociationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListFirewallRuleGroupAssociationsCommandOutput) => void
+    cb: (err: any, data?: ListFirewallRuleGroupAssociationsCommandOutput) => void,
   ): void;
 
   /**
@@ -1132,16 +1132,16 @@ export interface Route53Resolver {
   listFirewallRuleGroups(): Promise<ListFirewallRuleGroupsCommandOutput>;
   listFirewallRuleGroups(
     args: ListFirewallRuleGroupsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListFirewallRuleGroupsCommandOutput>;
   listFirewallRuleGroups(
     args: ListFirewallRuleGroupsCommandInput,
-    cb: (err: any, data?: ListFirewallRuleGroupsCommandOutput) => void
+    cb: (err: any, data?: ListFirewallRuleGroupsCommandOutput) => void,
   ): void;
   listFirewallRuleGroups(
     args: ListFirewallRuleGroupsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListFirewallRuleGroupsCommandOutput) => void
+    cb: (err: any, data?: ListFirewallRuleGroupsCommandOutput) => void,
   ): void;
 
   /**
@@ -1149,16 +1149,16 @@ export interface Route53Resolver {
    */
   listFirewallRules(
     args: ListFirewallRulesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListFirewallRulesCommandOutput>;
   listFirewallRules(
     args: ListFirewallRulesCommandInput,
-    cb: (err: any, data?: ListFirewallRulesCommandOutput) => void
+    cb: (err: any, data?: ListFirewallRulesCommandOutput) => void,
   ): void;
   listFirewallRules(
     args: ListFirewallRulesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListFirewallRulesCommandOutput) => void
+    cb: (err: any, data?: ListFirewallRulesCommandOutput) => void,
   ): void;
 
   /**
@@ -1167,16 +1167,16 @@ export interface Route53Resolver {
   listOutpostResolvers(): Promise<ListOutpostResolversCommandOutput>;
   listOutpostResolvers(
     args: ListOutpostResolversCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListOutpostResolversCommandOutput>;
   listOutpostResolvers(
     args: ListOutpostResolversCommandInput,
-    cb: (err: any, data?: ListOutpostResolversCommandOutput) => void
+    cb: (err: any, data?: ListOutpostResolversCommandOutput) => void,
   ): void;
   listOutpostResolvers(
     args: ListOutpostResolversCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListOutpostResolversCommandOutput) => void
+    cb: (err: any, data?: ListOutpostResolversCommandOutput) => void,
   ): void;
 
   /**
@@ -1185,16 +1185,16 @@ export interface Route53Resolver {
   listResolverConfigs(): Promise<ListResolverConfigsCommandOutput>;
   listResolverConfigs(
     args: ListResolverConfigsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListResolverConfigsCommandOutput>;
   listResolverConfigs(
     args: ListResolverConfigsCommandInput,
-    cb: (err: any, data?: ListResolverConfigsCommandOutput) => void
+    cb: (err: any, data?: ListResolverConfigsCommandOutput) => void,
   ): void;
   listResolverConfigs(
     args: ListResolverConfigsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListResolverConfigsCommandOutput) => void
+    cb: (err: any, data?: ListResolverConfigsCommandOutput) => void,
   ): void;
 
   /**
@@ -1203,16 +1203,16 @@ export interface Route53Resolver {
   listResolverDnssecConfigs(): Promise<ListResolverDnssecConfigsCommandOutput>;
   listResolverDnssecConfigs(
     args: ListResolverDnssecConfigsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListResolverDnssecConfigsCommandOutput>;
   listResolverDnssecConfigs(
     args: ListResolverDnssecConfigsCommandInput,
-    cb: (err: any, data?: ListResolverDnssecConfigsCommandOutput) => void
+    cb: (err: any, data?: ListResolverDnssecConfigsCommandOutput) => void,
   ): void;
   listResolverDnssecConfigs(
     args: ListResolverDnssecConfigsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListResolverDnssecConfigsCommandOutput) => void
+    cb: (err: any, data?: ListResolverDnssecConfigsCommandOutput) => void,
   ): void;
 
   /**
@@ -1220,16 +1220,16 @@ export interface Route53Resolver {
    */
   listResolverEndpointIpAddresses(
     args: ListResolverEndpointIpAddressesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListResolverEndpointIpAddressesCommandOutput>;
   listResolverEndpointIpAddresses(
     args: ListResolverEndpointIpAddressesCommandInput,
-    cb: (err: any, data?: ListResolverEndpointIpAddressesCommandOutput) => void
+    cb: (err: any, data?: ListResolverEndpointIpAddressesCommandOutput) => void,
   ): void;
   listResolverEndpointIpAddresses(
     args: ListResolverEndpointIpAddressesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListResolverEndpointIpAddressesCommandOutput) => void
+    cb: (err: any, data?: ListResolverEndpointIpAddressesCommandOutput) => void,
   ): void;
 
   /**
@@ -1238,16 +1238,16 @@ export interface Route53Resolver {
   listResolverEndpoints(): Promise<ListResolverEndpointsCommandOutput>;
   listResolverEndpoints(
     args: ListResolverEndpointsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListResolverEndpointsCommandOutput>;
   listResolverEndpoints(
     args: ListResolverEndpointsCommandInput,
-    cb: (err: any, data?: ListResolverEndpointsCommandOutput) => void
+    cb: (err: any, data?: ListResolverEndpointsCommandOutput) => void,
   ): void;
   listResolverEndpoints(
     args: ListResolverEndpointsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListResolverEndpointsCommandOutput) => void
+    cb: (err: any, data?: ListResolverEndpointsCommandOutput) => void,
   ): void;
 
   /**
@@ -1256,16 +1256,16 @@ export interface Route53Resolver {
   listResolverQueryLogConfigAssociations(): Promise<ListResolverQueryLogConfigAssociationsCommandOutput>;
   listResolverQueryLogConfigAssociations(
     args: ListResolverQueryLogConfigAssociationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListResolverQueryLogConfigAssociationsCommandOutput>;
   listResolverQueryLogConfigAssociations(
     args: ListResolverQueryLogConfigAssociationsCommandInput,
-    cb: (err: any, data?: ListResolverQueryLogConfigAssociationsCommandOutput) => void
+    cb: (err: any, data?: ListResolverQueryLogConfigAssociationsCommandOutput) => void,
   ): void;
   listResolverQueryLogConfigAssociations(
     args: ListResolverQueryLogConfigAssociationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListResolverQueryLogConfigAssociationsCommandOutput) => void
+    cb: (err: any, data?: ListResolverQueryLogConfigAssociationsCommandOutput) => void,
   ): void;
 
   /**
@@ -1274,16 +1274,16 @@ export interface Route53Resolver {
   listResolverQueryLogConfigs(): Promise<ListResolverQueryLogConfigsCommandOutput>;
   listResolverQueryLogConfigs(
     args: ListResolverQueryLogConfigsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListResolverQueryLogConfigsCommandOutput>;
   listResolverQueryLogConfigs(
     args: ListResolverQueryLogConfigsCommandInput,
-    cb: (err: any, data?: ListResolverQueryLogConfigsCommandOutput) => void
+    cb: (err: any, data?: ListResolverQueryLogConfigsCommandOutput) => void,
   ): void;
   listResolverQueryLogConfigs(
     args: ListResolverQueryLogConfigsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListResolverQueryLogConfigsCommandOutput) => void
+    cb: (err: any, data?: ListResolverQueryLogConfigsCommandOutput) => void,
   ): void;
 
   /**
@@ -1292,16 +1292,16 @@ export interface Route53Resolver {
   listResolverRuleAssociations(): Promise<ListResolverRuleAssociationsCommandOutput>;
   listResolverRuleAssociations(
     args: ListResolverRuleAssociationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListResolverRuleAssociationsCommandOutput>;
   listResolverRuleAssociations(
     args: ListResolverRuleAssociationsCommandInput,
-    cb: (err: any, data?: ListResolverRuleAssociationsCommandOutput) => void
+    cb: (err: any, data?: ListResolverRuleAssociationsCommandOutput) => void,
   ): void;
   listResolverRuleAssociations(
     args: ListResolverRuleAssociationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListResolverRuleAssociationsCommandOutput) => void
+    cb: (err: any, data?: ListResolverRuleAssociationsCommandOutput) => void,
   ): void;
 
   /**
@@ -1310,16 +1310,16 @@ export interface Route53Resolver {
   listResolverRules(): Promise<ListResolverRulesCommandOutput>;
   listResolverRules(
     args: ListResolverRulesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListResolverRulesCommandOutput>;
   listResolverRules(
     args: ListResolverRulesCommandInput,
-    cb: (err: any, data?: ListResolverRulesCommandOutput) => void
+    cb: (err: any, data?: ListResolverRulesCommandOutput) => void,
   ): void;
   listResolverRules(
     args: ListResolverRulesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListResolverRulesCommandOutput) => void
+    cb: (err: any, data?: ListResolverRulesCommandOutput) => void,
   ): void;
 
   /**
@@ -1327,16 +1327,16 @@ export interface Route53Resolver {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -1344,16 +1344,16 @@ export interface Route53Resolver {
    */
   putFirewallRuleGroupPolicy(
     args: PutFirewallRuleGroupPolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutFirewallRuleGroupPolicyCommandOutput>;
   putFirewallRuleGroupPolicy(
     args: PutFirewallRuleGroupPolicyCommandInput,
-    cb: (err: any, data?: PutFirewallRuleGroupPolicyCommandOutput) => void
+    cb: (err: any, data?: PutFirewallRuleGroupPolicyCommandOutput) => void,
   ): void;
   putFirewallRuleGroupPolicy(
     args: PutFirewallRuleGroupPolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutFirewallRuleGroupPolicyCommandOutput) => void
+    cb: (err: any, data?: PutFirewallRuleGroupPolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -1361,16 +1361,16 @@ export interface Route53Resolver {
    */
   putResolverQueryLogConfigPolicy(
     args: PutResolverQueryLogConfigPolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutResolverQueryLogConfigPolicyCommandOutput>;
   putResolverQueryLogConfigPolicy(
     args: PutResolverQueryLogConfigPolicyCommandInput,
-    cb: (err: any, data?: PutResolverQueryLogConfigPolicyCommandOutput) => void
+    cb: (err: any, data?: PutResolverQueryLogConfigPolicyCommandOutput) => void,
   ): void;
   putResolverQueryLogConfigPolicy(
     args: PutResolverQueryLogConfigPolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutResolverQueryLogConfigPolicyCommandOutput) => void
+    cb: (err: any, data?: PutResolverQueryLogConfigPolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -1378,16 +1378,16 @@ export interface Route53Resolver {
    */
   putResolverRulePolicy(
     args: PutResolverRulePolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutResolverRulePolicyCommandOutput>;
   putResolverRulePolicy(
     args: PutResolverRulePolicyCommandInput,
-    cb: (err: any, data?: PutResolverRulePolicyCommandOutput) => void
+    cb: (err: any, data?: PutResolverRulePolicyCommandOutput) => void,
   ): void;
   putResolverRulePolicy(
     args: PutResolverRulePolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutResolverRulePolicyCommandOutput) => void
+    cb: (err: any, data?: PutResolverRulePolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -1398,7 +1398,7 @@ export interface Route53Resolver {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -1409,7 +1409,7 @@ export interface Route53Resolver {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -1417,16 +1417,16 @@ export interface Route53Resolver {
    */
   updateFirewallConfig(
     args: UpdateFirewallConfigCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateFirewallConfigCommandOutput>;
   updateFirewallConfig(
     args: UpdateFirewallConfigCommandInput,
-    cb: (err: any, data?: UpdateFirewallConfigCommandOutput) => void
+    cb: (err: any, data?: UpdateFirewallConfigCommandOutput) => void,
   ): void;
   updateFirewallConfig(
     args: UpdateFirewallConfigCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateFirewallConfigCommandOutput) => void
+    cb: (err: any, data?: UpdateFirewallConfigCommandOutput) => void,
   ): void;
 
   /**
@@ -1434,16 +1434,16 @@ export interface Route53Resolver {
    */
   updateFirewallDomains(
     args: UpdateFirewallDomainsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateFirewallDomainsCommandOutput>;
   updateFirewallDomains(
     args: UpdateFirewallDomainsCommandInput,
-    cb: (err: any, data?: UpdateFirewallDomainsCommandOutput) => void
+    cb: (err: any, data?: UpdateFirewallDomainsCommandOutput) => void,
   ): void;
   updateFirewallDomains(
     args: UpdateFirewallDomainsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateFirewallDomainsCommandOutput) => void
+    cb: (err: any, data?: UpdateFirewallDomainsCommandOutput) => void,
   ): void;
 
   /**
@@ -1451,16 +1451,16 @@ export interface Route53Resolver {
    */
   updateFirewallRule(
     args: UpdateFirewallRuleCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateFirewallRuleCommandOutput>;
   updateFirewallRule(
     args: UpdateFirewallRuleCommandInput,
-    cb: (err: any, data?: UpdateFirewallRuleCommandOutput) => void
+    cb: (err: any, data?: UpdateFirewallRuleCommandOutput) => void,
   ): void;
   updateFirewallRule(
     args: UpdateFirewallRuleCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateFirewallRuleCommandOutput) => void
+    cb: (err: any, data?: UpdateFirewallRuleCommandOutput) => void,
   ): void;
 
   /**
@@ -1468,16 +1468,16 @@ export interface Route53Resolver {
    */
   updateFirewallRuleGroupAssociation(
     args: UpdateFirewallRuleGroupAssociationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateFirewallRuleGroupAssociationCommandOutput>;
   updateFirewallRuleGroupAssociation(
     args: UpdateFirewallRuleGroupAssociationCommandInput,
-    cb: (err: any, data?: UpdateFirewallRuleGroupAssociationCommandOutput) => void
+    cb: (err: any, data?: UpdateFirewallRuleGroupAssociationCommandOutput) => void,
   ): void;
   updateFirewallRuleGroupAssociation(
     args: UpdateFirewallRuleGroupAssociationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateFirewallRuleGroupAssociationCommandOutput) => void
+    cb: (err: any, data?: UpdateFirewallRuleGroupAssociationCommandOutput) => void,
   ): void;
 
   /**
@@ -1485,16 +1485,16 @@ export interface Route53Resolver {
    */
   updateOutpostResolver(
     args: UpdateOutpostResolverCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateOutpostResolverCommandOutput>;
   updateOutpostResolver(
     args: UpdateOutpostResolverCommandInput,
-    cb: (err: any, data?: UpdateOutpostResolverCommandOutput) => void
+    cb: (err: any, data?: UpdateOutpostResolverCommandOutput) => void,
   ): void;
   updateOutpostResolver(
     args: UpdateOutpostResolverCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateOutpostResolverCommandOutput) => void
+    cb: (err: any, data?: UpdateOutpostResolverCommandOutput) => void,
   ): void;
 
   /**
@@ -1502,16 +1502,16 @@ export interface Route53Resolver {
    */
   updateResolverConfig(
     args: UpdateResolverConfigCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateResolverConfigCommandOutput>;
   updateResolverConfig(
     args: UpdateResolverConfigCommandInput,
-    cb: (err: any, data?: UpdateResolverConfigCommandOutput) => void
+    cb: (err: any, data?: UpdateResolverConfigCommandOutput) => void,
   ): void;
   updateResolverConfig(
     args: UpdateResolverConfigCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateResolverConfigCommandOutput) => void
+    cb: (err: any, data?: UpdateResolverConfigCommandOutput) => void,
   ): void;
 
   /**
@@ -1519,16 +1519,16 @@ export interface Route53Resolver {
    */
   updateResolverDnssecConfig(
     args: UpdateResolverDnssecConfigCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateResolverDnssecConfigCommandOutput>;
   updateResolverDnssecConfig(
     args: UpdateResolverDnssecConfigCommandInput,
-    cb: (err: any, data?: UpdateResolverDnssecConfigCommandOutput) => void
+    cb: (err: any, data?: UpdateResolverDnssecConfigCommandOutput) => void,
   ): void;
   updateResolverDnssecConfig(
     args: UpdateResolverDnssecConfigCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateResolverDnssecConfigCommandOutput) => void
+    cb: (err: any, data?: UpdateResolverDnssecConfigCommandOutput) => void,
   ): void;
 
   /**
@@ -1536,16 +1536,16 @@ export interface Route53Resolver {
    */
   updateResolverEndpoint(
     args: UpdateResolverEndpointCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateResolverEndpointCommandOutput>;
   updateResolverEndpoint(
     args: UpdateResolverEndpointCommandInput,
-    cb: (err: any, data?: UpdateResolverEndpointCommandOutput) => void
+    cb: (err: any, data?: UpdateResolverEndpointCommandOutput) => void,
   ): void;
   updateResolverEndpoint(
     args: UpdateResolverEndpointCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateResolverEndpointCommandOutput) => void
+    cb: (err: any, data?: UpdateResolverEndpointCommandOutput) => void,
   ): void;
 
   /**
@@ -1553,16 +1553,16 @@ export interface Route53Resolver {
    */
   updateResolverRule(
     args: UpdateResolverRuleCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateResolverRuleCommandOutput>;
   updateResolverRule(
     args: UpdateResolverRuleCommandInput,
-    cb: (err: any, data?: UpdateResolverRuleCommandOutput) => void
+    cb: (err: any, data?: UpdateResolverRuleCommandOutput) => void,
   ): void;
   updateResolverRule(
     args: UpdateResolverRuleCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateResolverRuleCommandOutput) => void
+    cb: (err: any, data?: UpdateResolverRuleCommandOutput) => void,
   ): void;
 }
 

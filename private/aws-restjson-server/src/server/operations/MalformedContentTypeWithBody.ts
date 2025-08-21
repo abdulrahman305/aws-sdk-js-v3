@@ -66,14 +66,14 @@ export class MalformedContentTypeWithBodySerializer
 
 export const getMalformedContentTypeWithBodyHandler = <Context>(
   operation: __Operation<MalformedContentTypeWithBodyServerInput, MalformedContentTypeWithBodyServerOutput, Context>,
-  customizer: __ValidationCustomizer<"MalformedContentTypeWithBody">
+  customizer: __ValidationCustomizer<"MalformedContentTypeWithBody">,
 ): __ServiceHandler<Context, __HttpRequest, __HttpResponse> => {
   const mux = new httpbinding.HttpBindingMux<"RestJson", "MalformedContentTypeWithBody">([
     new httpbinding.UriSpec<"RestJson", "MalformedContentTypeWithBody">(
       "POST",
       [{ type: "path_literal", value: "MalformedContentTypeWithBody" }],
       [],
-      { service: "RestJson", operation: "MalformedContentTypeWithBody" }
+      { service: "RestJson", operation: "MalformedContentTypeWithBody" },
     ),
   ]);
   return new MalformedContentTypeWithBodyHandler(
@@ -81,7 +81,7 @@ export const getMalformedContentTypeWithBodyHandler = <Context>(
     mux,
     new MalformedContentTypeWithBodySerializer(),
     serializeFrameworkException,
-    customizer
+    customizer,
   );
 };
 
@@ -102,7 +102,7 @@ async function handle<S, O extends keyof S & string, Context>(
   operation: __Operation<__OperationInput<S[O]>, __OperationOutput<S[O]>, Context>,
   serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
   validationFn: (input: __OperationInput<S[O]>) => __ValidationFailure[],
-  validationCustomizer: __ValidationCustomizer<O>
+  validationCustomizer: __ValidationCustomizer<O>,
 ): Promise<__HttpResponse> {
   let input;
   try {
@@ -148,7 +148,7 @@ export class MalformedContentTypeWithBodyHandler<Context> implements __ServiceHa
   >;
   private readonly serializeFrameworkException: (
     e: __SmithyFrameworkException,
-    ctx: __ServerSerdeContext
+    ctx: __ServerSerdeContext,
   ) => Promise<__HttpResponse>;
   private readonly validationCustomizer: __ValidationCustomizer<"MalformedContentTypeWithBody">;
   /**
@@ -169,7 +169,7 @@ export class MalformedContentTypeWithBodyHandler<Context> implements __ServiceHa
       MalformedContentTypeWithBodyErrors
     >,
     serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
-    validationCustomizer: __ValidationCustomizer<"MalformedContentTypeWithBody">
+    validationCustomizer: __ValidationCustomizer<"MalformedContentTypeWithBody">,
   ) {
     this.operation = operation;
     this.mux = mux;
@@ -181,7 +181,7 @@ export class MalformedContentTypeWithBodyHandler<Context> implements __ServiceHa
     const target = this.mux.match(request);
     if (target === undefined) {
       console.log(
-        "Received a request that did not match aws.protocoltests.restjson#RestJson.MalformedContentTypeWithBody. This indicates a misconfiguration."
+        "Received a request that did not match aws.protocoltests.restjson#RestJson.MalformedContentTypeWithBody. This indicates a misconfiguration.",
       );
       return this.serializeFrameworkException(new __InternalFailureException(), serdeContextBase);
     }
@@ -193,7 +193,7 @@ export class MalformedContentTypeWithBodyHandler<Context> implements __ServiceHa
       this.operation,
       this.serializeFrameworkException,
       MalformedContentTypeWithBodyServerInput.validate,
-      this.validationCustomizer
+      this.validationCustomizer,
     );
   }
 }

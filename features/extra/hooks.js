@@ -151,7 +151,7 @@ Given(
         world.data = data;
       }
     });
-  }
+  },
 );
 
 Then("I should get more than one page", function (callback) {
@@ -189,7 +189,7 @@ Then(
       this.assert.equal(typeof this.data[wrapper][property], type);
     }
     callback();
-  }
+  },
 );
 
 Then("the result should contain a property {word} with a(n) {word}", function (property, type, callback) {

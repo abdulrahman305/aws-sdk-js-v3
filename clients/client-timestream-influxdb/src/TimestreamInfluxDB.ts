@@ -75,16 +75,16 @@ export interface TimestreamInfluxDB {
    */
   createDbInstance(
     args: CreateDbInstanceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateDbInstanceCommandOutput>;
   createDbInstance(
     args: CreateDbInstanceCommandInput,
-    cb: (err: any, data?: CreateDbInstanceCommandOutput) => void
+    cb: (err: any, data?: CreateDbInstanceCommandOutput) => void,
   ): void;
   createDbInstance(
     args: CreateDbInstanceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateDbInstanceCommandOutput) => void
+    cb: (err: any, data?: CreateDbInstanceCommandOutput) => void,
   ): void;
 
   /**
@@ -92,16 +92,16 @@ export interface TimestreamInfluxDB {
    */
   createDbParameterGroup(
     args: CreateDbParameterGroupCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateDbParameterGroupCommandOutput>;
   createDbParameterGroup(
     args: CreateDbParameterGroupCommandInput,
-    cb: (err: any, data?: CreateDbParameterGroupCommandOutput) => void
+    cb: (err: any, data?: CreateDbParameterGroupCommandOutput) => void,
   ): void;
   createDbParameterGroup(
     args: CreateDbParameterGroupCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateDbParameterGroupCommandOutput) => void
+    cb: (err: any, data?: CreateDbParameterGroupCommandOutput) => void,
   ): void;
 
   /**
@@ -109,16 +109,16 @@ export interface TimestreamInfluxDB {
    */
   deleteDbInstance(
     args: DeleteDbInstanceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteDbInstanceCommandOutput>;
   deleteDbInstance(
     args: DeleteDbInstanceCommandInput,
-    cb: (err: any, data?: DeleteDbInstanceCommandOutput) => void
+    cb: (err: any, data?: DeleteDbInstanceCommandOutput) => void,
   ): void;
   deleteDbInstance(
     args: DeleteDbInstanceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteDbInstanceCommandOutput) => void
+    cb: (err: any, data?: DeleteDbInstanceCommandOutput) => void,
   ): void;
 
   /**
@@ -129,7 +129,7 @@ export interface TimestreamInfluxDB {
   getDbInstance(
     args: GetDbInstanceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetDbInstanceCommandOutput) => void
+    cb: (err: any, data?: GetDbInstanceCommandOutput) => void,
   ): void;
 
   /**
@@ -137,16 +137,16 @@ export interface TimestreamInfluxDB {
    */
   getDbParameterGroup(
     args: GetDbParameterGroupCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetDbParameterGroupCommandOutput>;
   getDbParameterGroup(
     args: GetDbParameterGroupCommandInput,
-    cb: (err: any, data?: GetDbParameterGroupCommandOutput) => void
+    cb: (err: any, data?: GetDbParameterGroupCommandOutput) => void,
   ): void;
   getDbParameterGroup(
     args: GetDbParameterGroupCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetDbParameterGroupCommandOutput) => void
+    cb: (err: any, data?: GetDbParameterGroupCommandOutput) => void,
   ): void;
 
   /**
@@ -155,13 +155,13 @@ export interface TimestreamInfluxDB {
   listDbInstances(): Promise<ListDbInstancesCommandOutput>;
   listDbInstances(
     args: ListDbInstancesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListDbInstancesCommandOutput>;
   listDbInstances(args: ListDbInstancesCommandInput, cb: (err: any, data?: ListDbInstancesCommandOutput) => void): void;
   listDbInstances(
     args: ListDbInstancesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListDbInstancesCommandOutput) => void
+    cb: (err: any, data?: ListDbInstancesCommandOutput) => void,
   ): void;
 
   /**
@@ -170,16 +170,16 @@ export interface TimestreamInfluxDB {
   listDbParameterGroups(): Promise<ListDbParameterGroupsCommandOutput>;
   listDbParameterGroups(
     args: ListDbParameterGroupsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListDbParameterGroupsCommandOutput>;
   listDbParameterGroups(
     args: ListDbParameterGroupsCommandInput,
-    cb: (err: any, data?: ListDbParameterGroupsCommandOutput) => void
+    cb: (err: any, data?: ListDbParameterGroupsCommandOutput) => void,
   ): void;
   listDbParameterGroups(
     args: ListDbParameterGroupsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListDbParameterGroupsCommandOutput) => void
+    cb: (err: any, data?: ListDbParameterGroupsCommandOutput) => void,
   ): void;
 
   /**
@@ -187,16 +187,16 @@ export interface TimestreamInfluxDB {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -207,7 +207,7 @@ export interface TimestreamInfluxDB {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -218,7 +218,7 @@ export interface TimestreamInfluxDB {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -226,16 +226,16 @@ export interface TimestreamInfluxDB {
    */
   updateDbInstance(
     args: UpdateDbInstanceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateDbInstanceCommandOutput>;
   updateDbInstance(
     args: UpdateDbInstanceCommandInput,
-    cb: (err: any, data?: UpdateDbInstanceCommandOutput) => void
+    cb: (err: any, data?: UpdateDbInstanceCommandOutput) => void,
   ): void;
   updateDbInstance(
     args: UpdateDbInstanceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateDbInstanceCommandOutput) => void
+    cb: (err: any, data?: UpdateDbInstanceCommandOutput) => void,
   ): void;
 }
 

@@ -2664,7 +2664,7 @@ export const DescribeBudgetActionResponseFilterSensitiveLog = (obj: DescribeBudg
  * @internal
  */
 export const DescribeBudgetActionHistoriesResponseFilterSensitiveLog = (
-  obj: DescribeBudgetActionHistoriesResponse
+  obj: DescribeBudgetActionHistoriesResponse,
 ): any => ({
   ...obj,
 });
@@ -2673,7 +2673,7 @@ export const DescribeBudgetActionHistoriesResponseFilterSensitiveLog = (
  * @internal
  */
 export const DescribeBudgetActionsForAccountResponseFilterSensitiveLog = (
-  obj: DescribeBudgetActionsForAccountResponse
+  obj: DescribeBudgetActionsForAccountResponse,
 ): any => ({
   ...obj,
 });
@@ -2682,7 +2682,7 @@ export const DescribeBudgetActionsForAccountResponseFilterSensitiveLog = (
  * @internal
  */
 export const DescribeBudgetActionsForBudgetResponseFilterSensitiveLog = (
-  obj: DescribeBudgetActionsForBudgetResponse
+  obj: DescribeBudgetActionsForBudgetResponse,
 ): any => ({
   ...obj,
 });
@@ -2691,7 +2691,7 @@ export const DescribeBudgetActionsForBudgetResponseFilterSensitiveLog = (
  * @internal
  */
 export const DescribeSubscribersForNotificationResponseFilterSensitiveLog = (
-  obj: DescribeSubscribersForNotificationResponse
+  obj: DescribeSubscribersForNotificationResponse,
 ): any => ({
   ...obj,
   ...(obj.Subscribers && { Subscribers: obj.Subscribers.map((item) => SubscriberFilterSensitiveLog(item)) }),

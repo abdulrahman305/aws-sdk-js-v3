@@ -2129,7 +2129,7 @@ export const DescribeAppInstanceUserResponseFilterSensitiveLog = (obj: DescribeA
  * @internal
  */
 export const DescribeAppInstanceUserEndpointResponseFilterSensitiveLog = (
-  obj: DescribeAppInstanceUserEndpointResponse
+  obj: DescribeAppInstanceUserEndpointResponse,
 ): any => ({
   ...obj,
   ...(obj.AppInstanceUserEndpoint && {
@@ -2196,7 +2196,7 @@ export const ListAppInstancesResponseFilterSensitiveLog = (obj: ListAppInstances
  * @internal
  */
 export const ListAppInstanceUserEndpointsRequestFilterSensitiveLog = (
-  obj: ListAppInstanceUserEndpointsRequest
+  obj: ListAppInstanceUserEndpointsRequest,
 ): any => ({
   ...obj,
   ...(obj.AppInstanceUserArn && { AppInstanceUserArn: SENSITIVE_STRING }),
@@ -2207,12 +2207,12 @@ export const ListAppInstanceUserEndpointsRequestFilterSensitiveLog = (
  * @internal
  */
 export const ListAppInstanceUserEndpointsResponseFilterSensitiveLog = (
-  obj: ListAppInstanceUserEndpointsResponse
+  obj: ListAppInstanceUserEndpointsResponse,
 ): any => ({
   ...obj,
   ...(obj.AppInstanceUserEndpoints && {
     AppInstanceUserEndpoints: obj.AppInstanceUserEndpoints.map((item) =>
-      AppInstanceUserEndpointSummaryFilterSensitiveLog(item)
+      AppInstanceUserEndpointSummaryFilterSensitiveLog(item),
     ),
   }),
   ...(obj.NextToken && { NextToken: SENSITIVE_STRING }),
@@ -2249,7 +2249,7 @@ export const ListTagsForResourceResponseFilterSensitiveLog = (obj: ListTagsForRe
  * @internal
  */
 export const RegisterAppInstanceUserEndpointRequestFilterSensitiveLog = (
-  obj: RegisterAppInstanceUserEndpointRequest
+  obj: RegisterAppInstanceUserEndpointRequest,
 ): any => ({
   ...obj,
   ...(obj.AppInstanceUserArn && { AppInstanceUserArn: SENSITIVE_STRING }),
@@ -2304,7 +2304,7 @@ export const UpdateAppInstanceUserRequestFilterSensitiveLog = (obj: UpdateAppIns
  * @internal
  */
 export const UpdateAppInstanceUserEndpointRequestFilterSensitiveLog = (
-  obj: UpdateAppInstanceUserEndpointRequest
+  obj: UpdateAppInstanceUserEndpointRequest,
 ): any => ({
   ...obj,
   ...(obj.Name && { Name: SENSITIVE_STRING }),

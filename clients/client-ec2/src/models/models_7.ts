@@ -4949,7 +4949,7 @@ export const RunInstancesRequestFilterSensitiveLog = (obj: RunInstancesRequest):
  * @internal
  */
 export const ScheduledInstancesLaunchSpecificationFilterSensitiveLog = (
-  obj: ScheduledInstancesLaunchSpecification
+  obj: ScheduledInstancesLaunchSpecification,
 ): any => ({
   ...obj,
 });

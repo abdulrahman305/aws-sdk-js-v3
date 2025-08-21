@@ -26,12 +26,12 @@ export class S3ExpressIdentityProviderImpl implements S3ExpressIdentityProvider 
 
   public constructor(
     private createSessionFn: (key: string) => Promise<{ Credentials: Credentials }>,
-    private cache: S3ExpressIdentityCache = new S3ExpressIdentityCache()
+    private cache: S3ExpressIdentityCache = new S3ExpressIdentityCache(),
   ) {}
 
   public async getS3ExpressIdentity(
     awsIdentity: AwsCredentialIdentity,
-    identityProperties: { Bucket: string } & Record<string, string>
+    identityProperties: { Bucket: string } & Record<string, string>,
   ): Promise<S3ExpressIdentity> {
     const key = identityProperties.Bucket;
     const { cache } = this;

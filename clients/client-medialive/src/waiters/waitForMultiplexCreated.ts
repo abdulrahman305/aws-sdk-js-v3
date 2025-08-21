@@ -47,7 +47,7 @@ const checkState = async (client: MediaLiveClient, input: DescribeMultiplexComma
  */
 export const waitForMultiplexCreated = async (
   params: WaiterConfiguration<MediaLiveClient>,
-  input: DescribeMultiplexCommandInput
+  input: DescribeMultiplexCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 3, maxDelay: 120 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -59,7 +59,7 @@ export const waitForMultiplexCreated = async (
  */
 export const waitUntilMultiplexCreated = async (
   params: WaiterConfiguration<MediaLiveClient>,
-  input: DescribeMultiplexCommandInput
+  input: DescribeMultiplexCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 3, maxDelay: 120 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

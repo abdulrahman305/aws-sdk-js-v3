@@ -22,16 +22,16 @@ export interface KinesisVideoWebRTCStorage {
    */
   joinStorageSession(
     args: JoinStorageSessionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<JoinStorageSessionCommandOutput>;
   joinStorageSession(
     args: JoinStorageSessionCommandInput,
-    cb: (err: any, data?: JoinStorageSessionCommandOutput) => void
+    cb: (err: any, data?: JoinStorageSessionCommandOutput) => void,
   ): void;
   joinStorageSession(
     args: JoinStorageSessionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: JoinStorageSessionCommandOutput) => void
+    cb: (err: any, data?: JoinStorageSessionCommandOutput) => void,
   ): void;
 }
 

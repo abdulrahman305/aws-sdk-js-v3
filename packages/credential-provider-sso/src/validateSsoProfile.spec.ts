@@ -29,12 +29,12 @@ describe(validateSsoProfile.name, () => {
         new CredentialsProviderError(
           `Profile is configured with invalid SSO credentials. Required parameters ` +
             `"sso_account_id", "sso_region", "sso_role_name", "sso_start_url". Got ${Object.keys(profileToVerify).join(
-              ", "
+              ", ",
             )}\nReference: https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-sso.html`,
-          false
-        )
+          false,
+        ),
       );
-    }
+    },
   );
 
   it.each(["sso_session"])("does not throw if '%s' is missing from profile", (key) => {

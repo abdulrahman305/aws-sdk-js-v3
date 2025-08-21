@@ -193,7 +193,7 @@ import { Route53DomainsServiceException as __BaseException } from "../models/Rou
  */
 export const se_AcceptDomainTransferFromAnotherAwsAccountCommand = async (
   input: AcceptDomainTransferFromAnotherAwsAccountCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("AcceptDomainTransferFromAnotherAwsAccount");
   let body: any;
@@ -206,7 +206,7 @@ export const se_AcceptDomainTransferFromAnotherAwsAccountCommand = async (
  */
 export const se_AssociateDelegationSignerToDomainCommand = async (
   input: AssociateDelegationSignerToDomainCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("AssociateDelegationSignerToDomain");
   let body: any;
@@ -219,7 +219,7 @@ export const se_AssociateDelegationSignerToDomainCommand = async (
  */
 export const se_CancelDomainTransferToAnotherAwsAccountCommand = async (
   input: CancelDomainTransferToAnotherAwsAccountCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CancelDomainTransferToAnotherAwsAccount");
   let body: any;
@@ -232,7 +232,7 @@ export const se_CancelDomainTransferToAnotherAwsAccountCommand = async (
  */
 export const se_CheckDomainAvailabilityCommand = async (
   input: CheckDomainAvailabilityCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CheckDomainAvailability");
   let body: any;
@@ -245,7 +245,7 @@ export const se_CheckDomainAvailabilityCommand = async (
  */
 export const se_CheckDomainTransferabilityCommand = async (
   input: CheckDomainTransferabilityCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CheckDomainTransferability");
   let body: any;
@@ -258,7 +258,7 @@ export const se_CheckDomainTransferabilityCommand = async (
  */
 export const se_DeleteDomainCommand = async (
   input: DeleteDomainCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteDomain");
   let body: any;
@@ -271,7 +271,7 @@ export const se_DeleteDomainCommand = async (
  */
 export const se_DeleteTagsForDomainCommand = async (
   input: DeleteTagsForDomainCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteTagsForDomain");
   let body: any;
@@ -284,7 +284,7 @@ export const se_DeleteTagsForDomainCommand = async (
  */
 export const se_DisableDomainAutoRenewCommand = async (
   input: DisableDomainAutoRenewCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DisableDomainAutoRenew");
   let body: any;
@@ -297,7 +297,7 @@ export const se_DisableDomainAutoRenewCommand = async (
  */
 export const se_DisableDomainTransferLockCommand = async (
   input: DisableDomainTransferLockCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DisableDomainTransferLock");
   let body: any;
@@ -310,7 +310,7 @@ export const se_DisableDomainTransferLockCommand = async (
  */
 export const se_DisassociateDelegationSignerFromDomainCommand = async (
   input: DisassociateDelegationSignerFromDomainCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DisassociateDelegationSignerFromDomain");
   let body: any;
@@ -323,7 +323,7 @@ export const se_DisassociateDelegationSignerFromDomainCommand = async (
  */
 export const se_EnableDomainAutoRenewCommand = async (
   input: EnableDomainAutoRenewCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("EnableDomainAutoRenew");
   let body: any;
@@ -336,7 +336,7 @@ export const se_EnableDomainAutoRenewCommand = async (
  */
 export const se_EnableDomainTransferLockCommand = async (
   input: EnableDomainTransferLockCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("EnableDomainTransferLock");
   let body: any;
@@ -349,7 +349,7 @@ export const se_EnableDomainTransferLockCommand = async (
  */
 export const se_GetContactReachabilityStatusCommand = async (
   input: GetContactReachabilityStatusCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetContactReachabilityStatus");
   let body: any;
@@ -362,7 +362,7 @@ export const se_GetContactReachabilityStatusCommand = async (
  */
 export const se_GetDomainDetailCommand = async (
   input: GetDomainDetailCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetDomainDetail");
   let body: any;
@@ -375,7 +375,7 @@ export const se_GetDomainDetailCommand = async (
  */
 export const se_GetDomainSuggestionsCommand = async (
   input: GetDomainSuggestionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetDomainSuggestions");
   let body: any;
@@ -388,7 +388,7 @@ export const se_GetDomainSuggestionsCommand = async (
  */
 export const se_GetOperationDetailCommand = async (
   input: GetOperationDetailCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetOperationDetail");
   let body: any;
@@ -401,7 +401,7 @@ export const se_GetOperationDetailCommand = async (
  */
 export const se_ListDomainsCommand = async (
   input: ListDomainsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListDomains");
   let body: any;
@@ -414,7 +414,7 @@ export const se_ListDomainsCommand = async (
  */
 export const se_ListOperationsCommand = async (
   input: ListOperationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListOperations");
   let body: any;
@@ -427,7 +427,7 @@ export const se_ListOperationsCommand = async (
  */
 export const se_ListPricesCommand = async (
   input: ListPricesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListPrices");
   let body: any;
@@ -440,7 +440,7 @@ export const se_ListPricesCommand = async (
  */
 export const se_ListTagsForDomainCommand = async (
   input: ListTagsForDomainCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListTagsForDomain");
   let body: any;
@@ -453,7 +453,7 @@ export const se_ListTagsForDomainCommand = async (
  */
 export const se_PushDomainCommand = async (
   input: PushDomainCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("PushDomain");
   let body: any;
@@ -466,7 +466,7 @@ export const se_PushDomainCommand = async (
  */
 export const se_RegisterDomainCommand = async (
   input: RegisterDomainCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("RegisterDomain");
   let body: any;
@@ -479,7 +479,7 @@ export const se_RegisterDomainCommand = async (
  */
 export const se_RejectDomainTransferFromAnotherAwsAccountCommand = async (
   input: RejectDomainTransferFromAnotherAwsAccountCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("RejectDomainTransferFromAnotherAwsAccount");
   let body: any;
@@ -492,7 +492,7 @@ export const se_RejectDomainTransferFromAnotherAwsAccountCommand = async (
  */
 export const se_RenewDomainCommand = async (
   input: RenewDomainCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("RenewDomain");
   let body: any;
@@ -505,7 +505,7 @@ export const se_RenewDomainCommand = async (
  */
 export const se_ResendContactReachabilityEmailCommand = async (
   input: ResendContactReachabilityEmailCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ResendContactReachabilityEmail");
   let body: any;
@@ -518,7 +518,7 @@ export const se_ResendContactReachabilityEmailCommand = async (
  */
 export const se_ResendOperationAuthorizationCommand = async (
   input: ResendOperationAuthorizationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ResendOperationAuthorization");
   let body: any;
@@ -531,7 +531,7 @@ export const se_ResendOperationAuthorizationCommand = async (
  */
 export const se_RetrieveDomainAuthCodeCommand = async (
   input: RetrieveDomainAuthCodeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("RetrieveDomainAuthCode");
   let body: any;
@@ -544,7 +544,7 @@ export const se_RetrieveDomainAuthCodeCommand = async (
  */
 export const se_TransferDomainCommand = async (
   input: TransferDomainCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("TransferDomain");
   let body: any;
@@ -557,7 +557,7 @@ export const se_TransferDomainCommand = async (
  */
 export const se_TransferDomainToAnotherAwsAccountCommand = async (
   input: TransferDomainToAnotherAwsAccountCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("TransferDomainToAnotherAwsAccount");
   let body: any;
@@ -570,7 +570,7 @@ export const se_TransferDomainToAnotherAwsAccountCommand = async (
  */
 export const se_UpdateDomainContactCommand = async (
   input: UpdateDomainContactCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateDomainContact");
   let body: any;
@@ -583,7 +583,7 @@ export const se_UpdateDomainContactCommand = async (
  */
 export const se_UpdateDomainContactPrivacyCommand = async (
   input: UpdateDomainContactPrivacyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateDomainContactPrivacy");
   let body: any;
@@ -596,7 +596,7 @@ export const se_UpdateDomainContactPrivacyCommand = async (
  */
 export const se_UpdateDomainNameserversCommand = async (
   input: UpdateDomainNameserversCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateDomainNameservers");
   let body: any;
@@ -609,7 +609,7 @@ export const se_UpdateDomainNameserversCommand = async (
  */
 export const se_UpdateTagsForDomainCommand = async (
   input: UpdateTagsForDomainCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateTagsForDomain");
   let body: any;
@@ -622,7 +622,7 @@ export const se_UpdateTagsForDomainCommand = async (
  */
 export const se_ViewBillingCommand = async (
   input: ViewBillingCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ViewBilling");
   let body: any;
@@ -635,7 +635,7 @@ export const se_ViewBillingCommand = async (
  */
 export const de_AcceptDomainTransferFromAnotherAwsAccountCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AcceptDomainTransferFromAnotherAwsAccountCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -655,7 +655,7 @@ export const de_AcceptDomainTransferFromAnotherAwsAccountCommand = async (
  */
 export const de_AssociateDelegationSignerToDomainCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssociateDelegationSignerToDomainCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -675,7 +675,7 @@ export const de_AssociateDelegationSignerToDomainCommand = async (
  */
 export const de_CancelDomainTransferToAnotherAwsAccountCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CancelDomainTransferToAnotherAwsAccountCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -695,7 +695,7 @@ export const de_CancelDomainTransferToAnotherAwsAccountCommand = async (
  */
 export const de_CheckDomainAvailabilityCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CheckDomainAvailabilityCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -715,7 +715,7 @@ export const de_CheckDomainAvailabilityCommand = async (
  */
 export const de_CheckDomainTransferabilityCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CheckDomainTransferabilityCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -735,7 +735,7 @@ export const de_CheckDomainTransferabilityCommand = async (
  */
 export const de_DeleteDomainCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteDomainCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -755,7 +755,7 @@ export const de_DeleteDomainCommand = async (
  */
 export const de_DeleteTagsForDomainCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteTagsForDomainCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -775,7 +775,7 @@ export const de_DeleteTagsForDomainCommand = async (
  */
 export const de_DisableDomainAutoRenewCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisableDomainAutoRenewCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -795,7 +795,7 @@ export const de_DisableDomainAutoRenewCommand = async (
  */
 export const de_DisableDomainTransferLockCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisableDomainTransferLockCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -815,7 +815,7 @@ export const de_DisableDomainTransferLockCommand = async (
  */
 export const de_DisassociateDelegationSignerFromDomainCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisassociateDelegationSignerFromDomainCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -835,7 +835,7 @@ export const de_DisassociateDelegationSignerFromDomainCommand = async (
  */
 export const de_EnableDomainAutoRenewCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<EnableDomainAutoRenewCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -855,7 +855,7 @@ export const de_EnableDomainAutoRenewCommand = async (
  */
 export const de_EnableDomainTransferLockCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<EnableDomainTransferLockCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -875,7 +875,7 @@ export const de_EnableDomainTransferLockCommand = async (
  */
 export const de_GetContactReachabilityStatusCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetContactReachabilityStatusCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -895,7 +895,7 @@ export const de_GetContactReachabilityStatusCommand = async (
  */
 export const de_GetDomainDetailCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetDomainDetailCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -915,7 +915,7 @@ export const de_GetDomainDetailCommand = async (
  */
 export const de_GetDomainSuggestionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetDomainSuggestionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -935,7 +935,7 @@ export const de_GetDomainSuggestionsCommand = async (
  */
 export const de_GetOperationDetailCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetOperationDetailCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -955,7 +955,7 @@ export const de_GetOperationDetailCommand = async (
  */
 export const de_ListDomainsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListDomainsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -975,7 +975,7 @@ export const de_ListDomainsCommand = async (
  */
 export const de_ListOperationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListOperationsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -995,7 +995,7 @@ export const de_ListOperationsCommand = async (
  */
 export const de_ListPricesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListPricesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1015,7 +1015,7 @@ export const de_ListPricesCommand = async (
  */
 export const de_ListTagsForDomainCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForDomainCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1035,7 +1035,7 @@ export const de_ListTagsForDomainCommand = async (
  */
 export const de_PushDomainCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PushDomainCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1052,7 +1052,7 @@ export const de_PushDomainCommand = async (
  */
 export const de_RegisterDomainCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RegisterDomainCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1072,7 +1072,7 @@ export const de_RegisterDomainCommand = async (
  */
 export const de_RejectDomainTransferFromAnotherAwsAccountCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RejectDomainTransferFromAnotherAwsAccountCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1092,7 +1092,7 @@ export const de_RejectDomainTransferFromAnotherAwsAccountCommand = async (
  */
 export const de_RenewDomainCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RenewDomainCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1112,7 +1112,7 @@ export const de_RenewDomainCommand = async (
  */
 export const de_ResendContactReachabilityEmailCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResendContactReachabilityEmailCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1132,7 +1132,7 @@ export const de_ResendContactReachabilityEmailCommand = async (
  */
 export const de_ResendOperationAuthorizationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResendOperationAuthorizationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1149,7 +1149,7 @@ export const de_ResendOperationAuthorizationCommand = async (
  */
 export const de_RetrieveDomainAuthCodeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RetrieveDomainAuthCodeCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1169,7 +1169,7 @@ export const de_RetrieveDomainAuthCodeCommand = async (
  */
 export const de_TransferDomainCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TransferDomainCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1189,7 +1189,7 @@ export const de_TransferDomainCommand = async (
  */
 export const de_TransferDomainToAnotherAwsAccountCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TransferDomainToAnotherAwsAccountCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1209,7 +1209,7 @@ export const de_TransferDomainToAnotherAwsAccountCommand = async (
  */
 export const de_UpdateDomainContactCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateDomainContactCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1229,7 +1229,7 @@ export const de_UpdateDomainContactCommand = async (
  */
 export const de_UpdateDomainContactPrivacyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateDomainContactPrivacyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1249,7 +1249,7 @@ export const de_UpdateDomainContactPrivacyCommand = async (
  */
 export const de_UpdateDomainNameserversCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateDomainNameserversCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1269,7 +1269,7 @@ export const de_UpdateDomainNameserversCommand = async (
  */
 export const de_UpdateTagsForDomainCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateTagsForDomainCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1289,7 +1289,7 @@ export const de_UpdateTagsForDomainCommand = async (
  */
 export const de_ViewBillingCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ViewBillingCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1402,7 +1402,7 @@ const de_InvalidInputRes = async (parsedOutput: any, context: __SerdeContext): P
  */
 const de_OperationLimitExceededRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<OperationLimitExceeded> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1897,7 +1897,7 @@ const buildHttpRpcRequest = async (
   headers: __HeaderBag,
   path: string,
   resolvedHostname: string | undefined,
-  body: any
+  body: any,
 ): Promise<__HttpRequest> => {
   const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
   const contents: any = {

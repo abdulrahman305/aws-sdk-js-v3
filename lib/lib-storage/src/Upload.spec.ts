@@ -206,7 +206,7 @@ describe(Upload.name, () => {
     const streamBody = Readable.from(
       (function* () {
         yield params.Body;
-      })()
+      })(),
     );
     const upload = new Upload({
       params: { ...params, Body: streamBody },
@@ -381,7 +381,7 @@ describe(Upload.name, () => {
       const streamBody = Readable.from(
         (function* () {
           yield largeBuffer;
-        })()
+        })(),
       );
       const actionParams = { ...params, Body: streamBody };
       const upload = new Upload({
@@ -594,7 +594,7 @@ describe(Upload.name, () => {
     const streamBody = Readable.from(
       (function* () {
         yield largeBuffer;
-      })()
+      })(),
     );
     const actionParams = { ...params, Body: streamBody };
     const upload = new Upload({
@@ -676,7 +676,7 @@ describe(Upload.name, () => {
     const streamBody = Readable.from(
       (function* () {
         yield largeBuffer;
-      })()
+      })(),
     );
     const actionParams = { ...params, Body: streamBody };
     const upload = new Upload({
@@ -720,7 +720,7 @@ describe(Upload.name, () => {
 
     await upload.done();
     expect(() => upload.done()).rejects.toEqual(
-      new Error("@aws-sdk/lib-storage: this instance of Upload has already executed .done(). Create a new instance.")
+      new Error("@aws-sdk/lib-storage: this instance of Upload has already executed .done(). Create a new instance."),
     );
   });
 });

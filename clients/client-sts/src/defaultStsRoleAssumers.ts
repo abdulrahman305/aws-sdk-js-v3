@@ -24,7 +24,7 @@ export type STSRoleAssumerOptions = Pick<STSClientConfig, "logger" | "region" | 
  */
 export type RoleAssumer = (
   sourceCreds: AwsCredentialIdentity,
-  params: AssumeRoleCommandInput
+  params: AssumeRoleCommandInput,
 ) => Promise<AwsCredentialIdentity>;
 
 const ASSUME_ROLE_DEFAULT_REGION = "us-east-1";
@@ -37,7 +37,7 @@ const ASSUME_ROLE_DEFAULT_REGION = "us-east-1";
 const resolveRegion = async (
   _region: string | Provider<string> | undefined,
   _parentRegion: string | Provider<string> | undefined,
-  credentialProviderLogger?: Logger
+  credentialProviderLogger?: Logger,
 ): Promise<string> => {
   const region: string | undefined = typeof _region === "function" ? await _region() : _region;
   const parentRegion: string | undefined = typeof _parentRegion === "function" ? await _parentRegion() : _parentRegion;
@@ -47,7 +47,7 @@ const resolveRegion = async (
     "accepting first of:",
     `${region} (provider)`,
     `${parentRegion} (parent client)`,
-    `${ASSUME_ROLE_DEFAULT_REGION} (STS default)`
+    `${ASSUME_ROLE_DEFAULT_REGION} (STS default)`,
   );
   return region ?? parentRegion ?? ASSUME_ROLE_DEFAULT_REGION;
 };
@@ -58,7 +58,7 @@ const resolveRegion = async (
  */
 export const getDefaultRoleAssumer = (
   stsOptions: STSRoleAssumerOptions,
-  stsClientCtor: new (options: STSClientConfig) => STSClient
+  stsClientCtor: new (options: STSClientConfig) => STSClient,
 ): RoleAssumer => {
   let stsClient: STSClient;
   let closureSourceCreds: AwsCredentialIdentity;
@@ -74,7 +74,7 @@ export const getDefaultRoleAssumer = (
       const resolvedRegion = await resolveRegion(
         region,
         stsOptions?.parentClientConfig?.region,
-        credentialProviderLogger
+        credentialProviderLogger,
       );
       stsClient = new stsClientCtor({
         // A hack to make sts client uses the credential in current closure.
@@ -103,7 +103,7 @@ export const getDefaultRoleAssumer = (
  * @internal
  */
 export type RoleAssumerWithWebIdentity = (
-  params: AssumeRoleWithWebIdentityCommandInput
+  params: AssumeRoleWithWebIdentityCommandInput,
 ) => Promise<AwsCredentialIdentity>;
 
 /**
@@ -112,7 +112,7 @@ export type RoleAssumerWithWebIdentity = (
  */
 export const getDefaultRoleAssumerWithWebIdentity = (
   stsOptions: STSRoleAssumerOptions,
-  stsClientCtor: new (options: STSClientConfig) => STSClient
+  stsClientCtor: new (options: STSClientConfig) => STSClient,
 ): RoleAssumerWithWebIdentity => {
   let stsClient: STSClient;
   return async (params) => {
@@ -126,7 +126,7 @@ export const getDefaultRoleAssumerWithWebIdentity = (
       const resolvedRegion = await resolveRegion(
         region,
         stsOptions?.parentClientConfig?.region,
-        credentialProviderLogger
+        credentialProviderLogger,
       );
       stsClient = new stsClientCtor({
         region: resolvedRegion,
@@ -169,7 +169,7 @@ export const decorateDefaultCredentialProvider =
       roleAssumer: getDefaultRoleAssumer(input, input.stsClientCtor as new (options: STSClientConfig) => STSClient),
       roleAssumerWithWebIdentity: getDefaultRoleAssumerWithWebIdentity(
         input,
-        input.stsClientCtor as new (options: STSClientConfig) => STSClient
+        input.stsClientCtor as new (options: STSClientConfig) => STSClient,
       ),
       ...input,
     });

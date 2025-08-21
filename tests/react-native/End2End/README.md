@@ -25,7 +25,6 @@
 ## Steps to Setup
 
 1. Build the project:
-
    - change directory to project root: `cd ../../..`
    - `yarn`
    - `yarn build:all`
@@ -40,7 +39,6 @@
    - `git fetch [remove] --tags`
 
 1. Launch the ReactNative test:
-
    - change directory to RN test root: `cd tests/react-native/End2End`
    - make sure you have configured the SDK with the credentials from the testing account that contains
      `SdkReleaseV3IntegTestResourcesStack`

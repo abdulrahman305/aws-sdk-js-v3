@@ -28,7 +28,7 @@ const checkState = async (client: Route53Client, input: GetChangeCommandInput): 
  */
 export const waitForResourceRecordSetsChanged = async (
   params: WaiterConfiguration<Route53Client>,
-  input: GetChangeCommandInput
+  input: GetChangeCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 30, maxDelay: 120 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -40,7 +40,7 @@ export const waitForResourceRecordSetsChanged = async (
  */
 export const waitUntilResourceRecordSetsChanged = async (
   params: WaiterConfiguration<Route53Client>,
-  input: GetChangeCommandInput
+  input: GetChangeCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 30, maxDelay: 120 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

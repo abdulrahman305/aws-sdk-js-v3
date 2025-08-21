@@ -68,7 +68,8 @@ describe("middleware-sdk-route53", () => {
         body(raw) {
           const parsed = new XMLParser().parse(raw);
           expect(
-            parsed.ChangeResourceRecordSetsRequest.ChangeBatch.Changes.Change.ResourceRecordSet.AliasTarget.HostedZoneId
+            parsed.ChangeResourceRecordSetsRequest.ChangeBatch.Changes.Change.ResourceRecordSet.AliasTarget
+              .HostedZoneId,
           ).toMatch(/^my-zone$/);
         },
       });

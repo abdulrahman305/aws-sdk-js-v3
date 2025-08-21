@@ -87,7 +87,7 @@ export class TransactGetCommand extends DynamoDBDocumentClientCommand<
   resolveMiddleware(
     clientStack: MiddlewareStack<ServiceInputTypes, ServiceOutputTypes>,
     configuration: DynamoDBDocumentClientResolvedConfig,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Handler<TransactGetCommandInput, TransactGetCommandOutput> {
     this.addMarshallingMiddleware(configuration);
     const stack = clientStack.concat(this.middlewareStack as typeof clientStack);

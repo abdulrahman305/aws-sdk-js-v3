@@ -67,7 +67,7 @@ describe("addChecksumHeadersMiddleware", () => {
     expect(next.mock.calls.length).toBe(1);
     const { request } = next.mock.calls[0][0];
     expect(request.headers["x-amz-content-sha256"]).toBe(
-      "733cf513448ce6b20ad1bc5e50eb27c06aefae0c320713a5dd99f4e51bc1ca60"
+      "733cf513448ce6b20ad1bc5e50eb27c06aefae0c320713a5dd99f4e51bc1ca60",
     );
     expect(request.headers["x-amz-sha256-tree-hash"]).toBe("foo");
     expect(bodyChecksumGenerator.mock.calls.length).toBe(1);
@@ -92,7 +92,7 @@ describe("addChecksumHeadersMiddleware", () => {
     expect(next.mock.calls.length).toBe(1);
     const { request } = next.mock.calls[0][0];
     expect(request.headers["x-amz-sha256-tree-hash"]).toBe(
-      "733cf513448ce6b20ad1bc5e50eb27c06aefae0c320713a5dd99f4e51bc1ca60"
+      "733cf513448ce6b20ad1bc5e50eb27c06aefae0c320713a5dd99f4e51bc1ca60",
     );
     expect(request.headers["x-amz-content-sha256"]).toBe("foo");
     expect(bodyChecksumGenerator.mock.calls.length).toBe(1);

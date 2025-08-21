@@ -7594,7 +7594,7 @@ export const NumberDisplayFormatConfigurationFilterSensitiveLog = (obj: NumberDi
  * @internal
  */
 export const PercentageDisplayFormatConfigurationFilterSensitiveLog = (
-  obj: PercentageDisplayFormatConfiguration
+  obj: PercentageDisplayFormatConfiguration,
 ): any => ({
   ...obj,
   ...(obj.Prefix && { Prefix: SENSITIVE_STRING }),
@@ -7611,17 +7611,17 @@ export const NumericFormatConfigurationFilterSensitiveLog = (obj: NumericFormatC
   ...obj,
   ...(obj.NumberDisplayFormatConfiguration && {
     NumberDisplayFormatConfiguration: NumberDisplayFormatConfigurationFilterSensitiveLog(
-      obj.NumberDisplayFormatConfiguration
+      obj.NumberDisplayFormatConfiguration,
     ),
   }),
   ...(obj.CurrencyDisplayFormatConfiguration && {
     CurrencyDisplayFormatConfiguration: CurrencyDisplayFormatConfigurationFilterSensitiveLog(
-      obj.CurrencyDisplayFormatConfiguration
+      obj.CurrencyDisplayFormatConfiguration,
     ),
   }),
   ...(obj.PercentageDisplayFormatConfiguration && {
     PercentageDisplayFormatConfiguration: PercentageDisplayFormatConfigurationFilterSensitiveLog(
-      obj.PercentageDisplayFormatConfiguration
+      obj.PercentageDisplayFormatConfiguration,
     ),
   }),
 });
@@ -7754,7 +7754,7 @@ export const DateTimeDefaultValuesFilterSensitiveLog = (obj: DateTimeDefaultValu
  * @internal
  */
 export const DateTimeValueWhenUnsetConfigurationFilterSensitiveLog = (
-  obj: DateTimeValueWhenUnsetConfiguration
+  obj: DateTimeValueWhenUnsetConfiguration,
 ): any => ({
   ...obj,
   ...(obj.CustomValue && { CustomValue: SENSITIVE_STRING }),
@@ -7975,7 +7975,7 @@ export const CustomValuesConfigurationFilterSensitiveLog = (obj: CustomValuesCon
  * @internal
  */
 export const DestinationParameterValueConfigurationFilterSensitiveLog = (
-  obj: DestinationParameterValueConfiguration
+  obj: DestinationParameterValueConfiguration,
 ): any => ({
   ...obj,
   ...(obj.CustomValuesConfiguration && {
@@ -7998,7 +7998,7 @@ export const CustomActionSetParametersOperationFilterSensitiveLog = (obj: Custom
   ...obj,
   ...(obj.ParameterValueConfigurations && {
     ParameterValueConfigurations: obj.ParameterValueConfigurations.map((item) =>
-      SetParameterValueConfigurationFilterSensitiveLog(item)
+      SetParameterValueConfigurationFilterSensitiveLog(item),
     ),
   }),
 });
@@ -8152,7 +8152,7 @@ export const BarChartFieldWellsFilterSensitiveLog = (obj: BarChartFieldWells): a
  * @internal
  */
 export const ReferenceLineStaticDataConfigurationFilterSensitiveLog = (
-  obj: ReferenceLineStaticDataConfiguration
+  obj: ReferenceLineStaticDataConfiguration,
 ): any => ({
   ...obj,
   ...(obj.Value && { Value: SENSITIVE_STRING }),
@@ -8172,7 +8172,7 @@ export const ReferenceLineDataConfigurationFilterSensitiveLog = (obj: ReferenceL
  * @internal
  */
 export const ReferenceLineValueLabelConfigurationFilterSensitiveLog = (
-  obj: ReferenceLineValueLabelConfiguration
+  obj: ReferenceLineValueLabelConfiguration,
 ): any => ({
   ...obj,
   ...(obj.FormatConfiguration && {

@@ -41,7 +41,7 @@ export interface PersonalizeRuntimeHttpAuthSchemeParametersProvider
 export const defaultPersonalizeRuntimeHttpAuthSchemeParametersProvider = async (
   config: PersonalizeRuntimeClientResolvedConfig,
   context: HandlerExecutionContext,
-  input: object
+  input: object,
 ): Promise<PersonalizeRuntimeHttpAuthSchemeParameters> => {
   return {
     operation: getSmithyContext(context).operation as string,
@@ -82,7 +82,7 @@ export interface PersonalizeRuntimeHttpAuthSchemeProvider
  * @internal
  */
 export const defaultPersonalizeRuntimeHttpAuthSchemeProvider: PersonalizeRuntimeHttpAuthSchemeProvider = (
-  authParameters
+  authParameters,
 ) => {
   const options: HttpAuthOption[] = [];
   switch (authParameters.operation) {
@@ -131,7 +131,7 @@ export interface HttpAuthSchemeResolvedConfig extends AwsSdkSigV4AuthResolvedCon
  * @internal
  */
 export const resolveHttpAuthSchemeConfig = <T>(
-  config: T & HttpAuthSchemeInputConfig & AwsSdkSigV4PreviouslyResolved
+  config: T & HttpAuthSchemeInputConfig & AwsSdkSigV4PreviouslyResolved,
 ): T & HttpAuthSchemeResolvedConfig => {
   const config_0 = resolveAwsSdkSigV4Config(config);
   return {

@@ -97,7 +97,7 @@ describe("Endpoints from ARN", () => {
       expect(result.request.hostname).to.eql(`abc-111-${AccountId}.${OutpostId}.s3-outposts.us-west-2.amazonaws.com`);
       const date = new Date().toISOString().slice(0, 10).replace(/-/g, ""); //20201029
       expect(result.request.headers["authorization"]).contains(
-        `Credential=${credentials.accessKeyId}/${date}/${region}/s3-outposts/aws4_request`
+        `Credential=${credentials.accessKeyId}/${date}/${region}/s3-outposts/aws4_request`,
       );
     });
   });
@@ -116,7 +116,7 @@ describe("Endpoints from ARN", () => {
       const date = new Date().toISOString().slice(0, 10).replace(/-/g, ""); //20201029
       expect(result.request.hostname).to.eql("mybanner-123456789012.s3-object-lambda.us-east-1.amazonaws.com");
       expect(result.request.headers["authorization"]).contains(
-        `Credential=${credentials.accessKeyId}/${date}/${region}/s3-object-lambda/aws4_request`
+        `Credential=${credentials.accessKeyId}/${date}/${region}/s3-object-lambda/aws4_request`,
       );
     });
 
@@ -134,7 +134,7 @@ describe("Endpoints from ARN", () => {
       const date = new Date().toISOString().slice(0, 10).replace(/-/g, ""); //20201029
       expect(result.request.hostname).to.eql(`${requestRoute}.s3-object-lambda.us-east-1.amazonaws.com`);
       expect(result.request.headers["authorization"]).contains(
-        `Credential=${credentials.accessKeyId}/${date}/${region}/s3-object-lambda/aws4_request`
+        `Credential=${credentials.accessKeyId}/${date}/${region}/s3-object-lambda/aws4_request`,
       );
     });
   });
@@ -176,13 +176,13 @@ describe("Throw 200 response", () => {
 
     it("should throw if UploadPartCopy() return with 200 and empty payload", async () => {
       return expect(client.uploadPartCopy({ ...params, UploadId: "id", PartNumber: 1 })).to.eventually.be.rejectedWith(
-        errorMsg
+        errorMsg,
       );
     });
 
     it("should throw if CompleteMultipartUpload() return with 200 and empty payload", async () => {
       return expect(client.completeMultipartUpload({ ...params, UploadId: "id" })).to.eventually.be.rejectedWith(
-        errorMsg
+        errorMsg,
       );
     });
   });
@@ -207,13 +207,13 @@ describe("Throw 200 response", () => {
 
     it("should throw if UploadPartCopy() return with 200 and error preamble", async () => {
       return expect(client.uploadPartCopy({ ...params, UploadId: "id", PartNumber: 1 })).to.eventually.be.rejectedWith(
-        errorMsg
+        errorMsg,
       );
     });
 
     it("should throw if CompleteMultipartUpload() return with 200 and error preamble", async () => {
       return expect(client.completeMultipartUpload({ ...params, UploadId: "id" })).to.eventually.be.rejectedWith(
-        errorMsg
+        errorMsg,
       );
     });
   });

@@ -5365,7 +5365,7 @@ export const HttpEndpointRequestConfigurationFilterSensitiveLog = (obj: HttpEndp
  * @internal
  */
 export const HttpEndpointDestinationConfigurationFilterSensitiveLog = (
-  obj: HttpEndpointDestinationConfiguration
+  obj: HttpEndpointDestinationConfiguration,
 ): any => ({
   ...obj,
   ...(obj.EndpointConfiguration && {
@@ -5430,17 +5430,17 @@ export const CreateDeliveryStreamInputFilterSensitiveLog = (obj: CreateDeliveryS
   ...obj,
   ...(obj.RedshiftDestinationConfiguration && {
     RedshiftDestinationConfiguration: RedshiftDestinationConfigurationFilterSensitiveLog(
-      obj.RedshiftDestinationConfiguration
+      obj.RedshiftDestinationConfiguration,
     ),
   }),
   ...(obj.HttpEndpointDestinationConfiguration && {
     HttpEndpointDestinationConfiguration: HttpEndpointDestinationConfigurationFilterSensitiveLog(
-      obj.HttpEndpointDestinationConfiguration
+      obj.HttpEndpointDestinationConfiguration,
     ),
   }),
   ...(obj.SnowflakeDestinationConfiguration && {
     SnowflakeDestinationConfiguration: SnowflakeDestinationConfigurationFilterSensitiveLog(
-      obj.SnowflakeDestinationConfiguration
+      obj.SnowflakeDestinationConfiguration,
     ),
   }),
 });
@@ -5501,17 +5501,17 @@ export const DestinationDescriptionFilterSensitiveLog = (obj: DestinationDescrip
   ...obj,
   ...(obj.RedshiftDestinationDescription && {
     RedshiftDestinationDescription: RedshiftDestinationDescriptionFilterSensitiveLog(
-      obj.RedshiftDestinationDescription
+      obj.RedshiftDestinationDescription,
     ),
   }),
   ...(obj.HttpEndpointDestinationDescription && {
     HttpEndpointDestinationDescription: HttpEndpointDestinationDescriptionFilterSensitiveLog(
-      obj.HttpEndpointDestinationDescription
+      obj.HttpEndpointDestinationDescription,
     ),
   }),
   ...(obj.SnowflakeDestinationDescription && {
     SnowflakeDestinationDescription: SnowflakeDestinationDescriptionFilterSensitiveLog(
-      obj.SnowflakeDestinationDescription
+      obj.SnowflakeDestinationDescription,
     ),
   }),
 });

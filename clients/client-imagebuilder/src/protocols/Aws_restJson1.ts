@@ -309,7 +309,7 @@ import {
  */
 export const se_CancelImageCreationCommand = async (
   input: CancelImageCreationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -321,7 +321,7 @@ export const se_CancelImageCreationCommand = async (
     take(input, {
       clientToken: [true, (_) => _ ?? generateIdempotencyToken()],
       imageBuildVersionArn: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -332,7 +332,7 @@ export const se_CancelImageCreationCommand = async (
  */
 export const se_CancelLifecycleExecutionCommand = async (
   input: CancelLifecycleExecutionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -344,7 +344,7 @@ export const se_CancelLifecycleExecutionCommand = async (
     take(input, {
       clientToken: [true, (_) => _ ?? generateIdempotencyToken()],
       lifecycleExecutionId: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -355,7 +355,7 @@ export const se_CancelLifecycleExecutionCommand = async (
  */
 export const se_CreateComponentCommand = async (
   input: CreateComponentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -376,7 +376,7 @@ export const se_CreateComponentCommand = async (
       supportedOsVersions: (_) => _json(_),
       tags: (_) => _json(_),
       uri: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -387,7 +387,7 @@ export const se_CreateComponentCommand = async (
  */
 export const se_CreateContainerRecipeCommand = async (
   input: CreateContainerRecipeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -413,7 +413,7 @@ export const se_CreateContainerRecipeCommand = async (
       tags: (_) => _json(_),
       targetRepository: (_) => _json(_),
       workingDirectory: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -424,7 +424,7 @@ export const se_CreateContainerRecipeCommand = async (
  */
 export const se_CreateDistributionConfigurationCommand = async (
   input: CreateDistributionConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -439,7 +439,7 @@ export const se_CreateDistributionConfigurationCommand = async (
       distributions: (_) => _json(_),
       name: [],
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -450,7 +450,7 @@ export const se_CreateDistributionConfigurationCommand = async (
  */
 export const se_CreateImageCommand = async (
   input: CreateImageCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -471,7 +471,7 @@ export const se_CreateImageCommand = async (
       infrastructureConfigurationArn: [],
       tags: (_) => _json(_),
       workflows: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -482,7 +482,7 @@ export const se_CreateImageCommand = async (
  */
 export const se_CreateImagePipelineCommand = async (
   input: CreateImagePipelineCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -507,7 +507,7 @@ export const se_CreateImagePipelineCommand = async (
       status: [],
       tags: (_) => _json(_),
       workflows: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -518,7 +518,7 @@ export const se_CreateImagePipelineCommand = async (
  */
 export const se_CreateImageRecipeCommand = async (
   input: CreateImageRecipeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -538,7 +538,7 @@ export const se_CreateImageRecipeCommand = async (
       semanticVersion: [],
       tags: (_) => _json(_),
       workingDirectory: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -549,7 +549,7 @@ export const se_CreateImageRecipeCommand = async (
  */
 export const se_CreateInfrastructureConfigurationCommand = async (
   input: CreateInfrastructureConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -573,7 +573,7 @@ export const se_CreateInfrastructureConfigurationCommand = async (
       subnetId: [],
       tags: (_) => _json(_),
       terminateInstanceOnFailure: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -584,7 +584,7 @@ export const se_CreateInfrastructureConfigurationCommand = async (
  */
 export const se_CreateLifecyclePolicyCommand = async (
   input: CreateLifecyclePolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -603,7 +603,7 @@ export const se_CreateLifecyclePolicyCommand = async (
       resourceType: [],
       status: [],
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -614,7 +614,7 @@ export const se_CreateLifecyclePolicyCommand = async (
  */
 export const se_CreateWorkflowCommand = async (
   input: CreateWorkflowCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -634,7 +634,7 @@ export const se_CreateWorkflowCommand = async (
       tags: (_) => _json(_),
       type: [],
       uri: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -645,7 +645,7 @@ export const se_CreateWorkflowCommand = async (
  */
 export const se_DeleteComponentCommand = async (
   input: DeleteComponentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -663,7 +663,7 @@ export const se_DeleteComponentCommand = async (
  */
 export const se_DeleteContainerRecipeCommand = async (
   input: DeleteContainerRecipeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -681,7 +681,7 @@ export const se_DeleteContainerRecipeCommand = async (
  */
 export const se_DeleteDistributionConfigurationCommand = async (
   input: DeleteDistributionConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -699,7 +699,7 @@ export const se_DeleteDistributionConfigurationCommand = async (
  */
 export const se_DeleteImageCommand = async (
   input: DeleteImageCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -717,7 +717,7 @@ export const se_DeleteImageCommand = async (
  */
 export const se_DeleteImagePipelineCommand = async (
   input: DeleteImagePipelineCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -735,7 +735,7 @@ export const se_DeleteImagePipelineCommand = async (
  */
 export const se_DeleteImageRecipeCommand = async (
   input: DeleteImageRecipeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -753,7 +753,7 @@ export const se_DeleteImageRecipeCommand = async (
  */
 export const se_DeleteInfrastructureConfigurationCommand = async (
   input: DeleteInfrastructureConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -771,7 +771,7 @@ export const se_DeleteInfrastructureConfigurationCommand = async (
  */
 export const se_DeleteLifecyclePolicyCommand = async (
   input: DeleteLifecyclePolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -789,7 +789,7 @@ export const se_DeleteLifecyclePolicyCommand = async (
  */
 export const se_DeleteWorkflowCommand = async (
   input: DeleteWorkflowCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -807,7 +807,7 @@ export const se_DeleteWorkflowCommand = async (
  */
 export const se_GetComponentCommand = async (
   input: GetComponentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -825,7 +825,7 @@ export const se_GetComponentCommand = async (
  */
 export const se_GetComponentPolicyCommand = async (
   input: GetComponentPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -843,7 +843,7 @@ export const se_GetComponentPolicyCommand = async (
  */
 export const se_GetContainerRecipeCommand = async (
   input: GetContainerRecipeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -861,7 +861,7 @@ export const se_GetContainerRecipeCommand = async (
  */
 export const se_GetContainerRecipePolicyCommand = async (
   input: GetContainerRecipePolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -879,7 +879,7 @@ export const se_GetContainerRecipePolicyCommand = async (
  */
 export const se_GetDistributionConfigurationCommand = async (
   input: GetDistributionConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -897,7 +897,7 @@ export const se_GetDistributionConfigurationCommand = async (
  */
 export const se_GetImageCommand = async (
   input: GetImageCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -915,7 +915,7 @@ export const se_GetImageCommand = async (
  */
 export const se_GetImagePipelineCommand = async (
   input: GetImagePipelineCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -933,7 +933,7 @@ export const se_GetImagePipelineCommand = async (
  */
 export const se_GetImagePolicyCommand = async (
   input: GetImagePolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -951,7 +951,7 @@ export const se_GetImagePolicyCommand = async (
  */
 export const se_GetImageRecipeCommand = async (
   input: GetImageRecipeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -969,7 +969,7 @@ export const se_GetImageRecipeCommand = async (
  */
 export const se_GetImageRecipePolicyCommand = async (
   input: GetImageRecipePolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -987,7 +987,7 @@ export const se_GetImageRecipePolicyCommand = async (
  */
 export const se_GetInfrastructureConfigurationCommand = async (
   input: GetInfrastructureConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1005,7 +1005,7 @@ export const se_GetInfrastructureConfigurationCommand = async (
  */
 export const se_GetLifecycleExecutionCommand = async (
   input: GetLifecycleExecutionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1023,7 +1023,7 @@ export const se_GetLifecycleExecutionCommand = async (
  */
 export const se_GetLifecyclePolicyCommand = async (
   input: GetLifecyclePolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1041,7 +1041,7 @@ export const se_GetLifecyclePolicyCommand = async (
  */
 export const se_GetWorkflowCommand = async (
   input: GetWorkflowCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1059,7 +1059,7 @@ export const se_GetWorkflowCommand = async (
  */
 export const se_GetWorkflowExecutionCommand = async (
   input: GetWorkflowExecutionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1077,7 +1077,7 @@ export const se_GetWorkflowExecutionCommand = async (
  */
 export const se_GetWorkflowStepExecutionCommand = async (
   input: GetWorkflowStepExecutionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1095,7 +1095,7 @@ export const se_GetWorkflowStepExecutionCommand = async (
  */
 export const se_ImportComponentCommand = async (
   input: ImportComponentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1117,7 +1117,7 @@ export const se_ImportComponentCommand = async (
       tags: (_) => _json(_),
       type: [],
       uri: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1128,7 +1128,7 @@ export const se_ImportComponentCommand = async (
  */
 export const se_ImportVmImageCommand = async (
   input: ImportVmImageCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1146,7 +1146,7 @@ export const se_ImportVmImageCommand = async (
       semanticVersion: [],
       tags: (_) => _json(_),
       vmImportTaskId: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1157,7 +1157,7 @@ export const se_ImportVmImageCommand = async (
  */
 export const se_ListComponentBuildVersionsCommand = async (
   input: ListComponentBuildVersionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1170,7 +1170,7 @@ export const se_ListComponentBuildVersionsCommand = async (
       componentVersionArn: [],
       maxResults: [],
       nextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1181,7 +1181,7 @@ export const se_ListComponentBuildVersionsCommand = async (
  */
 export const se_ListComponentsCommand = async (
   input: ListComponentsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1196,7 +1196,7 @@ export const se_ListComponentsCommand = async (
       maxResults: [],
       nextToken: [],
       owner: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1207,7 +1207,7 @@ export const se_ListComponentsCommand = async (
  */
 export const se_ListContainerRecipesCommand = async (
   input: ListContainerRecipesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1221,7 +1221,7 @@ export const se_ListContainerRecipesCommand = async (
       maxResults: [],
       nextToken: [],
       owner: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1232,7 +1232,7 @@ export const se_ListContainerRecipesCommand = async (
  */
 export const se_ListDistributionConfigurationsCommand = async (
   input: ListDistributionConfigurationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1245,7 +1245,7 @@ export const se_ListDistributionConfigurationsCommand = async (
       filters: (_) => _json(_),
       maxResults: [],
       nextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1256,7 +1256,7 @@ export const se_ListDistributionConfigurationsCommand = async (
  */
 export const se_ListImageBuildVersionsCommand = async (
   input: ListImageBuildVersionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1270,7 +1270,7 @@ export const se_ListImageBuildVersionsCommand = async (
       imageVersionArn: [],
       maxResults: [],
       nextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1281,7 +1281,7 @@ export const se_ListImageBuildVersionsCommand = async (
  */
 export const se_ListImagePackagesCommand = async (
   input: ListImagePackagesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1294,7 +1294,7 @@ export const se_ListImagePackagesCommand = async (
       imageBuildVersionArn: [],
       maxResults: [],
       nextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1305,7 +1305,7 @@ export const se_ListImagePackagesCommand = async (
  */
 export const se_ListImagePipelineImagesCommand = async (
   input: ListImagePipelineImagesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1319,7 +1319,7 @@ export const se_ListImagePipelineImagesCommand = async (
       imagePipelineArn: [],
       maxResults: [],
       nextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1330,7 +1330,7 @@ export const se_ListImagePipelineImagesCommand = async (
  */
 export const se_ListImagePipelinesCommand = async (
   input: ListImagePipelinesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1343,7 +1343,7 @@ export const se_ListImagePipelinesCommand = async (
       filters: (_) => _json(_),
       maxResults: [],
       nextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1354,7 +1354,7 @@ export const se_ListImagePipelinesCommand = async (
  */
 export const se_ListImageRecipesCommand = async (
   input: ListImageRecipesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1368,7 +1368,7 @@ export const se_ListImageRecipesCommand = async (
       maxResults: [],
       nextToken: [],
       owner: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1379,7 +1379,7 @@ export const se_ListImageRecipesCommand = async (
  */
 export const se_ListImagesCommand = async (
   input: ListImagesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1395,7 +1395,7 @@ export const se_ListImagesCommand = async (
       maxResults: [],
       nextToken: [],
       owner: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1406,7 +1406,7 @@ export const se_ListImagesCommand = async (
  */
 export const se_ListImageScanFindingAggregationsCommand = async (
   input: ListImageScanFindingAggregationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1418,7 +1418,7 @@ export const se_ListImageScanFindingAggregationsCommand = async (
     take(input, {
       filter: (_) => _json(_),
       nextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1429,7 +1429,7 @@ export const se_ListImageScanFindingAggregationsCommand = async (
  */
 export const se_ListImageScanFindingsCommand = async (
   input: ListImageScanFindingsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1442,7 +1442,7 @@ export const se_ListImageScanFindingsCommand = async (
       filters: (_) => _json(_),
       maxResults: [],
       nextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1453,7 +1453,7 @@ export const se_ListImageScanFindingsCommand = async (
  */
 export const se_ListInfrastructureConfigurationsCommand = async (
   input: ListInfrastructureConfigurationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1466,7 +1466,7 @@ export const se_ListInfrastructureConfigurationsCommand = async (
       filters: (_) => _json(_),
       maxResults: [],
       nextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1477,7 +1477,7 @@ export const se_ListInfrastructureConfigurationsCommand = async (
  */
 export const se_ListLifecycleExecutionResourcesCommand = async (
   input: ListLifecycleExecutionResourcesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1491,7 +1491,7 @@ export const se_ListLifecycleExecutionResourcesCommand = async (
       maxResults: [],
       nextToken: [],
       parentResourceId: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1502,7 +1502,7 @@ export const se_ListLifecycleExecutionResourcesCommand = async (
  */
 export const se_ListLifecycleExecutionsCommand = async (
   input: ListLifecycleExecutionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1515,7 +1515,7 @@ export const se_ListLifecycleExecutionsCommand = async (
       maxResults: [],
       nextToken: [],
       resourceArn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1526,7 +1526,7 @@ export const se_ListLifecycleExecutionsCommand = async (
  */
 export const se_ListLifecyclePoliciesCommand = async (
   input: ListLifecyclePoliciesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1539,7 +1539,7 @@ export const se_ListLifecyclePoliciesCommand = async (
       filters: (_) => _json(_),
       maxResults: [],
       nextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1550,7 +1550,7 @@ export const se_ListLifecyclePoliciesCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1566,7 +1566,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_ListWaitingWorkflowStepsCommand = async (
   input: ListWaitingWorkflowStepsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1578,7 +1578,7 @@ export const se_ListWaitingWorkflowStepsCommand = async (
     take(input, {
       maxResults: [],
       nextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1589,7 +1589,7 @@ export const se_ListWaitingWorkflowStepsCommand = async (
  */
 export const se_ListWorkflowBuildVersionsCommand = async (
   input: ListWorkflowBuildVersionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1602,7 +1602,7 @@ export const se_ListWorkflowBuildVersionsCommand = async (
       maxResults: [],
       nextToken: [],
       workflowVersionArn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1613,7 +1613,7 @@ export const se_ListWorkflowBuildVersionsCommand = async (
  */
 export const se_ListWorkflowExecutionsCommand = async (
   input: ListWorkflowExecutionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1626,7 +1626,7 @@ export const se_ListWorkflowExecutionsCommand = async (
       imageBuildVersionArn: [],
       maxResults: [],
       nextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1637,7 +1637,7 @@ export const se_ListWorkflowExecutionsCommand = async (
  */
 export const se_ListWorkflowsCommand = async (
   input: ListWorkflowsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1652,7 +1652,7 @@ export const se_ListWorkflowsCommand = async (
       maxResults: [],
       nextToken: [],
       owner: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1663,7 +1663,7 @@ export const se_ListWorkflowsCommand = async (
  */
 export const se_ListWorkflowStepExecutionsCommand = async (
   input: ListWorkflowStepExecutionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1676,7 +1676,7 @@ export const se_ListWorkflowStepExecutionsCommand = async (
       maxResults: [],
       nextToken: [],
       workflowExecutionId: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1687,7 +1687,7 @@ export const se_ListWorkflowStepExecutionsCommand = async (
  */
 export const se_PutComponentPolicyCommand = async (
   input: PutComponentPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1699,7 +1699,7 @@ export const se_PutComponentPolicyCommand = async (
     take(input, {
       componentArn: [],
       policy: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1710,7 +1710,7 @@ export const se_PutComponentPolicyCommand = async (
  */
 export const se_PutContainerRecipePolicyCommand = async (
   input: PutContainerRecipePolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1722,7 +1722,7 @@ export const se_PutContainerRecipePolicyCommand = async (
     take(input, {
       containerRecipeArn: [],
       policy: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1733,7 +1733,7 @@ export const se_PutContainerRecipePolicyCommand = async (
  */
 export const se_PutImagePolicyCommand = async (
   input: PutImagePolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1745,7 +1745,7 @@ export const se_PutImagePolicyCommand = async (
     take(input, {
       imageArn: [],
       policy: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1756,7 +1756,7 @@ export const se_PutImagePolicyCommand = async (
  */
 export const se_PutImageRecipePolicyCommand = async (
   input: PutImageRecipePolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1768,7 +1768,7 @@ export const se_PutImageRecipePolicyCommand = async (
     take(input, {
       imageRecipeArn: [],
       policy: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1779,7 +1779,7 @@ export const se_PutImageRecipePolicyCommand = async (
  */
 export const se_SendWorkflowStepActionCommand = async (
   input: SendWorkflowStepActionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1794,7 +1794,7 @@ export const se_SendWorkflowStepActionCommand = async (
       imageBuildVersionArn: [],
       reason: [],
       stepExecutionId: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1805,7 +1805,7 @@ export const se_SendWorkflowStepActionCommand = async (
  */
 export const se_StartImagePipelineExecutionCommand = async (
   input: StartImagePipelineExecutionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1817,7 +1817,7 @@ export const se_StartImagePipelineExecutionCommand = async (
     take(input, {
       clientToken: [true, (_) => _ ?? generateIdempotencyToken()],
       imagePipelineArn: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1828,7 +1828,7 @@ export const se_StartImagePipelineExecutionCommand = async (
  */
 export const se_StartResourceStateUpdateCommand = async (
   input: StartResourceStateUpdateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1845,7 +1845,7 @@ export const se_StartResourceStateUpdateCommand = async (
       resourceArn: [],
       state: (_) => _json(_),
       updateAt: (_) => _.getTime() / 1_000,
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1856,7 +1856,7 @@ export const se_StartResourceStateUpdateCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1868,7 +1868,7 @@ export const se_TagResourceCommand = async (
   body = JSON.stringify(
     take(input, {
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1879,7 +1879,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1901,7 +1901,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateDistributionConfigurationCommand = async (
   input: UpdateDistributionConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1915,7 +1915,7 @@ export const se_UpdateDistributionConfigurationCommand = async (
       description: [],
       distributionConfigurationArn: [],
       distributions: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1926,7 +1926,7 @@ export const se_UpdateDistributionConfigurationCommand = async (
  */
 export const se_UpdateImagePipelineCommand = async (
   input: UpdateImagePipelineCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1950,7 +1950,7 @@ export const se_UpdateImagePipelineCommand = async (
       schedule: (_) => _json(_),
       status: [],
       workflows: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1961,7 +1961,7 @@ export const se_UpdateImagePipelineCommand = async (
  */
 export const se_UpdateInfrastructureConfigurationCommand = async (
   input: UpdateInfrastructureConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1984,7 +1984,7 @@ export const se_UpdateInfrastructureConfigurationCommand = async (
       snsTopicArn: [],
       subnetId: [],
       terminateInstanceOnFailure: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1995,7 +1995,7 @@ export const se_UpdateInfrastructureConfigurationCommand = async (
  */
 export const se_UpdateLifecyclePolicyCommand = async (
   input: UpdateLifecyclePolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2013,7 +2013,7 @@ export const se_UpdateLifecyclePolicyCommand = async (
       resourceSelection: (_) => _json(_),
       resourceType: [],
       status: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -2024,7 +2024,7 @@ export const se_UpdateLifecyclePolicyCommand = async (
  */
 export const de_CancelImageCreationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CancelImageCreationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2047,7 +2047,7 @@ export const de_CancelImageCreationCommand = async (
  */
 export const de_CancelLifecycleExecutionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CancelLifecycleExecutionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2068,7 +2068,7 @@ export const de_CancelLifecycleExecutionCommand = async (
  */
 export const de_CreateComponentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateComponentCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2091,7 +2091,7 @@ export const de_CreateComponentCommand = async (
  */
 export const de_CreateContainerRecipeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateContainerRecipeCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2114,7 +2114,7 @@ export const de_CreateContainerRecipeCommand = async (
  */
 export const de_CreateDistributionConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateDistributionConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2137,7 +2137,7 @@ export const de_CreateDistributionConfigurationCommand = async (
  */
 export const de_CreateImageCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateImageCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2160,7 +2160,7 @@ export const de_CreateImageCommand = async (
  */
 export const de_CreateImagePipelineCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateImagePipelineCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2183,7 +2183,7 @@ export const de_CreateImagePipelineCommand = async (
  */
 export const de_CreateImageRecipeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateImageRecipeCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2206,7 +2206,7 @@ export const de_CreateImageRecipeCommand = async (
  */
 export const de_CreateInfrastructureConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateInfrastructureConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2229,7 +2229,7 @@ export const de_CreateInfrastructureConfigurationCommand = async (
  */
 export const de_CreateLifecyclePolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateLifecyclePolicyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2251,7 +2251,7 @@ export const de_CreateLifecyclePolicyCommand = async (
  */
 export const de_CreateWorkflowCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateWorkflowCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2273,7 +2273,7 @@ export const de_CreateWorkflowCommand = async (
  */
 export const de_DeleteComponentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteComponentCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2295,7 +2295,7 @@ export const de_DeleteComponentCommand = async (
  */
 export const de_DeleteContainerRecipeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteContainerRecipeCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2317,7 +2317,7 @@ export const de_DeleteContainerRecipeCommand = async (
  */
 export const de_DeleteDistributionConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteDistributionConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2339,7 +2339,7 @@ export const de_DeleteDistributionConfigurationCommand = async (
  */
 export const de_DeleteImageCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteImageCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2361,7 +2361,7 @@ export const de_DeleteImageCommand = async (
  */
 export const de_DeleteImagePipelineCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteImagePipelineCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2383,7 +2383,7 @@ export const de_DeleteImagePipelineCommand = async (
  */
 export const de_DeleteImageRecipeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteImageRecipeCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2405,7 +2405,7 @@ export const de_DeleteImageRecipeCommand = async (
  */
 export const de_DeleteInfrastructureConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteInfrastructureConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2427,7 +2427,7 @@ export const de_DeleteInfrastructureConfigurationCommand = async (
  */
 export const de_DeleteLifecyclePolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteLifecyclePolicyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2448,7 +2448,7 @@ export const de_DeleteLifecyclePolicyCommand = async (
  */
 export const de_DeleteWorkflowCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteWorkflowCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2469,7 +2469,7 @@ export const de_DeleteWorkflowCommand = async (
  */
 export const de_GetComponentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetComponentCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2491,7 +2491,7 @@ export const de_GetComponentCommand = async (
  */
 export const de_GetComponentPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetComponentPolicyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2513,7 +2513,7 @@ export const de_GetComponentPolicyCommand = async (
  */
 export const de_GetContainerRecipeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetContainerRecipeCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2535,7 +2535,7 @@ export const de_GetContainerRecipeCommand = async (
  */
 export const de_GetContainerRecipePolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetContainerRecipePolicyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2557,7 +2557,7 @@ export const de_GetContainerRecipePolicyCommand = async (
  */
 export const de_GetDistributionConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetDistributionConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2579,7 +2579,7 @@ export const de_GetDistributionConfigurationCommand = async (
  */
 export const de_GetImageCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetImageCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2601,7 +2601,7 @@ export const de_GetImageCommand = async (
  */
 export const de_GetImagePipelineCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetImagePipelineCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2623,7 +2623,7 @@ export const de_GetImagePipelineCommand = async (
  */
 export const de_GetImagePolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetImagePolicyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2645,7 +2645,7 @@ export const de_GetImagePolicyCommand = async (
  */
 export const de_GetImageRecipeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetImageRecipeCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2667,7 +2667,7 @@ export const de_GetImageRecipeCommand = async (
  */
 export const de_GetImageRecipePolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetImageRecipePolicyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2689,7 +2689,7 @@ export const de_GetImageRecipePolicyCommand = async (
  */
 export const de_GetInfrastructureConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetInfrastructureConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2711,7 +2711,7 @@ export const de_GetInfrastructureConfigurationCommand = async (
  */
 export const de_GetLifecycleExecutionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetLifecycleExecutionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2732,7 +2732,7 @@ export const de_GetLifecycleExecutionCommand = async (
  */
 export const de_GetLifecyclePolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetLifecyclePolicyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2753,7 +2753,7 @@ export const de_GetLifecyclePolicyCommand = async (
  */
 export const de_GetWorkflowCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetWorkflowCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2774,7 +2774,7 @@ export const de_GetWorkflowCommand = async (
  */
 export const de_GetWorkflowExecutionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetWorkflowExecutionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2808,7 +2808,7 @@ export const de_GetWorkflowExecutionCommand = async (
  */
 export const de_GetWorkflowStepExecutionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetWorkflowStepExecutionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2845,7 +2845,7 @@ export const de_GetWorkflowStepExecutionCommand = async (
  */
 export const de_ImportComponentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ImportComponentCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2868,7 +2868,7 @@ export const de_ImportComponentCommand = async (
  */
 export const de_ImportVmImageCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ImportVmImageCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2891,7 +2891,7 @@ export const de_ImportVmImageCommand = async (
  */
 export const de_ListComponentBuildVersionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListComponentBuildVersionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2914,7 +2914,7 @@ export const de_ListComponentBuildVersionsCommand = async (
  */
 export const de_ListComponentsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListComponentsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2937,7 +2937,7 @@ export const de_ListComponentsCommand = async (
  */
 export const de_ListContainerRecipesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListContainerRecipesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2960,7 +2960,7 @@ export const de_ListContainerRecipesCommand = async (
  */
 export const de_ListDistributionConfigurationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListDistributionConfigurationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2983,7 +2983,7 @@ export const de_ListDistributionConfigurationsCommand = async (
  */
 export const de_ListImageBuildVersionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListImageBuildVersionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3006,7 +3006,7 @@ export const de_ListImageBuildVersionsCommand = async (
  */
 export const de_ListImagePackagesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListImagePackagesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3029,7 +3029,7 @@ export const de_ListImagePackagesCommand = async (
  */
 export const de_ListImagePipelineImagesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListImagePipelineImagesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3052,7 +3052,7 @@ export const de_ListImagePipelineImagesCommand = async (
  */
 export const de_ListImagePipelinesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListImagePipelinesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3075,7 +3075,7 @@ export const de_ListImagePipelinesCommand = async (
  */
 export const de_ListImageRecipesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListImageRecipesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3098,7 +3098,7 @@ export const de_ListImageRecipesCommand = async (
  */
 export const de_ListImagesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListImagesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3121,7 +3121,7 @@ export const de_ListImagesCommand = async (
  */
 export const de_ListImageScanFindingAggregationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListImageScanFindingAggregationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3145,7 +3145,7 @@ export const de_ListImageScanFindingAggregationsCommand = async (
  */
 export const de_ListImageScanFindingsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListImageScanFindingsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3168,7 +3168,7 @@ export const de_ListImageScanFindingsCommand = async (
  */
 export const de_ListInfrastructureConfigurationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListInfrastructureConfigurationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3191,7 +3191,7 @@ export const de_ListInfrastructureConfigurationsCommand = async (
  */
 export const de_ListLifecycleExecutionResourcesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListLifecycleExecutionResourcesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3215,7 +3215,7 @@ export const de_ListLifecycleExecutionResourcesCommand = async (
  */
 export const de_ListLifecycleExecutionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListLifecycleExecutionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3237,7 +3237,7 @@ export const de_ListLifecycleExecutionsCommand = async (
  */
 export const de_ListLifecyclePoliciesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListLifecyclePoliciesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3259,7 +3259,7 @@ export const de_ListLifecyclePoliciesCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3280,7 +3280,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_ListWaitingWorkflowStepsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListWaitingWorkflowStepsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3302,7 +3302,7 @@ export const de_ListWaitingWorkflowStepsCommand = async (
  */
 export const de_ListWorkflowBuildVersionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListWorkflowBuildVersionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3324,7 +3324,7 @@ export const de_ListWorkflowBuildVersionsCommand = async (
  */
 export const de_ListWorkflowExecutionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListWorkflowExecutionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3349,7 +3349,7 @@ export const de_ListWorkflowExecutionsCommand = async (
  */
 export const de_ListWorkflowsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListWorkflowsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3371,7 +3371,7 @@ export const de_ListWorkflowsCommand = async (
  */
 export const de_ListWorkflowStepExecutionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListWorkflowStepExecutionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3398,7 +3398,7 @@ export const de_ListWorkflowStepExecutionsCommand = async (
  */
 export const de_PutComponentPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutComponentPolicyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3420,7 +3420,7 @@ export const de_PutComponentPolicyCommand = async (
  */
 export const de_PutContainerRecipePolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutContainerRecipePolicyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3442,7 +3442,7 @@ export const de_PutContainerRecipePolicyCommand = async (
  */
 export const de_PutImagePolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutImagePolicyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3464,7 +3464,7 @@ export const de_PutImagePolicyCommand = async (
  */
 export const de_PutImageRecipePolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutImageRecipePolicyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3486,7 +3486,7 @@ export const de_PutImageRecipePolicyCommand = async (
  */
 export const de_SendWorkflowStepActionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SendWorkflowStepActionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3509,7 +3509,7 @@ export const de_SendWorkflowStepActionCommand = async (
  */
 export const de_StartImagePipelineExecutionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartImagePipelineExecutionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3532,7 +3532,7 @@ export const de_StartImagePipelineExecutionCommand = async (
  */
 export const de_StartResourceStateUpdateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartResourceStateUpdateCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3554,7 +3554,7 @@ export const de_StartResourceStateUpdateCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3571,7 +3571,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3588,7 +3588,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateDistributionConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateDistributionConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3611,7 +3611,7 @@ export const de_UpdateDistributionConfigurationCommand = async (
  */
 export const de_UpdateImagePipelineCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateImagePipelineCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3634,7 +3634,7 @@ export const de_UpdateImagePipelineCommand = async (
  */
 export const de_UpdateInfrastructureConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateInfrastructureConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3657,7 +3657,7 @@ export const de_UpdateInfrastructureConfigurationCommand = async (
  */
 export const de_UpdateLifecyclePolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateLifecyclePolicyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3750,7 +3750,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_CallRateLimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CallRateLimitExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -3804,7 +3804,7 @@ const de_ForbiddenExceptionRes = async (parsedOutput: any, context: __SerdeConte
  */
 const de_IdempotentParameterMismatchExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<IdempotentParameterMismatchException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -3824,7 +3824,7 @@ const de_IdempotentParameterMismatchExceptionRes = async (
  */
 const de_InvalidPaginationTokenExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidPaginationTokenException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -3844,7 +3844,7 @@ const de_InvalidPaginationTokenExceptionRes = async (
  */
 const de_InvalidParameterCombinationExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidParameterCombinationException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -3864,7 +3864,7 @@ const de_InvalidParameterCombinationExceptionRes = async (
  */
 const de_InvalidParameterExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidParameterException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -3884,7 +3884,7 @@ const de_InvalidParameterExceptionRes = async (
  */
 const de_InvalidParameterValueExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidParameterValueException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -3904,7 +3904,7 @@ const de_InvalidParameterValueExceptionRes = async (
  */
 const de_InvalidRequestExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidRequestException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -3924,7 +3924,7 @@ const de_InvalidRequestExceptionRes = async (
  */
 const de_InvalidVersionNumberExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidVersionNumberException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -3944,7 +3944,7 @@ const de_InvalidVersionNumberExceptionRes = async (
  */
 const de_ResourceAlreadyExistsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceAlreadyExistsException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -3964,7 +3964,7 @@ const de_ResourceAlreadyExistsExceptionRes = async (
  */
 const de_ResourceDependencyExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceDependencyException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -3984,7 +3984,7 @@ const de_ResourceDependencyExceptionRes = async (
  */
 const de_ResourceInUseExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceInUseException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -4004,7 +4004,7 @@ const de_ResourceInUseExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -4041,7 +4041,7 @@ const de_ServiceExceptionRes = async (parsedOutput: any, context: __SerdeContext
  */
 const de_ServiceQuotaExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceQuotaExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -4061,7 +4061,7 @@ const de_ServiceQuotaExceededExceptionRes = async (
  */
 const de_ServiceUnavailableExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceUnavailableException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;

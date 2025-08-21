@@ -36,7 +36,7 @@ const checkState = async (client: GroundStationClient, input: DescribeContactCom
  */
 export const waitForContactScheduled = async (
   params: WaiterConfiguration<GroundStationClient>,
-  input: DescribeContactCommandInput
+  input: DescribeContactCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 5, maxDelay: 900 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -48,7 +48,7 @@ export const waitForContactScheduled = async (
  */
 export const waitUntilContactScheduled = async (
   params: WaiterConfiguration<GroundStationClient>,
-  input: DescribeContactCommandInput
+  input: DescribeContactCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 5, maxDelay: 900 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

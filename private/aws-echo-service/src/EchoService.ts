@@ -27,7 +27,7 @@ export interface EchoService {
   length(
     args: LengthCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: LengthCommandOutput) => void
+    cb: (err: any, data?: LengthCommandOutput) => void,
   ): void;
 }
 

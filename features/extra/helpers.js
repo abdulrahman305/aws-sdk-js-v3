@@ -211,7 +211,7 @@ module.exports = {
       },
       function (err) {
         callback(err);
-      }
+      },
     );
   },
 
@@ -222,7 +222,7 @@ module.exports = {
       },
       function (err) {
         callback(err);
-      }
+      },
     );
   },
 };

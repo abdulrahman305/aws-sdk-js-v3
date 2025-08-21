@@ -29,7 +29,7 @@ describe(resolveEndpointDiscoveryConfig.name, () => {
           ...mockInput,
           endpointCacheSize,
         },
-        { endpointDiscoveryCommandCtor }
+        { endpointDiscoveryCommandCtor },
       );
       expect(EndpointCache).toBeCalledWith(endpointCacheSize);
     });
@@ -47,7 +47,7 @@ describe(resolveEndpointDiscoveryConfig.name, () => {
           ...mockInput,
           endpointDiscoveryEnabled,
         },
-        { endpointDiscoveryCommandCtor }
+        { endpointDiscoveryCommandCtor },
       );
       expect(resolvedConfig.endpointDiscoveryEnabled()).resolves.toBe(endpointDiscoveryEnabled);
       expect(mockInput.endpointDiscoveryEnabledProvider).not.toHaveBeenCalled();

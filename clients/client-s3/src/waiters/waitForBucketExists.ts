@@ -24,7 +24,7 @@ const checkState = async (client: S3Client, input: HeadBucketCommandInput): Prom
  */
 export const waitForBucketExists = async (
   params: WaiterConfiguration<S3Client>,
-  input: HeadBucketCommandInput
+  input: HeadBucketCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 5, maxDelay: 120 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -36,7 +36,7 @@ export const waitForBucketExists = async (
  */
 export const waitUntilBucketExists = async (
   params: WaiterConfiguration<S3Client>,
-  input: HeadBucketCommandInput
+  input: HeadBucketCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 5, maxDelay: 120 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

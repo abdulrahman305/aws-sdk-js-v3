@@ -239,16 +239,16 @@ export interface SWF {
    */
   countClosedWorkflowExecutions(
     args: CountClosedWorkflowExecutionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CountClosedWorkflowExecutionsCommandOutput>;
   countClosedWorkflowExecutions(
     args: CountClosedWorkflowExecutionsCommandInput,
-    cb: (err: any, data?: CountClosedWorkflowExecutionsCommandOutput) => void
+    cb: (err: any, data?: CountClosedWorkflowExecutionsCommandOutput) => void,
   ): void;
   countClosedWorkflowExecutions(
     args: CountClosedWorkflowExecutionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CountClosedWorkflowExecutionsCommandOutput) => void
+    cb: (err: any, data?: CountClosedWorkflowExecutionsCommandOutput) => void,
   ): void;
 
   /**
@@ -256,16 +256,16 @@ export interface SWF {
    */
   countOpenWorkflowExecutions(
     args: CountOpenWorkflowExecutionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CountOpenWorkflowExecutionsCommandOutput>;
   countOpenWorkflowExecutions(
     args: CountOpenWorkflowExecutionsCommandInput,
-    cb: (err: any, data?: CountOpenWorkflowExecutionsCommandOutput) => void
+    cb: (err: any, data?: CountOpenWorkflowExecutionsCommandOutput) => void,
   ): void;
   countOpenWorkflowExecutions(
     args: CountOpenWorkflowExecutionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CountOpenWorkflowExecutionsCommandOutput) => void
+    cb: (err: any, data?: CountOpenWorkflowExecutionsCommandOutput) => void,
   ): void;
 
   /**
@@ -273,16 +273,16 @@ export interface SWF {
    */
   countPendingActivityTasks(
     args: CountPendingActivityTasksCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CountPendingActivityTasksCommandOutput>;
   countPendingActivityTasks(
     args: CountPendingActivityTasksCommandInput,
-    cb: (err: any, data?: CountPendingActivityTasksCommandOutput) => void
+    cb: (err: any, data?: CountPendingActivityTasksCommandOutput) => void,
   ): void;
   countPendingActivityTasks(
     args: CountPendingActivityTasksCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CountPendingActivityTasksCommandOutput) => void
+    cb: (err: any, data?: CountPendingActivityTasksCommandOutput) => void,
   ): void;
 
   /**
@@ -290,16 +290,16 @@ export interface SWF {
    */
   countPendingDecisionTasks(
     args: CountPendingDecisionTasksCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CountPendingDecisionTasksCommandOutput>;
   countPendingDecisionTasks(
     args: CountPendingDecisionTasksCommandInput,
-    cb: (err: any, data?: CountPendingDecisionTasksCommandOutput) => void
+    cb: (err: any, data?: CountPendingDecisionTasksCommandOutput) => void,
   ): void;
   countPendingDecisionTasks(
     args: CountPendingDecisionTasksCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CountPendingDecisionTasksCommandOutput) => void
+    cb: (err: any, data?: CountPendingDecisionTasksCommandOutput) => void,
   ): void;
 
   /**
@@ -307,16 +307,16 @@ export interface SWF {
    */
   deleteActivityType(
     args: DeleteActivityTypeCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteActivityTypeCommandOutput>;
   deleteActivityType(
     args: DeleteActivityTypeCommandInput,
-    cb: (err: any, data?: DeleteActivityTypeCommandOutput) => void
+    cb: (err: any, data?: DeleteActivityTypeCommandOutput) => void,
   ): void;
   deleteActivityType(
     args: DeleteActivityTypeCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteActivityTypeCommandOutput) => void
+    cb: (err: any, data?: DeleteActivityTypeCommandOutput) => void,
   ): void;
 
   /**
@@ -324,16 +324,16 @@ export interface SWF {
    */
   deleteWorkflowType(
     args: DeleteWorkflowTypeCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteWorkflowTypeCommandOutput>;
   deleteWorkflowType(
     args: DeleteWorkflowTypeCommandInput,
-    cb: (err: any, data?: DeleteWorkflowTypeCommandOutput) => void
+    cb: (err: any, data?: DeleteWorkflowTypeCommandOutput) => void,
   ): void;
   deleteWorkflowType(
     args: DeleteWorkflowTypeCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteWorkflowTypeCommandOutput) => void
+    cb: (err: any, data?: DeleteWorkflowTypeCommandOutput) => void,
   ): void;
 
   /**
@@ -341,16 +341,16 @@ export interface SWF {
    */
   deprecateActivityType(
     args: DeprecateActivityTypeCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeprecateActivityTypeCommandOutput>;
   deprecateActivityType(
     args: DeprecateActivityTypeCommandInput,
-    cb: (err: any, data?: DeprecateActivityTypeCommandOutput) => void
+    cb: (err: any, data?: DeprecateActivityTypeCommandOutput) => void,
   ): void;
   deprecateActivityType(
     args: DeprecateActivityTypeCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeprecateActivityTypeCommandOutput) => void
+    cb: (err: any, data?: DeprecateActivityTypeCommandOutput) => void,
   ): void;
 
   /**
@@ -358,13 +358,13 @@ export interface SWF {
    */
   deprecateDomain(
     args: DeprecateDomainCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeprecateDomainCommandOutput>;
   deprecateDomain(args: DeprecateDomainCommandInput, cb: (err: any, data?: DeprecateDomainCommandOutput) => void): void;
   deprecateDomain(
     args: DeprecateDomainCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeprecateDomainCommandOutput) => void
+    cb: (err: any, data?: DeprecateDomainCommandOutput) => void,
   ): void;
 
   /**
@@ -372,16 +372,16 @@ export interface SWF {
    */
   deprecateWorkflowType(
     args: DeprecateWorkflowTypeCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeprecateWorkflowTypeCommandOutput>;
   deprecateWorkflowType(
     args: DeprecateWorkflowTypeCommandInput,
-    cb: (err: any, data?: DeprecateWorkflowTypeCommandOutput) => void
+    cb: (err: any, data?: DeprecateWorkflowTypeCommandOutput) => void,
   ): void;
   deprecateWorkflowType(
     args: DeprecateWorkflowTypeCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeprecateWorkflowTypeCommandOutput) => void
+    cb: (err: any, data?: DeprecateWorkflowTypeCommandOutput) => void,
   ): void;
 
   /**
@@ -389,16 +389,16 @@ export interface SWF {
    */
   describeActivityType(
     args: DescribeActivityTypeCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeActivityTypeCommandOutput>;
   describeActivityType(
     args: DescribeActivityTypeCommandInput,
-    cb: (err: any, data?: DescribeActivityTypeCommandOutput) => void
+    cb: (err: any, data?: DescribeActivityTypeCommandOutput) => void,
   ): void;
   describeActivityType(
     args: DescribeActivityTypeCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeActivityTypeCommandOutput) => void
+    cb: (err: any, data?: DescribeActivityTypeCommandOutput) => void,
   ): void;
 
   /**
@@ -406,13 +406,13 @@ export interface SWF {
    */
   describeDomain(
     args: DescribeDomainCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeDomainCommandOutput>;
   describeDomain(args: DescribeDomainCommandInput, cb: (err: any, data?: DescribeDomainCommandOutput) => void): void;
   describeDomain(
     args: DescribeDomainCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeDomainCommandOutput) => void
+    cb: (err: any, data?: DescribeDomainCommandOutput) => void,
   ): void;
 
   /**
@@ -420,16 +420,16 @@ export interface SWF {
    */
   describeWorkflowExecution(
     args: DescribeWorkflowExecutionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeWorkflowExecutionCommandOutput>;
   describeWorkflowExecution(
     args: DescribeWorkflowExecutionCommandInput,
-    cb: (err: any, data?: DescribeWorkflowExecutionCommandOutput) => void
+    cb: (err: any, data?: DescribeWorkflowExecutionCommandOutput) => void,
   ): void;
   describeWorkflowExecution(
     args: DescribeWorkflowExecutionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeWorkflowExecutionCommandOutput) => void
+    cb: (err: any, data?: DescribeWorkflowExecutionCommandOutput) => void,
   ): void;
 
   /**
@@ -437,16 +437,16 @@ export interface SWF {
    */
   describeWorkflowType(
     args: DescribeWorkflowTypeCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeWorkflowTypeCommandOutput>;
   describeWorkflowType(
     args: DescribeWorkflowTypeCommandInput,
-    cb: (err: any, data?: DescribeWorkflowTypeCommandOutput) => void
+    cb: (err: any, data?: DescribeWorkflowTypeCommandOutput) => void,
   ): void;
   describeWorkflowType(
     args: DescribeWorkflowTypeCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeWorkflowTypeCommandOutput) => void
+    cb: (err: any, data?: DescribeWorkflowTypeCommandOutput) => void,
   ): void;
 
   /**
@@ -454,16 +454,16 @@ export interface SWF {
    */
   getWorkflowExecutionHistory(
     args: GetWorkflowExecutionHistoryCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetWorkflowExecutionHistoryCommandOutput>;
   getWorkflowExecutionHistory(
     args: GetWorkflowExecutionHistoryCommandInput,
-    cb: (err: any, data?: GetWorkflowExecutionHistoryCommandOutput) => void
+    cb: (err: any, data?: GetWorkflowExecutionHistoryCommandOutput) => void,
   ): void;
   getWorkflowExecutionHistory(
     args: GetWorkflowExecutionHistoryCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetWorkflowExecutionHistoryCommandOutput) => void
+    cb: (err: any, data?: GetWorkflowExecutionHistoryCommandOutput) => void,
   ): void;
 
   /**
@@ -471,16 +471,16 @@ export interface SWF {
    */
   listActivityTypes(
     args: ListActivityTypesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListActivityTypesCommandOutput>;
   listActivityTypes(
     args: ListActivityTypesCommandInput,
-    cb: (err: any, data?: ListActivityTypesCommandOutput) => void
+    cb: (err: any, data?: ListActivityTypesCommandOutput) => void,
   ): void;
   listActivityTypes(
     args: ListActivityTypesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListActivityTypesCommandOutput) => void
+    cb: (err: any, data?: ListActivityTypesCommandOutput) => void,
   ): void;
 
   /**
@@ -488,16 +488,16 @@ export interface SWF {
    */
   listClosedWorkflowExecutions(
     args: ListClosedWorkflowExecutionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListClosedWorkflowExecutionsCommandOutput>;
   listClosedWorkflowExecutions(
     args: ListClosedWorkflowExecutionsCommandInput,
-    cb: (err: any, data?: ListClosedWorkflowExecutionsCommandOutput) => void
+    cb: (err: any, data?: ListClosedWorkflowExecutionsCommandOutput) => void,
   ): void;
   listClosedWorkflowExecutions(
     args: ListClosedWorkflowExecutionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListClosedWorkflowExecutionsCommandOutput) => void
+    cb: (err: any, data?: ListClosedWorkflowExecutionsCommandOutput) => void,
   ): void;
 
   /**
@@ -508,7 +508,7 @@ export interface SWF {
   listDomains(
     args: ListDomainsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListDomainsCommandOutput) => void
+    cb: (err: any, data?: ListDomainsCommandOutput) => void,
   ): void;
 
   /**
@@ -516,16 +516,16 @@ export interface SWF {
    */
   listOpenWorkflowExecutions(
     args: ListOpenWorkflowExecutionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListOpenWorkflowExecutionsCommandOutput>;
   listOpenWorkflowExecutions(
     args: ListOpenWorkflowExecutionsCommandInput,
-    cb: (err: any, data?: ListOpenWorkflowExecutionsCommandOutput) => void
+    cb: (err: any, data?: ListOpenWorkflowExecutionsCommandOutput) => void,
   ): void;
   listOpenWorkflowExecutions(
     args: ListOpenWorkflowExecutionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListOpenWorkflowExecutionsCommandOutput) => void
+    cb: (err: any, data?: ListOpenWorkflowExecutionsCommandOutput) => void,
   ): void;
 
   /**
@@ -533,16 +533,16 @@ export interface SWF {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -550,16 +550,16 @@ export interface SWF {
    */
   listWorkflowTypes(
     args: ListWorkflowTypesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListWorkflowTypesCommandOutput>;
   listWorkflowTypes(
     args: ListWorkflowTypesCommandInput,
-    cb: (err: any, data?: ListWorkflowTypesCommandOutput) => void
+    cb: (err: any, data?: ListWorkflowTypesCommandOutput) => void,
   ): void;
   listWorkflowTypes(
     args: ListWorkflowTypesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListWorkflowTypesCommandOutput) => void
+    cb: (err: any, data?: ListWorkflowTypesCommandOutput) => void,
   ): void;
 
   /**
@@ -567,16 +567,16 @@ export interface SWF {
    */
   pollForActivityTask(
     args: PollForActivityTaskCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PollForActivityTaskCommandOutput>;
   pollForActivityTask(
     args: PollForActivityTaskCommandInput,
-    cb: (err: any, data?: PollForActivityTaskCommandOutput) => void
+    cb: (err: any, data?: PollForActivityTaskCommandOutput) => void,
   ): void;
   pollForActivityTask(
     args: PollForActivityTaskCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PollForActivityTaskCommandOutput) => void
+    cb: (err: any, data?: PollForActivityTaskCommandOutput) => void,
   ): void;
 
   /**
@@ -584,16 +584,16 @@ export interface SWF {
    */
   pollForDecisionTask(
     args: PollForDecisionTaskCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PollForDecisionTaskCommandOutput>;
   pollForDecisionTask(
     args: PollForDecisionTaskCommandInput,
-    cb: (err: any, data?: PollForDecisionTaskCommandOutput) => void
+    cb: (err: any, data?: PollForDecisionTaskCommandOutput) => void,
   ): void;
   pollForDecisionTask(
     args: PollForDecisionTaskCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PollForDecisionTaskCommandOutput) => void
+    cb: (err: any, data?: PollForDecisionTaskCommandOutput) => void,
   ): void;
 
   /**
@@ -601,16 +601,16 @@ export interface SWF {
    */
   recordActivityTaskHeartbeat(
     args: RecordActivityTaskHeartbeatCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<RecordActivityTaskHeartbeatCommandOutput>;
   recordActivityTaskHeartbeat(
     args: RecordActivityTaskHeartbeatCommandInput,
-    cb: (err: any, data?: RecordActivityTaskHeartbeatCommandOutput) => void
+    cb: (err: any, data?: RecordActivityTaskHeartbeatCommandOutput) => void,
   ): void;
   recordActivityTaskHeartbeat(
     args: RecordActivityTaskHeartbeatCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RecordActivityTaskHeartbeatCommandOutput) => void
+    cb: (err: any, data?: RecordActivityTaskHeartbeatCommandOutput) => void,
   ): void;
 
   /**
@@ -618,16 +618,16 @@ export interface SWF {
    */
   registerActivityType(
     args: RegisterActivityTypeCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<RegisterActivityTypeCommandOutput>;
   registerActivityType(
     args: RegisterActivityTypeCommandInput,
-    cb: (err: any, data?: RegisterActivityTypeCommandOutput) => void
+    cb: (err: any, data?: RegisterActivityTypeCommandOutput) => void,
   ): void;
   registerActivityType(
     args: RegisterActivityTypeCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RegisterActivityTypeCommandOutput) => void
+    cb: (err: any, data?: RegisterActivityTypeCommandOutput) => void,
   ): void;
 
   /**
@@ -635,13 +635,13 @@ export interface SWF {
    */
   registerDomain(
     args: RegisterDomainCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<RegisterDomainCommandOutput>;
   registerDomain(args: RegisterDomainCommandInput, cb: (err: any, data?: RegisterDomainCommandOutput) => void): void;
   registerDomain(
     args: RegisterDomainCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RegisterDomainCommandOutput) => void
+    cb: (err: any, data?: RegisterDomainCommandOutput) => void,
   ): void;
 
   /**
@@ -649,16 +649,16 @@ export interface SWF {
    */
   registerWorkflowType(
     args: RegisterWorkflowTypeCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<RegisterWorkflowTypeCommandOutput>;
   registerWorkflowType(
     args: RegisterWorkflowTypeCommandInput,
-    cb: (err: any, data?: RegisterWorkflowTypeCommandOutput) => void
+    cb: (err: any, data?: RegisterWorkflowTypeCommandOutput) => void,
   ): void;
   registerWorkflowType(
     args: RegisterWorkflowTypeCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RegisterWorkflowTypeCommandOutput) => void
+    cb: (err: any, data?: RegisterWorkflowTypeCommandOutput) => void,
   ): void;
 
   /**
@@ -666,16 +666,16 @@ export interface SWF {
    */
   requestCancelWorkflowExecution(
     args: RequestCancelWorkflowExecutionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<RequestCancelWorkflowExecutionCommandOutput>;
   requestCancelWorkflowExecution(
     args: RequestCancelWorkflowExecutionCommandInput,
-    cb: (err: any, data?: RequestCancelWorkflowExecutionCommandOutput) => void
+    cb: (err: any, data?: RequestCancelWorkflowExecutionCommandOutput) => void,
   ): void;
   requestCancelWorkflowExecution(
     args: RequestCancelWorkflowExecutionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RequestCancelWorkflowExecutionCommandOutput) => void
+    cb: (err: any, data?: RequestCancelWorkflowExecutionCommandOutput) => void,
   ): void;
 
   /**
@@ -683,16 +683,16 @@ export interface SWF {
    */
   respondActivityTaskCanceled(
     args: RespondActivityTaskCanceledCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<RespondActivityTaskCanceledCommandOutput>;
   respondActivityTaskCanceled(
     args: RespondActivityTaskCanceledCommandInput,
-    cb: (err: any, data?: RespondActivityTaskCanceledCommandOutput) => void
+    cb: (err: any, data?: RespondActivityTaskCanceledCommandOutput) => void,
   ): void;
   respondActivityTaskCanceled(
     args: RespondActivityTaskCanceledCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RespondActivityTaskCanceledCommandOutput) => void
+    cb: (err: any, data?: RespondActivityTaskCanceledCommandOutput) => void,
   ): void;
 
   /**
@@ -700,16 +700,16 @@ export interface SWF {
    */
   respondActivityTaskCompleted(
     args: RespondActivityTaskCompletedCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<RespondActivityTaskCompletedCommandOutput>;
   respondActivityTaskCompleted(
     args: RespondActivityTaskCompletedCommandInput,
-    cb: (err: any, data?: RespondActivityTaskCompletedCommandOutput) => void
+    cb: (err: any, data?: RespondActivityTaskCompletedCommandOutput) => void,
   ): void;
   respondActivityTaskCompleted(
     args: RespondActivityTaskCompletedCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RespondActivityTaskCompletedCommandOutput) => void
+    cb: (err: any, data?: RespondActivityTaskCompletedCommandOutput) => void,
   ): void;
 
   /**
@@ -717,16 +717,16 @@ export interface SWF {
    */
   respondActivityTaskFailed(
     args: RespondActivityTaskFailedCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<RespondActivityTaskFailedCommandOutput>;
   respondActivityTaskFailed(
     args: RespondActivityTaskFailedCommandInput,
-    cb: (err: any, data?: RespondActivityTaskFailedCommandOutput) => void
+    cb: (err: any, data?: RespondActivityTaskFailedCommandOutput) => void,
   ): void;
   respondActivityTaskFailed(
     args: RespondActivityTaskFailedCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RespondActivityTaskFailedCommandOutput) => void
+    cb: (err: any, data?: RespondActivityTaskFailedCommandOutput) => void,
   ): void;
 
   /**
@@ -734,16 +734,16 @@ export interface SWF {
    */
   respondDecisionTaskCompleted(
     args: RespondDecisionTaskCompletedCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<RespondDecisionTaskCompletedCommandOutput>;
   respondDecisionTaskCompleted(
     args: RespondDecisionTaskCompletedCommandInput,
-    cb: (err: any, data?: RespondDecisionTaskCompletedCommandOutput) => void
+    cb: (err: any, data?: RespondDecisionTaskCompletedCommandOutput) => void,
   ): void;
   respondDecisionTaskCompleted(
     args: RespondDecisionTaskCompletedCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RespondDecisionTaskCompletedCommandOutput) => void
+    cb: (err: any, data?: RespondDecisionTaskCompletedCommandOutput) => void,
   ): void;
 
   /**
@@ -751,16 +751,16 @@ export interface SWF {
    */
   signalWorkflowExecution(
     args: SignalWorkflowExecutionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<SignalWorkflowExecutionCommandOutput>;
   signalWorkflowExecution(
     args: SignalWorkflowExecutionCommandInput,
-    cb: (err: any, data?: SignalWorkflowExecutionCommandOutput) => void
+    cb: (err: any, data?: SignalWorkflowExecutionCommandOutput) => void,
   ): void;
   signalWorkflowExecution(
     args: SignalWorkflowExecutionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SignalWorkflowExecutionCommandOutput) => void
+    cb: (err: any, data?: SignalWorkflowExecutionCommandOutput) => void,
   ): void;
 
   /**
@@ -768,16 +768,16 @@ export interface SWF {
    */
   startWorkflowExecution(
     args: StartWorkflowExecutionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartWorkflowExecutionCommandOutput>;
   startWorkflowExecution(
     args: StartWorkflowExecutionCommandInput,
-    cb: (err: any, data?: StartWorkflowExecutionCommandOutput) => void
+    cb: (err: any, data?: StartWorkflowExecutionCommandOutput) => void,
   ): void;
   startWorkflowExecution(
     args: StartWorkflowExecutionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartWorkflowExecutionCommandOutput) => void
+    cb: (err: any, data?: StartWorkflowExecutionCommandOutput) => void,
   ): void;
 
   /**
@@ -788,7 +788,7 @@ export interface SWF {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -796,16 +796,16 @@ export interface SWF {
    */
   terminateWorkflowExecution(
     args: TerminateWorkflowExecutionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<TerminateWorkflowExecutionCommandOutput>;
   terminateWorkflowExecution(
     args: TerminateWorkflowExecutionCommandInput,
-    cb: (err: any, data?: TerminateWorkflowExecutionCommandOutput) => void
+    cb: (err: any, data?: TerminateWorkflowExecutionCommandOutput) => void,
   ): void;
   terminateWorkflowExecution(
     args: TerminateWorkflowExecutionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TerminateWorkflowExecutionCommandOutput) => void
+    cb: (err: any, data?: TerminateWorkflowExecutionCommandOutput) => void,
   ): void;
 
   /**
@@ -813,16 +813,16 @@ export interface SWF {
    */
   undeprecateActivityType(
     args: UndeprecateActivityTypeCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UndeprecateActivityTypeCommandOutput>;
   undeprecateActivityType(
     args: UndeprecateActivityTypeCommandInput,
-    cb: (err: any, data?: UndeprecateActivityTypeCommandOutput) => void
+    cb: (err: any, data?: UndeprecateActivityTypeCommandOutput) => void,
   ): void;
   undeprecateActivityType(
     args: UndeprecateActivityTypeCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UndeprecateActivityTypeCommandOutput) => void
+    cb: (err: any, data?: UndeprecateActivityTypeCommandOutput) => void,
   ): void;
 
   /**
@@ -830,16 +830,16 @@ export interface SWF {
    */
   undeprecateDomain(
     args: UndeprecateDomainCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UndeprecateDomainCommandOutput>;
   undeprecateDomain(
     args: UndeprecateDomainCommandInput,
-    cb: (err: any, data?: UndeprecateDomainCommandOutput) => void
+    cb: (err: any, data?: UndeprecateDomainCommandOutput) => void,
   ): void;
   undeprecateDomain(
     args: UndeprecateDomainCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UndeprecateDomainCommandOutput) => void
+    cb: (err: any, data?: UndeprecateDomainCommandOutput) => void,
   ): void;
 
   /**
@@ -847,16 +847,16 @@ export interface SWF {
    */
   undeprecateWorkflowType(
     args: UndeprecateWorkflowTypeCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UndeprecateWorkflowTypeCommandOutput>;
   undeprecateWorkflowType(
     args: UndeprecateWorkflowTypeCommandInput,
-    cb: (err: any, data?: UndeprecateWorkflowTypeCommandOutput) => void
+    cb: (err: any, data?: UndeprecateWorkflowTypeCommandOutput) => void,
   ): void;
   undeprecateWorkflowType(
     args: UndeprecateWorkflowTypeCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UndeprecateWorkflowTypeCommandOutput) => void
+    cb: (err: any, data?: UndeprecateWorkflowTypeCommandOutput) => void,
   ): void;
 
   /**
@@ -867,7 +867,7 @@ export interface SWF {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 }
 

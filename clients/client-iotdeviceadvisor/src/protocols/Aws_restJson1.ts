@@ -75,7 +75,7 @@ import {
  */
 export const se_CreateSuiteDefinitionCommand = async (
   input: CreateSuiteDefinitionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -87,7 +87,7 @@ export const se_CreateSuiteDefinitionCommand = async (
     take(input, {
       suiteDefinitionConfiguration: (_) => _json(_),
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -98,7 +98,7 @@ export const se_CreateSuiteDefinitionCommand = async (
  */
 export const se_DeleteSuiteDefinitionCommand = async (
   input: DeleteSuiteDefinitionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -114,7 +114,7 @@ export const se_DeleteSuiteDefinitionCommand = async (
  */
 export const se_GetEndpointCommand = async (
   input: GetEndpointCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -135,7 +135,7 @@ export const se_GetEndpointCommand = async (
  */
 export const se_GetSuiteDefinitionCommand = async (
   input: GetSuiteDefinitionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -154,7 +154,7 @@ export const se_GetSuiteDefinitionCommand = async (
  */
 export const se_GetSuiteRunCommand = async (
   input: GetSuiteRunCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -171,7 +171,7 @@ export const se_GetSuiteRunCommand = async (
  */
 export const se_GetSuiteRunReportCommand = async (
   input: GetSuiteRunReportCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -188,7 +188,7 @@ export const se_GetSuiteRunReportCommand = async (
  */
 export const se_ListSuiteDefinitionsCommand = async (
   input: ListSuiteDefinitionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -207,7 +207,7 @@ export const se_ListSuiteDefinitionsCommand = async (
  */
 export const se_ListSuiteRunsCommand = async (
   input: ListSuiteRunsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -228,7 +228,7 @@ export const se_ListSuiteRunsCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -244,7 +244,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_StartSuiteRunCommand = async (
   input: StartSuiteRunCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -258,7 +258,7 @@ export const se_StartSuiteRunCommand = async (
       suiteDefinitionVersion: [],
       suiteRunConfiguration: (_) => _json(_),
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -269,7 +269,7 @@ export const se_StartSuiteRunCommand = async (
  */
 export const se_StopSuiteRunCommand = async (
   input: StopSuiteRunCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -286,7 +286,7 @@ export const se_StopSuiteRunCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -298,7 +298,7 @@ export const se_TagResourceCommand = async (
   body = JSON.stringify(
     take(input, {
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -309,7 +309,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -331,7 +331,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateSuiteDefinitionCommand = async (
   input: UpdateSuiteDefinitionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -343,7 +343,7 @@ export const se_UpdateSuiteDefinitionCommand = async (
   body = JSON.stringify(
     take(input, {
       suiteDefinitionConfiguration: (_) => _json(_),
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -354,7 +354,7 @@ export const se_UpdateSuiteDefinitionCommand = async (
  */
 export const de_CreateSuiteDefinitionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateSuiteDefinitionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -378,7 +378,7 @@ export const de_CreateSuiteDefinitionCommand = async (
  */
 export const de_DeleteSuiteDefinitionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteSuiteDefinitionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -395,7 +395,7 @@ export const de_DeleteSuiteDefinitionCommand = async (
  */
 export const de_GetEndpointCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetEndpointCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -416,7 +416,7 @@ export const de_GetEndpointCommand = async (
  */
 export const de_GetSuiteDefinitionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetSuiteDefinitionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -444,7 +444,7 @@ export const de_GetSuiteDefinitionCommand = async (
  */
 export const de_GetSuiteRunCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetSuiteRunCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -475,7 +475,7 @@ export const de_GetSuiteRunCommand = async (
  */
 export const de_GetSuiteRunReportCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetSuiteRunReportCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -496,7 +496,7 @@ export const de_GetSuiteRunReportCommand = async (
  */
 export const de_ListSuiteDefinitionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListSuiteDefinitionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -518,7 +518,7 @@ export const de_ListSuiteDefinitionsCommand = async (
  */
 export const de_ListSuiteRunsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListSuiteRunsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -540,7 +540,7 @@ export const de_ListSuiteRunsCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -561,7 +561,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_StartSuiteRunCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartSuiteRunCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -585,7 +585,7 @@ export const de_StartSuiteRunCommand = async (
  */
 export const de_StopSuiteRunCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StopSuiteRunCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -602,7 +602,7 @@ export const de_StopSuiteRunCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -619,7 +619,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -636,7 +636,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateSuiteDefinitionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateSuiteDefinitionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -712,7 +712,7 @@ const de_ConflictExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_InternalServerExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -732,7 +732,7 @@ const de_InternalServerExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;

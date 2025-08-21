@@ -6523,7 +6523,7 @@ export const DescribeUsersResultFilterSensitiveLog = (obj: DescribeUsersResult):
  * @internal
  */
 export const DescribeUserStackAssociationsRequestFilterSensitiveLog = (
-  obj: DescribeUserStackAssociationsRequest
+  obj: DescribeUserStackAssociationsRequest,
 ): any => ({
   ...obj,
   ...(obj.UserName && { UserName: SENSITIVE_STRING }),
@@ -6533,7 +6533,7 @@ export const DescribeUserStackAssociationsRequestFilterSensitiveLog = (
  * @internal
  */
 export const DescribeUserStackAssociationsResultFilterSensitiveLog = (
-  obj: DescribeUserStackAssociationsResult
+  obj: DescribeUserStackAssociationsResult,
 ): any => ({
   ...obj,
   ...(obj.UserStackAssociations && {

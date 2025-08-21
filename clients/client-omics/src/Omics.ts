@@ -445,16 +445,16 @@ export interface Omics {
    */
   abortMultipartReadSetUpload(
     args: AbortMultipartReadSetUploadCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AbortMultipartReadSetUploadCommandOutput>;
   abortMultipartReadSetUpload(
     args: AbortMultipartReadSetUploadCommandInput,
-    cb: (err: any, data?: AbortMultipartReadSetUploadCommandOutput) => void
+    cb: (err: any, data?: AbortMultipartReadSetUploadCommandOutput) => void,
   ): void;
   abortMultipartReadSetUpload(
     args: AbortMultipartReadSetUploadCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AbortMultipartReadSetUploadCommandOutput) => void
+    cb: (err: any, data?: AbortMultipartReadSetUploadCommandOutput) => void,
   ): void;
 
   /**
@@ -465,7 +465,7 @@ export interface Omics {
   acceptShare(
     args: AcceptShareCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AcceptShareCommandOutput) => void
+    cb: (err: any, data?: AcceptShareCommandOutput) => void,
   ): void;
 
   /**
@@ -473,16 +473,16 @@ export interface Omics {
    */
   batchDeleteReadSet(
     args: BatchDeleteReadSetCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<BatchDeleteReadSetCommandOutput>;
   batchDeleteReadSet(
     args: BatchDeleteReadSetCommandInput,
-    cb: (err: any, data?: BatchDeleteReadSetCommandOutput) => void
+    cb: (err: any, data?: BatchDeleteReadSetCommandOutput) => void,
   ): void;
   batchDeleteReadSet(
     args: BatchDeleteReadSetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: BatchDeleteReadSetCommandOutput) => void
+    cb: (err: any, data?: BatchDeleteReadSetCommandOutput) => void,
   ): void;
 
   /**
@@ -490,16 +490,16 @@ export interface Omics {
    */
   cancelAnnotationImportJob(
     args: CancelAnnotationImportJobCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CancelAnnotationImportJobCommandOutput>;
   cancelAnnotationImportJob(
     args: CancelAnnotationImportJobCommandInput,
-    cb: (err: any, data?: CancelAnnotationImportJobCommandOutput) => void
+    cb: (err: any, data?: CancelAnnotationImportJobCommandOutput) => void,
   ): void;
   cancelAnnotationImportJob(
     args: CancelAnnotationImportJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CancelAnnotationImportJobCommandOutput) => void
+    cb: (err: any, data?: CancelAnnotationImportJobCommandOutput) => void,
   ): void;
 
   /**
@@ -510,7 +510,7 @@ export interface Omics {
   cancelRun(
     args: CancelRunCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CancelRunCommandOutput) => void
+    cb: (err: any, data?: CancelRunCommandOutput) => void,
   ): void;
 
   /**
@@ -518,16 +518,16 @@ export interface Omics {
    */
   cancelVariantImportJob(
     args: CancelVariantImportJobCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CancelVariantImportJobCommandOutput>;
   cancelVariantImportJob(
     args: CancelVariantImportJobCommandInput,
-    cb: (err: any, data?: CancelVariantImportJobCommandOutput) => void
+    cb: (err: any, data?: CancelVariantImportJobCommandOutput) => void,
   ): void;
   cancelVariantImportJob(
     args: CancelVariantImportJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CancelVariantImportJobCommandOutput) => void
+    cb: (err: any, data?: CancelVariantImportJobCommandOutput) => void,
   ): void;
 
   /**
@@ -535,16 +535,16 @@ export interface Omics {
    */
   completeMultipartReadSetUpload(
     args: CompleteMultipartReadSetUploadCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CompleteMultipartReadSetUploadCommandOutput>;
   completeMultipartReadSetUpload(
     args: CompleteMultipartReadSetUploadCommandInput,
-    cb: (err: any, data?: CompleteMultipartReadSetUploadCommandOutput) => void
+    cb: (err: any, data?: CompleteMultipartReadSetUploadCommandOutput) => void,
   ): void;
   completeMultipartReadSetUpload(
     args: CompleteMultipartReadSetUploadCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CompleteMultipartReadSetUploadCommandOutput) => void
+    cb: (err: any, data?: CompleteMultipartReadSetUploadCommandOutput) => void,
   ): void;
 
   /**
@@ -552,16 +552,16 @@ export interface Omics {
    */
   createAnnotationStore(
     args: CreateAnnotationStoreCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateAnnotationStoreCommandOutput>;
   createAnnotationStore(
     args: CreateAnnotationStoreCommandInput,
-    cb: (err: any, data?: CreateAnnotationStoreCommandOutput) => void
+    cb: (err: any, data?: CreateAnnotationStoreCommandOutput) => void,
   ): void;
   createAnnotationStore(
     args: CreateAnnotationStoreCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateAnnotationStoreCommandOutput) => void
+    cb: (err: any, data?: CreateAnnotationStoreCommandOutput) => void,
   ): void;
 
   /**
@@ -569,16 +569,16 @@ export interface Omics {
    */
   createAnnotationStoreVersion(
     args: CreateAnnotationStoreVersionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateAnnotationStoreVersionCommandOutput>;
   createAnnotationStoreVersion(
     args: CreateAnnotationStoreVersionCommandInput,
-    cb: (err: any, data?: CreateAnnotationStoreVersionCommandOutput) => void
+    cb: (err: any, data?: CreateAnnotationStoreVersionCommandOutput) => void,
   ): void;
   createAnnotationStoreVersion(
     args: CreateAnnotationStoreVersionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateAnnotationStoreVersionCommandOutput) => void
+    cb: (err: any, data?: CreateAnnotationStoreVersionCommandOutput) => void,
   ): void;
 
   /**
@@ -586,16 +586,16 @@ export interface Omics {
    */
   createMultipartReadSetUpload(
     args: CreateMultipartReadSetUploadCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateMultipartReadSetUploadCommandOutput>;
   createMultipartReadSetUpload(
     args: CreateMultipartReadSetUploadCommandInput,
-    cb: (err: any, data?: CreateMultipartReadSetUploadCommandOutput) => void
+    cb: (err: any, data?: CreateMultipartReadSetUploadCommandOutput) => void,
   ): void;
   createMultipartReadSetUpload(
     args: CreateMultipartReadSetUploadCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateMultipartReadSetUploadCommandOutput) => void
+    cb: (err: any, data?: CreateMultipartReadSetUploadCommandOutput) => void,
   ): void;
 
   /**
@@ -603,16 +603,16 @@ export interface Omics {
    */
   createReferenceStore(
     args: CreateReferenceStoreCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateReferenceStoreCommandOutput>;
   createReferenceStore(
     args: CreateReferenceStoreCommandInput,
-    cb: (err: any, data?: CreateReferenceStoreCommandOutput) => void
+    cb: (err: any, data?: CreateReferenceStoreCommandOutput) => void,
   ): void;
   createReferenceStore(
     args: CreateReferenceStoreCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateReferenceStoreCommandOutput) => void
+    cb: (err: any, data?: CreateReferenceStoreCommandOutput) => void,
   ): void;
 
   /**
@@ -620,13 +620,13 @@ export interface Omics {
    */
   createRunGroup(
     args: CreateRunGroupCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateRunGroupCommandOutput>;
   createRunGroup(args: CreateRunGroupCommandInput, cb: (err: any, data?: CreateRunGroupCommandOutput) => void): void;
   createRunGroup(
     args: CreateRunGroupCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateRunGroupCommandOutput) => void
+    cb: (err: any, data?: CreateRunGroupCommandOutput) => void,
   ): void;
 
   /**
@@ -634,16 +634,16 @@ export interface Omics {
    */
   createSequenceStore(
     args: CreateSequenceStoreCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateSequenceStoreCommandOutput>;
   createSequenceStore(
     args: CreateSequenceStoreCommandInput,
-    cb: (err: any, data?: CreateSequenceStoreCommandOutput) => void
+    cb: (err: any, data?: CreateSequenceStoreCommandOutput) => void,
   ): void;
   createSequenceStore(
     args: CreateSequenceStoreCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateSequenceStoreCommandOutput) => void
+    cb: (err: any, data?: CreateSequenceStoreCommandOutput) => void,
   ): void;
 
   /**
@@ -654,7 +654,7 @@ export interface Omics {
   createShare(
     args: CreateShareCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateShareCommandOutput) => void
+    cb: (err: any, data?: CreateShareCommandOutput) => void,
   ): void;
 
   /**
@@ -662,16 +662,16 @@ export interface Omics {
    */
   createVariantStore(
     args: CreateVariantStoreCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateVariantStoreCommandOutput>;
   createVariantStore(
     args: CreateVariantStoreCommandInput,
-    cb: (err: any, data?: CreateVariantStoreCommandOutput) => void
+    cb: (err: any, data?: CreateVariantStoreCommandOutput) => void,
   ): void;
   createVariantStore(
     args: CreateVariantStoreCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateVariantStoreCommandOutput) => void
+    cb: (err: any, data?: CreateVariantStoreCommandOutput) => void,
   ): void;
 
   /**
@@ -679,13 +679,13 @@ export interface Omics {
    */
   createWorkflow(
     args: CreateWorkflowCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateWorkflowCommandOutput>;
   createWorkflow(args: CreateWorkflowCommandInput, cb: (err: any, data?: CreateWorkflowCommandOutput) => void): void;
   createWorkflow(
     args: CreateWorkflowCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateWorkflowCommandOutput) => void
+    cb: (err: any, data?: CreateWorkflowCommandOutput) => void,
   ): void;
 
   /**
@@ -693,16 +693,16 @@ export interface Omics {
    */
   deleteAnnotationStore(
     args: DeleteAnnotationStoreCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteAnnotationStoreCommandOutput>;
   deleteAnnotationStore(
     args: DeleteAnnotationStoreCommandInput,
-    cb: (err: any, data?: DeleteAnnotationStoreCommandOutput) => void
+    cb: (err: any, data?: DeleteAnnotationStoreCommandOutput) => void,
   ): void;
   deleteAnnotationStore(
     args: DeleteAnnotationStoreCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteAnnotationStoreCommandOutput) => void
+    cb: (err: any, data?: DeleteAnnotationStoreCommandOutput) => void,
   ): void;
 
   /**
@@ -710,16 +710,16 @@ export interface Omics {
    */
   deleteAnnotationStoreVersions(
     args: DeleteAnnotationStoreVersionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteAnnotationStoreVersionsCommandOutput>;
   deleteAnnotationStoreVersions(
     args: DeleteAnnotationStoreVersionsCommandInput,
-    cb: (err: any, data?: DeleteAnnotationStoreVersionsCommandOutput) => void
+    cb: (err: any, data?: DeleteAnnotationStoreVersionsCommandOutput) => void,
   ): void;
   deleteAnnotationStoreVersions(
     args: DeleteAnnotationStoreVersionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteAnnotationStoreVersionsCommandOutput) => void
+    cb: (err: any, data?: DeleteAnnotationStoreVersionsCommandOutput) => void,
   ): void;
 
   /**
@@ -727,13 +727,13 @@ export interface Omics {
    */
   deleteReference(
     args: DeleteReferenceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteReferenceCommandOutput>;
   deleteReference(args: DeleteReferenceCommandInput, cb: (err: any, data?: DeleteReferenceCommandOutput) => void): void;
   deleteReference(
     args: DeleteReferenceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteReferenceCommandOutput) => void
+    cb: (err: any, data?: DeleteReferenceCommandOutput) => void,
   ): void;
 
   /**
@@ -741,16 +741,16 @@ export interface Omics {
    */
   deleteReferenceStore(
     args: DeleteReferenceStoreCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteReferenceStoreCommandOutput>;
   deleteReferenceStore(
     args: DeleteReferenceStoreCommandInput,
-    cb: (err: any, data?: DeleteReferenceStoreCommandOutput) => void
+    cb: (err: any, data?: DeleteReferenceStoreCommandOutput) => void,
   ): void;
   deleteReferenceStore(
     args: DeleteReferenceStoreCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteReferenceStoreCommandOutput) => void
+    cb: (err: any, data?: DeleteReferenceStoreCommandOutput) => void,
   ): void;
 
   /**
@@ -761,7 +761,7 @@ export interface Omics {
   deleteRun(
     args: DeleteRunCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteRunCommandOutput) => void
+    cb: (err: any, data?: DeleteRunCommandOutput) => void,
   ): void;
 
   /**
@@ -769,13 +769,13 @@ export interface Omics {
    */
   deleteRunGroup(
     args: DeleteRunGroupCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteRunGroupCommandOutput>;
   deleteRunGroup(args: DeleteRunGroupCommandInput, cb: (err: any, data?: DeleteRunGroupCommandOutput) => void): void;
   deleteRunGroup(
     args: DeleteRunGroupCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteRunGroupCommandOutput) => void
+    cb: (err: any, data?: DeleteRunGroupCommandOutput) => void,
   ): void;
 
   /**
@@ -783,16 +783,16 @@ export interface Omics {
    */
   deleteSequenceStore(
     args: DeleteSequenceStoreCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteSequenceStoreCommandOutput>;
   deleteSequenceStore(
     args: DeleteSequenceStoreCommandInput,
-    cb: (err: any, data?: DeleteSequenceStoreCommandOutput) => void
+    cb: (err: any, data?: DeleteSequenceStoreCommandOutput) => void,
   ): void;
   deleteSequenceStore(
     args: DeleteSequenceStoreCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteSequenceStoreCommandOutput) => void
+    cb: (err: any, data?: DeleteSequenceStoreCommandOutput) => void,
   ): void;
 
   /**
@@ -803,7 +803,7 @@ export interface Omics {
   deleteShare(
     args: DeleteShareCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteShareCommandOutput) => void
+    cb: (err: any, data?: DeleteShareCommandOutput) => void,
   ): void;
 
   /**
@@ -811,16 +811,16 @@ export interface Omics {
    */
   deleteVariantStore(
     args: DeleteVariantStoreCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteVariantStoreCommandOutput>;
   deleteVariantStore(
     args: DeleteVariantStoreCommandInput,
-    cb: (err: any, data?: DeleteVariantStoreCommandOutput) => void
+    cb: (err: any, data?: DeleteVariantStoreCommandOutput) => void,
   ): void;
   deleteVariantStore(
     args: DeleteVariantStoreCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteVariantStoreCommandOutput) => void
+    cb: (err: any, data?: DeleteVariantStoreCommandOutput) => void,
   ): void;
 
   /**
@@ -828,13 +828,13 @@ export interface Omics {
    */
   deleteWorkflow(
     args: DeleteWorkflowCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteWorkflowCommandOutput>;
   deleteWorkflow(args: DeleteWorkflowCommandInput, cb: (err: any, data?: DeleteWorkflowCommandOutput) => void): void;
   deleteWorkflow(
     args: DeleteWorkflowCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteWorkflowCommandOutput) => void
+    cb: (err: any, data?: DeleteWorkflowCommandOutput) => void,
   ): void;
 
   /**
@@ -842,16 +842,16 @@ export interface Omics {
    */
   getAnnotationImportJob(
     args: GetAnnotationImportJobCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetAnnotationImportJobCommandOutput>;
   getAnnotationImportJob(
     args: GetAnnotationImportJobCommandInput,
-    cb: (err: any, data?: GetAnnotationImportJobCommandOutput) => void
+    cb: (err: any, data?: GetAnnotationImportJobCommandOutput) => void,
   ): void;
   getAnnotationImportJob(
     args: GetAnnotationImportJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetAnnotationImportJobCommandOutput) => void
+    cb: (err: any, data?: GetAnnotationImportJobCommandOutput) => void,
   ): void;
 
   /**
@@ -859,16 +859,16 @@ export interface Omics {
    */
   getAnnotationStore(
     args: GetAnnotationStoreCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetAnnotationStoreCommandOutput>;
   getAnnotationStore(
     args: GetAnnotationStoreCommandInput,
-    cb: (err: any, data?: GetAnnotationStoreCommandOutput) => void
+    cb: (err: any, data?: GetAnnotationStoreCommandOutput) => void,
   ): void;
   getAnnotationStore(
     args: GetAnnotationStoreCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetAnnotationStoreCommandOutput) => void
+    cb: (err: any, data?: GetAnnotationStoreCommandOutput) => void,
   ): void;
 
   /**
@@ -876,16 +876,16 @@ export interface Omics {
    */
   getAnnotationStoreVersion(
     args: GetAnnotationStoreVersionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetAnnotationStoreVersionCommandOutput>;
   getAnnotationStoreVersion(
     args: GetAnnotationStoreVersionCommandInput,
-    cb: (err: any, data?: GetAnnotationStoreVersionCommandOutput) => void
+    cb: (err: any, data?: GetAnnotationStoreVersionCommandOutput) => void,
   ): void;
   getAnnotationStoreVersion(
     args: GetAnnotationStoreVersionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetAnnotationStoreVersionCommandOutput) => void
+    cb: (err: any, data?: GetAnnotationStoreVersionCommandOutput) => void,
   ): void;
 
   /**
@@ -896,7 +896,7 @@ export interface Omics {
   getReadSet(
     args: GetReadSetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetReadSetCommandOutput) => void
+    cb: (err: any, data?: GetReadSetCommandOutput) => void,
   ): void;
 
   /**
@@ -904,16 +904,16 @@ export interface Omics {
    */
   getReadSetActivationJob(
     args: GetReadSetActivationJobCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetReadSetActivationJobCommandOutput>;
   getReadSetActivationJob(
     args: GetReadSetActivationJobCommandInput,
-    cb: (err: any, data?: GetReadSetActivationJobCommandOutput) => void
+    cb: (err: any, data?: GetReadSetActivationJobCommandOutput) => void,
   ): void;
   getReadSetActivationJob(
     args: GetReadSetActivationJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetReadSetActivationJobCommandOutput) => void
+    cb: (err: any, data?: GetReadSetActivationJobCommandOutput) => void,
   ): void;
 
   /**
@@ -921,16 +921,16 @@ export interface Omics {
    */
   getReadSetExportJob(
     args: GetReadSetExportJobCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetReadSetExportJobCommandOutput>;
   getReadSetExportJob(
     args: GetReadSetExportJobCommandInput,
-    cb: (err: any, data?: GetReadSetExportJobCommandOutput) => void
+    cb: (err: any, data?: GetReadSetExportJobCommandOutput) => void,
   ): void;
   getReadSetExportJob(
     args: GetReadSetExportJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetReadSetExportJobCommandOutput) => void
+    cb: (err: any, data?: GetReadSetExportJobCommandOutput) => void,
   ): void;
 
   /**
@@ -938,16 +938,16 @@ export interface Omics {
    */
   getReadSetImportJob(
     args: GetReadSetImportJobCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetReadSetImportJobCommandOutput>;
   getReadSetImportJob(
     args: GetReadSetImportJobCommandInput,
-    cb: (err: any, data?: GetReadSetImportJobCommandOutput) => void
+    cb: (err: any, data?: GetReadSetImportJobCommandOutput) => void,
   ): void;
   getReadSetImportJob(
     args: GetReadSetImportJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetReadSetImportJobCommandOutput) => void
+    cb: (err: any, data?: GetReadSetImportJobCommandOutput) => void,
   ): void;
 
   /**
@@ -955,16 +955,16 @@ export interface Omics {
    */
   getReadSetMetadata(
     args: GetReadSetMetadataCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetReadSetMetadataCommandOutput>;
   getReadSetMetadata(
     args: GetReadSetMetadataCommandInput,
-    cb: (err: any, data?: GetReadSetMetadataCommandOutput) => void
+    cb: (err: any, data?: GetReadSetMetadataCommandOutput) => void,
   ): void;
   getReadSetMetadata(
     args: GetReadSetMetadataCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetReadSetMetadataCommandOutput) => void
+    cb: (err: any, data?: GetReadSetMetadataCommandOutput) => void,
   ): void;
 
   /**
@@ -975,7 +975,7 @@ export interface Omics {
   getReference(
     args: GetReferenceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetReferenceCommandOutput) => void
+    cb: (err: any, data?: GetReferenceCommandOutput) => void,
   ): void;
 
   /**
@@ -983,16 +983,16 @@ export interface Omics {
    */
   getReferenceImportJob(
     args: GetReferenceImportJobCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetReferenceImportJobCommandOutput>;
   getReferenceImportJob(
     args: GetReferenceImportJobCommandInput,
-    cb: (err: any, data?: GetReferenceImportJobCommandOutput) => void
+    cb: (err: any, data?: GetReferenceImportJobCommandOutput) => void,
   ): void;
   getReferenceImportJob(
     args: GetReferenceImportJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetReferenceImportJobCommandOutput) => void
+    cb: (err: any, data?: GetReferenceImportJobCommandOutput) => void,
   ): void;
 
   /**
@@ -1000,16 +1000,16 @@ export interface Omics {
    */
   getReferenceMetadata(
     args: GetReferenceMetadataCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetReferenceMetadataCommandOutput>;
   getReferenceMetadata(
     args: GetReferenceMetadataCommandInput,
-    cb: (err: any, data?: GetReferenceMetadataCommandOutput) => void
+    cb: (err: any, data?: GetReferenceMetadataCommandOutput) => void,
   ): void;
   getReferenceMetadata(
     args: GetReferenceMetadataCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetReferenceMetadataCommandOutput) => void
+    cb: (err: any, data?: GetReferenceMetadataCommandOutput) => void,
   ): void;
 
   /**
@@ -1017,16 +1017,16 @@ export interface Omics {
    */
   getReferenceStore(
     args: GetReferenceStoreCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetReferenceStoreCommandOutput>;
   getReferenceStore(
     args: GetReferenceStoreCommandInput,
-    cb: (err: any, data?: GetReferenceStoreCommandOutput) => void
+    cb: (err: any, data?: GetReferenceStoreCommandOutput) => void,
   ): void;
   getReferenceStore(
     args: GetReferenceStoreCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetReferenceStoreCommandOutput) => void
+    cb: (err: any, data?: GetReferenceStoreCommandOutput) => void,
   ): void;
 
   /**
@@ -1037,7 +1037,7 @@ export interface Omics {
   getRun(
     args: GetRunCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetRunCommandOutput) => void
+    cb: (err: any, data?: GetRunCommandOutput) => void,
   ): void;
 
   /**
@@ -1048,7 +1048,7 @@ export interface Omics {
   getRunGroup(
     args: GetRunGroupCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetRunGroupCommandOutput) => void
+    cb: (err: any, data?: GetRunGroupCommandOutput) => void,
   ): void;
 
   /**
@@ -1059,7 +1059,7 @@ export interface Omics {
   getRunTask(
     args: GetRunTaskCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetRunTaskCommandOutput) => void
+    cb: (err: any, data?: GetRunTaskCommandOutput) => void,
   ): void;
 
   /**
@@ -1067,16 +1067,16 @@ export interface Omics {
    */
   getSequenceStore(
     args: GetSequenceStoreCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetSequenceStoreCommandOutput>;
   getSequenceStore(
     args: GetSequenceStoreCommandInput,
-    cb: (err: any, data?: GetSequenceStoreCommandOutput) => void
+    cb: (err: any, data?: GetSequenceStoreCommandOutput) => void,
   ): void;
   getSequenceStore(
     args: GetSequenceStoreCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetSequenceStoreCommandOutput) => void
+    cb: (err: any, data?: GetSequenceStoreCommandOutput) => void,
   ): void;
 
   /**
@@ -1087,7 +1087,7 @@ export interface Omics {
   getShare(
     args: GetShareCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetShareCommandOutput) => void
+    cb: (err: any, data?: GetShareCommandOutput) => void,
   ): void;
 
   /**
@@ -1095,16 +1095,16 @@ export interface Omics {
    */
   getVariantImportJob(
     args: GetVariantImportJobCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetVariantImportJobCommandOutput>;
   getVariantImportJob(
     args: GetVariantImportJobCommandInput,
-    cb: (err: any, data?: GetVariantImportJobCommandOutput) => void
+    cb: (err: any, data?: GetVariantImportJobCommandOutput) => void,
   ): void;
   getVariantImportJob(
     args: GetVariantImportJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetVariantImportJobCommandOutput) => void
+    cb: (err: any, data?: GetVariantImportJobCommandOutput) => void,
   ): void;
 
   /**
@@ -1112,13 +1112,13 @@ export interface Omics {
    */
   getVariantStore(
     args: GetVariantStoreCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetVariantStoreCommandOutput>;
   getVariantStore(args: GetVariantStoreCommandInput, cb: (err: any, data?: GetVariantStoreCommandOutput) => void): void;
   getVariantStore(
     args: GetVariantStoreCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetVariantStoreCommandOutput) => void
+    cb: (err: any, data?: GetVariantStoreCommandOutput) => void,
   ): void;
 
   /**
@@ -1129,7 +1129,7 @@ export interface Omics {
   getWorkflow(
     args: GetWorkflowCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetWorkflowCommandOutput) => void
+    cb: (err: any, data?: GetWorkflowCommandOutput) => void,
   ): void;
 
   /**
@@ -1138,16 +1138,16 @@ export interface Omics {
   listAnnotationImportJobs(): Promise<ListAnnotationImportJobsCommandOutput>;
   listAnnotationImportJobs(
     args: ListAnnotationImportJobsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListAnnotationImportJobsCommandOutput>;
   listAnnotationImportJobs(
     args: ListAnnotationImportJobsCommandInput,
-    cb: (err: any, data?: ListAnnotationImportJobsCommandOutput) => void
+    cb: (err: any, data?: ListAnnotationImportJobsCommandOutput) => void,
   ): void;
   listAnnotationImportJobs(
     args: ListAnnotationImportJobsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListAnnotationImportJobsCommandOutput) => void
+    cb: (err: any, data?: ListAnnotationImportJobsCommandOutput) => void,
   ): void;
 
   /**
@@ -1156,16 +1156,16 @@ export interface Omics {
   listAnnotationStores(): Promise<ListAnnotationStoresCommandOutput>;
   listAnnotationStores(
     args: ListAnnotationStoresCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListAnnotationStoresCommandOutput>;
   listAnnotationStores(
     args: ListAnnotationStoresCommandInput,
-    cb: (err: any, data?: ListAnnotationStoresCommandOutput) => void
+    cb: (err: any, data?: ListAnnotationStoresCommandOutput) => void,
   ): void;
   listAnnotationStores(
     args: ListAnnotationStoresCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListAnnotationStoresCommandOutput) => void
+    cb: (err: any, data?: ListAnnotationStoresCommandOutput) => void,
   ): void;
 
   /**
@@ -1173,16 +1173,16 @@ export interface Omics {
    */
   listAnnotationStoreVersions(
     args: ListAnnotationStoreVersionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListAnnotationStoreVersionsCommandOutput>;
   listAnnotationStoreVersions(
     args: ListAnnotationStoreVersionsCommandInput,
-    cb: (err: any, data?: ListAnnotationStoreVersionsCommandOutput) => void
+    cb: (err: any, data?: ListAnnotationStoreVersionsCommandOutput) => void,
   ): void;
   listAnnotationStoreVersions(
     args: ListAnnotationStoreVersionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListAnnotationStoreVersionsCommandOutput) => void
+    cb: (err: any, data?: ListAnnotationStoreVersionsCommandOutput) => void,
   ): void;
 
   /**
@@ -1190,16 +1190,16 @@ export interface Omics {
    */
   listMultipartReadSetUploads(
     args: ListMultipartReadSetUploadsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListMultipartReadSetUploadsCommandOutput>;
   listMultipartReadSetUploads(
     args: ListMultipartReadSetUploadsCommandInput,
-    cb: (err: any, data?: ListMultipartReadSetUploadsCommandOutput) => void
+    cb: (err: any, data?: ListMultipartReadSetUploadsCommandOutput) => void,
   ): void;
   listMultipartReadSetUploads(
     args: ListMultipartReadSetUploadsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListMultipartReadSetUploadsCommandOutput) => void
+    cb: (err: any, data?: ListMultipartReadSetUploadsCommandOutput) => void,
   ): void;
 
   /**
@@ -1207,16 +1207,16 @@ export interface Omics {
    */
   listReadSetActivationJobs(
     args: ListReadSetActivationJobsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListReadSetActivationJobsCommandOutput>;
   listReadSetActivationJobs(
     args: ListReadSetActivationJobsCommandInput,
-    cb: (err: any, data?: ListReadSetActivationJobsCommandOutput) => void
+    cb: (err: any, data?: ListReadSetActivationJobsCommandOutput) => void,
   ): void;
   listReadSetActivationJobs(
     args: ListReadSetActivationJobsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListReadSetActivationJobsCommandOutput) => void
+    cb: (err: any, data?: ListReadSetActivationJobsCommandOutput) => void,
   ): void;
 
   /**
@@ -1224,16 +1224,16 @@ export interface Omics {
    */
   listReadSetExportJobs(
     args: ListReadSetExportJobsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListReadSetExportJobsCommandOutput>;
   listReadSetExportJobs(
     args: ListReadSetExportJobsCommandInput,
-    cb: (err: any, data?: ListReadSetExportJobsCommandOutput) => void
+    cb: (err: any, data?: ListReadSetExportJobsCommandOutput) => void,
   ): void;
   listReadSetExportJobs(
     args: ListReadSetExportJobsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListReadSetExportJobsCommandOutput) => void
+    cb: (err: any, data?: ListReadSetExportJobsCommandOutput) => void,
   ): void;
 
   /**
@@ -1241,16 +1241,16 @@ export interface Omics {
    */
   listReadSetImportJobs(
     args: ListReadSetImportJobsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListReadSetImportJobsCommandOutput>;
   listReadSetImportJobs(
     args: ListReadSetImportJobsCommandInput,
-    cb: (err: any, data?: ListReadSetImportJobsCommandOutput) => void
+    cb: (err: any, data?: ListReadSetImportJobsCommandOutput) => void,
   ): void;
   listReadSetImportJobs(
     args: ListReadSetImportJobsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListReadSetImportJobsCommandOutput) => void
+    cb: (err: any, data?: ListReadSetImportJobsCommandOutput) => void,
   ): void;
 
   /**
@@ -1261,7 +1261,7 @@ export interface Omics {
   listReadSets(
     args: ListReadSetsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListReadSetsCommandOutput) => void
+    cb: (err: any, data?: ListReadSetsCommandOutput) => void,
   ): void;
 
   /**
@@ -1269,16 +1269,16 @@ export interface Omics {
    */
   listReadSetUploadParts(
     args: ListReadSetUploadPartsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListReadSetUploadPartsCommandOutput>;
   listReadSetUploadParts(
     args: ListReadSetUploadPartsCommandInput,
-    cb: (err: any, data?: ListReadSetUploadPartsCommandOutput) => void
+    cb: (err: any, data?: ListReadSetUploadPartsCommandOutput) => void,
   ): void;
   listReadSetUploadParts(
     args: ListReadSetUploadPartsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListReadSetUploadPartsCommandOutput) => void
+    cb: (err: any, data?: ListReadSetUploadPartsCommandOutput) => void,
   ): void;
 
   /**
@@ -1286,16 +1286,16 @@ export interface Omics {
    */
   listReferenceImportJobs(
     args: ListReferenceImportJobsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListReferenceImportJobsCommandOutput>;
   listReferenceImportJobs(
     args: ListReferenceImportJobsCommandInput,
-    cb: (err: any, data?: ListReferenceImportJobsCommandOutput) => void
+    cb: (err: any, data?: ListReferenceImportJobsCommandOutput) => void,
   ): void;
   listReferenceImportJobs(
     args: ListReferenceImportJobsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListReferenceImportJobsCommandOutput) => void
+    cb: (err: any, data?: ListReferenceImportJobsCommandOutput) => void,
   ): void;
 
   /**
@@ -1303,13 +1303,13 @@ export interface Omics {
    */
   listReferences(
     args: ListReferencesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListReferencesCommandOutput>;
   listReferences(args: ListReferencesCommandInput, cb: (err: any, data?: ListReferencesCommandOutput) => void): void;
   listReferences(
     args: ListReferencesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListReferencesCommandOutput) => void
+    cb: (err: any, data?: ListReferencesCommandOutput) => void,
   ): void;
 
   /**
@@ -1318,16 +1318,16 @@ export interface Omics {
   listReferenceStores(): Promise<ListReferenceStoresCommandOutput>;
   listReferenceStores(
     args: ListReferenceStoresCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListReferenceStoresCommandOutput>;
   listReferenceStores(
     args: ListReferenceStoresCommandInput,
-    cb: (err: any, data?: ListReferenceStoresCommandOutput) => void
+    cb: (err: any, data?: ListReferenceStoresCommandOutput) => void,
   ): void;
   listReferenceStores(
     args: ListReferenceStoresCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListReferenceStoresCommandOutput) => void
+    cb: (err: any, data?: ListReferenceStoresCommandOutput) => void,
   ): void;
 
   /**
@@ -1339,7 +1339,7 @@ export interface Omics {
   listRunGroups(
     args: ListRunGroupsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListRunGroupsCommandOutput) => void
+    cb: (err: any, data?: ListRunGroupsCommandOutput) => void,
   ): void;
 
   /**
@@ -1351,7 +1351,7 @@ export interface Omics {
   listRuns(
     args: ListRunsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListRunsCommandOutput) => void
+    cb: (err: any, data?: ListRunsCommandOutput) => void,
   ): void;
 
   /**
@@ -1362,7 +1362,7 @@ export interface Omics {
   listRunTasks(
     args: ListRunTasksCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListRunTasksCommandOutput) => void
+    cb: (err: any, data?: ListRunTasksCommandOutput) => void,
   ): void;
 
   /**
@@ -1371,16 +1371,16 @@ export interface Omics {
   listSequenceStores(): Promise<ListSequenceStoresCommandOutput>;
   listSequenceStores(
     args: ListSequenceStoresCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListSequenceStoresCommandOutput>;
   listSequenceStores(
     args: ListSequenceStoresCommandInput,
-    cb: (err: any, data?: ListSequenceStoresCommandOutput) => void
+    cb: (err: any, data?: ListSequenceStoresCommandOutput) => void,
   ): void;
   listSequenceStores(
     args: ListSequenceStoresCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListSequenceStoresCommandOutput) => void
+    cb: (err: any, data?: ListSequenceStoresCommandOutput) => void,
   ): void;
 
   /**
@@ -1391,7 +1391,7 @@ export interface Omics {
   listShares(
     args: ListSharesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListSharesCommandOutput) => void
+    cb: (err: any, data?: ListSharesCommandOutput) => void,
   ): void;
 
   /**
@@ -1399,16 +1399,16 @@ export interface Omics {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -1417,16 +1417,16 @@ export interface Omics {
   listVariantImportJobs(): Promise<ListVariantImportJobsCommandOutput>;
   listVariantImportJobs(
     args: ListVariantImportJobsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListVariantImportJobsCommandOutput>;
   listVariantImportJobs(
     args: ListVariantImportJobsCommandInput,
-    cb: (err: any, data?: ListVariantImportJobsCommandOutput) => void
+    cb: (err: any, data?: ListVariantImportJobsCommandOutput) => void,
   ): void;
   listVariantImportJobs(
     args: ListVariantImportJobsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListVariantImportJobsCommandOutput) => void
+    cb: (err: any, data?: ListVariantImportJobsCommandOutput) => void,
   ): void;
 
   /**
@@ -1435,16 +1435,16 @@ export interface Omics {
   listVariantStores(): Promise<ListVariantStoresCommandOutput>;
   listVariantStores(
     args: ListVariantStoresCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListVariantStoresCommandOutput>;
   listVariantStores(
     args: ListVariantStoresCommandInput,
-    cb: (err: any, data?: ListVariantStoresCommandOutput) => void
+    cb: (err: any, data?: ListVariantStoresCommandOutput) => void,
   ): void;
   listVariantStores(
     args: ListVariantStoresCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListVariantStoresCommandOutput) => void
+    cb: (err: any, data?: ListVariantStoresCommandOutput) => void,
   ): void;
 
   /**
@@ -1456,7 +1456,7 @@ export interface Omics {
   listWorkflows(
     args: ListWorkflowsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListWorkflowsCommandOutput) => void
+    cb: (err: any, data?: ListWorkflowsCommandOutput) => void,
   ): void;
 
   /**
@@ -1464,16 +1464,16 @@ export interface Omics {
    */
   startAnnotationImportJob(
     args: StartAnnotationImportJobCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartAnnotationImportJobCommandOutput>;
   startAnnotationImportJob(
     args: StartAnnotationImportJobCommandInput,
-    cb: (err: any, data?: StartAnnotationImportJobCommandOutput) => void
+    cb: (err: any, data?: StartAnnotationImportJobCommandOutput) => void,
   ): void;
   startAnnotationImportJob(
     args: StartAnnotationImportJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartAnnotationImportJobCommandOutput) => void
+    cb: (err: any, data?: StartAnnotationImportJobCommandOutput) => void,
   ): void;
 
   /**
@@ -1481,16 +1481,16 @@ export interface Omics {
    */
   startReadSetActivationJob(
     args: StartReadSetActivationJobCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartReadSetActivationJobCommandOutput>;
   startReadSetActivationJob(
     args: StartReadSetActivationJobCommandInput,
-    cb: (err: any, data?: StartReadSetActivationJobCommandOutput) => void
+    cb: (err: any, data?: StartReadSetActivationJobCommandOutput) => void,
   ): void;
   startReadSetActivationJob(
     args: StartReadSetActivationJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartReadSetActivationJobCommandOutput) => void
+    cb: (err: any, data?: StartReadSetActivationJobCommandOutput) => void,
   ): void;
 
   /**
@@ -1498,16 +1498,16 @@ export interface Omics {
    */
   startReadSetExportJob(
     args: StartReadSetExportJobCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartReadSetExportJobCommandOutput>;
   startReadSetExportJob(
     args: StartReadSetExportJobCommandInput,
-    cb: (err: any, data?: StartReadSetExportJobCommandOutput) => void
+    cb: (err: any, data?: StartReadSetExportJobCommandOutput) => void,
   ): void;
   startReadSetExportJob(
     args: StartReadSetExportJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartReadSetExportJobCommandOutput) => void
+    cb: (err: any, data?: StartReadSetExportJobCommandOutput) => void,
   ): void;
 
   /**
@@ -1515,16 +1515,16 @@ export interface Omics {
    */
   startReadSetImportJob(
     args: StartReadSetImportJobCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartReadSetImportJobCommandOutput>;
   startReadSetImportJob(
     args: StartReadSetImportJobCommandInput,
-    cb: (err: any, data?: StartReadSetImportJobCommandOutput) => void
+    cb: (err: any, data?: StartReadSetImportJobCommandOutput) => void,
   ): void;
   startReadSetImportJob(
     args: StartReadSetImportJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartReadSetImportJobCommandOutput) => void
+    cb: (err: any, data?: StartReadSetImportJobCommandOutput) => void,
   ): void;
 
   /**
@@ -1532,16 +1532,16 @@ export interface Omics {
    */
   startReferenceImportJob(
     args: StartReferenceImportJobCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartReferenceImportJobCommandOutput>;
   startReferenceImportJob(
     args: StartReferenceImportJobCommandInput,
-    cb: (err: any, data?: StartReferenceImportJobCommandOutput) => void
+    cb: (err: any, data?: StartReferenceImportJobCommandOutput) => void,
   ): void;
   startReferenceImportJob(
     args: StartReferenceImportJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartReferenceImportJobCommandOutput) => void
+    cb: (err: any, data?: StartReferenceImportJobCommandOutput) => void,
   ): void;
 
   /**
@@ -1552,7 +1552,7 @@ export interface Omics {
   startRun(
     args: StartRunCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartRunCommandOutput) => void
+    cb: (err: any, data?: StartRunCommandOutput) => void,
   ): void;
 
   /**
@@ -1560,16 +1560,16 @@ export interface Omics {
    */
   startVariantImportJob(
     args: StartVariantImportJobCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartVariantImportJobCommandOutput>;
   startVariantImportJob(
     args: StartVariantImportJobCommandInput,
-    cb: (err: any, data?: StartVariantImportJobCommandOutput) => void
+    cb: (err: any, data?: StartVariantImportJobCommandOutput) => void,
   ): void;
   startVariantImportJob(
     args: StartVariantImportJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartVariantImportJobCommandOutput) => void
+    cb: (err: any, data?: StartVariantImportJobCommandOutput) => void,
   ): void;
 
   /**
@@ -1580,7 +1580,7 @@ export interface Omics {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -1591,7 +1591,7 @@ export interface Omics {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -1599,16 +1599,16 @@ export interface Omics {
    */
   updateAnnotationStore(
     args: UpdateAnnotationStoreCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateAnnotationStoreCommandOutput>;
   updateAnnotationStore(
     args: UpdateAnnotationStoreCommandInput,
-    cb: (err: any, data?: UpdateAnnotationStoreCommandOutput) => void
+    cb: (err: any, data?: UpdateAnnotationStoreCommandOutput) => void,
   ): void;
   updateAnnotationStore(
     args: UpdateAnnotationStoreCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateAnnotationStoreCommandOutput) => void
+    cb: (err: any, data?: UpdateAnnotationStoreCommandOutput) => void,
   ): void;
 
   /**
@@ -1616,16 +1616,16 @@ export interface Omics {
    */
   updateAnnotationStoreVersion(
     args: UpdateAnnotationStoreVersionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateAnnotationStoreVersionCommandOutput>;
   updateAnnotationStoreVersion(
     args: UpdateAnnotationStoreVersionCommandInput,
-    cb: (err: any, data?: UpdateAnnotationStoreVersionCommandOutput) => void
+    cb: (err: any, data?: UpdateAnnotationStoreVersionCommandOutput) => void,
   ): void;
   updateAnnotationStoreVersion(
     args: UpdateAnnotationStoreVersionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateAnnotationStoreVersionCommandOutput) => void
+    cb: (err: any, data?: UpdateAnnotationStoreVersionCommandOutput) => void,
   ): void;
 
   /**
@@ -1633,13 +1633,13 @@ export interface Omics {
    */
   updateRunGroup(
     args: UpdateRunGroupCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateRunGroupCommandOutput>;
   updateRunGroup(args: UpdateRunGroupCommandInput, cb: (err: any, data?: UpdateRunGroupCommandOutput) => void): void;
   updateRunGroup(
     args: UpdateRunGroupCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateRunGroupCommandOutput) => void
+    cb: (err: any, data?: UpdateRunGroupCommandOutput) => void,
   ): void;
 
   /**
@@ -1647,16 +1647,16 @@ export interface Omics {
    */
   updateVariantStore(
     args: UpdateVariantStoreCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateVariantStoreCommandOutput>;
   updateVariantStore(
     args: UpdateVariantStoreCommandInput,
-    cb: (err: any, data?: UpdateVariantStoreCommandOutput) => void
+    cb: (err: any, data?: UpdateVariantStoreCommandOutput) => void,
   ): void;
   updateVariantStore(
     args: UpdateVariantStoreCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateVariantStoreCommandOutput) => void
+    cb: (err: any, data?: UpdateVariantStoreCommandOutput) => void,
   ): void;
 
   /**
@@ -1664,13 +1664,13 @@ export interface Omics {
    */
   updateWorkflow(
     args: UpdateWorkflowCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateWorkflowCommandOutput>;
   updateWorkflow(args: UpdateWorkflowCommandInput, cb: (err: any, data?: UpdateWorkflowCommandOutput) => void): void;
   updateWorkflow(
     args: UpdateWorkflowCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateWorkflowCommandOutput) => void
+    cb: (err: any, data?: UpdateWorkflowCommandOutput) => void,
   ): void;
 
   /**
@@ -1678,16 +1678,16 @@ export interface Omics {
    */
   uploadReadSetPart(
     args: UploadReadSetPartCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UploadReadSetPartCommandOutput>;
   uploadReadSetPart(
     args: UploadReadSetPartCommandInput,
-    cb: (err: any, data?: UploadReadSetPartCommandOutput) => void
+    cb: (err: any, data?: UploadReadSetPartCommandOutput) => void,
   ): void;
   uploadReadSetPart(
     args: UploadReadSetPartCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UploadReadSetPartCommandOutput) => void
+    cb: (err: any, data?: UploadReadSetPartCommandOutput) => void,
   ): void;
 }
 

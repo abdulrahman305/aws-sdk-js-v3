@@ -141,7 +141,7 @@ describe(EndpointCache.name, () => {
         mockEndpoints.map(({ Address, CachePeriodInMinutes }) => ({
           Address,
           Expires: now + CachePeriodInMinutes * 60 * 1000,
-        }))
+        })),
       );
     });
   });

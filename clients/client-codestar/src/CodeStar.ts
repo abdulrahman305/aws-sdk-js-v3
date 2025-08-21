@@ -117,16 +117,16 @@ export interface CodeStar {
    */
   associateTeamMember(
     args: AssociateTeamMemberCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AssociateTeamMemberCommandOutput>;
   associateTeamMember(
     args: AssociateTeamMemberCommandInput,
-    cb: (err: any, data?: AssociateTeamMemberCommandOutput) => void
+    cb: (err: any, data?: AssociateTeamMemberCommandOutput) => void,
   ): void;
   associateTeamMember(
     args: AssociateTeamMemberCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AssociateTeamMemberCommandOutput) => void
+    cb: (err: any, data?: AssociateTeamMemberCommandOutput) => void,
   ): void;
 
   /**
@@ -137,7 +137,7 @@ export interface CodeStar {
   createProject(
     args: CreateProjectCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateProjectCommandOutput) => void
+    cb: (err: any, data?: CreateProjectCommandOutput) => void,
   ): void;
 
   /**
@@ -145,16 +145,16 @@ export interface CodeStar {
    */
   createUserProfile(
     args: CreateUserProfileCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateUserProfileCommandOutput>;
   createUserProfile(
     args: CreateUserProfileCommandInput,
-    cb: (err: any, data?: CreateUserProfileCommandOutput) => void
+    cb: (err: any, data?: CreateUserProfileCommandOutput) => void,
   ): void;
   createUserProfile(
     args: CreateUserProfileCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateUserProfileCommandOutput) => void
+    cb: (err: any, data?: CreateUserProfileCommandOutput) => void,
   ): void;
 
   /**
@@ -165,7 +165,7 @@ export interface CodeStar {
   deleteProject(
     args: DeleteProjectCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteProjectCommandOutput) => void
+    cb: (err: any, data?: DeleteProjectCommandOutput) => void,
   ): void;
 
   /**
@@ -173,16 +173,16 @@ export interface CodeStar {
    */
   deleteUserProfile(
     args: DeleteUserProfileCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteUserProfileCommandOutput>;
   deleteUserProfile(
     args: DeleteUserProfileCommandInput,
-    cb: (err: any, data?: DeleteUserProfileCommandOutput) => void
+    cb: (err: any, data?: DeleteUserProfileCommandOutput) => void,
   ): void;
   deleteUserProfile(
     args: DeleteUserProfileCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteUserProfileCommandOutput) => void
+    cb: (err: any, data?: DeleteUserProfileCommandOutput) => void,
   ): void;
 
   /**
@@ -190,13 +190,13 @@ export interface CodeStar {
    */
   describeProject(
     args: DescribeProjectCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeProjectCommandOutput>;
   describeProject(args: DescribeProjectCommandInput, cb: (err: any, data?: DescribeProjectCommandOutput) => void): void;
   describeProject(
     args: DescribeProjectCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeProjectCommandOutput) => void
+    cb: (err: any, data?: DescribeProjectCommandOutput) => void,
   ): void;
 
   /**
@@ -204,16 +204,16 @@ export interface CodeStar {
    */
   describeUserProfile(
     args: DescribeUserProfileCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeUserProfileCommandOutput>;
   describeUserProfile(
     args: DescribeUserProfileCommandInput,
-    cb: (err: any, data?: DescribeUserProfileCommandOutput) => void
+    cb: (err: any, data?: DescribeUserProfileCommandOutput) => void,
   ): void;
   describeUserProfile(
     args: DescribeUserProfileCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeUserProfileCommandOutput) => void
+    cb: (err: any, data?: DescribeUserProfileCommandOutput) => void,
   ): void;
 
   /**
@@ -221,16 +221,16 @@ export interface CodeStar {
    */
   disassociateTeamMember(
     args: DisassociateTeamMemberCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DisassociateTeamMemberCommandOutput>;
   disassociateTeamMember(
     args: DisassociateTeamMemberCommandInput,
-    cb: (err: any, data?: DisassociateTeamMemberCommandOutput) => void
+    cb: (err: any, data?: DisassociateTeamMemberCommandOutput) => void,
   ): void;
   disassociateTeamMember(
     args: DisassociateTeamMemberCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DisassociateTeamMemberCommandOutput) => void
+    cb: (err: any, data?: DisassociateTeamMemberCommandOutput) => void,
   ): void;
 
   /**
@@ -242,7 +242,7 @@ export interface CodeStar {
   listProjects(
     args: ListProjectsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListProjectsCommandOutput) => void
+    cb: (err: any, data?: ListProjectsCommandOutput) => void,
   ): void;
 
   /**
@@ -253,7 +253,7 @@ export interface CodeStar {
   listResources(
     args: ListResourcesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListResourcesCommandOutput) => void
+    cb: (err: any, data?: ListResourcesCommandOutput) => void,
   ): void;
 
   /**
@@ -261,16 +261,16 @@ export interface CodeStar {
    */
   listTagsForProject(
     args: ListTagsForProjectCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForProjectCommandOutput>;
   listTagsForProject(
     args: ListTagsForProjectCommandInput,
-    cb: (err: any, data?: ListTagsForProjectCommandOutput) => void
+    cb: (err: any, data?: ListTagsForProjectCommandOutput) => void,
   ): void;
   listTagsForProject(
     args: ListTagsForProjectCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForProjectCommandOutput) => void
+    cb: (err: any, data?: ListTagsForProjectCommandOutput) => void,
   ): void;
 
   /**
@@ -278,13 +278,13 @@ export interface CodeStar {
    */
   listTeamMembers(
     args: ListTeamMembersCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTeamMembersCommandOutput>;
   listTeamMembers(args: ListTeamMembersCommandInput, cb: (err: any, data?: ListTeamMembersCommandOutput) => void): void;
   listTeamMembers(
     args: ListTeamMembersCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTeamMembersCommandOutput) => void
+    cb: (err: any, data?: ListTeamMembersCommandOutput) => void,
   ): void;
 
   /**
@@ -293,16 +293,16 @@ export interface CodeStar {
   listUserProfiles(): Promise<ListUserProfilesCommandOutput>;
   listUserProfiles(
     args: ListUserProfilesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListUserProfilesCommandOutput>;
   listUserProfiles(
     args: ListUserProfilesCommandInput,
-    cb: (err: any, data?: ListUserProfilesCommandOutput) => void
+    cb: (err: any, data?: ListUserProfilesCommandOutput) => void,
   ): void;
   listUserProfiles(
     args: ListUserProfilesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListUserProfilesCommandOutput) => void
+    cb: (err: any, data?: ListUserProfilesCommandOutput) => void,
   ): void;
 
   /**
@@ -313,7 +313,7 @@ export interface CodeStar {
   tagProject(
     args: TagProjectCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagProjectCommandOutput) => void
+    cb: (err: any, data?: TagProjectCommandOutput) => void,
   ): void;
 
   /**
@@ -324,7 +324,7 @@ export interface CodeStar {
   untagProject(
     args: UntagProjectCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagProjectCommandOutput) => void
+    cb: (err: any, data?: UntagProjectCommandOutput) => void,
   ): void;
 
   /**
@@ -335,7 +335,7 @@ export interface CodeStar {
   updateProject(
     args: UpdateProjectCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateProjectCommandOutput) => void
+    cb: (err: any, data?: UpdateProjectCommandOutput) => void,
   ): void;
 
   /**
@@ -343,16 +343,16 @@ export interface CodeStar {
    */
   updateTeamMember(
     args: UpdateTeamMemberCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateTeamMemberCommandOutput>;
   updateTeamMember(
     args: UpdateTeamMemberCommandInput,
-    cb: (err: any, data?: UpdateTeamMemberCommandOutput) => void
+    cb: (err: any, data?: UpdateTeamMemberCommandOutput) => void,
   ): void;
   updateTeamMember(
     args: UpdateTeamMemberCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateTeamMemberCommandOutput) => void
+    cb: (err: any, data?: UpdateTeamMemberCommandOutput) => void,
   ): void;
 
   /**
@@ -360,16 +360,16 @@ export interface CodeStar {
    */
   updateUserProfile(
     args: UpdateUserProfileCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateUserProfileCommandOutput>;
   updateUserProfile(
     args: UpdateUserProfileCommandInput,
-    cb: (err: any, data?: UpdateUserProfileCommandOutput) => void
+    cb: (err: any, data?: UpdateUserProfileCommandOutput) => void,
   ): void;
   updateUserProfile(
     args: UpdateUserProfileCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateUserProfileCommandOutput) => void
+    cb: (err: any, data?: UpdateUserProfileCommandOutput) => void,
   ): void;
 }
 

@@ -277,16 +277,16 @@ export interface CodeBuild {
    */
   batchDeleteBuilds(
     args: BatchDeleteBuildsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<BatchDeleteBuildsCommandOutput>;
   batchDeleteBuilds(
     args: BatchDeleteBuildsCommandInput,
-    cb: (err: any, data?: BatchDeleteBuildsCommandOutput) => void
+    cb: (err: any, data?: BatchDeleteBuildsCommandOutput) => void,
   ): void;
   batchDeleteBuilds(
     args: BatchDeleteBuildsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: BatchDeleteBuildsCommandOutput) => void
+    cb: (err: any, data?: BatchDeleteBuildsCommandOutput) => void,
   ): void;
 
   /**
@@ -294,16 +294,16 @@ export interface CodeBuild {
    */
   batchGetBuildBatches(
     args: BatchGetBuildBatchesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<BatchGetBuildBatchesCommandOutput>;
   batchGetBuildBatches(
     args: BatchGetBuildBatchesCommandInput,
-    cb: (err: any, data?: BatchGetBuildBatchesCommandOutput) => void
+    cb: (err: any, data?: BatchGetBuildBatchesCommandOutput) => void,
   ): void;
   batchGetBuildBatches(
     args: BatchGetBuildBatchesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: BatchGetBuildBatchesCommandOutput) => void
+    cb: (err: any, data?: BatchGetBuildBatchesCommandOutput) => void,
   ): void;
 
   /**
@@ -311,13 +311,13 @@ export interface CodeBuild {
    */
   batchGetBuilds(
     args: BatchGetBuildsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<BatchGetBuildsCommandOutput>;
   batchGetBuilds(args: BatchGetBuildsCommandInput, cb: (err: any, data?: BatchGetBuildsCommandOutput) => void): void;
   batchGetBuilds(
     args: BatchGetBuildsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: BatchGetBuildsCommandOutput) => void
+    cb: (err: any, data?: BatchGetBuildsCommandOutput) => void,
   ): void;
 
   /**
@@ -325,13 +325,13 @@ export interface CodeBuild {
    */
   batchGetFleets(
     args: BatchGetFleetsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<BatchGetFleetsCommandOutput>;
   batchGetFleets(args: BatchGetFleetsCommandInput, cb: (err: any, data?: BatchGetFleetsCommandOutput) => void): void;
   batchGetFleets(
     args: BatchGetFleetsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: BatchGetFleetsCommandOutput) => void
+    cb: (err: any, data?: BatchGetFleetsCommandOutput) => void,
   ): void;
 
   /**
@@ -339,16 +339,16 @@ export interface CodeBuild {
    */
   batchGetProjects(
     args: BatchGetProjectsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<BatchGetProjectsCommandOutput>;
   batchGetProjects(
     args: BatchGetProjectsCommandInput,
-    cb: (err: any, data?: BatchGetProjectsCommandOutput) => void
+    cb: (err: any, data?: BatchGetProjectsCommandOutput) => void,
   ): void;
   batchGetProjects(
     args: BatchGetProjectsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: BatchGetProjectsCommandOutput) => void
+    cb: (err: any, data?: BatchGetProjectsCommandOutput) => void,
   ): void;
 
   /**
@@ -356,16 +356,16 @@ export interface CodeBuild {
    */
   batchGetReportGroups(
     args: BatchGetReportGroupsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<BatchGetReportGroupsCommandOutput>;
   batchGetReportGroups(
     args: BatchGetReportGroupsCommandInput,
-    cb: (err: any, data?: BatchGetReportGroupsCommandOutput) => void
+    cb: (err: any, data?: BatchGetReportGroupsCommandOutput) => void,
   ): void;
   batchGetReportGroups(
     args: BatchGetReportGroupsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: BatchGetReportGroupsCommandOutput) => void
+    cb: (err: any, data?: BatchGetReportGroupsCommandOutput) => void,
   ): void;
 
   /**
@@ -373,13 +373,13 @@ export interface CodeBuild {
    */
   batchGetReports(
     args: BatchGetReportsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<BatchGetReportsCommandOutput>;
   batchGetReports(args: BatchGetReportsCommandInput, cb: (err: any, data?: BatchGetReportsCommandOutput) => void): void;
   batchGetReports(
     args: BatchGetReportsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: BatchGetReportsCommandOutput) => void
+    cb: (err: any, data?: BatchGetReportsCommandOutput) => void,
   ): void;
 
   /**
@@ -390,7 +390,7 @@ export interface CodeBuild {
   createFleet(
     args: CreateFleetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateFleetCommandOutput) => void
+    cb: (err: any, data?: CreateFleetCommandOutput) => void,
   ): void;
 
   /**
@@ -401,7 +401,7 @@ export interface CodeBuild {
   createProject(
     args: CreateProjectCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateProjectCommandOutput) => void
+    cb: (err: any, data?: CreateProjectCommandOutput) => void,
   ): void;
 
   /**
@@ -409,16 +409,16 @@ export interface CodeBuild {
    */
   createReportGroup(
     args: CreateReportGroupCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateReportGroupCommandOutput>;
   createReportGroup(
     args: CreateReportGroupCommandInput,
-    cb: (err: any, data?: CreateReportGroupCommandOutput) => void
+    cb: (err: any, data?: CreateReportGroupCommandOutput) => void,
   ): void;
   createReportGroup(
     args: CreateReportGroupCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateReportGroupCommandOutput) => void
+    cb: (err: any, data?: CreateReportGroupCommandOutput) => void,
   ): void;
 
   /**
@@ -429,7 +429,7 @@ export interface CodeBuild {
   createWebhook(
     args: CreateWebhookCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateWebhookCommandOutput) => void
+    cb: (err: any, data?: CreateWebhookCommandOutput) => void,
   ): void;
 
   /**
@@ -437,16 +437,16 @@ export interface CodeBuild {
    */
   deleteBuildBatch(
     args: DeleteBuildBatchCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteBuildBatchCommandOutput>;
   deleteBuildBatch(
     args: DeleteBuildBatchCommandInput,
-    cb: (err: any, data?: DeleteBuildBatchCommandOutput) => void
+    cb: (err: any, data?: DeleteBuildBatchCommandOutput) => void,
   ): void;
   deleteBuildBatch(
     args: DeleteBuildBatchCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteBuildBatchCommandOutput) => void
+    cb: (err: any, data?: DeleteBuildBatchCommandOutput) => void,
   ): void;
 
   /**
@@ -457,7 +457,7 @@ export interface CodeBuild {
   deleteFleet(
     args: DeleteFleetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteFleetCommandOutput) => void
+    cb: (err: any, data?: DeleteFleetCommandOutput) => void,
   ): void;
 
   /**
@@ -468,7 +468,7 @@ export interface CodeBuild {
   deleteProject(
     args: DeleteProjectCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteProjectCommandOutput) => void
+    cb: (err: any, data?: DeleteProjectCommandOutput) => void,
   ): void;
 
   /**
@@ -479,7 +479,7 @@ export interface CodeBuild {
   deleteReport(
     args: DeleteReportCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteReportCommandOutput) => void
+    cb: (err: any, data?: DeleteReportCommandOutput) => void,
   ): void;
 
   /**
@@ -487,16 +487,16 @@ export interface CodeBuild {
    */
   deleteReportGroup(
     args: DeleteReportGroupCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteReportGroupCommandOutput>;
   deleteReportGroup(
     args: DeleteReportGroupCommandInput,
-    cb: (err: any, data?: DeleteReportGroupCommandOutput) => void
+    cb: (err: any, data?: DeleteReportGroupCommandOutput) => void,
   ): void;
   deleteReportGroup(
     args: DeleteReportGroupCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteReportGroupCommandOutput) => void
+    cb: (err: any, data?: DeleteReportGroupCommandOutput) => void,
   ): void;
 
   /**
@@ -504,16 +504,16 @@ export interface CodeBuild {
    */
   deleteResourcePolicy(
     args: DeleteResourcePolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteResourcePolicyCommandOutput>;
   deleteResourcePolicy(
     args: DeleteResourcePolicyCommandInput,
-    cb: (err: any, data?: DeleteResourcePolicyCommandOutput) => void
+    cb: (err: any, data?: DeleteResourcePolicyCommandOutput) => void,
   ): void;
   deleteResourcePolicy(
     args: DeleteResourcePolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteResourcePolicyCommandOutput) => void
+    cb: (err: any, data?: DeleteResourcePolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -521,16 +521,16 @@ export interface CodeBuild {
    */
   deleteSourceCredentials(
     args: DeleteSourceCredentialsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteSourceCredentialsCommandOutput>;
   deleteSourceCredentials(
     args: DeleteSourceCredentialsCommandInput,
-    cb: (err: any, data?: DeleteSourceCredentialsCommandOutput) => void
+    cb: (err: any, data?: DeleteSourceCredentialsCommandOutput) => void,
   ): void;
   deleteSourceCredentials(
     args: DeleteSourceCredentialsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteSourceCredentialsCommandOutput) => void
+    cb: (err: any, data?: DeleteSourceCredentialsCommandOutput) => void,
   ): void;
 
   /**
@@ -541,7 +541,7 @@ export interface CodeBuild {
   deleteWebhook(
     args: DeleteWebhookCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteWebhookCommandOutput) => void
+    cb: (err: any, data?: DeleteWebhookCommandOutput) => void,
   ): void;
 
   /**
@@ -549,16 +549,16 @@ export interface CodeBuild {
    */
   describeCodeCoverages(
     args: DescribeCodeCoveragesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeCodeCoveragesCommandOutput>;
   describeCodeCoverages(
     args: DescribeCodeCoveragesCommandInput,
-    cb: (err: any, data?: DescribeCodeCoveragesCommandOutput) => void
+    cb: (err: any, data?: DescribeCodeCoveragesCommandOutput) => void,
   ): void;
   describeCodeCoverages(
     args: DescribeCodeCoveragesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeCodeCoveragesCommandOutput) => void
+    cb: (err: any, data?: DescribeCodeCoveragesCommandOutput) => void,
   ): void;
 
   /**
@@ -566,16 +566,16 @@ export interface CodeBuild {
    */
   describeTestCases(
     args: DescribeTestCasesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeTestCasesCommandOutput>;
   describeTestCases(
     args: DescribeTestCasesCommandInput,
-    cb: (err: any, data?: DescribeTestCasesCommandOutput) => void
+    cb: (err: any, data?: DescribeTestCasesCommandOutput) => void,
   ): void;
   describeTestCases(
     args: DescribeTestCasesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeTestCasesCommandOutput) => void
+    cb: (err: any, data?: DescribeTestCasesCommandOutput) => void,
   ): void;
 
   /**
@@ -583,16 +583,16 @@ export interface CodeBuild {
    */
   getReportGroupTrend(
     args: GetReportGroupTrendCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetReportGroupTrendCommandOutput>;
   getReportGroupTrend(
     args: GetReportGroupTrendCommandInput,
-    cb: (err: any, data?: GetReportGroupTrendCommandOutput) => void
+    cb: (err: any, data?: GetReportGroupTrendCommandOutput) => void,
   ): void;
   getReportGroupTrend(
     args: GetReportGroupTrendCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetReportGroupTrendCommandOutput) => void
+    cb: (err: any, data?: GetReportGroupTrendCommandOutput) => void,
   ): void;
 
   /**
@@ -600,16 +600,16 @@ export interface CodeBuild {
    */
   getResourcePolicy(
     args: GetResourcePolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetResourcePolicyCommandOutput>;
   getResourcePolicy(
     args: GetResourcePolicyCommandInput,
-    cb: (err: any, data?: GetResourcePolicyCommandOutput) => void
+    cb: (err: any, data?: GetResourcePolicyCommandOutput) => void,
   ): void;
   getResourcePolicy(
     args: GetResourcePolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetResourcePolicyCommandOutput) => void
+    cb: (err: any, data?: GetResourcePolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -617,16 +617,16 @@ export interface CodeBuild {
    */
   importSourceCredentials(
     args: ImportSourceCredentialsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ImportSourceCredentialsCommandOutput>;
   importSourceCredentials(
     args: ImportSourceCredentialsCommandInput,
-    cb: (err: any, data?: ImportSourceCredentialsCommandOutput) => void
+    cb: (err: any, data?: ImportSourceCredentialsCommandOutput) => void,
   ): void;
   importSourceCredentials(
     args: ImportSourceCredentialsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ImportSourceCredentialsCommandOutput) => void
+    cb: (err: any, data?: ImportSourceCredentialsCommandOutput) => void,
   ): void;
 
   /**
@@ -634,16 +634,16 @@ export interface CodeBuild {
    */
   invalidateProjectCache(
     args: InvalidateProjectCacheCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<InvalidateProjectCacheCommandOutput>;
   invalidateProjectCache(
     args: InvalidateProjectCacheCommandInput,
-    cb: (err: any, data?: InvalidateProjectCacheCommandOutput) => void
+    cb: (err: any, data?: InvalidateProjectCacheCommandOutput) => void,
   ): void;
   invalidateProjectCache(
     args: InvalidateProjectCacheCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: InvalidateProjectCacheCommandOutput) => void
+    cb: (err: any, data?: InvalidateProjectCacheCommandOutput) => void,
   ): void;
 
   /**
@@ -652,16 +652,16 @@ export interface CodeBuild {
   listBuildBatches(): Promise<ListBuildBatchesCommandOutput>;
   listBuildBatches(
     args: ListBuildBatchesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListBuildBatchesCommandOutput>;
   listBuildBatches(
     args: ListBuildBatchesCommandInput,
-    cb: (err: any, data?: ListBuildBatchesCommandOutput) => void
+    cb: (err: any, data?: ListBuildBatchesCommandOutput) => void,
   ): void;
   listBuildBatches(
     args: ListBuildBatchesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListBuildBatchesCommandOutput) => void
+    cb: (err: any, data?: ListBuildBatchesCommandOutput) => void,
   ): void;
 
   /**
@@ -670,16 +670,16 @@ export interface CodeBuild {
   listBuildBatchesForProject(): Promise<ListBuildBatchesForProjectCommandOutput>;
   listBuildBatchesForProject(
     args: ListBuildBatchesForProjectCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListBuildBatchesForProjectCommandOutput>;
   listBuildBatchesForProject(
     args: ListBuildBatchesForProjectCommandInput,
-    cb: (err: any, data?: ListBuildBatchesForProjectCommandOutput) => void
+    cb: (err: any, data?: ListBuildBatchesForProjectCommandOutput) => void,
   ): void;
   listBuildBatchesForProject(
     args: ListBuildBatchesForProjectCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListBuildBatchesForProjectCommandOutput) => void
+    cb: (err: any, data?: ListBuildBatchesForProjectCommandOutput) => void,
   ): void;
 
   /**
@@ -691,7 +691,7 @@ export interface CodeBuild {
   listBuilds(
     args: ListBuildsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListBuildsCommandOutput) => void
+    cb: (err: any, data?: ListBuildsCommandOutput) => void,
   ): void;
 
   /**
@@ -699,16 +699,16 @@ export interface CodeBuild {
    */
   listBuildsForProject(
     args: ListBuildsForProjectCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListBuildsForProjectCommandOutput>;
   listBuildsForProject(
     args: ListBuildsForProjectCommandInput,
-    cb: (err: any, data?: ListBuildsForProjectCommandOutput) => void
+    cb: (err: any, data?: ListBuildsForProjectCommandOutput) => void,
   ): void;
   listBuildsForProject(
     args: ListBuildsForProjectCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListBuildsForProjectCommandOutput) => void
+    cb: (err: any, data?: ListBuildsForProjectCommandOutput) => void,
   ): void;
 
   /**
@@ -717,16 +717,16 @@ export interface CodeBuild {
   listCuratedEnvironmentImages(): Promise<ListCuratedEnvironmentImagesCommandOutput>;
   listCuratedEnvironmentImages(
     args: ListCuratedEnvironmentImagesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListCuratedEnvironmentImagesCommandOutput>;
   listCuratedEnvironmentImages(
     args: ListCuratedEnvironmentImagesCommandInput,
-    cb: (err: any, data?: ListCuratedEnvironmentImagesCommandOutput) => void
+    cb: (err: any, data?: ListCuratedEnvironmentImagesCommandOutput) => void,
   ): void;
   listCuratedEnvironmentImages(
     args: ListCuratedEnvironmentImagesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListCuratedEnvironmentImagesCommandOutput) => void
+    cb: (err: any, data?: ListCuratedEnvironmentImagesCommandOutput) => void,
   ): void;
 
   /**
@@ -738,7 +738,7 @@ export interface CodeBuild {
   listFleets(
     args: ListFleetsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListFleetsCommandOutput) => void
+    cb: (err: any, data?: ListFleetsCommandOutput) => void,
   ): void;
 
   /**
@@ -750,7 +750,7 @@ export interface CodeBuild {
   listProjects(
     args: ListProjectsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListProjectsCommandOutput) => void
+    cb: (err: any, data?: ListProjectsCommandOutput) => void,
   ): void;
 
   /**
@@ -759,16 +759,16 @@ export interface CodeBuild {
   listReportGroups(): Promise<ListReportGroupsCommandOutput>;
   listReportGroups(
     args: ListReportGroupsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListReportGroupsCommandOutput>;
   listReportGroups(
     args: ListReportGroupsCommandInput,
-    cb: (err: any, data?: ListReportGroupsCommandOutput) => void
+    cb: (err: any, data?: ListReportGroupsCommandOutput) => void,
   ): void;
   listReportGroups(
     args: ListReportGroupsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListReportGroupsCommandOutput) => void
+    cb: (err: any, data?: ListReportGroupsCommandOutput) => void,
   ): void;
 
   /**
@@ -780,7 +780,7 @@ export interface CodeBuild {
   listReports(
     args: ListReportsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListReportsCommandOutput) => void
+    cb: (err: any, data?: ListReportsCommandOutput) => void,
   ): void;
 
   /**
@@ -788,16 +788,16 @@ export interface CodeBuild {
    */
   listReportsForReportGroup(
     args: ListReportsForReportGroupCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListReportsForReportGroupCommandOutput>;
   listReportsForReportGroup(
     args: ListReportsForReportGroupCommandInput,
-    cb: (err: any, data?: ListReportsForReportGroupCommandOutput) => void
+    cb: (err: any, data?: ListReportsForReportGroupCommandOutput) => void,
   ): void;
   listReportsForReportGroup(
     args: ListReportsForReportGroupCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListReportsForReportGroupCommandOutput) => void
+    cb: (err: any, data?: ListReportsForReportGroupCommandOutput) => void,
   ): void;
 
   /**
@@ -806,16 +806,16 @@ export interface CodeBuild {
   listSharedProjects(): Promise<ListSharedProjectsCommandOutput>;
   listSharedProjects(
     args: ListSharedProjectsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListSharedProjectsCommandOutput>;
   listSharedProjects(
     args: ListSharedProjectsCommandInput,
-    cb: (err: any, data?: ListSharedProjectsCommandOutput) => void
+    cb: (err: any, data?: ListSharedProjectsCommandOutput) => void,
   ): void;
   listSharedProjects(
     args: ListSharedProjectsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListSharedProjectsCommandOutput) => void
+    cb: (err: any, data?: ListSharedProjectsCommandOutput) => void,
   ): void;
 
   /**
@@ -824,16 +824,16 @@ export interface CodeBuild {
   listSharedReportGroups(): Promise<ListSharedReportGroupsCommandOutput>;
   listSharedReportGroups(
     args: ListSharedReportGroupsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListSharedReportGroupsCommandOutput>;
   listSharedReportGroups(
     args: ListSharedReportGroupsCommandInput,
-    cb: (err: any, data?: ListSharedReportGroupsCommandOutput) => void
+    cb: (err: any, data?: ListSharedReportGroupsCommandOutput) => void,
   ): void;
   listSharedReportGroups(
     args: ListSharedReportGroupsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListSharedReportGroupsCommandOutput) => void
+    cb: (err: any, data?: ListSharedReportGroupsCommandOutput) => void,
   ): void;
 
   /**
@@ -842,16 +842,16 @@ export interface CodeBuild {
   listSourceCredentials(): Promise<ListSourceCredentialsCommandOutput>;
   listSourceCredentials(
     args: ListSourceCredentialsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListSourceCredentialsCommandOutput>;
   listSourceCredentials(
     args: ListSourceCredentialsCommandInput,
-    cb: (err: any, data?: ListSourceCredentialsCommandOutput) => void
+    cb: (err: any, data?: ListSourceCredentialsCommandOutput) => void,
   ): void;
   listSourceCredentials(
     args: ListSourceCredentialsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListSourceCredentialsCommandOutput) => void
+    cb: (err: any, data?: ListSourceCredentialsCommandOutput) => void,
   ): void;
 
   /**
@@ -859,16 +859,16 @@ export interface CodeBuild {
    */
   putResourcePolicy(
     args: PutResourcePolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutResourcePolicyCommandOutput>;
   putResourcePolicy(
     args: PutResourcePolicyCommandInput,
-    cb: (err: any, data?: PutResourcePolicyCommandOutput) => void
+    cb: (err: any, data?: PutResourcePolicyCommandOutput) => void,
   ): void;
   putResourcePolicy(
     args: PutResourcePolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutResourcePolicyCommandOutput) => void
+    cb: (err: any, data?: PutResourcePolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -880,7 +880,7 @@ export interface CodeBuild {
   retryBuild(
     args: RetryBuildCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RetryBuildCommandOutput) => void
+    cb: (err: any, data?: RetryBuildCommandOutput) => void,
   ): void;
 
   /**
@@ -889,13 +889,13 @@ export interface CodeBuild {
   retryBuildBatch(): Promise<RetryBuildBatchCommandOutput>;
   retryBuildBatch(
     args: RetryBuildBatchCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<RetryBuildBatchCommandOutput>;
   retryBuildBatch(args: RetryBuildBatchCommandInput, cb: (err: any, data?: RetryBuildBatchCommandOutput) => void): void;
   retryBuildBatch(
     args: RetryBuildBatchCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RetryBuildBatchCommandOutput) => void
+    cb: (err: any, data?: RetryBuildBatchCommandOutput) => void,
   ): void;
 
   /**
@@ -906,7 +906,7 @@ export interface CodeBuild {
   startBuild(
     args: StartBuildCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartBuildCommandOutput) => void
+    cb: (err: any, data?: StartBuildCommandOutput) => void,
   ): void;
 
   /**
@@ -914,13 +914,13 @@ export interface CodeBuild {
    */
   startBuildBatch(
     args: StartBuildBatchCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartBuildBatchCommandOutput>;
   startBuildBatch(args: StartBuildBatchCommandInput, cb: (err: any, data?: StartBuildBatchCommandOutput) => void): void;
   startBuildBatch(
     args: StartBuildBatchCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartBuildBatchCommandOutput) => void
+    cb: (err: any, data?: StartBuildBatchCommandOutput) => void,
   ): void;
 
   /**
@@ -931,7 +931,7 @@ export interface CodeBuild {
   stopBuild(
     args: StopBuildCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StopBuildCommandOutput) => void
+    cb: (err: any, data?: StopBuildCommandOutput) => void,
   ): void;
 
   /**
@@ -939,13 +939,13 @@ export interface CodeBuild {
    */
   stopBuildBatch(
     args: StopBuildBatchCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StopBuildBatchCommandOutput>;
   stopBuildBatch(args: StopBuildBatchCommandInput, cb: (err: any, data?: StopBuildBatchCommandOutput) => void): void;
   stopBuildBatch(
     args: StopBuildBatchCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StopBuildBatchCommandOutput) => void
+    cb: (err: any, data?: StopBuildBatchCommandOutput) => void,
   ): void;
 
   /**
@@ -956,7 +956,7 @@ export interface CodeBuild {
   updateFleet(
     args: UpdateFleetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateFleetCommandOutput) => void
+    cb: (err: any, data?: UpdateFleetCommandOutput) => void,
   ): void;
 
   /**
@@ -967,7 +967,7 @@ export interface CodeBuild {
   updateProject(
     args: UpdateProjectCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateProjectCommandOutput) => void
+    cb: (err: any, data?: UpdateProjectCommandOutput) => void,
   ): void;
 
   /**
@@ -975,16 +975,16 @@ export interface CodeBuild {
    */
   updateProjectVisibility(
     args: UpdateProjectVisibilityCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateProjectVisibilityCommandOutput>;
   updateProjectVisibility(
     args: UpdateProjectVisibilityCommandInput,
-    cb: (err: any, data?: UpdateProjectVisibilityCommandOutput) => void
+    cb: (err: any, data?: UpdateProjectVisibilityCommandOutput) => void,
   ): void;
   updateProjectVisibility(
     args: UpdateProjectVisibilityCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateProjectVisibilityCommandOutput) => void
+    cb: (err: any, data?: UpdateProjectVisibilityCommandOutput) => void,
   ): void;
 
   /**
@@ -992,16 +992,16 @@ export interface CodeBuild {
    */
   updateReportGroup(
     args: UpdateReportGroupCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateReportGroupCommandOutput>;
   updateReportGroup(
     args: UpdateReportGroupCommandInput,
-    cb: (err: any, data?: UpdateReportGroupCommandOutput) => void
+    cb: (err: any, data?: UpdateReportGroupCommandOutput) => void,
   ): void;
   updateReportGroup(
     args: UpdateReportGroupCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateReportGroupCommandOutput) => void
+    cb: (err: any, data?: UpdateReportGroupCommandOutput) => void,
   ): void;
 
   /**
@@ -1012,7 +1012,7 @@ export interface CodeBuild {
   updateWebhook(
     args: UpdateWebhookCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateWebhookCommandOutput) => void
+    cb: (err: any, data?: UpdateWebhookCommandOutput) => void,
   ): void;
 }
 

@@ -61,14 +61,14 @@ export class JsonTimestampsSerializer
 
 export const getJsonTimestampsHandler = <Context>(
   operation: __Operation<JsonTimestampsServerInput, JsonTimestampsServerOutput, Context>,
-  customizer: __ValidationCustomizer<"JsonTimestamps">
+  customizer: __ValidationCustomizer<"JsonTimestamps">,
 ): __ServiceHandler<Context, __HttpRequest, __HttpResponse> => {
   const mux = new httpbinding.HttpBindingMux<"RestJson", "JsonTimestamps">([
     new httpbinding.UriSpec<"RestJson", "JsonTimestamps">(
       "POST",
       [{ type: "path_literal", value: "JsonTimestamps" }],
       [],
-      { service: "RestJson", operation: "JsonTimestamps" }
+      { service: "RestJson", operation: "JsonTimestamps" },
     ),
   ]);
   return new JsonTimestampsHandler(
@@ -76,7 +76,7 @@ export const getJsonTimestampsHandler = <Context>(
     mux,
     new JsonTimestampsSerializer(),
     serializeFrameworkException,
-    customizer
+    customizer,
   );
 };
 
@@ -97,7 +97,7 @@ async function handle<S, O extends keyof S & string, Context>(
   operation: __Operation<__OperationInput<S[O]>, __OperationOutput<S[O]>, Context>,
   serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
   validationFn: (input: __OperationInput<S[O]>) => __ValidationFailure[],
-  validationCustomizer: __ValidationCustomizer<O>
+  validationCustomizer: __ValidationCustomizer<O>,
 ): Promise<__HttpResponse> {
   let input;
   try {
@@ -135,7 +135,7 @@ export class JsonTimestampsHandler<Context> implements __ServiceHandler<Context>
   private readonly serializer: __OperationSerializer<RestJsonService<Context>, "JsonTimestamps", JsonTimestampsErrors>;
   private readonly serializeFrameworkException: (
     e: __SmithyFrameworkException,
-    ctx: __ServerSerdeContext
+    ctx: __ServerSerdeContext,
   ) => Promise<__HttpResponse>;
   private readonly validationCustomizer: __ValidationCustomizer<"JsonTimestamps">;
   /**
@@ -152,7 +152,7 @@ export class JsonTimestampsHandler<Context> implements __ServiceHandler<Context>
     mux: __Mux<"RestJson", "JsonTimestamps">,
     serializer: __OperationSerializer<RestJsonService<Context>, "JsonTimestamps", JsonTimestampsErrors>,
     serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
-    validationCustomizer: __ValidationCustomizer<"JsonTimestamps">
+    validationCustomizer: __ValidationCustomizer<"JsonTimestamps">,
   ) {
     this.operation = operation;
     this.mux = mux;
@@ -164,7 +164,7 @@ export class JsonTimestampsHandler<Context> implements __ServiceHandler<Context>
     const target = this.mux.match(request);
     if (target === undefined) {
       console.log(
-        "Received a request that did not match aws.protocoltests.restjson#RestJson.JsonTimestamps. This indicates a misconfiguration."
+        "Received a request that did not match aws.protocoltests.restjson#RestJson.JsonTimestamps. This indicates a misconfiguration.",
       );
       return this.serializeFrameworkException(new __InternalFailureException(), serdeContextBase);
     }
@@ -176,7 +176,7 @@ export class JsonTimestampsHandler<Context> implements __ServiceHandler<Context>
       this.operation,
       this.serializeFrameworkException,
       JsonTimestampsServerInput.validate,
-      this.validationCustomizer
+      this.validationCustomizer,
     );
   }
 }

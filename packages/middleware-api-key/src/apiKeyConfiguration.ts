@@ -29,7 +29,7 @@ export interface ApiKeyResolvedConfig {
 // or resolveFunction are set, then all of inputConfig, resolvedConfig, and
 // resolveFunction must be set."
 export const resolveApiKeyConfig = <T>(
-  input: T & ApiKeyPreviouslyResolved & ApiKeyInputConfig
+  input: T & ApiKeyPreviouslyResolved & ApiKeyInputConfig,
 ): T & ApiKeyResolvedConfig => {
   return {
     ...input,

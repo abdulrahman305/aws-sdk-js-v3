@@ -15,7 +15,7 @@ export const resolveProfileData = async (
   profileName: string,
   profiles: ParsedIniData,
   options: FromIniInit,
-  visitedProfiles: Record<string, true> = {}
+  visitedProfiles: Record<string, true> = {},
 ): Promise<AwsCredentialIdentity> => {
   const data = profiles[profileName];
 
@@ -61,6 +61,6 @@ export const resolveProfileData = async (
   // `source_profile` key).
   throw new CredentialsProviderError(
     `Could not resolve credentials using profile: [${profileName}] in configuration/credentials file(s).`,
-    { logger: options.logger }
+    { logger: options.logger },
   );
 };

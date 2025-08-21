@@ -11,7 +11,7 @@ const isTokenExpiringWithinFiveMins = (token: TokenIdentity) =>
  * @internal
  */
 export const normalizeTokenProvider = (
-  token: TokenIdentity | TokenIdentityProvider
+  token: TokenIdentity | TokenIdentityProvider,
 ): MemoizedProvider<TokenIdentity> => {
   if (typeof token === "function") {
     return memoize(token, isTokenExpiringWithinFiveMins, isTokenWithExpiry);

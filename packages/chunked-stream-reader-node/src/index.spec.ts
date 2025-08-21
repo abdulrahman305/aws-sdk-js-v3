@@ -106,7 +106,7 @@ describe("streamReader", () => {
     expect(mockChunkCalls[0][0].byteLength).toBe(500);
     expect(mockChunkCalls[1][0].byteLength).toBe(200);
     expect(
-      Buffer.compare(Buffer.concat([Buffer.from(mockChunkCalls[0][0]), Buffer.from(mockChunkCalls[1][0])]), payload)
+      Buffer.compare(Buffer.concat([Buffer.from(mockChunkCalls[0][0]), Buffer.from(mockChunkCalls[1][0])]), payload),
     ).toBe(0);
   });
 

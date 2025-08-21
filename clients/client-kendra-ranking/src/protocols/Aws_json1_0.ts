@@ -83,7 +83,7 @@ import {
  */
 export const se_CreateRescoreExecutionPlanCommand = async (
   input: CreateRescoreExecutionPlanCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateRescoreExecutionPlan");
   let body: any;
@@ -96,7 +96,7 @@ export const se_CreateRescoreExecutionPlanCommand = async (
  */
 export const se_DeleteRescoreExecutionPlanCommand = async (
   input: DeleteRescoreExecutionPlanCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteRescoreExecutionPlan");
   let body: any;
@@ -109,7 +109,7 @@ export const se_DeleteRescoreExecutionPlanCommand = async (
  */
 export const se_DescribeRescoreExecutionPlanCommand = async (
   input: DescribeRescoreExecutionPlanCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeRescoreExecutionPlan");
   let body: any;
@@ -122,7 +122,7 @@ export const se_DescribeRescoreExecutionPlanCommand = async (
  */
 export const se_ListRescoreExecutionPlansCommand = async (
   input: ListRescoreExecutionPlansCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListRescoreExecutionPlans");
   let body: any;
@@ -135,7 +135,7 @@ export const se_ListRescoreExecutionPlansCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListTagsForResource");
   let body: any;
@@ -148,7 +148,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_RescoreCommand = async (
   input: RescoreCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("Rescore");
   let body: any;
@@ -161,7 +161,7 @@ export const se_RescoreCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("TagResource");
   let body: any;
@@ -174,7 +174,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UntagResource");
   let body: any;
@@ -187,7 +187,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateRescoreExecutionPlanCommand = async (
   input: UpdateRescoreExecutionPlanCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateRescoreExecutionPlan");
   let body: any;
@@ -200,7 +200,7 @@ export const se_UpdateRescoreExecutionPlanCommand = async (
  */
 export const de_CreateRescoreExecutionPlanCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateRescoreExecutionPlanCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -220,7 +220,7 @@ export const de_CreateRescoreExecutionPlanCommand = async (
  */
 export const de_DeleteRescoreExecutionPlanCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteRescoreExecutionPlanCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -237,7 +237,7 @@ export const de_DeleteRescoreExecutionPlanCommand = async (
  */
 export const de_DescribeRescoreExecutionPlanCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeRescoreExecutionPlanCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -257,7 +257,7 @@ export const de_DescribeRescoreExecutionPlanCommand = async (
  */
 export const de_ListRescoreExecutionPlansCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListRescoreExecutionPlansCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -277,7 +277,7 @@ export const de_ListRescoreExecutionPlansCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -297,7 +297,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_RescoreCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RescoreCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -317,7 +317,7 @@ export const de_RescoreCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -337,7 +337,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -357,7 +357,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateRescoreExecutionPlanCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateRescoreExecutionPlanCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -418,7 +418,7 @@ const de_CommandError = async (output: __HttpResponse, context: __SerdeContext):
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -447,7 +447,7 @@ const de_ConflictExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_InternalServerExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -463,7 +463,7 @@ const de_InternalServerExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -479,7 +479,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_ResourceUnavailableExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceUnavailableException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -495,7 +495,7 @@ const de_ResourceUnavailableExceptionRes = async (
  */
 const de_ServiceQuotaExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceQuotaExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -541,7 +541,7 @@ const de_ValidationExceptionRes = async (parsedOutput: any, context: __SerdeCont
  */
 const se_CreateRescoreExecutionPlanRequest = (
   input: CreateRescoreExecutionPlanRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     CapacityUnits: _json,
@@ -624,7 +624,7 @@ const se_RescoreRequest = (input: RescoreRequest, context: __SerdeContext): any 
  */
 const de_DescribeRescoreExecutionPlanResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeRescoreExecutionPlanResponse => {
   return take(output, {
     Arn: __expectString,
@@ -646,7 +646,7 @@ const de_DescribeRescoreExecutionPlanResponse = (
  */
 const de_ListRescoreExecutionPlansResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ListRescoreExecutionPlansResponse => {
   return take(output, {
     NextToken: __expectString,
@@ -749,7 +749,7 @@ const buildHttpRpcRequest = async (
   headers: __HeaderBag,
   path: string,
   resolvedHostname: string | undefined,
-  body: any
+  body: any,
 ): Promise<__HttpRequest> => {
   const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
   const contents: any = {

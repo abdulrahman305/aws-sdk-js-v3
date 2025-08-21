@@ -6,7 +6,7 @@ import { SignatureV4 } from "@smithy/signature-v4";
 export const getSignedUrl = async (
   client: PollyClient,
   command: SynthesizeSpeechCommand,
-  options: any = {}
+  options: any = {},
 ): Promise<string> => {
   const signer = new SignatureV4({
     service: options.service || "polly",

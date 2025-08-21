@@ -16,10 +16,13 @@ export function createGetRequest(url: URL): HttpRequest {
     hostname: url.hostname,
     port: Number(url.port),
     path: url.pathname,
-    query: Array.from(url.searchParams.entries()).reduce((acc, [k, v]) => {
-      acc[k] = v;
-      return acc;
-    }, {} as Record<string, string>),
+    query: Array.from(url.searchParams.entries()).reduce(
+      (acc, [k, v]) => {
+        acc[k] = v;
+        return acc;
+      },
+      {} as Record<string, string>,
+    ),
     fragment: url.hash,
   });
 }
@@ -43,7 +46,7 @@ export async function getCredentials(response: HttpResponse, logger?: Logger): P
       throw new CredentialsProviderError(
         "HTTP credential provider response not of the required format, an object matching: " +
           "{ AccessKeyId: string, SecretAccessKey: string, Token: string, Expiration: string(rfc3339) }",
-        { logger }
+        { logger },
       );
     }
 
@@ -65,7 +68,7 @@ export async function getCredentials(response: HttpResponse, logger?: Logger): P
       {
         Code: parsedBody.Code,
         Message: parsedBody.Message,
-      }
+      },
     );
   }
   throw new CredentialsProviderError(`Server responded with status: ${response.statusCode}`, { logger });

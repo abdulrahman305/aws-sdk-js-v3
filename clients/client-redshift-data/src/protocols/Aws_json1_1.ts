@@ -76,7 +76,7 @@ import { RedshiftDataServiceException as __BaseException } from "../models/Redsh
  */
 export const se_BatchExecuteStatementCommand = async (
   input: BatchExecuteStatementCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("BatchExecuteStatement");
   let body: any;
@@ -89,7 +89,7 @@ export const se_BatchExecuteStatementCommand = async (
  */
 export const se_CancelStatementCommand = async (
   input: CancelStatementCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CancelStatement");
   let body: any;
@@ -102,7 +102,7 @@ export const se_CancelStatementCommand = async (
  */
 export const se_DescribeStatementCommand = async (
   input: DescribeStatementCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeStatement");
   let body: any;
@@ -115,7 +115,7 @@ export const se_DescribeStatementCommand = async (
  */
 export const se_DescribeTableCommand = async (
   input: DescribeTableCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeTable");
   let body: any;
@@ -128,7 +128,7 @@ export const se_DescribeTableCommand = async (
  */
 export const se_ExecuteStatementCommand = async (
   input: ExecuteStatementCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ExecuteStatement");
   let body: any;
@@ -141,7 +141,7 @@ export const se_ExecuteStatementCommand = async (
  */
 export const se_GetStatementResultCommand = async (
   input: GetStatementResultCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetStatementResult");
   let body: any;
@@ -154,7 +154,7 @@ export const se_GetStatementResultCommand = async (
  */
 export const se_ListDatabasesCommand = async (
   input: ListDatabasesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListDatabases");
   let body: any;
@@ -167,7 +167,7 @@ export const se_ListDatabasesCommand = async (
  */
 export const se_ListSchemasCommand = async (
   input: ListSchemasCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListSchemas");
   let body: any;
@@ -180,7 +180,7 @@ export const se_ListSchemasCommand = async (
  */
 export const se_ListStatementsCommand = async (
   input: ListStatementsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListStatements");
   let body: any;
@@ -193,7 +193,7 @@ export const se_ListStatementsCommand = async (
  */
 export const se_ListTablesCommand = async (
   input: ListTablesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListTables");
   let body: any;
@@ -206,7 +206,7 @@ export const se_ListTablesCommand = async (
  */
 export const de_BatchExecuteStatementCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchExecuteStatementCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -226,7 +226,7 @@ export const de_BatchExecuteStatementCommand = async (
  */
 export const de_CancelStatementCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CancelStatementCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -246,7 +246,7 @@ export const de_CancelStatementCommand = async (
  */
 export const de_DescribeStatementCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeStatementCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -266,7 +266,7 @@ export const de_DescribeStatementCommand = async (
  */
 export const de_DescribeTableCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeTableCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -286,7 +286,7 @@ export const de_DescribeTableCommand = async (
  */
 export const de_ExecuteStatementCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ExecuteStatementCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -306,7 +306,7 @@ export const de_ExecuteStatementCommand = async (
  */
 export const de_GetStatementResultCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetStatementResultCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -326,7 +326,7 @@ export const de_GetStatementResultCommand = async (
  */
 export const de_ListDatabasesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListDatabasesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -346,7 +346,7 @@ export const de_ListDatabasesCommand = async (
  */
 export const de_ListSchemasCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListSchemasCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -366,7 +366,7 @@ export const de_ListSchemasCommand = async (
  */
 export const de_ListStatementsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListStatementsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -386,7 +386,7 @@ export const de_ListStatementsCommand = async (
  */
 export const de_ListTablesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTablesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -447,7 +447,7 @@ const de_CommandError = async (output: __HttpResponse, context: __SerdeContext):
  */
 const de_ActiveStatementsExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ActiveStatementsExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -463,7 +463,7 @@ const de_ActiveStatementsExceededExceptionRes = async (
  */
 const de_BatchExecuteStatementExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchExecuteStatementException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -479,7 +479,7 @@ const de_BatchExecuteStatementExceptionRes = async (
  */
 const de_DatabaseConnectionExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DatabaseConnectionException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -495,7 +495,7 @@ const de_DatabaseConnectionExceptionRes = async (
  */
 const de_ExecuteStatementExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ExecuteStatementException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -511,7 +511,7 @@ const de_ExecuteStatementExceptionRes = async (
  */
 const de_InternalServerExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -527,7 +527,7 @@ const de_InternalServerExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -861,7 +861,7 @@ const buildHttpRpcRequest = async (
   headers: __HeaderBag,
   path: string,
   resolvedHostname: string | undefined,
-  body: any
+  body: any,
 ): Promise<__HttpRequest> => {
   const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
   const contents: any = {

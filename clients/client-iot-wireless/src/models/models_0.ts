@@ -6667,7 +6667,7 @@ export const SidewalkAccountInfoFilterSensitiveLog = (obj: SidewalkAccountInfo):
  * @internal
  */
 export const AssociateAwsAccountWithPartnerAccountRequestFilterSensitiveLog = (
-  obj: AssociateAwsAccountWithPartnerAccountRequest
+  obj: AssociateAwsAccountWithPartnerAccountRequest,
 ): any => ({
   ...obj,
   ...(obj.Sidewalk && { Sidewalk: SidewalkAccountInfoFilterSensitiveLog(obj.Sidewalk) }),
@@ -6677,7 +6677,7 @@ export const AssociateAwsAccountWithPartnerAccountRequestFilterSensitiveLog = (
  * @internal
  */
 export const AssociateAwsAccountWithPartnerAccountResponseFilterSensitiveLog = (
-  obj: AssociateAwsAccountWithPartnerAccountResponse
+  obj: AssociateAwsAccountWithPartnerAccountResponse,
 ): any => ({
   ...obj,
   ...(obj.Sidewalk && { Sidewalk: SidewalkAccountInfoFilterSensitiveLog(obj.Sidewalk) }),

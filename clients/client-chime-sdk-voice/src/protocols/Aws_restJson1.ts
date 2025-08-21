@@ -384,7 +384,7 @@ import {
  */
 export const se_AssociatePhoneNumbersWithVoiceConnectorCommand = async (
   input: AssociatePhoneNumbersWithVoiceConnectorCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -400,7 +400,7 @@ export const se_AssociatePhoneNumbersWithVoiceConnectorCommand = async (
     take(input, {
       E164PhoneNumbers: (_) => _json(_),
       ForceAssociate: [],
-    })
+    }),
   );
   b.m("POST").h(headers).q(query).b(body);
   return b.build();
@@ -411,7 +411,7 @@ export const se_AssociatePhoneNumbersWithVoiceConnectorCommand = async (
  */
 export const se_AssociatePhoneNumbersWithVoiceConnectorGroupCommand = async (
   input: AssociatePhoneNumbersWithVoiceConnectorGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -427,7 +427,7 @@ export const se_AssociatePhoneNumbersWithVoiceConnectorGroupCommand = async (
     take(input, {
       E164PhoneNumbers: (_) => _json(_),
       ForceAssociate: [],
-    })
+    }),
   );
   b.m("POST").h(headers).q(query).b(body);
   return b.build();
@@ -438,7 +438,7 @@ export const se_AssociatePhoneNumbersWithVoiceConnectorGroupCommand = async (
  */
 export const se_BatchDeletePhoneNumberCommand = async (
   input: BatchDeletePhoneNumberCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -452,7 +452,7 @@ export const se_BatchDeletePhoneNumberCommand = async (
   body = JSON.stringify(
     take(input, {
       PhoneNumberIds: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).q(query).b(body);
   return b.build();
@@ -463,7 +463,7 @@ export const se_BatchDeletePhoneNumberCommand = async (
  */
 export const se_BatchUpdatePhoneNumberCommand = async (
   input: BatchUpdatePhoneNumberCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -477,7 +477,7 @@ export const se_BatchUpdatePhoneNumberCommand = async (
   body = JSON.stringify(
     take(input, {
       UpdatePhoneNumberRequestItems: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).q(query).b(body);
   return b.build();
@@ -488,7 +488,7 @@ export const se_BatchUpdatePhoneNumberCommand = async (
  */
 export const se_CreatePhoneNumberOrderCommand = async (
   input: CreatePhoneNumberOrderCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -501,7 +501,7 @@ export const se_CreatePhoneNumberOrderCommand = async (
       E164PhoneNumbers: (_) => _json(_),
       Name: [],
       ProductType: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -512,7 +512,7 @@ export const se_CreatePhoneNumberOrderCommand = async (
  */
 export const se_CreateProxySessionCommand = async (
   input: CreateProxySessionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -530,7 +530,7 @@ export const se_CreateProxySessionCommand = async (
       Name: [],
       NumberSelectionBehavior: [],
       ParticipantPhoneNumbers: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -541,7 +541,7 @@ export const se_CreateProxySessionCommand = async (
  */
 export const se_CreateSipMediaApplicationCommand = async (
   input: CreateSipMediaApplicationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -555,7 +555,7 @@ export const se_CreateSipMediaApplicationCommand = async (
       Endpoints: (_) => _json(_),
       Name: [],
       Tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -566,7 +566,7 @@ export const se_CreateSipMediaApplicationCommand = async (
  */
 export const se_CreateSipMediaApplicationCallCommand = async (
   input: CreateSipMediaApplicationCallCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -581,7 +581,7 @@ export const se_CreateSipMediaApplicationCallCommand = async (
       FromPhoneNumber: [],
       SipHeaders: (_) => _json(_),
       ToPhoneNumber: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -592,7 +592,7 @@ export const se_CreateSipMediaApplicationCallCommand = async (
  */
 export const se_CreateSipRuleCommand = async (
   input: CreateSipRuleCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -607,7 +607,7 @@ export const se_CreateSipRuleCommand = async (
       TargetApplications: (_) => _json(_),
       TriggerType: [],
       TriggerValue: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -618,7 +618,7 @@ export const se_CreateSipRuleCommand = async (
  */
 export const se_CreateVoiceConnectorCommand = async (
   input: CreateVoiceConnectorCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -632,7 +632,7 @@ export const se_CreateVoiceConnectorCommand = async (
       Name: [],
       RequireEncryption: [],
       Tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -643,7 +643,7 @@ export const se_CreateVoiceConnectorCommand = async (
  */
 export const se_CreateVoiceConnectorGroupCommand = async (
   input: CreateVoiceConnectorGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -655,7 +655,7 @@ export const se_CreateVoiceConnectorGroupCommand = async (
     take(input, {
       Name: [],
       VoiceConnectorItems: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -666,7 +666,7 @@ export const se_CreateVoiceConnectorGroupCommand = async (
  */
 export const se_CreateVoiceProfileCommand = async (
   input: CreateVoiceProfileCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -677,7 +677,7 @@ export const se_CreateVoiceProfileCommand = async (
   body = JSON.stringify(
     take(input, {
       SpeakerSearchTaskId: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -688,7 +688,7 @@ export const se_CreateVoiceProfileCommand = async (
  */
 export const se_CreateVoiceProfileDomainCommand = async (
   input: CreateVoiceProfileDomainCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -703,7 +703,7 @@ export const se_CreateVoiceProfileDomainCommand = async (
       Name: [],
       ServerSideEncryptionConfiguration: (_) => _json(_),
       Tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -714,7 +714,7 @@ export const se_CreateVoiceProfileDomainCommand = async (
  */
 export const se_DeletePhoneNumberCommand = async (
   input: DeletePhoneNumberCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -730,7 +730,7 @@ export const se_DeletePhoneNumberCommand = async (
  */
 export const se_DeleteProxySessionCommand = async (
   input: DeleteProxySessionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -747,7 +747,7 @@ export const se_DeleteProxySessionCommand = async (
  */
 export const se_DeleteSipMediaApplicationCommand = async (
   input: DeleteSipMediaApplicationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -763,7 +763,7 @@ export const se_DeleteSipMediaApplicationCommand = async (
  */
 export const se_DeleteSipRuleCommand = async (
   input: DeleteSipRuleCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -779,7 +779,7 @@ export const se_DeleteSipRuleCommand = async (
  */
 export const se_DeleteVoiceConnectorCommand = async (
   input: DeleteVoiceConnectorCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -795,7 +795,7 @@ export const se_DeleteVoiceConnectorCommand = async (
  */
 export const se_DeleteVoiceConnectorEmergencyCallingConfigurationCommand = async (
   input: DeleteVoiceConnectorEmergencyCallingConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -811,7 +811,7 @@ export const se_DeleteVoiceConnectorEmergencyCallingConfigurationCommand = async
  */
 export const se_DeleteVoiceConnectorGroupCommand = async (
   input: DeleteVoiceConnectorGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -827,7 +827,7 @@ export const se_DeleteVoiceConnectorGroupCommand = async (
  */
 export const se_DeleteVoiceConnectorOriginationCommand = async (
   input: DeleteVoiceConnectorOriginationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -843,7 +843,7 @@ export const se_DeleteVoiceConnectorOriginationCommand = async (
  */
 export const se_DeleteVoiceConnectorProxyCommand = async (
   input: DeleteVoiceConnectorProxyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -859,7 +859,7 @@ export const se_DeleteVoiceConnectorProxyCommand = async (
  */
 export const se_DeleteVoiceConnectorStreamingConfigurationCommand = async (
   input: DeleteVoiceConnectorStreamingConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -875,7 +875,7 @@ export const se_DeleteVoiceConnectorStreamingConfigurationCommand = async (
  */
 export const se_DeleteVoiceConnectorTerminationCommand = async (
   input: DeleteVoiceConnectorTerminationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -891,7 +891,7 @@ export const se_DeleteVoiceConnectorTerminationCommand = async (
  */
 export const se_DeleteVoiceConnectorTerminationCredentialsCommand = async (
   input: DeleteVoiceConnectorTerminationCredentialsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -906,7 +906,7 @@ export const se_DeleteVoiceConnectorTerminationCredentialsCommand = async (
   body = JSON.stringify(
     take(input, {
       Usernames: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).q(query).b(body);
   return b.build();
@@ -917,7 +917,7 @@ export const se_DeleteVoiceConnectorTerminationCredentialsCommand = async (
  */
 export const se_DeleteVoiceProfileCommand = async (
   input: DeleteVoiceProfileCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -933,7 +933,7 @@ export const se_DeleteVoiceProfileCommand = async (
  */
 export const se_DeleteVoiceProfileDomainCommand = async (
   input: DeleteVoiceProfileDomainCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -949,7 +949,7 @@ export const se_DeleteVoiceProfileDomainCommand = async (
  */
 export const se_DisassociatePhoneNumbersFromVoiceConnectorCommand = async (
   input: DisassociatePhoneNumbersFromVoiceConnectorCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -964,7 +964,7 @@ export const se_DisassociatePhoneNumbersFromVoiceConnectorCommand = async (
   body = JSON.stringify(
     take(input, {
       E164PhoneNumbers: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).q(query).b(body);
   return b.build();
@@ -975,7 +975,7 @@ export const se_DisassociatePhoneNumbersFromVoiceConnectorCommand = async (
  */
 export const se_DisassociatePhoneNumbersFromVoiceConnectorGroupCommand = async (
   input: DisassociatePhoneNumbersFromVoiceConnectorGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -990,7 +990,7 @@ export const se_DisassociatePhoneNumbersFromVoiceConnectorGroupCommand = async (
   body = JSON.stringify(
     take(input, {
       E164PhoneNumbers: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).q(query).b(body);
   return b.build();
@@ -1001,7 +1001,7 @@ export const se_DisassociatePhoneNumbersFromVoiceConnectorGroupCommand = async (
  */
 export const se_GetGlobalSettingsCommand = async (
   input: GetGlobalSettingsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1019,7 +1019,7 @@ export const se_GetGlobalSettingsCommand = async (
  */
 export const se_GetPhoneNumberCommand = async (
   input: GetPhoneNumberCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1035,7 +1035,7 @@ export const se_GetPhoneNumberCommand = async (
  */
 export const se_GetPhoneNumberOrderCommand = async (
   input: GetPhoneNumberOrderCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1051,7 +1051,7 @@ export const se_GetPhoneNumberOrderCommand = async (
  */
 export const se_GetPhoneNumberSettingsCommand = async (
   input: GetPhoneNumberSettingsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1069,7 +1069,7 @@ export const se_GetPhoneNumberSettingsCommand = async (
  */
 export const se_GetProxySessionCommand = async (
   input: GetProxySessionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1086,7 +1086,7 @@ export const se_GetProxySessionCommand = async (
  */
 export const se_GetSipMediaApplicationCommand = async (
   input: GetSipMediaApplicationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1102,7 +1102,7 @@ export const se_GetSipMediaApplicationCommand = async (
  */
 export const se_GetSipMediaApplicationAlexaSkillConfigurationCommand = async (
   input: GetSipMediaApplicationAlexaSkillConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1118,7 +1118,7 @@ export const se_GetSipMediaApplicationAlexaSkillConfigurationCommand = async (
  */
 export const se_GetSipMediaApplicationLoggingConfigurationCommand = async (
   input: GetSipMediaApplicationLoggingConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1134,7 +1134,7 @@ export const se_GetSipMediaApplicationLoggingConfigurationCommand = async (
  */
 export const se_GetSipRuleCommand = async (
   input: GetSipRuleCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1150,7 +1150,7 @@ export const se_GetSipRuleCommand = async (
  */
 export const se_GetSpeakerSearchTaskCommand = async (
   input: GetSpeakerSearchTaskCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1167,7 +1167,7 @@ export const se_GetSpeakerSearchTaskCommand = async (
  */
 export const se_GetVoiceConnectorCommand = async (
   input: GetVoiceConnectorCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1183,7 +1183,7 @@ export const se_GetVoiceConnectorCommand = async (
  */
 export const se_GetVoiceConnectorEmergencyCallingConfigurationCommand = async (
   input: GetVoiceConnectorEmergencyCallingConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1199,7 +1199,7 @@ export const se_GetVoiceConnectorEmergencyCallingConfigurationCommand = async (
  */
 export const se_GetVoiceConnectorGroupCommand = async (
   input: GetVoiceConnectorGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1215,7 +1215,7 @@ export const se_GetVoiceConnectorGroupCommand = async (
  */
 export const se_GetVoiceConnectorLoggingConfigurationCommand = async (
   input: GetVoiceConnectorLoggingConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1231,7 +1231,7 @@ export const se_GetVoiceConnectorLoggingConfigurationCommand = async (
  */
 export const se_GetVoiceConnectorOriginationCommand = async (
   input: GetVoiceConnectorOriginationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1247,7 +1247,7 @@ export const se_GetVoiceConnectorOriginationCommand = async (
  */
 export const se_GetVoiceConnectorProxyCommand = async (
   input: GetVoiceConnectorProxyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1263,7 +1263,7 @@ export const se_GetVoiceConnectorProxyCommand = async (
  */
 export const se_GetVoiceConnectorStreamingConfigurationCommand = async (
   input: GetVoiceConnectorStreamingConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1279,7 +1279,7 @@ export const se_GetVoiceConnectorStreamingConfigurationCommand = async (
  */
 export const se_GetVoiceConnectorTerminationCommand = async (
   input: GetVoiceConnectorTerminationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1295,7 +1295,7 @@ export const se_GetVoiceConnectorTerminationCommand = async (
  */
 export const se_GetVoiceConnectorTerminationHealthCommand = async (
   input: GetVoiceConnectorTerminationHealthCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1311,7 +1311,7 @@ export const se_GetVoiceConnectorTerminationHealthCommand = async (
  */
 export const se_GetVoiceProfileCommand = async (
   input: GetVoiceProfileCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1327,7 +1327,7 @@ export const se_GetVoiceProfileCommand = async (
  */
 export const se_GetVoiceProfileDomainCommand = async (
   input: GetVoiceProfileDomainCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1343,7 +1343,7 @@ export const se_GetVoiceProfileDomainCommand = async (
  */
 export const se_GetVoiceToneAnalysisTaskCommand = async (
   input: GetVoiceToneAnalysisTaskCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1363,7 +1363,7 @@ export const se_GetVoiceToneAnalysisTaskCommand = async (
  */
 export const se_ListAvailableVoiceConnectorRegionsCommand = async (
   input: ListAvailableVoiceConnectorRegionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1381,7 +1381,7 @@ export const se_ListAvailableVoiceConnectorRegionsCommand = async (
  */
 export const se_ListPhoneNumberOrdersCommand = async (
   input: ListPhoneNumberOrdersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1400,7 +1400,7 @@ export const se_ListPhoneNumberOrdersCommand = async (
  */
 export const se_ListPhoneNumbersCommand = async (
   input: ListPhoneNumbersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1423,7 +1423,7 @@ export const se_ListPhoneNumbersCommand = async (
  */
 export const se_ListProxySessionsCommand = async (
   input: ListProxySessionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1444,7 +1444,7 @@ export const se_ListProxySessionsCommand = async (
  */
 export const se_ListSipMediaApplicationsCommand = async (
   input: ListSipMediaApplicationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1463,7 +1463,7 @@ export const se_ListSipMediaApplicationsCommand = async (
  */
 export const se_ListSipRulesCommand = async (
   input: ListSipRulesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1483,7 +1483,7 @@ export const se_ListSipRulesCommand = async (
  */
 export const se_ListSupportedPhoneNumberCountriesCommand = async (
   input: ListSupportedPhoneNumberCountriesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1501,7 +1501,7 @@ export const se_ListSupportedPhoneNumberCountriesCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1519,7 +1519,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_ListVoiceConnectorGroupsCommand = async (
   input: ListVoiceConnectorGroupsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1538,7 +1538,7 @@ export const se_ListVoiceConnectorGroupsCommand = async (
  */
 export const se_ListVoiceConnectorsCommand = async (
   input: ListVoiceConnectorsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1557,7 +1557,7 @@ export const se_ListVoiceConnectorsCommand = async (
  */
 export const se_ListVoiceConnectorTerminationCredentialsCommand = async (
   input: ListVoiceConnectorTerminationCredentialsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1573,7 +1573,7 @@ export const se_ListVoiceConnectorTerminationCredentialsCommand = async (
  */
 export const se_ListVoiceProfileDomainsCommand = async (
   input: ListVoiceProfileDomainsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1592,7 +1592,7 @@ export const se_ListVoiceProfileDomainsCommand = async (
  */
 export const se_ListVoiceProfilesCommand = async (
   input: ListVoiceProfilesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1612,7 +1612,7 @@ export const se_ListVoiceProfilesCommand = async (
  */
 export const se_PutSipMediaApplicationAlexaSkillConfigurationCommand = async (
   input: PutSipMediaApplicationAlexaSkillConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1624,7 +1624,7 @@ export const se_PutSipMediaApplicationAlexaSkillConfigurationCommand = async (
   body = JSON.stringify(
     take(input, {
       SipMediaApplicationAlexaSkillConfiguration: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1635,7 +1635,7 @@ export const se_PutSipMediaApplicationAlexaSkillConfigurationCommand = async (
  */
 export const se_PutSipMediaApplicationLoggingConfigurationCommand = async (
   input: PutSipMediaApplicationLoggingConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1647,7 +1647,7 @@ export const se_PutSipMediaApplicationLoggingConfigurationCommand = async (
   body = JSON.stringify(
     take(input, {
       SipMediaApplicationLoggingConfiguration: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1658,7 +1658,7 @@ export const se_PutSipMediaApplicationLoggingConfigurationCommand = async (
  */
 export const se_PutVoiceConnectorEmergencyCallingConfigurationCommand = async (
   input: PutVoiceConnectorEmergencyCallingConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1670,7 +1670,7 @@ export const se_PutVoiceConnectorEmergencyCallingConfigurationCommand = async (
   body = JSON.stringify(
     take(input, {
       EmergencyCallingConfiguration: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1681,7 +1681,7 @@ export const se_PutVoiceConnectorEmergencyCallingConfigurationCommand = async (
  */
 export const se_PutVoiceConnectorLoggingConfigurationCommand = async (
   input: PutVoiceConnectorLoggingConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1693,7 +1693,7 @@ export const se_PutVoiceConnectorLoggingConfigurationCommand = async (
   body = JSON.stringify(
     take(input, {
       LoggingConfiguration: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1704,7 +1704,7 @@ export const se_PutVoiceConnectorLoggingConfigurationCommand = async (
  */
 export const se_PutVoiceConnectorOriginationCommand = async (
   input: PutVoiceConnectorOriginationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1716,7 +1716,7 @@ export const se_PutVoiceConnectorOriginationCommand = async (
   body = JSON.stringify(
     take(input, {
       Origination: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1727,7 +1727,7 @@ export const se_PutVoiceConnectorOriginationCommand = async (
  */
 export const se_PutVoiceConnectorProxyCommand = async (
   input: PutVoiceConnectorProxyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1742,7 +1742,7 @@ export const se_PutVoiceConnectorProxyCommand = async (
       Disabled: [],
       FallBackPhoneNumber: [],
       PhoneNumberPoolCountries: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1753,7 +1753,7 @@ export const se_PutVoiceConnectorProxyCommand = async (
  */
 export const se_PutVoiceConnectorStreamingConfigurationCommand = async (
   input: PutVoiceConnectorStreamingConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1765,7 +1765,7 @@ export const se_PutVoiceConnectorStreamingConfigurationCommand = async (
   body = JSON.stringify(
     take(input, {
       StreamingConfiguration: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1776,7 +1776,7 @@ export const se_PutVoiceConnectorStreamingConfigurationCommand = async (
  */
 export const se_PutVoiceConnectorTerminationCommand = async (
   input: PutVoiceConnectorTerminationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1788,7 +1788,7 @@ export const se_PutVoiceConnectorTerminationCommand = async (
   body = JSON.stringify(
     take(input, {
       Termination: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1799,7 +1799,7 @@ export const se_PutVoiceConnectorTerminationCommand = async (
  */
 export const se_PutVoiceConnectorTerminationCredentialsCommand = async (
   input: PutVoiceConnectorTerminationCredentialsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1814,7 +1814,7 @@ export const se_PutVoiceConnectorTerminationCredentialsCommand = async (
   body = JSON.stringify(
     take(input, {
       Credentials: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).q(query).b(body);
   return b.build();
@@ -1825,7 +1825,7 @@ export const se_PutVoiceConnectorTerminationCredentialsCommand = async (
  */
 export const se_RestorePhoneNumberCommand = async (
   input: RestorePhoneNumberCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1844,7 +1844,7 @@ export const se_RestorePhoneNumberCommand = async (
  */
 export const se_SearchAvailablePhoneNumbersCommand = async (
   input: SearchAvailablePhoneNumbersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1870,7 +1870,7 @@ export const se_SearchAvailablePhoneNumbersCommand = async (
  */
 export const se_StartSpeakerSearchTaskCommand = async (
   input: StartSpeakerSearchTaskCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1885,7 +1885,7 @@ export const se_StartSpeakerSearchTaskCommand = async (
       ClientRequestToken: [],
       TransactionId: [],
       VoiceProfileDomainId: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1896,7 +1896,7 @@ export const se_StartSpeakerSearchTaskCommand = async (
  */
 export const se_StartVoiceToneAnalysisTaskCommand = async (
   input: StartVoiceToneAnalysisTaskCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1910,7 +1910,7 @@ export const se_StartVoiceToneAnalysisTaskCommand = async (
       ClientRequestToken: [],
       LanguageCode: [],
       TransactionId: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1921,7 +1921,7 @@ export const se_StartVoiceToneAnalysisTaskCommand = async (
  */
 export const se_StopSpeakerSearchTaskCommand = async (
   input: StopSpeakerSearchTaskCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1941,7 +1941,7 @@ export const se_StopSpeakerSearchTaskCommand = async (
  */
 export const se_StopVoiceToneAnalysisTaskCommand = async (
   input: StopVoiceToneAnalysisTaskCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1961,7 +1961,7 @@ export const se_StopVoiceToneAnalysisTaskCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1976,7 +1976,7 @@ export const se_TagResourceCommand = async (
     take(input, {
       ResourceARN: [],
       Tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).q(query).b(body);
   return b.build();
@@ -1987,7 +1987,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2002,7 +2002,7 @@ export const se_UntagResourceCommand = async (
     take(input, {
       ResourceARN: [],
       TagKeys: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).q(query).b(body);
   return b.build();
@@ -2013,7 +2013,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateGlobalSettingsCommand = async (
   input: UpdateGlobalSettingsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2024,7 +2024,7 @@ export const se_UpdateGlobalSettingsCommand = async (
   body = JSON.stringify(
     take(input, {
       VoiceConnector: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -2035,7 +2035,7 @@ export const se_UpdateGlobalSettingsCommand = async (
  */
 export const se_UpdatePhoneNumberCommand = async (
   input: UpdatePhoneNumberCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2049,7 +2049,7 @@ export const se_UpdatePhoneNumberCommand = async (
       CallingName: [],
       Name: [],
       ProductType: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -2060,7 +2060,7 @@ export const se_UpdatePhoneNumberCommand = async (
  */
 export const se_UpdatePhoneNumberSettingsCommand = async (
   input: UpdatePhoneNumberSettingsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2071,7 +2071,7 @@ export const se_UpdatePhoneNumberSettingsCommand = async (
   body = JSON.stringify(
     take(input, {
       CallingName: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -2082,7 +2082,7 @@ export const se_UpdatePhoneNumberSettingsCommand = async (
  */
 export const se_UpdateProxySessionCommand = async (
   input: UpdateProxySessionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2096,7 +2096,7 @@ export const se_UpdateProxySessionCommand = async (
     take(input, {
       Capabilities: (_) => _json(_),
       ExpiryMinutes: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -2107,7 +2107,7 @@ export const se_UpdateProxySessionCommand = async (
  */
 export const se_UpdateSipMediaApplicationCommand = async (
   input: UpdateSipMediaApplicationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2120,7 +2120,7 @@ export const se_UpdateSipMediaApplicationCommand = async (
     take(input, {
       Endpoints: (_) => _json(_),
       Name: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -2131,7 +2131,7 @@ export const se_UpdateSipMediaApplicationCommand = async (
  */
 export const se_UpdateSipMediaApplicationCallCommand = async (
   input: UpdateSipMediaApplicationCallCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2144,7 +2144,7 @@ export const se_UpdateSipMediaApplicationCallCommand = async (
   body = JSON.stringify(
     take(input, {
       Arguments: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -2155,7 +2155,7 @@ export const se_UpdateSipMediaApplicationCallCommand = async (
  */
 export const se_UpdateSipRuleCommand = async (
   input: UpdateSipRuleCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2169,7 +2169,7 @@ export const se_UpdateSipRuleCommand = async (
       Disabled: [],
       Name: [],
       TargetApplications: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -2180,7 +2180,7 @@ export const se_UpdateSipRuleCommand = async (
  */
 export const se_UpdateVoiceConnectorCommand = async (
   input: UpdateVoiceConnectorCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2193,7 +2193,7 @@ export const se_UpdateVoiceConnectorCommand = async (
     take(input, {
       Name: [],
       RequireEncryption: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -2204,7 +2204,7 @@ export const se_UpdateVoiceConnectorCommand = async (
  */
 export const se_UpdateVoiceConnectorGroupCommand = async (
   input: UpdateVoiceConnectorGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2217,7 +2217,7 @@ export const se_UpdateVoiceConnectorGroupCommand = async (
     take(input, {
       Name: [],
       VoiceConnectorItems: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -2228,7 +2228,7 @@ export const se_UpdateVoiceConnectorGroupCommand = async (
  */
 export const se_UpdateVoiceProfileCommand = async (
   input: UpdateVoiceProfileCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2240,7 +2240,7 @@ export const se_UpdateVoiceProfileCommand = async (
   body = JSON.stringify(
     take(input, {
       SpeakerSearchTaskId: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -2251,7 +2251,7 @@ export const se_UpdateVoiceProfileCommand = async (
  */
 export const se_UpdateVoiceProfileDomainCommand = async (
   input: UpdateVoiceProfileDomainCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2264,7 +2264,7 @@ export const se_UpdateVoiceProfileDomainCommand = async (
     take(input, {
       Description: [],
       Name: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -2275,7 +2275,7 @@ export const se_UpdateVoiceProfileDomainCommand = async (
  */
 export const se_ValidateE911AddressCommand = async (
   input: ValidateE911AddressCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2292,7 +2292,7 @@ export const se_ValidateE911AddressCommand = async (
       State: [],
       StreetInfo: [],
       StreetNumber: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -2303,7 +2303,7 @@ export const se_ValidateE911AddressCommand = async (
  */
 export const de_AssociatePhoneNumbersWithVoiceConnectorCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssociatePhoneNumbersWithVoiceConnectorCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2324,7 +2324,7 @@ export const de_AssociatePhoneNumbersWithVoiceConnectorCommand = async (
  */
 export const de_AssociatePhoneNumbersWithVoiceConnectorGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssociatePhoneNumbersWithVoiceConnectorGroupCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2345,7 +2345,7 @@ export const de_AssociatePhoneNumbersWithVoiceConnectorGroupCommand = async (
  */
 export const de_BatchDeletePhoneNumberCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchDeletePhoneNumberCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2366,7 +2366,7 @@ export const de_BatchDeletePhoneNumberCommand = async (
  */
 export const de_BatchUpdatePhoneNumberCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchUpdatePhoneNumberCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2387,7 +2387,7 @@ export const de_BatchUpdatePhoneNumberCommand = async (
  */
 export const de_CreatePhoneNumberOrderCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreatePhoneNumberOrderCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2408,7 +2408,7 @@ export const de_CreatePhoneNumberOrderCommand = async (
  */
 export const de_CreateProxySessionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateProxySessionCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2429,7 +2429,7 @@ export const de_CreateProxySessionCommand = async (
  */
 export const de_CreateSipMediaApplicationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateSipMediaApplicationCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2450,7 +2450,7 @@ export const de_CreateSipMediaApplicationCommand = async (
  */
 export const de_CreateSipMediaApplicationCallCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateSipMediaApplicationCallCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2471,7 +2471,7 @@ export const de_CreateSipMediaApplicationCallCommand = async (
  */
 export const de_CreateSipRuleCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateSipRuleCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2492,7 +2492,7 @@ export const de_CreateSipRuleCommand = async (
  */
 export const de_CreateVoiceConnectorCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateVoiceConnectorCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2513,7 +2513,7 @@ export const de_CreateVoiceConnectorCommand = async (
  */
 export const de_CreateVoiceConnectorGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateVoiceConnectorGroupCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2534,7 +2534,7 @@ export const de_CreateVoiceConnectorGroupCommand = async (
  */
 export const de_CreateVoiceProfileCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateVoiceProfileCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2555,7 +2555,7 @@ export const de_CreateVoiceProfileCommand = async (
  */
 export const de_CreateVoiceProfileDomainCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateVoiceProfileDomainCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2576,7 +2576,7 @@ export const de_CreateVoiceProfileDomainCommand = async (
  */
 export const de_DeletePhoneNumberCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeletePhoneNumberCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2593,7 +2593,7 @@ export const de_DeletePhoneNumberCommand = async (
  */
 export const de_DeleteProxySessionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteProxySessionCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2610,7 +2610,7 @@ export const de_DeleteProxySessionCommand = async (
  */
 export const de_DeleteSipMediaApplicationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteSipMediaApplicationCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2627,7 +2627,7 @@ export const de_DeleteSipMediaApplicationCommand = async (
  */
 export const de_DeleteSipRuleCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteSipRuleCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2644,7 +2644,7 @@ export const de_DeleteSipRuleCommand = async (
  */
 export const de_DeleteVoiceConnectorCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteVoiceConnectorCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2661,7 +2661,7 @@ export const de_DeleteVoiceConnectorCommand = async (
  */
 export const de_DeleteVoiceConnectorEmergencyCallingConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteVoiceConnectorEmergencyCallingConfigurationCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2678,7 +2678,7 @@ export const de_DeleteVoiceConnectorEmergencyCallingConfigurationCommand = async
  */
 export const de_DeleteVoiceConnectorGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteVoiceConnectorGroupCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2695,7 +2695,7 @@ export const de_DeleteVoiceConnectorGroupCommand = async (
  */
 export const de_DeleteVoiceConnectorOriginationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteVoiceConnectorOriginationCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2712,7 +2712,7 @@ export const de_DeleteVoiceConnectorOriginationCommand = async (
  */
 export const de_DeleteVoiceConnectorProxyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteVoiceConnectorProxyCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2729,7 +2729,7 @@ export const de_DeleteVoiceConnectorProxyCommand = async (
  */
 export const de_DeleteVoiceConnectorStreamingConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteVoiceConnectorStreamingConfigurationCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2746,7 +2746,7 @@ export const de_DeleteVoiceConnectorStreamingConfigurationCommand = async (
  */
 export const de_DeleteVoiceConnectorTerminationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteVoiceConnectorTerminationCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2763,7 +2763,7 @@ export const de_DeleteVoiceConnectorTerminationCommand = async (
  */
 export const de_DeleteVoiceConnectorTerminationCredentialsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteVoiceConnectorTerminationCredentialsCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2780,7 +2780,7 @@ export const de_DeleteVoiceConnectorTerminationCredentialsCommand = async (
  */
 export const de_DeleteVoiceProfileCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteVoiceProfileCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2797,7 +2797,7 @@ export const de_DeleteVoiceProfileCommand = async (
  */
 export const de_DeleteVoiceProfileDomainCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteVoiceProfileDomainCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2814,7 +2814,7 @@ export const de_DeleteVoiceProfileDomainCommand = async (
  */
 export const de_DisassociatePhoneNumbersFromVoiceConnectorCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisassociatePhoneNumbersFromVoiceConnectorCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2835,7 +2835,7 @@ export const de_DisassociatePhoneNumbersFromVoiceConnectorCommand = async (
  */
 export const de_DisassociatePhoneNumbersFromVoiceConnectorGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisassociatePhoneNumbersFromVoiceConnectorGroupCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2856,7 +2856,7 @@ export const de_DisassociatePhoneNumbersFromVoiceConnectorGroupCommand = async (
  */
 export const de_GetGlobalSettingsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetGlobalSettingsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2877,7 +2877,7 @@ export const de_GetGlobalSettingsCommand = async (
  */
 export const de_GetPhoneNumberCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetPhoneNumberCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2898,7 +2898,7 @@ export const de_GetPhoneNumberCommand = async (
  */
 export const de_GetPhoneNumberOrderCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetPhoneNumberOrderCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2919,7 +2919,7 @@ export const de_GetPhoneNumberOrderCommand = async (
  */
 export const de_GetPhoneNumberSettingsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetPhoneNumberSettingsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2941,7 +2941,7 @@ export const de_GetPhoneNumberSettingsCommand = async (
  */
 export const de_GetProxySessionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetProxySessionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2962,7 +2962,7 @@ export const de_GetProxySessionCommand = async (
  */
 export const de_GetSipMediaApplicationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetSipMediaApplicationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2983,7 +2983,7 @@ export const de_GetSipMediaApplicationCommand = async (
  */
 export const de_GetSipMediaApplicationAlexaSkillConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetSipMediaApplicationAlexaSkillConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3004,7 +3004,7 @@ export const de_GetSipMediaApplicationAlexaSkillConfigurationCommand = async (
  */
 export const de_GetSipMediaApplicationLoggingConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetSipMediaApplicationLoggingConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3025,7 +3025,7 @@ export const de_GetSipMediaApplicationLoggingConfigurationCommand = async (
  */
 export const de_GetSipRuleCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetSipRuleCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3046,7 +3046,7 @@ export const de_GetSipRuleCommand = async (
  */
 export const de_GetSpeakerSearchTaskCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetSpeakerSearchTaskCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3067,7 +3067,7 @@ export const de_GetSpeakerSearchTaskCommand = async (
  */
 export const de_GetVoiceConnectorCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetVoiceConnectorCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3088,7 +3088,7 @@ export const de_GetVoiceConnectorCommand = async (
  */
 export const de_GetVoiceConnectorEmergencyCallingConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetVoiceConnectorEmergencyCallingConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3109,7 +3109,7 @@ export const de_GetVoiceConnectorEmergencyCallingConfigurationCommand = async (
  */
 export const de_GetVoiceConnectorGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetVoiceConnectorGroupCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3130,7 +3130,7 @@ export const de_GetVoiceConnectorGroupCommand = async (
  */
 export const de_GetVoiceConnectorLoggingConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetVoiceConnectorLoggingConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3151,7 +3151,7 @@ export const de_GetVoiceConnectorLoggingConfigurationCommand = async (
  */
 export const de_GetVoiceConnectorOriginationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetVoiceConnectorOriginationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3172,7 +3172,7 @@ export const de_GetVoiceConnectorOriginationCommand = async (
  */
 export const de_GetVoiceConnectorProxyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetVoiceConnectorProxyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3193,7 +3193,7 @@ export const de_GetVoiceConnectorProxyCommand = async (
  */
 export const de_GetVoiceConnectorStreamingConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetVoiceConnectorStreamingConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3214,7 +3214,7 @@ export const de_GetVoiceConnectorStreamingConfigurationCommand = async (
  */
 export const de_GetVoiceConnectorTerminationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetVoiceConnectorTerminationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3235,7 +3235,7 @@ export const de_GetVoiceConnectorTerminationCommand = async (
  */
 export const de_GetVoiceConnectorTerminationHealthCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetVoiceConnectorTerminationHealthCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3256,7 +3256,7 @@ export const de_GetVoiceConnectorTerminationHealthCommand = async (
  */
 export const de_GetVoiceProfileCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetVoiceProfileCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3277,7 +3277,7 @@ export const de_GetVoiceProfileCommand = async (
  */
 export const de_GetVoiceProfileDomainCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetVoiceProfileDomainCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3298,7 +3298,7 @@ export const de_GetVoiceProfileDomainCommand = async (
  */
 export const de_GetVoiceToneAnalysisTaskCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetVoiceToneAnalysisTaskCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3319,7 +3319,7 @@ export const de_GetVoiceToneAnalysisTaskCommand = async (
  */
 export const de_ListAvailableVoiceConnectorRegionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAvailableVoiceConnectorRegionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3340,7 +3340,7 @@ export const de_ListAvailableVoiceConnectorRegionsCommand = async (
  */
 export const de_ListPhoneNumberOrdersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListPhoneNumberOrdersCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3362,7 +3362,7 @@ export const de_ListPhoneNumberOrdersCommand = async (
  */
 export const de_ListPhoneNumbersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListPhoneNumbersCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3384,7 +3384,7 @@ export const de_ListPhoneNumbersCommand = async (
  */
 export const de_ListProxySessionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListProxySessionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3406,7 +3406,7 @@ export const de_ListProxySessionsCommand = async (
  */
 export const de_ListSipMediaApplicationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListSipMediaApplicationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3428,7 +3428,7 @@ export const de_ListSipMediaApplicationsCommand = async (
  */
 export const de_ListSipRulesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListSipRulesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3450,7 +3450,7 @@ export const de_ListSipRulesCommand = async (
  */
 export const de_ListSupportedPhoneNumberCountriesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListSupportedPhoneNumberCountriesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3471,7 +3471,7 @@ export const de_ListSupportedPhoneNumberCountriesCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3492,7 +3492,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_ListVoiceConnectorGroupsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListVoiceConnectorGroupsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3514,7 +3514,7 @@ export const de_ListVoiceConnectorGroupsCommand = async (
  */
 export const de_ListVoiceConnectorsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListVoiceConnectorsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3536,7 +3536,7 @@ export const de_ListVoiceConnectorsCommand = async (
  */
 export const de_ListVoiceConnectorTerminationCredentialsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListVoiceConnectorTerminationCredentialsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3557,7 +3557,7 @@ export const de_ListVoiceConnectorTerminationCredentialsCommand = async (
  */
 export const de_ListVoiceProfileDomainsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListVoiceProfileDomainsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3579,7 +3579,7 @@ export const de_ListVoiceProfileDomainsCommand = async (
  */
 export const de_ListVoiceProfilesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListVoiceProfilesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3601,7 +3601,7 @@ export const de_ListVoiceProfilesCommand = async (
  */
 export const de_PutSipMediaApplicationAlexaSkillConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutSipMediaApplicationAlexaSkillConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3622,7 +3622,7 @@ export const de_PutSipMediaApplicationAlexaSkillConfigurationCommand = async (
  */
 export const de_PutSipMediaApplicationLoggingConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutSipMediaApplicationLoggingConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3643,7 +3643,7 @@ export const de_PutSipMediaApplicationLoggingConfigurationCommand = async (
  */
 export const de_PutVoiceConnectorEmergencyCallingConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutVoiceConnectorEmergencyCallingConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3664,7 +3664,7 @@ export const de_PutVoiceConnectorEmergencyCallingConfigurationCommand = async (
  */
 export const de_PutVoiceConnectorLoggingConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutVoiceConnectorLoggingConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3685,7 +3685,7 @@ export const de_PutVoiceConnectorLoggingConfigurationCommand = async (
  */
 export const de_PutVoiceConnectorOriginationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutVoiceConnectorOriginationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3706,7 +3706,7 @@ export const de_PutVoiceConnectorOriginationCommand = async (
  */
 export const de_PutVoiceConnectorProxyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutVoiceConnectorProxyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3727,7 +3727,7 @@ export const de_PutVoiceConnectorProxyCommand = async (
  */
 export const de_PutVoiceConnectorStreamingConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutVoiceConnectorStreamingConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3748,7 +3748,7 @@ export const de_PutVoiceConnectorStreamingConfigurationCommand = async (
  */
 export const de_PutVoiceConnectorTerminationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutVoiceConnectorTerminationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3769,7 +3769,7 @@ export const de_PutVoiceConnectorTerminationCommand = async (
  */
 export const de_PutVoiceConnectorTerminationCredentialsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutVoiceConnectorTerminationCredentialsCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3786,7 +3786,7 @@ export const de_PutVoiceConnectorTerminationCredentialsCommand = async (
  */
 export const de_RestorePhoneNumberCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RestorePhoneNumberCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3807,7 +3807,7 @@ export const de_RestorePhoneNumberCommand = async (
  */
 export const de_SearchAvailablePhoneNumbersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SearchAvailablePhoneNumbersCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3829,7 +3829,7 @@ export const de_SearchAvailablePhoneNumbersCommand = async (
  */
 export const de_StartSpeakerSearchTaskCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartSpeakerSearchTaskCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3850,7 +3850,7 @@ export const de_StartSpeakerSearchTaskCommand = async (
  */
 export const de_StartVoiceToneAnalysisTaskCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartVoiceToneAnalysisTaskCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3871,7 +3871,7 @@ export const de_StartVoiceToneAnalysisTaskCommand = async (
  */
 export const de_StopSpeakerSearchTaskCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StopSpeakerSearchTaskCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3888,7 +3888,7 @@ export const de_StopSpeakerSearchTaskCommand = async (
  */
 export const de_StopVoiceToneAnalysisTaskCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StopVoiceToneAnalysisTaskCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3905,7 +3905,7 @@ export const de_StopVoiceToneAnalysisTaskCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3922,7 +3922,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3939,7 +3939,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateGlobalSettingsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateGlobalSettingsCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3956,7 +3956,7 @@ export const de_UpdateGlobalSettingsCommand = async (
  */
 export const de_UpdatePhoneNumberCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdatePhoneNumberCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3977,7 +3977,7 @@ export const de_UpdatePhoneNumberCommand = async (
  */
 export const de_UpdatePhoneNumberSettingsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdatePhoneNumberSettingsCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3994,7 +3994,7 @@ export const de_UpdatePhoneNumberSettingsCommand = async (
  */
 export const de_UpdateProxySessionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateProxySessionCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4015,7 +4015,7 @@ export const de_UpdateProxySessionCommand = async (
  */
 export const de_UpdateSipMediaApplicationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateSipMediaApplicationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4036,7 +4036,7 @@ export const de_UpdateSipMediaApplicationCommand = async (
  */
 export const de_UpdateSipMediaApplicationCallCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateSipMediaApplicationCallCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4057,7 +4057,7 @@ export const de_UpdateSipMediaApplicationCallCommand = async (
  */
 export const de_UpdateSipRuleCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateSipRuleCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4078,7 +4078,7 @@ export const de_UpdateSipRuleCommand = async (
  */
 export const de_UpdateVoiceConnectorCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateVoiceConnectorCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4099,7 +4099,7 @@ export const de_UpdateVoiceConnectorCommand = async (
  */
 export const de_UpdateVoiceConnectorGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateVoiceConnectorGroupCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4120,7 +4120,7 @@ export const de_UpdateVoiceConnectorGroupCommand = async (
  */
 export const de_UpdateVoiceProfileCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateVoiceProfileCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4141,7 +4141,7 @@ export const de_UpdateVoiceProfileCommand = async (
  */
 export const de_UpdateVoiceProfileDomainCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateVoiceProfileDomainCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4162,7 +4162,7 @@ export const de_UpdateVoiceProfileDomainCommand = async (
  */
 export const de_ValidateE911AddressCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ValidateE911AddressCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4243,7 +4243,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -4354,7 +4354,7 @@ const de_NotFoundExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_ResourceLimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceLimitExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -4375,7 +4375,7 @@ const de_ResourceLimitExceededExceptionRes = async (
  */
 const de_ServiceFailureExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceFailureException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -4396,7 +4396,7 @@ const de_ServiceFailureExceptionRes = async (
  */
 const de_ServiceUnavailableExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceUnavailableException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -4417,7 +4417,7 @@ const de_ServiceUnavailableExceptionRes = async (
  */
 const de_ThrottledClientExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ThrottledClientException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -4438,7 +4438,7 @@ const de_ThrottledClientExceptionRes = async (
  */
 const de_UnauthorizedClientExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UnauthorizedClientException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -4459,7 +4459,7 @@ const de_UnauthorizedClientExceptionRes = async (
  */
 const de_UnprocessableEntityExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UnprocessableEntityException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;

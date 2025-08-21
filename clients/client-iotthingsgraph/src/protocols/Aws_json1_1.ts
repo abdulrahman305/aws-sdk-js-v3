@@ -206,7 +206,7 @@ import {
  */
 export const se_AssociateEntityToThingCommand = async (
   input: AssociateEntityToThingCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("AssociateEntityToThing");
   let body: any;
@@ -219,7 +219,7 @@ export const se_AssociateEntityToThingCommand = async (
  */
 export const se_CreateFlowTemplateCommand = async (
   input: CreateFlowTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateFlowTemplate");
   let body: any;
@@ -232,7 +232,7 @@ export const se_CreateFlowTemplateCommand = async (
  */
 export const se_CreateSystemInstanceCommand = async (
   input: CreateSystemInstanceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateSystemInstance");
   let body: any;
@@ -245,7 +245,7 @@ export const se_CreateSystemInstanceCommand = async (
  */
 export const se_CreateSystemTemplateCommand = async (
   input: CreateSystemTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateSystemTemplate");
   let body: any;
@@ -258,7 +258,7 @@ export const se_CreateSystemTemplateCommand = async (
  */
 export const se_DeleteFlowTemplateCommand = async (
   input: DeleteFlowTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteFlowTemplate");
   let body: any;
@@ -271,7 +271,7 @@ export const se_DeleteFlowTemplateCommand = async (
  */
 export const se_DeleteNamespaceCommand = async (
   input: DeleteNamespaceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteNamespace");
   let body: any;
@@ -284,7 +284,7 @@ export const se_DeleteNamespaceCommand = async (
  */
 export const se_DeleteSystemInstanceCommand = async (
   input: DeleteSystemInstanceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteSystemInstance");
   let body: any;
@@ -297,7 +297,7 @@ export const se_DeleteSystemInstanceCommand = async (
  */
 export const se_DeleteSystemTemplateCommand = async (
   input: DeleteSystemTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteSystemTemplate");
   let body: any;
@@ -310,7 +310,7 @@ export const se_DeleteSystemTemplateCommand = async (
  */
 export const se_DeploySystemInstanceCommand = async (
   input: DeploySystemInstanceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeploySystemInstance");
   let body: any;
@@ -323,7 +323,7 @@ export const se_DeploySystemInstanceCommand = async (
  */
 export const se_DeprecateFlowTemplateCommand = async (
   input: DeprecateFlowTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeprecateFlowTemplate");
   let body: any;
@@ -336,7 +336,7 @@ export const se_DeprecateFlowTemplateCommand = async (
  */
 export const se_DeprecateSystemTemplateCommand = async (
   input: DeprecateSystemTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeprecateSystemTemplate");
   let body: any;
@@ -349,7 +349,7 @@ export const se_DeprecateSystemTemplateCommand = async (
  */
 export const se_DescribeNamespaceCommand = async (
   input: DescribeNamespaceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeNamespace");
   let body: any;
@@ -362,7 +362,7 @@ export const se_DescribeNamespaceCommand = async (
  */
 export const se_DissociateEntityFromThingCommand = async (
   input: DissociateEntityFromThingCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DissociateEntityFromThing");
   let body: any;
@@ -375,7 +375,7 @@ export const se_DissociateEntityFromThingCommand = async (
  */
 export const se_GetEntitiesCommand = async (
   input: GetEntitiesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetEntities");
   let body: any;
@@ -388,7 +388,7 @@ export const se_GetEntitiesCommand = async (
  */
 export const se_GetFlowTemplateCommand = async (
   input: GetFlowTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetFlowTemplate");
   let body: any;
@@ -401,7 +401,7 @@ export const se_GetFlowTemplateCommand = async (
  */
 export const se_GetFlowTemplateRevisionsCommand = async (
   input: GetFlowTemplateRevisionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetFlowTemplateRevisions");
   let body: any;
@@ -414,7 +414,7 @@ export const se_GetFlowTemplateRevisionsCommand = async (
  */
 export const se_GetNamespaceDeletionStatusCommand = async (
   input: GetNamespaceDeletionStatusCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetNamespaceDeletionStatus");
   let body: any;
@@ -427,7 +427,7 @@ export const se_GetNamespaceDeletionStatusCommand = async (
  */
 export const se_GetSystemInstanceCommand = async (
   input: GetSystemInstanceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetSystemInstance");
   let body: any;
@@ -440,7 +440,7 @@ export const se_GetSystemInstanceCommand = async (
  */
 export const se_GetSystemTemplateCommand = async (
   input: GetSystemTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetSystemTemplate");
   let body: any;
@@ -453,7 +453,7 @@ export const se_GetSystemTemplateCommand = async (
  */
 export const se_GetSystemTemplateRevisionsCommand = async (
   input: GetSystemTemplateRevisionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetSystemTemplateRevisions");
   let body: any;
@@ -466,7 +466,7 @@ export const se_GetSystemTemplateRevisionsCommand = async (
  */
 export const se_GetUploadStatusCommand = async (
   input: GetUploadStatusCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetUploadStatus");
   let body: any;
@@ -479,7 +479,7 @@ export const se_GetUploadStatusCommand = async (
  */
 export const se_ListFlowExecutionMessagesCommand = async (
   input: ListFlowExecutionMessagesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListFlowExecutionMessages");
   let body: any;
@@ -492,7 +492,7 @@ export const se_ListFlowExecutionMessagesCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListTagsForResource");
   let body: any;
@@ -505,7 +505,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_SearchEntitiesCommand = async (
   input: SearchEntitiesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("SearchEntities");
   let body: any;
@@ -518,7 +518,7 @@ export const se_SearchEntitiesCommand = async (
  */
 export const se_SearchFlowExecutionsCommand = async (
   input: SearchFlowExecutionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("SearchFlowExecutions");
   let body: any;
@@ -531,7 +531,7 @@ export const se_SearchFlowExecutionsCommand = async (
  */
 export const se_SearchFlowTemplatesCommand = async (
   input: SearchFlowTemplatesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("SearchFlowTemplates");
   let body: any;
@@ -544,7 +544,7 @@ export const se_SearchFlowTemplatesCommand = async (
  */
 export const se_SearchSystemInstancesCommand = async (
   input: SearchSystemInstancesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("SearchSystemInstances");
   let body: any;
@@ -557,7 +557,7 @@ export const se_SearchSystemInstancesCommand = async (
  */
 export const se_SearchSystemTemplatesCommand = async (
   input: SearchSystemTemplatesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("SearchSystemTemplates");
   let body: any;
@@ -570,7 +570,7 @@ export const se_SearchSystemTemplatesCommand = async (
  */
 export const se_SearchThingsCommand = async (
   input: SearchThingsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("SearchThings");
   let body: any;
@@ -583,7 +583,7 @@ export const se_SearchThingsCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("TagResource");
   let body: any;
@@ -596,7 +596,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UndeploySystemInstanceCommand = async (
   input: UndeploySystemInstanceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UndeploySystemInstance");
   let body: any;
@@ -609,7 +609,7 @@ export const se_UndeploySystemInstanceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UntagResource");
   let body: any;
@@ -622,7 +622,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateFlowTemplateCommand = async (
   input: UpdateFlowTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateFlowTemplate");
   let body: any;
@@ -635,7 +635,7 @@ export const se_UpdateFlowTemplateCommand = async (
  */
 export const se_UpdateSystemTemplateCommand = async (
   input: UpdateSystemTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateSystemTemplate");
   let body: any;
@@ -648,7 +648,7 @@ export const se_UpdateSystemTemplateCommand = async (
  */
 export const se_UploadEntityDefinitionsCommand = async (
   input: UploadEntityDefinitionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UploadEntityDefinitions");
   let body: any;
@@ -661,7 +661,7 @@ export const se_UploadEntityDefinitionsCommand = async (
  */
 export const de_AssociateEntityToThingCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssociateEntityToThingCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -681,7 +681,7 @@ export const de_AssociateEntityToThingCommand = async (
  */
 export const de_CreateFlowTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateFlowTemplateCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -701,7 +701,7 @@ export const de_CreateFlowTemplateCommand = async (
  */
 export const de_CreateSystemInstanceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateSystemInstanceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -721,7 +721,7 @@ export const de_CreateSystemInstanceCommand = async (
  */
 export const de_CreateSystemTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateSystemTemplateCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -741,7 +741,7 @@ export const de_CreateSystemTemplateCommand = async (
  */
 export const de_DeleteFlowTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteFlowTemplateCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -761,7 +761,7 @@ export const de_DeleteFlowTemplateCommand = async (
  */
 export const de_DeleteNamespaceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteNamespaceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -781,7 +781,7 @@ export const de_DeleteNamespaceCommand = async (
  */
 export const de_DeleteSystemInstanceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteSystemInstanceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -801,7 +801,7 @@ export const de_DeleteSystemInstanceCommand = async (
  */
 export const de_DeleteSystemTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteSystemTemplateCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -821,7 +821,7 @@ export const de_DeleteSystemTemplateCommand = async (
  */
 export const de_DeploySystemInstanceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeploySystemInstanceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -841,7 +841,7 @@ export const de_DeploySystemInstanceCommand = async (
  */
 export const de_DeprecateFlowTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeprecateFlowTemplateCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -861,7 +861,7 @@ export const de_DeprecateFlowTemplateCommand = async (
  */
 export const de_DeprecateSystemTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeprecateSystemTemplateCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -881,7 +881,7 @@ export const de_DeprecateSystemTemplateCommand = async (
  */
 export const de_DescribeNamespaceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeNamespaceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -901,7 +901,7 @@ export const de_DescribeNamespaceCommand = async (
  */
 export const de_DissociateEntityFromThingCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DissociateEntityFromThingCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -921,7 +921,7 @@ export const de_DissociateEntityFromThingCommand = async (
  */
 export const de_GetEntitiesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetEntitiesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -941,7 +941,7 @@ export const de_GetEntitiesCommand = async (
  */
 export const de_GetFlowTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetFlowTemplateCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -961,7 +961,7 @@ export const de_GetFlowTemplateCommand = async (
  */
 export const de_GetFlowTemplateRevisionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetFlowTemplateRevisionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -981,7 +981,7 @@ export const de_GetFlowTemplateRevisionsCommand = async (
  */
 export const de_GetNamespaceDeletionStatusCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetNamespaceDeletionStatusCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1001,7 +1001,7 @@ export const de_GetNamespaceDeletionStatusCommand = async (
  */
 export const de_GetSystemInstanceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetSystemInstanceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1021,7 +1021,7 @@ export const de_GetSystemInstanceCommand = async (
  */
 export const de_GetSystemTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetSystemTemplateCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1041,7 +1041,7 @@ export const de_GetSystemTemplateCommand = async (
  */
 export const de_GetSystemTemplateRevisionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetSystemTemplateRevisionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1061,7 +1061,7 @@ export const de_GetSystemTemplateRevisionsCommand = async (
  */
 export const de_GetUploadStatusCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetUploadStatusCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1081,7 +1081,7 @@ export const de_GetUploadStatusCommand = async (
  */
 export const de_ListFlowExecutionMessagesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListFlowExecutionMessagesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1101,7 +1101,7 @@ export const de_ListFlowExecutionMessagesCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1121,7 +1121,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_SearchEntitiesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SearchEntitiesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1141,7 +1141,7 @@ export const de_SearchEntitiesCommand = async (
  */
 export const de_SearchFlowExecutionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SearchFlowExecutionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1161,7 +1161,7 @@ export const de_SearchFlowExecutionsCommand = async (
  */
 export const de_SearchFlowTemplatesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SearchFlowTemplatesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1181,7 +1181,7 @@ export const de_SearchFlowTemplatesCommand = async (
  */
 export const de_SearchSystemInstancesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SearchSystemInstancesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1201,7 +1201,7 @@ export const de_SearchSystemInstancesCommand = async (
  */
 export const de_SearchSystemTemplatesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SearchSystemTemplatesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1221,7 +1221,7 @@ export const de_SearchSystemTemplatesCommand = async (
  */
 export const de_SearchThingsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SearchThingsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1241,7 +1241,7 @@ export const de_SearchThingsCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1261,7 +1261,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UndeploySystemInstanceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UndeploySystemInstanceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1281,7 +1281,7 @@ export const de_UndeploySystemInstanceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1301,7 +1301,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateFlowTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateFlowTemplateCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1321,7 +1321,7 @@ export const de_UpdateFlowTemplateCommand = async (
  */
 export const de_UpdateSystemTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateSystemTemplateCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1341,7 +1341,7 @@ export const de_UpdateSystemTemplateCommand = async (
  */
 export const de_UploadEntityDefinitionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UploadEntityDefinitionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1402,7 +1402,7 @@ const de_CommandError = async (output: __HttpResponse, context: __SerdeContext):
  */
 const de_InternalFailureExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalFailureException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1418,7 +1418,7 @@ const de_InternalFailureExceptionRes = async (
  */
 const de_InvalidRequestExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidRequestException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1434,7 +1434,7 @@ const de_InvalidRequestExceptionRes = async (
  */
 const de_LimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<LimitExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1450,7 +1450,7 @@ const de_LimitExceededExceptionRes = async (
  */
 const de_ResourceAlreadyExistsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceAlreadyExistsException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1466,7 +1466,7 @@ const de_ResourceAlreadyExistsExceptionRes = async (
  */
 const de_ResourceInUseExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceInUseException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1482,7 +1482,7 @@ const de_ResourceInUseExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1820,7 +1820,7 @@ const de_GetFlowTemplateResponse = (output: any, context: __SerdeContext): GetFl
  */
 const de_GetFlowTemplateRevisionsResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): GetFlowTemplateRevisionsResponse => {
   return take(output, {
     nextToken: __expectString,
@@ -1853,7 +1853,7 @@ const de_GetSystemTemplateResponse = (output: any, context: __SerdeContext): Get
  */
 const de_GetSystemTemplateRevisionsResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): GetSystemTemplateRevisionsResponse => {
   return take(output, {
     nextToken: __expectString,
@@ -1887,7 +1887,7 @@ const de_GetUploadStatusResponse = (output: any, context: __SerdeContext): GetUp
  */
 const de_ListFlowExecutionMessagesResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ListFlowExecutionMessagesResponse => {
   return take(output, {
     messages: (_: any) => de_FlowExecutionMessages(_, context),
@@ -2099,7 +2099,7 @@ const buildHttpRpcRequest = async (
   headers: __HeaderBag,
   path: string,
   resolvedHostname: string | undefined,
-  body: any
+  body: any,
 ): Promise<__HttpRequest> => {
   const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
   const contents: any = {

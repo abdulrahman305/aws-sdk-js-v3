@@ -25,6 +25,6 @@ Then("list queues should eventually return the queue urls", function (callback) 
 
       this.request(null, "listQueues", {}, next);
     },
-    { maxTime: 60 }
+    { maxTime: 60 },
   );
 });

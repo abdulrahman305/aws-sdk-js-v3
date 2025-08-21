@@ -427,16 +427,16 @@ export interface Imagebuilder {
    */
   cancelImageCreation(
     args: CancelImageCreationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CancelImageCreationCommandOutput>;
   cancelImageCreation(
     args: CancelImageCreationCommandInput,
-    cb: (err: any, data?: CancelImageCreationCommandOutput) => void
+    cb: (err: any, data?: CancelImageCreationCommandOutput) => void,
   ): void;
   cancelImageCreation(
     args: CancelImageCreationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CancelImageCreationCommandOutput) => void
+    cb: (err: any, data?: CancelImageCreationCommandOutput) => void,
   ): void;
 
   /**
@@ -444,16 +444,16 @@ export interface Imagebuilder {
    */
   cancelLifecycleExecution(
     args: CancelLifecycleExecutionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CancelLifecycleExecutionCommandOutput>;
   cancelLifecycleExecution(
     args: CancelLifecycleExecutionCommandInput,
-    cb: (err: any, data?: CancelLifecycleExecutionCommandOutput) => void
+    cb: (err: any, data?: CancelLifecycleExecutionCommandOutput) => void,
   ): void;
   cancelLifecycleExecution(
     args: CancelLifecycleExecutionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CancelLifecycleExecutionCommandOutput) => void
+    cb: (err: any, data?: CancelLifecycleExecutionCommandOutput) => void,
   ): void;
 
   /**
@@ -461,13 +461,13 @@ export interface Imagebuilder {
    */
   createComponent(
     args: CreateComponentCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateComponentCommandOutput>;
   createComponent(args: CreateComponentCommandInput, cb: (err: any, data?: CreateComponentCommandOutput) => void): void;
   createComponent(
     args: CreateComponentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateComponentCommandOutput) => void
+    cb: (err: any, data?: CreateComponentCommandOutput) => void,
   ): void;
 
   /**
@@ -475,16 +475,16 @@ export interface Imagebuilder {
    */
   createContainerRecipe(
     args: CreateContainerRecipeCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateContainerRecipeCommandOutput>;
   createContainerRecipe(
     args: CreateContainerRecipeCommandInput,
-    cb: (err: any, data?: CreateContainerRecipeCommandOutput) => void
+    cb: (err: any, data?: CreateContainerRecipeCommandOutput) => void,
   ): void;
   createContainerRecipe(
     args: CreateContainerRecipeCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateContainerRecipeCommandOutput) => void
+    cb: (err: any, data?: CreateContainerRecipeCommandOutput) => void,
   ): void;
 
   /**
@@ -492,16 +492,16 @@ export interface Imagebuilder {
    */
   createDistributionConfiguration(
     args: CreateDistributionConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateDistributionConfigurationCommandOutput>;
   createDistributionConfiguration(
     args: CreateDistributionConfigurationCommandInput,
-    cb: (err: any, data?: CreateDistributionConfigurationCommandOutput) => void
+    cb: (err: any, data?: CreateDistributionConfigurationCommandOutput) => void,
   ): void;
   createDistributionConfiguration(
     args: CreateDistributionConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateDistributionConfigurationCommandOutput) => void
+    cb: (err: any, data?: CreateDistributionConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -512,7 +512,7 @@ export interface Imagebuilder {
   createImage(
     args: CreateImageCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateImageCommandOutput) => void
+    cb: (err: any, data?: CreateImageCommandOutput) => void,
   ): void;
 
   /**
@@ -520,16 +520,16 @@ export interface Imagebuilder {
    */
   createImagePipeline(
     args: CreateImagePipelineCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateImagePipelineCommandOutput>;
   createImagePipeline(
     args: CreateImagePipelineCommandInput,
-    cb: (err: any, data?: CreateImagePipelineCommandOutput) => void
+    cb: (err: any, data?: CreateImagePipelineCommandOutput) => void,
   ): void;
   createImagePipeline(
     args: CreateImagePipelineCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateImagePipelineCommandOutput) => void
+    cb: (err: any, data?: CreateImagePipelineCommandOutput) => void,
   ): void;
 
   /**
@@ -537,16 +537,16 @@ export interface Imagebuilder {
    */
   createImageRecipe(
     args: CreateImageRecipeCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateImageRecipeCommandOutput>;
   createImageRecipe(
     args: CreateImageRecipeCommandInput,
-    cb: (err: any, data?: CreateImageRecipeCommandOutput) => void
+    cb: (err: any, data?: CreateImageRecipeCommandOutput) => void,
   ): void;
   createImageRecipe(
     args: CreateImageRecipeCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateImageRecipeCommandOutput) => void
+    cb: (err: any, data?: CreateImageRecipeCommandOutput) => void,
   ): void;
 
   /**
@@ -554,16 +554,16 @@ export interface Imagebuilder {
    */
   createInfrastructureConfiguration(
     args: CreateInfrastructureConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateInfrastructureConfigurationCommandOutput>;
   createInfrastructureConfiguration(
     args: CreateInfrastructureConfigurationCommandInput,
-    cb: (err: any, data?: CreateInfrastructureConfigurationCommandOutput) => void
+    cb: (err: any, data?: CreateInfrastructureConfigurationCommandOutput) => void,
   ): void;
   createInfrastructureConfiguration(
     args: CreateInfrastructureConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateInfrastructureConfigurationCommandOutput) => void
+    cb: (err: any, data?: CreateInfrastructureConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -571,16 +571,16 @@ export interface Imagebuilder {
    */
   createLifecyclePolicy(
     args: CreateLifecyclePolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateLifecyclePolicyCommandOutput>;
   createLifecyclePolicy(
     args: CreateLifecyclePolicyCommandInput,
-    cb: (err: any, data?: CreateLifecyclePolicyCommandOutput) => void
+    cb: (err: any, data?: CreateLifecyclePolicyCommandOutput) => void,
   ): void;
   createLifecyclePolicy(
     args: CreateLifecyclePolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateLifecyclePolicyCommandOutput) => void
+    cb: (err: any, data?: CreateLifecyclePolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -588,13 +588,13 @@ export interface Imagebuilder {
    */
   createWorkflow(
     args: CreateWorkflowCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateWorkflowCommandOutput>;
   createWorkflow(args: CreateWorkflowCommandInput, cb: (err: any, data?: CreateWorkflowCommandOutput) => void): void;
   createWorkflow(
     args: CreateWorkflowCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateWorkflowCommandOutput) => void
+    cb: (err: any, data?: CreateWorkflowCommandOutput) => void,
   ): void;
 
   /**
@@ -602,13 +602,13 @@ export interface Imagebuilder {
    */
   deleteComponent(
     args: DeleteComponentCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteComponentCommandOutput>;
   deleteComponent(args: DeleteComponentCommandInput, cb: (err: any, data?: DeleteComponentCommandOutput) => void): void;
   deleteComponent(
     args: DeleteComponentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteComponentCommandOutput) => void
+    cb: (err: any, data?: DeleteComponentCommandOutput) => void,
   ): void;
 
   /**
@@ -616,16 +616,16 @@ export interface Imagebuilder {
    */
   deleteContainerRecipe(
     args: DeleteContainerRecipeCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteContainerRecipeCommandOutput>;
   deleteContainerRecipe(
     args: DeleteContainerRecipeCommandInput,
-    cb: (err: any, data?: DeleteContainerRecipeCommandOutput) => void
+    cb: (err: any, data?: DeleteContainerRecipeCommandOutput) => void,
   ): void;
   deleteContainerRecipe(
     args: DeleteContainerRecipeCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteContainerRecipeCommandOutput) => void
+    cb: (err: any, data?: DeleteContainerRecipeCommandOutput) => void,
   ): void;
 
   /**
@@ -633,16 +633,16 @@ export interface Imagebuilder {
    */
   deleteDistributionConfiguration(
     args: DeleteDistributionConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteDistributionConfigurationCommandOutput>;
   deleteDistributionConfiguration(
     args: DeleteDistributionConfigurationCommandInput,
-    cb: (err: any, data?: DeleteDistributionConfigurationCommandOutput) => void
+    cb: (err: any, data?: DeleteDistributionConfigurationCommandOutput) => void,
   ): void;
   deleteDistributionConfiguration(
     args: DeleteDistributionConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteDistributionConfigurationCommandOutput) => void
+    cb: (err: any, data?: DeleteDistributionConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -653,7 +653,7 @@ export interface Imagebuilder {
   deleteImage(
     args: DeleteImageCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteImageCommandOutput) => void
+    cb: (err: any, data?: DeleteImageCommandOutput) => void,
   ): void;
 
   /**
@@ -661,16 +661,16 @@ export interface Imagebuilder {
    */
   deleteImagePipeline(
     args: DeleteImagePipelineCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteImagePipelineCommandOutput>;
   deleteImagePipeline(
     args: DeleteImagePipelineCommandInput,
-    cb: (err: any, data?: DeleteImagePipelineCommandOutput) => void
+    cb: (err: any, data?: DeleteImagePipelineCommandOutput) => void,
   ): void;
   deleteImagePipeline(
     args: DeleteImagePipelineCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteImagePipelineCommandOutput) => void
+    cb: (err: any, data?: DeleteImagePipelineCommandOutput) => void,
   ): void;
 
   /**
@@ -678,16 +678,16 @@ export interface Imagebuilder {
    */
   deleteImageRecipe(
     args: DeleteImageRecipeCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteImageRecipeCommandOutput>;
   deleteImageRecipe(
     args: DeleteImageRecipeCommandInput,
-    cb: (err: any, data?: DeleteImageRecipeCommandOutput) => void
+    cb: (err: any, data?: DeleteImageRecipeCommandOutput) => void,
   ): void;
   deleteImageRecipe(
     args: DeleteImageRecipeCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteImageRecipeCommandOutput) => void
+    cb: (err: any, data?: DeleteImageRecipeCommandOutput) => void,
   ): void;
 
   /**
@@ -695,16 +695,16 @@ export interface Imagebuilder {
    */
   deleteInfrastructureConfiguration(
     args: DeleteInfrastructureConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteInfrastructureConfigurationCommandOutput>;
   deleteInfrastructureConfiguration(
     args: DeleteInfrastructureConfigurationCommandInput,
-    cb: (err: any, data?: DeleteInfrastructureConfigurationCommandOutput) => void
+    cb: (err: any, data?: DeleteInfrastructureConfigurationCommandOutput) => void,
   ): void;
   deleteInfrastructureConfiguration(
     args: DeleteInfrastructureConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteInfrastructureConfigurationCommandOutput) => void
+    cb: (err: any, data?: DeleteInfrastructureConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -712,16 +712,16 @@ export interface Imagebuilder {
    */
   deleteLifecyclePolicy(
     args: DeleteLifecyclePolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteLifecyclePolicyCommandOutput>;
   deleteLifecyclePolicy(
     args: DeleteLifecyclePolicyCommandInput,
-    cb: (err: any, data?: DeleteLifecyclePolicyCommandOutput) => void
+    cb: (err: any, data?: DeleteLifecyclePolicyCommandOutput) => void,
   ): void;
   deleteLifecyclePolicy(
     args: DeleteLifecyclePolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteLifecyclePolicyCommandOutput) => void
+    cb: (err: any, data?: DeleteLifecyclePolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -729,13 +729,13 @@ export interface Imagebuilder {
    */
   deleteWorkflow(
     args: DeleteWorkflowCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteWorkflowCommandOutput>;
   deleteWorkflow(args: DeleteWorkflowCommandInput, cb: (err: any, data?: DeleteWorkflowCommandOutput) => void): void;
   deleteWorkflow(
     args: DeleteWorkflowCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteWorkflowCommandOutput) => void
+    cb: (err: any, data?: DeleteWorkflowCommandOutput) => void,
   ): void;
 
   /**
@@ -746,7 +746,7 @@ export interface Imagebuilder {
   getComponent(
     args: GetComponentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetComponentCommandOutput) => void
+    cb: (err: any, data?: GetComponentCommandOutput) => void,
   ): void;
 
   /**
@@ -754,16 +754,16 @@ export interface Imagebuilder {
    */
   getComponentPolicy(
     args: GetComponentPolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetComponentPolicyCommandOutput>;
   getComponentPolicy(
     args: GetComponentPolicyCommandInput,
-    cb: (err: any, data?: GetComponentPolicyCommandOutput) => void
+    cb: (err: any, data?: GetComponentPolicyCommandOutput) => void,
   ): void;
   getComponentPolicy(
     args: GetComponentPolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetComponentPolicyCommandOutput) => void
+    cb: (err: any, data?: GetComponentPolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -771,16 +771,16 @@ export interface Imagebuilder {
    */
   getContainerRecipe(
     args: GetContainerRecipeCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetContainerRecipeCommandOutput>;
   getContainerRecipe(
     args: GetContainerRecipeCommandInput,
-    cb: (err: any, data?: GetContainerRecipeCommandOutput) => void
+    cb: (err: any, data?: GetContainerRecipeCommandOutput) => void,
   ): void;
   getContainerRecipe(
     args: GetContainerRecipeCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetContainerRecipeCommandOutput) => void
+    cb: (err: any, data?: GetContainerRecipeCommandOutput) => void,
   ): void;
 
   /**
@@ -788,16 +788,16 @@ export interface Imagebuilder {
    */
   getContainerRecipePolicy(
     args: GetContainerRecipePolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetContainerRecipePolicyCommandOutput>;
   getContainerRecipePolicy(
     args: GetContainerRecipePolicyCommandInput,
-    cb: (err: any, data?: GetContainerRecipePolicyCommandOutput) => void
+    cb: (err: any, data?: GetContainerRecipePolicyCommandOutput) => void,
   ): void;
   getContainerRecipePolicy(
     args: GetContainerRecipePolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetContainerRecipePolicyCommandOutput) => void
+    cb: (err: any, data?: GetContainerRecipePolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -805,16 +805,16 @@ export interface Imagebuilder {
    */
   getDistributionConfiguration(
     args: GetDistributionConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetDistributionConfigurationCommandOutput>;
   getDistributionConfiguration(
     args: GetDistributionConfigurationCommandInput,
-    cb: (err: any, data?: GetDistributionConfigurationCommandOutput) => void
+    cb: (err: any, data?: GetDistributionConfigurationCommandOutput) => void,
   ): void;
   getDistributionConfiguration(
     args: GetDistributionConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetDistributionConfigurationCommandOutput) => void
+    cb: (err: any, data?: GetDistributionConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -825,7 +825,7 @@ export interface Imagebuilder {
   getImage(
     args: GetImageCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetImageCommandOutput) => void
+    cb: (err: any, data?: GetImageCommandOutput) => void,
   ): void;
 
   /**
@@ -833,16 +833,16 @@ export interface Imagebuilder {
    */
   getImagePipeline(
     args: GetImagePipelineCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetImagePipelineCommandOutput>;
   getImagePipeline(
     args: GetImagePipelineCommandInput,
-    cb: (err: any, data?: GetImagePipelineCommandOutput) => void
+    cb: (err: any, data?: GetImagePipelineCommandOutput) => void,
   ): void;
   getImagePipeline(
     args: GetImagePipelineCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetImagePipelineCommandOutput) => void
+    cb: (err: any, data?: GetImagePipelineCommandOutput) => void,
   ): void;
 
   /**
@@ -850,13 +850,13 @@ export interface Imagebuilder {
    */
   getImagePolicy(
     args: GetImagePolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetImagePolicyCommandOutput>;
   getImagePolicy(args: GetImagePolicyCommandInput, cb: (err: any, data?: GetImagePolicyCommandOutput) => void): void;
   getImagePolicy(
     args: GetImagePolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetImagePolicyCommandOutput) => void
+    cb: (err: any, data?: GetImagePolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -864,13 +864,13 @@ export interface Imagebuilder {
    */
   getImageRecipe(
     args: GetImageRecipeCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetImageRecipeCommandOutput>;
   getImageRecipe(args: GetImageRecipeCommandInput, cb: (err: any, data?: GetImageRecipeCommandOutput) => void): void;
   getImageRecipe(
     args: GetImageRecipeCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetImageRecipeCommandOutput) => void
+    cb: (err: any, data?: GetImageRecipeCommandOutput) => void,
   ): void;
 
   /**
@@ -878,16 +878,16 @@ export interface Imagebuilder {
    */
   getImageRecipePolicy(
     args: GetImageRecipePolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetImageRecipePolicyCommandOutput>;
   getImageRecipePolicy(
     args: GetImageRecipePolicyCommandInput,
-    cb: (err: any, data?: GetImageRecipePolicyCommandOutput) => void
+    cb: (err: any, data?: GetImageRecipePolicyCommandOutput) => void,
   ): void;
   getImageRecipePolicy(
     args: GetImageRecipePolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetImageRecipePolicyCommandOutput) => void
+    cb: (err: any, data?: GetImageRecipePolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -895,16 +895,16 @@ export interface Imagebuilder {
    */
   getInfrastructureConfiguration(
     args: GetInfrastructureConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetInfrastructureConfigurationCommandOutput>;
   getInfrastructureConfiguration(
     args: GetInfrastructureConfigurationCommandInput,
-    cb: (err: any, data?: GetInfrastructureConfigurationCommandOutput) => void
+    cb: (err: any, data?: GetInfrastructureConfigurationCommandOutput) => void,
   ): void;
   getInfrastructureConfiguration(
     args: GetInfrastructureConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetInfrastructureConfigurationCommandOutput) => void
+    cb: (err: any, data?: GetInfrastructureConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -912,16 +912,16 @@ export interface Imagebuilder {
    */
   getLifecycleExecution(
     args: GetLifecycleExecutionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetLifecycleExecutionCommandOutput>;
   getLifecycleExecution(
     args: GetLifecycleExecutionCommandInput,
-    cb: (err: any, data?: GetLifecycleExecutionCommandOutput) => void
+    cb: (err: any, data?: GetLifecycleExecutionCommandOutput) => void,
   ): void;
   getLifecycleExecution(
     args: GetLifecycleExecutionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetLifecycleExecutionCommandOutput) => void
+    cb: (err: any, data?: GetLifecycleExecutionCommandOutput) => void,
   ): void;
 
   /**
@@ -929,16 +929,16 @@ export interface Imagebuilder {
    */
   getLifecyclePolicy(
     args: GetLifecyclePolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetLifecyclePolicyCommandOutput>;
   getLifecyclePolicy(
     args: GetLifecyclePolicyCommandInput,
-    cb: (err: any, data?: GetLifecyclePolicyCommandOutput) => void
+    cb: (err: any, data?: GetLifecyclePolicyCommandOutput) => void,
   ): void;
   getLifecyclePolicy(
     args: GetLifecyclePolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetLifecyclePolicyCommandOutput) => void
+    cb: (err: any, data?: GetLifecyclePolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -949,7 +949,7 @@ export interface Imagebuilder {
   getWorkflow(
     args: GetWorkflowCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetWorkflowCommandOutput) => void
+    cb: (err: any, data?: GetWorkflowCommandOutput) => void,
   ): void;
 
   /**
@@ -957,16 +957,16 @@ export interface Imagebuilder {
    */
   getWorkflowExecution(
     args: GetWorkflowExecutionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetWorkflowExecutionCommandOutput>;
   getWorkflowExecution(
     args: GetWorkflowExecutionCommandInput,
-    cb: (err: any, data?: GetWorkflowExecutionCommandOutput) => void
+    cb: (err: any, data?: GetWorkflowExecutionCommandOutput) => void,
   ): void;
   getWorkflowExecution(
     args: GetWorkflowExecutionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetWorkflowExecutionCommandOutput) => void
+    cb: (err: any, data?: GetWorkflowExecutionCommandOutput) => void,
   ): void;
 
   /**
@@ -974,16 +974,16 @@ export interface Imagebuilder {
    */
   getWorkflowStepExecution(
     args: GetWorkflowStepExecutionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetWorkflowStepExecutionCommandOutput>;
   getWorkflowStepExecution(
     args: GetWorkflowStepExecutionCommandInput,
-    cb: (err: any, data?: GetWorkflowStepExecutionCommandOutput) => void
+    cb: (err: any, data?: GetWorkflowStepExecutionCommandOutput) => void,
   ): void;
   getWorkflowStepExecution(
     args: GetWorkflowStepExecutionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetWorkflowStepExecutionCommandOutput) => void
+    cb: (err: any, data?: GetWorkflowStepExecutionCommandOutput) => void,
   ): void;
 
   /**
@@ -991,13 +991,13 @@ export interface Imagebuilder {
    */
   importComponent(
     args: ImportComponentCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ImportComponentCommandOutput>;
   importComponent(args: ImportComponentCommandInput, cb: (err: any, data?: ImportComponentCommandOutput) => void): void;
   importComponent(
     args: ImportComponentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ImportComponentCommandOutput) => void
+    cb: (err: any, data?: ImportComponentCommandOutput) => void,
   ): void;
 
   /**
@@ -1008,7 +1008,7 @@ export interface Imagebuilder {
   importVmImage(
     args: ImportVmImageCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ImportVmImageCommandOutput) => void
+    cb: (err: any, data?: ImportVmImageCommandOutput) => void,
   ): void;
 
   /**
@@ -1016,16 +1016,16 @@ export interface Imagebuilder {
    */
   listComponentBuildVersions(
     args: ListComponentBuildVersionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListComponentBuildVersionsCommandOutput>;
   listComponentBuildVersions(
     args: ListComponentBuildVersionsCommandInput,
-    cb: (err: any, data?: ListComponentBuildVersionsCommandOutput) => void
+    cb: (err: any, data?: ListComponentBuildVersionsCommandOutput) => void,
   ): void;
   listComponentBuildVersions(
     args: ListComponentBuildVersionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListComponentBuildVersionsCommandOutput) => void
+    cb: (err: any, data?: ListComponentBuildVersionsCommandOutput) => void,
   ): void;
 
   /**
@@ -1034,13 +1034,13 @@ export interface Imagebuilder {
   listComponents(): Promise<ListComponentsCommandOutput>;
   listComponents(
     args: ListComponentsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListComponentsCommandOutput>;
   listComponents(args: ListComponentsCommandInput, cb: (err: any, data?: ListComponentsCommandOutput) => void): void;
   listComponents(
     args: ListComponentsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListComponentsCommandOutput) => void
+    cb: (err: any, data?: ListComponentsCommandOutput) => void,
   ): void;
 
   /**
@@ -1049,16 +1049,16 @@ export interface Imagebuilder {
   listContainerRecipes(): Promise<ListContainerRecipesCommandOutput>;
   listContainerRecipes(
     args: ListContainerRecipesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListContainerRecipesCommandOutput>;
   listContainerRecipes(
     args: ListContainerRecipesCommandInput,
-    cb: (err: any, data?: ListContainerRecipesCommandOutput) => void
+    cb: (err: any, data?: ListContainerRecipesCommandOutput) => void,
   ): void;
   listContainerRecipes(
     args: ListContainerRecipesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListContainerRecipesCommandOutput) => void
+    cb: (err: any, data?: ListContainerRecipesCommandOutput) => void,
   ): void;
 
   /**
@@ -1067,16 +1067,16 @@ export interface Imagebuilder {
   listDistributionConfigurations(): Promise<ListDistributionConfigurationsCommandOutput>;
   listDistributionConfigurations(
     args: ListDistributionConfigurationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListDistributionConfigurationsCommandOutput>;
   listDistributionConfigurations(
     args: ListDistributionConfigurationsCommandInput,
-    cb: (err: any, data?: ListDistributionConfigurationsCommandOutput) => void
+    cb: (err: any, data?: ListDistributionConfigurationsCommandOutput) => void,
   ): void;
   listDistributionConfigurations(
     args: ListDistributionConfigurationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListDistributionConfigurationsCommandOutput) => void
+    cb: (err: any, data?: ListDistributionConfigurationsCommandOutput) => void,
   ): void;
 
   /**
@@ -1084,16 +1084,16 @@ export interface Imagebuilder {
    */
   listImageBuildVersions(
     args: ListImageBuildVersionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListImageBuildVersionsCommandOutput>;
   listImageBuildVersions(
     args: ListImageBuildVersionsCommandInput,
-    cb: (err: any, data?: ListImageBuildVersionsCommandOutput) => void
+    cb: (err: any, data?: ListImageBuildVersionsCommandOutput) => void,
   ): void;
   listImageBuildVersions(
     args: ListImageBuildVersionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListImageBuildVersionsCommandOutput) => void
+    cb: (err: any, data?: ListImageBuildVersionsCommandOutput) => void,
   ): void;
 
   /**
@@ -1101,16 +1101,16 @@ export interface Imagebuilder {
    */
   listImagePackages(
     args: ListImagePackagesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListImagePackagesCommandOutput>;
   listImagePackages(
     args: ListImagePackagesCommandInput,
-    cb: (err: any, data?: ListImagePackagesCommandOutput) => void
+    cb: (err: any, data?: ListImagePackagesCommandOutput) => void,
   ): void;
   listImagePackages(
     args: ListImagePackagesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListImagePackagesCommandOutput) => void
+    cb: (err: any, data?: ListImagePackagesCommandOutput) => void,
   ): void;
 
   /**
@@ -1118,16 +1118,16 @@ export interface Imagebuilder {
    */
   listImagePipelineImages(
     args: ListImagePipelineImagesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListImagePipelineImagesCommandOutput>;
   listImagePipelineImages(
     args: ListImagePipelineImagesCommandInput,
-    cb: (err: any, data?: ListImagePipelineImagesCommandOutput) => void
+    cb: (err: any, data?: ListImagePipelineImagesCommandOutput) => void,
   ): void;
   listImagePipelineImages(
     args: ListImagePipelineImagesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListImagePipelineImagesCommandOutput) => void
+    cb: (err: any, data?: ListImagePipelineImagesCommandOutput) => void,
   ): void;
 
   /**
@@ -1136,16 +1136,16 @@ export interface Imagebuilder {
   listImagePipelines(): Promise<ListImagePipelinesCommandOutput>;
   listImagePipelines(
     args: ListImagePipelinesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListImagePipelinesCommandOutput>;
   listImagePipelines(
     args: ListImagePipelinesCommandInput,
-    cb: (err: any, data?: ListImagePipelinesCommandOutput) => void
+    cb: (err: any, data?: ListImagePipelinesCommandOutput) => void,
   ): void;
   listImagePipelines(
     args: ListImagePipelinesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListImagePipelinesCommandOutput) => void
+    cb: (err: any, data?: ListImagePipelinesCommandOutput) => void,
   ): void;
 
   /**
@@ -1154,16 +1154,16 @@ export interface Imagebuilder {
   listImageRecipes(): Promise<ListImageRecipesCommandOutput>;
   listImageRecipes(
     args: ListImageRecipesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListImageRecipesCommandOutput>;
   listImageRecipes(
     args: ListImageRecipesCommandInput,
-    cb: (err: any, data?: ListImageRecipesCommandOutput) => void
+    cb: (err: any, data?: ListImageRecipesCommandOutput) => void,
   ): void;
   listImageRecipes(
     args: ListImageRecipesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListImageRecipesCommandOutput) => void
+    cb: (err: any, data?: ListImageRecipesCommandOutput) => void,
   ): void;
 
   /**
@@ -1175,7 +1175,7 @@ export interface Imagebuilder {
   listImages(
     args: ListImagesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListImagesCommandOutput) => void
+    cb: (err: any, data?: ListImagesCommandOutput) => void,
   ): void;
 
   /**
@@ -1184,16 +1184,16 @@ export interface Imagebuilder {
   listImageScanFindingAggregations(): Promise<ListImageScanFindingAggregationsCommandOutput>;
   listImageScanFindingAggregations(
     args: ListImageScanFindingAggregationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListImageScanFindingAggregationsCommandOutput>;
   listImageScanFindingAggregations(
     args: ListImageScanFindingAggregationsCommandInput,
-    cb: (err: any, data?: ListImageScanFindingAggregationsCommandOutput) => void
+    cb: (err: any, data?: ListImageScanFindingAggregationsCommandOutput) => void,
   ): void;
   listImageScanFindingAggregations(
     args: ListImageScanFindingAggregationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListImageScanFindingAggregationsCommandOutput) => void
+    cb: (err: any, data?: ListImageScanFindingAggregationsCommandOutput) => void,
   ): void;
 
   /**
@@ -1202,16 +1202,16 @@ export interface Imagebuilder {
   listImageScanFindings(): Promise<ListImageScanFindingsCommandOutput>;
   listImageScanFindings(
     args: ListImageScanFindingsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListImageScanFindingsCommandOutput>;
   listImageScanFindings(
     args: ListImageScanFindingsCommandInput,
-    cb: (err: any, data?: ListImageScanFindingsCommandOutput) => void
+    cb: (err: any, data?: ListImageScanFindingsCommandOutput) => void,
   ): void;
   listImageScanFindings(
     args: ListImageScanFindingsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListImageScanFindingsCommandOutput) => void
+    cb: (err: any, data?: ListImageScanFindingsCommandOutput) => void,
   ): void;
 
   /**
@@ -1220,16 +1220,16 @@ export interface Imagebuilder {
   listInfrastructureConfigurations(): Promise<ListInfrastructureConfigurationsCommandOutput>;
   listInfrastructureConfigurations(
     args: ListInfrastructureConfigurationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListInfrastructureConfigurationsCommandOutput>;
   listInfrastructureConfigurations(
     args: ListInfrastructureConfigurationsCommandInput,
-    cb: (err: any, data?: ListInfrastructureConfigurationsCommandOutput) => void
+    cb: (err: any, data?: ListInfrastructureConfigurationsCommandOutput) => void,
   ): void;
   listInfrastructureConfigurations(
     args: ListInfrastructureConfigurationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListInfrastructureConfigurationsCommandOutput) => void
+    cb: (err: any, data?: ListInfrastructureConfigurationsCommandOutput) => void,
   ): void;
 
   /**
@@ -1237,16 +1237,16 @@ export interface Imagebuilder {
    */
   listLifecycleExecutionResources(
     args: ListLifecycleExecutionResourcesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListLifecycleExecutionResourcesCommandOutput>;
   listLifecycleExecutionResources(
     args: ListLifecycleExecutionResourcesCommandInput,
-    cb: (err: any, data?: ListLifecycleExecutionResourcesCommandOutput) => void
+    cb: (err: any, data?: ListLifecycleExecutionResourcesCommandOutput) => void,
   ): void;
   listLifecycleExecutionResources(
     args: ListLifecycleExecutionResourcesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListLifecycleExecutionResourcesCommandOutput) => void
+    cb: (err: any, data?: ListLifecycleExecutionResourcesCommandOutput) => void,
   ): void;
 
   /**
@@ -1254,16 +1254,16 @@ export interface Imagebuilder {
    */
   listLifecycleExecutions(
     args: ListLifecycleExecutionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListLifecycleExecutionsCommandOutput>;
   listLifecycleExecutions(
     args: ListLifecycleExecutionsCommandInput,
-    cb: (err: any, data?: ListLifecycleExecutionsCommandOutput) => void
+    cb: (err: any, data?: ListLifecycleExecutionsCommandOutput) => void,
   ): void;
   listLifecycleExecutions(
     args: ListLifecycleExecutionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListLifecycleExecutionsCommandOutput) => void
+    cb: (err: any, data?: ListLifecycleExecutionsCommandOutput) => void,
   ): void;
 
   /**
@@ -1272,16 +1272,16 @@ export interface Imagebuilder {
   listLifecyclePolicies(): Promise<ListLifecyclePoliciesCommandOutput>;
   listLifecyclePolicies(
     args: ListLifecyclePoliciesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListLifecyclePoliciesCommandOutput>;
   listLifecyclePolicies(
     args: ListLifecyclePoliciesCommandInput,
-    cb: (err: any, data?: ListLifecyclePoliciesCommandOutput) => void
+    cb: (err: any, data?: ListLifecyclePoliciesCommandOutput) => void,
   ): void;
   listLifecyclePolicies(
     args: ListLifecyclePoliciesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListLifecyclePoliciesCommandOutput) => void
+    cb: (err: any, data?: ListLifecyclePoliciesCommandOutput) => void,
   ): void;
 
   /**
@@ -1289,16 +1289,16 @@ export interface Imagebuilder {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -1307,16 +1307,16 @@ export interface Imagebuilder {
   listWaitingWorkflowSteps(): Promise<ListWaitingWorkflowStepsCommandOutput>;
   listWaitingWorkflowSteps(
     args: ListWaitingWorkflowStepsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListWaitingWorkflowStepsCommandOutput>;
   listWaitingWorkflowSteps(
     args: ListWaitingWorkflowStepsCommandInput,
-    cb: (err: any, data?: ListWaitingWorkflowStepsCommandOutput) => void
+    cb: (err: any, data?: ListWaitingWorkflowStepsCommandOutput) => void,
   ): void;
   listWaitingWorkflowSteps(
     args: ListWaitingWorkflowStepsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListWaitingWorkflowStepsCommandOutput) => void
+    cb: (err: any, data?: ListWaitingWorkflowStepsCommandOutput) => void,
   ): void;
 
   /**
@@ -1324,16 +1324,16 @@ export interface Imagebuilder {
    */
   listWorkflowBuildVersions(
     args: ListWorkflowBuildVersionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListWorkflowBuildVersionsCommandOutput>;
   listWorkflowBuildVersions(
     args: ListWorkflowBuildVersionsCommandInput,
-    cb: (err: any, data?: ListWorkflowBuildVersionsCommandOutput) => void
+    cb: (err: any, data?: ListWorkflowBuildVersionsCommandOutput) => void,
   ): void;
   listWorkflowBuildVersions(
     args: ListWorkflowBuildVersionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListWorkflowBuildVersionsCommandOutput) => void
+    cb: (err: any, data?: ListWorkflowBuildVersionsCommandOutput) => void,
   ): void;
 
   /**
@@ -1341,16 +1341,16 @@ export interface Imagebuilder {
    */
   listWorkflowExecutions(
     args: ListWorkflowExecutionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListWorkflowExecutionsCommandOutput>;
   listWorkflowExecutions(
     args: ListWorkflowExecutionsCommandInput,
-    cb: (err: any, data?: ListWorkflowExecutionsCommandOutput) => void
+    cb: (err: any, data?: ListWorkflowExecutionsCommandOutput) => void,
   ): void;
   listWorkflowExecutions(
     args: ListWorkflowExecutionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListWorkflowExecutionsCommandOutput) => void
+    cb: (err: any, data?: ListWorkflowExecutionsCommandOutput) => void,
   ): void;
 
   /**
@@ -1362,7 +1362,7 @@ export interface Imagebuilder {
   listWorkflows(
     args: ListWorkflowsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListWorkflowsCommandOutput) => void
+    cb: (err: any, data?: ListWorkflowsCommandOutput) => void,
   ): void;
 
   /**
@@ -1370,16 +1370,16 @@ export interface Imagebuilder {
    */
   listWorkflowStepExecutions(
     args: ListWorkflowStepExecutionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListWorkflowStepExecutionsCommandOutput>;
   listWorkflowStepExecutions(
     args: ListWorkflowStepExecutionsCommandInput,
-    cb: (err: any, data?: ListWorkflowStepExecutionsCommandOutput) => void
+    cb: (err: any, data?: ListWorkflowStepExecutionsCommandOutput) => void,
   ): void;
   listWorkflowStepExecutions(
     args: ListWorkflowStepExecutionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListWorkflowStepExecutionsCommandOutput) => void
+    cb: (err: any, data?: ListWorkflowStepExecutionsCommandOutput) => void,
   ): void;
 
   /**
@@ -1387,16 +1387,16 @@ export interface Imagebuilder {
    */
   putComponentPolicy(
     args: PutComponentPolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutComponentPolicyCommandOutput>;
   putComponentPolicy(
     args: PutComponentPolicyCommandInput,
-    cb: (err: any, data?: PutComponentPolicyCommandOutput) => void
+    cb: (err: any, data?: PutComponentPolicyCommandOutput) => void,
   ): void;
   putComponentPolicy(
     args: PutComponentPolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutComponentPolicyCommandOutput) => void
+    cb: (err: any, data?: PutComponentPolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -1404,16 +1404,16 @@ export interface Imagebuilder {
    */
   putContainerRecipePolicy(
     args: PutContainerRecipePolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutContainerRecipePolicyCommandOutput>;
   putContainerRecipePolicy(
     args: PutContainerRecipePolicyCommandInput,
-    cb: (err: any, data?: PutContainerRecipePolicyCommandOutput) => void
+    cb: (err: any, data?: PutContainerRecipePolicyCommandOutput) => void,
   ): void;
   putContainerRecipePolicy(
     args: PutContainerRecipePolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutContainerRecipePolicyCommandOutput) => void
+    cb: (err: any, data?: PutContainerRecipePolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -1421,13 +1421,13 @@ export interface Imagebuilder {
    */
   putImagePolicy(
     args: PutImagePolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutImagePolicyCommandOutput>;
   putImagePolicy(args: PutImagePolicyCommandInput, cb: (err: any, data?: PutImagePolicyCommandOutput) => void): void;
   putImagePolicy(
     args: PutImagePolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutImagePolicyCommandOutput) => void
+    cb: (err: any, data?: PutImagePolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -1435,16 +1435,16 @@ export interface Imagebuilder {
    */
   putImageRecipePolicy(
     args: PutImageRecipePolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutImageRecipePolicyCommandOutput>;
   putImageRecipePolicy(
     args: PutImageRecipePolicyCommandInput,
-    cb: (err: any, data?: PutImageRecipePolicyCommandOutput) => void
+    cb: (err: any, data?: PutImageRecipePolicyCommandOutput) => void,
   ): void;
   putImageRecipePolicy(
     args: PutImageRecipePolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutImageRecipePolicyCommandOutput) => void
+    cb: (err: any, data?: PutImageRecipePolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -1452,16 +1452,16 @@ export interface Imagebuilder {
    */
   sendWorkflowStepAction(
     args: SendWorkflowStepActionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<SendWorkflowStepActionCommandOutput>;
   sendWorkflowStepAction(
     args: SendWorkflowStepActionCommandInput,
-    cb: (err: any, data?: SendWorkflowStepActionCommandOutput) => void
+    cb: (err: any, data?: SendWorkflowStepActionCommandOutput) => void,
   ): void;
   sendWorkflowStepAction(
     args: SendWorkflowStepActionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SendWorkflowStepActionCommandOutput) => void
+    cb: (err: any, data?: SendWorkflowStepActionCommandOutput) => void,
   ): void;
 
   /**
@@ -1469,16 +1469,16 @@ export interface Imagebuilder {
    */
   startImagePipelineExecution(
     args: StartImagePipelineExecutionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartImagePipelineExecutionCommandOutput>;
   startImagePipelineExecution(
     args: StartImagePipelineExecutionCommandInput,
-    cb: (err: any, data?: StartImagePipelineExecutionCommandOutput) => void
+    cb: (err: any, data?: StartImagePipelineExecutionCommandOutput) => void,
   ): void;
   startImagePipelineExecution(
     args: StartImagePipelineExecutionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartImagePipelineExecutionCommandOutput) => void
+    cb: (err: any, data?: StartImagePipelineExecutionCommandOutput) => void,
   ): void;
 
   /**
@@ -1486,16 +1486,16 @@ export interface Imagebuilder {
    */
   startResourceStateUpdate(
     args: StartResourceStateUpdateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartResourceStateUpdateCommandOutput>;
   startResourceStateUpdate(
     args: StartResourceStateUpdateCommandInput,
-    cb: (err: any, data?: StartResourceStateUpdateCommandOutput) => void
+    cb: (err: any, data?: StartResourceStateUpdateCommandOutput) => void,
   ): void;
   startResourceStateUpdate(
     args: StartResourceStateUpdateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartResourceStateUpdateCommandOutput) => void
+    cb: (err: any, data?: StartResourceStateUpdateCommandOutput) => void,
   ): void;
 
   /**
@@ -1506,7 +1506,7 @@ export interface Imagebuilder {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -1517,7 +1517,7 @@ export interface Imagebuilder {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -1525,16 +1525,16 @@ export interface Imagebuilder {
    */
   updateDistributionConfiguration(
     args: UpdateDistributionConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateDistributionConfigurationCommandOutput>;
   updateDistributionConfiguration(
     args: UpdateDistributionConfigurationCommandInput,
-    cb: (err: any, data?: UpdateDistributionConfigurationCommandOutput) => void
+    cb: (err: any, data?: UpdateDistributionConfigurationCommandOutput) => void,
   ): void;
   updateDistributionConfiguration(
     args: UpdateDistributionConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateDistributionConfigurationCommandOutput) => void
+    cb: (err: any, data?: UpdateDistributionConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -1542,16 +1542,16 @@ export interface Imagebuilder {
    */
   updateImagePipeline(
     args: UpdateImagePipelineCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateImagePipelineCommandOutput>;
   updateImagePipeline(
     args: UpdateImagePipelineCommandInput,
-    cb: (err: any, data?: UpdateImagePipelineCommandOutput) => void
+    cb: (err: any, data?: UpdateImagePipelineCommandOutput) => void,
   ): void;
   updateImagePipeline(
     args: UpdateImagePipelineCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateImagePipelineCommandOutput) => void
+    cb: (err: any, data?: UpdateImagePipelineCommandOutput) => void,
   ): void;
 
   /**
@@ -1559,16 +1559,16 @@ export interface Imagebuilder {
    */
   updateInfrastructureConfiguration(
     args: UpdateInfrastructureConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateInfrastructureConfigurationCommandOutput>;
   updateInfrastructureConfiguration(
     args: UpdateInfrastructureConfigurationCommandInput,
-    cb: (err: any, data?: UpdateInfrastructureConfigurationCommandOutput) => void
+    cb: (err: any, data?: UpdateInfrastructureConfigurationCommandOutput) => void,
   ): void;
   updateInfrastructureConfiguration(
     args: UpdateInfrastructureConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateInfrastructureConfigurationCommandOutput) => void
+    cb: (err: any, data?: UpdateInfrastructureConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -1576,16 +1576,16 @@ export interface Imagebuilder {
    */
   updateLifecyclePolicy(
     args: UpdateLifecyclePolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateLifecyclePolicyCommandOutput>;
   updateLifecyclePolicy(
     args: UpdateLifecyclePolicyCommandInput,
-    cb: (err: any, data?: UpdateLifecyclePolicyCommandOutput) => void
+    cb: (err: any, data?: UpdateLifecyclePolicyCommandOutput) => void,
   ): void;
   updateLifecyclePolicy(
     args: UpdateLifecyclePolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateLifecyclePolicyCommandOutput) => void
+    cb: (err: any, data?: UpdateLifecyclePolicyCommandOutput) => void,
   ): void;
 }
 

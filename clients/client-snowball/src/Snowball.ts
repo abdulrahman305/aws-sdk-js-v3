@@ -158,7 +158,7 @@ export interface Snowball {
   cancelCluster(
     args: CancelClusterCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CancelClusterCommandOutput) => void
+    cb: (err: any, data?: CancelClusterCommandOutput) => void,
   ): void;
 
   /**
@@ -169,7 +169,7 @@ export interface Snowball {
   cancelJob(
     args: CancelJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CancelJobCommandOutput) => void
+    cb: (err: any, data?: CancelJobCommandOutput) => void,
   ): void;
 
   /**
@@ -180,7 +180,7 @@ export interface Snowball {
   createAddress(
     args: CreateAddressCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateAddressCommandOutput) => void
+    cb: (err: any, data?: CreateAddressCommandOutput) => void,
   ): void;
 
   /**
@@ -191,7 +191,7 @@ export interface Snowball {
   createCluster(
     args: CreateClusterCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateClusterCommandOutput) => void
+    cb: (err: any, data?: CreateClusterCommandOutput) => void,
   ): void;
 
   /**
@@ -203,7 +203,7 @@ export interface Snowball {
   createJob(
     args: CreateJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateJobCommandOutput) => void
+    cb: (err: any, data?: CreateJobCommandOutput) => void,
   ): void;
 
   /**
@@ -211,16 +211,16 @@ export interface Snowball {
    */
   createLongTermPricing(
     args: CreateLongTermPricingCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateLongTermPricingCommandOutput>;
   createLongTermPricing(
     args: CreateLongTermPricingCommandInput,
-    cb: (err: any, data?: CreateLongTermPricingCommandOutput) => void
+    cb: (err: any, data?: CreateLongTermPricingCommandOutput) => void,
   ): void;
   createLongTermPricing(
     args: CreateLongTermPricingCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateLongTermPricingCommandOutput) => void
+    cb: (err: any, data?: CreateLongTermPricingCommandOutput) => void,
   ): void;
 
   /**
@@ -228,16 +228,16 @@ export interface Snowball {
    */
   createReturnShippingLabel(
     args: CreateReturnShippingLabelCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateReturnShippingLabelCommandOutput>;
   createReturnShippingLabel(
     args: CreateReturnShippingLabelCommandInput,
-    cb: (err: any, data?: CreateReturnShippingLabelCommandOutput) => void
+    cb: (err: any, data?: CreateReturnShippingLabelCommandOutput) => void,
   ): void;
   createReturnShippingLabel(
     args: CreateReturnShippingLabelCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateReturnShippingLabelCommandOutput) => void
+    cb: (err: any, data?: CreateReturnShippingLabelCommandOutput) => void,
   ): void;
 
   /**
@@ -245,13 +245,13 @@ export interface Snowball {
    */
   describeAddress(
     args: DescribeAddressCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeAddressCommandOutput>;
   describeAddress(args: DescribeAddressCommandInput, cb: (err: any, data?: DescribeAddressCommandOutput) => void): void;
   describeAddress(
     args: DescribeAddressCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeAddressCommandOutput) => void
+    cb: (err: any, data?: DescribeAddressCommandOutput) => void,
   ): void;
 
   /**
@@ -260,16 +260,16 @@ export interface Snowball {
   describeAddresses(): Promise<DescribeAddressesCommandOutput>;
   describeAddresses(
     args: DescribeAddressesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeAddressesCommandOutput>;
   describeAddresses(
     args: DescribeAddressesCommandInput,
-    cb: (err: any, data?: DescribeAddressesCommandOutput) => void
+    cb: (err: any, data?: DescribeAddressesCommandOutput) => void,
   ): void;
   describeAddresses(
     args: DescribeAddressesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeAddressesCommandOutput) => void
+    cb: (err: any, data?: DescribeAddressesCommandOutput) => void,
   ): void;
 
   /**
@@ -277,13 +277,13 @@ export interface Snowball {
    */
   describeCluster(
     args: DescribeClusterCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeClusterCommandOutput>;
   describeCluster(args: DescribeClusterCommandInput, cb: (err: any, data?: DescribeClusterCommandOutput) => void): void;
   describeCluster(
     args: DescribeClusterCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeClusterCommandOutput) => void
+    cb: (err: any, data?: DescribeClusterCommandOutput) => void,
   ): void;
 
   /**
@@ -294,7 +294,7 @@ export interface Snowball {
   describeJob(
     args: DescribeJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeJobCommandOutput) => void
+    cb: (err: any, data?: DescribeJobCommandOutput) => void,
   ): void;
 
   /**
@@ -302,16 +302,16 @@ export interface Snowball {
    */
   describeReturnShippingLabel(
     args: DescribeReturnShippingLabelCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeReturnShippingLabelCommandOutput>;
   describeReturnShippingLabel(
     args: DescribeReturnShippingLabelCommandInput,
-    cb: (err: any, data?: DescribeReturnShippingLabelCommandOutput) => void
+    cb: (err: any, data?: DescribeReturnShippingLabelCommandOutput) => void,
   ): void;
   describeReturnShippingLabel(
     args: DescribeReturnShippingLabelCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeReturnShippingLabelCommandOutput) => void
+    cb: (err: any, data?: DescribeReturnShippingLabelCommandOutput) => void,
   ): void;
 
   /**
@@ -319,13 +319,13 @@ export interface Snowball {
    */
   getJobManifest(
     args: GetJobManifestCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetJobManifestCommandOutput>;
   getJobManifest(args: GetJobManifestCommandInput, cb: (err: any, data?: GetJobManifestCommandOutput) => void): void;
   getJobManifest(
     args: GetJobManifestCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetJobManifestCommandOutput) => void
+    cb: (err: any, data?: GetJobManifestCommandOutput) => void,
   ): void;
 
   /**
@@ -333,16 +333,16 @@ export interface Snowball {
    */
   getJobUnlockCode(
     args: GetJobUnlockCodeCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetJobUnlockCodeCommandOutput>;
   getJobUnlockCode(
     args: GetJobUnlockCodeCommandInput,
-    cb: (err: any, data?: GetJobUnlockCodeCommandOutput) => void
+    cb: (err: any, data?: GetJobUnlockCodeCommandOutput) => void,
   ): void;
   getJobUnlockCode(
     args: GetJobUnlockCodeCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetJobUnlockCodeCommandOutput) => void
+    cb: (err: any, data?: GetJobUnlockCodeCommandOutput) => void,
   ): void;
 
   /**
@@ -351,16 +351,16 @@ export interface Snowball {
   getSnowballUsage(): Promise<GetSnowballUsageCommandOutput>;
   getSnowballUsage(
     args: GetSnowballUsageCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetSnowballUsageCommandOutput>;
   getSnowballUsage(
     args: GetSnowballUsageCommandInput,
-    cb: (err: any, data?: GetSnowballUsageCommandOutput) => void
+    cb: (err: any, data?: GetSnowballUsageCommandOutput) => void,
   ): void;
   getSnowballUsage(
     args: GetSnowballUsageCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetSnowballUsageCommandOutput) => void
+    cb: (err: any, data?: GetSnowballUsageCommandOutput) => void,
   ): void;
 
   /**
@@ -368,16 +368,16 @@ export interface Snowball {
    */
   getSoftwareUpdates(
     args: GetSoftwareUpdatesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetSoftwareUpdatesCommandOutput>;
   getSoftwareUpdates(
     args: GetSoftwareUpdatesCommandInput,
-    cb: (err: any, data?: GetSoftwareUpdatesCommandOutput) => void
+    cb: (err: any, data?: GetSoftwareUpdatesCommandOutput) => void,
   ): void;
   getSoftwareUpdates(
     args: GetSoftwareUpdatesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetSoftwareUpdatesCommandOutput) => void
+    cb: (err: any, data?: GetSoftwareUpdatesCommandOutput) => void,
   ): void;
 
   /**
@@ -385,13 +385,13 @@ export interface Snowball {
    */
   listClusterJobs(
     args: ListClusterJobsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListClusterJobsCommandOutput>;
   listClusterJobs(args: ListClusterJobsCommandInput, cb: (err: any, data?: ListClusterJobsCommandOutput) => void): void;
   listClusterJobs(
     args: ListClusterJobsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListClusterJobsCommandOutput) => void
+    cb: (err: any, data?: ListClusterJobsCommandOutput) => void,
   ): void;
 
   /**
@@ -403,7 +403,7 @@ export interface Snowball {
   listClusters(
     args: ListClustersCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListClustersCommandOutput) => void
+    cb: (err: any, data?: ListClustersCommandOutput) => void,
   ): void;
 
   /**
@@ -412,16 +412,16 @@ export interface Snowball {
   listCompatibleImages(): Promise<ListCompatibleImagesCommandOutput>;
   listCompatibleImages(
     args: ListCompatibleImagesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListCompatibleImagesCommandOutput>;
   listCompatibleImages(
     args: ListCompatibleImagesCommandInput,
-    cb: (err: any, data?: ListCompatibleImagesCommandOutput) => void
+    cb: (err: any, data?: ListCompatibleImagesCommandOutput) => void,
   ): void;
   listCompatibleImages(
     args: ListCompatibleImagesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListCompatibleImagesCommandOutput) => void
+    cb: (err: any, data?: ListCompatibleImagesCommandOutput) => void,
   ): void;
 
   /**
@@ -433,7 +433,7 @@ export interface Snowball {
   listJobs(
     args: ListJobsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListJobsCommandOutput) => void
+    cb: (err: any, data?: ListJobsCommandOutput) => void,
   ): void;
 
   /**
@@ -442,16 +442,16 @@ export interface Snowball {
   listLongTermPricing(): Promise<ListLongTermPricingCommandOutput>;
   listLongTermPricing(
     args: ListLongTermPricingCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListLongTermPricingCommandOutput>;
   listLongTermPricing(
     args: ListLongTermPricingCommandInput,
-    cb: (err: any, data?: ListLongTermPricingCommandOutput) => void
+    cb: (err: any, data?: ListLongTermPricingCommandOutput) => void,
   ): void;
   listLongTermPricing(
     args: ListLongTermPricingCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListLongTermPricingCommandOutput) => void
+    cb: (err: any, data?: ListLongTermPricingCommandOutput) => void,
   ): void;
 
   /**
@@ -460,16 +460,16 @@ export interface Snowball {
   listPickupLocations(): Promise<ListPickupLocationsCommandOutput>;
   listPickupLocations(
     args: ListPickupLocationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListPickupLocationsCommandOutput>;
   listPickupLocations(
     args: ListPickupLocationsCommandInput,
-    cb: (err: any, data?: ListPickupLocationsCommandOutput) => void
+    cb: (err: any, data?: ListPickupLocationsCommandOutput) => void,
   ): void;
   listPickupLocations(
     args: ListPickupLocationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListPickupLocationsCommandOutput) => void
+    cb: (err: any, data?: ListPickupLocationsCommandOutput) => void,
   ): void;
 
   /**
@@ -477,16 +477,16 @@ export interface Snowball {
    */
   listServiceVersions(
     args: ListServiceVersionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListServiceVersionsCommandOutput>;
   listServiceVersions(
     args: ListServiceVersionsCommandInput,
-    cb: (err: any, data?: ListServiceVersionsCommandOutput) => void
+    cb: (err: any, data?: ListServiceVersionsCommandOutput) => void,
   ): void;
   listServiceVersions(
     args: ListServiceVersionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListServiceVersionsCommandOutput) => void
+    cb: (err: any, data?: ListServiceVersionsCommandOutput) => void,
   ): void;
 
   /**
@@ -497,7 +497,7 @@ export interface Snowball {
   updateCluster(
     args: UpdateClusterCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateClusterCommandOutput) => void
+    cb: (err: any, data?: UpdateClusterCommandOutput) => void,
   ): void;
 
   /**
@@ -508,7 +508,7 @@ export interface Snowball {
   updateJob(
     args: UpdateJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateJobCommandOutput) => void
+    cb: (err: any, data?: UpdateJobCommandOutput) => void,
   ): void;
 
   /**
@@ -516,16 +516,16 @@ export interface Snowball {
    */
   updateJobShipmentState(
     args: UpdateJobShipmentStateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateJobShipmentStateCommandOutput>;
   updateJobShipmentState(
     args: UpdateJobShipmentStateCommandInput,
-    cb: (err: any, data?: UpdateJobShipmentStateCommandOutput) => void
+    cb: (err: any, data?: UpdateJobShipmentStateCommandOutput) => void,
   ): void;
   updateJobShipmentState(
     args: UpdateJobShipmentStateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateJobShipmentStateCommandOutput) => void
+    cb: (err: any, data?: UpdateJobShipmentStateCommandOutput) => void,
   ): void;
 
   /**
@@ -533,16 +533,16 @@ export interface Snowball {
    */
   updateLongTermPricing(
     args: UpdateLongTermPricingCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateLongTermPricingCommandOutput>;
   updateLongTermPricing(
     args: UpdateLongTermPricingCommandInput,
-    cb: (err: any, data?: UpdateLongTermPricingCommandOutput) => void
+    cb: (err: any, data?: UpdateLongTermPricingCommandOutput) => void,
   ): void;
   updateLongTermPricing(
     args: UpdateLongTermPricingCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateLongTermPricingCommandOutput) => void
+    cb: (err: any, data?: UpdateLongTermPricingCommandOutput) => void,
   ): void;
 }
 

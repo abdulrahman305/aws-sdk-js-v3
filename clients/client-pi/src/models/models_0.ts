@@ -2087,7 +2087,7 @@ export const AnalysisReportFilterSensitiveLog = (obj: AnalysisReport): any => ({
  * @internal
  */
 export const GetPerformanceAnalysisReportResponseFilterSensitiveLog = (
-  obj: GetPerformanceAnalysisReportResponse
+  obj: GetPerformanceAnalysisReportResponse,
 ): any => ({
   ...obj,
   ...(obj.AnalysisReport && { AnalysisReport: AnalysisReportFilterSensitiveLog(obj.AnalysisReport) }),

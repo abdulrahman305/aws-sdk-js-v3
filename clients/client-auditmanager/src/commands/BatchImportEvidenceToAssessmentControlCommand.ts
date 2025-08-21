@@ -150,7 +150,7 @@ export class BatchImportEvidenceToAssessmentControlCommand extends $Command
   .n("AuditManagerClient", "BatchImportEvidenceToAssessmentControlCommand")
   .f(
     BatchImportEvidenceToAssessmentControlRequestFilterSensitiveLog,
-    BatchImportEvidenceToAssessmentControlResponseFilterSensitiveLog
+    BatchImportEvidenceToAssessmentControlResponseFilterSensitiveLog,
   )
   .ser(se_BatchImportEvidenceToAssessmentControlCommand)
   .de(de_BatchImportEvidenceToAssessmentControlCommand)

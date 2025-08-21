@@ -18,11 +18,11 @@ import { S3RequestPresigner } from "./presigner";
 export const getSignedUrl = async <
   InputTypesUnion extends object,
   InputType extends InputTypesUnion,
-  OutputType extends MetadataBearer = MetadataBearer
+  OutputType extends MetadataBearer = MetadataBearer,
 >(
   client: Client<any, InputTypesUnion, MetadataBearer, any>,
   command: Command<InputType, OutputType, any, InputTypesUnion, MetadataBearer>,
-  options: RequestPresigningArguments = {}
+  options: RequestPresigningArguments = {},
 ): Promise<string> => {
   let s3Presigner: S3RequestPresigner;
 
@@ -31,7 +31,7 @@ export const getSignedUrl = async <
     const endpointV2: EndpointV2 = await getEndpointFromInstructions(
       command.input as Record<string, unknown>,
       command.constructor as EndpointParameterInstructionsSupplier,
-      client.config
+      client.config,
     );
     const authScheme = endpointV2.properties?.authSchemes?.[0];
     if (authScheme?.name === "sigv4a") {

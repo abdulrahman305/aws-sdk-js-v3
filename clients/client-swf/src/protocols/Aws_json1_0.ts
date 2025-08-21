@@ -239,7 +239,7 @@ import { SWFServiceException as __BaseException } from "../models/SWFServiceExce
  */
 export const se_CountClosedWorkflowExecutionsCommand = async (
   input: CountClosedWorkflowExecutionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CountClosedWorkflowExecutions");
   let body: any;
@@ -252,7 +252,7 @@ export const se_CountClosedWorkflowExecutionsCommand = async (
  */
 export const se_CountOpenWorkflowExecutionsCommand = async (
   input: CountOpenWorkflowExecutionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CountOpenWorkflowExecutions");
   let body: any;
@@ -265,7 +265,7 @@ export const se_CountOpenWorkflowExecutionsCommand = async (
  */
 export const se_CountPendingActivityTasksCommand = async (
   input: CountPendingActivityTasksCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CountPendingActivityTasks");
   let body: any;
@@ -278,7 +278,7 @@ export const se_CountPendingActivityTasksCommand = async (
  */
 export const se_CountPendingDecisionTasksCommand = async (
   input: CountPendingDecisionTasksCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CountPendingDecisionTasks");
   let body: any;
@@ -291,7 +291,7 @@ export const se_CountPendingDecisionTasksCommand = async (
  */
 export const se_DeleteActivityTypeCommand = async (
   input: DeleteActivityTypeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteActivityType");
   let body: any;
@@ -304,7 +304,7 @@ export const se_DeleteActivityTypeCommand = async (
  */
 export const se_DeleteWorkflowTypeCommand = async (
   input: DeleteWorkflowTypeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteWorkflowType");
   let body: any;
@@ -317,7 +317,7 @@ export const se_DeleteWorkflowTypeCommand = async (
  */
 export const se_DeprecateActivityTypeCommand = async (
   input: DeprecateActivityTypeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeprecateActivityType");
   let body: any;
@@ -330,7 +330,7 @@ export const se_DeprecateActivityTypeCommand = async (
  */
 export const se_DeprecateDomainCommand = async (
   input: DeprecateDomainCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeprecateDomain");
   let body: any;
@@ -343,7 +343,7 @@ export const se_DeprecateDomainCommand = async (
  */
 export const se_DeprecateWorkflowTypeCommand = async (
   input: DeprecateWorkflowTypeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeprecateWorkflowType");
   let body: any;
@@ -356,7 +356,7 @@ export const se_DeprecateWorkflowTypeCommand = async (
  */
 export const se_DescribeActivityTypeCommand = async (
   input: DescribeActivityTypeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeActivityType");
   let body: any;
@@ -369,7 +369,7 @@ export const se_DescribeActivityTypeCommand = async (
  */
 export const se_DescribeDomainCommand = async (
   input: DescribeDomainCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeDomain");
   let body: any;
@@ -382,7 +382,7 @@ export const se_DescribeDomainCommand = async (
  */
 export const se_DescribeWorkflowExecutionCommand = async (
   input: DescribeWorkflowExecutionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeWorkflowExecution");
   let body: any;
@@ -395,7 +395,7 @@ export const se_DescribeWorkflowExecutionCommand = async (
  */
 export const se_DescribeWorkflowTypeCommand = async (
   input: DescribeWorkflowTypeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeWorkflowType");
   let body: any;
@@ -408,7 +408,7 @@ export const se_DescribeWorkflowTypeCommand = async (
  */
 export const se_GetWorkflowExecutionHistoryCommand = async (
   input: GetWorkflowExecutionHistoryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetWorkflowExecutionHistory");
   let body: any;
@@ -421,7 +421,7 @@ export const se_GetWorkflowExecutionHistoryCommand = async (
  */
 export const se_ListActivityTypesCommand = async (
   input: ListActivityTypesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListActivityTypes");
   let body: any;
@@ -434,7 +434,7 @@ export const se_ListActivityTypesCommand = async (
  */
 export const se_ListClosedWorkflowExecutionsCommand = async (
   input: ListClosedWorkflowExecutionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListClosedWorkflowExecutions");
   let body: any;
@@ -447,7 +447,7 @@ export const se_ListClosedWorkflowExecutionsCommand = async (
  */
 export const se_ListDomainsCommand = async (
   input: ListDomainsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListDomains");
   let body: any;
@@ -460,7 +460,7 @@ export const se_ListDomainsCommand = async (
  */
 export const se_ListOpenWorkflowExecutionsCommand = async (
   input: ListOpenWorkflowExecutionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListOpenWorkflowExecutions");
   let body: any;
@@ -473,7 +473,7 @@ export const se_ListOpenWorkflowExecutionsCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListTagsForResource");
   let body: any;
@@ -486,7 +486,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_ListWorkflowTypesCommand = async (
   input: ListWorkflowTypesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListWorkflowTypes");
   let body: any;
@@ -499,7 +499,7 @@ export const se_ListWorkflowTypesCommand = async (
  */
 export const se_PollForActivityTaskCommand = async (
   input: PollForActivityTaskCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("PollForActivityTask");
   let body: any;
@@ -512,7 +512,7 @@ export const se_PollForActivityTaskCommand = async (
  */
 export const se_PollForDecisionTaskCommand = async (
   input: PollForDecisionTaskCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("PollForDecisionTask");
   let body: any;
@@ -525,7 +525,7 @@ export const se_PollForDecisionTaskCommand = async (
  */
 export const se_RecordActivityTaskHeartbeatCommand = async (
   input: RecordActivityTaskHeartbeatCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("RecordActivityTaskHeartbeat");
   let body: any;
@@ -538,7 +538,7 @@ export const se_RecordActivityTaskHeartbeatCommand = async (
  */
 export const se_RegisterActivityTypeCommand = async (
   input: RegisterActivityTypeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("RegisterActivityType");
   let body: any;
@@ -551,7 +551,7 @@ export const se_RegisterActivityTypeCommand = async (
  */
 export const se_RegisterDomainCommand = async (
   input: RegisterDomainCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("RegisterDomain");
   let body: any;
@@ -564,7 +564,7 @@ export const se_RegisterDomainCommand = async (
  */
 export const se_RegisterWorkflowTypeCommand = async (
   input: RegisterWorkflowTypeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("RegisterWorkflowType");
   let body: any;
@@ -577,7 +577,7 @@ export const se_RegisterWorkflowTypeCommand = async (
  */
 export const se_RequestCancelWorkflowExecutionCommand = async (
   input: RequestCancelWorkflowExecutionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("RequestCancelWorkflowExecution");
   let body: any;
@@ -590,7 +590,7 @@ export const se_RequestCancelWorkflowExecutionCommand = async (
  */
 export const se_RespondActivityTaskCanceledCommand = async (
   input: RespondActivityTaskCanceledCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("RespondActivityTaskCanceled");
   let body: any;
@@ -603,7 +603,7 @@ export const se_RespondActivityTaskCanceledCommand = async (
  */
 export const se_RespondActivityTaskCompletedCommand = async (
   input: RespondActivityTaskCompletedCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("RespondActivityTaskCompleted");
   let body: any;
@@ -616,7 +616,7 @@ export const se_RespondActivityTaskCompletedCommand = async (
  */
 export const se_RespondActivityTaskFailedCommand = async (
   input: RespondActivityTaskFailedCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("RespondActivityTaskFailed");
   let body: any;
@@ -629,7 +629,7 @@ export const se_RespondActivityTaskFailedCommand = async (
  */
 export const se_RespondDecisionTaskCompletedCommand = async (
   input: RespondDecisionTaskCompletedCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("RespondDecisionTaskCompleted");
   let body: any;
@@ -642,7 +642,7 @@ export const se_RespondDecisionTaskCompletedCommand = async (
  */
 export const se_SignalWorkflowExecutionCommand = async (
   input: SignalWorkflowExecutionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("SignalWorkflowExecution");
   let body: any;
@@ -655,7 +655,7 @@ export const se_SignalWorkflowExecutionCommand = async (
  */
 export const se_StartWorkflowExecutionCommand = async (
   input: StartWorkflowExecutionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StartWorkflowExecution");
   let body: any;
@@ -668,7 +668,7 @@ export const se_StartWorkflowExecutionCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("TagResource");
   let body: any;
@@ -681,7 +681,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_TerminateWorkflowExecutionCommand = async (
   input: TerminateWorkflowExecutionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("TerminateWorkflowExecution");
   let body: any;
@@ -694,7 +694,7 @@ export const se_TerminateWorkflowExecutionCommand = async (
  */
 export const se_UndeprecateActivityTypeCommand = async (
   input: UndeprecateActivityTypeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UndeprecateActivityType");
   let body: any;
@@ -707,7 +707,7 @@ export const se_UndeprecateActivityTypeCommand = async (
  */
 export const se_UndeprecateDomainCommand = async (
   input: UndeprecateDomainCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UndeprecateDomain");
   let body: any;
@@ -720,7 +720,7 @@ export const se_UndeprecateDomainCommand = async (
  */
 export const se_UndeprecateWorkflowTypeCommand = async (
   input: UndeprecateWorkflowTypeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UndeprecateWorkflowType");
   let body: any;
@@ -733,7 +733,7 @@ export const se_UndeprecateWorkflowTypeCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UntagResource");
   let body: any;
@@ -746,7 +746,7 @@ export const se_UntagResourceCommand = async (
  */
 export const de_CountClosedWorkflowExecutionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CountClosedWorkflowExecutionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -766,7 +766,7 @@ export const de_CountClosedWorkflowExecutionsCommand = async (
  */
 export const de_CountOpenWorkflowExecutionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CountOpenWorkflowExecutionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -786,7 +786,7 @@ export const de_CountOpenWorkflowExecutionsCommand = async (
  */
 export const de_CountPendingActivityTasksCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CountPendingActivityTasksCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -806,7 +806,7 @@ export const de_CountPendingActivityTasksCommand = async (
  */
 export const de_CountPendingDecisionTasksCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CountPendingDecisionTasksCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -826,7 +826,7 @@ export const de_CountPendingDecisionTasksCommand = async (
  */
 export const de_DeleteActivityTypeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteActivityTypeCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -843,7 +843,7 @@ export const de_DeleteActivityTypeCommand = async (
  */
 export const de_DeleteWorkflowTypeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteWorkflowTypeCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -860,7 +860,7 @@ export const de_DeleteWorkflowTypeCommand = async (
  */
 export const de_DeprecateActivityTypeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeprecateActivityTypeCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -877,7 +877,7 @@ export const de_DeprecateActivityTypeCommand = async (
  */
 export const de_DeprecateDomainCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeprecateDomainCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -894,7 +894,7 @@ export const de_DeprecateDomainCommand = async (
  */
 export const de_DeprecateWorkflowTypeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeprecateWorkflowTypeCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -911,7 +911,7 @@ export const de_DeprecateWorkflowTypeCommand = async (
  */
 export const de_DescribeActivityTypeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeActivityTypeCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -931,7 +931,7 @@ export const de_DescribeActivityTypeCommand = async (
  */
 export const de_DescribeDomainCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeDomainCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -951,7 +951,7 @@ export const de_DescribeDomainCommand = async (
  */
 export const de_DescribeWorkflowExecutionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeWorkflowExecutionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -971,7 +971,7 @@ export const de_DescribeWorkflowExecutionCommand = async (
  */
 export const de_DescribeWorkflowTypeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeWorkflowTypeCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -991,7 +991,7 @@ export const de_DescribeWorkflowTypeCommand = async (
  */
 export const de_GetWorkflowExecutionHistoryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetWorkflowExecutionHistoryCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1011,7 +1011,7 @@ export const de_GetWorkflowExecutionHistoryCommand = async (
  */
 export const de_ListActivityTypesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListActivityTypesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1031,7 +1031,7 @@ export const de_ListActivityTypesCommand = async (
  */
 export const de_ListClosedWorkflowExecutionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListClosedWorkflowExecutionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1051,7 +1051,7 @@ export const de_ListClosedWorkflowExecutionsCommand = async (
  */
 export const de_ListDomainsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListDomainsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1071,7 +1071,7 @@ export const de_ListDomainsCommand = async (
  */
 export const de_ListOpenWorkflowExecutionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListOpenWorkflowExecutionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1091,7 +1091,7 @@ export const de_ListOpenWorkflowExecutionsCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1111,7 +1111,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_ListWorkflowTypesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListWorkflowTypesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1131,7 +1131,7 @@ export const de_ListWorkflowTypesCommand = async (
  */
 export const de_PollForActivityTaskCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PollForActivityTaskCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1151,7 +1151,7 @@ export const de_PollForActivityTaskCommand = async (
  */
 export const de_PollForDecisionTaskCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PollForDecisionTaskCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1171,7 +1171,7 @@ export const de_PollForDecisionTaskCommand = async (
  */
 export const de_RecordActivityTaskHeartbeatCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RecordActivityTaskHeartbeatCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1191,7 +1191,7 @@ export const de_RecordActivityTaskHeartbeatCommand = async (
  */
 export const de_RegisterActivityTypeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RegisterActivityTypeCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1208,7 +1208,7 @@ export const de_RegisterActivityTypeCommand = async (
  */
 export const de_RegisterDomainCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RegisterDomainCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1225,7 +1225,7 @@ export const de_RegisterDomainCommand = async (
  */
 export const de_RegisterWorkflowTypeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RegisterWorkflowTypeCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1242,7 +1242,7 @@ export const de_RegisterWorkflowTypeCommand = async (
  */
 export const de_RequestCancelWorkflowExecutionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RequestCancelWorkflowExecutionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1259,7 +1259,7 @@ export const de_RequestCancelWorkflowExecutionCommand = async (
  */
 export const de_RespondActivityTaskCanceledCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RespondActivityTaskCanceledCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1276,7 +1276,7 @@ export const de_RespondActivityTaskCanceledCommand = async (
  */
 export const de_RespondActivityTaskCompletedCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RespondActivityTaskCompletedCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1293,7 +1293,7 @@ export const de_RespondActivityTaskCompletedCommand = async (
  */
 export const de_RespondActivityTaskFailedCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RespondActivityTaskFailedCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1310,7 +1310,7 @@ export const de_RespondActivityTaskFailedCommand = async (
  */
 export const de_RespondDecisionTaskCompletedCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RespondDecisionTaskCompletedCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1327,7 +1327,7 @@ export const de_RespondDecisionTaskCompletedCommand = async (
  */
 export const de_SignalWorkflowExecutionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SignalWorkflowExecutionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1344,7 +1344,7 @@ export const de_SignalWorkflowExecutionCommand = async (
  */
 export const de_StartWorkflowExecutionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartWorkflowExecutionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1364,7 +1364,7 @@ export const de_StartWorkflowExecutionCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1381,7 +1381,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_TerminateWorkflowExecutionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TerminateWorkflowExecutionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1398,7 +1398,7 @@ export const de_TerminateWorkflowExecutionCommand = async (
  */
 export const de_UndeprecateActivityTypeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UndeprecateActivityTypeCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1415,7 +1415,7 @@ export const de_UndeprecateActivityTypeCommand = async (
  */
 export const de_UndeprecateDomainCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UndeprecateDomainCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1432,7 +1432,7 @@ export const de_UndeprecateDomainCommand = async (
  */
 export const de_UndeprecateWorkflowTypeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UndeprecateWorkflowTypeCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1449,7 +1449,7 @@ export const de_UndeprecateWorkflowTypeCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1519,7 +1519,7 @@ const de_CommandError = async (output: __HttpResponse, context: __SerdeContext):
  */
 const de_DefaultUndefinedFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DefaultUndefinedFault> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1535,7 +1535,7 @@ const de_DefaultUndefinedFaultRes = async (
  */
 const de_DomainAlreadyExistsFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DomainAlreadyExistsFault> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1551,7 +1551,7 @@ const de_DomainAlreadyExistsFaultRes = async (
  */
 const de_DomainDeprecatedFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DomainDeprecatedFault> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1580,7 +1580,7 @@ const de_LimitExceededFaultRes = async (parsedOutput: any, context: __SerdeConte
  */
 const de_OperationNotPermittedFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<OperationNotPermittedFault> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1609,7 +1609,7 @@ const de_TooManyTagsFaultRes = async (parsedOutput: any, context: __SerdeContext
  */
 const de_TypeAlreadyExistsFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TypeAlreadyExistsFault> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1638,7 +1638,7 @@ const de_TypeDeprecatedFaultRes = async (parsedOutput: any, context: __SerdeCont
  */
 const de_TypeNotDeprecatedFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TypeNotDeprecatedFault> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1654,7 +1654,7 @@ const de_TypeNotDeprecatedFaultRes = async (
  */
 const de_UnknownResourceFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UnknownResourceFault> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1670,7 +1670,7 @@ const de_UnknownResourceFaultRes = async (
  */
 const de_WorkflowExecutionAlreadyStartedFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<WorkflowExecutionAlreadyStartedFault> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1698,7 +1698,7 @@ const de_WorkflowExecutionAlreadyStartedFaultRes = async (
  */
 const se_CountClosedWorkflowExecutionsInput = (
   input: CountClosedWorkflowExecutionsInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     closeStatusFilter: _json,
@@ -1771,7 +1771,7 @@ const se_ExecutionTimeFilter = (input: ExecutionTimeFilter, context: __SerdeCont
  */
 const se_ListClosedWorkflowExecutionsInput = (
   input: ListClosedWorkflowExecutionsInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     closeStatusFilter: _json,
@@ -2319,7 +2319,7 @@ const buildHttpRpcRequest = async (
   headers: __HeaderBag,
   path: string,
   resolvedHostname: string | undefined,
-  body: any
+  body: any,
 ): Promise<__HttpRequest> => {
   const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
   const contents: any = {

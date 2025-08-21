@@ -6527,7 +6527,7 @@ export const CreateAppResponseFilterSensitiveLog = (obj: CreateAppResponse): any
  * @internal
  */
 export const CreateRecommendationTemplateRequestFilterSensitiveLog = (
-  obj: CreateRecommendationTemplateRequest
+  obj: CreateRecommendationTemplateRequest,
 ): any => ({
   ...obj,
   ...(obj.tags && { tags: SENSITIVE_STRING }),
@@ -6545,7 +6545,7 @@ export const RecommendationTemplateFilterSensitiveLog = (obj: RecommendationTemp
  * @internal
  */
 export const CreateRecommendationTemplateResponseFilterSensitiveLog = (
-  obj: CreateRecommendationTemplateResponse
+  obj: CreateRecommendationTemplateResponse,
 ): any => ({
   ...obj,
   ...(obj.recommendationTemplate && {
@@ -6597,7 +6597,7 @@ export const DescribeResiliencyPolicyResponseFilterSensitiveLog = (obj: Describe
  * @internal
  */
 export const ListRecommendationTemplatesResponseFilterSensitiveLog = (
-  obj: ListRecommendationTemplatesResponse
+  obj: ListRecommendationTemplatesResponse,
 ): any => ({
   ...obj,
   ...(obj.recommendationTemplates && {
@@ -6619,7 +6619,7 @@ export const ListResiliencyPoliciesResponseFilterSensitiveLog = (obj: ListResili
  * @internal
  */
 export const ListSuggestedResiliencyPoliciesResponseFilterSensitiveLog = (
-  obj: ListSuggestedResiliencyPoliciesResponse
+  obj: ListSuggestedResiliencyPoliciesResponse,
 ): any => ({
   ...obj,
   ...(obj.resiliencyPolicies && {

@@ -53,7 +53,7 @@ const checkState = async (client: RedshiftClient, input: DescribeClustersCommand
  */
 export const waitForClusterAvailable = async (
   params: WaiterConfiguration<RedshiftClient>,
-  input: DescribeClustersCommandInput
+  input: DescribeClustersCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 60, maxDelay: 120 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -65,7 +65,7 @@ export const waitForClusterAvailable = async (
  */
 export const waitUntilClusterAvailable = async (
   params: WaiterConfiguration<RedshiftClient>,
-  input: DescribeClustersCommandInput
+  input: DescribeClustersCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 60, maxDelay: 120 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

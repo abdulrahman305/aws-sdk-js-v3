@@ -34,7 +34,7 @@ export interface MediaStoreData {
   deleteObject(
     args: DeleteObjectCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteObjectCommandOutput) => void
+    cb: (err: any, data?: DeleteObjectCommandOutput) => void,
   ): void;
 
   /**
@@ -42,13 +42,13 @@ export interface MediaStoreData {
    */
   describeObject(
     args: DescribeObjectCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeObjectCommandOutput>;
   describeObject(args: DescribeObjectCommandInput, cb: (err: any, data?: DescribeObjectCommandOutput) => void): void;
   describeObject(
     args: DescribeObjectCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeObjectCommandOutput) => void
+    cb: (err: any, data?: DescribeObjectCommandOutput) => void,
   ): void;
 
   /**
@@ -59,7 +59,7 @@ export interface MediaStoreData {
   getObject(
     args: GetObjectCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetObjectCommandOutput) => void
+    cb: (err: any, data?: GetObjectCommandOutput) => void,
   ): void;
 
   /**
@@ -71,7 +71,7 @@ export interface MediaStoreData {
   listItems(
     args: ListItemsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListItemsCommandOutput) => void
+    cb: (err: any, data?: ListItemsCommandOutput) => void,
   ): void;
 
   /**
@@ -82,7 +82,7 @@ export interface MediaStoreData {
   putObject(
     args: PutObjectCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutObjectCommandOutput) => void
+    cb: (err: any, data?: PutObjectCommandOutput) => void,
   ): void;
 }
 

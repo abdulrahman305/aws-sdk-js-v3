@@ -173,7 +173,7 @@ client.middlewareStack.add(
     name: "MyMiddleware",
     step: "build",
     override: true,
-  }
+  },
 );
 
 await client.listTables({});
@@ -559,7 +559,7 @@ client.middlewareStack.add(
     name: "addFooMetadataMiddleware",
     tags: ["METADATA", "FOO"],
     override: true,
-  }
+  },
 );
 
 await client.putObject(params);

@@ -47,5 +47,5 @@ Then(
       };
       this.request(null, "receiveMessage", params, next);
     });
-  }
+  },
 );

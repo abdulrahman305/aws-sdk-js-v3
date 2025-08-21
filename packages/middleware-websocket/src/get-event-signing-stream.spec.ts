@@ -80,7 +80,7 @@ describe(getEventSigningTransformStream.name, () => {
         sign: mockMessageSigner,
         signMessage: mockMessageSigner,
       },
-      eventStreamCodec
+      eventStreamCodec,
     );
     const output: Array<MessageHeaders> = [];
 
@@ -105,11 +105,11 @@ describe(getEventSigningTransformStream.name, () => {
     expect(output).toEqual(expected);
     expect(mockMessageSigner.mock.calls[0][0].priorSignature).toBe("initial");
     expect(mockMessageSigner.mock.calls[0][1].signingDate.getTime()).toBe(
-      (expected[0][":date"].value as Date).getTime()
+      (expected[0][":date"].value as Date).getTime(),
     );
     expect(mockMessageSigner.mock.calls[1][0].priorSignature).toBe("7369676e617475726531");
     expect(mockMessageSigner.mock.calls[1][1].signingDate.getTime()).toBe(
-      (expected[1][":date"].value as Date).getTime()
+      (expected[1][":date"].value as Date).getTime(),
     );
   });
 });

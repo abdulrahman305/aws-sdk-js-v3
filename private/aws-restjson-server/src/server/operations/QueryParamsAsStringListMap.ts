@@ -42,7 +42,7 @@ export namespace QueryParamsAsStringListMapServerInput {
    * @internal
    */
   export const validate: (
-    obj: Parameters<typeof QueryParamsAsStringListMapInput.validate>[0]
+    obj: Parameters<typeof QueryParamsAsStringListMapInput.validate>[0],
   ) => __ValidationFailure[] = QueryParamsAsStringListMapInput.validate;
 }
 export interface QueryParamsAsStringListMapServerOutput {}
@@ -50,8 +50,7 @@ export interface QueryParamsAsStringListMapServerOutput {}
 export type QueryParamsAsStringListMapErrors = never;
 
 export class QueryParamsAsStringListMapSerializer
-  implements
-    __OperationSerializer<RestJsonService<any>, "QueryParamsAsStringListMap", QueryParamsAsStringListMapErrors>
+  implements __OperationSerializer<RestJsonService<any>, "QueryParamsAsStringListMap", QueryParamsAsStringListMapErrors>
 {
   serialize = serializeQueryParamsAsStringListMapResponse;
   deserialize = deserializeQueryParamsAsStringListMapRequest;
@@ -67,14 +66,14 @@ export class QueryParamsAsStringListMapSerializer
 
 export const getQueryParamsAsStringListMapHandler = <Context>(
   operation: __Operation<QueryParamsAsStringListMapServerInput, QueryParamsAsStringListMapServerOutput, Context>,
-  customizer: __ValidationCustomizer<"QueryParamsAsStringListMap">
+  customizer: __ValidationCustomizer<"QueryParamsAsStringListMap">,
 ): __ServiceHandler<Context, __HttpRequest, __HttpResponse> => {
   const mux = new httpbinding.HttpBindingMux<"RestJson", "QueryParamsAsStringListMap">([
     new httpbinding.UriSpec<"RestJson", "QueryParamsAsStringListMap">(
       "POST",
       [{ type: "path_literal", value: "StringListMap" }],
       [],
-      { service: "RestJson", operation: "QueryParamsAsStringListMap" }
+      { service: "RestJson", operation: "QueryParamsAsStringListMap" },
     ),
   ]);
   return new QueryParamsAsStringListMapHandler(
@@ -82,7 +81,7 @@ export const getQueryParamsAsStringListMapHandler = <Context>(
     mux,
     new QueryParamsAsStringListMapSerializer(),
     serializeFrameworkException,
-    customizer
+    customizer,
   );
 };
 
@@ -103,7 +102,7 @@ async function handle<S, O extends keyof S & string, Context>(
   operation: __Operation<__OperationInput<S[O]>, __OperationOutput<S[O]>, Context>,
   serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
   validationFn: (input: __OperationInput<S[O]>) => __ValidationFailure[],
-  validationCustomizer: __ValidationCustomizer<O>
+  validationCustomizer: __ValidationCustomizer<O>,
 ): Promise<__HttpResponse> {
   let input;
   try {
@@ -149,7 +148,7 @@ export class QueryParamsAsStringListMapHandler<Context> implements __ServiceHand
   >;
   private readonly serializeFrameworkException: (
     e: __SmithyFrameworkException,
-    ctx: __ServerSerdeContext
+    ctx: __ServerSerdeContext,
   ) => Promise<__HttpResponse>;
   private readonly validationCustomizer: __ValidationCustomizer<"QueryParamsAsStringListMap">;
   /**
@@ -170,7 +169,7 @@ export class QueryParamsAsStringListMapHandler<Context> implements __ServiceHand
       QueryParamsAsStringListMapErrors
     >,
     serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
-    validationCustomizer: __ValidationCustomizer<"QueryParamsAsStringListMap">
+    validationCustomizer: __ValidationCustomizer<"QueryParamsAsStringListMap">,
   ) {
     this.operation = operation;
     this.mux = mux;
@@ -182,7 +181,7 @@ export class QueryParamsAsStringListMapHandler<Context> implements __ServiceHand
     const target = this.mux.match(request);
     if (target === undefined) {
       console.log(
-        "Received a request that did not match aws.protocoltests.restjson#RestJson.QueryParamsAsStringListMap. This indicates a misconfiguration."
+        "Received a request that did not match aws.protocoltests.restjson#RestJson.QueryParamsAsStringListMap. This indicates a misconfiguration.",
       );
       return this.serializeFrameworkException(new __InternalFailureException(), serdeContextBase);
     }
@@ -194,7 +193,7 @@ export class QueryParamsAsStringListMapHandler<Context> implements __ServiceHand
       this.operation,
       this.serializeFrameworkException,
       QueryParamsAsStringListMapServerInput.validate,
-      this.validationCustomizer
+      this.validationCustomizer,
     );
   }
 }

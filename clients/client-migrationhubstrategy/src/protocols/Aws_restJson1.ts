@@ -132,7 +132,7 @@ import {
  */
 export const se_GetApplicationComponentDetailsCommand = async (
   input: GetApplicationComponentDetailsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -148,7 +148,7 @@ export const se_GetApplicationComponentDetailsCommand = async (
  */
 export const se_GetApplicationComponentStrategiesCommand = async (
   input: GetApplicationComponentStrategiesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -164,7 +164,7 @@ export const se_GetApplicationComponentStrategiesCommand = async (
  */
 export const se_GetAssessmentCommand = async (
   input: GetAssessmentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -180,7 +180,7 @@ export const se_GetAssessmentCommand = async (
  */
 export const se_GetImportFileTaskCommand = async (
   input: GetImportFileTaskCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -196,7 +196,7 @@ export const se_GetImportFileTaskCommand = async (
  */
 export const se_GetLatestAssessmentIdCommand = async (
   input: GetLatestAssessmentIdCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -214,7 +214,7 @@ export const se_GetLatestAssessmentIdCommand = async (
  */
 export const se_GetPortfolioPreferencesCommand = async (
   input: GetPortfolioPreferencesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -232,7 +232,7 @@ export const se_GetPortfolioPreferencesCommand = async (
  */
 export const se_GetPortfolioSummaryCommand = async (
   input: GetPortfolioSummaryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -250,7 +250,7 @@ export const se_GetPortfolioSummaryCommand = async (
  */
 export const se_GetRecommendationReportDetailsCommand = async (
   input: GetRecommendationReportDetailsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -266,7 +266,7 @@ export const se_GetRecommendationReportDetailsCommand = async (
  */
 export const se_GetServerDetailsCommand = async (
   input: GetServerDetailsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -286,7 +286,7 @@ export const se_GetServerDetailsCommand = async (
  */
 export const se_GetServerStrategiesCommand = async (
   input: GetServerStrategiesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -302,7 +302,7 @@ export const se_GetServerStrategiesCommand = async (
  */
 export const se_ListAnalyzableServersCommand = async (
   input: ListAnalyzableServersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -315,7 +315,7 @@ export const se_ListAnalyzableServersCommand = async (
       maxResults: [],
       nextToken: [],
       sort: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -326,7 +326,7 @@ export const se_ListAnalyzableServersCommand = async (
  */
 export const se_ListApplicationComponentsCommand = async (
   input: ListApplicationComponentsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -342,7 +342,7 @@ export const se_ListApplicationComponentsCommand = async (
       maxResults: [],
       nextToken: [],
       sort: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -353,7 +353,7 @@ export const se_ListApplicationComponentsCommand = async (
  */
 export const se_ListCollectorsCommand = async (
   input: ListCollectorsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -372,7 +372,7 @@ export const se_ListCollectorsCommand = async (
  */
 export const se_ListImportFileTaskCommand = async (
   input: ListImportFileTaskCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -391,7 +391,7 @@ export const se_ListImportFileTaskCommand = async (
  */
 export const se_ListServersCommand = async (
   input: ListServersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -407,7 +407,7 @@ export const se_ListServersCommand = async (
       nextToken: [],
       serverCriteria: [],
       sort: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -418,7 +418,7 @@ export const se_ListServersCommand = async (
  */
 export const se_PutPortfolioPreferencesCommand = async (
   input: PutPortfolioPreferencesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -432,7 +432,7 @@ export const se_PutPortfolioPreferencesCommand = async (
       applicationPreferences: (_) => _json(_),
       databasePreferences: (_) => _json(_),
       prioritizeBusinessGoals: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -443,7 +443,7 @@ export const se_PutPortfolioPreferencesCommand = async (
  */
 export const se_StartAssessmentCommand = async (
   input: StartAssessmentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -457,7 +457,7 @@ export const se_StartAssessmentCommand = async (
       assessmentTargets: (_) => _json(_),
       s3bucketForAnalysisData: [],
       s3bucketForReportData: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -468,7 +468,7 @@ export const se_StartAssessmentCommand = async (
  */
 export const se_StartImportFileTaskCommand = async (
   input: StartImportFileTaskCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -484,7 +484,7 @@ export const se_StartImportFileTaskCommand = async (
       name: [],
       s3bucketForReportData: [],
       s3key: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -495,7 +495,7 @@ export const se_StartImportFileTaskCommand = async (
  */
 export const se_StartRecommendationReportGenerationCommand = async (
   input: StartRecommendationReportGenerationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -507,7 +507,7 @@ export const se_StartRecommendationReportGenerationCommand = async (
     take(input, {
       groupIdFilter: (_) => _json(_),
       outputFormat: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -518,7 +518,7 @@ export const se_StartRecommendationReportGenerationCommand = async (
  */
 export const se_StopAssessmentCommand = async (
   input: StopAssessmentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -529,7 +529,7 @@ export const se_StopAssessmentCommand = async (
   body = JSON.stringify(
     take(input, {
       assessmentId: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -540,7 +540,7 @@ export const se_StopAssessmentCommand = async (
  */
 export const se_UpdateApplicationComponentConfigCommand = async (
   input: UpdateApplicationComponentConfigCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -557,7 +557,7 @@ export const se_UpdateApplicationComponentConfigCommand = async (
       secretsManagerKey: [],
       sourceCodeList: (_) => _json(_),
       strategyOption: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -568,7 +568,7 @@ export const se_UpdateApplicationComponentConfigCommand = async (
  */
 export const se_UpdateServerConfigCommand = async (
   input: UpdateServerConfigCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -580,7 +580,7 @@ export const se_UpdateServerConfigCommand = async (
     take(input, {
       serverId: [],
       strategyOption: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -591,7 +591,7 @@ export const se_UpdateServerConfigCommand = async (
  */
 export const de_GetApplicationComponentDetailsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetApplicationComponentDetailsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -615,7 +615,7 @@ export const de_GetApplicationComponentDetailsCommand = async (
  */
 export const de_GetApplicationComponentStrategiesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetApplicationComponentStrategiesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -636,7 +636,7 @@ export const de_GetApplicationComponentStrategiesCommand = async (
  */
 export const de_GetAssessmentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetAssessmentCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -659,7 +659,7 @@ export const de_GetAssessmentCommand = async (
  */
 export const de_GetImportFileTaskCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetImportFileTaskCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -690,7 +690,7 @@ export const de_GetImportFileTaskCommand = async (
  */
 export const de_GetLatestAssessmentIdCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetLatestAssessmentIdCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -711,7 +711,7 @@ export const de_GetLatestAssessmentIdCommand = async (
  */
 export const de_GetPortfolioPreferencesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetPortfolioPreferencesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -735,7 +735,7 @@ export const de_GetPortfolioPreferencesCommand = async (
  */
 export const de_GetPortfolioSummaryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetPortfolioSummaryCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -756,7 +756,7 @@ export const de_GetPortfolioSummaryCommand = async (
  */
 export const de_GetRecommendationReportDetailsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetRecommendationReportDetailsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -778,7 +778,7 @@ export const de_GetRecommendationReportDetailsCommand = async (
  */
 export const de_GetServerDetailsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetServerDetailsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -801,7 +801,7 @@ export const de_GetServerDetailsCommand = async (
  */
 export const de_GetServerStrategiesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetServerStrategiesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -822,7 +822,7 @@ export const de_GetServerStrategiesCommand = async (
  */
 export const de_ListAnalyzableServersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAnalyzableServersCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -844,7 +844,7 @@ export const de_ListAnalyzableServersCommand = async (
  */
 export const de_ListApplicationComponentsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListApplicationComponentsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -866,7 +866,7 @@ export const de_ListApplicationComponentsCommand = async (
  */
 export const de_ListCollectorsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListCollectorsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -888,7 +888,7 @@ export const de_ListCollectorsCommand = async (
  */
 export const de_ListImportFileTaskCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListImportFileTaskCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -910,7 +910,7 @@ export const de_ListImportFileTaskCommand = async (
  */
 export const de_ListServersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListServersCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -932,7 +932,7 @@ export const de_ListServersCommand = async (
  */
 export const de_PutPortfolioPreferencesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutPortfolioPreferencesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -949,7 +949,7 @@ export const de_PutPortfolioPreferencesCommand = async (
  */
 export const de_StartAssessmentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartAssessmentCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -970,7 +970,7 @@ export const de_StartAssessmentCommand = async (
  */
 export const de_StartImportFileTaskCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartImportFileTaskCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -991,7 +991,7 @@ export const de_StartImportFileTaskCommand = async (
  */
 export const de_StartRecommendationReportGenerationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartRecommendationReportGenerationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1012,7 +1012,7 @@ export const de_StartRecommendationReportGenerationCommand = async (
  */
 export const de_StopAssessmentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StopAssessmentCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1029,7 +1029,7 @@ export const de_StopAssessmentCommand = async (
  */
 export const de_UpdateApplicationComponentConfigCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateApplicationComponentConfigCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1046,7 +1046,7 @@ export const de_UpdateApplicationComponentConfigCommand = async (
  */
 export const de_UpdateServerConfigCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateServerConfigCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1111,7 +1111,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1165,7 +1165,7 @@ const de_DependencyExceptionRes = async (parsedOutput: any, context: __SerdeCont
  */
 const de_InternalServerExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1185,7 +1185,7 @@ const de_InternalServerExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1205,7 +1205,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_ServiceLinkedRoleLockClientExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceLinkedRoleLockClientException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1225,7 +1225,7 @@ const de_ServiceLinkedRoleLockClientExceptionRes = async (
  */
 const de_ServiceQuotaExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceQuotaExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;

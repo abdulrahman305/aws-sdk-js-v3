@@ -43,10 +43,10 @@ describe("userAgentMiddleware", () => {
           expect(mockNextHandler.mock.calls[0][0].request.headers[userAgentKey]).toBeUndefined();
         } else {
           expect(mockNextHandler.mock.calls[0][0].request.headers[userAgentKey]).toEqual(
-            expect.stringContaining("aws-sdk-js/1.0.0")
+            expect.stringContaining("aws-sdk-js/1.0.0"),
           );
         }
-      })
+      }),
     );
   });
 
@@ -76,7 +76,7 @@ describe("userAgentMiddleware", () => {
             const handler = middleware(mockNextHandler, {});
             await handler({ input: {}, request: new HttpRequest({ headers: {} }) });
             expect(mockNextHandler.mock.calls[0][0].request.headers[sdkUserAgentKey]).toEqual(
-              expect.stringContaining(expected)
+              expect.stringContaining(expected),
             );
           });
 
@@ -91,11 +91,11 @@ describe("userAgentMiddleware", () => {
             const handler = middleware(mockInternalNextHandler, {});
             await handler({ input: {}, request: new HttpRequest({ headers: {} }) });
             expect(mockInternalNextHandler.mock.calls[0][0].request.headers[sdkUserAgentKey]).toEqual(
-              expect.stringContaining("a-test-prefix " + expected)
+              expect.stringContaining("a-test-prefix " + expected),
             );
           });
         }
-      })
+      }),
     );
   });
 });

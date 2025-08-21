@@ -24,7 +24,7 @@ const checkState = async (client: LambdaClient, input: GetFunctionCommandInput):
  */
 export const waitForFunctionExists = async (
   params: WaiterConfiguration<LambdaClient>,
-  input: GetFunctionCommandInput
+  input: GetFunctionCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 1, maxDelay: 120 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -36,7 +36,7 @@ export const waitForFunctionExists = async (
  */
 export const waitUntilFunctionExists = async (
   params: WaiterConfiguration<LambdaClient>,
-  input: GetFunctionCommandInput
+  input: GetFunctionCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 1, maxDelay: 120 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

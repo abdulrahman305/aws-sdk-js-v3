@@ -26,6 +26,6 @@ When("I ask to verify the email address {string}", function (email, next) {
     next,
     function () {
       // do nothing
-    }
+    },
   );
 });

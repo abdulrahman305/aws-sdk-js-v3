@@ -325,16 +325,16 @@ export interface EMR {
    */
   addInstanceFleet(
     args: AddInstanceFleetCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AddInstanceFleetCommandOutput>;
   addInstanceFleet(
     args: AddInstanceFleetCommandInput,
-    cb: (err: any, data?: AddInstanceFleetCommandOutput) => void
+    cb: (err: any, data?: AddInstanceFleetCommandOutput) => void,
   ): void;
   addInstanceFleet(
     args: AddInstanceFleetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AddInstanceFleetCommandOutput) => void
+    cb: (err: any, data?: AddInstanceFleetCommandOutput) => void,
   ): void;
 
   /**
@@ -342,16 +342,16 @@ export interface EMR {
    */
   addInstanceGroups(
     args: AddInstanceGroupsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AddInstanceGroupsCommandOutput>;
   addInstanceGroups(
     args: AddInstanceGroupsCommandInput,
-    cb: (err: any, data?: AddInstanceGroupsCommandOutput) => void
+    cb: (err: any, data?: AddInstanceGroupsCommandOutput) => void,
   ): void;
   addInstanceGroups(
     args: AddInstanceGroupsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AddInstanceGroupsCommandOutput) => void
+    cb: (err: any, data?: AddInstanceGroupsCommandOutput) => void,
   ): void;
 
   /**
@@ -359,13 +359,13 @@ export interface EMR {
    */
   addJobFlowSteps(
     args: AddJobFlowStepsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AddJobFlowStepsCommandOutput>;
   addJobFlowSteps(args: AddJobFlowStepsCommandInput, cb: (err: any, data?: AddJobFlowStepsCommandOutput) => void): void;
   addJobFlowSteps(
     args: AddJobFlowStepsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AddJobFlowStepsCommandOutput) => void
+    cb: (err: any, data?: AddJobFlowStepsCommandOutput) => void,
   ): void;
 
   /**
@@ -376,7 +376,7 @@ export interface EMR {
   addTags(
     args: AddTagsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AddTagsCommandOutput) => void
+    cb: (err: any, data?: AddTagsCommandOutput) => void,
   ): void;
 
   /**
@@ -387,7 +387,7 @@ export interface EMR {
   cancelSteps(
     args: CancelStepsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CancelStepsCommandOutput) => void
+    cb: (err: any, data?: CancelStepsCommandOutput) => void,
   ): void;
 
   /**
@@ -395,16 +395,16 @@ export interface EMR {
    */
   createSecurityConfiguration(
     args: CreateSecurityConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateSecurityConfigurationCommandOutput>;
   createSecurityConfiguration(
     args: CreateSecurityConfigurationCommandInput,
-    cb: (err: any, data?: CreateSecurityConfigurationCommandOutput) => void
+    cb: (err: any, data?: CreateSecurityConfigurationCommandOutput) => void,
   ): void;
   createSecurityConfiguration(
     args: CreateSecurityConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateSecurityConfigurationCommandOutput) => void
+    cb: (err: any, data?: CreateSecurityConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -415,7 +415,7 @@ export interface EMR {
   createStudio(
     args: CreateStudioCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateStudioCommandOutput) => void
+    cb: (err: any, data?: CreateStudioCommandOutput) => void,
   ): void;
 
   /**
@@ -423,16 +423,16 @@ export interface EMR {
    */
   createStudioSessionMapping(
     args: CreateStudioSessionMappingCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateStudioSessionMappingCommandOutput>;
   createStudioSessionMapping(
     args: CreateStudioSessionMappingCommandInput,
-    cb: (err: any, data?: CreateStudioSessionMappingCommandOutput) => void
+    cb: (err: any, data?: CreateStudioSessionMappingCommandOutput) => void,
   ): void;
   createStudioSessionMapping(
     args: CreateStudioSessionMappingCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateStudioSessionMappingCommandOutput) => void
+    cb: (err: any, data?: CreateStudioSessionMappingCommandOutput) => void,
   ): void;
 
   /**
@@ -440,16 +440,16 @@ export interface EMR {
    */
   deleteSecurityConfiguration(
     args: DeleteSecurityConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteSecurityConfigurationCommandOutput>;
   deleteSecurityConfiguration(
     args: DeleteSecurityConfigurationCommandInput,
-    cb: (err: any, data?: DeleteSecurityConfigurationCommandOutput) => void
+    cb: (err: any, data?: DeleteSecurityConfigurationCommandOutput) => void,
   ): void;
   deleteSecurityConfiguration(
     args: DeleteSecurityConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteSecurityConfigurationCommandOutput) => void
+    cb: (err: any, data?: DeleteSecurityConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -460,7 +460,7 @@ export interface EMR {
   deleteStudio(
     args: DeleteStudioCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteStudioCommandOutput) => void
+    cb: (err: any, data?: DeleteStudioCommandOutput) => void,
   ): void;
 
   /**
@@ -468,16 +468,16 @@ export interface EMR {
    */
   deleteStudioSessionMapping(
     args: DeleteStudioSessionMappingCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteStudioSessionMappingCommandOutput>;
   deleteStudioSessionMapping(
     args: DeleteStudioSessionMappingCommandInput,
-    cb: (err: any, data?: DeleteStudioSessionMappingCommandOutput) => void
+    cb: (err: any, data?: DeleteStudioSessionMappingCommandOutput) => void,
   ): void;
   deleteStudioSessionMapping(
     args: DeleteStudioSessionMappingCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteStudioSessionMappingCommandOutput) => void
+    cb: (err: any, data?: DeleteStudioSessionMappingCommandOutput) => void,
   ): void;
 
   /**
@@ -485,13 +485,13 @@ export interface EMR {
    */
   describeCluster(
     args: DescribeClusterCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeClusterCommandOutput>;
   describeCluster(args: DescribeClusterCommandInput, cb: (err: any, data?: DescribeClusterCommandOutput) => void): void;
   describeCluster(
     args: DescribeClusterCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeClusterCommandOutput) => void
+    cb: (err: any, data?: DescribeClusterCommandOutput) => void,
   ): void;
 
   /**
@@ -500,16 +500,16 @@ export interface EMR {
   describeJobFlows(): Promise<DescribeJobFlowsCommandOutput>;
   describeJobFlows(
     args: DescribeJobFlowsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeJobFlowsCommandOutput>;
   describeJobFlows(
     args: DescribeJobFlowsCommandInput,
-    cb: (err: any, data?: DescribeJobFlowsCommandOutput) => void
+    cb: (err: any, data?: DescribeJobFlowsCommandOutput) => void,
   ): void;
   describeJobFlows(
     args: DescribeJobFlowsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeJobFlowsCommandOutput) => void
+    cb: (err: any, data?: DescribeJobFlowsCommandOutput) => void,
   ): void;
 
   /**
@@ -517,16 +517,16 @@ export interface EMR {
    */
   describeNotebookExecution(
     args: DescribeNotebookExecutionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeNotebookExecutionCommandOutput>;
   describeNotebookExecution(
     args: DescribeNotebookExecutionCommandInput,
-    cb: (err: any, data?: DescribeNotebookExecutionCommandOutput) => void
+    cb: (err: any, data?: DescribeNotebookExecutionCommandOutput) => void,
   ): void;
   describeNotebookExecution(
     args: DescribeNotebookExecutionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeNotebookExecutionCommandOutput) => void
+    cb: (err: any, data?: DescribeNotebookExecutionCommandOutput) => void,
   ): void;
 
   /**
@@ -535,16 +535,16 @@ export interface EMR {
   describeReleaseLabel(): Promise<DescribeReleaseLabelCommandOutput>;
   describeReleaseLabel(
     args: DescribeReleaseLabelCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeReleaseLabelCommandOutput>;
   describeReleaseLabel(
     args: DescribeReleaseLabelCommandInput,
-    cb: (err: any, data?: DescribeReleaseLabelCommandOutput) => void
+    cb: (err: any, data?: DescribeReleaseLabelCommandOutput) => void,
   ): void;
   describeReleaseLabel(
     args: DescribeReleaseLabelCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeReleaseLabelCommandOutput) => void
+    cb: (err: any, data?: DescribeReleaseLabelCommandOutput) => void,
   ): void;
 
   /**
@@ -552,16 +552,16 @@ export interface EMR {
    */
   describeSecurityConfiguration(
     args: DescribeSecurityConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeSecurityConfigurationCommandOutput>;
   describeSecurityConfiguration(
     args: DescribeSecurityConfigurationCommandInput,
-    cb: (err: any, data?: DescribeSecurityConfigurationCommandOutput) => void
+    cb: (err: any, data?: DescribeSecurityConfigurationCommandOutput) => void,
   ): void;
   describeSecurityConfiguration(
     args: DescribeSecurityConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeSecurityConfigurationCommandOutput) => void
+    cb: (err: any, data?: DescribeSecurityConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -572,7 +572,7 @@ export interface EMR {
   describeStep(
     args: DescribeStepCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeStepCommandOutput) => void
+    cb: (err: any, data?: DescribeStepCommandOutput) => void,
   ): void;
 
   /**
@@ -580,13 +580,13 @@ export interface EMR {
    */
   describeStudio(
     args: DescribeStudioCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeStudioCommandOutput>;
   describeStudio(args: DescribeStudioCommandInput, cb: (err: any, data?: DescribeStudioCommandOutput) => void): void;
   describeStudio(
     args: DescribeStudioCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeStudioCommandOutput) => void
+    cb: (err: any, data?: DescribeStudioCommandOutput) => void,
   ): void;
 
   /**
@@ -594,16 +594,16 @@ export interface EMR {
    */
   getAutoTerminationPolicy(
     args: GetAutoTerminationPolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetAutoTerminationPolicyCommandOutput>;
   getAutoTerminationPolicy(
     args: GetAutoTerminationPolicyCommandInput,
-    cb: (err: any, data?: GetAutoTerminationPolicyCommandOutput) => void
+    cb: (err: any, data?: GetAutoTerminationPolicyCommandOutput) => void,
   ): void;
   getAutoTerminationPolicy(
     args: GetAutoTerminationPolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetAutoTerminationPolicyCommandOutput) => void
+    cb: (err: any, data?: GetAutoTerminationPolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -612,16 +612,16 @@ export interface EMR {
   getBlockPublicAccessConfiguration(): Promise<GetBlockPublicAccessConfigurationCommandOutput>;
   getBlockPublicAccessConfiguration(
     args: GetBlockPublicAccessConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetBlockPublicAccessConfigurationCommandOutput>;
   getBlockPublicAccessConfiguration(
     args: GetBlockPublicAccessConfigurationCommandInput,
-    cb: (err: any, data?: GetBlockPublicAccessConfigurationCommandOutput) => void
+    cb: (err: any, data?: GetBlockPublicAccessConfigurationCommandOutput) => void,
   ): void;
   getBlockPublicAccessConfiguration(
     args: GetBlockPublicAccessConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetBlockPublicAccessConfigurationCommandOutput) => void
+    cb: (err: any, data?: GetBlockPublicAccessConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -629,16 +629,16 @@ export interface EMR {
    */
   getClusterSessionCredentials(
     args: GetClusterSessionCredentialsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetClusterSessionCredentialsCommandOutput>;
   getClusterSessionCredentials(
     args: GetClusterSessionCredentialsCommandInput,
-    cb: (err: any, data?: GetClusterSessionCredentialsCommandOutput) => void
+    cb: (err: any, data?: GetClusterSessionCredentialsCommandOutput) => void,
   ): void;
   getClusterSessionCredentials(
     args: GetClusterSessionCredentialsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetClusterSessionCredentialsCommandOutput) => void
+    cb: (err: any, data?: GetClusterSessionCredentialsCommandOutput) => void,
   ): void;
 
   /**
@@ -646,16 +646,16 @@ export interface EMR {
    */
   getManagedScalingPolicy(
     args: GetManagedScalingPolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetManagedScalingPolicyCommandOutput>;
   getManagedScalingPolicy(
     args: GetManagedScalingPolicyCommandInput,
-    cb: (err: any, data?: GetManagedScalingPolicyCommandOutput) => void
+    cb: (err: any, data?: GetManagedScalingPolicyCommandOutput) => void,
   ): void;
   getManagedScalingPolicy(
     args: GetManagedScalingPolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetManagedScalingPolicyCommandOutput) => void
+    cb: (err: any, data?: GetManagedScalingPolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -663,16 +663,16 @@ export interface EMR {
    */
   getStudioSessionMapping(
     args: GetStudioSessionMappingCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetStudioSessionMappingCommandOutput>;
   getStudioSessionMapping(
     args: GetStudioSessionMappingCommandInput,
-    cb: (err: any, data?: GetStudioSessionMappingCommandOutput) => void
+    cb: (err: any, data?: GetStudioSessionMappingCommandOutput) => void,
   ): void;
   getStudioSessionMapping(
     args: GetStudioSessionMappingCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetStudioSessionMappingCommandOutput) => void
+    cb: (err: any, data?: GetStudioSessionMappingCommandOutput) => void,
   ): void;
 
   /**
@@ -680,16 +680,16 @@ export interface EMR {
    */
   listBootstrapActions(
     args: ListBootstrapActionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListBootstrapActionsCommandOutput>;
   listBootstrapActions(
     args: ListBootstrapActionsCommandInput,
-    cb: (err: any, data?: ListBootstrapActionsCommandOutput) => void
+    cb: (err: any, data?: ListBootstrapActionsCommandOutput) => void,
   ): void;
   listBootstrapActions(
     args: ListBootstrapActionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListBootstrapActionsCommandOutput) => void
+    cb: (err: any, data?: ListBootstrapActionsCommandOutput) => void,
   ): void;
 
   /**
@@ -701,7 +701,7 @@ export interface EMR {
   listClusters(
     args: ListClustersCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListClustersCommandOutput) => void
+    cb: (err: any, data?: ListClustersCommandOutput) => void,
   ): void;
 
   /**
@@ -709,16 +709,16 @@ export interface EMR {
    */
   listInstanceFleets(
     args: ListInstanceFleetsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListInstanceFleetsCommandOutput>;
   listInstanceFleets(
     args: ListInstanceFleetsCommandInput,
-    cb: (err: any, data?: ListInstanceFleetsCommandOutput) => void
+    cb: (err: any, data?: ListInstanceFleetsCommandOutput) => void,
   ): void;
   listInstanceFleets(
     args: ListInstanceFleetsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListInstanceFleetsCommandOutput) => void
+    cb: (err: any, data?: ListInstanceFleetsCommandOutput) => void,
   ): void;
 
   /**
@@ -726,16 +726,16 @@ export interface EMR {
    */
   listInstanceGroups(
     args: ListInstanceGroupsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListInstanceGroupsCommandOutput>;
   listInstanceGroups(
     args: ListInstanceGroupsCommandInput,
-    cb: (err: any, data?: ListInstanceGroupsCommandOutput) => void
+    cb: (err: any, data?: ListInstanceGroupsCommandOutput) => void,
   ): void;
   listInstanceGroups(
     args: ListInstanceGroupsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListInstanceGroupsCommandOutput) => void
+    cb: (err: any, data?: ListInstanceGroupsCommandOutput) => void,
   ): void;
 
   /**
@@ -746,7 +746,7 @@ export interface EMR {
   listInstances(
     args: ListInstancesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListInstancesCommandOutput) => void
+    cb: (err: any, data?: ListInstancesCommandOutput) => void,
   ): void;
 
   /**
@@ -755,16 +755,16 @@ export interface EMR {
   listNotebookExecutions(): Promise<ListNotebookExecutionsCommandOutput>;
   listNotebookExecutions(
     args: ListNotebookExecutionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListNotebookExecutionsCommandOutput>;
   listNotebookExecutions(
     args: ListNotebookExecutionsCommandInput,
-    cb: (err: any, data?: ListNotebookExecutionsCommandOutput) => void
+    cb: (err: any, data?: ListNotebookExecutionsCommandOutput) => void,
   ): void;
   listNotebookExecutions(
     args: ListNotebookExecutionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListNotebookExecutionsCommandOutput) => void
+    cb: (err: any, data?: ListNotebookExecutionsCommandOutput) => void,
   ): void;
 
   /**
@@ -773,16 +773,16 @@ export interface EMR {
   listReleaseLabels(): Promise<ListReleaseLabelsCommandOutput>;
   listReleaseLabels(
     args: ListReleaseLabelsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListReleaseLabelsCommandOutput>;
   listReleaseLabels(
     args: ListReleaseLabelsCommandInput,
-    cb: (err: any, data?: ListReleaseLabelsCommandOutput) => void
+    cb: (err: any, data?: ListReleaseLabelsCommandOutput) => void,
   ): void;
   listReleaseLabels(
     args: ListReleaseLabelsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListReleaseLabelsCommandOutput) => void
+    cb: (err: any, data?: ListReleaseLabelsCommandOutput) => void,
   ): void;
 
   /**
@@ -791,16 +791,16 @@ export interface EMR {
   listSecurityConfigurations(): Promise<ListSecurityConfigurationsCommandOutput>;
   listSecurityConfigurations(
     args: ListSecurityConfigurationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListSecurityConfigurationsCommandOutput>;
   listSecurityConfigurations(
     args: ListSecurityConfigurationsCommandInput,
-    cb: (err: any, data?: ListSecurityConfigurationsCommandOutput) => void
+    cb: (err: any, data?: ListSecurityConfigurationsCommandOutput) => void,
   ): void;
   listSecurityConfigurations(
     args: ListSecurityConfigurationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListSecurityConfigurationsCommandOutput) => void
+    cb: (err: any, data?: ListSecurityConfigurationsCommandOutput) => void,
   ): void;
 
   /**
@@ -811,7 +811,7 @@ export interface EMR {
   listSteps(
     args: ListStepsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListStepsCommandOutput) => void
+    cb: (err: any, data?: ListStepsCommandOutput) => void,
   ): void;
 
   /**
@@ -823,7 +823,7 @@ export interface EMR {
   listStudios(
     args: ListStudiosCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListStudiosCommandOutput) => void
+    cb: (err: any, data?: ListStudiosCommandOutput) => void,
   ): void;
 
   /**
@@ -832,16 +832,16 @@ export interface EMR {
   listStudioSessionMappings(): Promise<ListStudioSessionMappingsCommandOutput>;
   listStudioSessionMappings(
     args: ListStudioSessionMappingsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListStudioSessionMappingsCommandOutput>;
   listStudioSessionMappings(
     args: ListStudioSessionMappingsCommandInput,
-    cb: (err: any, data?: ListStudioSessionMappingsCommandOutput) => void
+    cb: (err: any, data?: ListStudioSessionMappingsCommandOutput) => void,
   ): void;
   listStudioSessionMappings(
     args: ListStudioSessionMappingsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListStudioSessionMappingsCommandOutput) => void
+    cb: (err: any, data?: ListStudioSessionMappingsCommandOutput) => void,
   ): void;
 
   /**
@@ -849,16 +849,16 @@ export interface EMR {
    */
   listSupportedInstanceTypes(
     args: ListSupportedInstanceTypesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListSupportedInstanceTypesCommandOutput>;
   listSupportedInstanceTypes(
     args: ListSupportedInstanceTypesCommandInput,
-    cb: (err: any, data?: ListSupportedInstanceTypesCommandOutput) => void
+    cb: (err: any, data?: ListSupportedInstanceTypesCommandOutput) => void,
   ): void;
   listSupportedInstanceTypes(
     args: ListSupportedInstanceTypesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListSupportedInstanceTypesCommandOutput) => void
+    cb: (err: any, data?: ListSupportedInstanceTypesCommandOutput) => void,
   ): void;
 
   /**
@@ -869,7 +869,7 @@ export interface EMR {
   modifyCluster(
     args: ModifyClusterCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ModifyClusterCommandOutput) => void
+    cb: (err: any, data?: ModifyClusterCommandOutput) => void,
   ): void;
 
   /**
@@ -877,16 +877,16 @@ export interface EMR {
    */
   modifyInstanceFleet(
     args: ModifyInstanceFleetCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ModifyInstanceFleetCommandOutput>;
   modifyInstanceFleet(
     args: ModifyInstanceFleetCommandInput,
-    cb: (err: any, data?: ModifyInstanceFleetCommandOutput) => void
+    cb: (err: any, data?: ModifyInstanceFleetCommandOutput) => void,
   ): void;
   modifyInstanceFleet(
     args: ModifyInstanceFleetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ModifyInstanceFleetCommandOutput) => void
+    cb: (err: any, data?: ModifyInstanceFleetCommandOutput) => void,
   ): void;
 
   /**
@@ -895,16 +895,16 @@ export interface EMR {
   modifyInstanceGroups(): Promise<ModifyInstanceGroupsCommandOutput>;
   modifyInstanceGroups(
     args: ModifyInstanceGroupsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ModifyInstanceGroupsCommandOutput>;
   modifyInstanceGroups(
     args: ModifyInstanceGroupsCommandInput,
-    cb: (err: any, data?: ModifyInstanceGroupsCommandOutput) => void
+    cb: (err: any, data?: ModifyInstanceGroupsCommandOutput) => void,
   ): void;
   modifyInstanceGroups(
     args: ModifyInstanceGroupsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ModifyInstanceGroupsCommandOutput) => void
+    cb: (err: any, data?: ModifyInstanceGroupsCommandOutput) => void,
   ): void;
 
   /**
@@ -912,16 +912,16 @@ export interface EMR {
    */
   putAutoScalingPolicy(
     args: PutAutoScalingPolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutAutoScalingPolicyCommandOutput>;
   putAutoScalingPolicy(
     args: PutAutoScalingPolicyCommandInput,
-    cb: (err: any, data?: PutAutoScalingPolicyCommandOutput) => void
+    cb: (err: any, data?: PutAutoScalingPolicyCommandOutput) => void,
   ): void;
   putAutoScalingPolicy(
     args: PutAutoScalingPolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutAutoScalingPolicyCommandOutput) => void
+    cb: (err: any, data?: PutAutoScalingPolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -929,16 +929,16 @@ export interface EMR {
    */
   putAutoTerminationPolicy(
     args: PutAutoTerminationPolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutAutoTerminationPolicyCommandOutput>;
   putAutoTerminationPolicy(
     args: PutAutoTerminationPolicyCommandInput,
-    cb: (err: any, data?: PutAutoTerminationPolicyCommandOutput) => void
+    cb: (err: any, data?: PutAutoTerminationPolicyCommandOutput) => void,
   ): void;
   putAutoTerminationPolicy(
     args: PutAutoTerminationPolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutAutoTerminationPolicyCommandOutput) => void
+    cb: (err: any, data?: PutAutoTerminationPolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -946,16 +946,16 @@ export interface EMR {
    */
   putBlockPublicAccessConfiguration(
     args: PutBlockPublicAccessConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutBlockPublicAccessConfigurationCommandOutput>;
   putBlockPublicAccessConfiguration(
     args: PutBlockPublicAccessConfigurationCommandInput,
-    cb: (err: any, data?: PutBlockPublicAccessConfigurationCommandOutput) => void
+    cb: (err: any, data?: PutBlockPublicAccessConfigurationCommandOutput) => void,
   ): void;
   putBlockPublicAccessConfiguration(
     args: PutBlockPublicAccessConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutBlockPublicAccessConfigurationCommandOutput) => void
+    cb: (err: any, data?: PutBlockPublicAccessConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -963,16 +963,16 @@ export interface EMR {
    */
   putManagedScalingPolicy(
     args: PutManagedScalingPolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutManagedScalingPolicyCommandOutput>;
   putManagedScalingPolicy(
     args: PutManagedScalingPolicyCommandInput,
-    cb: (err: any, data?: PutManagedScalingPolicyCommandOutput) => void
+    cb: (err: any, data?: PutManagedScalingPolicyCommandOutput) => void,
   ): void;
   putManagedScalingPolicy(
     args: PutManagedScalingPolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutManagedScalingPolicyCommandOutput) => void
+    cb: (err: any, data?: PutManagedScalingPolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -980,16 +980,16 @@ export interface EMR {
    */
   removeAutoScalingPolicy(
     args: RemoveAutoScalingPolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<RemoveAutoScalingPolicyCommandOutput>;
   removeAutoScalingPolicy(
     args: RemoveAutoScalingPolicyCommandInput,
-    cb: (err: any, data?: RemoveAutoScalingPolicyCommandOutput) => void
+    cb: (err: any, data?: RemoveAutoScalingPolicyCommandOutput) => void,
   ): void;
   removeAutoScalingPolicy(
     args: RemoveAutoScalingPolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RemoveAutoScalingPolicyCommandOutput) => void
+    cb: (err: any, data?: RemoveAutoScalingPolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -997,16 +997,16 @@ export interface EMR {
    */
   removeAutoTerminationPolicy(
     args: RemoveAutoTerminationPolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<RemoveAutoTerminationPolicyCommandOutput>;
   removeAutoTerminationPolicy(
     args: RemoveAutoTerminationPolicyCommandInput,
-    cb: (err: any, data?: RemoveAutoTerminationPolicyCommandOutput) => void
+    cb: (err: any, data?: RemoveAutoTerminationPolicyCommandOutput) => void,
   ): void;
   removeAutoTerminationPolicy(
     args: RemoveAutoTerminationPolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RemoveAutoTerminationPolicyCommandOutput) => void
+    cb: (err: any, data?: RemoveAutoTerminationPolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -1014,16 +1014,16 @@ export interface EMR {
    */
   removeManagedScalingPolicy(
     args: RemoveManagedScalingPolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<RemoveManagedScalingPolicyCommandOutput>;
   removeManagedScalingPolicy(
     args: RemoveManagedScalingPolicyCommandInput,
-    cb: (err: any, data?: RemoveManagedScalingPolicyCommandOutput) => void
+    cb: (err: any, data?: RemoveManagedScalingPolicyCommandOutput) => void,
   ): void;
   removeManagedScalingPolicy(
     args: RemoveManagedScalingPolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RemoveManagedScalingPolicyCommandOutput) => void
+    cb: (err: any, data?: RemoveManagedScalingPolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -1034,7 +1034,7 @@ export interface EMR {
   removeTags(
     args: RemoveTagsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RemoveTagsCommandOutput) => void
+    cb: (err: any, data?: RemoveTagsCommandOutput) => void,
   ): void;
 
   /**
@@ -1045,7 +1045,7 @@ export interface EMR {
   runJobFlow(
     args: RunJobFlowCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RunJobFlowCommandOutput) => void
+    cb: (err: any, data?: RunJobFlowCommandOutput) => void,
   ): void;
 
   /**
@@ -1053,16 +1053,16 @@ export interface EMR {
    */
   setKeepJobFlowAliveWhenNoSteps(
     args: SetKeepJobFlowAliveWhenNoStepsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<SetKeepJobFlowAliveWhenNoStepsCommandOutput>;
   setKeepJobFlowAliveWhenNoSteps(
     args: SetKeepJobFlowAliveWhenNoStepsCommandInput,
-    cb: (err: any, data?: SetKeepJobFlowAliveWhenNoStepsCommandOutput) => void
+    cb: (err: any, data?: SetKeepJobFlowAliveWhenNoStepsCommandOutput) => void,
   ): void;
   setKeepJobFlowAliveWhenNoSteps(
     args: SetKeepJobFlowAliveWhenNoStepsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SetKeepJobFlowAliveWhenNoStepsCommandOutput) => void
+    cb: (err: any, data?: SetKeepJobFlowAliveWhenNoStepsCommandOutput) => void,
   ): void;
 
   /**
@@ -1070,16 +1070,16 @@ export interface EMR {
    */
   setTerminationProtection(
     args: SetTerminationProtectionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<SetTerminationProtectionCommandOutput>;
   setTerminationProtection(
     args: SetTerminationProtectionCommandInput,
-    cb: (err: any, data?: SetTerminationProtectionCommandOutput) => void
+    cb: (err: any, data?: SetTerminationProtectionCommandOutput) => void,
   ): void;
   setTerminationProtection(
     args: SetTerminationProtectionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SetTerminationProtectionCommandOutput) => void
+    cb: (err: any, data?: SetTerminationProtectionCommandOutput) => void,
   ): void;
 
   /**
@@ -1087,16 +1087,16 @@ export interface EMR {
    */
   setUnhealthyNodeReplacement(
     args: SetUnhealthyNodeReplacementCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<SetUnhealthyNodeReplacementCommandOutput>;
   setUnhealthyNodeReplacement(
     args: SetUnhealthyNodeReplacementCommandInput,
-    cb: (err: any, data?: SetUnhealthyNodeReplacementCommandOutput) => void
+    cb: (err: any, data?: SetUnhealthyNodeReplacementCommandOutput) => void,
   ): void;
   setUnhealthyNodeReplacement(
     args: SetUnhealthyNodeReplacementCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SetUnhealthyNodeReplacementCommandOutput) => void
+    cb: (err: any, data?: SetUnhealthyNodeReplacementCommandOutput) => void,
   ): void;
 
   /**
@@ -1104,16 +1104,16 @@ export interface EMR {
    */
   setVisibleToAllUsers(
     args: SetVisibleToAllUsersCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<SetVisibleToAllUsersCommandOutput>;
   setVisibleToAllUsers(
     args: SetVisibleToAllUsersCommandInput,
-    cb: (err: any, data?: SetVisibleToAllUsersCommandOutput) => void
+    cb: (err: any, data?: SetVisibleToAllUsersCommandOutput) => void,
   ): void;
   setVisibleToAllUsers(
     args: SetVisibleToAllUsersCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SetVisibleToAllUsersCommandOutput) => void
+    cb: (err: any, data?: SetVisibleToAllUsersCommandOutput) => void,
   ): void;
 
   /**
@@ -1121,16 +1121,16 @@ export interface EMR {
    */
   startNotebookExecution(
     args: StartNotebookExecutionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartNotebookExecutionCommandOutput>;
   startNotebookExecution(
     args: StartNotebookExecutionCommandInput,
-    cb: (err: any, data?: StartNotebookExecutionCommandOutput) => void
+    cb: (err: any, data?: StartNotebookExecutionCommandOutput) => void,
   ): void;
   startNotebookExecution(
     args: StartNotebookExecutionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartNotebookExecutionCommandOutput) => void
+    cb: (err: any, data?: StartNotebookExecutionCommandOutput) => void,
   ): void;
 
   /**
@@ -1138,16 +1138,16 @@ export interface EMR {
    */
   stopNotebookExecution(
     args: StopNotebookExecutionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StopNotebookExecutionCommandOutput>;
   stopNotebookExecution(
     args: StopNotebookExecutionCommandInput,
-    cb: (err: any, data?: StopNotebookExecutionCommandOutput) => void
+    cb: (err: any, data?: StopNotebookExecutionCommandOutput) => void,
   ): void;
   stopNotebookExecution(
     args: StopNotebookExecutionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StopNotebookExecutionCommandOutput) => void
+    cb: (err: any, data?: StopNotebookExecutionCommandOutput) => void,
   ): void;
 
   /**
@@ -1155,16 +1155,16 @@ export interface EMR {
    */
   terminateJobFlows(
     args: TerminateJobFlowsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<TerminateJobFlowsCommandOutput>;
   terminateJobFlows(
     args: TerminateJobFlowsCommandInput,
-    cb: (err: any, data?: TerminateJobFlowsCommandOutput) => void
+    cb: (err: any, data?: TerminateJobFlowsCommandOutput) => void,
   ): void;
   terminateJobFlows(
     args: TerminateJobFlowsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TerminateJobFlowsCommandOutput) => void
+    cb: (err: any, data?: TerminateJobFlowsCommandOutput) => void,
   ): void;
 
   /**
@@ -1175,7 +1175,7 @@ export interface EMR {
   updateStudio(
     args: UpdateStudioCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateStudioCommandOutput) => void
+    cb: (err: any, data?: UpdateStudioCommandOutput) => void,
   ): void;
 
   /**
@@ -1183,16 +1183,16 @@ export interface EMR {
    */
   updateStudioSessionMapping(
     args: UpdateStudioSessionMappingCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateStudioSessionMappingCommandOutput>;
   updateStudioSessionMapping(
     args: UpdateStudioSessionMappingCommandInput,
-    cb: (err: any, data?: UpdateStudioSessionMappingCommandOutput) => void
+    cb: (err: any, data?: UpdateStudioSessionMappingCommandOutput) => void,
   ): void;
   updateStudioSessionMapping(
     args: UpdateStudioSessionMappingCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateStudioSessionMappingCommandOutput) => void
+    cb: (err: any, data?: UpdateStudioSessionMappingCommandOutput) => void,
   ): void;
 }
 

@@ -156,7 +156,7 @@ import {
  */
 export const se_AssociateServiceRoleToAccountCommand = async (
   input: AssociateServiceRoleToAccountCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -167,7 +167,7 @@ export const se_AssociateServiceRoleToAccountCommand = async (
   body = JSON.stringify(
     take(input, {
       RoleArn: [, , `roleArn`],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -178,7 +178,7 @@ export const se_AssociateServiceRoleToAccountCommand = async (
  */
 export const se_BatchAssociateClientDeviceWithCoreDeviceCommand = async (
   input: BatchAssociateClientDeviceWithCoreDeviceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -190,7 +190,7 @@ export const se_BatchAssociateClientDeviceWithCoreDeviceCommand = async (
   body = JSON.stringify(
     take(input, {
       entries: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -201,7 +201,7 @@ export const se_BatchAssociateClientDeviceWithCoreDeviceCommand = async (
  */
 export const se_BatchDisassociateClientDeviceFromCoreDeviceCommand = async (
   input: BatchDisassociateClientDeviceFromCoreDeviceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -213,7 +213,7 @@ export const se_BatchDisassociateClientDeviceFromCoreDeviceCommand = async (
   body = JSON.stringify(
     take(input, {
       entries: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -224,7 +224,7 @@ export const se_BatchDisassociateClientDeviceFromCoreDeviceCommand = async (
  */
 export const se_CancelDeploymentCommand = async (
   input: CancelDeploymentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -240,7 +240,7 @@ export const se_CancelDeploymentCommand = async (
  */
 export const se_CreateComponentVersionCommand = async (
   input: CreateComponentVersionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -254,7 +254,7 @@ export const se_CreateComponentVersionCommand = async (
       inlineRecipe: (_) => context.base64Encoder(_),
       lambdaFunction: (_) => _json(_),
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -265,7 +265,7 @@ export const se_CreateComponentVersionCommand = async (
  */
 export const se_CreateDeploymentCommand = async (
   input: CreateDeploymentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -283,7 +283,7 @@ export const se_CreateDeploymentCommand = async (
       parentTargetArn: [],
       tags: (_) => _json(_),
       targetArn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -294,7 +294,7 @@ export const se_CreateDeploymentCommand = async (
  */
 export const se_DeleteComponentCommand = async (
   input: DeleteComponentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -310,7 +310,7 @@ export const se_DeleteComponentCommand = async (
  */
 export const se_DeleteCoreDeviceCommand = async (
   input: DeleteCoreDeviceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -326,7 +326,7 @@ export const se_DeleteCoreDeviceCommand = async (
  */
 export const se_DeleteDeploymentCommand = async (
   input: DeleteDeploymentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -342,7 +342,7 @@ export const se_DeleteDeploymentCommand = async (
  */
 export const se_DescribeComponentCommand = async (
   input: DescribeComponentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -358,7 +358,7 @@ export const se_DescribeComponentCommand = async (
  */
 export const se_DisassociateServiceRoleFromAccountCommand = async (
   input: DisassociateServiceRoleFromAccountCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -376,7 +376,7 @@ export const se_DisassociateServiceRoleFromAccountCommand = async (
  */
 export const se_GetComponentCommand = async (
   input: GetComponentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -395,7 +395,7 @@ export const se_GetComponentCommand = async (
  */
 export const se_GetComponentVersionArtifactCommand = async (
   input: GetComponentVersionArtifactCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -417,7 +417,7 @@ export const se_GetComponentVersionArtifactCommand = async (
  */
 export const se_GetConnectivityInfoCommand = async (
   input: GetConnectivityInfoCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -433,7 +433,7 @@ export const se_GetConnectivityInfoCommand = async (
  */
 export const se_GetCoreDeviceCommand = async (
   input: GetCoreDeviceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -449,7 +449,7 @@ export const se_GetCoreDeviceCommand = async (
  */
 export const se_GetDeploymentCommand = async (
   input: GetDeploymentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -465,7 +465,7 @@ export const se_GetDeploymentCommand = async (
  */
 export const se_GetServiceRoleForAccountCommand = async (
   input: GetServiceRoleForAccountCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -483,7 +483,7 @@ export const se_GetServiceRoleForAccountCommand = async (
  */
 export const se_ListClientDevicesAssociatedWithCoreDeviceCommand = async (
   input: ListClientDevicesAssociatedWithCoreDeviceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -503,7 +503,7 @@ export const se_ListClientDevicesAssociatedWithCoreDeviceCommand = async (
  */
 export const se_ListComponentsCommand = async (
   input: ListComponentsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -523,7 +523,7 @@ export const se_ListComponentsCommand = async (
  */
 export const se_ListComponentVersionsCommand = async (
   input: ListComponentVersionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -543,7 +543,7 @@ export const se_ListComponentVersionsCommand = async (
  */
 export const se_ListCoreDevicesCommand = async (
   input: ListCoreDevicesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -564,7 +564,7 @@ export const se_ListCoreDevicesCommand = async (
  */
 export const se_ListDeploymentsCommand = async (
   input: ListDeploymentsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -586,7 +586,7 @@ export const se_ListDeploymentsCommand = async (
  */
 export const se_ListEffectiveDeploymentsCommand = async (
   input: ListEffectiveDeploymentsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -606,7 +606,7 @@ export const se_ListEffectiveDeploymentsCommand = async (
  */
 export const se_ListInstalledComponentsCommand = async (
   input: ListInstalledComponentsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -627,7 +627,7 @@ export const se_ListInstalledComponentsCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -643,7 +643,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_ResolveComponentCandidatesCommand = async (
   input: ResolveComponentCandidatesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -655,7 +655,7 @@ export const se_ResolveComponentCandidatesCommand = async (
     take(input, {
       componentCandidates: (_) => _json(_),
       platform: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -666,7 +666,7 @@ export const se_ResolveComponentCandidatesCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -678,7 +678,7 @@ export const se_TagResourceCommand = async (
   body = JSON.stringify(
     take(input, {
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -689,7 +689,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -711,7 +711,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateConnectivityInfoCommand = async (
   input: UpdateConnectivityInfoCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -723,7 +723,7 @@ export const se_UpdateConnectivityInfoCommand = async (
   body = JSON.stringify(
     take(input, {
       ConnectivityInfo: [, (_) => se_connectivityInfoList(_, context), `connectivityInfo`],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -734,7 +734,7 @@ export const se_UpdateConnectivityInfoCommand = async (
  */
 export const de_AssociateServiceRoleToAccountCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssociateServiceRoleToAccountCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -755,7 +755,7 @@ export const de_AssociateServiceRoleToAccountCommand = async (
  */
 export const de_BatchAssociateClientDeviceWithCoreDeviceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchAssociateClientDeviceWithCoreDeviceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -776,7 +776,7 @@ export const de_BatchAssociateClientDeviceWithCoreDeviceCommand = async (
  */
 export const de_BatchDisassociateClientDeviceFromCoreDeviceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchDisassociateClientDeviceFromCoreDeviceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -797,7 +797,7 @@ export const de_BatchDisassociateClientDeviceFromCoreDeviceCommand = async (
  */
 export const de_CancelDeploymentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CancelDeploymentCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -818,7 +818,7 @@ export const de_CancelDeploymentCommand = async (
  */
 export const de_CreateComponentVersionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateComponentVersionCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -843,7 +843,7 @@ export const de_CreateComponentVersionCommand = async (
  */
 export const de_CreateDeploymentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateDeploymentCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -866,7 +866,7 @@ export const de_CreateDeploymentCommand = async (
  */
 export const de_DeleteComponentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteComponentCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -883,7 +883,7 @@ export const de_DeleteComponentCommand = async (
  */
 export const de_DeleteCoreDeviceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteCoreDeviceCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -900,7 +900,7 @@ export const de_DeleteCoreDeviceCommand = async (
  */
 export const de_DeleteDeploymentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteDeploymentCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -917,7 +917,7 @@ export const de_DeleteDeploymentCommand = async (
  */
 export const de_DescribeComponentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeComponentCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -946,7 +946,7 @@ export const de_DescribeComponentCommand = async (
  */
 export const de_DisassociateServiceRoleFromAccountCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisassociateServiceRoleFromAccountCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -967,7 +967,7 @@ export const de_DisassociateServiceRoleFromAccountCommand = async (
  */
 export const de_GetComponentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetComponentCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -990,7 +990,7 @@ export const de_GetComponentCommand = async (
  */
 export const de_GetComponentVersionArtifactCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetComponentVersionArtifactCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1011,7 +1011,7 @@ export const de_GetComponentVersionArtifactCommand = async (
  */
 export const de_GetConnectivityInfoCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetConnectivityInfoCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1033,7 +1033,7 @@ export const de_GetConnectivityInfoCommand = async (
  */
 export const de_GetCoreDeviceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetCoreDeviceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1060,7 +1060,7 @@ export const de_GetCoreDeviceCommand = async (
  */
 export const de_GetDeploymentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetDeploymentCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1094,7 +1094,7 @@ export const de_GetDeploymentCommand = async (
  */
 export const de_GetServiceRoleForAccountCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetServiceRoleForAccountCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1116,7 +1116,7 @@ export const de_GetServiceRoleForAccountCommand = async (
  */
 export const de_ListClientDevicesAssociatedWithCoreDeviceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListClientDevicesAssociatedWithCoreDeviceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1138,7 +1138,7 @@ export const de_ListClientDevicesAssociatedWithCoreDeviceCommand = async (
  */
 export const de_ListComponentsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListComponentsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1160,7 +1160,7 @@ export const de_ListComponentsCommand = async (
  */
 export const de_ListComponentVersionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListComponentVersionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1182,7 +1182,7 @@ export const de_ListComponentVersionsCommand = async (
  */
 export const de_ListCoreDevicesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListCoreDevicesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1204,7 +1204,7 @@ export const de_ListCoreDevicesCommand = async (
  */
 export const de_ListDeploymentsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListDeploymentsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1226,7 +1226,7 @@ export const de_ListDeploymentsCommand = async (
  */
 export const de_ListEffectiveDeploymentsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListEffectiveDeploymentsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1248,7 +1248,7 @@ export const de_ListEffectiveDeploymentsCommand = async (
  */
 export const de_ListInstalledComponentsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListInstalledComponentsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1270,7 +1270,7 @@ export const de_ListInstalledComponentsCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1291,7 +1291,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_ResolveComponentCandidatesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResolveComponentCandidatesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1312,7 +1312,7 @@ export const de_ResolveComponentCandidatesCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1329,7 +1329,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1346,7 +1346,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateConnectivityInfoCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateConnectivityInfoCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1413,7 +1413,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1452,7 +1452,7 @@ const de_ConflictExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_InternalServerExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerException> => {
   const contents: any = map({
     [_rAS]: [() => void 0 !== parsedOutput.headers[_ra], () => __strictParseInt32(parsedOutput.headers[_ra])],
@@ -1474,7 +1474,7 @@ const de_InternalServerExceptionRes = async (
  */
 const de_RequestAlreadyInProgressExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RequestAlreadyInProgressException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1494,7 +1494,7 @@ const de_RequestAlreadyInProgressExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1516,7 +1516,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_ServiceQuotaExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceQuotaExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1607,7 +1607,7 @@ const se_ComponentDeploymentSpecification = (input: ComponentDeploymentSpecifica
  */
 const se_ComponentDeploymentSpecifications = (
   input: Record<string, ComponentDeploymentSpecification>,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return Object.entries(input).reduce((acc: Record<string, any>, [key, value]: [string, any]) => {
     if (value === null) {
@@ -1822,7 +1822,7 @@ const de_Component = (output: any, context: __SerdeContext): Component => {
  */
 const de_ComponentDeploymentSpecification = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ComponentDeploymentSpecification => {
   return take(output, {
     componentVersion: __expectString,
@@ -1836,7 +1836,7 @@ const de_ComponentDeploymentSpecification = (
  */
 const de_ComponentDeploymentSpecifications = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Record<string, ComponentDeploymentSpecification> => {
   return Object.entries(output).reduce(
     (acc: Record<string, ComponentDeploymentSpecification>, [key, value]: [string, any]) => {
@@ -1846,7 +1846,7 @@ const de_ComponentDeploymentSpecifications = (
       acc[key as string] = de_ComponentDeploymentSpecification(value, context);
       return acc;
     },
-    {} as Record<string, ComponentDeploymentSpecification>
+    {} as Record<string, ComponentDeploymentSpecification>,
   );
 };
 

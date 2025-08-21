@@ -61,14 +61,14 @@ export class MediaTypeHeaderSerializer
 
 export const getMediaTypeHeaderHandler = <Context>(
   operation: __Operation<MediaTypeHeaderServerInput, MediaTypeHeaderServerOutput, Context>,
-  customizer: __ValidationCustomizer<"MediaTypeHeader">
+  customizer: __ValidationCustomizer<"MediaTypeHeader">,
 ): __ServiceHandler<Context, __HttpRequest, __HttpResponse> => {
   const mux = new httpbinding.HttpBindingMux<"RestJson", "MediaTypeHeader">([
     new httpbinding.UriSpec<"RestJson", "MediaTypeHeader">(
       "GET",
       [{ type: "path_literal", value: "MediaTypeHeader" }],
       [],
-      { service: "RestJson", operation: "MediaTypeHeader" }
+      { service: "RestJson", operation: "MediaTypeHeader" },
     ),
   ]);
   return new MediaTypeHeaderHandler(
@@ -76,7 +76,7 @@ export const getMediaTypeHeaderHandler = <Context>(
     mux,
     new MediaTypeHeaderSerializer(),
     serializeFrameworkException,
-    customizer
+    customizer,
   );
 };
 
@@ -97,7 +97,7 @@ async function handle<S, O extends keyof S & string, Context>(
   operation: __Operation<__OperationInput<S[O]>, __OperationOutput<S[O]>, Context>,
   serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
   validationFn: (input: __OperationInput<S[O]>) => __ValidationFailure[],
-  validationCustomizer: __ValidationCustomizer<O>
+  validationCustomizer: __ValidationCustomizer<O>,
 ): Promise<__HttpResponse> {
   let input;
   try {
@@ -139,7 +139,7 @@ export class MediaTypeHeaderHandler<Context> implements __ServiceHandler<Context
   >;
   private readonly serializeFrameworkException: (
     e: __SmithyFrameworkException,
-    ctx: __ServerSerdeContext
+    ctx: __ServerSerdeContext,
   ) => Promise<__HttpResponse>;
   private readonly validationCustomizer: __ValidationCustomizer<"MediaTypeHeader">;
   /**
@@ -156,7 +156,7 @@ export class MediaTypeHeaderHandler<Context> implements __ServiceHandler<Context
     mux: __Mux<"RestJson", "MediaTypeHeader">,
     serializer: __OperationSerializer<RestJsonService<Context>, "MediaTypeHeader", MediaTypeHeaderErrors>,
     serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
-    validationCustomizer: __ValidationCustomizer<"MediaTypeHeader">
+    validationCustomizer: __ValidationCustomizer<"MediaTypeHeader">,
   ) {
     this.operation = operation;
     this.mux = mux;
@@ -168,7 +168,7 @@ export class MediaTypeHeaderHandler<Context> implements __ServiceHandler<Context
     const target = this.mux.match(request);
     if (target === undefined) {
       console.log(
-        "Received a request that did not match aws.protocoltests.restjson#RestJson.MediaTypeHeader. This indicates a misconfiguration."
+        "Received a request that did not match aws.protocoltests.restjson#RestJson.MediaTypeHeader. This indicates a misconfiguration.",
       );
       return this.serializeFrameworkException(new __InternalFailureException(), serdeContextBase);
     }
@@ -180,7 +180,7 @@ export class MediaTypeHeaderHandler<Context> implements __ServiceHandler<Context
       this.operation,
       this.serializeFrameworkException,
       MediaTypeHeaderServerInput.validate,
-      this.validationCustomizer
+      this.validationCustomizer,
     );
   }
 }

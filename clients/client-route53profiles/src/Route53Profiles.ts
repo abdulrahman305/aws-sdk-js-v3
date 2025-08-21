@@ -101,16 +101,16 @@ export interface Route53Profiles {
    */
   associateProfile(
     args: AssociateProfileCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AssociateProfileCommandOutput>;
   associateProfile(
     args: AssociateProfileCommandInput,
-    cb: (err: any, data?: AssociateProfileCommandOutput) => void
+    cb: (err: any, data?: AssociateProfileCommandOutput) => void,
   ): void;
   associateProfile(
     args: AssociateProfileCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AssociateProfileCommandOutput) => void
+    cb: (err: any, data?: AssociateProfileCommandOutput) => void,
   ): void;
 
   /**
@@ -118,16 +118,16 @@ export interface Route53Profiles {
    */
   associateResourceToProfile(
     args: AssociateResourceToProfileCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AssociateResourceToProfileCommandOutput>;
   associateResourceToProfile(
     args: AssociateResourceToProfileCommandInput,
-    cb: (err: any, data?: AssociateResourceToProfileCommandOutput) => void
+    cb: (err: any, data?: AssociateResourceToProfileCommandOutput) => void,
   ): void;
   associateResourceToProfile(
     args: AssociateResourceToProfileCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AssociateResourceToProfileCommandOutput) => void
+    cb: (err: any, data?: AssociateResourceToProfileCommandOutput) => void,
   ): void;
 
   /**
@@ -138,7 +138,7 @@ export interface Route53Profiles {
   createProfile(
     args: CreateProfileCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateProfileCommandOutput) => void
+    cb: (err: any, data?: CreateProfileCommandOutput) => void,
   ): void;
 
   /**
@@ -149,7 +149,7 @@ export interface Route53Profiles {
   deleteProfile(
     args: DeleteProfileCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteProfileCommandOutput) => void
+    cb: (err: any, data?: DeleteProfileCommandOutput) => void,
   ): void;
 
   /**
@@ -157,16 +157,16 @@ export interface Route53Profiles {
    */
   disassociateProfile(
     args: DisassociateProfileCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DisassociateProfileCommandOutput>;
   disassociateProfile(
     args: DisassociateProfileCommandInput,
-    cb: (err: any, data?: DisassociateProfileCommandOutput) => void
+    cb: (err: any, data?: DisassociateProfileCommandOutput) => void,
   ): void;
   disassociateProfile(
     args: DisassociateProfileCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DisassociateProfileCommandOutput) => void
+    cb: (err: any, data?: DisassociateProfileCommandOutput) => void,
   ): void;
 
   /**
@@ -174,16 +174,16 @@ export interface Route53Profiles {
    */
   disassociateResourceFromProfile(
     args: DisassociateResourceFromProfileCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DisassociateResourceFromProfileCommandOutput>;
   disassociateResourceFromProfile(
     args: DisassociateResourceFromProfileCommandInput,
-    cb: (err: any, data?: DisassociateResourceFromProfileCommandOutput) => void
+    cb: (err: any, data?: DisassociateResourceFromProfileCommandOutput) => void,
   ): void;
   disassociateResourceFromProfile(
     args: DisassociateResourceFromProfileCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DisassociateResourceFromProfileCommandOutput) => void
+    cb: (err: any, data?: DisassociateResourceFromProfileCommandOutput) => void,
   ): void;
 
   /**
@@ -194,7 +194,7 @@ export interface Route53Profiles {
   getProfile(
     args: GetProfileCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetProfileCommandOutput) => void
+    cb: (err: any, data?: GetProfileCommandOutput) => void,
   ): void;
 
   /**
@@ -202,16 +202,16 @@ export interface Route53Profiles {
    */
   getProfileAssociation(
     args: GetProfileAssociationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetProfileAssociationCommandOutput>;
   getProfileAssociation(
     args: GetProfileAssociationCommandInput,
-    cb: (err: any, data?: GetProfileAssociationCommandOutput) => void
+    cb: (err: any, data?: GetProfileAssociationCommandOutput) => void,
   ): void;
   getProfileAssociation(
     args: GetProfileAssociationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetProfileAssociationCommandOutput) => void
+    cb: (err: any, data?: GetProfileAssociationCommandOutput) => void,
   ): void;
 
   /**
@@ -219,16 +219,16 @@ export interface Route53Profiles {
    */
   getProfileResourceAssociation(
     args: GetProfileResourceAssociationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetProfileResourceAssociationCommandOutput>;
   getProfileResourceAssociation(
     args: GetProfileResourceAssociationCommandInput,
-    cb: (err: any, data?: GetProfileResourceAssociationCommandOutput) => void
+    cb: (err: any, data?: GetProfileResourceAssociationCommandOutput) => void,
   ): void;
   getProfileResourceAssociation(
     args: GetProfileResourceAssociationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetProfileResourceAssociationCommandOutput) => void
+    cb: (err: any, data?: GetProfileResourceAssociationCommandOutput) => void,
   ): void;
 
   /**
@@ -237,16 +237,16 @@ export interface Route53Profiles {
   listProfileAssociations(): Promise<ListProfileAssociationsCommandOutput>;
   listProfileAssociations(
     args: ListProfileAssociationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListProfileAssociationsCommandOutput>;
   listProfileAssociations(
     args: ListProfileAssociationsCommandInput,
-    cb: (err: any, data?: ListProfileAssociationsCommandOutput) => void
+    cb: (err: any, data?: ListProfileAssociationsCommandOutput) => void,
   ): void;
   listProfileAssociations(
     args: ListProfileAssociationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListProfileAssociationsCommandOutput) => void
+    cb: (err: any, data?: ListProfileAssociationsCommandOutput) => void,
   ): void;
 
   /**
@@ -254,16 +254,16 @@ export interface Route53Profiles {
    */
   listProfileResourceAssociations(
     args: ListProfileResourceAssociationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListProfileResourceAssociationsCommandOutput>;
   listProfileResourceAssociations(
     args: ListProfileResourceAssociationsCommandInput,
-    cb: (err: any, data?: ListProfileResourceAssociationsCommandOutput) => void
+    cb: (err: any, data?: ListProfileResourceAssociationsCommandOutput) => void,
   ): void;
   listProfileResourceAssociations(
     args: ListProfileResourceAssociationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListProfileResourceAssociationsCommandOutput) => void
+    cb: (err: any, data?: ListProfileResourceAssociationsCommandOutput) => void,
   ): void;
 
   /**
@@ -275,7 +275,7 @@ export interface Route53Profiles {
   listProfiles(
     args: ListProfilesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListProfilesCommandOutput) => void
+    cb: (err: any, data?: ListProfilesCommandOutput) => void,
   ): void;
 
   /**
@@ -283,16 +283,16 @@ export interface Route53Profiles {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -303,7 +303,7 @@ export interface Route53Profiles {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -314,7 +314,7 @@ export interface Route53Profiles {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -322,16 +322,16 @@ export interface Route53Profiles {
    */
   updateProfileResourceAssociation(
     args: UpdateProfileResourceAssociationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateProfileResourceAssociationCommandOutput>;
   updateProfileResourceAssociation(
     args: UpdateProfileResourceAssociationCommandInput,
-    cb: (err: any, data?: UpdateProfileResourceAssociationCommandOutput) => void
+    cb: (err: any, data?: UpdateProfileResourceAssociationCommandOutput) => void,
   ): void;
   updateProfileResourceAssociation(
     args: UpdateProfileResourceAssociationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateProfileResourceAssociationCommandOutput) => void
+    cb: (err: any, data?: UpdateProfileResourceAssociationCommandOutput) => void,
   ): void;
 }
 

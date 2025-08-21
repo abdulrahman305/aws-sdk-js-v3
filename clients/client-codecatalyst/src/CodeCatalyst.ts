@@ -217,16 +217,16 @@ export interface CodeCatalyst {
    */
   createAccessToken(
     args: CreateAccessTokenCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateAccessTokenCommandOutput>;
   createAccessToken(
     args: CreateAccessTokenCommandInput,
-    cb: (err: any, data?: CreateAccessTokenCommandOutput) => void
+    cb: (err: any, data?: CreateAccessTokenCommandOutput) => void,
   ): void;
   createAccessToken(
     args: CreateAccessTokenCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateAccessTokenCommandOutput) => void
+    cb: (err: any, data?: CreateAccessTokenCommandOutput) => void,
   ): void;
 
   /**
@@ -234,16 +234,16 @@ export interface CodeCatalyst {
    */
   createDevEnvironment(
     args: CreateDevEnvironmentCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateDevEnvironmentCommandOutput>;
   createDevEnvironment(
     args: CreateDevEnvironmentCommandInput,
-    cb: (err: any, data?: CreateDevEnvironmentCommandOutput) => void
+    cb: (err: any, data?: CreateDevEnvironmentCommandOutput) => void,
   ): void;
   createDevEnvironment(
     args: CreateDevEnvironmentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateDevEnvironmentCommandOutput) => void
+    cb: (err: any, data?: CreateDevEnvironmentCommandOutput) => void,
   ): void;
 
   /**
@@ -254,7 +254,7 @@ export interface CodeCatalyst {
   createProject(
     args: CreateProjectCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateProjectCommandOutput) => void
+    cb: (err: any, data?: CreateProjectCommandOutput) => void,
   ): void;
 
   /**
@@ -262,16 +262,16 @@ export interface CodeCatalyst {
    */
   createSourceRepository(
     args: CreateSourceRepositoryCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateSourceRepositoryCommandOutput>;
   createSourceRepository(
     args: CreateSourceRepositoryCommandInput,
-    cb: (err: any, data?: CreateSourceRepositoryCommandOutput) => void
+    cb: (err: any, data?: CreateSourceRepositoryCommandOutput) => void,
   ): void;
   createSourceRepository(
     args: CreateSourceRepositoryCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateSourceRepositoryCommandOutput) => void
+    cb: (err: any, data?: CreateSourceRepositoryCommandOutput) => void,
   ): void;
 
   /**
@@ -279,16 +279,16 @@ export interface CodeCatalyst {
    */
   createSourceRepositoryBranch(
     args: CreateSourceRepositoryBranchCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateSourceRepositoryBranchCommandOutput>;
   createSourceRepositoryBranch(
     args: CreateSourceRepositoryBranchCommandInput,
-    cb: (err: any, data?: CreateSourceRepositoryBranchCommandOutput) => void
+    cb: (err: any, data?: CreateSourceRepositoryBranchCommandOutput) => void,
   ): void;
   createSourceRepositoryBranch(
     args: CreateSourceRepositoryBranchCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateSourceRepositoryBranchCommandOutput) => void
+    cb: (err: any, data?: CreateSourceRepositoryBranchCommandOutput) => void,
   ): void;
 
   /**
@@ -296,16 +296,16 @@ export interface CodeCatalyst {
    */
   deleteAccessToken(
     args: DeleteAccessTokenCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteAccessTokenCommandOutput>;
   deleteAccessToken(
     args: DeleteAccessTokenCommandInput,
-    cb: (err: any, data?: DeleteAccessTokenCommandOutput) => void
+    cb: (err: any, data?: DeleteAccessTokenCommandOutput) => void,
   ): void;
   deleteAccessToken(
     args: DeleteAccessTokenCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteAccessTokenCommandOutput) => void
+    cb: (err: any, data?: DeleteAccessTokenCommandOutput) => void,
   ): void;
 
   /**
@@ -313,16 +313,16 @@ export interface CodeCatalyst {
    */
   deleteDevEnvironment(
     args: DeleteDevEnvironmentCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteDevEnvironmentCommandOutput>;
   deleteDevEnvironment(
     args: DeleteDevEnvironmentCommandInput,
-    cb: (err: any, data?: DeleteDevEnvironmentCommandOutput) => void
+    cb: (err: any, data?: DeleteDevEnvironmentCommandOutput) => void,
   ): void;
   deleteDevEnvironment(
     args: DeleteDevEnvironmentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteDevEnvironmentCommandOutput) => void
+    cb: (err: any, data?: DeleteDevEnvironmentCommandOutput) => void,
   ): void;
 
   /**
@@ -333,7 +333,7 @@ export interface CodeCatalyst {
   deleteProject(
     args: DeleteProjectCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteProjectCommandOutput) => void
+    cb: (err: any, data?: DeleteProjectCommandOutput) => void,
   ): void;
 
   /**
@@ -341,16 +341,16 @@ export interface CodeCatalyst {
    */
   deleteSourceRepository(
     args: DeleteSourceRepositoryCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteSourceRepositoryCommandOutput>;
   deleteSourceRepository(
     args: DeleteSourceRepositoryCommandInput,
-    cb: (err: any, data?: DeleteSourceRepositoryCommandOutput) => void
+    cb: (err: any, data?: DeleteSourceRepositoryCommandOutput) => void,
   ): void;
   deleteSourceRepository(
     args: DeleteSourceRepositoryCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteSourceRepositoryCommandOutput) => void
+    cb: (err: any, data?: DeleteSourceRepositoryCommandOutput) => void,
   ): void;
 
   /**
@@ -361,7 +361,7 @@ export interface CodeCatalyst {
   deleteSpace(
     args: DeleteSpaceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteSpaceCommandOutput) => void
+    cb: (err: any, data?: DeleteSpaceCommandOutput) => void,
   ): void;
 
   /**
@@ -369,16 +369,16 @@ export interface CodeCatalyst {
    */
   getDevEnvironment(
     args: GetDevEnvironmentCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetDevEnvironmentCommandOutput>;
   getDevEnvironment(
     args: GetDevEnvironmentCommandInput,
-    cb: (err: any, data?: GetDevEnvironmentCommandOutput) => void
+    cb: (err: any, data?: GetDevEnvironmentCommandOutput) => void,
   ): void;
   getDevEnvironment(
     args: GetDevEnvironmentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetDevEnvironmentCommandOutput) => void
+    cb: (err: any, data?: GetDevEnvironmentCommandOutput) => void,
   ): void;
 
   /**
@@ -389,7 +389,7 @@ export interface CodeCatalyst {
   getProject(
     args: GetProjectCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetProjectCommandOutput) => void
+    cb: (err: any, data?: GetProjectCommandOutput) => void,
   ): void;
 
   /**
@@ -397,16 +397,16 @@ export interface CodeCatalyst {
    */
   getSourceRepository(
     args: GetSourceRepositoryCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetSourceRepositoryCommandOutput>;
   getSourceRepository(
     args: GetSourceRepositoryCommandInput,
-    cb: (err: any, data?: GetSourceRepositoryCommandOutput) => void
+    cb: (err: any, data?: GetSourceRepositoryCommandOutput) => void,
   ): void;
   getSourceRepository(
     args: GetSourceRepositoryCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetSourceRepositoryCommandOutput) => void
+    cb: (err: any, data?: GetSourceRepositoryCommandOutput) => void,
   ): void;
 
   /**
@@ -414,16 +414,16 @@ export interface CodeCatalyst {
    */
   getSourceRepositoryCloneUrls(
     args: GetSourceRepositoryCloneUrlsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetSourceRepositoryCloneUrlsCommandOutput>;
   getSourceRepositoryCloneUrls(
     args: GetSourceRepositoryCloneUrlsCommandInput,
-    cb: (err: any, data?: GetSourceRepositoryCloneUrlsCommandOutput) => void
+    cb: (err: any, data?: GetSourceRepositoryCloneUrlsCommandOutput) => void,
   ): void;
   getSourceRepositoryCloneUrls(
     args: GetSourceRepositoryCloneUrlsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetSourceRepositoryCloneUrlsCommandOutput) => void
+    cb: (err: any, data?: GetSourceRepositoryCloneUrlsCommandOutput) => void,
   ): void;
 
   /**
@@ -434,7 +434,7 @@ export interface CodeCatalyst {
   getSpace(
     args: GetSpaceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetSpaceCommandOutput) => void
+    cb: (err: any, data?: GetSpaceCommandOutput) => void,
   ): void;
 
   /**
@@ -442,13 +442,13 @@ export interface CodeCatalyst {
    */
   getSubscription(
     args: GetSubscriptionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetSubscriptionCommandOutput>;
   getSubscription(args: GetSubscriptionCommandInput, cb: (err: any, data?: GetSubscriptionCommandOutput) => void): void;
   getSubscription(
     args: GetSubscriptionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetSubscriptionCommandOutput) => void
+    cb: (err: any, data?: GetSubscriptionCommandOutput) => void,
   ): void;
 
   /**
@@ -457,13 +457,13 @@ export interface CodeCatalyst {
   getUserDetails(): Promise<GetUserDetailsCommandOutput>;
   getUserDetails(
     args: GetUserDetailsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetUserDetailsCommandOutput>;
   getUserDetails(args: GetUserDetailsCommandInput, cb: (err: any, data?: GetUserDetailsCommandOutput) => void): void;
   getUserDetails(
     args: GetUserDetailsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetUserDetailsCommandOutput) => void
+    cb: (err: any, data?: GetUserDetailsCommandOutput) => void,
   ): void;
 
   /**
@@ -474,7 +474,7 @@ export interface CodeCatalyst {
   getWorkflow(
     args: GetWorkflowCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetWorkflowCommandOutput) => void
+    cb: (err: any, data?: GetWorkflowCommandOutput) => void,
   ): void;
 
   /**
@@ -482,13 +482,13 @@ export interface CodeCatalyst {
    */
   getWorkflowRun(
     args: GetWorkflowRunCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetWorkflowRunCommandOutput>;
   getWorkflowRun(args: GetWorkflowRunCommandInput, cb: (err: any, data?: GetWorkflowRunCommandOutput) => void): void;
   getWorkflowRun(
     args: GetWorkflowRunCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetWorkflowRunCommandOutput) => void
+    cb: (err: any, data?: GetWorkflowRunCommandOutput) => void,
   ): void;
 
   /**
@@ -497,16 +497,16 @@ export interface CodeCatalyst {
   listAccessTokens(): Promise<ListAccessTokensCommandOutput>;
   listAccessTokens(
     args: ListAccessTokensCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListAccessTokensCommandOutput>;
   listAccessTokens(
     args: ListAccessTokensCommandInput,
-    cb: (err: any, data?: ListAccessTokensCommandOutput) => void
+    cb: (err: any, data?: ListAccessTokensCommandOutput) => void,
   ): void;
   listAccessTokens(
     args: ListAccessTokensCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListAccessTokensCommandOutput) => void
+    cb: (err: any, data?: ListAccessTokensCommandOutput) => void,
   ): void;
 
   /**
@@ -514,16 +514,16 @@ export interface CodeCatalyst {
    */
   listDevEnvironments(
     args: ListDevEnvironmentsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListDevEnvironmentsCommandOutput>;
   listDevEnvironments(
     args: ListDevEnvironmentsCommandInput,
-    cb: (err: any, data?: ListDevEnvironmentsCommandOutput) => void
+    cb: (err: any, data?: ListDevEnvironmentsCommandOutput) => void,
   ): void;
   listDevEnvironments(
     args: ListDevEnvironmentsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListDevEnvironmentsCommandOutput) => void
+    cb: (err: any, data?: ListDevEnvironmentsCommandOutput) => void,
   ): void;
 
   /**
@@ -531,16 +531,16 @@ export interface CodeCatalyst {
    */
   listDevEnvironmentSessions(
     args: ListDevEnvironmentSessionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListDevEnvironmentSessionsCommandOutput>;
   listDevEnvironmentSessions(
     args: ListDevEnvironmentSessionsCommandInput,
-    cb: (err: any, data?: ListDevEnvironmentSessionsCommandOutput) => void
+    cb: (err: any, data?: ListDevEnvironmentSessionsCommandOutput) => void,
   ): void;
   listDevEnvironmentSessions(
     args: ListDevEnvironmentSessionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListDevEnvironmentSessionsCommandOutput) => void
+    cb: (err: any, data?: ListDevEnvironmentSessionsCommandOutput) => void,
   ): void;
 
   /**
@@ -551,7 +551,7 @@ export interface CodeCatalyst {
   listEventLogs(
     args: ListEventLogsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListEventLogsCommandOutput) => void
+    cb: (err: any, data?: ListEventLogsCommandOutput) => void,
   ): void;
 
   /**
@@ -562,7 +562,7 @@ export interface CodeCatalyst {
   listProjects(
     args: ListProjectsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListProjectsCommandOutput) => void
+    cb: (err: any, data?: ListProjectsCommandOutput) => void,
   ): void;
 
   /**
@@ -570,16 +570,16 @@ export interface CodeCatalyst {
    */
   listSourceRepositories(
     args: ListSourceRepositoriesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListSourceRepositoriesCommandOutput>;
   listSourceRepositories(
     args: ListSourceRepositoriesCommandInput,
-    cb: (err: any, data?: ListSourceRepositoriesCommandOutput) => void
+    cb: (err: any, data?: ListSourceRepositoriesCommandOutput) => void,
   ): void;
   listSourceRepositories(
     args: ListSourceRepositoriesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListSourceRepositoriesCommandOutput) => void
+    cb: (err: any, data?: ListSourceRepositoriesCommandOutput) => void,
   ): void;
 
   /**
@@ -587,16 +587,16 @@ export interface CodeCatalyst {
    */
   listSourceRepositoryBranches(
     args: ListSourceRepositoryBranchesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListSourceRepositoryBranchesCommandOutput>;
   listSourceRepositoryBranches(
     args: ListSourceRepositoryBranchesCommandInput,
-    cb: (err: any, data?: ListSourceRepositoryBranchesCommandOutput) => void
+    cb: (err: any, data?: ListSourceRepositoryBranchesCommandOutput) => void,
   ): void;
   listSourceRepositoryBranches(
     args: ListSourceRepositoryBranchesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListSourceRepositoryBranchesCommandOutput) => void
+    cb: (err: any, data?: ListSourceRepositoryBranchesCommandOutput) => void,
   ): void;
 
   /**
@@ -608,7 +608,7 @@ export interface CodeCatalyst {
   listSpaces(
     args: ListSpacesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListSpacesCommandOutput) => void
+    cb: (err: any, data?: ListSpacesCommandOutput) => void,
   ): void;
 
   /**
@@ -616,16 +616,16 @@ export interface CodeCatalyst {
    */
   listWorkflowRuns(
     args: ListWorkflowRunsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListWorkflowRunsCommandOutput>;
   listWorkflowRuns(
     args: ListWorkflowRunsCommandInput,
-    cb: (err: any, data?: ListWorkflowRunsCommandOutput) => void
+    cb: (err: any, data?: ListWorkflowRunsCommandOutput) => void,
   ): void;
   listWorkflowRuns(
     args: ListWorkflowRunsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListWorkflowRunsCommandOutput) => void
+    cb: (err: any, data?: ListWorkflowRunsCommandOutput) => void,
   ): void;
 
   /**
@@ -636,7 +636,7 @@ export interface CodeCatalyst {
   listWorkflows(
     args: ListWorkflowsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListWorkflowsCommandOutput) => void
+    cb: (err: any, data?: ListWorkflowsCommandOutput) => void,
   ): void;
 
   /**
@@ -644,16 +644,16 @@ export interface CodeCatalyst {
    */
   startDevEnvironment(
     args: StartDevEnvironmentCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartDevEnvironmentCommandOutput>;
   startDevEnvironment(
     args: StartDevEnvironmentCommandInput,
-    cb: (err: any, data?: StartDevEnvironmentCommandOutput) => void
+    cb: (err: any, data?: StartDevEnvironmentCommandOutput) => void,
   ): void;
   startDevEnvironment(
     args: StartDevEnvironmentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartDevEnvironmentCommandOutput) => void
+    cb: (err: any, data?: StartDevEnvironmentCommandOutput) => void,
   ): void;
 
   /**
@@ -661,16 +661,16 @@ export interface CodeCatalyst {
    */
   startDevEnvironmentSession(
     args: StartDevEnvironmentSessionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartDevEnvironmentSessionCommandOutput>;
   startDevEnvironmentSession(
     args: StartDevEnvironmentSessionCommandInput,
-    cb: (err: any, data?: StartDevEnvironmentSessionCommandOutput) => void
+    cb: (err: any, data?: StartDevEnvironmentSessionCommandOutput) => void,
   ): void;
   startDevEnvironmentSession(
     args: StartDevEnvironmentSessionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartDevEnvironmentSessionCommandOutput) => void
+    cb: (err: any, data?: StartDevEnvironmentSessionCommandOutput) => void,
   ): void;
 
   /**
@@ -678,16 +678,16 @@ export interface CodeCatalyst {
    */
   startWorkflowRun(
     args: StartWorkflowRunCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartWorkflowRunCommandOutput>;
   startWorkflowRun(
     args: StartWorkflowRunCommandInput,
-    cb: (err: any, data?: StartWorkflowRunCommandOutput) => void
+    cb: (err: any, data?: StartWorkflowRunCommandOutput) => void,
   ): void;
   startWorkflowRun(
     args: StartWorkflowRunCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartWorkflowRunCommandOutput) => void
+    cb: (err: any, data?: StartWorkflowRunCommandOutput) => void,
   ): void;
 
   /**
@@ -695,16 +695,16 @@ export interface CodeCatalyst {
    */
   stopDevEnvironment(
     args: StopDevEnvironmentCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StopDevEnvironmentCommandOutput>;
   stopDevEnvironment(
     args: StopDevEnvironmentCommandInput,
-    cb: (err: any, data?: StopDevEnvironmentCommandOutput) => void
+    cb: (err: any, data?: StopDevEnvironmentCommandOutput) => void,
   ): void;
   stopDevEnvironment(
     args: StopDevEnvironmentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StopDevEnvironmentCommandOutput) => void
+    cb: (err: any, data?: StopDevEnvironmentCommandOutput) => void,
   ): void;
 
   /**
@@ -712,16 +712,16 @@ export interface CodeCatalyst {
    */
   stopDevEnvironmentSession(
     args: StopDevEnvironmentSessionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StopDevEnvironmentSessionCommandOutput>;
   stopDevEnvironmentSession(
     args: StopDevEnvironmentSessionCommandInput,
-    cb: (err: any, data?: StopDevEnvironmentSessionCommandOutput) => void
+    cb: (err: any, data?: StopDevEnvironmentSessionCommandOutput) => void,
   ): void;
   stopDevEnvironmentSession(
     args: StopDevEnvironmentSessionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StopDevEnvironmentSessionCommandOutput) => void
+    cb: (err: any, data?: StopDevEnvironmentSessionCommandOutput) => void,
   ): void;
 
   /**
@@ -729,16 +729,16 @@ export interface CodeCatalyst {
    */
   updateDevEnvironment(
     args: UpdateDevEnvironmentCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateDevEnvironmentCommandOutput>;
   updateDevEnvironment(
     args: UpdateDevEnvironmentCommandInput,
-    cb: (err: any, data?: UpdateDevEnvironmentCommandOutput) => void
+    cb: (err: any, data?: UpdateDevEnvironmentCommandOutput) => void,
   ): void;
   updateDevEnvironment(
     args: UpdateDevEnvironmentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateDevEnvironmentCommandOutput) => void
+    cb: (err: any, data?: UpdateDevEnvironmentCommandOutput) => void,
   ): void;
 
   /**
@@ -749,7 +749,7 @@ export interface CodeCatalyst {
   updateProject(
     args: UpdateProjectCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateProjectCommandOutput) => void
+    cb: (err: any, data?: UpdateProjectCommandOutput) => void,
   ): void;
 
   /**
@@ -760,7 +760,7 @@ export interface CodeCatalyst {
   updateSpace(
     args: UpdateSpaceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateSpaceCommandOutput) => void
+    cb: (err: any, data?: UpdateSpaceCommandOutput) => void,
   ): void;
 
   /**
@@ -772,7 +772,7 @@ export interface CodeCatalyst {
   verifySession(
     args: VerifySessionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: VerifySessionCommandOutput) => void
+    cb: (err: any, data?: VerifySessionCommandOutput) => void,
   ): void;
 }
 

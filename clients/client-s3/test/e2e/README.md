@@ -4,7 +4,6 @@ Certain resources need to be created to make sure the integration test
 has backend resources to test against. Follow steps bellow to create them:
 
 1. Create S3 Bucket
-
    1. Create Bucket with:
 
    ```console

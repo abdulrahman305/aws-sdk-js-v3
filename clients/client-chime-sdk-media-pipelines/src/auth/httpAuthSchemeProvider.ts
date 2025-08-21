@@ -44,7 +44,7 @@ export interface ChimeSDKMediaPipelinesHttpAuthSchemeParametersProvider
 export const defaultChimeSDKMediaPipelinesHttpAuthSchemeParametersProvider = async (
   config: ChimeSDKMediaPipelinesClientResolvedConfig,
   context: HandlerExecutionContext,
-  input: object
+  input: object,
 ): Promise<ChimeSDKMediaPipelinesHttpAuthSchemeParameters> => {
   return {
     operation: getSmithyContext(context).operation as string,
@@ -57,7 +57,7 @@ export const defaultChimeSDKMediaPipelinesHttpAuthSchemeParametersProvider = asy
 };
 
 function createAwsAuthSigv4HttpAuthOption(
-  authParameters: ChimeSDKMediaPipelinesHttpAuthSchemeParameters
+  authParameters: ChimeSDKMediaPipelinesHttpAuthSchemeParameters,
 ): HttpAuthOption {
   return {
     schemeId: "aws.auth#sigv4",
@@ -87,7 +87,7 @@ export interface ChimeSDKMediaPipelinesHttpAuthSchemeProvider
  * @internal
  */
 export const defaultChimeSDKMediaPipelinesHttpAuthSchemeProvider: ChimeSDKMediaPipelinesHttpAuthSchemeProvider = (
-  authParameters
+  authParameters,
 ) => {
   const options: HttpAuthOption[] = [];
   switch (authParameters.operation) {
@@ -136,7 +136,7 @@ export interface HttpAuthSchemeResolvedConfig extends AwsSdkSigV4AuthResolvedCon
  * @internal
  */
 export const resolveHttpAuthSchemeConfig = <T>(
-  config: T & HttpAuthSchemeInputConfig & AwsSdkSigV4PreviouslyResolved
+  config: T & HttpAuthSchemeInputConfig & AwsSdkSigV4PreviouslyResolved,
 ): T & HttpAuthSchemeResolvedConfig => {
   const config_0 = resolveAwsSdkSigV4Config(config);
   return {

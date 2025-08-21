@@ -121,7 +121,7 @@ import { TranslateServiceException as __BaseException } from "../models/Translat
  */
 export const se_CreateParallelDataCommand = async (
   input: CreateParallelDataCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateParallelData");
   let body: any;
@@ -134,7 +134,7 @@ export const se_CreateParallelDataCommand = async (
  */
 export const se_DeleteParallelDataCommand = async (
   input: DeleteParallelDataCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteParallelData");
   let body: any;
@@ -147,7 +147,7 @@ export const se_DeleteParallelDataCommand = async (
  */
 export const se_DeleteTerminologyCommand = async (
   input: DeleteTerminologyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteTerminology");
   let body: any;
@@ -160,7 +160,7 @@ export const se_DeleteTerminologyCommand = async (
  */
 export const se_DescribeTextTranslationJobCommand = async (
   input: DescribeTextTranslationJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeTextTranslationJob");
   let body: any;
@@ -173,7 +173,7 @@ export const se_DescribeTextTranslationJobCommand = async (
  */
 export const se_GetParallelDataCommand = async (
   input: GetParallelDataCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetParallelData");
   let body: any;
@@ -186,7 +186,7 @@ export const se_GetParallelDataCommand = async (
  */
 export const se_GetTerminologyCommand = async (
   input: GetTerminologyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetTerminology");
   let body: any;
@@ -199,7 +199,7 @@ export const se_GetTerminologyCommand = async (
  */
 export const se_ImportTerminologyCommand = async (
   input: ImportTerminologyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ImportTerminology");
   let body: any;
@@ -212,7 +212,7 @@ export const se_ImportTerminologyCommand = async (
  */
 export const se_ListLanguagesCommand = async (
   input: ListLanguagesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListLanguages");
   let body: any;
@@ -225,7 +225,7 @@ export const se_ListLanguagesCommand = async (
  */
 export const se_ListParallelDataCommand = async (
   input: ListParallelDataCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListParallelData");
   let body: any;
@@ -238,7 +238,7 @@ export const se_ListParallelDataCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListTagsForResource");
   let body: any;
@@ -251,7 +251,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_ListTerminologiesCommand = async (
   input: ListTerminologiesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListTerminologies");
   let body: any;
@@ -264,7 +264,7 @@ export const se_ListTerminologiesCommand = async (
  */
 export const se_ListTextTranslationJobsCommand = async (
   input: ListTextTranslationJobsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListTextTranslationJobs");
   let body: any;
@@ -277,7 +277,7 @@ export const se_ListTextTranslationJobsCommand = async (
  */
 export const se_StartTextTranslationJobCommand = async (
   input: StartTextTranslationJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StartTextTranslationJob");
   let body: any;
@@ -290,7 +290,7 @@ export const se_StartTextTranslationJobCommand = async (
  */
 export const se_StopTextTranslationJobCommand = async (
   input: StopTextTranslationJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StopTextTranslationJob");
   let body: any;
@@ -303,7 +303,7 @@ export const se_StopTextTranslationJobCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("TagResource");
   let body: any;
@@ -316,7 +316,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_TranslateDocumentCommand = async (
   input: TranslateDocumentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("TranslateDocument");
   let body: any;
@@ -329,7 +329,7 @@ export const se_TranslateDocumentCommand = async (
  */
 export const se_TranslateTextCommand = async (
   input: TranslateTextCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("TranslateText");
   let body: any;
@@ -342,7 +342,7 @@ export const se_TranslateTextCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UntagResource");
   let body: any;
@@ -355,7 +355,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateParallelDataCommand = async (
   input: UpdateParallelDataCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateParallelData");
   let body: any;
@@ -368,7 +368,7 @@ export const se_UpdateParallelDataCommand = async (
  */
 export const de_CreateParallelDataCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateParallelDataCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -388,7 +388,7 @@ export const de_CreateParallelDataCommand = async (
  */
 export const de_DeleteParallelDataCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteParallelDataCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -408,7 +408,7 @@ export const de_DeleteParallelDataCommand = async (
  */
 export const de_DeleteTerminologyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteTerminologyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -425,7 +425,7 @@ export const de_DeleteTerminologyCommand = async (
  */
 export const de_DescribeTextTranslationJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeTextTranslationJobCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -445,7 +445,7 @@ export const de_DescribeTextTranslationJobCommand = async (
  */
 export const de_GetParallelDataCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetParallelDataCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -465,7 +465,7 @@ export const de_GetParallelDataCommand = async (
  */
 export const de_GetTerminologyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetTerminologyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -485,7 +485,7 @@ export const de_GetTerminologyCommand = async (
  */
 export const de_ImportTerminologyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ImportTerminologyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -505,7 +505,7 @@ export const de_ImportTerminologyCommand = async (
  */
 export const de_ListLanguagesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListLanguagesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -525,7 +525,7 @@ export const de_ListLanguagesCommand = async (
  */
 export const de_ListParallelDataCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListParallelDataCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -545,7 +545,7 @@ export const de_ListParallelDataCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -565,7 +565,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_ListTerminologiesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTerminologiesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -585,7 +585,7 @@ export const de_ListTerminologiesCommand = async (
  */
 export const de_ListTextTranslationJobsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTextTranslationJobsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -605,7 +605,7 @@ export const de_ListTextTranslationJobsCommand = async (
  */
 export const de_StartTextTranslationJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartTextTranslationJobCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -625,7 +625,7 @@ export const de_StartTextTranslationJobCommand = async (
  */
 export const de_StopTextTranslationJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StopTextTranslationJobCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -645,7 +645,7 @@ export const de_StopTextTranslationJobCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -665,7 +665,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_TranslateDocumentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TranslateDocumentCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -685,7 +685,7 @@ export const de_TranslateDocumentCommand = async (
  */
 export const de_TranslateTextCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TranslateTextCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -705,7 +705,7 @@ export const de_TranslateTextCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -725,7 +725,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateParallelDataCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateParallelDataCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -810,7 +810,7 @@ const de_CommandError = async (output: __HttpResponse, context: __SerdeContext):
  */
 const de_ConcurrentModificationExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ConcurrentModificationException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -839,7 +839,7 @@ const de_ConflictExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_DetectedLanguageLowConfidenceExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DetectedLanguageLowConfidenceException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -855,7 +855,7 @@ const de_DetectedLanguageLowConfidenceExceptionRes = async (
  */
 const de_InternalServerExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -871,7 +871,7 @@ const de_InternalServerExceptionRes = async (
  */
 const de_InvalidFilterExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidFilterException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -887,7 +887,7 @@ const de_InvalidFilterExceptionRes = async (
  */
 const de_InvalidParameterValueExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidParameterValueException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -903,7 +903,7 @@ const de_InvalidParameterValueExceptionRes = async (
  */
 const de_InvalidRequestExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidRequestException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -919,7 +919,7 @@ const de_InvalidRequestExceptionRes = async (
  */
 const de_LimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<LimitExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -935,7 +935,7 @@ const de_LimitExceededExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -951,7 +951,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_ServiceUnavailableExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceUnavailableException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -967,7 +967,7 @@ const de_ServiceUnavailableExceptionRes = async (
  */
 const de_TextSizeLimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TextSizeLimitExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -983,7 +983,7 @@ const de_TextSizeLimitExceededExceptionRes = async (
  */
 const de_TooManyRequestsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyRequestsException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -999,7 +999,7 @@ const de_TooManyRequestsExceptionRes = async (
  */
 const de_TooManyTagsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyTagsException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1015,7 +1015,7 @@ const de_TooManyTagsExceptionRes = async (
  */
 const de_UnsupportedDisplayLanguageCodeExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UnsupportedDisplayLanguageCodeException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1031,7 +1031,7 @@ const de_UnsupportedDisplayLanguageCodeExceptionRes = async (
  */
 const de_UnsupportedLanguagePairExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UnsupportedLanguagePairException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1220,7 +1220,7 @@ const se_UpdateParallelDataRequest = (input: UpdateParallelDataRequest, context:
  */
 const de_DescribeTextTranslationJobResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeTextTranslationJobResponse => {
   return take(output, {
     TextTranslationJobProperties: (_: any) => de_TextTranslationJobProperties(_, context),
@@ -1522,7 +1522,7 @@ const buildHttpRpcRequest = async (
   headers: __HeaderBag,
   path: string,
   resolvedHostname: string | undefined,
-  body: any
+  body: any,
 ): Promise<__HttpRequest> => {
   const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
   const contents: any = {

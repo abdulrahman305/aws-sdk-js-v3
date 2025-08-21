@@ -42,7 +42,7 @@ export interface STSHttpAuthSchemeParametersProvider
 export const defaultSTSHttpAuthSchemeParametersProvider = async (
   config: STSClientResolvedConfig,
   context: HandlerExecutionContext,
-  input: object
+  input: object,
 ): Promise<STSHttpAuthSchemeParameters> => {
   return {
     operation: getSmithyContext(context).operation as string,
@@ -158,7 +158,7 @@ export interface HttpAuthSchemeResolvedConfig extends StsAuthResolvedConfig, Aws
  * @internal
  */
 export const resolveHttpAuthSchemeConfig = <T>(
-  config: T & HttpAuthSchemeInputConfig & AwsSdkSigV4PreviouslyResolved
+  config: T & HttpAuthSchemeInputConfig & AwsSdkSigV4PreviouslyResolved,
 ): T & HttpAuthSchemeResolvedConfig => {
   const config_0 = resolveStsAuthConfig(config);
   const config_1 = resolveAwsSdkSigV4Config(config_0);

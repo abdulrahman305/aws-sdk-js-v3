@@ -42,7 +42,7 @@ export namespace HttpRequestWithFloatLabelsServerInput {
    * @internal
    */
   export const validate: (
-    obj: Parameters<typeof HttpRequestWithFloatLabelsInput.validate>[0]
+    obj: Parameters<typeof HttpRequestWithFloatLabelsInput.validate>[0],
   ) => __ValidationFailure[] = HttpRequestWithFloatLabelsInput.validate;
 }
 export interface HttpRequestWithFloatLabelsServerOutput {}
@@ -50,8 +50,7 @@ export interface HttpRequestWithFloatLabelsServerOutput {}
 export type HttpRequestWithFloatLabelsErrors = never;
 
 export class HttpRequestWithFloatLabelsSerializer
-  implements
-    __OperationSerializer<RestJsonService<any>, "HttpRequestWithFloatLabels", HttpRequestWithFloatLabelsErrors>
+  implements __OperationSerializer<RestJsonService<any>, "HttpRequestWithFloatLabels", HttpRequestWithFloatLabelsErrors>
 {
   serialize = serializeHttpRequestWithFloatLabelsResponse;
   deserialize = deserializeHttpRequestWithFloatLabelsRequest;
@@ -67,14 +66,14 @@ export class HttpRequestWithFloatLabelsSerializer
 
 export const getHttpRequestWithFloatLabelsHandler = <Context>(
   operation: __Operation<HttpRequestWithFloatLabelsServerInput, HttpRequestWithFloatLabelsServerOutput, Context>,
-  customizer: __ValidationCustomizer<"HttpRequestWithFloatLabels">
+  customizer: __ValidationCustomizer<"HttpRequestWithFloatLabels">,
 ): __ServiceHandler<Context, __HttpRequest, __HttpResponse> => {
   const mux = new httpbinding.HttpBindingMux<"RestJson", "HttpRequestWithFloatLabels">([
     new httpbinding.UriSpec<"RestJson", "HttpRequestWithFloatLabels">(
       "GET",
       [{ type: "path_literal", value: "FloatHttpLabels" }, { type: "path" }, { type: "path" }],
       [],
-      { service: "RestJson", operation: "HttpRequestWithFloatLabels" }
+      { service: "RestJson", operation: "HttpRequestWithFloatLabels" },
     ),
   ]);
   return new HttpRequestWithFloatLabelsHandler(
@@ -82,7 +81,7 @@ export const getHttpRequestWithFloatLabelsHandler = <Context>(
     mux,
     new HttpRequestWithFloatLabelsSerializer(),
     serializeFrameworkException,
-    customizer
+    customizer,
   );
 };
 
@@ -103,7 +102,7 @@ async function handle<S, O extends keyof S & string, Context>(
   operation: __Operation<__OperationInput<S[O]>, __OperationOutput<S[O]>, Context>,
   serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
   validationFn: (input: __OperationInput<S[O]>) => __ValidationFailure[],
-  validationCustomizer: __ValidationCustomizer<O>
+  validationCustomizer: __ValidationCustomizer<O>,
 ): Promise<__HttpResponse> {
   let input;
   try {
@@ -149,7 +148,7 @@ export class HttpRequestWithFloatLabelsHandler<Context> implements __ServiceHand
   >;
   private readonly serializeFrameworkException: (
     e: __SmithyFrameworkException,
-    ctx: __ServerSerdeContext
+    ctx: __ServerSerdeContext,
   ) => Promise<__HttpResponse>;
   private readonly validationCustomizer: __ValidationCustomizer<"HttpRequestWithFloatLabels">;
   /**
@@ -170,7 +169,7 @@ export class HttpRequestWithFloatLabelsHandler<Context> implements __ServiceHand
       HttpRequestWithFloatLabelsErrors
     >,
     serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
-    validationCustomizer: __ValidationCustomizer<"HttpRequestWithFloatLabels">
+    validationCustomizer: __ValidationCustomizer<"HttpRequestWithFloatLabels">,
   ) {
     this.operation = operation;
     this.mux = mux;
@@ -182,7 +181,7 @@ export class HttpRequestWithFloatLabelsHandler<Context> implements __ServiceHand
     const target = this.mux.match(request);
     if (target === undefined) {
       console.log(
-        "Received a request that did not match aws.protocoltests.restjson#RestJson.HttpRequestWithFloatLabels. This indicates a misconfiguration."
+        "Received a request that did not match aws.protocoltests.restjson#RestJson.HttpRequestWithFloatLabels. This indicates a misconfiguration.",
       );
       return this.serializeFrameworkException(new __InternalFailureException(), serdeContextBase);
     }
@@ -194,7 +193,7 @@ export class HttpRequestWithFloatLabelsHandler<Context> implements __ServiceHand
       this.operation,
       this.serializeFrameworkException,
       HttpRequestWithFloatLabelsServerInput.validate,
-      this.validationCustomizer
+      this.validationCustomizer,
     );
   }
 }

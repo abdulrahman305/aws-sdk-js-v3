@@ -67,7 +67,7 @@ import {
  */
 export const se_GetClipCommand = async (
   input: GetClipCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -80,7 +80,7 @@ export const se_GetClipCommand = async (
       ClipFragmentSelector: (_) => se_ClipFragmentSelector(_, context),
       StreamARN: [],
       StreamName: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -91,7 +91,7 @@ export const se_GetClipCommand = async (
  */
 export const se_GetDASHStreamingSessionURLCommand = async (
   input: GetDASHStreamingSessionURLCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -109,7 +109,7 @@ export const se_GetDASHStreamingSessionURLCommand = async (
       PlaybackMode: [],
       StreamARN: [],
       StreamName: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -120,7 +120,7 @@ export const se_GetDASHStreamingSessionURLCommand = async (
  */
 export const se_GetHLSStreamingSessionURLCommand = async (
   input: GetHLSStreamingSessionURLCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -139,7 +139,7 @@ export const se_GetHLSStreamingSessionURLCommand = async (
       PlaybackMode: [],
       StreamARN: [],
       StreamName: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -150,7 +150,7 @@ export const se_GetHLSStreamingSessionURLCommand = async (
  */
 export const se_GetImagesCommand = async (
   input: GetImagesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -172,7 +172,7 @@ export const se_GetImagesCommand = async (
       StreamARN: [],
       StreamName: [],
       WidthPixels: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -183,7 +183,7 @@ export const se_GetImagesCommand = async (
  */
 export const se_GetMediaForFragmentListCommand = async (
   input: GetMediaForFragmentListCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -196,7 +196,7 @@ export const se_GetMediaForFragmentListCommand = async (
       Fragments: (_) => _json(_),
       StreamARN: [],
       StreamName: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -207,7 +207,7 @@ export const se_GetMediaForFragmentListCommand = async (
  */
 export const se_ListFragmentsCommand = async (
   input: ListFragmentsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -222,7 +222,7 @@ export const se_ListFragmentsCommand = async (
       NextToken: [],
       StreamARN: [],
       StreamName: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -233,7 +233,7 @@ export const se_ListFragmentsCommand = async (
  */
 export const de_GetClipCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext & __SdkStreamSerdeContext
+  context: __SerdeContext & __SdkStreamSerdeContext,
 ): Promise<GetClipCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -253,7 +253,7 @@ export const de_GetClipCommand = async (
  */
 export const de_GetDASHStreamingSessionURLCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetDASHStreamingSessionURLCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -274,7 +274,7 @@ export const de_GetDASHStreamingSessionURLCommand = async (
  */
 export const de_GetHLSStreamingSessionURLCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetHLSStreamingSessionURLCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -295,7 +295,7 @@ export const de_GetHLSStreamingSessionURLCommand = async (
  */
 export const de_GetImagesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetImagesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -317,7 +317,7 @@ export const de_GetImagesCommand = async (
  */
 export const de_GetMediaForFragmentListCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext & __SdkStreamSerdeContext
+  context: __SerdeContext & __SdkStreamSerdeContext,
 ): Promise<GetMediaForFragmentListCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -337,7 +337,7 @@ export const de_GetMediaForFragmentListCommand = async (
  */
 export const de_ListFragmentsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListFragmentsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -407,7 +407,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_ClientLimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ClientLimitExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -427,7 +427,7 @@ const de_ClientLimitExceededExceptionRes = async (
  */
 const de_InvalidArgumentExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidArgumentException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -447,7 +447,7 @@ const de_InvalidArgumentExceptionRes = async (
  */
 const de_InvalidCodecPrivateDataExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidCodecPrivateDataException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -467,7 +467,7 @@ const de_InvalidCodecPrivateDataExceptionRes = async (
  */
 const de_InvalidMediaFrameExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidMediaFrameException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -487,7 +487,7 @@ const de_InvalidMediaFrameExceptionRes = async (
  */
 const de_MissingCodecPrivateDataExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<MissingCodecPrivateDataException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -507,7 +507,7 @@ const de_MissingCodecPrivateDataExceptionRes = async (
  */
 const de_NoDataRetentionExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<NoDataRetentionException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -527,7 +527,7 @@ const de_NoDataRetentionExceptionRes = async (
  */
 const de_NotAuthorizedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<NotAuthorizedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -547,7 +547,7 @@ const de_NotAuthorizedExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -567,7 +567,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_UnsupportedStreamMediaTypeExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UnsupportedStreamMediaTypeException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;

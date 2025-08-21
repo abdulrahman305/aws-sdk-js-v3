@@ -44,7 +44,7 @@ export interface KinesisVideoSignalingHttpAuthSchemeParametersProvider
 export const defaultKinesisVideoSignalingHttpAuthSchemeParametersProvider = async (
   config: KinesisVideoSignalingClientResolvedConfig,
   context: HandlerExecutionContext,
-  input: object
+  input: object,
 ): Promise<KinesisVideoSignalingHttpAuthSchemeParameters> => {
   return {
     operation: getSmithyContext(context).operation as string,
@@ -57,7 +57,7 @@ export const defaultKinesisVideoSignalingHttpAuthSchemeParametersProvider = asyn
 };
 
 function createAwsAuthSigv4HttpAuthOption(
-  authParameters: KinesisVideoSignalingHttpAuthSchemeParameters
+  authParameters: KinesisVideoSignalingHttpAuthSchemeParameters,
 ): HttpAuthOption {
   return {
     schemeId: "aws.auth#sigv4",
@@ -87,7 +87,7 @@ export interface KinesisVideoSignalingHttpAuthSchemeProvider
  * @internal
  */
 export const defaultKinesisVideoSignalingHttpAuthSchemeProvider: KinesisVideoSignalingHttpAuthSchemeProvider = (
-  authParameters
+  authParameters,
 ) => {
   const options: HttpAuthOption[] = [];
   switch (authParameters.operation) {
@@ -136,7 +136,7 @@ export interface HttpAuthSchemeResolvedConfig extends AwsSdkSigV4AuthResolvedCon
  * @internal
  */
 export const resolveHttpAuthSchemeConfig = <T>(
-  config: T & HttpAuthSchemeInputConfig & AwsSdkSigV4PreviouslyResolved
+  config: T & HttpAuthSchemeInputConfig & AwsSdkSigV4PreviouslyResolved,
 ): T & HttpAuthSchemeResolvedConfig => {
   const config_0 = resolveAwsSdkSigV4Config(config);
   return {

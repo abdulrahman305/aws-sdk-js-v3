@@ -15,7 +15,7 @@ describe(getChecksumAlgorithmListForResponse.name, () => {
   describe("returns list as per priority order", () => {
     it("when all algorithms are passed in reverse order", () => {
       expect(getChecksumAlgorithmListForResponse([...PRIORITY_ORDER_ALGORITHMS].reverse())).toEqual(
-        PRIORITY_ORDER_ALGORITHMS
+        PRIORITY_ORDER_ALGORITHMS,
       );
     });
 
@@ -24,7 +24,7 @@ describe(getChecksumAlgorithmListForResponse.name, () => {
       (start) => {
         const responseAlgorithms = PRIORITY_ORDER_ALGORITHMS.slice(start);
         expect(getChecksumAlgorithmListForResponse([...responseAlgorithms].reverse())).toEqual(responseAlgorithms);
-      }
+      },
     );
 
     it.each([...Array(PRIORITY_ORDER_ALGORITHMS.length).keys()].filter((num) => num !== 0))(
@@ -32,16 +32,16 @@ describe(getChecksumAlgorithmListForResponse.name, () => {
       (end) => {
         const responseAlgorithms = PRIORITY_ORDER_ALGORITHMS.slice(PRIORITY_ORDER_ALGORITHMS.length - end);
         expect(getChecksumAlgorithmListForResponse([...responseAlgorithms].reverse())).toEqual(responseAlgorithms);
-      }
+      },
     );
   });
 
   it("ignores algorithms not present in priority list", () => {
     expect(getChecksumAlgorithmListForResponse([unknownAlgorithm, ...PRIORITY_ORDER_ALGORITHMS].reverse())).toEqual(
-      PRIORITY_ORDER_ALGORITHMS
+      PRIORITY_ORDER_ALGORITHMS,
     );
     expect(getChecksumAlgorithmListForResponse([...PRIORITY_ORDER_ALGORITHMS, unknownAlgorithm].reverse())).toEqual(
-      PRIORITY_ORDER_ALGORITHMS
+      PRIORITY_ORDER_ALGORITHMS,
     );
   });
 });

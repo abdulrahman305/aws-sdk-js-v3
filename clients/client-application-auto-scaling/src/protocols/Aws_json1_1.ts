@@ -114,7 +114,7 @@ import {
  */
 export const se_DeleteScalingPolicyCommand = async (
   input: DeleteScalingPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteScalingPolicy");
   let body: any;
@@ -127,7 +127,7 @@ export const se_DeleteScalingPolicyCommand = async (
  */
 export const se_DeleteScheduledActionCommand = async (
   input: DeleteScheduledActionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteScheduledAction");
   let body: any;
@@ -140,7 +140,7 @@ export const se_DeleteScheduledActionCommand = async (
  */
 export const se_DeregisterScalableTargetCommand = async (
   input: DeregisterScalableTargetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeregisterScalableTarget");
   let body: any;
@@ -153,7 +153,7 @@ export const se_DeregisterScalableTargetCommand = async (
  */
 export const se_DescribeScalableTargetsCommand = async (
   input: DescribeScalableTargetsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeScalableTargets");
   let body: any;
@@ -166,7 +166,7 @@ export const se_DescribeScalableTargetsCommand = async (
  */
 export const se_DescribeScalingActivitiesCommand = async (
   input: DescribeScalingActivitiesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeScalingActivities");
   let body: any;
@@ -179,7 +179,7 @@ export const se_DescribeScalingActivitiesCommand = async (
  */
 export const se_DescribeScalingPoliciesCommand = async (
   input: DescribeScalingPoliciesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeScalingPolicies");
   let body: any;
@@ -192,7 +192,7 @@ export const se_DescribeScalingPoliciesCommand = async (
  */
 export const se_DescribeScheduledActionsCommand = async (
   input: DescribeScheduledActionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeScheduledActions");
   let body: any;
@@ -205,7 +205,7 @@ export const se_DescribeScheduledActionsCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListTagsForResource");
   let body: any;
@@ -218,7 +218,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_PutScalingPolicyCommand = async (
   input: PutScalingPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("PutScalingPolicy");
   let body: any;
@@ -231,7 +231,7 @@ export const se_PutScalingPolicyCommand = async (
  */
 export const se_PutScheduledActionCommand = async (
   input: PutScheduledActionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("PutScheduledAction");
   let body: any;
@@ -244,7 +244,7 @@ export const se_PutScheduledActionCommand = async (
  */
 export const se_RegisterScalableTargetCommand = async (
   input: RegisterScalableTargetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("RegisterScalableTarget");
   let body: any;
@@ -257,7 +257,7 @@ export const se_RegisterScalableTargetCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("TagResource");
   let body: any;
@@ -270,7 +270,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UntagResource");
   let body: any;
@@ -283,7 +283,7 @@ export const se_UntagResourceCommand = async (
  */
 export const de_DeleteScalingPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteScalingPolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -303,7 +303,7 @@ export const de_DeleteScalingPolicyCommand = async (
  */
 export const de_DeleteScheduledActionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteScheduledActionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -323,7 +323,7 @@ export const de_DeleteScheduledActionCommand = async (
  */
 export const de_DeregisterScalableTargetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeregisterScalableTargetCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -343,7 +343,7 @@ export const de_DeregisterScalableTargetCommand = async (
  */
 export const de_DescribeScalableTargetsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeScalableTargetsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -363,7 +363,7 @@ export const de_DescribeScalableTargetsCommand = async (
  */
 export const de_DescribeScalingActivitiesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeScalingActivitiesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -383,7 +383,7 @@ export const de_DescribeScalingActivitiesCommand = async (
  */
 export const de_DescribeScalingPoliciesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeScalingPoliciesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -403,7 +403,7 @@ export const de_DescribeScalingPoliciesCommand = async (
  */
 export const de_DescribeScheduledActionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeScheduledActionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -423,7 +423,7 @@ export const de_DescribeScheduledActionsCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -443,7 +443,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_PutScalingPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutScalingPolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -463,7 +463,7 @@ export const de_PutScalingPolicyCommand = async (
  */
 export const de_PutScheduledActionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutScheduledActionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -483,7 +483,7 @@ export const de_PutScheduledActionCommand = async (
  */
 export const de_RegisterScalableTargetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RegisterScalableTargetCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -503,7 +503,7 @@ export const de_RegisterScalableTargetCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -523,7 +523,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -590,7 +590,7 @@ const de_CommandError = async (output: __HttpResponse, context: __SerdeContext):
  */
 const de_ConcurrentUpdateExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ConcurrentUpdateException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -606,7 +606,7 @@ const de_ConcurrentUpdateExceptionRes = async (
  */
 const de_FailedResourceAccessExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<FailedResourceAccessException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -622,7 +622,7 @@ const de_FailedResourceAccessExceptionRes = async (
  */
 const de_InternalServiceExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServiceException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -638,7 +638,7 @@ const de_InternalServiceExceptionRes = async (
  */
 const de_InvalidNextTokenExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidNextTokenException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -654,7 +654,7 @@ const de_InvalidNextTokenExceptionRes = async (
  */
 const de_LimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<LimitExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -670,7 +670,7 @@ const de_LimitExceededExceptionRes = async (
  */
 const de_ObjectNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ObjectNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -686,7 +686,7 @@ const de_ObjectNotFoundExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -702,7 +702,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_TooManyTagsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyTagsException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -848,7 +848,7 @@ const se_StepScalingPolicyConfiguration = (input: StepScalingPolicyConfiguration
  */
 const se_TargetTrackingScalingPolicyConfiguration = (
   input: TargetTrackingScalingPolicyConfiguration,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     CustomizedMetricSpecification: _json,
@@ -891,7 +891,7 @@ const de_DescribeScalableTargetsResponse = (output: any, context: __SerdeContext
  */
 const de_DescribeScalingActivitiesResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeScalingActivitiesResponse => {
   return take(output, {
     NextToken: __expectString,
@@ -914,7 +914,7 @@ const de_DescribeScalingPoliciesResponse = (output: any, context: __SerdeContext
  */
 const de_DescribeScheduledActionsResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeScheduledActionsResponse => {
   return take(output, {
     NextToken: __expectString,
@@ -1135,7 +1135,7 @@ const de_StepScalingPolicyConfiguration = (output: any, context: __SerdeContext)
  */
 const de_TargetTrackingScalingPolicyConfiguration = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): TargetTrackingScalingPolicyConfiguration => {
   return take(output, {
     CustomizedMetricSpecification: _json,
@@ -1171,7 +1171,7 @@ const buildHttpRpcRequest = async (
   headers: __HeaderBag,
   path: string,
   resolvedHostname: string | undefined,
-  body: any
+  body: any,
 ): Promise<__HttpRequest> => {
   const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
   const contents: any = {

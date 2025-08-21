@@ -36,7 +36,7 @@ const checkState = async (client: NimbleClient, input: GetStreamingSessionComman
  */
 export const waitForStreamingSessionStopped = async (
   params: WaiterConfiguration<NimbleClient>,
-  input: GetStreamingSessionCommandInput
+  input: GetStreamingSessionCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 5, maxDelay: 900 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -48,7 +48,7 @@ export const waitForStreamingSessionStopped = async (
  */
 export const waitUntilStreamingSessionStopped = async (
   params: WaiterConfiguration<NimbleClient>,
-  input: GetStreamingSessionCommandInput
+  input: GetStreamingSessionCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 5, maxDelay: 900 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

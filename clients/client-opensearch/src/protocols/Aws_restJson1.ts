@@ -295,7 +295,7 @@ import { OpenSearchServiceException as __BaseException } from "../models/OpenSea
  */
 export const se_AcceptInboundConnectionCommand = async (
   input: AcceptInboundConnectionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -311,7 +311,7 @@ export const se_AcceptInboundConnectionCommand = async (
  */
 export const se_AddDataSourceCommand = async (
   input: AddDataSourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -325,7 +325,7 @@ export const se_AddDataSourceCommand = async (
       DataSourceType: (_) => _json(_),
       Description: [],
       Name: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -336,7 +336,7 @@ export const se_AddDataSourceCommand = async (
  */
 export const se_AddTagsCommand = async (
   input: AddTagsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -348,7 +348,7 @@ export const se_AddTagsCommand = async (
     take(input, {
       ARN: [],
       TagList: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -359,7 +359,7 @@ export const se_AddTagsCommand = async (
  */
 export const se_AssociatePackageCommand = async (
   input: AssociatePackageCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -376,7 +376,7 @@ export const se_AssociatePackageCommand = async (
  */
 export const se_AuthorizeVpcEndpointAccessCommand = async (
   input: AuthorizeVpcEndpointAccessCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -388,7 +388,7 @@ export const se_AuthorizeVpcEndpointAccessCommand = async (
   body = JSON.stringify(
     take(input, {
       Account: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -399,7 +399,7 @@ export const se_AuthorizeVpcEndpointAccessCommand = async (
  */
 export const se_CancelDomainConfigChangeCommand = async (
   input: CancelDomainConfigChangeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -411,7 +411,7 @@ export const se_CancelDomainConfigChangeCommand = async (
   body = JSON.stringify(
     take(input, {
       DryRun: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -422,7 +422,7 @@ export const se_CancelDomainConfigChangeCommand = async (
  */
 export const se_CancelServiceSoftwareUpdateCommand = async (
   input: CancelServiceSoftwareUpdateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -433,7 +433,7 @@ export const se_CancelServiceSoftwareUpdateCommand = async (
   body = JSON.stringify(
     take(input, {
       DomainName: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -444,7 +444,7 @@ export const se_CancelServiceSoftwareUpdateCommand = async (
  */
 export const se_CreateDomainCommand = async (
   input: CreateDomainCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -473,7 +473,7 @@ export const se_CreateDomainCommand = async (
       SoftwareUpdateOptions: (_) => _json(_),
       TagList: (_) => _json(_),
       VPCOptions: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -484,7 +484,7 @@ export const se_CreateDomainCommand = async (
  */
 export const se_CreateOutboundConnectionCommand = async (
   input: CreateOutboundConnectionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -499,7 +499,7 @@ export const se_CreateOutboundConnectionCommand = async (
       ConnectionProperties: (_) => _json(_),
       LocalDomainInfo: (_) => _json(_),
       RemoteDomainInfo: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -510,7 +510,7 @@ export const se_CreateOutboundConnectionCommand = async (
  */
 export const se_CreatePackageCommand = async (
   input: CreatePackageCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -524,7 +524,7 @@ export const se_CreatePackageCommand = async (
       PackageName: [],
       PackageSource: (_) => _json(_),
       PackageType: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -535,7 +535,7 @@ export const se_CreatePackageCommand = async (
  */
 export const se_CreateVpcEndpointCommand = async (
   input: CreateVpcEndpointCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -548,7 +548,7 @@ export const se_CreateVpcEndpointCommand = async (
       ClientToken: [],
       DomainArn: [],
       VpcOptions: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -559,7 +559,7 @@ export const se_CreateVpcEndpointCommand = async (
  */
 export const se_DeleteDataSourceCommand = async (
   input: DeleteDataSourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -576,7 +576,7 @@ export const se_DeleteDataSourceCommand = async (
  */
 export const se_DeleteDomainCommand = async (
   input: DeleteDomainCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -592,7 +592,7 @@ export const se_DeleteDomainCommand = async (
  */
 export const se_DeleteInboundConnectionCommand = async (
   input: DeleteInboundConnectionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -608,7 +608,7 @@ export const se_DeleteInboundConnectionCommand = async (
  */
 export const se_DeleteOutboundConnectionCommand = async (
   input: DeleteOutboundConnectionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -624,7 +624,7 @@ export const se_DeleteOutboundConnectionCommand = async (
  */
 export const se_DeletePackageCommand = async (
   input: DeletePackageCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -640,7 +640,7 @@ export const se_DeletePackageCommand = async (
  */
 export const se_DeleteVpcEndpointCommand = async (
   input: DeleteVpcEndpointCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -656,7 +656,7 @@ export const se_DeleteVpcEndpointCommand = async (
  */
 export const se_DescribeDomainCommand = async (
   input: DescribeDomainCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -672,7 +672,7 @@ export const se_DescribeDomainCommand = async (
  */
 export const se_DescribeDomainAutoTunesCommand = async (
   input: DescribeDomainAutoTunesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -685,7 +685,7 @@ export const se_DescribeDomainAutoTunesCommand = async (
     take(input, {
       MaxResults: [],
       NextToken: [],
-    })
+    }),
   );
   b.m("GET").h(headers).b(body);
   return b.build();
@@ -696,7 +696,7 @@ export const se_DescribeDomainAutoTunesCommand = async (
  */
 export const se_DescribeDomainChangeProgressCommand = async (
   input: DescribeDomainChangeProgressCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -715,7 +715,7 @@ export const se_DescribeDomainChangeProgressCommand = async (
  */
 export const se_DescribeDomainConfigCommand = async (
   input: DescribeDomainConfigCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -731,7 +731,7 @@ export const se_DescribeDomainConfigCommand = async (
  */
 export const se_DescribeDomainHealthCommand = async (
   input: DescribeDomainHealthCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -747,7 +747,7 @@ export const se_DescribeDomainHealthCommand = async (
  */
 export const se_DescribeDomainNodesCommand = async (
   input: DescribeDomainNodesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -763,7 +763,7 @@ export const se_DescribeDomainNodesCommand = async (
  */
 export const se_DescribeDomainsCommand = async (
   input: DescribeDomainsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -774,7 +774,7 @@ export const se_DescribeDomainsCommand = async (
   body = JSON.stringify(
     take(input, {
       DomainNames: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -785,7 +785,7 @@ export const se_DescribeDomainsCommand = async (
  */
 export const se_DescribeDryRunProgressCommand = async (
   input: DescribeDryRunProgressCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -805,7 +805,7 @@ export const se_DescribeDryRunProgressCommand = async (
  */
 export const se_DescribeInboundConnectionsCommand = async (
   input: DescribeInboundConnectionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -818,7 +818,7 @@ export const se_DescribeInboundConnectionsCommand = async (
       Filters: (_) => _json(_),
       MaxResults: [],
       NextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -829,7 +829,7 @@ export const se_DescribeInboundConnectionsCommand = async (
  */
 export const se_DescribeInstanceTypeLimitsCommand = async (
   input: DescribeInstanceTypeLimitsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -849,7 +849,7 @@ export const se_DescribeInstanceTypeLimitsCommand = async (
  */
 export const se_DescribeOutboundConnectionsCommand = async (
   input: DescribeOutboundConnectionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -862,7 +862,7 @@ export const se_DescribeOutboundConnectionsCommand = async (
       Filters: (_) => _json(_),
       MaxResults: [],
       NextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -873,7 +873,7 @@ export const se_DescribeOutboundConnectionsCommand = async (
  */
 export const se_DescribePackagesCommand = async (
   input: DescribePackagesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -886,7 +886,7 @@ export const se_DescribePackagesCommand = async (
       Filters: (_) => _json(_),
       MaxResults: [],
       NextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -897,7 +897,7 @@ export const se_DescribePackagesCommand = async (
  */
 export const se_DescribeReservedInstanceOfferingsCommand = async (
   input: DescribeReservedInstanceOfferingsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -917,7 +917,7 @@ export const se_DescribeReservedInstanceOfferingsCommand = async (
  */
 export const se_DescribeReservedInstancesCommand = async (
   input: DescribeReservedInstancesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -937,7 +937,7 @@ export const se_DescribeReservedInstancesCommand = async (
  */
 export const se_DescribeVpcEndpointsCommand = async (
   input: DescribeVpcEndpointsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -948,7 +948,7 @@ export const se_DescribeVpcEndpointsCommand = async (
   body = JSON.stringify(
     take(input, {
       VpcEndpointIds: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -959,7 +959,7 @@ export const se_DescribeVpcEndpointsCommand = async (
  */
 export const se_DissociatePackageCommand = async (
   input: DissociatePackageCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -976,7 +976,7 @@ export const se_DissociatePackageCommand = async (
  */
 export const se_GetCompatibleVersionsCommand = async (
   input: GetCompatibleVersionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -994,7 +994,7 @@ export const se_GetCompatibleVersionsCommand = async (
  */
 export const se_GetDataSourceCommand = async (
   input: GetDataSourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1011,7 +1011,7 @@ export const se_GetDataSourceCommand = async (
  */
 export const se_GetDomainMaintenanceStatusCommand = async (
   input: GetDomainMaintenanceStatusCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1030,7 +1030,7 @@ export const se_GetDomainMaintenanceStatusCommand = async (
  */
 export const se_GetPackageVersionHistoryCommand = async (
   input: GetPackageVersionHistoryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1050,7 +1050,7 @@ export const se_GetPackageVersionHistoryCommand = async (
  */
 export const se_GetUpgradeHistoryCommand = async (
   input: GetUpgradeHistoryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1070,7 +1070,7 @@ export const se_GetUpgradeHistoryCommand = async (
  */
 export const se_GetUpgradeStatusCommand = async (
   input: GetUpgradeStatusCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1086,7 +1086,7 @@ export const se_GetUpgradeStatusCommand = async (
  */
 export const se_ListDataSourcesCommand = async (
   input: ListDataSourcesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1102,7 +1102,7 @@ export const se_ListDataSourcesCommand = async (
  */
 export const se_ListDomainMaintenancesCommand = async (
   input: ListDomainMaintenancesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1124,7 +1124,7 @@ export const se_ListDomainMaintenancesCommand = async (
  */
 export const se_ListDomainNamesCommand = async (
   input: ListDomainNamesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1142,7 +1142,7 @@ export const se_ListDomainNamesCommand = async (
  */
 export const se_ListDomainsForPackageCommand = async (
   input: ListDomainsForPackageCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1162,7 +1162,7 @@ export const se_ListDomainsForPackageCommand = async (
  */
 export const se_ListInstanceTypeDetailsCommand = async (
   input: ListInstanceTypeDetailsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1185,7 +1185,7 @@ export const se_ListInstanceTypeDetailsCommand = async (
  */
 export const se_ListPackagesForDomainCommand = async (
   input: ListPackagesForDomainCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1205,7 +1205,7 @@ export const se_ListPackagesForDomainCommand = async (
  */
 export const se_ListScheduledActionsCommand = async (
   input: ListScheduledActionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1225,7 +1225,7 @@ export const se_ListScheduledActionsCommand = async (
  */
 export const se_ListTagsCommand = async (
   input: ListTagsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1243,7 +1243,7 @@ export const se_ListTagsCommand = async (
  */
 export const se_ListVersionsCommand = async (
   input: ListVersionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1262,7 +1262,7 @@ export const se_ListVersionsCommand = async (
  */
 export const se_ListVpcEndpointAccessCommand = async (
   input: ListVpcEndpointAccessCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1281,7 +1281,7 @@ export const se_ListVpcEndpointAccessCommand = async (
  */
 export const se_ListVpcEndpointsCommand = async (
   input: ListVpcEndpointsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1299,7 +1299,7 @@ export const se_ListVpcEndpointsCommand = async (
  */
 export const se_ListVpcEndpointsForDomainCommand = async (
   input: ListVpcEndpointsForDomainCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1318,7 +1318,7 @@ export const se_ListVpcEndpointsForDomainCommand = async (
  */
 export const se_PurchaseReservedInstanceOfferingCommand = async (
   input: PurchaseReservedInstanceOfferingCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1331,7 +1331,7 @@ export const se_PurchaseReservedInstanceOfferingCommand = async (
       InstanceCount: [],
       ReservationName: [],
       ReservedInstanceOfferingId: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1342,7 +1342,7 @@ export const se_PurchaseReservedInstanceOfferingCommand = async (
  */
 export const se_RejectInboundConnectionCommand = async (
   input: RejectInboundConnectionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1358,7 +1358,7 @@ export const se_RejectInboundConnectionCommand = async (
  */
 export const se_RemoveTagsCommand = async (
   input: RemoveTagsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1370,7 +1370,7 @@ export const se_RemoveTagsCommand = async (
     take(input, {
       ARN: [],
       TagKeys: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1381,7 +1381,7 @@ export const se_RemoveTagsCommand = async (
  */
 export const se_RevokeVpcEndpointAccessCommand = async (
   input: RevokeVpcEndpointAccessCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1393,7 +1393,7 @@ export const se_RevokeVpcEndpointAccessCommand = async (
   body = JSON.stringify(
     take(input, {
       Account: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1404,7 +1404,7 @@ export const se_RevokeVpcEndpointAccessCommand = async (
  */
 export const se_StartDomainMaintenanceCommand = async (
   input: StartDomainMaintenanceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1417,7 +1417,7 @@ export const se_StartDomainMaintenanceCommand = async (
     take(input, {
       Action: [],
       NodeId: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1428,7 +1428,7 @@ export const se_StartDomainMaintenanceCommand = async (
  */
 export const se_StartServiceSoftwareUpdateCommand = async (
   input: StartServiceSoftwareUpdateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1441,7 +1441,7 @@ export const se_StartServiceSoftwareUpdateCommand = async (
       DesiredStartTime: [],
       DomainName: [],
       ScheduleAt: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1452,7 +1452,7 @@ export const se_StartServiceSoftwareUpdateCommand = async (
  */
 export const se_UpdateDataSourceCommand = async (
   input: UpdateDataSourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1467,7 +1467,7 @@ export const se_UpdateDataSourceCommand = async (
       DataSourceType: (_) => _json(_),
       Description: [],
       Status: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1478,7 +1478,7 @@ export const se_UpdateDataSourceCommand = async (
  */
 export const se_UpdateDomainConfigCommand = async (
   input: UpdateDomainConfigCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1507,7 +1507,7 @@ export const se_UpdateDomainConfigCommand = async (
       SnapshotOptions: (_) => _json(_),
       SoftwareUpdateOptions: (_) => _json(_),
       VPCOptions: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1518,7 +1518,7 @@ export const se_UpdateDomainConfigCommand = async (
  */
 export const se_UpdatePackageCommand = async (
   input: UpdatePackageCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1532,7 +1532,7 @@ export const se_UpdatePackageCommand = async (
       PackageDescription: [],
       PackageID: [],
       PackageSource: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1543,7 +1543,7 @@ export const se_UpdatePackageCommand = async (
  */
 export const se_UpdateScheduledActionCommand = async (
   input: UpdateScheduledActionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1558,7 +1558,7 @@ export const se_UpdateScheduledActionCommand = async (
       ActionType: [],
       DesiredStartTime: [],
       ScheduleAt: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1569,7 +1569,7 @@ export const se_UpdateScheduledActionCommand = async (
  */
 export const se_UpdateVpcEndpointCommand = async (
   input: UpdateVpcEndpointCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1581,7 +1581,7 @@ export const se_UpdateVpcEndpointCommand = async (
     take(input, {
       VpcEndpointId: [],
       VpcOptions: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1592,7 +1592,7 @@ export const se_UpdateVpcEndpointCommand = async (
  */
 export const se_UpgradeDomainCommand = async (
   input: UpgradeDomainCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1606,7 +1606,7 @@ export const se_UpgradeDomainCommand = async (
       DomainName: [],
       PerformCheckOnly: [],
       TargetVersion: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1617,7 +1617,7 @@ export const se_UpgradeDomainCommand = async (
  */
 export const de_AcceptInboundConnectionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AcceptInboundConnectionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1638,7 +1638,7 @@ export const de_AcceptInboundConnectionCommand = async (
  */
 export const de_AddDataSourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AddDataSourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1659,7 +1659,7 @@ export const de_AddDataSourceCommand = async (
  */
 export const de_AddTagsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AddTagsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1676,7 +1676,7 @@ export const de_AddTagsCommand = async (
  */
 export const de_AssociatePackageCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssociatePackageCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1697,7 +1697,7 @@ export const de_AssociatePackageCommand = async (
  */
 export const de_AuthorizeVpcEndpointAccessCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AuthorizeVpcEndpointAccessCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1718,7 +1718,7 @@ export const de_AuthorizeVpcEndpointAccessCommand = async (
  */
 export const de_CancelDomainConfigChangeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CancelDomainConfigChangeCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1741,7 +1741,7 @@ export const de_CancelDomainConfigChangeCommand = async (
  */
 export const de_CancelServiceSoftwareUpdateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CancelServiceSoftwareUpdateCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1762,7 +1762,7 @@ export const de_CancelServiceSoftwareUpdateCommand = async (
  */
 export const de_CreateDomainCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateDomainCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1783,7 +1783,7 @@ export const de_CreateDomainCommand = async (
  */
 export const de_CreateOutboundConnectionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateOutboundConnectionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1810,7 +1810,7 @@ export const de_CreateOutboundConnectionCommand = async (
  */
 export const de_CreatePackageCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreatePackageCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1831,7 +1831,7 @@ export const de_CreatePackageCommand = async (
  */
 export const de_CreateVpcEndpointCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateVpcEndpointCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1852,7 +1852,7 @@ export const de_CreateVpcEndpointCommand = async (
  */
 export const de_DeleteDataSourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteDataSourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1873,7 +1873,7 @@ export const de_DeleteDataSourceCommand = async (
  */
 export const de_DeleteDomainCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteDomainCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1894,7 +1894,7 @@ export const de_DeleteDomainCommand = async (
  */
 export const de_DeleteInboundConnectionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteInboundConnectionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1915,7 +1915,7 @@ export const de_DeleteInboundConnectionCommand = async (
  */
 export const de_DeleteOutboundConnectionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteOutboundConnectionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1936,7 +1936,7 @@ export const de_DeleteOutboundConnectionCommand = async (
  */
 export const de_DeletePackageCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeletePackageCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1957,7 +1957,7 @@ export const de_DeletePackageCommand = async (
  */
 export const de_DeleteVpcEndpointCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteVpcEndpointCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1978,7 +1978,7 @@ export const de_DeleteVpcEndpointCommand = async (
  */
 export const de_DescribeDomainCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeDomainCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1999,7 +1999,7 @@ export const de_DescribeDomainCommand = async (
  */
 export const de_DescribeDomainAutoTunesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeDomainAutoTunesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2021,7 +2021,7 @@ export const de_DescribeDomainAutoTunesCommand = async (
  */
 export const de_DescribeDomainChangeProgressCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeDomainChangeProgressCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2042,7 +2042,7 @@ export const de_DescribeDomainChangeProgressCommand = async (
  */
 export const de_DescribeDomainConfigCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeDomainConfigCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2063,7 +2063,7 @@ export const de_DescribeDomainConfigCommand = async (
  */
 export const de_DescribeDomainHealthCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeDomainHealthCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2096,7 +2096,7 @@ export const de_DescribeDomainHealthCommand = async (
  */
 export const de_DescribeDomainNodesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeDomainNodesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2117,7 +2117,7 @@ export const de_DescribeDomainNodesCommand = async (
  */
 export const de_DescribeDomainsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeDomainsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2138,7 +2138,7 @@ export const de_DescribeDomainsCommand = async (
  */
 export const de_DescribeDryRunProgressCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeDryRunProgressCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2161,7 +2161,7 @@ export const de_DescribeDryRunProgressCommand = async (
  */
 export const de_DescribeInboundConnectionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeInboundConnectionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2183,7 +2183,7 @@ export const de_DescribeInboundConnectionsCommand = async (
  */
 export const de_DescribeInstanceTypeLimitsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeInstanceTypeLimitsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2204,7 +2204,7 @@ export const de_DescribeInstanceTypeLimitsCommand = async (
  */
 export const de_DescribeOutboundConnectionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeOutboundConnectionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2226,7 +2226,7 @@ export const de_DescribeOutboundConnectionsCommand = async (
  */
 export const de_DescribePackagesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribePackagesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2248,7 +2248,7 @@ export const de_DescribePackagesCommand = async (
  */
 export const de_DescribeReservedInstanceOfferingsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeReservedInstanceOfferingsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2270,7 +2270,7 @@ export const de_DescribeReservedInstanceOfferingsCommand = async (
  */
 export const de_DescribeReservedInstancesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeReservedInstancesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2292,7 +2292,7 @@ export const de_DescribeReservedInstancesCommand = async (
  */
 export const de_DescribeVpcEndpointsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeVpcEndpointsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2314,7 +2314,7 @@ export const de_DescribeVpcEndpointsCommand = async (
  */
 export const de_DissociatePackageCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DissociatePackageCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2335,7 +2335,7 @@ export const de_DissociatePackageCommand = async (
  */
 export const de_GetCompatibleVersionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetCompatibleVersionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2356,7 +2356,7 @@ export const de_GetCompatibleVersionsCommand = async (
  */
 export const de_GetDataSourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetDataSourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2380,7 +2380,7 @@ export const de_GetDataSourceCommand = async (
  */
 export const de_GetDomainMaintenanceStatusCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetDomainMaintenanceStatusCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2406,7 +2406,7 @@ export const de_GetDomainMaintenanceStatusCommand = async (
  */
 export const de_GetPackageVersionHistoryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetPackageVersionHistoryCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2429,7 +2429,7 @@ export const de_GetPackageVersionHistoryCommand = async (
  */
 export const de_GetUpgradeHistoryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetUpgradeHistoryCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2451,7 +2451,7 @@ export const de_GetUpgradeHistoryCommand = async (
  */
 export const de_GetUpgradeStatusCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetUpgradeStatusCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2474,7 +2474,7 @@ export const de_GetUpgradeStatusCommand = async (
  */
 export const de_ListDataSourcesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListDataSourcesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2495,7 +2495,7 @@ export const de_ListDataSourcesCommand = async (
  */
 export const de_ListDomainMaintenancesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListDomainMaintenancesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2517,7 +2517,7 @@ export const de_ListDomainMaintenancesCommand = async (
  */
 export const de_ListDomainNamesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListDomainNamesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2538,7 +2538,7 @@ export const de_ListDomainNamesCommand = async (
  */
 export const de_ListDomainsForPackageCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListDomainsForPackageCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2560,7 +2560,7 @@ export const de_ListDomainsForPackageCommand = async (
  */
 export const de_ListInstanceTypeDetailsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListInstanceTypeDetailsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2582,7 +2582,7 @@ export const de_ListInstanceTypeDetailsCommand = async (
  */
 export const de_ListPackagesForDomainCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListPackagesForDomainCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2604,7 +2604,7 @@ export const de_ListPackagesForDomainCommand = async (
  */
 export const de_ListScheduledActionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListScheduledActionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2626,7 +2626,7 @@ export const de_ListScheduledActionsCommand = async (
  */
 export const de_ListTagsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2647,7 +2647,7 @@ export const de_ListTagsCommand = async (
  */
 export const de_ListVersionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListVersionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2669,7 +2669,7 @@ export const de_ListVersionsCommand = async (
  */
 export const de_ListVpcEndpointAccessCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListVpcEndpointAccessCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2691,7 +2691,7 @@ export const de_ListVpcEndpointAccessCommand = async (
  */
 export const de_ListVpcEndpointsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListVpcEndpointsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2713,7 +2713,7 @@ export const de_ListVpcEndpointsCommand = async (
  */
 export const de_ListVpcEndpointsForDomainCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListVpcEndpointsForDomainCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2735,7 +2735,7 @@ export const de_ListVpcEndpointsForDomainCommand = async (
  */
 export const de_PurchaseReservedInstanceOfferingCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PurchaseReservedInstanceOfferingCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2757,7 +2757,7 @@ export const de_PurchaseReservedInstanceOfferingCommand = async (
  */
 export const de_RejectInboundConnectionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RejectInboundConnectionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2778,7 +2778,7 @@ export const de_RejectInboundConnectionCommand = async (
  */
 export const de_RemoveTagsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RemoveTagsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2795,7 +2795,7 @@ export const de_RemoveTagsCommand = async (
  */
 export const de_RevokeVpcEndpointAccessCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RevokeVpcEndpointAccessCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2812,7 +2812,7 @@ export const de_RevokeVpcEndpointAccessCommand = async (
  */
 export const de_StartDomainMaintenanceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartDomainMaintenanceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2833,7 +2833,7 @@ export const de_StartDomainMaintenanceCommand = async (
  */
 export const de_StartServiceSoftwareUpdateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartServiceSoftwareUpdateCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2854,7 +2854,7 @@ export const de_StartServiceSoftwareUpdateCommand = async (
  */
 export const de_UpdateDataSourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateDataSourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2875,7 +2875,7 @@ export const de_UpdateDataSourceCommand = async (
  */
 export const de_UpdateDomainConfigCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateDomainConfigCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2898,7 +2898,7 @@ export const de_UpdateDomainConfigCommand = async (
  */
 export const de_UpdatePackageCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdatePackageCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2919,7 +2919,7 @@ export const de_UpdatePackageCommand = async (
  */
 export const de_UpdateScheduledActionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateScheduledActionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2940,7 +2940,7 @@ export const de_UpdateScheduledActionCommand = async (
  */
 export const de_UpdateVpcEndpointCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateVpcEndpointCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2961,7 +2961,7 @@ export const de_UpdateVpcEndpointCommand = async (
  */
 export const de_UpgradeDomainCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpgradeDomainCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3047,7 +3047,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -3101,7 +3101,7 @@ const de_ConflictExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_DependencyFailureExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DependencyFailureException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -3121,7 +3121,7 @@ const de_DependencyFailureExceptionRes = async (
  */
 const de_DisabledOperationExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisabledOperationException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -3158,7 +3158,7 @@ const de_InternalExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_InvalidPaginationTokenExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidPaginationTokenException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -3178,7 +3178,7 @@ const de_InvalidPaginationTokenExceptionRes = async (
  */
 const de_InvalidTypeExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidTypeException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -3198,7 +3198,7 @@ const de_InvalidTypeExceptionRes = async (
  */
 const de_LimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<LimitExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -3218,7 +3218,7 @@ const de_LimitExceededExceptionRes = async (
  */
 const de_ResourceAlreadyExistsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceAlreadyExistsException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -3238,7 +3238,7 @@ const de_ResourceAlreadyExistsExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -3258,7 +3258,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_SlotNotAvailableExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SlotNotAvailableException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -3931,7 +3931,7 @@ const de_LogPublishingOptionsStatus = (output: any, context: __SerdeContext): Lo
  */
 const de_NodeToNodeEncryptionOptionsStatus = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): NodeToNodeEncryptionOptionsStatus => {
   return take(output, {
     Options: _json,

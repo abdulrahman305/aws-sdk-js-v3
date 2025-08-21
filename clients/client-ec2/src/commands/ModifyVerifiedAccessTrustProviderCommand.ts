@@ -139,7 +139,7 @@ export class ModifyVerifiedAccessTrustProviderCommand extends $Command
   .n("EC2Client", "ModifyVerifiedAccessTrustProviderCommand")
   .f(
     ModifyVerifiedAccessTrustProviderRequestFilterSensitiveLog,
-    ModifyVerifiedAccessTrustProviderResultFilterSensitiveLog
+    ModifyVerifiedAccessTrustProviderResultFilterSensitiveLog,
   )
   .ser(se_ModifyVerifiedAccessTrustProviderCommand)
   .de(de_ModifyVerifiedAccessTrustProviderCommand)

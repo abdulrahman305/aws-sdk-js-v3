@@ -429,7 +429,7 @@ import {
  */
 export const se_AttachInstancesCommand = async (
   input: AttachInstancesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -446,7 +446,7 @@ export const se_AttachInstancesCommand = async (
  */
 export const se_AttachLoadBalancersCommand = async (
   input: AttachLoadBalancersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -463,7 +463,7 @@ export const se_AttachLoadBalancersCommand = async (
  */
 export const se_AttachLoadBalancerTargetGroupsCommand = async (
   input: AttachLoadBalancerTargetGroupsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -480,7 +480,7 @@ export const se_AttachLoadBalancerTargetGroupsCommand = async (
  */
 export const se_AttachTrafficSourcesCommand = async (
   input: AttachTrafficSourcesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -497,7 +497,7 @@ export const se_AttachTrafficSourcesCommand = async (
  */
 export const se_BatchDeleteScheduledActionCommand = async (
   input: BatchDeleteScheduledActionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -514,7 +514,7 @@ export const se_BatchDeleteScheduledActionCommand = async (
  */
 export const se_BatchPutScheduledUpdateGroupActionCommand = async (
   input: BatchPutScheduledUpdateGroupActionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -531,7 +531,7 @@ export const se_BatchPutScheduledUpdateGroupActionCommand = async (
  */
 export const se_CancelInstanceRefreshCommand = async (
   input: CancelInstanceRefreshCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -548,7 +548,7 @@ export const se_CancelInstanceRefreshCommand = async (
  */
 export const se_CompleteLifecycleActionCommand = async (
   input: CompleteLifecycleActionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -565,7 +565,7 @@ export const se_CompleteLifecycleActionCommand = async (
  */
 export const se_CreateAutoScalingGroupCommand = async (
   input: CreateAutoScalingGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -582,7 +582,7 @@ export const se_CreateAutoScalingGroupCommand = async (
  */
 export const se_CreateLaunchConfigurationCommand = async (
   input: CreateLaunchConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -599,7 +599,7 @@ export const se_CreateLaunchConfigurationCommand = async (
  */
 export const se_CreateOrUpdateTagsCommand = async (
   input: CreateOrUpdateTagsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -616,7 +616,7 @@ export const se_CreateOrUpdateTagsCommand = async (
  */
 export const se_DeleteAutoScalingGroupCommand = async (
   input: DeleteAutoScalingGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -633,7 +633,7 @@ export const se_DeleteAutoScalingGroupCommand = async (
  */
 export const se_DeleteLaunchConfigurationCommand = async (
   input: DeleteLaunchConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -650,7 +650,7 @@ export const se_DeleteLaunchConfigurationCommand = async (
  */
 export const se_DeleteLifecycleHookCommand = async (
   input: DeleteLifecycleHookCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -667,7 +667,7 @@ export const se_DeleteLifecycleHookCommand = async (
  */
 export const se_DeleteNotificationConfigurationCommand = async (
   input: DeleteNotificationConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -684,7 +684,7 @@ export const se_DeleteNotificationConfigurationCommand = async (
  */
 export const se_DeletePolicyCommand = async (
   input: DeletePolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -701,7 +701,7 @@ export const se_DeletePolicyCommand = async (
  */
 export const se_DeleteScheduledActionCommand = async (
   input: DeleteScheduledActionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -718,7 +718,7 @@ export const se_DeleteScheduledActionCommand = async (
  */
 export const se_DeleteTagsCommand = async (
   input: DeleteTagsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -735,7 +735,7 @@ export const se_DeleteTagsCommand = async (
  */
 export const se_DeleteWarmPoolCommand = async (
   input: DeleteWarmPoolCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -752,7 +752,7 @@ export const se_DeleteWarmPoolCommand = async (
  */
 export const se_DescribeAccountLimitsCommand = async (
   input: DescribeAccountLimitsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   const body = buildFormUrlencodedString({
@@ -767,7 +767,7 @@ export const se_DescribeAccountLimitsCommand = async (
  */
 export const se_DescribeAdjustmentTypesCommand = async (
   input: DescribeAdjustmentTypesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   const body = buildFormUrlencodedString({
@@ -782,7 +782,7 @@ export const se_DescribeAdjustmentTypesCommand = async (
  */
 export const se_DescribeAutoScalingGroupsCommand = async (
   input: DescribeAutoScalingGroupsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -799,7 +799,7 @@ export const se_DescribeAutoScalingGroupsCommand = async (
  */
 export const se_DescribeAutoScalingInstancesCommand = async (
   input: DescribeAutoScalingInstancesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -816,7 +816,7 @@ export const se_DescribeAutoScalingInstancesCommand = async (
  */
 export const se_DescribeAutoScalingNotificationTypesCommand = async (
   input: DescribeAutoScalingNotificationTypesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   const body = buildFormUrlencodedString({
@@ -831,7 +831,7 @@ export const se_DescribeAutoScalingNotificationTypesCommand = async (
  */
 export const se_DescribeInstanceRefreshesCommand = async (
   input: DescribeInstanceRefreshesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -848,7 +848,7 @@ export const se_DescribeInstanceRefreshesCommand = async (
  */
 export const se_DescribeLaunchConfigurationsCommand = async (
   input: DescribeLaunchConfigurationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -865,7 +865,7 @@ export const se_DescribeLaunchConfigurationsCommand = async (
  */
 export const se_DescribeLifecycleHooksCommand = async (
   input: DescribeLifecycleHooksCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -882,7 +882,7 @@ export const se_DescribeLifecycleHooksCommand = async (
  */
 export const se_DescribeLifecycleHookTypesCommand = async (
   input: DescribeLifecycleHookTypesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   const body = buildFormUrlencodedString({
@@ -897,7 +897,7 @@ export const se_DescribeLifecycleHookTypesCommand = async (
  */
 export const se_DescribeLoadBalancersCommand = async (
   input: DescribeLoadBalancersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -914,7 +914,7 @@ export const se_DescribeLoadBalancersCommand = async (
  */
 export const se_DescribeLoadBalancerTargetGroupsCommand = async (
   input: DescribeLoadBalancerTargetGroupsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -931,7 +931,7 @@ export const se_DescribeLoadBalancerTargetGroupsCommand = async (
  */
 export const se_DescribeMetricCollectionTypesCommand = async (
   input: DescribeMetricCollectionTypesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   const body = buildFormUrlencodedString({
@@ -946,7 +946,7 @@ export const se_DescribeMetricCollectionTypesCommand = async (
  */
 export const se_DescribeNotificationConfigurationsCommand = async (
   input: DescribeNotificationConfigurationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -963,7 +963,7 @@ export const se_DescribeNotificationConfigurationsCommand = async (
  */
 export const se_DescribePoliciesCommand = async (
   input: DescribePoliciesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -980,7 +980,7 @@ export const se_DescribePoliciesCommand = async (
  */
 export const se_DescribeScalingActivitiesCommand = async (
   input: DescribeScalingActivitiesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -997,7 +997,7 @@ export const se_DescribeScalingActivitiesCommand = async (
  */
 export const se_DescribeScalingProcessTypesCommand = async (
   input: DescribeScalingProcessTypesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   const body = buildFormUrlencodedString({
@@ -1012,7 +1012,7 @@ export const se_DescribeScalingProcessTypesCommand = async (
  */
 export const se_DescribeScheduledActionsCommand = async (
   input: DescribeScheduledActionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1029,7 +1029,7 @@ export const se_DescribeScheduledActionsCommand = async (
  */
 export const se_DescribeTagsCommand = async (
   input: DescribeTagsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1046,7 +1046,7 @@ export const se_DescribeTagsCommand = async (
  */
 export const se_DescribeTerminationPolicyTypesCommand = async (
   input: DescribeTerminationPolicyTypesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   const body = buildFormUrlencodedString({
@@ -1061,7 +1061,7 @@ export const se_DescribeTerminationPolicyTypesCommand = async (
  */
 export const se_DescribeTrafficSourcesCommand = async (
   input: DescribeTrafficSourcesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1078,7 +1078,7 @@ export const se_DescribeTrafficSourcesCommand = async (
  */
 export const se_DescribeWarmPoolCommand = async (
   input: DescribeWarmPoolCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1095,7 +1095,7 @@ export const se_DescribeWarmPoolCommand = async (
  */
 export const se_DetachInstancesCommand = async (
   input: DetachInstancesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1112,7 +1112,7 @@ export const se_DetachInstancesCommand = async (
  */
 export const se_DetachLoadBalancersCommand = async (
   input: DetachLoadBalancersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1129,7 +1129,7 @@ export const se_DetachLoadBalancersCommand = async (
  */
 export const se_DetachLoadBalancerTargetGroupsCommand = async (
   input: DetachLoadBalancerTargetGroupsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1146,7 +1146,7 @@ export const se_DetachLoadBalancerTargetGroupsCommand = async (
  */
 export const se_DetachTrafficSourcesCommand = async (
   input: DetachTrafficSourcesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1163,7 +1163,7 @@ export const se_DetachTrafficSourcesCommand = async (
  */
 export const se_DisableMetricsCollectionCommand = async (
   input: DisableMetricsCollectionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1180,7 +1180,7 @@ export const se_DisableMetricsCollectionCommand = async (
  */
 export const se_EnableMetricsCollectionCommand = async (
   input: EnableMetricsCollectionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1197,7 +1197,7 @@ export const se_EnableMetricsCollectionCommand = async (
  */
 export const se_EnterStandbyCommand = async (
   input: EnterStandbyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1214,7 +1214,7 @@ export const se_EnterStandbyCommand = async (
  */
 export const se_ExecutePolicyCommand = async (
   input: ExecutePolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1231,7 +1231,7 @@ export const se_ExecutePolicyCommand = async (
  */
 export const se_ExitStandbyCommand = async (
   input: ExitStandbyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1248,7 +1248,7 @@ export const se_ExitStandbyCommand = async (
  */
 export const se_GetPredictiveScalingForecastCommand = async (
   input: GetPredictiveScalingForecastCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1265,7 +1265,7 @@ export const se_GetPredictiveScalingForecastCommand = async (
  */
 export const se_PutLifecycleHookCommand = async (
   input: PutLifecycleHookCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1282,7 +1282,7 @@ export const se_PutLifecycleHookCommand = async (
  */
 export const se_PutNotificationConfigurationCommand = async (
   input: PutNotificationConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1299,7 +1299,7 @@ export const se_PutNotificationConfigurationCommand = async (
  */
 export const se_PutScalingPolicyCommand = async (
   input: PutScalingPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1316,7 +1316,7 @@ export const se_PutScalingPolicyCommand = async (
  */
 export const se_PutScheduledUpdateGroupActionCommand = async (
   input: PutScheduledUpdateGroupActionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1333,7 +1333,7 @@ export const se_PutScheduledUpdateGroupActionCommand = async (
  */
 export const se_PutWarmPoolCommand = async (
   input: PutWarmPoolCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1350,7 +1350,7 @@ export const se_PutWarmPoolCommand = async (
  */
 export const se_RecordLifecycleActionHeartbeatCommand = async (
   input: RecordLifecycleActionHeartbeatCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1367,7 +1367,7 @@ export const se_RecordLifecycleActionHeartbeatCommand = async (
  */
 export const se_ResumeProcessesCommand = async (
   input: ResumeProcessesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1384,7 +1384,7 @@ export const se_ResumeProcessesCommand = async (
  */
 export const se_RollbackInstanceRefreshCommand = async (
   input: RollbackInstanceRefreshCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1401,7 +1401,7 @@ export const se_RollbackInstanceRefreshCommand = async (
  */
 export const se_SetDesiredCapacityCommand = async (
   input: SetDesiredCapacityCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1418,7 +1418,7 @@ export const se_SetDesiredCapacityCommand = async (
  */
 export const se_SetInstanceHealthCommand = async (
   input: SetInstanceHealthCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1435,7 +1435,7 @@ export const se_SetInstanceHealthCommand = async (
  */
 export const se_SetInstanceProtectionCommand = async (
   input: SetInstanceProtectionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1452,7 +1452,7 @@ export const se_SetInstanceProtectionCommand = async (
  */
 export const se_StartInstanceRefreshCommand = async (
   input: StartInstanceRefreshCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1469,7 +1469,7 @@ export const se_StartInstanceRefreshCommand = async (
  */
 export const se_SuspendProcessesCommand = async (
   input: SuspendProcessesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1486,7 +1486,7 @@ export const se_SuspendProcessesCommand = async (
  */
 export const se_TerminateInstanceInAutoScalingGroupCommand = async (
   input: TerminateInstanceInAutoScalingGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1503,7 +1503,7 @@ export const se_TerminateInstanceInAutoScalingGroupCommand = async (
  */
 export const se_UpdateAutoScalingGroupCommand = async (
   input: UpdateAutoScalingGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1520,7 +1520,7 @@ export const se_UpdateAutoScalingGroupCommand = async (
  */
 export const de_AttachInstancesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AttachInstancesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1537,7 +1537,7 @@ export const de_AttachInstancesCommand = async (
  */
 export const de_AttachLoadBalancersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AttachLoadBalancersCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1557,7 +1557,7 @@ export const de_AttachLoadBalancersCommand = async (
  */
 export const de_AttachLoadBalancerTargetGroupsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AttachLoadBalancerTargetGroupsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1577,7 +1577,7 @@ export const de_AttachLoadBalancerTargetGroupsCommand = async (
  */
 export const de_AttachTrafficSourcesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AttachTrafficSourcesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1597,7 +1597,7 @@ export const de_AttachTrafficSourcesCommand = async (
  */
 export const de_BatchDeleteScheduledActionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchDeleteScheduledActionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1617,7 +1617,7 @@ export const de_BatchDeleteScheduledActionCommand = async (
  */
 export const de_BatchPutScheduledUpdateGroupActionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchPutScheduledUpdateGroupActionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1637,7 +1637,7 @@ export const de_BatchPutScheduledUpdateGroupActionCommand = async (
  */
 export const de_CancelInstanceRefreshCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CancelInstanceRefreshCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1657,7 +1657,7 @@ export const de_CancelInstanceRefreshCommand = async (
  */
 export const de_CompleteLifecycleActionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CompleteLifecycleActionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1677,7 +1677,7 @@ export const de_CompleteLifecycleActionCommand = async (
  */
 export const de_CreateAutoScalingGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateAutoScalingGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1694,7 +1694,7 @@ export const de_CreateAutoScalingGroupCommand = async (
  */
 export const de_CreateLaunchConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateLaunchConfigurationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1711,7 +1711,7 @@ export const de_CreateLaunchConfigurationCommand = async (
  */
 export const de_CreateOrUpdateTagsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateOrUpdateTagsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1728,7 +1728,7 @@ export const de_CreateOrUpdateTagsCommand = async (
  */
 export const de_DeleteAutoScalingGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteAutoScalingGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1745,7 +1745,7 @@ export const de_DeleteAutoScalingGroupCommand = async (
  */
 export const de_DeleteLaunchConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteLaunchConfigurationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1762,7 +1762,7 @@ export const de_DeleteLaunchConfigurationCommand = async (
  */
 export const de_DeleteLifecycleHookCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteLifecycleHookCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1782,7 +1782,7 @@ export const de_DeleteLifecycleHookCommand = async (
  */
 export const de_DeleteNotificationConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteNotificationConfigurationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1799,7 +1799,7 @@ export const de_DeleteNotificationConfigurationCommand = async (
  */
 export const de_DeletePolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeletePolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1816,7 +1816,7 @@ export const de_DeletePolicyCommand = async (
  */
 export const de_DeleteScheduledActionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteScheduledActionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1833,7 +1833,7 @@ export const de_DeleteScheduledActionCommand = async (
  */
 export const de_DeleteTagsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteTagsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1850,7 +1850,7 @@ export const de_DeleteTagsCommand = async (
  */
 export const de_DeleteWarmPoolCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteWarmPoolCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1870,7 +1870,7 @@ export const de_DeleteWarmPoolCommand = async (
  */
 export const de_DescribeAccountLimitsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeAccountLimitsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1890,7 +1890,7 @@ export const de_DescribeAccountLimitsCommand = async (
  */
 export const de_DescribeAdjustmentTypesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeAdjustmentTypesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1910,7 +1910,7 @@ export const de_DescribeAdjustmentTypesCommand = async (
  */
 export const de_DescribeAutoScalingGroupsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeAutoScalingGroupsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1930,7 +1930,7 @@ export const de_DescribeAutoScalingGroupsCommand = async (
  */
 export const de_DescribeAutoScalingInstancesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeAutoScalingInstancesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1950,7 +1950,7 @@ export const de_DescribeAutoScalingInstancesCommand = async (
  */
 export const de_DescribeAutoScalingNotificationTypesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeAutoScalingNotificationTypesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1970,7 +1970,7 @@ export const de_DescribeAutoScalingNotificationTypesCommand = async (
  */
 export const de_DescribeInstanceRefreshesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeInstanceRefreshesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1990,7 +1990,7 @@ export const de_DescribeInstanceRefreshesCommand = async (
  */
 export const de_DescribeLaunchConfigurationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeLaunchConfigurationsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2010,7 +2010,7 @@ export const de_DescribeLaunchConfigurationsCommand = async (
  */
 export const de_DescribeLifecycleHooksCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeLifecycleHooksCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2030,7 +2030,7 @@ export const de_DescribeLifecycleHooksCommand = async (
  */
 export const de_DescribeLifecycleHookTypesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeLifecycleHookTypesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2050,7 +2050,7 @@ export const de_DescribeLifecycleHookTypesCommand = async (
  */
 export const de_DescribeLoadBalancersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeLoadBalancersCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2070,7 +2070,7 @@ export const de_DescribeLoadBalancersCommand = async (
  */
 export const de_DescribeLoadBalancerTargetGroupsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeLoadBalancerTargetGroupsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2090,7 +2090,7 @@ export const de_DescribeLoadBalancerTargetGroupsCommand = async (
  */
 export const de_DescribeMetricCollectionTypesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeMetricCollectionTypesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2110,7 +2110,7 @@ export const de_DescribeMetricCollectionTypesCommand = async (
  */
 export const de_DescribeNotificationConfigurationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeNotificationConfigurationsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2130,7 +2130,7 @@ export const de_DescribeNotificationConfigurationsCommand = async (
  */
 export const de_DescribePoliciesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribePoliciesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2150,7 +2150,7 @@ export const de_DescribePoliciesCommand = async (
  */
 export const de_DescribeScalingActivitiesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeScalingActivitiesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2170,7 +2170,7 @@ export const de_DescribeScalingActivitiesCommand = async (
  */
 export const de_DescribeScalingProcessTypesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeScalingProcessTypesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2190,7 +2190,7 @@ export const de_DescribeScalingProcessTypesCommand = async (
  */
 export const de_DescribeScheduledActionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeScheduledActionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2210,7 +2210,7 @@ export const de_DescribeScheduledActionsCommand = async (
  */
 export const de_DescribeTagsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeTagsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2230,7 +2230,7 @@ export const de_DescribeTagsCommand = async (
  */
 export const de_DescribeTerminationPolicyTypesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeTerminationPolicyTypesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2250,7 +2250,7 @@ export const de_DescribeTerminationPolicyTypesCommand = async (
  */
 export const de_DescribeTrafficSourcesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeTrafficSourcesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2270,7 +2270,7 @@ export const de_DescribeTrafficSourcesCommand = async (
  */
 export const de_DescribeWarmPoolCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeWarmPoolCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2290,7 +2290,7 @@ export const de_DescribeWarmPoolCommand = async (
  */
 export const de_DetachInstancesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DetachInstancesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2310,7 +2310,7 @@ export const de_DetachInstancesCommand = async (
  */
 export const de_DetachLoadBalancersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DetachLoadBalancersCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2330,7 +2330,7 @@ export const de_DetachLoadBalancersCommand = async (
  */
 export const de_DetachLoadBalancerTargetGroupsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DetachLoadBalancerTargetGroupsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2350,7 +2350,7 @@ export const de_DetachLoadBalancerTargetGroupsCommand = async (
  */
 export const de_DetachTrafficSourcesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DetachTrafficSourcesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2370,7 +2370,7 @@ export const de_DetachTrafficSourcesCommand = async (
  */
 export const de_DisableMetricsCollectionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisableMetricsCollectionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2387,7 +2387,7 @@ export const de_DisableMetricsCollectionCommand = async (
  */
 export const de_EnableMetricsCollectionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<EnableMetricsCollectionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2404,7 +2404,7 @@ export const de_EnableMetricsCollectionCommand = async (
  */
 export const de_EnterStandbyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<EnterStandbyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2424,7 +2424,7 @@ export const de_EnterStandbyCommand = async (
  */
 export const de_ExecutePolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ExecutePolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2441,7 +2441,7 @@ export const de_ExecutePolicyCommand = async (
  */
 export const de_ExitStandbyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ExitStandbyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2461,7 +2461,7 @@ export const de_ExitStandbyCommand = async (
  */
 export const de_GetPredictiveScalingForecastCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetPredictiveScalingForecastCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2481,7 +2481,7 @@ export const de_GetPredictiveScalingForecastCommand = async (
  */
 export const de_PutLifecycleHookCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutLifecycleHookCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2501,7 +2501,7 @@ export const de_PutLifecycleHookCommand = async (
  */
 export const de_PutNotificationConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutNotificationConfigurationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2518,7 +2518,7 @@ export const de_PutNotificationConfigurationCommand = async (
  */
 export const de_PutScalingPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutScalingPolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2538,7 +2538,7 @@ export const de_PutScalingPolicyCommand = async (
  */
 export const de_PutScheduledUpdateGroupActionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutScheduledUpdateGroupActionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2555,7 +2555,7 @@ export const de_PutScheduledUpdateGroupActionCommand = async (
  */
 export const de_PutWarmPoolCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutWarmPoolCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2575,7 +2575,7 @@ export const de_PutWarmPoolCommand = async (
  */
 export const de_RecordLifecycleActionHeartbeatCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RecordLifecycleActionHeartbeatCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2595,7 +2595,7 @@ export const de_RecordLifecycleActionHeartbeatCommand = async (
  */
 export const de_ResumeProcessesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResumeProcessesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2612,7 +2612,7 @@ export const de_ResumeProcessesCommand = async (
  */
 export const de_RollbackInstanceRefreshCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RollbackInstanceRefreshCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2632,7 +2632,7 @@ export const de_RollbackInstanceRefreshCommand = async (
  */
 export const de_SetDesiredCapacityCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SetDesiredCapacityCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2649,7 +2649,7 @@ export const de_SetDesiredCapacityCommand = async (
  */
 export const de_SetInstanceHealthCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SetInstanceHealthCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2666,7 +2666,7 @@ export const de_SetInstanceHealthCommand = async (
  */
 export const de_SetInstanceProtectionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SetInstanceProtectionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2686,7 +2686,7 @@ export const de_SetInstanceProtectionCommand = async (
  */
 export const de_StartInstanceRefreshCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartInstanceRefreshCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2706,7 +2706,7 @@ export const de_StartInstanceRefreshCommand = async (
  */
 export const de_SuspendProcessesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SuspendProcessesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2723,7 +2723,7 @@ export const de_SuspendProcessesCommand = async (
  */
 export const de_TerminateInstanceInAutoScalingGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TerminateInstanceInAutoScalingGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2743,7 +2743,7 @@ export const de_TerminateInstanceInAutoScalingGroupCommand = async (
  */
 export const de_UpdateAutoScalingGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateAutoScalingGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2810,7 +2810,7 @@ const de_CommandError = async (output: __HttpResponse, context: __SerdeContext):
  */
 const de_ActiveInstanceRefreshNotFoundFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ActiveInstanceRefreshNotFoundFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_ActiveInstanceRefreshNotFoundFault(body.Error, context);
@@ -2839,7 +2839,7 @@ const de_AlreadyExistsFaultRes = async (parsedOutput: any, context: __SerdeConte
  */
 const de_InstanceRefreshInProgressFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InstanceRefreshInProgressFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_InstanceRefreshInProgressFault(body.Error, context);
@@ -2868,7 +2868,7 @@ const de_InvalidNextTokenRes = async (parsedOutput: any, context: __SerdeContext
  */
 const de_IrreversibleInstanceRefreshFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<IrreversibleInstanceRefreshFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_IrreversibleInstanceRefreshFault(body.Error, context);
@@ -2897,7 +2897,7 @@ const de_LimitExceededFaultRes = async (parsedOutput: any, context: __SerdeConte
  */
 const de_ResourceContentionFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceContentionFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_ResourceContentionFault(body.Error, context);
@@ -2926,7 +2926,7 @@ const de_ResourceInUseFaultRes = async (parsedOutput: any, context: __SerdeConte
  */
 const de_ScalingActivityInProgressFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ScalingActivityInProgressFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_ScalingActivityInProgressFault(body.Error, context);
@@ -2942,7 +2942,7 @@ const de_ScalingActivityInProgressFaultRes = async (
  */
 const de_ServiceLinkedRoleFailureRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceLinkedRoleFailure> => {
   const body = parsedOutput.body;
   const deserialized: any = de_ServiceLinkedRoleFailure(body.Error, context);
@@ -3142,7 +3142,7 @@ const se_AttachLoadBalancersType = (input: AttachLoadBalancersType, context: __S
  */
 const se_AttachLoadBalancerTargetGroupsType = (
   input: AttachLoadBalancerTargetGroupsType,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_ASGN] != null) {
@@ -3304,7 +3304,7 @@ const se_BatchDeleteScheduledActionType = (input: BatchDeleteScheduledActionType
  */
 const se_BatchPutScheduledUpdateGroupActionType = (
   input: BatchPutScheduledUpdateGroupActionType,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_ASGN] != null) {
@@ -3786,7 +3786,7 @@ const se_DeleteLifecycleHookType = (input: DeleteLifecycleHookType, context: __S
  */
 const se_DeleteNotificationConfigurationType = (
   input: DeleteNotificationConfigurationType,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_ASGN] != null) {
@@ -3952,7 +3952,7 @@ const se_DescribeLoadBalancersRequest = (input: DescribeLoadBalancersRequest, co
  */
 const se_DescribeLoadBalancerTargetGroupsRequest = (
   input: DescribeLoadBalancerTargetGroupsRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_ASGN] != null) {
@@ -3972,7 +3972,7 @@ const se_DescribeLoadBalancerTargetGroupsRequest = (
  */
 const se_DescribeNotificationConfigurationsType = (
   input: DescribeNotificationConfigurationsType,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_ASGNu] != null) {
@@ -4227,7 +4227,7 @@ const se_DetachLoadBalancersType = (input: DetachLoadBalancersType, context: __S
  */
 const se_DetachLoadBalancerTargetGroupsType = (
   input: DetachLoadBalancerTargetGroupsType,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_ASGN] != null) {
@@ -5319,7 +5319,7 @@ const se_PredictiveScalingConfiguration = (input: PredictiveScalingConfiguration
  */
 const se_PredictiveScalingCustomizedCapacityMetric = (
   input: PredictiveScalingCustomizedCapacityMetric,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_MDQ] != null) {
@@ -5340,7 +5340,7 @@ const se_PredictiveScalingCustomizedCapacityMetric = (
  */
 const se_PredictiveScalingCustomizedLoadMetric = (
   input: PredictiveScalingCustomizedLoadMetric,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_MDQ] != null) {
@@ -5361,7 +5361,7 @@ const se_PredictiveScalingCustomizedLoadMetric = (
  */
 const se_PredictiveScalingCustomizedScalingMetric = (
   input: PredictiveScalingCustomizedScalingMetric,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_MDQ] != null) {
@@ -5382,7 +5382,7 @@ const se_PredictiveScalingCustomizedScalingMetric = (
  */
 const se_PredictiveScalingMetricSpecification = (
   input: PredictiveScalingMetricSpecification,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_TV] != null) {
@@ -5438,7 +5438,7 @@ const se_PredictiveScalingMetricSpecification = (
  */
 const se_PredictiveScalingMetricSpecifications = (
   input: PredictiveScalingMetricSpecification[],
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   let counter = 1;
@@ -5460,7 +5460,7 @@ const se_PredictiveScalingMetricSpecifications = (
  */
 const se_PredictiveScalingPredefinedLoadMetric = (
   input: PredictiveScalingPredefinedLoadMetric,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_PMT] != null) {
@@ -5477,7 +5477,7 @@ const se_PredictiveScalingPredefinedLoadMetric = (
  */
 const se_PredictiveScalingPredefinedMetricPair = (
   input: PredictiveScalingPredefinedMetricPair,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_PMT] != null) {
@@ -5494,7 +5494,7 @@ const se_PredictiveScalingPredefinedMetricPair = (
  */
 const se_PredictiveScalingPredefinedScalingMetric = (
   input: PredictiveScalingPredefinedScalingMetric,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_PMT] != null) {
@@ -5648,7 +5648,7 @@ const se_PutScalingPolicyType = (input: PutScalingPolicyType, context: __SerdeCo
  */
 const se_PutScheduledUpdateGroupActionType = (
   input: PutScheduledUpdateGroupActionType,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_ASGN] != null) {
@@ -5716,7 +5716,7 @@ const se_PutWarmPoolType = (input: PutWarmPoolType, context: __SerdeContext): an
  */
 const se_RecordLifecycleActionHeartbeatType = (
   input: RecordLifecycleActionHeartbeatType,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_LHN] != null) {
@@ -5836,7 +5836,7 @@ const se_ScheduledActionNames = (input: string[], context: __SerdeContext): any 
  */
 const se_ScheduledUpdateGroupActionRequest = (
   input: ScheduledUpdateGroupActionRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_SANc] != null) {
@@ -5871,7 +5871,7 @@ const se_ScheduledUpdateGroupActionRequest = (
  */
 const se_ScheduledUpdateGroupActionRequests = (
   input: ScheduledUpdateGroupActionRequest[],
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   let counter = 1;
@@ -6184,7 +6184,7 @@ const se_TargetTrackingMetricStat = (input: TargetTrackingMetricStat, context: _
  */
 const se_TerminateInstanceInAutoScalingGroupType = (
   input: TerminateInstanceInAutoScalingGroupType,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_IIn] != null) {
@@ -6430,7 +6430,7 @@ const de_AcceleratorNames = (output: any, context: __SerdeContext): AcceleratorN
  */
 const de_AcceleratorTotalMemoryMiBRequest = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): AcceleratorTotalMemoryMiBRequest => {
   const contents: any = {};
   if (output[_M] != null) {
@@ -6458,7 +6458,7 @@ const de_AcceleratorTypes = (output: any, context: __SerdeContext): AcceleratorT
  */
 const de_ActiveInstanceRefreshNotFoundFault = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ActiveInstanceRefreshNotFoundFault => {
   const contents: any = {};
   if (output[_m] != null) {
@@ -6655,7 +6655,7 @@ const de_AttachLoadBalancersResultType = (output: any, context: __SerdeContext):
  */
 const de_AttachLoadBalancerTargetGroupsResultType = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): AttachLoadBalancerTargetGroupsResultType => {
   const contents: any = {};
   return contents;
@@ -6933,7 +6933,7 @@ const de_BaselineEbsBandwidthMbpsRequest = (output: any, context: __SerdeContext
  */
 const de_BatchDeleteScheduledActionAnswer = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): BatchDeleteScheduledActionAnswer => {
   const contents: any = {};
   if (output.FailedScheduledActions === "") {
@@ -6949,7 +6949,7 @@ const de_BatchDeleteScheduledActionAnswer = (
  */
 const de_BatchPutScheduledUpdateGroupActionAnswer = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): BatchPutScheduledUpdateGroupActionAnswer => {
   const contents: any = {};
   if (output.FailedScheduledUpdateGroupActions === "") {
@@ -6957,7 +6957,7 @@ const de_BatchPutScheduledUpdateGroupActionAnswer = (
   } else if (output[_FSUGA] != null && output[_FSUGA][_me] != null) {
     contents[_FSUGA] = de_FailedScheduledUpdateGroupActionRequests(
       __getArrayIfSingleItem(output[_FSUGA][_me]),
-      context
+      context,
     );
   }
   return contents;
@@ -7148,7 +7148,7 @@ const de_DescribeAdjustmentTypesAnswer = (output: any, context: __SerdeContext):
  */
 const de_DescribeAutoScalingNotificationTypesAnswer = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeAutoScalingNotificationTypesAnswer => {
   const contents: any = {};
   if (output.AutoScalingNotificationTypes === "") {
@@ -7193,7 +7193,7 @@ const de_DescribeLifecycleHooksAnswer = (output: any, context: __SerdeContext): 
  */
 const de_DescribeLifecycleHookTypesAnswer = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeLifecycleHookTypesAnswer => {
   const contents: any = {};
   if (output.LifecycleHookTypes === "") {
@@ -7225,7 +7225,7 @@ const de_DescribeLoadBalancersResponse = (output: any, context: __SerdeContext):
  */
 const de_DescribeLoadBalancerTargetGroupsResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeLoadBalancerTargetGroupsResponse => {
   const contents: any = {};
   if (output.LoadBalancerTargetGroups === "") {
@@ -7244,7 +7244,7 @@ const de_DescribeLoadBalancerTargetGroupsResponse = (
  */
 const de_DescribeMetricCollectionTypesAnswer = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeMetricCollectionTypesAnswer => {
   const contents: any = {};
   if (output.Metrics === "") {
@@ -7265,7 +7265,7 @@ const de_DescribeMetricCollectionTypesAnswer = (
  */
 const de_DescribeNotificationConfigurationsAnswer = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeNotificationConfigurationsAnswer => {
   const contents: any = {};
   if (output.NotificationConfigurations === "") {
@@ -7284,7 +7284,7 @@ const de_DescribeNotificationConfigurationsAnswer = (
  */
 const de_DescribeTerminationPolicyTypesAnswer = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeTerminationPolicyTypesAnswer => {
   const contents: any = {};
   if (output.TerminationPolicyTypes === "") {
@@ -7370,7 +7370,7 @@ const de_DetachLoadBalancersResultType = (output: any, context: __SerdeContext):
  */
 const de_DetachLoadBalancerTargetGroupsResultType = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DetachLoadBalancerTargetGroupsResultType => {
   const contents: any = {};
   return contents;
@@ -7480,7 +7480,7 @@ const de_ExitStandbyAnswer = (output: any, context: __SerdeContext): ExitStandby
  */
 const de_FailedScheduledUpdateGroupActionRequest = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): FailedScheduledUpdateGroupActionRequest => {
   const contents: any = {};
   if (output[_SANc] != null) {
@@ -7500,7 +7500,7 @@ const de_FailedScheduledUpdateGroupActionRequest = (
  */
 const de_FailedScheduledUpdateGroupActionRequests = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): FailedScheduledUpdateGroupActionRequest[] => {
   return (output || [])
     .filter((e: any) => e != null)
@@ -7514,7 +7514,7 @@ const de_FailedScheduledUpdateGroupActionRequests = (
  */
 const de_GetPredictiveScalingForecastAnswer = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): GetPredictiveScalingForecastAnswer => {
   const contents: any = {};
   if (output.LoadForecast === "") {
@@ -7887,7 +7887,7 @@ const de_InvalidNextToken = (output: any, context: __SerdeContext): InvalidNextT
  */
 const de_IrreversibleInstanceRefreshFault = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): IrreversibleInstanceRefreshFault => {
   const contents: any = {};
   if (output[_m] != null) {
@@ -8535,7 +8535,7 @@ const de_PredictiveScalingConfiguration = (output: any, context: __SerdeContext)
  */
 const de_PredictiveScalingCustomizedCapacityMetric = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): PredictiveScalingCustomizedCapacityMetric => {
   const contents: any = {};
   if (output.MetricDataQueries === "") {
@@ -8551,7 +8551,7 @@ const de_PredictiveScalingCustomizedCapacityMetric = (
  */
 const de_PredictiveScalingCustomizedLoadMetric = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): PredictiveScalingCustomizedLoadMetric => {
   const contents: any = {};
   if (output.MetricDataQueries === "") {
@@ -8567,7 +8567,7 @@ const de_PredictiveScalingCustomizedLoadMetric = (
  */
 const de_PredictiveScalingCustomizedScalingMetric = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): PredictiveScalingCustomizedScalingMetric => {
   const contents: any = {};
   if (output.MetricDataQueries === "") {
@@ -8605,7 +8605,7 @@ const de_PredictiveScalingForecastValues = (output: any, context: __SerdeContext
  */
 const de_PredictiveScalingMetricSpecification = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): PredictiveScalingMetricSpecification => {
   const contents: any = {};
   if (output[_TV] != null) {
@@ -8637,7 +8637,7 @@ const de_PredictiveScalingMetricSpecification = (
  */
 const de_PredictiveScalingMetricSpecifications = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): PredictiveScalingMetricSpecification[] => {
   return (output || [])
     .filter((e: any) => e != null)
@@ -8651,7 +8651,7 @@ const de_PredictiveScalingMetricSpecifications = (
  */
 const de_PredictiveScalingPredefinedLoadMetric = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): PredictiveScalingPredefinedLoadMetric => {
   const contents: any = {};
   if (output[_PMT] != null) {
@@ -8668,7 +8668,7 @@ const de_PredictiveScalingPredefinedLoadMetric = (
  */
 const de_PredictiveScalingPredefinedMetricPair = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): PredictiveScalingPredefinedMetricPair => {
   const contents: any = {};
   if (output[_PMT] != null) {
@@ -8685,7 +8685,7 @@ const de_PredictiveScalingPredefinedMetricPair = (
  */
 const de_PredictiveScalingPredefinedScalingMetric = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): PredictiveScalingPredefinedScalingMetric => {
   const contents: any = {};
   if (output[_PMT] != null) {
@@ -8753,7 +8753,7 @@ const de_PutWarmPoolAnswer = (output: any, context: __SerdeContext): PutWarmPool
  */
 const de_RecordLifecycleActionHeartbeatAnswer = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): RecordLifecycleActionHeartbeatAnswer => {
   const contents: any = {};
   return contents;
@@ -9367,7 +9367,7 @@ const buildHttpRpcRequest = async (
   headers: __HeaderBag,
   path: string,
   resolvedHostname: string | undefined,
-  body: any
+  body: any,
 ): Promise<__HttpRequest> => {
   const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
   const contents: any = {

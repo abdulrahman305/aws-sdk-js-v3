@@ -130,7 +130,7 @@ import {
  */
 export const se_BatchGetUserAccessTasksCommand = async (
   input: BatchGetUserAccessTasksCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -142,7 +142,7 @@ export const se_BatchGetUserAccessTasksCommand = async (
     take(input, {
       appBundleIdentifier: [],
       taskIdList: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -153,7 +153,7 @@ export const se_BatchGetUserAccessTasksCommand = async (
  */
 export const se_ConnectAppAuthorizationCommand = async (
   input: ConnectAppAuthorizationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -166,7 +166,7 @@ export const se_ConnectAppAuthorizationCommand = async (
   body = JSON.stringify(
     take(input, {
       authRequest: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -177,7 +177,7 @@ export const se_ConnectAppAuthorizationCommand = async (
  */
 export const se_CreateAppAuthorizationCommand = async (
   input: CreateAppAuthorizationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -194,7 +194,7 @@ export const se_CreateAppAuthorizationCommand = async (
       credential: (_) => _json(_),
       tags: (_) => _json(_),
       tenant: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -205,7 +205,7 @@ export const se_CreateAppAuthorizationCommand = async (
  */
 export const se_CreateAppBundleCommand = async (
   input: CreateAppBundleCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -218,7 +218,7 @@ export const se_CreateAppBundleCommand = async (
       clientToken: [true, (_) => _ ?? generateIdempotencyToken()],
       customerManagedKeyIdentifier: [],
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -229,7 +229,7 @@ export const se_CreateAppBundleCommand = async (
  */
 export const se_CreateIngestionCommand = async (
   input: CreateIngestionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -245,7 +245,7 @@ export const se_CreateIngestionCommand = async (
       ingestionType: [],
       tags: (_) => _json(_),
       tenantId: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -256,7 +256,7 @@ export const se_CreateIngestionCommand = async (
  */
 export const se_CreateIngestionDestinationCommand = async (
   input: CreateIngestionDestinationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -272,7 +272,7 @@ export const se_CreateIngestionDestinationCommand = async (
       destinationConfiguration: (_) => _json(_),
       processingConfiguration: (_) => _json(_),
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -283,7 +283,7 @@ export const se_CreateIngestionDestinationCommand = async (
  */
 export const se_DeleteAppAuthorizationCommand = async (
   input: DeleteAppAuthorizationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -300,7 +300,7 @@ export const se_DeleteAppAuthorizationCommand = async (
  */
 export const se_DeleteAppBundleCommand = async (
   input: DeleteAppBundleCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -316,7 +316,7 @@ export const se_DeleteAppBundleCommand = async (
  */
 export const se_DeleteIngestionCommand = async (
   input: DeleteIngestionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -333,12 +333,12 @@ export const se_DeleteIngestionCommand = async (
  */
 export const se_DeleteIngestionDestinationCommand = async (
   input: DeleteIngestionDestinationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
   b.bp(
-    "/appbundles/{appBundleIdentifier}/ingestions/{ingestionIdentifier}/ingestiondestinations/{ingestionDestinationIdentifier}"
+    "/appbundles/{appBundleIdentifier}/ingestions/{ingestionIdentifier}/ingestiondestinations/{ingestionDestinationIdentifier}",
   );
   b.p("appBundleIdentifier", () => input.appBundleIdentifier!, "{appBundleIdentifier}", false);
   b.p("ingestionIdentifier", () => input.ingestionIdentifier!, "{ingestionIdentifier}", false);
@@ -346,7 +346,7 @@ export const se_DeleteIngestionDestinationCommand = async (
     "ingestionDestinationIdentifier",
     () => input.ingestionDestinationIdentifier!,
     "{ingestionDestinationIdentifier}",
-    false
+    false,
   );
   let body: any;
   b.m("DELETE").h(headers).b(body);
@@ -358,7 +358,7 @@ export const se_DeleteIngestionDestinationCommand = async (
  */
 export const se_GetAppAuthorizationCommand = async (
   input: GetAppAuthorizationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -375,7 +375,7 @@ export const se_GetAppAuthorizationCommand = async (
  */
 export const se_GetAppBundleCommand = async (
   input: GetAppBundleCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -391,7 +391,7 @@ export const se_GetAppBundleCommand = async (
  */
 export const se_GetIngestionCommand = async (
   input: GetIngestionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -408,12 +408,12 @@ export const se_GetIngestionCommand = async (
  */
 export const se_GetIngestionDestinationCommand = async (
   input: GetIngestionDestinationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
   b.bp(
-    "/appbundles/{appBundleIdentifier}/ingestions/{ingestionIdentifier}/ingestiondestinations/{ingestionDestinationIdentifier}"
+    "/appbundles/{appBundleIdentifier}/ingestions/{ingestionIdentifier}/ingestiondestinations/{ingestionDestinationIdentifier}",
   );
   b.p("appBundleIdentifier", () => input.appBundleIdentifier!, "{appBundleIdentifier}", false);
   b.p("ingestionIdentifier", () => input.ingestionIdentifier!, "{ingestionIdentifier}", false);
@@ -421,7 +421,7 @@ export const se_GetIngestionDestinationCommand = async (
     "ingestionDestinationIdentifier",
     () => input.ingestionDestinationIdentifier!,
     "{ingestionDestinationIdentifier}",
-    false
+    false,
   );
   let body: any;
   b.m("GET").h(headers).b(body);
@@ -433,7 +433,7 @@ export const se_GetIngestionDestinationCommand = async (
  */
 export const se_ListAppAuthorizationsCommand = async (
   input: ListAppAuthorizationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -453,7 +453,7 @@ export const se_ListAppAuthorizationsCommand = async (
  */
 export const se_ListAppBundlesCommand = async (
   input: ListAppBundlesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -472,7 +472,7 @@ export const se_ListAppBundlesCommand = async (
  */
 export const se_ListIngestionDestinationsCommand = async (
   input: ListIngestionDestinationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -493,7 +493,7 @@ export const se_ListIngestionDestinationsCommand = async (
  */
 export const se_ListIngestionsCommand = async (
   input: ListIngestionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -513,7 +513,7 @@ export const se_ListIngestionsCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -529,7 +529,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_StartIngestionCommand = async (
   input: StartIngestionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -546,7 +546,7 @@ export const se_StartIngestionCommand = async (
  */
 export const se_StartUserAccessTasksCommand = async (
   input: StartUserAccessTasksCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -558,7 +558,7 @@ export const se_StartUserAccessTasksCommand = async (
     take(input, {
       appBundleIdentifier: [],
       email: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -569,7 +569,7 @@ export const se_StartUserAccessTasksCommand = async (
  */
 export const se_StopIngestionCommand = async (
   input: StopIngestionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -586,7 +586,7 @@ export const se_StopIngestionCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -598,7 +598,7 @@ export const se_TagResourceCommand = async (
   body = JSON.stringify(
     take(input, {
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -609,7 +609,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -631,7 +631,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateAppAuthorizationCommand = async (
   input: UpdateAppAuthorizationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -645,7 +645,7 @@ export const se_UpdateAppAuthorizationCommand = async (
     take(input, {
       credential: (_) => _json(_),
       tenant: (_) => _json(_),
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -656,14 +656,14 @@ export const se_UpdateAppAuthorizationCommand = async (
  */
 export const se_UpdateIngestionDestinationCommand = async (
   input: UpdateIngestionDestinationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
     "content-type": "application/json",
   };
   b.bp(
-    "/appbundles/{appBundleIdentifier}/ingestions/{ingestionIdentifier}/ingestiondestinations/{ingestionDestinationIdentifier}"
+    "/appbundles/{appBundleIdentifier}/ingestions/{ingestionIdentifier}/ingestiondestinations/{ingestionDestinationIdentifier}",
   );
   b.p("appBundleIdentifier", () => input.appBundleIdentifier!, "{appBundleIdentifier}", false);
   b.p("ingestionIdentifier", () => input.ingestionIdentifier!, "{ingestionIdentifier}", false);
@@ -671,13 +671,13 @@ export const se_UpdateIngestionDestinationCommand = async (
     "ingestionDestinationIdentifier",
     () => input.ingestionDestinationIdentifier!,
     "{ingestionDestinationIdentifier}",
-    false
+    false,
   );
   let body: any;
   body = JSON.stringify(
     take(input, {
       destinationConfiguration: (_) => _json(_),
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -688,7 +688,7 @@ export const se_UpdateIngestionDestinationCommand = async (
  */
 export const de_BatchGetUserAccessTasksCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchGetUserAccessTasksCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -709,7 +709,7 @@ export const de_BatchGetUserAccessTasksCommand = async (
  */
 export const de_ConnectAppAuthorizationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ConnectAppAuthorizationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -730,7 +730,7 @@ export const de_ConnectAppAuthorizationCommand = async (
  */
 export const de_CreateAppAuthorizationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateAppAuthorizationCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -751,7 +751,7 @@ export const de_CreateAppAuthorizationCommand = async (
  */
 export const de_CreateAppBundleCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateAppBundleCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -772,7 +772,7 @@ export const de_CreateAppBundleCommand = async (
  */
 export const de_CreateIngestionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateIngestionCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -793,7 +793,7 @@ export const de_CreateIngestionCommand = async (
  */
 export const de_CreateIngestionDestinationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateIngestionDestinationCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -814,7 +814,7 @@ export const de_CreateIngestionDestinationCommand = async (
  */
 export const de_DeleteAppAuthorizationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteAppAuthorizationCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -831,7 +831,7 @@ export const de_DeleteAppAuthorizationCommand = async (
  */
 export const de_DeleteAppBundleCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteAppBundleCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -848,7 +848,7 @@ export const de_DeleteAppBundleCommand = async (
  */
 export const de_DeleteIngestionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteIngestionCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -865,7 +865,7 @@ export const de_DeleteIngestionCommand = async (
  */
 export const de_DeleteIngestionDestinationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteIngestionDestinationCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -882,7 +882,7 @@ export const de_DeleteIngestionDestinationCommand = async (
  */
 export const de_GetAppAuthorizationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetAppAuthorizationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -903,7 +903,7 @@ export const de_GetAppAuthorizationCommand = async (
  */
 export const de_GetAppBundleCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetAppBundleCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -924,7 +924,7 @@ export const de_GetAppBundleCommand = async (
  */
 export const de_GetIngestionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetIngestionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -945,7 +945,7 @@ export const de_GetIngestionCommand = async (
  */
 export const de_GetIngestionDestinationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetIngestionDestinationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -966,7 +966,7 @@ export const de_GetIngestionDestinationCommand = async (
  */
 export const de_ListAppAuthorizationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAppAuthorizationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -988,7 +988,7 @@ export const de_ListAppAuthorizationsCommand = async (
  */
 export const de_ListAppBundlesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAppBundlesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1010,7 +1010,7 @@ export const de_ListAppBundlesCommand = async (
  */
 export const de_ListIngestionDestinationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListIngestionDestinationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1032,7 +1032,7 @@ export const de_ListIngestionDestinationsCommand = async (
  */
 export const de_ListIngestionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListIngestionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1054,7 +1054,7 @@ export const de_ListIngestionsCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1075,7 +1075,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_StartIngestionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartIngestionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1092,7 +1092,7 @@ export const de_StartIngestionCommand = async (
  */
 export const de_StartUserAccessTasksCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartUserAccessTasksCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1113,7 +1113,7 @@ export const de_StartUserAccessTasksCommand = async (
  */
 export const de_StopIngestionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StopIngestionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1130,7 +1130,7 @@ export const de_StopIngestionCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1147,7 +1147,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1164,7 +1164,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateAppAuthorizationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateAppAuthorizationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1185,7 +1185,7 @@ export const de_UpdateAppAuthorizationCommand = async (
  */
 export const de_UpdateIngestionDestinationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateIngestionDestinationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1248,7 +1248,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1287,7 +1287,7 @@ const de_ConflictExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_InternalServerExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerException> => {
   const contents: any = map({
     [_rAS]: [() => void 0 !== parsedOutput.headers[_ra], () => __strictParseInt32(parsedOutput.headers[_ra])],
@@ -1309,7 +1309,7 @@ const de_InternalServerExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1331,7 +1331,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_ServiceQuotaExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceQuotaExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;

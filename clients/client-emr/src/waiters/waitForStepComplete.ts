@@ -44,7 +44,7 @@ const checkState = async (client: EMRClient, input: DescribeStepCommandInput): P
  */
 export const waitForStepComplete = async (
   params: WaiterConfiguration<EMRClient>,
-  input: DescribeStepCommandInput
+  input: DescribeStepCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 30, maxDelay: 120 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -56,7 +56,7 @@ export const waitForStepComplete = async (
  */
 export const waitUntilStepComplete = async (
   params: WaiterConfiguration<EMRClient>,
-  input: DescribeStepCommandInput
+  input: DescribeStepCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 30, maxDelay: 120 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

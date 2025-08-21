@@ -61,7 +61,7 @@ export interface EndpointDiscoveryConfigOptions {
 
 export const resolveEndpointDiscoveryConfig = <T>(
   input: T & PreviouslyResolved & EndpointDiscoveryInputConfig,
-  { endpointDiscoveryCommandCtor }: EndpointDiscoveryConfigOptions
+  { endpointDiscoveryCommandCtor }: EndpointDiscoveryConfigOptions,
 ): T & EndpointDiscoveryResolvedConfig => ({
   ...input,
   endpointDiscoveryCommandCtor,

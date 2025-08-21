@@ -41,7 +41,7 @@ export interface PcaConnectorScepHttpAuthSchemeParametersProvider
 export const defaultPcaConnectorScepHttpAuthSchemeParametersProvider = async (
   config: PcaConnectorScepClientResolvedConfig,
   context: HandlerExecutionContext,
-  input: object
+  input: object,
 ): Promise<PcaConnectorScepHttpAuthSchemeParameters> => {
   return {
     operation: getSmithyContext(context).operation as string,
@@ -82,7 +82,7 @@ export interface PcaConnectorScepHttpAuthSchemeProvider
  * @internal
  */
 export const defaultPcaConnectorScepHttpAuthSchemeProvider: PcaConnectorScepHttpAuthSchemeProvider = (
-  authParameters
+  authParameters,
 ) => {
   const options: HttpAuthOption[] = [];
   switch (authParameters.operation) {
@@ -131,7 +131,7 @@ export interface HttpAuthSchemeResolvedConfig extends AwsSdkSigV4AuthResolvedCon
  * @internal
  */
 export const resolveHttpAuthSchemeConfig = <T>(
-  config: T & HttpAuthSchemeInputConfig & AwsSdkSigV4PreviouslyResolved
+  config: T & HttpAuthSchemeInputConfig & AwsSdkSigV4PreviouslyResolved,
 ): T & HttpAuthSchemeResolvedConfig => {
   const config_0 = resolveAwsSdkSigV4Config(config);
   return {

@@ -45,16 +45,16 @@ export interface ElasticInference {
    */
   describeAcceleratorOfferings(
     args: DescribeAcceleratorOfferingsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeAcceleratorOfferingsCommandOutput>;
   describeAcceleratorOfferings(
     args: DescribeAcceleratorOfferingsCommandInput,
-    cb: (err: any, data?: DescribeAcceleratorOfferingsCommandOutput) => void
+    cb: (err: any, data?: DescribeAcceleratorOfferingsCommandOutput) => void,
   ): void;
   describeAcceleratorOfferings(
     args: DescribeAcceleratorOfferingsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeAcceleratorOfferingsCommandOutput) => void
+    cb: (err: any, data?: DescribeAcceleratorOfferingsCommandOutput) => void,
   ): void;
 
   /**
@@ -63,16 +63,16 @@ export interface ElasticInference {
   describeAccelerators(): Promise<DescribeAcceleratorsCommandOutput>;
   describeAccelerators(
     args: DescribeAcceleratorsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeAcceleratorsCommandOutput>;
   describeAccelerators(
     args: DescribeAcceleratorsCommandInput,
-    cb: (err: any, data?: DescribeAcceleratorsCommandOutput) => void
+    cb: (err: any, data?: DescribeAcceleratorsCommandOutput) => void,
   ): void;
   describeAccelerators(
     args: DescribeAcceleratorsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeAcceleratorsCommandOutput) => void
+    cb: (err: any, data?: DescribeAcceleratorsCommandOutput) => void,
   ): void;
 
   /**
@@ -81,16 +81,16 @@ export interface ElasticInference {
   describeAcceleratorTypes(): Promise<DescribeAcceleratorTypesCommandOutput>;
   describeAcceleratorTypes(
     args: DescribeAcceleratorTypesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeAcceleratorTypesCommandOutput>;
   describeAcceleratorTypes(
     args: DescribeAcceleratorTypesCommandInput,
-    cb: (err: any, data?: DescribeAcceleratorTypesCommandOutput) => void
+    cb: (err: any, data?: DescribeAcceleratorTypesCommandOutput) => void,
   ): void;
   describeAcceleratorTypes(
     args: DescribeAcceleratorTypesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeAcceleratorTypesCommandOutput) => void
+    cb: (err: any, data?: DescribeAcceleratorTypesCommandOutput) => void,
   ): void;
 
   /**
@@ -98,16 +98,16 @@ export interface ElasticInference {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -118,7 +118,7 @@ export interface ElasticInference {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -129,7 +129,7 @@ export interface ElasticInference {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 }
 

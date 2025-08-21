@@ -576,7 +576,7 @@ import {
  */
 export const se_AssociateApprovalRuleTemplateWithRepositoryCommand = async (
   input: AssociateApprovalRuleTemplateWithRepositoryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("AssociateApprovalRuleTemplateWithRepository");
   let body: any;
@@ -589,7 +589,7 @@ export const se_AssociateApprovalRuleTemplateWithRepositoryCommand = async (
  */
 export const se_BatchAssociateApprovalRuleTemplateWithRepositoriesCommand = async (
   input: BatchAssociateApprovalRuleTemplateWithRepositoriesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("BatchAssociateApprovalRuleTemplateWithRepositories");
   let body: any;
@@ -602,7 +602,7 @@ export const se_BatchAssociateApprovalRuleTemplateWithRepositoriesCommand = asyn
  */
 export const se_BatchDescribeMergeConflictsCommand = async (
   input: BatchDescribeMergeConflictsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("BatchDescribeMergeConflicts");
   let body: any;
@@ -615,7 +615,7 @@ export const se_BatchDescribeMergeConflictsCommand = async (
  */
 export const se_BatchDisassociateApprovalRuleTemplateFromRepositoriesCommand = async (
   input: BatchDisassociateApprovalRuleTemplateFromRepositoriesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("BatchDisassociateApprovalRuleTemplateFromRepositories");
   let body: any;
@@ -628,7 +628,7 @@ export const se_BatchDisassociateApprovalRuleTemplateFromRepositoriesCommand = a
  */
 export const se_BatchGetCommitsCommand = async (
   input: BatchGetCommitsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("BatchGetCommits");
   let body: any;
@@ -641,7 +641,7 @@ export const se_BatchGetCommitsCommand = async (
  */
 export const se_BatchGetRepositoriesCommand = async (
   input: BatchGetRepositoriesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("BatchGetRepositories");
   let body: any;
@@ -654,7 +654,7 @@ export const se_BatchGetRepositoriesCommand = async (
  */
 export const se_CreateApprovalRuleTemplateCommand = async (
   input: CreateApprovalRuleTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateApprovalRuleTemplate");
   let body: any;
@@ -667,7 +667,7 @@ export const se_CreateApprovalRuleTemplateCommand = async (
  */
 export const se_CreateBranchCommand = async (
   input: CreateBranchCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateBranch");
   let body: any;
@@ -680,7 +680,7 @@ export const se_CreateBranchCommand = async (
  */
 export const se_CreateCommitCommand = async (
   input: CreateCommitCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateCommit");
   let body: any;
@@ -693,7 +693,7 @@ export const se_CreateCommitCommand = async (
  */
 export const se_CreatePullRequestCommand = async (
   input: CreatePullRequestCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreatePullRequest");
   let body: any;
@@ -706,7 +706,7 @@ export const se_CreatePullRequestCommand = async (
  */
 export const se_CreatePullRequestApprovalRuleCommand = async (
   input: CreatePullRequestApprovalRuleCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreatePullRequestApprovalRule");
   let body: any;
@@ -719,7 +719,7 @@ export const se_CreatePullRequestApprovalRuleCommand = async (
  */
 export const se_CreateRepositoryCommand = async (
   input: CreateRepositoryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateRepository");
   let body: any;
@@ -732,7 +732,7 @@ export const se_CreateRepositoryCommand = async (
  */
 export const se_CreateUnreferencedMergeCommitCommand = async (
   input: CreateUnreferencedMergeCommitCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateUnreferencedMergeCommit");
   let body: any;
@@ -745,7 +745,7 @@ export const se_CreateUnreferencedMergeCommitCommand = async (
  */
 export const se_DeleteApprovalRuleTemplateCommand = async (
   input: DeleteApprovalRuleTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteApprovalRuleTemplate");
   let body: any;
@@ -758,7 +758,7 @@ export const se_DeleteApprovalRuleTemplateCommand = async (
  */
 export const se_DeleteBranchCommand = async (
   input: DeleteBranchCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteBranch");
   let body: any;
@@ -771,7 +771,7 @@ export const se_DeleteBranchCommand = async (
  */
 export const se_DeleteCommentContentCommand = async (
   input: DeleteCommentContentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteCommentContent");
   let body: any;
@@ -784,7 +784,7 @@ export const se_DeleteCommentContentCommand = async (
  */
 export const se_DeleteFileCommand = async (
   input: DeleteFileCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteFile");
   let body: any;
@@ -797,7 +797,7 @@ export const se_DeleteFileCommand = async (
  */
 export const se_DeletePullRequestApprovalRuleCommand = async (
   input: DeletePullRequestApprovalRuleCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeletePullRequestApprovalRule");
   let body: any;
@@ -810,7 +810,7 @@ export const se_DeletePullRequestApprovalRuleCommand = async (
  */
 export const se_DeleteRepositoryCommand = async (
   input: DeleteRepositoryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteRepository");
   let body: any;
@@ -823,7 +823,7 @@ export const se_DeleteRepositoryCommand = async (
  */
 export const se_DescribeMergeConflictsCommand = async (
   input: DescribeMergeConflictsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeMergeConflicts");
   let body: any;
@@ -836,7 +836,7 @@ export const se_DescribeMergeConflictsCommand = async (
  */
 export const se_DescribePullRequestEventsCommand = async (
   input: DescribePullRequestEventsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribePullRequestEvents");
   let body: any;
@@ -849,7 +849,7 @@ export const se_DescribePullRequestEventsCommand = async (
  */
 export const se_DisassociateApprovalRuleTemplateFromRepositoryCommand = async (
   input: DisassociateApprovalRuleTemplateFromRepositoryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DisassociateApprovalRuleTemplateFromRepository");
   let body: any;
@@ -862,7 +862,7 @@ export const se_DisassociateApprovalRuleTemplateFromRepositoryCommand = async (
  */
 export const se_EvaluatePullRequestApprovalRulesCommand = async (
   input: EvaluatePullRequestApprovalRulesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("EvaluatePullRequestApprovalRules");
   let body: any;
@@ -875,7 +875,7 @@ export const se_EvaluatePullRequestApprovalRulesCommand = async (
  */
 export const se_GetApprovalRuleTemplateCommand = async (
   input: GetApprovalRuleTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetApprovalRuleTemplate");
   let body: any;
@@ -888,7 +888,7 @@ export const se_GetApprovalRuleTemplateCommand = async (
  */
 export const se_GetBlobCommand = async (
   input: GetBlobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetBlob");
   let body: any;
@@ -901,7 +901,7 @@ export const se_GetBlobCommand = async (
  */
 export const se_GetBranchCommand = async (
   input: GetBranchCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetBranch");
   let body: any;
@@ -914,7 +914,7 @@ export const se_GetBranchCommand = async (
  */
 export const se_GetCommentCommand = async (
   input: GetCommentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetComment");
   let body: any;
@@ -927,7 +927,7 @@ export const se_GetCommentCommand = async (
  */
 export const se_GetCommentReactionsCommand = async (
   input: GetCommentReactionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetCommentReactions");
   let body: any;
@@ -940,7 +940,7 @@ export const se_GetCommentReactionsCommand = async (
  */
 export const se_GetCommentsForComparedCommitCommand = async (
   input: GetCommentsForComparedCommitCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetCommentsForComparedCommit");
   let body: any;
@@ -953,7 +953,7 @@ export const se_GetCommentsForComparedCommitCommand = async (
  */
 export const se_GetCommentsForPullRequestCommand = async (
   input: GetCommentsForPullRequestCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetCommentsForPullRequest");
   let body: any;
@@ -966,7 +966,7 @@ export const se_GetCommentsForPullRequestCommand = async (
  */
 export const se_GetCommitCommand = async (
   input: GetCommitCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetCommit");
   let body: any;
@@ -979,7 +979,7 @@ export const se_GetCommitCommand = async (
  */
 export const se_GetDifferencesCommand = async (
   input: GetDifferencesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetDifferences");
   let body: any;
@@ -992,7 +992,7 @@ export const se_GetDifferencesCommand = async (
  */
 export const se_GetFileCommand = async (
   input: GetFileCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetFile");
   let body: any;
@@ -1005,7 +1005,7 @@ export const se_GetFileCommand = async (
  */
 export const se_GetFolderCommand = async (
   input: GetFolderCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetFolder");
   let body: any;
@@ -1018,7 +1018,7 @@ export const se_GetFolderCommand = async (
  */
 export const se_GetMergeCommitCommand = async (
   input: GetMergeCommitCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetMergeCommit");
   let body: any;
@@ -1031,7 +1031,7 @@ export const se_GetMergeCommitCommand = async (
  */
 export const se_GetMergeConflictsCommand = async (
   input: GetMergeConflictsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetMergeConflicts");
   let body: any;
@@ -1044,7 +1044,7 @@ export const se_GetMergeConflictsCommand = async (
  */
 export const se_GetMergeOptionsCommand = async (
   input: GetMergeOptionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetMergeOptions");
   let body: any;
@@ -1057,7 +1057,7 @@ export const se_GetMergeOptionsCommand = async (
  */
 export const se_GetPullRequestCommand = async (
   input: GetPullRequestCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetPullRequest");
   let body: any;
@@ -1070,7 +1070,7 @@ export const se_GetPullRequestCommand = async (
  */
 export const se_GetPullRequestApprovalStatesCommand = async (
   input: GetPullRequestApprovalStatesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetPullRequestApprovalStates");
   let body: any;
@@ -1083,7 +1083,7 @@ export const se_GetPullRequestApprovalStatesCommand = async (
  */
 export const se_GetPullRequestOverrideStateCommand = async (
   input: GetPullRequestOverrideStateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetPullRequestOverrideState");
   let body: any;
@@ -1096,7 +1096,7 @@ export const se_GetPullRequestOverrideStateCommand = async (
  */
 export const se_GetRepositoryCommand = async (
   input: GetRepositoryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetRepository");
   let body: any;
@@ -1109,7 +1109,7 @@ export const se_GetRepositoryCommand = async (
  */
 export const se_GetRepositoryTriggersCommand = async (
   input: GetRepositoryTriggersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetRepositoryTriggers");
   let body: any;
@@ -1122,7 +1122,7 @@ export const se_GetRepositoryTriggersCommand = async (
  */
 export const se_ListApprovalRuleTemplatesCommand = async (
   input: ListApprovalRuleTemplatesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListApprovalRuleTemplates");
   let body: any;
@@ -1135,7 +1135,7 @@ export const se_ListApprovalRuleTemplatesCommand = async (
  */
 export const se_ListAssociatedApprovalRuleTemplatesForRepositoryCommand = async (
   input: ListAssociatedApprovalRuleTemplatesForRepositoryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListAssociatedApprovalRuleTemplatesForRepository");
   let body: any;
@@ -1148,7 +1148,7 @@ export const se_ListAssociatedApprovalRuleTemplatesForRepositoryCommand = async 
  */
 export const se_ListBranchesCommand = async (
   input: ListBranchesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListBranches");
   let body: any;
@@ -1161,7 +1161,7 @@ export const se_ListBranchesCommand = async (
  */
 export const se_ListFileCommitHistoryCommand = async (
   input: ListFileCommitHistoryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListFileCommitHistory");
   let body: any;
@@ -1174,7 +1174,7 @@ export const se_ListFileCommitHistoryCommand = async (
  */
 export const se_ListPullRequestsCommand = async (
   input: ListPullRequestsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListPullRequests");
   let body: any;
@@ -1187,7 +1187,7 @@ export const se_ListPullRequestsCommand = async (
  */
 export const se_ListRepositoriesCommand = async (
   input: ListRepositoriesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListRepositories");
   let body: any;
@@ -1200,7 +1200,7 @@ export const se_ListRepositoriesCommand = async (
  */
 export const se_ListRepositoriesForApprovalRuleTemplateCommand = async (
   input: ListRepositoriesForApprovalRuleTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListRepositoriesForApprovalRuleTemplate");
   let body: any;
@@ -1213,7 +1213,7 @@ export const se_ListRepositoriesForApprovalRuleTemplateCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListTagsForResource");
   let body: any;
@@ -1226,7 +1226,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_MergeBranchesByFastForwardCommand = async (
   input: MergeBranchesByFastForwardCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("MergeBranchesByFastForward");
   let body: any;
@@ -1239,7 +1239,7 @@ export const se_MergeBranchesByFastForwardCommand = async (
  */
 export const se_MergeBranchesBySquashCommand = async (
   input: MergeBranchesBySquashCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("MergeBranchesBySquash");
   let body: any;
@@ -1252,7 +1252,7 @@ export const se_MergeBranchesBySquashCommand = async (
  */
 export const se_MergeBranchesByThreeWayCommand = async (
   input: MergeBranchesByThreeWayCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("MergeBranchesByThreeWay");
   let body: any;
@@ -1265,7 +1265,7 @@ export const se_MergeBranchesByThreeWayCommand = async (
  */
 export const se_MergePullRequestByFastForwardCommand = async (
   input: MergePullRequestByFastForwardCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("MergePullRequestByFastForward");
   let body: any;
@@ -1278,7 +1278,7 @@ export const se_MergePullRequestByFastForwardCommand = async (
  */
 export const se_MergePullRequestBySquashCommand = async (
   input: MergePullRequestBySquashCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("MergePullRequestBySquash");
   let body: any;
@@ -1291,7 +1291,7 @@ export const se_MergePullRequestBySquashCommand = async (
  */
 export const se_MergePullRequestByThreeWayCommand = async (
   input: MergePullRequestByThreeWayCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("MergePullRequestByThreeWay");
   let body: any;
@@ -1304,7 +1304,7 @@ export const se_MergePullRequestByThreeWayCommand = async (
  */
 export const se_OverridePullRequestApprovalRulesCommand = async (
   input: OverridePullRequestApprovalRulesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("OverridePullRequestApprovalRules");
   let body: any;
@@ -1317,7 +1317,7 @@ export const se_OverridePullRequestApprovalRulesCommand = async (
  */
 export const se_PostCommentForComparedCommitCommand = async (
   input: PostCommentForComparedCommitCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("PostCommentForComparedCommit");
   let body: any;
@@ -1330,7 +1330,7 @@ export const se_PostCommentForComparedCommitCommand = async (
  */
 export const se_PostCommentForPullRequestCommand = async (
   input: PostCommentForPullRequestCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("PostCommentForPullRequest");
   let body: any;
@@ -1343,7 +1343,7 @@ export const se_PostCommentForPullRequestCommand = async (
  */
 export const se_PostCommentReplyCommand = async (
   input: PostCommentReplyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("PostCommentReply");
   let body: any;
@@ -1356,7 +1356,7 @@ export const se_PostCommentReplyCommand = async (
  */
 export const se_PutCommentReactionCommand = async (
   input: PutCommentReactionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("PutCommentReaction");
   let body: any;
@@ -1369,7 +1369,7 @@ export const se_PutCommentReactionCommand = async (
  */
 export const se_PutFileCommand = async (
   input: PutFileCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("PutFile");
   let body: any;
@@ -1382,7 +1382,7 @@ export const se_PutFileCommand = async (
  */
 export const se_PutRepositoryTriggersCommand = async (
   input: PutRepositoryTriggersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("PutRepositoryTriggers");
   let body: any;
@@ -1395,7 +1395,7 @@ export const se_PutRepositoryTriggersCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("TagResource");
   let body: any;
@@ -1408,7 +1408,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_TestRepositoryTriggersCommand = async (
   input: TestRepositoryTriggersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("TestRepositoryTriggers");
   let body: any;
@@ -1421,7 +1421,7 @@ export const se_TestRepositoryTriggersCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UntagResource");
   let body: any;
@@ -1434,7 +1434,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateApprovalRuleTemplateContentCommand = async (
   input: UpdateApprovalRuleTemplateContentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateApprovalRuleTemplateContent");
   let body: any;
@@ -1447,7 +1447,7 @@ export const se_UpdateApprovalRuleTemplateContentCommand = async (
  */
 export const se_UpdateApprovalRuleTemplateDescriptionCommand = async (
   input: UpdateApprovalRuleTemplateDescriptionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateApprovalRuleTemplateDescription");
   let body: any;
@@ -1460,7 +1460,7 @@ export const se_UpdateApprovalRuleTemplateDescriptionCommand = async (
  */
 export const se_UpdateApprovalRuleTemplateNameCommand = async (
   input: UpdateApprovalRuleTemplateNameCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateApprovalRuleTemplateName");
   let body: any;
@@ -1473,7 +1473,7 @@ export const se_UpdateApprovalRuleTemplateNameCommand = async (
  */
 export const se_UpdateCommentCommand = async (
   input: UpdateCommentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateComment");
   let body: any;
@@ -1486,7 +1486,7 @@ export const se_UpdateCommentCommand = async (
  */
 export const se_UpdateDefaultBranchCommand = async (
   input: UpdateDefaultBranchCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateDefaultBranch");
   let body: any;
@@ -1499,7 +1499,7 @@ export const se_UpdateDefaultBranchCommand = async (
  */
 export const se_UpdatePullRequestApprovalRuleContentCommand = async (
   input: UpdatePullRequestApprovalRuleContentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdatePullRequestApprovalRuleContent");
   let body: any;
@@ -1512,7 +1512,7 @@ export const se_UpdatePullRequestApprovalRuleContentCommand = async (
  */
 export const se_UpdatePullRequestApprovalStateCommand = async (
   input: UpdatePullRequestApprovalStateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdatePullRequestApprovalState");
   let body: any;
@@ -1525,7 +1525,7 @@ export const se_UpdatePullRequestApprovalStateCommand = async (
  */
 export const se_UpdatePullRequestDescriptionCommand = async (
   input: UpdatePullRequestDescriptionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdatePullRequestDescription");
   let body: any;
@@ -1538,7 +1538,7 @@ export const se_UpdatePullRequestDescriptionCommand = async (
  */
 export const se_UpdatePullRequestStatusCommand = async (
   input: UpdatePullRequestStatusCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdatePullRequestStatus");
   let body: any;
@@ -1551,7 +1551,7 @@ export const se_UpdatePullRequestStatusCommand = async (
  */
 export const se_UpdatePullRequestTitleCommand = async (
   input: UpdatePullRequestTitleCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdatePullRequestTitle");
   let body: any;
@@ -1564,7 +1564,7 @@ export const se_UpdatePullRequestTitleCommand = async (
  */
 export const se_UpdateRepositoryDescriptionCommand = async (
   input: UpdateRepositoryDescriptionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateRepositoryDescription");
   let body: any;
@@ -1577,7 +1577,7 @@ export const se_UpdateRepositoryDescriptionCommand = async (
  */
 export const se_UpdateRepositoryEncryptionKeyCommand = async (
   input: UpdateRepositoryEncryptionKeyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateRepositoryEncryptionKey");
   let body: any;
@@ -1590,7 +1590,7 @@ export const se_UpdateRepositoryEncryptionKeyCommand = async (
  */
 export const se_UpdateRepositoryNameCommand = async (
   input: UpdateRepositoryNameCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateRepositoryName");
   let body: any;
@@ -1603,7 +1603,7 @@ export const se_UpdateRepositoryNameCommand = async (
  */
 export const de_AssociateApprovalRuleTemplateWithRepositoryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssociateApprovalRuleTemplateWithRepositoryCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1620,7 +1620,7 @@ export const de_AssociateApprovalRuleTemplateWithRepositoryCommand = async (
  */
 export const de_BatchAssociateApprovalRuleTemplateWithRepositoriesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchAssociateApprovalRuleTemplateWithRepositoriesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1640,7 +1640,7 @@ export const de_BatchAssociateApprovalRuleTemplateWithRepositoriesCommand = asyn
  */
 export const de_BatchDescribeMergeConflictsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchDescribeMergeConflictsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1660,7 +1660,7 @@ export const de_BatchDescribeMergeConflictsCommand = async (
  */
 export const de_BatchDisassociateApprovalRuleTemplateFromRepositoriesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchDisassociateApprovalRuleTemplateFromRepositoriesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1680,7 +1680,7 @@ export const de_BatchDisassociateApprovalRuleTemplateFromRepositoriesCommand = a
  */
 export const de_BatchGetCommitsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchGetCommitsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1700,7 +1700,7 @@ export const de_BatchGetCommitsCommand = async (
  */
 export const de_BatchGetRepositoriesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchGetRepositoriesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1720,7 +1720,7 @@ export const de_BatchGetRepositoriesCommand = async (
  */
 export const de_CreateApprovalRuleTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateApprovalRuleTemplateCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1740,7 +1740,7 @@ export const de_CreateApprovalRuleTemplateCommand = async (
  */
 export const de_CreateBranchCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateBranchCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1757,7 +1757,7 @@ export const de_CreateBranchCommand = async (
  */
 export const de_CreateCommitCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateCommitCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1777,7 +1777,7 @@ export const de_CreateCommitCommand = async (
  */
 export const de_CreatePullRequestCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreatePullRequestCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1797,7 +1797,7 @@ export const de_CreatePullRequestCommand = async (
  */
 export const de_CreatePullRequestApprovalRuleCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreatePullRequestApprovalRuleCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1817,7 +1817,7 @@ export const de_CreatePullRequestApprovalRuleCommand = async (
  */
 export const de_CreateRepositoryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateRepositoryCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1837,7 +1837,7 @@ export const de_CreateRepositoryCommand = async (
  */
 export const de_CreateUnreferencedMergeCommitCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateUnreferencedMergeCommitCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1857,7 +1857,7 @@ export const de_CreateUnreferencedMergeCommitCommand = async (
  */
 export const de_DeleteApprovalRuleTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteApprovalRuleTemplateCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1877,7 +1877,7 @@ export const de_DeleteApprovalRuleTemplateCommand = async (
  */
 export const de_DeleteBranchCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteBranchCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1897,7 +1897,7 @@ export const de_DeleteBranchCommand = async (
  */
 export const de_DeleteCommentContentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteCommentContentCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1917,7 +1917,7 @@ export const de_DeleteCommentContentCommand = async (
  */
 export const de_DeleteFileCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteFileCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1937,7 +1937,7 @@ export const de_DeleteFileCommand = async (
  */
 export const de_DeletePullRequestApprovalRuleCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeletePullRequestApprovalRuleCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1957,7 +1957,7 @@ export const de_DeletePullRequestApprovalRuleCommand = async (
  */
 export const de_DeleteRepositoryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteRepositoryCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1977,7 +1977,7 @@ export const de_DeleteRepositoryCommand = async (
  */
 export const de_DescribeMergeConflictsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeMergeConflictsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1997,7 +1997,7 @@ export const de_DescribeMergeConflictsCommand = async (
  */
 export const de_DescribePullRequestEventsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribePullRequestEventsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2017,7 +2017,7 @@ export const de_DescribePullRequestEventsCommand = async (
  */
 export const de_DisassociateApprovalRuleTemplateFromRepositoryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisassociateApprovalRuleTemplateFromRepositoryCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2034,7 +2034,7 @@ export const de_DisassociateApprovalRuleTemplateFromRepositoryCommand = async (
  */
 export const de_EvaluatePullRequestApprovalRulesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<EvaluatePullRequestApprovalRulesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2054,7 +2054,7 @@ export const de_EvaluatePullRequestApprovalRulesCommand = async (
  */
 export const de_GetApprovalRuleTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetApprovalRuleTemplateCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2074,7 +2074,7 @@ export const de_GetApprovalRuleTemplateCommand = async (
  */
 export const de_GetBlobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetBlobCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2094,7 +2094,7 @@ export const de_GetBlobCommand = async (
  */
 export const de_GetBranchCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetBranchCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2114,7 +2114,7 @@ export const de_GetBranchCommand = async (
  */
 export const de_GetCommentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetCommentCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2134,7 +2134,7 @@ export const de_GetCommentCommand = async (
  */
 export const de_GetCommentReactionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetCommentReactionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2154,7 +2154,7 @@ export const de_GetCommentReactionsCommand = async (
  */
 export const de_GetCommentsForComparedCommitCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetCommentsForComparedCommitCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2174,7 +2174,7 @@ export const de_GetCommentsForComparedCommitCommand = async (
  */
 export const de_GetCommentsForPullRequestCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetCommentsForPullRequestCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2194,7 +2194,7 @@ export const de_GetCommentsForPullRequestCommand = async (
  */
 export const de_GetCommitCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetCommitCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2214,7 +2214,7 @@ export const de_GetCommitCommand = async (
  */
 export const de_GetDifferencesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetDifferencesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2234,7 +2234,7 @@ export const de_GetDifferencesCommand = async (
  */
 export const de_GetFileCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetFileCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2254,7 +2254,7 @@ export const de_GetFileCommand = async (
  */
 export const de_GetFolderCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetFolderCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2274,7 +2274,7 @@ export const de_GetFolderCommand = async (
  */
 export const de_GetMergeCommitCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetMergeCommitCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2294,7 +2294,7 @@ export const de_GetMergeCommitCommand = async (
  */
 export const de_GetMergeConflictsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetMergeConflictsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2314,7 +2314,7 @@ export const de_GetMergeConflictsCommand = async (
  */
 export const de_GetMergeOptionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetMergeOptionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2334,7 +2334,7 @@ export const de_GetMergeOptionsCommand = async (
  */
 export const de_GetPullRequestCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetPullRequestCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2354,7 +2354,7 @@ export const de_GetPullRequestCommand = async (
  */
 export const de_GetPullRequestApprovalStatesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetPullRequestApprovalStatesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2374,7 +2374,7 @@ export const de_GetPullRequestApprovalStatesCommand = async (
  */
 export const de_GetPullRequestOverrideStateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetPullRequestOverrideStateCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2394,7 +2394,7 @@ export const de_GetPullRequestOverrideStateCommand = async (
  */
 export const de_GetRepositoryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetRepositoryCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2414,7 +2414,7 @@ export const de_GetRepositoryCommand = async (
  */
 export const de_GetRepositoryTriggersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetRepositoryTriggersCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2434,7 +2434,7 @@ export const de_GetRepositoryTriggersCommand = async (
  */
 export const de_ListApprovalRuleTemplatesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListApprovalRuleTemplatesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2454,7 +2454,7 @@ export const de_ListApprovalRuleTemplatesCommand = async (
  */
 export const de_ListAssociatedApprovalRuleTemplatesForRepositoryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAssociatedApprovalRuleTemplatesForRepositoryCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2474,7 +2474,7 @@ export const de_ListAssociatedApprovalRuleTemplatesForRepositoryCommand = async 
  */
 export const de_ListBranchesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListBranchesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2494,7 +2494,7 @@ export const de_ListBranchesCommand = async (
  */
 export const de_ListFileCommitHistoryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListFileCommitHistoryCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2514,7 +2514,7 @@ export const de_ListFileCommitHistoryCommand = async (
  */
 export const de_ListPullRequestsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListPullRequestsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2534,7 +2534,7 @@ export const de_ListPullRequestsCommand = async (
  */
 export const de_ListRepositoriesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListRepositoriesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2554,7 +2554,7 @@ export const de_ListRepositoriesCommand = async (
  */
 export const de_ListRepositoriesForApprovalRuleTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListRepositoriesForApprovalRuleTemplateCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2574,7 +2574,7 @@ export const de_ListRepositoriesForApprovalRuleTemplateCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2594,7 +2594,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_MergeBranchesByFastForwardCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<MergeBranchesByFastForwardCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2614,7 +2614,7 @@ export const de_MergeBranchesByFastForwardCommand = async (
  */
 export const de_MergeBranchesBySquashCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<MergeBranchesBySquashCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2634,7 +2634,7 @@ export const de_MergeBranchesBySquashCommand = async (
  */
 export const de_MergeBranchesByThreeWayCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<MergeBranchesByThreeWayCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2654,7 +2654,7 @@ export const de_MergeBranchesByThreeWayCommand = async (
  */
 export const de_MergePullRequestByFastForwardCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<MergePullRequestByFastForwardCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2674,7 +2674,7 @@ export const de_MergePullRequestByFastForwardCommand = async (
  */
 export const de_MergePullRequestBySquashCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<MergePullRequestBySquashCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2694,7 +2694,7 @@ export const de_MergePullRequestBySquashCommand = async (
  */
 export const de_MergePullRequestByThreeWayCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<MergePullRequestByThreeWayCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2714,7 +2714,7 @@ export const de_MergePullRequestByThreeWayCommand = async (
  */
 export const de_OverridePullRequestApprovalRulesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<OverridePullRequestApprovalRulesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2731,7 +2731,7 @@ export const de_OverridePullRequestApprovalRulesCommand = async (
  */
 export const de_PostCommentForComparedCommitCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PostCommentForComparedCommitCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2751,7 +2751,7 @@ export const de_PostCommentForComparedCommitCommand = async (
  */
 export const de_PostCommentForPullRequestCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PostCommentForPullRequestCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2771,7 +2771,7 @@ export const de_PostCommentForPullRequestCommand = async (
  */
 export const de_PostCommentReplyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PostCommentReplyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2791,7 +2791,7 @@ export const de_PostCommentReplyCommand = async (
  */
 export const de_PutCommentReactionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutCommentReactionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2808,7 +2808,7 @@ export const de_PutCommentReactionCommand = async (
  */
 export const de_PutFileCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutFileCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2828,7 +2828,7 @@ export const de_PutFileCommand = async (
  */
 export const de_PutRepositoryTriggersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutRepositoryTriggersCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2848,7 +2848,7 @@ export const de_PutRepositoryTriggersCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2865,7 +2865,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_TestRepositoryTriggersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TestRepositoryTriggersCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2885,7 +2885,7 @@ export const de_TestRepositoryTriggersCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2902,7 +2902,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateApprovalRuleTemplateContentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateApprovalRuleTemplateContentCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2922,7 +2922,7 @@ export const de_UpdateApprovalRuleTemplateContentCommand = async (
  */
 export const de_UpdateApprovalRuleTemplateDescriptionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateApprovalRuleTemplateDescriptionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2942,7 +2942,7 @@ export const de_UpdateApprovalRuleTemplateDescriptionCommand = async (
  */
 export const de_UpdateApprovalRuleTemplateNameCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateApprovalRuleTemplateNameCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2962,7 +2962,7 @@ export const de_UpdateApprovalRuleTemplateNameCommand = async (
  */
 export const de_UpdateCommentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateCommentCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2982,7 +2982,7 @@ export const de_UpdateCommentCommand = async (
  */
 export const de_UpdateDefaultBranchCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateDefaultBranchCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2999,7 +2999,7 @@ export const de_UpdateDefaultBranchCommand = async (
  */
 export const de_UpdatePullRequestApprovalRuleContentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdatePullRequestApprovalRuleContentCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3019,7 +3019,7 @@ export const de_UpdatePullRequestApprovalRuleContentCommand = async (
  */
 export const de_UpdatePullRequestApprovalStateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdatePullRequestApprovalStateCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3036,7 +3036,7 @@ export const de_UpdatePullRequestApprovalStateCommand = async (
  */
 export const de_UpdatePullRequestDescriptionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdatePullRequestDescriptionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3056,7 +3056,7 @@ export const de_UpdatePullRequestDescriptionCommand = async (
  */
 export const de_UpdatePullRequestStatusCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdatePullRequestStatusCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3076,7 +3076,7 @@ export const de_UpdatePullRequestStatusCommand = async (
  */
 export const de_UpdatePullRequestTitleCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdatePullRequestTitleCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3096,7 +3096,7 @@ export const de_UpdatePullRequestTitleCommand = async (
  */
 export const de_UpdateRepositoryDescriptionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateRepositoryDescriptionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3113,7 +3113,7 @@ export const de_UpdateRepositoryDescriptionCommand = async (
  */
 export const de_UpdateRepositoryEncryptionKeyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateRepositoryEncryptionKeyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3133,7 +3133,7 @@ export const de_UpdateRepositoryEncryptionKeyCommand = async (
  */
 export const de_UpdateRepositoryNameCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateRepositoryNameCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3734,7 +3734,7 @@ const de_CommandError = async (output: __HttpResponse, context: __SerdeContext):
  */
 const de_ActorDoesNotExistExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ActorDoesNotExistException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3750,7 +3750,7 @@ const de_ActorDoesNotExistExceptionRes = async (
  */
 const de_ApprovalRuleContentRequiredExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ApprovalRuleContentRequiredException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3766,7 +3766,7 @@ const de_ApprovalRuleContentRequiredExceptionRes = async (
  */
 const de_ApprovalRuleDoesNotExistExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ApprovalRuleDoesNotExistException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3782,7 +3782,7 @@ const de_ApprovalRuleDoesNotExistExceptionRes = async (
  */
 const de_ApprovalRuleNameAlreadyExistsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ApprovalRuleNameAlreadyExistsException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3798,7 +3798,7 @@ const de_ApprovalRuleNameAlreadyExistsExceptionRes = async (
  */
 const de_ApprovalRuleNameRequiredExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ApprovalRuleNameRequiredException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3814,7 +3814,7 @@ const de_ApprovalRuleNameRequiredExceptionRes = async (
  */
 const de_ApprovalRuleTemplateContentRequiredExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ApprovalRuleTemplateContentRequiredException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3830,7 +3830,7 @@ const de_ApprovalRuleTemplateContentRequiredExceptionRes = async (
  */
 const de_ApprovalRuleTemplateDoesNotExistExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ApprovalRuleTemplateDoesNotExistException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3846,7 +3846,7 @@ const de_ApprovalRuleTemplateDoesNotExistExceptionRes = async (
  */
 const de_ApprovalRuleTemplateInUseExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ApprovalRuleTemplateInUseException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3862,7 +3862,7 @@ const de_ApprovalRuleTemplateInUseExceptionRes = async (
  */
 const de_ApprovalRuleTemplateNameAlreadyExistsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ApprovalRuleTemplateNameAlreadyExistsException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3878,7 +3878,7 @@ const de_ApprovalRuleTemplateNameAlreadyExistsExceptionRes = async (
  */
 const de_ApprovalRuleTemplateNameRequiredExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ApprovalRuleTemplateNameRequiredException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3894,7 +3894,7 @@ const de_ApprovalRuleTemplateNameRequiredExceptionRes = async (
  */
 const de_ApprovalStateRequiredExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ApprovalStateRequiredException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3910,7 +3910,7 @@ const de_ApprovalStateRequiredExceptionRes = async (
  */
 const de_AuthorDoesNotExistExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AuthorDoesNotExistException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3926,7 +3926,7 @@ const de_AuthorDoesNotExistExceptionRes = async (
  */
 const de_BeforeCommitIdAndAfterCommitIdAreSameExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BeforeCommitIdAndAfterCommitIdAreSameException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3942,7 +3942,7 @@ const de_BeforeCommitIdAndAfterCommitIdAreSameExceptionRes = async (
  */
 const de_BlobIdDoesNotExistExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BlobIdDoesNotExistException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3958,7 +3958,7 @@ const de_BlobIdDoesNotExistExceptionRes = async (
  */
 const de_BlobIdRequiredExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BlobIdRequiredException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3974,7 +3974,7 @@ const de_BlobIdRequiredExceptionRes = async (
  */
 const de_BranchDoesNotExistExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BranchDoesNotExistException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3990,7 +3990,7 @@ const de_BranchDoesNotExistExceptionRes = async (
  */
 const de_BranchNameExistsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BranchNameExistsException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -4006,7 +4006,7 @@ const de_BranchNameExistsExceptionRes = async (
  */
 const de_BranchNameIsTagNameExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BranchNameIsTagNameException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -4022,7 +4022,7 @@ const de_BranchNameIsTagNameExceptionRes = async (
  */
 const de_BranchNameRequiredExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BranchNameRequiredException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -4038,7 +4038,7 @@ const de_BranchNameRequiredExceptionRes = async (
  */
 const de_CannotDeleteApprovalRuleFromTemplateExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CannotDeleteApprovalRuleFromTemplateException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -4054,7 +4054,7 @@ const de_CannotDeleteApprovalRuleFromTemplateExceptionRes = async (
  */
 const de_CannotModifyApprovalRuleFromTemplateExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CannotModifyApprovalRuleFromTemplateException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -4070,7 +4070,7 @@ const de_CannotModifyApprovalRuleFromTemplateExceptionRes = async (
  */
 const de_ClientRequestTokenRequiredExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ClientRequestTokenRequiredException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -4086,7 +4086,7 @@ const de_ClientRequestTokenRequiredExceptionRes = async (
  */
 const de_CommentContentRequiredExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CommentContentRequiredException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -4102,7 +4102,7 @@ const de_CommentContentRequiredExceptionRes = async (
  */
 const de_CommentContentSizeLimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CommentContentSizeLimitExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -4118,7 +4118,7 @@ const de_CommentContentSizeLimitExceededExceptionRes = async (
  */
 const de_CommentDeletedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CommentDeletedException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -4134,7 +4134,7 @@ const de_CommentDeletedExceptionRes = async (
  */
 const de_CommentDoesNotExistExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CommentDoesNotExistException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -4150,7 +4150,7 @@ const de_CommentDoesNotExistExceptionRes = async (
  */
 const de_CommentIdRequiredExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CommentIdRequiredException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -4166,7 +4166,7 @@ const de_CommentIdRequiredExceptionRes = async (
  */
 const de_CommentNotCreatedByCallerExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CommentNotCreatedByCallerException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -4182,7 +4182,7 @@ const de_CommentNotCreatedByCallerExceptionRes = async (
  */
 const de_CommitDoesNotExistExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CommitDoesNotExistException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -4198,7 +4198,7 @@ const de_CommitDoesNotExistExceptionRes = async (
  */
 const de_CommitIdDoesNotExistExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CommitIdDoesNotExistException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -4214,7 +4214,7 @@ const de_CommitIdDoesNotExistExceptionRes = async (
  */
 const de_CommitIdRequiredExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CommitIdRequiredException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -4230,7 +4230,7 @@ const de_CommitIdRequiredExceptionRes = async (
  */
 const de_CommitIdsLimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CommitIdsLimitExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -4246,7 +4246,7 @@ const de_CommitIdsLimitExceededExceptionRes = async (
  */
 const de_CommitIdsListRequiredExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CommitIdsListRequiredException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -4262,7 +4262,7 @@ const de_CommitIdsListRequiredExceptionRes = async (
  */
 const de_CommitMessageLengthExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CommitMessageLengthExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -4278,7 +4278,7 @@ const de_CommitMessageLengthExceededExceptionRes = async (
  */
 const de_CommitRequiredExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CommitRequiredException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -4294,7 +4294,7 @@ const de_CommitRequiredExceptionRes = async (
  */
 const de_ConcurrentReferenceUpdateExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ConcurrentReferenceUpdateException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -4310,7 +4310,7 @@ const de_ConcurrentReferenceUpdateExceptionRes = async (
  */
 const de_DefaultBranchCannotBeDeletedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DefaultBranchCannotBeDeletedException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -4326,7 +4326,7 @@ const de_DefaultBranchCannotBeDeletedExceptionRes = async (
  */
 const de_DirectoryNameConflictsWithFileNameExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DirectoryNameConflictsWithFileNameException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -4342,7 +4342,7 @@ const de_DirectoryNameConflictsWithFileNameExceptionRes = async (
  */
 const de_EncryptionIntegrityChecksFailedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<EncryptionIntegrityChecksFailedException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -4358,7 +4358,7 @@ const de_EncryptionIntegrityChecksFailedExceptionRes = async (
  */
 const de_EncryptionKeyAccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<EncryptionKeyAccessDeniedException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -4374,7 +4374,7 @@ const de_EncryptionKeyAccessDeniedExceptionRes = async (
  */
 const de_EncryptionKeyDisabledExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<EncryptionKeyDisabledException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -4390,7 +4390,7 @@ const de_EncryptionKeyDisabledExceptionRes = async (
  */
 const de_EncryptionKeyInvalidIdExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<EncryptionKeyInvalidIdException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -4406,7 +4406,7 @@ const de_EncryptionKeyInvalidIdExceptionRes = async (
  */
 const de_EncryptionKeyInvalidUsageExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<EncryptionKeyInvalidUsageException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -4422,7 +4422,7 @@ const de_EncryptionKeyInvalidUsageExceptionRes = async (
  */
 const de_EncryptionKeyNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<EncryptionKeyNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -4438,7 +4438,7 @@ const de_EncryptionKeyNotFoundExceptionRes = async (
  */
 const de_EncryptionKeyRequiredExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<EncryptionKeyRequiredException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -4454,7 +4454,7 @@ const de_EncryptionKeyRequiredExceptionRes = async (
  */
 const de_EncryptionKeyUnavailableExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<EncryptionKeyUnavailableException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -4470,7 +4470,7 @@ const de_EncryptionKeyUnavailableExceptionRes = async (
  */
 const de_FileContentAndSourceFileSpecifiedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<FileContentAndSourceFileSpecifiedException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -4486,7 +4486,7 @@ const de_FileContentAndSourceFileSpecifiedExceptionRes = async (
  */
 const de_FileContentRequiredExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<FileContentRequiredException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -4502,7 +4502,7 @@ const de_FileContentRequiredExceptionRes = async (
  */
 const de_FileContentSizeLimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<FileContentSizeLimitExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -4518,7 +4518,7 @@ const de_FileContentSizeLimitExceededExceptionRes = async (
  */
 const de_FileDoesNotExistExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<FileDoesNotExistException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -4534,7 +4534,7 @@ const de_FileDoesNotExistExceptionRes = async (
  */
 const de_FileEntryRequiredExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<FileEntryRequiredException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -4550,7 +4550,7 @@ const de_FileEntryRequiredExceptionRes = async (
  */
 const de_FileModeRequiredExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<FileModeRequiredException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -4566,7 +4566,7 @@ const de_FileModeRequiredExceptionRes = async (
  */
 const de_FileNameConflictsWithDirectoryNameExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<FileNameConflictsWithDirectoryNameException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -4582,7 +4582,7 @@ const de_FileNameConflictsWithDirectoryNameExceptionRes = async (
  */
 const de_FilePathConflictsWithSubmodulePathExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<FilePathConflictsWithSubmodulePathException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -4598,7 +4598,7 @@ const de_FilePathConflictsWithSubmodulePathExceptionRes = async (
  */
 const de_FileTooLargeExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<FileTooLargeException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -4614,7 +4614,7 @@ const de_FileTooLargeExceptionRes = async (
  */
 const de_FolderContentSizeLimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<FolderContentSizeLimitExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -4630,7 +4630,7 @@ const de_FolderContentSizeLimitExceededExceptionRes = async (
  */
 const de_FolderDoesNotExistExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<FolderDoesNotExistException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -4646,7 +4646,7 @@ const de_FolderDoesNotExistExceptionRes = async (
  */
 const de_IdempotencyParameterMismatchExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<IdempotencyParameterMismatchException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -4662,7 +4662,7 @@ const de_IdempotencyParameterMismatchExceptionRes = async (
  */
 const de_InvalidActorArnExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidActorArnException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -4678,7 +4678,7 @@ const de_InvalidActorArnExceptionRes = async (
  */
 const de_InvalidApprovalRuleContentExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidApprovalRuleContentException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -4694,7 +4694,7 @@ const de_InvalidApprovalRuleContentExceptionRes = async (
  */
 const de_InvalidApprovalRuleNameExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidApprovalRuleNameException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -4710,7 +4710,7 @@ const de_InvalidApprovalRuleNameExceptionRes = async (
  */
 const de_InvalidApprovalRuleTemplateContentExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidApprovalRuleTemplateContentException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -4726,7 +4726,7 @@ const de_InvalidApprovalRuleTemplateContentExceptionRes = async (
  */
 const de_InvalidApprovalRuleTemplateDescriptionExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidApprovalRuleTemplateDescriptionException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -4742,7 +4742,7 @@ const de_InvalidApprovalRuleTemplateDescriptionExceptionRes = async (
  */
 const de_InvalidApprovalRuleTemplateNameExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidApprovalRuleTemplateNameException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -4758,7 +4758,7 @@ const de_InvalidApprovalRuleTemplateNameExceptionRes = async (
  */
 const de_InvalidApprovalStateExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidApprovalStateException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -4774,7 +4774,7 @@ const de_InvalidApprovalStateExceptionRes = async (
  */
 const de_InvalidAuthorArnExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidAuthorArnException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -4790,7 +4790,7 @@ const de_InvalidAuthorArnExceptionRes = async (
  */
 const de_InvalidBlobIdExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidBlobIdException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -4806,7 +4806,7 @@ const de_InvalidBlobIdExceptionRes = async (
  */
 const de_InvalidBranchNameExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidBranchNameException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -4822,7 +4822,7 @@ const de_InvalidBranchNameExceptionRes = async (
  */
 const de_InvalidClientRequestTokenExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidClientRequestTokenException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -4838,7 +4838,7 @@ const de_InvalidClientRequestTokenExceptionRes = async (
  */
 const de_InvalidCommentIdExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidCommentIdException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -4854,7 +4854,7 @@ const de_InvalidCommentIdExceptionRes = async (
  */
 const de_InvalidCommitExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidCommitException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -4870,7 +4870,7 @@ const de_InvalidCommitExceptionRes = async (
  */
 const de_InvalidCommitIdExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidCommitIdException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -4886,7 +4886,7 @@ const de_InvalidCommitIdExceptionRes = async (
  */
 const de_InvalidConflictDetailLevelExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidConflictDetailLevelException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -4902,7 +4902,7 @@ const de_InvalidConflictDetailLevelExceptionRes = async (
  */
 const de_InvalidConflictResolutionExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidConflictResolutionException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -4918,7 +4918,7 @@ const de_InvalidConflictResolutionExceptionRes = async (
  */
 const de_InvalidConflictResolutionStrategyExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidConflictResolutionStrategyException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -4934,7 +4934,7 @@ const de_InvalidConflictResolutionStrategyExceptionRes = async (
  */
 const de_InvalidContinuationTokenExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidContinuationTokenException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -4950,7 +4950,7 @@ const de_InvalidContinuationTokenExceptionRes = async (
  */
 const de_InvalidDeletionParameterExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidDeletionParameterException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -4966,7 +4966,7 @@ const de_InvalidDeletionParameterExceptionRes = async (
  */
 const de_InvalidDescriptionExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidDescriptionException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -4982,7 +4982,7 @@ const de_InvalidDescriptionExceptionRes = async (
  */
 const de_InvalidDestinationCommitSpecifierExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidDestinationCommitSpecifierException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -4998,7 +4998,7 @@ const de_InvalidDestinationCommitSpecifierExceptionRes = async (
  */
 const de_InvalidEmailExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidEmailException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -5014,7 +5014,7 @@ const de_InvalidEmailExceptionRes = async (
  */
 const de_InvalidFileLocationExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidFileLocationException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -5030,7 +5030,7 @@ const de_InvalidFileLocationExceptionRes = async (
  */
 const de_InvalidFileModeExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidFileModeException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -5046,7 +5046,7 @@ const de_InvalidFileModeExceptionRes = async (
  */
 const de_InvalidFilePositionExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidFilePositionException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -5062,7 +5062,7 @@ const de_InvalidFilePositionExceptionRes = async (
  */
 const de_InvalidMaxConflictFilesExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidMaxConflictFilesException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -5078,7 +5078,7 @@ const de_InvalidMaxConflictFilesExceptionRes = async (
  */
 const de_InvalidMaxMergeHunksExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidMaxMergeHunksException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -5094,7 +5094,7 @@ const de_InvalidMaxMergeHunksExceptionRes = async (
  */
 const de_InvalidMaxResultsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidMaxResultsException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -5110,7 +5110,7 @@ const de_InvalidMaxResultsExceptionRes = async (
  */
 const de_InvalidMergeOptionExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidMergeOptionException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -5126,7 +5126,7 @@ const de_InvalidMergeOptionExceptionRes = async (
  */
 const de_InvalidOrderExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidOrderException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -5142,7 +5142,7 @@ const de_InvalidOrderExceptionRes = async (
  */
 const de_InvalidOverrideStatusExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidOverrideStatusException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -5158,7 +5158,7 @@ const de_InvalidOverrideStatusExceptionRes = async (
  */
 const de_InvalidParentCommitIdExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidParentCommitIdException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -5174,7 +5174,7 @@ const de_InvalidParentCommitIdExceptionRes = async (
  */
 const de_InvalidPathExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidPathException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -5190,7 +5190,7 @@ const de_InvalidPathExceptionRes = async (
  */
 const de_InvalidPullRequestEventTypeExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidPullRequestEventTypeException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -5206,7 +5206,7 @@ const de_InvalidPullRequestEventTypeExceptionRes = async (
  */
 const de_InvalidPullRequestIdExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidPullRequestIdException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -5222,7 +5222,7 @@ const de_InvalidPullRequestIdExceptionRes = async (
  */
 const de_InvalidPullRequestStatusExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidPullRequestStatusException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -5238,7 +5238,7 @@ const de_InvalidPullRequestStatusExceptionRes = async (
  */
 const de_InvalidPullRequestStatusUpdateExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidPullRequestStatusUpdateException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -5254,7 +5254,7 @@ const de_InvalidPullRequestStatusUpdateExceptionRes = async (
  */
 const de_InvalidReactionUserArnExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidReactionUserArnException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -5270,7 +5270,7 @@ const de_InvalidReactionUserArnExceptionRes = async (
  */
 const de_InvalidReactionValueExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidReactionValueException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -5286,7 +5286,7 @@ const de_InvalidReactionValueExceptionRes = async (
  */
 const de_InvalidReferenceNameExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidReferenceNameException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -5302,7 +5302,7 @@ const de_InvalidReferenceNameExceptionRes = async (
  */
 const de_InvalidRelativeFileVersionEnumExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidRelativeFileVersionEnumException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -5318,7 +5318,7 @@ const de_InvalidRelativeFileVersionEnumExceptionRes = async (
  */
 const de_InvalidReplacementContentExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidReplacementContentException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -5334,7 +5334,7 @@ const de_InvalidReplacementContentExceptionRes = async (
  */
 const de_InvalidReplacementTypeExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidReplacementTypeException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -5350,7 +5350,7 @@ const de_InvalidReplacementTypeExceptionRes = async (
  */
 const de_InvalidRepositoryDescriptionExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidRepositoryDescriptionException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -5366,7 +5366,7 @@ const de_InvalidRepositoryDescriptionExceptionRes = async (
  */
 const de_InvalidRepositoryNameExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidRepositoryNameException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -5382,7 +5382,7 @@ const de_InvalidRepositoryNameExceptionRes = async (
  */
 const de_InvalidRepositoryTriggerBranchNameExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidRepositoryTriggerBranchNameException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -5398,7 +5398,7 @@ const de_InvalidRepositoryTriggerBranchNameExceptionRes = async (
  */
 const de_InvalidRepositoryTriggerCustomDataExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidRepositoryTriggerCustomDataException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -5414,7 +5414,7 @@ const de_InvalidRepositoryTriggerCustomDataExceptionRes = async (
  */
 const de_InvalidRepositoryTriggerDestinationArnExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidRepositoryTriggerDestinationArnException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -5430,7 +5430,7 @@ const de_InvalidRepositoryTriggerDestinationArnExceptionRes = async (
  */
 const de_InvalidRepositoryTriggerEventsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidRepositoryTriggerEventsException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -5446,7 +5446,7 @@ const de_InvalidRepositoryTriggerEventsExceptionRes = async (
  */
 const de_InvalidRepositoryTriggerNameExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidRepositoryTriggerNameException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -5462,7 +5462,7 @@ const de_InvalidRepositoryTriggerNameExceptionRes = async (
  */
 const de_InvalidRepositoryTriggerRegionExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidRepositoryTriggerRegionException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -5478,7 +5478,7 @@ const de_InvalidRepositoryTriggerRegionExceptionRes = async (
  */
 const de_InvalidResourceArnExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidResourceArnException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -5494,7 +5494,7 @@ const de_InvalidResourceArnExceptionRes = async (
  */
 const de_InvalidRevisionIdExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidRevisionIdException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -5510,7 +5510,7 @@ const de_InvalidRevisionIdExceptionRes = async (
  */
 const de_InvalidRuleContentSha256ExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidRuleContentSha256Exception> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -5526,7 +5526,7 @@ const de_InvalidRuleContentSha256ExceptionRes = async (
  */
 const de_InvalidSortByExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidSortByException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -5542,7 +5542,7 @@ const de_InvalidSortByExceptionRes = async (
  */
 const de_InvalidSourceCommitSpecifierExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidSourceCommitSpecifierException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -5558,7 +5558,7 @@ const de_InvalidSourceCommitSpecifierExceptionRes = async (
  */
 const de_InvalidSystemTagUsageExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidSystemTagUsageException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -5574,7 +5574,7 @@ const de_InvalidSystemTagUsageExceptionRes = async (
  */
 const de_InvalidTagKeysListExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidTagKeysListException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -5590,7 +5590,7 @@ const de_InvalidTagKeysListExceptionRes = async (
  */
 const de_InvalidTagsMapExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidTagsMapException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -5606,7 +5606,7 @@ const de_InvalidTagsMapExceptionRes = async (
  */
 const de_InvalidTargetBranchExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidTargetBranchException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -5622,7 +5622,7 @@ const de_InvalidTargetBranchExceptionRes = async (
  */
 const de_InvalidTargetExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidTargetException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -5638,7 +5638,7 @@ const de_InvalidTargetExceptionRes = async (
  */
 const de_InvalidTargetsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidTargetsException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -5654,7 +5654,7 @@ const de_InvalidTargetsExceptionRes = async (
  */
 const de_InvalidTitleExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidTitleException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -5670,7 +5670,7 @@ const de_InvalidTitleExceptionRes = async (
  */
 const de_ManualMergeRequiredExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ManualMergeRequiredException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -5686,7 +5686,7 @@ const de_ManualMergeRequiredExceptionRes = async (
  */
 const de_MaximumBranchesExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<MaximumBranchesExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -5702,7 +5702,7 @@ const de_MaximumBranchesExceededExceptionRes = async (
  */
 const de_MaximumConflictResolutionEntriesExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<MaximumConflictResolutionEntriesExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -5718,7 +5718,7 @@ const de_MaximumConflictResolutionEntriesExceededExceptionRes = async (
  */
 const de_MaximumFileContentToLoadExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<MaximumFileContentToLoadExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -5734,7 +5734,7 @@ const de_MaximumFileContentToLoadExceededExceptionRes = async (
  */
 const de_MaximumFileEntriesExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<MaximumFileEntriesExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -5750,7 +5750,7 @@ const de_MaximumFileEntriesExceededExceptionRes = async (
  */
 const de_MaximumItemsToCompareExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<MaximumItemsToCompareExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -5766,7 +5766,7 @@ const de_MaximumItemsToCompareExceededExceptionRes = async (
  */
 const de_MaximumNumberOfApprovalsExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<MaximumNumberOfApprovalsExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -5782,7 +5782,7 @@ const de_MaximumNumberOfApprovalsExceededExceptionRes = async (
  */
 const de_MaximumOpenPullRequestsExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<MaximumOpenPullRequestsExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -5798,7 +5798,7 @@ const de_MaximumOpenPullRequestsExceededExceptionRes = async (
  */
 const de_MaximumRepositoryNamesExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<MaximumRepositoryNamesExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -5814,7 +5814,7 @@ const de_MaximumRepositoryNamesExceededExceptionRes = async (
  */
 const de_MaximumRepositoryTriggersExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<MaximumRepositoryTriggersExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -5830,7 +5830,7 @@ const de_MaximumRepositoryTriggersExceededExceptionRes = async (
  */
 const de_MaximumRuleTemplatesAssociatedWithRepositoryExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<MaximumRuleTemplatesAssociatedWithRepositoryException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -5846,7 +5846,7 @@ const de_MaximumRuleTemplatesAssociatedWithRepositoryExceptionRes = async (
  */
 const de_MergeOptionRequiredExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<MergeOptionRequiredException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -5862,7 +5862,7 @@ const de_MergeOptionRequiredExceptionRes = async (
  */
 const de_MultipleConflictResolutionEntriesExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<MultipleConflictResolutionEntriesException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -5878,7 +5878,7 @@ const de_MultipleConflictResolutionEntriesExceptionRes = async (
  */
 const de_MultipleRepositoriesInPullRequestExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<MultipleRepositoriesInPullRequestException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -5894,7 +5894,7 @@ const de_MultipleRepositoriesInPullRequestExceptionRes = async (
  */
 const de_NameLengthExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<NameLengthExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -5923,7 +5923,7 @@ const de_NoChangeExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_NumberOfRulesExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<NumberOfRulesExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -5939,7 +5939,7 @@ const de_NumberOfRulesExceededExceptionRes = async (
  */
 const de_NumberOfRuleTemplatesExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<NumberOfRuleTemplatesExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -5955,7 +5955,7 @@ const de_NumberOfRuleTemplatesExceededExceptionRes = async (
  */
 const de_OverrideAlreadySetExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<OverrideAlreadySetException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -5971,7 +5971,7 @@ const de_OverrideAlreadySetExceptionRes = async (
  */
 const de_OverrideStatusRequiredExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<OverrideStatusRequiredException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -5987,7 +5987,7 @@ const de_OverrideStatusRequiredExceptionRes = async (
  */
 const de_ParentCommitDoesNotExistExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ParentCommitDoesNotExistException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -6003,7 +6003,7 @@ const de_ParentCommitDoesNotExistExceptionRes = async (
  */
 const de_ParentCommitIdOutdatedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ParentCommitIdOutdatedException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -6019,7 +6019,7 @@ const de_ParentCommitIdOutdatedExceptionRes = async (
  */
 const de_ParentCommitIdRequiredExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ParentCommitIdRequiredException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -6035,7 +6035,7 @@ const de_ParentCommitIdRequiredExceptionRes = async (
  */
 const de_PathDoesNotExistExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PathDoesNotExistException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -6051,7 +6051,7 @@ const de_PathDoesNotExistExceptionRes = async (
  */
 const de_PathRequiredExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PathRequiredException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -6067,7 +6067,7 @@ const de_PathRequiredExceptionRes = async (
  */
 const de_PullRequestAlreadyClosedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PullRequestAlreadyClosedException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -6083,7 +6083,7 @@ const de_PullRequestAlreadyClosedExceptionRes = async (
  */
 const de_PullRequestApprovalRulesNotSatisfiedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PullRequestApprovalRulesNotSatisfiedException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -6099,7 +6099,7 @@ const de_PullRequestApprovalRulesNotSatisfiedExceptionRes = async (
  */
 const de_PullRequestCannotBeApprovedByAuthorExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PullRequestCannotBeApprovedByAuthorException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -6115,7 +6115,7 @@ const de_PullRequestCannotBeApprovedByAuthorExceptionRes = async (
  */
 const de_PullRequestDoesNotExistExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PullRequestDoesNotExistException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -6131,7 +6131,7 @@ const de_PullRequestDoesNotExistExceptionRes = async (
  */
 const de_PullRequestIdRequiredExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PullRequestIdRequiredException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -6147,7 +6147,7 @@ const de_PullRequestIdRequiredExceptionRes = async (
  */
 const de_PullRequestStatusRequiredExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PullRequestStatusRequiredException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -6163,7 +6163,7 @@ const de_PullRequestStatusRequiredExceptionRes = async (
  */
 const de_PutFileEntryConflictExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutFileEntryConflictException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -6179,7 +6179,7 @@ const de_PutFileEntryConflictExceptionRes = async (
  */
 const de_ReactionLimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ReactionLimitExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -6195,7 +6195,7 @@ const de_ReactionLimitExceededExceptionRes = async (
  */
 const de_ReactionValueRequiredExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ReactionValueRequiredException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -6211,7 +6211,7 @@ const de_ReactionValueRequiredExceptionRes = async (
  */
 const de_ReferenceDoesNotExistExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ReferenceDoesNotExistException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -6227,7 +6227,7 @@ const de_ReferenceDoesNotExistExceptionRes = async (
  */
 const de_ReferenceNameRequiredExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ReferenceNameRequiredException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -6243,7 +6243,7 @@ const de_ReferenceNameRequiredExceptionRes = async (
  */
 const de_ReferenceTypeNotSupportedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ReferenceTypeNotSupportedException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -6259,7 +6259,7 @@ const de_ReferenceTypeNotSupportedExceptionRes = async (
  */
 const de_ReplacementContentRequiredExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ReplacementContentRequiredException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -6275,7 +6275,7 @@ const de_ReplacementContentRequiredExceptionRes = async (
  */
 const de_ReplacementTypeRequiredExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ReplacementTypeRequiredException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -6291,7 +6291,7 @@ const de_ReplacementTypeRequiredExceptionRes = async (
  */
 const de_RepositoryDoesNotExistExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RepositoryDoesNotExistException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -6307,7 +6307,7 @@ const de_RepositoryDoesNotExistExceptionRes = async (
  */
 const de_RepositoryLimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RepositoryLimitExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -6323,7 +6323,7 @@ const de_RepositoryLimitExceededExceptionRes = async (
  */
 const de_RepositoryNameExistsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RepositoryNameExistsException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -6339,7 +6339,7 @@ const de_RepositoryNameExistsExceptionRes = async (
  */
 const de_RepositoryNameRequiredExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RepositoryNameRequiredException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -6355,7 +6355,7 @@ const de_RepositoryNameRequiredExceptionRes = async (
  */
 const de_RepositoryNamesRequiredExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RepositoryNamesRequiredException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -6371,7 +6371,7 @@ const de_RepositoryNamesRequiredExceptionRes = async (
  */
 const de_RepositoryNotAssociatedWithPullRequestExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RepositoryNotAssociatedWithPullRequestException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -6387,7 +6387,7 @@ const de_RepositoryNotAssociatedWithPullRequestExceptionRes = async (
  */
 const de_RepositoryTriggerBranchNameListRequiredExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RepositoryTriggerBranchNameListRequiredException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -6403,7 +6403,7 @@ const de_RepositoryTriggerBranchNameListRequiredExceptionRes = async (
  */
 const de_RepositoryTriggerDestinationArnRequiredExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RepositoryTriggerDestinationArnRequiredException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -6419,7 +6419,7 @@ const de_RepositoryTriggerDestinationArnRequiredExceptionRes = async (
  */
 const de_RepositoryTriggerEventsListRequiredExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RepositoryTriggerEventsListRequiredException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -6435,7 +6435,7 @@ const de_RepositoryTriggerEventsListRequiredExceptionRes = async (
  */
 const de_RepositoryTriggerNameRequiredExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RepositoryTriggerNameRequiredException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -6451,7 +6451,7 @@ const de_RepositoryTriggerNameRequiredExceptionRes = async (
  */
 const de_RepositoryTriggersListRequiredExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RepositoryTriggersListRequiredException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -6467,7 +6467,7 @@ const de_RepositoryTriggersListRequiredExceptionRes = async (
  */
 const de_ResourceArnRequiredExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceArnRequiredException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -6483,7 +6483,7 @@ const de_ResourceArnRequiredExceptionRes = async (
  */
 const de_RestrictedSourceFileExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RestrictedSourceFileException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -6499,7 +6499,7 @@ const de_RestrictedSourceFileExceptionRes = async (
  */
 const de_RevisionIdRequiredExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RevisionIdRequiredException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -6515,7 +6515,7 @@ const de_RevisionIdRequiredExceptionRes = async (
  */
 const de_RevisionNotCurrentExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RevisionNotCurrentException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -6531,7 +6531,7 @@ const de_RevisionNotCurrentExceptionRes = async (
  */
 const de_SameFileContentExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SameFileContentException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -6547,7 +6547,7 @@ const de_SameFileContentExceptionRes = async (
  */
 const de_SamePathRequestExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SamePathRequestException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -6563,7 +6563,7 @@ const de_SamePathRequestExceptionRes = async (
  */
 const de_SourceAndDestinationAreSameExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SourceAndDestinationAreSameException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -6579,7 +6579,7 @@ const de_SourceAndDestinationAreSameExceptionRes = async (
  */
 const de_SourceFileOrContentRequiredExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SourceFileOrContentRequiredException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -6595,7 +6595,7 @@ const de_SourceFileOrContentRequiredExceptionRes = async (
  */
 const de_TagKeysListRequiredExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagKeysListRequiredException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -6624,7 +6624,7 @@ const de_TagPolicyExceptionRes = async (parsedOutput: any, context: __SerdeConte
  */
 const de_TagsMapRequiredExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagsMapRequiredException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -6640,7 +6640,7 @@ const de_TagsMapRequiredExceptionRes = async (
  */
 const de_TargetRequiredExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TargetRequiredException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -6656,7 +6656,7 @@ const de_TargetRequiredExceptionRes = async (
  */
 const de_TargetsRequiredExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TargetsRequiredException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -6672,7 +6672,7 @@ const de_TargetsRequiredExceptionRes = async (
  */
 const de_TipOfSourceReferenceIsDifferentExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TipOfSourceReferenceIsDifferentException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -6688,7 +6688,7 @@ const de_TipOfSourceReferenceIsDifferentExceptionRes = async (
  */
 const de_TipsDivergenceExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TipsDivergenceExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -6704,7 +6704,7 @@ const de_TipsDivergenceExceededExceptionRes = async (
  */
 const de_TitleRequiredExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TitleRequiredException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -6720,7 +6720,7 @@ const de_TitleRequiredExceptionRes = async (
  */
 const de_TooManyTagsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyTagsException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -6801,7 +6801,7 @@ const se_CreatePullRequestInput = (input: CreatePullRequestInput, context: __Ser
  */
 const se_CreateUnreferencedMergeCommitInput = (
   input: CreateUnreferencedMergeCommitInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     authorName: [],
@@ -6985,7 +6985,7 @@ const se_MergePullRequestByThreeWayInput = (input: MergePullRequestByThreeWayInp
  */
 const se_PostCommentForComparedCommitInput = (
   input: PostCommentForComparedCommitInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     afterCommitId: [],
@@ -7425,7 +7425,7 @@ const de_CommentsForPullRequestData = (output: any, context: __SerdeContext): Co
  */
 const de_CreateApprovalRuleTemplateOutput = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CreateApprovalRuleTemplateOutput => {
   return take(output, {
     approvalRuleTemplate: (_: any) => de_ApprovalRuleTemplate(_, context),
@@ -7439,7 +7439,7 @@ const de_CreateApprovalRuleTemplateOutput = (
  */
 const de_CreatePullRequestApprovalRuleOutput = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CreatePullRequestApprovalRuleOutput => {
   return take(output, {
     approvalRule: (_: any) => de_ApprovalRule(_, context),
@@ -7601,7 +7601,7 @@ const de_GetCommentOutput = (output: any, context: __SerdeContext): GetCommentOu
  */
 const de_GetCommentsForComparedCommitOutput = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): GetCommentsForComparedCommitOutput => {
   return take(output, {
     commentsForComparedCommitData: (_: any) => de_CommentsForComparedCommitData(_, context),
@@ -7864,7 +7864,7 @@ const de_GetRepositoryOutput = (output: any, context: __SerdeContext): GetReposi
  */
 const de_MergePullRequestByFastForwardOutput = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): MergePullRequestByFastForwardOutput => {
   return take(output, {
     pullRequest: (_: any) => de_PullRequest(_, context),
@@ -7885,7 +7885,7 @@ const de_MergePullRequestBySquashOutput = (output: any, context: __SerdeContext)
  */
 const de_MergePullRequestByThreeWayOutput = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): MergePullRequestByThreeWayOutput => {
   return take(output, {
     pullRequest: (_: any) => de_PullRequest(_, context),
@@ -7929,7 +7929,7 @@ const de_MergePullRequestByThreeWayOutput = (
  */
 const de_PostCommentForComparedCommitOutput = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): PostCommentForComparedCommitOutput => {
   return take(output, {
     afterBlobId: __expectString,
@@ -8201,7 +8201,7 @@ const de_RepositoryMetadataList = (output: any, context: __SerdeContext): Reposi
  */
 const de_UpdateApprovalRuleTemplateContentOutput = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): UpdateApprovalRuleTemplateContentOutput => {
   return take(output, {
     approvalRuleTemplate: (_: any) => de_ApprovalRuleTemplate(_, context),
@@ -8213,7 +8213,7 @@ const de_UpdateApprovalRuleTemplateContentOutput = (
  */
 const de_UpdateApprovalRuleTemplateDescriptionOutput = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): UpdateApprovalRuleTemplateDescriptionOutput => {
   return take(output, {
     approvalRuleTemplate: (_: any) => de_ApprovalRuleTemplate(_, context),
@@ -8225,7 +8225,7 @@ const de_UpdateApprovalRuleTemplateDescriptionOutput = (
  */
 const de_UpdateApprovalRuleTemplateNameOutput = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): UpdateApprovalRuleTemplateNameOutput => {
   return take(output, {
     approvalRuleTemplate: (_: any) => de_ApprovalRuleTemplate(_, context),
@@ -8246,7 +8246,7 @@ const de_UpdateCommentOutput = (output: any, context: __SerdeContext): UpdateCom
  */
 const de_UpdatePullRequestApprovalRuleContentOutput = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): UpdatePullRequestApprovalRuleContentOutput => {
   return take(output, {
     approvalRule: (_: any) => de_ApprovalRule(_, context),
@@ -8258,7 +8258,7 @@ const de_UpdatePullRequestApprovalRuleContentOutput = (
  */
 const de_UpdatePullRequestDescriptionOutput = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): UpdatePullRequestDescriptionOutput => {
   return take(output, {
     pullRequest: (_: any) => de_PullRequest(_, context),
@@ -8305,7 +8305,7 @@ const buildHttpRpcRequest = async (
   headers: __HeaderBag,
   path: string,
   resolvedHostname: string | undefined,
-  body: any
+  body: any,
 ): Promise<__HttpRequest> => {
   const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
   const contents: any = {

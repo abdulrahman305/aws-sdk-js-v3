@@ -42,7 +42,7 @@ export namespace SimpleScalarPropertiesServerInput {
    * @internal
    */
   export const validate: (
-    obj: Parameters<typeof SimpleScalarPropertiesInputOutput.validate>[0]
+    obj: Parameters<typeof SimpleScalarPropertiesInputOutput.validate>[0],
   ) => __ValidationFailure[] = SimpleScalarPropertiesInputOutput.validate;
 }
 export interface SimpleScalarPropertiesServerOutput extends SimpleScalarPropertiesInputOutput {}
@@ -66,14 +66,14 @@ export class SimpleScalarPropertiesSerializer
 
 export const getSimpleScalarPropertiesHandler = <Context>(
   operation: __Operation<SimpleScalarPropertiesServerInput, SimpleScalarPropertiesServerOutput, Context>,
-  customizer: __ValidationCustomizer<"SimpleScalarProperties">
+  customizer: __ValidationCustomizer<"SimpleScalarProperties">,
 ): __ServiceHandler<Context, __HttpRequest, __HttpResponse> => {
   const mux = new httpbinding.HttpBindingMux<"RestJson", "SimpleScalarProperties">([
     new httpbinding.UriSpec<"RestJson", "SimpleScalarProperties">(
       "PUT",
       [{ type: "path_literal", value: "SimpleScalarProperties" }],
       [],
-      { service: "RestJson", operation: "SimpleScalarProperties" }
+      { service: "RestJson", operation: "SimpleScalarProperties" },
     ),
   ]);
   return new SimpleScalarPropertiesHandler(
@@ -81,7 +81,7 @@ export const getSimpleScalarPropertiesHandler = <Context>(
     mux,
     new SimpleScalarPropertiesSerializer(),
     serializeFrameworkException,
-    customizer
+    customizer,
   );
 };
 
@@ -102,7 +102,7 @@ async function handle<S, O extends keyof S & string, Context>(
   operation: __Operation<__OperationInput<S[O]>, __OperationOutput<S[O]>, Context>,
   serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
   validationFn: (input: __OperationInput<S[O]>) => __ValidationFailure[],
-  validationCustomizer: __ValidationCustomizer<O>
+  validationCustomizer: __ValidationCustomizer<O>,
 ): Promise<__HttpResponse> {
   let input;
   try {
@@ -148,7 +148,7 @@ export class SimpleScalarPropertiesHandler<Context> implements __ServiceHandler<
   >;
   private readonly serializeFrameworkException: (
     e: __SmithyFrameworkException,
-    ctx: __ServerSerdeContext
+    ctx: __ServerSerdeContext,
   ) => Promise<__HttpResponse>;
   private readonly validationCustomizer: __ValidationCustomizer<"SimpleScalarProperties">;
   /**
@@ -165,7 +165,7 @@ export class SimpleScalarPropertiesHandler<Context> implements __ServiceHandler<
     mux: __Mux<"RestJson", "SimpleScalarProperties">,
     serializer: __OperationSerializer<RestJsonService<Context>, "SimpleScalarProperties", SimpleScalarPropertiesErrors>,
     serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
-    validationCustomizer: __ValidationCustomizer<"SimpleScalarProperties">
+    validationCustomizer: __ValidationCustomizer<"SimpleScalarProperties">,
   ) {
     this.operation = operation;
     this.mux = mux;
@@ -177,7 +177,7 @@ export class SimpleScalarPropertiesHandler<Context> implements __ServiceHandler<
     const target = this.mux.match(request);
     if (target === undefined) {
       console.log(
-        "Received a request that did not match aws.protocoltests.restjson#RestJson.SimpleScalarProperties. This indicates a misconfiguration."
+        "Received a request that did not match aws.protocoltests.restjson#RestJson.SimpleScalarProperties. This indicates a misconfiguration.",
       );
       return this.serializeFrameworkException(new __InternalFailureException(), serdeContextBase);
     }
@@ -189,7 +189,7 @@ export class SimpleScalarPropertiesHandler<Context> implements __ServiceHandler<
       this.operation,
       this.serializeFrameworkException,
       SimpleScalarPropertiesServerInput.validate,
-      this.validationCustomizer
+      this.validationCustomizer,
     );
   }
 }

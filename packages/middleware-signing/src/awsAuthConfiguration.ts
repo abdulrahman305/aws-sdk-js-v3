@@ -129,14 +129,14 @@ export interface AwsAuthResolvedConfig {
 export interface SigV4AuthResolvedConfig extends AwsAuthResolvedConfig {}
 
 export const resolveAwsAuthConfig = <T>(
-  input: T & AwsAuthInputConfig & PreviouslyResolved
+  input: T & AwsAuthInputConfig & PreviouslyResolved,
 ): T & AwsAuthResolvedConfig => {
   const normalizedCreds = input.credentials
     ? normalizeCredentialProvider(input.credentials)
     : input.credentialDefaultProvider(
         Object.assign({}, input, {
           parentClientConfig: input,
-        })
+        }),
       );
   const { signingEscapePath = true, systemClockOffset = input.systemClockOffset || 0, sha256 } = input;
   let signer: (authScheme?: AuthScheme) => Promise<RequestSigner>;
@@ -156,7 +156,7 @@ export const resolveAwsAuthConfig = <T>(
                 useDualstackEndpoint: await input.useDualstackEndpoint(),
               })) || {},
               region,
-            ] as [RegionInfo, string]
+            ] as [RegionInfo, string],
         )
         .then(([regionInfo, region]) => {
           const { signingRegion, signingService } = regionInfo;
@@ -191,7 +191,7 @@ export const resolveAwsAuthConfig = <T>(
           signingRegion: await normalizeProvider(input.region)(),
           properties: {},
         },
-        authScheme
+        authScheme,
       );
 
       const isSigv4a = authScheme?.name === "sigv4a";
@@ -239,14 +239,14 @@ export const resolveAwsAuthConfig = <T>(
 
 // TODO: reduce code duplication
 export const resolveSigV4AuthConfig = <T>(
-  input: T & SigV4AuthInputConfig & SigV4PreviouslyResolved
+  input: T & SigV4AuthInputConfig & SigV4PreviouslyResolved,
 ): T & SigV4AuthResolvedConfig => {
   const normalizedCreds = input.credentials
     ? normalizeCredentialProvider(input.credentials)
     : input.credentialDefaultProvider(
         Object.assign({}, input, {
           parentClientConfig: input,
-        })
+        }),
       );
   const { signingEscapePath = true, systemClockOffset = input.systemClockOffset || 0, sha256 } = input;
   let signer: Provider<RequestSigner>;
@@ -261,7 +261,7 @@ export const resolveSigV4AuthConfig = <T>(
         service: input.signingName,
         sha256,
         uriEscapePath: signingEscapePath,
-      })
+      }),
     );
   }
   return {
@@ -274,7 +274,7 @@ export const resolveSigV4AuthConfig = <T>(
 };
 
 const normalizeCredentialProvider = (
-  credentials: AwsCredentialIdentity | Provider<AwsCredentialIdentity>
+  credentials: AwsCredentialIdentity | Provider<AwsCredentialIdentity>,
 ): MemoizedProvider<AwsCredentialIdentity> => {
   if (typeof credentials === "function") {
     return memoize(
@@ -282,7 +282,7 @@ const normalizeCredentialProvider = (
       (credentials) =>
         credentials.expiration !== undefined &&
         credentials.expiration.getTime() - Date.now() < CREDENTIAL_EXPIRE_WINDOW,
-      (credentials) => credentials.expiration !== undefined
+      (credentials) => credentials.expiration !== undefined,
     );
   }
   return normalizeProvider(credentials);

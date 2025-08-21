@@ -264,7 +264,7 @@ import {
  */
 export const se_CancelKeyDeletionCommand = async (
   input: CancelKeyDeletionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CancelKeyDeletion");
   let body: any;
@@ -277,7 +277,7 @@ export const se_CancelKeyDeletionCommand = async (
  */
 export const se_ConnectCustomKeyStoreCommand = async (
   input: ConnectCustomKeyStoreCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ConnectCustomKeyStore");
   let body: any;
@@ -290,7 +290,7 @@ export const se_ConnectCustomKeyStoreCommand = async (
  */
 export const se_CreateAliasCommand = async (
   input: CreateAliasCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateAlias");
   let body: any;
@@ -303,7 +303,7 @@ export const se_CreateAliasCommand = async (
  */
 export const se_CreateCustomKeyStoreCommand = async (
   input: CreateCustomKeyStoreCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateCustomKeyStore");
   let body: any;
@@ -316,7 +316,7 @@ export const se_CreateCustomKeyStoreCommand = async (
  */
 export const se_CreateGrantCommand = async (
   input: CreateGrantCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateGrant");
   let body: any;
@@ -329,7 +329,7 @@ export const se_CreateGrantCommand = async (
  */
 export const se_CreateKeyCommand = async (
   input: CreateKeyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateKey");
   let body: any;
@@ -342,7 +342,7 @@ export const se_CreateKeyCommand = async (
  */
 export const se_DecryptCommand = async (
   input: DecryptCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("Decrypt");
   let body: any;
@@ -355,7 +355,7 @@ export const se_DecryptCommand = async (
  */
 export const se_DeleteAliasCommand = async (
   input: DeleteAliasCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteAlias");
   let body: any;
@@ -368,7 +368,7 @@ export const se_DeleteAliasCommand = async (
  */
 export const se_DeleteCustomKeyStoreCommand = async (
   input: DeleteCustomKeyStoreCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteCustomKeyStore");
   let body: any;
@@ -381,7 +381,7 @@ export const se_DeleteCustomKeyStoreCommand = async (
  */
 export const se_DeleteImportedKeyMaterialCommand = async (
   input: DeleteImportedKeyMaterialCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteImportedKeyMaterial");
   let body: any;
@@ -394,7 +394,7 @@ export const se_DeleteImportedKeyMaterialCommand = async (
  */
 export const se_DeriveSharedSecretCommand = async (
   input: DeriveSharedSecretCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeriveSharedSecret");
   let body: any;
@@ -407,7 +407,7 @@ export const se_DeriveSharedSecretCommand = async (
  */
 export const se_DescribeCustomKeyStoresCommand = async (
   input: DescribeCustomKeyStoresCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeCustomKeyStores");
   let body: any;
@@ -420,7 +420,7 @@ export const se_DescribeCustomKeyStoresCommand = async (
  */
 export const se_DescribeKeyCommand = async (
   input: DescribeKeyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeKey");
   let body: any;
@@ -433,7 +433,7 @@ export const se_DescribeKeyCommand = async (
  */
 export const se_DisableKeyCommand = async (
   input: DisableKeyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DisableKey");
   let body: any;
@@ -446,7 +446,7 @@ export const se_DisableKeyCommand = async (
  */
 export const se_DisableKeyRotationCommand = async (
   input: DisableKeyRotationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DisableKeyRotation");
   let body: any;
@@ -459,7 +459,7 @@ export const se_DisableKeyRotationCommand = async (
  */
 export const se_DisconnectCustomKeyStoreCommand = async (
   input: DisconnectCustomKeyStoreCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DisconnectCustomKeyStore");
   let body: any;
@@ -472,7 +472,7 @@ export const se_DisconnectCustomKeyStoreCommand = async (
  */
 export const se_EnableKeyCommand = async (
   input: EnableKeyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("EnableKey");
   let body: any;
@@ -485,7 +485,7 @@ export const se_EnableKeyCommand = async (
  */
 export const se_EnableKeyRotationCommand = async (
   input: EnableKeyRotationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("EnableKeyRotation");
   let body: any;
@@ -498,7 +498,7 @@ export const se_EnableKeyRotationCommand = async (
  */
 export const se_EncryptCommand = async (
   input: EncryptCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("Encrypt");
   let body: any;
@@ -511,7 +511,7 @@ export const se_EncryptCommand = async (
  */
 export const se_GenerateDataKeyCommand = async (
   input: GenerateDataKeyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GenerateDataKey");
   let body: any;
@@ -524,7 +524,7 @@ export const se_GenerateDataKeyCommand = async (
  */
 export const se_GenerateDataKeyPairCommand = async (
   input: GenerateDataKeyPairCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GenerateDataKeyPair");
   let body: any;
@@ -537,7 +537,7 @@ export const se_GenerateDataKeyPairCommand = async (
  */
 export const se_GenerateDataKeyPairWithoutPlaintextCommand = async (
   input: GenerateDataKeyPairWithoutPlaintextCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GenerateDataKeyPairWithoutPlaintext");
   let body: any;
@@ -550,7 +550,7 @@ export const se_GenerateDataKeyPairWithoutPlaintextCommand = async (
  */
 export const se_GenerateDataKeyWithoutPlaintextCommand = async (
   input: GenerateDataKeyWithoutPlaintextCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GenerateDataKeyWithoutPlaintext");
   let body: any;
@@ -563,7 +563,7 @@ export const se_GenerateDataKeyWithoutPlaintextCommand = async (
  */
 export const se_GenerateMacCommand = async (
   input: GenerateMacCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GenerateMac");
   let body: any;
@@ -576,7 +576,7 @@ export const se_GenerateMacCommand = async (
  */
 export const se_GenerateRandomCommand = async (
   input: GenerateRandomCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GenerateRandom");
   let body: any;
@@ -589,7 +589,7 @@ export const se_GenerateRandomCommand = async (
  */
 export const se_GetKeyPolicyCommand = async (
   input: GetKeyPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetKeyPolicy");
   let body: any;
@@ -602,7 +602,7 @@ export const se_GetKeyPolicyCommand = async (
  */
 export const se_GetKeyRotationStatusCommand = async (
   input: GetKeyRotationStatusCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetKeyRotationStatus");
   let body: any;
@@ -615,7 +615,7 @@ export const se_GetKeyRotationStatusCommand = async (
  */
 export const se_GetParametersForImportCommand = async (
   input: GetParametersForImportCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetParametersForImport");
   let body: any;
@@ -628,7 +628,7 @@ export const se_GetParametersForImportCommand = async (
  */
 export const se_GetPublicKeyCommand = async (
   input: GetPublicKeyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetPublicKey");
   let body: any;
@@ -641,7 +641,7 @@ export const se_GetPublicKeyCommand = async (
  */
 export const se_ImportKeyMaterialCommand = async (
   input: ImportKeyMaterialCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ImportKeyMaterial");
   let body: any;
@@ -654,7 +654,7 @@ export const se_ImportKeyMaterialCommand = async (
  */
 export const se_ListAliasesCommand = async (
   input: ListAliasesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListAliases");
   let body: any;
@@ -667,7 +667,7 @@ export const se_ListAliasesCommand = async (
  */
 export const se_ListGrantsCommand = async (
   input: ListGrantsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListGrants");
   let body: any;
@@ -680,7 +680,7 @@ export const se_ListGrantsCommand = async (
  */
 export const se_ListKeyPoliciesCommand = async (
   input: ListKeyPoliciesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListKeyPolicies");
   let body: any;
@@ -693,7 +693,7 @@ export const se_ListKeyPoliciesCommand = async (
  */
 export const se_ListKeyRotationsCommand = async (
   input: ListKeyRotationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListKeyRotations");
   let body: any;
@@ -706,7 +706,7 @@ export const se_ListKeyRotationsCommand = async (
  */
 export const se_ListKeysCommand = async (
   input: ListKeysCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListKeys");
   let body: any;
@@ -719,7 +719,7 @@ export const se_ListKeysCommand = async (
  */
 export const se_ListResourceTagsCommand = async (
   input: ListResourceTagsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListResourceTags");
   let body: any;
@@ -732,7 +732,7 @@ export const se_ListResourceTagsCommand = async (
  */
 export const se_ListRetirableGrantsCommand = async (
   input: ListRetirableGrantsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListRetirableGrants");
   let body: any;
@@ -745,7 +745,7 @@ export const se_ListRetirableGrantsCommand = async (
  */
 export const se_PutKeyPolicyCommand = async (
   input: PutKeyPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("PutKeyPolicy");
   let body: any;
@@ -758,7 +758,7 @@ export const se_PutKeyPolicyCommand = async (
  */
 export const se_ReEncryptCommand = async (
   input: ReEncryptCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ReEncrypt");
   let body: any;
@@ -771,7 +771,7 @@ export const se_ReEncryptCommand = async (
  */
 export const se_ReplicateKeyCommand = async (
   input: ReplicateKeyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ReplicateKey");
   let body: any;
@@ -784,7 +784,7 @@ export const se_ReplicateKeyCommand = async (
  */
 export const se_RetireGrantCommand = async (
   input: RetireGrantCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("RetireGrant");
   let body: any;
@@ -797,7 +797,7 @@ export const se_RetireGrantCommand = async (
  */
 export const se_RevokeGrantCommand = async (
   input: RevokeGrantCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("RevokeGrant");
   let body: any;
@@ -810,7 +810,7 @@ export const se_RevokeGrantCommand = async (
  */
 export const se_RotateKeyOnDemandCommand = async (
   input: RotateKeyOnDemandCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("RotateKeyOnDemand");
   let body: any;
@@ -823,7 +823,7 @@ export const se_RotateKeyOnDemandCommand = async (
  */
 export const se_ScheduleKeyDeletionCommand = async (
   input: ScheduleKeyDeletionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ScheduleKeyDeletion");
   let body: any;
@@ -846,7 +846,7 @@ export const se_SignCommand = async (input: SignCommandInput, context: __SerdeCo
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("TagResource");
   let body: any;
@@ -859,7 +859,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UntagResource");
   let body: any;
@@ -872,7 +872,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateAliasCommand = async (
   input: UpdateAliasCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateAlias");
   let body: any;
@@ -885,7 +885,7 @@ export const se_UpdateAliasCommand = async (
  */
 export const se_UpdateCustomKeyStoreCommand = async (
   input: UpdateCustomKeyStoreCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateCustomKeyStore");
   let body: any;
@@ -898,7 +898,7 @@ export const se_UpdateCustomKeyStoreCommand = async (
  */
 export const se_UpdateKeyDescriptionCommand = async (
   input: UpdateKeyDescriptionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateKeyDescription");
   let body: any;
@@ -911,7 +911,7 @@ export const se_UpdateKeyDescriptionCommand = async (
  */
 export const se_UpdatePrimaryRegionCommand = async (
   input: UpdatePrimaryRegionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdatePrimaryRegion");
   let body: any;
@@ -934,7 +934,7 @@ export const se_VerifyCommand = async (input: VerifyCommandInput, context: __Ser
  */
 export const se_VerifyMacCommand = async (
   input: VerifyMacCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("VerifyMac");
   let body: any;
@@ -947,7 +947,7 @@ export const se_VerifyMacCommand = async (
  */
 export const de_CancelKeyDeletionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CancelKeyDeletionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -967,7 +967,7 @@ export const de_CancelKeyDeletionCommand = async (
  */
 export const de_ConnectCustomKeyStoreCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ConnectCustomKeyStoreCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -987,7 +987,7 @@ export const de_ConnectCustomKeyStoreCommand = async (
  */
 export const de_CreateAliasCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateAliasCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1004,7 +1004,7 @@ export const de_CreateAliasCommand = async (
  */
 export const de_CreateCustomKeyStoreCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateCustomKeyStoreCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1024,7 +1024,7 @@ export const de_CreateCustomKeyStoreCommand = async (
  */
 export const de_CreateGrantCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateGrantCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1044,7 +1044,7 @@ export const de_CreateGrantCommand = async (
  */
 export const de_CreateKeyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateKeyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1064,7 +1064,7 @@ export const de_CreateKeyCommand = async (
  */
 export const de_DecryptCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DecryptCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1084,7 +1084,7 @@ export const de_DecryptCommand = async (
  */
 export const de_DeleteAliasCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteAliasCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1101,7 +1101,7 @@ export const de_DeleteAliasCommand = async (
  */
 export const de_DeleteCustomKeyStoreCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteCustomKeyStoreCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1121,7 +1121,7 @@ export const de_DeleteCustomKeyStoreCommand = async (
  */
 export const de_DeleteImportedKeyMaterialCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteImportedKeyMaterialCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1138,7 +1138,7 @@ export const de_DeleteImportedKeyMaterialCommand = async (
  */
 export const de_DeriveSharedSecretCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeriveSharedSecretCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1158,7 +1158,7 @@ export const de_DeriveSharedSecretCommand = async (
  */
 export const de_DescribeCustomKeyStoresCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeCustomKeyStoresCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1178,7 +1178,7 @@ export const de_DescribeCustomKeyStoresCommand = async (
  */
 export const de_DescribeKeyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeKeyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1198,7 +1198,7 @@ export const de_DescribeKeyCommand = async (
  */
 export const de_DisableKeyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisableKeyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1215,7 +1215,7 @@ export const de_DisableKeyCommand = async (
  */
 export const de_DisableKeyRotationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisableKeyRotationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1232,7 +1232,7 @@ export const de_DisableKeyRotationCommand = async (
  */
 export const de_DisconnectCustomKeyStoreCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisconnectCustomKeyStoreCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1252,7 +1252,7 @@ export const de_DisconnectCustomKeyStoreCommand = async (
  */
 export const de_EnableKeyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<EnableKeyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1269,7 +1269,7 @@ export const de_EnableKeyCommand = async (
  */
 export const de_EnableKeyRotationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<EnableKeyRotationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1286,7 +1286,7 @@ export const de_EnableKeyRotationCommand = async (
  */
 export const de_EncryptCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<EncryptCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1306,7 +1306,7 @@ export const de_EncryptCommand = async (
  */
 export const de_GenerateDataKeyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GenerateDataKeyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1326,7 +1326,7 @@ export const de_GenerateDataKeyCommand = async (
  */
 export const de_GenerateDataKeyPairCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GenerateDataKeyPairCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1346,7 +1346,7 @@ export const de_GenerateDataKeyPairCommand = async (
  */
 export const de_GenerateDataKeyPairWithoutPlaintextCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GenerateDataKeyPairWithoutPlaintextCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1366,7 +1366,7 @@ export const de_GenerateDataKeyPairWithoutPlaintextCommand = async (
  */
 export const de_GenerateDataKeyWithoutPlaintextCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GenerateDataKeyWithoutPlaintextCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1386,7 +1386,7 @@ export const de_GenerateDataKeyWithoutPlaintextCommand = async (
  */
 export const de_GenerateMacCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GenerateMacCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1406,7 +1406,7 @@ export const de_GenerateMacCommand = async (
  */
 export const de_GenerateRandomCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GenerateRandomCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1426,7 +1426,7 @@ export const de_GenerateRandomCommand = async (
  */
 export const de_GetKeyPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetKeyPolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1446,7 +1446,7 @@ export const de_GetKeyPolicyCommand = async (
  */
 export const de_GetKeyRotationStatusCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetKeyRotationStatusCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1466,7 +1466,7 @@ export const de_GetKeyRotationStatusCommand = async (
  */
 export const de_GetParametersForImportCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetParametersForImportCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1486,7 +1486,7 @@ export const de_GetParametersForImportCommand = async (
  */
 export const de_GetPublicKeyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetPublicKeyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1506,7 +1506,7 @@ export const de_GetPublicKeyCommand = async (
  */
 export const de_ImportKeyMaterialCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ImportKeyMaterialCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1526,7 +1526,7 @@ export const de_ImportKeyMaterialCommand = async (
  */
 export const de_ListAliasesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAliasesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1546,7 +1546,7 @@ export const de_ListAliasesCommand = async (
  */
 export const de_ListGrantsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListGrantsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1566,7 +1566,7 @@ export const de_ListGrantsCommand = async (
  */
 export const de_ListKeyPoliciesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListKeyPoliciesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1586,7 +1586,7 @@ export const de_ListKeyPoliciesCommand = async (
  */
 export const de_ListKeyRotationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListKeyRotationsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1606,7 +1606,7 @@ export const de_ListKeyRotationsCommand = async (
  */
 export const de_ListKeysCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListKeysCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1626,7 +1626,7 @@ export const de_ListKeysCommand = async (
  */
 export const de_ListResourceTagsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListResourceTagsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1646,7 +1646,7 @@ export const de_ListResourceTagsCommand = async (
  */
 export const de_ListRetirableGrantsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListRetirableGrantsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1666,7 +1666,7 @@ export const de_ListRetirableGrantsCommand = async (
  */
 export const de_PutKeyPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutKeyPolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1683,7 +1683,7 @@ export const de_PutKeyPolicyCommand = async (
  */
 export const de_ReEncryptCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ReEncryptCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1703,7 +1703,7 @@ export const de_ReEncryptCommand = async (
  */
 export const de_ReplicateKeyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ReplicateKeyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1723,7 +1723,7 @@ export const de_ReplicateKeyCommand = async (
  */
 export const de_RetireGrantCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RetireGrantCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1740,7 +1740,7 @@ export const de_RetireGrantCommand = async (
  */
 export const de_RevokeGrantCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RevokeGrantCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1757,7 +1757,7 @@ export const de_RevokeGrantCommand = async (
  */
 export const de_RotateKeyOnDemandCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RotateKeyOnDemandCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1777,7 +1777,7 @@ export const de_RotateKeyOnDemandCommand = async (
  */
 export const de_ScheduleKeyDeletionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ScheduleKeyDeletionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1814,7 +1814,7 @@ export const de_SignCommand = async (output: __HttpResponse, context: __SerdeCon
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1831,7 +1831,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1848,7 +1848,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateAliasCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateAliasCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1865,7 +1865,7 @@ export const de_UpdateAliasCommand = async (
  */
 export const de_UpdateCustomKeyStoreCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateCustomKeyStoreCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1885,7 +1885,7 @@ export const de_UpdateCustomKeyStoreCommand = async (
  */
 export const de_UpdateKeyDescriptionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateKeyDescriptionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1902,7 +1902,7 @@ export const de_UpdateKeyDescriptionCommand = async (
  */
 export const de_UpdatePrimaryRegionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdatePrimaryRegionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1919,7 +1919,7 @@ export const de_UpdatePrimaryRegionCommand = async (
  */
 export const de_VerifyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<VerifyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1939,7 +1939,7 @@ export const de_VerifyCommand = async (
  */
 export const de_VerifyMacCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<VerifyMacCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2123,7 +2123,7 @@ const de_CommandError = async (output: __HttpResponse, context: __SerdeContext):
  */
 const de_AlreadyExistsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AlreadyExistsException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2139,7 +2139,7 @@ const de_AlreadyExistsExceptionRes = async (
  */
 const de_CloudHsmClusterInUseExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CloudHsmClusterInUseException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2155,7 +2155,7 @@ const de_CloudHsmClusterInUseExceptionRes = async (
  */
 const de_CloudHsmClusterInvalidConfigurationExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CloudHsmClusterInvalidConfigurationException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2171,7 +2171,7 @@ const de_CloudHsmClusterInvalidConfigurationExceptionRes = async (
  */
 const de_CloudHsmClusterNotActiveExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CloudHsmClusterNotActiveException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2187,7 +2187,7 @@ const de_CloudHsmClusterNotActiveExceptionRes = async (
  */
 const de_CloudHsmClusterNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CloudHsmClusterNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2203,7 +2203,7 @@ const de_CloudHsmClusterNotFoundExceptionRes = async (
  */
 const de_CloudHsmClusterNotRelatedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CloudHsmClusterNotRelatedException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2232,7 +2232,7 @@ const de_ConflictExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_CustomKeyStoreHasCMKsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CustomKeyStoreHasCMKsException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2248,7 +2248,7 @@ const de_CustomKeyStoreHasCMKsExceptionRes = async (
  */
 const de_CustomKeyStoreInvalidStateExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CustomKeyStoreInvalidStateException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2264,7 +2264,7 @@ const de_CustomKeyStoreInvalidStateExceptionRes = async (
  */
 const de_CustomKeyStoreNameInUseExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CustomKeyStoreNameInUseException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2280,7 +2280,7 @@ const de_CustomKeyStoreNameInUseExceptionRes = async (
  */
 const de_CustomKeyStoreNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CustomKeyStoreNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2296,7 +2296,7 @@ const de_CustomKeyStoreNotFoundExceptionRes = async (
  */
 const de_DependencyTimeoutExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DependencyTimeoutException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2325,7 +2325,7 @@ const de_DisabledExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_DryRunOperationExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DryRunOperationException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2341,7 +2341,7 @@ const de_DryRunOperationExceptionRes = async (
  */
 const de_ExpiredImportTokenExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ExpiredImportTokenException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2357,7 +2357,7 @@ const de_ExpiredImportTokenExceptionRes = async (
  */
 const de_IncorrectKeyExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<IncorrectKeyException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2373,7 +2373,7 @@ const de_IncorrectKeyExceptionRes = async (
  */
 const de_IncorrectKeyMaterialExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<IncorrectKeyMaterialException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2389,7 +2389,7 @@ const de_IncorrectKeyMaterialExceptionRes = async (
  */
 const de_IncorrectTrustAnchorExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<IncorrectTrustAnchorException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2405,7 +2405,7 @@ const de_IncorrectTrustAnchorExceptionRes = async (
  */
 const de_InvalidAliasNameExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidAliasNameException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2434,7 +2434,7 @@ const de_InvalidArnExceptionRes = async (parsedOutput: any, context: __SerdeCont
  */
 const de_InvalidCiphertextExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidCiphertextException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2450,7 +2450,7 @@ const de_InvalidCiphertextExceptionRes = async (
  */
 const de_InvalidGrantIdExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidGrantIdException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2466,7 +2466,7 @@ const de_InvalidGrantIdExceptionRes = async (
  */
 const de_InvalidGrantTokenExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidGrantTokenException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2482,7 +2482,7 @@ const de_InvalidGrantTokenExceptionRes = async (
  */
 const de_InvalidImportTokenExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidImportTokenException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2498,7 +2498,7 @@ const de_InvalidImportTokenExceptionRes = async (
  */
 const de_InvalidKeyUsageExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidKeyUsageException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2514,7 +2514,7 @@ const de_InvalidKeyUsageExceptionRes = async (
  */
 const de_InvalidMarkerExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidMarkerException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2530,7 +2530,7 @@ const de_InvalidMarkerExceptionRes = async (
  */
 const de_KeyUnavailableExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<KeyUnavailableException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2546,7 +2546,7 @@ const de_KeyUnavailableExceptionRes = async (
  */
 const de_KMSInternalExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<KMSInternalException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2562,7 +2562,7 @@ const de_KMSInternalExceptionRes = async (
  */
 const de_KMSInvalidMacExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<KMSInvalidMacException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2578,7 +2578,7 @@ const de_KMSInvalidMacExceptionRes = async (
  */
 const de_KMSInvalidSignatureExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<KMSInvalidSignatureException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2594,7 +2594,7 @@ const de_KMSInvalidSignatureExceptionRes = async (
  */
 const de_KMSInvalidStateExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<KMSInvalidStateException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2610,7 +2610,7 @@ const de_KMSInvalidStateExceptionRes = async (
  */
 const de_LimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<LimitExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2626,7 +2626,7 @@ const de_LimitExceededExceptionRes = async (
  */
 const de_MalformedPolicyDocumentExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<MalformedPolicyDocumentException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2668,7 +2668,7 @@ const de_TagExceptionRes = async (parsedOutput: any, context: __SerdeContext): P
  */
 const de_UnsupportedOperationExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UnsupportedOperationException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2684,7 +2684,7 @@ const de_UnsupportedOperationExceptionRes = async (
  */
 const de_XksKeyAlreadyInUseExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<XksKeyAlreadyInUseException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2700,7 +2700,7 @@ const de_XksKeyAlreadyInUseExceptionRes = async (
  */
 const de_XksKeyInvalidConfigurationExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<XksKeyInvalidConfigurationException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2716,7 +2716,7 @@ const de_XksKeyInvalidConfigurationExceptionRes = async (
  */
 const de_XksKeyNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<XksKeyNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2732,7 +2732,7 @@ const de_XksKeyNotFoundExceptionRes = async (
  */
 const de_XksProxyIncorrectAuthenticationCredentialExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<XksProxyIncorrectAuthenticationCredentialException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2748,7 +2748,7 @@ const de_XksProxyIncorrectAuthenticationCredentialExceptionRes = async (
  */
 const de_XksProxyInvalidConfigurationExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<XksProxyInvalidConfigurationException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2764,7 +2764,7 @@ const de_XksProxyInvalidConfigurationExceptionRes = async (
  */
 const de_XksProxyInvalidResponseExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<XksProxyInvalidResponseException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2780,7 +2780,7 @@ const de_XksProxyInvalidResponseExceptionRes = async (
  */
 const de_XksProxyUriEndpointInUseExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<XksProxyUriEndpointInUseException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2796,7 +2796,7 @@ const de_XksProxyUriEndpointInUseExceptionRes = async (
  */
 const de_XksProxyUriInUseExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<XksProxyUriInUseException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2812,7 +2812,7 @@ const de_XksProxyUriInUseExceptionRes = async (
  */
 const de_XksProxyUriUnreachableExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<XksProxyUriUnreachableException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2828,7 +2828,7 @@ const de_XksProxyUriUnreachableExceptionRes = async (
  */
 const de_XksProxyVpcEndpointServiceInUseExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<XksProxyVpcEndpointServiceInUseException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2844,7 +2844,7 @@ const de_XksProxyVpcEndpointServiceInUseExceptionRes = async (
  */
 const de_XksProxyVpcEndpointServiceInvalidConfigurationExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<XksProxyVpcEndpointServiceInvalidConfigurationException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2860,7 +2860,7 @@ const de_XksProxyVpcEndpointServiceInvalidConfigurationExceptionRes = async (
  */
 const de_XksProxyVpcEndpointServiceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<XksProxyVpcEndpointServiceNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3332,7 +3332,7 @@ const de_GenerateDataKeyPairResponse = (output: any, context: __SerdeContext): G
  */
 const de_GenerateDataKeyPairWithoutPlaintextResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): GenerateDataKeyPairWithoutPlaintextResponse => {
   return take(output, {
     KeyId: __expectString,
@@ -3359,7 +3359,7 @@ const de_GenerateDataKeyResponse = (output: any, context: __SerdeContext): Gener
  */
 const de_GenerateDataKeyWithoutPlaintextResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): GenerateDataKeyWithoutPlaintextResponse => {
   return take(output, {
     CiphertextBlob: context.base64Decoder,
@@ -3726,7 +3726,7 @@ const buildHttpRpcRequest = async (
   headers: __HeaderBag,
   path: string,
   resolvedHostname: string | undefined,
-  body: any
+  body: any,
 ): Promise<__HttpRequest> => {
   const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
   const contents: any = {

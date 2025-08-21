@@ -18,7 +18,7 @@ describe(RDS.name, () => {
         body: (body) => {
           const parse = new URLSearchParams(body);
           expect(parse.get("SourceDBClusterSnapshotIdentifier")).toEqual(
-            "arn:aws:rds:us-west-2:1234567890:my-db-cluster-snapshot-id"
+            "arn:aws:rds:us-west-2:1234567890:my-db-cluster-snapshot-id",
           );
           expect(parse.get("TargetDBClusterSnapshotIdentifier")).toEqual("my-target-db-cluster-snapshot-id");
           expect(parse.get("Action")).toEqual("CopyDBClusterSnapshot");

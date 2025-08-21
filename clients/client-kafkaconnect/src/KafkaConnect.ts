@@ -105,13 +105,13 @@ export interface KafkaConnect {
    */
   createConnector(
     args: CreateConnectorCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateConnectorCommandOutput>;
   createConnector(args: CreateConnectorCommandInput, cb: (err: any, data?: CreateConnectorCommandOutput) => void): void;
   createConnector(
     args: CreateConnectorCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateConnectorCommandOutput) => void
+    cb: (err: any, data?: CreateConnectorCommandOutput) => void,
   ): void;
 
   /**
@@ -119,16 +119,16 @@ export interface KafkaConnect {
    */
   createCustomPlugin(
     args: CreateCustomPluginCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateCustomPluginCommandOutput>;
   createCustomPlugin(
     args: CreateCustomPluginCommandInput,
-    cb: (err: any, data?: CreateCustomPluginCommandOutput) => void
+    cb: (err: any, data?: CreateCustomPluginCommandOutput) => void,
   ): void;
   createCustomPlugin(
     args: CreateCustomPluginCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateCustomPluginCommandOutput) => void
+    cb: (err: any, data?: CreateCustomPluginCommandOutput) => void,
   ): void;
 
   /**
@@ -136,16 +136,16 @@ export interface KafkaConnect {
    */
   createWorkerConfiguration(
     args: CreateWorkerConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateWorkerConfigurationCommandOutput>;
   createWorkerConfiguration(
     args: CreateWorkerConfigurationCommandInput,
-    cb: (err: any, data?: CreateWorkerConfigurationCommandOutput) => void
+    cb: (err: any, data?: CreateWorkerConfigurationCommandOutput) => void,
   ): void;
   createWorkerConfiguration(
     args: CreateWorkerConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateWorkerConfigurationCommandOutput) => void
+    cb: (err: any, data?: CreateWorkerConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -153,13 +153,13 @@ export interface KafkaConnect {
    */
   deleteConnector(
     args: DeleteConnectorCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteConnectorCommandOutput>;
   deleteConnector(args: DeleteConnectorCommandInput, cb: (err: any, data?: DeleteConnectorCommandOutput) => void): void;
   deleteConnector(
     args: DeleteConnectorCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteConnectorCommandOutput) => void
+    cb: (err: any, data?: DeleteConnectorCommandOutput) => void,
   ): void;
 
   /**
@@ -167,16 +167,16 @@ export interface KafkaConnect {
    */
   deleteCustomPlugin(
     args: DeleteCustomPluginCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteCustomPluginCommandOutput>;
   deleteCustomPlugin(
     args: DeleteCustomPluginCommandInput,
-    cb: (err: any, data?: DeleteCustomPluginCommandOutput) => void
+    cb: (err: any, data?: DeleteCustomPluginCommandOutput) => void,
   ): void;
   deleteCustomPlugin(
     args: DeleteCustomPluginCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteCustomPluginCommandOutput) => void
+    cb: (err: any, data?: DeleteCustomPluginCommandOutput) => void,
   ): void;
 
   /**
@@ -184,16 +184,16 @@ export interface KafkaConnect {
    */
   deleteWorkerConfiguration(
     args: DeleteWorkerConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteWorkerConfigurationCommandOutput>;
   deleteWorkerConfiguration(
     args: DeleteWorkerConfigurationCommandInput,
-    cb: (err: any, data?: DeleteWorkerConfigurationCommandOutput) => void
+    cb: (err: any, data?: DeleteWorkerConfigurationCommandOutput) => void,
   ): void;
   deleteWorkerConfiguration(
     args: DeleteWorkerConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteWorkerConfigurationCommandOutput) => void
+    cb: (err: any, data?: DeleteWorkerConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -201,16 +201,16 @@ export interface KafkaConnect {
    */
   describeConnector(
     args: DescribeConnectorCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeConnectorCommandOutput>;
   describeConnector(
     args: DescribeConnectorCommandInput,
-    cb: (err: any, data?: DescribeConnectorCommandOutput) => void
+    cb: (err: any, data?: DescribeConnectorCommandOutput) => void,
   ): void;
   describeConnector(
     args: DescribeConnectorCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeConnectorCommandOutput) => void
+    cb: (err: any, data?: DescribeConnectorCommandOutput) => void,
   ): void;
 
   /**
@@ -218,16 +218,16 @@ export interface KafkaConnect {
    */
   describeCustomPlugin(
     args: DescribeCustomPluginCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeCustomPluginCommandOutput>;
   describeCustomPlugin(
     args: DescribeCustomPluginCommandInput,
-    cb: (err: any, data?: DescribeCustomPluginCommandOutput) => void
+    cb: (err: any, data?: DescribeCustomPluginCommandOutput) => void,
   ): void;
   describeCustomPlugin(
     args: DescribeCustomPluginCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeCustomPluginCommandOutput) => void
+    cb: (err: any, data?: DescribeCustomPluginCommandOutput) => void,
   ): void;
 
   /**
@@ -235,16 +235,16 @@ export interface KafkaConnect {
    */
   describeWorkerConfiguration(
     args: DescribeWorkerConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeWorkerConfigurationCommandOutput>;
   describeWorkerConfiguration(
     args: DescribeWorkerConfigurationCommandInput,
-    cb: (err: any, data?: DescribeWorkerConfigurationCommandOutput) => void
+    cb: (err: any, data?: DescribeWorkerConfigurationCommandOutput) => void,
   ): void;
   describeWorkerConfiguration(
     args: DescribeWorkerConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeWorkerConfigurationCommandOutput) => void
+    cb: (err: any, data?: DescribeWorkerConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -253,13 +253,13 @@ export interface KafkaConnect {
   listConnectors(): Promise<ListConnectorsCommandOutput>;
   listConnectors(
     args: ListConnectorsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListConnectorsCommandOutput>;
   listConnectors(args: ListConnectorsCommandInput, cb: (err: any, data?: ListConnectorsCommandOutput) => void): void;
   listConnectors(
     args: ListConnectorsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListConnectorsCommandOutput) => void
+    cb: (err: any, data?: ListConnectorsCommandOutput) => void,
   ): void;
 
   /**
@@ -268,16 +268,16 @@ export interface KafkaConnect {
   listCustomPlugins(): Promise<ListCustomPluginsCommandOutput>;
   listCustomPlugins(
     args: ListCustomPluginsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListCustomPluginsCommandOutput>;
   listCustomPlugins(
     args: ListCustomPluginsCommandInput,
-    cb: (err: any, data?: ListCustomPluginsCommandOutput) => void
+    cb: (err: any, data?: ListCustomPluginsCommandOutput) => void,
   ): void;
   listCustomPlugins(
     args: ListCustomPluginsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListCustomPluginsCommandOutput) => void
+    cb: (err: any, data?: ListCustomPluginsCommandOutput) => void,
   ): void;
 
   /**
@@ -285,16 +285,16 @@ export interface KafkaConnect {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -303,16 +303,16 @@ export interface KafkaConnect {
   listWorkerConfigurations(): Promise<ListWorkerConfigurationsCommandOutput>;
   listWorkerConfigurations(
     args: ListWorkerConfigurationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListWorkerConfigurationsCommandOutput>;
   listWorkerConfigurations(
     args: ListWorkerConfigurationsCommandInput,
-    cb: (err: any, data?: ListWorkerConfigurationsCommandOutput) => void
+    cb: (err: any, data?: ListWorkerConfigurationsCommandOutput) => void,
   ): void;
   listWorkerConfigurations(
     args: ListWorkerConfigurationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListWorkerConfigurationsCommandOutput) => void
+    cb: (err: any, data?: ListWorkerConfigurationsCommandOutput) => void,
   ): void;
 
   /**
@@ -323,7 +323,7 @@ export interface KafkaConnect {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -334,7 +334,7 @@ export interface KafkaConnect {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -342,13 +342,13 @@ export interface KafkaConnect {
    */
   updateConnector(
     args: UpdateConnectorCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateConnectorCommandOutput>;
   updateConnector(args: UpdateConnectorCommandInput, cb: (err: any, data?: UpdateConnectorCommandOutput) => void): void;
   updateConnector(
     args: UpdateConnectorCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateConnectorCommandOutput) => void
+    cb: (err: any, data?: UpdateConnectorCommandOutput) => void,
   ): void;
 }
 

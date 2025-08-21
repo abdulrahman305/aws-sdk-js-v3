@@ -266,7 +266,7 @@ module.exports = class PatternDetection extends CompressionAlgorithm {
 
           codeBlockBuffer[j] = codeBlockBuffer[j].replaceAll(
             new RegExp(`${iCode.replaceAll(/([\[\]{}()])/g, `\\$1`)}:([^ ])`, "g"),
-            `[${iSymbol}]:$1`
+            `[${iSymbol}]:$1`,
           );
           codeBlockBuffer[j] = codeBlockBuffer[j].replaceAll(iCode, iSymbol);
         }

@@ -364,7 +364,7 @@ import { Route53ServiceException as __BaseException } from "../models/Route53Ser
  */
 export const se_ActivateKeySigningKeyCommand = async (
   input: ActivateKeySigningKeyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -381,7 +381,7 @@ export const se_ActivateKeySigningKeyCommand = async (
  */
 export const se_AssociateVPCWithHostedZoneCommand = async (
   input: AssociateVPCWithHostedZoneCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -409,7 +409,7 @@ export const se_AssociateVPCWithHostedZoneCommand = async (
  */
 export const se_ChangeCidrCollectionCommand = async (
   input: ChangeCidrCollectionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -435,7 +435,7 @@ export const se_ChangeCidrCollectionCommand = async (
  */
 export const se_ChangeResourceRecordSetsCommand = async (
   input: ChangeResourceRecordSetsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -460,7 +460,7 @@ export const se_ChangeResourceRecordSetsCommand = async (
  */
 export const se_ChangeTagsForResourceCommand = async (
   input: ChangeTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -485,7 +485,7 @@ export const se_ChangeTagsForResourceCommand = async (
  */
 export const se_CreateCidrCollectionCommand = async (
   input: CreateCidrCollectionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -512,7 +512,7 @@ export const se_CreateCidrCollectionCommand = async (
  */
 export const se_CreateHealthCheckCommand = async (
   input: CreateHealthCheckCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -539,7 +539,7 @@ export const se_CreateHealthCheckCommand = async (
  */
 export const se_CreateHostedZoneCommand = async (
   input: CreateHostedZoneCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -575,7 +575,7 @@ export const se_CreateHostedZoneCommand = async (
  */
 export const se_CreateKeySigningKeyCommand = async (
   input: CreateKeySigningKeyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -611,7 +611,7 @@ export const se_CreateKeySigningKeyCommand = async (
  */
 export const se_CreateQueryLoggingConfigCommand = async (
   input: CreateQueryLoggingConfigCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -636,7 +636,7 @@ export const se_CreateQueryLoggingConfigCommand = async (
  */
 export const se_CreateReusableDelegationSetCommand = async (
   input: CreateReusableDelegationSetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -663,7 +663,7 @@ export const se_CreateReusableDelegationSetCommand = async (
  */
 export const se_CreateTrafficPolicyCommand = async (
   input: CreateTrafficPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -693,7 +693,7 @@ export const se_CreateTrafficPolicyCommand = async (
  */
 export const se_CreateTrafficPolicyInstanceCommand = async (
   input: CreateTrafficPolicyInstanceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -727,7 +727,7 @@ export const se_CreateTrafficPolicyInstanceCommand = async (
  */
 export const se_CreateTrafficPolicyVersionCommand = async (
   input: CreateTrafficPolicyVersionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -755,7 +755,7 @@ export const se_CreateTrafficPolicyVersionCommand = async (
  */
 export const se_CreateVPCAssociationAuthorizationCommand = async (
   input: CreateVPCAssociationAuthorizationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -780,7 +780,7 @@ export const se_CreateVPCAssociationAuthorizationCommand = async (
  */
 export const se_DeactivateKeySigningKeyCommand = async (
   input: DeactivateKeySigningKeyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -797,7 +797,7 @@ export const se_DeactivateKeySigningKeyCommand = async (
  */
 export const se_DeleteCidrCollectionCommand = async (
   input: DeleteCidrCollectionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -813,7 +813,7 @@ export const se_DeleteCidrCollectionCommand = async (
  */
 export const se_DeleteHealthCheckCommand = async (
   input: DeleteHealthCheckCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -829,7 +829,7 @@ export const se_DeleteHealthCheckCommand = async (
  */
 export const se_DeleteHostedZoneCommand = async (
   input: DeleteHostedZoneCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -845,7 +845,7 @@ export const se_DeleteHostedZoneCommand = async (
  */
 export const se_DeleteKeySigningKeyCommand = async (
   input: DeleteKeySigningKeyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -862,7 +862,7 @@ export const se_DeleteKeySigningKeyCommand = async (
  */
 export const se_DeleteQueryLoggingConfigCommand = async (
   input: DeleteQueryLoggingConfigCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -878,7 +878,7 @@ export const se_DeleteQueryLoggingConfigCommand = async (
  */
 export const se_DeleteReusableDelegationSetCommand = async (
   input: DeleteReusableDelegationSetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -894,7 +894,7 @@ export const se_DeleteReusableDelegationSetCommand = async (
  */
 export const se_DeleteTrafficPolicyCommand = async (
   input: DeleteTrafficPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -911,7 +911,7 @@ export const se_DeleteTrafficPolicyCommand = async (
  */
 export const se_DeleteTrafficPolicyInstanceCommand = async (
   input: DeleteTrafficPolicyInstanceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -927,7 +927,7 @@ export const se_DeleteTrafficPolicyInstanceCommand = async (
  */
 export const se_DeleteVPCAssociationAuthorizationCommand = async (
   input: DeleteVPCAssociationAuthorizationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -952,7 +952,7 @@ export const se_DeleteVPCAssociationAuthorizationCommand = async (
  */
 export const se_DisableHostedZoneDNSSECCommand = async (
   input: DisableHostedZoneDNSSECCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -968,7 +968,7 @@ export const se_DisableHostedZoneDNSSECCommand = async (
  */
 export const se_DisassociateVPCFromHostedZoneCommand = async (
   input: DisassociateVPCFromHostedZoneCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -996,7 +996,7 @@ export const se_DisassociateVPCFromHostedZoneCommand = async (
  */
 export const se_EnableHostedZoneDNSSECCommand = async (
   input: EnableHostedZoneDNSSECCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1012,7 +1012,7 @@ export const se_EnableHostedZoneDNSSECCommand = async (
  */
 export const se_GetAccountLimitCommand = async (
   input: GetAccountLimitCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1028,7 +1028,7 @@ export const se_GetAccountLimitCommand = async (
  */
 export const se_GetChangeCommand = async (
   input: GetChangeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1044,7 +1044,7 @@ export const se_GetChangeCommand = async (
  */
 export const se_GetCheckerIpRangesCommand = async (
   input: GetCheckerIpRangesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1062,7 +1062,7 @@ export const se_GetCheckerIpRangesCommand = async (
  */
 export const se_GetDNSSECCommand = async (
   input: GetDNSSECCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1078,7 +1078,7 @@ export const se_GetDNSSECCommand = async (
  */
 export const se_GetGeoLocationCommand = async (
   input: GetGeoLocationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1098,7 +1098,7 @@ export const se_GetGeoLocationCommand = async (
  */
 export const se_GetHealthCheckCommand = async (
   input: GetHealthCheckCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1114,7 +1114,7 @@ export const se_GetHealthCheckCommand = async (
  */
 export const se_GetHealthCheckCountCommand = async (
   input: GetHealthCheckCountCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1132,7 +1132,7 @@ export const se_GetHealthCheckCountCommand = async (
  */
 export const se_GetHealthCheckLastFailureReasonCommand = async (
   input: GetHealthCheckLastFailureReasonCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1148,7 +1148,7 @@ export const se_GetHealthCheckLastFailureReasonCommand = async (
  */
 export const se_GetHealthCheckStatusCommand = async (
   input: GetHealthCheckStatusCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1164,7 +1164,7 @@ export const se_GetHealthCheckStatusCommand = async (
  */
 export const se_GetHostedZoneCommand = async (
   input: GetHostedZoneCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1180,7 +1180,7 @@ export const se_GetHostedZoneCommand = async (
  */
 export const se_GetHostedZoneCountCommand = async (
   input: GetHostedZoneCountCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1198,7 +1198,7 @@ export const se_GetHostedZoneCountCommand = async (
  */
 export const se_GetHostedZoneLimitCommand = async (
   input: GetHostedZoneLimitCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1215,7 +1215,7 @@ export const se_GetHostedZoneLimitCommand = async (
  */
 export const se_GetQueryLoggingConfigCommand = async (
   input: GetQueryLoggingConfigCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1231,7 +1231,7 @@ export const se_GetQueryLoggingConfigCommand = async (
  */
 export const se_GetReusableDelegationSetCommand = async (
   input: GetReusableDelegationSetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1247,7 +1247,7 @@ export const se_GetReusableDelegationSetCommand = async (
  */
 export const se_GetReusableDelegationSetLimitCommand = async (
   input: GetReusableDelegationSetLimitCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1264,7 +1264,7 @@ export const se_GetReusableDelegationSetLimitCommand = async (
  */
 export const se_GetTrafficPolicyCommand = async (
   input: GetTrafficPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1281,7 +1281,7 @@ export const se_GetTrafficPolicyCommand = async (
  */
 export const se_GetTrafficPolicyInstanceCommand = async (
   input: GetTrafficPolicyInstanceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1297,7 +1297,7 @@ export const se_GetTrafficPolicyInstanceCommand = async (
  */
 export const se_GetTrafficPolicyInstanceCountCommand = async (
   input: GetTrafficPolicyInstanceCountCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1315,7 +1315,7 @@ export const se_GetTrafficPolicyInstanceCountCommand = async (
  */
 export const se_ListCidrBlocksCommand = async (
   input: ListCidrBlocksCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1336,7 +1336,7 @@ export const se_ListCidrBlocksCommand = async (
  */
 export const se_ListCidrCollectionsCommand = async (
   input: ListCidrCollectionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1355,7 +1355,7 @@ export const se_ListCidrCollectionsCommand = async (
  */
 export const se_ListCidrLocationsCommand = async (
   input: ListCidrLocationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1375,7 +1375,7 @@ export const se_ListCidrLocationsCommand = async (
  */
 export const se_ListGeoLocationsCommand = async (
   input: ListGeoLocationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1396,7 +1396,7 @@ export const se_ListGeoLocationsCommand = async (
  */
 export const se_ListHealthChecksCommand = async (
   input: ListHealthChecksCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1415,7 +1415,7 @@ export const se_ListHealthChecksCommand = async (
  */
 export const se_ListHostedZonesCommand = async (
   input: ListHostedZonesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1436,7 +1436,7 @@ export const se_ListHostedZonesCommand = async (
  */
 export const se_ListHostedZonesByNameCommand = async (
   input: ListHostedZonesByNameCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1456,7 +1456,7 @@ export const se_ListHostedZonesByNameCommand = async (
  */
 export const se_ListHostedZonesByVPCCommand = async (
   input: ListHostedZonesByVPCCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1477,7 +1477,7 @@ export const se_ListHostedZonesByVPCCommand = async (
  */
 export const se_ListQueryLoggingConfigsCommand = async (
   input: ListQueryLoggingConfigsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1497,7 +1497,7 @@ export const se_ListQueryLoggingConfigsCommand = async (
  */
 export const se_ListResourceRecordSetsCommand = async (
   input: ListResourceRecordSetsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1519,7 +1519,7 @@ export const se_ListResourceRecordSetsCommand = async (
  */
 export const se_ListReusableDelegationSetsCommand = async (
   input: ListReusableDelegationSetsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1538,7 +1538,7 @@ export const se_ListReusableDelegationSetsCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1555,7 +1555,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_ListTagsForResourcesCommand = async (
   input: ListTagsForResourcesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1578,7 +1578,7 @@ export const se_ListTagsForResourcesCommand = async (
  */
 export const se_ListTrafficPoliciesCommand = async (
   input: ListTrafficPoliciesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1597,7 +1597,7 @@ export const se_ListTrafficPoliciesCommand = async (
  */
 export const se_ListTrafficPolicyInstancesCommand = async (
   input: ListTrafficPolicyInstancesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1618,7 +1618,7 @@ export const se_ListTrafficPolicyInstancesCommand = async (
  */
 export const se_ListTrafficPolicyInstancesByHostedZoneCommand = async (
   input: ListTrafficPolicyInstancesByHostedZoneCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1639,7 +1639,7 @@ export const se_ListTrafficPolicyInstancesByHostedZoneCommand = async (
  */
 export const se_ListTrafficPolicyInstancesByPolicyCommand = async (
   input: ListTrafficPolicyInstancesByPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1665,7 +1665,7 @@ export const se_ListTrafficPolicyInstancesByPolicyCommand = async (
  */
 export const se_ListTrafficPolicyVersionsCommand = async (
   input: ListTrafficPolicyVersionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1685,7 +1685,7 @@ export const se_ListTrafficPolicyVersionsCommand = async (
  */
 export const se_ListVPCAssociationAuthorizationsCommand = async (
   input: ListVPCAssociationAuthorizationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1705,7 +1705,7 @@ export const se_ListVPCAssociationAuthorizationsCommand = async (
  */
 export const se_TestDNSAnswerCommand = async (
   input: TestDNSAnswerCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1728,7 +1728,7 @@ export const se_TestDNSAnswerCommand = async (
  */
 export const se_UpdateHealthCheckCommand = async (
   input: UpdateHealthCheckCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1782,7 +1782,7 @@ export const se_UpdateHealthCheckCommand = async (
  */
 export const se_UpdateHostedZoneCommentCommand = async (
   input: UpdateHostedZoneCommentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1807,7 +1807,7 @@ export const se_UpdateHostedZoneCommentCommand = async (
  */
 export const se_UpdateTrafficPolicyCommentCommand = async (
   input: UpdateTrafficPolicyCommentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1833,7 +1833,7 @@ export const se_UpdateTrafficPolicyCommentCommand = async (
  */
 export const se_UpdateTrafficPolicyInstanceCommand = async (
   input: UpdateTrafficPolicyInstanceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1862,7 +1862,7 @@ export const se_UpdateTrafficPolicyInstanceCommand = async (
  */
 export const de_ActivateKeySigningKeyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ActivateKeySigningKeyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1882,7 +1882,7 @@ export const de_ActivateKeySigningKeyCommand = async (
  */
 export const de_AssociateVPCWithHostedZoneCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssociateVPCWithHostedZoneCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1902,7 +1902,7 @@ export const de_AssociateVPCWithHostedZoneCommand = async (
  */
 export const de_ChangeCidrCollectionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ChangeCidrCollectionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1922,7 +1922,7 @@ export const de_ChangeCidrCollectionCommand = async (
  */
 export const de_ChangeResourceRecordSetsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ChangeResourceRecordSetsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1942,7 +1942,7 @@ export const de_ChangeResourceRecordSetsCommand = async (
  */
 export const de_ChangeTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ChangeTagsForResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1959,7 +1959,7 @@ export const de_ChangeTagsForResourceCommand = async (
  */
 export const de_CreateCidrCollectionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateCidrCollectionCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1980,7 +1980,7 @@ export const de_CreateCidrCollectionCommand = async (
  */
 export const de_CreateHealthCheckCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateHealthCheckCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2001,7 +2001,7 @@ export const de_CreateHealthCheckCommand = async (
  */
 export const de_CreateHostedZoneCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateHostedZoneCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2031,7 +2031,7 @@ export const de_CreateHostedZoneCommand = async (
  */
 export const de_CreateKeySigningKeyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateKeySigningKeyCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2055,7 +2055,7 @@ export const de_CreateKeySigningKeyCommand = async (
  */
 export const de_CreateQueryLoggingConfigCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateQueryLoggingConfigCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2076,7 +2076,7 @@ export const de_CreateQueryLoggingConfigCommand = async (
  */
 export const de_CreateReusableDelegationSetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateReusableDelegationSetCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2097,7 +2097,7 @@ export const de_CreateReusableDelegationSetCommand = async (
  */
 export const de_CreateTrafficPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateTrafficPolicyCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2118,7 +2118,7 @@ export const de_CreateTrafficPolicyCommand = async (
  */
 export const de_CreateTrafficPolicyInstanceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateTrafficPolicyInstanceCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2139,7 +2139,7 @@ export const de_CreateTrafficPolicyInstanceCommand = async (
  */
 export const de_CreateTrafficPolicyVersionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateTrafficPolicyVersionCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2160,7 +2160,7 @@ export const de_CreateTrafficPolicyVersionCommand = async (
  */
 export const de_CreateVPCAssociationAuthorizationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateVPCAssociationAuthorizationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2183,7 +2183,7 @@ export const de_CreateVPCAssociationAuthorizationCommand = async (
  */
 export const de_DeactivateKeySigningKeyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeactivateKeySigningKeyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2203,7 +2203,7 @@ export const de_DeactivateKeySigningKeyCommand = async (
  */
 export const de_DeleteCidrCollectionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteCidrCollectionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2220,7 +2220,7 @@ export const de_DeleteCidrCollectionCommand = async (
  */
 export const de_DeleteHealthCheckCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteHealthCheckCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2237,7 +2237,7 @@ export const de_DeleteHealthCheckCommand = async (
  */
 export const de_DeleteHostedZoneCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteHostedZoneCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2257,7 +2257,7 @@ export const de_DeleteHostedZoneCommand = async (
  */
 export const de_DeleteKeySigningKeyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteKeySigningKeyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2277,7 +2277,7 @@ export const de_DeleteKeySigningKeyCommand = async (
  */
 export const de_DeleteQueryLoggingConfigCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteQueryLoggingConfigCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2294,7 +2294,7 @@ export const de_DeleteQueryLoggingConfigCommand = async (
  */
 export const de_DeleteReusableDelegationSetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteReusableDelegationSetCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2311,7 +2311,7 @@ export const de_DeleteReusableDelegationSetCommand = async (
  */
 export const de_DeleteTrafficPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteTrafficPolicyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2328,7 +2328,7 @@ export const de_DeleteTrafficPolicyCommand = async (
  */
 export const de_DeleteTrafficPolicyInstanceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteTrafficPolicyInstanceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2345,7 +2345,7 @@ export const de_DeleteTrafficPolicyInstanceCommand = async (
  */
 export const de_DeleteVPCAssociationAuthorizationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteVPCAssociationAuthorizationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2362,7 +2362,7 @@ export const de_DeleteVPCAssociationAuthorizationCommand = async (
  */
 export const de_DisableHostedZoneDNSSECCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisableHostedZoneDNSSECCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2382,7 +2382,7 @@ export const de_DisableHostedZoneDNSSECCommand = async (
  */
 export const de_DisassociateVPCFromHostedZoneCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisassociateVPCFromHostedZoneCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2402,7 +2402,7 @@ export const de_DisassociateVPCFromHostedZoneCommand = async (
  */
 export const de_EnableHostedZoneDNSSECCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<EnableHostedZoneDNSSECCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2422,7 +2422,7 @@ export const de_EnableHostedZoneDNSSECCommand = async (
  */
 export const de_GetAccountLimitCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetAccountLimitCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2445,7 +2445,7 @@ export const de_GetAccountLimitCommand = async (
  */
 export const de_GetChangeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetChangeCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2465,7 +2465,7 @@ export const de_GetChangeCommand = async (
  */
 export const de_GetCheckerIpRangesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetCheckerIpRangesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2487,7 +2487,7 @@ export const de_GetCheckerIpRangesCommand = async (
  */
 export const de_GetDNSSECCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetDNSSECCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2512,7 +2512,7 @@ export const de_GetDNSSECCommand = async (
  */
 export const de_GetGeoLocationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetGeoLocationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2532,7 +2532,7 @@ export const de_GetGeoLocationCommand = async (
  */
 export const de_GetHealthCheckCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetHealthCheckCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2552,7 +2552,7 @@ export const de_GetHealthCheckCommand = async (
  */
 export const de_GetHealthCheckCountCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetHealthCheckCountCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2572,7 +2572,7 @@ export const de_GetHealthCheckCountCommand = async (
  */
 export const de_GetHealthCheckLastFailureReasonCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetHealthCheckLastFailureReasonCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2594,7 +2594,7 @@ export const de_GetHealthCheckLastFailureReasonCommand = async (
  */
 export const de_GetHealthCheckStatusCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetHealthCheckStatusCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2616,7 +2616,7 @@ export const de_GetHealthCheckStatusCommand = async (
  */
 export const de_GetHostedZoneCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetHostedZoneCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2644,7 +2644,7 @@ export const de_GetHostedZoneCommand = async (
  */
 export const de_GetHostedZoneCountCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetHostedZoneCountCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2664,7 +2664,7 @@ export const de_GetHostedZoneCountCommand = async (
  */
 export const de_GetHostedZoneLimitCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetHostedZoneLimitCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2687,7 +2687,7 @@ export const de_GetHostedZoneLimitCommand = async (
  */
 export const de_GetQueryLoggingConfigCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetQueryLoggingConfigCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2707,7 +2707,7 @@ export const de_GetQueryLoggingConfigCommand = async (
  */
 export const de_GetReusableDelegationSetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetReusableDelegationSetCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2727,7 +2727,7 @@ export const de_GetReusableDelegationSetCommand = async (
  */
 export const de_GetReusableDelegationSetLimitCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetReusableDelegationSetLimitCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2750,7 +2750,7 @@ export const de_GetReusableDelegationSetLimitCommand = async (
  */
 export const de_GetTrafficPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetTrafficPolicyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2770,7 +2770,7 @@ export const de_GetTrafficPolicyCommand = async (
  */
 export const de_GetTrafficPolicyInstanceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetTrafficPolicyInstanceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2790,7 +2790,7 @@ export const de_GetTrafficPolicyInstanceCommand = async (
  */
 export const de_GetTrafficPolicyInstanceCountCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetTrafficPolicyInstanceCountCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2810,7 +2810,7 @@ export const de_GetTrafficPolicyInstanceCountCommand = async (
  */
 export const de_ListCidrBlocksCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListCidrBlocksCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2835,7 +2835,7 @@ export const de_ListCidrBlocksCommand = async (
  */
 export const de_ListCidrCollectionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListCidrCollectionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2860,7 +2860,7 @@ export const de_ListCidrCollectionsCommand = async (
  */
 export const de_ListCidrLocationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListCidrLocationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2885,7 +2885,7 @@ export const de_ListCidrLocationsCommand = async (
  */
 export const de_ListGeoLocationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListGeoLocationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2922,7 +2922,7 @@ export const de_ListGeoLocationsCommand = async (
  */
 export const de_ListHealthChecksCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListHealthChecksCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2956,7 +2956,7 @@ export const de_ListHealthChecksCommand = async (
  */
 export const de_ListHostedZonesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListHostedZonesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2990,7 +2990,7 @@ export const de_ListHostedZonesCommand = async (
  */
 export const de_ListHostedZonesByNameCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListHostedZonesByNameCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3030,7 +3030,7 @@ export const de_ListHostedZonesByNameCommand = async (
  */
 export const de_ListHostedZonesByVPCCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListHostedZonesByVPCCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3058,7 +3058,7 @@ export const de_ListHostedZonesByVPCCommand = async (
  */
 export const de_ListQueryLoggingConfigsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListQueryLoggingConfigsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3083,7 +3083,7 @@ export const de_ListQueryLoggingConfigsCommand = async (
  */
 export const de_ListResourceRecordSetsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListResourceRecordSetsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3120,7 +3120,7 @@ export const de_ListResourceRecordSetsCommand = async (
  */
 export const de_ListReusableDelegationSetsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListReusableDelegationSetsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3154,7 +3154,7 @@ export const de_ListReusableDelegationSetsCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3174,7 +3174,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_ListTagsForResourcesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourcesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3196,7 +3196,7 @@ export const de_ListTagsForResourcesCommand = async (
  */
 export const de_ListTrafficPoliciesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTrafficPoliciesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3227,7 +3227,7 @@ export const de_ListTrafficPoliciesCommand = async (
  */
 export const de_ListTrafficPolicyInstancesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTrafficPolicyInstancesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3264,7 +3264,7 @@ export const de_ListTrafficPolicyInstancesCommand = async (
  */
 export const de_ListTrafficPolicyInstancesByHostedZoneCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTrafficPolicyInstancesByHostedZoneCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3298,7 +3298,7 @@ export const de_ListTrafficPolicyInstancesByHostedZoneCommand = async (
  */
 export const de_ListTrafficPolicyInstancesByPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTrafficPolicyInstancesByPolicyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3335,7 +3335,7 @@ export const de_ListTrafficPolicyInstancesByPolicyCommand = async (
  */
 export const de_ListTrafficPolicyVersionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTrafficPolicyVersionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3366,7 +3366,7 @@ export const de_ListTrafficPolicyVersionsCommand = async (
  */
 export const de_ListVPCAssociationAuthorizationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListVPCAssociationAuthorizationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3394,7 +3394,7 @@ export const de_ListVPCAssociationAuthorizationsCommand = async (
  */
 export const de_TestDNSAnswerCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TestDNSAnswerCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3431,7 +3431,7 @@ export const de_TestDNSAnswerCommand = async (
  */
 export const de_UpdateHealthCheckCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateHealthCheckCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3451,7 +3451,7 @@ export const de_UpdateHealthCheckCommand = async (
  */
 export const de_UpdateHostedZoneCommentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateHostedZoneCommentCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3471,7 +3471,7 @@ export const de_UpdateHostedZoneCommentCommand = async (
  */
 export const de_UpdateTrafficPolicyCommentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateTrafficPolicyCommentCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3491,7 +3491,7 @@ export const de_UpdateTrafficPolicyCommentCommand = async (
  */
 export const de_UpdateTrafficPolicyInstanceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateTrafficPolicyInstanceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3739,7 +3739,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_CidrBlockInUseExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CidrBlockInUseException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -3758,7 +3758,7 @@ const de_CidrBlockInUseExceptionRes = async (
  */
 const de_CidrCollectionAlreadyExistsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CidrCollectionAlreadyExistsException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -3777,7 +3777,7 @@ const de_CidrCollectionAlreadyExistsExceptionRes = async (
  */
 const de_CidrCollectionInUseExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CidrCollectionInUseException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -3796,7 +3796,7 @@ const de_CidrCollectionInUseExceptionRes = async (
  */
 const de_CidrCollectionVersionMismatchExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CidrCollectionVersionMismatchException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -3815,7 +3815,7 @@ const de_CidrCollectionVersionMismatchExceptionRes = async (
  */
 const de_ConcurrentModificationRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ConcurrentModification> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -3834,7 +3834,7 @@ const de_ConcurrentModificationRes = async (
  */
 const de_ConflictingDomainExistsRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ConflictingDomainExists> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -3869,7 +3869,7 @@ const de_ConflictingTypesRes = async (parsedOutput: any, context: __SerdeContext
  */
 const de_DelegationSetAlreadyCreatedRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DelegationSetAlreadyCreated> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -3888,7 +3888,7 @@ const de_DelegationSetAlreadyCreatedRes = async (
  */
 const de_DelegationSetAlreadyReusableRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DelegationSetAlreadyReusable> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -3923,7 +3923,7 @@ const de_DelegationSetInUseRes = async (parsedOutput: any, context: __SerdeConte
  */
 const de_DelegationSetNotAvailableRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DelegationSetNotAvailable> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -3942,7 +3942,7 @@ const de_DelegationSetNotAvailableRes = async (
  */
 const de_DelegationSetNotReusableRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DelegationSetNotReusable> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -3977,7 +3977,7 @@ const de_DNSSECNotFoundRes = async (parsedOutput: any, context: __SerdeContext):
  */
 const de_HealthCheckAlreadyExistsRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<HealthCheckAlreadyExists> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -4012,7 +4012,7 @@ const de_HealthCheckInUseRes = async (parsedOutput: any, context: __SerdeContext
  */
 const de_HealthCheckVersionMismatchRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<HealthCheckVersionMismatch> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -4031,7 +4031,7 @@ const de_HealthCheckVersionMismatchRes = async (
  */
 const de_HostedZoneAlreadyExistsRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<HostedZoneAlreadyExists> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -4082,7 +4082,7 @@ const de_HostedZoneNotFoundRes = async (parsedOutput: any, context: __SerdeConte
  */
 const de_HostedZoneNotPrivateRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<HostedZoneNotPrivate> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -4101,7 +4101,7 @@ const de_HostedZoneNotPrivateRes = async (
  */
 const de_HostedZonePartiallyDelegatedRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<HostedZonePartiallyDelegated> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -4136,7 +4136,7 @@ const de_IncompatibleVersionRes = async (parsedOutput: any, context: __SerdeCont
  */
 const de_InsufficientCloudWatchLogsResourcePolicyRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InsufficientCloudWatchLogsResourcePolicy> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -4224,7 +4224,7 @@ const de_InvalidInputRes = async (parsedOutput: any, context: __SerdeContext): P
  */
 const de_InvalidKeySigningKeyNameRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidKeySigningKeyName> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -4243,7 +4243,7 @@ const de_InvalidKeySigningKeyNameRes = async (
  */
 const de_InvalidKeySigningKeyStatusRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidKeySigningKeyStatus> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -4278,7 +4278,7 @@ const de_InvalidKMSArnRes = async (parsedOutput: any, context: __SerdeContext): 
  */
 const de_InvalidPaginationTokenRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidPaginationToken> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -4297,7 +4297,7 @@ const de_InvalidPaginationTokenRes = async (
  */
 const de_InvalidSigningStatusRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidSigningStatus> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -4316,7 +4316,7 @@ const de_InvalidSigningStatusRes = async (
  */
 const de_InvalidTrafficPolicyDocumentRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidTrafficPolicyDocument> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -4351,7 +4351,7 @@ const de_InvalidVPCIdRes = async (parsedOutput: any, context: __SerdeContext): P
  */
 const de_KeySigningKeyAlreadyExistsRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<KeySigningKeyAlreadyExists> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -4370,7 +4370,7 @@ const de_KeySigningKeyAlreadyExistsRes = async (
  */
 const de_KeySigningKeyInParentDSRecordRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<KeySigningKeyInParentDSRecord> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -4405,7 +4405,7 @@ const de_KeySigningKeyInUseRes = async (parsedOutput: any, context: __SerdeConte
  */
 const de_KeySigningKeyWithActiveStatusNotFoundRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<KeySigningKeyWithActiveStatusNotFound> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -4472,7 +4472,7 @@ const de_NoSuchChangeRes = async (parsedOutput: any, context: __SerdeContext): P
  */
 const de_NoSuchCidrCollectionExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<NoSuchCidrCollectionException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -4491,7 +4491,7 @@ const de_NoSuchCidrCollectionExceptionRes = async (
  */
 const de_NoSuchCidrLocationExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<NoSuchCidrLocationException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -4510,7 +4510,7 @@ const de_NoSuchCidrLocationExceptionRes = async (
  */
 const de_NoSuchCloudWatchLogsLogGroupRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<NoSuchCloudWatchLogsLogGroup> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -4609,7 +4609,7 @@ const de_NoSuchKeySigningKeyRes = async (parsedOutput: any, context: __SerdeCont
  */
 const de_NoSuchQueryLoggingConfigRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<NoSuchQueryLoggingConfig> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -4644,7 +4644,7 @@ const de_NoSuchTrafficPolicyRes = async (parsedOutput: any, context: __SerdeCont
  */
 const de_NoSuchTrafficPolicyInstanceRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<NoSuchTrafficPolicyInstance> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -4663,7 +4663,7 @@ const de_NoSuchTrafficPolicyInstanceRes = async (
  */
 const de_NotAuthorizedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<NotAuthorizedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -4682,7 +4682,7 @@ const de_NotAuthorizedExceptionRes = async (
  */
 const de_PriorRequestNotCompleteRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PriorRequestNotComplete> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -4701,7 +4701,7 @@ const de_PriorRequestNotCompleteRes = async (
  */
 const de_PublicZoneVPCAssociationRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PublicZoneVPCAssociation> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -4720,7 +4720,7 @@ const de_PublicZoneVPCAssociationRes = async (
  */
 const de_QueryLoggingConfigAlreadyExistsRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<QueryLoggingConfigAlreadyExists> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -4787,7 +4787,7 @@ const de_TooManyHostedZonesRes = async (parsedOutput: any, context: __SerdeConte
  */
 const de_TooManyKeySigningKeysRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyKeySigningKeys> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -4806,7 +4806,7 @@ const de_TooManyKeySigningKeysRes = async (
  */
 const de_TooManyTrafficPoliciesRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyTrafficPolicies> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -4825,7 +4825,7 @@ const de_TooManyTrafficPoliciesRes = async (
  */
 const de_TooManyTrafficPolicyInstancesRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyTrafficPolicyInstances> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -4844,7 +4844,7 @@ const de_TooManyTrafficPolicyInstancesRes = async (
  */
 const de_TooManyTrafficPolicyVersionsForCurrentPolicyRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyTrafficPolicyVersionsForCurrentPolicy> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -4863,7 +4863,7 @@ const de_TooManyTrafficPolicyVersionsForCurrentPolicyRes = async (
  */
 const de_TooManyVPCAssociationAuthorizationsRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyVPCAssociationAuthorizations> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -4882,7 +4882,7 @@ const de_TooManyVPCAssociationAuthorizationsRes = async (
  */
 const de_TrafficPolicyAlreadyExistsRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TrafficPolicyAlreadyExists> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -4901,7 +4901,7 @@ const de_TrafficPolicyAlreadyExistsRes = async (
  */
 const de_TrafficPolicyInstanceAlreadyExistsRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TrafficPolicyInstanceAlreadyExists> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -4936,7 +4936,7 @@ const de_TrafficPolicyInUseRes = async (parsedOutput: any, context: __SerdeConte
  */
 const de_VPCAssociationAuthorizationNotFoundRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<VPCAssociationAuthorizationNotFound> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;
@@ -4955,7 +4955,7 @@ const de_VPCAssociationAuthorizationNotFoundRes = async (
  */
 const de_VPCAssociationNotFoundRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<VPCAssociationNotFound> => {
   const contents: any = map({});
   const data: any = parsedOutput.body.Error;

@@ -26,5 +26,5 @@ export const paginateListCollaborationConfiguredAudienceModelAssociations: (
   ListCollaborationConfiguredAudienceModelAssociationsCommand,
   "nextToken",
   "nextToken",
-  "maxResults"
+  "maxResults",
 );

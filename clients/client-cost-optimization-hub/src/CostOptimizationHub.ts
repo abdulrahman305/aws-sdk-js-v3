@@ -56,13 +56,13 @@ export interface CostOptimizationHub {
   getPreferences(): Promise<GetPreferencesCommandOutput>;
   getPreferences(
     args: GetPreferencesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetPreferencesCommandOutput>;
   getPreferences(args: GetPreferencesCommandInput, cb: (err: any, data?: GetPreferencesCommandOutput) => void): void;
   getPreferences(
     args: GetPreferencesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetPreferencesCommandOutput) => void
+    cb: (err: any, data?: GetPreferencesCommandOutput) => void,
   ): void;
 
   /**
@@ -70,16 +70,16 @@ export interface CostOptimizationHub {
    */
   getRecommendation(
     args: GetRecommendationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetRecommendationCommandOutput>;
   getRecommendation(
     args: GetRecommendationCommandInput,
-    cb: (err: any, data?: GetRecommendationCommandOutput) => void
+    cb: (err: any, data?: GetRecommendationCommandOutput) => void,
   ): void;
   getRecommendation(
     args: GetRecommendationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetRecommendationCommandOutput) => void
+    cb: (err: any, data?: GetRecommendationCommandOutput) => void,
   ): void;
 
   /**
@@ -88,16 +88,16 @@ export interface CostOptimizationHub {
   listEnrollmentStatuses(): Promise<ListEnrollmentStatusesCommandOutput>;
   listEnrollmentStatuses(
     args: ListEnrollmentStatusesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListEnrollmentStatusesCommandOutput>;
   listEnrollmentStatuses(
     args: ListEnrollmentStatusesCommandInput,
-    cb: (err: any, data?: ListEnrollmentStatusesCommandOutput) => void
+    cb: (err: any, data?: ListEnrollmentStatusesCommandOutput) => void,
   ): void;
   listEnrollmentStatuses(
     args: ListEnrollmentStatusesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListEnrollmentStatusesCommandOutput) => void
+    cb: (err: any, data?: ListEnrollmentStatusesCommandOutput) => void,
   ): void;
 
   /**
@@ -106,16 +106,16 @@ export interface CostOptimizationHub {
   listRecommendations(): Promise<ListRecommendationsCommandOutput>;
   listRecommendations(
     args: ListRecommendationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListRecommendationsCommandOutput>;
   listRecommendations(
     args: ListRecommendationsCommandInput,
-    cb: (err: any, data?: ListRecommendationsCommandOutput) => void
+    cb: (err: any, data?: ListRecommendationsCommandOutput) => void,
   ): void;
   listRecommendations(
     args: ListRecommendationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListRecommendationsCommandOutput) => void
+    cb: (err: any, data?: ListRecommendationsCommandOutput) => void,
   ): void;
 
   /**
@@ -123,16 +123,16 @@ export interface CostOptimizationHub {
    */
   listRecommendationSummaries(
     args: ListRecommendationSummariesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListRecommendationSummariesCommandOutput>;
   listRecommendationSummaries(
     args: ListRecommendationSummariesCommandInput,
-    cb: (err: any, data?: ListRecommendationSummariesCommandOutput) => void
+    cb: (err: any, data?: ListRecommendationSummariesCommandOutput) => void,
   ): void;
   listRecommendationSummaries(
     args: ListRecommendationSummariesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListRecommendationSummariesCommandOutput) => void
+    cb: (err: any, data?: ListRecommendationSummariesCommandOutput) => void,
   ): void;
 
   /**
@@ -140,16 +140,16 @@ export interface CostOptimizationHub {
    */
   updateEnrollmentStatus(
     args: UpdateEnrollmentStatusCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateEnrollmentStatusCommandOutput>;
   updateEnrollmentStatus(
     args: UpdateEnrollmentStatusCommandInput,
-    cb: (err: any, data?: UpdateEnrollmentStatusCommandOutput) => void
+    cb: (err: any, data?: UpdateEnrollmentStatusCommandOutput) => void,
   ): void;
   updateEnrollmentStatus(
     args: UpdateEnrollmentStatusCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateEnrollmentStatusCommandOutput) => void
+    cb: (err: any, data?: UpdateEnrollmentStatusCommandOutput) => void,
   ): void;
 
   /**
@@ -158,16 +158,16 @@ export interface CostOptimizationHub {
   updatePreferences(): Promise<UpdatePreferencesCommandOutput>;
   updatePreferences(
     args: UpdatePreferencesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdatePreferencesCommandOutput>;
   updatePreferences(
     args: UpdatePreferencesCommandInput,
-    cb: (err: any, data?: UpdatePreferencesCommandOutput) => void
+    cb: (err: any, data?: UpdatePreferencesCommandOutput) => void,
   ): void;
   updatePreferences(
     args: UpdatePreferencesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdatePreferencesCommandOutput) => void
+    cb: (err: any, data?: UpdatePreferencesCommandOutput) => void,
   ): void;
 }
 

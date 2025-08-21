@@ -60,7 +60,7 @@ import { OAMServiceException as __BaseException } from "../models/OAMServiceExce
  */
 export const se_CreateLinkCommand = async (
   input: CreateLinkCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -75,7 +75,7 @@ export const se_CreateLinkCommand = async (
       ResourceTypes: (_) => _json(_),
       SinkIdentifier: [],
       Tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -86,7 +86,7 @@ export const se_CreateLinkCommand = async (
  */
 export const se_CreateSinkCommand = async (
   input: CreateSinkCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -98,7 +98,7 @@ export const se_CreateSinkCommand = async (
     take(input, {
       Name: [],
       Tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -109,7 +109,7 @@ export const se_CreateSinkCommand = async (
  */
 export const se_DeleteLinkCommand = async (
   input: DeleteLinkCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -120,7 +120,7 @@ export const se_DeleteLinkCommand = async (
   body = JSON.stringify(
     take(input, {
       Identifier: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -131,7 +131,7 @@ export const se_DeleteLinkCommand = async (
  */
 export const se_DeleteSinkCommand = async (
   input: DeleteSinkCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -142,7 +142,7 @@ export const se_DeleteSinkCommand = async (
   body = JSON.stringify(
     take(input, {
       Identifier: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -153,7 +153,7 @@ export const se_DeleteSinkCommand = async (
  */
 export const se_GetLinkCommand = async (
   input: GetLinkCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -164,7 +164,7 @@ export const se_GetLinkCommand = async (
   body = JSON.stringify(
     take(input, {
       Identifier: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -175,7 +175,7 @@ export const se_GetLinkCommand = async (
  */
 export const se_GetSinkCommand = async (
   input: GetSinkCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -186,7 +186,7 @@ export const se_GetSinkCommand = async (
   body = JSON.stringify(
     take(input, {
       Identifier: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -197,7 +197,7 @@ export const se_GetSinkCommand = async (
  */
 export const se_GetSinkPolicyCommand = async (
   input: GetSinkPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -208,7 +208,7 @@ export const se_GetSinkPolicyCommand = async (
   body = JSON.stringify(
     take(input, {
       SinkIdentifier: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -219,7 +219,7 @@ export const se_GetSinkPolicyCommand = async (
  */
 export const se_ListAttachedLinksCommand = async (
   input: ListAttachedLinksCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -232,7 +232,7 @@ export const se_ListAttachedLinksCommand = async (
       MaxResults: [],
       NextToken: [],
       SinkIdentifier: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -243,7 +243,7 @@ export const se_ListAttachedLinksCommand = async (
  */
 export const se_ListLinksCommand = async (
   input: ListLinksCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -255,7 +255,7 @@ export const se_ListLinksCommand = async (
     take(input, {
       MaxResults: [],
       NextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -266,7 +266,7 @@ export const se_ListLinksCommand = async (
  */
 export const se_ListSinksCommand = async (
   input: ListSinksCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -278,7 +278,7 @@ export const se_ListSinksCommand = async (
     take(input, {
       MaxResults: [],
       NextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -289,7 +289,7 @@ export const se_ListSinksCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -305,7 +305,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_PutSinkPolicyCommand = async (
   input: PutSinkPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -317,7 +317,7 @@ export const se_PutSinkPolicyCommand = async (
     take(input, {
       Policy: [],
       SinkIdentifier: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -328,7 +328,7 @@ export const se_PutSinkPolicyCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -340,7 +340,7 @@ export const se_TagResourceCommand = async (
   body = JSON.stringify(
     take(input, {
       Tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -351,7 +351,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -373,7 +373,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateLinkCommand = async (
   input: UpdateLinkCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -386,7 +386,7 @@ export const se_UpdateLinkCommand = async (
       Identifier: [],
       LinkConfiguration: (_) => _json(_),
       ResourceTypes: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -397,7 +397,7 @@ export const se_UpdateLinkCommand = async (
  */
 export const de_CreateLinkCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateLinkCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -425,7 +425,7 @@ export const de_CreateLinkCommand = async (
  */
 export const de_CreateSinkCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateSinkCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -449,7 +449,7 @@ export const de_CreateSinkCommand = async (
  */
 export const de_DeleteLinkCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteLinkCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -466,7 +466,7 @@ export const de_DeleteLinkCommand = async (
  */
 export const de_DeleteSinkCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteSinkCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -483,7 +483,7 @@ export const de_DeleteSinkCommand = async (
  */
 export const de_GetLinkCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetLinkCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -511,7 +511,7 @@ export const de_GetLinkCommand = async (
  */
 export const de_GetSinkCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetSinkCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -535,7 +535,7 @@ export const de_GetSinkCommand = async (
  */
 export const de_GetSinkPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetSinkPolicyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -558,7 +558,7 @@ export const de_GetSinkPolicyCommand = async (
  */
 export const de_ListAttachedLinksCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAttachedLinksCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -580,7 +580,7 @@ export const de_ListAttachedLinksCommand = async (
  */
 export const de_ListLinksCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListLinksCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -602,7 +602,7 @@ export const de_ListLinksCommand = async (
  */
 export const de_ListSinksCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListSinksCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -624,7 +624,7 @@ export const de_ListSinksCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -645,7 +645,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_PutSinkPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutSinkPolicyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -668,7 +668,7 @@ export const de_PutSinkPolicyCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -685,7 +685,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -702,7 +702,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateLinkCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateLinkCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -794,7 +794,7 @@ const de_ConflictExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_InternalServiceFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServiceFault> => {
   const contents: any = map({
     [_aET]: [, parsedOutput.headers[_xae]],
@@ -816,7 +816,7 @@ const de_InternalServiceFaultRes = async (
  */
 const de_InvalidParameterExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidParameterException> => {
   const contents: any = map({
     [_aET]: [, parsedOutput.headers[_xae]],
@@ -838,7 +838,7 @@ const de_InvalidParameterExceptionRes = async (
  */
 const de_MissingRequiredParameterExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<MissingRequiredParameterException> => {
   const contents: any = map({
     [_aET]: [, parsedOutput.headers[_xae]],
@@ -860,7 +860,7 @@ const de_MissingRequiredParameterExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const contents: any = map({
     [_aET]: [, parsedOutput.headers[_xae]],
@@ -882,7 +882,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_ServiceQuotaExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceQuotaExceededException> => {
   const contents: any = map({
     [_aET]: [, parsedOutput.headers[_xae]],
@@ -904,7 +904,7 @@ const de_ServiceQuotaExceededExceptionRes = async (
  */
 const de_TooManyTagsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyTagsException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;

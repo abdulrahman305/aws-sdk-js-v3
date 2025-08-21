@@ -30,7 +30,7 @@ Given(
       else params.checksum = "00000000000000000000000000000000";
     }
     this.request(null, "uploadArchive", params, callback, false);
-  }
+  },
 );
 
 Then("the result should contain the Glacier archive ID", function (callback) {
@@ -83,7 +83,7 @@ When(
       partSize: this.partSize.toString(),
     };
     this.request(null, "initiateMultipartUpload", params, callback);
-  }
+  },
 );
 
 Then("the result should contain the Glacier multi-part upload ID", function (callback) {

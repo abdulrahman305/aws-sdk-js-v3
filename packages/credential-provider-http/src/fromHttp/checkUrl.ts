@@ -77,6 +77,6 @@ export const checkUrl = (url: URL, logger?: Logger): void => {
   - loopback CIDR 127.0.0.0/8 or [::1/128]
   - ECS container host 169.254.170.2
   - EKS container host 169.254.170.23 or [fd00:ec2::23]`,
-    { logger }
+    { logger },
   );
 };

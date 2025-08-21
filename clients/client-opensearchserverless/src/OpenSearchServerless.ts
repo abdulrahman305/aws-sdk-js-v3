@@ -232,16 +232,16 @@ export interface OpenSearchServerless {
   batchGetCollection(): Promise<BatchGetCollectionCommandOutput>;
   batchGetCollection(
     args: BatchGetCollectionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<BatchGetCollectionCommandOutput>;
   batchGetCollection(
     args: BatchGetCollectionCommandInput,
-    cb: (err: any, data?: BatchGetCollectionCommandOutput) => void
+    cb: (err: any, data?: BatchGetCollectionCommandOutput) => void,
   ): void;
   batchGetCollection(
     args: BatchGetCollectionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: BatchGetCollectionCommandOutput) => void
+    cb: (err: any, data?: BatchGetCollectionCommandOutput) => void,
   ): void;
 
   /**
@@ -249,16 +249,16 @@ export interface OpenSearchServerless {
    */
   batchGetEffectiveLifecyclePolicy(
     args: BatchGetEffectiveLifecyclePolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<BatchGetEffectiveLifecyclePolicyCommandOutput>;
   batchGetEffectiveLifecyclePolicy(
     args: BatchGetEffectiveLifecyclePolicyCommandInput,
-    cb: (err: any, data?: BatchGetEffectiveLifecyclePolicyCommandOutput) => void
+    cb: (err: any, data?: BatchGetEffectiveLifecyclePolicyCommandOutput) => void,
   ): void;
   batchGetEffectiveLifecyclePolicy(
     args: BatchGetEffectiveLifecyclePolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: BatchGetEffectiveLifecyclePolicyCommandOutput) => void
+    cb: (err: any, data?: BatchGetEffectiveLifecyclePolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -266,16 +266,16 @@ export interface OpenSearchServerless {
    */
   batchGetLifecyclePolicy(
     args: BatchGetLifecyclePolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<BatchGetLifecyclePolicyCommandOutput>;
   batchGetLifecyclePolicy(
     args: BatchGetLifecyclePolicyCommandInput,
-    cb: (err: any, data?: BatchGetLifecyclePolicyCommandOutput) => void
+    cb: (err: any, data?: BatchGetLifecyclePolicyCommandOutput) => void,
   ): void;
   batchGetLifecyclePolicy(
     args: BatchGetLifecyclePolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: BatchGetLifecyclePolicyCommandOutput) => void
+    cb: (err: any, data?: BatchGetLifecyclePolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -283,16 +283,16 @@ export interface OpenSearchServerless {
    */
   batchGetVpcEndpoint(
     args: BatchGetVpcEndpointCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<BatchGetVpcEndpointCommandOutput>;
   batchGetVpcEndpoint(
     args: BatchGetVpcEndpointCommandInput,
-    cb: (err: any, data?: BatchGetVpcEndpointCommandOutput) => void
+    cb: (err: any, data?: BatchGetVpcEndpointCommandOutput) => void,
   ): void;
   batchGetVpcEndpoint(
     args: BatchGetVpcEndpointCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: BatchGetVpcEndpointCommandOutput) => void
+    cb: (err: any, data?: BatchGetVpcEndpointCommandOutput) => void,
   ): void;
 
   /**
@@ -300,16 +300,16 @@ export interface OpenSearchServerless {
    */
   createAccessPolicy(
     args: CreateAccessPolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateAccessPolicyCommandOutput>;
   createAccessPolicy(
     args: CreateAccessPolicyCommandInput,
-    cb: (err: any, data?: CreateAccessPolicyCommandOutput) => void
+    cb: (err: any, data?: CreateAccessPolicyCommandOutput) => void,
   ): void;
   createAccessPolicy(
     args: CreateAccessPolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateAccessPolicyCommandOutput) => void
+    cb: (err: any, data?: CreateAccessPolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -317,16 +317,16 @@ export interface OpenSearchServerless {
    */
   createCollection(
     args: CreateCollectionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateCollectionCommandOutput>;
   createCollection(
     args: CreateCollectionCommandInput,
-    cb: (err: any, data?: CreateCollectionCommandOutput) => void
+    cb: (err: any, data?: CreateCollectionCommandOutput) => void,
   ): void;
   createCollection(
     args: CreateCollectionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateCollectionCommandOutput) => void
+    cb: (err: any, data?: CreateCollectionCommandOutput) => void,
   ): void;
 
   /**
@@ -334,16 +334,16 @@ export interface OpenSearchServerless {
    */
   createLifecyclePolicy(
     args: CreateLifecyclePolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateLifecyclePolicyCommandOutput>;
   createLifecyclePolicy(
     args: CreateLifecyclePolicyCommandInput,
-    cb: (err: any, data?: CreateLifecyclePolicyCommandOutput) => void
+    cb: (err: any, data?: CreateLifecyclePolicyCommandOutput) => void,
   ): void;
   createLifecyclePolicy(
     args: CreateLifecyclePolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateLifecyclePolicyCommandOutput) => void
+    cb: (err: any, data?: CreateLifecyclePolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -351,16 +351,16 @@ export interface OpenSearchServerless {
    */
   createSecurityConfig(
     args: CreateSecurityConfigCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateSecurityConfigCommandOutput>;
   createSecurityConfig(
     args: CreateSecurityConfigCommandInput,
-    cb: (err: any, data?: CreateSecurityConfigCommandOutput) => void
+    cb: (err: any, data?: CreateSecurityConfigCommandOutput) => void,
   ): void;
   createSecurityConfig(
     args: CreateSecurityConfigCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateSecurityConfigCommandOutput) => void
+    cb: (err: any, data?: CreateSecurityConfigCommandOutput) => void,
   ): void;
 
   /**
@@ -368,16 +368,16 @@ export interface OpenSearchServerless {
    */
   createSecurityPolicy(
     args: CreateSecurityPolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateSecurityPolicyCommandOutput>;
   createSecurityPolicy(
     args: CreateSecurityPolicyCommandInput,
-    cb: (err: any, data?: CreateSecurityPolicyCommandOutput) => void
+    cb: (err: any, data?: CreateSecurityPolicyCommandOutput) => void,
   ): void;
   createSecurityPolicy(
     args: CreateSecurityPolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateSecurityPolicyCommandOutput) => void
+    cb: (err: any, data?: CreateSecurityPolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -385,16 +385,16 @@ export interface OpenSearchServerless {
    */
   createVpcEndpoint(
     args: CreateVpcEndpointCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateVpcEndpointCommandOutput>;
   createVpcEndpoint(
     args: CreateVpcEndpointCommandInput,
-    cb: (err: any, data?: CreateVpcEndpointCommandOutput) => void
+    cb: (err: any, data?: CreateVpcEndpointCommandOutput) => void,
   ): void;
   createVpcEndpoint(
     args: CreateVpcEndpointCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateVpcEndpointCommandOutput) => void
+    cb: (err: any, data?: CreateVpcEndpointCommandOutput) => void,
   ): void;
 
   /**
@@ -402,16 +402,16 @@ export interface OpenSearchServerless {
    */
   deleteAccessPolicy(
     args: DeleteAccessPolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteAccessPolicyCommandOutput>;
   deleteAccessPolicy(
     args: DeleteAccessPolicyCommandInput,
-    cb: (err: any, data?: DeleteAccessPolicyCommandOutput) => void
+    cb: (err: any, data?: DeleteAccessPolicyCommandOutput) => void,
   ): void;
   deleteAccessPolicy(
     args: DeleteAccessPolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteAccessPolicyCommandOutput) => void
+    cb: (err: any, data?: DeleteAccessPolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -419,16 +419,16 @@ export interface OpenSearchServerless {
    */
   deleteCollection(
     args: DeleteCollectionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteCollectionCommandOutput>;
   deleteCollection(
     args: DeleteCollectionCommandInput,
-    cb: (err: any, data?: DeleteCollectionCommandOutput) => void
+    cb: (err: any, data?: DeleteCollectionCommandOutput) => void,
   ): void;
   deleteCollection(
     args: DeleteCollectionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteCollectionCommandOutput) => void
+    cb: (err: any, data?: DeleteCollectionCommandOutput) => void,
   ): void;
 
   /**
@@ -436,16 +436,16 @@ export interface OpenSearchServerless {
    */
   deleteLifecyclePolicy(
     args: DeleteLifecyclePolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteLifecyclePolicyCommandOutput>;
   deleteLifecyclePolicy(
     args: DeleteLifecyclePolicyCommandInput,
-    cb: (err: any, data?: DeleteLifecyclePolicyCommandOutput) => void
+    cb: (err: any, data?: DeleteLifecyclePolicyCommandOutput) => void,
   ): void;
   deleteLifecyclePolicy(
     args: DeleteLifecyclePolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteLifecyclePolicyCommandOutput) => void
+    cb: (err: any, data?: DeleteLifecyclePolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -453,16 +453,16 @@ export interface OpenSearchServerless {
    */
   deleteSecurityConfig(
     args: DeleteSecurityConfigCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteSecurityConfigCommandOutput>;
   deleteSecurityConfig(
     args: DeleteSecurityConfigCommandInput,
-    cb: (err: any, data?: DeleteSecurityConfigCommandOutput) => void
+    cb: (err: any, data?: DeleteSecurityConfigCommandOutput) => void,
   ): void;
   deleteSecurityConfig(
     args: DeleteSecurityConfigCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteSecurityConfigCommandOutput) => void
+    cb: (err: any, data?: DeleteSecurityConfigCommandOutput) => void,
   ): void;
 
   /**
@@ -470,16 +470,16 @@ export interface OpenSearchServerless {
    */
   deleteSecurityPolicy(
     args: DeleteSecurityPolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteSecurityPolicyCommandOutput>;
   deleteSecurityPolicy(
     args: DeleteSecurityPolicyCommandInput,
-    cb: (err: any, data?: DeleteSecurityPolicyCommandOutput) => void
+    cb: (err: any, data?: DeleteSecurityPolicyCommandOutput) => void,
   ): void;
   deleteSecurityPolicy(
     args: DeleteSecurityPolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteSecurityPolicyCommandOutput) => void
+    cb: (err: any, data?: DeleteSecurityPolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -487,16 +487,16 @@ export interface OpenSearchServerless {
    */
   deleteVpcEndpoint(
     args: DeleteVpcEndpointCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteVpcEndpointCommandOutput>;
   deleteVpcEndpoint(
     args: DeleteVpcEndpointCommandInput,
-    cb: (err: any, data?: DeleteVpcEndpointCommandOutput) => void
+    cb: (err: any, data?: DeleteVpcEndpointCommandOutput) => void,
   ): void;
   deleteVpcEndpoint(
     args: DeleteVpcEndpointCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteVpcEndpointCommandOutput) => void
+    cb: (err: any, data?: DeleteVpcEndpointCommandOutput) => void,
   ): void;
 
   /**
@@ -504,13 +504,13 @@ export interface OpenSearchServerless {
    */
   getAccessPolicy(
     args: GetAccessPolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetAccessPolicyCommandOutput>;
   getAccessPolicy(args: GetAccessPolicyCommandInput, cb: (err: any, data?: GetAccessPolicyCommandOutput) => void): void;
   getAccessPolicy(
     args: GetAccessPolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetAccessPolicyCommandOutput) => void
+    cb: (err: any, data?: GetAccessPolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -519,16 +519,16 @@ export interface OpenSearchServerless {
   getAccountSettings(): Promise<GetAccountSettingsCommandOutput>;
   getAccountSettings(
     args: GetAccountSettingsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetAccountSettingsCommandOutput>;
   getAccountSettings(
     args: GetAccountSettingsCommandInput,
-    cb: (err: any, data?: GetAccountSettingsCommandOutput) => void
+    cb: (err: any, data?: GetAccountSettingsCommandOutput) => void,
   ): void;
   getAccountSettings(
     args: GetAccountSettingsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetAccountSettingsCommandOutput) => void
+    cb: (err: any, data?: GetAccountSettingsCommandOutput) => void,
   ): void;
 
   /**
@@ -537,16 +537,16 @@ export interface OpenSearchServerless {
   getPoliciesStats(): Promise<GetPoliciesStatsCommandOutput>;
   getPoliciesStats(
     args: GetPoliciesStatsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetPoliciesStatsCommandOutput>;
   getPoliciesStats(
     args: GetPoliciesStatsCommandInput,
-    cb: (err: any, data?: GetPoliciesStatsCommandOutput) => void
+    cb: (err: any, data?: GetPoliciesStatsCommandOutput) => void,
   ): void;
   getPoliciesStats(
     args: GetPoliciesStatsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetPoliciesStatsCommandOutput) => void
+    cb: (err: any, data?: GetPoliciesStatsCommandOutput) => void,
   ): void;
 
   /**
@@ -554,16 +554,16 @@ export interface OpenSearchServerless {
    */
   getSecurityConfig(
     args: GetSecurityConfigCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetSecurityConfigCommandOutput>;
   getSecurityConfig(
     args: GetSecurityConfigCommandInput,
-    cb: (err: any, data?: GetSecurityConfigCommandOutput) => void
+    cb: (err: any, data?: GetSecurityConfigCommandOutput) => void,
   ): void;
   getSecurityConfig(
     args: GetSecurityConfigCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetSecurityConfigCommandOutput) => void
+    cb: (err: any, data?: GetSecurityConfigCommandOutput) => void,
   ): void;
 
   /**
@@ -571,16 +571,16 @@ export interface OpenSearchServerless {
    */
   getSecurityPolicy(
     args: GetSecurityPolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetSecurityPolicyCommandOutput>;
   getSecurityPolicy(
     args: GetSecurityPolicyCommandInput,
-    cb: (err: any, data?: GetSecurityPolicyCommandOutput) => void
+    cb: (err: any, data?: GetSecurityPolicyCommandOutput) => void,
   ): void;
   getSecurityPolicy(
     args: GetSecurityPolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetSecurityPolicyCommandOutput) => void
+    cb: (err: any, data?: GetSecurityPolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -588,16 +588,16 @@ export interface OpenSearchServerless {
    */
   listAccessPolicies(
     args: ListAccessPoliciesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListAccessPoliciesCommandOutput>;
   listAccessPolicies(
     args: ListAccessPoliciesCommandInput,
-    cb: (err: any, data?: ListAccessPoliciesCommandOutput) => void
+    cb: (err: any, data?: ListAccessPoliciesCommandOutput) => void,
   ): void;
   listAccessPolicies(
     args: ListAccessPoliciesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListAccessPoliciesCommandOutput) => void
+    cb: (err: any, data?: ListAccessPoliciesCommandOutput) => void,
   ): void;
 
   /**
@@ -606,13 +606,13 @@ export interface OpenSearchServerless {
   listCollections(): Promise<ListCollectionsCommandOutput>;
   listCollections(
     args: ListCollectionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListCollectionsCommandOutput>;
   listCollections(args: ListCollectionsCommandInput, cb: (err: any, data?: ListCollectionsCommandOutput) => void): void;
   listCollections(
     args: ListCollectionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListCollectionsCommandOutput) => void
+    cb: (err: any, data?: ListCollectionsCommandOutput) => void,
   ): void;
 
   /**
@@ -620,16 +620,16 @@ export interface OpenSearchServerless {
    */
   listLifecyclePolicies(
     args: ListLifecyclePoliciesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListLifecyclePoliciesCommandOutput>;
   listLifecyclePolicies(
     args: ListLifecyclePoliciesCommandInput,
-    cb: (err: any, data?: ListLifecyclePoliciesCommandOutput) => void
+    cb: (err: any, data?: ListLifecyclePoliciesCommandOutput) => void,
   ): void;
   listLifecyclePolicies(
     args: ListLifecyclePoliciesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListLifecyclePoliciesCommandOutput) => void
+    cb: (err: any, data?: ListLifecyclePoliciesCommandOutput) => void,
   ): void;
 
   /**
@@ -637,16 +637,16 @@ export interface OpenSearchServerless {
    */
   listSecurityConfigs(
     args: ListSecurityConfigsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListSecurityConfigsCommandOutput>;
   listSecurityConfigs(
     args: ListSecurityConfigsCommandInput,
-    cb: (err: any, data?: ListSecurityConfigsCommandOutput) => void
+    cb: (err: any, data?: ListSecurityConfigsCommandOutput) => void,
   ): void;
   listSecurityConfigs(
     args: ListSecurityConfigsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListSecurityConfigsCommandOutput) => void
+    cb: (err: any, data?: ListSecurityConfigsCommandOutput) => void,
   ): void;
 
   /**
@@ -654,16 +654,16 @@ export interface OpenSearchServerless {
    */
   listSecurityPolicies(
     args: ListSecurityPoliciesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListSecurityPoliciesCommandOutput>;
   listSecurityPolicies(
     args: ListSecurityPoliciesCommandInput,
-    cb: (err: any, data?: ListSecurityPoliciesCommandOutput) => void
+    cb: (err: any, data?: ListSecurityPoliciesCommandOutput) => void,
   ): void;
   listSecurityPolicies(
     args: ListSecurityPoliciesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListSecurityPoliciesCommandOutput) => void
+    cb: (err: any, data?: ListSecurityPoliciesCommandOutput) => void,
   ): void;
 
   /**
@@ -671,16 +671,16 @@ export interface OpenSearchServerless {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -689,16 +689,16 @@ export interface OpenSearchServerless {
   listVpcEndpoints(): Promise<ListVpcEndpointsCommandOutput>;
   listVpcEndpoints(
     args: ListVpcEndpointsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListVpcEndpointsCommandOutput>;
   listVpcEndpoints(
     args: ListVpcEndpointsCommandInput,
-    cb: (err: any, data?: ListVpcEndpointsCommandOutput) => void
+    cb: (err: any, data?: ListVpcEndpointsCommandOutput) => void,
   ): void;
   listVpcEndpoints(
     args: ListVpcEndpointsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListVpcEndpointsCommandOutput) => void
+    cb: (err: any, data?: ListVpcEndpointsCommandOutput) => void,
   ): void;
 
   /**
@@ -709,7 +709,7 @@ export interface OpenSearchServerless {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -720,7 +720,7 @@ export interface OpenSearchServerless {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -728,16 +728,16 @@ export interface OpenSearchServerless {
    */
   updateAccessPolicy(
     args: UpdateAccessPolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateAccessPolicyCommandOutput>;
   updateAccessPolicy(
     args: UpdateAccessPolicyCommandInput,
-    cb: (err: any, data?: UpdateAccessPolicyCommandOutput) => void
+    cb: (err: any, data?: UpdateAccessPolicyCommandOutput) => void,
   ): void;
   updateAccessPolicy(
     args: UpdateAccessPolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateAccessPolicyCommandOutput) => void
+    cb: (err: any, data?: UpdateAccessPolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -746,16 +746,16 @@ export interface OpenSearchServerless {
   updateAccountSettings(): Promise<UpdateAccountSettingsCommandOutput>;
   updateAccountSettings(
     args: UpdateAccountSettingsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateAccountSettingsCommandOutput>;
   updateAccountSettings(
     args: UpdateAccountSettingsCommandInput,
-    cb: (err: any, data?: UpdateAccountSettingsCommandOutput) => void
+    cb: (err: any, data?: UpdateAccountSettingsCommandOutput) => void,
   ): void;
   updateAccountSettings(
     args: UpdateAccountSettingsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateAccountSettingsCommandOutput) => void
+    cb: (err: any, data?: UpdateAccountSettingsCommandOutput) => void,
   ): void;
 
   /**
@@ -763,16 +763,16 @@ export interface OpenSearchServerless {
    */
   updateCollection(
     args: UpdateCollectionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateCollectionCommandOutput>;
   updateCollection(
     args: UpdateCollectionCommandInput,
-    cb: (err: any, data?: UpdateCollectionCommandOutput) => void
+    cb: (err: any, data?: UpdateCollectionCommandOutput) => void,
   ): void;
   updateCollection(
     args: UpdateCollectionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateCollectionCommandOutput) => void
+    cb: (err: any, data?: UpdateCollectionCommandOutput) => void,
   ): void;
 
   /**
@@ -780,16 +780,16 @@ export interface OpenSearchServerless {
    */
   updateLifecyclePolicy(
     args: UpdateLifecyclePolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateLifecyclePolicyCommandOutput>;
   updateLifecyclePolicy(
     args: UpdateLifecyclePolicyCommandInput,
-    cb: (err: any, data?: UpdateLifecyclePolicyCommandOutput) => void
+    cb: (err: any, data?: UpdateLifecyclePolicyCommandOutput) => void,
   ): void;
   updateLifecyclePolicy(
     args: UpdateLifecyclePolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateLifecyclePolicyCommandOutput) => void
+    cb: (err: any, data?: UpdateLifecyclePolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -797,16 +797,16 @@ export interface OpenSearchServerless {
    */
   updateSecurityConfig(
     args: UpdateSecurityConfigCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateSecurityConfigCommandOutput>;
   updateSecurityConfig(
     args: UpdateSecurityConfigCommandInput,
-    cb: (err: any, data?: UpdateSecurityConfigCommandOutput) => void
+    cb: (err: any, data?: UpdateSecurityConfigCommandOutput) => void,
   ): void;
   updateSecurityConfig(
     args: UpdateSecurityConfigCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateSecurityConfigCommandOutput) => void
+    cb: (err: any, data?: UpdateSecurityConfigCommandOutput) => void,
   ): void;
 
   /**
@@ -814,16 +814,16 @@ export interface OpenSearchServerless {
    */
   updateSecurityPolicy(
     args: UpdateSecurityPolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateSecurityPolicyCommandOutput>;
   updateSecurityPolicy(
     args: UpdateSecurityPolicyCommandInput,
-    cb: (err: any, data?: UpdateSecurityPolicyCommandOutput) => void
+    cb: (err: any, data?: UpdateSecurityPolicyCommandOutput) => void,
   ): void;
   updateSecurityPolicy(
     args: UpdateSecurityPolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateSecurityPolicyCommandOutput) => void
+    cb: (err: any, data?: UpdateSecurityPolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -831,16 +831,16 @@ export interface OpenSearchServerless {
    */
   updateVpcEndpoint(
     args: UpdateVpcEndpointCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateVpcEndpointCommandOutput>;
   updateVpcEndpoint(
     args: UpdateVpcEndpointCommandInput,
-    cb: (err: any, data?: UpdateVpcEndpointCommandOutput) => void
+    cb: (err: any, data?: UpdateVpcEndpointCommandOutput) => void,
   ): void;
   updateVpcEndpoint(
     args: UpdateVpcEndpointCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateVpcEndpointCommandOutput) => void
+    cb: (err: any, data?: UpdateVpcEndpointCommandOutput) => void,
   ): void;
 }
 

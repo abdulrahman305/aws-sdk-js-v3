@@ -6,7 +6,7 @@ import { ElasticBeanstalkClient } from "../ElasticBeanstalkClient";
 
 const checkState = async (
   client: ElasticBeanstalkClient,
-  input: DescribeEnvironmentsCommandInput
+  input: DescribeEnvironmentsCommandInput,
 ): Promise<WaiterResult> => {
   let reason;
   try {
@@ -55,7 +55,7 @@ const checkState = async (
  */
 export const waitForEnvironmentExists = async (
   params: WaiterConfiguration<ElasticBeanstalkClient>,
-  input: DescribeEnvironmentsCommandInput
+  input: DescribeEnvironmentsCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 20, maxDelay: 120 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -67,7 +67,7 @@ export const waitForEnvironmentExists = async (
  */
 export const waitUntilEnvironmentExists = async (
   params: WaiterConfiguration<ElasticBeanstalkClient>,
-  input: DescribeEnvironmentsCommandInput
+  input: DescribeEnvironmentsCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 20, maxDelay: 120 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

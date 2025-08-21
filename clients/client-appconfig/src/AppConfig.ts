@@ -267,16 +267,16 @@ export interface AppConfig {
    */
   createApplication(
     args: CreateApplicationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateApplicationCommandOutput>;
   createApplication(
     args: CreateApplicationCommandInput,
-    cb: (err: any, data?: CreateApplicationCommandOutput) => void
+    cb: (err: any, data?: CreateApplicationCommandOutput) => void,
   ): void;
   createApplication(
     args: CreateApplicationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateApplicationCommandOutput) => void
+    cb: (err: any, data?: CreateApplicationCommandOutput) => void,
   ): void;
 
   /**
@@ -284,16 +284,16 @@ export interface AppConfig {
    */
   createConfigurationProfile(
     args: CreateConfigurationProfileCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateConfigurationProfileCommandOutput>;
   createConfigurationProfile(
     args: CreateConfigurationProfileCommandInput,
-    cb: (err: any, data?: CreateConfigurationProfileCommandOutput) => void
+    cb: (err: any, data?: CreateConfigurationProfileCommandOutput) => void,
   ): void;
   createConfigurationProfile(
     args: CreateConfigurationProfileCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateConfigurationProfileCommandOutput) => void
+    cb: (err: any, data?: CreateConfigurationProfileCommandOutput) => void,
   ): void;
 
   /**
@@ -301,16 +301,16 @@ export interface AppConfig {
    */
   createDeploymentStrategy(
     args: CreateDeploymentStrategyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateDeploymentStrategyCommandOutput>;
   createDeploymentStrategy(
     args: CreateDeploymentStrategyCommandInput,
-    cb: (err: any, data?: CreateDeploymentStrategyCommandOutput) => void
+    cb: (err: any, data?: CreateDeploymentStrategyCommandOutput) => void,
   ): void;
   createDeploymentStrategy(
     args: CreateDeploymentStrategyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateDeploymentStrategyCommandOutput) => void
+    cb: (err: any, data?: CreateDeploymentStrategyCommandOutput) => void,
   ): void;
 
   /**
@@ -318,16 +318,16 @@ export interface AppConfig {
    */
   createEnvironment(
     args: CreateEnvironmentCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateEnvironmentCommandOutput>;
   createEnvironment(
     args: CreateEnvironmentCommandInput,
-    cb: (err: any, data?: CreateEnvironmentCommandOutput) => void
+    cb: (err: any, data?: CreateEnvironmentCommandOutput) => void,
   ): void;
   createEnvironment(
     args: CreateEnvironmentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateEnvironmentCommandOutput) => void
+    cb: (err: any, data?: CreateEnvironmentCommandOutput) => void,
   ): void;
 
   /**
@@ -335,13 +335,13 @@ export interface AppConfig {
    */
   createExtension(
     args: CreateExtensionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateExtensionCommandOutput>;
   createExtension(args: CreateExtensionCommandInput, cb: (err: any, data?: CreateExtensionCommandOutput) => void): void;
   createExtension(
     args: CreateExtensionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateExtensionCommandOutput) => void
+    cb: (err: any, data?: CreateExtensionCommandOutput) => void,
   ): void;
 
   /**
@@ -349,16 +349,16 @@ export interface AppConfig {
    */
   createExtensionAssociation(
     args: CreateExtensionAssociationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateExtensionAssociationCommandOutput>;
   createExtensionAssociation(
     args: CreateExtensionAssociationCommandInput,
-    cb: (err: any, data?: CreateExtensionAssociationCommandOutput) => void
+    cb: (err: any, data?: CreateExtensionAssociationCommandOutput) => void,
   ): void;
   createExtensionAssociation(
     args: CreateExtensionAssociationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateExtensionAssociationCommandOutput) => void
+    cb: (err: any, data?: CreateExtensionAssociationCommandOutput) => void,
   ): void;
 
   /**
@@ -366,16 +366,16 @@ export interface AppConfig {
    */
   createHostedConfigurationVersion(
     args: CreateHostedConfigurationVersionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateHostedConfigurationVersionCommandOutput>;
   createHostedConfigurationVersion(
     args: CreateHostedConfigurationVersionCommandInput,
-    cb: (err: any, data?: CreateHostedConfigurationVersionCommandOutput) => void
+    cb: (err: any, data?: CreateHostedConfigurationVersionCommandOutput) => void,
   ): void;
   createHostedConfigurationVersion(
     args: CreateHostedConfigurationVersionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateHostedConfigurationVersionCommandOutput) => void
+    cb: (err: any, data?: CreateHostedConfigurationVersionCommandOutput) => void,
   ): void;
 
   /**
@@ -383,16 +383,16 @@ export interface AppConfig {
    */
   deleteApplication(
     args: DeleteApplicationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteApplicationCommandOutput>;
   deleteApplication(
     args: DeleteApplicationCommandInput,
-    cb: (err: any, data?: DeleteApplicationCommandOutput) => void
+    cb: (err: any, data?: DeleteApplicationCommandOutput) => void,
   ): void;
   deleteApplication(
     args: DeleteApplicationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteApplicationCommandOutput) => void
+    cb: (err: any, data?: DeleteApplicationCommandOutput) => void,
   ): void;
 
   /**
@@ -400,16 +400,16 @@ export interface AppConfig {
    */
   deleteConfigurationProfile(
     args: DeleteConfigurationProfileCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteConfigurationProfileCommandOutput>;
   deleteConfigurationProfile(
     args: DeleteConfigurationProfileCommandInput,
-    cb: (err: any, data?: DeleteConfigurationProfileCommandOutput) => void
+    cb: (err: any, data?: DeleteConfigurationProfileCommandOutput) => void,
   ): void;
   deleteConfigurationProfile(
     args: DeleteConfigurationProfileCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteConfigurationProfileCommandOutput) => void
+    cb: (err: any, data?: DeleteConfigurationProfileCommandOutput) => void,
   ): void;
 
   /**
@@ -417,16 +417,16 @@ export interface AppConfig {
    */
   deleteDeploymentStrategy(
     args: DeleteDeploymentStrategyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteDeploymentStrategyCommandOutput>;
   deleteDeploymentStrategy(
     args: DeleteDeploymentStrategyCommandInput,
-    cb: (err: any, data?: DeleteDeploymentStrategyCommandOutput) => void
+    cb: (err: any, data?: DeleteDeploymentStrategyCommandOutput) => void,
   ): void;
   deleteDeploymentStrategy(
     args: DeleteDeploymentStrategyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteDeploymentStrategyCommandOutput) => void
+    cb: (err: any, data?: DeleteDeploymentStrategyCommandOutput) => void,
   ): void;
 
   /**
@@ -434,16 +434,16 @@ export interface AppConfig {
    */
   deleteEnvironment(
     args: DeleteEnvironmentCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteEnvironmentCommandOutput>;
   deleteEnvironment(
     args: DeleteEnvironmentCommandInput,
-    cb: (err: any, data?: DeleteEnvironmentCommandOutput) => void
+    cb: (err: any, data?: DeleteEnvironmentCommandOutput) => void,
   ): void;
   deleteEnvironment(
     args: DeleteEnvironmentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteEnvironmentCommandOutput) => void
+    cb: (err: any, data?: DeleteEnvironmentCommandOutput) => void,
   ): void;
 
   /**
@@ -451,13 +451,13 @@ export interface AppConfig {
    */
   deleteExtension(
     args: DeleteExtensionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteExtensionCommandOutput>;
   deleteExtension(args: DeleteExtensionCommandInput, cb: (err: any, data?: DeleteExtensionCommandOutput) => void): void;
   deleteExtension(
     args: DeleteExtensionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteExtensionCommandOutput) => void
+    cb: (err: any, data?: DeleteExtensionCommandOutput) => void,
   ): void;
 
   /**
@@ -465,16 +465,16 @@ export interface AppConfig {
    */
   deleteExtensionAssociation(
     args: DeleteExtensionAssociationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteExtensionAssociationCommandOutput>;
   deleteExtensionAssociation(
     args: DeleteExtensionAssociationCommandInput,
-    cb: (err: any, data?: DeleteExtensionAssociationCommandOutput) => void
+    cb: (err: any, data?: DeleteExtensionAssociationCommandOutput) => void,
   ): void;
   deleteExtensionAssociation(
     args: DeleteExtensionAssociationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteExtensionAssociationCommandOutput) => void
+    cb: (err: any, data?: DeleteExtensionAssociationCommandOutput) => void,
   ): void;
 
   /**
@@ -482,16 +482,16 @@ export interface AppConfig {
    */
   deleteHostedConfigurationVersion(
     args: DeleteHostedConfigurationVersionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteHostedConfigurationVersionCommandOutput>;
   deleteHostedConfigurationVersion(
     args: DeleteHostedConfigurationVersionCommandInput,
-    cb: (err: any, data?: DeleteHostedConfigurationVersionCommandOutput) => void
+    cb: (err: any, data?: DeleteHostedConfigurationVersionCommandOutput) => void,
   ): void;
   deleteHostedConfigurationVersion(
     args: DeleteHostedConfigurationVersionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteHostedConfigurationVersionCommandOutput) => void
+    cb: (err: any, data?: DeleteHostedConfigurationVersionCommandOutput) => void,
   ): void;
 
   /**
@@ -499,13 +499,13 @@ export interface AppConfig {
    */
   getApplication(
     args: GetApplicationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetApplicationCommandOutput>;
   getApplication(args: GetApplicationCommandInput, cb: (err: any, data?: GetApplicationCommandOutput) => void): void;
   getApplication(
     args: GetApplicationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetApplicationCommandOutput) => void
+    cb: (err: any, data?: GetApplicationCommandOutput) => void,
   ): void;
 
   /**
@@ -513,16 +513,16 @@ export interface AppConfig {
    */
   getConfiguration(
     args: GetConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetConfigurationCommandOutput>;
   getConfiguration(
     args: GetConfigurationCommandInput,
-    cb: (err: any, data?: GetConfigurationCommandOutput) => void
+    cb: (err: any, data?: GetConfigurationCommandOutput) => void,
   ): void;
   getConfiguration(
     args: GetConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetConfigurationCommandOutput) => void
+    cb: (err: any, data?: GetConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -530,16 +530,16 @@ export interface AppConfig {
    */
   getConfigurationProfile(
     args: GetConfigurationProfileCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetConfigurationProfileCommandOutput>;
   getConfigurationProfile(
     args: GetConfigurationProfileCommandInput,
-    cb: (err: any, data?: GetConfigurationProfileCommandOutput) => void
+    cb: (err: any, data?: GetConfigurationProfileCommandOutput) => void,
   ): void;
   getConfigurationProfile(
     args: GetConfigurationProfileCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetConfigurationProfileCommandOutput) => void
+    cb: (err: any, data?: GetConfigurationProfileCommandOutput) => void,
   ): void;
 
   /**
@@ -550,7 +550,7 @@ export interface AppConfig {
   getDeployment(
     args: GetDeploymentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetDeploymentCommandOutput) => void
+    cb: (err: any, data?: GetDeploymentCommandOutput) => void,
   ): void;
 
   /**
@@ -558,16 +558,16 @@ export interface AppConfig {
    */
   getDeploymentStrategy(
     args: GetDeploymentStrategyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetDeploymentStrategyCommandOutput>;
   getDeploymentStrategy(
     args: GetDeploymentStrategyCommandInput,
-    cb: (err: any, data?: GetDeploymentStrategyCommandOutput) => void
+    cb: (err: any, data?: GetDeploymentStrategyCommandOutput) => void,
   ): void;
   getDeploymentStrategy(
     args: GetDeploymentStrategyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetDeploymentStrategyCommandOutput) => void
+    cb: (err: any, data?: GetDeploymentStrategyCommandOutput) => void,
   ): void;
 
   /**
@@ -575,13 +575,13 @@ export interface AppConfig {
    */
   getEnvironment(
     args: GetEnvironmentCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetEnvironmentCommandOutput>;
   getEnvironment(args: GetEnvironmentCommandInput, cb: (err: any, data?: GetEnvironmentCommandOutput) => void): void;
   getEnvironment(
     args: GetEnvironmentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetEnvironmentCommandOutput) => void
+    cb: (err: any, data?: GetEnvironmentCommandOutput) => void,
   ): void;
 
   /**
@@ -592,7 +592,7 @@ export interface AppConfig {
   getExtension(
     args: GetExtensionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetExtensionCommandOutput) => void
+    cb: (err: any, data?: GetExtensionCommandOutput) => void,
   ): void;
 
   /**
@@ -600,16 +600,16 @@ export interface AppConfig {
    */
   getExtensionAssociation(
     args: GetExtensionAssociationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetExtensionAssociationCommandOutput>;
   getExtensionAssociation(
     args: GetExtensionAssociationCommandInput,
-    cb: (err: any, data?: GetExtensionAssociationCommandOutput) => void
+    cb: (err: any, data?: GetExtensionAssociationCommandOutput) => void,
   ): void;
   getExtensionAssociation(
     args: GetExtensionAssociationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetExtensionAssociationCommandOutput) => void
+    cb: (err: any, data?: GetExtensionAssociationCommandOutput) => void,
   ): void;
 
   /**
@@ -617,16 +617,16 @@ export interface AppConfig {
    */
   getHostedConfigurationVersion(
     args: GetHostedConfigurationVersionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetHostedConfigurationVersionCommandOutput>;
   getHostedConfigurationVersion(
     args: GetHostedConfigurationVersionCommandInput,
-    cb: (err: any, data?: GetHostedConfigurationVersionCommandOutput) => void
+    cb: (err: any, data?: GetHostedConfigurationVersionCommandOutput) => void,
   ): void;
   getHostedConfigurationVersion(
     args: GetHostedConfigurationVersionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetHostedConfigurationVersionCommandOutput) => void
+    cb: (err: any, data?: GetHostedConfigurationVersionCommandOutput) => void,
   ): void;
 
   /**
@@ -635,16 +635,16 @@ export interface AppConfig {
   listApplications(): Promise<ListApplicationsCommandOutput>;
   listApplications(
     args: ListApplicationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListApplicationsCommandOutput>;
   listApplications(
     args: ListApplicationsCommandInput,
-    cb: (err: any, data?: ListApplicationsCommandOutput) => void
+    cb: (err: any, data?: ListApplicationsCommandOutput) => void,
   ): void;
   listApplications(
     args: ListApplicationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListApplicationsCommandOutput) => void
+    cb: (err: any, data?: ListApplicationsCommandOutput) => void,
   ): void;
 
   /**
@@ -652,16 +652,16 @@ export interface AppConfig {
    */
   listConfigurationProfiles(
     args: ListConfigurationProfilesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListConfigurationProfilesCommandOutput>;
   listConfigurationProfiles(
     args: ListConfigurationProfilesCommandInput,
-    cb: (err: any, data?: ListConfigurationProfilesCommandOutput) => void
+    cb: (err: any, data?: ListConfigurationProfilesCommandOutput) => void,
   ): void;
   listConfigurationProfiles(
     args: ListConfigurationProfilesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListConfigurationProfilesCommandOutput) => void
+    cb: (err: any, data?: ListConfigurationProfilesCommandOutput) => void,
   ): void;
 
   /**
@@ -669,13 +669,13 @@ export interface AppConfig {
    */
   listDeployments(
     args: ListDeploymentsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListDeploymentsCommandOutput>;
   listDeployments(args: ListDeploymentsCommandInput, cb: (err: any, data?: ListDeploymentsCommandOutput) => void): void;
   listDeployments(
     args: ListDeploymentsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListDeploymentsCommandOutput) => void
+    cb: (err: any, data?: ListDeploymentsCommandOutput) => void,
   ): void;
 
   /**
@@ -684,16 +684,16 @@ export interface AppConfig {
   listDeploymentStrategies(): Promise<ListDeploymentStrategiesCommandOutput>;
   listDeploymentStrategies(
     args: ListDeploymentStrategiesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListDeploymentStrategiesCommandOutput>;
   listDeploymentStrategies(
     args: ListDeploymentStrategiesCommandInput,
-    cb: (err: any, data?: ListDeploymentStrategiesCommandOutput) => void
+    cb: (err: any, data?: ListDeploymentStrategiesCommandOutput) => void,
   ): void;
   listDeploymentStrategies(
     args: ListDeploymentStrategiesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListDeploymentStrategiesCommandOutput) => void
+    cb: (err: any, data?: ListDeploymentStrategiesCommandOutput) => void,
   ): void;
 
   /**
@@ -701,16 +701,16 @@ export interface AppConfig {
    */
   listEnvironments(
     args: ListEnvironmentsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListEnvironmentsCommandOutput>;
   listEnvironments(
     args: ListEnvironmentsCommandInput,
-    cb: (err: any, data?: ListEnvironmentsCommandOutput) => void
+    cb: (err: any, data?: ListEnvironmentsCommandOutput) => void,
   ): void;
   listEnvironments(
     args: ListEnvironmentsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListEnvironmentsCommandOutput) => void
+    cb: (err: any, data?: ListEnvironmentsCommandOutput) => void,
   ): void;
 
   /**
@@ -719,16 +719,16 @@ export interface AppConfig {
   listExtensionAssociations(): Promise<ListExtensionAssociationsCommandOutput>;
   listExtensionAssociations(
     args: ListExtensionAssociationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListExtensionAssociationsCommandOutput>;
   listExtensionAssociations(
     args: ListExtensionAssociationsCommandInput,
-    cb: (err: any, data?: ListExtensionAssociationsCommandOutput) => void
+    cb: (err: any, data?: ListExtensionAssociationsCommandOutput) => void,
   ): void;
   listExtensionAssociations(
     args: ListExtensionAssociationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListExtensionAssociationsCommandOutput) => void
+    cb: (err: any, data?: ListExtensionAssociationsCommandOutput) => void,
   ): void;
 
   /**
@@ -737,13 +737,13 @@ export interface AppConfig {
   listExtensions(): Promise<ListExtensionsCommandOutput>;
   listExtensions(
     args: ListExtensionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListExtensionsCommandOutput>;
   listExtensions(args: ListExtensionsCommandInput, cb: (err: any, data?: ListExtensionsCommandOutput) => void): void;
   listExtensions(
     args: ListExtensionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListExtensionsCommandOutput) => void
+    cb: (err: any, data?: ListExtensionsCommandOutput) => void,
   ): void;
 
   /**
@@ -751,16 +751,16 @@ export interface AppConfig {
    */
   listHostedConfigurationVersions(
     args: ListHostedConfigurationVersionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListHostedConfigurationVersionsCommandOutput>;
   listHostedConfigurationVersions(
     args: ListHostedConfigurationVersionsCommandInput,
-    cb: (err: any, data?: ListHostedConfigurationVersionsCommandOutput) => void
+    cb: (err: any, data?: ListHostedConfigurationVersionsCommandOutput) => void,
   ): void;
   listHostedConfigurationVersions(
     args: ListHostedConfigurationVersionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListHostedConfigurationVersionsCommandOutput) => void
+    cb: (err: any, data?: ListHostedConfigurationVersionsCommandOutput) => void,
   ): void;
 
   /**
@@ -768,16 +768,16 @@ export interface AppConfig {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -785,13 +785,13 @@ export interface AppConfig {
    */
   startDeployment(
     args: StartDeploymentCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartDeploymentCommandOutput>;
   startDeployment(args: StartDeploymentCommandInput, cb: (err: any, data?: StartDeploymentCommandOutput) => void): void;
   startDeployment(
     args: StartDeploymentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartDeploymentCommandOutput) => void
+    cb: (err: any, data?: StartDeploymentCommandOutput) => void,
   ): void;
 
   /**
@@ -799,13 +799,13 @@ export interface AppConfig {
    */
   stopDeployment(
     args: StopDeploymentCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StopDeploymentCommandOutput>;
   stopDeployment(args: StopDeploymentCommandInput, cb: (err: any, data?: StopDeploymentCommandOutput) => void): void;
   stopDeployment(
     args: StopDeploymentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StopDeploymentCommandOutput) => void
+    cb: (err: any, data?: StopDeploymentCommandOutput) => void,
   ): void;
 
   /**
@@ -816,7 +816,7 @@ export interface AppConfig {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -827,7 +827,7 @@ export interface AppConfig {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -835,16 +835,16 @@ export interface AppConfig {
    */
   updateApplication(
     args: UpdateApplicationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateApplicationCommandOutput>;
   updateApplication(
     args: UpdateApplicationCommandInput,
-    cb: (err: any, data?: UpdateApplicationCommandOutput) => void
+    cb: (err: any, data?: UpdateApplicationCommandOutput) => void,
   ): void;
   updateApplication(
     args: UpdateApplicationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateApplicationCommandOutput) => void
+    cb: (err: any, data?: UpdateApplicationCommandOutput) => void,
   ): void;
 
   /**
@@ -852,16 +852,16 @@ export interface AppConfig {
    */
   updateConfigurationProfile(
     args: UpdateConfigurationProfileCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateConfigurationProfileCommandOutput>;
   updateConfigurationProfile(
     args: UpdateConfigurationProfileCommandInput,
-    cb: (err: any, data?: UpdateConfigurationProfileCommandOutput) => void
+    cb: (err: any, data?: UpdateConfigurationProfileCommandOutput) => void,
   ): void;
   updateConfigurationProfile(
     args: UpdateConfigurationProfileCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateConfigurationProfileCommandOutput) => void
+    cb: (err: any, data?: UpdateConfigurationProfileCommandOutput) => void,
   ): void;
 
   /**
@@ -869,16 +869,16 @@ export interface AppConfig {
    */
   updateDeploymentStrategy(
     args: UpdateDeploymentStrategyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateDeploymentStrategyCommandOutput>;
   updateDeploymentStrategy(
     args: UpdateDeploymentStrategyCommandInput,
-    cb: (err: any, data?: UpdateDeploymentStrategyCommandOutput) => void
+    cb: (err: any, data?: UpdateDeploymentStrategyCommandOutput) => void,
   ): void;
   updateDeploymentStrategy(
     args: UpdateDeploymentStrategyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateDeploymentStrategyCommandOutput) => void
+    cb: (err: any, data?: UpdateDeploymentStrategyCommandOutput) => void,
   ): void;
 
   /**
@@ -886,16 +886,16 @@ export interface AppConfig {
    */
   updateEnvironment(
     args: UpdateEnvironmentCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateEnvironmentCommandOutput>;
   updateEnvironment(
     args: UpdateEnvironmentCommandInput,
-    cb: (err: any, data?: UpdateEnvironmentCommandOutput) => void
+    cb: (err: any, data?: UpdateEnvironmentCommandOutput) => void,
   ): void;
   updateEnvironment(
     args: UpdateEnvironmentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateEnvironmentCommandOutput) => void
+    cb: (err: any, data?: UpdateEnvironmentCommandOutput) => void,
   ): void;
 
   /**
@@ -903,13 +903,13 @@ export interface AppConfig {
    */
   updateExtension(
     args: UpdateExtensionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateExtensionCommandOutput>;
   updateExtension(args: UpdateExtensionCommandInput, cb: (err: any, data?: UpdateExtensionCommandOutput) => void): void;
   updateExtension(
     args: UpdateExtensionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateExtensionCommandOutput) => void
+    cb: (err: any, data?: UpdateExtensionCommandOutput) => void,
   ): void;
 
   /**
@@ -917,16 +917,16 @@ export interface AppConfig {
    */
   updateExtensionAssociation(
     args: UpdateExtensionAssociationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateExtensionAssociationCommandOutput>;
   updateExtensionAssociation(
     args: UpdateExtensionAssociationCommandInput,
-    cb: (err: any, data?: UpdateExtensionAssociationCommandOutput) => void
+    cb: (err: any, data?: UpdateExtensionAssociationCommandOutput) => void,
   ): void;
   updateExtensionAssociation(
     args: UpdateExtensionAssociationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateExtensionAssociationCommandOutput) => void
+    cb: (err: any, data?: UpdateExtensionAssociationCommandOutput) => void,
   ): void;
 
   /**
@@ -934,16 +934,16 @@ export interface AppConfig {
    */
   validateConfiguration(
     args: ValidateConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ValidateConfigurationCommandOutput>;
   validateConfiguration(
     args: ValidateConfigurationCommandInput,
-    cb: (err: any, data?: ValidateConfigurationCommandOutput) => void
+    cb: (err: any, data?: ValidateConfigurationCommandOutput) => void,
   ): void;
   validateConfiguration(
     args: ValidateConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ValidateConfigurationCommandOutput) => void
+    cb: (err: any, data?: ValidateConfigurationCommandOutput) => void,
   ): void;
 }
 

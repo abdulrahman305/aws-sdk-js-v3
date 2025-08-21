@@ -323,16 +323,16 @@ export interface RoboMaker {
    */
   batchDeleteWorlds(
     args: BatchDeleteWorldsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<BatchDeleteWorldsCommandOutput>;
   batchDeleteWorlds(
     args: BatchDeleteWorldsCommandInput,
-    cb: (err: any, data?: BatchDeleteWorldsCommandOutput) => void
+    cb: (err: any, data?: BatchDeleteWorldsCommandOutput) => void,
   ): void;
   batchDeleteWorlds(
     args: BatchDeleteWorldsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: BatchDeleteWorldsCommandOutput) => void
+    cb: (err: any, data?: BatchDeleteWorldsCommandOutput) => void,
   ): void;
 
   /**
@@ -340,16 +340,16 @@ export interface RoboMaker {
    */
   batchDescribeSimulationJob(
     args: BatchDescribeSimulationJobCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<BatchDescribeSimulationJobCommandOutput>;
   batchDescribeSimulationJob(
     args: BatchDescribeSimulationJobCommandInput,
-    cb: (err: any, data?: BatchDescribeSimulationJobCommandOutput) => void
+    cb: (err: any, data?: BatchDescribeSimulationJobCommandOutput) => void,
   ): void;
   batchDescribeSimulationJob(
     args: BatchDescribeSimulationJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: BatchDescribeSimulationJobCommandOutput) => void
+    cb: (err: any, data?: BatchDescribeSimulationJobCommandOutput) => void,
   ): void;
 
   /**
@@ -357,16 +357,16 @@ export interface RoboMaker {
    */
   cancelDeploymentJob(
     args: CancelDeploymentJobCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CancelDeploymentJobCommandOutput>;
   cancelDeploymentJob(
     args: CancelDeploymentJobCommandInput,
-    cb: (err: any, data?: CancelDeploymentJobCommandOutput) => void
+    cb: (err: any, data?: CancelDeploymentJobCommandOutput) => void,
   ): void;
   cancelDeploymentJob(
     args: CancelDeploymentJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CancelDeploymentJobCommandOutput) => void
+    cb: (err: any, data?: CancelDeploymentJobCommandOutput) => void,
   ): void;
 
   /**
@@ -374,16 +374,16 @@ export interface RoboMaker {
    */
   cancelSimulationJob(
     args: CancelSimulationJobCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CancelSimulationJobCommandOutput>;
   cancelSimulationJob(
     args: CancelSimulationJobCommandInput,
-    cb: (err: any, data?: CancelSimulationJobCommandOutput) => void
+    cb: (err: any, data?: CancelSimulationJobCommandOutput) => void,
   ): void;
   cancelSimulationJob(
     args: CancelSimulationJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CancelSimulationJobCommandOutput) => void
+    cb: (err: any, data?: CancelSimulationJobCommandOutput) => void,
   ): void;
 
   /**
@@ -391,16 +391,16 @@ export interface RoboMaker {
    */
   cancelSimulationJobBatch(
     args: CancelSimulationJobBatchCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CancelSimulationJobBatchCommandOutput>;
   cancelSimulationJobBatch(
     args: CancelSimulationJobBatchCommandInput,
-    cb: (err: any, data?: CancelSimulationJobBatchCommandOutput) => void
+    cb: (err: any, data?: CancelSimulationJobBatchCommandOutput) => void,
   ): void;
   cancelSimulationJobBatch(
     args: CancelSimulationJobBatchCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CancelSimulationJobBatchCommandOutput) => void
+    cb: (err: any, data?: CancelSimulationJobBatchCommandOutput) => void,
   ): void;
 
   /**
@@ -408,16 +408,16 @@ export interface RoboMaker {
    */
   cancelWorldExportJob(
     args: CancelWorldExportJobCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CancelWorldExportJobCommandOutput>;
   cancelWorldExportJob(
     args: CancelWorldExportJobCommandInput,
-    cb: (err: any, data?: CancelWorldExportJobCommandOutput) => void
+    cb: (err: any, data?: CancelWorldExportJobCommandOutput) => void,
   ): void;
   cancelWorldExportJob(
     args: CancelWorldExportJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CancelWorldExportJobCommandOutput) => void
+    cb: (err: any, data?: CancelWorldExportJobCommandOutput) => void,
   ): void;
 
   /**
@@ -425,16 +425,16 @@ export interface RoboMaker {
    */
   cancelWorldGenerationJob(
     args: CancelWorldGenerationJobCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CancelWorldGenerationJobCommandOutput>;
   cancelWorldGenerationJob(
     args: CancelWorldGenerationJobCommandInput,
-    cb: (err: any, data?: CancelWorldGenerationJobCommandOutput) => void
+    cb: (err: any, data?: CancelWorldGenerationJobCommandOutput) => void,
   ): void;
   cancelWorldGenerationJob(
     args: CancelWorldGenerationJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CancelWorldGenerationJobCommandOutput) => void
+    cb: (err: any, data?: CancelWorldGenerationJobCommandOutput) => void,
   ): void;
 
   /**
@@ -442,16 +442,16 @@ export interface RoboMaker {
    */
   createDeploymentJob(
     args: CreateDeploymentJobCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateDeploymentJobCommandOutput>;
   createDeploymentJob(
     args: CreateDeploymentJobCommandInput,
-    cb: (err: any, data?: CreateDeploymentJobCommandOutput) => void
+    cb: (err: any, data?: CreateDeploymentJobCommandOutput) => void,
   ): void;
   createDeploymentJob(
     args: CreateDeploymentJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateDeploymentJobCommandOutput) => void
+    cb: (err: any, data?: CreateDeploymentJobCommandOutput) => void,
   ): void;
 
   /**
@@ -462,7 +462,7 @@ export interface RoboMaker {
   createFleet(
     args: CreateFleetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateFleetCommandOutput) => void
+    cb: (err: any, data?: CreateFleetCommandOutput) => void,
   ): void;
 
   /**
@@ -473,7 +473,7 @@ export interface RoboMaker {
   createRobot(
     args: CreateRobotCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateRobotCommandOutput) => void
+    cb: (err: any, data?: CreateRobotCommandOutput) => void,
   ): void;
 
   /**
@@ -481,16 +481,16 @@ export interface RoboMaker {
    */
   createRobotApplication(
     args: CreateRobotApplicationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateRobotApplicationCommandOutput>;
   createRobotApplication(
     args: CreateRobotApplicationCommandInput,
-    cb: (err: any, data?: CreateRobotApplicationCommandOutput) => void
+    cb: (err: any, data?: CreateRobotApplicationCommandOutput) => void,
   ): void;
   createRobotApplication(
     args: CreateRobotApplicationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateRobotApplicationCommandOutput) => void
+    cb: (err: any, data?: CreateRobotApplicationCommandOutput) => void,
   ): void;
 
   /**
@@ -498,16 +498,16 @@ export interface RoboMaker {
    */
   createRobotApplicationVersion(
     args: CreateRobotApplicationVersionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateRobotApplicationVersionCommandOutput>;
   createRobotApplicationVersion(
     args: CreateRobotApplicationVersionCommandInput,
-    cb: (err: any, data?: CreateRobotApplicationVersionCommandOutput) => void
+    cb: (err: any, data?: CreateRobotApplicationVersionCommandOutput) => void,
   ): void;
   createRobotApplicationVersion(
     args: CreateRobotApplicationVersionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateRobotApplicationVersionCommandOutput) => void
+    cb: (err: any, data?: CreateRobotApplicationVersionCommandOutput) => void,
   ): void;
 
   /**
@@ -515,16 +515,16 @@ export interface RoboMaker {
    */
   createSimulationApplication(
     args: CreateSimulationApplicationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateSimulationApplicationCommandOutput>;
   createSimulationApplication(
     args: CreateSimulationApplicationCommandInput,
-    cb: (err: any, data?: CreateSimulationApplicationCommandOutput) => void
+    cb: (err: any, data?: CreateSimulationApplicationCommandOutput) => void,
   ): void;
   createSimulationApplication(
     args: CreateSimulationApplicationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateSimulationApplicationCommandOutput) => void
+    cb: (err: any, data?: CreateSimulationApplicationCommandOutput) => void,
   ): void;
 
   /**
@@ -532,16 +532,16 @@ export interface RoboMaker {
    */
   createSimulationApplicationVersion(
     args: CreateSimulationApplicationVersionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateSimulationApplicationVersionCommandOutput>;
   createSimulationApplicationVersion(
     args: CreateSimulationApplicationVersionCommandInput,
-    cb: (err: any, data?: CreateSimulationApplicationVersionCommandOutput) => void
+    cb: (err: any, data?: CreateSimulationApplicationVersionCommandOutput) => void,
   ): void;
   createSimulationApplicationVersion(
     args: CreateSimulationApplicationVersionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateSimulationApplicationVersionCommandOutput) => void
+    cb: (err: any, data?: CreateSimulationApplicationVersionCommandOutput) => void,
   ): void;
 
   /**
@@ -549,16 +549,16 @@ export interface RoboMaker {
    */
   createSimulationJob(
     args: CreateSimulationJobCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateSimulationJobCommandOutput>;
   createSimulationJob(
     args: CreateSimulationJobCommandInput,
-    cb: (err: any, data?: CreateSimulationJobCommandOutput) => void
+    cb: (err: any, data?: CreateSimulationJobCommandOutput) => void,
   ): void;
   createSimulationJob(
     args: CreateSimulationJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateSimulationJobCommandOutput) => void
+    cb: (err: any, data?: CreateSimulationJobCommandOutput) => void,
   ): void;
 
   /**
@@ -566,16 +566,16 @@ export interface RoboMaker {
    */
   createWorldExportJob(
     args: CreateWorldExportJobCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateWorldExportJobCommandOutput>;
   createWorldExportJob(
     args: CreateWorldExportJobCommandInput,
-    cb: (err: any, data?: CreateWorldExportJobCommandOutput) => void
+    cb: (err: any, data?: CreateWorldExportJobCommandOutput) => void,
   ): void;
   createWorldExportJob(
     args: CreateWorldExportJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateWorldExportJobCommandOutput) => void
+    cb: (err: any, data?: CreateWorldExportJobCommandOutput) => void,
   ): void;
 
   /**
@@ -583,16 +583,16 @@ export interface RoboMaker {
    */
   createWorldGenerationJob(
     args: CreateWorldGenerationJobCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateWorldGenerationJobCommandOutput>;
   createWorldGenerationJob(
     args: CreateWorldGenerationJobCommandInput,
-    cb: (err: any, data?: CreateWorldGenerationJobCommandOutput) => void
+    cb: (err: any, data?: CreateWorldGenerationJobCommandOutput) => void,
   ): void;
   createWorldGenerationJob(
     args: CreateWorldGenerationJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateWorldGenerationJobCommandOutput) => void
+    cb: (err: any, data?: CreateWorldGenerationJobCommandOutput) => void,
   ): void;
 
   /**
@@ -601,16 +601,16 @@ export interface RoboMaker {
   createWorldTemplate(): Promise<CreateWorldTemplateCommandOutput>;
   createWorldTemplate(
     args: CreateWorldTemplateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateWorldTemplateCommandOutput>;
   createWorldTemplate(
     args: CreateWorldTemplateCommandInput,
-    cb: (err: any, data?: CreateWorldTemplateCommandOutput) => void
+    cb: (err: any, data?: CreateWorldTemplateCommandOutput) => void,
   ): void;
   createWorldTemplate(
     args: CreateWorldTemplateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateWorldTemplateCommandOutput) => void
+    cb: (err: any, data?: CreateWorldTemplateCommandOutput) => void,
   ): void;
 
   /**
@@ -621,7 +621,7 @@ export interface RoboMaker {
   deleteFleet(
     args: DeleteFleetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteFleetCommandOutput) => void
+    cb: (err: any, data?: DeleteFleetCommandOutput) => void,
   ): void;
 
   /**
@@ -632,7 +632,7 @@ export interface RoboMaker {
   deleteRobot(
     args: DeleteRobotCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteRobotCommandOutput) => void
+    cb: (err: any, data?: DeleteRobotCommandOutput) => void,
   ): void;
 
   /**
@@ -640,16 +640,16 @@ export interface RoboMaker {
    */
   deleteRobotApplication(
     args: DeleteRobotApplicationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteRobotApplicationCommandOutput>;
   deleteRobotApplication(
     args: DeleteRobotApplicationCommandInput,
-    cb: (err: any, data?: DeleteRobotApplicationCommandOutput) => void
+    cb: (err: any, data?: DeleteRobotApplicationCommandOutput) => void,
   ): void;
   deleteRobotApplication(
     args: DeleteRobotApplicationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteRobotApplicationCommandOutput) => void
+    cb: (err: any, data?: DeleteRobotApplicationCommandOutput) => void,
   ): void;
 
   /**
@@ -657,16 +657,16 @@ export interface RoboMaker {
    */
   deleteSimulationApplication(
     args: DeleteSimulationApplicationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteSimulationApplicationCommandOutput>;
   deleteSimulationApplication(
     args: DeleteSimulationApplicationCommandInput,
-    cb: (err: any, data?: DeleteSimulationApplicationCommandOutput) => void
+    cb: (err: any, data?: DeleteSimulationApplicationCommandOutput) => void,
   ): void;
   deleteSimulationApplication(
     args: DeleteSimulationApplicationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteSimulationApplicationCommandOutput) => void
+    cb: (err: any, data?: DeleteSimulationApplicationCommandOutput) => void,
   ): void;
 
   /**
@@ -674,16 +674,16 @@ export interface RoboMaker {
    */
   deleteWorldTemplate(
     args: DeleteWorldTemplateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteWorldTemplateCommandOutput>;
   deleteWorldTemplate(
     args: DeleteWorldTemplateCommandInput,
-    cb: (err: any, data?: DeleteWorldTemplateCommandOutput) => void
+    cb: (err: any, data?: DeleteWorldTemplateCommandOutput) => void,
   ): void;
   deleteWorldTemplate(
     args: DeleteWorldTemplateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteWorldTemplateCommandOutput) => void
+    cb: (err: any, data?: DeleteWorldTemplateCommandOutput) => void,
   ): void;
 
   /**
@@ -691,13 +691,13 @@ export interface RoboMaker {
    */
   deregisterRobot(
     args: DeregisterRobotCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeregisterRobotCommandOutput>;
   deregisterRobot(args: DeregisterRobotCommandInput, cb: (err: any, data?: DeregisterRobotCommandOutput) => void): void;
   deregisterRobot(
     args: DeregisterRobotCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeregisterRobotCommandOutput) => void
+    cb: (err: any, data?: DeregisterRobotCommandOutput) => void,
   ): void;
 
   /**
@@ -705,16 +705,16 @@ export interface RoboMaker {
    */
   describeDeploymentJob(
     args: DescribeDeploymentJobCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeDeploymentJobCommandOutput>;
   describeDeploymentJob(
     args: DescribeDeploymentJobCommandInput,
-    cb: (err: any, data?: DescribeDeploymentJobCommandOutput) => void
+    cb: (err: any, data?: DescribeDeploymentJobCommandOutput) => void,
   ): void;
   describeDeploymentJob(
     args: DescribeDeploymentJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeDeploymentJobCommandOutput) => void
+    cb: (err: any, data?: DescribeDeploymentJobCommandOutput) => void,
   ): void;
 
   /**
@@ -725,7 +725,7 @@ export interface RoboMaker {
   describeFleet(
     args: DescribeFleetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeFleetCommandOutput) => void
+    cb: (err: any, data?: DescribeFleetCommandOutput) => void,
   ): void;
 
   /**
@@ -736,7 +736,7 @@ export interface RoboMaker {
   describeRobot(
     args: DescribeRobotCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeRobotCommandOutput) => void
+    cb: (err: any, data?: DescribeRobotCommandOutput) => void,
   ): void;
 
   /**
@@ -744,16 +744,16 @@ export interface RoboMaker {
    */
   describeRobotApplication(
     args: DescribeRobotApplicationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeRobotApplicationCommandOutput>;
   describeRobotApplication(
     args: DescribeRobotApplicationCommandInput,
-    cb: (err: any, data?: DescribeRobotApplicationCommandOutput) => void
+    cb: (err: any, data?: DescribeRobotApplicationCommandOutput) => void,
   ): void;
   describeRobotApplication(
     args: DescribeRobotApplicationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeRobotApplicationCommandOutput) => void
+    cb: (err: any, data?: DescribeRobotApplicationCommandOutput) => void,
   ): void;
 
   /**
@@ -761,16 +761,16 @@ export interface RoboMaker {
    */
   describeSimulationApplication(
     args: DescribeSimulationApplicationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeSimulationApplicationCommandOutput>;
   describeSimulationApplication(
     args: DescribeSimulationApplicationCommandInput,
-    cb: (err: any, data?: DescribeSimulationApplicationCommandOutput) => void
+    cb: (err: any, data?: DescribeSimulationApplicationCommandOutput) => void,
   ): void;
   describeSimulationApplication(
     args: DescribeSimulationApplicationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeSimulationApplicationCommandOutput) => void
+    cb: (err: any, data?: DescribeSimulationApplicationCommandOutput) => void,
   ): void;
 
   /**
@@ -778,16 +778,16 @@ export interface RoboMaker {
    */
   describeSimulationJob(
     args: DescribeSimulationJobCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeSimulationJobCommandOutput>;
   describeSimulationJob(
     args: DescribeSimulationJobCommandInput,
-    cb: (err: any, data?: DescribeSimulationJobCommandOutput) => void
+    cb: (err: any, data?: DescribeSimulationJobCommandOutput) => void,
   ): void;
   describeSimulationJob(
     args: DescribeSimulationJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeSimulationJobCommandOutput) => void
+    cb: (err: any, data?: DescribeSimulationJobCommandOutput) => void,
   ): void;
 
   /**
@@ -795,16 +795,16 @@ export interface RoboMaker {
    */
   describeSimulationJobBatch(
     args: DescribeSimulationJobBatchCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeSimulationJobBatchCommandOutput>;
   describeSimulationJobBatch(
     args: DescribeSimulationJobBatchCommandInput,
-    cb: (err: any, data?: DescribeSimulationJobBatchCommandOutput) => void
+    cb: (err: any, data?: DescribeSimulationJobBatchCommandOutput) => void,
   ): void;
   describeSimulationJobBatch(
     args: DescribeSimulationJobBatchCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeSimulationJobBatchCommandOutput) => void
+    cb: (err: any, data?: DescribeSimulationJobBatchCommandOutput) => void,
   ): void;
 
   /**
@@ -815,7 +815,7 @@ export interface RoboMaker {
   describeWorld(
     args: DescribeWorldCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeWorldCommandOutput) => void
+    cb: (err: any, data?: DescribeWorldCommandOutput) => void,
   ): void;
 
   /**
@@ -823,16 +823,16 @@ export interface RoboMaker {
    */
   describeWorldExportJob(
     args: DescribeWorldExportJobCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeWorldExportJobCommandOutput>;
   describeWorldExportJob(
     args: DescribeWorldExportJobCommandInput,
-    cb: (err: any, data?: DescribeWorldExportJobCommandOutput) => void
+    cb: (err: any, data?: DescribeWorldExportJobCommandOutput) => void,
   ): void;
   describeWorldExportJob(
     args: DescribeWorldExportJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeWorldExportJobCommandOutput) => void
+    cb: (err: any, data?: DescribeWorldExportJobCommandOutput) => void,
   ): void;
 
   /**
@@ -840,16 +840,16 @@ export interface RoboMaker {
    */
   describeWorldGenerationJob(
     args: DescribeWorldGenerationJobCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeWorldGenerationJobCommandOutput>;
   describeWorldGenerationJob(
     args: DescribeWorldGenerationJobCommandInput,
-    cb: (err: any, data?: DescribeWorldGenerationJobCommandOutput) => void
+    cb: (err: any, data?: DescribeWorldGenerationJobCommandOutput) => void,
   ): void;
   describeWorldGenerationJob(
     args: DescribeWorldGenerationJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeWorldGenerationJobCommandOutput) => void
+    cb: (err: any, data?: DescribeWorldGenerationJobCommandOutput) => void,
   ): void;
 
   /**
@@ -857,16 +857,16 @@ export interface RoboMaker {
    */
   describeWorldTemplate(
     args: DescribeWorldTemplateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeWorldTemplateCommandOutput>;
   describeWorldTemplate(
     args: DescribeWorldTemplateCommandInput,
-    cb: (err: any, data?: DescribeWorldTemplateCommandOutput) => void
+    cb: (err: any, data?: DescribeWorldTemplateCommandOutput) => void,
   ): void;
   describeWorldTemplate(
     args: DescribeWorldTemplateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeWorldTemplateCommandOutput) => void
+    cb: (err: any, data?: DescribeWorldTemplateCommandOutput) => void,
   ): void;
 
   /**
@@ -875,16 +875,16 @@ export interface RoboMaker {
   getWorldTemplateBody(): Promise<GetWorldTemplateBodyCommandOutput>;
   getWorldTemplateBody(
     args: GetWorldTemplateBodyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetWorldTemplateBodyCommandOutput>;
   getWorldTemplateBody(
     args: GetWorldTemplateBodyCommandInput,
-    cb: (err: any, data?: GetWorldTemplateBodyCommandOutput) => void
+    cb: (err: any, data?: GetWorldTemplateBodyCommandOutput) => void,
   ): void;
   getWorldTemplateBody(
     args: GetWorldTemplateBodyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetWorldTemplateBodyCommandOutput) => void
+    cb: (err: any, data?: GetWorldTemplateBodyCommandOutput) => void,
   ): void;
 
   /**
@@ -893,16 +893,16 @@ export interface RoboMaker {
   listDeploymentJobs(): Promise<ListDeploymentJobsCommandOutput>;
   listDeploymentJobs(
     args: ListDeploymentJobsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListDeploymentJobsCommandOutput>;
   listDeploymentJobs(
     args: ListDeploymentJobsCommandInput,
-    cb: (err: any, data?: ListDeploymentJobsCommandOutput) => void
+    cb: (err: any, data?: ListDeploymentJobsCommandOutput) => void,
   ): void;
   listDeploymentJobs(
     args: ListDeploymentJobsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListDeploymentJobsCommandOutput) => void
+    cb: (err: any, data?: ListDeploymentJobsCommandOutput) => void,
   ): void;
 
   /**
@@ -914,7 +914,7 @@ export interface RoboMaker {
   listFleets(
     args: ListFleetsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListFleetsCommandOutput) => void
+    cb: (err: any, data?: ListFleetsCommandOutput) => void,
   ): void;
 
   /**
@@ -923,16 +923,16 @@ export interface RoboMaker {
   listRobotApplications(): Promise<ListRobotApplicationsCommandOutput>;
   listRobotApplications(
     args: ListRobotApplicationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListRobotApplicationsCommandOutput>;
   listRobotApplications(
     args: ListRobotApplicationsCommandInput,
-    cb: (err: any, data?: ListRobotApplicationsCommandOutput) => void
+    cb: (err: any, data?: ListRobotApplicationsCommandOutput) => void,
   ): void;
   listRobotApplications(
     args: ListRobotApplicationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListRobotApplicationsCommandOutput) => void
+    cb: (err: any, data?: ListRobotApplicationsCommandOutput) => void,
   ): void;
 
   /**
@@ -944,7 +944,7 @@ export interface RoboMaker {
   listRobots(
     args: ListRobotsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListRobotsCommandOutput) => void
+    cb: (err: any, data?: ListRobotsCommandOutput) => void,
   ): void;
 
   /**
@@ -953,16 +953,16 @@ export interface RoboMaker {
   listSimulationApplications(): Promise<ListSimulationApplicationsCommandOutput>;
   listSimulationApplications(
     args: ListSimulationApplicationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListSimulationApplicationsCommandOutput>;
   listSimulationApplications(
     args: ListSimulationApplicationsCommandInput,
-    cb: (err: any, data?: ListSimulationApplicationsCommandOutput) => void
+    cb: (err: any, data?: ListSimulationApplicationsCommandOutput) => void,
   ): void;
   listSimulationApplications(
     args: ListSimulationApplicationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListSimulationApplicationsCommandOutput) => void
+    cb: (err: any, data?: ListSimulationApplicationsCommandOutput) => void,
   ): void;
 
   /**
@@ -971,16 +971,16 @@ export interface RoboMaker {
   listSimulationJobBatches(): Promise<ListSimulationJobBatchesCommandOutput>;
   listSimulationJobBatches(
     args: ListSimulationJobBatchesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListSimulationJobBatchesCommandOutput>;
   listSimulationJobBatches(
     args: ListSimulationJobBatchesCommandInput,
-    cb: (err: any, data?: ListSimulationJobBatchesCommandOutput) => void
+    cb: (err: any, data?: ListSimulationJobBatchesCommandOutput) => void,
   ): void;
   listSimulationJobBatches(
     args: ListSimulationJobBatchesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListSimulationJobBatchesCommandOutput) => void
+    cb: (err: any, data?: ListSimulationJobBatchesCommandOutput) => void,
   ): void;
 
   /**
@@ -989,16 +989,16 @@ export interface RoboMaker {
   listSimulationJobs(): Promise<ListSimulationJobsCommandOutput>;
   listSimulationJobs(
     args: ListSimulationJobsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListSimulationJobsCommandOutput>;
   listSimulationJobs(
     args: ListSimulationJobsCommandInput,
-    cb: (err: any, data?: ListSimulationJobsCommandOutput) => void
+    cb: (err: any, data?: ListSimulationJobsCommandOutput) => void,
   ): void;
   listSimulationJobs(
     args: ListSimulationJobsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListSimulationJobsCommandOutput) => void
+    cb: (err: any, data?: ListSimulationJobsCommandOutput) => void,
   ): void;
 
   /**
@@ -1006,16 +1006,16 @@ export interface RoboMaker {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -1024,16 +1024,16 @@ export interface RoboMaker {
   listWorldExportJobs(): Promise<ListWorldExportJobsCommandOutput>;
   listWorldExportJobs(
     args: ListWorldExportJobsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListWorldExportJobsCommandOutput>;
   listWorldExportJobs(
     args: ListWorldExportJobsCommandInput,
-    cb: (err: any, data?: ListWorldExportJobsCommandOutput) => void
+    cb: (err: any, data?: ListWorldExportJobsCommandOutput) => void,
   ): void;
   listWorldExportJobs(
     args: ListWorldExportJobsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListWorldExportJobsCommandOutput) => void
+    cb: (err: any, data?: ListWorldExportJobsCommandOutput) => void,
   ): void;
 
   /**
@@ -1042,16 +1042,16 @@ export interface RoboMaker {
   listWorldGenerationJobs(): Promise<ListWorldGenerationJobsCommandOutput>;
   listWorldGenerationJobs(
     args: ListWorldGenerationJobsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListWorldGenerationJobsCommandOutput>;
   listWorldGenerationJobs(
     args: ListWorldGenerationJobsCommandInput,
-    cb: (err: any, data?: ListWorldGenerationJobsCommandOutput) => void
+    cb: (err: any, data?: ListWorldGenerationJobsCommandOutput) => void,
   ): void;
   listWorldGenerationJobs(
     args: ListWorldGenerationJobsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListWorldGenerationJobsCommandOutput) => void
+    cb: (err: any, data?: ListWorldGenerationJobsCommandOutput) => void,
   ): void;
 
   /**
@@ -1063,7 +1063,7 @@ export interface RoboMaker {
   listWorlds(
     args: ListWorldsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListWorldsCommandOutput) => void
+    cb: (err: any, data?: ListWorldsCommandOutput) => void,
   ): void;
 
   /**
@@ -1072,16 +1072,16 @@ export interface RoboMaker {
   listWorldTemplates(): Promise<ListWorldTemplatesCommandOutput>;
   listWorldTemplates(
     args: ListWorldTemplatesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListWorldTemplatesCommandOutput>;
   listWorldTemplates(
     args: ListWorldTemplatesCommandInput,
-    cb: (err: any, data?: ListWorldTemplatesCommandOutput) => void
+    cb: (err: any, data?: ListWorldTemplatesCommandOutput) => void,
   ): void;
   listWorldTemplates(
     args: ListWorldTemplatesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListWorldTemplatesCommandOutput) => void
+    cb: (err: any, data?: ListWorldTemplatesCommandOutput) => void,
   ): void;
 
   /**
@@ -1092,7 +1092,7 @@ export interface RoboMaker {
   registerRobot(
     args: RegisterRobotCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RegisterRobotCommandOutput) => void
+    cb: (err: any, data?: RegisterRobotCommandOutput) => void,
   ): void;
 
   /**
@@ -1100,16 +1100,16 @@ export interface RoboMaker {
    */
   restartSimulationJob(
     args: RestartSimulationJobCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<RestartSimulationJobCommandOutput>;
   restartSimulationJob(
     args: RestartSimulationJobCommandInput,
-    cb: (err: any, data?: RestartSimulationJobCommandOutput) => void
+    cb: (err: any, data?: RestartSimulationJobCommandOutput) => void,
   ): void;
   restartSimulationJob(
     args: RestartSimulationJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RestartSimulationJobCommandOutput) => void
+    cb: (err: any, data?: RestartSimulationJobCommandOutput) => void,
   ): void;
 
   /**
@@ -1117,16 +1117,16 @@ export interface RoboMaker {
    */
   startSimulationJobBatch(
     args: StartSimulationJobBatchCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartSimulationJobBatchCommandOutput>;
   startSimulationJobBatch(
     args: StartSimulationJobBatchCommandInput,
-    cb: (err: any, data?: StartSimulationJobBatchCommandOutput) => void
+    cb: (err: any, data?: StartSimulationJobBatchCommandOutput) => void,
   ): void;
   startSimulationJobBatch(
     args: StartSimulationJobBatchCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartSimulationJobBatchCommandOutput) => void
+    cb: (err: any, data?: StartSimulationJobBatchCommandOutput) => void,
   ): void;
 
   /**
@@ -1134,16 +1134,16 @@ export interface RoboMaker {
    */
   syncDeploymentJob(
     args: SyncDeploymentJobCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<SyncDeploymentJobCommandOutput>;
   syncDeploymentJob(
     args: SyncDeploymentJobCommandInput,
-    cb: (err: any, data?: SyncDeploymentJobCommandOutput) => void
+    cb: (err: any, data?: SyncDeploymentJobCommandOutput) => void,
   ): void;
   syncDeploymentJob(
     args: SyncDeploymentJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SyncDeploymentJobCommandOutput) => void
+    cb: (err: any, data?: SyncDeploymentJobCommandOutput) => void,
   ): void;
 
   /**
@@ -1154,7 +1154,7 @@ export interface RoboMaker {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -1165,7 +1165,7 @@ export interface RoboMaker {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -1173,16 +1173,16 @@ export interface RoboMaker {
    */
   updateRobotApplication(
     args: UpdateRobotApplicationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateRobotApplicationCommandOutput>;
   updateRobotApplication(
     args: UpdateRobotApplicationCommandInput,
-    cb: (err: any, data?: UpdateRobotApplicationCommandOutput) => void
+    cb: (err: any, data?: UpdateRobotApplicationCommandOutput) => void,
   ): void;
   updateRobotApplication(
     args: UpdateRobotApplicationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateRobotApplicationCommandOutput) => void
+    cb: (err: any, data?: UpdateRobotApplicationCommandOutput) => void,
   ): void;
 
   /**
@@ -1190,16 +1190,16 @@ export interface RoboMaker {
    */
   updateSimulationApplication(
     args: UpdateSimulationApplicationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateSimulationApplicationCommandOutput>;
   updateSimulationApplication(
     args: UpdateSimulationApplicationCommandInput,
-    cb: (err: any, data?: UpdateSimulationApplicationCommandOutput) => void
+    cb: (err: any, data?: UpdateSimulationApplicationCommandOutput) => void,
   ): void;
   updateSimulationApplication(
     args: UpdateSimulationApplicationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateSimulationApplicationCommandOutput) => void
+    cb: (err: any, data?: UpdateSimulationApplicationCommandOutput) => void,
   ): void;
 
   /**
@@ -1207,16 +1207,16 @@ export interface RoboMaker {
    */
   updateWorldTemplate(
     args: UpdateWorldTemplateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateWorldTemplateCommandOutput>;
   updateWorldTemplate(
     args: UpdateWorldTemplateCommandInput,
-    cb: (err: any, data?: UpdateWorldTemplateCommandOutput) => void
+    cb: (err: any, data?: UpdateWorldTemplateCommandOutput) => void,
   ): void;
   updateWorldTemplate(
     args: UpdateWorldTemplateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateWorldTemplateCommandOutput) => void
+    cb: (err: any, data?: UpdateWorldTemplateCommandOutput) => void,
   ): void;
 }
 

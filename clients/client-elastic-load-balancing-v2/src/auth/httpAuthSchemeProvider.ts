@@ -44,7 +44,7 @@ export interface ElasticLoadBalancingV2HttpAuthSchemeParametersProvider
 export const defaultElasticLoadBalancingV2HttpAuthSchemeParametersProvider = async (
   config: ElasticLoadBalancingV2ClientResolvedConfig,
   context: HandlerExecutionContext,
-  input: object
+  input: object,
 ): Promise<ElasticLoadBalancingV2HttpAuthSchemeParameters> => {
   return {
     operation: getSmithyContext(context).operation as string,
@@ -57,7 +57,7 @@ export const defaultElasticLoadBalancingV2HttpAuthSchemeParametersProvider = asy
 };
 
 function createAwsAuthSigv4HttpAuthOption(
-  authParameters: ElasticLoadBalancingV2HttpAuthSchemeParameters
+  authParameters: ElasticLoadBalancingV2HttpAuthSchemeParameters,
 ): HttpAuthOption {
   return {
     schemeId: "aws.auth#sigv4",
@@ -87,7 +87,7 @@ export interface ElasticLoadBalancingV2HttpAuthSchemeProvider
  * @internal
  */
 export const defaultElasticLoadBalancingV2HttpAuthSchemeProvider: ElasticLoadBalancingV2HttpAuthSchemeProvider = (
-  authParameters
+  authParameters,
 ) => {
   const options: HttpAuthOption[] = [];
   switch (authParameters.operation) {
@@ -136,7 +136,7 @@ export interface HttpAuthSchemeResolvedConfig extends AwsSdkSigV4AuthResolvedCon
  * @internal
  */
 export const resolveHttpAuthSchemeConfig = <T>(
-  config: T & HttpAuthSchemeInputConfig & AwsSdkSigV4PreviouslyResolved
+  config: T & HttpAuthSchemeInputConfig & AwsSdkSigV4PreviouslyResolved,
 ): T & HttpAuthSchemeResolvedConfig => {
   const config_0 = resolveAwsSdkSigV4Config(config);
   return {

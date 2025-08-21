@@ -97,16 +97,16 @@ export interface DocDBElastic {
    */
   copyClusterSnapshot(
     args: CopyClusterSnapshotCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CopyClusterSnapshotCommandOutput>;
   copyClusterSnapshot(
     args: CopyClusterSnapshotCommandInput,
-    cb: (err: any, data?: CopyClusterSnapshotCommandOutput) => void
+    cb: (err: any, data?: CopyClusterSnapshotCommandOutput) => void,
   ): void;
   copyClusterSnapshot(
     args: CopyClusterSnapshotCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CopyClusterSnapshotCommandOutput) => void
+    cb: (err: any, data?: CopyClusterSnapshotCommandOutput) => void,
   ): void;
 
   /**
@@ -117,7 +117,7 @@ export interface DocDBElastic {
   createCluster(
     args: CreateClusterCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateClusterCommandOutput) => void
+    cb: (err: any, data?: CreateClusterCommandOutput) => void,
   ): void;
 
   /**
@@ -125,16 +125,16 @@ export interface DocDBElastic {
    */
   createClusterSnapshot(
     args: CreateClusterSnapshotCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateClusterSnapshotCommandOutput>;
   createClusterSnapshot(
     args: CreateClusterSnapshotCommandInput,
-    cb: (err: any, data?: CreateClusterSnapshotCommandOutput) => void
+    cb: (err: any, data?: CreateClusterSnapshotCommandOutput) => void,
   ): void;
   createClusterSnapshot(
     args: CreateClusterSnapshotCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateClusterSnapshotCommandOutput) => void
+    cb: (err: any, data?: CreateClusterSnapshotCommandOutput) => void,
   ): void;
 
   /**
@@ -145,7 +145,7 @@ export interface DocDBElastic {
   deleteCluster(
     args: DeleteClusterCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteClusterCommandOutput) => void
+    cb: (err: any, data?: DeleteClusterCommandOutput) => void,
   ): void;
 
   /**
@@ -153,16 +153,16 @@ export interface DocDBElastic {
    */
   deleteClusterSnapshot(
     args: DeleteClusterSnapshotCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteClusterSnapshotCommandOutput>;
   deleteClusterSnapshot(
     args: DeleteClusterSnapshotCommandInput,
-    cb: (err: any, data?: DeleteClusterSnapshotCommandOutput) => void
+    cb: (err: any, data?: DeleteClusterSnapshotCommandOutput) => void,
   ): void;
   deleteClusterSnapshot(
     args: DeleteClusterSnapshotCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteClusterSnapshotCommandOutput) => void
+    cb: (err: any, data?: DeleteClusterSnapshotCommandOutput) => void,
   ): void;
 
   /**
@@ -173,7 +173,7 @@ export interface DocDBElastic {
   getCluster(
     args: GetClusterCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetClusterCommandOutput) => void
+    cb: (err: any, data?: GetClusterCommandOutput) => void,
   ): void;
 
   /**
@@ -181,16 +181,16 @@ export interface DocDBElastic {
    */
   getClusterSnapshot(
     args: GetClusterSnapshotCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetClusterSnapshotCommandOutput>;
   getClusterSnapshot(
     args: GetClusterSnapshotCommandInput,
-    cb: (err: any, data?: GetClusterSnapshotCommandOutput) => void
+    cb: (err: any, data?: GetClusterSnapshotCommandOutput) => void,
   ): void;
   getClusterSnapshot(
     args: GetClusterSnapshotCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetClusterSnapshotCommandOutput) => void
+    cb: (err: any, data?: GetClusterSnapshotCommandOutput) => void,
   ): void;
 
   /**
@@ -202,7 +202,7 @@ export interface DocDBElastic {
   listClusters(
     args: ListClustersCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListClustersCommandOutput) => void
+    cb: (err: any, data?: ListClustersCommandOutput) => void,
   ): void;
 
   /**
@@ -211,16 +211,16 @@ export interface DocDBElastic {
   listClusterSnapshots(): Promise<ListClusterSnapshotsCommandOutput>;
   listClusterSnapshots(
     args: ListClusterSnapshotsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListClusterSnapshotsCommandOutput>;
   listClusterSnapshots(
     args: ListClusterSnapshotsCommandInput,
-    cb: (err: any, data?: ListClusterSnapshotsCommandOutput) => void
+    cb: (err: any, data?: ListClusterSnapshotsCommandOutput) => void,
   ): void;
   listClusterSnapshots(
     args: ListClusterSnapshotsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListClusterSnapshotsCommandOutput) => void
+    cb: (err: any, data?: ListClusterSnapshotsCommandOutput) => void,
   ): void;
 
   /**
@@ -228,16 +228,16 @@ export interface DocDBElastic {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -245,16 +245,16 @@ export interface DocDBElastic {
    */
   restoreClusterFromSnapshot(
     args: RestoreClusterFromSnapshotCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<RestoreClusterFromSnapshotCommandOutput>;
   restoreClusterFromSnapshot(
     args: RestoreClusterFromSnapshotCommandInput,
-    cb: (err: any, data?: RestoreClusterFromSnapshotCommandOutput) => void
+    cb: (err: any, data?: RestoreClusterFromSnapshotCommandOutput) => void,
   ): void;
   restoreClusterFromSnapshot(
     args: RestoreClusterFromSnapshotCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RestoreClusterFromSnapshotCommandOutput) => void
+    cb: (err: any, data?: RestoreClusterFromSnapshotCommandOutput) => void,
   ): void;
 
   /**
@@ -265,7 +265,7 @@ export interface DocDBElastic {
   startCluster(
     args: StartClusterCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartClusterCommandOutput) => void
+    cb: (err: any, data?: StartClusterCommandOutput) => void,
   ): void;
 
   /**
@@ -276,7 +276,7 @@ export interface DocDBElastic {
   stopCluster(
     args: StopClusterCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StopClusterCommandOutput) => void
+    cb: (err: any, data?: StopClusterCommandOutput) => void,
   ): void;
 
   /**
@@ -287,7 +287,7 @@ export interface DocDBElastic {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -298,7 +298,7 @@ export interface DocDBElastic {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -309,7 +309,7 @@ export interface DocDBElastic {
   updateCluster(
     args: UpdateClusterCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateClusterCommandOutput) => void
+    cb: (err: any, data?: UpdateClusterCommandOutput) => void,
   ): void;
 }
 

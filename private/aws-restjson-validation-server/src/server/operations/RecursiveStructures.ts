@@ -76,14 +76,14 @@ export class RecursiveStructuresSerializer
 }
 
 export const getRecursiveStructuresHandler = <Context>(
-  operation: __Operation<RecursiveStructuresServerInput, RecursiveStructuresServerOutput, Context>
+  operation: __Operation<RecursiveStructuresServerInput, RecursiveStructuresServerOutput, Context>,
 ): __ServiceHandler<Context, __HttpRequest, __HttpResponse> => {
   const mux = new httpbinding.HttpBindingMux<"RestJsonValidation", "RecursiveStructures">([
     new httpbinding.UriSpec<"RestJsonValidation", "RecursiveStructures">(
       "POST",
       [{ type: "path_literal", value: "RecursiveStructures" }],
       [],
-      { service: "RestJsonValidation", operation: "RecursiveStructures" }
+      { service: "RestJsonValidation", operation: "RecursiveStructures" },
     ),
   ]);
   const customizer: __ValidationCustomizer<"RecursiveStructures"> = (ctx, failures) => {
@@ -105,7 +105,7 @@ export const getRecursiveStructuresHandler = <Context>(
     mux,
     new RecursiveStructuresSerializer(),
     serializeFrameworkException,
-    customizer
+    customizer,
   );
 };
 
@@ -126,7 +126,7 @@ async function handle<S, O extends keyof S & string, Context>(
   operation: __Operation<__OperationInput<S[O]>, __OperationOutput<S[O]>, Context>,
   serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
   validationFn: (input: __OperationInput<S[O]>) => __ValidationFailure[],
-  validationCustomizer: __ValidationCustomizer<O>
+  validationCustomizer: __ValidationCustomizer<O>,
 ): Promise<__HttpResponse> {
   let input;
   try {
@@ -168,7 +168,7 @@ export class RecursiveStructuresHandler<Context> implements __ServiceHandler<Con
   >;
   private readonly serializeFrameworkException: (
     e: __SmithyFrameworkException,
-    ctx: __ServerSerdeContext
+    ctx: __ServerSerdeContext,
   ) => Promise<__HttpResponse>;
   private readonly validationCustomizer: __ValidationCustomizer<"RecursiveStructures">;
   /**
@@ -189,7 +189,7 @@ export class RecursiveStructuresHandler<Context> implements __ServiceHandler<Con
       RecursiveStructuresErrors
     >,
     serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
-    validationCustomizer: __ValidationCustomizer<"RecursiveStructures">
+    validationCustomizer: __ValidationCustomizer<"RecursiveStructures">,
   ) {
     this.operation = operation;
     this.mux = mux;
@@ -201,7 +201,7 @@ export class RecursiveStructuresHandler<Context> implements __ServiceHandler<Con
     const target = this.mux.match(request);
     if (target === undefined) {
       console.log(
-        "Received a request that did not match aws.protocoltests.restjson.validation#RestJsonValidation.RecursiveStructures. This indicates a misconfiguration."
+        "Received a request that did not match aws.protocoltests.restjson.validation#RestJsonValidation.RecursiveStructures. This indicates a misconfiguration.",
       );
       return this.serializeFrameworkException(new __InternalFailureException(), serdeContextBase);
     }
@@ -213,7 +213,7 @@ export class RecursiveStructuresHandler<Context> implements __ServiceHandler<Con
       this.operation,
       this.serializeFrameworkException,
       RecursiveStructuresServerInput.validate,
-      this.validationCustomizer
+      this.validationCustomizer,
     );
   }
 }

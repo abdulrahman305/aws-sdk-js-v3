@@ -229,7 +229,7 @@ import {
  */
 export const se_DeleteAlarmsCommand = async (
   input: DeleteAlarmsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -246,7 +246,7 @@ export const se_DeleteAlarmsCommand = async (
  */
 export const se_DeleteAnomalyDetectorCommand = async (
   input: DeleteAnomalyDetectorCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -263,7 +263,7 @@ export const se_DeleteAnomalyDetectorCommand = async (
  */
 export const se_DeleteDashboardsCommand = async (
   input: DeleteDashboardsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -280,7 +280,7 @@ export const se_DeleteDashboardsCommand = async (
  */
 export const se_DeleteInsightRulesCommand = async (
   input: DeleteInsightRulesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -297,7 +297,7 @@ export const se_DeleteInsightRulesCommand = async (
  */
 export const se_DeleteMetricStreamCommand = async (
   input: DeleteMetricStreamCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -314,7 +314,7 @@ export const se_DeleteMetricStreamCommand = async (
  */
 export const se_DescribeAlarmHistoryCommand = async (
   input: DescribeAlarmHistoryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -331,7 +331,7 @@ export const se_DescribeAlarmHistoryCommand = async (
  */
 export const se_DescribeAlarmsCommand = async (
   input: DescribeAlarmsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -348,7 +348,7 @@ export const se_DescribeAlarmsCommand = async (
  */
 export const se_DescribeAlarmsForMetricCommand = async (
   input: DescribeAlarmsForMetricCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -365,7 +365,7 @@ export const se_DescribeAlarmsForMetricCommand = async (
  */
 export const se_DescribeAnomalyDetectorsCommand = async (
   input: DescribeAnomalyDetectorsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -382,7 +382,7 @@ export const se_DescribeAnomalyDetectorsCommand = async (
  */
 export const se_DescribeInsightRulesCommand = async (
   input: DescribeInsightRulesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -399,7 +399,7 @@ export const se_DescribeInsightRulesCommand = async (
  */
 export const se_DisableAlarmActionsCommand = async (
   input: DisableAlarmActionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -416,7 +416,7 @@ export const se_DisableAlarmActionsCommand = async (
  */
 export const se_DisableInsightRulesCommand = async (
   input: DisableInsightRulesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -433,7 +433,7 @@ export const se_DisableInsightRulesCommand = async (
  */
 export const se_EnableAlarmActionsCommand = async (
   input: EnableAlarmActionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -450,7 +450,7 @@ export const se_EnableAlarmActionsCommand = async (
  */
 export const se_EnableInsightRulesCommand = async (
   input: EnableInsightRulesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -467,7 +467,7 @@ export const se_EnableInsightRulesCommand = async (
  */
 export const se_GetDashboardCommand = async (
   input: GetDashboardCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -484,7 +484,7 @@ export const se_GetDashboardCommand = async (
  */
 export const se_GetInsightRuleReportCommand = async (
   input: GetInsightRuleReportCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -501,7 +501,7 @@ export const se_GetInsightRuleReportCommand = async (
  */
 export const se_GetMetricDataCommand = async (
   input: GetMetricDataCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -518,7 +518,7 @@ export const se_GetMetricDataCommand = async (
  */
 export const se_GetMetricStatisticsCommand = async (
   input: GetMetricStatisticsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -535,7 +535,7 @@ export const se_GetMetricStatisticsCommand = async (
  */
 export const se_GetMetricStreamCommand = async (
   input: GetMetricStreamCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -552,7 +552,7 @@ export const se_GetMetricStreamCommand = async (
  */
 export const se_GetMetricWidgetImageCommand = async (
   input: GetMetricWidgetImageCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -569,7 +569,7 @@ export const se_GetMetricWidgetImageCommand = async (
  */
 export const se_ListDashboardsCommand = async (
   input: ListDashboardsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -586,7 +586,7 @@ export const se_ListDashboardsCommand = async (
  */
 export const se_ListManagedInsightRulesCommand = async (
   input: ListManagedInsightRulesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -603,7 +603,7 @@ export const se_ListManagedInsightRulesCommand = async (
  */
 export const se_ListMetricsCommand = async (
   input: ListMetricsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -620,7 +620,7 @@ export const se_ListMetricsCommand = async (
  */
 export const se_ListMetricStreamsCommand = async (
   input: ListMetricStreamsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -637,7 +637,7 @@ export const se_ListMetricStreamsCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -654,7 +654,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_PutAnomalyDetectorCommand = async (
   input: PutAnomalyDetectorCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -671,7 +671,7 @@ export const se_PutAnomalyDetectorCommand = async (
  */
 export const se_PutCompositeAlarmCommand = async (
   input: PutCompositeAlarmCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -688,7 +688,7 @@ export const se_PutCompositeAlarmCommand = async (
  */
 export const se_PutDashboardCommand = async (
   input: PutDashboardCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -705,7 +705,7 @@ export const se_PutDashboardCommand = async (
  */
 export const se_PutInsightRuleCommand = async (
   input: PutInsightRuleCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -722,7 +722,7 @@ export const se_PutInsightRuleCommand = async (
  */
 export const se_PutManagedInsightRulesCommand = async (
   input: PutManagedInsightRulesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -739,7 +739,7 @@ export const se_PutManagedInsightRulesCommand = async (
  */
 export const se_PutMetricAlarmCommand = async (
   input: PutMetricAlarmCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -756,7 +756,7 @@ export const se_PutMetricAlarmCommand = async (
  */
 export const se_PutMetricDataCommand = async (
   input: PutMetricDataCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -773,7 +773,7 @@ export const se_PutMetricDataCommand = async (
  */
 export const se_PutMetricStreamCommand = async (
   input: PutMetricStreamCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -790,7 +790,7 @@ export const se_PutMetricStreamCommand = async (
  */
 export const se_SetAlarmStateCommand = async (
   input: SetAlarmStateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -807,7 +807,7 @@ export const se_SetAlarmStateCommand = async (
  */
 export const se_StartMetricStreamsCommand = async (
   input: StartMetricStreamsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -824,7 +824,7 @@ export const se_StartMetricStreamsCommand = async (
  */
 export const se_StopMetricStreamsCommand = async (
   input: StopMetricStreamsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -841,7 +841,7 @@ export const se_StopMetricStreamsCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -858,7 +858,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -875,7 +875,7 @@ export const se_UntagResourceCommand = async (
  */
 export const de_DeleteAlarmsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteAlarmsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -892,7 +892,7 @@ export const de_DeleteAlarmsCommand = async (
  */
 export const de_DeleteAnomalyDetectorCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteAnomalyDetectorCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -912,7 +912,7 @@ export const de_DeleteAnomalyDetectorCommand = async (
  */
 export const de_DeleteDashboardsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteDashboardsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -932,7 +932,7 @@ export const de_DeleteDashboardsCommand = async (
  */
 export const de_DeleteInsightRulesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteInsightRulesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -952,7 +952,7 @@ export const de_DeleteInsightRulesCommand = async (
  */
 export const de_DeleteMetricStreamCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteMetricStreamCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -972,7 +972,7 @@ export const de_DeleteMetricStreamCommand = async (
  */
 export const de_DescribeAlarmHistoryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeAlarmHistoryCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -992,7 +992,7 @@ export const de_DescribeAlarmHistoryCommand = async (
  */
 export const de_DescribeAlarmsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeAlarmsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1012,7 +1012,7 @@ export const de_DescribeAlarmsCommand = async (
  */
 export const de_DescribeAlarmsForMetricCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeAlarmsForMetricCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1032,7 +1032,7 @@ export const de_DescribeAlarmsForMetricCommand = async (
  */
 export const de_DescribeAnomalyDetectorsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeAnomalyDetectorsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1052,7 +1052,7 @@ export const de_DescribeAnomalyDetectorsCommand = async (
  */
 export const de_DescribeInsightRulesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeInsightRulesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1072,7 +1072,7 @@ export const de_DescribeInsightRulesCommand = async (
  */
 export const de_DisableAlarmActionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisableAlarmActionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1089,7 +1089,7 @@ export const de_DisableAlarmActionsCommand = async (
  */
 export const de_DisableInsightRulesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisableInsightRulesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1109,7 +1109,7 @@ export const de_DisableInsightRulesCommand = async (
  */
 export const de_EnableAlarmActionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<EnableAlarmActionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1126,7 +1126,7 @@ export const de_EnableAlarmActionsCommand = async (
  */
 export const de_EnableInsightRulesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<EnableInsightRulesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1146,7 +1146,7 @@ export const de_EnableInsightRulesCommand = async (
  */
 export const de_GetDashboardCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetDashboardCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1166,7 +1166,7 @@ export const de_GetDashboardCommand = async (
  */
 export const de_GetInsightRuleReportCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetInsightRuleReportCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1186,7 +1186,7 @@ export const de_GetInsightRuleReportCommand = async (
  */
 export const de_GetMetricDataCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetMetricDataCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1206,7 +1206,7 @@ export const de_GetMetricDataCommand = async (
  */
 export const de_GetMetricStatisticsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetMetricStatisticsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1226,7 +1226,7 @@ export const de_GetMetricStatisticsCommand = async (
  */
 export const de_GetMetricStreamCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetMetricStreamCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1246,7 +1246,7 @@ export const de_GetMetricStreamCommand = async (
  */
 export const de_GetMetricWidgetImageCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetMetricWidgetImageCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1266,7 +1266,7 @@ export const de_GetMetricWidgetImageCommand = async (
  */
 export const de_ListDashboardsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListDashboardsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1286,7 +1286,7 @@ export const de_ListDashboardsCommand = async (
  */
 export const de_ListManagedInsightRulesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListManagedInsightRulesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1306,7 +1306,7 @@ export const de_ListManagedInsightRulesCommand = async (
  */
 export const de_ListMetricsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListMetricsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1326,7 +1326,7 @@ export const de_ListMetricsCommand = async (
  */
 export const de_ListMetricStreamsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListMetricStreamsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1346,7 +1346,7 @@ export const de_ListMetricStreamsCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1366,7 +1366,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_PutAnomalyDetectorCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutAnomalyDetectorCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1386,7 +1386,7 @@ export const de_PutAnomalyDetectorCommand = async (
  */
 export const de_PutCompositeAlarmCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutCompositeAlarmCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1403,7 +1403,7 @@ export const de_PutCompositeAlarmCommand = async (
  */
 export const de_PutDashboardCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutDashboardCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1423,7 +1423,7 @@ export const de_PutDashboardCommand = async (
  */
 export const de_PutInsightRuleCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutInsightRuleCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1443,7 +1443,7 @@ export const de_PutInsightRuleCommand = async (
  */
 export const de_PutManagedInsightRulesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutManagedInsightRulesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1463,7 +1463,7 @@ export const de_PutManagedInsightRulesCommand = async (
  */
 export const de_PutMetricAlarmCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutMetricAlarmCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1480,7 +1480,7 @@ export const de_PutMetricAlarmCommand = async (
  */
 export const de_PutMetricDataCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutMetricDataCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1497,7 +1497,7 @@ export const de_PutMetricDataCommand = async (
  */
 export const de_PutMetricStreamCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutMetricStreamCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1517,7 +1517,7 @@ export const de_PutMetricStreamCommand = async (
  */
 export const de_SetAlarmStateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SetAlarmStateCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1534,7 +1534,7 @@ export const de_SetAlarmStateCommand = async (
  */
 export const de_StartMetricStreamsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartMetricStreamsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1554,7 +1554,7 @@ export const de_StartMetricStreamsCommand = async (
  */
 export const de_StopMetricStreamsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StopMetricStreamsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1574,7 +1574,7 @@ export const de_StopMetricStreamsCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1594,7 +1594,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1670,7 +1670,7 @@ const de_CommandError = async (output: __HttpResponse, context: __SerdeContext):
  */
 const de_ConcurrentModificationExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ConcurrentModificationException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_ConcurrentModificationException(body.Error, context);
@@ -1686,7 +1686,7 @@ const de_ConcurrentModificationExceptionRes = async (
  */
 const de_DashboardInvalidInputErrorRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DashboardInvalidInputError> => {
   const body = parsedOutput.body;
   const deserialized: any = de_DashboardInvalidInputError(body.Error, context);
@@ -1702,7 +1702,7 @@ const de_DashboardInvalidInputErrorRes = async (
  */
 const de_InternalServiceFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServiceFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_InternalServiceFault(body.Error, context);
@@ -1744,7 +1744,7 @@ const de_InvalidNextTokenRes = async (parsedOutput: any, context: __SerdeContext
  */
 const de_InvalidParameterCombinationExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidParameterCombinationException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_InvalidParameterCombinationException(body.Error, context);
@@ -1760,7 +1760,7 @@ const de_InvalidParameterCombinationExceptionRes = async (
  */
 const de_InvalidParameterValueExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidParameterValueException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_InvalidParameterValueException(body.Error, context);
@@ -1776,7 +1776,7 @@ const de_InvalidParameterValueExceptionRes = async (
  */
 const de_LimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<LimitExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_LimitExceededException(body.Error, context);
@@ -1805,7 +1805,7 @@ const de_LimitExceededFaultRes = async (parsedOutput: any, context: __SerdeConte
  */
 const de_MissingRequiredParameterExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<MissingRequiredParameterException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_MissingRequiredParameterException(body.Error, context);
@@ -1834,7 +1834,7 @@ const de_ResourceNotFoundRes = async (parsedOutput: any, context: __SerdeContext
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_ResourceNotFoundException(body.Error, context);
@@ -3050,7 +3050,7 @@ const se_MetricStreamStatisticsAdditionalStatistics = (input: string[], context:
  */
 const se_MetricStreamStatisticsConfiguration = (
   input: MetricStreamStatisticsConfiguration,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_IM] != null) {
@@ -3081,7 +3081,7 @@ const se_MetricStreamStatisticsConfiguration = (
  */
 const se_MetricStreamStatisticsConfigurations = (
   input: MetricStreamStatisticsConfiguration[],
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   let counter = 1;
@@ -3103,7 +3103,7 @@ const se_MetricStreamStatisticsConfigurations = (
  */
 const se_MetricStreamStatisticsIncludeMetrics = (
   input: MetricStreamStatisticsMetric[],
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   let counter = 1;
@@ -4513,7 +4513,7 @@ const de_InsightRuleContributorDatapoint = (output: any, context: __SerdeContext
  */
 const de_InsightRuleContributorDatapoints = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): InsightRuleContributorDatapoint[] => {
   return (output || [])
     .filter((e: any) => e != null)
@@ -4647,7 +4647,7 @@ const de_InvalidNextToken = (output: any, context: __SerdeContext): InvalidNextT
  */
 const de_InvalidParameterCombinationException = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): InvalidParameterCombinationException => {
   const contents: any = {};
   if (output[_me] != null) {
@@ -5205,7 +5205,7 @@ const de_MetricStreamStatisticsAdditionalStatistics = (output: any, context: __S
  */
 const de_MetricStreamStatisticsConfiguration = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): MetricStreamStatisticsConfiguration => {
   const contents: any = {};
   if (output.IncludeMetrics === "") {
@@ -5226,7 +5226,7 @@ const de_MetricStreamStatisticsConfiguration = (
  */
 const de_MetricStreamStatisticsConfigurations = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): MetricStreamStatisticsConfiguration[] => {
   return (output || [])
     .filter((e: any) => e != null)
@@ -5240,7 +5240,7 @@ const de_MetricStreamStatisticsConfigurations = (
  */
 const de_MetricStreamStatisticsIncludeMetrics = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): MetricStreamStatisticsMetric[] => {
   return (output || [])
     .filter((e: any) => e != null)
@@ -5268,7 +5268,7 @@ const de_MetricStreamStatisticsMetric = (output: any, context: __SerdeContext): 
  */
 const de_MissingRequiredParameterException = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): MissingRequiredParameterException => {
   const contents: any = {};
   if (output[_me] != null) {
@@ -5525,7 +5525,7 @@ const buildHttpRpcRequest = async (
   headers: __HeaderBag,
   path: string,
   resolvedHostname: string | undefined,
-  body: any
+  body: any,
 ): Promise<__HttpRequest> => {
   const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
   const contents: any = {

@@ -144,21 +144,21 @@ describe("fromTemporaryCredentials", () => {
     expect(outmostClient.config.credentials).toEqual(expect.objectContaining({ accessKeyId: "access_id_from_second" }));
     expect((outmostClient.send as jest.Mock).mock.calls.length).toBe(1);
     expect((outmostClient.send as jest.Mock).mock.calls[0][0].input).toEqual(
-      expect.objectContaining({ RoleArn: roleArnOf("third") })
+      expect.objectContaining({ RoleArn: roleArnOf("third") }),
     );
 
     const middleClient = (STSClient as jest.Mock).mock.results[1].value;
     expect(middleClient.config.credentials).toEqual(expect.objectContaining({ accessKeyId: "access_id_from_first" }));
     expect((middleClient.send as jest.Mock).mock.calls.length).toBe(1);
     expect((middleClient.send as jest.Mock).mock.calls[0][0].input).toEqual(
-      expect.objectContaining({ RoleArn: roleArnOf("second") })
+      expect.objectContaining({ RoleArn: roleArnOf("second") }),
     );
 
     const innermostClient = (STSClient as jest.Mock).mock.results[2].value;
     expect(innermostClient.config.credentials).toEqual(undefined);
     expect((innermostClient.send as jest.Mock).mock.calls.length).toBe(1);
     expect((innermostClient.send as jest.Mock).mock.calls[0][0].input).toEqual(
-      expect.objectContaining({ RoleArn: roleArnOf("first") })
+      expect.objectContaining({ RoleArn: roleArnOf("first") }),
     );
 
     // Call assume role API with expected chronological order
@@ -189,7 +189,7 @@ describe("fromTemporaryCredentials", () => {
           SerialNumber,
           TokenCode: mfaCode,
         },
-      })
+      }),
     );
   });
 

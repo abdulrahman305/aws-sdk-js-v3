@@ -1640,7 +1640,7 @@ export interface UpdateRecommendationLifecycleRequest {
  * @internal
  */
 export const AccountRecommendationLifecycleSummaryFilterSensitiveLog = (
-  obj: AccountRecommendationLifecycleSummary
+  obj: AccountRecommendationLifecycleSummary,
 ): any => ({
   ...obj,
   ...(obj.updateReason && { updateReason: SENSITIVE_STRING }),
@@ -1658,7 +1658,7 @@ export const OrganizationRecommendationFilterSensitiveLog = (obj: OrganizationRe
  * @internal
  */
 export const GetOrganizationRecommendationResponseFilterSensitiveLog = (
-  obj: GetOrganizationRecommendationResponse
+  obj: GetOrganizationRecommendationResponse,
 ): any => ({
   ...obj,
   ...(obj.organizationRecommendation && {
@@ -1686,12 +1686,12 @@ export const GetRecommendationResponseFilterSensitiveLog = (obj: GetRecommendati
  * @internal
  */
 export const ListOrganizationRecommendationAccountsResponseFilterSensitiveLog = (
-  obj: ListOrganizationRecommendationAccountsResponse
+  obj: ListOrganizationRecommendationAccountsResponse,
 ): any => ({
   ...obj,
   ...(obj.accountRecommendationLifecycleSummaries && {
     accountRecommendationLifecycleSummaries: obj.accountRecommendationLifecycleSummaries.map((item) =>
-      AccountRecommendationLifecycleSummaryFilterSensitiveLog(item)
+      AccountRecommendationLifecycleSummaryFilterSensitiveLog(item),
     ),
   }),
 });
@@ -1700,7 +1700,7 @@ export const ListOrganizationRecommendationAccountsResponseFilterSensitiveLog = 
  * @internal
  */
 export const UpdateOrganizationRecommendationLifecycleRequestFilterSensitiveLog = (
-  obj: UpdateOrganizationRecommendationLifecycleRequest
+  obj: UpdateOrganizationRecommendationLifecycleRequest,
 ): any => ({
   ...obj,
   ...(obj.updateReason && { updateReason: SENSITIVE_STRING }),
@@ -1710,7 +1710,7 @@ export const UpdateOrganizationRecommendationLifecycleRequestFilterSensitiveLog 
  * @internal
  */
 export const UpdateRecommendationLifecycleRequestFilterSensitiveLog = (
-  obj: UpdateRecommendationLifecycleRequest
+  obj: UpdateRecommendationLifecycleRequest,
 ): any => ({
   ...obj,
   ...(obj.updateReason && { updateReason: SENSITIVE_STRING }),

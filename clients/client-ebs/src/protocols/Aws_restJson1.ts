@@ -52,7 +52,7 @@ import {
  */
 export const se_CompleteSnapshotCommand = async (
   input: CompleteSnapshotCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -73,7 +73,7 @@ export const se_CompleteSnapshotCommand = async (
  */
 export const se_GetSnapshotBlockCommand = async (
   input: GetSnapshotBlockCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -93,7 +93,7 @@ export const se_GetSnapshotBlockCommand = async (
  */
 export const se_ListChangedBlocksCommand = async (
   input: ListChangedBlocksCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -115,7 +115,7 @@ export const se_ListChangedBlocksCommand = async (
  */
 export const se_ListSnapshotBlocksCommand = async (
   input: ListSnapshotBlocksCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -136,7 +136,7 @@ export const se_ListSnapshotBlocksCommand = async (
  */
 export const se_PutSnapshotBlockCommand = async (
   input: PutSnapshotBlockCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -163,7 +163,7 @@ export const se_PutSnapshotBlockCommand = async (
  */
 export const se_StartSnapshotCommand = async (
   input: StartSnapshotCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -181,7 +181,7 @@ export const se_StartSnapshotCommand = async (
       Tags: (_) => _json(_),
       Timeout: [],
       VolumeSize: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -192,7 +192,7 @@ export const se_StartSnapshotCommand = async (
  */
 export const de_CompleteSnapshotCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CompleteSnapshotCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -213,7 +213,7 @@ export const de_CompleteSnapshotCommand = async (
  */
 export const de_GetSnapshotBlockCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext & __SdkStreamSerdeContext
+  context: __SerdeContext & __SdkStreamSerdeContext,
 ): Promise<GetSnapshotBlockCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -235,7 +235,7 @@ export const de_GetSnapshotBlockCommand = async (
  */
 export const de_ListChangedBlocksCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListChangedBlocksCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -260,7 +260,7 @@ export const de_ListChangedBlocksCommand = async (
  */
 export const de_ListSnapshotBlocksCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListSnapshotBlocksCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -285,7 +285,7 @@ export const de_ListSnapshotBlocksCommand = async (
  */
 export const de_PutSnapshotBlockCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutSnapshotBlockCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -304,7 +304,7 @@ export const de_PutSnapshotBlockCommand = async (
  */
 export const de_StartSnapshotCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartSnapshotCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -380,7 +380,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -401,7 +401,7 @@ const de_AccessDeniedExceptionRes = async (
  */
 const de_ConcurrentLimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ConcurrentLimitExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -438,7 +438,7 @@ const de_ConflictExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_InternalServerExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -458,7 +458,7 @@ const de_InternalServerExceptionRes = async (
  */
 const de_RequestThrottledExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RequestThrottledException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -479,7 +479,7 @@ const de_RequestThrottledExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -500,7 +500,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_ServiceQuotaExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceQuotaExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;

@@ -22,7 +22,7 @@ describe("EventSigningStream", () => {
       body: fromUtf8("bar"),
     };
     const inputChunks: Array<Uint8Array> = ([message1, message2] as Array<Message>).map((event) =>
-      eventStreamCodec.encode(event)
+      eventStreamCodec.encode(event),
     );
     const expected: Array<MessageHeaders> = [
       {
@@ -71,11 +71,11 @@ describe("EventSigningStream", () => {
       expect(output).toEqual(expected);
       expect(mockMessageSigner.mock.calls[0][0].priorSignature).toBe("initial");
       expect(mockMessageSigner.mock.calls[0][1].signingDate.getTime()).toBe(
-        (expected[0][":date"].value as Date).getTime()
+        (expected[0][":date"].value as Date).getTime(),
       );
       expect(mockMessageSigner.mock.calls[1][0].priorSignature).toBe("7369676e617475726531");
       expect(mockMessageSigner.mock.calls[1][1].signingDate.getTime()).toBe(
-        (expected[1][":date"].value as Date).getTime()
+        (expected[1][":date"].value as Date).getTime(),
       );
       done();
     });

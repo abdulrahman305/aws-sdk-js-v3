@@ -65,14 +65,14 @@ export class PostUnionWithJsonNameSerializer
 
 export const getPostUnionWithJsonNameHandler = <Context>(
   operation: __Operation<PostUnionWithJsonNameServerInput, PostUnionWithJsonNameServerOutput, Context>,
-  customizer: __ValidationCustomizer<"PostUnionWithJsonName">
+  customizer: __ValidationCustomizer<"PostUnionWithJsonName">,
 ): __ServiceHandler<Context, __HttpRequest, __HttpResponse> => {
   const mux = new httpbinding.HttpBindingMux<"RestJson", "PostUnionWithJsonName">([
     new httpbinding.UriSpec<"RestJson", "PostUnionWithJsonName">(
       "POST",
       [{ type: "path_literal", value: "PostUnionWithJsonName" }],
       [],
-      { service: "RestJson", operation: "PostUnionWithJsonName" }
+      { service: "RestJson", operation: "PostUnionWithJsonName" },
     ),
   ]);
   return new PostUnionWithJsonNameHandler(
@@ -80,7 +80,7 @@ export const getPostUnionWithJsonNameHandler = <Context>(
     mux,
     new PostUnionWithJsonNameSerializer(),
     serializeFrameworkException,
-    customizer
+    customizer,
   );
 };
 
@@ -101,7 +101,7 @@ async function handle<S, O extends keyof S & string, Context>(
   operation: __Operation<__OperationInput<S[O]>, __OperationOutput<S[O]>, Context>,
   serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
   validationFn: (input: __OperationInput<S[O]>) => __ValidationFailure[],
-  validationCustomizer: __ValidationCustomizer<O>
+  validationCustomizer: __ValidationCustomizer<O>,
 ): Promise<__HttpResponse> {
   let input;
   try {
@@ -143,7 +143,7 @@ export class PostUnionWithJsonNameHandler<Context> implements __ServiceHandler<C
   >;
   private readonly serializeFrameworkException: (
     e: __SmithyFrameworkException,
-    ctx: __ServerSerdeContext
+    ctx: __ServerSerdeContext,
   ) => Promise<__HttpResponse>;
   private readonly validationCustomizer: __ValidationCustomizer<"PostUnionWithJsonName">;
   /**
@@ -160,7 +160,7 @@ export class PostUnionWithJsonNameHandler<Context> implements __ServiceHandler<C
     mux: __Mux<"RestJson", "PostUnionWithJsonName">,
     serializer: __OperationSerializer<RestJsonService<Context>, "PostUnionWithJsonName", PostUnionWithJsonNameErrors>,
     serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
-    validationCustomizer: __ValidationCustomizer<"PostUnionWithJsonName">
+    validationCustomizer: __ValidationCustomizer<"PostUnionWithJsonName">,
   ) {
     this.operation = operation;
     this.mux = mux;
@@ -172,7 +172,7 @@ export class PostUnionWithJsonNameHandler<Context> implements __ServiceHandler<C
     const target = this.mux.match(request);
     if (target === undefined) {
       console.log(
-        "Received a request that did not match aws.protocoltests.restjson#RestJson.PostUnionWithJsonName. This indicates a misconfiguration."
+        "Received a request that did not match aws.protocoltests.restjson#RestJson.PostUnionWithJsonName. This indicates a misconfiguration.",
       );
       return this.serializeFrameworkException(new __InternalFailureException(), serdeContextBase);
     }
@@ -184,7 +184,7 @@ export class PostUnionWithJsonNameHandler<Context> implements __ServiceHandler<C
       this.operation,
       this.serializeFrameworkException,
       PostUnionWithJsonNameServerInput.validate,
-      this.validationCustomizer
+      this.validationCustomizer,
     );
   }
 }

@@ -700,7 +700,7 @@ export interface Pinpoint {
   createApp(
     args: CreateAppCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateAppCommandOutput) => void
+    cb: (err: any, data?: CreateAppCommandOutput) => void,
   ): void;
 
   /**
@@ -708,13 +708,13 @@ export interface Pinpoint {
    */
   createCampaign(
     args: CreateCampaignCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateCampaignCommandOutput>;
   createCampaign(args: CreateCampaignCommandInput, cb: (err: any, data?: CreateCampaignCommandOutput) => void): void;
   createCampaign(
     args: CreateCampaignCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateCampaignCommandOutput) => void
+    cb: (err: any, data?: CreateCampaignCommandOutput) => void,
   ): void;
 
   /**
@@ -722,16 +722,16 @@ export interface Pinpoint {
    */
   createEmailTemplate(
     args: CreateEmailTemplateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateEmailTemplateCommandOutput>;
   createEmailTemplate(
     args: CreateEmailTemplateCommandInput,
-    cb: (err: any, data?: CreateEmailTemplateCommandOutput) => void
+    cb: (err: any, data?: CreateEmailTemplateCommandOutput) => void,
   ): void;
   createEmailTemplate(
     args: CreateEmailTemplateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateEmailTemplateCommandOutput) => void
+    cb: (err: any, data?: CreateEmailTemplateCommandOutput) => void,
   ): void;
 
   /**
@@ -739,13 +739,13 @@ export interface Pinpoint {
    */
   createExportJob(
     args: CreateExportJobCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateExportJobCommandOutput>;
   createExportJob(args: CreateExportJobCommandInput, cb: (err: any, data?: CreateExportJobCommandOutput) => void): void;
   createExportJob(
     args: CreateExportJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateExportJobCommandOutput) => void
+    cb: (err: any, data?: CreateExportJobCommandOutput) => void,
   ): void;
 
   /**
@@ -753,13 +753,13 @@ export interface Pinpoint {
    */
   createImportJob(
     args: CreateImportJobCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateImportJobCommandOutput>;
   createImportJob(args: CreateImportJobCommandInput, cb: (err: any, data?: CreateImportJobCommandOutput) => void): void;
   createImportJob(
     args: CreateImportJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateImportJobCommandOutput) => void
+    cb: (err: any, data?: CreateImportJobCommandOutput) => void,
   ): void;
 
   /**
@@ -767,16 +767,16 @@ export interface Pinpoint {
    */
   createInAppTemplate(
     args: CreateInAppTemplateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateInAppTemplateCommandOutput>;
   createInAppTemplate(
     args: CreateInAppTemplateCommandInput,
-    cb: (err: any, data?: CreateInAppTemplateCommandOutput) => void
+    cb: (err: any, data?: CreateInAppTemplateCommandOutput) => void,
   ): void;
   createInAppTemplate(
     args: CreateInAppTemplateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateInAppTemplateCommandOutput) => void
+    cb: (err: any, data?: CreateInAppTemplateCommandOutput) => void,
   ): void;
 
   /**
@@ -787,7 +787,7 @@ export interface Pinpoint {
   createJourney(
     args: CreateJourneyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateJourneyCommandOutput) => void
+    cb: (err: any, data?: CreateJourneyCommandOutput) => void,
   ): void;
 
   /**
@@ -795,16 +795,16 @@ export interface Pinpoint {
    */
   createPushTemplate(
     args: CreatePushTemplateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreatePushTemplateCommandOutput>;
   createPushTemplate(
     args: CreatePushTemplateCommandInput,
-    cb: (err: any, data?: CreatePushTemplateCommandOutput) => void
+    cb: (err: any, data?: CreatePushTemplateCommandOutput) => void,
   ): void;
   createPushTemplate(
     args: CreatePushTemplateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreatePushTemplateCommandOutput) => void
+    cb: (err: any, data?: CreatePushTemplateCommandOutput) => void,
   ): void;
 
   /**
@@ -812,16 +812,16 @@ export interface Pinpoint {
    */
   createRecommenderConfiguration(
     args: CreateRecommenderConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateRecommenderConfigurationCommandOutput>;
   createRecommenderConfiguration(
     args: CreateRecommenderConfigurationCommandInput,
-    cb: (err: any, data?: CreateRecommenderConfigurationCommandOutput) => void
+    cb: (err: any, data?: CreateRecommenderConfigurationCommandOutput) => void,
   ): void;
   createRecommenderConfiguration(
     args: CreateRecommenderConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateRecommenderConfigurationCommandOutput) => void
+    cb: (err: any, data?: CreateRecommenderConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -832,7 +832,7 @@ export interface Pinpoint {
   createSegment(
     args: CreateSegmentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateSegmentCommandOutput) => void
+    cb: (err: any, data?: CreateSegmentCommandOutput) => void,
   ): void;
 
   /**
@@ -840,16 +840,16 @@ export interface Pinpoint {
    */
   createSmsTemplate(
     args: CreateSmsTemplateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateSmsTemplateCommandOutput>;
   createSmsTemplate(
     args: CreateSmsTemplateCommandInput,
-    cb: (err: any, data?: CreateSmsTemplateCommandOutput) => void
+    cb: (err: any, data?: CreateSmsTemplateCommandOutput) => void,
   ): void;
   createSmsTemplate(
     args: CreateSmsTemplateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateSmsTemplateCommandOutput) => void
+    cb: (err: any, data?: CreateSmsTemplateCommandOutput) => void,
   ): void;
 
   /**
@@ -857,16 +857,16 @@ export interface Pinpoint {
    */
   createVoiceTemplate(
     args: CreateVoiceTemplateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateVoiceTemplateCommandOutput>;
   createVoiceTemplate(
     args: CreateVoiceTemplateCommandInput,
-    cb: (err: any, data?: CreateVoiceTemplateCommandOutput) => void
+    cb: (err: any, data?: CreateVoiceTemplateCommandOutput) => void,
   ): void;
   createVoiceTemplate(
     args: CreateVoiceTemplateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateVoiceTemplateCommandOutput) => void
+    cb: (err: any, data?: CreateVoiceTemplateCommandOutput) => void,
   ): void;
 
   /**
@@ -874,16 +874,16 @@ export interface Pinpoint {
    */
   deleteAdmChannel(
     args: DeleteAdmChannelCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteAdmChannelCommandOutput>;
   deleteAdmChannel(
     args: DeleteAdmChannelCommandInput,
-    cb: (err: any, data?: DeleteAdmChannelCommandOutput) => void
+    cb: (err: any, data?: DeleteAdmChannelCommandOutput) => void,
   ): void;
   deleteAdmChannel(
     args: DeleteAdmChannelCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteAdmChannelCommandOutput) => void
+    cb: (err: any, data?: DeleteAdmChannelCommandOutput) => void,
   ): void;
 
   /**
@@ -891,16 +891,16 @@ export interface Pinpoint {
    */
   deleteApnsChannel(
     args: DeleteApnsChannelCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteApnsChannelCommandOutput>;
   deleteApnsChannel(
     args: DeleteApnsChannelCommandInput,
-    cb: (err: any, data?: DeleteApnsChannelCommandOutput) => void
+    cb: (err: any, data?: DeleteApnsChannelCommandOutput) => void,
   ): void;
   deleteApnsChannel(
     args: DeleteApnsChannelCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteApnsChannelCommandOutput) => void
+    cb: (err: any, data?: DeleteApnsChannelCommandOutput) => void,
   ): void;
 
   /**
@@ -908,16 +908,16 @@ export interface Pinpoint {
    */
   deleteApnsSandboxChannel(
     args: DeleteApnsSandboxChannelCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteApnsSandboxChannelCommandOutput>;
   deleteApnsSandboxChannel(
     args: DeleteApnsSandboxChannelCommandInput,
-    cb: (err: any, data?: DeleteApnsSandboxChannelCommandOutput) => void
+    cb: (err: any, data?: DeleteApnsSandboxChannelCommandOutput) => void,
   ): void;
   deleteApnsSandboxChannel(
     args: DeleteApnsSandboxChannelCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteApnsSandboxChannelCommandOutput) => void
+    cb: (err: any, data?: DeleteApnsSandboxChannelCommandOutput) => void,
   ): void;
 
   /**
@@ -925,16 +925,16 @@ export interface Pinpoint {
    */
   deleteApnsVoipChannel(
     args: DeleteApnsVoipChannelCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteApnsVoipChannelCommandOutput>;
   deleteApnsVoipChannel(
     args: DeleteApnsVoipChannelCommandInput,
-    cb: (err: any, data?: DeleteApnsVoipChannelCommandOutput) => void
+    cb: (err: any, data?: DeleteApnsVoipChannelCommandOutput) => void,
   ): void;
   deleteApnsVoipChannel(
     args: DeleteApnsVoipChannelCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteApnsVoipChannelCommandOutput) => void
+    cb: (err: any, data?: DeleteApnsVoipChannelCommandOutput) => void,
   ): void;
 
   /**
@@ -942,16 +942,16 @@ export interface Pinpoint {
    */
   deleteApnsVoipSandboxChannel(
     args: DeleteApnsVoipSandboxChannelCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteApnsVoipSandboxChannelCommandOutput>;
   deleteApnsVoipSandboxChannel(
     args: DeleteApnsVoipSandboxChannelCommandInput,
-    cb: (err: any, data?: DeleteApnsVoipSandboxChannelCommandOutput) => void
+    cb: (err: any, data?: DeleteApnsVoipSandboxChannelCommandOutput) => void,
   ): void;
   deleteApnsVoipSandboxChannel(
     args: DeleteApnsVoipSandboxChannelCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteApnsVoipSandboxChannelCommandOutput) => void
+    cb: (err: any, data?: DeleteApnsVoipSandboxChannelCommandOutput) => void,
   ): void;
 
   /**
@@ -962,7 +962,7 @@ export interface Pinpoint {
   deleteApp(
     args: DeleteAppCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteAppCommandOutput) => void
+    cb: (err: any, data?: DeleteAppCommandOutput) => void,
   ): void;
 
   /**
@@ -970,16 +970,16 @@ export interface Pinpoint {
    */
   deleteBaiduChannel(
     args: DeleteBaiduChannelCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteBaiduChannelCommandOutput>;
   deleteBaiduChannel(
     args: DeleteBaiduChannelCommandInput,
-    cb: (err: any, data?: DeleteBaiduChannelCommandOutput) => void
+    cb: (err: any, data?: DeleteBaiduChannelCommandOutput) => void,
   ): void;
   deleteBaiduChannel(
     args: DeleteBaiduChannelCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteBaiduChannelCommandOutput) => void
+    cb: (err: any, data?: DeleteBaiduChannelCommandOutput) => void,
   ): void;
 
   /**
@@ -987,13 +987,13 @@ export interface Pinpoint {
    */
   deleteCampaign(
     args: DeleteCampaignCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteCampaignCommandOutput>;
   deleteCampaign(args: DeleteCampaignCommandInput, cb: (err: any, data?: DeleteCampaignCommandOutput) => void): void;
   deleteCampaign(
     args: DeleteCampaignCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteCampaignCommandOutput) => void
+    cb: (err: any, data?: DeleteCampaignCommandOutput) => void,
   ): void;
 
   /**
@@ -1001,16 +1001,16 @@ export interface Pinpoint {
    */
   deleteEmailChannel(
     args: DeleteEmailChannelCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteEmailChannelCommandOutput>;
   deleteEmailChannel(
     args: DeleteEmailChannelCommandInput,
-    cb: (err: any, data?: DeleteEmailChannelCommandOutput) => void
+    cb: (err: any, data?: DeleteEmailChannelCommandOutput) => void,
   ): void;
   deleteEmailChannel(
     args: DeleteEmailChannelCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteEmailChannelCommandOutput) => void
+    cb: (err: any, data?: DeleteEmailChannelCommandOutput) => void,
   ): void;
 
   /**
@@ -1018,16 +1018,16 @@ export interface Pinpoint {
    */
   deleteEmailTemplate(
     args: DeleteEmailTemplateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteEmailTemplateCommandOutput>;
   deleteEmailTemplate(
     args: DeleteEmailTemplateCommandInput,
-    cb: (err: any, data?: DeleteEmailTemplateCommandOutput) => void
+    cb: (err: any, data?: DeleteEmailTemplateCommandOutput) => void,
   ): void;
   deleteEmailTemplate(
     args: DeleteEmailTemplateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteEmailTemplateCommandOutput) => void
+    cb: (err: any, data?: DeleteEmailTemplateCommandOutput) => void,
   ): void;
 
   /**
@@ -1035,13 +1035,13 @@ export interface Pinpoint {
    */
   deleteEndpoint(
     args: DeleteEndpointCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteEndpointCommandOutput>;
   deleteEndpoint(args: DeleteEndpointCommandInput, cb: (err: any, data?: DeleteEndpointCommandOutput) => void): void;
   deleteEndpoint(
     args: DeleteEndpointCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteEndpointCommandOutput) => void
+    cb: (err: any, data?: DeleteEndpointCommandOutput) => void,
   ): void;
 
   /**
@@ -1049,16 +1049,16 @@ export interface Pinpoint {
    */
   deleteEventStream(
     args: DeleteEventStreamCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteEventStreamCommandOutput>;
   deleteEventStream(
     args: DeleteEventStreamCommandInput,
-    cb: (err: any, data?: DeleteEventStreamCommandOutput) => void
+    cb: (err: any, data?: DeleteEventStreamCommandOutput) => void,
   ): void;
   deleteEventStream(
     args: DeleteEventStreamCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteEventStreamCommandOutput) => void
+    cb: (err: any, data?: DeleteEventStreamCommandOutput) => void,
   ): void;
 
   /**
@@ -1066,16 +1066,16 @@ export interface Pinpoint {
    */
   deleteGcmChannel(
     args: DeleteGcmChannelCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteGcmChannelCommandOutput>;
   deleteGcmChannel(
     args: DeleteGcmChannelCommandInput,
-    cb: (err: any, data?: DeleteGcmChannelCommandOutput) => void
+    cb: (err: any, data?: DeleteGcmChannelCommandOutput) => void,
   ): void;
   deleteGcmChannel(
     args: DeleteGcmChannelCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteGcmChannelCommandOutput) => void
+    cb: (err: any, data?: DeleteGcmChannelCommandOutput) => void,
   ): void;
 
   /**
@@ -1083,16 +1083,16 @@ export interface Pinpoint {
    */
   deleteInAppTemplate(
     args: DeleteInAppTemplateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteInAppTemplateCommandOutput>;
   deleteInAppTemplate(
     args: DeleteInAppTemplateCommandInput,
-    cb: (err: any, data?: DeleteInAppTemplateCommandOutput) => void
+    cb: (err: any, data?: DeleteInAppTemplateCommandOutput) => void,
   ): void;
   deleteInAppTemplate(
     args: DeleteInAppTemplateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteInAppTemplateCommandOutput) => void
+    cb: (err: any, data?: DeleteInAppTemplateCommandOutput) => void,
   ): void;
 
   /**
@@ -1103,7 +1103,7 @@ export interface Pinpoint {
   deleteJourney(
     args: DeleteJourneyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteJourneyCommandOutput) => void
+    cb: (err: any, data?: DeleteJourneyCommandOutput) => void,
   ): void;
 
   /**
@@ -1111,16 +1111,16 @@ export interface Pinpoint {
    */
   deletePushTemplate(
     args: DeletePushTemplateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeletePushTemplateCommandOutput>;
   deletePushTemplate(
     args: DeletePushTemplateCommandInput,
-    cb: (err: any, data?: DeletePushTemplateCommandOutput) => void
+    cb: (err: any, data?: DeletePushTemplateCommandOutput) => void,
   ): void;
   deletePushTemplate(
     args: DeletePushTemplateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeletePushTemplateCommandOutput) => void
+    cb: (err: any, data?: DeletePushTemplateCommandOutput) => void,
   ): void;
 
   /**
@@ -1128,16 +1128,16 @@ export interface Pinpoint {
    */
   deleteRecommenderConfiguration(
     args: DeleteRecommenderConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteRecommenderConfigurationCommandOutput>;
   deleteRecommenderConfiguration(
     args: DeleteRecommenderConfigurationCommandInput,
-    cb: (err: any, data?: DeleteRecommenderConfigurationCommandOutput) => void
+    cb: (err: any, data?: DeleteRecommenderConfigurationCommandOutput) => void,
   ): void;
   deleteRecommenderConfiguration(
     args: DeleteRecommenderConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteRecommenderConfigurationCommandOutput) => void
+    cb: (err: any, data?: DeleteRecommenderConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -1148,7 +1148,7 @@ export interface Pinpoint {
   deleteSegment(
     args: DeleteSegmentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteSegmentCommandOutput) => void
+    cb: (err: any, data?: DeleteSegmentCommandOutput) => void,
   ): void;
 
   /**
@@ -1156,16 +1156,16 @@ export interface Pinpoint {
    */
   deleteSmsChannel(
     args: DeleteSmsChannelCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteSmsChannelCommandOutput>;
   deleteSmsChannel(
     args: DeleteSmsChannelCommandInput,
-    cb: (err: any, data?: DeleteSmsChannelCommandOutput) => void
+    cb: (err: any, data?: DeleteSmsChannelCommandOutput) => void,
   ): void;
   deleteSmsChannel(
     args: DeleteSmsChannelCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteSmsChannelCommandOutput) => void
+    cb: (err: any, data?: DeleteSmsChannelCommandOutput) => void,
   ): void;
 
   /**
@@ -1173,16 +1173,16 @@ export interface Pinpoint {
    */
   deleteSmsTemplate(
     args: DeleteSmsTemplateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteSmsTemplateCommandOutput>;
   deleteSmsTemplate(
     args: DeleteSmsTemplateCommandInput,
-    cb: (err: any, data?: DeleteSmsTemplateCommandOutput) => void
+    cb: (err: any, data?: DeleteSmsTemplateCommandOutput) => void,
   ): void;
   deleteSmsTemplate(
     args: DeleteSmsTemplateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteSmsTemplateCommandOutput) => void
+    cb: (err: any, data?: DeleteSmsTemplateCommandOutput) => void,
   ): void;
 
   /**
@@ -1190,16 +1190,16 @@ export interface Pinpoint {
    */
   deleteUserEndpoints(
     args: DeleteUserEndpointsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteUserEndpointsCommandOutput>;
   deleteUserEndpoints(
     args: DeleteUserEndpointsCommandInput,
-    cb: (err: any, data?: DeleteUserEndpointsCommandOutput) => void
+    cb: (err: any, data?: DeleteUserEndpointsCommandOutput) => void,
   ): void;
   deleteUserEndpoints(
     args: DeleteUserEndpointsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteUserEndpointsCommandOutput) => void
+    cb: (err: any, data?: DeleteUserEndpointsCommandOutput) => void,
   ): void;
 
   /**
@@ -1207,16 +1207,16 @@ export interface Pinpoint {
    */
   deleteVoiceChannel(
     args: DeleteVoiceChannelCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteVoiceChannelCommandOutput>;
   deleteVoiceChannel(
     args: DeleteVoiceChannelCommandInput,
-    cb: (err: any, data?: DeleteVoiceChannelCommandOutput) => void
+    cb: (err: any, data?: DeleteVoiceChannelCommandOutput) => void,
   ): void;
   deleteVoiceChannel(
     args: DeleteVoiceChannelCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteVoiceChannelCommandOutput) => void
+    cb: (err: any, data?: DeleteVoiceChannelCommandOutput) => void,
   ): void;
 
   /**
@@ -1224,16 +1224,16 @@ export interface Pinpoint {
    */
   deleteVoiceTemplate(
     args: DeleteVoiceTemplateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteVoiceTemplateCommandOutput>;
   deleteVoiceTemplate(
     args: DeleteVoiceTemplateCommandInput,
-    cb: (err: any, data?: DeleteVoiceTemplateCommandOutput) => void
+    cb: (err: any, data?: DeleteVoiceTemplateCommandOutput) => void,
   ): void;
   deleteVoiceTemplate(
     args: DeleteVoiceTemplateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteVoiceTemplateCommandOutput) => void
+    cb: (err: any, data?: DeleteVoiceTemplateCommandOutput) => void,
   ): void;
 
   /**
@@ -1244,7 +1244,7 @@ export interface Pinpoint {
   getAdmChannel(
     args: GetAdmChannelCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetAdmChannelCommandOutput) => void
+    cb: (err: any, data?: GetAdmChannelCommandOutput) => void,
   ): void;
 
   /**
@@ -1252,13 +1252,13 @@ export interface Pinpoint {
    */
   getApnsChannel(
     args: GetApnsChannelCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetApnsChannelCommandOutput>;
   getApnsChannel(args: GetApnsChannelCommandInput, cb: (err: any, data?: GetApnsChannelCommandOutput) => void): void;
   getApnsChannel(
     args: GetApnsChannelCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetApnsChannelCommandOutput) => void
+    cb: (err: any, data?: GetApnsChannelCommandOutput) => void,
   ): void;
 
   /**
@@ -1266,16 +1266,16 @@ export interface Pinpoint {
    */
   getApnsSandboxChannel(
     args: GetApnsSandboxChannelCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetApnsSandboxChannelCommandOutput>;
   getApnsSandboxChannel(
     args: GetApnsSandboxChannelCommandInput,
-    cb: (err: any, data?: GetApnsSandboxChannelCommandOutput) => void
+    cb: (err: any, data?: GetApnsSandboxChannelCommandOutput) => void,
   ): void;
   getApnsSandboxChannel(
     args: GetApnsSandboxChannelCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetApnsSandboxChannelCommandOutput) => void
+    cb: (err: any, data?: GetApnsSandboxChannelCommandOutput) => void,
   ): void;
 
   /**
@@ -1283,16 +1283,16 @@ export interface Pinpoint {
    */
   getApnsVoipChannel(
     args: GetApnsVoipChannelCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetApnsVoipChannelCommandOutput>;
   getApnsVoipChannel(
     args: GetApnsVoipChannelCommandInput,
-    cb: (err: any, data?: GetApnsVoipChannelCommandOutput) => void
+    cb: (err: any, data?: GetApnsVoipChannelCommandOutput) => void,
   ): void;
   getApnsVoipChannel(
     args: GetApnsVoipChannelCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetApnsVoipChannelCommandOutput) => void
+    cb: (err: any, data?: GetApnsVoipChannelCommandOutput) => void,
   ): void;
 
   /**
@@ -1300,16 +1300,16 @@ export interface Pinpoint {
    */
   getApnsVoipSandboxChannel(
     args: GetApnsVoipSandboxChannelCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetApnsVoipSandboxChannelCommandOutput>;
   getApnsVoipSandboxChannel(
     args: GetApnsVoipSandboxChannelCommandInput,
-    cb: (err: any, data?: GetApnsVoipSandboxChannelCommandOutput) => void
+    cb: (err: any, data?: GetApnsVoipSandboxChannelCommandOutput) => void,
   ): void;
   getApnsVoipSandboxChannel(
     args: GetApnsVoipSandboxChannelCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetApnsVoipSandboxChannelCommandOutput) => void
+    cb: (err: any, data?: GetApnsVoipSandboxChannelCommandOutput) => void,
   ): void;
 
   /**
@@ -1320,7 +1320,7 @@ export interface Pinpoint {
   getApp(
     args: GetAppCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetAppCommandOutput) => void
+    cb: (err: any, data?: GetAppCommandOutput) => void,
   ): void;
 
   /**
@@ -1328,16 +1328,16 @@ export interface Pinpoint {
    */
   getApplicationDateRangeKpi(
     args: GetApplicationDateRangeKpiCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetApplicationDateRangeKpiCommandOutput>;
   getApplicationDateRangeKpi(
     args: GetApplicationDateRangeKpiCommandInput,
-    cb: (err: any, data?: GetApplicationDateRangeKpiCommandOutput) => void
+    cb: (err: any, data?: GetApplicationDateRangeKpiCommandOutput) => void,
   ): void;
   getApplicationDateRangeKpi(
     args: GetApplicationDateRangeKpiCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetApplicationDateRangeKpiCommandOutput) => void
+    cb: (err: any, data?: GetApplicationDateRangeKpiCommandOutput) => void,
   ): void;
 
   /**
@@ -1345,16 +1345,16 @@ export interface Pinpoint {
    */
   getApplicationSettings(
     args: GetApplicationSettingsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetApplicationSettingsCommandOutput>;
   getApplicationSettings(
     args: GetApplicationSettingsCommandInput,
-    cb: (err: any, data?: GetApplicationSettingsCommandOutput) => void
+    cb: (err: any, data?: GetApplicationSettingsCommandOutput) => void,
   ): void;
   getApplicationSettings(
     args: GetApplicationSettingsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetApplicationSettingsCommandOutput) => void
+    cb: (err: any, data?: GetApplicationSettingsCommandOutput) => void,
   ): void;
 
   /**
@@ -1366,7 +1366,7 @@ export interface Pinpoint {
   getApps(
     args: GetAppsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetAppsCommandOutput) => void
+    cb: (err: any, data?: GetAppsCommandOutput) => void,
   ): void;
 
   /**
@@ -1374,13 +1374,13 @@ export interface Pinpoint {
    */
   getBaiduChannel(
     args: GetBaiduChannelCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetBaiduChannelCommandOutput>;
   getBaiduChannel(args: GetBaiduChannelCommandInput, cb: (err: any, data?: GetBaiduChannelCommandOutput) => void): void;
   getBaiduChannel(
     args: GetBaiduChannelCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetBaiduChannelCommandOutput) => void
+    cb: (err: any, data?: GetBaiduChannelCommandOutput) => void,
   ): void;
 
   /**
@@ -1391,7 +1391,7 @@ export interface Pinpoint {
   getCampaign(
     args: GetCampaignCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetCampaignCommandOutput) => void
+    cb: (err: any, data?: GetCampaignCommandOutput) => void,
   ): void;
 
   /**
@@ -1399,16 +1399,16 @@ export interface Pinpoint {
    */
   getCampaignActivities(
     args: GetCampaignActivitiesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetCampaignActivitiesCommandOutput>;
   getCampaignActivities(
     args: GetCampaignActivitiesCommandInput,
-    cb: (err: any, data?: GetCampaignActivitiesCommandOutput) => void
+    cb: (err: any, data?: GetCampaignActivitiesCommandOutput) => void,
   ): void;
   getCampaignActivities(
     args: GetCampaignActivitiesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetCampaignActivitiesCommandOutput) => void
+    cb: (err: any, data?: GetCampaignActivitiesCommandOutput) => void,
   ): void;
 
   /**
@@ -1416,16 +1416,16 @@ export interface Pinpoint {
    */
   getCampaignDateRangeKpi(
     args: GetCampaignDateRangeKpiCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetCampaignDateRangeKpiCommandOutput>;
   getCampaignDateRangeKpi(
     args: GetCampaignDateRangeKpiCommandInput,
-    cb: (err: any, data?: GetCampaignDateRangeKpiCommandOutput) => void
+    cb: (err: any, data?: GetCampaignDateRangeKpiCommandOutput) => void,
   ): void;
   getCampaignDateRangeKpi(
     args: GetCampaignDateRangeKpiCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetCampaignDateRangeKpiCommandOutput) => void
+    cb: (err: any, data?: GetCampaignDateRangeKpiCommandOutput) => void,
   ): void;
 
   /**
@@ -1436,7 +1436,7 @@ export interface Pinpoint {
   getCampaigns(
     args: GetCampaignsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetCampaignsCommandOutput) => void
+    cb: (err: any, data?: GetCampaignsCommandOutput) => void,
   ): void;
 
   /**
@@ -1444,16 +1444,16 @@ export interface Pinpoint {
    */
   getCampaignVersion(
     args: GetCampaignVersionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetCampaignVersionCommandOutput>;
   getCampaignVersion(
     args: GetCampaignVersionCommandInput,
-    cb: (err: any, data?: GetCampaignVersionCommandOutput) => void
+    cb: (err: any, data?: GetCampaignVersionCommandOutput) => void,
   ): void;
   getCampaignVersion(
     args: GetCampaignVersionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetCampaignVersionCommandOutput) => void
+    cb: (err: any, data?: GetCampaignVersionCommandOutput) => void,
   ): void;
 
   /**
@@ -1461,16 +1461,16 @@ export interface Pinpoint {
    */
   getCampaignVersions(
     args: GetCampaignVersionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetCampaignVersionsCommandOutput>;
   getCampaignVersions(
     args: GetCampaignVersionsCommandInput,
-    cb: (err: any, data?: GetCampaignVersionsCommandOutput) => void
+    cb: (err: any, data?: GetCampaignVersionsCommandOutput) => void,
   ): void;
   getCampaignVersions(
     args: GetCampaignVersionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetCampaignVersionsCommandOutput) => void
+    cb: (err: any, data?: GetCampaignVersionsCommandOutput) => void,
   ): void;
 
   /**
@@ -1481,7 +1481,7 @@ export interface Pinpoint {
   getChannels(
     args: GetChannelsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetChannelsCommandOutput) => void
+    cb: (err: any, data?: GetChannelsCommandOutput) => void,
   ): void;
 
   /**
@@ -1489,13 +1489,13 @@ export interface Pinpoint {
    */
   getEmailChannel(
     args: GetEmailChannelCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetEmailChannelCommandOutput>;
   getEmailChannel(args: GetEmailChannelCommandInput, cb: (err: any, data?: GetEmailChannelCommandOutput) => void): void;
   getEmailChannel(
     args: GetEmailChannelCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetEmailChannelCommandOutput) => void
+    cb: (err: any, data?: GetEmailChannelCommandOutput) => void,
   ): void;
 
   /**
@@ -1503,16 +1503,16 @@ export interface Pinpoint {
    */
   getEmailTemplate(
     args: GetEmailTemplateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetEmailTemplateCommandOutput>;
   getEmailTemplate(
     args: GetEmailTemplateCommandInput,
-    cb: (err: any, data?: GetEmailTemplateCommandOutput) => void
+    cb: (err: any, data?: GetEmailTemplateCommandOutput) => void,
   ): void;
   getEmailTemplate(
     args: GetEmailTemplateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetEmailTemplateCommandOutput) => void
+    cb: (err: any, data?: GetEmailTemplateCommandOutput) => void,
   ): void;
 
   /**
@@ -1523,7 +1523,7 @@ export interface Pinpoint {
   getEndpoint(
     args: GetEndpointCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetEndpointCommandOutput) => void
+    cb: (err: any, data?: GetEndpointCommandOutput) => void,
   ): void;
 
   /**
@@ -1531,13 +1531,13 @@ export interface Pinpoint {
    */
   getEventStream(
     args: GetEventStreamCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetEventStreamCommandOutput>;
   getEventStream(args: GetEventStreamCommandInput, cb: (err: any, data?: GetEventStreamCommandOutput) => void): void;
   getEventStream(
     args: GetEventStreamCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetEventStreamCommandOutput) => void
+    cb: (err: any, data?: GetEventStreamCommandOutput) => void,
   ): void;
 
   /**
@@ -1548,7 +1548,7 @@ export interface Pinpoint {
   getExportJob(
     args: GetExportJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetExportJobCommandOutput) => void
+    cb: (err: any, data?: GetExportJobCommandOutput) => void,
   ): void;
 
   /**
@@ -1559,7 +1559,7 @@ export interface Pinpoint {
   getExportJobs(
     args: GetExportJobsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetExportJobsCommandOutput) => void
+    cb: (err: any, data?: GetExportJobsCommandOutput) => void,
   ): void;
 
   /**
@@ -1570,7 +1570,7 @@ export interface Pinpoint {
   getGcmChannel(
     args: GetGcmChannelCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetGcmChannelCommandOutput) => void
+    cb: (err: any, data?: GetGcmChannelCommandOutput) => void,
   ): void;
 
   /**
@@ -1581,7 +1581,7 @@ export interface Pinpoint {
   getImportJob(
     args: GetImportJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetImportJobCommandOutput) => void
+    cb: (err: any, data?: GetImportJobCommandOutput) => void,
   ): void;
 
   /**
@@ -1592,7 +1592,7 @@ export interface Pinpoint {
   getImportJobs(
     args: GetImportJobsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetImportJobsCommandOutput) => void
+    cb: (err: any, data?: GetImportJobsCommandOutput) => void,
   ): void;
 
   /**
@@ -1600,16 +1600,16 @@ export interface Pinpoint {
    */
   getInAppMessages(
     args: GetInAppMessagesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetInAppMessagesCommandOutput>;
   getInAppMessages(
     args: GetInAppMessagesCommandInput,
-    cb: (err: any, data?: GetInAppMessagesCommandOutput) => void
+    cb: (err: any, data?: GetInAppMessagesCommandOutput) => void,
   ): void;
   getInAppMessages(
     args: GetInAppMessagesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetInAppMessagesCommandOutput) => void
+    cb: (err: any, data?: GetInAppMessagesCommandOutput) => void,
   ): void;
 
   /**
@@ -1617,16 +1617,16 @@ export interface Pinpoint {
    */
   getInAppTemplate(
     args: GetInAppTemplateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetInAppTemplateCommandOutput>;
   getInAppTemplate(
     args: GetInAppTemplateCommandInput,
-    cb: (err: any, data?: GetInAppTemplateCommandOutput) => void
+    cb: (err: any, data?: GetInAppTemplateCommandOutput) => void,
   ): void;
   getInAppTemplate(
     args: GetInAppTemplateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetInAppTemplateCommandOutput) => void
+    cb: (err: any, data?: GetInAppTemplateCommandOutput) => void,
   ): void;
 
   /**
@@ -1637,7 +1637,7 @@ export interface Pinpoint {
   getJourney(
     args: GetJourneyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetJourneyCommandOutput) => void
+    cb: (err: any, data?: GetJourneyCommandOutput) => void,
   ): void;
 
   /**
@@ -1645,16 +1645,16 @@ export interface Pinpoint {
    */
   getJourneyDateRangeKpi(
     args: GetJourneyDateRangeKpiCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetJourneyDateRangeKpiCommandOutput>;
   getJourneyDateRangeKpi(
     args: GetJourneyDateRangeKpiCommandInput,
-    cb: (err: any, data?: GetJourneyDateRangeKpiCommandOutput) => void
+    cb: (err: any, data?: GetJourneyDateRangeKpiCommandOutput) => void,
   ): void;
   getJourneyDateRangeKpi(
     args: GetJourneyDateRangeKpiCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetJourneyDateRangeKpiCommandOutput) => void
+    cb: (err: any, data?: GetJourneyDateRangeKpiCommandOutput) => void,
   ): void;
 
   /**
@@ -1662,16 +1662,16 @@ export interface Pinpoint {
    */
   getJourneyExecutionActivityMetrics(
     args: GetJourneyExecutionActivityMetricsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetJourneyExecutionActivityMetricsCommandOutput>;
   getJourneyExecutionActivityMetrics(
     args: GetJourneyExecutionActivityMetricsCommandInput,
-    cb: (err: any, data?: GetJourneyExecutionActivityMetricsCommandOutput) => void
+    cb: (err: any, data?: GetJourneyExecutionActivityMetricsCommandOutput) => void,
   ): void;
   getJourneyExecutionActivityMetrics(
     args: GetJourneyExecutionActivityMetricsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetJourneyExecutionActivityMetricsCommandOutput) => void
+    cb: (err: any, data?: GetJourneyExecutionActivityMetricsCommandOutput) => void,
   ): void;
 
   /**
@@ -1679,16 +1679,16 @@ export interface Pinpoint {
    */
   getJourneyExecutionMetrics(
     args: GetJourneyExecutionMetricsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetJourneyExecutionMetricsCommandOutput>;
   getJourneyExecutionMetrics(
     args: GetJourneyExecutionMetricsCommandInput,
-    cb: (err: any, data?: GetJourneyExecutionMetricsCommandOutput) => void
+    cb: (err: any, data?: GetJourneyExecutionMetricsCommandOutput) => void,
   ): void;
   getJourneyExecutionMetrics(
     args: GetJourneyExecutionMetricsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetJourneyExecutionMetricsCommandOutput) => void
+    cb: (err: any, data?: GetJourneyExecutionMetricsCommandOutput) => void,
   ): void;
 
   /**
@@ -1696,16 +1696,16 @@ export interface Pinpoint {
    */
   getJourneyRunExecutionActivityMetrics(
     args: GetJourneyRunExecutionActivityMetricsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetJourneyRunExecutionActivityMetricsCommandOutput>;
   getJourneyRunExecutionActivityMetrics(
     args: GetJourneyRunExecutionActivityMetricsCommandInput,
-    cb: (err: any, data?: GetJourneyRunExecutionActivityMetricsCommandOutput) => void
+    cb: (err: any, data?: GetJourneyRunExecutionActivityMetricsCommandOutput) => void,
   ): void;
   getJourneyRunExecutionActivityMetrics(
     args: GetJourneyRunExecutionActivityMetricsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetJourneyRunExecutionActivityMetricsCommandOutput) => void
+    cb: (err: any, data?: GetJourneyRunExecutionActivityMetricsCommandOutput) => void,
   ): void;
 
   /**
@@ -1713,16 +1713,16 @@ export interface Pinpoint {
    */
   getJourneyRunExecutionMetrics(
     args: GetJourneyRunExecutionMetricsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetJourneyRunExecutionMetricsCommandOutput>;
   getJourneyRunExecutionMetrics(
     args: GetJourneyRunExecutionMetricsCommandInput,
-    cb: (err: any, data?: GetJourneyRunExecutionMetricsCommandOutput) => void
+    cb: (err: any, data?: GetJourneyRunExecutionMetricsCommandOutput) => void,
   ): void;
   getJourneyRunExecutionMetrics(
     args: GetJourneyRunExecutionMetricsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetJourneyRunExecutionMetricsCommandOutput) => void
+    cb: (err: any, data?: GetJourneyRunExecutionMetricsCommandOutput) => void,
   ): void;
 
   /**
@@ -1730,13 +1730,13 @@ export interface Pinpoint {
    */
   getJourneyRuns(
     args: GetJourneyRunsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetJourneyRunsCommandOutput>;
   getJourneyRuns(args: GetJourneyRunsCommandInput, cb: (err: any, data?: GetJourneyRunsCommandOutput) => void): void;
   getJourneyRuns(
     args: GetJourneyRunsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetJourneyRunsCommandOutput) => void
+    cb: (err: any, data?: GetJourneyRunsCommandOutput) => void,
   ): void;
 
   /**
@@ -1744,13 +1744,13 @@ export interface Pinpoint {
    */
   getPushTemplate(
     args: GetPushTemplateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetPushTemplateCommandOutput>;
   getPushTemplate(args: GetPushTemplateCommandInput, cb: (err: any, data?: GetPushTemplateCommandOutput) => void): void;
   getPushTemplate(
     args: GetPushTemplateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetPushTemplateCommandOutput) => void
+    cb: (err: any, data?: GetPushTemplateCommandOutput) => void,
   ): void;
 
   /**
@@ -1758,16 +1758,16 @@ export interface Pinpoint {
    */
   getRecommenderConfiguration(
     args: GetRecommenderConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetRecommenderConfigurationCommandOutput>;
   getRecommenderConfiguration(
     args: GetRecommenderConfigurationCommandInput,
-    cb: (err: any, data?: GetRecommenderConfigurationCommandOutput) => void
+    cb: (err: any, data?: GetRecommenderConfigurationCommandOutput) => void,
   ): void;
   getRecommenderConfiguration(
     args: GetRecommenderConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetRecommenderConfigurationCommandOutput) => void
+    cb: (err: any, data?: GetRecommenderConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -1776,16 +1776,16 @@ export interface Pinpoint {
   getRecommenderConfigurations(): Promise<GetRecommenderConfigurationsCommandOutput>;
   getRecommenderConfigurations(
     args: GetRecommenderConfigurationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetRecommenderConfigurationsCommandOutput>;
   getRecommenderConfigurations(
     args: GetRecommenderConfigurationsCommandInput,
-    cb: (err: any, data?: GetRecommenderConfigurationsCommandOutput) => void
+    cb: (err: any, data?: GetRecommenderConfigurationsCommandOutput) => void,
   ): void;
   getRecommenderConfigurations(
     args: GetRecommenderConfigurationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetRecommenderConfigurationsCommandOutput) => void
+    cb: (err: any, data?: GetRecommenderConfigurationsCommandOutput) => void,
   ): void;
 
   /**
@@ -1796,7 +1796,7 @@ export interface Pinpoint {
   getSegment(
     args: GetSegmentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetSegmentCommandOutput) => void
+    cb: (err: any, data?: GetSegmentCommandOutput) => void,
   ): void;
 
   /**
@@ -1804,16 +1804,16 @@ export interface Pinpoint {
    */
   getSegmentExportJobs(
     args: GetSegmentExportJobsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetSegmentExportJobsCommandOutput>;
   getSegmentExportJobs(
     args: GetSegmentExportJobsCommandInput,
-    cb: (err: any, data?: GetSegmentExportJobsCommandOutput) => void
+    cb: (err: any, data?: GetSegmentExportJobsCommandOutput) => void,
   ): void;
   getSegmentExportJobs(
     args: GetSegmentExportJobsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetSegmentExportJobsCommandOutput) => void
+    cb: (err: any, data?: GetSegmentExportJobsCommandOutput) => void,
   ): void;
 
   /**
@@ -1821,16 +1821,16 @@ export interface Pinpoint {
    */
   getSegmentImportJobs(
     args: GetSegmentImportJobsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetSegmentImportJobsCommandOutput>;
   getSegmentImportJobs(
     args: GetSegmentImportJobsCommandInput,
-    cb: (err: any, data?: GetSegmentImportJobsCommandOutput) => void
+    cb: (err: any, data?: GetSegmentImportJobsCommandOutput) => void,
   ): void;
   getSegmentImportJobs(
     args: GetSegmentImportJobsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetSegmentImportJobsCommandOutput) => void
+    cb: (err: any, data?: GetSegmentImportJobsCommandOutput) => void,
   ): void;
 
   /**
@@ -1841,7 +1841,7 @@ export interface Pinpoint {
   getSegments(
     args: GetSegmentsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetSegmentsCommandOutput) => void
+    cb: (err: any, data?: GetSegmentsCommandOutput) => void,
   ): void;
 
   /**
@@ -1849,16 +1849,16 @@ export interface Pinpoint {
    */
   getSegmentVersion(
     args: GetSegmentVersionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetSegmentVersionCommandOutput>;
   getSegmentVersion(
     args: GetSegmentVersionCommandInput,
-    cb: (err: any, data?: GetSegmentVersionCommandOutput) => void
+    cb: (err: any, data?: GetSegmentVersionCommandOutput) => void,
   ): void;
   getSegmentVersion(
     args: GetSegmentVersionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetSegmentVersionCommandOutput) => void
+    cb: (err: any, data?: GetSegmentVersionCommandOutput) => void,
   ): void;
 
   /**
@@ -1866,16 +1866,16 @@ export interface Pinpoint {
    */
   getSegmentVersions(
     args: GetSegmentVersionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetSegmentVersionsCommandOutput>;
   getSegmentVersions(
     args: GetSegmentVersionsCommandInput,
-    cb: (err: any, data?: GetSegmentVersionsCommandOutput) => void
+    cb: (err: any, data?: GetSegmentVersionsCommandOutput) => void,
   ): void;
   getSegmentVersions(
     args: GetSegmentVersionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetSegmentVersionsCommandOutput) => void
+    cb: (err: any, data?: GetSegmentVersionsCommandOutput) => void,
   ): void;
 
   /**
@@ -1886,7 +1886,7 @@ export interface Pinpoint {
   getSmsChannel(
     args: GetSmsChannelCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetSmsChannelCommandOutput) => void
+    cb: (err: any, data?: GetSmsChannelCommandOutput) => void,
   ): void;
 
   /**
@@ -1894,13 +1894,13 @@ export interface Pinpoint {
    */
   getSmsTemplate(
     args: GetSmsTemplateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetSmsTemplateCommandOutput>;
   getSmsTemplate(args: GetSmsTemplateCommandInput, cb: (err: any, data?: GetSmsTemplateCommandOutput) => void): void;
   getSmsTemplate(
     args: GetSmsTemplateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetSmsTemplateCommandOutput) => void
+    cb: (err: any, data?: GetSmsTemplateCommandOutput) => void,
   ): void;
 
   /**
@@ -1908,16 +1908,16 @@ export interface Pinpoint {
    */
   getUserEndpoints(
     args: GetUserEndpointsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetUserEndpointsCommandOutput>;
   getUserEndpoints(
     args: GetUserEndpointsCommandInput,
-    cb: (err: any, data?: GetUserEndpointsCommandOutput) => void
+    cb: (err: any, data?: GetUserEndpointsCommandOutput) => void,
   ): void;
   getUserEndpoints(
     args: GetUserEndpointsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetUserEndpointsCommandOutput) => void
+    cb: (err: any, data?: GetUserEndpointsCommandOutput) => void,
   ): void;
 
   /**
@@ -1925,13 +1925,13 @@ export interface Pinpoint {
    */
   getVoiceChannel(
     args: GetVoiceChannelCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetVoiceChannelCommandOutput>;
   getVoiceChannel(args: GetVoiceChannelCommandInput, cb: (err: any, data?: GetVoiceChannelCommandOutput) => void): void;
   getVoiceChannel(
     args: GetVoiceChannelCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetVoiceChannelCommandOutput) => void
+    cb: (err: any, data?: GetVoiceChannelCommandOutput) => void,
   ): void;
 
   /**
@@ -1939,16 +1939,16 @@ export interface Pinpoint {
    */
   getVoiceTemplate(
     args: GetVoiceTemplateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetVoiceTemplateCommandOutput>;
   getVoiceTemplate(
     args: GetVoiceTemplateCommandInput,
-    cb: (err: any, data?: GetVoiceTemplateCommandOutput) => void
+    cb: (err: any, data?: GetVoiceTemplateCommandOutput) => void,
   ): void;
   getVoiceTemplate(
     args: GetVoiceTemplateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetVoiceTemplateCommandOutput) => void
+    cb: (err: any, data?: GetVoiceTemplateCommandOutput) => void,
   ): void;
 
   /**
@@ -1959,7 +1959,7 @@ export interface Pinpoint {
   listJourneys(
     args: ListJourneysCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListJourneysCommandOutput) => void
+    cb: (err: any, data?: ListJourneysCommandOutput) => void,
   ): void;
 
   /**
@@ -1967,16 +1967,16 @@ export interface Pinpoint {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -1988,7 +1988,7 @@ export interface Pinpoint {
   listTemplates(
     args: ListTemplatesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTemplatesCommandOutput) => void
+    cb: (err: any, data?: ListTemplatesCommandOutput) => void,
   ): void;
 
   /**
@@ -1996,16 +1996,16 @@ export interface Pinpoint {
    */
   listTemplateVersions(
     args: ListTemplateVersionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTemplateVersionsCommandOutput>;
   listTemplateVersions(
     args: ListTemplateVersionsCommandInput,
-    cb: (err: any, data?: ListTemplateVersionsCommandOutput) => void
+    cb: (err: any, data?: ListTemplateVersionsCommandOutput) => void,
   ): void;
   listTemplateVersions(
     args: ListTemplateVersionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTemplateVersionsCommandOutput) => void
+    cb: (err: any, data?: ListTemplateVersionsCommandOutput) => void,
   ): void;
 
   /**
@@ -2013,16 +2013,16 @@ export interface Pinpoint {
    */
   phoneNumberValidate(
     args: PhoneNumberValidateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PhoneNumberValidateCommandOutput>;
   phoneNumberValidate(
     args: PhoneNumberValidateCommandInput,
-    cb: (err: any, data?: PhoneNumberValidateCommandOutput) => void
+    cb: (err: any, data?: PhoneNumberValidateCommandOutput) => void,
   ): void;
   phoneNumberValidate(
     args: PhoneNumberValidateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PhoneNumberValidateCommandOutput) => void
+    cb: (err: any, data?: PhoneNumberValidateCommandOutput) => void,
   ): void;
 
   /**
@@ -2033,7 +2033,7 @@ export interface Pinpoint {
   putEvents(
     args: PutEventsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutEventsCommandOutput) => void
+    cb: (err: any, data?: PutEventsCommandOutput) => void,
   ): void;
 
   /**
@@ -2041,13 +2041,13 @@ export interface Pinpoint {
    */
   putEventStream(
     args: PutEventStreamCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutEventStreamCommandOutput>;
   putEventStream(args: PutEventStreamCommandInput, cb: (err: any, data?: PutEventStreamCommandOutput) => void): void;
   putEventStream(
     args: PutEventStreamCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutEventStreamCommandOutput) => void
+    cb: (err: any, data?: PutEventStreamCommandOutput) => void,
   ): void;
 
   /**
@@ -2055,16 +2055,16 @@ export interface Pinpoint {
    */
   removeAttributes(
     args: RemoveAttributesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<RemoveAttributesCommandOutput>;
   removeAttributes(
     args: RemoveAttributesCommandInput,
-    cb: (err: any, data?: RemoveAttributesCommandOutput) => void
+    cb: (err: any, data?: RemoveAttributesCommandOutput) => void,
   ): void;
   removeAttributes(
     args: RemoveAttributesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RemoveAttributesCommandOutput) => void
+    cb: (err: any, data?: RemoveAttributesCommandOutput) => void,
   ): void;
 
   /**
@@ -2075,7 +2075,7 @@ export interface Pinpoint {
   sendMessages(
     args: SendMessagesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SendMessagesCommandOutput) => void
+    cb: (err: any, data?: SendMessagesCommandOutput) => void,
   ): void;
 
   /**
@@ -2083,13 +2083,13 @@ export interface Pinpoint {
    */
   sendOTPMessage(
     args: SendOTPMessageCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<SendOTPMessageCommandOutput>;
   sendOTPMessage(args: SendOTPMessageCommandInput, cb: (err: any, data?: SendOTPMessageCommandOutput) => void): void;
   sendOTPMessage(
     args: SendOTPMessageCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SendOTPMessageCommandOutput) => void
+    cb: (err: any, data?: SendOTPMessageCommandOutput) => void,
   ): void;
 
   /**
@@ -2097,16 +2097,16 @@ export interface Pinpoint {
    */
   sendUsersMessages(
     args: SendUsersMessagesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<SendUsersMessagesCommandOutput>;
   sendUsersMessages(
     args: SendUsersMessagesCommandInput,
-    cb: (err: any, data?: SendUsersMessagesCommandOutput) => void
+    cb: (err: any, data?: SendUsersMessagesCommandOutput) => void,
   ): void;
   sendUsersMessages(
     args: SendUsersMessagesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SendUsersMessagesCommandOutput) => void
+    cb: (err: any, data?: SendUsersMessagesCommandOutput) => void,
   ): void;
 
   /**
@@ -2117,7 +2117,7 @@ export interface Pinpoint {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -2128,7 +2128,7 @@ export interface Pinpoint {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -2136,16 +2136,16 @@ export interface Pinpoint {
    */
   updateAdmChannel(
     args: UpdateAdmChannelCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateAdmChannelCommandOutput>;
   updateAdmChannel(
     args: UpdateAdmChannelCommandInput,
-    cb: (err: any, data?: UpdateAdmChannelCommandOutput) => void
+    cb: (err: any, data?: UpdateAdmChannelCommandOutput) => void,
   ): void;
   updateAdmChannel(
     args: UpdateAdmChannelCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateAdmChannelCommandOutput) => void
+    cb: (err: any, data?: UpdateAdmChannelCommandOutput) => void,
   ): void;
 
   /**
@@ -2153,16 +2153,16 @@ export interface Pinpoint {
    */
   updateApnsChannel(
     args: UpdateApnsChannelCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateApnsChannelCommandOutput>;
   updateApnsChannel(
     args: UpdateApnsChannelCommandInput,
-    cb: (err: any, data?: UpdateApnsChannelCommandOutput) => void
+    cb: (err: any, data?: UpdateApnsChannelCommandOutput) => void,
   ): void;
   updateApnsChannel(
     args: UpdateApnsChannelCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateApnsChannelCommandOutput) => void
+    cb: (err: any, data?: UpdateApnsChannelCommandOutput) => void,
   ): void;
 
   /**
@@ -2170,16 +2170,16 @@ export interface Pinpoint {
    */
   updateApnsSandboxChannel(
     args: UpdateApnsSandboxChannelCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateApnsSandboxChannelCommandOutput>;
   updateApnsSandboxChannel(
     args: UpdateApnsSandboxChannelCommandInput,
-    cb: (err: any, data?: UpdateApnsSandboxChannelCommandOutput) => void
+    cb: (err: any, data?: UpdateApnsSandboxChannelCommandOutput) => void,
   ): void;
   updateApnsSandboxChannel(
     args: UpdateApnsSandboxChannelCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateApnsSandboxChannelCommandOutput) => void
+    cb: (err: any, data?: UpdateApnsSandboxChannelCommandOutput) => void,
   ): void;
 
   /**
@@ -2187,16 +2187,16 @@ export interface Pinpoint {
    */
   updateApnsVoipChannel(
     args: UpdateApnsVoipChannelCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateApnsVoipChannelCommandOutput>;
   updateApnsVoipChannel(
     args: UpdateApnsVoipChannelCommandInput,
-    cb: (err: any, data?: UpdateApnsVoipChannelCommandOutput) => void
+    cb: (err: any, data?: UpdateApnsVoipChannelCommandOutput) => void,
   ): void;
   updateApnsVoipChannel(
     args: UpdateApnsVoipChannelCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateApnsVoipChannelCommandOutput) => void
+    cb: (err: any, data?: UpdateApnsVoipChannelCommandOutput) => void,
   ): void;
 
   /**
@@ -2204,16 +2204,16 @@ export interface Pinpoint {
    */
   updateApnsVoipSandboxChannel(
     args: UpdateApnsVoipSandboxChannelCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateApnsVoipSandboxChannelCommandOutput>;
   updateApnsVoipSandboxChannel(
     args: UpdateApnsVoipSandboxChannelCommandInput,
-    cb: (err: any, data?: UpdateApnsVoipSandboxChannelCommandOutput) => void
+    cb: (err: any, data?: UpdateApnsVoipSandboxChannelCommandOutput) => void,
   ): void;
   updateApnsVoipSandboxChannel(
     args: UpdateApnsVoipSandboxChannelCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateApnsVoipSandboxChannelCommandOutput) => void
+    cb: (err: any, data?: UpdateApnsVoipSandboxChannelCommandOutput) => void,
   ): void;
 
   /**
@@ -2221,16 +2221,16 @@ export interface Pinpoint {
    */
   updateApplicationSettings(
     args: UpdateApplicationSettingsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateApplicationSettingsCommandOutput>;
   updateApplicationSettings(
     args: UpdateApplicationSettingsCommandInput,
-    cb: (err: any, data?: UpdateApplicationSettingsCommandOutput) => void
+    cb: (err: any, data?: UpdateApplicationSettingsCommandOutput) => void,
   ): void;
   updateApplicationSettings(
     args: UpdateApplicationSettingsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateApplicationSettingsCommandOutput) => void
+    cb: (err: any, data?: UpdateApplicationSettingsCommandOutput) => void,
   ): void;
 
   /**
@@ -2238,16 +2238,16 @@ export interface Pinpoint {
    */
   updateBaiduChannel(
     args: UpdateBaiduChannelCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateBaiduChannelCommandOutput>;
   updateBaiduChannel(
     args: UpdateBaiduChannelCommandInput,
-    cb: (err: any, data?: UpdateBaiduChannelCommandOutput) => void
+    cb: (err: any, data?: UpdateBaiduChannelCommandOutput) => void,
   ): void;
   updateBaiduChannel(
     args: UpdateBaiduChannelCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateBaiduChannelCommandOutput) => void
+    cb: (err: any, data?: UpdateBaiduChannelCommandOutput) => void,
   ): void;
 
   /**
@@ -2255,13 +2255,13 @@ export interface Pinpoint {
    */
   updateCampaign(
     args: UpdateCampaignCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateCampaignCommandOutput>;
   updateCampaign(args: UpdateCampaignCommandInput, cb: (err: any, data?: UpdateCampaignCommandOutput) => void): void;
   updateCampaign(
     args: UpdateCampaignCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateCampaignCommandOutput) => void
+    cb: (err: any, data?: UpdateCampaignCommandOutput) => void,
   ): void;
 
   /**
@@ -2269,16 +2269,16 @@ export interface Pinpoint {
    */
   updateEmailChannel(
     args: UpdateEmailChannelCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateEmailChannelCommandOutput>;
   updateEmailChannel(
     args: UpdateEmailChannelCommandInput,
-    cb: (err: any, data?: UpdateEmailChannelCommandOutput) => void
+    cb: (err: any, data?: UpdateEmailChannelCommandOutput) => void,
   ): void;
   updateEmailChannel(
     args: UpdateEmailChannelCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateEmailChannelCommandOutput) => void
+    cb: (err: any, data?: UpdateEmailChannelCommandOutput) => void,
   ): void;
 
   /**
@@ -2286,16 +2286,16 @@ export interface Pinpoint {
    */
   updateEmailTemplate(
     args: UpdateEmailTemplateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateEmailTemplateCommandOutput>;
   updateEmailTemplate(
     args: UpdateEmailTemplateCommandInput,
-    cb: (err: any, data?: UpdateEmailTemplateCommandOutput) => void
+    cb: (err: any, data?: UpdateEmailTemplateCommandOutput) => void,
   ): void;
   updateEmailTemplate(
     args: UpdateEmailTemplateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateEmailTemplateCommandOutput) => void
+    cb: (err: any, data?: UpdateEmailTemplateCommandOutput) => void,
   ): void;
 
   /**
@@ -2303,13 +2303,13 @@ export interface Pinpoint {
    */
   updateEndpoint(
     args: UpdateEndpointCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateEndpointCommandOutput>;
   updateEndpoint(args: UpdateEndpointCommandInput, cb: (err: any, data?: UpdateEndpointCommandOutput) => void): void;
   updateEndpoint(
     args: UpdateEndpointCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateEndpointCommandOutput) => void
+    cb: (err: any, data?: UpdateEndpointCommandOutput) => void,
   ): void;
 
   /**
@@ -2317,16 +2317,16 @@ export interface Pinpoint {
    */
   updateEndpointsBatch(
     args: UpdateEndpointsBatchCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateEndpointsBatchCommandOutput>;
   updateEndpointsBatch(
     args: UpdateEndpointsBatchCommandInput,
-    cb: (err: any, data?: UpdateEndpointsBatchCommandOutput) => void
+    cb: (err: any, data?: UpdateEndpointsBatchCommandOutput) => void,
   ): void;
   updateEndpointsBatch(
     args: UpdateEndpointsBatchCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateEndpointsBatchCommandOutput) => void
+    cb: (err: any, data?: UpdateEndpointsBatchCommandOutput) => void,
   ): void;
 
   /**
@@ -2334,16 +2334,16 @@ export interface Pinpoint {
    */
   updateGcmChannel(
     args: UpdateGcmChannelCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateGcmChannelCommandOutput>;
   updateGcmChannel(
     args: UpdateGcmChannelCommandInput,
-    cb: (err: any, data?: UpdateGcmChannelCommandOutput) => void
+    cb: (err: any, data?: UpdateGcmChannelCommandOutput) => void,
   ): void;
   updateGcmChannel(
     args: UpdateGcmChannelCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateGcmChannelCommandOutput) => void
+    cb: (err: any, data?: UpdateGcmChannelCommandOutput) => void,
   ): void;
 
   /**
@@ -2351,16 +2351,16 @@ export interface Pinpoint {
    */
   updateInAppTemplate(
     args: UpdateInAppTemplateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateInAppTemplateCommandOutput>;
   updateInAppTemplate(
     args: UpdateInAppTemplateCommandInput,
-    cb: (err: any, data?: UpdateInAppTemplateCommandOutput) => void
+    cb: (err: any, data?: UpdateInAppTemplateCommandOutput) => void,
   ): void;
   updateInAppTemplate(
     args: UpdateInAppTemplateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateInAppTemplateCommandOutput) => void
+    cb: (err: any, data?: UpdateInAppTemplateCommandOutput) => void,
   ): void;
 
   /**
@@ -2371,7 +2371,7 @@ export interface Pinpoint {
   updateJourney(
     args: UpdateJourneyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateJourneyCommandOutput) => void
+    cb: (err: any, data?: UpdateJourneyCommandOutput) => void,
   ): void;
 
   /**
@@ -2379,16 +2379,16 @@ export interface Pinpoint {
    */
   updateJourneyState(
     args: UpdateJourneyStateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateJourneyStateCommandOutput>;
   updateJourneyState(
     args: UpdateJourneyStateCommandInput,
-    cb: (err: any, data?: UpdateJourneyStateCommandOutput) => void
+    cb: (err: any, data?: UpdateJourneyStateCommandOutput) => void,
   ): void;
   updateJourneyState(
     args: UpdateJourneyStateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateJourneyStateCommandOutput) => void
+    cb: (err: any, data?: UpdateJourneyStateCommandOutput) => void,
   ): void;
 
   /**
@@ -2396,16 +2396,16 @@ export interface Pinpoint {
    */
   updatePushTemplate(
     args: UpdatePushTemplateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdatePushTemplateCommandOutput>;
   updatePushTemplate(
     args: UpdatePushTemplateCommandInput,
-    cb: (err: any, data?: UpdatePushTemplateCommandOutput) => void
+    cb: (err: any, data?: UpdatePushTemplateCommandOutput) => void,
   ): void;
   updatePushTemplate(
     args: UpdatePushTemplateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdatePushTemplateCommandOutput) => void
+    cb: (err: any, data?: UpdatePushTemplateCommandOutput) => void,
   ): void;
 
   /**
@@ -2413,16 +2413,16 @@ export interface Pinpoint {
    */
   updateRecommenderConfiguration(
     args: UpdateRecommenderConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateRecommenderConfigurationCommandOutput>;
   updateRecommenderConfiguration(
     args: UpdateRecommenderConfigurationCommandInput,
-    cb: (err: any, data?: UpdateRecommenderConfigurationCommandOutput) => void
+    cb: (err: any, data?: UpdateRecommenderConfigurationCommandOutput) => void,
   ): void;
   updateRecommenderConfiguration(
     args: UpdateRecommenderConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateRecommenderConfigurationCommandOutput) => void
+    cb: (err: any, data?: UpdateRecommenderConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -2433,7 +2433,7 @@ export interface Pinpoint {
   updateSegment(
     args: UpdateSegmentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateSegmentCommandOutput) => void
+    cb: (err: any, data?: UpdateSegmentCommandOutput) => void,
   ): void;
 
   /**
@@ -2441,16 +2441,16 @@ export interface Pinpoint {
    */
   updateSmsChannel(
     args: UpdateSmsChannelCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateSmsChannelCommandOutput>;
   updateSmsChannel(
     args: UpdateSmsChannelCommandInput,
-    cb: (err: any, data?: UpdateSmsChannelCommandOutput) => void
+    cb: (err: any, data?: UpdateSmsChannelCommandOutput) => void,
   ): void;
   updateSmsChannel(
     args: UpdateSmsChannelCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateSmsChannelCommandOutput) => void
+    cb: (err: any, data?: UpdateSmsChannelCommandOutput) => void,
   ): void;
 
   /**
@@ -2458,16 +2458,16 @@ export interface Pinpoint {
    */
   updateSmsTemplate(
     args: UpdateSmsTemplateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateSmsTemplateCommandOutput>;
   updateSmsTemplate(
     args: UpdateSmsTemplateCommandInput,
-    cb: (err: any, data?: UpdateSmsTemplateCommandOutput) => void
+    cb: (err: any, data?: UpdateSmsTemplateCommandOutput) => void,
   ): void;
   updateSmsTemplate(
     args: UpdateSmsTemplateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateSmsTemplateCommandOutput) => void
+    cb: (err: any, data?: UpdateSmsTemplateCommandOutput) => void,
   ): void;
 
   /**
@@ -2475,16 +2475,16 @@ export interface Pinpoint {
    */
   updateTemplateActiveVersion(
     args: UpdateTemplateActiveVersionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateTemplateActiveVersionCommandOutput>;
   updateTemplateActiveVersion(
     args: UpdateTemplateActiveVersionCommandInput,
-    cb: (err: any, data?: UpdateTemplateActiveVersionCommandOutput) => void
+    cb: (err: any, data?: UpdateTemplateActiveVersionCommandOutput) => void,
   ): void;
   updateTemplateActiveVersion(
     args: UpdateTemplateActiveVersionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateTemplateActiveVersionCommandOutput) => void
+    cb: (err: any, data?: UpdateTemplateActiveVersionCommandOutput) => void,
   ): void;
 
   /**
@@ -2492,16 +2492,16 @@ export interface Pinpoint {
    */
   updateVoiceChannel(
     args: UpdateVoiceChannelCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateVoiceChannelCommandOutput>;
   updateVoiceChannel(
     args: UpdateVoiceChannelCommandInput,
-    cb: (err: any, data?: UpdateVoiceChannelCommandOutput) => void
+    cb: (err: any, data?: UpdateVoiceChannelCommandOutput) => void,
   ): void;
   updateVoiceChannel(
     args: UpdateVoiceChannelCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateVoiceChannelCommandOutput) => void
+    cb: (err: any, data?: UpdateVoiceChannelCommandOutput) => void,
   ): void;
 
   /**
@@ -2509,16 +2509,16 @@ export interface Pinpoint {
    */
   updateVoiceTemplate(
     args: UpdateVoiceTemplateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateVoiceTemplateCommandOutput>;
   updateVoiceTemplate(
     args: UpdateVoiceTemplateCommandInput,
-    cb: (err: any, data?: UpdateVoiceTemplateCommandOutput) => void
+    cb: (err: any, data?: UpdateVoiceTemplateCommandOutput) => void,
   ): void;
   updateVoiceTemplate(
     args: UpdateVoiceTemplateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateVoiceTemplateCommandOutput) => void
+    cb: (err: any, data?: UpdateVoiceTemplateCommandOutput) => void,
   ): void;
 
   /**
@@ -2526,16 +2526,16 @@ export interface Pinpoint {
    */
   verifyOTPMessage(
     args: VerifyOTPMessageCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<VerifyOTPMessageCommandOutput>;
   verifyOTPMessage(
     args: VerifyOTPMessageCommandInput,
-    cb: (err: any, data?: VerifyOTPMessageCommandOutput) => void
+    cb: (err: any, data?: VerifyOTPMessageCommandOutput) => void,
   ): void;
   verifyOTPMessage(
     args: VerifyOTPMessageCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: VerifyOTPMessageCommandOutput) => void
+    cb: (err: any, data?: VerifyOTPMessageCommandOutput) => void,
   ): void;
 }
 

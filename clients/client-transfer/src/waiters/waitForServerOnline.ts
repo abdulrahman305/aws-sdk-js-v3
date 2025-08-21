@@ -36,7 +36,7 @@ const checkState = async (client: TransferClient, input: DescribeServerCommandIn
  */
 export const waitForServerOnline = async (
   params: WaiterConfiguration<TransferClient>,
-  input: DescribeServerCommandInput
+  input: DescribeServerCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 30, maxDelay: 3600 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -48,7 +48,7 @@ export const waitForServerOnline = async (
  */
 export const waitUntilServerOnline = async (
   params: WaiterConfiguration<TransferClient>,
-  input: DescribeServerCommandInput
+  input: DescribeServerCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 30, maxDelay: 3600 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

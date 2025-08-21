@@ -7064,7 +7064,7 @@ export const ServiceInstanceFilterSensitiveLog = (obj: ServiceInstance): any => 
  * @internal
  */
 export const CancelServiceInstanceDeploymentOutputFilterSensitiveLog = (
-  obj: CancelServiceInstanceDeploymentOutput
+  obj: CancelServiceInstanceDeploymentOutput,
 ): any => ({
   ...obj,
   ...(obj.serviceInstance && { serviceInstance: ServiceInstanceFilterSensitiveLog(obj.serviceInstance) }),
@@ -7083,7 +7083,7 @@ export const ServicePipelineFilterSensitiveLog = (obj: ServicePipeline): any => 
  * @internal
  */
 export const CancelServicePipelineDeploymentOutputFilterSensitiveLog = (
-  obj: CancelServicePipelineDeploymentOutput
+  obj: CancelServicePipelineDeploymentOutput,
 ): any => ({
   ...obj,
   ...(obj.pipeline && { pipeline: ServicePipelineFilterSensitiveLog(obj.pipeline) }),
@@ -7408,7 +7408,7 @@ export const UpdateEnvironmentTemplateOutputFilterSensitiveLog = (obj: UpdateEnv
  * @internal
  */
 export const CreateEnvironmentTemplateVersionInputFilterSensitiveLog = (
-  obj: CreateEnvironmentTemplateVersionInput
+  obj: CreateEnvironmentTemplateVersionInput,
 ): any => ({
   ...obj,
   ...(obj.description && { description: SENSITIVE_STRING }),
@@ -7429,7 +7429,7 @@ export const EnvironmentTemplateVersionFilterSensitiveLog = (obj: EnvironmentTem
  * @internal
  */
 export const CreateEnvironmentTemplateVersionOutputFilterSensitiveLog = (
-  obj: CreateEnvironmentTemplateVersionOutput
+  obj: CreateEnvironmentTemplateVersionOutput,
 ): any => ({
   ...obj,
   ...(obj.environmentTemplateVersion && {
@@ -7441,7 +7441,7 @@ export const CreateEnvironmentTemplateVersionOutputFilterSensitiveLog = (
  * @internal
  */
 export const DeleteEnvironmentTemplateVersionOutputFilterSensitiveLog = (
-  obj: DeleteEnvironmentTemplateVersionOutput
+  obj: DeleteEnvironmentTemplateVersionOutput,
 ): any => ({
   ...obj,
   ...(obj.environmentTemplateVersion && {
@@ -7453,7 +7453,7 @@ export const DeleteEnvironmentTemplateVersionOutputFilterSensitiveLog = (
  * @internal
  */
 export const GetEnvironmentTemplateVersionOutputFilterSensitiveLog = (
-  obj: GetEnvironmentTemplateVersionOutput
+  obj: GetEnvironmentTemplateVersionOutput,
 ): any => ({
   ...obj,
   ...(obj.environmentTemplateVersion && {
@@ -7474,7 +7474,7 @@ export const EnvironmentTemplateVersionSummaryFilterSensitiveLog = (obj: Environ
  * @internal
  */
 export const ListEnvironmentTemplateVersionsOutputFilterSensitiveLog = (
-  obj: ListEnvironmentTemplateVersionsOutput
+  obj: ListEnvironmentTemplateVersionsOutput,
 ): any => ({
   ...obj,
   ...(obj.templateVersions && {
@@ -7486,7 +7486,7 @@ export const ListEnvironmentTemplateVersionsOutputFilterSensitiveLog = (
  * @internal
  */
 export const UpdateEnvironmentTemplateVersionInputFilterSensitiveLog = (
-  obj: UpdateEnvironmentTemplateVersionInput
+  obj: UpdateEnvironmentTemplateVersionInput,
 ): any => ({
   ...obj,
   ...(obj.description && { description: SENSITIVE_STRING }),
@@ -7496,7 +7496,7 @@ export const UpdateEnvironmentTemplateVersionInputFilterSensitiveLog = (
  * @internal
  */
 export const UpdateEnvironmentTemplateVersionOutputFilterSensitiveLog = (
-  obj: UpdateEnvironmentTemplateVersionOutput
+  obj: UpdateEnvironmentTemplateVersionOutput,
 ): any => ({
   ...obj,
   ...(obj.environmentTemplateVersion && {
@@ -7508,7 +7508,7 @@ export const UpdateEnvironmentTemplateVersionOutputFilterSensitiveLog = (
  * @internal
  */
 export const NotifyResourceDeploymentStatusChangeInputFilterSensitiveLog = (
-  obj: NotifyResourceDeploymentStatusChangeInput
+  obj: NotifyResourceDeploymentStatusChangeInput,
 ): any => ({
   ...obj,
   ...(obj.outputs && { outputs: SENSITIVE_STRING }),

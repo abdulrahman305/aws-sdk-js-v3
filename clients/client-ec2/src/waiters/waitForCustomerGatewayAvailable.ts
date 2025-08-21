@@ -67,7 +67,7 @@ const checkState = async (client: EC2Client, input: DescribeCustomerGatewaysComm
  */
 export const waitForCustomerGatewayAvailable = async (
   params: WaiterConfiguration<EC2Client>,
-  input: DescribeCustomerGatewaysCommandInput
+  input: DescribeCustomerGatewaysCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 15, maxDelay: 120 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -79,7 +79,7 @@ export const waitForCustomerGatewayAvailable = async (
  */
 export const waitUntilCustomerGatewayAvailable = async (
   params: WaiterConfiguration<EC2Client>,
-  input: DescribeCustomerGatewaysCommandInput
+  input: DescribeCustomerGatewaysCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 15, maxDelay: 120 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

@@ -30,7 +30,7 @@ export interface LexRuntimeService {
   deleteSession(
     args: DeleteSessionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteSessionCommandOutput) => void
+    cb: (err: any, data?: DeleteSessionCommandOutput) => void,
   ): void;
 
   /**
@@ -41,7 +41,7 @@ export interface LexRuntimeService {
   getSession(
     args: GetSessionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetSessionCommandOutput) => void
+    cb: (err: any, data?: GetSessionCommandOutput) => void,
   ): void;
 
   /**
@@ -52,7 +52,7 @@ export interface LexRuntimeService {
   postContent(
     args: PostContentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PostContentCommandOutput) => void
+    cb: (err: any, data?: PostContentCommandOutput) => void,
   ): void;
 
   /**
@@ -63,7 +63,7 @@ export interface LexRuntimeService {
   postText(
     args: PostTextCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PostTextCommandOutput) => void
+    cb: (err: any, data?: PostTextCommandOutput) => void,
   ): void;
 
   /**
@@ -74,7 +74,7 @@ export interface LexRuntimeService {
   putSession(
     args: PutSessionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutSessionCommandOutput) => void
+    cb: (err: any, data?: PutSessionCommandOutput) => void,
   ): void;
 }
 

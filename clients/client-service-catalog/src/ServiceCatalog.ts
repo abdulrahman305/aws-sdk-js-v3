@@ -549,16 +549,16 @@ export interface ServiceCatalog {
    */
   acceptPortfolioShare(
     args: AcceptPortfolioShareCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AcceptPortfolioShareCommandOutput>;
   acceptPortfolioShare(
     args: AcceptPortfolioShareCommandInput,
-    cb: (err: any, data?: AcceptPortfolioShareCommandOutput) => void
+    cb: (err: any, data?: AcceptPortfolioShareCommandOutput) => void,
   ): void;
   acceptPortfolioShare(
     args: AcceptPortfolioShareCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AcceptPortfolioShareCommandOutput) => void
+    cb: (err: any, data?: AcceptPortfolioShareCommandOutput) => void,
   ): void;
 
   /**
@@ -566,16 +566,16 @@ export interface ServiceCatalog {
    */
   associateBudgetWithResource(
     args: AssociateBudgetWithResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AssociateBudgetWithResourceCommandOutput>;
   associateBudgetWithResource(
     args: AssociateBudgetWithResourceCommandInput,
-    cb: (err: any, data?: AssociateBudgetWithResourceCommandOutput) => void
+    cb: (err: any, data?: AssociateBudgetWithResourceCommandOutput) => void,
   ): void;
   associateBudgetWithResource(
     args: AssociateBudgetWithResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AssociateBudgetWithResourceCommandOutput) => void
+    cb: (err: any, data?: AssociateBudgetWithResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -583,16 +583,16 @@ export interface ServiceCatalog {
    */
   associatePrincipalWithPortfolio(
     args: AssociatePrincipalWithPortfolioCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AssociatePrincipalWithPortfolioCommandOutput>;
   associatePrincipalWithPortfolio(
     args: AssociatePrincipalWithPortfolioCommandInput,
-    cb: (err: any, data?: AssociatePrincipalWithPortfolioCommandOutput) => void
+    cb: (err: any, data?: AssociatePrincipalWithPortfolioCommandOutput) => void,
   ): void;
   associatePrincipalWithPortfolio(
     args: AssociatePrincipalWithPortfolioCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AssociatePrincipalWithPortfolioCommandOutput) => void
+    cb: (err: any, data?: AssociatePrincipalWithPortfolioCommandOutput) => void,
   ): void;
 
   /**
@@ -600,16 +600,16 @@ export interface ServiceCatalog {
    */
   associateProductWithPortfolio(
     args: AssociateProductWithPortfolioCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AssociateProductWithPortfolioCommandOutput>;
   associateProductWithPortfolio(
     args: AssociateProductWithPortfolioCommandInput,
-    cb: (err: any, data?: AssociateProductWithPortfolioCommandOutput) => void
+    cb: (err: any, data?: AssociateProductWithPortfolioCommandOutput) => void,
   ): void;
   associateProductWithPortfolio(
     args: AssociateProductWithPortfolioCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AssociateProductWithPortfolioCommandOutput) => void
+    cb: (err: any, data?: AssociateProductWithPortfolioCommandOutput) => void,
   ): void;
 
   /**
@@ -617,16 +617,16 @@ export interface ServiceCatalog {
    */
   associateServiceActionWithProvisioningArtifact(
     args: AssociateServiceActionWithProvisioningArtifactCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AssociateServiceActionWithProvisioningArtifactCommandOutput>;
   associateServiceActionWithProvisioningArtifact(
     args: AssociateServiceActionWithProvisioningArtifactCommandInput,
-    cb: (err: any, data?: AssociateServiceActionWithProvisioningArtifactCommandOutput) => void
+    cb: (err: any, data?: AssociateServiceActionWithProvisioningArtifactCommandOutput) => void,
   ): void;
   associateServiceActionWithProvisioningArtifact(
     args: AssociateServiceActionWithProvisioningArtifactCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AssociateServiceActionWithProvisioningArtifactCommandOutput) => void
+    cb: (err: any, data?: AssociateServiceActionWithProvisioningArtifactCommandOutput) => void,
   ): void;
 
   /**
@@ -634,16 +634,16 @@ export interface ServiceCatalog {
    */
   associateTagOptionWithResource(
     args: AssociateTagOptionWithResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AssociateTagOptionWithResourceCommandOutput>;
   associateTagOptionWithResource(
     args: AssociateTagOptionWithResourceCommandInput,
-    cb: (err: any, data?: AssociateTagOptionWithResourceCommandOutput) => void
+    cb: (err: any, data?: AssociateTagOptionWithResourceCommandOutput) => void,
   ): void;
   associateTagOptionWithResource(
     args: AssociateTagOptionWithResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AssociateTagOptionWithResourceCommandOutput) => void
+    cb: (err: any, data?: AssociateTagOptionWithResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -651,16 +651,16 @@ export interface ServiceCatalog {
    */
   batchAssociateServiceActionWithProvisioningArtifact(
     args: BatchAssociateServiceActionWithProvisioningArtifactCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<BatchAssociateServiceActionWithProvisioningArtifactCommandOutput>;
   batchAssociateServiceActionWithProvisioningArtifact(
     args: BatchAssociateServiceActionWithProvisioningArtifactCommandInput,
-    cb: (err: any, data?: BatchAssociateServiceActionWithProvisioningArtifactCommandOutput) => void
+    cb: (err: any, data?: BatchAssociateServiceActionWithProvisioningArtifactCommandOutput) => void,
   ): void;
   batchAssociateServiceActionWithProvisioningArtifact(
     args: BatchAssociateServiceActionWithProvisioningArtifactCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: BatchAssociateServiceActionWithProvisioningArtifactCommandOutput) => void
+    cb: (err: any, data?: BatchAssociateServiceActionWithProvisioningArtifactCommandOutput) => void,
   ): void;
 
   /**
@@ -668,16 +668,16 @@ export interface ServiceCatalog {
    */
   batchDisassociateServiceActionFromProvisioningArtifact(
     args: BatchDisassociateServiceActionFromProvisioningArtifactCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<BatchDisassociateServiceActionFromProvisioningArtifactCommandOutput>;
   batchDisassociateServiceActionFromProvisioningArtifact(
     args: BatchDisassociateServiceActionFromProvisioningArtifactCommandInput,
-    cb: (err: any, data?: BatchDisassociateServiceActionFromProvisioningArtifactCommandOutput) => void
+    cb: (err: any, data?: BatchDisassociateServiceActionFromProvisioningArtifactCommandOutput) => void,
   ): void;
   batchDisassociateServiceActionFromProvisioningArtifact(
     args: BatchDisassociateServiceActionFromProvisioningArtifactCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: BatchDisassociateServiceActionFromProvisioningArtifactCommandOutput) => void
+    cb: (err: any, data?: BatchDisassociateServiceActionFromProvisioningArtifactCommandOutput) => void,
   ): void;
 
   /**
@@ -688,7 +688,7 @@ export interface ServiceCatalog {
   copyProduct(
     args: CopyProductCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CopyProductCommandOutput) => void
+    cb: (err: any, data?: CopyProductCommandOutput) => void,
   ): void;
 
   /**
@@ -696,16 +696,16 @@ export interface ServiceCatalog {
    */
   createConstraint(
     args: CreateConstraintCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateConstraintCommandOutput>;
   createConstraint(
     args: CreateConstraintCommandInput,
-    cb: (err: any, data?: CreateConstraintCommandOutput) => void
+    cb: (err: any, data?: CreateConstraintCommandOutput) => void,
   ): void;
   createConstraint(
     args: CreateConstraintCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateConstraintCommandOutput) => void
+    cb: (err: any, data?: CreateConstraintCommandOutput) => void,
   ): void;
 
   /**
@@ -713,13 +713,13 @@ export interface ServiceCatalog {
    */
   createPortfolio(
     args: CreatePortfolioCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreatePortfolioCommandOutput>;
   createPortfolio(args: CreatePortfolioCommandInput, cb: (err: any, data?: CreatePortfolioCommandOutput) => void): void;
   createPortfolio(
     args: CreatePortfolioCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreatePortfolioCommandOutput) => void
+    cb: (err: any, data?: CreatePortfolioCommandOutput) => void,
   ): void;
 
   /**
@@ -727,16 +727,16 @@ export interface ServiceCatalog {
    */
   createPortfolioShare(
     args: CreatePortfolioShareCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreatePortfolioShareCommandOutput>;
   createPortfolioShare(
     args: CreatePortfolioShareCommandInput,
-    cb: (err: any, data?: CreatePortfolioShareCommandOutput) => void
+    cb: (err: any, data?: CreatePortfolioShareCommandOutput) => void,
   ): void;
   createPortfolioShare(
     args: CreatePortfolioShareCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreatePortfolioShareCommandOutput) => void
+    cb: (err: any, data?: CreatePortfolioShareCommandOutput) => void,
   ): void;
 
   /**
@@ -747,7 +747,7 @@ export interface ServiceCatalog {
   createProduct(
     args: CreateProductCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateProductCommandOutput) => void
+    cb: (err: any, data?: CreateProductCommandOutput) => void,
   ): void;
 
   /**
@@ -755,16 +755,16 @@ export interface ServiceCatalog {
    */
   createProvisionedProductPlan(
     args: CreateProvisionedProductPlanCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateProvisionedProductPlanCommandOutput>;
   createProvisionedProductPlan(
     args: CreateProvisionedProductPlanCommandInput,
-    cb: (err: any, data?: CreateProvisionedProductPlanCommandOutput) => void
+    cb: (err: any, data?: CreateProvisionedProductPlanCommandOutput) => void,
   ): void;
   createProvisionedProductPlan(
     args: CreateProvisionedProductPlanCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateProvisionedProductPlanCommandOutput) => void
+    cb: (err: any, data?: CreateProvisionedProductPlanCommandOutput) => void,
   ): void;
 
   /**
@@ -772,16 +772,16 @@ export interface ServiceCatalog {
    */
   createProvisioningArtifact(
     args: CreateProvisioningArtifactCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateProvisioningArtifactCommandOutput>;
   createProvisioningArtifact(
     args: CreateProvisioningArtifactCommandInput,
-    cb: (err: any, data?: CreateProvisioningArtifactCommandOutput) => void
+    cb: (err: any, data?: CreateProvisioningArtifactCommandOutput) => void,
   ): void;
   createProvisioningArtifact(
     args: CreateProvisioningArtifactCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateProvisioningArtifactCommandOutput) => void
+    cb: (err: any, data?: CreateProvisioningArtifactCommandOutput) => void,
   ): void;
 
   /**
@@ -789,16 +789,16 @@ export interface ServiceCatalog {
    */
   createServiceAction(
     args: CreateServiceActionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateServiceActionCommandOutput>;
   createServiceAction(
     args: CreateServiceActionCommandInput,
-    cb: (err: any, data?: CreateServiceActionCommandOutput) => void
+    cb: (err: any, data?: CreateServiceActionCommandOutput) => void,
   ): void;
   createServiceAction(
     args: CreateServiceActionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateServiceActionCommandOutput) => void
+    cb: (err: any, data?: CreateServiceActionCommandOutput) => void,
   ): void;
 
   /**
@@ -806,13 +806,13 @@ export interface ServiceCatalog {
    */
   createTagOption(
     args: CreateTagOptionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateTagOptionCommandOutput>;
   createTagOption(args: CreateTagOptionCommandInput, cb: (err: any, data?: CreateTagOptionCommandOutput) => void): void;
   createTagOption(
     args: CreateTagOptionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateTagOptionCommandOutput) => void
+    cb: (err: any, data?: CreateTagOptionCommandOutput) => void,
   ): void;
 
   /**
@@ -820,16 +820,16 @@ export interface ServiceCatalog {
    */
   deleteConstraint(
     args: DeleteConstraintCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteConstraintCommandOutput>;
   deleteConstraint(
     args: DeleteConstraintCommandInput,
-    cb: (err: any, data?: DeleteConstraintCommandOutput) => void
+    cb: (err: any, data?: DeleteConstraintCommandOutput) => void,
   ): void;
   deleteConstraint(
     args: DeleteConstraintCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteConstraintCommandOutput) => void
+    cb: (err: any, data?: DeleteConstraintCommandOutput) => void,
   ): void;
 
   /**
@@ -837,13 +837,13 @@ export interface ServiceCatalog {
    */
   deletePortfolio(
     args: DeletePortfolioCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeletePortfolioCommandOutput>;
   deletePortfolio(args: DeletePortfolioCommandInput, cb: (err: any, data?: DeletePortfolioCommandOutput) => void): void;
   deletePortfolio(
     args: DeletePortfolioCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeletePortfolioCommandOutput) => void
+    cb: (err: any, data?: DeletePortfolioCommandOutput) => void,
   ): void;
 
   /**
@@ -851,16 +851,16 @@ export interface ServiceCatalog {
    */
   deletePortfolioShare(
     args: DeletePortfolioShareCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeletePortfolioShareCommandOutput>;
   deletePortfolioShare(
     args: DeletePortfolioShareCommandInput,
-    cb: (err: any, data?: DeletePortfolioShareCommandOutput) => void
+    cb: (err: any, data?: DeletePortfolioShareCommandOutput) => void,
   ): void;
   deletePortfolioShare(
     args: DeletePortfolioShareCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeletePortfolioShareCommandOutput) => void
+    cb: (err: any, data?: DeletePortfolioShareCommandOutput) => void,
   ): void;
 
   /**
@@ -871,7 +871,7 @@ export interface ServiceCatalog {
   deleteProduct(
     args: DeleteProductCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteProductCommandOutput) => void
+    cb: (err: any, data?: DeleteProductCommandOutput) => void,
   ): void;
 
   /**
@@ -879,16 +879,16 @@ export interface ServiceCatalog {
    */
   deleteProvisionedProductPlan(
     args: DeleteProvisionedProductPlanCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteProvisionedProductPlanCommandOutput>;
   deleteProvisionedProductPlan(
     args: DeleteProvisionedProductPlanCommandInput,
-    cb: (err: any, data?: DeleteProvisionedProductPlanCommandOutput) => void
+    cb: (err: any, data?: DeleteProvisionedProductPlanCommandOutput) => void,
   ): void;
   deleteProvisionedProductPlan(
     args: DeleteProvisionedProductPlanCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteProvisionedProductPlanCommandOutput) => void
+    cb: (err: any, data?: DeleteProvisionedProductPlanCommandOutput) => void,
   ): void;
 
   /**
@@ -896,16 +896,16 @@ export interface ServiceCatalog {
    */
   deleteProvisioningArtifact(
     args: DeleteProvisioningArtifactCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteProvisioningArtifactCommandOutput>;
   deleteProvisioningArtifact(
     args: DeleteProvisioningArtifactCommandInput,
-    cb: (err: any, data?: DeleteProvisioningArtifactCommandOutput) => void
+    cb: (err: any, data?: DeleteProvisioningArtifactCommandOutput) => void,
   ): void;
   deleteProvisioningArtifact(
     args: DeleteProvisioningArtifactCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteProvisioningArtifactCommandOutput) => void
+    cb: (err: any, data?: DeleteProvisioningArtifactCommandOutput) => void,
   ): void;
 
   /**
@@ -913,16 +913,16 @@ export interface ServiceCatalog {
    */
   deleteServiceAction(
     args: DeleteServiceActionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteServiceActionCommandOutput>;
   deleteServiceAction(
     args: DeleteServiceActionCommandInput,
-    cb: (err: any, data?: DeleteServiceActionCommandOutput) => void
+    cb: (err: any, data?: DeleteServiceActionCommandOutput) => void,
   ): void;
   deleteServiceAction(
     args: DeleteServiceActionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteServiceActionCommandOutput) => void
+    cb: (err: any, data?: DeleteServiceActionCommandOutput) => void,
   ): void;
 
   /**
@@ -930,13 +930,13 @@ export interface ServiceCatalog {
    */
   deleteTagOption(
     args: DeleteTagOptionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteTagOptionCommandOutput>;
   deleteTagOption(args: DeleteTagOptionCommandInput, cb: (err: any, data?: DeleteTagOptionCommandOutput) => void): void;
   deleteTagOption(
     args: DeleteTagOptionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteTagOptionCommandOutput) => void
+    cb: (err: any, data?: DeleteTagOptionCommandOutput) => void,
   ): void;
 
   /**
@@ -944,16 +944,16 @@ export interface ServiceCatalog {
    */
   describeConstraint(
     args: DescribeConstraintCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeConstraintCommandOutput>;
   describeConstraint(
     args: DescribeConstraintCommandInput,
-    cb: (err: any, data?: DescribeConstraintCommandOutput) => void
+    cb: (err: any, data?: DescribeConstraintCommandOutput) => void,
   ): void;
   describeConstraint(
     args: DescribeConstraintCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeConstraintCommandOutput) => void
+    cb: (err: any, data?: DescribeConstraintCommandOutput) => void,
   ): void;
 
   /**
@@ -961,16 +961,16 @@ export interface ServiceCatalog {
    */
   describeCopyProductStatus(
     args: DescribeCopyProductStatusCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeCopyProductStatusCommandOutput>;
   describeCopyProductStatus(
     args: DescribeCopyProductStatusCommandInput,
-    cb: (err: any, data?: DescribeCopyProductStatusCommandOutput) => void
+    cb: (err: any, data?: DescribeCopyProductStatusCommandOutput) => void,
   ): void;
   describeCopyProductStatus(
     args: DescribeCopyProductStatusCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeCopyProductStatusCommandOutput) => void
+    cb: (err: any, data?: DescribeCopyProductStatusCommandOutput) => void,
   ): void;
 
   /**
@@ -978,16 +978,16 @@ export interface ServiceCatalog {
    */
   describePortfolio(
     args: DescribePortfolioCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribePortfolioCommandOutput>;
   describePortfolio(
     args: DescribePortfolioCommandInput,
-    cb: (err: any, data?: DescribePortfolioCommandOutput) => void
+    cb: (err: any, data?: DescribePortfolioCommandOutput) => void,
   ): void;
   describePortfolio(
     args: DescribePortfolioCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribePortfolioCommandOutput) => void
+    cb: (err: any, data?: DescribePortfolioCommandOutput) => void,
   ): void;
 
   /**
@@ -995,16 +995,16 @@ export interface ServiceCatalog {
    */
   describePortfolioShares(
     args: DescribePortfolioSharesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribePortfolioSharesCommandOutput>;
   describePortfolioShares(
     args: DescribePortfolioSharesCommandInput,
-    cb: (err: any, data?: DescribePortfolioSharesCommandOutput) => void
+    cb: (err: any, data?: DescribePortfolioSharesCommandOutput) => void,
   ): void;
   describePortfolioShares(
     args: DescribePortfolioSharesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribePortfolioSharesCommandOutput) => void
+    cb: (err: any, data?: DescribePortfolioSharesCommandOutput) => void,
   ): void;
 
   /**
@@ -1012,16 +1012,16 @@ export interface ServiceCatalog {
    */
   describePortfolioShareStatus(
     args: DescribePortfolioShareStatusCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribePortfolioShareStatusCommandOutput>;
   describePortfolioShareStatus(
     args: DescribePortfolioShareStatusCommandInput,
-    cb: (err: any, data?: DescribePortfolioShareStatusCommandOutput) => void
+    cb: (err: any, data?: DescribePortfolioShareStatusCommandOutput) => void,
   ): void;
   describePortfolioShareStatus(
     args: DescribePortfolioShareStatusCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribePortfolioShareStatusCommandOutput) => void
+    cb: (err: any, data?: DescribePortfolioShareStatusCommandOutput) => void,
   ): void;
 
   /**
@@ -1030,13 +1030,13 @@ export interface ServiceCatalog {
   describeProduct(): Promise<DescribeProductCommandOutput>;
   describeProduct(
     args: DescribeProductCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeProductCommandOutput>;
   describeProduct(args: DescribeProductCommandInput, cb: (err: any, data?: DescribeProductCommandOutput) => void): void;
   describeProduct(
     args: DescribeProductCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeProductCommandOutput) => void
+    cb: (err: any, data?: DescribeProductCommandOutput) => void,
   ): void;
 
   /**
@@ -1045,16 +1045,16 @@ export interface ServiceCatalog {
   describeProductAsAdmin(): Promise<DescribeProductAsAdminCommandOutput>;
   describeProductAsAdmin(
     args: DescribeProductAsAdminCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeProductAsAdminCommandOutput>;
   describeProductAsAdmin(
     args: DescribeProductAsAdminCommandInput,
-    cb: (err: any, data?: DescribeProductAsAdminCommandOutput) => void
+    cb: (err: any, data?: DescribeProductAsAdminCommandOutput) => void,
   ): void;
   describeProductAsAdmin(
     args: DescribeProductAsAdminCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeProductAsAdminCommandOutput) => void
+    cb: (err: any, data?: DescribeProductAsAdminCommandOutput) => void,
   ): void;
 
   /**
@@ -1062,16 +1062,16 @@ export interface ServiceCatalog {
    */
   describeProductView(
     args: DescribeProductViewCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeProductViewCommandOutput>;
   describeProductView(
     args: DescribeProductViewCommandInput,
-    cb: (err: any, data?: DescribeProductViewCommandOutput) => void
+    cb: (err: any, data?: DescribeProductViewCommandOutput) => void,
   ): void;
   describeProductView(
     args: DescribeProductViewCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeProductViewCommandOutput) => void
+    cb: (err: any, data?: DescribeProductViewCommandOutput) => void,
   ): void;
 
   /**
@@ -1080,16 +1080,16 @@ export interface ServiceCatalog {
   describeProvisionedProduct(): Promise<DescribeProvisionedProductCommandOutput>;
   describeProvisionedProduct(
     args: DescribeProvisionedProductCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeProvisionedProductCommandOutput>;
   describeProvisionedProduct(
     args: DescribeProvisionedProductCommandInput,
-    cb: (err: any, data?: DescribeProvisionedProductCommandOutput) => void
+    cb: (err: any, data?: DescribeProvisionedProductCommandOutput) => void,
   ): void;
   describeProvisionedProduct(
     args: DescribeProvisionedProductCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeProvisionedProductCommandOutput) => void
+    cb: (err: any, data?: DescribeProvisionedProductCommandOutput) => void,
   ): void;
 
   /**
@@ -1097,16 +1097,16 @@ export interface ServiceCatalog {
    */
   describeProvisionedProductPlan(
     args: DescribeProvisionedProductPlanCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeProvisionedProductPlanCommandOutput>;
   describeProvisionedProductPlan(
     args: DescribeProvisionedProductPlanCommandInput,
-    cb: (err: any, data?: DescribeProvisionedProductPlanCommandOutput) => void
+    cb: (err: any, data?: DescribeProvisionedProductPlanCommandOutput) => void,
   ): void;
   describeProvisionedProductPlan(
     args: DescribeProvisionedProductPlanCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeProvisionedProductPlanCommandOutput) => void
+    cb: (err: any, data?: DescribeProvisionedProductPlanCommandOutput) => void,
   ): void;
 
   /**
@@ -1115,16 +1115,16 @@ export interface ServiceCatalog {
   describeProvisioningArtifact(): Promise<DescribeProvisioningArtifactCommandOutput>;
   describeProvisioningArtifact(
     args: DescribeProvisioningArtifactCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeProvisioningArtifactCommandOutput>;
   describeProvisioningArtifact(
     args: DescribeProvisioningArtifactCommandInput,
-    cb: (err: any, data?: DescribeProvisioningArtifactCommandOutput) => void
+    cb: (err: any, data?: DescribeProvisioningArtifactCommandOutput) => void,
   ): void;
   describeProvisioningArtifact(
     args: DescribeProvisioningArtifactCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeProvisioningArtifactCommandOutput) => void
+    cb: (err: any, data?: DescribeProvisioningArtifactCommandOutput) => void,
   ): void;
 
   /**
@@ -1133,16 +1133,16 @@ export interface ServiceCatalog {
   describeProvisioningParameters(): Promise<DescribeProvisioningParametersCommandOutput>;
   describeProvisioningParameters(
     args: DescribeProvisioningParametersCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeProvisioningParametersCommandOutput>;
   describeProvisioningParameters(
     args: DescribeProvisioningParametersCommandInput,
-    cb: (err: any, data?: DescribeProvisioningParametersCommandOutput) => void
+    cb: (err: any, data?: DescribeProvisioningParametersCommandOutput) => void,
   ): void;
   describeProvisioningParameters(
     args: DescribeProvisioningParametersCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeProvisioningParametersCommandOutput) => void
+    cb: (err: any, data?: DescribeProvisioningParametersCommandOutput) => void,
   ): void;
 
   /**
@@ -1150,13 +1150,13 @@ export interface ServiceCatalog {
    */
   describeRecord(
     args: DescribeRecordCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeRecordCommandOutput>;
   describeRecord(args: DescribeRecordCommandInput, cb: (err: any, data?: DescribeRecordCommandOutput) => void): void;
   describeRecord(
     args: DescribeRecordCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeRecordCommandOutput) => void
+    cb: (err: any, data?: DescribeRecordCommandOutput) => void,
   ): void;
 
   /**
@@ -1164,16 +1164,16 @@ export interface ServiceCatalog {
    */
   describeServiceAction(
     args: DescribeServiceActionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeServiceActionCommandOutput>;
   describeServiceAction(
     args: DescribeServiceActionCommandInput,
-    cb: (err: any, data?: DescribeServiceActionCommandOutput) => void
+    cb: (err: any, data?: DescribeServiceActionCommandOutput) => void,
   ): void;
   describeServiceAction(
     args: DescribeServiceActionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeServiceActionCommandOutput) => void
+    cb: (err: any, data?: DescribeServiceActionCommandOutput) => void,
   ): void;
 
   /**
@@ -1181,16 +1181,16 @@ export interface ServiceCatalog {
    */
   describeServiceActionExecutionParameters(
     args: DescribeServiceActionExecutionParametersCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeServiceActionExecutionParametersCommandOutput>;
   describeServiceActionExecutionParameters(
     args: DescribeServiceActionExecutionParametersCommandInput,
-    cb: (err: any, data?: DescribeServiceActionExecutionParametersCommandOutput) => void
+    cb: (err: any, data?: DescribeServiceActionExecutionParametersCommandOutput) => void,
   ): void;
   describeServiceActionExecutionParameters(
     args: DescribeServiceActionExecutionParametersCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeServiceActionExecutionParametersCommandOutput) => void
+    cb: (err: any, data?: DescribeServiceActionExecutionParametersCommandOutput) => void,
   ): void;
 
   /**
@@ -1198,16 +1198,16 @@ export interface ServiceCatalog {
    */
   describeTagOption(
     args: DescribeTagOptionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeTagOptionCommandOutput>;
   describeTagOption(
     args: DescribeTagOptionCommandInput,
-    cb: (err: any, data?: DescribeTagOptionCommandOutput) => void
+    cb: (err: any, data?: DescribeTagOptionCommandOutput) => void,
   ): void;
   describeTagOption(
     args: DescribeTagOptionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeTagOptionCommandOutput) => void
+    cb: (err: any, data?: DescribeTagOptionCommandOutput) => void,
   ): void;
 
   /**
@@ -1216,16 +1216,16 @@ export interface ServiceCatalog {
   disableAWSOrganizationsAccess(): Promise<DisableAWSOrganizationsAccessCommandOutput>;
   disableAWSOrganizationsAccess(
     args: DisableAWSOrganizationsAccessCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DisableAWSOrganizationsAccessCommandOutput>;
   disableAWSOrganizationsAccess(
     args: DisableAWSOrganizationsAccessCommandInput,
-    cb: (err: any, data?: DisableAWSOrganizationsAccessCommandOutput) => void
+    cb: (err: any, data?: DisableAWSOrganizationsAccessCommandOutput) => void,
   ): void;
   disableAWSOrganizationsAccess(
     args: DisableAWSOrganizationsAccessCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DisableAWSOrganizationsAccessCommandOutput) => void
+    cb: (err: any, data?: DisableAWSOrganizationsAccessCommandOutput) => void,
   ): void;
 
   /**
@@ -1233,16 +1233,16 @@ export interface ServiceCatalog {
    */
   disassociateBudgetFromResource(
     args: DisassociateBudgetFromResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DisassociateBudgetFromResourceCommandOutput>;
   disassociateBudgetFromResource(
     args: DisassociateBudgetFromResourceCommandInput,
-    cb: (err: any, data?: DisassociateBudgetFromResourceCommandOutput) => void
+    cb: (err: any, data?: DisassociateBudgetFromResourceCommandOutput) => void,
   ): void;
   disassociateBudgetFromResource(
     args: DisassociateBudgetFromResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DisassociateBudgetFromResourceCommandOutput) => void
+    cb: (err: any, data?: DisassociateBudgetFromResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -1250,16 +1250,16 @@ export interface ServiceCatalog {
    */
   disassociatePrincipalFromPortfolio(
     args: DisassociatePrincipalFromPortfolioCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DisassociatePrincipalFromPortfolioCommandOutput>;
   disassociatePrincipalFromPortfolio(
     args: DisassociatePrincipalFromPortfolioCommandInput,
-    cb: (err: any, data?: DisassociatePrincipalFromPortfolioCommandOutput) => void
+    cb: (err: any, data?: DisassociatePrincipalFromPortfolioCommandOutput) => void,
   ): void;
   disassociatePrincipalFromPortfolio(
     args: DisassociatePrincipalFromPortfolioCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DisassociatePrincipalFromPortfolioCommandOutput) => void
+    cb: (err: any, data?: DisassociatePrincipalFromPortfolioCommandOutput) => void,
   ): void;
 
   /**
@@ -1267,16 +1267,16 @@ export interface ServiceCatalog {
    */
   disassociateProductFromPortfolio(
     args: DisassociateProductFromPortfolioCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DisassociateProductFromPortfolioCommandOutput>;
   disassociateProductFromPortfolio(
     args: DisassociateProductFromPortfolioCommandInput,
-    cb: (err: any, data?: DisassociateProductFromPortfolioCommandOutput) => void
+    cb: (err: any, data?: DisassociateProductFromPortfolioCommandOutput) => void,
   ): void;
   disassociateProductFromPortfolio(
     args: DisassociateProductFromPortfolioCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DisassociateProductFromPortfolioCommandOutput) => void
+    cb: (err: any, data?: DisassociateProductFromPortfolioCommandOutput) => void,
   ): void;
 
   /**
@@ -1284,16 +1284,16 @@ export interface ServiceCatalog {
    */
   disassociateServiceActionFromProvisioningArtifact(
     args: DisassociateServiceActionFromProvisioningArtifactCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DisassociateServiceActionFromProvisioningArtifactCommandOutput>;
   disassociateServiceActionFromProvisioningArtifact(
     args: DisassociateServiceActionFromProvisioningArtifactCommandInput,
-    cb: (err: any, data?: DisassociateServiceActionFromProvisioningArtifactCommandOutput) => void
+    cb: (err: any, data?: DisassociateServiceActionFromProvisioningArtifactCommandOutput) => void,
   ): void;
   disassociateServiceActionFromProvisioningArtifact(
     args: DisassociateServiceActionFromProvisioningArtifactCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DisassociateServiceActionFromProvisioningArtifactCommandOutput) => void
+    cb: (err: any, data?: DisassociateServiceActionFromProvisioningArtifactCommandOutput) => void,
   ): void;
 
   /**
@@ -1301,16 +1301,16 @@ export interface ServiceCatalog {
    */
   disassociateTagOptionFromResource(
     args: DisassociateTagOptionFromResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DisassociateTagOptionFromResourceCommandOutput>;
   disassociateTagOptionFromResource(
     args: DisassociateTagOptionFromResourceCommandInput,
-    cb: (err: any, data?: DisassociateTagOptionFromResourceCommandOutput) => void
+    cb: (err: any, data?: DisassociateTagOptionFromResourceCommandOutput) => void,
   ): void;
   disassociateTagOptionFromResource(
     args: DisassociateTagOptionFromResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DisassociateTagOptionFromResourceCommandOutput) => void
+    cb: (err: any, data?: DisassociateTagOptionFromResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -1319,16 +1319,16 @@ export interface ServiceCatalog {
   enableAWSOrganizationsAccess(): Promise<EnableAWSOrganizationsAccessCommandOutput>;
   enableAWSOrganizationsAccess(
     args: EnableAWSOrganizationsAccessCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<EnableAWSOrganizationsAccessCommandOutput>;
   enableAWSOrganizationsAccess(
     args: EnableAWSOrganizationsAccessCommandInput,
-    cb: (err: any, data?: EnableAWSOrganizationsAccessCommandOutput) => void
+    cb: (err: any, data?: EnableAWSOrganizationsAccessCommandOutput) => void,
   ): void;
   enableAWSOrganizationsAccess(
     args: EnableAWSOrganizationsAccessCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: EnableAWSOrganizationsAccessCommandOutput) => void
+    cb: (err: any, data?: EnableAWSOrganizationsAccessCommandOutput) => void,
   ): void;
 
   /**
@@ -1336,16 +1336,16 @@ export interface ServiceCatalog {
    */
   executeProvisionedProductPlan(
     args: ExecuteProvisionedProductPlanCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ExecuteProvisionedProductPlanCommandOutput>;
   executeProvisionedProductPlan(
     args: ExecuteProvisionedProductPlanCommandInput,
-    cb: (err: any, data?: ExecuteProvisionedProductPlanCommandOutput) => void
+    cb: (err: any, data?: ExecuteProvisionedProductPlanCommandOutput) => void,
   ): void;
   executeProvisionedProductPlan(
     args: ExecuteProvisionedProductPlanCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ExecuteProvisionedProductPlanCommandOutput) => void
+    cb: (err: any, data?: ExecuteProvisionedProductPlanCommandOutput) => void,
   ): void;
 
   /**
@@ -1353,16 +1353,16 @@ export interface ServiceCatalog {
    */
   executeProvisionedProductServiceAction(
     args: ExecuteProvisionedProductServiceActionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ExecuteProvisionedProductServiceActionCommandOutput>;
   executeProvisionedProductServiceAction(
     args: ExecuteProvisionedProductServiceActionCommandInput,
-    cb: (err: any, data?: ExecuteProvisionedProductServiceActionCommandOutput) => void
+    cb: (err: any, data?: ExecuteProvisionedProductServiceActionCommandOutput) => void,
   ): void;
   executeProvisionedProductServiceAction(
     args: ExecuteProvisionedProductServiceActionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ExecuteProvisionedProductServiceActionCommandOutput) => void
+    cb: (err: any, data?: ExecuteProvisionedProductServiceActionCommandOutput) => void,
   ): void;
 
   /**
@@ -1371,16 +1371,16 @@ export interface ServiceCatalog {
   getAWSOrganizationsAccessStatus(): Promise<GetAWSOrganizationsAccessStatusCommandOutput>;
   getAWSOrganizationsAccessStatus(
     args: GetAWSOrganizationsAccessStatusCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetAWSOrganizationsAccessStatusCommandOutput>;
   getAWSOrganizationsAccessStatus(
     args: GetAWSOrganizationsAccessStatusCommandInput,
-    cb: (err: any, data?: GetAWSOrganizationsAccessStatusCommandOutput) => void
+    cb: (err: any, data?: GetAWSOrganizationsAccessStatusCommandOutput) => void,
   ): void;
   getAWSOrganizationsAccessStatus(
     args: GetAWSOrganizationsAccessStatusCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetAWSOrganizationsAccessStatusCommandOutput) => void
+    cb: (err: any, data?: GetAWSOrganizationsAccessStatusCommandOutput) => void,
   ): void;
 
   /**
@@ -1389,16 +1389,16 @@ export interface ServiceCatalog {
   getProvisionedProductOutputs(): Promise<GetProvisionedProductOutputsCommandOutput>;
   getProvisionedProductOutputs(
     args: GetProvisionedProductOutputsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetProvisionedProductOutputsCommandOutput>;
   getProvisionedProductOutputs(
     args: GetProvisionedProductOutputsCommandInput,
-    cb: (err: any, data?: GetProvisionedProductOutputsCommandOutput) => void
+    cb: (err: any, data?: GetProvisionedProductOutputsCommandOutput) => void,
   ): void;
   getProvisionedProductOutputs(
     args: GetProvisionedProductOutputsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetProvisionedProductOutputsCommandOutput) => void
+    cb: (err: any, data?: GetProvisionedProductOutputsCommandOutput) => void,
   ): void;
 
   /**
@@ -1406,16 +1406,16 @@ export interface ServiceCatalog {
    */
   importAsProvisionedProduct(
     args: ImportAsProvisionedProductCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ImportAsProvisionedProductCommandOutput>;
   importAsProvisionedProduct(
     args: ImportAsProvisionedProductCommandInput,
-    cb: (err: any, data?: ImportAsProvisionedProductCommandOutput) => void
+    cb: (err: any, data?: ImportAsProvisionedProductCommandOutput) => void,
   ): void;
   importAsProvisionedProduct(
     args: ImportAsProvisionedProductCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ImportAsProvisionedProductCommandOutput) => void
+    cb: (err: any, data?: ImportAsProvisionedProductCommandOutput) => void,
   ): void;
 
   /**
@@ -1424,16 +1424,16 @@ export interface ServiceCatalog {
   listAcceptedPortfolioShares(): Promise<ListAcceptedPortfolioSharesCommandOutput>;
   listAcceptedPortfolioShares(
     args: ListAcceptedPortfolioSharesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListAcceptedPortfolioSharesCommandOutput>;
   listAcceptedPortfolioShares(
     args: ListAcceptedPortfolioSharesCommandInput,
-    cb: (err: any, data?: ListAcceptedPortfolioSharesCommandOutput) => void
+    cb: (err: any, data?: ListAcceptedPortfolioSharesCommandOutput) => void,
   ): void;
   listAcceptedPortfolioShares(
     args: ListAcceptedPortfolioSharesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListAcceptedPortfolioSharesCommandOutput) => void
+    cb: (err: any, data?: ListAcceptedPortfolioSharesCommandOutput) => void,
   ): void;
 
   /**
@@ -1441,16 +1441,16 @@ export interface ServiceCatalog {
    */
   listBudgetsForResource(
     args: ListBudgetsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListBudgetsForResourceCommandOutput>;
   listBudgetsForResource(
     args: ListBudgetsForResourceCommandInput,
-    cb: (err: any, data?: ListBudgetsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListBudgetsForResourceCommandOutput) => void,
   ): void;
   listBudgetsForResource(
     args: ListBudgetsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListBudgetsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListBudgetsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -1458,16 +1458,16 @@ export interface ServiceCatalog {
    */
   listConstraintsForPortfolio(
     args: ListConstraintsForPortfolioCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListConstraintsForPortfolioCommandOutput>;
   listConstraintsForPortfolio(
     args: ListConstraintsForPortfolioCommandInput,
-    cb: (err: any, data?: ListConstraintsForPortfolioCommandOutput) => void
+    cb: (err: any, data?: ListConstraintsForPortfolioCommandOutput) => void,
   ): void;
   listConstraintsForPortfolio(
     args: ListConstraintsForPortfolioCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListConstraintsForPortfolioCommandOutput) => void
+    cb: (err: any, data?: ListConstraintsForPortfolioCommandOutput) => void,
   ): void;
 
   /**
@@ -1475,13 +1475,13 @@ export interface ServiceCatalog {
    */
   listLaunchPaths(
     args: ListLaunchPathsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListLaunchPathsCommandOutput>;
   listLaunchPaths(args: ListLaunchPathsCommandInput, cb: (err: any, data?: ListLaunchPathsCommandOutput) => void): void;
   listLaunchPaths(
     args: ListLaunchPathsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListLaunchPathsCommandOutput) => void
+    cb: (err: any, data?: ListLaunchPathsCommandOutput) => void,
   ): void;
 
   /**
@@ -1489,16 +1489,16 @@ export interface ServiceCatalog {
    */
   listOrganizationPortfolioAccess(
     args: ListOrganizationPortfolioAccessCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListOrganizationPortfolioAccessCommandOutput>;
   listOrganizationPortfolioAccess(
     args: ListOrganizationPortfolioAccessCommandInput,
-    cb: (err: any, data?: ListOrganizationPortfolioAccessCommandOutput) => void
+    cb: (err: any, data?: ListOrganizationPortfolioAccessCommandOutput) => void,
   ): void;
   listOrganizationPortfolioAccess(
     args: ListOrganizationPortfolioAccessCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListOrganizationPortfolioAccessCommandOutput) => void
+    cb: (err: any, data?: ListOrganizationPortfolioAccessCommandOutput) => void,
   ): void;
 
   /**
@@ -1506,16 +1506,16 @@ export interface ServiceCatalog {
    */
   listPortfolioAccess(
     args: ListPortfolioAccessCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListPortfolioAccessCommandOutput>;
   listPortfolioAccess(
     args: ListPortfolioAccessCommandInput,
-    cb: (err: any, data?: ListPortfolioAccessCommandOutput) => void
+    cb: (err: any, data?: ListPortfolioAccessCommandOutput) => void,
   ): void;
   listPortfolioAccess(
     args: ListPortfolioAccessCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListPortfolioAccessCommandOutput) => void
+    cb: (err: any, data?: ListPortfolioAccessCommandOutput) => void,
   ): void;
 
   /**
@@ -1524,13 +1524,13 @@ export interface ServiceCatalog {
   listPortfolios(): Promise<ListPortfoliosCommandOutput>;
   listPortfolios(
     args: ListPortfoliosCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListPortfoliosCommandOutput>;
   listPortfolios(args: ListPortfoliosCommandInput, cb: (err: any, data?: ListPortfoliosCommandOutput) => void): void;
   listPortfolios(
     args: ListPortfoliosCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListPortfoliosCommandOutput) => void
+    cb: (err: any, data?: ListPortfoliosCommandOutput) => void,
   ): void;
 
   /**
@@ -1538,16 +1538,16 @@ export interface ServiceCatalog {
    */
   listPortfoliosForProduct(
     args: ListPortfoliosForProductCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListPortfoliosForProductCommandOutput>;
   listPortfoliosForProduct(
     args: ListPortfoliosForProductCommandInput,
-    cb: (err: any, data?: ListPortfoliosForProductCommandOutput) => void
+    cb: (err: any, data?: ListPortfoliosForProductCommandOutput) => void,
   ): void;
   listPortfoliosForProduct(
     args: ListPortfoliosForProductCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListPortfoliosForProductCommandOutput) => void
+    cb: (err: any, data?: ListPortfoliosForProductCommandOutput) => void,
   ): void;
 
   /**
@@ -1555,16 +1555,16 @@ export interface ServiceCatalog {
    */
   listPrincipalsForPortfolio(
     args: ListPrincipalsForPortfolioCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListPrincipalsForPortfolioCommandOutput>;
   listPrincipalsForPortfolio(
     args: ListPrincipalsForPortfolioCommandInput,
-    cb: (err: any, data?: ListPrincipalsForPortfolioCommandOutput) => void
+    cb: (err: any, data?: ListPrincipalsForPortfolioCommandOutput) => void,
   ): void;
   listPrincipalsForPortfolio(
     args: ListPrincipalsForPortfolioCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListPrincipalsForPortfolioCommandOutput) => void
+    cb: (err: any, data?: ListPrincipalsForPortfolioCommandOutput) => void,
   ): void;
 
   /**
@@ -1573,16 +1573,16 @@ export interface ServiceCatalog {
   listProvisionedProductPlans(): Promise<ListProvisionedProductPlansCommandOutput>;
   listProvisionedProductPlans(
     args: ListProvisionedProductPlansCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListProvisionedProductPlansCommandOutput>;
   listProvisionedProductPlans(
     args: ListProvisionedProductPlansCommandInput,
-    cb: (err: any, data?: ListProvisionedProductPlansCommandOutput) => void
+    cb: (err: any, data?: ListProvisionedProductPlansCommandOutput) => void,
   ): void;
   listProvisionedProductPlans(
     args: ListProvisionedProductPlansCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListProvisionedProductPlansCommandOutput) => void
+    cb: (err: any, data?: ListProvisionedProductPlansCommandOutput) => void,
   ): void;
 
   /**
@@ -1590,16 +1590,16 @@ export interface ServiceCatalog {
    */
   listProvisioningArtifacts(
     args: ListProvisioningArtifactsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListProvisioningArtifactsCommandOutput>;
   listProvisioningArtifacts(
     args: ListProvisioningArtifactsCommandInput,
-    cb: (err: any, data?: ListProvisioningArtifactsCommandOutput) => void
+    cb: (err: any, data?: ListProvisioningArtifactsCommandOutput) => void,
   ): void;
   listProvisioningArtifacts(
     args: ListProvisioningArtifactsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListProvisioningArtifactsCommandOutput) => void
+    cb: (err: any, data?: ListProvisioningArtifactsCommandOutput) => void,
   ): void;
 
   /**
@@ -1607,16 +1607,16 @@ export interface ServiceCatalog {
    */
   listProvisioningArtifactsForServiceAction(
     args: ListProvisioningArtifactsForServiceActionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListProvisioningArtifactsForServiceActionCommandOutput>;
   listProvisioningArtifactsForServiceAction(
     args: ListProvisioningArtifactsForServiceActionCommandInput,
-    cb: (err: any, data?: ListProvisioningArtifactsForServiceActionCommandOutput) => void
+    cb: (err: any, data?: ListProvisioningArtifactsForServiceActionCommandOutput) => void,
   ): void;
   listProvisioningArtifactsForServiceAction(
     args: ListProvisioningArtifactsForServiceActionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListProvisioningArtifactsForServiceActionCommandOutput) => void
+    cb: (err: any, data?: ListProvisioningArtifactsForServiceActionCommandOutput) => void,
   ): void;
 
   /**
@@ -1625,16 +1625,16 @@ export interface ServiceCatalog {
   listRecordHistory(): Promise<ListRecordHistoryCommandOutput>;
   listRecordHistory(
     args: ListRecordHistoryCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListRecordHistoryCommandOutput>;
   listRecordHistory(
     args: ListRecordHistoryCommandInput,
-    cb: (err: any, data?: ListRecordHistoryCommandOutput) => void
+    cb: (err: any, data?: ListRecordHistoryCommandOutput) => void,
   ): void;
   listRecordHistory(
     args: ListRecordHistoryCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListRecordHistoryCommandOutput) => void
+    cb: (err: any, data?: ListRecordHistoryCommandOutput) => void,
   ): void;
 
   /**
@@ -1642,16 +1642,16 @@ export interface ServiceCatalog {
    */
   listResourcesForTagOption(
     args: ListResourcesForTagOptionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListResourcesForTagOptionCommandOutput>;
   listResourcesForTagOption(
     args: ListResourcesForTagOptionCommandInput,
-    cb: (err: any, data?: ListResourcesForTagOptionCommandOutput) => void
+    cb: (err: any, data?: ListResourcesForTagOptionCommandOutput) => void,
   ): void;
   listResourcesForTagOption(
     args: ListResourcesForTagOptionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListResourcesForTagOptionCommandOutput) => void
+    cb: (err: any, data?: ListResourcesForTagOptionCommandOutput) => void,
   ): void;
 
   /**
@@ -1660,16 +1660,16 @@ export interface ServiceCatalog {
   listServiceActions(): Promise<ListServiceActionsCommandOutput>;
   listServiceActions(
     args: ListServiceActionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListServiceActionsCommandOutput>;
   listServiceActions(
     args: ListServiceActionsCommandInput,
-    cb: (err: any, data?: ListServiceActionsCommandOutput) => void
+    cb: (err: any, data?: ListServiceActionsCommandOutput) => void,
   ): void;
   listServiceActions(
     args: ListServiceActionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListServiceActionsCommandOutput) => void
+    cb: (err: any, data?: ListServiceActionsCommandOutput) => void,
   ): void;
 
   /**
@@ -1677,16 +1677,16 @@ export interface ServiceCatalog {
    */
   listServiceActionsForProvisioningArtifact(
     args: ListServiceActionsForProvisioningArtifactCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListServiceActionsForProvisioningArtifactCommandOutput>;
   listServiceActionsForProvisioningArtifact(
     args: ListServiceActionsForProvisioningArtifactCommandInput,
-    cb: (err: any, data?: ListServiceActionsForProvisioningArtifactCommandOutput) => void
+    cb: (err: any, data?: ListServiceActionsForProvisioningArtifactCommandOutput) => void,
   ): void;
   listServiceActionsForProvisioningArtifact(
     args: ListServiceActionsForProvisioningArtifactCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListServiceActionsForProvisioningArtifactCommandOutput) => void
+    cb: (err: any, data?: ListServiceActionsForProvisioningArtifactCommandOutput) => void,
   ): void;
 
   /**
@@ -1694,16 +1694,16 @@ export interface ServiceCatalog {
    */
   listStackInstancesForProvisionedProduct(
     args: ListStackInstancesForProvisionedProductCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListStackInstancesForProvisionedProductCommandOutput>;
   listStackInstancesForProvisionedProduct(
     args: ListStackInstancesForProvisionedProductCommandInput,
-    cb: (err: any, data?: ListStackInstancesForProvisionedProductCommandOutput) => void
+    cb: (err: any, data?: ListStackInstancesForProvisionedProductCommandOutput) => void,
   ): void;
   listStackInstancesForProvisionedProduct(
     args: ListStackInstancesForProvisionedProductCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListStackInstancesForProvisionedProductCommandOutput) => void
+    cb: (err: any, data?: ListStackInstancesForProvisionedProductCommandOutput) => void,
   ): void;
 
   /**
@@ -1712,13 +1712,13 @@ export interface ServiceCatalog {
   listTagOptions(): Promise<ListTagOptionsCommandOutput>;
   listTagOptions(
     args: ListTagOptionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagOptionsCommandOutput>;
   listTagOptions(args: ListTagOptionsCommandInput, cb: (err: any, data?: ListTagOptionsCommandOutput) => void): void;
   listTagOptions(
     args: ListTagOptionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagOptionsCommandOutput) => void
+    cb: (err: any, data?: ListTagOptionsCommandOutput) => void,
   ): void;
 
   /**
@@ -1726,16 +1726,16 @@ export interface ServiceCatalog {
    */
   notifyProvisionProductEngineWorkflowResult(
     args: NotifyProvisionProductEngineWorkflowResultCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<NotifyProvisionProductEngineWorkflowResultCommandOutput>;
   notifyProvisionProductEngineWorkflowResult(
     args: NotifyProvisionProductEngineWorkflowResultCommandInput,
-    cb: (err: any, data?: NotifyProvisionProductEngineWorkflowResultCommandOutput) => void
+    cb: (err: any, data?: NotifyProvisionProductEngineWorkflowResultCommandOutput) => void,
   ): void;
   notifyProvisionProductEngineWorkflowResult(
     args: NotifyProvisionProductEngineWorkflowResultCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: NotifyProvisionProductEngineWorkflowResultCommandOutput) => void
+    cb: (err: any, data?: NotifyProvisionProductEngineWorkflowResultCommandOutput) => void,
   ): void;
 
   /**
@@ -1743,16 +1743,16 @@ export interface ServiceCatalog {
    */
   notifyTerminateProvisionedProductEngineWorkflowResult(
     args: NotifyTerminateProvisionedProductEngineWorkflowResultCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<NotifyTerminateProvisionedProductEngineWorkflowResultCommandOutput>;
   notifyTerminateProvisionedProductEngineWorkflowResult(
     args: NotifyTerminateProvisionedProductEngineWorkflowResultCommandInput,
-    cb: (err: any, data?: NotifyTerminateProvisionedProductEngineWorkflowResultCommandOutput) => void
+    cb: (err: any, data?: NotifyTerminateProvisionedProductEngineWorkflowResultCommandOutput) => void,
   ): void;
   notifyTerminateProvisionedProductEngineWorkflowResult(
     args: NotifyTerminateProvisionedProductEngineWorkflowResultCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: NotifyTerminateProvisionedProductEngineWorkflowResultCommandOutput) => void
+    cb: (err: any, data?: NotifyTerminateProvisionedProductEngineWorkflowResultCommandOutput) => void,
   ): void;
 
   /**
@@ -1760,16 +1760,16 @@ export interface ServiceCatalog {
    */
   notifyUpdateProvisionedProductEngineWorkflowResult(
     args: NotifyUpdateProvisionedProductEngineWorkflowResultCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<NotifyUpdateProvisionedProductEngineWorkflowResultCommandOutput>;
   notifyUpdateProvisionedProductEngineWorkflowResult(
     args: NotifyUpdateProvisionedProductEngineWorkflowResultCommandInput,
-    cb: (err: any, data?: NotifyUpdateProvisionedProductEngineWorkflowResultCommandOutput) => void
+    cb: (err: any, data?: NotifyUpdateProvisionedProductEngineWorkflowResultCommandOutput) => void,
   ): void;
   notifyUpdateProvisionedProductEngineWorkflowResult(
     args: NotifyUpdateProvisionedProductEngineWorkflowResultCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: NotifyUpdateProvisionedProductEngineWorkflowResultCommandOutput) => void
+    cb: (err: any, data?: NotifyUpdateProvisionedProductEngineWorkflowResultCommandOutput) => void,
   ): void;
 
   /**
@@ -1777,16 +1777,16 @@ export interface ServiceCatalog {
    */
   provisionProduct(
     args: ProvisionProductCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ProvisionProductCommandOutput>;
   provisionProduct(
     args: ProvisionProductCommandInput,
-    cb: (err: any, data?: ProvisionProductCommandOutput) => void
+    cb: (err: any, data?: ProvisionProductCommandOutput) => void,
   ): void;
   provisionProduct(
     args: ProvisionProductCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ProvisionProductCommandOutput) => void
+    cb: (err: any, data?: ProvisionProductCommandOutput) => void,
   ): void;
 
   /**
@@ -1794,16 +1794,16 @@ export interface ServiceCatalog {
    */
   rejectPortfolioShare(
     args: RejectPortfolioShareCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<RejectPortfolioShareCommandOutput>;
   rejectPortfolioShare(
     args: RejectPortfolioShareCommandInput,
-    cb: (err: any, data?: RejectPortfolioShareCommandOutput) => void
+    cb: (err: any, data?: RejectPortfolioShareCommandOutput) => void,
   ): void;
   rejectPortfolioShare(
     args: RejectPortfolioShareCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RejectPortfolioShareCommandOutput) => void
+    cb: (err: any, data?: RejectPortfolioShareCommandOutput) => void,
   ): void;
 
   /**
@@ -1812,16 +1812,16 @@ export interface ServiceCatalog {
   scanProvisionedProducts(): Promise<ScanProvisionedProductsCommandOutput>;
   scanProvisionedProducts(
     args: ScanProvisionedProductsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ScanProvisionedProductsCommandOutput>;
   scanProvisionedProducts(
     args: ScanProvisionedProductsCommandInput,
-    cb: (err: any, data?: ScanProvisionedProductsCommandOutput) => void
+    cb: (err: any, data?: ScanProvisionedProductsCommandOutput) => void,
   ): void;
   scanProvisionedProducts(
     args: ScanProvisionedProductsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ScanProvisionedProductsCommandOutput) => void
+    cb: (err: any, data?: ScanProvisionedProductsCommandOutput) => void,
   ): void;
 
   /**
@@ -1830,13 +1830,13 @@ export interface ServiceCatalog {
   searchProducts(): Promise<SearchProductsCommandOutput>;
   searchProducts(
     args: SearchProductsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<SearchProductsCommandOutput>;
   searchProducts(args: SearchProductsCommandInput, cb: (err: any, data?: SearchProductsCommandOutput) => void): void;
   searchProducts(
     args: SearchProductsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SearchProductsCommandOutput) => void
+    cb: (err: any, data?: SearchProductsCommandOutput) => void,
   ): void;
 
   /**
@@ -1845,16 +1845,16 @@ export interface ServiceCatalog {
   searchProductsAsAdmin(): Promise<SearchProductsAsAdminCommandOutput>;
   searchProductsAsAdmin(
     args: SearchProductsAsAdminCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<SearchProductsAsAdminCommandOutput>;
   searchProductsAsAdmin(
     args: SearchProductsAsAdminCommandInput,
-    cb: (err: any, data?: SearchProductsAsAdminCommandOutput) => void
+    cb: (err: any, data?: SearchProductsAsAdminCommandOutput) => void,
   ): void;
   searchProductsAsAdmin(
     args: SearchProductsAsAdminCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SearchProductsAsAdminCommandOutput) => void
+    cb: (err: any, data?: SearchProductsAsAdminCommandOutput) => void,
   ): void;
 
   /**
@@ -1863,16 +1863,16 @@ export interface ServiceCatalog {
   searchProvisionedProducts(): Promise<SearchProvisionedProductsCommandOutput>;
   searchProvisionedProducts(
     args: SearchProvisionedProductsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<SearchProvisionedProductsCommandOutput>;
   searchProvisionedProducts(
     args: SearchProvisionedProductsCommandInput,
-    cb: (err: any, data?: SearchProvisionedProductsCommandOutput) => void
+    cb: (err: any, data?: SearchProvisionedProductsCommandOutput) => void,
   ): void;
   searchProvisionedProducts(
     args: SearchProvisionedProductsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SearchProvisionedProductsCommandOutput) => void
+    cb: (err: any, data?: SearchProvisionedProductsCommandOutput) => void,
   ): void;
 
   /**
@@ -1880,16 +1880,16 @@ export interface ServiceCatalog {
    */
   terminateProvisionedProduct(
     args: TerminateProvisionedProductCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<TerminateProvisionedProductCommandOutput>;
   terminateProvisionedProduct(
     args: TerminateProvisionedProductCommandInput,
-    cb: (err: any, data?: TerminateProvisionedProductCommandOutput) => void
+    cb: (err: any, data?: TerminateProvisionedProductCommandOutput) => void,
   ): void;
   terminateProvisionedProduct(
     args: TerminateProvisionedProductCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TerminateProvisionedProductCommandOutput) => void
+    cb: (err: any, data?: TerminateProvisionedProductCommandOutput) => void,
   ): void;
 
   /**
@@ -1897,16 +1897,16 @@ export interface ServiceCatalog {
    */
   updateConstraint(
     args: UpdateConstraintCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateConstraintCommandOutput>;
   updateConstraint(
     args: UpdateConstraintCommandInput,
-    cb: (err: any, data?: UpdateConstraintCommandOutput) => void
+    cb: (err: any, data?: UpdateConstraintCommandOutput) => void,
   ): void;
   updateConstraint(
     args: UpdateConstraintCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateConstraintCommandOutput) => void
+    cb: (err: any, data?: UpdateConstraintCommandOutput) => void,
   ): void;
 
   /**
@@ -1914,13 +1914,13 @@ export interface ServiceCatalog {
    */
   updatePortfolio(
     args: UpdatePortfolioCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdatePortfolioCommandOutput>;
   updatePortfolio(args: UpdatePortfolioCommandInput, cb: (err: any, data?: UpdatePortfolioCommandOutput) => void): void;
   updatePortfolio(
     args: UpdatePortfolioCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdatePortfolioCommandOutput) => void
+    cb: (err: any, data?: UpdatePortfolioCommandOutput) => void,
   ): void;
 
   /**
@@ -1928,16 +1928,16 @@ export interface ServiceCatalog {
    */
   updatePortfolioShare(
     args: UpdatePortfolioShareCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdatePortfolioShareCommandOutput>;
   updatePortfolioShare(
     args: UpdatePortfolioShareCommandInput,
-    cb: (err: any, data?: UpdatePortfolioShareCommandOutput) => void
+    cb: (err: any, data?: UpdatePortfolioShareCommandOutput) => void,
   ): void;
   updatePortfolioShare(
     args: UpdatePortfolioShareCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdatePortfolioShareCommandOutput) => void
+    cb: (err: any, data?: UpdatePortfolioShareCommandOutput) => void,
   ): void;
 
   /**
@@ -1948,7 +1948,7 @@ export interface ServiceCatalog {
   updateProduct(
     args: UpdateProductCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateProductCommandOutput) => void
+    cb: (err: any, data?: UpdateProductCommandOutput) => void,
   ): void;
 
   /**
@@ -1956,16 +1956,16 @@ export interface ServiceCatalog {
    */
   updateProvisionedProduct(
     args: UpdateProvisionedProductCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateProvisionedProductCommandOutput>;
   updateProvisionedProduct(
     args: UpdateProvisionedProductCommandInput,
-    cb: (err: any, data?: UpdateProvisionedProductCommandOutput) => void
+    cb: (err: any, data?: UpdateProvisionedProductCommandOutput) => void,
   ): void;
   updateProvisionedProduct(
     args: UpdateProvisionedProductCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateProvisionedProductCommandOutput) => void
+    cb: (err: any, data?: UpdateProvisionedProductCommandOutput) => void,
   ): void;
 
   /**
@@ -1973,16 +1973,16 @@ export interface ServiceCatalog {
    */
   updateProvisionedProductProperties(
     args: UpdateProvisionedProductPropertiesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateProvisionedProductPropertiesCommandOutput>;
   updateProvisionedProductProperties(
     args: UpdateProvisionedProductPropertiesCommandInput,
-    cb: (err: any, data?: UpdateProvisionedProductPropertiesCommandOutput) => void
+    cb: (err: any, data?: UpdateProvisionedProductPropertiesCommandOutput) => void,
   ): void;
   updateProvisionedProductProperties(
     args: UpdateProvisionedProductPropertiesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateProvisionedProductPropertiesCommandOutput) => void
+    cb: (err: any, data?: UpdateProvisionedProductPropertiesCommandOutput) => void,
   ): void;
 
   /**
@@ -1990,16 +1990,16 @@ export interface ServiceCatalog {
    */
   updateProvisioningArtifact(
     args: UpdateProvisioningArtifactCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateProvisioningArtifactCommandOutput>;
   updateProvisioningArtifact(
     args: UpdateProvisioningArtifactCommandInput,
-    cb: (err: any, data?: UpdateProvisioningArtifactCommandOutput) => void
+    cb: (err: any, data?: UpdateProvisioningArtifactCommandOutput) => void,
   ): void;
   updateProvisioningArtifact(
     args: UpdateProvisioningArtifactCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateProvisioningArtifactCommandOutput) => void
+    cb: (err: any, data?: UpdateProvisioningArtifactCommandOutput) => void,
   ): void;
 
   /**
@@ -2007,16 +2007,16 @@ export interface ServiceCatalog {
    */
   updateServiceAction(
     args: UpdateServiceActionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateServiceActionCommandOutput>;
   updateServiceAction(
     args: UpdateServiceActionCommandInput,
-    cb: (err: any, data?: UpdateServiceActionCommandOutput) => void
+    cb: (err: any, data?: UpdateServiceActionCommandOutput) => void,
   ): void;
   updateServiceAction(
     args: UpdateServiceActionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateServiceActionCommandOutput) => void
+    cb: (err: any, data?: UpdateServiceActionCommandOutput) => void,
   ): void;
 
   /**
@@ -2024,13 +2024,13 @@ export interface ServiceCatalog {
    */
   updateTagOption(
     args: UpdateTagOptionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateTagOptionCommandOutput>;
   updateTagOption(args: UpdateTagOptionCommandInput, cb: (err: any, data?: UpdateTagOptionCommandOutput) => void): void;
   updateTagOption(
     args: UpdateTagOptionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateTagOptionCommandOutput) => void
+    cb: (err: any, data?: UpdateTagOptionCommandOutput) => void,
   ): void;
 }
 

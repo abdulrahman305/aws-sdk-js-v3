@@ -178,7 +178,7 @@ import { OpenSearchServerlessServiceException as __BaseException } from "../mode
  */
 export const se_BatchGetCollectionCommand = async (
   input: BatchGetCollectionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("BatchGetCollection");
   let body: any;
@@ -191,7 +191,7 @@ export const se_BatchGetCollectionCommand = async (
  */
 export const se_BatchGetEffectiveLifecyclePolicyCommand = async (
   input: BatchGetEffectiveLifecyclePolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("BatchGetEffectiveLifecyclePolicy");
   let body: any;
@@ -204,7 +204,7 @@ export const se_BatchGetEffectiveLifecyclePolicyCommand = async (
  */
 export const se_BatchGetLifecyclePolicyCommand = async (
   input: BatchGetLifecyclePolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("BatchGetLifecyclePolicy");
   let body: any;
@@ -217,7 +217,7 @@ export const se_BatchGetLifecyclePolicyCommand = async (
  */
 export const se_BatchGetVpcEndpointCommand = async (
   input: BatchGetVpcEndpointCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("BatchGetVpcEndpoint");
   let body: any;
@@ -230,7 +230,7 @@ export const se_BatchGetVpcEndpointCommand = async (
  */
 export const se_CreateAccessPolicyCommand = async (
   input: CreateAccessPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateAccessPolicy");
   let body: any;
@@ -243,7 +243,7 @@ export const se_CreateAccessPolicyCommand = async (
  */
 export const se_CreateCollectionCommand = async (
   input: CreateCollectionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateCollection");
   let body: any;
@@ -256,7 +256,7 @@ export const se_CreateCollectionCommand = async (
  */
 export const se_CreateLifecyclePolicyCommand = async (
   input: CreateLifecyclePolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateLifecyclePolicy");
   let body: any;
@@ -269,7 +269,7 @@ export const se_CreateLifecyclePolicyCommand = async (
  */
 export const se_CreateSecurityConfigCommand = async (
   input: CreateSecurityConfigCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateSecurityConfig");
   let body: any;
@@ -282,7 +282,7 @@ export const se_CreateSecurityConfigCommand = async (
  */
 export const se_CreateSecurityPolicyCommand = async (
   input: CreateSecurityPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateSecurityPolicy");
   let body: any;
@@ -295,7 +295,7 @@ export const se_CreateSecurityPolicyCommand = async (
  */
 export const se_CreateVpcEndpointCommand = async (
   input: CreateVpcEndpointCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateVpcEndpoint");
   let body: any;
@@ -308,7 +308,7 @@ export const se_CreateVpcEndpointCommand = async (
  */
 export const se_DeleteAccessPolicyCommand = async (
   input: DeleteAccessPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteAccessPolicy");
   let body: any;
@@ -321,7 +321,7 @@ export const se_DeleteAccessPolicyCommand = async (
  */
 export const se_DeleteCollectionCommand = async (
   input: DeleteCollectionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteCollection");
   let body: any;
@@ -334,7 +334,7 @@ export const se_DeleteCollectionCommand = async (
  */
 export const se_DeleteLifecyclePolicyCommand = async (
   input: DeleteLifecyclePolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteLifecyclePolicy");
   let body: any;
@@ -347,7 +347,7 @@ export const se_DeleteLifecyclePolicyCommand = async (
  */
 export const se_DeleteSecurityConfigCommand = async (
   input: DeleteSecurityConfigCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteSecurityConfig");
   let body: any;
@@ -360,7 +360,7 @@ export const se_DeleteSecurityConfigCommand = async (
  */
 export const se_DeleteSecurityPolicyCommand = async (
   input: DeleteSecurityPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteSecurityPolicy");
   let body: any;
@@ -373,7 +373,7 @@ export const se_DeleteSecurityPolicyCommand = async (
  */
 export const se_DeleteVpcEndpointCommand = async (
   input: DeleteVpcEndpointCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteVpcEndpoint");
   let body: any;
@@ -386,7 +386,7 @@ export const se_DeleteVpcEndpointCommand = async (
  */
 export const se_GetAccessPolicyCommand = async (
   input: GetAccessPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetAccessPolicy");
   let body: any;
@@ -399,7 +399,7 @@ export const se_GetAccessPolicyCommand = async (
  */
 export const se_GetAccountSettingsCommand = async (
   input: GetAccountSettingsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetAccountSettings");
   let body: any;
@@ -412,7 +412,7 @@ export const se_GetAccountSettingsCommand = async (
  */
 export const se_GetPoliciesStatsCommand = async (
   input: GetPoliciesStatsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetPoliciesStats");
   let body: any;
@@ -425,7 +425,7 @@ export const se_GetPoliciesStatsCommand = async (
  */
 export const se_GetSecurityConfigCommand = async (
   input: GetSecurityConfigCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetSecurityConfig");
   let body: any;
@@ -438,7 +438,7 @@ export const se_GetSecurityConfigCommand = async (
  */
 export const se_GetSecurityPolicyCommand = async (
   input: GetSecurityPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetSecurityPolicy");
   let body: any;
@@ -451,7 +451,7 @@ export const se_GetSecurityPolicyCommand = async (
  */
 export const se_ListAccessPoliciesCommand = async (
   input: ListAccessPoliciesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListAccessPolicies");
   let body: any;
@@ -464,7 +464,7 @@ export const se_ListAccessPoliciesCommand = async (
  */
 export const se_ListCollectionsCommand = async (
   input: ListCollectionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListCollections");
   let body: any;
@@ -477,7 +477,7 @@ export const se_ListCollectionsCommand = async (
  */
 export const se_ListLifecyclePoliciesCommand = async (
   input: ListLifecyclePoliciesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListLifecyclePolicies");
   let body: any;
@@ -490,7 +490,7 @@ export const se_ListLifecyclePoliciesCommand = async (
  */
 export const se_ListSecurityConfigsCommand = async (
   input: ListSecurityConfigsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListSecurityConfigs");
   let body: any;
@@ -503,7 +503,7 @@ export const se_ListSecurityConfigsCommand = async (
  */
 export const se_ListSecurityPoliciesCommand = async (
   input: ListSecurityPoliciesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListSecurityPolicies");
   let body: any;
@@ -516,7 +516,7 @@ export const se_ListSecurityPoliciesCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListTagsForResource");
   let body: any;
@@ -529,7 +529,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_ListVpcEndpointsCommand = async (
   input: ListVpcEndpointsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListVpcEndpoints");
   let body: any;
@@ -542,7 +542,7 @@ export const se_ListVpcEndpointsCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("TagResource");
   let body: any;
@@ -555,7 +555,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UntagResource");
   let body: any;
@@ -568,7 +568,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateAccessPolicyCommand = async (
   input: UpdateAccessPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateAccessPolicy");
   let body: any;
@@ -581,7 +581,7 @@ export const se_UpdateAccessPolicyCommand = async (
  */
 export const se_UpdateAccountSettingsCommand = async (
   input: UpdateAccountSettingsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateAccountSettings");
   let body: any;
@@ -594,7 +594,7 @@ export const se_UpdateAccountSettingsCommand = async (
  */
 export const se_UpdateCollectionCommand = async (
   input: UpdateCollectionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateCollection");
   let body: any;
@@ -607,7 +607,7 @@ export const se_UpdateCollectionCommand = async (
  */
 export const se_UpdateLifecyclePolicyCommand = async (
   input: UpdateLifecyclePolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateLifecyclePolicy");
   let body: any;
@@ -620,7 +620,7 @@ export const se_UpdateLifecyclePolicyCommand = async (
  */
 export const se_UpdateSecurityConfigCommand = async (
   input: UpdateSecurityConfigCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateSecurityConfig");
   let body: any;
@@ -633,7 +633,7 @@ export const se_UpdateSecurityConfigCommand = async (
  */
 export const se_UpdateSecurityPolicyCommand = async (
   input: UpdateSecurityPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateSecurityPolicy");
   let body: any;
@@ -646,7 +646,7 @@ export const se_UpdateSecurityPolicyCommand = async (
  */
 export const se_UpdateVpcEndpointCommand = async (
   input: UpdateVpcEndpointCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateVpcEndpoint");
   let body: any;
@@ -659,7 +659,7 @@ export const se_UpdateVpcEndpointCommand = async (
  */
 export const de_BatchGetCollectionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchGetCollectionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -679,7 +679,7 @@ export const de_BatchGetCollectionCommand = async (
  */
 export const de_BatchGetEffectiveLifecyclePolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchGetEffectiveLifecyclePolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -699,7 +699,7 @@ export const de_BatchGetEffectiveLifecyclePolicyCommand = async (
  */
 export const de_BatchGetLifecyclePolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchGetLifecyclePolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -719,7 +719,7 @@ export const de_BatchGetLifecyclePolicyCommand = async (
  */
 export const de_BatchGetVpcEndpointCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchGetVpcEndpointCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -739,7 +739,7 @@ export const de_BatchGetVpcEndpointCommand = async (
  */
 export const de_CreateAccessPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateAccessPolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -759,7 +759,7 @@ export const de_CreateAccessPolicyCommand = async (
  */
 export const de_CreateCollectionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateCollectionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -779,7 +779,7 @@ export const de_CreateCollectionCommand = async (
  */
 export const de_CreateLifecyclePolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateLifecyclePolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -799,7 +799,7 @@ export const de_CreateLifecyclePolicyCommand = async (
  */
 export const de_CreateSecurityConfigCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateSecurityConfigCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -819,7 +819,7 @@ export const de_CreateSecurityConfigCommand = async (
  */
 export const de_CreateSecurityPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateSecurityPolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -839,7 +839,7 @@ export const de_CreateSecurityPolicyCommand = async (
  */
 export const de_CreateVpcEndpointCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateVpcEndpointCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -859,7 +859,7 @@ export const de_CreateVpcEndpointCommand = async (
  */
 export const de_DeleteAccessPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteAccessPolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -879,7 +879,7 @@ export const de_DeleteAccessPolicyCommand = async (
  */
 export const de_DeleteCollectionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteCollectionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -899,7 +899,7 @@ export const de_DeleteCollectionCommand = async (
  */
 export const de_DeleteLifecyclePolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteLifecyclePolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -919,7 +919,7 @@ export const de_DeleteLifecyclePolicyCommand = async (
  */
 export const de_DeleteSecurityConfigCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteSecurityConfigCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -939,7 +939,7 @@ export const de_DeleteSecurityConfigCommand = async (
  */
 export const de_DeleteSecurityPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteSecurityPolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -959,7 +959,7 @@ export const de_DeleteSecurityPolicyCommand = async (
  */
 export const de_DeleteVpcEndpointCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteVpcEndpointCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -979,7 +979,7 @@ export const de_DeleteVpcEndpointCommand = async (
  */
 export const de_GetAccessPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetAccessPolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -999,7 +999,7 @@ export const de_GetAccessPolicyCommand = async (
  */
 export const de_GetAccountSettingsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetAccountSettingsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1019,7 +1019,7 @@ export const de_GetAccountSettingsCommand = async (
  */
 export const de_GetPoliciesStatsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetPoliciesStatsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1039,7 +1039,7 @@ export const de_GetPoliciesStatsCommand = async (
  */
 export const de_GetSecurityConfigCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetSecurityConfigCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1059,7 +1059,7 @@ export const de_GetSecurityConfigCommand = async (
  */
 export const de_GetSecurityPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetSecurityPolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1079,7 +1079,7 @@ export const de_GetSecurityPolicyCommand = async (
  */
 export const de_ListAccessPoliciesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAccessPoliciesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1099,7 +1099,7 @@ export const de_ListAccessPoliciesCommand = async (
  */
 export const de_ListCollectionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListCollectionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1119,7 +1119,7 @@ export const de_ListCollectionsCommand = async (
  */
 export const de_ListLifecyclePoliciesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListLifecyclePoliciesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1139,7 +1139,7 @@ export const de_ListLifecyclePoliciesCommand = async (
  */
 export const de_ListSecurityConfigsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListSecurityConfigsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1159,7 +1159,7 @@ export const de_ListSecurityConfigsCommand = async (
  */
 export const de_ListSecurityPoliciesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListSecurityPoliciesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1179,7 +1179,7 @@ export const de_ListSecurityPoliciesCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1199,7 +1199,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_ListVpcEndpointsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListVpcEndpointsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1219,7 +1219,7 @@ export const de_ListVpcEndpointsCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1239,7 +1239,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1259,7 +1259,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateAccessPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateAccessPolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1279,7 +1279,7 @@ export const de_UpdateAccessPolicyCommand = async (
  */
 export const de_UpdateAccountSettingsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateAccountSettingsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1299,7 +1299,7 @@ export const de_UpdateAccountSettingsCommand = async (
  */
 export const de_UpdateCollectionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateCollectionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1319,7 +1319,7 @@ export const de_UpdateCollectionCommand = async (
  */
 export const de_UpdateLifecyclePolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateLifecyclePolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1339,7 +1339,7 @@ export const de_UpdateLifecyclePolicyCommand = async (
  */
 export const de_UpdateSecurityConfigCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateSecurityConfigCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1359,7 +1359,7 @@ export const de_UpdateSecurityConfigCommand = async (
  */
 export const de_UpdateSecurityPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateSecurityPolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1379,7 +1379,7 @@ export const de_UpdateSecurityPolicyCommand = async (
  */
 export const de_UpdateVpcEndpointCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateVpcEndpointCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1450,7 +1450,7 @@ const de_ConflictExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_InternalServerExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1466,7 +1466,7 @@ const de_InternalServerExceptionRes = async (
  */
 const de_OcuLimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<OcuLimitExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1482,7 +1482,7 @@ const de_OcuLimitExceededExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1498,7 +1498,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_ServiceQuotaExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceQuotaExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2138,7 +2138,7 @@ const buildHttpRpcRequest = async (
   headers: __HeaderBag,
   path: string,
   resolvedHostname: string | undefined,
-  body: any
+  body: any,
 ): Promise<__HttpRequest> => {
   const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
   const contents: any = {

@@ -56,7 +56,7 @@ import {
  */
 export const se_DeleteThingShadowCommand = async (
   input: DeleteThingShadowCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -75,7 +75,7 @@ export const se_DeleteThingShadowCommand = async (
  */
 export const se_GetRetainedMessageCommand = async (
   input: GetRetainedMessageCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -91,7 +91,7 @@ export const se_GetRetainedMessageCommand = async (
  */
 export const se_GetThingShadowCommand = async (
   input: GetThingShadowCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -110,7 +110,7 @@ export const se_GetThingShadowCommand = async (
  */
 export const se_ListNamedShadowsForThingCommand = async (
   input: ListNamedShadowsForThingCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -130,7 +130,7 @@ export const se_ListNamedShadowsForThingCommand = async (
  */
 export const se_ListRetainedMessagesCommand = async (
   input: ListRetainedMessagesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -149,7 +149,7 @@ export const se_ListRetainedMessagesCommand = async (
  */
 export const se_PublishCommand = async (
   input: PublishCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -183,7 +183,7 @@ export const se_PublishCommand = async (
  */
 export const se_UpdateThingShadowCommand = async (
   input: UpdateThingShadowCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -207,7 +207,7 @@ export const se_UpdateThingShadowCommand = async (
  */
 export const de_DeleteThingShadowCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteThingShadowCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -225,7 +225,7 @@ export const de_DeleteThingShadowCommand = async (
  */
 export const de_GetRetainedMessageCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetRetainedMessageCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -250,7 +250,7 @@ export const de_GetRetainedMessageCommand = async (
  */
 export const de_GetThingShadowCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetThingShadowCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -268,7 +268,7 @@ export const de_GetThingShadowCommand = async (
  */
 export const de_ListNamedShadowsForThingCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListNamedShadowsForThingCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -291,7 +291,7 @@ export const de_ListNamedShadowsForThingCommand = async (
  */
 export const de_ListRetainedMessagesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListRetainedMessagesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -313,7 +313,7 @@ export const de_ListRetainedMessagesCommand = async (
  */
 export const de_PublishCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PublishCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -330,7 +330,7 @@ export const de_PublishCommand = async (
  */
 export const de_UpdateThingShadowCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateThingShadowCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -416,7 +416,7 @@ const de_ConflictExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_InternalFailureExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalFailureException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -436,7 +436,7 @@ const de_InternalFailureExceptionRes = async (
  */
 const de_InvalidRequestExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidRequestException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -456,7 +456,7 @@ const de_InvalidRequestExceptionRes = async (
  */
 const de_MethodNotAllowedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<MethodNotAllowedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -476,7 +476,7 @@ const de_MethodNotAllowedExceptionRes = async (
  */
 const de_RequestEntityTooLargeExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RequestEntityTooLargeException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -496,7 +496,7 @@ const de_RequestEntityTooLargeExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -516,7 +516,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_ServiceUnavailableExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceUnavailableException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -553,7 +553,7 @@ const de_ThrottlingExceptionRes = async (parsedOutput: any, context: __SerdeCont
  */
 const de_UnauthorizedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UnauthorizedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -573,7 +573,7 @@ const de_UnauthorizedExceptionRes = async (
  */
 const de_UnsupportedDocumentEncodingExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UnsupportedDocumentEncodingException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;

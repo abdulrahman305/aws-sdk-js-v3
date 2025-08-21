@@ -220,7 +220,7 @@ import {
  */
 export const se_AddBridgeOutputsCommand = async (
   input: AddBridgeOutputsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -232,7 +232,7 @@ export const se_AddBridgeOutputsCommand = async (
   body = JSON.stringify(
     take(input, {
       outputs: [, (_) => se___listOfAddBridgeOutputRequest(_, context), `Outputs`],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -243,7 +243,7 @@ export const se_AddBridgeOutputsCommand = async (
  */
 export const se_AddBridgeSourcesCommand = async (
   input: AddBridgeSourcesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -255,7 +255,7 @@ export const se_AddBridgeSourcesCommand = async (
   body = JSON.stringify(
     take(input, {
       sources: [, (_) => se___listOfAddBridgeSourceRequest(_, context), `Sources`],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -266,7 +266,7 @@ export const se_AddBridgeSourcesCommand = async (
  */
 export const se_AddFlowMediaStreamsCommand = async (
   input: AddFlowMediaStreamsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -278,7 +278,7 @@ export const se_AddFlowMediaStreamsCommand = async (
   body = JSON.stringify(
     take(input, {
       mediaStreams: [, (_) => se___listOfAddMediaStreamRequest(_, context), `MediaStreams`],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -289,7 +289,7 @@ export const se_AddFlowMediaStreamsCommand = async (
  */
 export const se_AddFlowOutputsCommand = async (
   input: AddFlowOutputsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -301,7 +301,7 @@ export const se_AddFlowOutputsCommand = async (
   body = JSON.stringify(
     take(input, {
       outputs: [, (_) => se___listOfAddOutputRequest(_, context), `Outputs`],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -312,7 +312,7 @@ export const se_AddFlowOutputsCommand = async (
  */
 export const se_AddFlowSourcesCommand = async (
   input: AddFlowSourcesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -324,7 +324,7 @@ export const se_AddFlowSourcesCommand = async (
   body = JSON.stringify(
     take(input, {
       sources: [, (_) => se___listOfSetSourceRequest(_, context), `Sources`],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -335,7 +335,7 @@ export const se_AddFlowSourcesCommand = async (
  */
 export const se_AddFlowVpcInterfacesCommand = async (
   input: AddFlowVpcInterfacesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -347,7 +347,7 @@ export const se_AddFlowVpcInterfacesCommand = async (
   body = JSON.stringify(
     take(input, {
       vpcInterfaces: [, (_) => se___listOfVpcInterfaceRequest(_, context), `VpcInterfaces`],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -358,7 +358,7 @@ export const se_AddFlowVpcInterfacesCommand = async (
  */
 export const se_CreateBridgeCommand = async (
   input: CreateBridgeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -375,7 +375,7 @@ export const se_CreateBridgeCommand = async (
       placementArn: [, , `PlacementArn`],
       sourceFailoverConfig: [, (_) => se_FailoverConfig(_, context), `SourceFailoverConfig`],
       sources: [, (_) => se___listOfAddBridgeSourceRequest(_, context), `Sources`],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -386,7 +386,7 @@ export const se_CreateBridgeCommand = async (
  */
 export const se_CreateFlowCommand = async (
   input: CreateFlowCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -406,7 +406,7 @@ export const se_CreateFlowCommand = async (
       sourceFailoverConfig: [, (_) => se_FailoverConfig(_, context), `SourceFailoverConfig`],
       sources: [, (_) => se___listOfSetSourceRequest(_, context), `Sources`],
       vpcInterfaces: [, (_) => se___listOfVpcInterfaceRequest(_, context), `VpcInterfaces`],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -417,7 +417,7 @@ export const se_CreateFlowCommand = async (
  */
 export const se_CreateGatewayCommand = async (
   input: CreateGatewayCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -430,7 +430,7 @@ export const se_CreateGatewayCommand = async (
       egressCidrBlocks: [, (_) => _json(_), `EgressCidrBlocks`],
       name: [, , `Name`],
       networks: [, (_) => se___listOfGatewayNetwork(_, context), `Networks`],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -441,7 +441,7 @@ export const se_CreateGatewayCommand = async (
  */
 export const se_DeleteBridgeCommand = async (
   input: DeleteBridgeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -457,7 +457,7 @@ export const se_DeleteBridgeCommand = async (
  */
 export const se_DeleteFlowCommand = async (
   input: DeleteFlowCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -473,7 +473,7 @@ export const se_DeleteFlowCommand = async (
  */
 export const se_DeleteGatewayCommand = async (
   input: DeleteGatewayCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -489,7 +489,7 @@ export const se_DeleteGatewayCommand = async (
  */
 export const se_DeregisterGatewayInstanceCommand = async (
   input: DeregisterGatewayInstanceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -508,7 +508,7 @@ export const se_DeregisterGatewayInstanceCommand = async (
  */
 export const se_DescribeBridgeCommand = async (
   input: DescribeBridgeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -524,7 +524,7 @@ export const se_DescribeBridgeCommand = async (
  */
 export const se_DescribeFlowCommand = async (
   input: DescribeFlowCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -540,7 +540,7 @@ export const se_DescribeFlowCommand = async (
  */
 export const se_DescribeFlowSourceMetadataCommand = async (
   input: DescribeFlowSourceMetadataCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -556,7 +556,7 @@ export const se_DescribeFlowSourceMetadataCommand = async (
  */
 export const se_DescribeGatewayCommand = async (
   input: DescribeGatewayCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -572,7 +572,7 @@ export const se_DescribeGatewayCommand = async (
  */
 export const se_DescribeGatewayInstanceCommand = async (
   input: DescribeGatewayInstanceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -588,7 +588,7 @@ export const se_DescribeGatewayInstanceCommand = async (
  */
 export const se_DescribeOfferingCommand = async (
   input: DescribeOfferingCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -604,7 +604,7 @@ export const se_DescribeOfferingCommand = async (
  */
 export const se_DescribeReservationCommand = async (
   input: DescribeReservationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -620,7 +620,7 @@ export const se_DescribeReservationCommand = async (
  */
 export const se_GrantFlowEntitlementsCommand = async (
   input: GrantFlowEntitlementsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -632,7 +632,7 @@ export const se_GrantFlowEntitlementsCommand = async (
   body = JSON.stringify(
     take(input, {
       entitlements: [, (_) => se___listOfGrantEntitlementRequest(_, context), `Entitlements`],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -643,7 +643,7 @@ export const se_GrantFlowEntitlementsCommand = async (
  */
 export const se_ListBridgesCommand = async (
   input: ListBridgesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -663,7 +663,7 @@ export const se_ListBridgesCommand = async (
  */
 export const se_ListEntitlementsCommand = async (
   input: ListEntitlementsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -682,7 +682,7 @@ export const se_ListEntitlementsCommand = async (
  */
 export const se_ListFlowsCommand = async (
   input: ListFlowsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -701,7 +701,7 @@ export const se_ListFlowsCommand = async (
  */
 export const se_ListGatewayInstancesCommand = async (
   input: ListGatewayInstancesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -721,7 +721,7 @@ export const se_ListGatewayInstancesCommand = async (
  */
 export const se_ListGatewaysCommand = async (
   input: ListGatewaysCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -740,7 +740,7 @@ export const se_ListGatewaysCommand = async (
  */
 export const se_ListOfferingsCommand = async (
   input: ListOfferingsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -759,7 +759,7 @@ export const se_ListOfferingsCommand = async (
  */
 export const se_ListReservationsCommand = async (
   input: ListReservationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -778,7 +778,7 @@ export const se_ListReservationsCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -794,7 +794,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_PurchaseOfferingCommand = async (
   input: PurchaseOfferingCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -807,7 +807,7 @@ export const se_PurchaseOfferingCommand = async (
     take(input, {
       reservationName: [, , `ReservationName`],
       start: [, , `Start`],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -818,7 +818,7 @@ export const se_PurchaseOfferingCommand = async (
  */
 export const se_RemoveBridgeOutputCommand = async (
   input: RemoveBridgeOutputCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -835,7 +835,7 @@ export const se_RemoveBridgeOutputCommand = async (
  */
 export const se_RemoveBridgeSourceCommand = async (
   input: RemoveBridgeSourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -852,7 +852,7 @@ export const se_RemoveBridgeSourceCommand = async (
  */
 export const se_RemoveFlowMediaStreamCommand = async (
   input: RemoveFlowMediaStreamCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -869,7 +869,7 @@ export const se_RemoveFlowMediaStreamCommand = async (
  */
 export const se_RemoveFlowOutputCommand = async (
   input: RemoveFlowOutputCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -886,7 +886,7 @@ export const se_RemoveFlowOutputCommand = async (
  */
 export const se_RemoveFlowSourceCommand = async (
   input: RemoveFlowSourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -903,7 +903,7 @@ export const se_RemoveFlowSourceCommand = async (
  */
 export const se_RemoveFlowVpcInterfaceCommand = async (
   input: RemoveFlowVpcInterfaceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -920,7 +920,7 @@ export const se_RemoveFlowVpcInterfaceCommand = async (
  */
 export const se_RevokeFlowEntitlementCommand = async (
   input: RevokeFlowEntitlementCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -937,7 +937,7 @@ export const se_RevokeFlowEntitlementCommand = async (
  */
 export const se_StartFlowCommand = async (
   input: StartFlowCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -953,7 +953,7 @@ export const se_StartFlowCommand = async (
  */
 export const se_StopFlowCommand = async (
   input: StopFlowCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -969,7 +969,7 @@ export const se_StopFlowCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -981,7 +981,7 @@ export const se_TagResourceCommand = async (
   body = JSON.stringify(
     take(input, {
       tags: [, (_) => _json(_), `Tags`],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -992,7 +992,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1014,7 +1014,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateBridgeCommand = async (
   input: UpdateBridgeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1028,7 +1028,7 @@ export const se_UpdateBridgeCommand = async (
       egressGatewayBridge: [, (_) => se_UpdateEgressGatewayBridgeRequest(_, context), `EgressGatewayBridge`],
       ingressGatewayBridge: [, (_) => se_UpdateIngressGatewayBridgeRequest(_, context), `IngressGatewayBridge`],
       sourceFailoverConfig: [, (_) => se_UpdateFailoverConfig(_, context), `SourceFailoverConfig`],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1039,7 +1039,7 @@ export const se_UpdateBridgeCommand = async (
  */
 export const se_UpdateBridgeOutputCommand = async (
   input: UpdateBridgeOutputCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1052,7 +1052,7 @@ export const se_UpdateBridgeOutputCommand = async (
   body = JSON.stringify(
     take(input, {
       networkOutput: [, (_) => se_UpdateBridgeNetworkOutputRequest(_, context), `NetworkOutput`],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1063,7 +1063,7 @@ export const se_UpdateBridgeOutputCommand = async (
  */
 export const se_UpdateBridgeSourceCommand = async (
   input: UpdateBridgeSourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1077,7 +1077,7 @@ export const se_UpdateBridgeSourceCommand = async (
     take(input, {
       flowSource: [, (_) => se_UpdateBridgeFlowSourceRequest(_, context), `FlowSource`],
       networkSource: [, (_) => se_UpdateBridgeNetworkSourceRequest(_, context), `NetworkSource`],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1088,7 +1088,7 @@ export const se_UpdateBridgeSourceCommand = async (
  */
 export const se_UpdateBridgeStateCommand = async (
   input: UpdateBridgeStateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1100,7 +1100,7 @@ export const se_UpdateBridgeStateCommand = async (
   body = JSON.stringify(
     take(input, {
       desiredState: [, , `DesiredState`],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1111,7 +1111,7 @@ export const se_UpdateBridgeStateCommand = async (
  */
 export const se_UpdateFlowCommand = async (
   input: UpdateFlowCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1124,7 +1124,7 @@ export const se_UpdateFlowCommand = async (
     take(input, {
       maintenance: [, (_) => se_UpdateMaintenance(_, context), `Maintenance`],
       sourceFailoverConfig: [, (_) => se_UpdateFailoverConfig(_, context), `SourceFailoverConfig`],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1135,7 +1135,7 @@ export const se_UpdateFlowCommand = async (
  */
 export const se_UpdateFlowEntitlementCommand = async (
   input: UpdateFlowEntitlementCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1151,7 +1151,7 @@ export const se_UpdateFlowEntitlementCommand = async (
       encryption: [, (_) => se_UpdateEncryption(_, context), `Encryption`],
       entitlementStatus: [, , `EntitlementStatus`],
       subscribers: [, (_) => _json(_), `Subscribers`],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1162,7 +1162,7 @@ export const se_UpdateFlowEntitlementCommand = async (
  */
 export const se_UpdateFlowMediaStreamCommand = async (
   input: UpdateFlowMediaStreamCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1179,7 +1179,7 @@ export const se_UpdateFlowMediaStreamCommand = async (
       description: [, , `Description`],
       mediaStreamType: [, , `MediaStreamType`],
       videoFormat: [, , `VideoFormat`],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1190,7 +1190,7 @@ export const se_UpdateFlowMediaStreamCommand = async (
  */
 export const se_UpdateFlowOutputCommand = async (
   input: UpdateFlowOutputCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1221,7 +1221,7 @@ export const se_UpdateFlowOutputCommand = async (
       smoothingLatency: [, , `SmoothingLatency`],
       streamId: [, , `StreamId`],
       vpcInterfaceAttachment: [, (_) => se_VpcInterfaceAttachment(_, context), `VpcInterfaceAttachment`],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1232,7 +1232,7 @@ export const se_UpdateFlowOutputCommand = async (
  */
 export const se_UpdateFlowSourceCommand = async (
   input: UpdateFlowSourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1266,7 +1266,7 @@ export const se_UpdateFlowSourceCommand = async (
       streamId: [, , `StreamId`],
       vpcInterfaceName: [, , `VpcInterfaceName`],
       whitelistCidr: [, , `WhitelistCidr`],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1277,7 +1277,7 @@ export const se_UpdateFlowSourceCommand = async (
  */
 export const se_UpdateGatewayInstanceCommand = async (
   input: UpdateGatewayInstanceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1289,7 +1289,7 @@ export const se_UpdateGatewayInstanceCommand = async (
   body = JSON.stringify(
     take(input, {
       bridgePlacement: [, , `BridgePlacement`],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1300,7 +1300,7 @@ export const se_UpdateGatewayInstanceCommand = async (
  */
 export const de_AddBridgeOutputsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AddBridgeOutputsCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1322,7 +1322,7 @@ export const de_AddBridgeOutputsCommand = async (
  */
 export const de_AddBridgeSourcesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AddBridgeSourcesCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1344,7 +1344,7 @@ export const de_AddBridgeSourcesCommand = async (
  */
 export const de_AddFlowMediaStreamsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AddFlowMediaStreamsCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1366,7 +1366,7 @@ export const de_AddFlowMediaStreamsCommand = async (
  */
 export const de_AddFlowOutputsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AddFlowOutputsCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1388,7 +1388,7 @@ export const de_AddFlowOutputsCommand = async (
  */
 export const de_AddFlowSourcesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AddFlowSourcesCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1410,7 +1410,7 @@ export const de_AddFlowSourcesCommand = async (
  */
 export const de_AddFlowVpcInterfacesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AddFlowVpcInterfacesCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1432,7 +1432,7 @@ export const de_AddFlowVpcInterfacesCommand = async (
  */
 export const de_CreateBridgeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateBridgeCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1453,7 +1453,7 @@ export const de_CreateBridgeCommand = async (
  */
 export const de_CreateFlowCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateFlowCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1474,7 +1474,7 @@ export const de_CreateFlowCommand = async (
  */
 export const de_CreateGatewayCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateGatewayCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1495,7 +1495,7 @@ export const de_CreateGatewayCommand = async (
  */
 export const de_DeleteBridgeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteBridgeCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1516,7 +1516,7 @@ export const de_DeleteBridgeCommand = async (
  */
 export const de_DeleteFlowCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteFlowCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1538,7 +1538,7 @@ export const de_DeleteFlowCommand = async (
  */
 export const de_DeleteGatewayCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteGatewayCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1559,7 +1559,7 @@ export const de_DeleteGatewayCommand = async (
  */
 export const de_DeregisterGatewayInstanceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeregisterGatewayInstanceCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1581,7 +1581,7 @@ export const de_DeregisterGatewayInstanceCommand = async (
  */
 export const de_DescribeBridgeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeBridgeCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1602,7 +1602,7 @@ export const de_DescribeBridgeCommand = async (
  */
 export const de_DescribeFlowCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeFlowCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1624,7 +1624,7 @@ export const de_DescribeFlowCommand = async (
  */
 export const de_DescribeFlowSourceMetadataCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeFlowSourceMetadataCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1648,7 +1648,7 @@ export const de_DescribeFlowSourceMetadataCommand = async (
  */
 export const de_DescribeGatewayCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeGatewayCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1669,7 +1669,7 @@ export const de_DescribeGatewayCommand = async (
  */
 export const de_DescribeGatewayInstanceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeGatewayInstanceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1690,7 +1690,7 @@ export const de_DescribeGatewayInstanceCommand = async (
  */
 export const de_DescribeOfferingCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeOfferingCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1711,7 +1711,7 @@ export const de_DescribeOfferingCommand = async (
  */
 export const de_DescribeReservationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeReservationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1732,7 +1732,7 @@ export const de_DescribeReservationCommand = async (
  */
 export const de_GrantFlowEntitlementsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GrantFlowEntitlementsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1754,7 +1754,7 @@ export const de_GrantFlowEntitlementsCommand = async (
  */
 export const de_ListBridgesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListBridgesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1776,7 +1776,7 @@ export const de_ListBridgesCommand = async (
  */
 export const de_ListEntitlementsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListEntitlementsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1798,7 +1798,7 @@ export const de_ListEntitlementsCommand = async (
  */
 export const de_ListFlowsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListFlowsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1820,7 +1820,7 @@ export const de_ListFlowsCommand = async (
  */
 export const de_ListGatewayInstancesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListGatewayInstancesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1842,7 +1842,7 @@ export const de_ListGatewayInstancesCommand = async (
  */
 export const de_ListGatewaysCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListGatewaysCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1864,7 +1864,7 @@ export const de_ListGatewaysCommand = async (
  */
 export const de_ListOfferingsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListOfferingsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1886,7 +1886,7 @@ export const de_ListOfferingsCommand = async (
  */
 export const de_ListReservationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListReservationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1908,7 +1908,7 @@ export const de_ListReservationsCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1929,7 +1929,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_PurchaseOfferingCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PurchaseOfferingCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1950,7 +1950,7 @@ export const de_PurchaseOfferingCommand = async (
  */
 export const de_RemoveBridgeOutputCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RemoveBridgeOutputCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1972,7 +1972,7 @@ export const de_RemoveBridgeOutputCommand = async (
  */
 export const de_RemoveBridgeSourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RemoveBridgeSourceCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1994,7 +1994,7 @@ export const de_RemoveBridgeSourceCommand = async (
  */
 export const de_RemoveFlowMediaStreamCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RemoveFlowMediaStreamCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2016,7 +2016,7 @@ export const de_RemoveFlowMediaStreamCommand = async (
  */
 export const de_RemoveFlowOutputCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RemoveFlowOutputCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2038,7 +2038,7 @@ export const de_RemoveFlowOutputCommand = async (
  */
 export const de_RemoveFlowSourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RemoveFlowSourceCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2060,7 +2060,7 @@ export const de_RemoveFlowSourceCommand = async (
  */
 export const de_RemoveFlowVpcInterfaceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RemoveFlowVpcInterfaceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2083,7 +2083,7 @@ export const de_RemoveFlowVpcInterfaceCommand = async (
  */
 export const de_RevokeFlowEntitlementCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RevokeFlowEntitlementCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2105,7 +2105,7 @@ export const de_RevokeFlowEntitlementCommand = async (
  */
 export const de_StartFlowCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartFlowCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2127,7 +2127,7 @@ export const de_StartFlowCommand = async (
  */
 export const de_StopFlowCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StopFlowCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2149,7 +2149,7 @@ export const de_StopFlowCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2166,7 +2166,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2183,7 +2183,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateBridgeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateBridgeCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2204,7 +2204,7 @@ export const de_UpdateBridgeCommand = async (
  */
 export const de_UpdateBridgeOutputCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateBridgeOutputCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2226,7 +2226,7 @@ export const de_UpdateBridgeOutputCommand = async (
  */
 export const de_UpdateBridgeSourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateBridgeSourceCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2248,7 +2248,7 @@ export const de_UpdateBridgeSourceCommand = async (
  */
 export const de_UpdateBridgeStateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateBridgeStateCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2270,7 +2270,7 @@ export const de_UpdateBridgeStateCommand = async (
  */
 export const de_UpdateFlowCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateFlowCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2291,7 +2291,7 @@ export const de_UpdateFlowCommand = async (
  */
 export const de_UpdateFlowEntitlementCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateFlowEntitlementCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2313,7 +2313,7 @@ export const de_UpdateFlowEntitlementCommand = async (
  */
 export const de_UpdateFlowMediaStreamCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateFlowMediaStreamCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2335,7 +2335,7 @@ export const de_UpdateFlowMediaStreamCommand = async (
  */
 export const de_UpdateFlowOutputCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateFlowOutputCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2357,7 +2357,7 @@ export const de_UpdateFlowOutputCommand = async (
  */
 export const de_UpdateFlowSourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateFlowSourceCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2379,7 +2379,7 @@ export const de_UpdateFlowSourceCommand = async (
  */
 export const de_UpdateGatewayInstanceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateGatewayInstanceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2458,7 +2458,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_AddFlowOutputs420ExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AddFlowOutputs420Exception> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2512,7 +2512,7 @@ const de_ConflictExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_CreateBridge420ExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateBridge420Exception> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2532,7 +2532,7 @@ const de_CreateBridge420ExceptionRes = async (
  */
 const de_CreateFlow420ExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateFlow420Exception> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2552,7 +2552,7 @@ const de_CreateFlow420ExceptionRes = async (
  */
 const de_CreateGateway420ExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateGateway420Exception> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2589,7 +2589,7 @@ const de_ForbiddenExceptionRes = async (parsedOutput: any, context: __SerdeConte
  */
 const de_GrantFlowEntitlements420ExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GrantFlowEntitlements420Exception> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2609,7 +2609,7 @@ const de_GrantFlowEntitlements420ExceptionRes = async (
  */
 const de_InternalServerErrorExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerErrorException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2646,7 +2646,7 @@ const de_NotFoundExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_ServiceUnavailableExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceUnavailableException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2666,7 +2666,7 @@ const de_ServiceUnavailableExceptionRes = async (
  */
 const de_TooManyRequestsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyRequestsException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2732,7 +2732,7 @@ const se___listOfAddOutputRequest = (input: AddOutputRequest[], context: __Serde
  */
 const se___listOfDestinationConfigurationRequest = (
   input: DestinationConfigurationRequest[],
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return input
     .filter((e: any) => e != null)
@@ -2779,7 +2779,7 @@ const se___listOfInputConfigurationRequest = (input: InputConfigurationRequest[]
  */
 const se___listOfMediaStreamOutputConfigurationRequest = (
   input: MediaStreamOutputConfigurationRequest[],
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return input
     .filter((e: any) => e != null)
@@ -2793,7 +2793,7 @@ const se___listOfMediaStreamOutputConfigurationRequest = (
  */
 const se___listOfMediaStreamSourceConfigurationRequest = (
   input: MediaStreamSourceConfigurationRequest[],
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return input
     .filter((e: any) => e != null)
@@ -3077,7 +3077,7 @@ const se_MediaStreamAttributesRequest = (input: MediaStreamAttributesRequest, co
  */
 const se_MediaStreamOutputConfigurationRequest = (
   input: MediaStreamOutputConfigurationRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     destinationConfigurations: [
@@ -3096,7 +3096,7 @@ const se_MediaStreamOutputConfigurationRequest = (
  */
 const se_MediaStreamSourceConfigurationRequest = (
   input: MediaStreamSourceConfigurationRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     encodingName: [, , `EncodingName`],
@@ -3243,7 +3243,7 @@ const se_UpdateGatewayBridgeSourceRequest = (input: UpdateGatewayBridgeSourceReq
  */
 const se_UpdateIngressGatewayBridgeRequest = (
   input: UpdateIngressGatewayBridgeRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     maxBitrate: [, , `MaxBitrate`],
@@ -3437,7 +3437,7 @@ const de___listOfMediaStream = (output: any, context: __SerdeContext): MediaStre
  */
 const de___listOfMediaStreamOutputConfiguration = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): MediaStreamOutputConfiguration[] => {
   const retVal = (output || [])
     .filter((e: any) => e != null)
@@ -3452,7 +3452,7 @@ const de___listOfMediaStreamOutputConfiguration = (
  */
 const de___listOfMediaStreamSourceConfiguration = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): MediaStreamSourceConfiguration[] => {
   const retVal = (output || [])
     .filter((e: any) => e != null)

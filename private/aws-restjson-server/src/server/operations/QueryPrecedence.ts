@@ -61,14 +61,14 @@ export class QueryPrecedenceSerializer
 
 export const getQueryPrecedenceHandler = <Context>(
   operation: __Operation<QueryPrecedenceServerInput, QueryPrecedenceServerOutput, Context>,
-  customizer: __ValidationCustomizer<"QueryPrecedence">
+  customizer: __ValidationCustomizer<"QueryPrecedence">,
 ): __ServiceHandler<Context, __HttpRequest, __HttpResponse> => {
   const mux = new httpbinding.HttpBindingMux<"RestJson", "QueryPrecedence">([
     new httpbinding.UriSpec<"RestJson", "QueryPrecedence">(
       "POST",
       [{ type: "path_literal", value: "Precedence" }],
       [],
-      { service: "RestJson", operation: "QueryPrecedence" }
+      { service: "RestJson", operation: "QueryPrecedence" },
     ),
   ]);
   return new QueryPrecedenceHandler(
@@ -76,7 +76,7 @@ export const getQueryPrecedenceHandler = <Context>(
     mux,
     new QueryPrecedenceSerializer(),
     serializeFrameworkException,
-    customizer
+    customizer,
   );
 };
 
@@ -97,7 +97,7 @@ async function handle<S, O extends keyof S & string, Context>(
   operation: __Operation<__OperationInput<S[O]>, __OperationOutput<S[O]>, Context>,
   serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
   validationFn: (input: __OperationInput<S[O]>) => __ValidationFailure[],
-  validationCustomizer: __ValidationCustomizer<O>
+  validationCustomizer: __ValidationCustomizer<O>,
 ): Promise<__HttpResponse> {
   let input;
   try {
@@ -139,7 +139,7 @@ export class QueryPrecedenceHandler<Context> implements __ServiceHandler<Context
   >;
   private readonly serializeFrameworkException: (
     e: __SmithyFrameworkException,
-    ctx: __ServerSerdeContext
+    ctx: __ServerSerdeContext,
   ) => Promise<__HttpResponse>;
   private readonly validationCustomizer: __ValidationCustomizer<"QueryPrecedence">;
   /**
@@ -156,7 +156,7 @@ export class QueryPrecedenceHandler<Context> implements __ServiceHandler<Context
     mux: __Mux<"RestJson", "QueryPrecedence">,
     serializer: __OperationSerializer<RestJsonService<Context>, "QueryPrecedence", QueryPrecedenceErrors>,
     serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
-    validationCustomizer: __ValidationCustomizer<"QueryPrecedence">
+    validationCustomizer: __ValidationCustomizer<"QueryPrecedence">,
   ) {
     this.operation = operation;
     this.mux = mux;
@@ -168,7 +168,7 @@ export class QueryPrecedenceHandler<Context> implements __ServiceHandler<Context
     const target = this.mux.match(request);
     if (target === undefined) {
       console.log(
-        "Received a request that did not match aws.protocoltests.restjson#RestJson.QueryPrecedence. This indicates a misconfiguration."
+        "Received a request that did not match aws.protocoltests.restjson#RestJson.QueryPrecedence. This indicates a misconfiguration.",
       );
       return this.serializeFrameworkException(new __InternalFailureException(), serdeContextBase);
     }
@@ -180,7 +180,7 @@ export class QueryPrecedenceHandler<Context> implements __ServiceHandler<Context
       this.operation,
       this.serializeFrameworkException,
       QueryPrecedenceServerInput.validate,
-      this.validationCustomizer
+      this.validationCustomizer,
     );
   }
 }

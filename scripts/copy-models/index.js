@@ -19,7 +19,7 @@ restJson1,
 awsJson1_0,
 awsQuery,
 restXml,
-ec2Query`
+ec2Query`,
   )
   .help().argv;
 

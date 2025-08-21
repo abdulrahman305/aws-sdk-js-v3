@@ -39,7 +39,7 @@ const checkState = async (client: ECRClient, input: GetLifecyclePolicyPreviewCom
  */
 export const waitForLifecyclePolicyPreviewComplete = async (
   params: WaiterConfiguration<ECRClient>,
-  input: GetLifecyclePolicyPreviewCommandInput
+  input: GetLifecyclePolicyPreviewCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 5, maxDelay: 120 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -51,7 +51,7 @@ export const waitForLifecyclePolicyPreviewComplete = async (
  */
 export const waitUntilLifecyclePolicyPreviewComplete = async (
   params: WaiterConfiguration<ECRClient>,
-  input: GetLifecyclePolicyPreviewCommandInput
+  input: GetLifecyclePolicyPreviewCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 5, maxDelay: 120 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

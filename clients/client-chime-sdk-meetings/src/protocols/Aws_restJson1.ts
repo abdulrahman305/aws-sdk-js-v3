@@ -93,7 +93,7 @@ import {
  */
 export const se_BatchCreateAttendeeCommand = async (
   input: BatchCreateAttendeeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -108,7 +108,7 @@ export const se_BatchCreateAttendeeCommand = async (
   body = JSON.stringify(
     take(input, {
       Attendees: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).q(query).b(body);
   return b.build();
@@ -119,7 +119,7 @@ export const se_BatchCreateAttendeeCommand = async (
  */
 export const se_BatchUpdateAttendeeCapabilitiesExceptCommand = async (
   input: BatchUpdateAttendeeCapabilitiesExceptCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -135,7 +135,7 @@ export const se_BatchUpdateAttendeeCapabilitiesExceptCommand = async (
     take(input, {
       Capabilities: (_) => _json(_),
       ExcludedAttendeeIds: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).q(query).b(body);
   return b.build();
@@ -146,7 +146,7 @@ export const se_BatchUpdateAttendeeCapabilitiesExceptCommand = async (
  */
 export const se_CreateAttendeeCommand = async (
   input: CreateAttendeeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -159,7 +159,7 @@ export const se_CreateAttendeeCommand = async (
     take(input, {
       Capabilities: (_) => _json(_),
       ExternalUserId: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -170,7 +170,7 @@ export const se_CreateAttendeeCommand = async (
  */
 export const se_CreateMeetingCommand = async (
   input: CreateMeetingCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -189,7 +189,7 @@ export const se_CreateMeetingCommand = async (
       PrimaryMeetingId: [],
       Tags: (_) => _json(_),
       TenantIds: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -200,7 +200,7 @@ export const se_CreateMeetingCommand = async (
  */
 export const se_CreateMeetingWithAttendeesCommand = async (
   input: CreateMeetingWithAttendeesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -223,7 +223,7 @@ export const se_CreateMeetingWithAttendeesCommand = async (
       PrimaryMeetingId: [],
       Tags: (_) => _json(_),
       TenantIds: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).q(query).b(body);
   return b.build();
@@ -234,7 +234,7 @@ export const se_CreateMeetingWithAttendeesCommand = async (
  */
 export const se_DeleteAttendeeCommand = async (
   input: DeleteAttendeeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -251,7 +251,7 @@ export const se_DeleteAttendeeCommand = async (
  */
 export const se_DeleteMeetingCommand = async (
   input: DeleteMeetingCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -267,7 +267,7 @@ export const se_DeleteMeetingCommand = async (
  */
 export const se_GetAttendeeCommand = async (
   input: GetAttendeeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -284,7 +284,7 @@ export const se_GetAttendeeCommand = async (
  */
 export const se_GetMeetingCommand = async (
   input: GetMeetingCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -300,7 +300,7 @@ export const se_GetMeetingCommand = async (
  */
 export const se_ListAttendeesCommand = async (
   input: ListAttendeesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -320,7 +320,7 @@ export const se_ListAttendeesCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -338,7 +338,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_StartMeetingTranscriptionCommand = async (
   input: StartMeetingTranscriptionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -353,7 +353,7 @@ export const se_StartMeetingTranscriptionCommand = async (
   body = JSON.stringify(
     take(input, {
       TranscriptionConfiguration: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).q(query).b(body);
   return b.build();
@@ -364,7 +364,7 @@ export const se_StartMeetingTranscriptionCommand = async (
  */
 export const se_StopMeetingTranscriptionCommand = async (
   input: StopMeetingTranscriptionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -383,7 +383,7 @@ export const se_StopMeetingTranscriptionCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -398,7 +398,7 @@ export const se_TagResourceCommand = async (
     take(input, {
       ResourceARN: [],
       Tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).q(query).b(body);
   return b.build();
@@ -409,7 +409,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -424,7 +424,7 @@ export const se_UntagResourceCommand = async (
     take(input, {
       ResourceARN: [],
       TagKeys: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).q(query).b(body);
   return b.build();
@@ -435,7 +435,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateAttendeeCapabilitiesCommand = async (
   input: UpdateAttendeeCapabilitiesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -448,7 +448,7 @@ export const se_UpdateAttendeeCapabilitiesCommand = async (
   body = JSON.stringify(
     take(input, {
       Capabilities: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -459,7 +459,7 @@ export const se_UpdateAttendeeCapabilitiesCommand = async (
  */
 export const de_BatchCreateAttendeeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchCreateAttendeeCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -481,7 +481,7 @@ export const de_BatchCreateAttendeeCommand = async (
  */
 export const de_BatchUpdateAttendeeCapabilitiesExceptCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchUpdateAttendeeCapabilitiesExceptCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -498,7 +498,7 @@ export const de_BatchUpdateAttendeeCapabilitiesExceptCommand = async (
  */
 export const de_CreateAttendeeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateAttendeeCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -519,7 +519,7 @@ export const de_CreateAttendeeCommand = async (
  */
 export const de_CreateMeetingCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateMeetingCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -540,7 +540,7 @@ export const de_CreateMeetingCommand = async (
  */
 export const de_CreateMeetingWithAttendeesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateMeetingWithAttendeesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -563,7 +563,7 @@ export const de_CreateMeetingWithAttendeesCommand = async (
  */
 export const de_DeleteAttendeeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteAttendeeCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -580,7 +580,7 @@ export const de_DeleteAttendeeCommand = async (
  */
 export const de_DeleteMeetingCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteMeetingCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -597,7 +597,7 @@ export const de_DeleteMeetingCommand = async (
  */
 export const de_GetAttendeeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetAttendeeCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -618,7 +618,7 @@ export const de_GetAttendeeCommand = async (
  */
 export const de_GetMeetingCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetMeetingCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -639,7 +639,7 @@ export const de_GetMeetingCommand = async (
  */
 export const de_ListAttendeesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAttendeesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -661,7 +661,7 @@ export const de_ListAttendeesCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -682,7 +682,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_StartMeetingTranscriptionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartMeetingTranscriptionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -699,7 +699,7 @@ export const de_StartMeetingTranscriptionCommand = async (
  */
 export const de_StopMeetingTranscriptionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StopMeetingTranscriptionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -716,7 +716,7 @@ export const de_StopMeetingTranscriptionCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -733,7 +733,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -750,7 +750,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateAttendeeCapabilitiesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateAttendeeCapabilitiesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -885,7 +885,7 @@ const de_ForbiddenExceptionRes = async (parsedOutput: any, context: __SerdeConte
  */
 const de_LimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<LimitExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -926,7 +926,7 @@ const de_NotFoundExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -949,7 +949,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_ServiceFailureExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceFailureException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -971,7 +971,7 @@ const de_ServiceFailureExceptionRes = async (
  */
 const de_ServiceUnavailableExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceUnavailableException> => {
   const contents: any = map({
     [_RAS]: [, parsedOutput.headers[_ra]],
@@ -1014,7 +1014,7 @@ const de_ThrottlingExceptionRes = async (parsedOutput: any, context: __SerdeCont
  */
 const de_TooManyTagsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyTagsException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1037,7 +1037,7 @@ const de_TooManyTagsExceptionRes = async (
  */
 const de_UnauthorizedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UnauthorizedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1059,7 +1059,7 @@ const de_UnauthorizedExceptionRes = async (
  */
 const de_UnprocessableEntityExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UnprocessableEntityException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;

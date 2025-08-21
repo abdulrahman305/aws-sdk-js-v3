@@ -61,14 +61,14 @@ export class PostPlayerActionSerializer
 
 export const getPostPlayerActionHandler = <Context>(
   operation: __Operation<PostPlayerActionServerInput, PostPlayerActionServerOutput, Context>,
-  customizer: __ValidationCustomizer<"PostPlayerAction">
+  customizer: __ValidationCustomizer<"PostPlayerAction">,
 ): __ServiceHandler<Context, __HttpRequest, __HttpResponse> => {
   const mux = new httpbinding.HttpBindingMux<"RestJson", "PostPlayerAction">([
     new httpbinding.UriSpec<"RestJson", "PostPlayerAction">(
       "POST",
       [{ type: "path_literal", value: "PostPlayerAction" }],
       [],
-      { service: "RestJson", operation: "PostPlayerAction" }
+      { service: "RestJson", operation: "PostPlayerAction" },
     ),
   ]);
   return new PostPlayerActionHandler(
@@ -76,7 +76,7 @@ export const getPostPlayerActionHandler = <Context>(
     mux,
     new PostPlayerActionSerializer(),
     serializeFrameworkException,
-    customizer
+    customizer,
   );
 };
 
@@ -97,7 +97,7 @@ async function handle<S, O extends keyof S & string, Context>(
   operation: __Operation<__OperationInput<S[O]>, __OperationOutput<S[O]>, Context>,
   serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
   validationFn: (input: __OperationInput<S[O]>) => __ValidationFailure[],
-  validationCustomizer: __ValidationCustomizer<O>
+  validationCustomizer: __ValidationCustomizer<O>,
 ): Promise<__HttpResponse> {
   let input;
   try {
@@ -139,7 +139,7 @@ export class PostPlayerActionHandler<Context> implements __ServiceHandler<Contex
   >;
   private readonly serializeFrameworkException: (
     e: __SmithyFrameworkException,
-    ctx: __ServerSerdeContext
+    ctx: __ServerSerdeContext,
   ) => Promise<__HttpResponse>;
   private readonly validationCustomizer: __ValidationCustomizer<"PostPlayerAction">;
   /**
@@ -156,7 +156,7 @@ export class PostPlayerActionHandler<Context> implements __ServiceHandler<Contex
     mux: __Mux<"RestJson", "PostPlayerAction">,
     serializer: __OperationSerializer<RestJsonService<Context>, "PostPlayerAction", PostPlayerActionErrors>,
     serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
-    validationCustomizer: __ValidationCustomizer<"PostPlayerAction">
+    validationCustomizer: __ValidationCustomizer<"PostPlayerAction">,
   ) {
     this.operation = operation;
     this.mux = mux;
@@ -168,7 +168,7 @@ export class PostPlayerActionHandler<Context> implements __ServiceHandler<Contex
     const target = this.mux.match(request);
     if (target === undefined) {
       console.log(
-        "Received a request that did not match aws.protocoltests.restjson#RestJson.PostPlayerAction. This indicates a misconfiguration."
+        "Received a request that did not match aws.protocoltests.restjson#RestJson.PostPlayerAction. This indicates a misconfiguration.",
       );
       return this.serializeFrameworkException(new __InternalFailureException(), serdeContextBase);
     }
@@ -180,7 +180,7 @@ export class PostPlayerActionHandler<Context> implements __ServiceHandler<Contex
       this.operation,
       this.serializeFrameworkException,
       PostPlayerActionServerInput.validate,
-      this.validationCustomizer
+      this.validationCustomizer,
     );
   }
 }

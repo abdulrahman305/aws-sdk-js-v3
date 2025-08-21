@@ -36,7 +36,7 @@ import {
  */
 export const se_GetFreeTierUsageCommand = async (
   input: GetFreeTierUsageCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetFreeTierUsage");
   let body: any;
@@ -49,7 +49,7 @@ export const se_GetFreeTierUsageCommand = async (
  */
 export const de_GetFreeTierUsageCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetFreeTierUsageCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -98,7 +98,7 @@ const de_CommandError = async (output: __HttpResponse, context: __SerdeContext):
  */
 const de_InternalServerExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -239,7 +239,7 @@ const buildHttpRpcRequest = async (
   headers: __HeaderBag,
   path: string,
   resolvedHostname: string | undefined,
-  body: any
+  body: any,
 ): Promise<__HttpRequest> => {
   const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
   const contents: any = {

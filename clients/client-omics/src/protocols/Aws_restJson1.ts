@@ -320,7 +320,7 @@ import { OmicsServiceException as __BaseException } from "../models/OmicsService
  */
 export const se_AbortMultipartReadSetUploadCommand = async (
   input: AbortMultipartReadSetUploadCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -345,7 +345,7 @@ export const se_AbortMultipartReadSetUploadCommand = async (
  */
 export const se_AcceptShareCommand = async (
   input: AcceptShareCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -369,7 +369,7 @@ export const se_AcceptShareCommand = async (
  */
 export const se_BatchDeleteReadSetCommand = async (
   input: BatchDeleteReadSetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -381,7 +381,7 @@ export const se_BatchDeleteReadSetCommand = async (
   body = JSON.stringify(
     take(input, {
       ids: (_) => _json(_),
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -400,7 +400,7 @@ export const se_BatchDeleteReadSetCommand = async (
  */
 export const se_CancelAnnotationImportJobCommand = async (
   input: CancelAnnotationImportJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -424,7 +424,7 @@ export const se_CancelAnnotationImportJobCommand = async (
  */
 export const se_CancelRunCommand = async (
   input: CancelRunCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -448,7 +448,7 @@ export const se_CancelRunCommand = async (
  */
 export const se_CancelVariantImportJobCommand = async (
   input: CancelVariantImportJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -472,7 +472,7 @@ export const se_CancelVariantImportJobCommand = async (
  */
 export const se_CompleteMultipartReadSetUploadCommand = async (
   input: CompleteMultipartReadSetUploadCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -485,7 +485,7 @@ export const se_CompleteMultipartReadSetUploadCommand = async (
   body = JSON.stringify(
     take(input, {
       parts: (_) => _json(_),
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -504,7 +504,7 @@ export const se_CompleteMultipartReadSetUploadCommand = async (
  */
 export const se_CreateAnnotationStoreCommand = async (
   input: CreateAnnotationStoreCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -522,7 +522,7 @@ export const se_CreateAnnotationStoreCommand = async (
       storeOptions: (_) => _json(_),
       tags: (_) => _json(_),
       versionName: [],
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -541,7 +541,7 @@ export const se_CreateAnnotationStoreCommand = async (
  */
 export const se_CreateAnnotationStoreVersionCommand = async (
   input: CreateAnnotationStoreVersionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -556,7 +556,7 @@ export const se_CreateAnnotationStoreVersionCommand = async (
       tags: (_) => _json(_),
       versionName: [],
       versionOptions: (_) => _json(_),
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -575,7 +575,7 @@ export const se_CreateAnnotationStoreVersionCommand = async (
  */
 export const se_CreateMultipartReadSetUploadCommand = async (
   input: CreateMultipartReadSetUploadCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -595,7 +595,7 @@ export const se_CreateMultipartReadSetUploadCommand = async (
       sourceFileType: [],
       subjectId: [],
       tags: (_) => _json(_),
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -614,7 +614,7 @@ export const se_CreateMultipartReadSetUploadCommand = async (
  */
 export const se_CreateReferenceStoreCommand = async (
   input: CreateReferenceStoreCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -629,7 +629,7 @@ export const se_CreateReferenceStoreCommand = async (
       name: [],
       sseConfig: (_) => _json(_),
       tags: (_) => _json(_),
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -648,7 +648,7 @@ export const se_CreateReferenceStoreCommand = async (
  */
 export const se_CreateRunGroupCommand = async (
   input: CreateRunGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -665,7 +665,7 @@ export const se_CreateRunGroupCommand = async (
       name: [],
       requestId: [true, (_) => _ ?? generateIdempotencyToken()],
       tags: (_) => _json(_),
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -684,7 +684,7 @@ export const se_CreateRunGroupCommand = async (
  */
 export const se_CreateSequenceStoreCommand = async (
   input: CreateSequenceStoreCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -701,7 +701,7 @@ export const se_CreateSequenceStoreCommand = async (
       name: [],
       sseConfig: (_) => _json(_),
       tags: (_) => _json(_),
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -720,7 +720,7 @@ export const se_CreateSequenceStoreCommand = async (
  */
 export const se_CreateShareCommand = async (
   input: CreateShareCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -733,7 +733,7 @@ export const se_CreateShareCommand = async (
       principalSubscriber: [],
       resourceArn: [],
       shareName: [],
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -752,7 +752,7 @@ export const se_CreateShareCommand = async (
  */
 export const se_CreateVariantStoreCommand = async (
   input: CreateVariantStoreCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -767,7 +767,7 @@ export const se_CreateVariantStoreCommand = async (
       reference: (_) => _json(_),
       sseConfig: (_) => _json(_),
       tags: (_) => _json(_),
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -786,7 +786,7 @@ export const se_CreateVariantStoreCommand = async (
  */
 export const se_CreateWorkflowCommand = async (
   input: CreateWorkflowCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -807,7 +807,7 @@ export const se_CreateWorkflowCommand = async (
       requestId: [true, (_) => _ ?? generateIdempotencyToken()],
       storageCapacity: [],
       tags: (_) => _json(_),
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -826,7 +826,7 @@ export const se_CreateWorkflowCommand = async (
  */
 export const se_DeleteAnnotationStoreCommand = async (
   input: DeleteAnnotationStoreCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -853,7 +853,7 @@ export const se_DeleteAnnotationStoreCommand = async (
  */
 export const se_DeleteAnnotationStoreVersionsCommand = async (
   input: DeleteAnnotationStoreVersionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -868,7 +868,7 @@ export const se_DeleteAnnotationStoreVersionsCommand = async (
   body = JSON.stringify(
     take(input, {
       versions: (_) => _json(_),
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -887,7 +887,7 @@ export const se_DeleteAnnotationStoreVersionsCommand = async (
  */
 export const se_DeleteReferenceCommand = async (
   input: DeleteReferenceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -912,7 +912,7 @@ export const se_DeleteReferenceCommand = async (
  */
 export const se_DeleteReferenceStoreCommand = async (
   input: DeleteReferenceStoreCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -936,7 +936,7 @@ export const se_DeleteReferenceStoreCommand = async (
  */
 export const se_DeleteRunCommand = async (
   input: DeleteRunCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -960,7 +960,7 @@ export const se_DeleteRunCommand = async (
  */
 export const se_DeleteRunGroupCommand = async (
   input: DeleteRunGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -984,7 +984,7 @@ export const se_DeleteRunGroupCommand = async (
  */
 export const se_DeleteSequenceStoreCommand = async (
   input: DeleteSequenceStoreCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1008,7 +1008,7 @@ export const se_DeleteSequenceStoreCommand = async (
  */
 export const se_DeleteShareCommand = async (
   input: DeleteShareCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1032,7 +1032,7 @@ export const se_DeleteShareCommand = async (
  */
 export const se_DeleteVariantStoreCommand = async (
   input: DeleteVariantStoreCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1059,7 +1059,7 @@ export const se_DeleteVariantStoreCommand = async (
  */
 export const se_DeleteWorkflowCommand = async (
   input: DeleteWorkflowCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1083,7 +1083,7 @@ export const se_DeleteWorkflowCommand = async (
  */
 export const se_GetAnnotationImportJobCommand = async (
   input: GetAnnotationImportJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1107,7 +1107,7 @@ export const se_GetAnnotationImportJobCommand = async (
  */
 export const se_GetAnnotationStoreCommand = async (
   input: GetAnnotationStoreCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1131,7 +1131,7 @@ export const se_GetAnnotationStoreCommand = async (
  */
 export const se_GetAnnotationStoreVersionCommand = async (
   input: GetAnnotationStoreVersionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1156,7 +1156,7 @@ export const se_GetAnnotationStoreVersionCommand = async (
  */
 export const se_GetReadSetCommand = async (
   input: GetReadSetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1185,7 +1185,7 @@ export const se_GetReadSetCommand = async (
  */
 export const se_GetReadSetActivationJobCommand = async (
   input: GetReadSetActivationJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1210,7 +1210,7 @@ export const se_GetReadSetActivationJobCommand = async (
  */
 export const se_GetReadSetExportJobCommand = async (
   input: GetReadSetExportJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1235,7 +1235,7 @@ export const se_GetReadSetExportJobCommand = async (
  */
 export const se_GetReadSetImportJobCommand = async (
   input: GetReadSetImportJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1260,7 +1260,7 @@ export const se_GetReadSetImportJobCommand = async (
  */
 export const se_GetReadSetMetadataCommand = async (
   input: GetReadSetMetadataCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1285,7 +1285,7 @@ export const se_GetReadSetMetadataCommand = async (
  */
 export const se_GetReferenceCommand = async (
   input: GetReferenceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1316,7 +1316,7 @@ export const se_GetReferenceCommand = async (
  */
 export const se_GetReferenceImportJobCommand = async (
   input: GetReferenceImportJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1341,7 +1341,7 @@ export const se_GetReferenceImportJobCommand = async (
  */
 export const se_GetReferenceMetadataCommand = async (
   input: GetReferenceMetadataCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1366,7 +1366,7 @@ export const se_GetReferenceMetadataCommand = async (
  */
 export const se_GetReferenceStoreCommand = async (
   input: GetReferenceStoreCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1414,7 +1414,7 @@ export const se_GetRunCommand = async (input: GetRunCommandInput, context: __Ser
  */
 export const se_GetRunGroupCommand = async (
   input: GetRunGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1438,7 +1438,7 @@ export const se_GetRunGroupCommand = async (
  */
 export const se_GetRunTaskCommand = async (
   input: GetRunTaskCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1463,7 +1463,7 @@ export const se_GetRunTaskCommand = async (
  */
 export const se_GetSequenceStoreCommand = async (
   input: GetSequenceStoreCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1487,7 +1487,7 @@ export const se_GetSequenceStoreCommand = async (
  */
 export const se_GetShareCommand = async (
   input: GetShareCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1511,7 +1511,7 @@ export const se_GetShareCommand = async (
  */
 export const se_GetVariantImportJobCommand = async (
   input: GetVariantImportJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1535,7 +1535,7 @@ export const se_GetVariantImportJobCommand = async (
  */
 export const se_GetVariantStoreCommand = async (
   input: GetVariantStoreCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1559,7 +1559,7 @@ export const se_GetVariantStoreCommand = async (
  */
 export const se_GetWorkflowCommand = async (
   input: GetWorkflowCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1588,7 +1588,7 @@ export const se_GetWorkflowCommand = async (
  */
 export const se_ListAnnotationImportJobsCommand = async (
   input: ListAnnotationImportJobsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1604,7 +1604,7 @@ export const se_ListAnnotationImportJobsCommand = async (
     take(input, {
       filter: (_) => _json(_),
       ids: (_) => _json(_),
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -1623,7 +1623,7 @@ export const se_ListAnnotationImportJobsCommand = async (
  */
 export const se_ListAnnotationStoresCommand = async (
   input: ListAnnotationStoresCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1639,7 +1639,7 @@ export const se_ListAnnotationStoresCommand = async (
     take(input, {
       filter: (_) => _json(_),
       ids: (_) => _json(_),
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -1658,7 +1658,7 @@ export const se_ListAnnotationStoresCommand = async (
  */
 export const se_ListAnnotationStoreVersionsCommand = async (
   input: ListAnnotationStoreVersionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1674,7 +1674,7 @@ export const se_ListAnnotationStoreVersionsCommand = async (
   body = JSON.stringify(
     take(input, {
       filter: (_) => _json(_),
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -1693,7 +1693,7 @@ export const se_ListAnnotationStoreVersionsCommand = async (
  */
 export const se_ListMultipartReadSetUploadsCommand = async (
   input: ListMultipartReadSetUploadsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1721,7 +1721,7 @@ export const se_ListMultipartReadSetUploadsCommand = async (
  */
 export const se_ListReadSetActivationJobsCommand = async (
   input: ListReadSetActivationJobsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1737,7 +1737,7 @@ export const se_ListReadSetActivationJobsCommand = async (
   body = JSON.stringify(
     take(input, {
       filter: (_) => se_ActivateReadSetFilter(_, context),
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -1756,7 +1756,7 @@ export const se_ListReadSetActivationJobsCommand = async (
  */
 export const se_ListReadSetExportJobsCommand = async (
   input: ListReadSetExportJobsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1772,7 +1772,7 @@ export const se_ListReadSetExportJobsCommand = async (
   body = JSON.stringify(
     take(input, {
       filter: (_) => se_ExportReadSetFilter(_, context),
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -1791,7 +1791,7 @@ export const se_ListReadSetExportJobsCommand = async (
  */
 export const se_ListReadSetImportJobsCommand = async (
   input: ListReadSetImportJobsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1807,7 +1807,7 @@ export const se_ListReadSetImportJobsCommand = async (
   body = JSON.stringify(
     take(input, {
       filter: (_) => se_ImportReadSetFilter(_, context),
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -1826,7 +1826,7 @@ export const se_ListReadSetImportJobsCommand = async (
  */
 export const se_ListReadSetsCommand = async (
   input: ListReadSetsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1842,7 +1842,7 @@ export const se_ListReadSetsCommand = async (
   body = JSON.stringify(
     take(input, {
       filter: (_) => se_ReadSetFilter(_, context),
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -1861,7 +1861,7 @@ export const se_ListReadSetsCommand = async (
  */
 export const se_ListReadSetUploadPartsCommand = async (
   input: ListReadSetUploadPartsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1879,7 +1879,7 @@ export const se_ListReadSetUploadPartsCommand = async (
     take(input, {
       filter: (_) => se_ReadSetUploadPartListFilter(_, context),
       partSource: [],
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -1898,7 +1898,7 @@ export const se_ListReadSetUploadPartsCommand = async (
  */
 export const se_ListReferenceImportJobsCommand = async (
   input: ListReferenceImportJobsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1914,7 +1914,7 @@ export const se_ListReferenceImportJobsCommand = async (
   body = JSON.stringify(
     take(input, {
       filter: (_) => se_ImportReferenceFilter(_, context),
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -1933,7 +1933,7 @@ export const se_ListReferenceImportJobsCommand = async (
  */
 export const se_ListReferencesCommand = async (
   input: ListReferencesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1949,7 +1949,7 @@ export const se_ListReferencesCommand = async (
   body = JSON.stringify(
     take(input, {
       filter: (_) => se_ReferenceFilter(_, context),
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -1968,7 +1968,7 @@ export const se_ListReferencesCommand = async (
  */
 export const se_ListReferenceStoresCommand = async (
   input: ListReferenceStoresCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1983,7 +1983,7 @@ export const se_ListReferenceStoresCommand = async (
   body = JSON.stringify(
     take(input, {
       filter: (_) => se_ReferenceStoreFilter(_, context),
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -2002,7 +2002,7 @@ export const se_ListReferenceStoresCommand = async (
  */
 export const se_ListRunGroupsCommand = async (
   input: ListRunGroupsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -2030,7 +2030,7 @@ export const se_ListRunGroupsCommand = async (
  */
 export const se_ListRunsCommand = async (
   input: ListRunsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -2060,7 +2060,7 @@ export const se_ListRunsCommand = async (
  */
 export const se_ListRunTasksCommand = async (
   input: ListRunTasksCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -2089,7 +2089,7 @@ export const se_ListRunTasksCommand = async (
  */
 export const se_ListSequenceStoresCommand = async (
   input: ListSequenceStoresCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2104,7 +2104,7 @@ export const se_ListSequenceStoresCommand = async (
   body = JSON.stringify(
     take(input, {
       filter: (_) => se_SequenceStoreFilter(_, context),
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -2123,7 +2123,7 @@ export const se_ListSequenceStoresCommand = async (
  */
 export const se_ListSharesCommand = async (
   input: ListSharesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2139,7 +2139,7 @@ export const se_ListSharesCommand = async (
     take(input, {
       filter: (_) => _json(_),
       resourceOwner: [],
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -2158,7 +2158,7 @@ export const se_ListSharesCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -2182,7 +2182,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_ListVariantImportJobsCommand = async (
   input: ListVariantImportJobsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2198,7 +2198,7 @@ export const se_ListVariantImportJobsCommand = async (
     take(input, {
       filter: (_) => _json(_),
       ids: (_) => _json(_),
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -2217,7 +2217,7 @@ export const se_ListVariantImportJobsCommand = async (
  */
 export const se_ListVariantStoresCommand = async (
   input: ListVariantStoresCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2233,7 +2233,7 @@ export const se_ListVariantStoresCommand = async (
     take(input, {
       filter: (_) => _json(_),
       ids: (_) => _json(_),
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -2252,7 +2252,7 @@ export const se_ListVariantStoresCommand = async (
  */
 export const se_ListWorkflowsCommand = async (
   input: ListWorkflowsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -2281,7 +2281,7 @@ export const se_ListWorkflowsCommand = async (
  */
 export const se_StartAnnotationImportJobCommand = async (
   input: StartAnnotationImportJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2298,7 +2298,7 @@ export const se_StartAnnotationImportJobCommand = async (
       roleArn: [],
       runLeftNormalization: [],
       versionName: [],
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -2317,7 +2317,7 @@ export const se_StartAnnotationImportJobCommand = async (
  */
 export const se_StartReadSetActivationJobCommand = async (
   input: StartReadSetActivationJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2330,7 +2330,7 @@ export const se_StartReadSetActivationJobCommand = async (
     take(input, {
       clientToken: [],
       sources: (_) => _json(_),
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -2349,7 +2349,7 @@ export const se_StartReadSetActivationJobCommand = async (
  */
 export const se_StartReadSetExportJobCommand = async (
   input: StartReadSetExportJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2364,7 +2364,7 @@ export const se_StartReadSetExportJobCommand = async (
       destination: [],
       roleArn: [],
       sources: (_) => _json(_),
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -2383,7 +2383,7 @@ export const se_StartReadSetExportJobCommand = async (
  */
 export const se_StartReadSetImportJobCommand = async (
   input: StartReadSetImportJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2397,7 +2397,7 @@ export const se_StartReadSetImportJobCommand = async (
       clientToken: [],
       roleArn: [],
       sources: (_) => _json(_),
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -2416,7 +2416,7 @@ export const se_StartReadSetImportJobCommand = async (
  */
 export const se_StartReferenceImportJobCommand = async (
   input: StartReferenceImportJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2430,7 +2430,7 @@ export const se_StartReferenceImportJobCommand = async (
       clientToken: [],
       roleArn: [],
       sources: (_) => _json(_),
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -2449,7 +2449,7 @@ export const se_StartReferenceImportJobCommand = async (
  */
 export const se_StartRunCommand = async (
   input: StartRunCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2475,7 +2475,7 @@ export const se_StartRunCommand = async (
       workflowId: [],
       workflowOwnerId: [],
       workflowType: [],
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -2494,7 +2494,7 @@ export const se_StartRunCommand = async (
  */
 export const se_StartVariantImportJobCommand = async (
   input: StartVariantImportJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2509,7 +2509,7 @@ export const se_StartVariantImportJobCommand = async (
       items: (_) => _json(_),
       roleArn: [],
       runLeftNormalization: [],
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -2528,7 +2528,7 @@ export const se_StartVariantImportJobCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2540,7 +2540,7 @@ export const se_TagResourceCommand = async (
   body = JSON.stringify(
     take(input, {
       tags: (_) => _json(_),
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -2559,7 +2559,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -2589,7 +2589,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateAnnotationStoreCommand = async (
   input: UpdateAnnotationStoreCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2601,7 +2601,7 @@ export const se_UpdateAnnotationStoreCommand = async (
   body = JSON.stringify(
     take(input, {
       description: [],
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -2620,7 +2620,7 @@ export const se_UpdateAnnotationStoreCommand = async (
  */
 export const se_UpdateAnnotationStoreVersionCommand = async (
   input: UpdateAnnotationStoreVersionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2633,7 +2633,7 @@ export const se_UpdateAnnotationStoreVersionCommand = async (
   body = JSON.stringify(
     take(input, {
       description: [],
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -2652,7 +2652,7 @@ export const se_UpdateAnnotationStoreVersionCommand = async (
  */
 export const se_UpdateRunGroupCommand = async (
   input: UpdateRunGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2668,7 +2668,7 @@ export const se_UpdateRunGroupCommand = async (
       maxGpus: [],
       maxRuns: [],
       name: [],
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -2687,7 +2687,7 @@ export const se_UpdateRunGroupCommand = async (
  */
 export const se_UpdateVariantStoreCommand = async (
   input: UpdateVariantStoreCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2699,7 +2699,7 @@ export const se_UpdateVariantStoreCommand = async (
   body = JSON.stringify(
     take(input, {
       description: [],
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -2718,7 +2718,7 @@ export const se_UpdateVariantStoreCommand = async (
  */
 export const se_UpdateWorkflowCommand = async (
   input: UpdateWorkflowCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2731,7 +2731,7 @@ export const se_UpdateWorkflowCommand = async (
     take(input, {
       description: [],
       name: [],
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -2750,7 +2750,7 @@ export const se_UpdateWorkflowCommand = async (
  */
 export const se_UploadReadSetPartCommand = async (
   input: UploadReadSetPartCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2785,7 +2785,7 @@ export const se_UploadReadSetPartCommand = async (
  */
 export const de_AbortMultipartReadSetUploadCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AbortMultipartReadSetUploadCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2802,7 +2802,7 @@ export const de_AbortMultipartReadSetUploadCommand = async (
  */
 export const de_AcceptShareCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AcceptShareCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2823,7 +2823,7 @@ export const de_AcceptShareCommand = async (
  */
 export const de_BatchDeleteReadSetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchDeleteReadSetCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2844,7 +2844,7 @@ export const de_BatchDeleteReadSetCommand = async (
  */
 export const de_CancelAnnotationImportJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CancelAnnotationImportJobCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2861,7 +2861,7 @@ export const de_CancelAnnotationImportJobCommand = async (
  */
 export const de_CancelRunCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CancelRunCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2878,7 +2878,7 @@ export const de_CancelRunCommand = async (
  */
 export const de_CancelVariantImportJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CancelVariantImportJobCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2895,7 +2895,7 @@ export const de_CancelVariantImportJobCommand = async (
  */
 export const de_CompleteMultipartReadSetUploadCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CompleteMultipartReadSetUploadCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2916,7 +2916,7 @@ export const de_CompleteMultipartReadSetUploadCommand = async (
  */
 export const de_CreateAnnotationStoreCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateAnnotationStoreCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2944,7 +2944,7 @@ export const de_CreateAnnotationStoreCommand = async (
  */
 export const de_CreateAnnotationStoreVersionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateAnnotationStoreVersionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2971,7 +2971,7 @@ export const de_CreateAnnotationStoreVersionCommand = async (
  */
 export const de_CreateMultipartReadSetUploadCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateMultipartReadSetUploadCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3002,7 +3002,7 @@ export const de_CreateMultipartReadSetUploadCommand = async (
  */
 export const de_CreateReferenceStoreCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateReferenceStoreCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3028,7 +3028,7 @@ export const de_CreateReferenceStoreCommand = async (
  */
 export const de_CreateRunGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateRunGroupCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3051,7 +3051,7 @@ export const de_CreateRunGroupCommand = async (
  */
 export const de_CreateSequenceStoreCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateSequenceStoreCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3079,7 +3079,7 @@ export const de_CreateSequenceStoreCommand = async (
  */
 export const de_CreateShareCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateShareCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3102,7 +3102,7 @@ export const de_CreateShareCommand = async (
  */
 export const de_CreateVariantStoreCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateVariantStoreCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3127,7 +3127,7 @@ export const de_CreateVariantStoreCommand = async (
  */
 export const de_CreateWorkflowCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateWorkflowCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3151,7 +3151,7 @@ export const de_CreateWorkflowCommand = async (
  */
 export const de_DeleteAnnotationStoreCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteAnnotationStoreCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3172,7 +3172,7 @@ export const de_DeleteAnnotationStoreCommand = async (
  */
 export const de_DeleteAnnotationStoreVersionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteAnnotationStoreVersionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3193,7 +3193,7 @@ export const de_DeleteAnnotationStoreVersionsCommand = async (
  */
 export const de_DeleteReferenceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteReferenceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3210,7 +3210,7 @@ export const de_DeleteReferenceCommand = async (
  */
 export const de_DeleteReferenceStoreCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteReferenceStoreCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3227,7 +3227,7 @@ export const de_DeleteReferenceStoreCommand = async (
  */
 export const de_DeleteRunCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteRunCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3244,7 +3244,7 @@ export const de_DeleteRunCommand = async (
  */
 export const de_DeleteRunGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteRunGroupCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3261,7 +3261,7 @@ export const de_DeleteRunGroupCommand = async (
  */
 export const de_DeleteSequenceStoreCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteSequenceStoreCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3278,7 +3278,7 @@ export const de_DeleteSequenceStoreCommand = async (
  */
 export const de_DeleteShareCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteShareCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3299,7 +3299,7 @@ export const de_DeleteShareCommand = async (
  */
 export const de_DeleteVariantStoreCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteVariantStoreCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3320,7 +3320,7 @@ export const de_DeleteVariantStoreCommand = async (
  */
 export const de_DeleteWorkflowCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteWorkflowCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3337,7 +3337,7 @@ export const de_DeleteWorkflowCommand = async (
  */
 export const de_GetAnnotationImportJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetAnnotationImportJobCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3370,7 +3370,7 @@ export const de_GetAnnotationImportJobCommand = async (
  */
 export const de_GetAnnotationStoreCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetAnnotationStoreCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3405,7 +3405,7 @@ export const de_GetAnnotationStoreCommand = async (
  */
 export const de_GetAnnotationStoreVersionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetAnnotationStoreVersionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3438,7 +3438,7 @@ export const de_GetAnnotationStoreVersionCommand = async (
  */
 export const de_GetReadSetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext & __SdkStreamSerdeContext
+  context: __SerdeContext & __SdkStreamSerdeContext,
 ): Promise<GetReadSetCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3457,7 +3457,7 @@ export const de_GetReadSetCommand = async (
  */
 export const de_GetReadSetActivationJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetReadSetActivationJobCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3484,7 +3484,7 @@ export const de_GetReadSetActivationJobCommand = async (
  */
 export const de_GetReadSetExportJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetReadSetExportJobCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3512,7 +3512,7 @@ export const de_GetReadSetExportJobCommand = async (
  */
 export const de_GetReadSetImportJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetReadSetImportJobCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3540,7 +3540,7 @@ export const de_GetReadSetImportJobCommand = async (
  */
 export const de_GetReadSetMetadataCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetReadSetMetadataCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3576,7 +3576,7 @@ export const de_GetReadSetMetadataCommand = async (
  */
 export const de_GetReferenceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext & __SdkStreamSerdeContext
+  context: __SerdeContext & __SdkStreamSerdeContext,
 ): Promise<GetReferenceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3595,7 +3595,7 @@ export const de_GetReferenceCommand = async (
  */
 export const de_GetReferenceImportJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetReferenceImportJobCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3623,7 +3623,7 @@ export const de_GetReferenceImportJobCommand = async (
  */
 export const de_GetReferenceMetadataCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetReferenceMetadataCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3653,7 +3653,7 @@ export const de_GetReferenceMetadataCommand = async (
  */
 export const de_GetReferenceStoreCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetReferenceStoreCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3679,7 +3679,7 @@ export const de_GetReferenceStoreCommand = async (
  */
 export const de_GetRunCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetRunCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3730,7 +3730,7 @@ export const de_GetRunCommand = async (
  */
 export const de_GetRunGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetRunGroupCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3759,7 +3759,7 @@ export const de_GetRunGroupCommand = async (
  */
 export const de_GetRunTaskCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetRunTaskCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3792,7 +3792,7 @@ export const de_GetRunTaskCommand = async (
  */
 export const de_GetSequenceStoreCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetSequenceStoreCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3821,7 +3821,7 @@ export const de_GetSequenceStoreCommand = async (
  */
 export const de_GetShareCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetShareCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3842,7 +3842,7 @@ export const de_GetShareCommand = async (
  */
 export const de_GetVariantImportJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetVariantImportJobCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3873,7 +3873,7 @@ export const de_GetVariantImportJobCommand = async (
  */
 export const de_GetVariantStoreCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetVariantStoreCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3905,7 +3905,7 @@ export const de_GetVariantStoreCommand = async (
  */
 export const de_GetWorkflowCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetWorkflowCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3942,7 +3942,7 @@ export const de_GetWorkflowCommand = async (
  */
 export const de_ListAnnotationImportJobsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAnnotationImportJobsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3964,7 +3964,7 @@ export const de_ListAnnotationImportJobsCommand = async (
  */
 export const de_ListAnnotationStoresCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAnnotationStoresCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3986,7 +3986,7 @@ export const de_ListAnnotationStoresCommand = async (
  */
 export const de_ListAnnotationStoreVersionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAnnotationStoreVersionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4008,7 +4008,7 @@ export const de_ListAnnotationStoreVersionsCommand = async (
  */
 export const de_ListMultipartReadSetUploadsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListMultipartReadSetUploadsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4030,7 +4030,7 @@ export const de_ListMultipartReadSetUploadsCommand = async (
  */
 export const de_ListReadSetActivationJobsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListReadSetActivationJobsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4052,7 +4052,7 @@ export const de_ListReadSetActivationJobsCommand = async (
  */
 export const de_ListReadSetExportJobsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListReadSetExportJobsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4074,7 +4074,7 @@ export const de_ListReadSetExportJobsCommand = async (
  */
 export const de_ListReadSetImportJobsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListReadSetImportJobsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4096,7 +4096,7 @@ export const de_ListReadSetImportJobsCommand = async (
  */
 export const de_ListReadSetsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListReadSetsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4118,7 +4118,7 @@ export const de_ListReadSetsCommand = async (
  */
 export const de_ListReadSetUploadPartsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListReadSetUploadPartsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4140,7 +4140,7 @@ export const de_ListReadSetUploadPartsCommand = async (
  */
 export const de_ListReferenceImportJobsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListReferenceImportJobsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4162,7 +4162,7 @@ export const de_ListReferenceImportJobsCommand = async (
  */
 export const de_ListReferencesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListReferencesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4184,7 +4184,7 @@ export const de_ListReferencesCommand = async (
  */
 export const de_ListReferenceStoresCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListReferenceStoresCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4206,7 +4206,7 @@ export const de_ListReferenceStoresCommand = async (
  */
 export const de_ListRunGroupsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListRunGroupsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4228,7 +4228,7 @@ export const de_ListRunGroupsCommand = async (
  */
 export const de_ListRunsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListRunsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4250,7 +4250,7 @@ export const de_ListRunsCommand = async (
  */
 export const de_ListRunTasksCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListRunTasksCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4272,7 +4272,7 @@ export const de_ListRunTasksCommand = async (
  */
 export const de_ListSequenceStoresCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListSequenceStoresCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4294,7 +4294,7 @@ export const de_ListSequenceStoresCommand = async (
  */
 export const de_ListSharesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListSharesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4316,7 +4316,7 @@ export const de_ListSharesCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4337,7 +4337,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_ListVariantImportJobsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListVariantImportJobsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4359,7 +4359,7 @@ export const de_ListVariantImportJobsCommand = async (
  */
 export const de_ListVariantStoresCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListVariantStoresCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4381,7 +4381,7 @@ export const de_ListVariantStoresCommand = async (
  */
 export const de_ListWorkflowsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListWorkflowsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4403,7 +4403,7 @@ export const de_ListWorkflowsCommand = async (
  */
 export const de_StartAnnotationImportJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartAnnotationImportJobCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4424,7 +4424,7 @@ export const de_StartAnnotationImportJobCommand = async (
  */
 export const de_StartReadSetActivationJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartReadSetActivationJobCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4448,7 +4448,7 @@ export const de_StartReadSetActivationJobCommand = async (
  */
 export const de_StartReadSetExportJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartReadSetExportJobCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4473,7 +4473,7 @@ export const de_StartReadSetExportJobCommand = async (
  */
 export const de_StartReadSetImportJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartReadSetImportJobCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4498,7 +4498,7 @@ export const de_StartReadSetImportJobCommand = async (
  */
 export const de_StartReferenceImportJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartReferenceImportJobCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4523,7 +4523,7 @@ export const de_StartReferenceImportJobCommand = async (
  */
 export const de_StartRunCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartRunCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4549,7 +4549,7 @@ export const de_StartRunCommand = async (
  */
 export const de_StartVariantImportJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartVariantImportJobCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4570,7 +4570,7 @@ export const de_StartVariantImportJobCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4587,7 +4587,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4604,7 +4604,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateAnnotationStoreCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateAnnotationStoreCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4633,7 +4633,7 @@ export const de_UpdateAnnotationStoreCommand = async (
  */
 export const de_UpdateAnnotationStoreVersionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateAnnotationStoreVersionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4661,7 +4661,7 @@ export const de_UpdateAnnotationStoreVersionCommand = async (
  */
 export const de_UpdateRunGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateRunGroupCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4678,7 +4678,7 @@ export const de_UpdateRunGroupCommand = async (
  */
 export const de_UpdateVariantStoreCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateVariantStoreCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4705,7 +4705,7 @@ export const de_UpdateVariantStoreCommand = async (
  */
 export const de_UpdateWorkflowCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateWorkflowCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4722,7 +4722,7 @@ export const de_UpdateWorkflowCommand = async (
  */
 export const de_UploadReadSetPartCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UploadReadSetPartCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4794,7 +4794,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -4831,7 +4831,7 @@ const de_ConflictExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_InternalServerExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -4851,7 +4851,7 @@ const de_InternalServerExceptionRes = async (
  */
 const de_NotSupportedOperationExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<NotSupportedOperationException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -4871,7 +4871,7 @@ const de_NotSupportedOperationExceptionRes = async (
  */
 const de_RangeNotSatisfiableExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RangeNotSatisfiableException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -4891,7 +4891,7 @@ const de_RangeNotSatisfiableExceptionRes = async (
  */
 const de_RequestTimeoutExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RequestTimeoutException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -4911,7 +4911,7 @@ const de_RequestTimeoutExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -4931,7 +4931,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_ServiceQuotaExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceQuotaExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;

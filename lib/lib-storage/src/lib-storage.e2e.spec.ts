@@ -77,7 +77,7 @@ describe("@aws-sdk/lib-storage", () => {
           name: "E2eRequestLog",
           step: "build",
           override: true,
-        }
+        },
       );
 
       const s3Upload = new Upload({

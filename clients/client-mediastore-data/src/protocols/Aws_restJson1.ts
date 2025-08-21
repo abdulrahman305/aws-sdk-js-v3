@@ -46,7 +46,7 @@ import {
  */
 export const se_DeleteObjectCommand = async (
   input: DeleteObjectCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -62,7 +62,7 @@ export const se_DeleteObjectCommand = async (
  */
 export const se_DescribeObjectCommand = async (
   input: DescribeObjectCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -78,7 +78,7 @@ export const se_DescribeObjectCommand = async (
  */
 export const se_GetObjectCommand = async (
   input: GetObjectCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -96,7 +96,7 @@ export const se_GetObjectCommand = async (
  */
 export const se_ListItemsCommand = async (
   input: ListItemsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -116,7 +116,7 @@ export const se_ListItemsCommand = async (
  */
 export const se_PutObjectCommand = async (
   input: PutObjectCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -141,7 +141,7 @@ export const se_PutObjectCommand = async (
  */
 export const de_DeleteObjectCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteObjectCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -158,7 +158,7 @@ export const de_DeleteObjectCommand = async (
  */
 export const de_DescribeObjectCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeObjectCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -180,7 +180,7 @@ export const de_DescribeObjectCommand = async (
  */
 export const de_GetObjectCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext & __SdkStreamSerdeContext
+  context: __SerdeContext & __SdkStreamSerdeContext,
 ): Promise<GetObjectCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -208,7 +208,7 @@ export const de_GetObjectCommand = async (
  */
 export const de_ListItemsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListItemsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -230,7 +230,7 @@ export const de_ListItemsCommand = async (
  */
 export const de_PutObjectCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutObjectCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -286,7 +286,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_ContainerNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ContainerNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -323,7 +323,7 @@ const de_InternalServerErrorRes = async (parsedOutput: any, context: __SerdeCont
  */
 const de_ObjectNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ObjectNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -343,7 +343,7 @@ const de_ObjectNotFoundExceptionRes = async (
  */
 const de_RequestedRangeNotSatisfiableExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RequestedRangeNotSatisfiableException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;

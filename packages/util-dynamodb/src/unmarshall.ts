@@ -30,7 +30,7 @@ export interface unmarshallOptions {
  */
 export const unmarshall = (
   data: Record<string, AttributeValue> | AttributeValue,
-  options?: unmarshallOptions
+  options?: unmarshallOptions,
 ): Record<string, NativeAttributeValue> => {
   if (options?.convertWithoutMapWrapper) {
     return convertToNative(data as AttributeValue, options);

@@ -24,7 +24,7 @@ const checkState = async (client: EC2Client, input: DescribeVpcsCommandInput): P
  */
 export const waitForVpcExists = async (
   params: WaiterConfiguration<EC2Client>,
-  input: DescribeVpcsCommandInput
+  input: DescribeVpcsCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 1, maxDelay: 120 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -36,7 +36,7 @@ export const waitForVpcExists = async (
  */
 export const waitUntilVpcExists = async (
   params: WaiterConfiguration<EC2Client>,
-  input: DescribeVpcsCommandInput
+  input: DescribeVpcsCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 1, maxDelay: 120 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

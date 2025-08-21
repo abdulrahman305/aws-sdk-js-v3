@@ -9,7 +9,7 @@ import { RekognitionClient } from "../RekognitionClient";
 
 const checkState = async (
   client: RekognitionClient,
-  input: DescribeProjectVersionsCommandInput
+  input: DescribeProjectVersionsCommandInput,
 ): Promise<WaiterResult> => {
   let reason;
   try {
@@ -56,7 +56,7 @@ const checkState = async (
  */
 export const waitForProjectVersionRunning = async (
   params: WaiterConfiguration<RekognitionClient>,
-  input: DescribeProjectVersionsCommandInput
+  input: DescribeProjectVersionsCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 30, maxDelay: 120 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -68,7 +68,7 @@ export const waitForProjectVersionRunning = async (
  */
 export const waitUntilProjectVersionRunning = async (
   params: WaiterConfiguration<RekognitionClient>,
-  input: DescribeProjectVersionsCommandInput
+  input: DescribeProjectVersionsCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 30, maxDelay: 120 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

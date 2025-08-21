@@ -42,7 +42,7 @@ export namespace QueryIdempotencyTokenAutoFillServerInput {
    * @internal
    */
   export const validate: (
-    obj: Parameters<typeof QueryIdempotencyTokenAutoFillInput.validate>[0]
+    obj: Parameters<typeof QueryIdempotencyTokenAutoFillInput.validate>[0],
   ) => __ValidationFailure[] = QueryIdempotencyTokenAutoFillInput.validate;
 }
 export interface QueryIdempotencyTokenAutoFillServerOutput {}
@@ -67,14 +67,14 @@ export class QueryIdempotencyTokenAutoFillSerializer
 
 export const getQueryIdempotencyTokenAutoFillHandler = <Context>(
   operation: __Operation<QueryIdempotencyTokenAutoFillServerInput, QueryIdempotencyTokenAutoFillServerOutput, Context>,
-  customizer: __ValidationCustomizer<"QueryIdempotencyTokenAutoFill">
+  customizer: __ValidationCustomizer<"QueryIdempotencyTokenAutoFill">,
 ): __ServiceHandler<Context, __HttpRequest, __HttpResponse> => {
   const mux = new httpbinding.HttpBindingMux<"RestJson", "QueryIdempotencyTokenAutoFill">([
     new httpbinding.UriSpec<"RestJson", "QueryIdempotencyTokenAutoFill">(
       "POST",
       [{ type: "path_literal", value: "QueryIdempotencyTokenAutoFill" }],
       [],
-      { service: "RestJson", operation: "QueryIdempotencyTokenAutoFill" }
+      { service: "RestJson", operation: "QueryIdempotencyTokenAutoFill" },
     ),
   ]);
   return new QueryIdempotencyTokenAutoFillHandler(
@@ -82,7 +82,7 @@ export const getQueryIdempotencyTokenAutoFillHandler = <Context>(
     mux,
     new QueryIdempotencyTokenAutoFillSerializer(),
     serializeFrameworkException,
-    customizer
+    customizer,
   );
 };
 
@@ -103,7 +103,7 @@ async function handle<S, O extends keyof S & string, Context>(
   operation: __Operation<__OperationInput<S[O]>, __OperationOutput<S[O]>, Context>,
   serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
   validationFn: (input: __OperationInput<S[O]>) => __ValidationFailure[],
-  validationCustomizer: __ValidationCustomizer<O>
+  validationCustomizer: __ValidationCustomizer<O>,
 ): Promise<__HttpResponse> {
   let input;
   try {
@@ -149,7 +149,7 @@ export class QueryIdempotencyTokenAutoFillHandler<Context> implements __ServiceH
   >;
   private readonly serializeFrameworkException: (
     e: __SmithyFrameworkException,
-    ctx: __ServerSerdeContext
+    ctx: __ServerSerdeContext,
   ) => Promise<__HttpResponse>;
   private readonly validationCustomizer: __ValidationCustomizer<"QueryIdempotencyTokenAutoFill">;
   /**
@@ -174,7 +174,7 @@ export class QueryIdempotencyTokenAutoFillHandler<Context> implements __ServiceH
       QueryIdempotencyTokenAutoFillErrors
     >,
     serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
-    validationCustomizer: __ValidationCustomizer<"QueryIdempotencyTokenAutoFill">
+    validationCustomizer: __ValidationCustomizer<"QueryIdempotencyTokenAutoFill">,
   ) {
     this.operation = operation;
     this.mux = mux;
@@ -186,7 +186,7 @@ export class QueryIdempotencyTokenAutoFillHandler<Context> implements __ServiceH
     const target = this.mux.match(request);
     if (target === undefined) {
       console.log(
-        "Received a request that did not match aws.protocoltests.restjson#RestJson.QueryIdempotencyTokenAutoFill. This indicates a misconfiguration."
+        "Received a request that did not match aws.protocoltests.restjson#RestJson.QueryIdempotencyTokenAutoFill. This indicates a misconfiguration.",
       );
       return this.serializeFrameworkException(new __InternalFailureException(), serdeContextBase);
     }
@@ -198,7 +198,7 @@ export class QueryIdempotencyTokenAutoFillHandler<Context> implements __ServiceH
       this.operation,
       this.serializeFrameworkException,
       QueryIdempotencyTokenAutoFillServerInput.validate,
-      this.validationCustomizer
+      this.validationCustomizer,
     );
   }
 }

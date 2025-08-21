@@ -97,7 +97,7 @@ export class BatchGetCommand extends DynamoDBDocumentClientCommand<
   resolveMiddleware(
     clientStack: MiddlewareStack<ServiceInputTypes, ServiceOutputTypes>,
     configuration: DynamoDBDocumentClientResolvedConfig,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Handler<BatchGetCommandInput, BatchGetCommandOutput> {
     this.addMarshallingMiddleware(configuration);
     const stack = clientStack.concat(this.middlewareStack as typeof clientStack);

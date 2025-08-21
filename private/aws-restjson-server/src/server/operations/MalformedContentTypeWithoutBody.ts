@@ -72,14 +72,14 @@ export const getMalformedContentTypeWithoutBodyHandler = <Context>(
     MalformedContentTypeWithoutBodyServerOutput,
     Context
   >,
-  customizer: __ValidationCustomizer<"MalformedContentTypeWithoutBody">
+  customizer: __ValidationCustomizer<"MalformedContentTypeWithoutBody">,
 ): __ServiceHandler<Context, __HttpRequest, __HttpResponse> => {
   const mux = new httpbinding.HttpBindingMux<"RestJson", "MalformedContentTypeWithoutBody">([
     new httpbinding.UriSpec<"RestJson", "MalformedContentTypeWithoutBody">(
       "POST",
       [{ type: "path_literal", value: "MalformedContentTypeWithoutBody" }],
       [],
-      { service: "RestJson", operation: "MalformedContentTypeWithoutBody" }
+      { service: "RestJson", operation: "MalformedContentTypeWithoutBody" },
     ),
   ]);
   return new MalformedContentTypeWithoutBodyHandler(
@@ -87,7 +87,7 @@ export const getMalformedContentTypeWithoutBodyHandler = <Context>(
     mux,
     new MalformedContentTypeWithoutBodySerializer(),
     serializeFrameworkException,
-    customizer
+    customizer,
   );
 };
 
@@ -108,7 +108,7 @@ async function handle<S, O extends keyof S & string, Context>(
   operation: __Operation<__OperationInput<S[O]>, __OperationOutput<S[O]>, Context>,
   serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
   validationFn: (input: __OperationInput<S[O]>) => __ValidationFailure[],
-  validationCustomizer: __ValidationCustomizer<O>
+  validationCustomizer: __ValidationCustomizer<O>,
 ): Promise<__HttpResponse> {
   let input;
   try {
@@ -154,7 +154,7 @@ export class MalformedContentTypeWithoutBodyHandler<Context> implements __Servic
   >;
   private readonly serializeFrameworkException: (
     e: __SmithyFrameworkException,
-    ctx: __ServerSerdeContext
+    ctx: __ServerSerdeContext,
   ) => Promise<__HttpResponse>;
   private readonly validationCustomizer: __ValidationCustomizer<"MalformedContentTypeWithoutBody">;
   /**
@@ -179,7 +179,7 @@ export class MalformedContentTypeWithoutBodyHandler<Context> implements __Servic
       MalformedContentTypeWithoutBodyErrors
     >,
     serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
-    validationCustomizer: __ValidationCustomizer<"MalformedContentTypeWithoutBody">
+    validationCustomizer: __ValidationCustomizer<"MalformedContentTypeWithoutBody">,
   ) {
     this.operation = operation;
     this.mux = mux;
@@ -191,7 +191,7 @@ export class MalformedContentTypeWithoutBodyHandler<Context> implements __Servic
     const target = this.mux.match(request);
     if (target === undefined) {
       console.log(
-        "Received a request that did not match aws.protocoltests.restjson#RestJson.MalformedContentTypeWithoutBody. This indicates a misconfiguration."
+        "Received a request that did not match aws.protocoltests.restjson#RestJson.MalformedContentTypeWithoutBody. This indicates a misconfiguration.",
       );
       return this.serializeFrameworkException(new __InternalFailureException(), serdeContextBase);
     }
@@ -203,7 +203,7 @@ export class MalformedContentTypeWithoutBodyHandler<Context> implements __Servic
       this.operation,
       this.serializeFrameworkException,
       MalformedContentTypeWithoutBodyServerInput.validate,
-      this.validationCustomizer
+      this.validationCustomizer,
     );
   }
 }

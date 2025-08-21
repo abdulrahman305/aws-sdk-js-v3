@@ -125,7 +125,7 @@ import { TimestreamWriteServiceException as __BaseException } from "../models/Ti
  */
 export const se_CreateBatchLoadTaskCommand = async (
   input: CreateBatchLoadTaskCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateBatchLoadTask");
   let body: any;
@@ -138,7 +138,7 @@ export const se_CreateBatchLoadTaskCommand = async (
  */
 export const se_CreateDatabaseCommand = async (
   input: CreateDatabaseCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateDatabase");
   let body: any;
@@ -151,7 +151,7 @@ export const se_CreateDatabaseCommand = async (
  */
 export const se_CreateTableCommand = async (
   input: CreateTableCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateTable");
   let body: any;
@@ -164,7 +164,7 @@ export const se_CreateTableCommand = async (
  */
 export const se_DeleteDatabaseCommand = async (
   input: DeleteDatabaseCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteDatabase");
   let body: any;
@@ -177,7 +177,7 @@ export const se_DeleteDatabaseCommand = async (
  */
 export const se_DeleteTableCommand = async (
   input: DeleteTableCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteTable");
   let body: any;
@@ -190,7 +190,7 @@ export const se_DeleteTableCommand = async (
  */
 export const se_DescribeBatchLoadTaskCommand = async (
   input: DescribeBatchLoadTaskCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeBatchLoadTask");
   let body: any;
@@ -203,7 +203,7 @@ export const se_DescribeBatchLoadTaskCommand = async (
  */
 export const se_DescribeDatabaseCommand = async (
   input: DescribeDatabaseCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeDatabase");
   let body: any;
@@ -216,7 +216,7 @@ export const se_DescribeDatabaseCommand = async (
  */
 export const se_DescribeEndpointsCommand = async (
   input: DescribeEndpointsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeEndpoints");
   let body: any;
@@ -229,7 +229,7 @@ export const se_DescribeEndpointsCommand = async (
  */
 export const se_DescribeTableCommand = async (
   input: DescribeTableCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeTable");
   let body: any;
@@ -242,7 +242,7 @@ export const se_DescribeTableCommand = async (
  */
 export const se_ListBatchLoadTasksCommand = async (
   input: ListBatchLoadTasksCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListBatchLoadTasks");
   let body: any;
@@ -255,7 +255,7 @@ export const se_ListBatchLoadTasksCommand = async (
  */
 export const se_ListDatabasesCommand = async (
   input: ListDatabasesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListDatabases");
   let body: any;
@@ -268,7 +268,7 @@ export const se_ListDatabasesCommand = async (
  */
 export const se_ListTablesCommand = async (
   input: ListTablesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListTables");
   let body: any;
@@ -281,7 +281,7 @@ export const se_ListTablesCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListTagsForResource");
   let body: any;
@@ -294,7 +294,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_ResumeBatchLoadTaskCommand = async (
   input: ResumeBatchLoadTaskCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ResumeBatchLoadTask");
   let body: any;
@@ -307,7 +307,7 @@ export const se_ResumeBatchLoadTaskCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("TagResource");
   let body: any;
@@ -320,7 +320,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UntagResource");
   let body: any;
@@ -333,7 +333,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateDatabaseCommand = async (
   input: UpdateDatabaseCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateDatabase");
   let body: any;
@@ -346,7 +346,7 @@ export const se_UpdateDatabaseCommand = async (
  */
 export const se_UpdateTableCommand = async (
   input: UpdateTableCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateTable");
   let body: any;
@@ -359,7 +359,7 @@ export const se_UpdateTableCommand = async (
  */
 export const se_WriteRecordsCommand = async (
   input: WriteRecordsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("WriteRecords");
   let body: any;
@@ -372,7 +372,7 @@ export const se_WriteRecordsCommand = async (
  */
 export const de_CreateBatchLoadTaskCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateBatchLoadTaskCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -392,7 +392,7 @@ export const de_CreateBatchLoadTaskCommand = async (
  */
 export const de_CreateDatabaseCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateDatabaseCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -412,7 +412,7 @@ export const de_CreateDatabaseCommand = async (
  */
 export const de_CreateTableCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateTableCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -432,7 +432,7 @@ export const de_CreateTableCommand = async (
  */
 export const de_DeleteDatabaseCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteDatabaseCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -449,7 +449,7 @@ export const de_DeleteDatabaseCommand = async (
  */
 export const de_DeleteTableCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteTableCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -466,7 +466,7 @@ export const de_DeleteTableCommand = async (
  */
 export const de_DescribeBatchLoadTaskCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeBatchLoadTaskCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -486,7 +486,7 @@ export const de_DescribeBatchLoadTaskCommand = async (
  */
 export const de_DescribeDatabaseCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeDatabaseCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -506,7 +506,7 @@ export const de_DescribeDatabaseCommand = async (
  */
 export const de_DescribeEndpointsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeEndpointsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -526,7 +526,7 @@ export const de_DescribeEndpointsCommand = async (
  */
 export const de_DescribeTableCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeTableCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -546,7 +546,7 @@ export const de_DescribeTableCommand = async (
  */
 export const de_ListBatchLoadTasksCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListBatchLoadTasksCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -566,7 +566,7 @@ export const de_ListBatchLoadTasksCommand = async (
  */
 export const de_ListDatabasesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListDatabasesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -586,7 +586,7 @@ export const de_ListDatabasesCommand = async (
  */
 export const de_ListTablesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTablesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -606,7 +606,7 @@ export const de_ListTablesCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -626,7 +626,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_ResumeBatchLoadTaskCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResumeBatchLoadTaskCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -646,7 +646,7 @@ export const de_ResumeBatchLoadTaskCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -666,7 +666,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -686,7 +686,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateDatabaseCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateDatabaseCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -706,7 +706,7 @@ export const de_UpdateDatabaseCommand = async (
  */
 export const de_UpdateTableCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateTableCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -726,7 +726,7 @@ export const de_UpdateTableCommand = async (
  */
 export const de_WriteRecordsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<WriteRecordsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -793,7 +793,7 @@ const de_CommandError = async (output: __HttpResponse, context: __SerdeContext):
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -822,7 +822,7 @@ const de_ConflictExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_InternalServerExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -838,7 +838,7 @@ const de_InternalServerExceptionRes = async (
  */
 const de_InvalidEndpointExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidEndpointException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -854,7 +854,7 @@ const de_InvalidEndpointExceptionRes = async (
  */
 const de_RejectedRecordsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RejectedRecordsException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -870,7 +870,7 @@ const de_RejectedRecordsExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -886,7 +886,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_ServiceQuotaExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceQuotaExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1342,7 +1342,7 @@ const buildHttpRpcRequest = async (
   headers: __HeaderBag,
   path: string,
   resolvedHostname: string | undefined,
-  body: any
+  body: any,
 ): Promise<__HttpRequest> => {
   const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
   const contents: any = {

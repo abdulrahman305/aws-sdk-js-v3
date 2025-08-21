@@ -195,16 +195,16 @@ export interface ChimeSDKMediaPipelines {
    */
   createMediaCapturePipeline(
     args: CreateMediaCapturePipelineCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateMediaCapturePipelineCommandOutput>;
   createMediaCapturePipeline(
     args: CreateMediaCapturePipelineCommandInput,
-    cb: (err: any, data?: CreateMediaCapturePipelineCommandOutput) => void
+    cb: (err: any, data?: CreateMediaCapturePipelineCommandOutput) => void,
   ): void;
   createMediaCapturePipeline(
     args: CreateMediaCapturePipelineCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateMediaCapturePipelineCommandOutput) => void
+    cb: (err: any, data?: CreateMediaCapturePipelineCommandOutput) => void,
   ): void;
 
   /**
@@ -212,16 +212,16 @@ export interface ChimeSDKMediaPipelines {
    */
   createMediaConcatenationPipeline(
     args: CreateMediaConcatenationPipelineCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateMediaConcatenationPipelineCommandOutput>;
   createMediaConcatenationPipeline(
     args: CreateMediaConcatenationPipelineCommandInput,
-    cb: (err: any, data?: CreateMediaConcatenationPipelineCommandOutput) => void
+    cb: (err: any, data?: CreateMediaConcatenationPipelineCommandOutput) => void,
   ): void;
   createMediaConcatenationPipeline(
     args: CreateMediaConcatenationPipelineCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateMediaConcatenationPipelineCommandOutput) => void
+    cb: (err: any, data?: CreateMediaConcatenationPipelineCommandOutput) => void,
   ): void;
 
   /**
@@ -229,16 +229,16 @@ export interface ChimeSDKMediaPipelines {
    */
   createMediaInsightsPipeline(
     args: CreateMediaInsightsPipelineCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateMediaInsightsPipelineCommandOutput>;
   createMediaInsightsPipeline(
     args: CreateMediaInsightsPipelineCommandInput,
-    cb: (err: any, data?: CreateMediaInsightsPipelineCommandOutput) => void
+    cb: (err: any, data?: CreateMediaInsightsPipelineCommandOutput) => void,
   ): void;
   createMediaInsightsPipeline(
     args: CreateMediaInsightsPipelineCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateMediaInsightsPipelineCommandOutput) => void
+    cb: (err: any, data?: CreateMediaInsightsPipelineCommandOutput) => void,
   ): void;
 
   /**
@@ -246,16 +246,16 @@ export interface ChimeSDKMediaPipelines {
    */
   createMediaInsightsPipelineConfiguration(
     args: CreateMediaInsightsPipelineConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateMediaInsightsPipelineConfigurationCommandOutput>;
   createMediaInsightsPipelineConfiguration(
     args: CreateMediaInsightsPipelineConfigurationCommandInput,
-    cb: (err: any, data?: CreateMediaInsightsPipelineConfigurationCommandOutput) => void
+    cb: (err: any, data?: CreateMediaInsightsPipelineConfigurationCommandOutput) => void,
   ): void;
   createMediaInsightsPipelineConfiguration(
     args: CreateMediaInsightsPipelineConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateMediaInsightsPipelineConfigurationCommandOutput) => void
+    cb: (err: any, data?: CreateMediaInsightsPipelineConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -263,16 +263,16 @@ export interface ChimeSDKMediaPipelines {
    */
   createMediaLiveConnectorPipeline(
     args: CreateMediaLiveConnectorPipelineCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateMediaLiveConnectorPipelineCommandOutput>;
   createMediaLiveConnectorPipeline(
     args: CreateMediaLiveConnectorPipelineCommandInput,
-    cb: (err: any, data?: CreateMediaLiveConnectorPipelineCommandOutput) => void
+    cb: (err: any, data?: CreateMediaLiveConnectorPipelineCommandOutput) => void,
   ): void;
   createMediaLiveConnectorPipeline(
     args: CreateMediaLiveConnectorPipelineCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateMediaLiveConnectorPipelineCommandOutput) => void
+    cb: (err: any, data?: CreateMediaLiveConnectorPipelineCommandOutput) => void,
   ): void;
 
   /**
@@ -280,16 +280,16 @@ export interface ChimeSDKMediaPipelines {
    */
   createMediaPipelineKinesisVideoStreamPool(
     args: CreateMediaPipelineKinesisVideoStreamPoolCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateMediaPipelineKinesisVideoStreamPoolCommandOutput>;
   createMediaPipelineKinesisVideoStreamPool(
     args: CreateMediaPipelineKinesisVideoStreamPoolCommandInput,
-    cb: (err: any, data?: CreateMediaPipelineKinesisVideoStreamPoolCommandOutput) => void
+    cb: (err: any, data?: CreateMediaPipelineKinesisVideoStreamPoolCommandOutput) => void,
   ): void;
   createMediaPipelineKinesisVideoStreamPool(
     args: CreateMediaPipelineKinesisVideoStreamPoolCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateMediaPipelineKinesisVideoStreamPoolCommandOutput) => void
+    cb: (err: any, data?: CreateMediaPipelineKinesisVideoStreamPoolCommandOutput) => void,
   ): void;
 
   /**
@@ -297,16 +297,16 @@ export interface ChimeSDKMediaPipelines {
    */
   createMediaStreamPipeline(
     args: CreateMediaStreamPipelineCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateMediaStreamPipelineCommandOutput>;
   createMediaStreamPipeline(
     args: CreateMediaStreamPipelineCommandInput,
-    cb: (err: any, data?: CreateMediaStreamPipelineCommandOutput) => void
+    cb: (err: any, data?: CreateMediaStreamPipelineCommandOutput) => void,
   ): void;
   createMediaStreamPipeline(
     args: CreateMediaStreamPipelineCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateMediaStreamPipelineCommandOutput) => void
+    cb: (err: any, data?: CreateMediaStreamPipelineCommandOutput) => void,
   ): void;
 
   /**
@@ -314,16 +314,16 @@ export interface ChimeSDKMediaPipelines {
    */
   deleteMediaCapturePipeline(
     args: DeleteMediaCapturePipelineCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteMediaCapturePipelineCommandOutput>;
   deleteMediaCapturePipeline(
     args: DeleteMediaCapturePipelineCommandInput,
-    cb: (err: any, data?: DeleteMediaCapturePipelineCommandOutput) => void
+    cb: (err: any, data?: DeleteMediaCapturePipelineCommandOutput) => void,
   ): void;
   deleteMediaCapturePipeline(
     args: DeleteMediaCapturePipelineCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteMediaCapturePipelineCommandOutput) => void
+    cb: (err: any, data?: DeleteMediaCapturePipelineCommandOutput) => void,
   ): void;
 
   /**
@@ -331,16 +331,16 @@ export interface ChimeSDKMediaPipelines {
    */
   deleteMediaInsightsPipelineConfiguration(
     args: DeleteMediaInsightsPipelineConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteMediaInsightsPipelineConfigurationCommandOutput>;
   deleteMediaInsightsPipelineConfiguration(
     args: DeleteMediaInsightsPipelineConfigurationCommandInput,
-    cb: (err: any, data?: DeleteMediaInsightsPipelineConfigurationCommandOutput) => void
+    cb: (err: any, data?: DeleteMediaInsightsPipelineConfigurationCommandOutput) => void,
   ): void;
   deleteMediaInsightsPipelineConfiguration(
     args: DeleteMediaInsightsPipelineConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteMediaInsightsPipelineConfigurationCommandOutput) => void
+    cb: (err: any, data?: DeleteMediaInsightsPipelineConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -348,16 +348,16 @@ export interface ChimeSDKMediaPipelines {
    */
   deleteMediaPipeline(
     args: DeleteMediaPipelineCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteMediaPipelineCommandOutput>;
   deleteMediaPipeline(
     args: DeleteMediaPipelineCommandInput,
-    cb: (err: any, data?: DeleteMediaPipelineCommandOutput) => void
+    cb: (err: any, data?: DeleteMediaPipelineCommandOutput) => void,
   ): void;
   deleteMediaPipeline(
     args: DeleteMediaPipelineCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteMediaPipelineCommandOutput) => void
+    cb: (err: any, data?: DeleteMediaPipelineCommandOutput) => void,
   ): void;
 
   /**
@@ -365,16 +365,16 @@ export interface ChimeSDKMediaPipelines {
    */
   deleteMediaPipelineKinesisVideoStreamPool(
     args: DeleteMediaPipelineKinesisVideoStreamPoolCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteMediaPipelineKinesisVideoStreamPoolCommandOutput>;
   deleteMediaPipelineKinesisVideoStreamPool(
     args: DeleteMediaPipelineKinesisVideoStreamPoolCommandInput,
-    cb: (err: any, data?: DeleteMediaPipelineKinesisVideoStreamPoolCommandOutput) => void
+    cb: (err: any, data?: DeleteMediaPipelineKinesisVideoStreamPoolCommandOutput) => void,
   ): void;
   deleteMediaPipelineKinesisVideoStreamPool(
     args: DeleteMediaPipelineKinesisVideoStreamPoolCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteMediaPipelineKinesisVideoStreamPoolCommandOutput) => void
+    cb: (err: any, data?: DeleteMediaPipelineKinesisVideoStreamPoolCommandOutput) => void,
   ): void;
 
   /**
@@ -382,16 +382,16 @@ export interface ChimeSDKMediaPipelines {
    */
   getMediaCapturePipeline(
     args: GetMediaCapturePipelineCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetMediaCapturePipelineCommandOutput>;
   getMediaCapturePipeline(
     args: GetMediaCapturePipelineCommandInput,
-    cb: (err: any, data?: GetMediaCapturePipelineCommandOutput) => void
+    cb: (err: any, data?: GetMediaCapturePipelineCommandOutput) => void,
   ): void;
   getMediaCapturePipeline(
     args: GetMediaCapturePipelineCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetMediaCapturePipelineCommandOutput) => void
+    cb: (err: any, data?: GetMediaCapturePipelineCommandOutput) => void,
   ): void;
 
   /**
@@ -399,16 +399,16 @@ export interface ChimeSDKMediaPipelines {
    */
   getMediaInsightsPipelineConfiguration(
     args: GetMediaInsightsPipelineConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetMediaInsightsPipelineConfigurationCommandOutput>;
   getMediaInsightsPipelineConfiguration(
     args: GetMediaInsightsPipelineConfigurationCommandInput,
-    cb: (err: any, data?: GetMediaInsightsPipelineConfigurationCommandOutput) => void
+    cb: (err: any, data?: GetMediaInsightsPipelineConfigurationCommandOutput) => void,
   ): void;
   getMediaInsightsPipelineConfiguration(
     args: GetMediaInsightsPipelineConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetMediaInsightsPipelineConfigurationCommandOutput) => void
+    cb: (err: any, data?: GetMediaInsightsPipelineConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -416,16 +416,16 @@ export interface ChimeSDKMediaPipelines {
    */
   getMediaPipeline(
     args: GetMediaPipelineCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetMediaPipelineCommandOutput>;
   getMediaPipeline(
     args: GetMediaPipelineCommandInput,
-    cb: (err: any, data?: GetMediaPipelineCommandOutput) => void
+    cb: (err: any, data?: GetMediaPipelineCommandOutput) => void,
   ): void;
   getMediaPipeline(
     args: GetMediaPipelineCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetMediaPipelineCommandOutput) => void
+    cb: (err: any, data?: GetMediaPipelineCommandOutput) => void,
   ): void;
 
   /**
@@ -433,16 +433,16 @@ export interface ChimeSDKMediaPipelines {
    */
   getMediaPipelineKinesisVideoStreamPool(
     args: GetMediaPipelineKinesisVideoStreamPoolCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetMediaPipelineKinesisVideoStreamPoolCommandOutput>;
   getMediaPipelineKinesisVideoStreamPool(
     args: GetMediaPipelineKinesisVideoStreamPoolCommandInput,
-    cb: (err: any, data?: GetMediaPipelineKinesisVideoStreamPoolCommandOutput) => void
+    cb: (err: any, data?: GetMediaPipelineKinesisVideoStreamPoolCommandOutput) => void,
   ): void;
   getMediaPipelineKinesisVideoStreamPool(
     args: GetMediaPipelineKinesisVideoStreamPoolCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetMediaPipelineKinesisVideoStreamPoolCommandOutput) => void
+    cb: (err: any, data?: GetMediaPipelineKinesisVideoStreamPoolCommandOutput) => void,
   ): void;
 
   /**
@@ -450,16 +450,16 @@ export interface ChimeSDKMediaPipelines {
    */
   getSpeakerSearchTask(
     args: GetSpeakerSearchTaskCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetSpeakerSearchTaskCommandOutput>;
   getSpeakerSearchTask(
     args: GetSpeakerSearchTaskCommandInput,
-    cb: (err: any, data?: GetSpeakerSearchTaskCommandOutput) => void
+    cb: (err: any, data?: GetSpeakerSearchTaskCommandOutput) => void,
   ): void;
   getSpeakerSearchTask(
     args: GetSpeakerSearchTaskCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetSpeakerSearchTaskCommandOutput) => void
+    cb: (err: any, data?: GetSpeakerSearchTaskCommandOutput) => void,
   ): void;
 
   /**
@@ -467,16 +467,16 @@ export interface ChimeSDKMediaPipelines {
    */
   getVoiceToneAnalysisTask(
     args: GetVoiceToneAnalysisTaskCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetVoiceToneAnalysisTaskCommandOutput>;
   getVoiceToneAnalysisTask(
     args: GetVoiceToneAnalysisTaskCommandInput,
-    cb: (err: any, data?: GetVoiceToneAnalysisTaskCommandOutput) => void
+    cb: (err: any, data?: GetVoiceToneAnalysisTaskCommandOutput) => void,
   ): void;
   getVoiceToneAnalysisTask(
     args: GetVoiceToneAnalysisTaskCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetVoiceToneAnalysisTaskCommandOutput) => void
+    cb: (err: any, data?: GetVoiceToneAnalysisTaskCommandOutput) => void,
   ): void;
 
   /**
@@ -485,16 +485,16 @@ export interface ChimeSDKMediaPipelines {
   listMediaCapturePipelines(): Promise<ListMediaCapturePipelinesCommandOutput>;
   listMediaCapturePipelines(
     args: ListMediaCapturePipelinesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListMediaCapturePipelinesCommandOutput>;
   listMediaCapturePipelines(
     args: ListMediaCapturePipelinesCommandInput,
-    cb: (err: any, data?: ListMediaCapturePipelinesCommandOutput) => void
+    cb: (err: any, data?: ListMediaCapturePipelinesCommandOutput) => void,
   ): void;
   listMediaCapturePipelines(
     args: ListMediaCapturePipelinesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListMediaCapturePipelinesCommandOutput) => void
+    cb: (err: any, data?: ListMediaCapturePipelinesCommandOutput) => void,
   ): void;
 
   /**
@@ -503,16 +503,16 @@ export interface ChimeSDKMediaPipelines {
   listMediaInsightsPipelineConfigurations(): Promise<ListMediaInsightsPipelineConfigurationsCommandOutput>;
   listMediaInsightsPipelineConfigurations(
     args: ListMediaInsightsPipelineConfigurationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListMediaInsightsPipelineConfigurationsCommandOutput>;
   listMediaInsightsPipelineConfigurations(
     args: ListMediaInsightsPipelineConfigurationsCommandInput,
-    cb: (err: any, data?: ListMediaInsightsPipelineConfigurationsCommandOutput) => void
+    cb: (err: any, data?: ListMediaInsightsPipelineConfigurationsCommandOutput) => void,
   ): void;
   listMediaInsightsPipelineConfigurations(
     args: ListMediaInsightsPipelineConfigurationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListMediaInsightsPipelineConfigurationsCommandOutput) => void
+    cb: (err: any, data?: ListMediaInsightsPipelineConfigurationsCommandOutput) => void,
   ): void;
 
   /**
@@ -521,16 +521,16 @@ export interface ChimeSDKMediaPipelines {
   listMediaPipelineKinesisVideoStreamPools(): Promise<ListMediaPipelineKinesisVideoStreamPoolsCommandOutput>;
   listMediaPipelineKinesisVideoStreamPools(
     args: ListMediaPipelineKinesisVideoStreamPoolsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListMediaPipelineKinesisVideoStreamPoolsCommandOutput>;
   listMediaPipelineKinesisVideoStreamPools(
     args: ListMediaPipelineKinesisVideoStreamPoolsCommandInput,
-    cb: (err: any, data?: ListMediaPipelineKinesisVideoStreamPoolsCommandOutput) => void
+    cb: (err: any, data?: ListMediaPipelineKinesisVideoStreamPoolsCommandOutput) => void,
   ): void;
   listMediaPipelineKinesisVideoStreamPools(
     args: ListMediaPipelineKinesisVideoStreamPoolsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListMediaPipelineKinesisVideoStreamPoolsCommandOutput) => void
+    cb: (err: any, data?: ListMediaPipelineKinesisVideoStreamPoolsCommandOutput) => void,
   ): void;
 
   /**
@@ -539,16 +539,16 @@ export interface ChimeSDKMediaPipelines {
   listMediaPipelines(): Promise<ListMediaPipelinesCommandOutput>;
   listMediaPipelines(
     args: ListMediaPipelinesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListMediaPipelinesCommandOutput>;
   listMediaPipelines(
     args: ListMediaPipelinesCommandInput,
-    cb: (err: any, data?: ListMediaPipelinesCommandOutput) => void
+    cb: (err: any, data?: ListMediaPipelinesCommandOutput) => void,
   ): void;
   listMediaPipelines(
     args: ListMediaPipelinesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListMediaPipelinesCommandOutput) => void
+    cb: (err: any, data?: ListMediaPipelinesCommandOutput) => void,
   ): void;
 
   /**
@@ -556,16 +556,16 @@ export interface ChimeSDKMediaPipelines {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -573,16 +573,16 @@ export interface ChimeSDKMediaPipelines {
    */
   startSpeakerSearchTask(
     args: StartSpeakerSearchTaskCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartSpeakerSearchTaskCommandOutput>;
   startSpeakerSearchTask(
     args: StartSpeakerSearchTaskCommandInput,
-    cb: (err: any, data?: StartSpeakerSearchTaskCommandOutput) => void
+    cb: (err: any, data?: StartSpeakerSearchTaskCommandOutput) => void,
   ): void;
   startSpeakerSearchTask(
     args: StartSpeakerSearchTaskCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartSpeakerSearchTaskCommandOutput) => void
+    cb: (err: any, data?: StartSpeakerSearchTaskCommandOutput) => void,
   ): void;
 
   /**
@@ -590,16 +590,16 @@ export interface ChimeSDKMediaPipelines {
    */
   startVoiceToneAnalysisTask(
     args: StartVoiceToneAnalysisTaskCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartVoiceToneAnalysisTaskCommandOutput>;
   startVoiceToneAnalysisTask(
     args: StartVoiceToneAnalysisTaskCommandInput,
-    cb: (err: any, data?: StartVoiceToneAnalysisTaskCommandOutput) => void
+    cb: (err: any, data?: StartVoiceToneAnalysisTaskCommandOutput) => void,
   ): void;
   startVoiceToneAnalysisTask(
     args: StartVoiceToneAnalysisTaskCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartVoiceToneAnalysisTaskCommandOutput) => void
+    cb: (err: any, data?: StartVoiceToneAnalysisTaskCommandOutput) => void,
   ): void;
 
   /**
@@ -607,16 +607,16 @@ export interface ChimeSDKMediaPipelines {
    */
   stopSpeakerSearchTask(
     args: StopSpeakerSearchTaskCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StopSpeakerSearchTaskCommandOutput>;
   stopSpeakerSearchTask(
     args: StopSpeakerSearchTaskCommandInput,
-    cb: (err: any, data?: StopSpeakerSearchTaskCommandOutput) => void
+    cb: (err: any, data?: StopSpeakerSearchTaskCommandOutput) => void,
   ): void;
   stopSpeakerSearchTask(
     args: StopSpeakerSearchTaskCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StopSpeakerSearchTaskCommandOutput) => void
+    cb: (err: any, data?: StopSpeakerSearchTaskCommandOutput) => void,
   ): void;
 
   /**
@@ -624,16 +624,16 @@ export interface ChimeSDKMediaPipelines {
    */
   stopVoiceToneAnalysisTask(
     args: StopVoiceToneAnalysisTaskCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StopVoiceToneAnalysisTaskCommandOutput>;
   stopVoiceToneAnalysisTask(
     args: StopVoiceToneAnalysisTaskCommandInput,
-    cb: (err: any, data?: StopVoiceToneAnalysisTaskCommandOutput) => void
+    cb: (err: any, data?: StopVoiceToneAnalysisTaskCommandOutput) => void,
   ): void;
   stopVoiceToneAnalysisTask(
     args: StopVoiceToneAnalysisTaskCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StopVoiceToneAnalysisTaskCommandOutput) => void
+    cb: (err: any, data?: StopVoiceToneAnalysisTaskCommandOutput) => void,
   ): void;
 
   /**
@@ -644,7 +644,7 @@ export interface ChimeSDKMediaPipelines {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -655,7 +655,7 @@ export interface ChimeSDKMediaPipelines {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -663,16 +663,16 @@ export interface ChimeSDKMediaPipelines {
    */
   updateMediaInsightsPipelineConfiguration(
     args: UpdateMediaInsightsPipelineConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateMediaInsightsPipelineConfigurationCommandOutput>;
   updateMediaInsightsPipelineConfiguration(
     args: UpdateMediaInsightsPipelineConfigurationCommandInput,
-    cb: (err: any, data?: UpdateMediaInsightsPipelineConfigurationCommandOutput) => void
+    cb: (err: any, data?: UpdateMediaInsightsPipelineConfigurationCommandOutput) => void,
   ): void;
   updateMediaInsightsPipelineConfiguration(
     args: UpdateMediaInsightsPipelineConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateMediaInsightsPipelineConfigurationCommandOutput) => void
+    cb: (err: any, data?: UpdateMediaInsightsPipelineConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -680,16 +680,16 @@ export interface ChimeSDKMediaPipelines {
    */
   updateMediaInsightsPipelineStatus(
     args: UpdateMediaInsightsPipelineStatusCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateMediaInsightsPipelineStatusCommandOutput>;
   updateMediaInsightsPipelineStatus(
     args: UpdateMediaInsightsPipelineStatusCommandInput,
-    cb: (err: any, data?: UpdateMediaInsightsPipelineStatusCommandOutput) => void
+    cb: (err: any, data?: UpdateMediaInsightsPipelineStatusCommandOutput) => void,
   ): void;
   updateMediaInsightsPipelineStatus(
     args: UpdateMediaInsightsPipelineStatusCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateMediaInsightsPipelineStatusCommandOutput) => void
+    cb: (err: any, data?: UpdateMediaInsightsPipelineStatusCommandOutput) => void,
   ): void;
 
   /**
@@ -697,16 +697,16 @@ export interface ChimeSDKMediaPipelines {
    */
   updateMediaPipelineKinesisVideoStreamPool(
     args: UpdateMediaPipelineKinesisVideoStreamPoolCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateMediaPipelineKinesisVideoStreamPoolCommandOutput>;
   updateMediaPipelineKinesisVideoStreamPool(
     args: UpdateMediaPipelineKinesisVideoStreamPoolCommandInput,
-    cb: (err: any, data?: UpdateMediaPipelineKinesisVideoStreamPoolCommandOutput) => void
+    cb: (err: any, data?: UpdateMediaPipelineKinesisVideoStreamPoolCommandOutput) => void,
   ): void;
   updateMediaPipelineKinesisVideoStreamPool(
     args: UpdateMediaPipelineKinesisVideoStreamPoolCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateMediaPipelineKinesisVideoStreamPoolCommandOutput) => void
+    cb: (err: any, data?: UpdateMediaPipelineKinesisVideoStreamPoolCommandOutput) => void,
   ): void;
 }
 

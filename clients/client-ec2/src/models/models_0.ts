@@ -9795,7 +9795,7 @@ export const VerifiedAccessTrustProviderFilterSensitiveLog = (obj: VerifiedAcces
  * @internal
  */
 export const AttachVerifiedAccessTrustProviderResultFilterSensitiveLog = (
-  obj: AttachVerifiedAccessTrustProviderResult
+  obj: AttachVerifiedAccessTrustProviderResult,
 ): any => ({
   ...obj,
   ...(obj.VerifiedAccessTrustProvider && {

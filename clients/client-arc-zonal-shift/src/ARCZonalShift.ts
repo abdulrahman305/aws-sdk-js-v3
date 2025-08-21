@@ -79,16 +79,16 @@ export interface ARCZonalShift {
    */
   cancelZonalShift(
     args: CancelZonalShiftCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CancelZonalShiftCommandOutput>;
   cancelZonalShift(
     args: CancelZonalShiftCommandInput,
-    cb: (err: any, data?: CancelZonalShiftCommandOutput) => void
+    cb: (err: any, data?: CancelZonalShiftCommandOutput) => void,
   ): void;
   cancelZonalShift(
     args: CancelZonalShiftCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CancelZonalShiftCommandOutput) => void
+    cb: (err: any, data?: CancelZonalShiftCommandOutput) => void,
   ): void;
 
   /**
@@ -96,16 +96,16 @@ export interface ARCZonalShift {
    */
   createPracticeRunConfiguration(
     args: CreatePracticeRunConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreatePracticeRunConfigurationCommandOutput>;
   createPracticeRunConfiguration(
     args: CreatePracticeRunConfigurationCommandInput,
-    cb: (err: any, data?: CreatePracticeRunConfigurationCommandOutput) => void
+    cb: (err: any, data?: CreatePracticeRunConfigurationCommandOutput) => void,
   ): void;
   createPracticeRunConfiguration(
     args: CreatePracticeRunConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreatePracticeRunConfigurationCommandOutput) => void
+    cb: (err: any, data?: CreatePracticeRunConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -113,16 +113,16 @@ export interface ARCZonalShift {
    */
   deletePracticeRunConfiguration(
     args: DeletePracticeRunConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeletePracticeRunConfigurationCommandOutput>;
   deletePracticeRunConfiguration(
     args: DeletePracticeRunConfigurationCommandInput,
-    cb: (err: any, data?: DeletePracticeRunConfigurationCommandOutput) => void
+    cb: (err: any, data?: DeletePracticeRunConfigurationCommandOutput) => void,
   ): void;
   deletePracticeRunConfiguration(
     args: DeletePracticeRunConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeletePracticeRunConfigurationCommandOutput) => void
+    cb: (err: any, data?: DeletePracticeRunConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -130,16 +130,16 @@ export interface ARCZonalShift {
    */
   getManagedResource(
     args: GetManagedResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetManagedResourceCommandOutput>;
   getManagedResource(
     args: GetManagedResourceCommandInput,
-    cb: (err: any, data?: GetManagedResourceCommandOutput) => void
+    cb: (err: any, data?: GetManagedResourceCommandOutput) => void,
   ): void;
   getManagedResource(
     args: GetManagedResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetManagedResourceCommandOutput) => void
+    cb: (err: any, data?: GetManagedResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -148,13 +148,13 @@ export interface ARCZonalShift {
   listAutoshifts(): Promise<ListAutoshiftsCommandOutput>;
   listAutoshifts(
     args: ListAutoshiftsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListAutoshiftsCommandOutput>;
   listAutoshifts(args: ListAutoshiftsCommandInput, cb: (err: any, data?: ListAutoshiftsCommandOutput) => void): void;
   listAutoshifts(
     args: ListAutoshiftsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListAutoshiftsCommandOutput) => void
+    cb: (err: any, data?: ListAutoshiftsCommandOutput) => void,
   ): void;
 
   /**
@@ -163,16 +163,16 @@ export interface ARCZonalShift {
   listManagedResources(): Promise<ListManagedResourcesCommandOutput>;
   listManagedResources(
     args: ListManagedResourcesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListManagedResourcesCommandOutput>;
   listManagedResources(
     args: ListManagedResourcesCommandInput,
-    cb: (err: any, data?: ListManagedResourcesCommandOutput) => void
+    cb: (err: any, data?: ListManagedResourcesCommandOutput) => void,
   ): void;
   listManagedResources(
     args: ListManagedResourcesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListManagedResourcesCommandOutput) => void
+    cb: (err: any, data?: ListManagedResourcesCommandOutput) => void,
   ): void;
 
   /**
@@ -181,13 +181,13 @@ export interface ARCZonalShift {
   listZonalShifts(): Promise<ListZonalShiftsCommandOutput>;
   listZonalShifts(
     args: ListZonalShiftsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListZonalShiftsCommandOutput>;
   listZonalShifts(args: ListZonalShiftsCommandInput, cb: (err: any, data?: ListZonalShiftsCommandOutput) => void): void;
   listZonalShifts(
     args: ListZonalShiftsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListZonalShiftsCommandOutput) => void
+    cb: (err: any, data?: ListZonalShiftsCommandOutput) => void,
   ): void;
 
   /**
@@ -195,13 +195,13 @@ export interface ARCZonalShift {
    */
   startZonalShift(
     args: StartZonalShiftCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartZonalShiftCommandOutput>;
   startZonalShift(args: StartZonalShiftCommandInput, cb: (err: any, data?: StartZonalShiftCommandOutput) => void): void;
   startZonalShift(
     args: StartZonalShiftCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartZonalShiftCommandOutput) => void
+    cb: (err: any, data?: StartZonalShiftCommandOutput) => void,
   ): void;
 
   /**
@@ -209,16 +209,16 @@ export interface ARCZonalShift {
    */
   updatePracticeRunConfiguration(
     args: UpdatePracticeRunConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdatePracticeRunConfigurationCommandOutput>;
   updatePracticeRunConfiguration(
     args: UpdatePracticeRunConfigurationCommandInput,
-    cb: (err: any, data?: UpdatePracticeRunConfigurationCommandOutput) => void
+    cb: (err: any, data?: UpdatePracticeRunConfigurationCommandOutput) => void,
   ): void;
   updatePracticeRunConfiguration(
     args: UpdatePracticeRunConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdatePracticeRunConfigurationCommandOutput) => void
+    cb: (err: any, data?: UpdatePracticeRunConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -226,16 +226,16 @@ export interface ARCZonalShift {
    */
   updateZonalAutoshiftConfiguration(
     args: UpdateZonalAutoshiftConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateZonalAutoshiftConfigurationCommandOutput>;
   updateZonalAutoshiftConfiguration(
     args: UpdateZonalAutoshiftConfigurationCommandInput,
-    cb: (err: any, data?: UpdateZonalAutoshiftConfigurationCommandOutput) => void
+    cb: (err: any, data?: UpdateZonalAutoshiftConfigurationCommandOutput) => void,
   ): void;
   updateZonalAutoshiftConfiguration(
     args: UpdateZonalAutoshiftConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateZonalAutoshiftConfigurationCommandOutput) => void
+    cb: (err: any, data?: UpdateZonalAutoshiftConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -243,16 +243,16 @@ export interface ARCZonalShift {
    */
   updateZonalShift(
     args: UpdateZonalShiftCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateZonalShiftCommandOutput>;
   updateZonalShift(
     args: UpdateZonalShiftCommandInput,
-    cb: (err: any, data?: UpdateZonalShiftCommandOutput) => void
+    cb: (err: any, data?: UpdateZonalShiftCommandOutput) => void,
   ): void;
   updateZonalShift(
     args: UpdateZonalShiftCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateZonalShiftCommandOutput) => void
+    cb: (err: any, data?: UpdateZonalShiftCommandOutput) => void,
   ): void;
 }
 

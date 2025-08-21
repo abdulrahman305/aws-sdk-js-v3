@@ -44,7 +44,7 @@ const checkState = async (client: EKSClient, input: DescribeAddonCommandInput): 
  */
 export const waitForAddonActive = async (
   params: WaiterConfiguration<EKSClient>,
-  input: DescribeAddonCommandInput
+  input: DescribeAddonCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 10, maxDelay: 120 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -56,7 +56,7 @@ export const waitForAddonActive = async (
  */
 export const waitUntilAddonActive = async (
   params: WaiterConfiguration<EKSClient>,
-  input: DescribeAddonCommandInput
+  input: DescribeAddonCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 10, maxDelay: 120 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

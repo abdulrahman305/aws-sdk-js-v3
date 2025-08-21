@@ -29,7 +29,7 @@ describe("emitWarningIfUnsupportedVersion", () => {
         getPreviousPatchVersion([major, minor, patch]),
         [...getPreviousMinorVersion([major, minor]), 0],
         [getPreviousMajorVersion(major), 0, 0],
-      ].map((arr) => `v${arr.join(".")}`)
+      ].map((arr) => `v${arr.join(".")}`),
     )(`%s`, async (unsupportedVersion) => {
       process.emitWarning = jest.fn();
       emitWarningIfUnsupportedVersion(unsupportedVersion);
@@ -43,7 +43,7 @@ no longer support Node.js 14.x on May 1, 2024.
 To continue receiving updates to AWS services, bug fixes, and security
 updates please upgrade to an active Node.js LTS version.
 
-More information can be found at: https://a.co/dzr2AJd`
+More information can be found at: https://a.co/dzr2AJd`,
       );
 
       // Verify that the warning emits only once.
@@ -60,7 +60,7 @@ More information can be found at: https://a.co/dzr2AJd`
         [major, minor, patch + 1],
         [major, minor + 1, 0],
         [major + 1, 0, 0],
-      ].map((arr) => `v${arr.join(".")}`)
+      ].map((arr) => `v${arr.join(".")}`),
     )(`%s`, async (unsupportedVersion) => {
       process.emitWarning = jest.fn();
       emitWarningIfUnsupportedVersion(unsupportedVersion);

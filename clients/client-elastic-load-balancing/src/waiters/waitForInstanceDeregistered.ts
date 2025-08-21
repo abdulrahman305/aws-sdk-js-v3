@@ -9,7 +9,7 @@ import { ElasticLoadBalancingClient } from "../ElasticLoadBalancingClient";
 
 const checkState = async (
   client: ElasticLoadBalancingClient,
-  input: DescribeInstanceHealthCommandInput
+  input: DescribeInstanceHealthCommandInput,
 ): Promise<WaiterResult> => {
   let reason;
   try {
@@ -45,7 +45,7 @@ const checkState = async (
  */
 export const waitForInstanceDeregistered = async (
   params: WaiterConfiguration<ElasticLoadBalancingClient>,
-  input: DescribeInstanceHealthCommandInput
+  input: DescribeInstanceHealthCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 15, maxDelay: 120 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -57,7 +57,7 @@ export const waitForInstanceDeregistered = async (
  */
 export const waitUntilInstanceDeregistered = async (
   params: WaiterConfiguration<ElasticLoadBalancingClient>,
-  input: DescribeInstanceHealthCommandInput
+  input: DescribeInstanceHealthCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 15, maxDelay: 120 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

@@ -134,7 +134,7 @@ import {
  */
 export const se_CloneBackendCommand = async (
   input: CloneBackendCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -147,7 +147,7 @@ export const se_CloneBackendCommand = async (
   body = JSON.stringify(
     take(input, {
       targetEnvironmentName: [, , `TargetEnvironmentName`],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -158,7 +158,7 @@ export const se_CloneBackendCommand = async (
  */
 export const se_CreateBackendCommand = async (
   input: CreateBackendCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -173,7 +173,7 @@ export const se_CreateBackendCommand = async (
       backendEnvironmentName: [, , `BackendEnvironmentName`],
       resourceConfig: [, (_) => _json(_), `ResourceConfig`],
       resourceName: [, , `ResourceName`],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -184,7 +184,7 @@ export const se_CreateBackendCommand = async (
  */
 export const se_CreateBackendAPICommand = async (
   input: CreateBackendAPICommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -198,7 +198,7 @@ export const se_CreateBackendAPICommand = async (
       backendEnvironmentName: [, , `BackendEnvironmentName`],
       resourceConfig: [, (_) => se_BackendAPIResourceConfig(_, context), `ResourceConfig`],
       resourceName: [, , `ResourceName`],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -209,7 +209,7 @@ export const se_CreateBackendAPICommand = async (
  */
 export const se_CreateBackendAuthCommand = async (
   input: CreateBackendAuthCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -223,7 +223,7 @@ export const se_CreateBackendAuthCommand = async (
       backendEnvironmentName: [, , `BackendEnvironmentName`],
       resourceConfig: [, (_) => se_CreateBackendAuthResourceConfig(_, context), `ResourceConfig`],
       resourceName: [, , `ResourceName`],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -234,7 +234,7 @@ export const se_CreateBackendAuthCommand = async (
  */
 export const se_CreateBackendConfigCommand = async (
   input: CreateBackendConfigCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -246,7 +246,7 @@ export const se_CreateBackendConfigCommand = async (
   body = JSON.stringify(
     take(input, {
       backendManagerAppId: [, , `BackendManagerAppId`],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -257,7 +257,7 @@ export const se_CreateBackendConfigCommand = async (
  */
 export const se_CreateBackendStorageCommand = async (
   input: CreateBackendStorageCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -271,7 +271,7 @@ export const se_CreateBackendStorageCommand = async (
       backendEnvironmentName: [, , `BackendEnvironmentName`],
       resourceConfig: [, (_) => se_CreateBackendStorageResourceConfig(_, context), `ResourceConfig`],
       resourceName: [, , `ResourceName`],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -282,7 +282,7 @@ export const se_CreateBackendStorageCommand = async (
  */
 export const se_CreateTokenCommand = async (
   input: CreateTokenCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -298,7 +298,7 @@ export const se_CreateTokenCommand = async (
  */
 export const se_DeleteBackendCommand = async (
   input: DeleteBackendCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -315,7 +315,7 @@ export const se_DeleteBackendCommand = async (
  */
 export const se_DeleteBackendAPICommand = async (
   input: DeleteBackendAPICommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -329,7 +329,7 @@ export const se_DeleteBackendAPICommand = async (
     take(input, {
       resourceConfig: [, (_) => se_BackendAPIResourceConfig(_, context), `ResourceConfig`],
       resourceName: [, , `ResourceName`],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -340,7 +340,7 @@ export const se_DeleteBackendAPICommand = async (
  */
 export const se_DeleteBackendAuthCommand = async (
   input: DeleteBackendAuthCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -353,7 +353,7 @@ export const se_DeleteBackendAuthCommand = async (
   body = JSON.stringify(
     take(input, {
       resourceName: [, , `ResourceName`],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -364,7 +364,7 @@ export const se_DeleteBackendAuthCommand = async (
  */
 export const se_DeleteBackendStorageCommand = async (
   input: DeleteBackendStorageCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -378,7 +378,7 @@ export const se_DeleteBackendStorageCommand = async (
     take(input, {
       resourceName: [, , `ResourceName`],
       serviceName: [, , `ServiceName`],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -389,7 +389,7 @@ export const se_DeleteBackendStorageCommand = async (
  */
 export const se_DeleteTokenCommand = async (
   input: DeleteTokenCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -406,7 +406,7 @@ export const se_DeleteTokenCommand = async (
  */
 export const se_GenerateBackendAPIModelsCommand = async (
   input: GenerateBackendAPIModelsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -419,7 +419,7 @@ export const se_GenerateBackendAPIModelsCommand = async (
   body = JSON.stringify(
     take(input, {
       resourceName: [, , `ResourceName`],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -430,7 +430,7 @@ export const se_GenerateBackendAPIModelsCommand = async (
  */
 export const se_GetBackendCommand = async (
   input: GetBackendCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -442,7 +442,7 @@ export const se_GetBackendCommand = async (
   body = JSON.stringify(
     take(input, {
       backendEnvironmentName: [, , `BackendEnvironmentName`],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -453,7 +453,7 @@ export const se_GetBackendCommand = async (
  */
 export const se_GetBackendAPICommand = async (
   input: GetBackendAPICommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -467,7 +467,7 @@ export const se_GetBackendAPICommand = async (
     take(input, {
       resourceConfig: [, (_) => se_BackendAPIResourceConfig(_, context), `ResourceConfig`],
       resourceName: [, , `ResourceName`],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -478,7 +478,7 @@ export const se_GetBackendAPICommand = async (
  */
 export const se_GetBackendAPIModelsCommand = async (
   input: GetBackendAPIModelsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -491,7 +491,7 @@ export const se_GetBackendAPIModelsCommand = async (
   body = JSON.stringify(
     take(input, {
       resourceName: [, , `ResourceName`],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -502,7 +502,7 @@ export const se_GetBackendAPIModelsCommand = async (
  */
 export const se_GetBackendAuthCommand = async (
   input: GetBackendAuthCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -515,7 +515,7 @@ export const se_GetBackendAuthCommand = async (
   body = JSON.stringify(
     take(input, {
       resourceName: [, , `ResourceName`],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -526,7 +526,7 @@ export const se_GetBackendAuthCommand = async (
  */
 export const se_GetBackendJobCommand = async (
   input: GetBackendJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -544,7 +544,7 @@ export const se_GetBackendJobCommand = async (
  */
 export const se_GetBackendStorageCommand = async (
   input: GetBackendStorageCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -557,7 +557,7 @@ export const se_GetBackendStorageCommand = async (
   body = JSON.stringify(
     take(input, {
       resourceName: [, , `ResourceName`],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -568,7 +568,7 @@ export const se_GetBackendStorageCommand = async (
  */
 export const se_GetTokenCommand = async (
   input: GetTokenCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -585,7 +585,7 @@ export const se_GetTokenCommand = async (
  */
 export const se_ImportBackendAuthCommand = async (
   input: ImportBackendAuthCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -601,7 +601,7 @@ export const se_ImportBackendAuthCommand = async (
       nativeClientId: [, , `NativeClientId`],
       userPoolId: [, , `UserPoolId`],
       webClientId: [, , `WebClientId`],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -612,7 +612,7 @@ export const se_ImportBackendAuthCommand = async (
  */
 export const se_ImportBackendStorageCommand = async (
   input: ImportBackendStorageCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -626,7 +626,7 @@ export const se_ImportBackendStorageCommand = async (
     take(input, {
       bucketName: [, , `BucketName`],
       serviceName: [, , `ServiceName`],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -637,7 +637,7 @@ export const se_ImportBackendStorageCommand = async (
  */
 export const se_ListBackendJobsCommand = async (
   input: ListBackendJobsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -654,7 +654,7 @@ export const se_ListBackendJobsCommand = async (
       nextToken: [, , `NextToken`],
       operation: [, , `Operation`],
       status: [, , `Status`],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -665,7 +665,7 @@ export const se_ListBackendJobsCommand = async (
  */
 export const se_ListS3BucketsCommand = async (
   input: ListS3BucketsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -676,7 +676,7 @@ export const se_ListS3BucketsCommand = async (
   body = JSON.stringify(
     take(input, {
       nextToken: [, , `NextToken`],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -687,7 +687,7 @@ export const se_ListS3BucketsCommand = async (
  */
 export const se_RemoveAllBackendsCommand = async (
   input: RemoveAllBackendsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -699,7 +699,7 @@ export const se_RemoveAllBackendsCommand = async (
   body = JSON.stringify(
     take(input, {
       cleanAmplifyApp: [, , `CleanAmplifyApp`],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -710,7 +710,7 @@ export const se_RemoveAllBackendsCommand = async (
  */
 export const se_RemoveBackendConfigCommand = async (
   input: RemoveBackendConfigCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -726,7 +726,7 @@ export const se_RemoveBackendConfigCommand = async (
  */
 export const se_UpdateBackendAPICommand = async (
   input: UpdateBackendAPICommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -740,7 +740,7 @@ export const se_UpdateBackendAPICommand = async (
     take(input, {
       resourceConfig: [, (_) => se_BackendAPIResourceConfig(_, context), `ResourceConfig`],
       resourceName: [, , `ResourceName`],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -751,7 +751,7 @@ export const se_UpdateBackendAPICommand = async (
  */
 export const se_UpdateBackendAuthCommand = async (
   input: UpdateBackendAuthCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -765,7 +765,7 @@ export const se_UpdateBackendAuthCommand = async (
     take(input, {
       resourceConfig: [, (_) => se_UpdateBackendAuthResourceConfig(_, context), `ResourceConfig`],
       resourceName: [, , `ResourceName`],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -776,7 +776,7 @@ export const se_UpdateBackendAuthCommand = async (
  */
 export const se_UpdateBackendConfigCommand = async (
   input: UpdateBackendConfigCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -788,7 +788,7 @@ export const se_UpdateBackendConfigCommand = async (
   body = JSON.stringify(
     take(input, {
       loginAuthConfig: [, (_) => se_LoginAuthConfigReqObj(_, context), `LoginAuthConfig`],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -799,7 +799,7 @@ export const se_UpdateBackendConfigCommand = async (
  */
 export const se_UpdateBackendJobCommand = async (
   input: UpdateBackendJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -814,7 +814,7 @@ export const se_UpdateBackendJobCommand = async (
     take(input, {
       operation: [, , `Operation`],
       status: [, , `Status`],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -825,7 +825,7 @@ export const se_UpdateBackendJobCommand = async (
  */
 export const se_UpdateBackendStorageCommand = async (
   input: UpdateBackendStorageCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -839,7 +839,7 @@ export const se_UpdateBackendStorageCommand = async (
     take(input, {
       resourceConfig: [, (_) => se_UpdateBackendStorageResourceConfig(_, context), `ResourceConfig`],
       resourceName: [, , `ResourceName`],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -850,7 +850,7 @@ export const se_UpdateBackendStorageCommand = async (
  */
 export const de_CloneBackendCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CloneBackendCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -876,7 +876,7 @@ export const de_CloneBackendCommand = async (
  */
 export const de_CreateBackendCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateBackendCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -902,7 +902,7 @@ export const de_CreateBackendCommand = async (
  */
 export const de_CreateBackendAPICommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateBackendAPICommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -928,7 +928,7 @@ export const de_CreateBackendAPICommand = async (
  */
 export const de_CreateBackendAuthCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateBackendAuthCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -954,7 +954,7 @@ export const de_CreateBackendAuthCommand = async (
  */
 export const de_CreateBackendConfigCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateBackendConfigCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -978,7 +978,7 @@ export const de_CreateBackendConfigCommand = async (
  */
 export const de_CreateBackendStorageCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateBackendStorageCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1002,7 +1002,7 @@ export const de_CreateBackendStorageCommand = async (
  */
 export const de_CreateTokenCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateTokenCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1026,7 +1026,7 @@ export const de_CreateTokenCommand = async (
  */
 export const de_DeleteBackendCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteBackendCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1052,7 +1052,7 @@ export const de_DeleteBackendCommand = async (
  */
 export const de_DeleteBackendAPICommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteBackendAPICommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1078,7 +1078,7 @@ export const de_DeleteBackendAPICommand = async (
  */
 export const de_DeleteBackendAuthCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteBackendAuthCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1104,7 +1104,7 @@ export const de_DeleteBackendAuthCommand = async (
  */
 export const de_DeleteBackendStorageCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteBackendStorageCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1128,7 +1128,7 @@ export const de_DeleteBackendStorageCommand = async (
  */
 export const de_DeleteTokenCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteTokenCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1149,7 +1149,7 @@ export const de_DeleteTokenCommand = async (
  */
 export const de_GenerateBackendAPIModelsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GenerateBackendAPIModelsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1175,7 +1175,7 @@ export const de_GenerateBackendAPIModelsCommand = async (
  */
 export const de_GetBackendCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetBackendCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1202,7 +1202,7 @@ export const de_GetBackendCommand = async (
  */
 export const de_GetBackendAPICommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetBackendAPICommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1227,7 +1227,7 @@ export const de_GetBackendAPICommand = async (
  */
 export const de_GetBackendAPIModelsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetBackendAPIModelsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1250,7 +1250,7 @@ export const de_GetBackendAPIModelsCommand = async (
  */
 export const de_GetBackendAuthCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetBackendAuthCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1275,7 +1275,7 @@ export const de_GetBackendAuthCommand = async (
  */
 export const de_GetBackendJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetBackendJobCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1303,7 +1303,7 @@ export const de_GetBackendJobCommand = async (
  */
 export const de_GetBackendStorageCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetBackendStorageCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1327,7 +1327,7 @@ export const de_GetBackendStorageCommand = async (
  */
 export const de_GetTokenCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetTokenCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1351,7 +1351,7 @@ export const de_GetTokenCommand = async (
  */
 export const de_ImportBackendAuthCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ImportBackendAuthCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1377,7 +1377,7 @@ export const de_ImportBackendAuthCommand = async (
  */
 export const de_ImportBackendStorageCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ImportBackendStorageCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1401,7 +1401,7 @@ export const de_ImportBackendStorageCommand = async (
  */
 export const de_ListBackendJobsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListBackendJobsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1423,7 +1423,7 @@ export const de_ListBackendJobsCommand = async (
  */
 export const de_ListS3BucketsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListS3BucketsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1445,7 +1445,7 @@ export const de_ListS3BucketsCommand = async (
  */
 export const de_RemoveAllBackendsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RemoveAllBackendsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1470,7 +1470,7 @@ export const de_RemoveAllBackendsCommand = async (
  */
 export const de_RemoveBackendConfigCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RemoveBackendConfigCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1491,7 +1491,7 @@ export const de_RemoveBackendConfigCommand = async (
  */
 export const de_UpdateBackendAPICommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateBackendAPICommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1517,7 +1517,7 @@ export const de_UpdateBackendAPICommand = async (
  */
 export const de_UpdateBackendAuthCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateBackendAuthCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1543,7 +1543,7 @@ export const de_UpdateBackendAuthCommand = async (
  */
 export const de_UpdateBackendConfigCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateBackendConfigCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1567,7 +1567,7 @@ export const de_UpdateBackendConfigCommand = async (
  */
 export const de_UpdateBackendJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateBackendJobCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1595,7 +1595,7 @@ export const de_UpdateBackendJobCommand = async (
  */
 export const de_UpdateBackendStorageCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateBackendStorageCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1669,7 +1669,7 @@ const de_BadRequestExceptionRes = async (parsedOutput: any, context: __SerdeCont
  */
 const de_GatewayTimeoutExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GatewayTimeoutException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1707,7 +1707,7 @@ const de_NotFoundExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_TooManyRequestsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyRequestsException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1809,7 +1809,7 @@ const se_BackendStoragePermissions = (input: BackendStoragePermissions, context:
  */
 const se_CreateBackendAuthForgotPasswordConfig = (
   input: CreateBackendAuthForgotPasswordConfig,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     deliveryMethod: [, , `DeliveryMethod`],
@@ -1823,7 +1823,7 @@ const se_CreateBackendAuthForgotPasswordConfig = (
  */
 const se_CreateBackendAuthIdentityPoolConfig = (
   input: CreateBackendAuthIdentityPoolConfig,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     identityPoolName: [, , `IdentityPoolName`],
@@ -1860,7 +1860,7 @@ const se_CreateBackendAuthOAuthConfig = (input: CreateBackendAuthOAuthConfig, co
  */
 const se_CreateBackendAuthPasswordPolicyConfig = (
   input: CreateBackendAuthPasswordPolicyConfig,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     additionalConstraints: [, _json, `AdditionalConstraints`],
@@ -1901,7 +1901,7 @@ const se_CreateBackendAuthUserPoolConfig = (input: CreateBackendAuthUserPoolConf
  */
 const se_CreateBackendAuthVerificationMessageConfig = (
   input: CreateBackendAuthVerificationMessageConfig,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     deliveryMethod: [, , `DeliveryMethod`],
@@ -1915,7 +1915,7 @@ const se_CreateBackendAuthVerificationMessageConfig = (
  */
 const se_CreateBackendStorageResourceConfig = (
   input: CreateBackendStorageResourceConfig,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     bucketName: [, , `BucketName`],
@@ -2009,7 +2009,7 @@ const se_SocialProviderSettings = (input: SocialProviderSettings, context: __Ser
  */
 const se_UpdateBackendAuthForgotPasswordConfig = (
   input: UpdateBackendAuthForgotPasswordConfig,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     deliveryMethod: [, , `DeliveryMethod`],
@@ -2023,7 +2023,7 @@ const se_UpdateBackendAuthForgotPasswordConfig = (
  */
 const se_UpdateBackendAuthIdentityPoolConfig = (
   input: UpdateBackendAuthIdentityPoolConfig,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     unauthenticatedLogin: [, , `UnauthenticatedLogin`],
@@ -2059,7 +2059,7 @@ const se_UpdateBackendAuthOAuthConfig = (input: UpdateBackendAuthOAuthConfig, co
  */
 const se_UpdateBackendAuthPasswordPolicyConfig = (
   input: UpdateBackendAuthPasswordPolicyConfig,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     additionalConstraints: [, _json, `AdditionalConstraints`],
@@ -2097,7 +2097,7 @@ const se_UpdateBackendAuthUserPoolConfig = (input: UpdateBackendAuthUserPoolConf
  */
 const se_UpdateBackendAuthVerificationMessageConfig = (
   input: UpdateBackendAuthVerificationMessageConfig,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     deliveryMethod: [, , `DeliveryMethod`],
@@ -2111,7 +2111,7 @@ const se_UpdateBackendAuthVerificationMessageConfig = (
  */
 const se_UpdateBackendStorageResourceConfig = (
   input: UpdateBackendStorageResourceConfig,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     permissions: [, (_) => se_BackendStoragePermissions(_, context), `Permissions`],
@@ -2221,7 +2221,7 @@ const de_BackendStoragePermissions = (output: any, context: __SerdeContext): Bac
  */
 const de_CreateBackendAuthForgotPasswordConfig = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CreateBackendAuthForgotPasswordConfig => {
   return take(output, {
     DeliveryMethod: [, __expectString, `deliveryMethod`],
@@ -2235,7 +2235,7 @@ const de_CreateBackendAuthForgotPasswordConfig = (
  */
 const de_CreateBackendAuthIdentityPoolConfig = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CreateBackendAuthIdentityPoolConfig => {
   return take(output, {
     IdentityPoolName: [, __expectString, `identityPoolName`],
@@ -2272,7 +2272,7 @@ const de_CreateBackendAuthOAuthConfig = (output: any, context: __SerdeContext): 
  */
 const de_CreateBackendAuthPasswordPolicyConfig = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CreateBackendAuthPasswordPolicyConfig => {
   return take(output, {
     AdditionalConstraints: [, _json, `additionalConstraints`],
@@ -2317,7 +2317,7 @@ const de_CreateBackendAuthUserPoolConfig = (output: any, context: __SerdeContext
  */
 const de_CreateBackendAuthVerificationMessageConfig = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CreateBackendAuthVerificationMessageConfig => {
   return take(output, {
     DeliveryMethod: [, __expectString, `deliveryMethod`],

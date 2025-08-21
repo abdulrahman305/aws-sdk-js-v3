@@ -47,7 +47,7 @@ const checkState = async (client: MediaLiveClient, input: DescribeChannelCommand
  */
 export const waitForChannelCreated = async (
   params: WaiterConfiguration<MediaLiveClient>,
-  input: DescribeChannelCommandInput
+  input: DescribeChannelCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 3, maxDelay: 120 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -59,7 +59,7 @@ export const waitForChannelCreated = async (
  */
 export const waitUntilChannelCreated = async (
   params: WaiterConfiguration<MediaLiveClient>,
-  input: DescribeChannelCommandInput
+  input: DescribeChannelCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 3, maxDelay: 120 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

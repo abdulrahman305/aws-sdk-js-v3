@@ -15,14 +15,14 @@ describe(getOutpostEndpoint.name, () => {
       const mockHostname = `s3-control${useFipsEndpoint ? "-fips" : ""}.${mockRegion}.${mockDnsSuffix}`;
       it("uses region from hostname if regionOverride if provided", () => {
         expect(getOutpostEndpoint(mockHostname, { ...mockInput, useFipsEndpoint })).toStrictEqual(
-          `s3-outposts${useFipsEndpoint ? "-fips" : ""}.${mockRegion}.${mockDnsSuffix}`
+          `s3-outposts${useFipsEndpoint ? "-fips" : ""}.${mockRegion}.${mockDnsSuffix}`,
         );
       });
 
       it("uses region from regionOverride if provided", () => {
         const mockRegionOverride = "mockRegionOverride";
         expect(
-          getOutpostEndpoint(mockHostname, { ...mockInput, useFipsEndpoint, regionOverride: mockRegionOverride })
+          getOutpostEndpoint(mockHostname, { ...mockInput, useFipsEndpoint, regionOverride: mockRegionOverride }),
         ).toStrictEqual(`s3-outposts${useFipsEndpoint ? "-fips" : ""}.${mockRegionOverride}.${mockDnsSuffix}`);
       });
     };

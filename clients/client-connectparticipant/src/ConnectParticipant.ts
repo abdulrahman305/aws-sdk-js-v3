@@ -59,16 +59,16 @@ export interface ConnectParticipant {
    */
   completeAttachmentUpload(
     args: CompleteAttachmentUploadCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CompleteAttachmentUploadCommandOutput>;
   completeAttachmentUpload(
     args: CompleteAttachmentUploadCommandInput,
-    cb: (err: any, data?: CompleteAttachmentUploadCommandOutput) => void
+    cb: (err: any, data?: CompleteAttachmentUploadCommandOutput) => void,
   ): void;
   completeAttachmentUpload(
     args: CompleteAttachmentUploadCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CompleteAttachmentUploadCommandOutput) => void
+    cb: (err: any, data?: CompleteAttachmentUploadCommandOutput) => void,
   ): void;
 
   /**
@@ -76,16 +76,16 @@ export interface ConnectParticipant {
    */
   createParticipantConnection(
     args: CreateParticipantConnectionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateParticipantConnectionCommandOutput>;
   createParticipantConnection(
     args: CreateParticipantConnectionCommandInput,
-    cb: (err: any, data?: CreateParticipantConnectionCommandOutput) => void
+    cb: (err: any, data?: CreateParticipantConnectionCommandOutput) => void,
   ): void;
   createParticipantConnection(
     args: CreateParticipantConnectionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateParticipantConnectionCommandOutput) => void
+    cb: (err: any, data?: CreateParticipantConnectionCommandOutput) => void,
   ): void;
 
   /**
@@ -96,7 +96,7 @@ export interface ConnectParticipant {
   describeView(
     args: DescribeViewCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeViewCommandOutput) => void
+    cb: (err: any, data?: DescribeViewCommandOutput) => void,
   ): void;
 
   /**
@@ -104,16 +104,16 @@ export interface ConnectParticipant {
    */
   disconnectParticipant(
     args: DisconnectParticipantCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DisconnectParticipantCommandOutput>;
   disconnectParticipant(
     args: DisconnectParticipantCommandInput,
-    cb: (err: any, data?: DisconnectParticipantCommandOutput) => void
+    cb: (err: any, data?: DisconnectParticipantCommandOutput) => void,
   ): void;
   disconnectParticipant(
     args: DisconnectParticipantCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DisconnectParticipantCommandOutput) => void
+    cb: (err: any, data?: DisconnectParticipantCommandOutput) => void,
   ): void;
 
   /**
@@ -124,7 +124,7 @@ export interface ConnectParticipant {
   getAttachment(
     args: GetAttachmentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetAttachmentCommandOutput) => void
+    cb: (err: any, data?: GetAttachmentCommandOutput) => void,
   ): void;
 
   /**
@@ -135,7 +135,7 @@ export interface ConnectParticipant {
   getTranscript(
     args: GetTranscriptCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetTranscriptCommandOutput) => void
+    cb: (err: any, data?: GetTranscriptCommandOutput) => void,
   ): void;
 
   /**
@@ -146,7 +146,7 @@ export interface ConnectParticipant {
   sendEvent(
     args: SendEventCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SendEventCommandOutput) => void
+    cb: (err: any, data?: SendEventCommandOutput) => void,
   ): void;
 
   /**
@@ -157,7 +157,7 @@ export interface ConnectParticipant {
   sendMessage(
     args: SendMessageCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SendMessageCommandOutput) => void
+    cb: (err: any, data?: SendMessageCommandOutput) => void,
   ): void;
 
   /**
@@ -165,16 +165,16 @@ export interface ConnectParticipant {
    */
   startAttachmentUpload(
     args: StartAttachmentUploadCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartAttachmentUploadCommandOutput>;
   startAttachmentUpload(
     args: StartAttachmentUploadCommandInput,
-    cb: (err: any, data?: StartAttachmentUploadCommandOutput) => void
+    cb: (err: any, data?: StartAttachmentUploadCommandOutput) => void,
   ): void;
   startAttachmentUpload(
     args: StartAttachmentUploadCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartAttachmentUploadCommandOutput) => void
+    cb: (err: any, data?: StartAttachmentUploadCommandOutput) => void,
   ): void;
 }
 

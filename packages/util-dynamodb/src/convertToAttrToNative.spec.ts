@@ -124,7 +124,7 @@ describe("convertToAttrToNative", () => {
     it(`testing list with options.wrapNumbers=true`, () => {
       const input = [1, 1.01, BigInt(9007199254740996)];
       expect(convertToNative(convertToAttr(input), { wrapNumbers: true })).toEqual(
-        input.map((num) => ({ value: num.toString() }))
+        input.map((num) => ({ value: num.toString() })),
       );
     });
   });
@@ -139,7 +139,7 @@ describe("convertToAttrToNative", () => {
 
       it("with options.wrapNumbers=true", () => {
         expect(convertToNative(convertToAttr(set), { wrapNumbers: true })).toEqual(
-          new Set(Array.from(set).map((num) => ({ value: num.toString() })))
+          new Set(Array.from(set).map((num) => ({ value: num.toString() }))),
         );
       });
     });
@@ -154,7 +154,7 @@ describe("convertToAttrToNative", () => {
 
       it("with options.wrapNumbers=true", () => {
         expect(convertToNative(convertToAttr(set), { wrapNumbers: true })).toEqual(
-          new Set(Array.from(set).map((num) => ({ value: num.toString() })))
+          new Set(Array.from(set).map((num) => ({ value: num.toString() }))),
         );
       });
     });
@@ -218,8 +218,8 @@ describe("convertToAttrToNative", () => {
             ...acc,
             [key]: { value: num.toString() },
           }),
-          {}
-        )
+          {},
+        ),
       );
     });
   });

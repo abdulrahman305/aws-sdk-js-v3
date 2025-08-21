@@ -9889,7 +9889,7 @@ export const AdminRespondToAuthChallengeRequestFilterSensitiveLog = (obj: AdminR
  * @internal
  */
 export const AdminRespondToAuthChallengeResponseFilterSensitiveLog = (
-  obj: AdminRespondToAuthChallengeResponse
+  obj: AdminRespondToAuthChallengeResponse,
 ): any => ({
   ...obj,
   ...(obj.Session && { Session: SENSITIVE_STRING }),
@@ -9927,7 +9927,7 @@ export const AdminSetUserSettingsRequestFilterSensitiveLog = (obj: AdminSetUserS
  * @internal
  */
 export const AdminUpdateAuthEventFeedbackRequestFilterSensitiveLog = (
-  obj: AdminUpdateAuthEventFeedbackRequest
+  obj: AdminUpdateAuthEventFeedbackRequest,
 ): any => ({
   ...obj,
   ...(obj.Username && { Username: SENSITIVE_STRING }),
@@ -10189,7 +10189,7 @@ export const GetUserResponseFilterSensitiveLog = (obj: GetUserResponse): any => 
  * @internal
  */
 export const GetUserAttributeVerificationCodeRequestFilterSensitiveLog = (
-  obj: GetUserAttributeVerificationCodeRequest
+  obj: GetUserAttributeVerificationCodeRequest,
 ): any => ({
   ...obj,
   ...(obj.AccessToken && { AccessToken: SENSITIVE_STRING }),

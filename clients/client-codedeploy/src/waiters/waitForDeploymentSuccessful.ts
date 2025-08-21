@@ -44,7 +44,7 @@ const checkState = async (client: CodeDeployClient, input: GetDeploymentCommandI
  */
 export const waitForDeploymentSuccessful = async (
   params: WaiterConfiguration<CodeDeployClient>,
-  input: GetDeploymentCommandInput
+  input: GetDeploymentCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 15, maxDelay: 120 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -56,7 +56,7 @@ export const waitForDeploymentSuccessful = async (
  */
 export const waitUntilDeploymentSuccessful = async (
   params: WaiterConfiguration<CodeDeployClient>,
-  input: GetDeploymentCommandInput
+  input: GetDeploymentCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 15, maxDelay: 120 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

@@ -38,7 +38,7 @@ export const generateProject = async (projectDir: string, options: PackageSizeRe
       env: {
         npm_config_registry: options.localRegistry,
       },
-    }
+    },
   );
 };
 

@@ -41,7 +41,7 @@ locations.clients = join(locations.root, "clients");
         writeFileSync(clientPkgJsonLocation, JSON.stringify(pkg, null, 2), "utf-8");
       })().catch((e) => {
         console.error("error in " + clientFolderName, e);
-      })
+      }),
     );
   }
 

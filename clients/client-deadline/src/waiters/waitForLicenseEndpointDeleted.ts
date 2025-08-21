@@ -31,7 +31,7 @@ const checkState = async (client: DeadlineClient, input: GetLicenseEndpointComma
  */
 export const waitForLicenseEndpointDeleted = async (
   params: WaiterConfiguration<DeadlineClient>,
-  input: GetLicenseEndpointCommandInput
+  input: GetLicenseEndpointCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 10, maxDelay: 2340 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -43,7 +43,7 @@ export const waitForLicenseEndpointDeleted = async (
  */
 export const waitUntilLicenseEndpointDeleted = async (
   params: WaiterConfiguration<DeadlineClient>,
-  input: GetLicenseEndpointCommandInput
+  input: GetLicenseEndpointCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 10, maxDelay: 2340 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

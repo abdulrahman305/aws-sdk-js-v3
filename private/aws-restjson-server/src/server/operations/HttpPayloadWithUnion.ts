@@ -42,7 +42,7 @@ export namespace HttpPayloadWithUnionServerInput {
    * @internal
    */
   export const validate: (
-    obj: Parameters<typeof HttpPayloadWithUnionInputOutput.validate>[0]
+    obj: Parameters<typeof HttpPayloadWithUnionInputOutput.validate>[0],
   ) => __ValidationFailure[] = HttpPayloadWithUnionInputOutput.validate;
 }
 export interface HttpPayloadWithUnionServerOutput extends HttpPayloadWithUnionInputOutput {}
@@ -66,14 +66,14 @@ export class HttpPayloadWithUnionSerializer
 
 export const getHttpPayloadWithUnionHandler = <Context>(
   operation: __Operation<HttpPayloadWithUnionServerInput, HttpPayloadWithUnionServerOutput, Context>,
-  customizer: __ValidationCustomizer<"HttpPayloadWithUnion">
+  customizer: __ValidationCustomizer<"HttpPayloadWithUnion">,
 ): __ServiceHandler<Context, __HttpRequest, __HttpResponse> => {
   const mux = new httpbinding.HttpBindingMux<"RestJson", "HttpPayloadWithUnion">([
     new httpbinding.UriSpec<"RestJson", "HttpPayloadWithUnion">(
       "PUT",
       [{ type: "path_literal", value: "HttpPayloadWithUnion" }],
       [],
-      { service: "RestJson", operation: "HttpPayloadWithUnion" }
+      { service: "RestJson", operation: "HttpPayloadWithUnion" },
     ),
   ]);
   return new HttpPayloadWithUnionHandler(
@@ -81,7 +81,7 @@ export const getHttpPayloadWithUnionHandler = <Context>(
     mux,
     new HttpPayloadWithUnionSerializer(),
     serializeFrameworkException,
-    customizer
+    customizer,
   );
 };
 
@@ -102,7 +102,7 @@ async function handle<S, O extends keyof S & string, Context>(
   operation: __Operation<__OperationInput<S[O]>, __OperationOutput<S[O]>, Context>,
   serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
   validationFn: (input: __OperationInput<S[O]>) => __ValidationFailure[],
-  validationCustomizer: __ValidationCustomizer<O>
+  validationCustomizer: __ValidationCustomizer<O>,
 ): Promise<__HttpResponse> {
   let input;
   try {
@@ -144,7 +144,7 @@ export class HttpPayloadWithUnionHandler<Context> implements __ServiceHandler<Co
   >;
   private readonly serializeFrameworkException: (
     e: __SmithyFrameworkException,
-    ctx: __ServerSerdeContext
+    ctx: __ServerSerdeContext,
   ) => Promise<__HttpResponse>;
   private readonly validationCustomizer: __ValidationCustomizer<"HttpPayloadWithUnion">;
   /**
@@ -161,7 +161,7 @@ export class HttpPayloadWithUnionHandler<Context> implements __ServiceHandler<Co
     mux: __Mux<"RestJson", "HttpPayloadWithUnion">,
     serializer: __OperationSerializer<RestJsonService<Context>, "HttpPayloadWithUnion", HttpPayloadWithUnionErrors>,
     serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
-    validationCustomizer: __ValidationCustomizer<"HttpPayloadWithUnion">
+    validationCustomizer: __ValidationCustomizer<"HttpPayloadWithUnion">,
   ) {
     this.operation = operation;
     this.mux = mux;
@@ -173,7 +173,7 @@ export class HttpPayloadWithUnionHandler<Context> implements __ServiceHandler<Co
     const target = this.mux.match(request);
     if (target === undefined) {
       console.log(
-        "Received a request that did not match aws.protocoltests.restjson#RestJson.HttpPayloadWithUnion. This indicates a misconfiguration."
+        "Received a request that did not match aws.protocoltests.restjson#RestJson.HttpPayloadWithUnion. This indicates a misconfiguration.",
       );
       return this.serializeFrameworkException(new __InternalFailureException(), serdeContextBase);
     }
@@ -185,7 +185,7 @@ export class HttpPayloadWithUnionHandler<Context> implements __ServiceHandler<Co
       this.operation,
       this.serializeFrameworkException,
       HttpPayloadWithUnionServerInput.validate,
-      this.validationCustomizer
+      this.validationCustomizer,
     );
   }
 }

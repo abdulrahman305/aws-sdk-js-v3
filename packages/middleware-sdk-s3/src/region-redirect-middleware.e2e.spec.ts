@@ -97,7 +97,7 @@ async function deleteBucket(s3: S3, bucketName: string) {
       s3.deleteObject({
         Bucket,
         Key: key.Key,
-      })
+      }),
     );
   }
   await Promise.all(promises);

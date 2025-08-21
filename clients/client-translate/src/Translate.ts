@@ -123,16 +123,16 @@ export interface Translate {
    */
   createParallelData(
     args: CreateParallelDataCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateParallelDataCommandOutput>;
   createParallelData(
     args: CreateParallelDataCommandInput,
-    cb: (err: any, data?: CreateParallelDataCommandOutput) => void
+    cb: (err: any, data?: CreateParallelDataCommandOutput) => void,
   ): void;
   createParallelData(
     args: CreateParallelDataCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateParallelDataCommandOutput) => void
+    cb: (err: any, data?: CreateParallelDataCommandOutput) => void,
   ): void;
 
   /**
@@ -140,16 +140,16 @@ export interface Translate {
    */
   deleteParallelData(
     args: DeleteParallelDataCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteParallelDataCommandOutput>;
   deleteParallelData(
     args: DeleteParallelDataCommandInput,
-    cb: (err: any, data?: DeleteParallelDataCommandOutput) => void
+    cb: (err: any, data?: DeleteParallelDataCommandOutput) => void,
   ): void;
   deleteParallelData(
     args: DeleteParallelDataCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteParallelDataCommandOutput) => void
+    cb: (err: any, data?: DeleteParallelDataCommandOutput) => void,
   ): void;
 
   /**
@@ -157,16 +157,16 @@ export interface Translate {
    */
   deleteTerminology(
     args: DeleteTerminologyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteTerminologyCommandOutput>;
   deleteTerminology(
     args: DeleteTerminologyCommandInput,
-    cb: (err: any, data?: DeleteTerminologyCommandOutput) => void
+    cb: (err: any, data?: DeleteTerminologyCommandOutput) => void,
   ): void;
   deleteTerminology(
     args: DeleteTerminologyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteTerminologyCommandOutput) => void
+    cb: (err: any, data?: DeleteTerminologyCommandOutput) => void,
   ): void;
 
   /**
@@ -174,16 +174,16 @@ export interface Translate {
    */
   describeTextTranslationJob(
     args: DescribeTextTranslationJobCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeTextTranslationJobCommandOutput>;
   describeTextTranslationJob(
     args: DescribeTextTranslationJobCommandInput,
-    cb: (err: any, data?: DescribeTextTranslationJobCommandOutput) => void
+    cb: (err: any, data?: DescribeTextTranslationJobCommandOutput) => void,
   ): void;
   describeTextTranslationJob(
     args: DescribeTextTranslationJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeTextTranslationJobCommandOutput) => void
+    cb: (err: any, data?: DescribeTextTranslationJobCommandOutput) => void,
   ): void;
 
   /**
@@ -191,13 +191,13 @@ export interface Translate {
    */
   getParallelData(
     args: GetParallelDataCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetParallelDataCommandOutput>;
   getParallelData(args: GetParallelDataCommandInput, cb: (err: any, data?: GetParallelDataCommandOutput) => void): void;
   getParallelData(
     args: GetParallelDataCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetParallelDataCommandOutput) => void
+    cb: (err: any, data?: GetParallelDataCommandOutput) => void,
   ): void;
 
   /**
@@ -205,13 +205,13 @@ export interface Translate {
    */
   getTerminology(
     args: GetTerminologyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetTerminologyCommandOutput>;
   getTerminology(args: GetTerminologyCommandInput, cb: (err: any, data?: GetTerminologyCommandOutput) => void): void;
   getTerminology(
     args: GetTerminologyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetTerminologyCommandOutput) => void
+    cb: (err: any, data?: GetTerminologyCommandOutput) => void,
   ): void;
 
   /**
@@ -219,16 +219,16 @@ export interface Translate {
    */
   importTerminology(
     args: ImportTerminologyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ImportTerminologyCommandOutput>;
   importTerminology(
     args: ImportTerminologyCommandInput,
-    cb: (err: any, data?: ImportTerminologyCommandOutput) => void
+    cb: (err: any, data?: ImportTerminologyCommandOutput) => void,
   ): void;
   importTerminology(
     args: ImportTerminologyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ImportTerminologyCommandOutput) => void
+    cb: (err: any, data?: ImportTerminologyCommandOutput) => void,
   ): void;
 
   /**
@@ -240,7 +240,7 @@ export interface Translate {
   listLanguages(
     args: ListLanguagesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListLanguagesCommandOutput) => void
+    cb: (err: any, data?: ListLanguagesCommandOutput) => void,
   ): void;
 
   /**
@@ -249,16 +249,16 @@ export interface Translate {
   listParallelData(): Promise<ListParallelDataCommandOutput>;
   listParallelData(
     args: ListParallelDataCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListParallelDataCommandOutput>;
   listParallelData(
     args: ListParallelDataCommandInput,
-    cb: (err: any, data?: ListParallelDataCommandOutput) => void
+    cb: (err: any, data?: ListParallelDataCommandOutput) => void,
   ): void;
   listParallelData(
     args: ListParallelDataCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListParallelDataCommandOutput) => void
+    cb: (err: any, data?: ListParallelDataCommandOutput) => void,
   ): void;
 
   /**
@@ -266,16 +266,16 @@ export interface Translate {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -284,16 +284,16 @@ export interface Translate {
   listTerminologies(): Promise<ListTerminologiesCommandOutput>;
   listTerminologies(
     args: ListTerminologiesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTerminologiesCommandOutput>;
   listTerminologies(
     args: ListTerminologiesCommandInput,
-    cb: (err: any, data?: ListTerminologiesCommandOutput) => void
+    cb: (err: any, data?: ListTerminologiesCommandOutput) => void,
   ): void;
   listTerminologies(
     args: ListTerminologiesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTerminologiesCommandOutput) => void
+    cb: (err: any, data?: ListTerminologiesCommandOutput) => void,
   ): void;
 
   /**
@@ -302,16 +302,16 @@ export interface Translate {
   listTextTranslationJobs(): Promise<ListTextTranslationJobsCommandOutput>;
   listTextTranslationJobs(
     args: ListTextTranslationJobsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTextTranslationJobsCommandOutput>;
   listTextTranslationJobs(
     args: ListTextTranslationJobsCommandInput,
-    cb: (err: any, data?: ListTextTranslationJobsCommandOutput) => void
+    cb: (err: any, data?: ListTextTranslationJobsCommandOutput) => void,
   ): void;
   listTextTranslationJobs(
     args: ListTextTranslationJobsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTextTranslationJobsCommandOutput) => void
+    cb: (err: any, data?: ListTextTranslationJobsCommandOutput) => void,
   ): void;
 
   /**
@@ -319,16 +319,16 @@ export interface Translate {
    */
   startTextTranslationJob(
     args: StartTextTranslationJobCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartTextTranslationJobCommandOutput>;
   startTextTranslationJob(
     args: StartTextTranslationJobCommandInput,
-    cb: (err: any, data?: StartTextTranslationJobCommandOutput) => void
+    cb: (err: any, data?: StartTextTranslationJobCommandOutput) => void,
   ): void;
   startTextTranslationJob(
     args: StartTextTranslationJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartTextTranslationJobCommandOutput) => void
+    cb: (err: any, data?: StartTextTranslationJobCommandOutput) => void,
   ): void;
 
   /**
@@ -336,16 +336,16 @@ export interface Translate {
    */
   stopTextTranslationJob(
     args: StopTextTranslationJobCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StopTextTranslationJobCommandOutput>;
   stopTextTranslationJob(
     args: StopTextTranslationJobCommandInput,
-    cb: (err: any, data?: StopTextTranslationJobCommandOutput) => void
+    cb: (err: any, data?: StopTextTranslationJobCommandOutput) => void,
   ): void;
   stopTextTranslationJob(
     args: StopTextTranslationJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StopTextTranslationJobCommandOutput) => void
+    cb: (err: any, data?: StopTextTranslationJobCommandOutput) => void,
   ): void;
 
   /**
@@ -356,7 +356,7 @@ export interface Translate {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -364,16 +364,16 @@ export interface Translate {
    */
   translateDocument(
     args: TranslateDocumentCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<TranslateDocumentCommandOutput>;
   translateDocument(
     args: TranslateDocumentCommandInput,
-    cb: (err: any, data?: TranslateDocumentCommandOutput) => void
+    cb: (err: any, data?: TranslateDocumentCommandOutput) => void,
   ): void;
   translateDocument(
     args: TranslateDocumentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TranslateDocumentCommandOutput) => void
+    cb: (err: any, data?: TranslateDocumentCommandOutput) => void,
   ): void;
 
   /**
@@ -384,7 +384,7 @@ export interface Translate {
   translateText(
     args: TranslateTextCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TranslateTextCommandOutput) => void
+    cb: (err: any, data?: TranslateTextCommandOutput) => void,
   ): void;
 
   /**
@@ -395,7 +395,7 @@ export interface Translate {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -403,16 +403,16 @@ export interface Translate {
    */
   updateParallelData(
     args: UpdateParallelDataCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateParallelDataCommandOutput>;
   updateParallelData(
     args: UpdateParallelDataCommandInput,
-    cb: (err: any, data?: UpdateParallelDataCommandOutput) => void
+    cb: (err: any, data?: UpdateParallelDataCommandOutput) => void,
   ): void;
   updateParallelData(
     args: UpdateParallelDataCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateParallelDataCommandOutput) => void
+    cb: (err: any, data?: UpdateParallelDataCommandOutput) => void,
   ): void;
 }
 

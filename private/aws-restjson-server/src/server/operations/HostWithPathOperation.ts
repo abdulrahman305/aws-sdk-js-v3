@@ -63,14 +63,14 @@ export class HostWithPathOperationSerializer
 
 export const getHostWithPathOperationHandler = <Context>(
   operation: __Operation<HostWithPathOperationServerInput, HostWithPathOperationServerOutput, Context>,
-  customizer: __ValidationCustomizer<"HostWithPathOperation">
+  customizer: __ValidationCustomizer<"HostWithPathOperation">,
 ): __ServiceHandler<Context, __HttpRequest, __HttpResponse> => {
   const mux = new httpbinding.HttpBindingMux<"RestJson", "HostWithPathOperation">([
     new httpbinding.UriSpec<"RestJson", "HostWithPathOperation">(
       "GET",
       [{ type: "path_literal", value: "HostWithPathOperation" }],
       [],
-      { service: "RestJson", operation: "HostWithPathOperation" }
+      { service: "RestJson", operation: "HostWithPathOperation" },
     ),
   ]);
   return new HostWithPathOperationHandler(
@@ -78,7 +78,7 @@ export const getHostWithPathOperationHandler = <Context>(
     mux,
     new HostWithPathOperationSerializer(),
     serializeFrameworkException,
-    customizer
+    customizer,
   );
 };
 
@@ -99,7 +99,7 @@ async function handle<S, O extends keyof S & string, Context>(
   operation: __Operation<__OperationInput<S[O]>, __OperationOutput<S[O]>, Context>,
   serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
   validationFn: (input: __OperationInput<S[O]>) => __ValidationFailure[],
-  validationCustomizer: __ValidationCustomizer<O>
+  validationCustomizer: __ValidationCustomizer<O>,
 ): Promise<__HttpResponse> {
   let input;
   try {
@@ -141,7 +141,7 @@ export class HostWithPathOperationHandler<Context> implements __ServiceHandler<C
   >;
   private readonly serializeFrameworkException: (
     e: __SmithyFrameworkException,
-    ctx: __ServerSerdeContext
+    ctx: __ServerSerdeContext,
   ) => Promise<__HttpResponse>;
   private readonly validationCustomizer: __ValidationCustomizer<"HostWithPathOperation">;
   /**
@@ -158,7 +158,7 @@ export class HostWithPathOperationHandler<Context> implements __ServiceHandler<C
     mux: __Mux<"RestJson", "HostWithPathOperation">,
     serializer: __OperationSerializer<RestJsonService<Context>, "HostWithPathOperation", HostWithPathOperationErrors>,
     serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
-    validationCustomizer: __ValidationCustomizer<"HostWithPathOperation">
+    validationCustomizer: __ValidationCustomizer<"HostWithPathOperation">,
   ) {
     this.operation = operation;
     this.mux = mux;
@@ -170,7 +170,7 @@ export class HostWithPathOperationHandler<Context> implements __ServiceHandler<C
     const target = this.mux.match(request);
     if (target === undefined) {
       console.log(
-        "Received a request that did not match aws.protocoltests.restjson#RestJson.HostWithPathOperation. This indicates a misconfiguration."
+        "Received a request that did not match aws.protocoltests.restjson#RestJson.HostWithPathOperation. This indicates a misconfiguration.",
       );
       return this.serializeFrameworkException(new __InternalFailureException(), serdeContextBase);
     }
@@ -182,7 +182,7 @@ export class HostWithPathOperationHandler<Context> implements __ServiceHandler<C
       this.operation,
       this.serializeFrameworkException,
       HostWithPathOperationServerInput.validate,
-      this.validationCustomizer
+      this.validationCustomizer,
     );
   }
 }

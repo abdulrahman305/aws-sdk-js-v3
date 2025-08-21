@@ -260,7 +260,7 @@ export class StartCallAnalyticsStreamTranscriptionCommand extends $Command
   .n("TranscribeStreamingClient", "StartCallAnalyticsStreamTranscriptionCommand")
   .f(
     StartCallAnalyticsStreamTranscriptionRequestFilterSensitiveLog,
-    StartCallAnalyticsStreamTranscriptionResponseFilterSensitiveLog
+    StartCallAnalyticsStreamTranscriptionResponseFilterSensitiveLog,
   )
   .ser(se_StartCallAnalyticsStreamTranscriptionCommand)
   .de(de_StartCallAnalyticsStreamTranscriptionCommand)

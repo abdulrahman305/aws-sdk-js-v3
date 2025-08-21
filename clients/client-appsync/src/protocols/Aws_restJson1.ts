@@ -192,7 +192,7 @@ import {
  */
 export const se_AssociateApiCommand = async (
   input: AssociateApiCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -204,7 +204,7 @@ export const se_AssociateApiCommand = async (
   body = JSON.stringify(
     take(input, {
       apiId: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -215,7 +215,7 @@ export const se_AssociateApiCommand = async (
  */
 export const se_AssociateMergedGraphqlApiCommand = async (
   input: AssociateMergedGraphqlApiCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -229,7 +229,7 @@ export const se_AssociateMergedGraphqlApiCommand = async (
       description: [],
       mergedApiIdentifier: [],
       sourceApiAssociationConfig: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -240,7 +240,7 @@ export const se_AssociateMergedGraphqlApiCommand = async (
  */
 export const se_AssociateSourceGraphqlApiCommand = async (
   input: AssociateSourceGraphqlApiCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -254,7 +254,7 @@ export const se_AssociateSourceGraphqlApiCommand = async (
       description: [],
       sourceApiAssociationConfig: (_) => _json(_),
       sourceApiIdentifier: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -265,7 +265,7 @@ export const se_AssociateSourceGraphqlApiCommand = async (
  */
 export const se_CreateApiCacheCommand = async (
   input: CreateApiCacheCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -282,7 +282,7 @@ export const se_CreateApiCacheCommand = async (
       transitEncryptionEnabled: [],
       ttl: [],
       type: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -293,7 +293,7 @@ export const se_CreateApiCacheCommand = async (
  */
 export const se_CreateApiKeyCommand = async (
   input: CreateApiKeyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -306,7 +306,7 @@ export const se_CreateApiKeyCommand = async (
     take(input, {
       description: [],
       expires: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -317,7 +317,7 @@ export const se_CreateApiKeyCommand = async (
  */
 export const se_CreateDataSourceCommand = async (
   input: CreateDataSourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -340,7 +340,7 @@ export const se_CreateDataSourceCommand = async (
       relationalDatabaseConfig: (_) => _json(_),
       serviceRoleArn: [],
       type: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -351,7 +351,7 @@ export const se_CreateDataSourceCommand = async (
  */
 export const se_CreateDomainNameCommand = async (
   input: CreateDomainNameCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -364,7 +364,7 @@ export const se_CreateDomainNameCommand = async (
       certificateArn: [],
       description: [],
       domainName: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -375,7 +375,7 @@ export const se_CreateDomainNameCommand = async (
  */
 export const se_CreateFunctionCommand = async (
   input: CreateFunctionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -396,7 +396,7 @@ export const se_CreateFunctionCommand = async (
       responseMappingTemplate: [],
       runtime: (_) => _json(_),
       syncConfig: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -407,7 +407,7 @@ export const se_CreateFunctionCommand = async (
  */
 export const se_CreateGraphqlApiCommand = async (
   input: CreateGraphqlApiCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -434,7 +434,7 @@ export const se_CreateGraphqlApiCommand = async (
       userPoolConfig: (_) => _json(_),
       visibility: [],
       xrayEnabled: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -445,7 +445,7 @@ export const se_CreateGraphqlApiCommand = async (
  */
 export const se_CreateResolverCommand = async (
   input: CreateResolverCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -469,7 +469,7 @@ export const se_CreateResolverCommand = async (
       responseMappingTemplate: [],
       runtime: (_) => _json(_),
       syncConfig: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -480,7 +480,7 @@ export const se_CreateResolverCommand = async (
  */
 export const se_CreateTypeCommand = async (
   input: CreateTypeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -493,7 +493,7 @@ export const se_CreateTypeCommand = async (
     take(input, {
       definition: [],
       format: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -504,7 +504,7 @@ export const se_CreateTypeCommand = async (
  */
 export const se_DeleteApiCacheCommand = async (
   input: DeleteApiCacheCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -520,7 +520,7 @@ export const se_DeleteApiCacheCommand = async (
  */
 export const se_DeleteApiKeyCommand = async (
   input: DeleteApiKeyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -537,7 +537,7 @@ export const se_DeleteApiKeyCommand = async (
  */
 export const se_DeleteDataSourceCommand = async (
   input: DeleteDataSourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -554,7 +554,7 @@ export const se_DeleteDataSourceCommand = async (
  */
 export const se_DeleteDomainNameCommand = async (
   input: DeleteDomainNameCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -570,7 +570,7 @@ export const se_DeleteDomainNameCommand = async (
  */
 export const se_DeleteFunctionCommand = async (
   input: DeleteFunctionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -587,7 +587,7 @@ export const se_DeleteFunctionCommand = async (
  */
 export const se_DeleteGraphqlApiCommand = async (
   input: DeleteGraphqlApiCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -603,7 +603,7 @@ export const se_DeleteGraphqlApiCommand = async (
  */
 export const se_DeleteResolverCommand = async (
   input: DeleteResolverCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -621,7 +621,7 @@ export const se_DeleteResolverCommand = async (
  */
 export const se_DeleteTypeCommand = async (
   input: DeleteTypeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -638,7 +638,7 @@ export const se_DeleteTypeCommand = async (
  */
 export const se_DisassociateApiCommand = async (
   input: DisassociateApiCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -654,7 +654,7 @@ export const se_DisassociateApiCommand = async (
  */
 export const se_DisassociateMergedGraphqlApiCommand = async (
   input: DisassociateMergedGraphqlApiCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -671,7 +671,7 @@ export const se_DisassociateMergedGraphqlApiCommand = async (
  */
 export const se_DisassociateSourceGraphqlApiCommand = async (
   input: DisassociateSourceGraphqlApiCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -688,7 +688,7 @@ export const se_DisassociateSourceGraphqlApiCommand = async (
  */
 export const se_EvaluateCodeCommand = async (
   input: EvaluateCodeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -702,7 +702,7 @@ export const se_EvaluateCodeCommand = async (
       context: [],
       function: [],
       runtime: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -713,7 +713,7 @@ export const se_EvaluateCodeCommand = async (
  */
 export const se_EvaluateMappingTemplateCommand = async (
   input: EvaluateMappingTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -725,7 +725,7 @@ export const se_EvaluateMappingTemplateCommand = async (
     take(input, {
       context: [],
       template: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -736,7 +736,7 @@ export const se_EvaluateMappingTemplateCommand = async (
  */
 export const se_FlushApiCacheCommand = async (
   input: FlushApiCacheCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -752,7 +752,7 @@ export const se_FlushApiCacheCommand = async (
  */
 export const se_GetApiAssociationCommand = async (
   input: GetApiAssociationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -768,7 +768,7 @@ export const se_GetApiAssociationCommand = async (
  */
 export const se_GetApiCacheCommand = async (
   input: GetApiCacheCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -784,7 +784,7 @@ export const se_GetApiCacheCommand = async (
  */
 export const se_GetDataSourceCommand = async (
   input: GetDataSourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -801,7 +801,7 @@ export const se_GetDataSourceCommand = async (
  */
 export const se_GetDataSourceIntrospectionCommand = async (
   input: GetDataSourceIntrospectionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -822,7 +822,7 @@ export const se_GetDataSourceIntrospectionCommand = async (
  */
 export const se_GetDomainNameCommand = async (
   input: GetDomainNameCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -838,7 +838,7 @@ export const se_GetDomainNameCommand = async (
  */
 export const se_GetFunctionCommand = async (
   input: GetFunctionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -855,7 +855,7 @@ export const se_GetFunctionCommand = async (
  */
 export const se_GetGraphqlApiCommand = async (
   input: GetGraphqlApiCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -871,7 +871,7 @@ export const se_GetGraphqlApiCommand = async (
  */
 export const se_GetGraphqlApiEnvironmentVariablesCommand = async (
   input: GetGraphqlApiEnvironmentVariablesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -887,7 +887,7 @@ export const se_GetGraphqlApiEnvironmentVariablesCommand = async (
  */
 export const se_GetIntrospectionSchemaCommand = async (
   input: GetIntrospectionSchemaCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -907,7 +907,7 @@ export const se_GetIntrospectionSchemaCommand = async (
  */
 export const se_GetResolverCommand = async (
   input: GetResolverCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -925,7 +925,7 @@ export const se_GetResolverCommand = async (
  */
 export const se_GetSchemaCreationStatusCommand = async (
   input: GetSchemaCreationStatusCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -941,7 +941,7 @@ export const se_GetSchemaCreationStatusCommand = async (
  */
 export const se_GetSourceApiAssociationCommand = async (
   input: GetSourceApiAssociationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -958,7 +958,7 @@ export const se_GetSourceApiAssociationCommand = async (
  */
 export const se_GetTypeCommand = async (
   input: GetTypeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -978,7 +978,7 @@ export const se_GetTypeCommand = async (
  */
 export const se_ListApiKeysCommand = async (
   input: ListApiKeysCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -998,7 +998,7 @@ export const se_ListApiKeysCommand = async (
  */
 export const se_ListDataSourcesCommand = async (
   input: ListDataSourcesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1018,7 +1018,7 @@ export const se_ListDataSourcesCommand = async (
  */
 export const se_ListDomainNamesCommand = async (
   input: ListDomainNamesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1037,7 +1037,7 @@ export const se_ListDomainNamesCommand = async (
  */
 export const se_ListFunctionsCommand = async (
   input: ListFunctionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1057,7 +1057,7 @@ export const se_ListFunctionsCommand = async (
  */
 export const se_ListGraphqlApisCommand = async (
   input: ListGraphqlApisCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1078,7 +1078,7 @@ export const se_ListGraphqlApisCommand = async (
  */
 export const se_ListResolversCommand = async (
   input: ListResolversCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1099,7 +1099,7 @@ export const se_ListResolversCommand = async (
  */
 export const se_ListResolversByFunctionCommand = async (
   input: ListResolversByFunctionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1120,7 +1120,7 @@ export const se_ListResolversByFunctionCommand = async (
  */
 export const se_ListSourceApiAssociationsCommand = async (
   input: ListSourceApiAssociationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1140,7 +1140,7 @@ export const se_ListSourceApiAssociationsCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1156,7 +1156,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_ListTypesCommand = async (
   input: ListTypesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1177,7 +1177,7 @@ export const se_ListTypesCommand = async (
  */
 export const se_ListTypesByAssociationCommand = async (
   input: ListTypesByAssociationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1199,7 +1199,7 @@ export const se_ListTypesByAssociationCommand = async (
  */
 export const se_PutGraphqlApiEnvironmentVariablesCommand = async (
   input: PutGraphqlApiEnvironmentVariablesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1211,7 +1211,7 @@ export const se_PutGraphqlApiEnvironmentVariablesCommand = async (
   body = JSON.stringify(
     take(input, {
       environmentVariables: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1222,7 +1222,7 @@ export const se_PutGraphqlApiEnvironmentVariablesCommand = async (
  */
 export const se_StartDataSourceIntrospectionCommand = async (
   input: StartDataSourceIntrospectionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1233,7 +1233,7 @@ export const se_StartDataSourceIntrospectionCommand = async (
   body = JSON.stringify(
     take(input, {
       rdsDataApiConfig: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1244,7 +1244,7 @@ export const se_StartDataSourceIntrospectionCommand = async (
  */
 export const se_StartSchemaCreationCommand = async (
   input: StartSchemaCreationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1256,7 +1256,7 @@ export const se_StartSchemaCreationCommand = async (
   body = JSON.stringify(
     take(input, {
       definition: (_) => context.base64Encoder(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1267,7 +1267,7 @@ export const se_StartSchemaCreationCommand = async (
  */
 export const se_StartSchemaMergeCommand = async (
   input: StartSchemaMergeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1284,7 +1284,7 @@ export const se_StartSchemaMergeCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1296,7 +1296,7 @@ export const se_TagResourceCommand = async (
   body = JSON.stringify(
     take(input, {
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1307,7 +1307,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1329,7 +1329,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateApiCacheCommand = async (
   input: UpdateApiCacheCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1344,7 +1344,7 @@ export const se_UpdateApiCacheCommand = async (
       healthMetricsConfig: [],
       ttl: [],
       type: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1355,7 +1355,7 @@ export const se_UpdateApiCacheCommand = async (
  */
 export const se_UpdateApiKeyCommand = async (
   input: UpdateApiKeyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1369,7 +1369,7 @@ export const se_UpdateApiKeyCommand = async (
     take(input, {
       description: [],
       expires: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1380,7 +1380,7 @@ export const se_UpdateApiKeyCommand = async (
  */
 export const se_UpdateDataSourceCommand = async (
   input: UpdateDataSourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1403,7 +1403,7 @@ export const se_UpdateDataSourceCommand = async (
       relationalDatabaseConfig: (_) => _json(_),
       serviceRoleArn: [],
       type: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1414,7 +1414,7 @@ export const se_UpdateDataSourceCommand = async (
  */
 export const se_UpdateDomainNameCommand = async (
   input: UpdateDomainNameCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1426,7 +1426,7 @@ export const se_UpdateDomainNameCommand = async (
   body = JSON.stringify(
     take(input, {
       description: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1437,7 +1437,7 @@ export const se_UpdateDomainNameCommand = async (
  */
 export const se_UpdateFunctionCommand = async (
   input: UpdateFunctionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1459,7 +1459,7 @@ export const se_UpdateFunctionCommand = async (
       responseMappingTemplate: [],
       runtime: (_) => _json(_),
       syncConfig: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1470,7 +1470,7 @@ export const se_UpdateFunctionCommand = async (
  */
 export const se_UpdateGraphqlApiCommand = async (
   input: UpdateGraphqlApiCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1495,7 +1495,7 @@ export const se_UpdateGraphqlApiCommand = async (
       resolverCountLimit: [],
       userPoolConfig: (_) => _json(_),
       xrayEnabled: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1506,7 +1506,7 @@ export const se_UpdateGraphqlApiCommand = async (
  */
 export const se_UpdateResolverCommand = async (
   input: UpdateResolverCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1530,7 +1530,7 @@ export const se_UpdateResolverCommand = async (
       responseMappingTemplate: [],
       runtime: (_) => _json(_),
       syncConfig: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1541,7 +1541,7 @@ export const se_UpdateResolverCommand = async (
  */
 export const se_UpdateSourceApiAssociationCommand = async (
   input: UpdateSourceApiAssociationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1555,7 +1555,7 @@ export const se_UpdateSourceApiAssociationCommand = async (
     take(input, {
       description: [],
       sourceApiAssociationConfig: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1566,7 +1566,7 @@ export const se_UpdateSourceApiAssociationCommand = async (
  */
 export const se_UpdateTypeCommand = async (
   input: UpdateTypeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1580,7 +1580,7 @@ export const se_UpdateTypeCommand = async (
     take(input, {
       definition: [],
       format: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1591,7 +1591,7 @@ export const se_UpdateTypeCommand = async (
  */
 export const de_AssociateApiCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssociateApiCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1612,7 +1612,7 @@ export const de_AssociateApiCommand = async (
  */
 export const de_AssociateMergedGraphqlApiCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssociateMergedGraphqlApiCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1633,7 +1633,7 @@ export const de_AssociateMergedGraphqlApiCommand = async (
  */
 export const de_AssociateSourceGraphqlApiCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssociateSourceGraphqlApiCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1654,7 +1654,7 @@ export const de_AssociateSourceGraphqlApiCommand = async (
  */
 export const de_CreateApiCacheCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateApiCacheCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1675,7 +1675,7 @@ export const de_CreateApiCacheCommand = async (
  */
 export const de_CreateApiKeyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateApiKeyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1696,7 +1696,7 @@ export const de_CreateApiKeyCommand = async (
  */
 export const de_CreateDataSourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateDataSourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1717,7 +1717,7 @@ export const de_CreateDataSourceCommand = async (
  */
 export const de_CreateDomainNameCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateDomainNameCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1738,7 +1738,7 @@ export const de_CreateDomainNameCommand = async (
  */
 export const de_CreateFunctionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateFunctionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1759,7 +1759,7 @@ export const de_CreateFunctionCommand = async (
  */
 export const de_CreateGraphqlApiCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateGraphqlApiCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1780,7 +1780,7 @@ export const de_CreateGraphqlApiCommand = async (
  */
 export const de_CreateResolverCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateResolverCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1801,7 +1801,7 @@ export const de_CreateResolverCommand = async (
  */
 export const de_CreateTypeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateTypeCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1822,7 +1822,7 @@ export const de_CreateTypeCommand = async (
  */
 export const de_DeleteApiCacheCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteApiCacheCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1839,7 +1839,7 @@ export const de_DeleteApiCacheCommand = async (
  */
 export const de_DeleteApiKeyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteApiKeyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1856,7 +1856,7 @@ export const de_DeleteApiKeyCommand = async (
  */
 export const de_DeleteDataSourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteDataSourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1873,7 +1873,7 @@ export const de_DeleteDataSourceCommand = async (
  */
 export const de_DeleteDomainNameCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteDomainNameCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1890,7 +1890,7 @@ export const de_DeleteDomainNameCommand = async (
  */
 export const de_DeleteFunctionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteFunctionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1907,7 +1907,7 @@ export const de_DeleteFunctionCommand = async (
  */
 export const de_DeleteGraphqlApiCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteGraphqlApiCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1924,7 +1924,7 @@ export const de_DeleteGraphqlApiCommand = async (
  */
 export const de_DeleteResolverCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteResolverCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1941,7 +1941,7 @@ export const de_DeleteResolverCommand = async (
  */
 export const de_DeleteTypeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteTypeCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1958,7 +1958,7 @@ export const de_DeleteTypeCommand = async (
  */
 export const de_DisassociateApiCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisassociateApiCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1975,7 +1975,7 @@ export const de_DisassociateApiCommand = async (
  */
 export const de_DisassociateMergedGraphqlApiCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisassociateMergedGraphqlApiCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1996,7 +1996,7 @@ export const de_DisassociateMergedGraphqlApiCommand = async (
  */
 export const de_DisassociateSourceGraphqlApiCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisassociateSourceGraphqlApiCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2017,7 +2017,7 @@ export const de_DisassociateSourceGraphqlApiCommand = async (
  */
 export const de_EvaluateCodeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<EvaluateCodeCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2040,7 +2040,7 @@ export const de_EvaluateCodeCommand = async (
  */
 export const de_EvaluateMappingTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<EvaluateMappingTemplateCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2063,7 +2063,7 @@ export const de_EvaluateMappingTemplateCommand = async (
  */
 export const de_FlushApiCacheCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<FlushApiCacheCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2080,7 +2080,7 @@ export const de_FlushApiCacheCommand = async (
  */
 export const de_GetApiAssociationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetApiAssociationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2101,7 +2101,7 @@ export const de_GetApiAssociationCommand = async (
  */
 export const de_GetApiCacheCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetApiCacheCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2122,7 +2122,7 @@ export const de_GetApiCacheCommand = async (
  */
 export const de_GetDataSourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetDataSourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2143,7 +2143,7 @@ export const de_GetDataSourceCommand = async (
  */
 export const de_GetDataSourceIntrospectionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetDataSourceIntrospectionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2167,7 +2167,7 @@ export const de_GetDataSourceIntrospectionCommand = async (
  */
 export const de_GetDomainNameCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetDomainNameCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2188,7 +2188,7 @@ export const de_GetDomainNameCommand = async (
  */
 export const de_GetFunctionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetFunctionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2209,7 +2209,7 @@ export const de_GetFunctionCommand = async (
  */
 export const de_GetGraphqlApiCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetGraphqlApiCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2230,7 +2230,7 @@ export const de_GetGraphqlApiCommand = async (
  */
 export const de_GetGraphqlApiEnvironmentVariablesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetGraphqlApiEnvironmentVariablesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2251,7 +2251,7 @@ export const de_GetGraphqlApiEnvironmentVariablesCommand = async (
  */
 export const de_GetIntrospectionSchemaCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetIntrospectionSchemaCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2269,7 +2269,7 @@ export const de_GetIntrospectionSchemaCommand = async (
  */
 export const de_GetResolverCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetResolverCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2290,7 +2290,7 @@ export const de_GetResolverCommand = async (
  */
 export const de_GetSchemaCreationStatusCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetSchemaCreationStatusCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2312,7 +2312,7 @@ export const de_GetSchemaCreationStatusCommand = async (
  */
 export const de_GetSourceApiAssociationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetSourceApiAssociationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2333,7 +2333,7 @@ export const de_GetSourceApiAssociationCommand = async (
  */
 export const de_GetTypeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetTypeCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2354,7 +2354,7 @@ export const de_GetTypeCommand = async (
  */
 export const de_ListApiKeysCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListApiKeysCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2376,7 +2376,7 @@ export const de_ListApiKeysCommand = async (
  */
 export const de_ListDataSourcesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListDataSourcesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2398,7 +2398,7 @@ export const de_ListDataSourcesCommand = async (
  */
 export const de_ListDomainNamesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListDomainNamesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2420,7 +2420,7 @@ export const de_ListDomainNamesCommand = async (
  */
 export const de_ListFunctionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListFunctionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2442,7 +2442,7 @@ export const de_ListFunctionsCommand = async (
  */
 export const de_ListGraphqlApisCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListGraphqlApisCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2464,7 +2464,7 @@ export const de_ListGraphqlApisCommand = async (
  */
 export const de_ListResolversCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListResolversCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2486,7 +2486,7 @@ export const de_ListResolversCommand = async (
  */
 export const de_ListResolversByFunctionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListResolversByFunctionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2508,7 +2508,7 @@ export const de_ListResolversByFunctionCommand = async (
  */
 export const de_ListSourceApiAssociationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListSourceApiAssociationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2530,7 +2530,7 @@ export const de_ListSourceApiAssociationsCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2551,7 +2551,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_ListTypesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTypesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2573,7 +2573,7 @@ export const de_ListTypesCommand = async (
  */
 export const de_ListTypesByAssociationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTypesByAssociationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2595,7 +2595,7 @@ export const de_ListTypesByAssociationCommand = async (
  */
 export const de_PutGraphqlApiEnvironmentVariablesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutGraphqlApiEnvironmentVariablesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2616,7 +2616,7 @@ export const de_PutGraphqlApiEnvironmentVariablesCommand = async (
  */
 export const de_StartDataSourceIntrospectionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartDataSourceIntrospectionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2639,7 +2639,7 @@ export const de_StartDataSourceIntrospectionCommand = async (
  */
 export const de_StartSchemaCreationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartSchemaCreationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2660,7 +2660,7 @@ export const de_StartSchemaCreationCommand = async (
  */
 export const de_StartSchemaMergeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartSchemaMergeCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2681,7 +2681,7 @@ export const de_StartSchemaMergeCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2698,7 +2698,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2715,7 +2715,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateApiCacheCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateApiCacheCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2736,7 +2736,7 @@ export const de_UpdateApiCacheCommand = async (
  */
 export const de_UpdateApiKeyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateApiKeyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2757,7 +2757,7 @@ export const de_UpdateApiKeyCommand = async (
  */
 export const de_UpdateDataSourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateDataSourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2778,7 +2778,7 @@ export const de_UpdateDataSourceCommand = async (
  */
 export const de_UpdateDomainNameCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateDomainNameCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2799,7 +2799,7 @@ export const de_UpdateDomainNameCommand = async (
  */
 export const de_UpdateFunctionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateFunctionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2820,7 +2820,7 @@ export const de_UpdateFunctionCommand = async (
  */
 export const de_UpdateGraphqlApiCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateGraphqlApiCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2841,7 +2841,7 @@ export const de_UpdateGraphqlApiCommand = async (
  */
 export const de_UpdateResolverCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateResolverCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2862,7 +2862,7 @@ export const de_UpdateResolverCommand = async (
  */
 export const de_UpdateSourceApiAssociationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateSourceApiAssociationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2883,7 +2883,7 @@ export const de_UpdateSourceApiAssociationCommand = async (
  */
 export const de_UpdateTypeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateTypeCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2958,7 +2958,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2978,7 +2978,7 @@ const de_AccessDeniedExceptionRes = async (
  */
 const de_ApiKeyLimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ApiKeyLimitExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2998,7 +2998,7 @@ const de_ApiKeyLimitExceededExceptionRes = async (
  */
 const de_ApiKeyValidityOutOfBoundsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ApiKeyValidityOutOfBoundsException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -3018,7 +3018,7 @@ const de_ApiKeyValidityOutOfBoundsExceptionRes = async (
  */
 const de_ApiLimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ApiLimitExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -3057,7 +3057,7 @@ const de_BadRequestExceptionRes = async (parsedOutput: any, context: __SerdeCont
  */
 const de_ConcurrentModificationExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ConcurrentModificationException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -3077,7 +3077,7 @@ const de_ConcurrentModificationExceptionRes = async (
  */
 const de_GraphQLSchemaExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GraphQLSchemaException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -3097,7 +3097,7 @@ const de_GraphQLSchemaExceptionRes = async (
  */
 const de_InternalFailureExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalFailureException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -3117,7 +3117,7 @@ const de_InternalFailureExceptionRes = async (
  */
 const de_LimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<LimitExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -3154,7 +3154,7 @@ const de_NotFoundExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_UnauthorizedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UnauthorizedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -3281,7 +3281,7 @@ const de_DataSourceIntrospectionModel = (output: any, context: __SerdeContext): 
  */
 const de_DataSourceIntrospectionModelField = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DataSourceIntrospectionModelField => {
   return take(output, {
     length: __expectLong,
@@ -3295,7 +3295,7 @@ const de_DataSourceIntrospectionModelField = (
  */
 const de_DataSourceIntrospectionModelFields = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DataSourceIntrospectionModelField[] => {
   const retVal = (output || [])
     .filter((e: any) => e != null)
@@ -3310,7 +3310,7 @@ const de_DataSourceIntrospectionModelFields = (
  */
 const de_DataSourceIntrospectionModelFieldType = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DataSourceIntrospectionModelFieldType => {
   return take(output, {
     kind: __expectString,

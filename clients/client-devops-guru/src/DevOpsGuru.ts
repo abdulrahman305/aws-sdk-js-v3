@@ -191,16 +191,16 @@ export interface DevOpsGuru {
    */
   addNotificationChannel(
     args: AddNotificationChannelCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AddNotificationChannelCommandOutput>;
   addNotificationChannel(
     args: AddNotificationChannelCommandInput,
-    cb: (err: any, data?: AddNotificationChannelCommandOutput) => void
+    cb: (err: any, data?: AddNotificationChannelCommandOutput) => void,
   ): void;
   addNotificationChannel(
     args: AddNotificationChannelCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AddNotificationChannelCommandOutput) => void
+    cb: (err: any, data?: AddNotificationChannelCommandOutput) => void,
   ): void;
 
   /**
@@ -211,7 +211,7 @@ export interface DevOpsGuru {
   deleteInsight(
     args: DeleteInsightCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteInsightCommandOutput) => void
+    cb: (err: any, data?: DeleteInsightCommandOutput) => void,
   ): void;
 
   /**
@@ -220,16 +220,16 @@ export interface DevOpsGuru {
   describeAccountHealth(): Promise<DescribeAccountHealthCommandOutput>;
   describeAccountHealth(
     args: DescribeAccountHealthCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeAccountHealthCommandOutput>;
   describeAccountHealth(
     args: DescribeAccountHealthCommandInput,
-    cb: (err: any, data?: DescribeAccountHealthCommandOutput) => void
+    cb: (err: any, data?: DescribeAccountHealthCommandOutput) => void,
   ): void;
   describeAccountHealth(
     args: DescribeAccountHealthCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeAccountHealthCommandOutput) => void
+    cb: (err: any, data?: DescribeAccountHealthCommandOutput) => void,
   ): void;
 
   /**
@@ -237,16 +237,16 @@ export interface DevOpsGuru {
    */
   describeAccountOverview(
     args: DescribeAccountOverviewCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeAccountOverviewCommandOutput>;
   describeAccountOverview(
     args: DescribeAccountOverviewCommandInput,
-    cb: (err: any, data?: DescribeAccountOverviewCommandOutput) => void
+    cb: (err: any, data?: DescribeAccountOverviewCommandOutput) => void,
   ): void;
   describeAccountOverview(
     args: DescribeAccountOverviewCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeAccountOverviewCommandOutput) => void
+    cb: (err: any, data?: DescribeAccountOverviewCommandOutput) => void,
   ): void;
 
   /**
@@ -254,13 +254,13 @@ export interface DevOpsGuru {
    */
   describeAnomaly(
     args: DescribeAnomalyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeAnomalyCommandOutput>;
   describeAnomaly(args: DescribeAnomalyCommandInput, cb: (err: any, data?: DescribeAnomalyCommandOutput) => void): void;
   describeAnomaly(
     args: DescribeAnomalyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeAnomalyCommandOutput) => void
+    cb: (err: any, data?: DescribeAnomalyCommandOutput) => void,
   ): void;
 
   /**
@@ -269,16 +269,16 @@ export interface DevOpsGuru {
   describeEventSourcesConfig(): Promise<DescribeEventSourcesConfigCommandOutput>;
   describeEventSourcesConfig(
     args: DescribeEventSourcesConfigCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeEventSourcesConfigCommandOutput>;
   describeEventSourcesConfig(
     args: DescribeEventSourcesConfigCommandInput,
-    cb: (err: any, data?: DescribeEventSourcesConfigCommandOutput) => void
+    cb: (err: any, data?: DescribeEventSourcesConfigCommandOutput) => void,
   ): void;
   describeEventSourcesConfig(
     args: DescribeEventSourcesConfigCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeEventSourcesConfigCommandOutput) => void
+    cb: (err: any, data?: DescribeEventSourcesConfigCommandOutput) => void,
   ): void;
 
   /**
@@ -287,16 +287,16 @@ export interface DevOpsGuru {
   describeFeedback(): Promise<DescribeFeedbackCommandOutput>;
   describeFeedback(
     args: DescribeFeedbackCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeFeedbackCommandOutput>;
   describeFeedback(
     args: DescribeFeedbackCommandInput,
-    cb: (err: any, data?: DescribeFeedbackCommandOutput) => void
+    cb: (err: any, data?: DescribeFeedbackCommandOutput) => void,
   ): void;
   describeFeedback(
     args: DescribeFeedbackCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeFeedbackCommandOutput) => void
+    cb: (err: any, data?: DescribeFeedbackCommandOutput) => void,
   ): void;
 
   /**
@@ -304,13 +304,13 @@ export interface DevOpsGuru {
    */
   describeInsight(
     args: DescribeInsightCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeInsightCommandOutput>;
   describeInsight(args: DescribeInsightCommandInput, cb: (err: any, data?: DescribeInsightCommandOutput) => void): void;
   describeInsight(
     args: DescribeInsightCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeInsightCommandOutput) => void
+    cb: (err: any, data?: DescribeInsightCommandOutput) => void,
   ): void;
 
   /**
@@ -319,16 +319,16 @@ export interface DevOpsGuru {
   describeOrganizationHealth(): Promise<DescribeOrganizationHealthCommandOutput>;
   describeOrganizationHealth(
     args: DescribeOrganizationHealthCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeOrganizationHealthCommandOutput>;
   describeOrganizationHealth(
     args: DescribeOrganizationHealthCommandInput,
-    cb: (err: any, data?: DescribeOrganizationHealthCommandOutput) => void
+    cb: (err: any, data?: DescribeOrganizationHealthCommandOutput) => void,
   ): void;
   describeOrganizationHealth(
     args: DescribeOrganizationHealthCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeOrganizationHealthCommandOutput) => void
+    cb: (err: any, data?: DescribeOrganizationHealthCommandOutput) => void,
   ): void;
 
   /**
@@ -336,16 +336,16 @@ export interface DevOpsGuru {
    */
   describeOrganizationOverview(
     args: DescribeOrganizationOverviewCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeOrganizationOverviewCommandOutput>;
   describeOrganizationOverview(
     args: DescribeOrganizationOverviewCommandInput,
-    cb: (err: any, data?: DescribeOrganizationOverviewCommandOutput) => void
+    cb: (err: any, data?: DescribeOrganizationOverviewCommandOutput) => void,
   ): void;
   describeOrganizationOverview(
     args: DescribeOrganizationOverviewCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeOrganizationOverviewCommandOutput) => void
+    cb: (err: any, data?: DescribeOrganizationOverviewCommandOutput) => void,
   ): void;
 
   /**
@@ -353,16 +353,16 @@ export interface DevOpsGuru {
    */
   describeOrganizationResourceCollectionHealth(
     args: DescribeOrganizationResourceCollectionHealthCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeOrganizationResourceCollectionHealthCommandOutput>;
   describeOrganizationResourceCollectionHealth(
     args: DescribeOrganizationResourceCollectionHealthCommandInput,
-    cb: (err: any, data?: DescribeOrganizationResourceCollectionHealthCommandOutput) => void
+    cb: (err: any, data?: DescribeOrganizationResourceCollectionHealthCommandOutput) => void,
   ): void;
   describeOrganizationResourceCollectionHealth(
     args: DescribeOrganizationResourceCollectionHealthCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeOrganizationResourceCollectionHealthCommandOutput) => void
+    cb: (err: any, data?: DescribeOrganizationResourceCollectionHealthCommandOutput) => void,
   ): void;
 
   /**
@@ -370,16 +370,16 @@ export interface DevOpsGuru {
    */
   describeResourceCollectionHealth(
     args: DescribeResourceCollectionHealthCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeResourceCollectionHealthCommandOutput>;
   describeResourceCollectionHealth(
     args: DescribeResourceCollectionHealthCommandInput,
-    cb: (err: any, data?: DescribeResourceCollectionHealthCommandOutput) => void
+    cb: (err: any, data?: DescribeResourceCollectionHealthCommandOutput) => void,
   ): void;
   describeResourceCollectionHealth(
     args: DescribeResourceCollectionHealthCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeResourceCollectionHealthCommandOutput) => void
+    cb: (err: any, data?: DescribeResourceCollectionHealthCommandOutput) => void,
   ): void;
 
   /**
@@ -388,16 +388,16 @@ export interface DevOpsGuru {
   describeServiceIntegration(): Promise<DescribeServiceIntegrationCommandOutput>;
   describeServiceIntegration(
     args: DescribeServiceIntegrationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeServiceIntegrationCommandOutput>;
   describeServiceIntegration(
     args: DescribeServiceIntegrationCommandInput,
-    cb: (err: any, data?: DescribeServiceIntegrationCommandOutput) => void
+    cb: (err: any, data?: DescribeServiceIntegrationCommandOutput) => void,
   ): void;
   describeServiceIntegration(
     args: DescribeServiceIntegrationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeServiceIntegrationCommandOutput) => void
+    cb: (err: any, data?: DescribeServiceIntegrationCommandOutput) => void,
   ): void;
 
   /**
@@ -406,16 +406,16 @@ export interface DevOpsGuru {
   getCostEstimation(): Promise<GetCostEstimationCommandOutput>;
   getCostEstimation(
     args: GetCostEstimationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetCostEstimationCommandOutput>;
   getCostEstimation(
     args: GetCostEstimationCommandInput,
-    cb: (err: any, data?: GetCostEstimationCommandOutput) => void
+    cb: (err: any, data?: GetCostEstimationCommandOutput) => void,
   ): void;
   getCostEstimation(
     args: GetCostEstimationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetCostEstimationCommandOutput) => void
+    cb: (err: any, data?: GetCostEstimationCommandOutput) => void,
   ): void;
 
   /**
@@ -423,16 +423,16 @@ export interface DevOpsGuru {
    */
   getResourceCollection(
     args: GetResourceCollectionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetResourceCollectionCommandOutput>;
   getResourceCollection(
     args: GetResourceCollectionCommandInput,
-    cb: (err: any, data?: GetResourceCollectionCommandOutput) => void
+    cb: (err: any, data?: GetResourceCollectionCommandOutput) => void,
   ): void;
   getResourceCollection(
     args: GetResourceCollectionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetResourceCollectionCommandOutput) => void
+    cb: (err: any, data?: GetResourceCollectionCommandOutput) => void,
   ): void;
 
   /**
@@ -440,16 +440,16 @@ export interface DevOpsGuru {
    */
   listAnomaliesForInsight(
     args: ListAnomaliesForInsightCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListAnomaliesForInsightCommandOutput>;
   listAnomaliesForInsight(
     args: ListAnomaliesForInsightCommandInput,
-    cb: (err: any, data?: ListAnomaliesForInsightCommandOutput) => void
+    cb: (err: any, data?: ListAnomaliesForInsightCommandOutput) => void,
   ): void;
   listAnomaliesForInsight(
     args: ListAnomaliesForInsightCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListAnomaliesForInsightCommandOutput) => void
+    cb: (err: any, data?: ListAnomaliesForInsightCommandOutput) => void,
   ): void;
 
   /**
@@ -457,16 +457,16 @@ export interface DevOpsGuru {
    */
   listAnomalousLogGroups(
     args: ListAnomalousLogGroupsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListAnomalousLogGroupsCommandOutput>;
   listAnomalousLogGroups(
     args: ListAnomalousLogGroupsCommandInput,
-    cb: (err: any, data?: ListAnomalousLogGroupsCommandOutput) => void
+    cb: (err: any, data?: ListAnomalousLogGroupsCommandOutput) => void,
   ): void;
   listAnomalousLogGroups(
     args: ListAnomalousLogGroupsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListAnomalousLogGroupsCommandOutput) => void
+    cb: (err: any, data?: ListAnomalousLogGroupsCommandOutput) => void,
   ): void;
 
   /**
@@ -477,7 +477,7 @@ export interface DevOpsGuru {
   listEvents(
     args: ListEventsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListEventsCommandOutput) => void
+    cb: (err: any, data?: ListEventsCommandOutput) => void,
   ): void;
 
   /**
@@ -488,7 +488,7 @@ export interface DevOpsGuru {
   listInsights(
     args: ListInsightsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListInsightsCommandOutput) => void
+    cb: (err: any, data?: ListInsightsCommandOutput) => void,
   ): void;
 
   /**
@@ -497,16 +497,16 @@ export interface DevOpsGuru {
   listMonitoredResources(): Promise<ListMonitoredResourcesCommandOutput>;
   listMonitoredResources(
     args: ListMonitoredResourcesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListMonitoredResourcesCommandOutput>;
   listMonitoredResources(
     args: ListMonitoredResourcesCommandInput,
-    cb: (err: any, data?: ListMonitoredResourcesCommandOutput) => void
+    cb: (err: any, data?: ListMonitoredResourcesCommandOutput) => void,
   ): void;
   listMonitoredResources(
     args: ListMonitoredResourcesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListMonitoredResourcesCommandOutput) => void
+    cb: (err: any, data?: ListMonitoredResourcesCommandOutput) => void,
   ): void;
 
   /**
@@ -515,16 +515,16 @@ export interface DevOpsGuru {
   listNotificationChannels(): Promise<ListNotificationChannelsCommandOutput>;
   listNotificationChannels(
     args: ListNotificationChannelsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListNotificationChannelsCommandOutput>;
   listNotificationChannels(
     args: ListNotificationChannelsCommandInput,
-    cb: (err: any, data?: ListNotificationChannelsCommandOutput) => void
+    cb: (err: any, data?: ListNotificationChannelsCommandOutput) => void,
   ): void;
   listNotificationChannels(
     args: ListNotificationChannelsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListNotificationChannelsCommandOutput) => void
+    cb: (err: any, data?: ListNotificationChannelsCommandOutput) => void,
   ): void;
 
   /**
@@ -532,16 +532,16 @@ export interface DevOpsGuru {
    */
   listOrganizationInsights(
     args: ListOrganizationInsightsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListOrganizationInsightsCommandOutput>;
   listOrganizationInsights(
     args: ListOrganizationInsightsCommandInput,
-    cb: (err: any, data?: ListOrganizationInsightsCommandOutput) => void
+    cb: (err: any, data?: ListOrganizationInsightsCommandOutput) => void,
   ): void;
   listOrganizationInsights(
     args: ListOrganizationInsightsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListOrganizationInsightsCommandOutput) => void
+    cb: (err: any, data?: ListOrganizationInsightsCommandOutput) => void,
   ): void;
 
   /**
@@ -549,16 +549,16 @@ export interface DevOpsGuru {
    */
   listRecommendations(
     args: ListRecommendationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListRecommendationsCommandOutput>;
   listRecommendations(
     args: ListRecommendationsCommandInput,
-    cb: (err: any, data?: ListRecommendationsCommandOutput) => void
+    cb: (err: any, data?: ListRecommendationsCommandOutput) => void,
   ): void;
   listRecommendations(
     args: ListRecommendationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListRecommendationsCommandOutput) => void
+    cb: (err: any, data?: ListRecommendationsCommandOutput) => void,
   ): void;
 
   /**
@@ -570,7 +570,7 @@ export interface DevOpsGuru {
   putFeedback(
     args: PutFeedbackCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutFeedbackCommandOutput) => void
+    cb: (err: any, data?: PutFeedbackCommandOutput) => void,
   ): void;
 
   /**
@@ -578,16 +578,16 @@ export interface DevOpsGuru {
    */
   removeNotificationChannel(
     args: RemoveNotificationChannelCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<RemoveNotificationChannelCommandOutput>;
   removeNotificationChannel(
     args: RemoveNotificationChannelCommandInput,
-    cb: (err: any, data?: RemoveNotificationChannelCommandOutput) => void
+    cb: (err: any, data?: RemoveNotificationChannelCommandOutput) => void,
   ): void;
   removeNotificationChannel(
     args: RemoveNotificationChannelCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RemoveNotificationChannelCommandOutput) => void
+    cb: (err: any, data?: RemoveNotificationChannelCommandOutput) => void,
   ): void;
 
   /**
@@ -595,13 +595,13 @@ export interface DevOpsGuru {
    */
   searchInsights(
     args: SearchInsightsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<SearchInsightsCommandOutput>;
   searchInsights(args: SearchInsightsCommandInput, cb: (err: any, data?: SearchInsightsCommandOutput) => void): void;
   searchInsights(
     args: SearchInsightsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SearchInsightsCommandOutput) => void
+    cb: (err: any, data?: SearchInsightsCommandOutput) => void,
   ): void;
 
   /**
@@ -609,16 +609,16 @@ export interface DevOpsGuru {
    */
   searchOrganizationInsights(
     args: SearchOrganizationInsightsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<SearchOrganizationInsightsCommandOutput>;
   searchOrganizationInsights(
     args: SearchOrganizationInsightsCommandInput,
-    cb: (err: any, data?: SearchOrganizationInsightsCommandOutput) => void
+    cb: (err: any, data?: SearchOrganizationInsightsCommandOutput) => void,
   ): void;
   searchOrganizationInsights(
     args: SearchOrganizationInsightsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SearchOrganizationInsightsCommandOutput) => void
+    cb: (err: any, data?: SearchOrganizationInsightsCommandOutput) => void,
   ): void;
 
   /**
@@ -626,16 +626,16 @@ export interface DevOpsGuru {
    */
   startCostEstimation(
     args: StartCostEstimationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartCostEstimationCommandOutput>;
   startCostEstimation(
     args: StartCostEstimationCommandInput,
-    cb: (err: any, data?: StartCostEstimationCommandOutput) => void
+    cb: (err: any, data?: StartCostEstimationCommandOutput) => void,
   ): void;
   startCostEstimation(
     args: StartCostEstimationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartCostEstimationCommandOutput) => void
+    cb: (err: any, data?: StartCostEstimationCommandOutput) => void,
   ): void;
 
   /**
@@ -644,16 +644,16 @@ export interface DevOpsGuru {
   updateEventSourcesConfig(): Promise<UpdateEventSourcesConfigCommandOutput>;
   updateEventSourcesConfig(
     args: UpdateEventSourcesConfigCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateEventSourcesConfigCommandOutput>;
   updateEventSourcesConfig(
     args: UpdateEventSourcesConfigCommandInput,
-    cb: (err: any, data?: UpdateEventSourcesConfigCommandOutput) => void
+    cb: (err: any, data?: UpdateEventSourcesConfigCommandOutput) => void,
   ): void;
   updateEventSourcesConfig(
     args: UpdateEventSourcesConfigCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateEventSourcesConfigCommandOutput) => void
+    cb: (err: any, data?: UpdateEventSourcesConfigCommandOutput) => void,
   ): void;
 
   /**
@@ -661,16 +661,16 @@ export interface DevOpsGuru {
    */
   updateResourceCollection(
     args: UpdateResourceCollectionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateResourceCollectionCommandOutput>;
   updateResourceCollection(
     args: UpdateResourceCollectionCommandInput,
-    cb: (err: any, data?: UpdateResourceCollectionCommandOutput) => void
+    cb: (err: any, data?: UpdateResourceCollectionCommandOutput) => void,
   ): void;
   updateResourceCollection(
     args: UpdateResourceCollectionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateResourceCollectionCommandOutput) => void
+    cb: (err: any, data?: UpdateResourceCollectionCommandOutput) => void,
   ): void;
 
   /**
@@ -678,16 +678,16 @@ export interface DevOpsGuru {
    */
   updateServiceIntegration(
     args: UpdateServiceIntegrationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateServiceIntegrationCommandOutput>;
   updateServiceIntegration(
     args: UpdateServiceIntegrationCommandInput,
-    cb: (err: any, data?: UpdateServiceIntegrationCommandOutput) => void
+    cb: (err: any, data?: UpdateServiceIntegrationCommandOutput) => void,
   ): void;
   updateServiceIntegration(
     args: UpdateServiceIntegrationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateServiceIntegrationCommandOutput) => void
+    cb: (err: any, data?: UpdateServiceIntegrationCommandOutput) => void,
   ): void;
 }
 

@@ -2953,7 +2953,7 @@ export const CreateConfigurationProfileRequestFilterSensitiveLog = (obj: CreateC
  * @internal
  */
 export const CreateHostedConfigurationVersionRequestFilterSensitiveLog = (
-  obj: CreateHostedConfigurationVersionRequest
+  obj: CreateHostedConfigurationVersionRequest,
 ): any => ({
   ...obj,
   ...(obj.Content && { Content: SENSITIVE_STRING }),

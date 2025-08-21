@@ -29,7 +29,7 @@ interface PreviouslyResolved {}
 export const s3ExpiresMiddleware = (config: PreviouslyResolved): DeserializeMiddleware<any, any> => {
   return <Output extends MetadataBearer>(
       next: DeserializeHandler<any, Output>,
-      context: HandlerExecutionContext
+      context: HandlerExecutionContext,
     ): DeserializeHandler<any, Output> =>
     async (args: DeserializeHandlerArguments<any>): Promise<DeserializeHandlerOutput<Output>> => {
       const result = await next(args);
@@ -41,7 +41,7 @@ export const s3ExpiresMiddleware = (config: PreviouslyResolved): DeserializeMidd
             parseRfc7231DateTime(response.headers.expires);
           } catch (e) {
             context.logger?.warn(
-              `AWS SDK Warning for ${context.clientName}::${context.commandName} response parsing (${response.headers.expires}): ${e}`
+              `AWS SDK Warning for ${context.clientName}::${context.commandName} response parsing (${response.headers.expires}): ${e}`,
             );
             delete response.headers.expires;
           }

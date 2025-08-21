@@ -168,7 +168,7 @@ import {
  */
 export const se_CreateEnvironmentCommand = async (
   input: CreateEnvironmentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -186,7 +186,7 @@ export const se_CreateEnvironmentCommand = async (
       name: [],
       superuserParameters: (_) => _json(_),
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -197,7 +197,7 @@ export const se_CreateEnvironmentCommand = async (
  */
 export const se_CreateKxChangesetCommand = async (
   input: CreateKxChangesetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -211,7 +211,7 @@ export const se_CreateKxChangesetCommand = async (
     take(input, {
       changeRequests: (_) => _json(_),
       clientToken: [true, (_) => _ ?? generateIdempotencyToken()],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -222,7 +222,7 @@ export const se_CreateKxChangesetCommand = async (
  */
 export const se_CreateKxClusterCommand = async (
   input: CreateKxClusterCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -253,7 +253,7 @@ export const se_CreateKxClusterCommand = async (
       tags: (_) => _json(_),
       tickerplantLogConfiguration: (_) => _json(_),
       vpcConfiguration: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -264,7 +264,7 @@ export const se_CreateKxClusterCommand = async (
  */
 export const se_CreateKxDatabaseCommand = async (
   input: CreateKxDatabaseCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -279,7 +279,7 @@ export const se_CreateKxDatabaseCommand = async (
       databaseName: [],
       description: [],
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -290,7 +290,7 @@ export const se_CreateKxDatabaseCommand = async (
  */
 export const se_CreateKxDataviewCommand = async (
   input: CreateKxDataviewCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -312,7 +312,7 @@ export const se_CreateKxDataviewCommand = async (
       readWrite: [],
       segmentConfigurations: (_) => _json(_),
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -323,7 +323,7 @@ export const se_CreateKxDataviewCommand = async (
  */
 export const se_CreateKxEnvironmentCommand = async (
   input: CreateKxEnvironmentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -338,7 +338,7 @@ export const se_CreateKxEnvironmentCommand = async (
       kmsKeyId: [],
       name: [],
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -349,7 +349,7 @@ export const se_CreateKxEnvironmentCommand = async (
  */
 export const se_CreateKxScalingGroupCommand = async (
   input: CreateKxScalingGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -365,7 +365,7 @@ export const se_CreateKxScalingGroupCommand = async (
       hostType: [],
       scalingGroupName: [],
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -376,7 +376,7 @@ export const se_CreateKxScalingGroupCommand = async (
  */
 export const se_CreateKxUserCommand = async (
   input: CreateKxUserCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -391,7 +391,7 @@ export const se_CreateKxUserCommand = async (
       iamRole: [],
       tags: (_) => _json(_),
       userName: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -402,7 +402,7 @@ export const se_CreateKxUserCommand = async (
  */
 export const se_CreateKxVolumeCommand = async (
   input: CreateKxVolumeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -421,7 +421,7 @@ export const se_CreateKxVolumeCommand = async (
       tags: (_) => _json(_),
       volumeName: [],
       volumeType: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -432,7 +432,7 @@ export const se_CreateKxVolumeCommand = async (
  */
 export const se_DeleteEnvironmentCommand = async (
   input: DeleteEnvironmentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -448,7 +448,7 @@ export const se_DeleteEnvironmentCommand = async (
  */
 export const se_DeleteKxClusterCommand = async (
   input: DeleteKxClusterCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -468,7 +468,7 @@ export const se_DeleteKxClusterCommand = async (
  */
 export const se_DeleteKxClusterNodeCommand = async (
   input: DeleteKxClusterNodeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -486,7 +486,7 @@ export const se_DeleteKxClusterNodeCommand = async (
  */
 export const se_DeleteKxDatabaseCommand = async (
   input: DeleteKxDatabaseCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -506,7 +506,7 @@ export const se_DeleteKxDatabaseCommand = async (
  */
 export const se_DeleteKxDataviewCommand = async (
   input: DeleteKxDataviewCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -527,7 +527,7 @@ export const se_DeleteKxDataviewCommand = async (
  */
 export const se_DeleteKxEnvironmentCommand = async (
   input: DeleteKxEnvironmentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -546,7 +546,7 @@ export const se_DeleteKxEnvironmentCommand = async (
  */
 export const se_DeleteKxScalingGroupCommand = async (
   input: DeleteKxScalingGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -566,7 +566,7 @@ export const se_DeleteKxScalingGroupCommand = async (
  */
 export const se_DeleteKxUserCommand = async (
   input: DeleteKxUserCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -586,7 +586,7 @@ export const se_DeleteKxUserCommand = async (
  */
 export const se_DeleteKxVolumeCommand = async (
   input: DeleteKxVolumeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -606,7 +606,7 @@ export const se_DeleteKxVolumeCommand = async (
  */
 export const se_GetEnvironmentCommand = async (
   input: GetEnvironmentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -622,7 +622,7 @@ export const se_GetEnvironmentCommand = async (
  */
 export const se_GetKxChangesetCommand = async (
   input: GetKxChangesetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -640,7 +640,7 @@ export const se_GetKxChangesetCommand = async (
  */
 export const se_GetKxClusterCommand = async (
   input: GetKxClusterCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -657,7 +657,7 @@ export const se_GetKxClusterCommand = async (
  */
 export const se_GetKxConnectionStringCommand = async (
   input: GetKxConnectionStringCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -677,7 +677,7 @@ export const se_GetKxConnectionStringCommand = async (
  */
 export const se_GetKxDatabaseCommand = async (
   input: GetKxDatabaseCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -694,7 +694,7 @@ export const se_GetKxDatabaseCommand = async (
  */
 export const se_GetKxDataviewCommand = async (
   input: GetKxDataviewCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -712,7 +712,7 @@ export const se_GetKxDataviewCommand = async (
  */
 export const se_GetKxEnvironmentCommand = async (
   input: GetKxEnvironmentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -728,7 +728,7 @@ export const se_GetKxEnvironmentCommand = async (
  */
 export const se_GetKxScalingGroupCommand = async (
   input: GetKxScalingGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -745,7 +745,7 @@ export const se_GetKxScalingGroupCommand = async (
  */
 export const se_GetKxUserCommand = async (
   input: GetKxUserCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -762,7 +762,7 @@ export const se_GetKxUserCommand = async (
  */
 export const se_GetKxVolumeCommand = async (
   input: GetKxVolumeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -779,7 +779,7 @@ export const se_GetKxVolumeCommand = async (
  */
 export const se_ListEnvironmentsCommand = async (
   input: ListEnvironmentsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -798,7 +798,7 @@ export const se_ListEnvironmentsCommand = async (
  */
 export const se_ListKxChangesetsCommand = async (
   input: ListKxChangesetsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -819,7 +819,7 @@ export const se_ListKxChangesetsCommand = async (
  */
 export const se_ListKxClusterNodesCommand = async (
   input: ListKxClusterNodesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -840,7 +840,7 @@ export const se_ListKxClusterNodesCommand = async (
  */
 export const se_ListKxClustersCommand = async (
   input: ListKxClustersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -861,7 +861,7 @@ export const se_ListKxClustersCommand = async (
  */
 export const se_ListKxDatabasesCommand = async (
   input: ListKxDatabasesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -881,7 +881,7 @@ export const se_ListKxDatabasesCommand = async (
  */
 export const se_ListKxDataviewsCommand = async (
   input: ListKxDataviewsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -902,7 +902,7 @@ export const se_ListKxDataviewsCommand = async (
  */
 export const se_ListKxEnvironmentsCommand = async (
   input: ListKxEnvironmentsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -921,7 +921,7 @@ export const se_ListKxEnvironmentsCommand = async (
  */
 export const se_ListKxScalingGroupsCommand = async (
   input: ListKxScalingGroupsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -941,7 +941,7 @@ export const se_ListKxScalingGroupsCommand = async (
  */
 export const se_ListKxUsersCommand = async (
   input: ListKxUsersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -961,7 +961,7 @@ export const se_ListKxUsersCommand = async (
  */
 export const se_ListKxVolumesCommand = async (
   input: ListKxVolumesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -982,7 +982,7 @@ export const se_ListKxVolumesCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -998,7 +998,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1010,7 +1010,7 @@ export const se_TagResourceCommand = async (
   body = JSON.stringify(
     take(input, {
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1021,7 +1021,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1043,7 +1043,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateEnvironmentCommand = async (
   input: UpdateEnvironmentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1058,7 +1058,7 @@ export const se_UpdateEnvironmentCommand = async (
       federationMode: [],
       federationParameters: (_) => _json(_),
       name: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1069,7 +1069,7 @@ export const se_UpdateEnvironmentCommand = async (
  */
 export const se_UpdateKxClusterCodeConfigurationCommand = async (
   input: UpdateKxClusterCodeConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1086,7 +1086,7 @@ export const se_UpdateKxClusterCodeConfigurationCommand = async (
       commandLineArguments: (_) => _json(_),
       deploymentConfiguration: (_) => _json(_),
       initializationScript: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1097,7 +1097,7 @@ export const se_UpdateKxClusterCodeConfigurationCommand = async (
  */
 export const se_UpdateKxClusterDatabasesCommand = async (
   input: UpdateKxClusterDatabasesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1112,7 +1112,7 @@ export const se_UpdateKxClusterDatabasesCommand = async (
       clientToken: [true, (_) => _ ?? generateIdempotencyToken()],
       databases: (_) => _json(_),
       deploymentConfiguration: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1123,7 +1123,7 @@ export const se_UpdateKxClusterDatabasesCommand = async (
  */
 export const se_UpdateKxDatabaseCommand = async (
   input: UpdateKxDatabaseCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1137,7 +1137,7 @@ export const se_UpdateKxDatabaseCommand = async (
     take(input, {
       clientToken: [true, (_) => _ ?? generateIdempotencyToken()],
       description: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1148,7 +1148,7 @@ export const se_UpdateKxDatabaseCommand = async (
  */
 export const se_UpdateKxDataviewCommand = async (
   input: UpdateKxDataviewCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1165,7 +1165,7 @@ export const se_UpdateKxDataviewCommand = async (
       clientToken: [true, (_) => _ ?? generateIdempotencyToken()],
       description: [],
       segmentConfigurations: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1176,7 +1176,7 @@ export const se_UpdateKxDataviewCommand = async (
  */
 export const se_UpdateKxEnvironmentCommand = async (
   input: UpdateKxEnvironmentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1190,7 +1190,7 @@ export const se_UpdateKxEnvironmentCommand = async (
       clientToken: [true, (_) => _ ?? generateIdempotencyToken()],
       description: [],
       name: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1201,7 +1201,7 @@ export const se_UpdateKxEnvironmentCommand = async (
  */
 export const se_UpdateKxEnvironmentNetworkCommand = async (
   input: UpdateKxEnvironmentNetworkCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1215,7 +1215,7 @@ export const se_UpdateKxEnvironmentNetworkCommand = async (
       clientToken: [true, (_) => _ ?? generateIdempotencyToken()],
       customDNSConfiguration: (_) => _json(_),
       transitGatewayConfiguration: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1226,7 +1226,7 @@ export const se_UpdateKxEnvironmentNetworkCommand = async (
  */
 export const se_UpdateKxUserCommand = async (
   input: UpdateKxUserCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1240,7 +1240,7 @@ export const se_UpdateKxUserCommand = async (
     take(input, {
       clientToken: [true, (_) => _ ?? generateIdempotencyToken()],
       iamRole: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1251,7 +1251,7 @@ export const se_UpdateKxUserCommand = async (
  */
 export const se_UpdateKxVolumeCommand = async (
   input: UpdateKxVolumeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1266,7 +1266,7 @@ export const se_UpdateKxVolumeCommand = async (
       clientToken: [true, (_) => _ ?? generateIdempotencyToken()],
       description: [],
       nas1Configuration: (_) => _json(_),
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -1277,7 +1277,7 @@ export const se_UpdateKxVolumeCommand = async (
  */
 export const de_CreateEnvironmentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateEnvironmentCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1300,7 +1300,7 @@ export const de_CreateEnvironmentCommand = async (
  */
 export const de_CreateKxChangesetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateKxChangesetCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1328,7 +1328,7 @@ export const de_CreateKxChangesetCommand = async (
  */
 export const de_CreateKxClusterCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateKxClusterCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1372,7 +1372,7 @@ export const de_CreateKxClusterCommand = async (
  */
 export const de_CreateKxDatabaseCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateKxDatabaseCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1398,7 +1398,7 @@ export const de_CreateKxDatabaseCommand = async (
  */
 export const de_CreateKxDataviewCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateKxDataviewCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1431,7 +1431,7 @@ export const de_CreateKxDataviewCommand = async (
  */
 export const de_CreateKxEnvironmentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateKxEnvironmentCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1458,7 +1458,7 @@ export const de_CreateKxEnvironmentCommand = async (
  */
 export const de_CreateKxScalingGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateKxScalingGroupCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1485,7 +1485,7 @@ export const de_CreateKxScalingGroupCommand = async (
  */
 export const de_CreateKxUserCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateKxUserCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1509,7 +1509,7 @@ export const de_CreateKxUserCommand = async (
  */
 export const de_CreateKxVolumeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateKxVolumeCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1540,7 +1540,7 @@ export const de_CreateKxVolumeCommand = async (
  */
 export const de_DeleteEnvironmentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteEnvironmentCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1557,7 +1557,7 @@ export const de_DeleteEnvironmentCommand = async (
  */
 export const de_DeleteKxClusterCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteKxClusterCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1574,7 +1574,7 @@ export const de_DeleteKxClusterCommand = async (
  */
 export const de_DeleteKxClusterNodeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteKxClusterNodeCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1591,7 +1591,7 @@ export const de_DeleteKxClusterNodeCommand = async (
  */
 export const de_DeleteKxDatabaseCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteKxDatabaseCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1608,7 +1608,7 @@ export const de_DeleteKxDatabaseCommand = async (
  */
 export const de_DeleteKxDataviewCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteKxDataviewCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1625,7 +1625,7 @@ export const de_DeleteKxDataviewCommand = async (
  */
 export const de_DeleteKxEnvironmentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteKxEnvironmentCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1642,7 +1642,7 @@ export const de_DeleteKxEnvironmentCommand = async (
  */
 export const de_DeleteKxScalingGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteKxScalingGroupCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1659,7 +1659,7 @@ export const de_DeleteKxScalingGroupCommand = async (
  */
 export const de_DeleteKxUserCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteKxUserCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1676,7 +1676,7 @@ export const de_DeleteKxUserCommand = async (
  */
 export const de_DeleteKxVolumeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteKxVolumeCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1693,7 +1693,7 @@ export const de_DeleteKxVolumeCommand = async (
  */
 export const de_GetEnvironmentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetEnvironmentCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1714,7 +1714,7 @@ export const de_GetEnvironmentCommand = async (
  */
 export const de_GetKxChangesetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetKxChangesetCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1743,7 +1743,7 @@ export const de_GetKxChangesetCommand = async (
  */
 export const de_GetKxClusterCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetKxClusterCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1786,7 +1786,7 @@ export const de_GetKxClusterCommand = async (
  */
 export const de_GetKxConnectionStringCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetKxConnectionStringCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1807,7 +1807,7 @@ export const de_GetKxConnectionStringCommand = async (
  */
 export const de_GetKxDatabaseCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetKxDatabaseCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1837,7 +1837,7 @@ export const de_GetKxDatabaseCommand = async (
  */
 export const de_GetKxDataviewCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetKxDataviewCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1872,7 +1872,7 @@ export const de_GetKxDataviewCommand = async (
  */
 export const de_GetKxEnvironmentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetKxEnvironmentCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1909,7 +1909,7 @@ export const de_GetKxEnvironmentCommand = async (
  */
 export const de_GetKxScalingGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetKxScalingGroupCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1938,7 +1938,7 @@ export const de_GetKxScalingGroupCommand = async (
  */
 export const de_GetKxUserCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetKxUserCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1962,7 +1962,7 @@ export const de_GetKxUserCommand = async (
  */
 export const de_GetKxVolumeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetKxVolumeCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1995,7 +1995,7 @@ export const de_GetKxVolumeCommand = async (
  */
 export const de_ListEnvironmentsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListEnvironmentsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2017,7 +2017,7 @@ export const de_ListEnvironmentsCommand = async (
  */
 export const de_ListKxChangesetsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListKxChangesetsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2039,7 +2039,7 @@ export const de_ListKxChangesetsCommand = async (
  */
 export const de_ListKxClusterNodesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListKxClusterNodesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2061,7 +2061,7 @@ export const de_ListKxClusterNodesCommand = async (
  */
 export const de_ListKxClustersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListKxClustersCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2083,7 +2083,7 @@ export const de_ListKxClustersCommand = async (
  */
 export const de_ListKxDatabasesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListKxDatabasesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2105,7 +2105,7 @@ export const de_ListKxDatabasesCommand = async (
  */
 export const de_ListKxDataviewsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListKxDataviewsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2127,7 +2127,7 @@ export const de_ListKxDataviewsCommand = async (
  */
 export const de_ListKxEnvironmentsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListKxEnvironmentsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2149,7 +2149,7 @@ export const de_ListKxEnvironmentsCommand = async (
  */
 export const de_ListKxScalingGroupsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListKxScalingGroupsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2171,7 +2171,7 @@ export const de_ListKxScalingGroupsCommand = async (
  */
 export const de_ListKxUsersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListKxUsersCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2193,7 +2193,7 @@ export const de_ListKxUsersCommand = async (
  */
 export const de_ListKxVolumesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListKxVolumesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2215,7 +2215,7 @@ export const de_ListKxVolumesCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2236,7 +2236,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2253,7 +2253,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2270,7 +2270,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateEnvironmentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateEnvironmentCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2291,7 +2291,7 @@ export const de_UpdateEnvironmentCommand = async (
  */
 export const de_UpdateKxClusterCodeConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateKxClusterCodeConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2308,7 +2308,7 @@ export const de_UpdateKxClusterCodeConfigurationCommand = async (
  */
 export const de_UpdateKxClusterDatabasesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateKxClusterDatabasesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2325,7 +2325,7 @@ export const de_UpdateKxClusterDatabasesCommand = async (
  */
 export const de_UpdateKxDatabaseCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateKxDatabaseCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2349,7 +2349,7 @@ export const de_UpdateKxDatabaseCommand = async (
  */
 export const de_UpdateKxDataviewCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateKxDataviewCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2383,7 +2383,7 @@ export const de_UpdateKxDataviewCommand = async (
  */
 export const de_UpdateKxEnvironmentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateKxEnvironmentCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2419,7 +2419,7 @@ export const de_UpdateKxEnvironmentCommand = async (
  */
 export const de_UpdateKxEnvironmentNetworkCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateKxEnvironmentNetworkCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2455,7 +2455,7 @@ export const de_UpdateKxEnvironmentNetworkCommand = async (
  */
 export const de_UpdateKxUserCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateKxUserCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2479,7 +2479,7 @@ export const de_UpdateKxUserCommand = async (
  */
 export const de_UpdateKxVolumeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateKxVolumeCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2563,7 +2563,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2601,7 +2601,7 @@ const de_ConflictExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_InternalServerExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2621,7 +2621,7 @@ const de_InternalServerExceptionRes = async (
  */
 const de_InvalidRequestExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidRequestException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2641,7 +2641,7 @@ const de_InvalidRequestExceptionRes = async (
  */
 const de_LimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<LimitExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2661,7 +2661,7 @@ const de_LimitExceededExceptionRes = async (
  */
 const de_ResourceAlreadyExistsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceAlreadyExistsException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2681,7 +2681,7 @@ const de_ResourceAlreadyExistsExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2701,7 +2701,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_ServiceQuotaExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceQuotaExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;

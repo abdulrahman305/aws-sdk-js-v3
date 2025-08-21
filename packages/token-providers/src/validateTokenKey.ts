@@ -9,7 +9,7 @@ export const validateTokenKey = (key: string, value: unknown, forRefresh = false
   if (typeof value === "undefined") {
     throw new TokenProviderError(
       `Value not present for '${key}' in SSO Token${forRefresh ? ". Cannot refresh" : ""}. ${REFRESH_MESSAGE}`,
-      false
+      false,
     );
   }
 };

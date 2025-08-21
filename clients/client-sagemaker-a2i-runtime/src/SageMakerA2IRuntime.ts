@@ -43,13 +43,13 @@ export interface SageMakerA2IRuntime {
    */
   deleteHumanLoop(
     args: DeleteHumanLoopCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteHumanLoopCommandOutput>;
   deleteHumanLoop(args: DeleteHumanLoopCommandInput, cb: (err: any, data?: DeleteHumanLoopCommandOutput) => void): void;
   deleteHumanLoop(
     args: DeleteHumanLoopCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteHumanLoopCommandOutput) => void
+    cb: (err: any, data?: DeleteHumanLoopCommandOutput) => void,
   ): void;
 
   /**
@@ -57,16 +57,16 @@ export interface SageMakerA2IRuntime {
    */
   describeHumanLoop(
     args: DescribeHumanLoopCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeHumanLoopCommandOutput>;
   describeHumanLoop(
     args: DescribeHumanLoopCommandInput,
-    cb: (err: any, data?: DescribeHumanLoopCommandOutput) => void
+    cb: (err: any, data?: DescribeHumanLoopCommandOutput) => void,
   ): void;
   describeHumanLoop(
     args: DescribeHumanLoopCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeHumanLoopCommandOutput) => void
+    cb: (err: any, data?: DescribeHumanLoopCommandOutput) => void,
   ): void;
 
   /**
@@ -74,13 +74,13 @@ export interface SageMakerA2IRuntime {
    */
   listHumanLoops(
     args: ListHumanLoopsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListHumanLoopsCommandOutput>;
   listHumanLoops(args: ListHumanLoopsCommandInput, cb: (err: any, data?: ListHumanLoopsCommandOutput) => void): void;
   listHumanLoops(
     args: ListHumanLoopsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListHumanLoopsCommandOutput) => void
+    cb: (err: any, data?: ListHumanLoopsCommandOutput) => void,
   ): void;
 
   /**
@@ -88,13 +88,13 @@ export interface SageMakerA2IRuntime {
    */
   startHumanLoop(
     args: StartHumanLoopCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartHumanLoopCommandOutput>;
   startHumanLoop(args: StartHumanLoopCommandInput, cb: (err: any, data?: StartHumanLoopCommandOutput) => void): void;
   startHumanLoop(
     args: StartHumanLoopCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartHumanLoopCommandOutput) => void
+    cb: (err: any, data?: StartHumanLoopCommandOutput) => void,
   ): void;
 
   /**
@@ -105,7 +105,7 @@ export interface SageMakerA2IRuntime {
   stopHumanLoop(
     args: StopHumanLoopCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StopHumanLoopCommandOutput) => void
+    cb: (err: any, data?: StopHumanLoopCommandOutput) => void,
   ): void;
 }
 

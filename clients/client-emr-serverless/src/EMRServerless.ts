@@ -96,7 +96,7 @@ export interface EMRServerless {
   cancelJobRun(
     args: CancelJobRunCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CancelJobRunCommandOutput) => void
+    cb: (err: any, data?: CancelJobRunCommandOutput) => void,
   ): void;
 
   /**
@@ -104,16 +104,16 @@ export interface EMRServerless {
    */
   createApplication(
     args: CreateApplicationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateApplicationCommandOutput>;
   createApplication(
     args: CreateApplicationCommandInput,
-    cb: (err: any, data?: CreateApplicationCommandOutput) => void
+    cb: (err: any, data?: CreateApplicationCommandOutput) => void,
   ): void;
   createApplication(
     args: CreateApplicationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateApplicationCommandOutput) => void
+    cb: (err: any, data?: CreateApplicationCommandOutput) => void,
   ): void;
 
   /**
@@ -121,16 +121,16 @@ export interface EMRServerless {
    */
   deleteApplication(
     args: DeleteApplicationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteApplicationCommandOutput>;
   deleteApplication(
     args: DeleteApplicationCommandInput,
-    cb: (err: any, data?: DeleteApplicationCommandOutput) => void
+    cb: (err: any, data?: DeleteApplicationCommandOutput) => void,
   ): void;
   deleteApplication(
     args: DeleteApplicationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteApplicationCommandOutput) => void
+    cb: (err: any, data?: DeleteApplicationCommandOutput) => void,
   ): void;
 
   /**
@@ -138,13 +138,13 @@ export interface EMRServerless {
    */
   getApplication(
     args: GetApplicationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetApplicationCommandOutput>;
   getApplication(args: GetApplicationCommandInput, cb: (err: any, data?: GetApplicationCommandOutput) => void): void;
   getApplication(
     args: GetApplicationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetApplicationCommandOutput) => void
+    cb: (err: any, data?: GetApplicationCommandOutput) => void,
   ): void;
 
   /**
@@ -152,16 +152,16 @@ export interface EMRServerless {
    */
   getDashboardForJobRun(
     args: GetDashboardForJobRunCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetDashboardForJobRunCommandOutput>;
   getDashboardForJobRun(
     args: GetDashboardForJobRunCommandInput,
-    cb: (err: any, data?: GetDashboardForJobRunCommandOutput) => void
+    cb: (err: any, data?: GetDashboardForJobRunCommandOutput) => void,
   ): void;
   getDashboardForJobRun(
     args: GetDashboardForJobRunCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetDashboardForJobRunCommandOutput) => void
+    cb: (err: any, data?: GetDashboardForJobRunCommandOutput) => void,
   ): void;
 
   /**
@@ -172,7 +172,7 @@ export interface EMRServerless {
   getJobRun(
     args: GetJobRunCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetJobRunCommandOutput) => void
+    cb: (err: any, data?: GetJobRunCommandOutput) => void,
   ): void;
 
   /**
@@ -181,16 +181,16 @@ export interface EMRServerless {
   listApplications(): Promise<ListApplicationsCommandOutput>;
   listApplications(
     args: ListApplicationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListApplicationsCommandOutput>;
   listApplications(
     args: ListApplicationsCommandInput,
-    cb: (err: any, data?: ListApplicationsCommandOutput) => void
+    cb: (err: any, data?: ListApplicationsCommandOutput) => void,
   ): void;
   listApplications(
     args: ListApplicationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListApplicationsCommandOutput) => void
+    cb: (err: any, data?: ListApplicationsCommandOutput) => void,
   ): void;
 
   /**
@@ -198,16 +198,16 @@ export interface EMRServerless {
    */
   listJobRunAttempts(
     args: ListJobRunAttemptsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListJobRunAttemptsCommandOutput>;
   listJobRunAttempts(
     args: ListJobRunAttemptsCommandInput,
-    cb: (err: any, data?: ListJobRunAttemptsCommandOutput) => void
+    cb: (err: any, data?: ListJobRunAttemptsCommandOutput) => void,
   ): void;
   listJobRunAttempts(
     args: ListJobRunAttemptsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListJobRunAttemptsCommandOutput) => void
+    cb: (err: any, data?: ListJobRunAttemptsCommandOutput) => void,
   ): void;
 
   /**
@@ -218,7 +218,7 @@ export interface EMRServerless {
   listJobRuns(
     args: ListJobRunsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListJobRunsCommandOutput) => void
+    cb: (err: any, data?: ListJobRunsCommandOutput) => void,
   ): void;
 
   /**
@@ -226,16 +226,16 @@ export interface EMRServerless {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -243,16 +243,16 @@ export interface EMRServerless {
    */
   startApplication(
     args: StartApplicationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartApplicationCommandOutput>;
   startApplication(
     args: StartApplicationCommandInput,
-    cb: (err: any, data?: StartApplicationCommandOutput) => void
+    cb: (err: any, data?: StartApplicationCommandOutput) => void,
   ): void;
   startApplication(
     args: StartApplicationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartApplicationCommandOutput) => void
+    cb: (err: any, data?: StartApplicationCommandOutput) => void,
   ): void;
 
   /**
@@ -263,7 +263,7 @@ export interface EMRServerless {
   startJobRun(
     args: StartJobRunCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartJobRunCommandOutput) => void
+    cb: (err: any, data?: StartJobRunCommandOutput) => void,
   ): void;
 
   /**
@@ -271,13 +271,13 @@ export interface EMRServerless {
    */
   stopApplication(
     args: StopApplicationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StopApplicationCommandOutput>;
   stopApplication(args: StopApplicationCommandInput, cb: (err: any, data?: StopApplicationCommandOutput) => void): void;
   stopApplication(
     args: StopApplicationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StopApplicationCommandOutput) => void
+    cb: (err: any, data?: StopApplicationCommandOutput) => void,
   ): void;
 
   /**
@@ -288,7 +288,7 @@ export interface EMRServerless {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -299,7 +299,7 @@ export interface EMRServerless {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -307,16 +307,16 @@ export interface EMRServerless {
    */
   updateApplication(
     args: UpdateApplicationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateApplicationCommandOutput>;
   updateApplication(
     args: UpdateApplicationCommandInput,
-    cb: (err: any, data?: UpdateApplicationCommandOutput) => void
+    cb: (err: any, data?: UpdateApplicationCommandOutput) => void,
   ): void;
   updateApplication(
     args: UpdateApplicationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateApplicationCommandOutput) => void
+    cb: (err: any, data?: UpdateApplicationCommandOutput) => void,
   ): void;
 }
 

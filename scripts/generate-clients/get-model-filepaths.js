@@ -20,7 +20,7 @@ const getModelFilepaths = (models) => {
         Glob.sync(pattern, {
           realpath: true,
           absolute: true,
-        })
+        }),
       )
       .flat()
       .filter((modelFilepath) => lstatSync(modelFilepath).isFile());

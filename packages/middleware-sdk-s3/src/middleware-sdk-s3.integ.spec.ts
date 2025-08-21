@@ -52,7 +52,7 @@ describe("middleware-sdk-s3", () => {
       });
 
       expect(client.config.logger.warn).toHaveBeenCalledWith(
-        "Are you using a Stream of unknown length as the Body of a PutObject request? Consider using Upload instead from @aws-sdk/lib-storage."
+        "Are you using a Stream of unknown length as the Body of a PutObject request? Consider using Upload instead from @aws-sdk/lib-storage.",
       );
 
       expect.hasAssertions();

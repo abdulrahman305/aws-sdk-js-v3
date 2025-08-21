@@ -94,7 +94,7 @@ import { QLDBServiceException as __BaseException } from "../models/QLDBServiceEx
  */
 export const se_CancelJournalKinesisStreamCommand = async (
   input: CancelJournalKinesisStreamCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -111,7 +111,7 @@ export const se_CancelJournalKinesisStreamCommand = async (
  */
 export const se_CreateLedgerCommand = async (
   input: CreateLedgerCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -126,7 +126,7 @@ export const se_CreateLedgerCommand = async (
       Name: [],
       PermissionsMode: [],
       Tags: (_) => se_Tags(_, context),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -137,7 +137,7 @@ export const se_CreateLedgerCommand = async (
  */
 export const se_DeleteLedgerCommand = async (
   input: DeleteLedgerCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -153,7 +153,7 @@ export const se_DeleteLedgerCommand = async (
  */
 export const se_DescribeJournalKinesisStreamCommand = async (
   input: DescribeJournalKinesisStreamCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -170,7 +170,7 @@ export const se_DescribeJournalKinesisStreamCommand = async (
  */
 export const se_DescribeJournalS3ExportCommand = async (
   input: DescribeJournalS3ExportCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -187,7 +187,7 @@ export const se_DescribeJournalS3ExportCommand = async (
  */
 export const se_DescribeLedgerCommand = async (
   input: DescribeLedgerCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -203,7 +203,7 @@ export const se_DescribeLedgerCommand = async (
  */
 export const se_ExportJournalToS3Command = async (
   input: ExportJournalToS3CommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -219,7 +219,7 @@ export const se_ExportJournalToS3Command = async (
       OutputFormat: [],
       RoleArn: [],
       S3ExportConfiguration: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -230,7 +230,7 @@ export const se_ExportJournalToS3Command = async (
  */
 export const se_GetBlockCommand = async (
   input: GetBlockCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -243,7 +243,7 @@ export const se_GetBlockCommand = async (
     take(input, {
       BlockAddress: (_) => _json(_),
       DigestTipAddress: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -254,7 +254,7 @@ export const se_GetBlockCommand = async (
  */
 export const se_GetDigestCommand = async (
   input: GetDigestCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -270,7 +270,7 @@ export const se_GetDigestCommand = async (
  */
 export const se_GetRevisionCommand = async (
   input: GetRevisionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -284,7 +284,7 @@ export const se_GetRevisionCommand = async (
       BlockAddress: (_) => _json(_),
       DigestTipAddress: (_) => _json(_),
       DocumentId: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -295,7 +295,7 @@ export const se_GetRevisionCommand = async (
  */
 export const se_ListJournalKinesisStreamsForLedgerCommand = async (
   input: ListJournalKinesisStreamsForLedgerCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -315,7 +315,7 @@ export const se_ListJournalKinesisStreamsForLedgerCommand = async (
  */
 export const se_ListJournalS3ExportsCommand = async (
   input: ListJournalS3ExportsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -334,7 +334,7 @@ export const se_ListJournalS3ExportsCommand = async (
  */
 export const se_ListJournalS3ExportsForLedgerCommand = async (
   input: ListJournalS3ExportsForLedgerCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -354,7 +354,7 @@ export const se_ListJournalS3ExportsForLedgerCommand = async (
  */
 export const se_ListLedgersCommand = async (
   input: ListLedgersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -373,7 +373,7 @@ export const se_ListLedgersCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -389,7 +389,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_StreamJournalToKinesisCommand = async (
   input: StreamJournalToKinesisCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -406,7 +406,7 @@ export const se_StreamJournalToKinesisCommand = async (
       RoleArn: [],
       StreamName: [],
       Tags: (_) => se_Tags(_, context),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -417,7 +417,7 @@ export const se_StreamJournalToKinesisCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -429,7 +429,7 @@ export const se_TagResourceCommand = async (
   body = JSON.stringify(
     take(input, {
       Tags: (_) => se_Tags(_, context),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -440,7 +440,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -462,7 +462,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateLedgerCommand = async (
   input: UpdateLedgerCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -475,7 +475,7 @@ export const se_UpdateLedgerCommand = async (
     take(input, {
       DeletionProtection: [],
       KmsKey: [],
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -486,7 +486,7 @@ export const se_UpdateLedgerCommand = async (
  */
 export const se_UpdateLedgerPermissionsModeCommand = async (
   input: UpdateLedgerPermissionsModeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -498,7 +498,7 @@ export const se_UpdateLedgerPermissionsModeCommand = async (
   body = JSON.stringify(
     take(input, {
       PermissionsMode: [],
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -509,7 +509,7 @@ export const se_UpdateLedgerPermissionsModeCommand = async (
  */
 export const de_CancelJournalKinesisStreamCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CancelJournalKinesisStreamCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -530,7 +530,7 @@ export const de_CancelJournalKinesisStreamCommand = async (
  */
 export const de_CreateLedgerCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateLedgerCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -557,7 +557,7 @@ export const de_CreateLedgerCommand = async (
  */
 export const de_DeleteLedgerCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteLedgerCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -574,7 +574,7 @@ export const de_DeleteLedgerCommand = async (
  */
 export const de_DescribeJournalKinesisStreamCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeJournalKinesisStreamCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -595,7 +595,7 @@ export const de_DescribeJournalKinesisStreamCommand = async (
  */
 export const de_DescribeJournalS3ExportCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeJournalS3ExportCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -616,7 +616,7 @@ export const de_DescribeJournalS3ExportCommand = async (
  */
 export const de_DescribeLedgerCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeLedgerCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -643,7 +643,7 @@ export const de_DescribeLedgerCommand = async (
  */
 export const de_ExportJournalToS3Command = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ExportJournalToS3CommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -664,7 +664,7 @@ export const de_ExportJournalToS3Command = async (
  */
 export const de_GetBlockCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetBlockCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -686,7 +686,7 @@ export const de_GetBlockCommand = async (
  */
 export const de_GetDigestCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetDigestCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -708,7 +708,7 @@ export const de_GetDigestCommand = async (
  */
 export const de_GetRevisionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetRevisionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -730,7 +730,7 @@ export const de_GetRevisionCommand = async (
  */
 export const de_ListJournalKinesisStreamsForLedgerCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListJournalKinesisStreamsForLedgerCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -752,7 +752,7 @@ export const de_ListJournalKinesisStreamsForLedgerCommand = async (
  */
 export const de_ListJournalS3ExportsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListJournalS3ExportsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -774,7 +774,7 @@ export const de_ListJournalS3ExportsCommand = async (
  */
 export const de_ListJournalS3ExportsForLedgerCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListJournalS3ExportsForLedgerCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -796,7 +796,7 @@ export const de_ListJournalS3ExportsForLedgerCommand = async (
  */
 export const de_ListLedgersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListLedgersCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -818,7 +818,7 @@ export const de_ListLedgersCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -839,7 +839,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_StreamJournalToKinesisCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StreamJournalToKinesisCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -860,7 +860,7 @@ export const de_StreamJournalToKinesisCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -877,7 +877,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -894,7 +894,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateLedgerCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateLedgerCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -920,7 +920,7 @@ export const de_UpdateLedgerCommand = async (
  */
 export const de_UpdateLedgerPermissionsModeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateLedgerPermissionsModeCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -982,7 +982,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_InvalidParameterExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidParameterException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1003,7 +1003,7 @@ const de_InvalidParameterExceptionRes = async (
  */
 const de_LimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<LimitExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1024,7 +1024,7 @@ const de_LimitExceededExceptionRes = async (
  */
 const de_ResourceAlreadyExistsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceAlreadyExistsException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1046,7 +1046,7 @@ const de_ResourceAlreadyExistsExceptionRes = async (
  */
 const de_ResourceInUseExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceInUseException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1068,7 +1068,7 @@ const de_ResourceInUseExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1090,7 +1090,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_ResourcePreconditionNotMetExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourcePreconditionNotMetException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1153,7 +1153,7 @@ const de_JournalKinesisStreamDescription = (output: any, context: __SerdeContext
  */
 const de_JournalKinesisStreamDescriptionList = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): JournalKinesisStreamDescription[] => {
   const retVal = (output || [])
     .filter((e: any) => e != null)
@@ -1236,14 +1236,17 @@ const de_LedgerSummary = (output: any, context: __SerdeContext): LedgerSummary =
  * deserializeAws_restJson1Tags
  */
 const de_Tags = (output: any, context: __SerdeContext): Record<string, string> => {
-  return Object.entries(output).reduce((acc: Record<string, string>, [key, value]: [string, any]) => {
-    if (value === null) {
-      acc[key as string] = null as any;
+  return Object.entries(output).reduce(
+    (acc: Record<string, string>, [key, value]: [string, any]) => {
+      if (value === null) {
+        acc[key as string] = null as any;
+        return acc;
+      }
+      acc[key as string] = __expectString(value) as any;
       return acc;
-    }
-    acc[key as string] = __expectString(value) as any;
-    return acc;
-  }, {} as Record<string, string>);
+    },
+    {} as Record<string, string>,
+  );
 };
 
 // de_ValueHolder omitted.

@@ -161,7 +161,7 @@ import { SSMIncidentsServiceException as __BaseException } from "../models/SSMIn
  */
 export const se_BatchGetIncidentFindingsCommand = async (
   input: BatchGetIncidentFindingsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -173,7 +173,7 @@ export const se_BatchGetIncidentFindingsCommand = async (
     take(input, {
       findingIds: (_) => _json(_),
       incidentRecordArn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -184,7 +184,7 @@ export const se_BatchGetIncidentFindingsCommand = async (
  */
 export const se_CreateReplicationSetCommand = async (
   input: CreateReplicationSetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -197,7 +197,7 @@ export const se_CreateReplicationSetCommand = async (
       clientToken: [true, (_) => _ ?? generateIdempotencyToken()],
       regions: (_) => _json(_),
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -208,7 +208,7 @@ export const se_CreateReplicationSetCommand = async (
  */
 export const se_CreateResponsePlanCommand = async (
   input: CreateResponsePlanCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -227,7 +227,7 @@ export const se_CreateResponsePlanCommand = async (
       integrations: (_) => _json(_),
       name: [],
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -238,7 +238,7 @@ export const se_CreateResponsePlanCommand = async (
  */
 export const se_CreateTimelineEventCommand = async (
   input: CreateTimelineEventCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -254,7 +254,7 @@ export const se_CreateTimelineEventCommand = async (
       eventTime: (_) => _.getTime() / 1_000,
       eventType: [],
       incidentRecordArn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -265,7 +265,7 @@ export const se_CreateTimelineEventCommand = async (
  */
 export const se_DeleteIncidentRecordCommand = async (
   input: DeleteIncidentRecordCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -276,7 +276,7 @@ export const se_DeleteIncidentRecordCommand = async (
   body = JSON.stringify(
     take(input, {
       arn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -287,7 +287,7 @@ export const se_DeleteIncidentRecordCommand = async (
  */
 export const se_DeleteReplicationSetCommand = async (
   input: DeleteReplicationSetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -305,7 +305,7 @@ export const se_DeleteReplicationSetCommand = async (
  */
 export const se_DeleteResourcePolicyCommand = async (
   input: DeleteResourcePolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -317,7 +317,7 @@ export const se_DeleteResourcePolicyCommand = async (
     take(input, {
       policyId: [],
       resourceArn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -328,7 +328,7 @@ export const se_DeleteResourcePolicyCommand = async (
  */
 export const se_DeleteResponsePlanCommand = async (
   input: DeleteResponsePlanCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -339,7 +339,7 @@ export const se_DeleteResponsePlanCommand = async (
   body = JSON.stringify(
     take(input, {
       arn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -350,7 +350,7 @@ export const se_DeleteResponsePlanCommand = async (
  */
 export const se_DeleteTimelineEventCommand = async (
   input: DeleteTimelineEventCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -362,7 +362,7 @@ export const se_DeleteTimelineEventCommand = async (
     take(input, {
       eventId: [],
       incidentRecordArn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -373,7 +373,7 @@ export const se_DeleteTimelineEventCommand = async (
  */
 export const se_GetIncidentRecordCommand = async (
   input: GetIncidentRecordCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -391,7 +391,7 @@ export const se_GetIncidentRecordCommand = async (
  */
 export const se_GetReplicationSetCommand = async (
   input: GetReplicationSetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -409,7 +409,7 @@ export const se_GetReplicationSetCommand = async (
  */
 export const se_GetResourcePoliciesCommand = async (
   input: GetResourcePoliciesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -424,7 +424,7 @@ export const se_GetResourcePoliciesCommand = async (
     take(input, {
       maxResults: [],
       nextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).q(query).b(body);
   return b.build();
@@ -435,7 +435,7 @@ export const se_GetResourcePoliciesCommand = async (
  */
 export const se_GetResponsePlanCommand = async (
   input: GetResponsePlanCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -453,7 +453,7 @@ export const se_GetResponsePlanCommand = async (
  */
 export const se_GetTimelineEventCommand = async (
   input: GetTimelineEventCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -472,7 +472,7 @@ export const se_GetTimelineEventCommand = async (
  */
 export const se_ListIncidentFindingsCommand = async (
   input: ListIncidentFindingsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -485,7 +485,7 @@ export const se_ListIncidentFindingsCommand = async (
       incidentRecordArn: [],
       maxResults: [],
       nextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -496,7 +496,7 @@ export const se_ListIncidentFindingsCommand = async (
  */
 export const se_ListIncidentRecordsCommand = async (
   input: ListIncidentRecordsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -509,7 +509,7 @@ export const se_ListIncidentRecordsCommand = async (
       filters: (_) => se_FilterList(_, context),
       maxResults: [],
       nextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -520,7 +520,7 @@ export const se_ListIncidentRecordsCommand = async (
  */
 export const se_ListRelatedItemsCommand = async (
   input: ListRelatedItemsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -533,7 +533,7 @@ export const se_ListRelatedItemsCommand = async (
       incidentRecordArn: [],
       maxResults: [],
       nextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -544,7 +544,7 @@ export const se_ListRelatedItemsCommand = async (
  */
 export const se_ListReplicationSetsCommand = async (
   input: ListReplicationSetsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -556,7 +556,7 @@ export const se_ListReplicationSetsCommand = async (
     take(input, {
       maxResults: [],
       nextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -567,7 +567,7 @@ export const se_ListReplicationSetsCommand = async (
  */
 export const se_ListResponsePlansCommand = async (
   input: ListResponsePlansCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -579,7 +579,7 @@ export const se_ListResponsePlansCommand = async (
     take(input, {
       maxResults: [],
       nextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -590,7 +590,7 @@ export const se_ListResponsePlansCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -606,7 +606,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_ListTimelineEventsCommand = async (
   input: ListTimelineEventsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -622,7 +622,7 @@ export const se_ListTimelineEventsCommand = async (
       nextToken: [],
       sortBy: [],
       sortOrder: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -633,7 +633,7 @@ export const se_ListTimelineEventsCommand = async (
  */
 export const se_PutResourcePolicyCommand = async (
   input: PutResourcePolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -645,7 +645,7 @@ export const se_PutResourcePolicyCommand = async (
     take(input, {
       policy: [],
       resourceArn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -656,7 +656,7 @@ export const se_PutResourcePolicyCommand = async (
  */
 export const se_StartIncidentCommand = async (
   input: StartIncidentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -672,7 +672,7 @@ export const se_StartIncidentCommand = async (
       responsePlanArn: [],
       title: [],
       triggerDetails: (_) => se_TriggerDetails(_, context),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -683,7 +683,7 @@ export const se_StartIncidentCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -695,7 +695,7 @@ export const se_TagResourceCommand = async (
   body = JSON.stringify(
     take(input, {
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -706,7 +706,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -728,7 +728,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateDeletionProtectionCommand = async (
   input: UpdateDeletionProtectionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -741,7 +741,7 @@ export const se_UpdateDeletionProtectionCommand = async (
       arn: [],
       clientToken: [true, (_) => _ ?? generateIdempotencyToken()],
       deletionProtected: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -752,7 +752,7 @@ export const se_UpdateDeletionProtectionCommand = async (
  */
 export const se_UpdateIncidentRecordCommand = async (
   input: UpdateIncidentRecordCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -770,7 +770,7 @@ export const se_UpdateIncidentRecordCommand = async (
       status: [],
       summary: [],
       title: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -781,7 +781,7 @@ export const se_UpdateIncidentRecordCommand = async (
  */
 export const se_UpdateRelatedItemsCommand = async (
   input: UpdateRelatedItemsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -794,7 +794,7 @@ export const se_UpdateRelatedItemsCommand = async (
       clientToken: [true, (_) => _ ?? generateIdempotencyToken()],
       incidentRecordArn: [],
       relatedItemsUpdate: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -805,7 +805,7 @@ export const se_UpdateRelatedItemsCommand = async (
  */
 export const se_UpdateReplicationSetCommand = async (
   input: UpdateReplicationSetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -818,7 +818,7 @@ export const se_UpdateReplicationSetCommand = async (
       actions: (_) => _json(_),
       arn: [],
       clientToken: [true, (_) => _ ?? generateIdempotencyToken()],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -829,7 +829,7 @@ export const se_UpdateReplicationSetCommand = async (
  */
 export const se_UpdateResponsePlanCommand = async (
   input: UpdateResponsePlanCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -852,7 +852,7 @@ export const se_UpdateResponsePlanCommand = async (
       incidentTemplateTags: (_) => _json(_),
       incidentTemplateTitle: [],
       integrations: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -863,7 +863,7 @@ export const se_UpdateResponsePlanCommand = async (
  */
 export const se_UpdateTimelineEventCommand = async (
   input: UpdateTimelineEventCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -880,7 +880,7 @@ export const se_UpdateTimelineEventCommand = async (
       eventTime: (_) => _.getTime() / 1_000,
       eventType: [],
       incidentRecordArn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -891,7 +891,7 @@ export const se_UpdateTimelineEventCommand = async (
  */
 export const de_BatchGetIncidentFindingsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchGetIncidentFindingsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -913,7 +913,7 @@ export const de_BatchGetIncidentFindingsCommand = async (
  */
 export const de_CreateReplicationSetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateReplicationSetCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -934,7 +934,7 @@ export const de_CreateReplicationSetCommand = async (
  */
 export const de_CreateResponsePlanCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateResponsePlanCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -955,7 +955,7 @@ export const de_CreateResponsePlanCommand = async (
  */
 export const de_CreateTimelineEventCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateTimelineEventCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -977,7 +977,7 @@ export const de_CreateTimelineEventCommand = async (
  */
 export const de_DeleteIncidentRecordCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteIncidentRecordCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -994,7 +994,7 @@ export const de_DeleteIncidentRecordCommand = async (
  */
 export const de_DeleteReplicationSetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteReplicationSetCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1011,7 +1011,7 @@ export const de_DeleteReplicationSetCommand = async (
  */
 export const de_DeleteResourcePolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteResourcePolicyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1028,7 +1028,7 @@ export const de_DeleteResourcePolicyCommand = async (
  */
 export const de_DeleteResponsePlanCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteResponsePlanCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1045,7 +1045,7 @@ export const de_DeleteResponsePlanCommand = async (
  */
 export const de_DeleteTimelineEventCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteTimelineEventCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1062,7 +1062,7 @@ export const de_DeleteTimelineEventCommand = async (
  */
 export const de_GetIncidentRecordCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetIncidentRecordCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1083,7 +1083,7 @@ export const de_GetIncidentRecordCommand = async (
  */
 export const de_GetReplicationSetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetReplicationSetCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1104,7 +1104,7 @@ export const de_GetReplicationSetCommand = async (
  */
 export const de_GetResourcePoliciesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetResourcePoliciesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1126,7 +1126,7 @@ export const de_GetResourcePoliciesCommand = async (
  */
 export const de_GetResponsePlanCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetResponsePlanCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1154,7 +1154,7 @@ export const de_GetResponsePlanCommand = async (
  */
 export const de_GetTimelineEventCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetTimelineEventCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1175,7 +1175,7 @@ export const de_GetTimelineEventCommand = async (
  */
 export const de_ListIncidentFindingsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListIncidentFindingsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1197,7 +1197,7 @@ export const de_ListIncidentFindingsCommand = async (
  */
 export const de_ListIncidentRecordsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListIncidentRecordsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1219,7 +1219,7 @@ export const de_ListIncidentRecordsCommand = async (
  */
 export const de_ListRelatedItemsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListRelatedItemsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1241,7 +1241,7 @@ export const de_ListRelatedItemsCommand = async (
  */
 export const de_ListReplicationSetsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListReplicationSetsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1263,7 +1263,7 @@ export const de_ListReplicationSetsCommand = async (
  */
 export const de_ListResponsePlansCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListResponsePlansCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1285,7 +1285,7 @@ export const de_ListResponsePlansCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1306,7 +1306,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_ListTimelineEventsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTimelineEventsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1328,7 +1328,7 @@ export const de_ListTimelineEventsCommand = async (
  */
 export const de_PutResourcePolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutResourcePolicyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1349,7 +1349,7 @@ export const de_PutResourcePolicyCommand = async (
  */
 export const de_StartIncidentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartIncidentCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1370,7 +1370,7 @@ export const de_StartIncidentCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1387,7 +1387,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1404,7 +1404,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateDeletionProtectionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateDeletionProtectionCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1421,7 +1421,7 @@ export const de_UpdateDeletionProtectionCommand = async (
  */
 export const de_UpdateIncidentRecordCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateIncidentRecordCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1438,7 +1438,7 @@ export const de_UpdateIncidentRecordCommand = async (
  */
 export const de_UpdateRelatedItemsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateRelatedItemsCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1455,7 +1455,7 @@ export const de_UpdateRelatedItemsCommand = async (
  */
 export const de_UpdateReplicationSetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateReplicationSetCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1472,7 +1472,7 @@ export const de_UpdateReplicationSetCommand = async (
  */
 export const de_UpdateResponsePlanCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateResponsePlanCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1489,7 +1489,7 @@ export const de_UpdateResponsePlanCommand = async (
  */
 export const de_UpdateTimelineEventCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateTimelineEventCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1548,7 +1548,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1588,7 +1588,7 @@ const de_ConflictExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_InternalServerExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1608,7 +1608,7 @@ const de_InternalServerExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1630,7 +1630,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_ServiceQuotaExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceQuotaExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1705,7 +1705,7 @@ const se_Condition = (input: Condition, context: __SerdeContext): any => {
     after: (value) => ({ after: value.getTime() / 1_000 }),
     before: (value) => ({ before: value.getTime() / 1_000 }),
     equals: (value) => ({ equals: _json(value) }),
-    _: (name, value) => ({ name: value } as any),
+    _: (name, value) => ({ name: value }) as any,
   });
 };
 
@@ -2033,13 +2033,16 @@ const de_RegionInfo = (output: any, context: __SerdeContext): RegionInfo => {
  * deserializeAws_restJson1RegionInfoMap
  */
 const de_RegionInfoMap = (output: any, context: __SerdeContext): Record<string, RegionInfo> => {
-  return Object.entries(output).reduce((acc: Record<string, RegionInfo>, [key, value]: [string, any]) => {
-    if (value === null) {
+  return Object.entries(output).reduce(
+    (acc: Record<string, RegionInfo>, [key, value]: [string, any]) => {
+      if (value === null) {
+        return acc;
+      }
+      acc[key as string] = de_RegionInfo(value, context);
       return acc;
-    }
-    acc[key as string] = de_RegionInfo(value, context);
-    return acc;
-  }, {} as Record<string, RegionInfo>);
+    },
+    {} as Record<string, RegionInfo>,
+  );
 };
 
 // de_RelatedItem omitted.

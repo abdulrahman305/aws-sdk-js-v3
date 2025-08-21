@@ -134,7 +134,7 @@ import {
  */
 export const se_CreateAlertManagerDefinitionCommand = async (
   input: CreateAlertManagerDefinitionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -147,7 +147,7 @@ export const se_CreateAlertManagerDefinitionCommand = async (
     take(input, {
       clientToken: [true, (_) => _ ?? generateIdempotencyToken()],
       data: (_) => context.base64Encoder(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -158,7 +158,7 @@ export const se_CreateAlertManagerDefinitionCommand = async (
  */
 export const se_CreateLoggingConfigurationCommand = async (
   input: CreateLoggingConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -171,7 +171,7 @@ export const se_CreateLoggingConfigurationCommand = async (
     take(input, {
       clientToken: [true, (_) => _ ?? generateIdempotencyToken()],
       logGroupArn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -182,7 +182,7 @@ export const se_CreateLoggingConfigurationCommand = async (
  */
 export const se_CreateRuleGroupsNamespaceCommand = async (
   input: CreateRuleGroupsNamespaceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -197,7 +197,7 @@ export const se_CreateRuleGroupsNamespaceCommand = async (
       data: (_) => context.base64Encoder(_),
       name: [],
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -208,7 +208,7 @@ export const se_CreateRuleGroupsNamespaceCommand = async (
  */
 export const se_CreateScraperCommand = async (
   input: CreateScraperCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -224,7 +224,7 @@ export const se_CreateScraperCommand = async (
       scrapeConfiguration: (_) => se_ScrapeConfiguration(_, context),
       source: (_) => _json(_),
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -235,7 +235,7 @@ export const se_CreateScraperCommand = async (
  */
 export const se_CreateWorkspaceCommand = async (
   input: CreateWorkspaceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -249,7 +249,7 @@ export const se_CreateWorkspaceCommand = async (
       clientToken: [true, (_) => _ ?? generateIdempotencyToken()],
       kmsKeyArn: [],
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -260,7 +260,7 @@ export const se_CreateWorkspaceCommand = async (
  */
 export const se_DeleteAlertManagerDefinitionCommand = async (
   input: DeleteAlertManagerDefinitionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -279,7 +279,7 @@ export const se_DeleteAlertManagerDefinitionCommand = async (
  */
 export const se_DeleteLoggingConfigurationCommand = async (
   input: DeleteLoggingConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -298,7 +298,7 @@ export const se_DeleteLoggingConfigurationCommand = async (
  */
 export const se_DeleteRuleGroupsNamespaceCommand = async (
   input: DeleteRuleGroupsNamespaceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -318,7 +318,7 @@ export const se_DeleteRuleGroupsNamespaceCommand = async (
  */
 export const se_DeleteScraperCommand = async (
   input: DeleteScraperCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -337,7 +337,7 @@ export const se_DeleteScraperCommand = async (
  */
 export const se_DeleteWorkspaceCommand = async (
   input: DeleteWorkspaceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -356,7 +356,7 @@ export const se_DeleteWorkspaceCommand = async (
  */
 export const se_DescribeAlertManagerDefinitionCommand = async (
   input: DescribeAlertManagerDefinitionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -372,7 +372,7 @@ export const se_DescribeAlertManagerDefinitionCommand = async (
  */
 export const se_DescribeLoggingConfigurationCommand = async (
   input: DescribeLoggingConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -388,7 +388,7 @@ export const se_DescribeLoggingConfigurationCommand = async (
  */
 export const se_DescribeRuleGroupsNamespaceCommand = async (
   input: DescribeRuleGroupsNamespaceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -405,7 +405,7 @@ export const se_DescribeRuleGroupsNamespaceCommand = async (
  */
 export const se_DescribeScraperCommand = async (
   input: DescribeScraperCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -421,7 +421,7 @@ export const se_DescribeScraperCommand = async (
  */
 export const se_DescribeWorkspaceCommand = async (
   input: DescribeWorkspaceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -437,7 +437,7 @@ export const se_DescribeWorkspaceCommand = async (
  */
 export const se_GetDefaultScraperConfigurationCommand = async (
   input: GetDefaultScraperConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -455,7 +455,7 @@ export const se_GetDefaultScraperConfigurationCommand = async (
  */
 export const se_ListRuleGroupsNamespacesCommand = async (
   input: ListRuleGroupsNamespacesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -476,7 +476,7 @@ export const se_ListRuleGroupsNamespacesCommand = async (
  */
 export const se_ListScrapersCommand = async (
   input: ListScrapersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -496,7 +496,7 @@ export const se_ListScrapersCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -512,7 +512,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_ListWorkspacesCommand = async (
   input: ListWorkspacesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -532,7 +532,7 @@ export const se_ListWorkspacesCommand = async (
  */
 export const se_PutAlertManagerDefinitionCommand = async (
   input: PutAlertManagerDefinitionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -545,7 +545,7 @@ export const se_PutAlertManagerDefinitionCommand = async (
     take(input, {
       clientToken: [true, (_) => _ ?? generateIdempotencyToken()],
       data: (_) => context.base64Encoder(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -556,7 +556,7 @@ export const se_PutAlertManagerDefinitionCommand = async (
  */
 export const se_PutRuleGroupsNamespaceCommand = async (
   input: PutRuleGroupsNamespaceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -570,7 +570,7 @@ export const se_PutRuleGroupsNamespaceCommand = async (
     take(input, {
       clientToken: [true, (_) => _ ?? generateIdempotencyToken()],
       data: (_) => context.base64Encoder(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -581,7 +581,7 @@ export const se_PutRuleGroupsNamespaceCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -593,7 +593,7 @@ export const se_TagResourceCommand = async (
   body = JSON.stringify(
     take(input, {
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -604,7 +604,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -626,7 +626,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateLoggingConfigurationCommand = async (
   input: UpdateLoggingConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -639,7 +639,7 @@ export const se_UpdateLoggingConfigurationCommand = async (
     take(input, {
       clientToken: [true, (_) => _ ?? generateIdempotencyToken()],
       logGroupArn: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -650,7 +650,7 @@ export const se_UpdateLoggingConfigurationCommand = async (
  */
 export const se_UpdateWorkspaceAliasCommand = async (
   input: UpdateWorkspaceAliasCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -663,7 +663,7 @@ export const se_UpdateWorkspaceAliasCommand = async (
     take(input, {
       alias: [],
       clientToken: [true, (_) => _ ?? generateIdempotencyToken()],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -674,7 +674,7 @@ export const se_UpdateWorkspaceAliasCommand = async (
  */
 export const de_CreateAlertManagerDefinitionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateAlertManagerDefinitionCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -695,7 +695,7 @@ export const de_CreateAlertManagerDefinitionCommand = async (
  */
 export const de_CreateLoggingConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateLoggingConfigurationCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -716,7 +716,7 @@ export const de_CreateLoggingConfigurationCommand = async (
  */
 export const de_CreateRuleGroupsNamespaceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateRuleGroupsNamespaceCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -740,7 +740,7 @@ export const de_CreateRuleGroupsNamespaceCommand = async (
  */
 export const de_CreateScraperCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateScraperCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -764,7 +764,7 @@ export const de_CreateScraperCommand = async (
  */
 export const de_CreateWorkspaceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateWorkspaceCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -789,7 +789,7 @@ export const de_CreateWorkspaceCommand = async (
  */
 export const de_DeleteAlertManagerDefinitionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteAlertManagerDefinitionCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -806,7 +806,7 @@ export const de_DeleteAlertManagerDefinitionCommand = async (
  */
 export const de_DeleteLoggingConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteLoggingConfigurationCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -823,7 +823,7 @@ export const de_DeleteLoggingConfigurationCommand = async (
  */
 export const de_DeleteRuleGroupsNamespaceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteRuleGroupsNamespaceCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -840,7 +840,7 @@ export const de_DeleteRuleGroupsNamespaceCommand = async (
  */
 export const de_DeleteScraperCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteScraperCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -862,7 +862,7 @@ export const de_DeleteScraperCommand = async (
  */
 export const de_DeleteWorkspaceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteWorkspaceCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -879,7 +879,7 @@ export const de_DeleteWorkspaceCommand = async (
  */
 export const de_DescribeAlertManagerDefinitionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeAlertManagerDefinitionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -900,7 +900,7 @@ export const de_DescribeAlertManagerDefinitionCommand = async (
  */
 export const de_DescribeLoggingConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeLoggingConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -921,7 +921,7 @@ export const de_DescribeLoggingConfigurationCommand = async (
  */
 export const de_DescribeRuleGroupsNamespaceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeRuleGroupsNamespaceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -942,7 +942,7 @@ export const de_DescribeRuleGroupsNamespaceCommand = async (
  */
 export const de_DescribeScraperCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeScraperCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -963,7 +963,7 @@ export const de_DescribeScraperCommand = async (
  */
 export const de_DescribeWorkspaceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeWorkspaceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -984,7 +984,7 @@ export const de_DescribeWorkspaceCommand = async (
  */
 export const de_GetDefaultScraperConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetDefaultScraperConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1005,7 +1005,7 @@ export const de_GetDefaultScraperConfigurationCommand = async (
  */
 export const de_ListRuleGroupsNamespacesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListRuleGroupsNamespacesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1027,7 +1027,7 @@ export const de_ListRuleGroupsNamespacesCommand = async (
  */
 export const de_ListScrapersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListScrapersCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1049,7 +1049,7 @@ export const de_ListScrapersCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1070,7 +1070,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_ListWorkspacesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListWorkspacesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1092,7 +1092,7 @@ export const de_ListWorkspacesCommand = async (
  */
 export const de_PutAlertManagerDefinitionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutAlertManagerDefinitionCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1113,7 +1113,7 @@ export const de_PutAlertManagerDefinitionCommand = async (
  */
 export const de_PutRuleGroupsNamespaceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutRuleGroupsNamespaceCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1137,7 +1137,7 @@ export const de_PutRuleGroupsNamespaceCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1154,7 +1154,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1171,7 +1171,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateLoggingConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateLoggingConfigurationCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1192,7 +1192,7 @@ export const de_UpdateLoggingConfigurationCommand = async (
  */
 export const de_UpdateWorkspaceAliasCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateWorkspaceAliasCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1251,7 +1251,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1290,7 +1290,7 @@ const de_ConflictExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_InternalServerExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerException> => {
   const contents: any = map({
     [_rAS]: [() => void 0 !== parsedOutput.headers[_ra], () => __strictParseInt32(parsedOutput.headers[_ra])],
@@ -1312,7 +1312,7 @@ const de_InternalServerExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1334,7 +1334,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_ServiceQuotaExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceQuotaExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1405,7 +1405,7 @@ const de_ValidationExceptionRes = async (parsedOutput: any, context: __SerdeCont
 const se_ScrapeConfiguration = (input: ScrapeConfiguration, context: __SerdeContext): any => {
   return ScrapeConfiguration.visit(input, {
     configurationBlob: (value) => ({ configurationBlob: context.base64Encoder(value) }),
-    _: (name, value) => ({ name: value } as any),
+    _: (name, value) => ({ name: value }) as any,
   });
 };
 
@@ -1422,7 +1422,7 @@ const se_ScrapeConfiguration = (input: ScrapeConfiguration, context: __SerdeCont
  */
 const de_AlertManagerDefinitionDescription = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): AlertManagerDefinitionDescription => {
   return take(output, {
     createdAt: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),

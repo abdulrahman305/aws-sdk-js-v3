@@ -94,7 +94,7 @@ export interface TimestreamQuery {
   cancelQuery(
     args: CancelQueryCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CancelQueryCommandOutput) => void
+    cb: (err: any, data?: CancelQueryCommandOutput) => void,
   ): void;
 
   /**
@@ -102,16 +102,16 @@ export interface TimestreamQuery {
    */
   createScheduledQuery(
     args: CreateScheduledQueryCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateScheduledQueryCommandOutput>;
   createScheduledQuery(
     args: CreateScheduledQueryCommandInput,
-    cb: (err: any, data?: CreateScheduledQueryCommandOutput) => void
+    cb: (err: any, data?: CreateScheduledQueryCommandOutput) => void,
   ): void;
   createScheduledQuery(
     args: CreateScheduledQueryCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateScheduledQueryCommandOutput) => void
+    cb: (err: any, data?: CreateScheduledQueryCommandOutput) => void,
   ): void;
 
   /**
@@ -119,16 +119,16 @@ export interface TimestreamQuery {
    */
   deleteScheduledQuery(
     args: DeleteScheduledQueryCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteScheduledQueryCommandOutput>;
   deleteScheduledQuery(
     args: DeleteScheduledQueryCommandInput,
-    cb: (err: any, data?: DeleteScheduledQueryCommandOutput) => void
+    cb: (err: any, data?: DeleteScheduledQueryCommandOutput) => void,
   ): void;
   deleteScheduledQuery(
     args: DeleteScheduledQueryCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteScheduledQueryCommandOutput) => void
+    cb: (err: any, data?: DeleteScheduledQueryCommandOutput) => void,
   ): void;
 
   /**
@@ -137,16 +137,16 @@ export interface TimestreamQuery {
   describeAccountSettings(): Promise<DescribeAccountSettingsCommandOutput>;
   describeAccountSettings(
     args: DescribeAccountSettingsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeAccountSettingsCommandOutput>;
   describeAccountSettings(
     args: DescribeAccountSettingsCommandInput,
-    cb: (err: any, data?: DescribeAccountSettingsCommandOutput) => void
+    cb: (err: any, data?: DescribeAccountSettingsCommandOutput) => void,
   ): void;
   describeAccountSettings(
     args: DescribeAccountSettingsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeAccountSettingsCommandOutput) => void
+    cb: (err: any, data?: DescribeAccountSettingsCommandOutput) => void,
   ): void;
 
   /**
@@ -155,16 +155,16 @@ export interface TimestreamQuery {
   describeEndpoints(): Promise<DescribeEndpointsCommandOutput>;
   describeEndpoints(
     args: DescribeEndpointsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeEndpointsCommandOutput>;
   describeEndpoints(
     args: DescribeEndpointsCommandInput,
-    cb: (err: any, data?: DescribeEndpointsCommandOutput) => void
+    cb: (err: any, data?: DescribeEndpointsCommandOutput) => void,
   ): void;
   describeEndpoints(
     args: DescribeEndpointsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeEndpointsCommandOutput) => void
+    cb: (err: any, data?: DescribeEndpointsCommandOutput) => void,
   ): void;
 
   /**
@@ -172,16 +172,16 @@ export interface TimestreamQuery {
    */
   describeScheduledQuery(
     args: DescribeScheduledQueryCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeScheduledQueryCommandOutput>;
   describeScheduledQuery(
     args: DescribeScheduledQueryCommandInput,
-    cb: (err: any, data?: DescribeScheduledQueryCommandOutput) => void
+    cb: (err: any, data?: DescribeScheduledQueryCommandOutput) => void,
   ): void;
   describeScheduledQuery(
     args: DescribeScheduledQueryCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeScheduledQueryCommandOutput) => void
+    cb: (err: any, data?: DescribeScheduledQueryCommandOutput) => void,
   ): void;
 
   /**
@@ -189,16 +189,16 @@ export interface TimestreamQuery {
    */
   executeScheduledQuery(
     args: ExecuteScheduledQueryCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ExecuteScheduledQueryCommandOutput>;
   executeScheduledQuery(
     args: ExecuteScheduledQueryCommandInput,
-    cb: (err: any, data?: ExecuteScheduledQueryCommandOutput) => void
+    cb: (err: any, data?: ExecuteScheduledQueryCommandOutput) => void,
   ): void;
   executeScheduledQuery(
     args: ExecuteScheduledQueryCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ExecuteScheduledQueryCommandOutput) => void
+    cb: (err: any, data?: ExecuteScheduledQueryCommandOutput) => void,
   ): void;
 
   /**
@@ -207,16 +207,16 @@ export interface TimestreamQuery {
   listScheduledQueries(): Promise<ListScheduledQueriesCommandOutput>;
   listScheduledQueries(
     args: ListScheduledQueriesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListScheduledQueriesCommandOutput>;
   listScheduledQueries(
     args: ListScheduledQueriesCommandInput,
-    cb: (err: any, data?: ListScheduledQueriesCommandOutput) => void
+    cb: (err: any, data?: ListScheduledQueriesCommandOutput) => void,
   ): void;
   listScheduledQueries(
     args: ListScheduledQueriesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListScheduledQueriesCommandOutput) => void
+    cb: (err: any, data?: ListScheduledQueriesCommandOutput) => void,
   ): void;
 
   /**
@@ -224,16 +224,16 @@ export interface TimestreamQuery {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -244,7 +244,7 @@ export interface TimestreamQuery {
   prepareQuery(
     args: PrepareQueryCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PrepareQueryCommandOutput) => void
+    cb: (err: any, data?: PrepareQueryCommandOutput) => void,
   ): void;
 
   /**
@@ -255,7 +255,7 @@ export interface TimestreamQuery {
   query(
     args: QueryCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: QueryCommandOutput) => void
+    cb: (err: any, data?: QueryCommandOutput) => void,
   ): void;
 
   /**
@@ -266,7 +266,7 @@ export interface TimestreamQuery {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -277,7 +277,7 @@ export interface TimestreamQuery {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -286,16 +286,16 @@ export interface TimestreamQuery {
   updateAccountSettings(): Promise<UpdateAccountSettingsCommandOutput>;
   updateAccountSettings(
     args: UpdateAccountSettingsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateAccountSettingsCommandOutput>;
   updateAccountSettings(
     args: UpdateAccountSettingsCommandInput,
-    cb: (err: any, data?: UpdateAccountSettingsCommandOutput) => void
+    cb: (err: any, data?: UpdateAccountSettingsCommandOutput) => void,
   ): void;
   updateAccountSettings(
     args: UpdateAccountSettingsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateAccountSettingsCommandOutput) => void
+    cb: (err: any, data?: UpdateAccountSettingsCommandOutput) => void,
   ): void;
 
   /**
@@ -303,16 +303,16 @@ export interface TimestreamQuery {
    */
   updateScheduledQuery(
     args: UpdateScheduledQueryCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateScheduledQueryCommandOutput>;
   updateScheduledQuery(
     args: UpdateScheduledQueryCommandInput,
-    cb: (err: any, data?: UpdateScheduledQueryCommandOutput) => void
+    cb: (err: any, data?: UpdateScheduledQueryCommandOutput) => void,
   ): void;
   updateScheduledQuery(
     args: UpdateScheduledQueryCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateScheduledQueryCommandOutput) => void
+    cb: (err: any, data?: UpdateScheduledQueryCommandOutput) => void,
   ): void;
 }
 

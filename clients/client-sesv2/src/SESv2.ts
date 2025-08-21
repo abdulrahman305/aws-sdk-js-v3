@@ -549,16 +549,16 @@ export interface SESv2 {
    */
   batchGetMetricData(
     args: BatchGetMetricDataCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<BatchGetMetricDataCommandOutput>;
   batchGetMetricData(
     args: BatchGetMetricDataCommandInput,
-    cb: (err: any, data?: BatchGetMetricDataCommandOutput) => void
+    cb: (err: any, data?: BatchGetMetricDataCommandOutput) => void,
   ): void;
   batchGetMetricData(
     args: BatchGetMetricDataCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: BatchGetMetricDataCommandOutput) => void
+    cb: (err: any, data?: BatchGetMetricDataCommandOutput) => void,
   ): void;
 
   /**
@@ -566,13 +566,13 @@ export interface SESv2 {
    */
   cancelExportJob(
     args: CancelExportJobCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CancelExportJobCommandOutput>;
   cancelExportJob(args: CancelExportJobCommandInput, cb: (err: any, data?: CancelExportJobCommandOutput) => void): void;
   cancelExportJob(
     args: CancelExportJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CancelExportJobCommandOutput) => void
+    cb: (err: any, data?: CancelExportJobCommandOutput) => void,
   ): void;
 
   /**
@@ -580,16 +580,16 @@ export interface SESv2 {
    */
   createConfigurationSet(
     args: CreateConfigurationSetCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateConfigurationSetCommandOutput>;
   createConfigurationSet(
     args: CreateConfigurationSetCommandInput,
-    cb: (err: any, data?: CreateConfigurationSetCommandOutput) => void
+    cb: (err: any, data?: CreateConfigurationSetCommandOutput) => void,
   ): void;
   createConfigurationSet(
     args: CreateConfigurationSetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateConfigurationSetCommandOutput) => void
+    cb: (err: any, data?: CreateConfigurationSetCommandOutput) => void,
   ): void;
 
   /**
@@ -597,16 +597,16 @@ export interface SESv2 {
    */
   createConfigurationSetEventDestination(
     args: CreateConfigurationSetEventDestinationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateConfigurationSetEventDestinationCommandOutput>;
   createConfigurationSetEventDestination(
     args: CreateConfigurationSetEventDestinationCommandInput,
-    cb: (err: any, data?: CreateConfigurationSetEventDestinationCommandOutput) => void
+    cb: (err: any, data?: CreateConfigurationSetEventDestinationCommandOutput) => void,
   ): void;
   createConfigurationSetEventDestination(
     args: CreateConfigurationSetEventDestinationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateConfigurationSetEventDestinationCommandOutput) => void
+    cb: (err: any, data?: CreateConfigurationSetEventDestinationCommandOutput) => void,
   ): void;
 
   /**
@@ -617,7 +617,7 @@ export interface SESv2 {
   createContact(
     args: CreateContactCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateContactCommandOutput) => void
+    cb: (err: any, data?: CreateContactCommandOutput) => void,
   ): void;
 
   /**
@@ -625,16 +625,16 @@ export interface SESv2 {
    */
   createContactList(
     args: CreateContactListCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateContactListCommandOutput>;
   createContactList(
     args: CreateContactListCommandInput,
-    cb: (err: any, data?: CreateContactListCommandOutput) => void
+    cb: (err: any, data?: CreateContactListCommandOutput) => void,
   ): void;
   createContactList(
     args: CreateContactListCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateContactListCommandOutput) => void
+    cb: (err: any, data?: CreateContactListCommandOutput) => void,
   ): void;
 
   /**
@@ -642,16 +642,16 @@ export interface SESv2 {
    */
   createCustomVerificationEmailTemplate(
     args: CreateCustomVerificationEmailTemplateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateCustomVerificationEmailTemplateCommandOutput>;
   createCustomVerificationEmailTemplate(
     args: CreateCustomVerificationEmailTemplateCommandInput,
-    cb: (err: any, data?: CreateCustomVerificationEmailTemplateCommandOutput) => void
+    cb: (err: any, data?: CreateCustomVerificationEmailTemplateCommandOutput) => void,
   ): void;
   createCustomVerificationEmailTemplate(
     args: CreateCustomVerificationEmailTemplateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateCustomVerificationEmailTemplateCommandOutput) => void
+    cb: (err: any, data?: CreateCustomVerificationEmailTemplateCommandOutput) => void,
   ): void;
 
   /**
@@ -659,16 +659,16 @@ export interface SESv2 {
    */
   createDedicatedIpPool(
     args: CreateDedicatedIpPoolCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateDedicatedIpPoolCommandOutput>;
   createDedicatedIpPool(
     args: CreateDedicatedIpPoolCommandInput,
-    cb: (err: any, data?: CreateDedicatedIpPoolCommandOutput) => void
+    cb: (err: any, data?: CreateDedicatedIpPoolCommandOutput) => void,
   ): void;
   createDedicatedIpPool(
     args: CreateDedicatedIpPoolCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateDedicatedIpPoolCommandOutput) => void
+    cb: (err: any, data?: CreateDedicatedIpPoolCommandOutput) => void,
   ): void;
 
   /**
@@ -676,16 +676,16 @@ export interface SESv2 {
    */
   createDeliverabilityTestReport(
     args: CreateDeliverabilityTestReportCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateDeliverabilityTestReportCommandOutput>;
   createDeliverabilityTestReport(
     args: CreateDeliverabilityTestReportCommandInput,
-    cb: (err: any, data?: CreateDeliverabilityTestReportCommandOutput) => void
+    cb: (err: any, data?: CreateDeliverabilityTestReportCommandOutput) => void,
   ): void;
   createDeliverabilityTestReport(
     args: CreateDeliverabilityTestReportCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateDeliverabilityTestReportCommandOutput) => void
+    cb: (err: any, data?: CreateDeliverabilityTestReportCommandOutput) => void,
   ): void;
 
   /**
@@ -693,16 +693,16 @@ export interface SESv2 {
    */
   createEmailIdentity(
     args: CreateEmailIdentityCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateEmailIdentityCommandOutput>;
   createEmailIdentity(
     args: CreateEmailIdentityCommandInput,
-    cb: (err: any, data?: CreateEmailIdentityCommandOutput) => void
+    cb: (err: any, data?: CreateEmailIdentityCommandOutput) => void,
   ): void;
   createEmailIdentity(
     args: CreateEmailIdentityCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateEmailIdentityCommandOutput) => void
+    cb: (err: any, data?: CreateEmailIdentityCommandOutput) => void,
   ): void;
 
   /**
@@ -710,16 +710,16 @@ export interface SESv2 {
    */
   createEmailIdentityPolicy(
     args: CreateEmailIdentityPolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateEmailIdentityPolicyCommandOutput>;
   createEmailIdentityPolicy(
     args: CreateEmailIdentityPolicyCommandInput,
-    cb: (err: any, data?: CreateEmailIdentityPolicyCommandOutput) => void
+    cb: (err: any, data?: CreateEmailIdentityPolicyCommandOutput) => void,
   ): void;
   createEmailIdentityPolicy(
     args: CreateEmailIdentityPolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateEmailIdentityPolicyCommandOutput) => void
+    cb: (err: any, data?: CreateEmailIdentityPolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -727,16 +727,16 @@ export interface SESv2 {
    */
   createEmailTemplate(
     args: CreateEmailTemplateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateEmailTemplateCommandOutput>;
   createEmailTemplate(
     args: CreateEmailTemplateCommandInput,
-    cb: (err: any, data?: CreateEmailTemplateCommandOutput) => void
+    cb: (err: any, data?: CreateEmailTemplateCommandOutput) => void,
   ): void;
   createEmailTemplate(
     args: CreateEmailTemplateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateEmailTemplateCommandOutput) => void
+    cb: (err: any, data?: CreateEmailTemplateCommandOutput) => void,
   ): void;
 
   /**
@@ -744,13 +744,13 @@ export interface SESv2 {
    */
   createExportJob(
     args: CreateExportJobCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateExportJobCommandOutput>;
   createExportJob(args: CreateExportJobCommandInput, cb: (err: any, data?: CreateExportJobCommandOutput) => void): void;
   createExportJob(
     args: CreateExportJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateExportJobCommandOutput) => void
+    cb: (err: any, data?: CreateExportJobCommandOutput) => void,
   ): void;
 
   /**
@@ -758,13 +758,13 @@ export interface SESv2 {
    */
   createImportJob(
     args: CreateImportJobCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateImportJobCommandOutput>;
   createImportJob(args: CreateImportJobCommandInput, cb: (err: any, data?: CreateImportJobCommandOutput) => void): void;
   createImportJob(
     args: CreateImportJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateImportJobCommandOutput) => void
+    cb: (err: any, data?: CreateImportJobCommandOutput) => void,
   ): void;
 
   /**
@@ -772,16 +772,16 @@ export interface SESv2 {
    */
   deleteConfigurationSet(
     args: DeleteConfigurationSetCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteConfigurationSetCommandOutput>;
   deleteConfigurationSet(
     args: DeleteConfigurationSetCommandInput,
-    cb: (err: any, data?: DeleteConfigurationSetCommandOutput) => void
+    cb: (err: any, data?: DeleteConfigurationSetCommandOutput) => void,
   ): void;
   deleteConfigurationSet(
     args: DeleteConfigurationSetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteConfigurationSetCommandOutput) => void
+    cb: (err: any, data?: DeleteConfigurationSetCommandOutput) => void,
   ): void;
 
   /**
@@ -789,16 +789,16 @@ export interface SESv2 {
    */
   deleteConfigurationSetEventDestination(
     args: DeleteConfigurationSetEventDestinationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteConfigurationSetEventDestinationCommandOutput>;
   deleteConfigurationSetEventDestination(
     args: DeleteConfigurationSetEventDestinationCommandInput,
-    cb: (err: any, data?: DeleteConfigurationSetEventDestinationCommandOutput) => void
+    cb: (err: any, data?: DeleteConfigurationSetEventDestinationCommandOutput) => void,
   ): void;
   deleteConfigurationSetEventDestination(
     args: DeleteConfigurationSetEventDestinationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteConfigurationSetEventDestinationCommandOutput) => void
+    cb: (err: any, data?: DeleteConfigurationSetEventDestinationCommandOutput) => void,
   ): void;
 
   /**
@@ -809,7 +809,7 @@ export interface SESv2 {
   deleteContact(
     args: DeleteContactCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteContactCommandOutput) => void
+    cb: (err: any, data?: DeleteContactCommandOutput) => void,
   ): void;
 
   /**
@@ -817,16 +817,16 @@ export interface SESv2 {
    */
   deleteContactList(
     args: DeleteContactListCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteContactListCommandOutput>;
   deleteContactList(
     args: DeleteContactListCommandInput,
-    cb: (err: any, data?: DeleteContactListCommandOutput) => void
+    cb: (err: any, data?: DeleteContactListCommandOutput) => void,
   ): void;
   deleteContactList(
     args: DeleteContactListCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteContactListCommandOutput) => void
+    cb: (err: any, data?: DeleteContactListCommandOutput) => void,
   ): void;
 
   /**
@@ -834,16 +834,16 @@ export interface SESv2 {
    */
   deleteCustomVerificationEmailTemplate(
     args: DeleteCustomVerificationEmailTemplateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteCustomVerificationEmailTemplateCommandOutput>;
   deleteCustomVerificationEmailTemplate(
     args: DeleteCustomVerificationEmailTemplateCommandInput,
-    cb: (err: any, data?: DeleteCustomVerificationEmailTemplateCommandOutput) => void
+    cb: (err: any, data?: DeleteCustomVerificationEmailTemplateCommandOutput) => void,
   ): void;
   deleteCustomVerificationEmailTemplate(
     args: DeleteCustomVerificationEmailTemplateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteCustomVerificationEmailTemplateCommandOutput) => void
+    cb: (err: any, data?: DeleteCustomVerificationEmailTemplateCommandOutput) => void,
   ): void;
 
   /**
@@ -851,16 +851,16 @@ export interface SESv2 {
    */
   deleteDedicatedIpPool(
     args: DeleteDedicatedIpPoolCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteDedicatedIpPoolCommandOutput>;
   deleteDedicatedIpPool(
     args: DeleteDedicatedIpPoolCommandInput,
-    cb: (err: any, data?: DeleteDedicatedIpPoolCommandOutput) => void
+    cb: (err: any, data?: DeleteDedicatedIpPoolCommandOutput) => void,
   ): void;
   deleteDedicatedIpPool(
     args: DeleteDedicatedIpPoolCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteDedicatedIpPoolCommandOutput) => void
+    cb: (err: any, data?: DeleteDedicatedIpPoolCommandOutput) => void,
   ): void;
 
   /**
@@ -868,16 +868,16 @@ export interface SESv2 {
    */
   deleteEmailIdentity(
     args: DeleteEmailIdentityCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteEmailIdentityCommandOutput>;
   deleteEmailIdentity(
     args: DeleteEmailIdentityCommandInput,
-    cb: (err: any, data?: DeleteEmailIdentityCommandOutput) => void
+    cb: (err: any, data?: DeleteEmailIdentityCommandOutput) => void,
   ): void;
   deleteEmailIdentity(
     args: DeleteEmailIdentityCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteEmailIdentityCommandOutput) => void
+    cb: (err: any, data?: DeleteEmailIdentityCommandOutput) => void,
   ): void;
 
   /**
@@ -885,16 +885,16 @@ export interface SESv2 {
    */
   deleteEmailIdentityPolicy(
     args: DeleteEmailIdentityPolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteEmailIdentityPolicyCommandOutput>;
   deleteEmailIdentityPolicy(
     args: DeleteEmailIdentityPolicyCommandInput,
-    cb: (err: any, data?: DeleteEmailIdentityPolicyCommandOutput) => void
+    cb: (err: any, data?: DeleteEmailIdentityPolicyCommandOutput) => void,
   ): void;
   deleteEmailIdentityPolicy(
     args: DeleteEmailIdentityPolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteEmailIdentityPolicyCommandOutput) => void
+    cb: (err: any, data?: DeleteEmailIdentityPolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -902,16 +902,16 @@ export interface SESv2 {
    */
   deleteEmailTemplate(
     args: DeleteEmailTemplateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteEmailTemplateCommandOutput>;
   deleteEmailTemplate(
     args: DeleteEmailTemplateCommandInput,
-    cb: (err: any, data?: DeleteEmailTemplateCommandOutput) => void
+    cb: (err: any, data?: DeleteEmailTemplateCommandOutput) => void,
   ): void;
   deleteEmailTemplate(
     args: DeleteEmailTemplateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteEmailTemplateCommandOutput) => void
+    cb: (err: any, data?: DeleteEmailTemplateCommandOutput) => void,
   ): void;
 
   /**
@@ -919,16 +919,16 @@ export interface SESv2 {
    */
   deleteSuppressedDestination(
     args: DeleteSuppressedDestinationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteSuppressedDestinationCommandOutput>;
   deleteSuppressedDestination(
     args: DeleteSuppressedDestinationCommandInput,
-    cb: (err: any, data?: DeleteSuppressedDestinationCommandOutput) => void
+    cb: (err: any, data?: DeleteSuppressedDestinationCommandOutput) => void,
   ): void;
   deleteSuppressedDestination(
     args: DeleteSuppressedDestinationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteSuppressedDestinationCommandOutput) => void
+    cb: (err: any, data?: DeleteSuppressedDestinationCommandOutput) => void,
   ): void;
 
   /**
@@ -940,7 +940,7 @@ export interface SESv2 {
   getAccount(
     args: GetAccountCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetAccountCommandOutput) => void
+    cb: (err: any, data?: GetAccountCommandOutput) => void,
   ): void;
 
   /**
@@ -948,16 +948,16 @@ export interface SESv2 {
    */
   getBlacklistReports(
     args: GetBlacklistReportsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetBlacklistReportsCommandOutput>;
   getBlacklistReports(
     args: GetBlacklistReportsCommandInput,
-    cb: (err: any, data?: GetBlacklistReportsCommandOutput) => void
+    cb: (err: any, data?: GetBlacklistReportsCommandOutput) => void,
   ): void;
   getBlacklistReports(
     args: GetBlacklistReportsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetBlacklistReportsCommandOutput) => void
+    cb: (err: any, data?: GetBlacklistReportsCommandOutput) => void,
   ): void;
 
   /**
@@ -965,16 +965,16 @@ export interface SESv2 {
    */
   getConfigurationSet(
     args: GetConfigurationSetCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetConfigurationSetCommandOutput>;
   getConfigurationSet(
     args: GetConfigurationSetCommandInput,
-    cb: (err: any, data?: GetConfigurationSetCommandOutput) => void
+    cb: (err: any, data?: GetConfigurationSetCommandOutput) => void,
   ): void;
   getConfigurationSet(
     args: GetConfigurationSetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetConfigurationSetCommandOutput) => void
+    cb: (err: any, data?: GetConfigurationSetCommandOutput) => void,
   ): void;
 
   /**
@@ -982,16 +982,16 @@ export interface SESv2 {
    */
   getConfigurationSetEventDestinations(
     args: GetConfigurationSetEventDestinationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetConfigurationSetEventDestinationsCommandOutput>;
   getConfigurationSetEventDestinations(
     args: GetConfigurationSetEventDestinationsCommandInput,
-    cb: (err: any, data?: GetConfigurationSetEventDestinationsCommandOutput) => void
+    cb: (err: any, data?: GetConfigurationSetEventDestinationsCommandOutput) => void,
   ): void;
   getConfigurationSetEventDestinations(
     args: GetConfigurationSetEventDestinationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetConfigurationSetEventDestinationsCommandOutput) => void
+    cb: (err: any, data?: GetConfigurationSetEventDestinationsCommandOutput) => void,
   ): void;
 
   /**
@@ -1002,7 +1002,7 @@ export interface SESv2 {
   getContact(
     args: GetContactCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetContactCommandOutput) => void
+    cb: (err: any, data?: GetContactCommandOutput) => void,
   ): void;
 
   /**
@@ -1010,13 +1010,13 @@ export interface SESv2 {
    */
   getContactList(
     args: GetContactListCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetContactListCommandOutput>;
   getContactList(args: GetContactListCommandInput, cb: (err: any, data?: GetContactListCommandOutput) => void): void;
   getContactList(
     args: GetContactListCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetContactListCommandOutput) => void
+    cb: (err: any, data?: GetContactListCommandOutput) => void,
   ): void;
 
   /**
@@ -1024,16 +1024,16 @@ export interface SESv2 {
    */
   getCustomVerificationEmailTemplate(
     args: GetCustomVerificationEmailTemplateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetCustomVerificationEmailTemplateCommandOutput>;
   getCustomVerificationEmailTemplate(
     args: GetCustomVerificationEmailTemplateCommandInput,
-    cb: (err: any, data?: GetCustomVerificationEmailTemplateCommandOutput) => void
+    cb: (err: any, data?: GetCustomVerificationEmailTemplateCommandOutput) => void,
   ): void;
   getCustomVerificationEmailTemplate(
     args: GetCustomVerificationEmailTemplateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetCustomVerificationEmailTemplateCommandOutput) => void
+    cb: (err: any, data?: GetCustomVerificationEmailTemplateCommandOutput) => void,
   ): void;
 
   /**
@@ -1041,13 +1041,13 @@ export interface SESv2 {
    */
   getDedicatedIp(
     args: GetDedicatedIpCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetDedicatedIpCommandOutput>;
   getDedicatedIp(args: GetDedicatedIpCommandInput, cb: (err: any, data?: GetDedicatedIpCommandOutput) => void): void;
   getDedicatedIp(
     args: GetDedicatedIpCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetDedicatedIpCommandOutput) => void
+    cb: (err: any, data?: GetDedicatedIpCommandOutput) => void,
   ): void;
 
   /**
@@ -1055,16 +1055,16 @@ export interface SESv2 {
    */
   getDedicatedIpPool(
     args: GetDedicatedIpPoolCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetDedicatedIpPoolCommandOutput>;
   getDedicatedIpPool(
     args: GetDedicatedIpPoolCommandInput,
-    cb: (err: any, data?: GetDedicatedIpPoolCommandOutput) => void
+    cb: (err: any, data?: GetDedicatedIpPoolCommandOutput) => void,
   ): void;
   getDedicatedIpPool(
     args: GetDedicatedIpPoolCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetDedicatedIpPoolCommandOutput) => void
+    cb: (err: any, data?: GetDedicatedIpPoolCommandOutput) => void,
   ): void;
 
   /**
@@ -1073,13 +1073,13 @@ export interface SESv2 {
   getDedicatedIps(): Promise<GetDedicatedIpsCommandOutput>;
   getDedicatedIps(
     args: GetDedicatedIpsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetDedicatedIpsCommandOutput>;
   getDedicatedIps(args: GetDedicatedIpsCommandInput, cb: (err: any, data?: GetDedicatedIpsCommandOutput) => void): void;
   getDedicatedIps(
     args: GetDedicatedIpsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetDedicatedIpsCommandOutput) => void
+    cb: (err: any, data?: GetDedicatedIpsCommandOutput) => void,
   ): void;
 
   /**
@@ -1088,16 +1088,16 @@ export interface SESv2 {
   getDeliverabilityDashboardOptions(): Promise<GetDeliverabilityDashboardOptionsCommandOutput>;
   getDeliverabilityDashboardOptions(
     args: GetDeliverabilityDashboardOptionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetDeliverabilityDashboardOptionsCommandOutput>;
   getDeliverabilityDashboardOptions(
     args: GetDeliverabilityDashboardOptionsCommandInput,
-    cb: (err: any, data?: GetDeliverabilityDashboardOptionsCommandOutput) => void
+    cb: (err: any, data?: GetDeliverabilityDashboardOptionsCommandOutput) => void,
   ): void;
   getDeliverabilityDashboardOptions(
     args: GetDeliverabilityDashboardOptionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetDeliverabilityDashboardOptionsCommandOutput) => void
+    cb: (err: any, data?: GetDeliverabilityDashboardOptionsCommandOutput) => void,
   ): void;
 
   /**
@@ -1105,16 +1105,16 @@ export interface SESv2 {
    */
   getDeliverabilityTestReport(
     args: GetDeliverabilityTestReportCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetDeliverabilityTestReportCommandOutput>;
   getDeliverabilityTestReport(
     args: GetDeliverabilityTestReportCommandInput,
-    cb: (err: any, data?: GetDeliverabilityTestReportCommandOutput) => void
+    cb: (err: any, data?: GetDeliverabilityTestReportCommandOutput) => void,
   ): void;
   getDeliverabilityTestReport(
     args: GetDeliverabilityTestReportCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetDeliverabilityTestReportCommandOutput) => void
+    cb: (err: any, data?: GetDeliverabilityTestReportCommandOutput) => void,
   ): void;
 
   /**
@@ -1122,16 +1122,16 @@ export interface SESv2 {
    */
   getDomainDeliverabilityCampaign(
     args: GetDomainDeliverabilityCampaignCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetDomainDeliverabilityCampaignCommandOutput>;
   getDomainDeliverabilityCampaign(
     args: GetDomainDeliverabilityCampaignCommandInput,
-    cb: (err: any, data?: GetDomainDeliverabilityCampaignCommandOutput) => void
+    cb: (err: any, data?: GetDomainDeliverabilityCampaignCommandOutput) => void,
   ): void;
   getDomainDeliverabilityCampaign(
     args: GetDomainDeliverabilityCampaignCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetDomainDeliverabilityCampaignCommandOutput) => void
+    cb: (err: any, data?: GetDomainDeliverabilityCampaignCommandOutput) => void,
   ): void;
 
   /**
@@ -1139,16 +1139,16 @@ export interface SESv2 {
    */
   getDomainStatisticsReport(
     args: GetDomainStatisticsReportCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetDomainStatisticsReportCommandOutput>;
   getDomainStatisticsReport(
     args: GetDomainStatisticsReportCommandInput,
-    cb: (err: any, data?: GetDomainStatisticsReportCommandOutput) => void
+    cb: (err: any, data?: GetDomainStatisticsReportCommandOutput) => void,
   ): void;
   getDomainStatisticsReport(
     args: GetDomainStatisticsReportCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetDomainStatisticsReportCommandOutput) => void
+    cb: (err: any, data?: GetDomainStatisticsReportCommandOutput) => void,
   ): void;
 
   /**
@@ -1156,16 +1156,16 @@ export interface SESv2 {
    */
   getEmailIdentity(
     args: GetEmailIdentityCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetEmailIdentityCommandOutput>;
   getEmailIdentity(
     args: GetEmailIdentityCommandInput,
-    cb: (err: any, data?: GetEmailIdentityCommandOutput) => void
+    cb: (err: any, data?: GetEmailIdentityCommandOutput) => void,
   ): void;
   getEmailIdentity(
     args: GetEmailIdentityCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetEmailIdentityCommandOutput) => void
+    cb: (err: any, data?: GetEmailIdentityCommandOutput) => void,
   ): void;
 
   /**
@@ -1173,16 +1173,16 @@ export interface SESv2 {
    */
   getEmailIdentityPolicies(
     args: GetEmailIdentityPoliciesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetEmailIdentityPoliciesCommandOutput>;
   getEmailIdentityPolicies(
     args: GetEmailIdentityPoliciesCommandInput,
-    cb: (err: any, data?: GetEmailIdentityPoliciesCommandOutput) => void
+    cb: (err: any, data?: GetEmailIdentityPoliciesCommandOutput) => void,
   ): void;
   getEmailIdentityPolicies(
     args: GetEmailIdentityPoliciesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetEmailIdentityPoliciesCommandOutput) => void
+    cb: (err: any, data?: GetEmailIdentityPoliciesCommandOutput) => void,
   ): void;
 
   /**
@@ -1190,16 +1190,16 @@ export interface SESv2 {
    */
   getEmailTemplate(
     args: GetEmailTemplateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetEmailTemplateCommandOutput>;
   getEmailTemplate(
     args: GetEmailTemplateCommandInput,
-    cb: (err: any, data?: GetEmailTemplateCommandOutput) => void
+    cb: (err: any, data?: GetEmailTemplateCommandOutput) => void,
   ): void;
   getEmailTemplate(
     args: GetEmailTemplateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetEmailTemplateCommandOutput) => void
+    cb: (err: any, data?: GetEmailTemplateCommandOutput) => void,
   ): void;
 
   /**
@@ -1210,7 +1210,7 @@ export interface SESv2 {
   getExportJob(
     args: GetExportJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetExportJobCommandOutput) => void
+    cb: (err: any, data?: GetExportJobCommandOutput) => void,
   ): void;
 
   /**
@@ -1221,7 +1221,7 @@ export interface SESv2 {
   getImportJob(
     args: GetImportJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetImportJobCommandOutput) => void
+    cb: (err: any, data?: GetImportJobCommandOutput) => void,
   ): void;
 
   /**
@@ -1229,16 +1229,16 @@ export interface SESv2 {
    */
   getMessageInsights(
     args: GetMessageInsightsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetMessageInsightsCommandOutput>;
   getMessageInsights(
     args: GetMessageInsightsCommandInput,
-    cb: (err: any, data?: GetMessageInsightsCommandOutput) => void
+    cb: (err: any, data?: GetMessageInsightsCommandOutput) => void,
   ): void;
   getMessageInsights(
     args: GetMessageInsightsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetMessageInsightsCommandOutput) => void
+    cb: (err: any, data?: GetMessageInsightsCommandOutput) => void,
   ): void;
 
   /**
@@ -1246,16 +1246,16 @@ export interface SESv2 {
    */
   getSuppressedDestination(
     args: GetSuppressedDestinationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetSuppressedDestinationCommandOutput>;
   getSuppressedDestination(
     args: GetSuppressedDestinationCommandInput,
-    cb: (err: any, data?: GetSuppressedDestinationCommandOutput) => void
+    cb: (err: any, data?: GetSuppressedDestinationCommandOutput) => void,
   ): void;
   getSuppressedDestination(
     args: GetSuppressedDestinationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetSuppressedDestinationCommandOutput) => void
+    cb: (err: any, data?: GetSuppressedDestinationCommandOutput) => void,
   ): void;
 
   /**
@@ -1264,16 +1264,16 @@ export interface SESv2 {
   listConfigurationSets(): Promise<ListConfigurationSetsCommandOutput>;
   listConfigurationSets(
     args: ListConfigurationSetsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListConfigurationSetsCommandOutput>;
   listConfigurationSets(
     args: ListConfigurationSetsCommandInput,
-    cb: (err: any, data?: ListConfigurationSetsCommandOutput) => void
+    cb: (err: any, data?: ListConfigurationSetsCommandOutput) => void,
   ): void;
   listConfigurationSets(
     args: ListConfigurationSetsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListConfigurationSetsCommandOutput) => void
+    cb: (err: any, data?: ListConfigurationSetsCommandOutput) => void,
   ): void;
 
   /**
@@ -1282,16 +1282,16 @@ export interface SESv2 {
   listContactLists(): Promise<ListContactListsCommandOutput>;
   listContactLists(
     args: ListContactListsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListContactListsCommandOutput>;
   listContactLists(
     args: ListContactListsCommandInput,
-    cb: (err: any, data?: ListContactListsCommandOutput) => void
+    cb: (err: any, data?: ListContactListsCommandOutput) => void,
   ): void;
   listContactLists(
     args: ListContactListsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListContactListsCommandOutput) => void
+    cb: (err: any, data?: ListContactListsCommandOutput) => void,
   ): void;
 
   /**
@@ -1302,7 +1302,7 @@ export interface SESv2 {
   listContacts(
     args: ListContactsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListContactsCommandOutput) => void
+    cb: (err: any, data?: ListContactsCommandOutput) => void,
   ): void;
 
   /**
@@ -1311,16 +1311,16 @@ export interface SESv2 {
   listCustomVerificationEmailTemplates(): Promise<ListCustomVerificationEmailTemplatesCommandOutput>;
   listCustomVerificationEmailTemplates(
     args: ListCustomVerificationEmailTemplatesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListCustomVerificationEmailTemplatesCommandOutput>;
   listCustomVerificationEmailTemplates(
     args: ListCustomVerificationEmailTemplatesCommandInput,
-    cb: (err: any, data?: ListCustomVerificationEmailTemplatesCommandOutput) => void
+    cb: (err: any, data?: ListCustomVerificationEmailTemplatesCommandOutput) => void,
   ): void;
   listCustomVerificationEmailTemplates(
     args: ListCustomVerificationEmailTemplatesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListCustomVerificationEmailTemplatesCommandOutput) => void
+    cb: (err: any, data?: ListCustomVerificationEmailTemplatesCommandOutput) => void,
   ): void;
 
   /**
@@ -1329,16 +1329,16 @@ export interface SESv2 {
   listDedicatedIpPools(): Promise<ListDedicatedIpPoolsCommandOutput>;
   listDedicatedIpPools(
     args: ListDedicatedIpPoolsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListDedicatedIpPoolsCommandOutput>;
   listDedicatedIpPools(
     args: ListDedicatedIpPoolsCommandInput,
-    cb: (err: any, data?: ListDedicatedIpPoolsCommandOutput) => void
+    cb: (err: any, data?: ListDedicatedIpPoolsCommandOutput) => void,
   ): void;
   listDedicatedIpPools(
     args: ListDedicatedIpPoolsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListDedicatedIpPoolsCommandOutput) => void
+    cb: (err: any, data?: ListDedicatedIpPoolsCommandOutput) => void,
   ): void;
 
   /**
@@ -1347,16 +1347,16 @@ export interface SESv2 {
   listDeliverabilityTestReports(): Promise<ListDeliverabilityTestReportsCommandOutput>;
   listDeliverabilityTestReports(
     args: ListDeliverabilityTestReportsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListDeliverabilityTestReportsCommandOutput>;
   listDeliverabilityTestReports(
     args: ListDeliverabilityTestReportsCommandInput,
-    cb: (err: any, data?: ListDeliverabilityTestReportsCommandOutput) => void
+    cb: (err: any, data?: ListDeliverabilityTestReportsCommandOutput) => void,
   ): void;
   listDeliverabilityTestReports(
     args: ListDeliverabilityTestReportsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListDeliverabilityTestReportsCommandOutput) => void
+    cb: (err: any, data?: ListDeliverabilityTestReportsCommandOutput) => void,
   ): void;
 
   /**
@@ -1364,16 +1364,16 @@ export interface SESv2 {
    */
   listDomainDeliverabilityCampaigns(
     args: ListDomainDeliverabilityCampaignsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListDomainDeliverabilityCampaignsCommandOutput>;
   listDomainDeliverabilityCampaigns(
     args: ListDomainDeliverabilityCampaignsCommandInput,
-    cb: (err: any, data?: ListDomainDeliverabilityCampaignsCommandOutput) => void
+    cb: (err: any, data?: ListDomainDeliverabilityCampaignsCommandOutput) => void,
   ): void;
   listDomainDeliverabilityCampaigns(
     args: ListDomainDeliverabilityCampaignsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListDomainDeliverabilityCampaignsCommandOutput) => void
+    cb: (err: any, data?: ListDomainDeliverabilityCampaignsCommandOutput) => void,
   ): void;
 
   /**
@@ -1382,16 +1382,16 @@ export interface SESv2 {
   listEmailIdentities(): Promise<ListEmailIdentitiesCommandOutput>;
   listEmailIdentities(
     args: ListEmailIdentitiesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListEmailIdentitiesCommandOutput>;
   listEmailIdentities(
     args: ListEmailIdentitiesCommandInput,
-    cb: (err: any, data?: ListEmailIdentitiesCommandOutput) => void
+    cb: (err: any, data?: ListEmailIdentitiesCommandOutput) => void,
   ): void;
   listEmailIdentities(
     args: ListEmailIdentitiesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListEmailIdentitiesCommandOutput) => void
+    cb: (err: any, data?: ListEmailIdentitiesCommandOutput) => void,
   ): void;
 
   /**
@@ -1400,16 +1400,16 @@ export interface SESv2 {
   listEmailTemplates(): Promise<ListEmailTemplatesCommandOutput>;
   listEmailTemplates(
     args: ListEmailTemplatesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListEmailTemplatesCommandOutput>;
   listEmailTemplates(
     args: ListEmailTemplatesCommandInput,
-    cb: (err: any, data?: ListEmailTemplatesCommandOutput) => void
+    cb: (err: any, data?: ListEmailTemplatesCommandOutput) => void,
   ): void;
   listEmailTemplates(
     args: ListEmailTemplatesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListEmailTemplatesCommandOutput) => void
+    cb: (err: any, data?: ListEmailTemplatesCommandOutput) => void,
   ): void;
 
   /**
@@ -1418,13 +1418,13 @@ export interface SESv2 {
   listExportJobs(): Promise<ListExportJobsCommandOutput>;
   listExportJobs(
     args: ListExportJobsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListExportJobsCommandOutput>;
   listExportJobs(args: ListExportJobsCommandInput, cb: (err: any, data?: ListExportJobsCommandOutput) => void): void;
   listExportJobs(
     args: ListExportJobsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListExportJobsCommandOutput) => void
+    cb: (err: any, data?: ListExportJobsCommandOutput) => void,
   ): void;
 
   /**
@@ -1433,13 +1433,13 @@ export interface SESv2 {
   listImportJobs(): Promise<ListImportJobsCommandOutput>;
   listImportJobs(
     args: ListImportJobsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListImportJobsCommandOutput>;
   listImportJobs(args: ListImportJobsCommandInput, cb: (err: any, data?: ListImportJobsCommandOutput) => void): void;
   listImportJobs(
     args: ListImportJobsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListImportJobsCommandOutput) => void
+    cb: (err: any, data?: ListImportJobsCommandOutput) => void,
   ): void;
 
   /**
@@ -1448,16 +1448,16 @@ export interface SESv2 {
   listRecommendations(): Promise<ListRecommendationsCommandOutput>;
   listRecommendations(
     args: ListRecommendationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListRecommendationsCommandOutput>;
   listRecommendations(
     args: ListRecommendationsCommandInput,
-    cb: (err: any, data?: ListRecommendationsCommandOutput) => void
+    cb: (err: any, data?: ListRecommendationsCommandOutput) => void,
   ): void;
   listRecommendations(
     args: ListRecommendationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListRecommendationsCommandOutput) => void
+    cb: (err: any, data?: ListRecommendationsCommandOutput) => void,
   ): void;
 
   /**
@@ -1466,16 +1466,16 @@ export interface SESv2 {
   listSuppressedDestinations(): Promise<ListSuppressedDestinationsCommandOutput>;
   listSuppressedDestinations(
     args: ListSuppressedDestinationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListSuppressedDestinationsCommandOutput>;
   listSuppressedDestinations(
     args: ListSuppressedDestinationsCommandInput,
-    cb: (err: any, data?: ListSuppressedDestinationsCommandOutput) => void
+    cb: (err: any, data?: ListSuppressedDestinationsCommandOutput) => void,
   ): void;
   listSuppressedDestinations(
     args: ListSuppressedDestinationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListSuppressedDestinationsCommandOutput) => void
+    cb: (err: any, data?: ListSuppressedDestinationsCommandOutput) => void,
   ): void;
 
   /**
@@ -1483,16 +1483,16 @@ export interface SESv2 {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -1501,16 +1501,16 @@ export interface SESv2 {
   putAccountDedicatedIpWarmupAttributes(): Promise<PutAccountDedicatedIpWarmupAttributesCommandOutput>;
   putAccountDedicatedIpWarmupAttributes(
     args: PutAccountDedicatedIpWarmupAttributesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutAccountDedicatedIpWarmupAttributesCommandOutput>;
   putAccountDedicatedIpWarmupAttributes(
     args: PutAccountDedicatedIpWarmupAttributesCommandInput,
-    cb: (err: any, data?: PutAccountDedicatedIpWarmupAttributesCommandOutput) => void
+    cb: (err: any, data?: PutAccountDedicatedIpWarmupAttributesCommandOutput) => void,
   ): void;
   putAccountDedicatedIpWarmupAttributes(
     args: PutAccountDedicatedIpWarmupAttributesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutAccountDedicatedIpWarmupAttributesCommandOutput) => void
+    cb: (err: any, data?: PutAccountDedicatedIpWarmupAttributesCommandOutput) => void,
   ): void;
 
   /**
@@ -1518,16 +1518,16 @@ export interface SESv2 {
    */
   putAccountDetails(
     args: PutAccountDetailsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutAccountDetailsCommandOutput>;
   putAccountDetails(
     args: PutAccountDetailsCommandInput,
-    cb: (err: any, data?: PutAccountDetailsCommandOutput) => void
+    cb: (err: any, data?: PutAccountDetailsCommandOutput) => void,
   ): void;
   putAccountDetails(
     args: PutAccountDetailsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutAccountDetailsCommandOutput) => void
+    cb: (err: any, data?: PutAccountDetailsCommandOutput) => void,
   ): void;
 
   /**
@@ -1536,16 +1536,16 @@ export interface SESv2 {
   putAccountSendingAttributes(): Promise<PutAccountSendingAttributesCommandOutput>;
   putAccountSendingAttributes(
     args: PutAccountSendingAttributesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutAccountSendingAttributesCommandOutput>;
   putAccountSendingAttributes(
     args: PutAccountSendingAttributesCommandInput,
-    cb: (err: any, data?: PutAccountSendingAttributesCommandOutput) => void
+    cb: (err: any, data?: PutAccountSendingAttributesCommandOutput) => void,
   ): void;
   putAccountSendingAttributes(
     args: PutAccountSendingAttributesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutAccountSendingAttributesCommandOutput) => void
+    cb: (err: any, data?: PutAccountSendingAttributesCommandOutput) => void,
   ): void;
 
   /**
@@ -1554,16 +1554,16 @@ export interface SESv2 {
   putAccountSuppressionAttributes(): Promise<PutAccountSuppressionAttributesCommandOutput>;
   putAccountSuppressionAttributes(
     args: PutAccountSuppressionAttributesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutAccountSuppressionAttributesCommandOutput>;
   putAccountSuppressionAttributes(
     args: PutAccountSuppressionAttributesCommandInput,
-    cb: (err: any, data?: PutAccountSuppressionAttributesCommandOutput) => void
+    cb: (err: any, data?: PutAccountSuppressionAttributesCommandOutput) => void,
   ): void;
   putAccountSuppressionAttributes(
     args: PutAccountSuppressionAttributesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutAccountSuppressionAttributesCommandOutput) => void
+    cb: (err: any, data?: PutAccountSuppressionAttributesCommandOutput) => void,
   ): void;
 
   /**
@@ -1571,16 +1571,16 @@ export interface SESv2 {
    */
   putAccountVdmAttributes(
     args: PutAccountVdmAttributesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutAccountVdmAttributesCommandOutput>;
   putAccountVdmAttributes(
     args: PutAccountVdmAttributesCommandInput,
-    cb: (err: any, data?: PutAccountVdmAttributesCommandOutput) => void
+    cb: (err: any, data?: PutAccountVdmAttributesCommandOutput) => void,
   ): void;
   putAccountVdmAttributes(
     args: PutAccountVdmAttributesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutAccountVdmAttributesCommandOutput) => void
+    cb: (err: any, data?: PutAccountVdmAttributesCommandOutput) => void,
   ): void;
 
   /**
@@ -1588,16 +1588,16 @@ export interface SESv2 {
    */
   putConfigurationSetDeliveryOptions(
     args: PutConfigurationSetDeliveryOptionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutConfigurationSetDeliveryOptionsCommandOutput>;
   putConfigurationSetDeliveryOptions(
     args: PutConfigurationSetDeliveryOptionsCommandInput,
-    cb: (err: any, data?: PutConfigurationSetDeliveryOptionsCommandOutput) => void
+    cb: (err: any, data?: PutConfigurationSetDeliveryOptionsCommandOutput) => void,
   ): void;
   putConfigurationSetDeliveryOptions(
     args: PutConfigurationSetDeliveryOptionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutConfigurationSetDeliveryOptionsCommandOutput) => void
+    cb: (err: any, data?: PutConfigurationSetDeliveryOptionsCommandOutput) => void,
   ): void;
 
   /**
@@ -1605,16 +1605,16 @@ export interface SESv2 {
    */
   putConfigurationSetReputationOptions(
     args: PutConfigurationSetReputationOptionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutConfigurationSetReputationOptionsCommandOutput>;
   putConfigurationSetReputationOptions(
     args: PutConfigurationSetReputationOptionsCommandInput,
-    cb: (err: any, data?: PutConfigurationSetReputationOptionsCommandOutput) => void
+    cb: (err: any, data?: PutConfigurationSetReputationOptionsCommandOutput) => void,
   ): void;
   putConfigurationSetReputationOptions(
     args: PutConfigurationSetReputationOptionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutConfigurationSetReputationOptionsCommandOutput) => void
+    cb: (err: any, data?: PutConfigurationSetReputationOptionsCommandOutput) => void,
   ): void;
 
   /**
@@ -1622,16 +1622,16 @@ export interface SESv2 {
    */
   putConfigurationSetSendingOptions(
     args: PutConfigurationSetSendingOptionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutConfigurationSetSendingOptionsCommandOutput>;
   putConfigurationSetSendingOptions(
     args: PutConfigurationSetSendingOptionsCommandInput,
-    cb: (err: any, data?: PutConfigurationSetSendingOptionsCommandOutput) => void
+    cb: (err: any, data?: PutConfigurationSetSendingOptionsCommandOutput) => void,
   ): void;
   putConfigurationSetSendingOptions(
     args: PutConfigurationSetSendingOptionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutConfigurationSetSendingOptionsCommandOutput) => void
+    cb: (err: any, data?: PutConfigurationSetSendingOptionsCommandOutput) => void,
   ): void;
 
   /**
@@ -1639,16 +1639,16 @@ export interface SESv2 {
    */
   putConfigurationSetSuppressionOptions(
     args: PutConfigurationSetSuppressionOptionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutConfigurationSetSuppressionOptionsCommandOutput>;
   putConfigurationSetSuppressionOptions(
     args: PutConfigurationSetSuppressionOptionsCommandInput,
-    cb: (err: any, data?: PutConfigurationSetSuppressionOptionsCommandOutput) => void
+    cb: (err: any, data?: PutConfigurationSetSuppressionOptionsCommandOutput) => void,
   ): void;
   putConfigurationSetSuppressionOptions(
     args: PutConfigurationSetSuppressionOptionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutConfigurationSetSuppressionOptionsCommandOutput) => void
+    cb: (err: any, data?: PutConfigurationSetSuppressionOptionsCommandOutput) => void,
   ): void;
 
   /**
@@ -1656,16 +1656,16 @@ export interface SESv2 {
    */
   putConfigurationSetTrackingOptions(
     args: PutConfigurationSetTrackingOptionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutConfigurationSetTrackingOptionsCommandOutput>;
   putConfigurationSetTrackingOptions(
     args: PutConfigurationSetTrackingOptionsCommandInput,
-    cb: (err: any, data?: PutConfigurationSetTrackingOptionsCommandOutput) => void
+    cb: (err: any, data?: PutConfigurationSetTrackingOptionsCommandOutput) => void,
   ): void;
   putConfigurationSetTrackingOptions(
     args: PutConfigurationSetTrackingOptionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutConfigurationSetTrackingOptionsCommandOutput) => void
+    cb: (err: any, data?: PutConfigurationSetTrackingOptionsCommandOutput) => void,
   ): void;
 
   /**
@@ -1673,16 +1673,16 @@ export interface SESv2 {
    */
   putConfigurationSetVdmOptions(
     args: PutConfigurationSetVdmOptionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutConfigurationSetVdmOptionsCommandOutput>;
   putConfigurationSetVdmOptions(
     args: PutConfigurationSetVdmOptionsCommandInput,
-    cb: (err: any, data?: PutConfigurationSetVdmOptionsCommandOutput) => void
+    cb: (err: any, data?: PutConfigurationSetVdmOptionsCommandOutput) => void,
   ): void;
   putConfigurationSetVdmOptions(
     args: PutConfigurationSetVdmOptionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutConfigurationSetVdmOptionsCommandOutput) => void
+    cb: (err: any, data?: PutConfigurationSetVdmOptionsCommandOutput) => void,
   ): void;
 
   /**
@@ -1690,16 +1690,16 @@ export interface SESv2 {
    */
   putDedicatedIpInPool(
     args: PutDedicatedIpInPoolCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutDedicatedIpInPoolCommandOutput>;
   putDedicatedIpInPool(
     args: PutDedicatedIpInPoolCommandInput,
-    cb: (err: any, data?: PutDedicatedIpInPoolCommandOutput) => void
+    cb: (err: any, data?: PutDedicatedIpInPoolCommandOutput) => void,
   ): void;
   putDedicatedIpInPool(
     args: PutDedicatedIpInPoolCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutDedicatedIpInPoolCommandOutput) => void
+    cb: (err: any, data?: PutDedicatedIpInPoolCommandOutput) => void,
   ): void;
 
   /**
@@ -1707,16 +1707,16 @@ export interface SESv2 {
    */
   putDedicatedIpPoolScalingAttributes(
     args: PutDedicatedIpPoolScalingAttributesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutDedicatedIpPoolScalingAttributesCommandOutput>;
   putDedicatedIpPoolScalingAttributes(
     args: PutDedicatedIpPoolScalingAttributesCommandInput,
-    cb: (err: any, data?: PutDedicatedIpPoolScalingAttributesCommandOutput) => void
+    cb: (err: any, data?: PutDedicatedIpPoolScalingAttributesCommandOutput) => void,
   ): void;
   putDedicatedIpPoolScalingAttributes(
     args: PutDedicatedIpPoolScalingAttributesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutDedicatedIpPoolScalingAttributesCommandOutput) => void
+    cb: (err: any, data?: PutDedicatedIpPoolScalingAttributesCommandOutput) => void,
   ): void;
 
   /**
@@ -1724,16 +1724,16 @@ export interface SESv2 {
    */
   putDedicatedIpWarmupAttributes(
     args: PutDedicatedIpWarmupAttributesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutDedicatedIpWarmupAttributesCommandOutput>;
   putDedicatedIpWarmupAttributes(
     args: PutDedicatedIpWarmupAttributesCommandInput,
-    cb: (err: any, data?: PutDedicatedIpWarmupAttributesCommandOutput) => void
+    cb: (err: any, data?: PutDedicatedIpWarmupAttributesCommandOutput) => void,
   ): void;
   putDedicatedIpWarmupAttributes(
     args: PutDedicatedIpWarmupAttributesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutDedicatedIpWarmupAttributesCommandOutput) => void
+    cb: (err: any, data?: PutDedicatedIpWarmupAttributesCommandOutput) => void,
   ): void;
 
   /**
@@ -1741,16 +1741,16 @@ export interface SESv2 {
    */
   putDeliverabilityDashboardOption(
     args: PutDeliverabilityDashboardOptionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutDeliverabilityDashboardOptionCommandOutput>;
   putDeliverabilityDashboardOption(
     args: PutDeliverabilityDashboardOptionCommandInput,
-    cb: (err: any, data?: PutDeliverabilityDashboardOptionCommandOutput) => void
+    cb: (err: any, data?: PutDeliverabilityDashboardOptionCommandOutput) => void,
   ): void;
   putDeliverabilityDashboardOption(
     args: PutDeliverabilityDashboardOptionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutDeliverabilityDashboardOptionCommandOutput) => void
+    cb: (err: any, data?: PutDeliverabilityDashboardOptionCommandOutput) => void,
   ): void;
 
   /**
@@ -1758,16 +1758,16 @@ export interface SESv2 {
    */
   putEmailIdentityConfigurationSetAttributes(
     args: PutEmailIdentityConfigurationSetAttributesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutEmailIdentityConfigurationSetAttributesCommandOutput>;
   putEmailIdentityConfigurationSetAttributes(
     args: PutEmailIdentityConfigurationSetAttributesCommandInput,
-    cb: (err: any, data?: PutEmailIdentityConfigurationSetAttributesCommandOutput) => void
+    cb: (err: any, data?: PutEmailIdentityConfigurationSetAttributesCommandOutput) => void,
   ): void;
   putEmailIdentityConfigurationSetAttributes(
     args: PutEmailIdentityConfigurationSetAttributesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutEmailIdentityConfigurationSetAttributesCommandOutput) => void
+    cb: (err: any, data?: PutEmailIdentityConfigurationSetAttributesCommandOutput) => void,
   ): void;
 
   /**
@@ -1775,16 +1775,16 @@ export interface SESv2 {
    */
   putEmailIdentityDkimAttributes(
     args: PutEmailIdentityDkimAttributesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutEmailIdentityDkimAttributesCommandOutput>;
   putEmailIdentityDkimAttributes(
     args: PutEmailIdentityDkimAttributesCommandInput,
-    cb: (err: any, data?: PutEmailIdentityDkimAttributesCommandOutput) => void
+    cb: (err: any, data?: PutEmailIdentityDkimAttributesCommandOutput) => void,
   ): void;
   putEmailIdentityDkimAttributes(
     args: PutEmailIdentityDkimAttributesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutEmailIdentityDkimAttributesCommandOutput) => void
+    cb: (err: any, data?: PutEmailIdentityDkimAttributesCommandOutput) => void,
   ): void;
 
   /**
@@ -1792,16 +1792,16 @@ export interface SESv2 {
    */
   putEmailIdentityDkimSigningAttributes(
     args: PutEmailIdentityDkimSigningAttributesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutEmailIdentityDkimSigningAttributesCommandOutput>;
   putEmailIdentityDkimSigningAttributes(
     args: PutEmailIdentityDkimSigningAttributesCommandInput,
-    cb: (err: any, data?: PutEmailIdentityDkimSigningAttributesCommandOutput) => void
+    cb: (err: any, data?: PutEmailIdentityDkimSigningAttributesCommandOutput) => void,
   ): void;
   putEmailIdentityDkimSigningAttributes(
     args: PutEmailIdentityDkimSigningAttributesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutEmailIdentityDkimSigningAttributesCommandOutput) => void
+    cb: (err: any, data?: PutEmailIdentityDkimSigningAttributesCommandOutput) => void,
   ): void;
 
   /**
@@ -1809,16 +1809,16 @@ export interface SESv2 {
    */
   putEmailIdentityFeedbackAttributes(
     args: PutEmailIdentityFeedbackAttributesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutEmailIdentityFeedbackAttributesCommandOutput>;
   putEmailIdentityFeedbackAttributes(
     args: PutEmailIdentityFeedbackAttributesCommandInput,
-    cb: (err: any, data?: PutEmailIdentityFeedbackAttributesCommandOutput) => void
+    cb: (err: any, data?: PutEmailIdentityFeedbackAttributesCommandOutput) => void,
   ): void;
   putEmailIdentityFeedbackAttributes(
     args: PutEmailIdentityFeedbackAttributesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutEmailIdentityFeedbackAttributesCommandOutput) => void
+    cb: (err: any, data?: PutEmailIdentityFeedbackAttributesCommandOutput) => void,
   ): void;
 
   /**
@@ -1826,16 +1826,16 @@ export interface SESv2 {
    */
   putEmailIdentityMailFromAttributes(
     args: PutEmailIdentityMailFromAttributesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutEmailIdentityMailFromAttributesCommandOutput>;
   putEmailIdentityMailFromAttributes(
     args: PutEmailIdentityMailFromAttributesCommandInput,
-    cb: (err: any, data?: PutEmailIdentityMailFromAttributesCommandOutput) => void
+    cb: (err: any, data?: PutEmailIdentityMailFromAttributesCommandOutput) => void,
   ): void;
   putEmailIdentityMailFromAttributes(
     args: PutEmailIdentityMailFromAttributesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutEmailIdentityMailFromAttributesCommandOutput) => void
+    cb: (err: any, data?: PutEmailIdentityMailFromAttributesCommandOutput) => void,
   ): void;
 
   /**
@@ -1843,16 +1843,16 @@ export interface SESv2 {
    */
   putSuppressedDestination(
     args: PutSuppressedDestinationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutSuppressedDestinationCommandOutput>;
   putSuppressedDestination(
     args: PutSuppressedDestinationCommandInput,
-    cb: (err: any, data?: PutSuppressedDestinationCommandOutput) => void
+    cb: (err: any, data?: PutSuppressedDestinationCommandOutput) => void,
   ): void;
   putSuppressedDestination(
     args: PutSuppressedDestinationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutSuppressedDestinationCommandOutput) => void
+    cb: (err: any, data?: PutSuppressedDestinationCommandOutput) => void,
   ): void;
 
   /**
@@ -1863,7 +1863,7 @@ export interface SESv2 {
   sendBulkEmail(
     args: SendBulkEmailCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SendBulkEmailCommandOutput) => void
+    cb: (err: any, data?: SendBulkEmailCommandOutput) => void,
   ): void;
 
   /**
@@ -1871,16 +1871,16 @@ export interface SESv2 {
    */
   sendCustomVerificationEmail(
     args: SendCustomVerificationEmailCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<SendCustomVerificationEmailCommandOutput>;
   sendCustomVerificationEmail(
     args: SendCustomVerificationEmailCommandInput,
-    cb: (err: any, data?: SendCustomVerificationEmailCommandOutput) => void
+    cb: (err: any, data?: SendCustomVerificationEmailCommandOutput) => void,
   ): void;
   sendCustomVerificationEmail(
     args: SendCustomVerificationEmailCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SendCustomVerificationEmailCommandOutput) => void
+    cb: (err: any, data?: SendCustomVerificationEmailCommandOutput) => void,
   ): void;
 
   /**
@@ -1891,7 +1891,7 @@ export interface SESv2 {
   sendEmail(
     args: SendEmailCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SendEmailCommandOutput) => void
+    cb: (err: any, data?: SendEmailCommandOutput) => void,
   ): void;
 
   /**
@@ -1902,7 +1902,7 @@ export interface SESv2 {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -1910,16 +1910,16 @@ export interface SESv2 {
    */
   testRenderEmailTemplate(
     args: TestRenderEmailTemplateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<TestRenderEmailTemplateCommandOutput>;
   testRenderEmailTemplate(
     args: TestRenderEmailTemplateCommandInput,
-    cb: (err: any, data?: TestRenderEmailTemplateCommandOutput) => void
+    cb: (err: any, data?: TestRenderEmailTemplateCommandOutput) => void,
   ): void;
   testRenderEmailTemplate(
     args: TestRenderEmailTemplateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TestRenderEmailTemplateCommandOutput) => void
+    cb: (err: any, data?: TestRenderEmailTemplateCommandOutput) => void,
   ): void;
 
   /**
@@ -1930,7 +1930,7 @@ export interface SESv2 {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -1938,16 +1938,16 @@ export interface SESv2 {
    */
   updateConfigurationSetEventDestination(
     args: UpdateConfigurationSetEventDestinationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateConfigurationSetEventDestinationCommandOutput>;
   updateConfigurationSetEventDestination(
     args: UpdateConfigurationSetEventDestinationCommandInput,
-    cb: (err: any, data?: UpdateConfigurationSetEventDestinationCommandOutput) => void
+    cb: (err: any, data?: UpdateConfigurationSetEventDestinationCommandOutput) => void,
   ): void;
   updateConfigurationSetEventDestination(
     args: UpdateConfigurationSetEventDestinationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateConfigurationSetEventDestinationCommandOutput) => void
+    cb: (err: any, data?: UpdateConfigurationSetEventDestinationCommandOutput) => void,
   ): void;
 
   /**
@@ -1958,7 +1958,7 @@ export interface SESv2 {
   updateContact(
     args: UpdateContactCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateContactCommandOutput) => void
+    cb: (err: any, data?: UpdateContactCommandOutput) => void,
   ): void;
 
   /**
@@ -1966,16 +1966,16 @@ export interface SESv2 {
    */
   updateContactList(
     args: UpdateContactListCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateContactListCommandOutput>;
   updateContactList(
     args: UpdateContactListCommandInput,
-    cb: (err: any, data?: UpdateContactListCommandOutput) => void
+    cb: (err: any, data?: UpdateContactListCommandOutput) => void,
   ): void;
   updateContactList(
     args: UpdateContactListCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateContactListCommandOutput) => void
+    cb: (err: any, data?: UpdateContactListCommandOutput) => void,
   ): void;
 
   /**
@@ -1983,16 +1983,16 @@ export interface SESv2 {
    */
   updateCustomVerificationEmailTemplate(
     args: UpdateCustomVerificationEmailTemplateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateCustomVerificationEmailTemplateCommandOutput>;
   updateCustomVerificationEmailTemplate(
     args: UpdateCustomVerificationEmailTemplateCommandInput,
-    cb: (err: any, data?: UpdateCustomVerificationEmailTemplateCommandOutput) => void
+    cb: (err: any, data?: UpdateCustomVerificationEmailTemplateCommandOutput) => void,
   ): void;
   updateCustomVerificationEmailTemplate(
     args: UpdateCustomVerificationEmailTemplateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateCustomVerificationEmailTemplateCommandOutput) => void
+    cb: (err: any, data?: UpdateCustomVerificationEmailTemplateCommandOutput) => void,
   ): void;
 
   /**
@@ -2000,16 +2000,16 @@ export interface SESv2 {
    */
   updateEmailIdentityPolicy(
     args: UpdateEmailIdentityPolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateEmailIdentityPolicyCommandOutput>;
   updateEmailIdentityPolicy(
     args: UpdateEmailIdentityPolicyCommandInput,
-    cb: (err: any, data?: UpdateEmailIdentityPolicyCommandOutput) => void
+    cb: (err: any, data?: UpdateEmailIdentityPolicyCommandOutput) => void,
   ): void;
   updateEmailIdentityPolicy(
     args: UpdateEmailIdentityPolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateEmailIdentityPolicyCommandOutput) => void
+    cb: (err: any, data?: UpdateEmailIdentityPolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -2017,16 +2017,16 @@ export interface SESv2 {
    */
   updateEmailTemplate(
     args: UpdateEmailTemplateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateEmailTemplateCommandOutput>;
   updateEmailTemplate(
     args: UpdateEmailTemplateCommandInput,
-    cb: (err: any, data?: UpdateEmailTemplateCommandOutput) => void
+    cb: (err: any, data?: UpdateEmailTemplateCommandOutput) => void,
   ): void;
   updateEmailTemplate(
     args: UpdateEmailTemplateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateEmailTemplateCommandOutput) => void
+    cb: (err: any, data?: UpdateEmailTemplateCommandOutput) => void,
   ): void;
 }
 

@@ -16,7 +16,7 @@ export interface LocationConstraintResolvedConfig {
   region: Provider<string>;
 }
 export function resolveLocationConstraintConfig<T>(
-  input: T & LocationConstraintInputConfig & PreviouslyResolved
+  input: T & LocationConstraintInputConfig & PreviouslyResolved,
 ): T & LocationConstraintResolvedConfig {
   return { ...input };
 }

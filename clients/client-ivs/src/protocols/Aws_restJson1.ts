@@ -136,7 +136,7 @@ import {
  */
 export const se_BatchGetChannelCommand = async (
   input: BatchGetChannelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -147,7 +147,7 @@ export const se_BatchGetChannelCommand = async (
   body = JSON.stringify(
     take(input, {
       arns: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -158,7 +158,7 @@ export const se_BatchGetChannelCommand = async (
  */
 export const se_BatchGetStreamKeyCommand = async (
   input: BatchGetStreamKeyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -169,7 +169,7 @@ export const se_BatchGetStreamKeyCommand = async (
   body = JSON.stringify(
     take(input, {
       arns: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -180,7 +180,7 @@ export const se_BatchGetStreamKeyCommand = async (
  */
 export const se_BatchStartViewerSessionRevocationCommand = async (
   input: BatchStartViewerSessionRevocationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -191,7 +191,7 @@ export const se_BatchStartViewerSessionRevocationCommand = async (
   body = JSON.stringify(
     take(input, {
       viewerSessions: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -202,7 +202,7 @@ export const se_BatchStartViewerSessionRevocationCommand = async (
  */
 export const se_CreateChannelCommand = async (
   input: CreateChannelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -221,7 +221,7 @@ export const se_CreateChannelCommand = async (
       recordingConfigurationArn: [],
       tags: (_) => _json(_),
       type: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -232,7 +232,7 @@ export const se_CreateChannelCommand = async (
  */
 export const se_CreatePlaybackRestrictionPolicyCommand = async (
   input: CreatePlaybackRestrictionPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -247,7 +247,7 @@ export const se_CreatePlaybackRestrictionPolicyCommand = async (
       enableStrictOriginEnforcement: [],
       name: [],
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -258,7 +258,7 @@ export const se_CreatePlaybackRestrictionPolicyCommand = async (
  */
 export const se_CreateRecordingConfigurationCommand = async (
   input: CreateRecordingConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -274,7 +274,7 @@ export const se_CreateRecordingConfigurationCommand = async (
       renditionConfiguration: (_) => _json(_),
       tags: (_) => _json(_),
       thumbnailConfiguration: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -285,7 +285,7 @@ export const se_CreateRecordingConfigurationCommand = async (
  */
 export const se_CreateStreamKeyCommand = async (
   input: CreateStreamKeyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -297,7 +297,7 @@ export const se_CreateStreamKeyCommand = async (
     take(input, {
       channelArn: [],
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -308,7 +308,7 @@ export const se_CreateStreamKeyCommand = async (
  */
 export const se_DeleteChannelCommand = async (
   input: DeleteChannelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -319,7 +319,7 @@ export const se_DeleteChannelCommand = async (
   body = JSON.stringify(
     take(input, {
       arn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -330,7 +330,7 @@ export const se_DeleteChannelCommand = async (
  */
 export const se_DeletePlaybackKeyPairCommand = async (
   input: DeletePlaybackKeyPairCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -341,7 +341,7 @@ export const se_DeletePlaybackKeyPairCommand = async (
   body = JSON.stringify(
     take(input, {
       arn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -352,7 +352,7 @@ export const se_DeletePlaybackKeyPairCommand = async (
  */
 export const se_DeletePlaybackRestrictionPolicyCommand = async (
   input: DeletePlaybackRestrictionPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -363,7 +363,7 @@ export const se_DeletePlaybackRestrictionPolicyCommand = async (
   body = JSON.stringify(
     take(input, {
       arn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -374,7 +374,7 @@ export const se_DeletePlaybackRestrictionPolicyCommand = async (
  */
 export const se_DeleteRecordingConfigurationCommand = async (
   input: DeleteRecordingConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -385,7 +385,7 @@ export const se_DeleteRecordingConfigurationCommand = async (
   body = JSON.stringify(
     take(input, {
       arn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -396,7 +396,7 @@ export const se_DeleteRecordingConfigurationCommand = async (
  */
 export const se_DeleteStreamKeyCommand = async (
   input: DeleteStreamKeyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -407,7 +407,7 @@ export const se_DeleteStreamKeyCommand = async (
   body = JSON.stringify(
     take(input, {
       arn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -418,7 +418,7 @@ export const se_DeleteStreamKeyCommand = async (
  */
 export const se_GetChannelCommand = async (
   input: GetChannelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -429,7 +429,7 @@ export const se_GetChannelCommand = async (
   body = JSON.stringify(
     take(input, {
       arn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -440,7 +440,7 @@ export const se_GetChannelCommand = async (
  */
 export const se_GetPlaybackKeyPairCommand = async (
   input: GetPlaybackKeyPairCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -451,7 +451,7 @@ export const se_GetPlaybackKeyPairCommand = async (
   body = JSON.stringify(
     take(input, {
       arn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -462,7 +462,7 @@ export const se_GetPlaybackKeyPairCommand = async (
  */
 export const se_GetPlaybackRestrictionPolicyCommand = async (
   input: GetPlaybackRestrictionPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -473,7 +473,7 @@ export const se_GetPlaybackRestrictionPolicyCommand = async (
   body = JSON.stringify(
     take(input, {
       arn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -484,7 +484,7 @@ export const se_GetPlaybackRestrictionPolicyCommand = async (
  */
 export const se_GetRecordingConfigurationCommand = async (
   input: GetRecordingConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -495,7 +495,7 @@ export const se_GetRecordingConfigurationCommand = async (
   body = JSON.stringify(
     take(input, {
       arn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -506,7 +506,7 @@ export const se_GetRecordingConfigurationCommand = async (
  */
 export const se_GetStreamCommand = async (
   input: GetStreamCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -517,7 +517,7 @@ export const se_GetStreamCommand = async (
   body = JSON.stringify(
     take(input, {
       channelArn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -528,7 +528,7 @@ export const se_GetStreamCommand = async (
  */
 export const se_GetStreamKeyCommand = async (
   input: GetStreamKeyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -539,7 +539,7 @@ export const se_GetStreamKeyCommand = async (
   body = JSON.stringify(
     take(input, {
       arn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -550,7 +550,7 @@ export const se_GetStreamKeyCommand = async (
  */
 export const se_GetStreamSessionCommand = async (
   input: GetStreamSessionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -562,7 +562,7 @@ export const se_GetStreamSessionCommand = async (
     take(input, {
       channelArn: [],
       streamId: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -573,7 +573,7 @@ export const se_GetStreamSessionCommand = async (
  */
 export const se_ImportPlaybackKeyPairCommand = async (
   input: ImportPlaybackKeyPairCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -586,7 +586,7 @@ export const se_ImportPlaybackKeyPairCommand = async (
       name: [],
       publicKeyMaterial: [],
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -597,7 +597,7 @@ export const se_ImportPlaybackKeyPairCommand = async (
  */
 export const se_ListChannelsCommand = async (
   input: ListChannelsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -612,7 +612,7 @@ export const se_ListChannelsCommand = async (
       filterByRecordingConfigurationArn: [],
       maxResults: [],
       nextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -623,7 +623,7 @@ export const se_ListChannelsCommand = async (
  */
 export const se_ListPlaybackKeyPairsCommand = async (
   input: ListPlaybackKeyPairsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -635,7 +635,7 @@ export const se_ListPlaybackKeyPairsCommand = async (
     take(input, {
       maxResults: [],
       nextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -646,7 +646,7 @@ export const se_ListPlaybackKeyPairsCommand = async (
  */
 export const se_ListPlaybackRestrictionPoliciesCommand = async (
   input: ListPlaybackRestrictionPoliciesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -658,7 +658,7 @@ export const se_ListPlaybackRestrictionPoliciesCommand = async (
     take(input, {
       maxResults: [],
       nextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -669,7 +669,7 @@ export const se_ListPlaybackRestrictionPoliciesCommand = async (
  */
 export const se_ListRecordingConfigurationsCommand = async (
   input: ListRecordingConfigurationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -681,7 +681,7 @@ export const se_ListRecordingConfigurationsCommand = async (
     take(input, {
       maxResults: [],
       nextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -692,7 +692,7 @@ export const se_ListRecordingConfigurationsCommand = async (
  */
 export const se_ListStreamKeysCommand = async (
   input: ListStreamKeysCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -705,7 +705,7 @@ export const se_ListStreamKeysCommand = async (
       channelArn: [],
       maxResults: [],
       nextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -716,7 +716,7 @@ export const se_ListStreamKeysCommand = async (
  */
 export const se_ListStreamsCommand = async (
   input: ListStreamsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -729,7 +729,7 @@ export const se_ListStreamsCommand = async (
       filterBy: (_) => _json(_),
       maxResults: [],
       nextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -740,7 +740,7 @@ export const se_ListStreamsCommand = async (
  */
 export const se_ListStreamSessionsCommand = async (
   input: ListStreamSessionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -753,7 +753,7 @@ export const se_ListStreamSessionsCommand = async (
       channelArn: [],
       maxResults: [],
       nextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -764,7 +764,7 @@ export const se_ListStreamSessionsCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -780,7 +780,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_PutMetadataCommand = async (
   input: PutMetadataCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -792,7 +792,7 @@ export const se_PutMetadataCommand = async (
     take(input, {
       channelArn: [],
       metadata: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -803,7 +803,7 @@ export const se_PutMetadataCommand = async (
  */
 export const se_StartViewerSessionRevocationCommand = async (
   input: StartViewerSessionRevocationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -816,7 +816,7 @@ export const se_StartViewerSessionRevocationCommand = async (
       channelArn: [],
       viewerId: [],
       viewerSessionVersionsLessThanOrEqualTo: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -827,7 +827,7 @@ export const se_StartViewerSessionRevocationCommand = async (
  */
 export const se_StopStreamCommand = async (
   input: StopStreamCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -838,7 +838,7 @@ export const se_StopStreamCommand = async (
   body = JSON.stringify(
     take(input, {
       channelArn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -849,7 +849,7 @@ export const se_StopStreamCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -861,7 +861,7 @@ export const se_TagResourceCommand = async (
   body = JSON.stringify(
     take(input, {
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -872,7 +872,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -894,7 +894,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateChannelCommand = async (
   input: UpdateChannelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -913,7 +913,7 @@ export const se_UpdateChannelCommand = async (
       preset: [],
       recordingConfigurationArn: [],
       type: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -924,7 +924,7 @@ export const se_UpdateChannelCommand = async (
  */
 export const se_UpdatePlaybackRestrictionPolicyCommand = async (
   input: UpdatePlaybackRestrictionPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -939,7 +939,7 @@ export const se_UpdatePlaybackRestrictionPolicyCommand = async (
       arn: [],
       enableStrictOriginEnforcement: [],
       name: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -950,7 +950,7 @@ export const se_UpdatePlaybackRestrictionPolicyCommand = async (
  */
 export const de_BatchGetChannelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchGetChannelCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -972,7 +972,7 @@ export const de_BatchGetChannelCommand = async (
  */
 export const de_BatchGetStreamKeyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchGetStreamKeyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -994,7 +994,7 @@ export const de_BatchGetStreamKeyCommand = async (
  */
 export const de_BatchStartViewerSessionRevocationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchStartViewerSessionRevocationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1015,7 +1015,7 @@ export const de_BatchStartViewerSessionRevocationCommand = async (
  */
 export const de_CreateChannelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateChannelCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1037,7 +1037,7 @@ export const de_CreateChannelCommand = async (
  */
 export const de_CreatePlaybackRestrictionPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreatePlaybackRestrictionPolicyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1058,7 +1058,7 @@ export const de_CreatePlaybackRestrictionPolicyCommand = async (
  */
 export const de_CreateRecordingConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateRecordingConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1079,7 +1079,7 @@ export const de_CreateRecordingConfigurationCommand = async (
  */
 export const de_CreateStreamKeyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateStreamKeyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1100,7 +1100,7 @@ export const de_CreateStreamKeyCommand = async (
  */
 export const de_DeleteChannelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteChannelCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1117,7 +1117,7 @@ export const de_DeleteChannelCommand = async (
  */
 export const de_DeletePlaybackKeyPairCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeletePlaybackKeyPairCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1134,7 +1134,7 @@ export const de_DeletePlaybackKeyPairCommand = async (
  */
 export const de_DeletePlaybackRestrictionPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeletePlaybackRestrictionPolicyCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1151,7 +1151,7 @@ export const de_DeletePlaybackRestrictionPolicyCommand = async (
  */
 export const de_DeleteRecordingConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteRecordingConfigurationCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1168,7 +1168,7 @@ export const de_DeleteRecordingConfigurationCommand = async (
  */
 export const de_DeleteStreamKeyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteStreamKeyCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1185,7 +1185,7 @@ export const de_DeleteStreamKeyCommand = async (
  */
 export const de_GetChannelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetChannelCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1206,7 +1206,7 @@ export const de_GetChannelCommand = async (
  */
 export const de_GetPlaybackKeyPairCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetPlaybackKeyPairCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1227,7 +1227,7 @@ export const de_GetPlaybackKeyPairCommand = async (
  */
 export const de_GetPlaybackRestrictionPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetPlaybackRestrictionPolicyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1248,7 +1248,7 @@ export const de_GetPlaybackRestrictionPolicyCommand = async (
  */
 export const de_GetRecordingConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetRecordingConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1269,7 +1269,7 @@ export const de_GetRecordingConfigurationCommand = async (
  */
 export const de_GetStreamCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetStreamCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1290,7 +1290,7 @@ export const de_GetStreamCommand = async (
  */
 export const de_GetStreamKeyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetStreamKeyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1311,7 +1311,7 @@ export const de_GetStreamKeyCommand = async (
  */
 export const de_GetStreamSessionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetStreamSessionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1332,7 +1332,7 @@ export const de_GetStreamSessionCommand = async (
  */
 export const de_ImportPlaybackKeyPairCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ImportPlaybackKeyPairCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1353,7 +1353,7 @@ export const de_ImportPlaybackKeyPairCommand = async (
  */
 export const de_ListChannelsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListChannelsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1375,7 +1375,7 @@ export const de_ListChannelsCommand = async (
  */
 export const de_ListPlaybackKeyPairsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListPlaybackKeyPairsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1397,7 +1397,7 @@ export const de_ListPlaybackKeyPairsCommand = async (
  */
 export const de_ListPlaybackRestrictionPoliciesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListPlaybackRestrictionPoliciesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1419,7 +1419,7 @@ export const de_ListPlaybackRestrictionPoliciesCommand = async (
  */
 export const de_ListRecordingConfigurationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListRecordingConfigurationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1441,7 +1441,7 @@ export const de_ListRecordingConfigurationsCommand = async (
  */
 export const de_ListStreamKeysCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListStreamKeysCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1463,7 +1463,7 @@ export const de_ListStreamKeysCommand = async (
  */
 export const de_ListStreamsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListStreamsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1485,7 +1485,7 @@ export const de_ListStreamsCommand = async (
  */
 export const de_ListStreamSessionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListStreamSessionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1507,7 +1507,7 @@ export const de_ListStreamSessionsCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1528,7 +1528,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_PutMetadataCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutMetadataCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1545,7 +1545,7 @@ export const de_PutMetadataCommand = async (
  */
 export const de_StartViewerSessionRevocationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartViewerSessionRevocationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1562,7 +1562,7 @@ export const de_StartViewerSessionRevocationCommand = async (
  */
 export const de_StopStreamCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StopStreamCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1579,7 +1579,7 @@ export const de_StopStreamCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1596,7 +1596,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1613,7 +1613,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateChannelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateChannelCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1634,7 +1634,7 @@ export const de_UpdateChannelCommand = async (
  */
 export const de_UpdatePlaybackRestrictionPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdatePlaybackRestrictionPolicyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1706,7 +1706,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1726,7 +1726,7 @@ const de_AccessDeniedExceptionRes = async (
  */
 const de_ChannelNotBroadcastingRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ChannelNotBroadcasting> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1763,7 +1763,7 @@ const de_ConflictExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_InternalServerExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1800,7 +1800,7 @@ const de_PendingVerificationRes = async (parsedOutput: any, context: __SerdeCont
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1820,7 +1820,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_ServiceQuotaExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceQuotaExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;

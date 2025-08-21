@@ -561,16 +561,16 @@ export interface ConfigService {
    */
   batchGetAggregateResourceConfig(
     args: BatchGetAggregateResourceConfigCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<BatchGetAggregateResourceConfigCommandOutput>;
   batchGetAggregateResourceConfig(
     args: BatchGetAggregateResourceConfigCommandInput,
-    cb: (err: any, data?: BatchGetAggregateResourceConfigCommandOutput) => void
+    cb: (err: any, data?: BatchGetAggregateResourceConfigCommandOutput) => void,
   ): void;
   batchGetAggregateResourceConfig(
     args: BatchGetAggregateResourceConfigCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: BatchGetAggregateResourceConfigCommandOutput) => void
+    cb: (err: any, data?: BatchGetAggregateResourceConfigCommandOutput) => void,
   ): void;
 
   /**
@@ -578,16 +578,16 @@ export interface ConfigService {
    */
   batchGetResourceConfig(
     args: BatchGetResourceConfigCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<BatchGetResourceConfigCommandOutput>;
   batchGetResourceConfig(
     args: BatchGetResourceConfigCommandInput,
-    cb: (err: any, data?: BatchGetResourceConfigCommandOutput) => void
+    cb: (err: any, data?: BatchGetResourceConfigCommandOutput) => void,
   ): void;
   batchGetResourceConfig(
     args: BatchGetResourceConfigCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: BatchGetResourceConfigCommandOutput) => void
+    cb: (err: any, data?: BatchGetResourceConfigCommandOutput) => void,
   ): void;
 
   /**
@@ -595,16 +595,16 @@ export interface ConfigService {
    */
   deleteAggregationAuthorization(
     args: DeleteAggregationAuthorizationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteAggregationAuthorizationCommandOutput>;
   deleteAggregationAuthorization(
     args: DeleteAggregationAuthorizationCommandInput,
-    cb: (err: any, data?: DeleteAggregationAuthorizationCommandOutput) => void
+    cb: (err: any, data?: DeleteAggregationAuthorizationCommandOutput) => void,
   ): void;
   deleteAggregationAuthorization(
     args: DeleteAggregationAuthorizationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteAggregationAuthorizationCommandOutput) => void
+    cb: (err: any, data?: DeleteAggregationAuthorizationCommandOutput) => void,
   ): void;
 
   /**
@@ -612,16 +612,16 @@ export interface ConfigService {
    */
   deleteConfigRule(
     args: DeleteConfigRuleCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteConfigRuleCommandOutput>;
   deleteConfigRule(
     args: DeleteConfigRuleCommandInput,
-    cb: (err: any, data?: DeleteConfigRuleCommandOutput) => void
+    cb: (err: any, data?: DeleteConfigRuleCommandOutput) => void,
   ): void;
   deleteConfigRule(
     args: DeleteConfigRuleCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteConfigRuleCommandOutput) => void
+    cb: (err: any, data?: DeleteConfigRuleCommandOutput) => void,
   ): void;
 
   /**
@@ -629,16 +629,16 @@ export interface ConfigService {
    */
   deleteConfigurationAggregator(
     args: DeleteConfigurationAggregatorCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteConfigurationAggregatorCommandOutput>;
   deleteConfigurationAggregator(
     args: DeleteConfigurationAggregatorCommandInput,
-    cb: (err: any, data?: DeleteConfigurationAggregatorCommandOutput) => void
+    cb: (err: any, data?: DeleteConfigurationAggregatorCommandOutput) => void,
   ): void;
   deleteConfigurationAggregator(
     args: DeleteConfigurationAggregatorCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteConfigurationAggregatorCommandOutput) => void
+    cb: (err: any, data?: DeleteConfigurationAggregatorCommandOutput) => void,
   ): void;
 
   /**
@@ -646,16 +646,16 @@ export interface ConfigService {
    */
   deleteConfigurationRecorder(
     args: DeleteConfigurationRecorderCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteConfigurationRecorderCommandOutput>;
   deleteConfigurationRecorder(
     args: DeleteConfigurationRecorderCommandInput,
-    cb: (err: any, data?: DeleteConfigurationRecorderCommandOutput) => void
+    cb: (err: any, data?: DeleteConfigurationRecorderCommandOutput) => void,
   ): void;
   deleteConfigurationRecorder(
     args: DeleteConfigurationRecorderCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteConfigurationRecorderCommandOutput) => void
+    cb: (err: any, data?: DeleteConfigurationRecorderCommandOutput) => void,
   ): void;
 
   /**
@@ -663,16 +663,16 @@ export interface ConfigService {
    */
   deleteConformancePack(
     args: DeleteConformancePackCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteConformancePackCommandOutput>;
   deleteConformancePack(
     args: DeleteConformancePackCommandInput,
-    cb: (err: any, data?: DeleteConformancePackCommandOutput) => void
+    cb: (err: any, data?: DeleteConformancePackCommandOutput) => void,
   ): void;
   deleteConformancePack(
     args: DeleteConformancePackCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteConformancePackCommandOutput) => void
+    cb: (err: any, data?: DeleteConformancePackCommandOutput) => void,
   ): void;
 
   /**
@@ -680,16 +680,16 @@ export interface ConfigService {
    */
   deleteDeliveryChannel(
     args: DeleteDeliveryChannelCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteDeliveryChannelCommandOutput>;
   deleteDeliveryChannel(
     args: DeleteDeliveryChannelCommandInput,
-    cb: (err: any, data?: DeleteDeliveryChannelCommandOutput) => void
+    cb: (err: any, data?: DeleteDeliveryChannelCommandOutput) => void,
   ): void;
   deleteDeliveryChannel(
     args: DeleteDeliveryChannelCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteDeliveryChannelCommandOutput) => void
+    cb: (err: any, data?: DeleteDeliveryChannelCommandOutput) => void,
   ): void;
 
   /**
@@ -697,16 +697,16 @@ export interface ConfigService {
    */
   deleteEvaluationResults(
     args: DeleteEvaluationResultsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteEvaluationResultsCommandOutput>;
   deleteEvaluationResults(
     args: DeleteEvaluationResultsCommandInput,
-    cb: (err: any, data?: DeleteEvaluationResultsCommandOutput) => void
+    cb: (err: any, data?: DeleteEvaluationResultsCommandOutput) => void,
   ): void;
   deleteEvaluationResults(
     args: DeleteEvaluationResultsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteEvaluationResultsCommandOutput) => void
+    cb: (err: any, data?: DeleteEvaluationResultsCommandOutput) => void,
   ): void;
 
   /**
@@ -714,16 +714,16 @@ export interface ConfigService {
    */
   deleteOrganizationConfigRule(
     args: DeleteOrganizationConfigRuleCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteOrganizationConfigRuleCommandOutput>;
   deleteOrganizationConfigRule(
     args: DeleteOrganizationConfigRuleCommandInput,
-    cb: (err: any, data?: DeleteOrganizationConfigRuleCommandOutput) => void
+    cb: (err: any, data?: DeleteOrganizationConfigRuleCommandOutput) => void,
   ): void;
   deleteOrganizationConfigRule(
     args: DeleteOrganizationConfigRuleCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteOrganizationConfigRuleCommandOutput) => void
+    cb: (err: any, data?: DeleteOrganizationConfigRuleCommandOutput) => void,
   ): void;
 
   /**
@@ -731,16 +731,16 @@ export interface ConfigService {
    */
   deleteOrganizationConformancePack(
     args: DeleteOrganizationConformancePackCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteOrganizationConformancePackCommandOutput>;
   deleteOrganizationConformancePack(
     args: DeleteOrganizationConformancePackCommandInput,
-    cb: (err: any, data?: DeleteOrganizationConformancePackCommandOutput) => void
+    cb: (err: any, data?: DeleteOrganizationConformancePackCommandOutput) => void,
   ): void;
   deleteOrganizationConformancePack(
     args: DeleteOrganizationConformancePackCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteOrganizationConformancePackCommandOutput) => void
+    cb: (err: any, data?: DeleteOrganizationConformancePackCommandOutput) => void,
   ): void;
 
   /**
@@ -748,16 +748,16 @@ export interface ConfigService {
    */
   deletePendingAggregationRequest(
     args: DeletePendingAggregationRequestCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeletePendingAggregationRequestCommandOutput>;
   deletePendingAggregationRequest(
     args: DeletePendingAggregationRequestCommandInput,
-    cb: (err: any, data?: DeletePendingAggregationRequestCommandOutput) => void
+    cb: (err: any, data?: DeletePendingAggregationRequestCommandOutput) => void,
   ): void;
   deletePendingAggregationRequest(
     args: DeletePendingAggregationRequestCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeletePendingAggregationRequestCommandOutput) => void
+    cb: (err: any, data?: DeletePendingAggregationRequestCommandOutput) => void,
   ): void;
 
   /**
@@ -765,16 +765,16 @@ export interface ConfigService {
    */
   deleteRemediationConfiguration(
     args: DeleteRemediationConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteRemediationConfigurationCommandOutput>;
   deleteRemediationConfiguration(
     args: DeleteRemediationConfigurationCommandInput,
-    cb: (err: any, data?: DeleteRemediationConfigurationCommandOutput) => void
+    cb: (err: any, data?: DeleteRemediationConfigurationCommandOutput) => void,
   ): void;
   deleteRemediationConfiguration(
     args: DeleteRemediationConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteRemediationConfigurationCommandOutput) => void
+    cb: (err: any, data?: DeleteRemediationConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -782,16 +782,16 @@ export interface ConfigService {
    */
   deleteRemediationExceptions(
     args: DeleteRemediationExceptionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteRemediationExceptionsCommandOutput>;
   deleteRemediationExceptions(
     args: DeleteRemediationExceptionsCommandInput,
-    cb: (err: any, data?: DeleteRemediationExceptionsCommandOutput) => void
+    cb: (err: any, data?: DeleteRemediationExceptionsCommandOutput) => void,
   ): void;
   deleteRemediationExceptions(
     args: DeleteRemediationExceptionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteRemediationExceptionsCommandOutput) => void
+    cb: (err: any, data?: DeleteRemediationExceptionsCommandOutput) => void,
   ): void;
 
   /**
@@ -799,16 +799,16 @@ export interface ConfigService {
    */
   deleteResourceConfig(
     args: DeleteResourceConfigCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteResourceConfigCommandOutput>;
   deleteResourceConfig(
     args: DeleteResourceConfigCommandInput,
-    cb: (err: any, data?: DeleteResourceConfigCommandOutput) => void
+    cb: (err: any, data?: DeleteResourceConfigCommandOutput) => void,
   ): void;
   deleteResourceConfig(
     args: DeleteResourceConfigCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteResourceConfigCommandOutput) => void
+    cb: (err: any, data?: DeleteResourceConfigCommandOutput) => void,
   ): void;
 
   /**
@@ -816,16 +816,16 @@ export interface ConfigService {
    */
   deleteRetentionConfiguration(
     args: DeleteRetentionConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteRetentionConfigurationCommandOutput>;
   deleteRetentionConfiguration(
     args: DeleteRetentionConfigurationCommandInput,
-    cb: (err: any, data?: DeleteRetentionConfigurationCommandOutput) => void
+    cb: (err: any, data?: DeleteRetentionConfigurationCommandOutput) => void,
   ): void;
   deleteRetentionConfiguration(
     args: DeleteRetentionConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteRetentionConfigurationCommandOutput) => void
+    cb: (err: any, data?: DeleteRetentionConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -833,16 +833,16 @@ export interface ConfigService {
    */
   deleteStoredQuery(
     args: DeleteStoredQueryCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteStoredQueryCommandOutput>;
   deleteStoredQuery(
     args: DeleteStoredQueryCommandInput,
-    cb: (err: any, data?: DeleteStoredQueryCommandOutput) => void
+    cb: (err: any, data?: DeleteStoredQueryCommandOutput) => void,
   ): void;
   deleteStoredQuery(
     args: DeleteStoredQueryCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteStoredQueryCommandOutput) => void
+    cb: (err: any, data?: DeleteStoredQueryCommandOutput) => void,
   ): void;
 
   /**
@@ -850,16 +850,16 @@ export interface ConfigService {
    */
   deliverConfigSnapshot(
     args: DeliverConfigSnapshotCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeliverConfigSnapshotCommandOutput>;
   deliverConfigSnapshot(
     args: DeliverConfigSnapshotCommandInput,
-    cb: (err: any, data?: DeliverConfigSnapshotCommandOutput) => void
+    cb: (err: any, data?: DeliverConfigSnapshotCommandOutput) => void,
   ): void;
   deliverConfigSnapshot(
     args: DeliverConfigSnapshotCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeliverConfigSnapshotCommandOutput) => void
+    cb: (err: any, data?: DeliverConfigSnapshotCommandOutput) => void,
   ): void;
 
   /**
@@ -867,16 +867,16 @@ export interface ConfigService {
    */
   describeAggregateComplianceByConfigRules(
     args: DescribeAggregateComplianceByConfigRulesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeAggregateComplianceByConfigRulesCommandOutput>;
   describeAggregateComplianceByConfigRules(
     args: DescribeAggregateComplianceByConfigRulesCommandInput,
-    cb: (err: any, data?: DescribeAggregateComplianceByConfigRulesCommandOutput) => void
+    cb: (err: any, data?: DescribeAggregateComplianceByConfigRulesCommandOutput) => void,
   ): void;
   describeAggregateComplianceByConfigRules(
     args: DescribeAggregateComplianceByConfigRulesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeAggregateComplianceByConfigRulesCommandOutput) => void
+    cb: (err: any, data?: DescribeAggregateComplianceByConfigRulesCommandOutput) => void,
   ): void;
 
   /**
@@ -884,16 +884,16 @@ export interface ConfigService {
    */
   describeAggregateComplianceByConformancePacks(
     args: DescribeAggregateComplianceByConformancePacksCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeAggregateComplianceByConformancePacksCommandOutput>;
   describeAggregateComplianceByConformancePacks(
     args: DescribeAggregateComplianceByConformancePacksCommandInput,
-    cb: (err: any, data?: DescribeAggregateComplianceByConformancePacksCommandOutput) => void
+    cb: (err: any, data?: DescribeAggregateComplianceByConformancePacksCommandOutput) => void,
   ): void;
   describeAggregateComplianceByConformancePacks(
     args: DescribeAggregateComplianceByConformancePacksCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeAggregateComplianceByConformancePacksCommandOutput) => void
+    cb: (err: any, data?: DescribeAggregateComplianceByConformancePacksCommandOutput) => void,
   ): void;
 
   /**
@@ -902,16 +902,16 @@ export interface ConfigService {
   describeAggregationAuthorizations(): Promise<DescribeAggregationAuthorizationsCommandOutput>;
   describeAggregationAuthorizations(
     args: DescribeAggregationAuthorizationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeAggregationAuthorizationsCommandOutput>;
   describeAggregationAuthorizations(
     args: DescribeAggregationAuthorizationsCommandInput,
-    cb: (err: any, data?: DescribeAggregationAuthorizationsCommandOutput) => void
+    cb: (err: any, data?: DescribeAggregationAuthorizationsCommandOutput) => void,
   ): void;
   describeAggregationAuthorizations(
     args: DescribeAggregationAuthorizationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeAggregationAuthorizationsCommandOutput) => void
+    cb: (err: any, data?: DescribeAggregationAuthorizationsCommandOutput) => void,
   ): void;
 
   /**
@@ -920,16 +920,16 @@ export interface ConfigService {
   describeComplianceByConfigRule(): Promise<DescribeComplianceByConfigRuleCommandOutput>;
   describeComplianceByConfigRule(
     args: DescribeComplianceByConfigRuleCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeComplianceByConfigRuleCommandOutput>;
   describeComplianceByConfigRule(
     args: DescribeComplianceByConfigRuleCommandInput,
-    cb: (err: any, data?: DescribeComplianceByConfigRuleCommandOutput) => void
+    cb: (err: any, data?: DescribeComplianceByConfigRuleCommandOutput) => void,
   ): void;
   describeComplianceByConfigRule(
     args: DescribeComplianceByConfigRuleCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeComplianceByConfigRuleCommandOutput) => void
+    cb: (err: any, data?: DescribeComplianceByConfigRuleCommandOutput) => void,
   ): void;
 
   /**
@@ -938,16 +938,16 @@ export interface ConfigService {
   describeComplianceByResource(): Promise<DescribeComplianceByResourceCommandOutput>;
   describeComplianceByResource(
     args: DescribeComplianceByResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeComplianceByResourceCommandOutput>;
   describeComplianceByResource(
     args: DescribeComplianceByResourceCommandInput,
-    cb: (err: any, data?: DescribeComplianceByResourceCommandOutput) => void
+    cb: (err: any, data?: DescribeComplianceByResourceCommandOutput) => void,
   ): void;
   describeComplianceByResource(
     args: DescribeComplianceByResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeComplianceByResourceCommandOutput) => void
+    cb: (err: any, data?: DescribeComplianceByResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -956,16 +956,16 @@ export interface ConfigService {
   describeConfigRuleEvaluationStatus(): Promise<DescribeConfigRuleEvaluationStatusCommandOutput>;
   describeConfigRuleEvaluationStatus(
     args: DescribeConfigRuleEvaluationStatusCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeConfigRuleEvaluationStatusCommandOutput>;
   describeConfigRuleEvaluationStatus(
     args: DescribeConfigRuleEvaluationStatusCommandInput,
-    cb: (err: any, data?: DescribeConfigRuleEvaluationStatusCommandOutput) => void
+    cb: (err: any, data?: DescribeConfigRuleEvaluationStatusCommandOutput) => void,
   ): void;
   describeConfigRuleEvaluationStatus(
     args: DescribeConfigRuleEvaluationStatusCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeConfigRuleEvaluationStatusCommandOutput) => void
+    cb: (err: any, data?: DescribeConfigRuleEvaluationStatusCommandOutput) => void,
   ): void;
 
   /**
@@ -974,16 +974,16 @@ export interface ConfigService {
   describeConfigRules(): Promise<DescribeConfigRulesCommandOutput>;
   describeConfigRules(
     args: DescribeConfigRulesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeConfigRulesCommandOutput>;
   describeConfigRules(
     args: DescribeConfigRulesCommandInput,
-    cb: (err: any, data?: DescribeConfigRulesCommandOutput) => void
+    cb: (err: any, data?: DescribeConfigRulesCommandOutput) => void,
   ): void;
   describeConfigRules(
     args: DescribeConfigRulesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeConfigRulesCommandOutput) => void
+    cb: (err: any, data?: DescribeConfigRulesCommandOutput) => void,
   ): void;
 
   /**
@@ -992,16 +992,16 @@ export interface ConfigService {
   describeConfigurationAggregators(): Promise<DescribeConfigurationAggregatorsCommandOutput>;
   describeConfigurationAggregators(
     args: DescribeConfigurationAggregatorsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeConfigurationAggregatorsCommandOutput>;
   describeConfigurationAggregators(
     args: DescribeConfigurationAggregatorsCommandInput,
-    cb: (err: any, data?: DescribeConfigurationAggregatorsCommandOutput) => void
+    cb: (err: any, data?: DescribeConfigurationAggregatorsCommandOutput) => void,
   ): void;
   describeConfigurationAggregators(
     args: DescribeConfigurationAggregatorsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeConfigurationAggregatorsCommandOutput) => void
+    cb: (err: any, data?: DescribeConfigurationAggregatorsCommandOutput) => void,
   ): void;
 
   /**
@@ -1009,16 +1009,16 @@ export interface ConfigService {
    */
   describeConfigurationAggregatorSourcesStatus(
     args: DescribeConfigurationAggregatorSourcesStatusCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeConfigurationAggregatorSourcesStatusCommandOutput>;
   describeConfigurationAggregatorSourcesStatus(
     args: DescribeConfigurationAggregatorSourcesStatusCommandInput,
-    cb: (err: any, data?: DescribeConfigurationAggregatorSourcesStatusCommandOutput) => void
+    cb: (err: any, data?: DescribeConfigurationAggregatorSourcesStatusCommandOutput) => void,
   ): void;
   describeConfigurationAggregatorSourcesStatus(
     args: DescribeConfigurationAggregatorSourcesStatusCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeConfigurationAggregatorSourcesStatusCommandOutput) => void
+    cb: (err: any, data?: DescribeConfigurationAggregatorSourcesStatusCommandOutput) => void,
   ): void;
 
   /**
@@ -1027,16 +1027,16 @@ export interface ConfigService {
   describeConfigurationRecorders(): Promise<DescribeConfigurationRecordersCommandOutput>;
   describeConfigurationRecorders(
     args: DescribeConfigurationRecordersCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeConfigurationRecordersCommandOutput>;
   describeConfigurationRecorders(
     args: DescribeConfigurationRecordersCommandInput,
-    cb: (err: any, data?: DescribeConfigurationRecordersCommandOutput) => void
+    cb: (err: any, data?: DescribeConfigurationRecordersCommandOutput) => void,
   ): void;
   describeConfigurationRecorders(
     args: DescribeConfigurationRecordersCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeConfigurationRecordersCommandOutput) => void
+    cb: (err: any, data?: DescribeConfigurationRecordersCommandOutput) => void,
   ): void;
 
   /**
@@ -1045,16 +1045,16 @@ export interface ConfigService {
   describeConfigurationRecorderStatus(): Promise<DescribeConfigurationRecorderStatusCommandOutput>;
   describeConfigurationRecorderStatus(
     args: DescribeConfigurationRecorderStatusCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeConfigurationRecorderStatusCommandOutput>;
   describeConfigurationRecorderStatus(
     args: DescribeConfigurationRecorderStatusCommandInput,
-    cb: (err: any, data?: DescribeConfigurationRecorderStatusCommandOutput) => void
+    cb: (err: any, data?: DescribeConfigurationRecorderStatusCommandOutput) => void,
   ): void;
   describeConfigurationRecorderStatus(
     args: DescribeConfigurationRecorderStatusCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeConfigurationRecorderStatusCommandOutput) => void
+    cb: (err: any, data?: DescribeConfigurationRecorderStatusCommandOutput) => void,
   ): void;
 
   /**
@@ -1062,16 +1062,16 @@ export interface ConfigService {
    */
   describeConformancePackCompliance(
     args: DescribeConformancePackComplianceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeConformancePackComplianceCommandOutput>;
   describeConformancePackCompliance(
     args: DescribeConformancePackComplianceCommandInput,
-    cb: (err: any, data?: DescribeConformancePackComplianceCommandOutput) => void
+    cb: (err: any, data?: DescribeConformancePackComplianceCommandOutput) => void,
   ): void;
   describeConformancePackCompliance(
     args: DescribeConformancePackComplianceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeConformancePackComplianceCommandOutput) => void
+    cb: (err: any, data?: DescribeConformancePackComplianceCommandOutput) => void,
   ): void;
 
   /**
@@ -1080,16 +1080,16 @@ export interface ConfigService {
   describeConformancePacks(): Promise<DescribeConformancePacksCommandOutput>;
   describeConformancePacks(
     args: DescribeConformancePacksCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeConformancePacksCommandOutput>;
   describeConformancePacks(
     args: DescribeConformancePacksCommandInput,
-    cb: (err: any, data?: DescribeConformancePacksCommandOutput) => void
+    cb: (err: any, data?: DescribeConformancePacksCommandOutput) => void,
   ): void;
   describeConformancePacks(
     args: DescribeConformancePacksCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeConformancePacksCommandOutput) => void
+    cb: (err: any, data?: DescribeConformancePacksCommandOutput) => void,
   ): void;
 
   /**
@@ -1098,16 +1098,16 @@ export interface ConfigService {
   describeConformancePackStatus(): Promise<DescribeConformancePackStatusCommandOutput>;
   describeConformancePackStatus(
     args: DescribeConformancePackStatusCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeConformancePackStatusCommandOutput>;
   describeConformancePackStatus(
     args: DescribeConformancePackStatusCommandInput,
-    cb: (err: any, data?: DescribeConformancePackStatusCommandOutput) => void
+    cb: (err: any, data?: DescribeConformancePackStatusCommandOutput) => void,
   ): void;
   describeConformancePackStatus(
     args: DescribeConformancePackStatusCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeConformancePackStatusCommandOutput) => void
+    cb: (err: any, data?: DescribeConformancePackStatusCommandOutput) => void,
   ): void;
 
   /**
@@ -1116,16 +1116,16 @@ export interface ConfigService {
   describeDeliveryChannels(): Promise<DescribeDeliveryChannelsCommandOutput>;
   describeDeliveryChannels(
     args: DescribeDeliveryChannelsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeDeliveryChannelsCommandOutput>;
   describeDeliveryChannels(
     args: DescribeDeliveryChannelsCommandInput,
-    cb: (err: any, data?: DescribeDeliveryChannelsCommandOutput) => void
+    cb: (err: any, data?: DescribeDeliveryChannelsCommandOutput) => void,
   ): void;
   describeDeliveryChannels(
     args: DescribeDeliveryChannelsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeDeliveryChannelsCommandOutput) => void
+    cb: (err: any, data?: DescribeDeliveryChannelsCommandOutput) => void,
   ): void;
 
   /**
@@ -1134,16 +1134,16 @@ export interface ConfigService {
   describeDeliveryChannelStatus(): Promise<DescribeDeliveryChannelStatusCommandOutput>;
   describeDeliveryChannelStatus(
     args: DescribeDeliveryChannelStatusCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeDeliveryChannelStatusCommandOutput>;
   describeDeliveryChannelStatus(
     args: DescribeDeliveryChannelStatusCommandInput,
-    cb: (err: any, data?: DescribeDeliveryChannelStatusCommandOutput) => void
+    cb: (err: any, data?: DescribeDeliveryChannelStatusCommandOutput) => void,
   ): void;
   describeDeliveryChannelStatus(
     args: DescribeDeliveryChannelStatusCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeDeliveryChannelStatusCommandOutput) => void
+    cb: (err: any, data?: DescribeDeliveryChannelStatusCommandOutput) => void,
   ): void;
 
   /**
@@ -1152,16 +1152,16 @@ export interface ConfigService {
   describeOrganizationConfigRules(): Promise<DescribeOrganizationConfigRulesCommandOutput>;
   describeOrganizationConfigRules(
     args: DescribeOrganizationConfigRulesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeOrganizationConfigRulesCommandOutput>;
   describeOrganizationConfigRules(
     args: DescribeOrganizationConfigRulesCommandInput,
-    cb: (err: any, data?: DescribeOrganizationConfigRulesCommandOutput) => void
+    cb: (err: any, data?: DescribeOrganizationConfigRulesCommandOutput) => void,
   ): void;
   describeOrganizationConfigRules(
     args: DescribeOrganizationConfigRulesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeOrganizationConfigRulesCommandOutput) => void
+    cb: (err: any, data?: DescribeOrganizationConfigRulesCommandOutput) => void,
   ): void;
 
   /**
@@ -1170,16 +1170,16 @@ export interface ConfigService {
   describeOrganizationConfigRuleStatuses(): Promise<DescribeOrganizationConfigRuleStatusesCommandOutput>;
   describeOrganizationConfigRuleStatuses(
     args: DescribeOrganizationConfigRuleStatusesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeOrganizationConfigRuleStatusesCommandOutput>;
   describeOrganizationConfigRuleStatuses(
     args: DescribeOrganizationConfigRuleStatusesCommandInput,
-    cb: (err: any, data?: DescribeOrganizationConfigRuleStatusesCommandOutput) => void
+    cb: (err: any, data?: DescribeOrganizationConfigRuleStatusesCommandOutput) => void,
   ): void;
   describeOrganizationConfigRuleStatuses(
     args: DescribeOrganizationConfigRuleStatusesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeOrganizationConfigRuleStatusesCommandOutput) => void
+    cb: (err: any, data?: DescribeOrganizationConfigRuleStatusesCommandOutput) => void,
   ): void;
 
   /**
@@ -1188,16 +1188,16 @@ export interface ConfigService {
   describeOrganizationConformancePacks(): Promise<DescribeOrganizationConformancePacksCommandOutput>;
   describeOrganizationConformancePacks(
     args: DescribeOrganizationConformancePacksCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeOrganizationConformancePacksCommandOutput>;
   describeOrganizationConformancePacks(
     args: DescribeOrganizationConformancePacksCommandInput,
-    cb: (err: any, data?: DescribeOrganizationConformancePacksCommandOutput) => void
+    cb: (err: any, data?: DescribeOrganizationConformancePacksCommandOutput) => void,
   ): void;
   describeOrganizationConformancePacks(
     args: DescribeOrganizationConformancePacksCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeOrganizationConformancePacksCommandOutput) => void
+    cb: (err: any, data?: DescribeOrganizationConformancePacksCommandOutput) => void,
   ): void;
 
   /**
@@ -1206,16 +1206,16 @@ export interface ConfigService {
   describeOrganizationConformancePackStatuses(): Promise<DescribeOrganizationConformancePackStatusesCommandOutput>;
   describeOrganizationConformancePackStatuses(
     args: DescribeOrganizationConformancePackStatusesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeOrganizationConformancePackStatusesCommandOutput>;
   describeOrganizationConformancePackStatuses(
     args: DescribeOrganizationConformancePackStatusesCommandInput,
-    cb: (err: any, data?: DescribeOrganizationConformancePackStatusesCommandOutput) => void
+    cb: (err: any, data?: DescribeOrganizationConformancePackStatusesCommandOutput) => void,
   ): void;
   describeOrganizationConformancePackStatuses(
     args: DescribeOrganizationConformancePackStatusesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeOrganizationConformancePackStatusesCommandOutput) => void
+    cb: (err: any, data?: DescribeOrganizationConformancePackStatusesCommandOutput) => void,
   ): void;
 
   /**
@@ -1224,16 +1224,16 @@ export interface ConfigService {
   describePendingAggregationRequests(): Promise<DescribePendingAggregationRequestsCommandOutput>;
   describePendingAggregationRequests(
     args: DescribePendingAggregationRequestsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribePendingAggregationRequestsCommandOutput>;
   describePendingAggregationRequests(
     args: DescribePendingAggregationRequestsCommandInput,
-    cb: (err: any, data?: DescribePendingAggregationRequestsCommandOutput) => void
+    cb: (err: any, data?: DescribePendingAggregationRequestsCommandOutput) => void,
   ): void;
   describePendingAggregationRequests(
     args: DescribePendingAggregationRequestsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribePendingAggregationRequestsCommandOutput) => void
+    cb: (err: any, data?: DescribePendingAggregationRequestsCommandOutput) => void,
   ): void;
 
   /**
@@ -1241,16 +1241,16 @@ export interface ConfigService {
    */
   describeRemediationConfigurations(
     args: DescribeRemediationConfigurationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeRemediationConfigurationsCommandOutput>;
   describeRemediationConfigurations(
     args: DescribeRemediationConfigurationsCommandInput,
-    cb: (err: any, data?: DescribeRemediationConfigurationsCommandOutput) => void
+    cb: (err: any, data?: DescribeRemediationConfigurationsCommandOutput) => void,
   ): void;
   describeRemediationConfigurations(
     args: DescribeRemediationConfigurationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeRemediationConfigurationsCommandOutput) => void
+    cb: (err: any, data?: DescribeRemediationConfigurationsCommandOutput) => void,
   ): void;
 
   /**
@@ -1258,16 +1258,16 @@ export interface ConfigService {
    */
   describeRemediationExceptions(
     args: DescribeRemediationExceptionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeRemediationExceptionsCommandOutput>;
   describeRemediationExceptions(
     args: DescribeRemediationExceptionsCommandInput,
-    cb: (err: any, data?: DescribeRemediationExceptionsCommandOutput) => void
+    cb: (err: any, data?: DescribeRemediationExceptionsCommandOutput) => void,
   ): void;
   describeRemediationExceptions(
     args: DescribeRemediationExceptionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeRemediationExceptionsCommandOutput) => void
+    cb: (err: any, data?: DescribeRemediationExceptionsCommandOutput) => void,
   ): void;
 
   /**
@@ -1275,16 +1275,16 @@ export interface ConfigService {
    */
   describeRemediationExecutionStatus(
     args: DescribeRemediationExecutionStatusCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeRemediationExecutionStatusCommandOutput>;
   describeRemediationExecutionStatus(
     args: DescribeRemediationExecutionStatusCommandInput,
-    cb: (err: any, data?: DescribeRemediationExecutionStatusCommandOutput) => void
+    cb: (err: any, data?: DescribeRemediationExecutionStatusCommandOutput) => void,
   ): void;
   describeRemediationExecutionStatus(
     args: DescribeRemediationExecutionStatusCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeRemediationExecutionStatusCommandOutput) => void
+    cb: (err: any, data?: DescribeRemediationExecutionStatusCommandOutput) => void,
   ): void;
 
   /**
@@ -1293,16 +1293,16 @@ export interface ConfigService {
   describeRetentionConfigurations(): Promise<DescribeRetentionConfigurationsCommandOutput>;
   describeRetentionConfigurations(
     args: DescribeRetentionConfigurationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeRetentionConfigurationsCommandOutput>;
   describeRetentionConfigurations(
     args: DescribeRetentionConfigurationsCommandInput,
-    cb: (err: any, data?: DescribeRetentionConfigurationsCommandOutput) => void
+    cb: (err: any, data?: DescribeRetentionConfigurationsCommandOutput) => void,
   ): void;
   describeRetentionConfigurations(
     args: DescribeRetentionConfigurationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeRetentionConfigurationsCommandOutput) => void
+    cb: (err: any, data?: DescribeRetentionConfigurationsCommandOutput) => void,
   ): void;
 
   /**
@@ -1310,16 +1310,16 @@ export interface ConfigService {
    */
   getAggregateComplianceDetailsByConfigRule(
     args: GetAggregateComplianceDetailsByConfigRuleCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetAggregateComplianceDetailsByConfigRuleCommandOutput>;
   getAggregateComplianceDetailsByConfigRule(
     args: GetAggregateComplianceDetailsByConfigRuleCommandInput,
-    cb: (err: any, data?: GetAggregateComplianceDetailsByConfigRuleCommandOutput) => void
+    cb: (err: any, data?: GetAggregateComplianceDetailsByConfigRuleCommandOutput) => void,
   ): void;
   getAggregateComplianceDetailsByConfigRule(
     args: GetAggregateComplianceDetailsByConfigRuleCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetAggregateComplianceDetailsByConfigRuleCommandOutput) => void
+    cb: (err: any, data?: GetAggregateComplianceDetailsByConfigRuleCommandOutput) => void,
   ): void;
 
   /**
@@ -1327,16 +1327,16 @@ export interface ConfigService {
    */
   getAggregateConfigRuleComplianceSummary(
     args: GetAggregateConfigRuleComplianceSummaryCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetAggregateConfigRuleComplianceSummaryCommandOutput>;
   getAggregateConfigRuleComplianceSummary(
     args: GetAggregateConfigRuleComplianceSummaryCommandInput,
-    cb: (err: any, data?: GetAggregateConfigRuleComplianceSummaryCommandOutput) => void
+    cb: (err: any, data?: GetAggregateConfigRuleComplianceSummaryCommandOutput) => void,
   ): void;
   getAggregateConfigRuleComplianceSummary(
     args: GetAggregateConfigRuleComplianceSummaryCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetAggregateConfigRuleComplianceSummaryCommandOutput) => void
+    cb: (err: any, data?: GetAggregateConfigRuleComplianceSummaryCommandOutput) => void,
   ): void;
 
   /**
@@ -1344,16 +1344,16 @@ export interface ConfigService {
    */
   getAggregateConformancePackComplianceSummary(
     args: GetAggregateConformancePackComplianceSummaryCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetAggregateConformancePackComplianceSummaryCommandOutput>;
   getAggregateConformancePackComplianceSummary(
     args: GetAggregateConformancePackComplianceSummaryCommandInput,
-    cb: (err: any, data?: GetAggregateConformancePackComplianceSummaryCommandOutput) => void
+    cb: (err: any, data?: GetAggregateConformancePackComplianceSummaryCommandOutput) => void,
   ): void;
   getAggregateConformancePackComplianceSummary(
     args: GetAggregateConformancePackComplianceSummaryCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetAggregateConformancePackComplianceSummaryCommandOutput) => void
+    cb: (err: any, data?: GetAggregateConformancePackComplianceSummaryCommandOutput) => void,
   ): void;
 
   /**
@@ -1361,16 +1361,16 @@ export interface ConfigService {
    */
   getAggregateDiscoveredResourceCounts(
     args: GetAggregateDiscoveredResourceCountsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetAggregateDiscoveredResourceCountsCommandOutput>;
   getAggregateDiscoveredResourceCounts(
     args: GetAggregateDiscoveredResourceCountsCommandInput,
-    cb: (err: any, data?: GetAggregateDiscoveredResourceCountsCommandOutput) => void
+    cb: (err: any, data?: GetAggregateDiscoveredResourceCountsCommandOutput) => void,
   ): void;
   getAggregateDiscoveredResourceCounts(
     args: GetAggregateDiscoveredResourceCountsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetAggregateDiscoveredResourceCountsCommandOutput) => void
+    cb: (err: any, data?: GetAggregateDiscoveredResourceCountsCommandOutput) => void,
   ): void;
 
   /**
@@ -1378,16 +1378,16 @@ export interface ConfigService {
    */
   getAggregateResourceConfig(
     args: GetAggregateResourceConfigCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetAggregateResourceConfigCommandOutput>;
   getAggregateResourceConfig(
     args: GetAggregateResourceConfigCommandInput,
-    cb: (err: any, data?: GetAggregateResourceConfigCommandOutput) => void
+    cb: (err: any, data?: GetAggregateResourceConfigCommandOutput) => void,
   ): void;
   getAggregateResourceConfig(
     args: GetAggregateResourceConfigCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetAggregateResourceConfigCommandOutput) => void
+    cb: (err: any, data?: GetAggregateResourceConfigCommandOutput) => void,
   ): void;
 
   /**
@@ -1395,16 +1395,16 @@ export interface ConfigService {
    */
   getComplianceDetailsByConfigRule(
     args: GetComplianceDetailsByConfigRuleCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetComplianceDetailsByConfigRuleCommandOutput>;
   getComplianceDetailsByConfigRule(
     args: GetComplianceDetailsByConfigRuleCommandInput,
-    cb: (err: any, data?: GetComplianceDetailsByConfigRuleCommandOutput) => void
+    cb: (err: any, data?: GetComplianceDetailsByConfigRuleCommandOutput) => void,
   ): void;
   getComplianceDetailsByConfigRule(
     args: GetComplianceDetailsByConfigRuleCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetComplianceDetailsByConfigRuleCommandOutput) => void
+    cb: (err: any, data?: GetComplianceDetailsByConfigRuleCommandOutput) => void,
   ): void;
 
   /**
@@ -1413,16 +1413,16 @@ export interface ConfigService {
   getComplianceDetailsByResource(): Promise<GetComplianceDetailsByResourceCommandOutput>;
   getComplianceDetailsByResource(
     args: GetComplianceDetailsByResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetComplianceDetailsByResourceCommandOutput>;
   getComplianceDetailsByResource(
     args: GetComplianceDetailsByResourceCommandInput,
-    cb: (err: any, data?: GetComplianceDetailsByResourceCommandOutput) => void
+    cb: (err: any, data?: GetComplianceDetailsByResourceCommandOutput) => void,
   ): void;
   getComplianceDetailsByResource(
     args: GetComplianceDetailsByResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetComplianceDetailsByResourceCommandOutput) => void
+    cb: (err: any, data?: GetComplianceDetailsByResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -1431,16 +1431,16 @@ export interface ConfigService {
   getComplianceSummaryByConfigRule(): Promise<GetComplianceSummaryByConfigRuleCommandOutput>;
   getComplianceSummaryByConfigRule(
     args: GetComplianceSummaryByConfigRuleCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetComplianceSummaryByConfigRuleCommandOutput>;
   getComplianceSummaryByConfigRule(
     args: GetComplianceSummaryByConfigRuleCommandInput,
-    cb: (err: any, data?: GetComplianceSummaryByConfigRuleCommandOutput) => void
+    cb: (err: any, data?: GetComplianceSummaryByConfigRuleCommandOutput) => void,
   ): void;
   getComplianceSummaryByConfigRule(
     args: GetComplianceSummaryByConfigRuleCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetComplianceSummaryByConfigRuleCommandOutput) => void
+    cb: (err: any, data?: GetComplianceSummaryByConfigRuleCommandOutput) => void,
   ): void;
 
   /**
@@ -1449,16 +1449,16 @@ export interface ConfigService {
   getComplianceSummaryByResourceType(): Promise<GetComplianceSummaryByResourceTypeCommandOutput>;
   getComplianceSummaryByResourceType(
     args: GetComplianceSummaryByResourceTypeCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetComplianceSummaryByResourceTypeCommandOutput>;
   getComplianceSummaryByResourceType(
     args: GetComplianceSummaryByResourceTypeCommandInput,
-    cb: (err: any, data?: GetComplianceSummaryByResourceTypeCommandOutput) => void
+    cb: (err: any, data?: GetComplianceSummaryByResourceTypeCommandOutput) => void,
   ): void;
   getComplianceSummaryByResourceType(
     args: GetComplianceSummaryByResourceTypeCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetComplianceSummaryByResourceTypeCommandOutput) => void
+    cb: (err: any, data?: GetComplianceSummaryByResourceTypeCommandOutput) => void,
   ): void;
 
   /**
@@ -1466,16 +1466,16 @@ export interface ConfigService {
    */
   getConformancePackComplianceDetails(
     args: GetConformancePackComplianceDetailsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetConformancePackComplianceDetailsCommandOutput>;
   getConformancePackComplianceDetails(
     args: GetConformancePackComplianceDetailsCommandInput,
-    cb: (err: any, data?: GetConformancePackComplianceDetailsCommandOutput) => void
+    cb: (err: any, data?: GetConformancePackComplianceDetailsCommandOutput) => void,
   ): void;
   getConformancePackComplianceDetails(
     args: GetConformancePackComplianceDetailsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetConformancePackComplianceDetailsCommandOutput) => void
+    cb: (err: any, data?: GetConformancePackComplianceDetailsCommandOutput) => void,
   ): void;
 
   /**
@@ -1483,16 +1483,16 @@ export interface ConfigService {
    */
   getConformancePackComplianceSummary(
     args: GetConformancePackComplianceSummaryCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetConformancePackComplianceSummaryCommandOutput>;
   getConformancePackComplianceSummary(
     args: GetConformancePackComplianceSummaryCommandInput,
-    cb: (err: any, data?: GetConformancePackComplianceSummaryCommandOutput) => void
+    cb: (err: any, data?: GetConformancePackComplianceSummaryCommandOutput) => void,
   ): void;
   getConformancePackComplianceSummary(
     args: GetConformancePackComplianceSummaryCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetConformancePackComplianceSummaryCommandOutput) => void
+    cb: (err: any, data?: GetConformancePackComplianceSummaryCommandOutput) => void,
   ): void;
 
   /**
@@ -1501,16 +1501,16 @@ export interface ConfigService {
   getCustomRulePolicy(): Promise<GetCustomRulePolicyCommandOutput>;
   getCustomRulePolicy(
     args: GetCustomRulePolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetCustomRulePolicyCommandOutput>;
   getCustomRulePolicy(
     args: GetCustomRulePolicyCommandInput,
-    cb: (err: any, data?: GetCustomRulePolicyCommandOutput) => void
+    cb: (err: any, data?: GetCustomRulePolicyCommandOutput) => void,
   ): void;
   getCustomRulePolicy(
     args: GetCustomRulePolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetCustomRulePolicyCommandOutput) => void
+    cb: (err: any, data?: GetCustomRulePolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -1519,16 +1519,16 @@ export interface ConfigService {
   getDiscoveredResourceCounts(): Promise<GetDiscoveredResourceCountsCommandOutput>;
   getDiscoveredResourceCounts(
     args: GetDiscoveredResourceCountsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetDiscoveredResourceCountsCommandOutput>;
   getDiscoveredResourceCounts(
     args: GetDiscoveredResourceCountsCommandInput,
-    cb: (err: any, data?: GetDiscoveredResourceCountsCommandOutput) => void
+    cb: (err: any, data?: GetDiscoveredResourceCountsCommandOutput) => void,
   ): void;
   getDiscoveredResourceCounts(
     args: GetDiscoveredResourceCountsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetDiscoveredResourceCountsCommandOutput) => void
+    cb: (err: any, data?: GetDiscoveredResourceCountsCommandOutput) => void,
   ): void;
 
   /**
@@ -1536,16 +1536,16 @@ export interface ConfigService {
    */
   getOrganizationConfigRuleDetailedStatus(
     args: GetOrganizationConfigRuleDetailedStatusCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetOrganizationConfigRuleDetailedStatusCommandOutput>;
   getOrganizationConfigRuleDetailedStatus(
     args: GetOrganizationConfigRuleDetailedStatusCommandInput,
-    cb: (err: any, data?: GetOrganizationConfigRuleDetailedStatusCommandOutput) => void
+    cb: (err: any, data?: GetOrganizationConfigRuleDetailedStatusCommandOutput) => void,
   ): void;
   getOrganizationConfigRuleDetailedStatus(
     args: GetOrganizationConfigRuleDetailedStatusCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetOrganizationConfigRuleDetailedStatusCommandOutput) => void
+    cb: (err: any, data?: GetOrganizationConfigRuleDetailedStatusCommandOutput) => void,
   ): void;
 
   /**
@@ -1553,16 +1553,16 @@ export interface ConfigService {
    */
   getOrganizationConformancePackDetailedStatus(
     args: GetOrganizationConformancePackDetailedStatusCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetOrganizationConformancePackDetailedStatusCommandOutput>;
   getOrganizationConformancePackDetailedStatus(
     args: GetOrganizationConformancePackDetailedStatusCommandInput,
-    cb: (err: any, data?: GetOrganizationConformancePackDetailedStatusCommandOutput) => void
+    cb: (err: any, data?: GetOrganizationConformancePackDetailedStatusCommandOutput) => void,
   ): void;
   getOrganizationConformancePackDetailedStatus(
     args: GetOrganizationConformancePackDetailedStatusCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetOrganizationConformancePackDetailedStatusCommandOutput) => void
+    cb: (err: any, data?: GetOrganizationConformancePackDetailedStatusCommandOutput) => void,
   ): void;
 
   /**
@@ -1570,16 +1570,16 @@ export interface ConfigService {
    */
   getOrganizationCustomRulePolicy(
     args: GetOrganizationCustomRulePolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetOrganizationCustomRulePolicyCommandOutput>;
   getOrganizationCustomRulePolicy(
     args: GetOrganizationCustomRulePolicyCommandInput,
-    cb: (err: any, data?: GetOrganizationCustomRulePolicyCommandOutput) => void
+    cb: (err: any, data?: GetOrganizationCustomRulePolicyCommandOutput) => void,
   ): void;
   getOrganizationCustomRulePolicy(
     args: GetOrganizationCustomRulePolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetOrganizationCustomRulePolicyCommandOutput) => void
+    cb: (err: any, data?: GetOrganizationCustomRulePolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -1587,16 +1587,16 @@ export interface ConfigService {
    */
   getResourceConfigHistory(
     args: GetResourceConfigHistoryCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetResourceConfigHistoryCommandOutput>;
   getResourceConfigHistory(
     args: GetResourceConfigHistoryCommandInput,
-    cb: (err: any, data?: GetResourceConfigHistoryCommandOutput) => void
+    cb: (err: any, data?: GetResourceConfigHistoryCommandOutput) => void,
   ): void;
   getResourceConfigHistory(
     args: GetResourceConfigHistoryCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetResourceConfigHistoryCommandOutput) => void
+    cb: (err: any, data?: GetResourceConfigHistoryCommandOutput) => void,
   ): void;
 
   /**
@@ -1604,16 +1604,16 @@ export interface ConfigService {
    */
   getResourceEvaluationSummary(
     args: GetResourceEvaluationSummaryCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetResourceEvaluationSummaryCommandOutput>;
   getResourceEvaluationSummary(
     args: GetResourceEvaluationSummaryCommandInput,
-    cb: (err: any, data?: GetResourceEvaluationSummaryCommandOutput) => void
+    cb: (err: any, data?: GetResourceEvaluationSummaryCommandOutput) => void,
   ): void;
   getResourceEvaluationSummary(
     args: GetResourceEvaluationSummaryCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetResourceEvaluationSummaryCommandOutput) => void
+    cb: (err: any, data?: GetResourceEvaluationSummaryCommandOutput) => void,
   ): void;
 
   /**
@@ -1621,13 +1621,13 @@ export interface ConfigService {
    */
   getStoredQuery(
     args: GetStoredQueryCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetStoredQueryCommandOutput>;
   getStoredQuery(args: GetStoredQueryCommandInput, cb: (err: any, data?: GetStoredQueryCommandOutput) => void): void;
   getStoredQuery(
     args: GetStoredQueryCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetStoredQueryCommandOutput) => void
+    cb: (err: any, data?: GetStoredQueryCommandOutput) => void,
   ): void;
 
   /**
@@ -1635,16 +1635,16 @@ export interface ConfigService {
    */
   listAggregateDiscoveredResources(
     args: ListAggregateDiscoveredResourcesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListAggregateDiscoveredResourcesCommandOutput>;
   listAggregateDiscoveredResources(
     args: ListAggregateDiscoveredResourcesCommandInput,
-    cb: (err: any, data?: ListAggregateDiscoveredResourcesCommandOutput) => void
+    cb: (err: any, data?: ListAggregateDiscoveredResourcesCommandOutput) => void,
   ): void;
   listAggregateDiscoveredResources(
     args: ListAggregateDiscoveredResourcesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListAggregateDiscoveredResourcesCommandOutput) => void
+    cb: (err: any, data?: ListAggregateDiscoveredResourcesCommandOutput) => void,
   ): void;
 
   /**
@@ -1653,16 +1653,16 @@ export interface ConfigService {
   listConformancePackComplianceScores(): Promise<ListConformancePackComplianceScoresCommandOutput>;
   listConformancePackComplianceScores(
     args: ListConformancePackComplianceScoresCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListConformancePackComplianceScoresCommandOutput>;
   listConformancePackComplianceScores(
     args: ListConformancePackComplianceScoresCommandInput,
-    cb: (err: any, data?: ListConformancePackComplianceScoresCommandOutput) => void
+    cb: (err: any, data?: ListConformancePackComplianceScoresCommandOutput) => void,
   ): void;
   listConformancePackComplianceScores(
     args: ListConformancePackComplianceScoresCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListConformancePackComplianceScoresCommandOutput) => void
+    cb: (err: any, data?: ListConformancePackComplianceScoresCommandOutput) => void,
   ): void;
 
   /**
@@ -1670,16 +1670,16 @@ export interface ConfigService {
    */
   listDiscoveredResources(
     args: ListDiscoveredResourcesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListDiscoveredResourcesCommandOutput>;
   listDiscoveredResources(
     args: ListDiscoveredResourcesCommandInput,
-    cb: (err: any, data?: ListDiscoveredResourcesCommandOutput) => void
+    cb: (err: any, data?: ListDiscoveredResourcesCommandOutput) => void,
   ): void;
   listDiscoveredResources(
     args: ListDiscoveredResourcesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListDiscoveredResourcesCommandOutput) => void
+    cb: (err: any, data?: ListDiscoveredResourcesCommandOutput) => void,
   ): void;
 
   /**
@@ -1688,16 +1688,16 @@ export interface ConfigService {
   listResourceEvaluations(): Promise<ListResourceEvaluationsCommandOutput>;
   listResourceEvaluations(
     args: ListResourceEvaluationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListResourceEvaluationsCommandOutput>;
   listResourceEvaluations(
     args: ListResourceEvaluationsCommandInput,
-    cb: (err: any, data?: ListResourceEvaluationsCommandOutput) => void
+    cb: (err: any, data?: ListResourceEvaluationsCommandOutput) => void,
   ): void;
   listResourceEvaluations(
     args: ListResourceEvaluationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListResourceEvaluationsCommandOutput) => void
+    cb: (err: any, data?: ListResourceEvaluationsCommandOutput) => void,
   ): void;
 
   /**
@@ -1706,16 +1706,16 @@ export interface ConfigService {
   listStoredQueries(): Promise<ListStoredQueriesCommandOutput>;
   listStoredQueries(
     args: ListStoredQueriesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListStoredQueriesCommandOutput>;
   listStoredQueries(
     args: ListStoredQueriesCommandInput,
-    cb: (err: any, data?: ListStoredQueriesCommandOutput) => void
+    cb: (err: any, data?: ListStoredQueriesCommandOutput) => void,
   ): void;
   listStoredQueries(
     args: ListStoredQueriesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListStoredQueriesCommandOutput) => void
+    cb: (err: any, data?: ListStoredQueriesCommandOutput) => void,
   ): void;
 
   /**
@@ -1723,16 +1723,16 @@ export interface ConfigService {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -1740,16 +1740,16 @@ export interface ConfigService {
    */
   putAggregationAuthorization(
     args: PutAggregationAuthorizationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutAggregationAuthorizationCommandOutput>;
   putAggregationAuthorization(
     args: PutAggregationAuthorizationCommandInput,
-    cb: (err: any, data?: PutAggregationAuthorizationCommandOutput) => void
+    cb: (err: any, data?: PutAggregationAuthorizationCommandOutput) => void,
   ): void;
   putAggregationAuthorization(
     args: PutAggregationAuthorizationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutAggregationAuthorizationCommandOutput) => void
+    cb: (err: any, data?: PutAggregationAuthorizationCommandOutput) => void,
   ): void;
 
   /**
@@ -1760,7 +1760,7 @@ export interface ConfigService {
   putConfigRule(
     args: PutConfigRuleCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutConfigRuleCommandOutput) => void
+    cb: (err: any, data?: PutConfigRuleCommandOutput) => void,
   ): void;
 
   /**
@@ -1768,16 +1768,16 @@ export interface ConfigService {
    */
   putConfigurationAggregator(
     args: PutConfigurationAggregatorCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutConfigurationAggregatorCommandOutput>;
   putConfigurationAggregator(
     args: PutConfigurationAggregatorCommandInput,
-    cb: (err: any, data?: PutConfigurationAggregatorCommandOutput) => void
+    cb: (err: any, data?: PutConfigurationAggregatorCommandOutput) => void,
   ): void;
   putConfigurationAggregator(
     args: PutConfigurationAggregatorCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutConfigurationAggregatorCommandOutput) => void
+    cb: (err: any, data?: PutConfigurationAggregatorCommandOutput) => void,
   ): void;
 
   /**
@@ -1785,16 +1785,16 @@ export interface ConfigService {
    */
   putConfigurationRecorder(
     args: PutConfigurationRecorderCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutConfigurationRecorderCommandOutput>;
   putConfigurationRecorder(
     args: PutConfigurationRecorderCommandInput,
-    cb: (err: any, data?: PutConfigurationRecorderCommandOutput) => void
+    cb: (err: any, data?: PutConfigurationRecorderCommandOutput) => void,
   ): void;
   putConfigurationRecorder(
     args: PutConfigurationRecorderCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutConfigurationRecorderCommandOutput) => void
+    cb: (err: any, data?: PutConfigurationRecorderCommandOutput) => void,
   ): void;
 
   /**
@@ -1802,16 +1802,16 @@ export interface ConfigService {
    */
   putConformancePack(
     args: PutConformancePackCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutConformancePackCommandOutput>;
   putConformancePack(
     args: PutConformancePackCommandInput,
-    cb: (err: any, data?: PutConformancePackCommandOutput) => void
+    cb: (err: any, data?: PutConformancePackCommandOutput) => void,
   ): void;
   putConformancePack(
     args: PutConformancePackCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutConformancePackCommandOutput) => void
+    cb: (err: any, data?: PutConformancePackCommandOutput) => void,
   ): void;
 
   /**
@@ -1819,16 +1819,16 @@ export interface ConfigService {
    */
   putDeliveryChannel(
     args: PutDeliveryChannelCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutDeliveryChannelCommandOutput>;
   putDeliveryChannel(
     args: PutDeliveryChannelCommandInput,
-    cb: (err: any, data?: PutDeliveryChannelCommandOutput) => void
+    cb: (err: any, data?: PutDeliveryChannelCommandOutput) => void,
   ): void;
   putDeliveryChannel(
     args: PutDeliveryChannelCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutDeliveryChannelCommandOutput) => void
+    cb: (err: any, data?: PutDeliveryChannelCommandOutput) => void,
   ): void;
 
   /**
@@ -1836,13 +1836,13 @@ export interface ConfigService {
    */
   putEvaluations(
     args: PutEvaluationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutEvaluationsCommandOutput>;
   putEvaluations(args: PutEvaluationsCommandInput, cb: (err: any, data?: PutEvaluationsCommandOutput) => void): void;
   putEvaluations(
     args: PutEvaluationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutEvaluationsCommandOutput) => void
+    cb: (err: any, data?: PutEvaluationsCommandOutput) => void,
   ): void;
 
   /**
@@ -1850,16 +1850,16 @@ export interface ConfigService {
    */
   putExternalEvaluation(
     args: PutExternalEvaluationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutExternalEvaluationCommandOutput>;
   putExternalEvaluation(
     args: PutExternalEvaluationCommandInput,
-    cb: (err: any, data?: PutExternalEvaluationCommandOutput) => void
+    cb: (err: any, data?: PutExternalEvaluationCommandOutput) => void,
   ): void;
   putExternalEvaluation(
     args: PutExternalEvaluationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutExternalEvaluationCommandOutput) => void
+    cb: (err: any, data?: PutExternalEvaluationCommandOutput) => void,
   ): void;
 
   /**
@@ -1867,16 +1867,16 @@ export interface ConfigService {
    */
   putOrganizationConfigRule(
     args: PutOrganizationConfigRuleCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutOrganizationConfigRuleCommandOutput>;
   putOrganizationConfigRule(
     args: PutOrganizationConfigRuleCommandInput,
-    cb: (err: any, data?: PutOrganizationConfigRuleCommandOutput) => void
+    cb: (err: any, data?: PutOrganizationConfigRuleCommandOutput) => void,
   ): void;
   putOrganizationConfigRule(
     args: PutOrganizationConfigRuleCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutOrganizationConfigRuleCommandOutput) => void
+    cb: (err: any, data?: PutOrganizationConfigRuleCommandOutput) => void,
   ): void;
 
   /**
@@ -1884,16 +1884,16 @@ export interface ConfigService {
    */
   putOrganizationConformancePack(
     args: PutOrganizationConformancePackCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutOrganizationConformancePackCommandOutput>;
   putOrganizationConformancePack(
     args: PutOrganizationConformancePackCommandInput,
-    cb: (err: any, data?: PutOrganizationConformancePackCommandOutput) => void
+    cb: (err: any, data?: PutOrganizationConformancePackCommandOutput) => void,
   ): void;
   putOrganizationConformancePack(
     args: PutOrganizationConformancePackCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutOrganizationConformancePackCommandOutput) => void
+    cb: (err: any, data?: PutOrganizationConformancePackCommandOutput) => void,
   ): void;
 
   /**
@@ -1901,16 +1901,16 @@ export interface ConfigService {
    */
   putRemediationConfigurations(
     args: PutRemediationConfigurationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutRemediationConfigurationsCommandOutput>;
   putRemediationConfigurations(
     args: PutRemediationConfigurationsCommandInput,
-    cb: (err: any, data?: PutRemediationConfigurationsCommandOutput) => void
+    cb: (err: any, data?: PutRemediationConfigurationsCommandOutput) => void,
   ): void;
   putRemediationConfigurations(
     args: PutRemediationConfigurationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutRemediationConfigurationsCommandOutput) => void
+    cb: (err: any, data?: PutRemediationConfigurationsCommandOutput) => void,
   ): void;
 
   /**
@@ -1918,16 +1918,16 @@ export interface ConfigService {
    */
   putRemediationExceptions(
     args: PutRemediationExceptionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutRemediationExceptionsCommandOutput>;
   putRemediationExceptions(
     args: PutRemediationExceptionsCommandInput,
-    cb: (err: any, data?: PutRemediationExceptionsCommandOutput) => void
+    cb: (err: any, data?: PutRemediationExceptionsCommandOutput) => void,
   ): void;
   putRemediationExceptions(
     args: PutRemediationExceptionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutRemediationExceptionsCommandOutput) => void
+    cb: (err: any, data?: PutRemediationExceptionsCommandOutput) => void,
   ): void;
 
   /**
@@ -1935,16 +1935,16 @@ export interface ConfigService {
    */
   putResourceConfig(
     args: PutResourceConfigCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutResourceConfigCommandOutput>;
   putResourceConfig(
     args: PutResourceConfigCommandInput,
-    cb: (err: any, data?: PutResourceConfigCommandOutput) => void
+    cb: (err: any, data?: PutResourceConfigCommandOutput) => void,
   ): void;
   putResourceConfig(
     args: PutResourceConfigCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutResourceConfigCommandOutput) => void
+    cb: (err: any, data?: PutResourceConfigCommandOutput) => void,
   ): void;
 
   /**
@@ -1952,16 +1952,16 @@ export interface ConfigService {
    */
   putRetentionConfiguration(
     args: PutRetentionConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutRetentionConfigurationCommandOutput>;
   putRetentionConfiguration(
     args: PutRetentionConfigurationCommandInput,
-    cb: (err: any, data?: PutRetentionConfigurationCommandOutput) => void
+    cb: (err: any, data?: PutRetentionConfigurationCommandOutput) => void,
   ): void;
   putRetentionConfiguration(
     args: PutRetentionConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutRetentionConfigurationCommandOutput) => void
+    cb: (err: any, data?: PutRetentionConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -1969,13 +1969,13 @@ export interface ConfigService {
    */
   putStoredQuery(
     args: PutStoredQueryCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutStoredQueryCommandOutput>;
   putStoredQuery(args: PutStoredQueryCommandInput, cb: (err: any, data?: PutStoredQueryCommandOutput) => void): void;
   putStoredQuery(
     args: PutStoredQueryCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutStoredQueryCommandOutput) => void
+    cb: (err: any, data?: PutStoredQueryCommandOutput) => void,
   ): void;
 
   /**
@@ -1983,16 +1983,16 @@ export interface ConfigService {
    */
   selectAggregateResourceConfig(
     args: SelectAggregateResourceConfigCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<SelectAggregateResourceConfigCommandOutput>;
   selectAggregateResourceConfig(
     args: SelectAggregateResourceConfigCommandInput,
-    cb: (err: any, data?: SelectAggregateResourceConfigCommandOutput) => void
+    cb: (err: any, data?: SelectAggregateResourceConfigCommandOutput) => void,
   ): void;
   selectAggregateResourceConfig(
     args: SelectAggregateResourceConfigCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SelectAggregateResourceConfigCommandOutput) => void
+    cb: (err: any, data?: SelectAggregateResourceConfigCommandOutput) => void,
   ): void;
 
   /**
@@ -2000,16 +2000,16 @@ export interface ConfigService {
    */
   selectResourceConfig(
     args: SelectResourceConfigCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<SelectResourceConfigCommandOutput>;
   selectResourceConfig(
     args: SelectResourceConfigCommandInput,
-    cb: (err: any, data?: SelectResourceConfigCommandOutput) => void
+    cb: (err: any, data?: SelectResourceConfigCommandOutput) => void,
   ): void;
   selectResourceConfig(
     args: SelectResourceConfigCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SelectResourceConfigCommandOutput) => void
+    cb: (err: any, data?: SelectResourceConfigCommandOutput) => void,
   ): void;
 
   /**
@@ -2018,16 +2018,16 @@ export interface ConfigService {
   startConfigRulesEvaluation(): Promise<StartConfigRulesEvaluationCommandOutput>;
   startConfigRulesEvaluation(
     args: StartConfigRulesEvaluationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartConfigRulesEvaluationCommandOutput>;
   startConfigRulesEvaluation(
     args: StartConfigRulesEvaluationCommandInput,
-    cb: (err: any, data?: StartConfigRulesEvaluationCommandOutput) => void
+    cb: (err: any, data?: StartConfigRulesEvaluationCommandOutput) => void,
   ): void;
   startConfigRulesEvaluation(
     args: StartConfigRulesEvaluationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartConfigRulesEvaluationCommandOutput) => void
+    cb: (err: any, data?: StartConfigRulesEvaluationCommandOutput) => void,
   ): void;
 
   /**
@@ -2035,16 +2035,16 @@ export interface ConfigService {
    */
   startConfigurationRecorder(
     args: StartConfigurationRecorderCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartConfigurationRecorderCommandOutput>;
   startConfigurationRecorder(
     args: StartConfigurationRecorderCommandInput,
-    cb: (err: any, data?: StartConfigurationRecorderCommandOutput) => void
+    cb: (err: any, data?: StartConfigurationRecorderCommandOutput) => void,
   ): void;
   startConfigurationRecorder(
     args: StartConfigurationRecorderCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartConfigurationRecorderCommandOutput) => void
+    cb: (err: any, data?: StartConfigurationRecorderCommandOutput) => void,
   ): void;
 
   /**
@@ -2052,16 +2052,16 @@ export interface ConfigService {
    */
   startRemediationExecution(
     args: StartRemediationExecutionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartRemediationExecutionCommandOutput>;
   startRemediationExecution(
     args: StartRemediationExecutionCommandInput,
-    cb: (err: any, data?: StartRemediationExecutionCommandOutput) => void
+    cb: (err: any, data?: StartRemediationExecutionCommandOutput) => void,
   ): void;
   startRemediationExecution(
     args: StartRemediationExecutionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartRemediationExecutionCommandOutput) => void
+    cb: (err: any, data?: StartRemediationExecutionCommandOutput) => void,
   ): void;
 
   /**
@@ -2069,16 +2069,16 @@ export interface ConfigService {
    */
   startResourceEvaluation(
     args: StartResourceEvaluationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartResourceEvaluationCommandOutput>;
   startResourceEvaluation(
     args: StartResourceEvaluationCommandInput,
-    cb: (err: any, data?: StartResourceEvaluationCommandOutput) => void
+    cb: (err: any, data?: StartResourceEvaluationCommandOutput) => void,
   ): void;
   startResourceEvaluation(
     args: StartResourceEvaluationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartResourceEvaluationCommandOutput) => void
+    cb: (err: any, data?: StartResourceEvaluationCommandOutput) => void,
   ): void;
 
   /**
@@ -2086,16 +2086,16 @@ export interface ConfigService {
    */
   stopConfigurationRecorder(
     args: StopConfigurationRecorderCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StopConfigurationRecorderCommandOutput>;
   stopConfigurationRecorder(
     args: StopConfigurationRecorderCommandInput,
-    cb: (err: any, data?: StopConfigurationRecorderCommandOutput) => void
+    cb: (err: any, data?: StopConfigurationRecorderCommandOutput) => void,
   ): void;
   stopConfigurationRecorder(
     args: StopConfigurationRecorderCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StopConfigurationRecorderCommandOutput) => void
+    cb: (err: any, data?: StopConfigurationRecorderCommandOutput) => void,
   ): void;
 
   /**
@@ -2106,7 +2106,7 @@ export interface ConfigService {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -2117,7 +2117,7 @@ export interface ConfigService {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 }
 

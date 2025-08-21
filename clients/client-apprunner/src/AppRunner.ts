@@ -231,16 +231,16 @@ export interface AppRunner {
    */
   associateCustomDomain(
     args: AssociateCustomDomainCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AssociateCustomDomainCommandOutput>;
   associateCustomDomain(
     args: AssociateCustomDomainCommandInput,
-    cb: (err: any, data?: AssociateCustomDomainCommandOutput) => void
+    cb: (err: any, data?: AssociateCustomDomainCommandOutput) => void,
   ): void;
   associateCustomDomain(
     args: AssociateCustomDomainCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AssociateCustomDomainCommandOutput) => void
+    cb: (err: any, data?: AssociateCustomDomainCommandOutput) => void,
   ): void;
 
   /**
@@ -248,16 +248,16 @@ export interface AppRunner {
    */
   createAutoScalingConfiguration(
     args: CreateAutoScalingConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateAutoScalingConfigurationCommandOutput>;
   createAutoScalingConfiguration(
     args: CreateAutoScalingConfigurationCommandInput,
-    cb: (err: any, data?: CreateAutoScalingConfigurationCommandOutput) => void
+    cb: (err: any, data?: CreateAutoScalingConfigurationCommandOutput) => void,
   ): void;
   createAutoScalingConfiguration(
     args: CreateAutoScalingConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateAutoScalingConfigurationCommandOutput) => void
+    cb: (err: any, data?: CreateAutoScalingConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -265,16 +265,16 @@ export interface AppRunner {
    */
   createConnection(
     args: CreateConnectionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateConnectionCommandOutput>;
   createConnection(
     args: CreateConnectionCommandInput,
-    cb: (err: any, data?: CreateConnectionCommandOutput) => void
+    cb: (err: any, data?: CreateConnectionCommandOutput) => void,
   ): void;
   createConnection(
     args: CreateConnectionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateConnectionCommandOutput) => void
+    cb: (err: any, data?: CreateConnectionCommandOutput) => void,
   ): void;
 
   /**
@@ -282,16 +282,16 @@ export interface AppRunner {
    */
   createObservabilityConfiguration(
     args: CreateObservabilityConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateObservabilityConfigurationCommandOutput>;
   createObservabilityConfiguration(
     args: CreateObservabilityConfigurationCommandInput,
-    cb: (err: any, data?: CreateObservabilityConfigurationCommandOutput) => void
+    cb: (err: any, data?: CreateObservabilityConfigurationCommandOutput) => void,
   ): void;
   createObservabilityConfiguration(
     args: CreateObservabilityConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateObservabilityConfigurationCommandOutput) => void
+    cb: (err: any, data?: CreateObservabilityConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -302,7 +302,7 @@ export interface AppRunner {
   createService(
     args: CreateServiceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateServiceCommandOutput) => void
+    cb: (err: any, data?: CreateServiceCommandOutput) => void,
   ): void;
 
   /**
@@ -310,16 +310,16 @@ export interface AppRunner {
    */
   createVpcConnector(
     args: CreateVpcConnectorCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateVpcConnectorCommandOutput>;
   createVpcConnector(
     args: CreateVpcConnectorCommandInput,
-    cb: (err: any, data?: CreateVpcConnectorCommandOutput) => void
+    cb: (err: any, data?: CreateVpcConnectorCommandOutput) => void,
   ): void;
   createVpcConnector(
     args: CreateVpcConnectorCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateVpcConnectorCommandOutput) => void
+    cb: (err: any, data?: CreateVpcConnectorCommandOutput) => void,
   ): void;
 
   /**
@@ -327,16 +327,16 @@ export interface AppRunner {
    */
   createVpcIngressConnection(
     args: CreateVpcIngressConnectionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateVpcIngressConnectionCommandOutput>;
   createVpcIngressConnection(
     args: CreateVpcIngressConnectionCommandInput,
-    cb: (err: any, data?: CreateVpcIngressConnectionCommandOutput) => void
+    cb: (err: any, data?: CreateVpcIngressConnectionCommandOutput) => void,
   ): void;
   createVpcIngressConnection(
     args: CreateVpcIngressConnectionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateVpcIngressConnectionCommandOutput) => void
+    cb: (err: any, data?: CreateVpcIngressConnectionCommandOutput) => void,
   ): void;
 
   /**
@@ -344,16 +344,16 @@ export interface AppRunner {
    */
   deleteAutoScalingConfiguration(
     args: DeleteAutoScalingConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteAutoScalingConfigurationCommandOutput>;
   deleteAutoScalingConfiguration(
     args: DeleteAutoScalingConfigurationCommandInput,
-    cb: (err: any, data?: DeleteAutoScalingConfigurationCommandOutput) => void
+    cb: (err: any, data?: DeleteAutoScalingConfigurationCommandOutput) => void,
   ): void;
   deleteAutoScalingConfiguration(
     args: DeleteAutoScalingConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteAutoScalingConfigurationCommandOutput) => void
+    cb: (err: any, data?: DeleteAutoScalingConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -361,16 +361,16 @@ export interface AppRunner {
    */
   deleteConnection(
     args: DeleteConnectionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteConnectionCommandOutput>;
   deleteConnection(
     args: DeleteConnectionCommandInput,
-    cb: (err: any, data?: DeleteConnectionCommandOutput) => void
+    cb: (err: any, data?: DeleteConnectionCommandOutput) => void,
   ): void;
   deleteConnection(
     args: DeleteConnectionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteConnectionCommandOutput) => void
+    cb: (err: any, data?: DeleteConnectionCommandOutput) => void,
   ): void;
 
   /**
@@ -378,16 +378,16 @@ export interface AppRunner {
    */
   deleteObservabilityConfiguration(
     args: DeleteObservabilityConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteObservabilityConfigurationCommandOutput>;
   deleteObservabilityConfiguration(
     args: DeleteObservabilityConfigurationCommandInput,
-    cb: (err: any, data?: DeleteObservabilityConfigurationCommandOutput) => void
+    cb: (err: any, data?: DeleteObservabilityConfigurationCommandOutput) => void,
   ): void;
   deleteObservabilityConfiguration(
     args: DeleteObservabilityConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteObservabilityConfigurationCommandOutput) => void
+    cb: (err: any, data?: DeleteObservabilityConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -398,7 +398,7 @@ export interface AppRunner {
   deleteService(
     args: DeleteServiceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteServiceCommandOutput) => void
+    cb: (err: any, data?: DeleteServiceCommandOutput) => void,
   ): void;
 
   /**
@@ -406,16 +406,16 @@ export interface AppRunner {
    */
   deleteVpcConnector(
     args: DeleteVpcConnectorCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteVpcConnectorCommandOutput>;
   deleteVpcConnector(
     args: DeleteVpcConnectorCommandInput,
-    cb: (err: any, data?: DeleteVpcConnectorCommandOutput) => void
+    cb: (err: any, data?: DeleteVpcConnectorCommandOutput) => void,
   ): void;
   deleteVpcConnector(
     args: DeleteVpcConnectorCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteVpcConnectorCommandOutput) => void
+    cb: (err: any, data?: DeleteVpcConnectorCommandOutput) => void,
   ): void;
 
   /**
@@ -423,16 +423,16 @@ export interface AppRunner {
    */
   deleteVpcIngressConnection(
     args: DeleteVpcIngressConnectionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteVpcIngressConnectionCommandOutput>;
   deleteVpcIngressConnection(
     args: DeleteVpcIngressConnectionCommandInput,
-    cb: (err: any, data?: DeleteVpcIngressConnectionCommandOutput) => void
+    cb: (err: any, data?: DeleteVpcIngressConnectionCommandOutput) => void,
   ): void;
   deleteVpcIngressConnection(
     args: DeleteVpcIngressConnectionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteVpcIngressConnectionCommandOutput) => void
+    cb: (err: any, data?: DeleteVpcIngressConnectionCommandOutput) => void,
   ): void;
 
   /**
@@ -440,16 +440,16 @@ export interface AppRunner {
    */
   describeAutoScalingConfiguration(
     args: DescribeAutoScalingConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeAutoScalingConfigurationCommandOutput>;
   describeAutoScalingConfiguration(
     args: DescribeAutoScalingConfigurationCommandInput,
-    cb: (err: any, data?: DescribeAutoScalingConfigurationCommandOutput) => void
+    cb: (err: any, data?: DescribeAutoScalingConfigurationCommandOutput) => void,
   ): void;
   describeAutoScalingConfiguration(
     args: DescribeAutoScalingConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeAutoScalingConfigurationCommandOutput) => void
+    cb: (err: any, data?: DescribeAutoScalingConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -457,16 +457,16 @@ export interface AppRunner {
    */
   describeCustomDomains(
     args: DescribeCustomDomainsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeCustomDomainsCommandOutput>;
   describeCustomDomains(
     args: DescribeCustomDomainsCommandInput,
-    cb: (err: any, data?: DescribeCustomDomainsCommandOutput) => void
+    cb: (err: any, data?: DescribeCustomDomainsCommandOutput) => void,
   ): void;
   describeCustomDomains(
     args: DescribeCustomDomainsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeCustomDomainsCommandOutput) => void
+    cb: (err: any, data?: DescribeCustomDomainsCommandOutput) => void,
   ): void;
 
   /**
@@ -474,16 +474,16 @@ export interface AppRunner {
    */
   describeObservabilityConfiguration(
     args: DescribeObservabilityConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeObservabilityConfigurationCommandOutput>;
   describeObservabilityConfiguration(
     args: DescribeObservabilityConfigurationCommandInput,
-    cb: (err: any, data?: DescribeObservabilityConfigurationCommandOutput) => void
+    cb: (err: any, data?: DescribeObservabilityConfigurationCommandOutput) => void,
   ): void;
   describeObservabilityConfiguration(
     args: DescribeObservabilityConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeObservabilityConfigurationCommandOutput) => void
+    cb: (err: any, data?: DescribeObservabilityConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -491,13 +491,13 @@ export interface AppRunner {
    */
   describeService(
     args: DescribeServiceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeServiceCommandOutput>;
   describeService(args: DescribeServiceCommandInput, cb: (err: any, data?: DescribeServiceCommandOutput) => void): void;
   describeService(
     args: DescribeServiceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeServiceCommandOutput) => void
+    cb: (err: any, data?: DescribeServiceCommandOutput) => void,
   ): void;
 
   /**
@@ -505,16 +505,16 @@ export interface AppRunner {
    */
   describeVpcConnector(
     args: DescribeVpcConnectorCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeVpcConnectorCommandOutput>;
   describeVpcConnector(
     args: DescribeVpcConnectorCommandInput,
-    cb: (err: any, data?: DescribeVpcConnectorCommandOutput) => void
+    cb: (err: any, data?: DescribeVpcConnectorCommandOutput) => void,
   ): void;
   describeVpcConnector(
     args: DescribeVpcConnectorCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeVpcConnectorCommandOutput) => void
+    cb: (err: any, data?: DescribeVpcConnectorCommandOutput) => void,
   ): void;
 
   /**
@@ -522,16 +522,16 @@ export interface AppRunner {
    */
   describeVpcIngressConnection(
     args: DescribeVpcIngressConnectionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeVpcIngressConnectionCommandOutput>;
   describeVpcIngressConnection(
     args: DescribeVpcIngressConnectionCommandInput,
-    cb: (err: any, data?: DescribeVpcIngressConnectionCommandOutput) => void
+    cb: (err: any, data?: DescribeVpcIngressConnectionCommandOutput) => void,
   ): void;
   describeVpcIngressConnection(
     args: DescribeVpcIngressConnectionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeVpcIngressConnectionCommandOutput) => void
+    cb: (err: any, data?: DescribeVpcIngressConnectionCommandOutput) => void,
   ): void;
 
   /**
@@ -539,16 +539,16 @@ export interface AppRunner {
    */
   disassociateCustomDomain(
     args: DisassociateCustomDomainCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DisassociateCustomDomainCommandOutput>;
   disassociateCustomDomain(
     args: DisassociateCustomDomainCommandInput,
-    cb: (err: any, data?: DisassociateCustomDomainCommandOutput) => void
+    cb: (err: any, data?: DisassociateCustomDomainCommandOutput) => void,
   ): void;
   disassociateCustomDomain(
     args: DisassociateCustomDomainCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DisassociateCustomDomainCommandOutput) => void
+    cb: (err: any, data?: DisassociateCustomDomainCommandOutput) => void,
   ): void;
 
   /**
@@ -557,16 +557,16 @@ export interface AppRunner {
   listAutoScalingConfigurations(): Promise<ListAutoScalingConfigurationsCommandOutput>;
   listAutoScalingConfigurations(
     args: ListAutoScalingConfigurationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListAutoScalingConfigurationsCommandOutput>;
   listAutoScalingConfigurations(
     args: ListAutoScalingConfigurationsCommandInput,
-    cb: (err: any, data?: ListAutoScalingConfigurationsCommandOutput) => void
+    cb: (err: any, data?: ListAutoScalingConfigurationsCommandOutput) => void,
   ): void;
   listAutoScalingConfigurations(
     args: ListAutoScalingConfigurationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListAutoScalingConfigurationsCommandOutput) => void
+    cb: (err: any, data?: ListAutoScalingConfigurationsCommandOutput) => void,
   ): void;
 
   /**
@@ -575,13 +575,13 @@ export interface AppRunner {
   listConnections(): Promise<ListConnectionsCommandOutput>;
   listConnections(
     args: ListConnectionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListConnectionsCommandOutput>;
   listConnections(args: ListConnectionsCommandInput, cb: (err: any, data?: ListConnectionsCommandOutput) => void): void;
   listConnections(
     args: ListConnectionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListConnectionsCommandOutput) => void
+    cb: (err: any, data?: ListConnectionsCommandOutput) => void,
   ): void;
 
   /**
@@ -590,16 +590,16 @@ export interface AppRunner {
   listObservabilityConfigurations(): Promise<ListObservabilityConfigurationsCommandOutput>;
   listObservabilityConfigurations(
     args: ListObservabilityConfigurationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListObservabilityConfigurationsCommandOutput>;
   listObservabilityConfigurations(
     args: ListObservabilityConfigurationsCommandInput,
-    cb: (err: any, data?: ListObservabilityConfigurationsCommandOutput) => void
+    cb: (err: any, data?: ListObservabilityConfigurationsCommandOutput) => void,
   ): void;
   listObservabilityConfigurations(
     args: ListObservabilityConfigurationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListObservabilityConfigurationsCommandOutput) => void
+    cb: (err: any, data?: ListObservabilityConfigurationsCommandOutput) => void,
   ): void;
 
   /**
@@ -607,13 +607,13 @@ export interface AppRunner {
    */
   listOperations(
     args: ListOperationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListOperationsCommandOutput>;
   listOperations(args: ListOperationsCommandInput, cb: (err: any, data?: ListOperationsCommandOutput) => void): void;
   listOperations(
     args: ListOperationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListOperationsCommandOutput) => void
+    cb: (err: any, data?: ListOperationsCommandOutput) => void,
   ): void;
 
   /**
@@ -625,7 +625,7 @@ export interface AppRunner {
   listServices(
     args: ListServicesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListServicesCommandOutput) => void
+    cb: (err: any, data?: ListServicesCommandOutput) => void,
   ): void;
 
   /**
@@ -633,16 +633,16 @@ export interface AppRunner {
    */
   listServicesForAutoScalingConfiguration(
     args: ListServicesForAutoScalingConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListServicesForAutoScalingConfigurationCommandOutput>;
   listServicesForAutoScalingConfiguration(
     args: ListServicesForAutoScalingConfigurationCommandInput,
-    cb: (err: any, data?: ListServicesForAutoScalingConfigurationCommandOutput) => void
+    cb: (err: any, data?: ListServicesForAutoScalingConfigurationCommandOutput) => void,
   ): void;
   listServicesForAutoScalingConfiguration(
     args: ListServicesForAutoScalingConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListServicesForAutoScalingConfigurationCommandOutput) => void
+    cb: (err: any, data?: ListServicesForAutoScalingConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -650,16 +650,16 @@ export interface AppRunner {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -668,16 +668,16 @@ export interface AppRunner {
   listVpcConnectors(): Promise<ListVpcConnectorsCommandOutput>;
   listVpcConnectors(
     args: ListVpcConnectorsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListVpcConnectorsCommandOutput>;
   listVpcConnectors(
     args: ListVpcConnectorsCommandInput,
-    cb: (err: any, data?: ListVpcConnectorsCommandOutput) => void
+    cb: (err: any, data?: ListVpcConnectorsCommandOutput) => void,
   ): void;
   listVpcConnectors(
     args: ListVpcConnectorsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListVpcConnectorsCommandOutput) => void
+    cb: (err: any, data?: ListVpcConnectorsCommandOutput) => void,
   ): void;
 
   /**
@@ -686,16 +686,16 @@ export interface AppRunner {
   listVpcIngressConnections(): Promise<ListVpcIngressConnectionsCommandOutput>;
   listVpcIngressConnections(
     args: ListVpcIngressConnectionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListVpcIngressConnectionsCommandOutput>;
   listVpcIngressConnections(
     args: ListVpcIngressConnectionsCommandInput,
-    cb: (err: any, data?: ListVpcIngressConnectionsCommandOutput) => void
+    cb: (err: any, data?: ListVpcIngressConnectionsCommandOutput) => void,
   ): void;
   listVpcIngressConnections(
     args: ListVpcIngressConnectionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListVpcIngressConnectionsCommandOutput) => void
+    cb: (err: any, data?: ListVpcIngressConnectionsCommandOutput) => void,
   ): void;
 
   /**
@@ -706,7 +706,7 @@ export interface AppRunner {
   pauseService(
     args: PauseServiceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PauseServiceCommandOutput) => void
+    cb: (err: any, data?: PauseServiceCommandOutput) => void,
   ): void;
 
   /**
@@ -717,7 +717,7 @@ export interface AppRunner {
   resumeService(
     args: ResumeServiceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ResumeServiceCommandOutput) => void
+    cb: (err: any, data?: ResumeServiceCommandOutput) => void,
   ): void;
 
   /**
@@ -725,13 +725,13 @@ export interface AppRunner {
    */
   startDeployment(
     args: StartDeploymentCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartDeploymentCommandOutput>;
   startDeployment(args: StartDeploymentCommandInput, cb: (err: any, data?: StartDeploymentCommandOutput) => void): void;
   startDeployment(
     args: StartDeploymentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartDeploymentCommandOutput) => void
+    cb: (err: any, data?: StartDeploymentCommandOutput) => void,
   ): void;
 
   /**
@@ -742,7 +742,7 @@ export interface AppRunner {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -753,7 +753,7 @@ export interface AppRunner {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -761,16 +761,16 @@ export interface AppRunner {
    */
   updateDefaultAutoScalingConfiguration(
     args: UpdateDefaultAutoScalingConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateDefaultAutoScalingConfigurationCommandOutput>;
   updateDefaultAutoScalingConfiguration(
     args: UpdateDefaultAutoScalingConfigurationCommandInput,
-    cb: (err: any, data?: UpdateDefaultAutoScalingConfigurationCommandOutput) => void
+    cb: (err: any, data?: UpdateDefaultAutoScalingConfigurationCommandOutput) => void,
   ): void;
   updateDefaultAutoScalingConfiguration(
     args: UpdateDefaultAutoScalingConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateDefaultAutoScalingConfigurationCommandOutput) => void
+    cb: (err: any, data?: UpdateDefaultAutoScalingConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -781,7 +781,7 @@ export interface AppRunner {
   updateService(
     args: UpdateServiceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateServiceCommandOutput) => void
+    cb: (err: any, data?: UpdateServiceCommandOutput) => void,
   ): void;
 
   /**
@@ -789,16 +789,16 @@ export interface AppRunner {
    */
   updateVpcIngressConnection(
     args: UpdateVpcIngressConnectionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateVpcIngressConnectionCommandOutput>;
   updateVpcIngressConnection(
     args: UpdateVpcIngressConnectionCommandInput,
-    cb: (err: any, data?: UpdateVpcIngressConnectionCommandOutput) => void
+    cb: (err: any, data?: UpdateVpcIngressConnectionCommandOutput) => void,
   ): void;
   updateVpcIngressConnection(
     args: UpdateVpcIngressConnectionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateVpcIngressConnectionCommandOutput) => void
+    cb: (err: any, data?: UpdateVpcIngressConnectionCommandOutput) => void,
   ): void;
 }
 

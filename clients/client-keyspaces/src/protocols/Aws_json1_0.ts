@@ -97,7 +97,7 @@ import {
  */
 export const se_CreateKeyspaceCommand = async (
   input: CreateKeyspaceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateKeyspace");
   let body: any;
@@ -110,7 +110,7 @@ export const se_CreateKeyspaceCommand = async (
  */
 export const se_CreateTableCommand = async (
   input: CreateTableCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateTable");
   let body: any;
@@ -123,7 +123,7 @@ export const se_CreateTableCommand = async (
  */
 export const se_DeleteKeyspaceCommand = async (
   input: DeleteKeyspaceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteKeyspace");
   let body: any;
@@ -136,7 +136,7 @@ export const se_DeleteKeyspaceCommand = async (
  */
 export const se_DeleteTableCommand = async (
   input: DeleteTableCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteTable");
   let body: any;
@@ -149,7 +149,7 @@ export const se_DeleteTableCommand = async (
  */
 export const se_GetKeyspaceCommand = async (
   input: GetKeyspaceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetKeyspace");
   let body: any;
@@ -162,7 +162,7 @@ export const se_GetKeyspaceCommand = async (
  */
 export const se_GetTableCommand = async (
   input: GetTableCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetTable");
   let body: any;
@@ -175,7 +175,7 @@ export const se_GetTableCommand = async (
  */
 export const se_GetTableAutoScalingSettingsCommand = async (
   input: GetTableAutoScalingSettingsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetTableAutoScalingSettings");
   let body: any;
@@ -188,7 +188,7 @@ export const se_GetTableAutoScalingSettingsCommand = async (
  */
 export const se_ListKeyspacesCommand = async (
   input: ListKeyspacesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListKeyspaces");
   let body: any;
@@ -201,7 +201,7 @@ export const se_ListKeyspacesCommand = async (
  */
 export const se_ListTablesCommand = async (
   input: ListTablesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListTables");
   let body: any;
@@ -214,7 +214,7 @@ export const se_ListTablesCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListTagsForResource");
   let body: any;
@@ -227,7 +227,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_RestoreTableCommand = async (
   input: RestoreTableCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("RestoreTable");
   let body: any;
@@ -240,7 +240,7 @@ export const se_RestoreTableCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("TagResource");
   let body: any;
@@ -253,7 +253,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UntagResource");
   let body: any;
@@ -266,7 +266,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateTableCommand = async (
   input: UpdateTableCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateTable");
   let body: any;
@@ -279,7 +279,7 @@ export const se_UpdateTableCommand = async (
  */
 export const de_CreateKeyspaceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateKeyspaceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -299,7 +299,7 @@ export const de_CreateKeyspaceCommand = async (
  */
 export const de_CreateTableCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateTableCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -319,7 +319,7 @@ export const de_CreateTableCommand = async (
  */
 export const de_DeleteKeyspaceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteKeyspaceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -339,7 +339,7 @@ export const de_DeleteKeyspaceCommand = async (
  */
 export const de_DeleteTableCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteTableCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -359,7 +359,7 @@ export const de_DeleteTableCommand = async (
  */
 export const de_GetKeyspaceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetKeyspaceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -379,7 +379,7 @@ export const de_GetKeyspaceCommand = async (
  */
 export const de_GetTableCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetTableCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -399,7 +399,7 @@ export const de_GetTableCommand = async (
  */
 export const de_GetTableAutoScalingSettingsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetTableAutoScalingSettingsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -419,7 +419,7 @@ export const de_GetTableAutoScalingSettingsCommand = async (
  */
 export const de_ListKeyspacesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListKeyspacesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -439,7 +439,7 @@ export const de_ListKeyspacesCommand = async (
  */
 export const de_ListTablesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTablesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -459,7 +459,7 @@ export const de_ListTablesCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -479,7 +479,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_RestoreTableCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RestoreTableCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -499,7 +499,7 @@ export const de_RestoreTableCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -519,7 +519,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -539,7 +539,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateTableCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateTableCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -597,7 +597,7 @@ const de_CommandError = async (output: __HttpResponse, context: __SerdeContext):
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -626,7 +626,7 @@ const de_ConflictExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_InternalServerExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -642,7 +642,7 @@ const de_InternalServerExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -658,7 +658,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_ServiceQuotaExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceQuotaExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -836,7 +836,7 @@ const se_RestoreTableRequest = (input: RestoreTableRequest, context: __SerdeCont
  */
 const se_TargetTrackingScalingPolicyConfiguration = (
   input: TargetTrackingScalingPolicyConfiguration,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     disableScaleIn: [],
@@ -945,7 +945,7 @@ const de_CapacitySpecificationSummary = (output: any, context: __SerdeContext): 
  */
 const de_GetTableAutoScalingSettingsResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): GetTableAutoScalingSettingsResponse => {
   return take(output, {
     autoScalingSpecification: (_: any) => de_AutoScalingSpecification(_, context),
@@ -1021,7 +1021,7 @@ const de_ReplicaAutoScalingSpecification = (output: any, context: __SerdeContext
  */
 const de_ReplicaAutoScalingSpecificationList = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ReplicaAutoScalingSpecification[] => {
   const retVal = (output || [])
     .filter((e: any) => e != null)
@@ -1081,7 +1081,7 @@ const de_ReplicaSpecificationSummaryList = (output: any, context: __SerdeContext
  */
 const de_TargetTrackingScalingPolicyConfiguration = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): TargetTrackingScalingPolicyConfiguration => {
   return take(output, {
     disableScaleIn: __expectBoolean,
@@ -1117,7 +1117,7 @@ const buildHttpRpcRequest = async (
   headers: __HeaderBag,
   path: string,
   resolvedHostname: string | undefined,
-  body: any
+  body: any,
 ): Promise<__HttpRequest> => {
   const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
   const contents: any = {

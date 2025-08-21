@@ -24,7 +24,7 @@ const checkState = async (client: IAMClient, input: GetInstanceProfileCommandInp
  */
 export const waitForInstanceProfileExists = async (
   params: WaiterConfiguration<IAMClient>,
-  input: GetInstanceProfileCommandInput
+  input: GetInstanceProfileCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 1, maxDelay: 120 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -36,7 +36,7 @@ export const waitForInstanceProfileExists = async (
  */
 export const waitUntilInstanceProfileExists = async (
   params: WaiterConfiguration<IAMClient>,
-  input: GetInstanceProfileCommandInput
+  input: GetInstanceProfileCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 1, maxDelay: 120 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

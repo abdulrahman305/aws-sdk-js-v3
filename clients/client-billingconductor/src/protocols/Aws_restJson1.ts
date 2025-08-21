@@ -159,7 +159,7 @@ import {
  */
 export const se_AssociateAccountsCommand = async (
   input: AssociateAccountsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -171,7 +171,7 @@ export const se_AssociateAccountsCommand = async (
     take(input, {
       AccountIds: (_) => _json(_),
       Arn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -182,7 +182,7 @@ export const se_AssociateAccountsCommand = async (
  */
 export const se_AssociatePricingRulesCommand = async (
   input: AssociatePricingRulesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -194,7 +194,7 @@ export const se_AssociatePricingRulesCommand = async (
     take(input, {
       Arn: [],
       PricingRuleArns: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -205,7 +205,7 @@ export const se_AssociatePricingRulesCommand = async (
  */
 export const se_BatchAssociateResourcesToCustomLineItemCommand = async (
   input: BatchAssociateResourcesToCustomLineItemCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -218,7 +218,7 @@ export const se_BatchAssociateResourcesToCustomLineItemCommand = async (
       BillingPeriodRange: (_) => _json(_),
       ResourceArns: (_) => _json(_),
       TargetArn: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -229,7 +229,7 @@ export const se_BatchAssociateResourcesToCustomLineItemCommand = async (
  */
 export const se_BatchDisassociateResourcesFromCustomLineItemCommand = async (
   input: BatchDisassociateResourcesFromCustomLineItemCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -242,7 +242,7 @@ export const se_BatchDisassociateResourcesFromCustomLineItemCommand = async (
       BillingPeriodRange: (_) => _json(_),
       ResourceArns: (_) => _json(_),
       TargetArn: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -253,7 +253,7 @@ export const se_BatchDisassociateResourcesFromCustomLineItemCommand = async (
  */
 export const se_CreateBillingGroupCommand = async (
   input: CreateBillingGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -270,7 +270,7 @@ export const se_CreateBillingGroupCommand = async (
       Name: [],
       PrimaryAccountId: [],
       Tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -281,7 +281,7 @@ export const se_CreateBillingGroupCommand = async (
  */
 export const se_CreateCustomLineItemCommand = async (
   input: CreateCustomLineItemCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -299,7 +299,7 @@ export const se_CreateCustomLineItemCommand = async (
       Description: [],
       Name: [],
       Tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -310,7 +310,7 @@ export const se_CreateCustomLineItemCommand = async (
  */
 export const se_CreatePricingPlanCommand = async (
   input: CreatePricingPlanCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -325,7 +325,7 @@ export const se_CreatePricingPlanCommand = async (
       Name: [],
       PricingRuleArns: (_) => _json(_),
       Tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -336,7 +336,7 @@ export const se_CreatePricingPlanCommand = async (
  */
 export const se_CreatePricingRuleCommand = async (
   input: CreatePricingRuleCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -358,7 +358,7 @@ export const se_CreatePricingRuleCommand = async (
       Tiering: (_) => _json(_),
       Type: [],
       UsageType: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -369,7 +369,7 @@ export const se_CreatePricingRuleCommand = async (
  */
 export const se_DeleteBillingGroupCommand = async (
   input: DeleteBillingGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -380,7 +380,7 @@ export const se_DeleteBillingGroupCommand = async (
   body = JSON.stringify(
     take(input, {
       Arn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -391,7 +391,7 @@ export const se_DeleteBillingGroupCommand = async (
  */
 export const se_DeleteCustomLineItemCommand = async (
   input: DeleteCustomLineItemCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -403,7 +403,7 @@ export const se_DeleteCustomLineItemCommand = async (
     take(input, {
       Arn: [],
       BillingPeriodRange: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -414,7 +414,7 @@ export const se_DeleteCustomLineItemCommand = async (
  */
 export const se_DeletePricingPlanCommand = async (
   input: DeletePricingPlanCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -425,7 +425,7 @@ export const se_DeletePricingPlanCommand = async (
   body = JSON.stringify(
     take(input, {
       Arn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -436,7 +436,7 @@ export const se_DeletePricingPlanCommand = async (
  */
 export const se_DeletePricingRuleCommand = async (
   input: DeletePricingRuleCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -447,7 +447,7 @@ export const se_DeletePricingRuleCommand = async (
   body = JSON.stringify(
     take(input, {
       Arn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -458,7 +458,7 @@ export const se_DeletePricingRuleCommand = async (
  */
 export const se_DisassociateAccountsCommand = async (
   input: DisassociateAccountsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -470,7 +470,7 @@ export const se_DisassociateAccountsCommand = async (
     take(input, {
       AccountIds: (_) => _json(_),
       Arn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -481,7 +481,7 @@ export const se_DisassociateAccountsCommand = async (
  */
 export const se_DisassociatePricingRulesCommand = async (
   input: DisassociatePricingRulesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -493,7 +493,7 @@ export const se_DisassociatePricingRulesCommand = async (
     take(input, {
       Arn: [],
       PricingRuleArns: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -504,7 +504,7 @@ export const se_DisassociatePricingRulesCommand = async (
  */
 export const se_GetBillingGroupCostReportCommand = async (
   input: GetBillingGroupCostReportCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -519,7 +519,7 @@ export const se_GetBillingGroupCostReportCommand = async (
       GroupBy: (_) => _json(_),
       MaxResults: [],
       NextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -530,7 +530,7 @@ export const se_GetBillingGroupCostReportCommand = async (
  */
 export const se_ListAccountAssociationsCommand = async (
   input: ListAccountAssociationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -543,7 +543,7 @@ export const se_ListAccountAssociationsCommand = async (
       BillingPeriod: [],
       Filters: (_) => _json(_),
       NextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -554,7 +554,7 @@ export const se_ListAccountAssociationsCommand = async (
  */
 export const se_ListBillingGroupCostReportsCommand = async (
   input: ListBillingGroupCostReportsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -568,7 +568,7 @@ export const se_ListBillingGroupCostReportsCommand = async (
       Filters: (_) => _json(_),
       MaxResults: [],
       NextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -579,7 +579,7 @@ export const se_ListBillingGroupCostReportsCommand = async (
  */
 export const se_ListBillingGroupsCommand = async (
   input: ListBillingGroupsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -593,7 +593,7 @@ export const se_ListBillingGroupsCommand = async (
       Filters: (_) => _json(_),
       MaxResults: [],
       NextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -604,7 +604,7 @@ export const se_ListBillingGroupsCommand = async (
  */
 export const se_ListCustomLineItemsCommand = async (
   input: ListCustomLineItemsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -618,7 +618,7 @@ export const se_ListCustomLineItemsCommand = async (
       Filters: (_) => _json(_),
       MaxResults: [],
       NextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -629,7 +629,7 @@ export const se_ListCustomLineItemsCommand = async (
  */
 export const se_ListCustomLineItemVersionsCommand = async (
   input: ListCustomLineItemVersionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -643,7 +643,7 @@ export const se_ListCustomLineItemVersionsCommand = async (
       Filters: (_) => _json(_),
       MaxResults: [],
       NextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -654,7 +654,7 @@ export const se_ListCustomLineItemVersionsCommand = async (
  */
 export const se_ListPricingPlansCommand = async (
   input: ListPricingPlansCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -668,7 +668,7 @@ export const se_ListPricingPlansCommand = async (
       Filters: (_) => _json(_),
       MaxResults: [],
       NextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -679,7 +679,7 @@ export const se_ListPricingPlansCommand = async (
  */
 export const se_ListPricingPlansAssociatedWithPricingRuleCommand = async (
   input: ListPricingPlansAssociatedWithPricingRuleCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -693,7 +693,7 @@ export const se_ListPricingPlansAssociatedWithPricingRuleCommand = async (
       MaxResults: [],
       NextToken: [],
       PricingRuleArn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -704,7 +704,7 @@ export const se_ListPricingPlansAssociatedWithPricingRuleCommand = async (
  */
 export const se_ListPricingRulesCommand = async (
   input: ListPricingRulesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -718,7 +718,7 @@ export const se_ListPricingRulesCommand = async (
       Filters: (_) => _json(_),
       MaxResults: [],
       NextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -729,7 +729,7 @@ export const se_ListPricingRulesCommand = async (
  */
 export const se_ListPricingRulesAssociatedToPricingPlanCommand = async (
   input: ListPricingRulesAssociatedToPricingPlanCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -743,7 +743,7 @@ export const se_ListPricingRulesAssociatedToPricingPlanCommand = async (
       MaxResults: [],
       NextToken: [],
       PricingPlanArn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -754,7 +754,7 @@ export const se_ListPricingRulesAssociatedToPricingPlanCommand = async (
  */
 export const se_ListResourcesAssociatedToCustomLineItemCommand = async (
   input: ListResourcesAssociatedToCustomLineItemCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -769,7 +769,7 @@ export const se_ListResourcesAssociatedToCustomLineItemCommand = async (
       Filters: (_) => _json(_),
       MaxResults: [],
       NextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -780,7 +780,7 @@ export const se_ListResourcesAssociatedToCustomLineItemCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -796,7 +796,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -808,7 +808,7 @@ export const se_TagResourceCommand = async (
   body = JSON.stringify(
     take(input, {
       Tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -819,7 +819,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -841,7 +841,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateBillingGroupCommand = async (
   input: UpdateBillingGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -857,7 +857,7 @@ export const se_UpdateBillingGroupCommand = async (
       Description: [],
       Name: [],
       Status: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -868,7 +868,7 @@ export const se_UpdateBillingGroupCommand = async (
  */
 export const se_UpdateCustomLineItemCommand = async (
   input: UpdateCustomLineItemCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -883,7 +883,7 @@ export const se_UpdateCustomLineItemCommand = async (
       ChargeDetails: (_) => se_UpdateCustomLineItemChargeDetails(_, context),
       Description: [],
       Name: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -894,7 +894,7 @@ export const se_UpdateCustomLineItemCommand = async (
  */
 export const se_UpdatePricingPlanCommand = async (
   input: UpdatePricingPlanCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -907,7 +907,7 @@ export const se_UpdatePricingPlanCommand = async (
       Arn: [],
       Description: [],
       Name: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -918,7 +918,7 @@ export const se_UpdatePricingPlanCommand = async (
  */
 export const se_UpdatePricingRuleCommand = async (
   input: UpdatePricingRuleCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -934,7 +934,7 @@ export const se_UpdatePricingRuleCommand = async (
       Name: [],
       Tiering: (_) => _json(_),
       Type: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -945,7 +945,7 @@ export const se_UpdatePricingRuleCommand = async (
  */
 export const de_AssociateAccountsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssociateAccountsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -966,7 +966,7 @@ export const de_AssociateAccountsCommand = async (
  */
 export const de_AssociatePricingRulesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssociatePricingRulesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -987,7 +987,7 @@ export const de_AssociatePricingRulesCommand = async (
  */
 export const de_BatchAssociateResourcesToCustomLineItemCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchAssociateResourcesToCustomLineItemCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1009,7 +1009,7 @@ export const de_BatchAssociateResourcesToCustomLineItemCommand = async (
  */
 export const de_BatchDisassociateResourcesFromCustomLineItemCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchDisassociateResourcesFromCustomLineItemCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1031,7 +1031,7 @@ export const de_BatchDisassociateResourcesFromCustomLineItemCommand = async (
  */
 export const de_CreateBillingGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateBillingGroupCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1052,7 +1052,7 @@ export const de_CreateBillingGroupCommand = async (
  */
 export const de_CreateCustomLineItemCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateCustomLineItemCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1073,7 +1073,7 @@ export const de_CreateCustomLineItemCommand = async (
  */
 export const de_CreatePricingPlanCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreatePricingPlanCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1094,7 +1094,7 @@ export const de_CreatePricingPlanCommand = async (
  */
 export const de_CreatePricingRuleCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreatePricingRuleCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1115,7 +1115,7 @@ export const de_CreatePricingRuleCommand = async (
  */
 export const de_DeleteBillingGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteBillingGroupCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1136,7 +1136,7 @@ export const de_DeleteBillingGroupCommand = async (
  */
 export const de_DeleteCustomLineItemCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteCustomLineItemCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1157,7 +1157,7 @@ export const de_DeleteCustomLineItemCommand = async (
  */
 export const de_DeletePricingPlanCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeletePricingPlanCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1178,7 +1178,7 @@ export const de_DeletePricingPlanCommand = async (
  */
 export const de_DeletePricingRuleCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeletePricingRuleCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1199,7 +1199,7 @@ export const de_DeletePricingRuleCommand = async (
  */
 export const de_DisassociateAccountsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisassociateAccountsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1220,7 +1220,7 @@ export const de_DisassociateAccountsCommand = async (
  */
 export const de_DisassociatePricingRulesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisassociatePricingRulesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1241,7 +1241,7 @@ export const de_DisassociatePricingRulesCommand = async (
  */
 export const de_GetBillingGroupCostReportCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetBillingGroupCostReportCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1263,7 +1263,7 @@ export const de_GetBillingGroupCostReportCommand = async (
  */
 export const de_ListAccountAssociationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAccountAssociationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1285,7 +1285,7 @@ export const de_ListAccountAssociationsCommand = async (
  */
 export const de_ListBillingGroupCostReportsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListBillingGroupCostReportsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1307,7 +1307,7 @@ export const de_ListBillingGroupCostReportsCommand = async (
  */
 export const de_ListBillingGroupsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListBillingGroupsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1329,7 +1329,7 @@ export const de_ListBillingGroupsCommand = async (
  */
 export const de_ListCustomLineItemsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListCustomLineItemsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1351,7 +1351,7 @@ export const de_ListCustomLineItemsCommand = async (
  */
 export const de_ListCustomLineItemVersionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListCustomLineItemVersionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1373,7 +1373,7 @@ export const de_ListCustomLineItemVersionsCommand = async (
  */
 export const de_ListPricingPlansCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListPricingPlansCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1396,7 +1396,7 @@ export const de_ListPricingPlansCommand = async (
  */
 export const de_ListPricingPlansAssociatedWithPricingRuleCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListPricingPlansAssociatedWithPricingRuleCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1420,7 +1420,7 @@ export const de_ListPricingPlansAssociatedWithPricingRuleCommand = async (
  */
 export const de_ListPricingRulesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListPricingRulesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1443,7 +1443,7 @@ export const de_ListPricingRulesCommand = async (
  */
 export const de_ListPricingRulesAssociatedToPricingPlanCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListPricingRulesAssociatedToPricingPlanCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1467,7 +1467,7 @@ export const de_ListPricingRulesAssociatedToPricingPlanCommand = async (
  */
 export const de_ListResourcesAssociatedToCustomLineItemCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListResourcesAssociatedToCustomLineItemCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1490,7 +1490,7 @@ export const de_ListResourcesAssociatedToCustomLineItemCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1511,7 +1511,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1528,7 +1528,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1545,7 +1545,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateBillingGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateBillingGroupCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1575,7 +1575,7 @@ export const de_UpdateBillingGroupCommand = async (
  */
 export const de_UpdateCustomLineItemCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateCustomLineItemCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1602,7 +1602,7 @@ export const de_UpdateCustomLineItemCommand = async (
  */
 export const de_UpdatePricingPlanCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdatePricingPlanCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1627,7 +1627,7 @@ export const de_UpdatePricingPlanCommand = async (
  */
 export const de_UpdatePricingRuleCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdatePricingRuleCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1702,7 +1702,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1742,7 +1742,7 @@ const de_ConflictExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_InternalServerExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerException> => {
   const contents: any = map({
     [_RAS]: [() => void 0 !== parsedOutput.headers[_ra], () => __strictParseInt32(parsedOutput.headers[_ra])],
@@ -1764,7 +1764,7 @@ const de_InternalServerExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1786,7 +1786,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_ServiceLimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceLimitExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1899,7 +1899,7 @@ const se_CustomLineItemFlatChargeDetails = (input: CustomLineItemFlatChargeDetai
  */
 const se_CustomLineItemPercentageChargeDetails = (
   input: CustomLineItemPercentageChargeDetails,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     AssociatedValues: _json,
@@ -1950,7 +1950,7 @@ const se_CustomLineItemPercentageChargeDetails = (
  */
 const se_UpdateCustomLineItemChargeDetails = (
   input: UpdateCustomLineItemChargeDetails,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     Flat: (_) => se_UpdateCustomLineItemFlatChargeDetails(_, context),
@@ -1964,7 +1964,7 @@ const se_UpdateCustomLineItemChargeDetails = (
  */
 const se_UpdateCustomLineItemFlatChargeDetails = (
   input: UpdateCustomLineItemFlatChargeDetails,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     ChargeValue: __serializeFloat,
@@ -1976,7 +1976,7 @@ const se_UpdateCustomLineItemFlatChargeDetails = (
  */
 const se_UpdateCustomLineItemPercentageChargeDetails = (
   input: UpdateCustomLineItemPercentageChargeDetails,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     PercentageValue: __serializeFloat,
@@ -2063,7 +2063,7 @@ const de_CustomLineItemVersionList = (output: any, context: __SerdeContext): Cus
  */
 const de_CustomLineItemVersionListElement = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CustomLineItemVersionListElement => {
   return take(output, {
     AccountId: __expectString,
@@ -2114,7 +2114,7 @@ const de_ListCustomLineItemChargeDetails = (output: any, context: __SerdeContext
  */
 const de_ListCustomLineItemFlatChargeDetails = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ListCustomLineItemFlatChargeDetails => {
   return take(output, {
     ChargeValue: __limitedParseDouble,
@@ -2126,7 +2126,7 @@ const de_ListCustomLineItemFlatChargeDetails = (
  */
 const de_ListCustomLineItemPercentageChargeDetails = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ListCustomLineItemPercentageChargeDetails => {
   return take(output, {
     PercentageValue: __limitedParseDouble,

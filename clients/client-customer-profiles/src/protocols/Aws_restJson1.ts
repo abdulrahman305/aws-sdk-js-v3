@@ -214,7 +214,7 @@ import {
  */
 export const se_AddProfileKeyCommand = async (
   input: AddProfileKeyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -228,7 +228,7 @@ export const se_AddProfileKeyCommand = async (
       KeyName: [],
       ProfileId: [],
       Values: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -239,7 +239,7 @@ export const se_AddProfileKeyCommand = async (
  */
 export const se_CreateCalculatedAttributeDefinitionCommand = async (
   input: CreateCalculatedAttributeDefinitionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -257,7 +257,7 @@ export const se_CreateCalculatedAttributeDefinitionCommand = async (
       DisplayName: [],
       Statistic: [],
       Tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -268,7 +268,7 @@ export const se_CreateCalculatedAttributeDefinitionCommand = async (
  */
 export const se_CreateDomainCommand = async (
   input: CreateDomainCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -285,7 +285,7 @@ export const se_CreateDomainCommand = async (
       Matching: (_) => se_MatchingRequest(_, context),
       RuleBasedMatching: (_) => _json(_),
       Tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -296,7 +296,7 @@ export const se_CreateDomainCommand = async (
  */
 export const se_CreateEventStreamCommand = async (
   input: CreateEventStreamCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -310,7 +310,7 @@ export const se_CreateEventStreamCommand = async (
     take(input, {
       Tags: (_) => _json(_),
       Uri: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -321,7 +321,7 @@ export const se_CreateEventStreamCommand = async (
  */
 export const se_CreateIntegrationWorkflowCommand = async (
   input: CreateIntegrationWorkflowCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -337,7 +337,7 @@ export const se_CreateIntegrationWorkflowCommand = async (
       RoleArn: [],
       Tags: (_) => _json(_),
       WorkflowType: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -348,7 +348,7 @@ export const se_CreateIntegrationWorkflowCommand = async (
  */
 export const se_CreateProfileCommand = async (
   input: CreateProfileCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -382,7 +382,7 @@ export const se_CreateProfileCommand = async (
       PersonalEmailAddress: [],
       PhoneNumber: [],
       ShippingAddress: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -393,7 +393,7 @@ export const se_CreateProfileCommand = async (
  */
 export const se_DeleteCalculatedAttributeDefinitionCommand = async (
   input: DeleteCalculatedAttributeDefinitionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -410,7 +410,7 @@ export const se_DeleteCalculatedAttributeDefinitionCommand = async (
  */
 export const se_DeleteDomainCommand = async (
   input: DeleteDomainCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -426,7 +426,7 @@ export const se_DeleteDomainCommand = async (
  */
 export const se_DeleteEventStreamCommand = async (
   input: DeleteEventStreamCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -443,7 +443,7 @@ export const se_DeleteEventStreamCommand = async (
  */
 export const se_DeleteIntegrationCommand = async (
   input: DeleteIntegrationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -455,7 +455,7 @@ export const se_DeleteIntegrationCommand = async (
   body = JSON.stringify(
     take(input, {
       Uri: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -466,7 +466,7 @@ export const se_DeleteIntegrationCommand = async (
  */
 export const se_DeleteProfileCommand = async (
   input: DeleteProfileCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -478,7 +478,7 @@ export const se_DeleteProfileCommand = async (
   body = JSON.stringify(
     take(input, {
       ProfileId: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -489,7 +489,7 @@ export const se_DeleteProfileCommand = async (
  */
 export const se_DeleteProfileKeyCommand = async (
   input: DeleteProfileKeyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -503,7 +503,7 @@ export const se_DeleteProfileKeyCommand = async (
       KeyName: [],
       ProfileId: [],
       Values: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -514,7 +514,7 @@ export const se_DeleteProfileKeyCommand = async (
  */
 export const se_DeleteProfileObjectCommand = async (
   input: DeleteProfileObjectCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -528,7 +528,7 @@ export const se_DeleteProfileObjectCommand = async (
       ObjectTypeName: [],
       ProfileId: [],
       ProfileObjectUniqueKey: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -539,7 +539,7 @@ export const se_DeleteProfileObjectCommand = async (
  */
 export const se_DeleteProfileObjectTypeCommand = async (
   input: DeleteProfileObjectTypeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -556,7 +556,7 @@ export const se_DeleteProfileObjectTypeCommand = async (
  */
 export const se_DeleteWorkflowCommand = async (
   input: DeleteWorkflowCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -573,7 +573,7 @@ export const se_DeleteWorkflowCommand = async (
  */
 export const se_DetectProfileObjectTypeCommand = async (
   input: DetectProfileObjectTypeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -585,7 +585,7 @@ export const se_DetectProfileObjectTypeCommand = async (
   body = JSON.stringify(
     take(input, {
       Objects: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -596,7 +596,7 @@ export const se_DetectProfileObjectTypeCommand = async (
  */
 export const se_GetAutoMergingPreviewCommand = async (
   input: GetAutoMergingPreviewCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -610,7 +610,7 @@ export const se_GetAutoMergingPreviewCommand = async (
       ConflictResolution: (_) => _json(_),
       Consolidation: (_) => _json(_),
       MinAllowedConfidenceScoreForMerging: (_) => __serializeFloat(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -621,7 +621,7 @@ export const se_GetAutoMergingPreviewCommand = async (
  */
 export const se_GetCalculatedAttributeDefinitionCommand = async (
   input: GetCalculatedAttributeDefinitionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -638,7 +638,7 @@ export const se_GetCalculatedAttributeDefinitionCommand = async (
  */
 export const se_GetCalculatedAttributeForProfileCommand = async (
   input: GetCalculatedAttributeForProfileCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -656,7 +656,7 @@ export const se_GetCalculatedAttributeForProfileCommand = async (
  */
 export const se_GetDomainCommand = async (
   input: GetDomainCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -672,7 +672,7 @@ export const se_GetDomainCommand = async (
  */
 export const se_GetEventStreamCommand = async (
   input: GetEventStreamCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -689,7 +689,7 @@ export const se_GetEventStreamCommand = async (
  */
 export const se_GetIdentityResolutionJobCommand = async (
   input: GetIdentityResolutionJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -706,7 +706,7 @@ export const se_GetIdentityResolutionJobCommand = async (
  */
 export const se_GetIntegrationCommand = async (
   input: GetIntegrationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -718,7 +718,7 @@ export const se_GetIntegrationCommand = async (
   body = JSON.stringify(
     take(input, {
       Uri: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -729,7 +729,7 @@ export const se_GetIntegrationCommand = async (
  */
 export const se_GetMatchesCommand = async (
   input: GetMatchesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -749,7 +749,7 @@ export const se_GetMatchesCommand = async (
  */
 export const se_GetProfileObjectTypeCommand = async (
   input: GetProfileObjectTypeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -766,7 +766,7 @@ export const se_GetProfileObjectTypeCommand = async (
  */
 export const se_GetProfileObjectTypeTemplateCommand = async (
   input: GetProfileObjectTypeTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -782,7 +782,7 @@ export const se_GetProfileObjectTypeTemplateCommand = async (
  */
 export const se_GetSimilarProfilesCommand = async (
   input: GetSimilarProfilesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -800,7 +800,7 @@ export const se_GetSimilarProfilesCommand = async (
       MatchType: [],
       SearchKey: [],
       SearchValue: [],
-    })
+    }),
   );
   b.m("POST").h(headers).q(query).b(body);
   return b.build();
@@ -811,7 +811,7 @@ export const se_GetSimilarProfilesCommand = async (
  */
 export const se_GetWorkflowCommand = async (
   input: GetWorkflowCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -828,7 +828,7 @@ export const se_GetWorkflowCommand = async (
  */
 export const se_GetWorkflowStepsCommand = async (
   input: GetWorkflowStepsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -849,7 +849,7 @@ export const se_GetWorkflowStepsCommand = async (
  */
 export const se_ListAccountIntegrationsCommand = async (
   input: ListAccountIntegrationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -865,7 +865,7 @@ export const se_ListAccountIntegrationsCommand = async (
   body = JSON.stringify(
     take(input, {
       Uri: [],
-    })
+    }),
   );
   b.m("POST").h(headers).q(query).b(body);
   return b.build();
@@ -876,7 +876,7 @@ export const se_ListAccountIntegrationsCommand = async (
  */
 export const se_ListCalculatedAttributeDefinitionsCommand = async (
   input: ListCalculatedAttributeDefinitionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -896,7 +896,7 @@ export const se_ListCalculatedAttributeDefinitionsCommand = async (
  */
 export const se_ListCalculatedAttributesForProfileCommand = async (
   input: ListCalculatedAttributesForProfileCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -917,7 +917,7 @@ export const se_ListCalculatedAttributesForProfileCommand = async (
  */
 export const se_ListDomainsCommand = async (
   input: ListDomainsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -936,7 +936,7 @@ export const se_ListDomainsCommand = async (
  */
 export const se_ListEventStreamsCommand = async (
   input: ListEventStreamsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -956,7 +956,7 @@ export const se_ListEventStreamsCommand = async (
  */
 export const se_ListIdentityResolutionJobsCommand = async (
   input: ListIdentityResolutionJobsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -976,7 +976,7 @@ export const se_ListIdentityResolutionJobsCommand = async (
  */
 export const se_ListIntegrationsCommand = async (
   input: ListIntegrationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -997,7 +997,7 @@ export const se_ListIntegrationsCommand = async (
  */
 export const se_ListProfileObjectsCommand = async (
   input: ListProfileObjectsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1015,7 +1015,7 @@ export const se_ListProfileObjectsCommand = async (
       ObjectFilter: (_) => _json(_),
       ObjectTypeName: [],
       ProfileId: [],
-    })
+    }),
   );
   b.m("POST").h(headers).q(query).b(body);
   return b.build();
@@ -1026,7 +1026,7 @@ export const se_ListProfileObjectsCommand = async (
  */
 export const se_ListProfileObjectTypesCommand = async (
   input: ListProfileObjectTypesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1046,7 +1046,7 @@ export const se_ListProfileObjectTypesCommand = async (
  */
 export const se_ListProfileObjectTypeTemplatesCommand = async (
   input: ListProfileObjectTypeTemplatesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1065,7 +1065,7 @@ export const se_ListProfileObjectTypeTemplatesCommand = async (
  */
 export const se_ListRuleBasedMatchesCommand = async (
   input: ListRuleBasedMatchesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1085,7 +1085,7 @@ export const se_ListRuleBasedMatchesCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1101,7 +1101,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_ListWorkflowsCommand = async (
   input: ListWorkflowsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1120,7 +1120,7 @@ export const se_ListWorkflowsCommand = async (
       QueryStartDate: (_) => _.getTime() / 1_000,
       Status: [],
       WorkflowType: [],
-    })
+    }),
   );
   b.m("POST").h(headers).q(query).b(body);
   return b.build();
@@ -1131,7 +1131,7 @@ export const se_ListWorkflowsCommand = async (
  */
 export const se_MergeProfilesCommand = async (
   input: MergeProfilesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1145,7 +1145,7 @@ export const se_MergeProfilesCommand = async (
       FieldSourceProfileIds: (_) => _json(_),
       MainProfileId: [],
       ProfileIdsToBeMerged: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1156,7 +1156,7 @@ export const se_MergeProfilesCommand = async (
  */
 export const se_PutIntegrationCommand = async (
   input: PutIntegrationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1172,7 +1172,7 @@ export const se_PutIntegrationCommand = async (
       ObjectTypeNames: (_) => _json(_),
       Tags: (_) => _json(_),
       Uri: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1183,7 +1183,7 @@ export const se_PutIntegrationCommand = async (
  */
 export const se_PutProfileObjectCommand = async (
   input: PutProfileObjectCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1196,7 +1196,7 @@ export const se_PutProfileObjectCommand = async (
     take(input, {
       Object: [],
       ObjectTypeName: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1207,7 +1207,7 @@ export const se_PutProfileObjectCommand = async (
  */
 export const se_PutProfileObjectTypeCommand = async (
   input: PutProfileObjectTypeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1228,7 +1228,7 @@ export const se_PutProfileObjectTypeCommand = async (
       SourceLastUpdatedTimestampFormat: [],
       Tags: (_) => _json(_),
       TemplateId: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1239,7 +1239,7 @@ export const se_PutProfileObjectTypeCommand = async (
  */
 export const se_SearchProfilesCommand = async (
   input: SearchProfilesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1258,7 +1258,7 @@ export const se_SearchProfilesCommand = async (
       KeyName: [],
       LogicalOperator: [],
       Values: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).q(query).b(body);
   return b.build();
@@ -1269,7 +1269,7 @@ export const se_SearchProfilesCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1281,7 +1281,7 @@ export const se_TagResourceCommand = async (
   body = JSON.stringify(
     take(input, {
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1292,7 +1292,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1314,7 +1314,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateCalculatedAttributeDefinitionCommand = async (
   input: UpdateCalculatedAttributeDefinitionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1329,7 +1329,7 @@ export const se_UpdateCalculatedAttributeDefinitionCommand = async (
       Conditions: (_) => _json(_),
       Description: [],
       DisplayName: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1340,7 +1340,7 @@ export const se_UpdateCalculatedAttributeDefinitionCommand = async (
  */
 export const se_UpdateDomainCommand = async (
   input: UpdateDomainCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1357,7 +1357,7 @@ export const se_UpdateDomainCommand = async (
       Matching: (_) => se_MatchingRequest(_, context),
       RuleBasedMatching: (_) => _json(_),
       Tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1368,7 +1368,7 @@ export const se_UpdateDomainCommand = async (
  */
 export const se_UpdateProfileCommand = async (
   input: UpdateProfileCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1403,7 +1403,7 @@ export const se_UpdateProfileCommand = async (
       PhoneNumber: [],
       ProfileId: [],
       ShippingAddress: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1414,7 +1414,7 @@ export const se_UpdateProfileCommand = async (
  */
 export const de_AddProfileKeyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AddProfileKeyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1436,7 +1436,7 @@ export const de_AddProfileKeyCommand = async (
  */
 export const de_CreateCalculatedAttributeDefinitionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateCalculatedAttributeDefinitionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1465,7 +1465,7 @@ export const de_CreateCalculatedAttributeDefinitionCommand = async (
  */
 export const de_CreateDomainCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateDomainCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1494,7 +1494,7 @@ export const de_CreateDomainCommand = async (
  */
 export const de_CreateEventStreamCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateEventStreamCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1516,7 +1516,7 @@ export const de_CreateEventStreamCommand = async (
  */
 export const de_CreateIntegrationWorkflowCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateIntegrationWorkflowCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1538,7 +1538,7 @@ export const de_CreateIntegrationWorkflowCommand = async (
  */
 export const de_CreateProfileCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateProfileCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1559,7 +1559,7 @@ export const de_CreateProfileCommand = async (
  */
 export const de_DeleteCalculatedAttributeDefinitionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteCalculatedAttributeDefinitionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1576,7 +1576,7 @@ export const de_DeleteCalculatedAttributeDefinitionCommand = async (
  */
 export const de_DeleteDomainCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteDomainCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1597,7 +1597,7 @@ export const de_DeleteDomainCommand = async (
  */
 export const de_DeleteEventStreamCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteEventStreamCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1614,7 +1614,7 @@ export const de_DeleteEventStreamCommand = async (
  */
 export const de_DeleteIntegrationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteIntegrationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1635,7 +1635,7 @@ export const de_DeleteIntegrationCommand = async (
  */
 export const de_DeleteProfileCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteProfileCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1656,7 +1656,7 @@ export const de_DeleteProfileCommand = async (
  */
 export const de_DeleteProfileKeyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteProfileKeyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1677,7 +1677,7 @@ export const de_DeleteProfileKeyCommand = async (
  */
 export const de_DeleteProfileObjectCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteProfileObjectCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1698,7 +1698,7 @@ export const de_DeleteProfileObjectCommand = async (
  */
 export const de_DeleteProfileObjectTypeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteProfileObjectTypeCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1719,7 +1719,7 @@ export const de_DeleteProfileObjectTypeCommand = async (
  */
 export const de_DeleteWorkflowCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteWorkflowCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1736,7 +1736,7 @@ export const de_DeleteWorkflowCommand = async (
  */
 export const de_DetectProfileObjectTypeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DetectProfileObjectTypeCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1757,7 +1757,7 @@ export const de_DetectProfileObjectTypeCommand = async (
  */
 export const de_GetAutoMergingPreviewCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetAutoMergingPreviewCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1781,7 +1781,7 @@ export const de_GetAutoMergingPreviewCommand = async (
  */
 export const de_GetCalculatedAttributeDefinitionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetCalculatedAttributeDefinitionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1810,7 +1810,7 @@ export const de_GetCalculatedAttributeDefinitionCommand = async (
  */
 export const de_GetCalculatedAttributeForProfileCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetCalculatedAttributeForProfileCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1834,7 +1834,7 @@ export const de_GetCalculatedAttributeForProfileCommand = async (
  */
 export const de_GetDomainCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetDomainCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1864,7 +1864,7 @@ export const de_GetDomainCommand = async (
  */
 export const de_GetEventStreamCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetEventStreamCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1891,7 +1891,7 @@ export const de_GetEventStreamCommand = async (
  */
 export const de_GetIdentityResolutionJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetIdentityResolutionJobCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1922,7 +1922,7 @@ export const de_GetIdentityResolutionJobCommand = async (
  */
 export const de_GetIntegrationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetIntegrationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1951,7 +1951,7 @@ export const de_GetIntegrationCommand = async (
  */
 export const de_GetMatchesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetMatchesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1975,7 +1975,7 @@ export const de_GetMatchesCommand = async (
  */
 export const de_GetProfileObjectTypeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetProfileObjectTypeCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2007,7 +2007,7 @@ export const de_GetProfileObjectTypeCommand = async (
  */
 export const de_GetProfileObjectTypeTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetProfileObjectTypeTemplateCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2034,7 +2034,7 @@ export const de_GetProfileObjectTypeTemplateCommand = async (
  */
 export const de_GetSimilarProfilesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetSimilarProfilesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2060,7 +2060,7 @@ export const de_GetSimilarProfilesCommand = async (
  */
 export const de_GetWorkflowCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetWorkflowCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2088,7 +2088,7 @@ export const de_GetWorkflowCommand = async (
  */
 export const de_GetWorkflowStepsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetWorkflowStepsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2112,7 +2112,7 @@ export const de_GetWorkflowStepsCommand = async (
  */
 export const de_ListAccountIntegrationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAccountIntegrationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2134,7 +2134,7 @@ export const de_ListAccountIntegrationsCommand = async (
  */
 export const de_ListCalculatedAttributeDefinitionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListCalculatedAttributeDefinitionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2156,7 +2156,7 @@ export const de_ListCalculatedAttributeDefinitionsCommand = async (
  */
 export const de_ListCalculatedAttributesForProfileCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListCalculatedAttributesForProfileCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2178,7 +2178,7 @@ export const de_ListCalculatedAttributesForProfileCommand = async (
  */
 export const de_ListDomainsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListDomainsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2200,7 +2200,7 @@ export const de_ListDomainsCommand = async (
  */
 export const de_ListEventStreamsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListEventStreamsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2222,7 +2222,7 @@ export const de_ListEventStreamsCommand = async (
  */
 export const de_ListIdentityResolutionJobsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListIdentityResolutionJobsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2244,7 +2244,7 @@ export const de_ListIdentityResolutionJobsCommand = async (
  */
 export const de_ListIntegrationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListIntegrationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2266,7 +2266,7 @@ export const de_ListIntegrationsCommand = async (
  */
 export const de_ListProfileObjectsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListProfileObjectsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2288,7 +2288,7 @@ export const de_ListProfileObjectsCommand = async (
  */
 export const de_ListProfileObjectTypesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListProfileObjectTypesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2310,7 +2310,7 @@ export const de_ListProfileObjectTypesCommand = async (
  */
 export const de_ListProfileObjectTypeTemplatesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListProfileObjectTypeTemplatesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2332,7 +2332,7 @@ export const de_ListProfileObjectTypeTemplatesCommand = async (
  */
 export const de_ListRuleBasedMatchesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListRuleBasedMatchesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2354,7 +2354,7 @@ export const de_ListRuleBasedMatchesCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2375,7 +2375,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_ListWorkflowsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListWorkflowsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2397,7 +2397,7 @@ export const de_ListWorkflowsCommand = async (
  */
 export const de_MergeProfilesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<MergeProfilesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2418,7 +2418,7 @@ export const de_MergeProfilesCommand = async (
  */
 export const de_PutIntegrationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutIntegrationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2447,7 +2447,7 @@ export const de_PutIntegrationCommand = async (
  */
 export const de_PutProfileObjectCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutProfileObjectCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2468,7 +2468,7 @@ export const de_PutProfileObjectCommand = async (
  */
 export const de_PutProfileObjectTypeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutProfileObjectTypeCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2500,7 +2500,7 @@ export const de_PutProfileObjectTypeCommand = async (
  */
 export const de_SearchProfilesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SearchProfilesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2522,7 +2522,7 @@ export const de_SearchProfilesCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2539,7 +2539,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2556,7 +2556,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateCalculatedAttributeDefinitionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateCalculatedAttributeDefinitionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2585,7 +2585,7 @@ export const de_UpdateCalculatedAttributeDefinitionCommand = async (
  */
 export const de_UpdateDomainCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateDomainCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2614,7 +2614,7 @@ export const de_UpdateDomainCommand = async (
  */
 export const de_UpdateProfileCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateProfileCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2671,7 +2671,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2708,7 +2708,7 @@ const de_BadRequestExceptionRes = async (parsedOutput: any, context: __SerdeCont
  */
 const de_InternalServerExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2728,7 +2728,7 @@ const de_InternalServerExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -3033,7 +3033,7 @@ const de_AutoMerging = (output: any, context: __SerdeContext): AutoMerging => {
  */
 const de_CalculatedAttributeDefinitionsList = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ListCalculatedAttributeDefinitionItem[] => {
   const retVal = (output || [])
     .filter((e: any) => e != null)
@@ -3184,7 +3184,7 @@ const de_IntegrationList = (output: any, context: __SerdeContext): ListIntegrati
  */
 const de_ListCalculatedAttributeDefinitionItem = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ListCalculatedAttributeDefinitionItem => {
   return take(output, {
     CalculatedAttributeName: __expectString,

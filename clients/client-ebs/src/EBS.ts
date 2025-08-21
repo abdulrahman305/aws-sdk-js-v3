@@ -49,16 +49,16 @@ export interface EBS {
    */
   completeSnapshot(
     args: CompleteSnapshotCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CompleteSnapshotCommandOutput>;
   completeSnapshot(
     args: CompleteSnapshotCommandInput,
-    cb: (err: any, data?: CompleteSnapshotCommandOutput) => void
+    cb: (err: any, data?: CompleteSnapshotCommandOutput) => void,
   ): void;
   completeSnapshot(
     args: CompleteSnapshotCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CompleteSnapshotCommandOutput) => void
+    cb: (err: any, data?: CompleteSnapshotCommandOutput) => void,
   ): void;
 
   /**
@@ -66,16 +66,16 @@ export interface EBS {
    */
   getSnapshotBlock(
     args: GetSnapshotBlockCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetSnapshotBlockCommandOutput>;
   getSnapshotBlock(
     args: GetSnapshotBlockCommandInput,
-    cb: (err: any, data?: GetSnapshotBlockCommandOutput) => void
+    cb: (err: any, data?: GetSnapshotBlockCommandOutput) => void,
   ): void;
   getSnapshotBlock(
     args: GetSnapshotBlockCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetSnapshotBlockCommandOutput) => void
+    cb: (err: any, data?: GetSnapshotBlockCommandOutput) => void,
   ): void;
 
   /**
@@ -83,16 +83,16 @@ export interface EBS {
    */
   listChangedBlocks(
     args: ListChangedBlocksCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListChangedBlocksCommandOutput>;
   listChangedBlocks(
     args: ListChangedBlocksCommandInput,
-    cb: (err: any, data?: ListChangedBlocksCommandOutput) => void
+    cb: (err: any, data?: ListChangedBlocksCommandOutput) => void,
   ): void;
   listChangedBlocks(
     args: ListChangedBlocksCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListChangedBlocksCommandOutput) => void
+    cb: (err: any, data?: ListChangedBlocksCommandOutput) => void,
   ): void;
 
   /**
@@ -100,16 +100,16 @@ export interface EBS {
    */
   listSnapshotBlocks(
     args: ListSnapshotBlocksCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListSnapshotBlocksCommandOutput>;
   listSnapshotBlocks(
     args: ListSnapshotBlocksCommandInput,
-    cb: (err: any, data?: ListSnapshotBlocksCommandOutput) => void
+    cb: (err: any, data?: ListSnapshotBlocksCommandOutput) => void,
   ): void;
   listSnapshotBlocks(
     args: ListSnapshotBlocksCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListSnapshotBlocksCommandOutput) => void
+    cb: (err: any, data?: ListSnapshotBlocksCommandOutput) => void,
   ): void;
 
   /**
@@ -117,16 +117,16 @@ export interface EBS {
    */
   putSnapshotBlock(
     args: PutSnapshotBlockCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutSnapshotBlockCommandOutput>;
   putSnapshotBlock(
     args: PutSnapshotBlockCommandInput,
-    cb: (err: any, data?: PutSnapshotBlockCommandOutput) => void
+    cb: (err: any, data?: PutSnapshotBlockCommandOutput) => void,
   ): void;
   putSnapshotBlock(
     args: PutSnapshotBlockCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutSnapshotBlockCommandOutput) => void
+    cb: (err: any, data?: PutSnapshotBlockCommandOutput) => void,
   ): void;
 
   /**
@@ -137,7 +137,7 @@ export interface EBS {
   startSnapshot(
     args: StartSnapshotCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartSnapshotCommandOutput) => void
+    cb: (err: any, data?: StartSnapshotCommandOutput) => void,
   ): void;
 }
 

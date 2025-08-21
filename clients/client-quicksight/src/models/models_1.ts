@@ -7983,7 +7983,7 @@ export const ShapeConditionalFormatFilterSensitiveLog = (obj: ShapeConditionalFo
  * @internal
  */
 export const FilledMapShapeConditionalFormattingFilterSensitiveLog = (
-  obj: FilledMapShapeConditionalFormatting
+  obj: FilledMapShapeConditionalFormatting,
 ): any => ({
   ...obj,
   ...(obj.Format && { Format: ShapeConditionalFormatFilterSensitiveLog(obj.Format) }),
@@ -7993,7 +7993,7 @@ export const FilledMapShapeConditionalFormattingFilterSensitiveLog = (
  * @internal
  */
 export const FilledMapConditionalFormattingOptionFilterSensitiveLog = (
-  obj: FilledMapConditionalFormattingOption
+  obj: FilledMapConditionalFormattingOption,
 ): any => ({
   ...obj,
   ...(obj.Shape && { Shape: FilledMapShapeConditionalFormattingFilterSensitiveLog(obj.Shape) }),
@@ -8006,7 +8006,7 @@ export const FilledMapConditionalFormattingFilterSensitiveLog = (obj: FilledMapC
   ...obj,
   ...(obj.ConditionalFormattingOptions && {
     ConditionalFormattingOptions: obj.ConditionalFormattingOptions.map((item) =>
-      FilledMapConditionalFormattingOptionFilterSensitiveLog(item)
+      FilledMapConditionalFormattingOptionFilterSensitiveLog(item),
     ),
   }),
 });
@@ -8067,12 +8067,12 @@ export const ComparisonFormatConfigurationFilterSensitiveLog = (obj: ComparisonF
   ...obj,
   ...(obj.NumberDisplayFormatConfiguration && {
     NumberDisplayFormatConfiguration: NumberDisplayFormatConfigurationFilterSensitiveLog(
-      obj.NumberDisplayFormatConfiguration
+      obj.NumberDisplayFormatConfiguration,
     ),
   }),
   ...(obj.PercentageDisplayFormatConfiguration && {
     PercentageDisplayFormatConfiguration: PercentageDisplayFormatConfigurationFilterSensitiveLog(
-      obj.PercentageDisplayFormatConfiguration
+      obj.PercentageDisplayFormatConfiguration,
     ),
   }),
 });
@@ -8118,7 +8118,7 @@ export const GaugeChartArcConditionalFormattingFilterSensitiveLog = (obj: GaugeC
  * @internal
  */
 export const ConditionalFormattingCustomIconConditionFilterSensitiveLog = (
-  obj: ConditionalFormattingCustomIconCondition
+  obj: ConditionalFormattingCustomIconCondition,
 ): any => ({
   ...obj,
   ...(obj.Expression && { Expression: SENSITIVE_STRING }),
@@ -8147,7 +8147,7 @@ export const ConditionalFormattingIconFilterSensitiveLog = (obj: ConditionalForm
  * @internal
  */
 export const GaugeChartPrimaryValueConditionalFormattingFilterSensitiveLog = (
-  obj: GaugeChartPrimaryValueConditionalFormatting
+  obj: GaugeChartPrimaryValueConditionalFormatting,
 ): any => ({
   ...obj,
   ...(obj.TextColor && { TextColor: ConditionalFormattingColorFilterSensitiveLog(obj.TextColor) }),
@@ -8158,7 +8158,7 @@ export const GaugeChartPrimaryValueConditionalFormattingFilterSensitiveLog = (
  * @internal
  */
 export const GaugeChartConditionalFormattingOptionFilterSensitiveLog = (
-  obj: GaugeChartConditionalFormattingOption
+  obj: GaugeChartConditionalFormattingOption,
 ): any => ({
   ...obj,
   ...(obj.PrimaryValue && {
@@ -8174,7 +8174,7 @@ export const GaugeChartConditionalFormattingFilterSensitiveLog = (obj: GaugeChar
   ...obj,
   ...(obj.ConditionalFormattingOptions && {
     ConditionalFormattingOptions: obj.ConditionalFormattingOptions.map((item) =>
-      GaugeChartConditionalFormattingOptionFilterSensitiveLog(item)
+      GaugeChartConditionalFormattingOptionFilterSensitiveLog(item),
     ),
   }),
 });
@@ -8440,7 +8440,7 @@ export const KPIConfigurationFilterSensitiveLog = (obj: KPIConfiguration): any =
  * @internal
  */
 export const KPIActualValueConditionalFormattingFilterSensitiveLog = (
-  obj: KPIActualValueConditionalFormatting
+  obj: KPIActualValueConditionalFormatting,
 ): any => ({
   ...obj,
   ...(obj.TextColor && { TextColor: ConditionalFormattingColorFilterSensitiveLog(obj.TextColor) }),
@@ -8451,7 +8451,7 @@ export const KPIActualValueConditionalFormattingFilterSensitiveLog = (
  * @internal
  */
 export const KPIComparisonValueConditionalFormattingFilterSensitiveLog = (
-  obj: KPIComparisonValueConditionalFormatting
+  obj: KPIComparisonValueConditionalFormatting,
 ): any => ({
   ...obj,
   ...(obj.TextColor && { TextColor: ConditionalFormattingColorFilterSensitiveLog(obj.TextColor) }),
@@ -8462,7 +8462,7 @@ export const KPIComparisonValueConditionalFormattingFilterSensitiveLog = (
  * @internal
  */
 export const KPIPrimaryValueConditionalFormattingFilterSensitiveLog = (
-  obj: KPIPrimaryValueConditionalFormatting
+  obj: KPIPrimaryValueConditionalFormatting,
 ): any => ({
   ...obj,
   ...(obj.TextColor && { TextColor: ConditionalFormattingColorFilterSensitiveLog(obj.TextColor) }),
@@ -8473,7 +8473,7 @@ export const KPIPrimaryValueConditionalFormattingFilterSensitiveLog = (
  * @internal
  */
 export const KPIProgressBarConditionalFormattingFilterSensitiveLog = (
-  obj: KPIProgressBarConditionalFormatting
+  obj: KPIProgressBarConditionalFormatting,
 ): any => ({
   ...obj,
   ...(obj.ForegroundColor && { ForegroundColor: ConditionalFormattingColorFilterSensitiveLog(obj.ForegroundColor) }),
@@ -8499,7 +8499,7 @@ export const KPIConditionalFormattingFilterSensitiveLog = (obj: KPIConditionalFo
   ...obj,
   ...(obj.ConditionalFormattingOptions && {
     ConditionalFormattingOptions: obj.ConditionalFormattingOptions.map((item) =>
-      KPIConditionalFormattingOptionFilterSensitiveLog(item)
+      KPIConditionalFormattingOptionFilterSensitiveLog(item),
     ),
   }),
 });
@@ -8699,7 +8699,7 @@ export const TextConditionalFormatFilterSensitiveLog = (obj: TextConditionalForm
  * @internal
  */
 export const PivotTableCellConditionalFormattingFilterSensitiveLog = (
-  obj: PivotTableCellConditionalFormatting
+  obj: PivotTableCellConditionalFormatting,
 ): any => ({
   ...obj,
   ...(obj.TextFormat && { TextFormat: TextConditionalFormatFilterSensitiveLog(obj.TextFormat) }),
@@ -8709,7 +8709,7 @@ export const PivotTableCellConditionalFormattingFilterSensitiveLog = (
  * @internal
  */
 export const PivotTableConditionalFormattingOptionFilterSensitiveLog = (
-  obj: PivotTableConditionalFormattingOption
+  obj: PivotTableConditionalFormattingOption,
 ): any => ({
   ...obj,
   ...(obj.Cell && { Cell: PivotTableCellConditionalFormattingFilterSensitiveLog(obj.Cell) }),
@@ -8722,7 +8722,7 @@ export const PivotTableConditionalFormattingFilterSensitiveLog = (obj: PivotTabl
   ...obj,
   ...(obj.ConditionalFormattingOptions && {
     ConditionalFormattingOptions: obj.ConditionalFormattingOptions.map((item) =>
-      PivotTableConditionalFormattingOptionFilterSensitiveLog(item)
+      PivotTableConditionalFormattingOptionFilterSensitiveLog(item),
     ),
   }),
 });
@@ -8801,7 +8801,7 @@ export const SankeyDiagramVisualFilterSensitiveLog = (obj: SankeyDiagramVisual):
  * @internal
  */
 export const ScatterPlotCategoricallyAggregatedFieldWellsFilterSensitiveLog = (
-  obj: ScatterPlotCategoricallyAggregatedFieldWells
+  obj: ScatterPlotCategoricallyAggregatedFieldWells,
 ): any => ({
   ...obj,
   ...(obj.XAxis && { XAxis: obj.XAxis.map((item) => MeasureFieldFilterSensitiveLog(item)) }),
@@ -8824,7 +8824,7 @@ export const ScatterPlotFieldWellsFilterSensitiveLog = (obj: ScatterPlotFieldWel
   ...obj,
   ...(obj.ScatterPlotCategoricallyAggregatedFieldWells && {
     ScatterPlotCategoricallyAggregatedFieldWells: ScatterPlotCategoricallyAggregatedFieldWellsFilterSensitiveLog(
-      obj.ScatterPlotCategoricallyAggregatedFieldWells
+      obj.ScatterPlotCategoricallyAggregatedFieldWells,
     ),
   }),
 });
@@ -8925,7 +8925,7 @@ export const TableConditionalFormattingFilterSensitiveLog = (obj: TableCondition
   ...obj,
   ...(obj.ConditionalFormattingOptions && {
     ConditionalFormattingOptions: obj.ConditionalFormattingOptions.map((item) =>
-      TableConditionalFormattingOptionFilterSensitiveLog(item)
+      TableConditionalFormattingOptionFilterSensitiveLog(item),
     ),
   }),
 });

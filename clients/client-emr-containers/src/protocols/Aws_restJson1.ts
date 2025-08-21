@@ -139,7 +139,7 @@ import {
  */
 export const se_CancelJobRunCommand = async (
   input: CancelJobRunCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -156,7 +156,7 @@ export const se_CancelJobRunCommand = async (
  */
 export const se_CreateJobTemplateCommand = async (
   input: CreateJobTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -171,7 +171,7 @@ export const se_CreateJobTemplateCommand = async (
       kmsKeyArn: [],
       name: [],
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -182,7 +182,7 @@ export const se_CreateJobTemplateCommand = async (
  */
 export const se_CreateManagedEndpointCommand = async (
   input: CreateManagedEndpointCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -201,7 +201,7 @@ export const se_CreateManagedEndpointCommand = async (
       releaseLabel: [],
       tags: (_) => _json(_),
       type: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -212,7 +212,7 @@ export const se_CreateManagedEndpointCommand = async (
  */
 export const se_CreateSecurityConfigurationCommand = async (
   input: CreateSecurityConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -226,7 +226,7 @@ export const se_CreateSecurityConfigurationCommand = async (
       name: [],
       securityConfigurationData: (_) => _json(_),
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -237,7 +237,7 @@ export const se_CreateSecurityConfigurationCommand = async (
  */
 export const se_CreateVirtualClusterCommand = async (
   input: CreateVirtualClusterCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -252,7 +252,7 @@ export const se_CreateVirtualClusterCommand = async (
       name: [],
       securityConfigurationId: [],
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -263,7 +263,7 @@ export const se_CreateVirtualClusterCommand = async (
  */
 export const se_DeleteJobTemplateCommand = async (
   input: DeleteJobTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -279,7 +279,7 @@ export const se_DeleteJobTemplateCommand = async (
  */
 export const se_DeleteManagedEndpointCommand = async (
   input: DeleteManagedEndpointCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -296,7 +296,7 @@ export const se_DeleteManagedEndpointCommand = async (
  */
 export const se_DeleteVirtualClusterCommand = async (
   input: DeleteVirtualClusterCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -312,7 +312,7 @@ export const se_DeleteVirtualClusterCommand = async (
  */
 export const se_DescribeJobRunCommand = async (
   input: DescribeJobRunCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -329,7 +329,7 @@ export const se_DescribeJobRunCommand = async (
  */
 export const se_DescribeJobTemplateCommand = async (
   input: DescribeJobTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -345,7 +345,7 @@ export const se_DescribeJobTemplateCommand = async (
  */
 export const se_DescribeManagedEndpointCommand = async (
   input: DescribeManagedEndpointCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -362,7 +362,7 @@ export const se_DescribeManagedEndpointCommand = async (
  */
 export const se_DescribeSecurityConfigurationCommand = async (
   input: DescribeSecurityConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -378,7 +378,7 @@ export const se_DescribeSecurityConfigurationCommand = async (
  */
 export const se_DescribeVirtualClusterCommand = async (
   input: DescribeVirtualClusterCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -394,7 +394,7 @@ export const se_DescribeVirtualClusterCommand = async (
  */
 export const se_GetManagedEndpointSessionCredentialsCommand = async (
   input: GetManagedEndpointSessionCredentialsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -411,7 +411,7 @@ export const se_GetManagedEndpointSessionCredentialsCommand = async (
       durationInSeconds: [],
       executionRoleArn: [],
       logContext: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -422,7 +422,7 @@ export const se_GetManagedEndpointSessionCredentialsCommand = async (
  */
 export const se_ListJobRunsCommand = async (
   input: ListJobRunsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -446,7 +446,7 @@ export const se_ListJobRunsCommand = async (
  */
 export const se_ListJobTemplatesCommand = async (
   input: ListJobTemplatesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -467,7 +467,7 @@ export const se_ListJobTemplatesCommand = async (
  */
 export const se_ListManagedEndpointsCommand = async (
   input: ListManagedEndpointsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -491,7 +491,7 @@ export const se_ListManagedEndpointsCommand = async (
  */
 export const se_ListSecurityConfigurationsCommand = async (
   input: ListSecurityConfigurationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -512,7 +512,7 @@ export const se_ListSecurityConfigurationsCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -528,7 +528,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_ListVirtualClustersCommand = async (
   input: ListVirtualClustersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -553,7 +553,7 @@ export const se_ListVirtualClustersCommand = async (
  */
 export const se_StartJobRunCommand = async (
   input: StartJobRunCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -574,7 +574,7 @@ export const se_StartJobRunCommand = async (
       releaseLabel: [],
       retryPolicyConfiguration: (_) => _json(_),
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -585,7 +585,7 @@ export const se_StartJobRunCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -597,7 +597,7 @@ export const se_TagResourceCommand = async (
   body = JSON.stringify(
     take(input, {
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -608,7 +608,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -630,7 +630,7 @@ export const se_UntagResourceCommand = async (
  */
 export const de_CancelJobRunCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CancelJobRunCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -652,7 +652,7 @@ export const de_CancelJobRunCommand = async (
  */
 export const de_CreateJobTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateJobTemplateCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -676,7 +676,7 @@ export const de_CreateJobTemplateCommand = async (
  */
 export const de_CreateManagedEndpointCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateManagedEndpointCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -700,7 +700,7 @@ export const de_CreateManagedEndpointCommand = async (
  */
 export const de_CreateSecurityConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateSecurityConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -723,7 +723,7 @@ export const de_CreateSecurityConfigurationCommand = async (
  */
 export const de_CreateVirtualClusterCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateVirtualClusterCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -746,7 +746,7 @@ export const de_CreateVirtualClusterCommand = async (
  */
 export const de_DeleteJobTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteJobTemplateCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -767,7 +767,7 @@ export const de_DeleteJobTemplateCommand = async (
  */
 export const de_DeleteManagedEndpointCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteManagedEndpointCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -789,7 +789,7 @@ export const de_DeleteManagedEndpointCommand = async (
  */
 export const de_DeleteVirtualClusterCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteVirtualClusterCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -810,7 +810,7 @@ export const de_DeleteVirtualClusterCommand = async (
  */
 export const de_DescribeJobRunCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeJobRunCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -831,7 +831,7 @@ export const de_DescribeJobRunCommand = async (
  */
 export const de_DescribeJobTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeJobTemplateCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -852,7 +852,7 @@ export const de_DescribeJobTemplateCommand = async (
  */
 export const de_DescribeManagedEndpointCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeManagedEndpointCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -873,7 +873,7 @@ export const de_DescribeManagedEndpointCommand = async (
  */
 export const de_DescribeSecurityConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeSecurityConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -894,7 +894,7 @@ export const de_DescribeSecurityConfigurationCommand = async (
  */
 export const de_DescribeVirtualClusterCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeVirtualClusterCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -915,7 +915,7 @@ export const de_DescribeVirtualClusterCommand = async (
  */
 export const de_GetManagedEndpointSessionCredentialsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetManagedEndpointSessionCredentialsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -938,7 +938,7 @@ export const de_GetManagedEndpointSessionCredentialsCommand = async (
  */
 export const de_ListJobRunsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListJobRunsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -960,7 +960,7 @@ export const de_ListJobRunsCommand = async (
  */
 export const de_ListJobTemplatesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListJobTemplatesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -982,7 +982,7 @@ export const de_ListJobTemplatesCommand = async (
  */
 export const de_ListManagedEndpointsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListManagedEndpointsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1004,7 +1004,7 @@ export const de_ListManagedEndpointsCommand = async (
  */
 export const de_ListSecurityConfigurationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListSecurityConfigurationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1026,7 +1026,7 @@ export const de_ListSecurityConfigurationsCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1047,7 +1047,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_ListVirtualClustersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListVirtualClustersCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1069,7 +1069,7 @@ export const de_ListVirtualClustersCommand = async (
  */
 export const de_StartJobRunCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartJobRunCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1093,7 +1093,7 @@ export const de_StartJobRunCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1110,7 +1110,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1163,7 +1163,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_EKSRequestThrottledExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<EKSRequestThrottledException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1183,7 +1183,7 @@ const de_EKSRequestThrottledExceptionRes = async (
  */
 const de_InternalServerExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1203,7 +1203,7 @@ const de_InternalServerExceptionRes = async (
  */
 const de_RequestThrottledExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RequestThrottledException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1223,7 +1223,7 @@ const de_RequestThrottledExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1552,7 +1552,7 @@ const de_JobTemplates = (output: any, context: __SerdeContext): JobTemplate[] =>
  */
 const de_ParametricConfigurationOverrides = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ParametricConfigurationOverrides => {
   return take(output, {
     applicationConfiguration: (_: any) => de_ConfigurationList(_, context),

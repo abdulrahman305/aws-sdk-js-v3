@@ -74,7 +74,7 @@ export interface SnowDeviceManagement {
   cancelTask(
     args: CancelTaskCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CancelTaskCommandOutput) => void
+    cb: (err: any, data?: CancelTaskCommandOutput) => void,
   ): void;
 
   /**
@@ -85,7 +85,7 @@ export interface SnowDeviceManagement {
   createTask(
     args: CreateTaskCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateTaskCommandOutput) => void
+    cb: (err: any, data?: CreateTaskCommandOutput) => void,
   ): void;
 
   /**
@@ -93,13 +93,13 @@ export interface SnowDeviceManagement {
    */
   describeDevice(
     args: DescribeDeviceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeDeviceCommandOutput>;
   describeDevice(args: DescribeDeviceCommandInput, cb: (err: any, data?: DescribeDeviceCommandOutput) => void): void;
   describeDevice(
     args: DescribeDeviceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeDeviceCommandOutput) => void
+    cb: (err: any, data?: DescribeDeviceCommandOutput) => void,
   ): void;
 
   /**
@@ -107,16 +107,16 @@ export interface SnowDeviceManagement {
    */
   describeDeviceEc2Instances(
     args: DescribeDeviceEc2InstancesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeDeviceEc2InstancesCommandOutput>;
   describeDeviceEc2Instances(
     args: DescribeDeviceEc2InstancesCommandInput,
-    cb: (err: any, data?: DescribeDeviceEc2InstancesCommandOutput) => void
+    cb: (err: any, data?: DescribeDeviceEc2InstancesCommandOutput) => void,
   ): void;
   describeDeviceEc2Instances(
     args: DescribeDeviceEc2InstancesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeDeviceEc2InstancesCommandOutput) => void
+    cb: (err: any, data?: DescribeDeviceEc2InstancesCommandOutput) => void,
   ): void;
 
   /**
@@ -124,16 +124,16 @@ export interface SnowDeviceManagement {
    */
   describeExecution(
     args: DescribeExecutionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeExecutionCommandOutput>;
   describeExecution(
     args: DescribeExecutionCommandInput,
-    cb: (err: any, data?: DescribeExecutionCommandOutput) => void
+    cb: (err: any, data?: DescribeExecutionCommandOutput) => void,
   ): void;
   describeExecution(
     args: DescribeExecutionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeExecutionCommandOutput) => void
+    cb: (err: any, data?: DescribeExecutionCommandOutput) => void,
   ): void;
 
   /**
@@ -144,7 +144,7 @@ export interface SnowDeviceManagement {
   describeTask(
     args: DescribeTaskCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeTaskCommandOutput) => void
+    cb: (err: any, data?: DescribeTaskCommandOutput) => void,
   ): void;
 
   /**
@@ -152,16 +152,16 @@ export interface SnowDeviceManagement {
    */
   listDeviceResources(
     args: ListDeviceResourcesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListDeviceResourcesCommandOutput>;
   listDeviceResources(
     args: ListDeviceResourcesCommandInput,
-    cb: (err: any, data?: ListDeviceResourcesCommandOutput) => void
+    cb: (err: any, data?: ListDeviceResourcesCommandOutput) => void,
   ): void;
   listDeviceResources(
     args: ListDeviceResourcesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListDeviceResourcesCommandOutput) => void
+    cb: (err: any, data?: ListDeviceResourcesCommandOutput) => void,
   ): void;
 
   /**
@@ -173,7 +173,7 @@ export interface SnowDeviceManagement {
   listDevices(
     args: ListDevicesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListDevicesCommandOutput) => void
+    cb: (err: any, data?: ListDevicesCommandOutput) => void,
   ): void;
 
   /**
@@ -181,13 +181,13 @@ export interface SnowDeviceManagement {
    */
   listExecutions(
     args: ListExecutionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListExecutionsCommandOutput>;
   listExecutions(args: ListExecutionsCommandInput, cb: (err: any, data?: ListExecutionsCommandOutput) => void): void;
   listExecutions(
     args: ListExecutionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListExecutionsCommandOutput) => void
+    cb: (err: any, data?: ListExecutionsCommandOutput) => void,
   ): void;
 
   /**
@@ -195,16 +195,16 @@ export interface SnowDeviceManagement {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -216,7 +216,7 @@ export interface SnowDeviceManagement {
   listTasks(
     args: ListTasksCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTasksCommandOutput) => void
+    cb: (err: any, data?: ListTasksCommandOutput) => void,
   ): void;
 
   /**
@@ -227,7 +227,7 @@ export interface SnowDeviceManagement {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -238,7 +238,7 @@ export interface SnowDeviceManagement {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 }
 

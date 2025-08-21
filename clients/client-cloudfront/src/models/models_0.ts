@@ -3592,7 +3592,7 @@ export class IllegalFieldLevelEncryptionConfigAssociationWithCacheBehavior exten
    * @internal
    */
   constructor(
-    opts: __ExceptionOptionType<IllegalFieldLevelEncryptionConfigAssociationWithCacheBehavior, __BaseException>
+    opts: __ExceptionOptionType<IllegalFieldLevelEncryptionConfigAssociationWithCacheBehavior, __BaseException>,
   ) {
     super({
       name: "IllegalFieldLevelEncryptionConfigAssociationWithCacheBehavior",
@@ -4471,7 +4471,7 @@ export class TooManyDistributionsAssociatedToFieldLevelEncryptionConfig extends 
    * @internal
    */
   constructor(
-    opts: __ExceptionOptionType<TooManyDistributionsAssociatedToFieldLevelEncryptionConfig, __BaseException>
+    opts: __ExceptionOptionType<TooManyDistributionsAssociatedToFieldLevelEncryptionConfig, __BaseException>,
   ) {
     super({
       name: "TooManyDistributionsAssociatedToFieldLevelEncryptionConfig",

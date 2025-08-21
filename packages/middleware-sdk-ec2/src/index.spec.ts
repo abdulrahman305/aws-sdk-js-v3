@@ -15,7 +15,7 @@ const handler = copySnapshotPresignedUrlMiddleware({
       url: {
         hostname: "ec2.src-region.test-host.com",
       },
-    } as EndpointV2),
+    }) as EndpointV2,
 } as any)(nextHandler, {} as any);
 
 describe("middleware-sdk-ec2", () => {
@@ -40,7 +40,7 @@ describe("middleware-sdk-ec2", () => {
     expect(presignedUrl).toMatch(/Action\=CopySnapshot/);
     expect(presignedUrl).toMatch(/Version\=2016\-11\-15/);
     expect(presignedUrl).toMatch(
-      /DestinationRegion\=mock\-region\&SourceRegion\=src\-region\&SourceSnapshotId\=snap\-123456789/
+      /DestinationRegion\=mock\-region\&SourceRegion\=src\-region\&SourceSnapshotId\=snap\-123456789/,
     );
     expect(presignedUrl).toMatch(/X\-Amz\-Security\-Token\=session/);
     expect(presignedUrl).toMatch(/X\-Amz\-Algorithm\=AWS4\-HMAC\-SHA256/);
@@ -73,7 +73,7 @@ describe("middleware-sdk-ec2", () => {
     expect(nextHandler.mock.calls.length).toBe(1);
     const middlewareOutput = nextHandler.mock.calls[0][0];
     expect(middlewareOutput.request.body).toContain(
-      `&DestinationRegion=mock-region&PresignedUrl=https%3A%2F%2Fec2.src-region.test-host.com%2F%3FAction%3DCopySnapshot`
+      `&DestinationRegion=mock-region&PresignedUrl=https%3A%2F%2Fec2.src-region.test-host.com%2F%3FAction%3DCopySnapshot`,
     );
   });
 });

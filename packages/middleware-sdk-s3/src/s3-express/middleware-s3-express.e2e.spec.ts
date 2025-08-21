@@ -57,7 +57,7 @@ describe("s3 express CRUD test suite", () => {
           Bucket: bucketName,
           Key: String(i),
           Body: Buffer.from("abcd"),
-        })
+        }),
       );
     }
 
@@ -70,7 +70,7 @@ describe("s3 express CRUD test suite", () => {
             Bucket: bucketName,
             Key: String(i),
           })
-          .then((r) => r.Body?.transformToString())
+          .then((r) => r.Body?.transformToString()),
       );
     }
 
@@ -81,7 +81,7 @@ describe("s3 express CRUD test suite", () => {
         s3.deleteObject({
           Bucket: bucketName,
           Key: String(i),
-        })
+        }),
       );
     }
 
@@ -177,7 +177,7 @@ describe("s3 express CRUD test suite", () => {
                 data,
               });
             });
-          }
+          },
         )
         .on("error", reject);
 
@@ -229,7 +229,7 @@ async function createClientAndRecorder() {
       step: "deserialize",
       override: true,
       name: "s3-express-recorder",
-    }
+    },
   );
 
   return {

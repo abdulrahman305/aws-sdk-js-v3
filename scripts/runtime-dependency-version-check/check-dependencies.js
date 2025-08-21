@@ -85,8 +85,8 @@ const node_libraries = [
         ...new Set(
           [...(contents.toString().match(/(from |import\()"(.*?)"\)?;/g) ?? [])]
             .map((_) => _.replace(/(from ")|(import\(")/g, "").replace(/"\)?;$/, ""))
-            .filter((_) => !_.startsWith(".") && !node_libraries.includes(_))
-        )
+            .filter((_) => !_.startsWith(".") && !node_libraries.includes(_)),
+        ),
       );
 
       for (const dependency of importedDependencies) {

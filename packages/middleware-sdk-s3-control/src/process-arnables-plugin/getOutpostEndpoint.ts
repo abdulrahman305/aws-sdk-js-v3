@@ -8,7 +8,7 @@ export interface GetOutpostEndpointOptions {
 
 export const getOutpostEndpoint = (
   hostname: string,
-  { isCustomEndpoint, regionOverride, useFipsEndpoint }: GetOutpostEndpointOptions
+  { isCustomEndpoint, regionOverride, useFipsEndpoint }: GetOutpostEndpointOptions,
 ): string => {
   if (isCustomEndpoint) {
     return hostname;

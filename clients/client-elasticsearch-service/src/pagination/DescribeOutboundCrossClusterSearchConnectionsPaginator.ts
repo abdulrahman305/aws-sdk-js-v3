@@ -26,5 +26,5 @@ export const paginateDescribeOutboundCrossClusterSearchConnections: (
   DescribeOutboundCrossClusterSearchConnectionsCommand,
   "NextToken",
   "NextToken",
-  "MaxResults"
+  "MaxResults",
 );

@@ -54,7 +54,7 @@ import {
  */
 export const se_DescribeStreamCommand = async (
   input: DescribeStreamCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeStream");
   let body: any;
@@ -67,7 +67,7 @@ export const se_DescribeStreamCommand = async (
  */
 export const se_GetRecordsCommand = async (
   input: GetRecordsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetRecords");
   let body: any;
@@ -80,7 +80,7 @@ export const se_GetRecordsCommand = async (
  */
 export const se_GetShardIteratorCommand = async (
   input: GetShardIteratorCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetShardIterator");
   let body: any;
@@ -93,7 +93,7 @@ export const se_GetShardIteratorCommand = async (
  */
 export const se_ListStreamsCommand = async (
   input: ListStreamsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListStreams");
   let body: any;
@@ -106,7 +106,7 @@ export const se_ListStreamsCommand = async (
  */
 export const de_DescribeStreamCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeStreamCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -126,7 +126,7 @@ export const de_DescribeStreamCommand = async (
  */
 export const de_GetRecordsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetRecordsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -146,7 +146,7 @@ export const de_GetRecordsCommand = async (
  */
 export const de_GetShardIteratorCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetShardIteratorCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -166,7 +166,7 @@ export const de_GetShardIteratorCommand = async (
  */
 export const de_ListStreamsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListStreamsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -221,7 +221,7 @@ const de_CommandError = async (output: __HttpResponse, context: __SerdeContext):
  */
 const de_ExpiredIteratorExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ExpiredIteratorException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -250,7 +250,7 @@ const de_InternalServerErrorRes = async (parsedOutput: any, context: __SerdeCont
  */
 const de_LimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<LimitExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -266,7 +266,7 @@ const de_LimitExceededExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -282,7 +282,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_TrimmedDataAccessExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TrimmedDataAccessException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -305,13 +305,16 @@ const de_TrimmedDataAccessExceptionRes = async (
  * deserializeAws_json1_0AttributeMap
  */
 const de_AttributeMap = (output: any, context: __SerdeContext): Record<string, AttributeValue> => {
-  return Object.entries(output).reduce((acc: Record<string, AttributeValue>, [key, value]: [string, any]) => {
-    if (value === null) {
+  return Object.entries(output).reduce(
+    (acc: Record<string, AttributeValue>, [key, value]: [string, any]) => {
+      if (value === null) {
+        return acc;
+      }
+      acc[key as string] = de_AttributeValue(__expectUnion(value), context);
       return acc;
-    }
-    acc[key as string] = de_AttributeValue(__expectUnion(value), context);
-    return acc;
-  }, {} as Record<string, AttributeValue>);
+    },
+    {} as Record<string, AttributeValue>,
+  );
 };
 
 /**
@@ -426,13 +429,16 @@ const de_ListAttributeValue = (output: any, context: __SerdeContext): AttributeV
  * deserializeAws_json1_0MapAttributeValue
  */
 const de_MapAttributeValue = (output: any, context: __SerdeContext): Record<string, AttributeValue> => {
-  return Object.entries(output).reduce((acc: Record<string, AttributeValue>, [key, value]: [string, any]) => {
-    if (value === null) {
+  return Object.entries(output).reduce(
+    (acc: Record<string, AttributeValue>, [key, value]: [string, any]) => {
+      if (value === null) {
+        return acc;
+      }
+      acc[key as string] = de_AttributeValue(__expectUnion(value), context);
       return acc;
-    }
-    acc[key as string] = de_AttributeValue(__expectUnion(value), context);
-    return acc;
-  }, {} as Record<string, AttributeValue>);
+    },
+    {} as Record<string, AttributeValue>,
+  );
 };
 
 // de_NumberSetAttributeValue omitted.
@@ -530,7 +536,7 @@ const buildHttpRpcRequest = async (
   headers: __HeaderBag,
   path: string,
   resolvedHostname: string | undefined,
-  body: any
+  body: any,
 ): Promise<__HttpRequest> => {
   const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
   const contents: any = {

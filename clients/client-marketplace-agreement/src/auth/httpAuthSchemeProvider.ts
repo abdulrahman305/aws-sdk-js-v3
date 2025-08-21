@@ -44,7 +44,7 @@ export interface MarketplaceAgreementHttpAuthSchemeParametersProvider
 export const defaultMarketplaceAgreementHttpAuthSchemeParametersProvider = async (
   config: MarketplaceAgreementClientResolvedConfig,
   context: HandlerExecutionContext,
-  input: object
+  input: object,
 ): Promise<MarketplaceAgreementHttpAuthSchemeParameters> => {
   return {
     operation: getSmithyContext(context).operation as string,
@@ -57,7 +57,7 @@ export const defaultMarketplaceAgreementHttpAuthSchemeParametersProvider = async
 };
 
 function createAwsAuthSigv4HttpAuthOption(
-  authParameters: MarketplaceAgreementHttpAuthSchemeParameters
+  authParameters: MarketplaceAgreementHttpAuthSchemeParameters,
 ): HttpAuthOption {
   return {
     schemeId: "aws.auth#sigv4",
@@ -87,7 +87,7 @@ export interface MarketplaceAgreementHttpAuthSchemeProvider
  * @internal
  */
 export const defaultMarketplaceAgreementHttpAuthSchemeProvider: MarketplaceAgreementHttpAuthSchemeProvider = (
-  authParameters
+  authParameters,
 ) => {
   const options: HttpAuthOption[] = [];
   switch (authParameters.operation) {
@@ -136,7 +136,7 @@ export interface HttpAuthSchemeResolvedConfig extends AwsSdkSigV4AuthResolvedCon
  * @internal
  */
 export const resolveHttpAuthSchemeConfig = <T>(
-  config: T & HttpAuthSchemeInputConfig & AwsSdkSigV4PreviouslyResolved
+  config: T & HttpAuthSchemeInputConfig & AwsSdkSigV4PreviouslyResolved,
 ): T & HttpAuthSchemeResolvedConfig => {
   const config_0 = resolveAwsSdkSigV4Config(config);
   return {

@@ -4617,7 +4617,7 @@ export const GetResourcesResponseFilterSensitiveLog = (obj: GetResourcesResponse
  * @internal
  */
 export const InitiateDocumentVersionUploadRequestFilterSensitiveLog = (
-  obj: InitiateDocumentVersionUploadRequest
+  obj: InitiateDocumentVersionUploadRequest,
 ): any => ({
   ...obj,
   ...(obj.AuthenticationToken && { AuthenticationToken: SENSITIVE_STRING }),
@@ -4636,7 +4636,7 @@ export const UploadMetadataFilterSensitiveLog = (obj: UploadMetadata): any => ({
  * @internal
  */
 export const InitiateDocumentVersionUploadResponseFilterSensitiveLog = (
-  obj: InitiateDocumentVersionUploadResponse
+  obj: InitiateDocumentVersionUploadResponse,
 ): any => ({
   ...obj,
   ...(obj.Metadata && { Metadata: DocumentMetadataFilterSensitiveLog(obj.Metadata) }),
@@ -4647,7 +4647,7 @@ export const InitiateDocumentVersionUploadResponseFilterSensitiveLog = (
  * @internal
  */
 export const RemoveAllResourcePermissionsRequestFilterSensitiveLog = (
-  obj: RemoveAllResourcePermissionsRequest
+  obj: RemoveAllResourcePermissionsRequest,
 ): any => ({
   ...obj,
   ...(obj.AuthenticationToken && { AuthenticationToken: SENSITIVE_STRING }),

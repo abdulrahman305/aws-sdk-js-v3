@@ -65,7 +65,7 @@ export class HttpRequestWithLabelsSerializer
 
 export const getHttpRequestWithLabelsHandler = <Context>(
   operation: __Operation<HttpRequestWithLabelsServerInput, HttpRequestWithLabelsServerOutput, Context>,
-  customizer: __ValidationCustomizer<"HttpRequestWithLabels">
+  customizer: __ValidationCustomizer<"HttpRequestWithLabels">,
 ): __ServiceHandler<Context, __HttpRequest, __HttpResponse> => {
   const mux = new httpbinding.HttpBindingMux<"RestJson", "HttpRequestWithLabels">([
     new httpbinding.UriSpec<"RestJson", "HttpRequestWithLabels">(
@@ -82,7 +82,7 @@ export const getHttpRequestWithLabelsHandler = <Context>(
         { type: "path" },
       ],
       [],
-      { service: "RestJson", operation: "HttpRequestWithLabels" }
+      { service: "RestJson", operation: "HttpRequestWithLabels" },
     ),
   ]);
   return new HttpRequestWithLabelsHandler(
@@ -90,7 +90,7 @@ export const getHttpRequestWithLabelsHandler = <Context>(
     mux,
     new HttpRequestWithLabelsSerializer(),
     serializeFrameworkException,
-    customizer
+    customizer,
   );
 };
 
@@ -111,7 +111,7 @@ async function handle<S, O extends keyof S & string, Context>(
   operation: __Operation<__OperationInput<S[O]>, __OperationOutput<S[O]>, Context>,
   serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
   validationFn: (input: __OperationInput<S[O]>) => __ValidationFailure[],
-  validationCustomizer: __ValidationCustomizer<O>
+  validationCustomizer: __ValidationCustomizer<O>,
 ): Promise<__HttpResponse> {
   let input;
   try {
@@ -153,7 +153,7 @@ export class HttpRequestWithLabelsHandler<Context> implements __ServiceHandler<C
   >;
   private readonly serializeFrameworkException: (
     e: __SmithyFrameworkException,
-    ctx: __ServerSerdeContext
+    ctx: __ServerSerdeContext,
   ) => Promise<__HttpResponse>;
   private readonly validationCustomizer: __ValidationCustomizer<"HttpRequestWithLabels">;
   /**
@@ -170,7 +170,7 @@ export class HttpRequestWithLabelsHandler<Context> implements __ServiceHandler<C
     mux: __Mux<"RestJson", "HttpRequestWithLabels">,
     serializer: __OperationSerializer<RestJsonService<Context>, "HttpRequestWithLabels", HttpRequestWithLabelsErrors>,
     serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
-    validationCustomizer: __ValidationCustomizer<"HttpRequestWithLabels">
+    validationCustomizer: __ValidationCustomizer<"HttpRequestWithLabels">,
   ) {
     this.operation = operation;
     this.mux = mux;
@@ -182,7 +182,7 @@ export class HttpRequestWithLabelsHandler<Context> implements __ServiceHandler<C
     const target = this.mux.match(request);
     if (target === undefined) {
       console.log(
-        "Received a request that did not match aws.protocoltests.restjson#RestJson.HttpRequestWithLabels. This indicates a misconfiguration."
+        "Received a request that did not match aws.protocoltests.restjson#RestJson.HttpRequestWithLabels. This indicates a misconfiguration.",
       );
       return this.serializeFrameworkException(new __InternalFailureException(), serdeContextBase);
     }
@@ -194,7 +194,7 @@ export class HttpRequestWithLabelsHandler<Context> implements __ServiceHandler<C
       this.operation,
       this.serializeFrameworkException,
       HttpRequestWithLabelsServerInput.validate,
-      this.validationCustomizer
+      this.validationCustomizer,
     );
   }
 }

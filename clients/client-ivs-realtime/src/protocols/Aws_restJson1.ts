@@ -128,7 +128,7 @@ import {
  */
 export const se_CreateEncoderConfigurationCommand = async (
   input: CreateEncoderConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -141,7 +141,7 @@ export const se_CreateEncoderConfigurationCommand = async (
       name: [],
       tags: (_) => _json(_),
       video: (_) => se_Video(_, context),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -152,7 +152,7 @@ export const se_CreateEncoderConfigurationCommand = async (
  */
 export const se_CreateParticipantTokenCommand = async (
   input: CreateParticipantTokenCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -167,7 +167,7 @@ export const se_CreateParticipantTokenCommand = async (
       duration: [],
       stageArn: [],
       userId: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -178,7 +178,7 @@ export const se_CreateParticipantTokenCommand = async (
  */
 export const se_CreateStageCommand = async (
   input: CreateStageCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -191,7 +191,7 @@ export const se_CreateStageCommand = async (
       name: [],
       participantTokenConfigurations: (_) => _json(_),
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -202,7 +202,7 @@ export const se_CreateStageCommand = async (
  */
 export const se_CreateStorageConfigurationCommand = async (
   input: CreateStorageConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -215,7 +215,7 @@ export const se_CreateStorageConfigurationCommand = async (
       name: [],
       s3: (_) => _json(_),
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -226,7 +226,7 @@ export const se_CreateStorageConfigurationCommand = async (
  */
 export const se_DeleteEncoderConfigurationCommand = async (
   input: DeleteEncoderConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -237,7 +237,7 @@ export const se_DeleteEncoderConfigurationCommand = async (
   body = JSON.stringify(
     take(input, {
       arn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -248,7 +248,7 @@ export const se_DeleteEncoderConfigurationCommand = async (
  */
 export const se_DeleteStageCommand = async (
   input: DeleteStageCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -259,7 +259,7 @@ export const se_DeleteStageCommand = async (
   body = JSON.stringify(
     take(input, {
       arn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -270,7 +270,7 @@ export const se_DeleteStageCommand = async (
  */
 export const se_DeleteStorageConfigurationCommand = async (
   input: DeleteStorageConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -281,7 +281,7 @@ export const se_DeleteStorageConfigurationCommand = async (
   body = JSON.stringify(
     take(input, {
       arn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -292,7 +292,7 @@ export const se_DeleteStorageConfigurationCommand = async (
  */
 export const se_DisconnectParticipantCommand = async (
   input: DisconnectParticipantCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -305,7 +305,7 @@ export const se_DisconnectParticipantCommand = async (
       participantId: [],
       reason: [],
       stageArn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -316,7 +316,7 @@ export const se_DisconnectParticipantCommand = async (
  */
 export const se_GetCompositionCommand = async (
   input: GetCompositionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -327,7 +327,7 @@ export const se_GetCompositionCommand = async (
   body = JSON.stringify(
     take(input, {
       arn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -338,7 +338,7 @@ export const se_GetCompositionCommand = async (
  */
 export const se_GetEncoderConfigurationCommand = async (
   input: GetEncoderConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -349,7 +349,7 @@ export const se_GetEncoderConfigurationCommand = async (
   body = JSON.stringify(
     take(input, {
       arn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -360,7 +360,7 @@ export const se_GetEncoderConfigurationCommand = async (
  */
 export const se_GetParticipantCommand = async (
   input: GetParticipantCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -373,7 +373,7 @@ export const se_GetParticipantCommand = async (
       participantId: [],
       sessionId: [],
       stageArn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -384,7 +384,7 @@ export const se_GetParticipantCommand = async (
  */
 export const se_GetStageCommand = async (
   input: GetStageCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -395,7 +395,7 @@ export const se_GetStageCommand = async (
   body = JSON.stringify(
     take(input, {
       arn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -406,7 +406,7 @@ export const se_GetStageCommand = async (
  */
 export const se_GetStageSessionCommand = async (
   input: GetStageSessionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -418,7 +418,7 @@ export const se_GetStageSessionCommand = async (
     take(input, {
       sessionId: [],
       stageArn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -429,7 +429,7 @@ export const se_GetStageSessionCommand = async (
  */
 export const se_GetStorageConfigurationCommand = async (
   input: GetStorageConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -440,7 +440,7 @@ export const se_GetStorageConfigurationCommand = async (
   body = JSON.stringify(
     take(input, {
       arn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -451,7 +451,7 @@ export const se_GetStorageConfigurationCommand = async (
  */
 export const se_ListCompositionsCommand = async (
   input: ListCompositionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -465,7 +465,7 @@ export const se_ListCompositionsCommand = async (
       filterByStageArn: [],
       maxResults: [],
       nextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -476,7 +476,7 @@ export const se_ListCompositionsCommand = async (
  */
 export const se_ListEncoderConfigurationsCommand = async (
   input: ListEncoderConfigurationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -488,7 +488,7 @@ export const se_ListEncoderConfigurationsCommand = async (
     take(input, {
       maxResults: [],
       nextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -499,7 +499,7 @@ export const se_ListEncoderConfigurationsCommand = async (
  */
 export const se_ListParticipantEventsCommand = async (
   input: ListParticipantEventsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -514,7 +514,7 @@ export const se_ListParticipantEventsCommand = async (
       participantId: [],
       sessionId: [],
       stageArn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -525,7 +525,7 @@ export const se_ListParticipantEventsCommand = async (
  */
 export const se_ListParticipantsCommand = async (
   input: ListParticipantsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -542,7 +542,7 @@ export const se_ListParticipantsCommand = async (
       nextToken: [],
       sessionId: [],
       stageArn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -553,7 +553,7 @@ export const se_ListParticipantsCommand = async (
  */
 export const se_ListStagesCommand = async (
   input: ListStagesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -565,7 +565,7 @@ export const se_ListStagesCommand = async (
     take(input, {
       maxResults: [],
       nextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -576,7 +576,7 @@ export const se_ListStagesCommand = async (
  */
 export const se_ListStageSessionsCommand = async (
   input: ListStageSessionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -589,7 +589,7 @@ export const se_ListStageSessionsCommand = async (
       maxResults: [],
       nextToken: [],
       stageArn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -600,7 +600,7 @@ export const se_ListStageSessionsCommand = async (
  */
 export const se_ListStorageConfigurationsCommand = async (
   input: ListStorageConfigurationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -612,7 +612,7 @@ export const se_ListStorageConfigurationsCommand = async (
     take(input, {
       maxResults: [],
       nextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -623,7 +623,7 @@ export const se_ListStorageConfigurationsCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -639,7 +639,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_StartCompositionCommand = async (
   input: StartCompositionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -654,7 +654,7 @@ export const se_StartCompositionCommand = async (
       layout: (_) => _json(_),
       stageArn: [],
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -665,7 +665,7 @@ export const se_StartCompositionCommand = async (
  */
 export const se_StopCompositionCommand = async (
   input: StopCompositionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -676,7 +676,7 @@ export const se_StopCompositionCommand = async (
   body = JSON.stringify(
     take(input, {
       arn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -687,7 +687,7 @@ export const se_StopCompositionCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -699,7 +699,7 @@ export const se_TagResourceCommand = async (
   body = JSON.stringify(
     take(input, {
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -710,7 +710,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -732,7 +732,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateStageCommand = async (
   input: UpdateStageCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -744,7 +744,7 @@ export const se_UpdateStageCommand = async (
     take(input, {
       arn: [],
       name: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -755,7 +755,7 @@ export const se_UpdateStageCommand = async (
  */
 export const de_CreateEncoderConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateEncoderConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -776,7 +776,7 @@ export const de_CreateEncoderConfigurationCommand = async (
  */
 export const de_CreateParticipantTokenCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateParticipantTokenCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -797,7 +797,7 @@ export const de_CreateParticipantTokenCommand = async (
  */
 export const de_CreateStageCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateStageCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -819,7 +819,7 @@ export const de_CreateStageCommand = async (
  */
 export const de_CreateStorageConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateStorageConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -840,7 +840,7 @@ export const de_CreateStorageConfigurationCommand = async (
  */
 export const de_DeleteEncoderConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteEncoderConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -857,7 +857,7 @@ export const de_DeleteEncoderConfigurationCommand = async (
  */
 export const de_DeleteStageCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteStageCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -874,7 +874,7 @@ export const de_DeleteStageCommand = async (
  */
 export const de_DeleteStorageConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteStorageConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -891,7 +891,7 @@ export const de_DeleteStorageConfigurationCommand = async (
  */
 export const de_DisconnectParticipantCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisconnectParticipantCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -908,7 +908,7 @@ export const de_DisconnectParticipantCommand = async (
  */
 export const de_GetCompositionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetCompositionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -929,7 +929,7 @@ export const de_GetCompositionCommand = async (
  */
 export const de_GetEncoderConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetEncoderConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -950,7 +950,7 @@ export const de_GetEncoderConfigurationCommand = async (
  */
 export const de_GetParticipantCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetParticipantCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -971,7 +971,7 @@ export const de_GetParticipantCommand = async (
  */
 export const de_GetStageCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetStageCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -992,7 +992,7 @@ export const de_GetStageCommand = async (
  */
 export const de_GetStageSessionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetStageSessionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1013,7 +1013,7 @@ export const de_GetStageSessionCommand = async (
  */
 export const de_GetStorageConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetStorageConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1034,7 +1034,7 @@ export const de_GetStorageConfigurationCommand = async (
  */
 export const de_ListCompositionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListCompositionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1056,7 +1056,7 @@ export const de_ListCompositionsCommand = async (
  */
 export const de_ListEncoderConfigurationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListEncoderConfigurationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1078,7 +1078,7 @@ export const de_ListEncoderConfigurationsCommand = async (
  */
 export const de_ListParticipantEventsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListParticipantEventsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1100,7 +1100,7 @@ export const de_ListParticipantEventsCommand = async (
  */
 export const de_ListParticipantsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListParticipantsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1122,7 +1122,7 @@ export const de_ListParticipantsCommand = async (
  */
 export const de_ListStagesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListStagesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1144,7 +1144,7 @@ export const de_ListStagesCommand = async (
  */
 export const de_ListStageSessionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListStageSessionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1166,7 +1166,7 @@ export const de_ListStageSessionsCommand = async (
  */
 export const de_ListStorageConfigurationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListStorageConfigurationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1188,7 +1188,7 @@ export const de_ListStorageConfigurationsCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1209,7 +1209,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_StartCompositionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartCompositionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1230,7 +1230,7 @@ export const de_StartCompositionCommand = async (
  */
 export const de_StopCompositionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StopCompositionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1247,7 +1247,7 @@ export const de_StopCompositionCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1264,7 +1264,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1281,7 +1281,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateStageCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateStageCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1344,7 +1344,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1381,7 +1381,7 @@ const de_ConflictExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_InternalServerExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1418,7 +1418,7 @@ const de_PendingVerificationRes = async (parsedOutput: any, context: __SerdeCont
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1438,7 +1438,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_ServiceQuotaExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceQuotaExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;

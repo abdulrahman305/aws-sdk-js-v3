@@ -28,13 +28,13 @@ module.exports = class S3StorageImpl {
         .send(
           new HeadBucketCommand({
             Bucket: this.bucket,
-          })
+          }),
         )
         .catch(() => {
           return this.s3.send(
             new CreateBucketCommand({
               Bucket: this.bucket,
-            })
+            }),
           );
         })
         .catch(() => {});
@@ -49,7 +49,7 @@ module.exports = class S3StorageImpl {
           Bucket: this.bucket,
           Key: hash,
           Body: body,
-        })
+        }),
       )
       .catch((err) => {
         writeFileSync(join(fsTempFolder, hash), body);
@@ -63,7 +63,7 @@ module.exports = class S3StorageImpl {
         new GetObjectCommand({
           Bucket: this.bucket,
           Key: hash,
-        })
+        }),
       );
     } catch (e) {
       return readFileSync(join(fsTempFolder, hash));

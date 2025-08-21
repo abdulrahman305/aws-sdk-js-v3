@@ -65,7 +65,7 @@ export const resolveSSOCredentials = async ({
     new SSOClient(
       Object.assign({}, clientConfig ?? {}, {
         region: clientConfig?.region ?? ssoRegion,
-      })
+      }),
     );
   let ssoResp: GetRoleCredentialsCommandOutput;
   try {
@@ -74,7 +74,7 @@ export const resolveSSOCredentials = async ({
         accountId: ssoAccountId,
         roleName: ssoRoleName,
         accessToken,
-      })
+      }),
     );
   } catch (e) {
     throw new CredentialsProviderError(e, {

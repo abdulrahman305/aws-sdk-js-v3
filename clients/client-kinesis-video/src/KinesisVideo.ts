@@ -177,16 +177,16 @@ export interface KinesisVideo {
    */
   createSignalingChannel(
     args: CreateSignalingChannelCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateSignalingChannelCommandOutput>;
   createSignalingChannel(
     args: CreateSignalingChannelCommandInput,
-    cb: (err: any, data?: CreateSignalingChannelCommandOutput) => void
+    cb: (err: any, data?: CreateSignalingChannelCommandOutput) => void,
   ): void;
   createSignalingChannel(
     args: CreateSignalingChannelCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateSignalingChannelCommandOutput) => void
+    cb: (err: any, data?: CreateSignalingChannelCommandOutput) => void,
   ): void;
 
   /**
@@ -197,7 +197,7 @@ export interface KinesisVideo {
   createStream(
     args: CreateStreamCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateStreamCommandOutput) => void
+    cb: (err: any, data?: CreateStreamCommandOutput) => void,
   ): void;
 
   /**
@@ -206,16 +206,16 @@ export interface KinesisVideo {
   deleteEdgeConfiguration(): Promise<DeleteEdgeConfigurationCommandOutput>;
   deleteEdgeConfiguration(
     args: DeleteEdgeConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteEdgeConfigurationCommandOutput>;
   deleteEdgeConfiguration(
     args: DeleteEdgeConfigurationCommandInput,
-    cb: (err: any, data?: DeleteEdgeConfigurationCommandOutput) => void
+    cb: (err: any, data?: DeleteEdgeConfigurationCommandOutput) => void,
   ): void;
   deleteEdgeConfiguration(
     args: DeleteEdgeConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteEdgeConfigurationCommandOutput) => void
+    cb: (err: any, data?: DeleteEdgeConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -223,16 +223,16 @@ export interface KinesisVideo {
    */
   deleteSignalingChannel(
     args: DeleteSignalingChannelCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteSignalingChannelCommandOutput>;
   deleteSignalingChannel(
     args: DeleteSignalingChannelCommandInput,
-    cb: (err: any, data?: DeleteSignalingChannelCommandOutput) => void
+    cb: (err: any, data?: DeleteSignalingChannelCommandOutput) => void,
   ): void;
   deleteSignalingChannel(
     args: DeleteSignalingChannelCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteSignalingChannelCommandOutput) => void
+    cb: (err: any, data?: DeleteSignalingChannelCommandOutput) => void,
   ): void;
 
   /**
@@ -243,7 +243,7 @@ export interface KinesisVideo {
   deleteStream(
     args: DeleteStreamCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteStreamCommandOutput) => void
+    cb: (err: any, data?: DeleteStreamCommandOutput) => void,
   ): void;
 
   /**
@@ -252,16 +252,16 @@ export interface KinesisVideo {
   describeEdgeConfiguration(): Promise<DescribeEdgeConfigurationCommandOutput>;
   describeEdgeConfiguration(
     args: DescribeEdgeConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeEdgeConfigurationCommandOutput>;
   describeEdgeConfiguration(
     args: DescribeEdgeConfigurationCommandInput,
-    cb: (err: any, data?: DescribeEdgeConfigurationCommandOutput) => void
+    cb: (err: any, data?: DescribeEdgeConfigurationCommandOutput) => void,
   ): void;
   describeEdgeConfiguration(
     args: DescribeEdgeConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeEdgeConfigurationCommandOutput) => void
+    cb: (err: any, data?: DescribeEdgeConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -270,16 +270,16 @@ export interface KinesisVideo {
   describeImageGenerationConfiguration(): Promise<DescribeImageGenerationConfigurationCommandOutput>;
   describeImageGenerationConfiguration(
     args: DescribeImageGenerationConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeImageGenerationConfigurationCommandOutput>;
   describeImageGenerationConfiguration(
     args: DescribeImageGenerationConfigurationCommandInput,
-    cb: (err: any, data?: DescribeImageGenerationConfigurationCommandOutput) => void
+    cb: (err: any, data?: DescribeImageGenerationConfigurationCommandOutput) => void,
   ): void;
   describeImageGenerationConfiguration(
     args: DescribeImageGenerationConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeImageGenerationConfigurationCommandOutput) => void
+    cb: (err: any, data?: DescribeImageGenerationConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -288,16 +288,16 @@ export interface KinesisVideo {
   describeMappedResourceConfiguration(): Promise<DescribeMappedResourceConfigurationCommandOutput>;
   describeMappedResourceConfiguration(
     args: DescribeMappedResourceConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeMappedResourceConfigurationCommandOutput>;
   describeMappedResourceConfiguration(
     args: DescribeMappedResourceConfigurationCommandInput,
-    cb: (err: any, data?: DescribeMappedResourceConfigurationCommandOutput) => void
+    cb: (err: any, data?: DescribeMappedResourceConfigurationCommandOutput) => void,
   ): void;
   describeMappedResourceConfiguration(
     args: DescribeMappedResourceConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeMappedResourceConfigurationCommandOutput) => void
+    cb: (err: any, data?: DescribeMappedResourceConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -306,16 +306,16 @@ export interface KinesisVideo {
   describeMediaStorageConfiguration(): Promise<DescribeMediaStorageConfigurationCommandOutput>;
   describeMediaStorageConfiguration(
     args: DescribeMediaStorageConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeMediaStorageConfigurationCommandOutput>;
   describeMediaStorageConfiguration(
     args: DescribeMediaStorageConfigurationCommandInput,
-    cb: (err: any, data?: DescribeMediaStorageConfigurationCommandOutput) => void
+    cb: (err: any, data?: DescribeMediaStorageConfigurationCommandOutput) => void,
   ): void;
   describeMediaStorageConfiguration(
     args: DescribeMediaStorageConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeMediaStorageConfigurationCommandOutput) => void
+    cb: (err: any, data?: DescribeMediaStorageConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -324,16 +324,16 @@ export interface KinesisVideo {
   describeNotificationConfiguration(): Promise<DescribeNotificationConfigurationCommandOutput>;
   describeNotificationConfiguration(
     args: DescribeNotificationConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeNotificationConfigurationCommandOutput>;
   describeNotificationConfiguration(
     args: DescribeNotificationConfigurationCommandInput,
-    cb: (err: any, data?: DescribeNotificationConfigurationCommandOutput) => void
+    cb: (err: any, data?: DescribeNotificationConfigurationCommandOutput) => void,
   ): void;
   describeNotificationConfiguration(
     args: DescribeNotificationConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeNotificationConfigurationCommandOutput) => void
+    cb: (err: any, data?: DescribeNotificationConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -342,16 +342,16 @@ export interface KinesisVideo {
   describeSignalingChannel(): Promise<DescribeSignalingChannelCommandOutput>;
   describeSignalingChannel(
     args: DescribeSignalingChannelCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeSignalingChannelCommandOutput>;
   describeSignalingChannel(
     args: DescribeSignalingChannelCommandInput,
-    cb: (err: any, data?: DescribeSignalingChannelCommandOutput) => void
+    cb: (err: any, data?: DescribeSignalingChannelCommandOutput) => void,
   ): void;
   describeSignalingChannel(
     args: DescribeSignalingChannelCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeSignalingChannelCommandOutput) => void
+    cb: (err: any, data?: DescribeSignalingChannelCommandOutput) => void,
   ): void;
 
   /**
@@ -360,13 +360,13 @@ export interface KinesisVideo {
   describeStream(): Promise<DescribeStreamCommandOutput>;
   describeStream(
     args: DescribeStreamCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeStreamCommandOutput>;
   describeStream(args: DescribeStreamCommandInput, cb: (err: any, data?: DescribeStreamCommandOutput) => void): void;
   describeStream(
     args: DescribeStreamCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeStreamCommandOutput) => void
+    cb: (err: any, data?: DescribeStreamCommandOutput) => void,
   ): void;
 
   /**
@@ -374,13 +374,13 @@ export interface KinesisVideo {
    */
   getDataEndpoint(
     args: GetDataEndpointCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetDataEndpointCommandOutput>;
   getDataEndpoint(args: GetDataEndpointCommandInput, cb: (err: any, data?: GetDataEndpointCommandOutput) => void): void;
   getDataEndpoint(
     args: GetDataEndpointCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetDataEndpointCommandOutput) => void
+    cb: (err: any, data?: GetDataEndpointCommandOutput) => void,
   ): void;
 
   /**
@@ -388,16 +388,16 @@ export interface KinesisVideo {
    */
   getSignalingChannelEndpoint(
     args: GetSignalingChannelEndpointCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetSignalingChannelEndpointCommandOutput>;
   getSignalingChannelEndpoint(
     args: GetSignalingChannelEndpointCommandInput,
-    cb: (err: any, data?: GetSignalingChannelEndpointCommandOutput) => void
+    cb: (err: any, data?: GetSignalingChannelEndpointCommandOutput) => void,
   ): void;
   getSignalingChannelEndpoint(
     args: GetSignalingChannelEndpointCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetSignalingChannelEndpointCommandOutput) => void
+    cb: (err: any, data?: GetSignalingChannelEndpointCommandOutput) => void,
   ): void;
 
   /**
@@ -405,16 +405,16 @@ export interface KinesisVideo {
    */
   listEdgeAgentConfigurations(
     args: ListEdgeAgentConfigurationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListEdgeAgentConfigurationsCommandOutput>;
   listEdgeAgentConfigurations(
     args: ListEdgeAgentConfigurationsCommandInput,
-    cb: (err: any, data?: ListEdgeAgentConfigurationsCommandOutput) => void
+    cb: (err: any, data?: ListEdgeAgentConfigurationsCommandOutput) => void,
   ): void;
   listEdgeAgentConfigurations(
     args: ListEdgeAgentConfigurationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListEdgeAgentConfigurationsCommandOutput) => void
+    cb: (err: any, data?: ListEdgeAgentConfigurationsCommandOutput) => void,
   ): void;
 
   /**
@@ -423,16 +423,16 @@ export interface KinesisVideo {
   listSignalingChannels(): Promise<ListSignalingChannelsCommandOutput>;
   listSignalingChannels(
     args: ListSignalingChannelsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListSignalingChannelsCommandOutput>;
   listSignalingChannels(
     args: ListSignalingChannelsCommandInput,
-    cb: (err: any, data?: ListSignalingChannelsCommandOutput) => void
+    cb: (err: any, data?: ListSignalingChannelsCommandOutput) => void,
   ): void;
   listSignalingChannels(
     args: ListSignalingChannelsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListSignalingChannelsCommandOutput) => void
+    cb: (err: any, data?: ListSignalingChannelsCommandOutput) => void,
   ): void;
 
   /**
@@ -444,7 +444,7 @@ export interface KinesisVideo {
   listStreams(
     args: ListStreamsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListStreamsCommandOutput) => void
+    cb: (err: any, data?: ListStreamsCommandOutput) => void,
   ): void;
 
   /**
@@ -452,16 +452,16 @@ export interface KinesisVideo {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -470,16 +470,16 @@ export interface KinesisVideo {
   listTagsForStream(): Promise<ListTagsForStreamCommandOutput>;
   listTagsForStream(
     args: ListTagsForStreamCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForStreamCommandOutput>;
   listTagsForStream(
     args: ListTagsForStreamCommandInput,
-    cb: (err: any, data?: ListTagsForStreamCommandOutput) => void
+    cb: (err: any, data?: ListTagsForStreamCommandOutput) => void,
   ): void;
   listTagsForStream(
     args: ListTagsForStreamCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForStreamCommandOutput) => void
+    cb: (err: any, data?: ListTagsForStreamCommandOutput) => void,
   ): void;
 
   /**
@@ -487,16 +487,16 @@ export interface KinesisVideo {
    */
   startEdgeConfigurationUpdate(
     args: StartEdgeConfigurationUpdateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartEdgeConfigurationUpdateCommandOutput>;
   startEdgeConfigurationUpdate(
     args: StartEdgeConfigurationUpdateCommandInput,
-    cb: (err: any, data?: StartEdgeConfigurationUpdateCommandOutput) => void
+    cb: (err: any, data?: StartEdgeConfigurationUpdateCommandOutput) => void,
   ): void;
   startEdgeConfigurationUpdate(
     args: StartEdgeConfigurationUpdateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartEdgeConfigurationUpdateCommandOutput) => void
+    cb: (err: any, data?: StartEdgeConfigurationUpdateCommandOutput) => void,
   ): void;
 
   /**
@@ -507,7 +507,7 @@ export interface KinesisVideo {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -518,7 +518,7 @@ export interface KinesisVideo {
   tagStream(
     args: TagStreamCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagStreamCommandOutput) => void
+    cb: (err: any, data?: TagStreamCommandOutput) => void,
   ): void;
 
   /**
@@ -529,7 +529,7 @@ export interface KinesisVideo {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -540,7 +540,7 @@ export interface KinesisVideo {
   untagStream(
     args: UntagStreamCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagStreamCommandOutput) => void
+    cb: (err: any, data?: UntagStreamCommandOutput) => void,
   ): void;
 
   /**
@@ -548,16 +548,16 @@ export interface KinesisVideo {
    */
   updateDataRetention(
     args: UpdateDataRetentionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateDataRetentionCommandOutput>;
   updateDataRetention(
     args: UpdateDataRetentionCommandInput,
-    cb: (err: any, data?: UpdateDataRetentionCommandOutput) => void
+    cb: (err: any, data?: UpdateDataRetentionCommandOutput) => void,
   ): void;
   updateDataRetention(
     args: UpdateDataRetentionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateDataRetentionCommandOutput) => void
+    cb: (err: any, data?: UpdateDataRetentionCommandOutput) => void,
   ): void;
 
   /**
@@ -566,16 +566,16 @@ export interface KinesisVideo {
   updateImageGenerationConfiguration(): Promise<UpdateImageGenerationConfigurationCommandOutput>;
   updateImageGenerationConfiguration(
     args: UpdateImageGenerationConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateImageGenerationConfigurationCommandOutput>;
   updateImageGenerationConfiguration(
     args: UpdateImageGenerationConfigurationCommandInput,
-    cb: (err: any, data?: UpdateImageGenerationConfigurationCommandOutput) => void
+    cb: (err: any, data?: UpdateImageGenerationConfigurationCommandOutput) => void,
   ): void;
   updateImageGenerationConfiguration(
     args: UpdateImageGenerationConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateImageGenerationConfigurationCommandOutput) => void
+    cb: (err: any, data?: UpdateImageGenerationConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -583,16 +583,16 @@ export interface KinesisVideo {
    */
   updateMediaStorageConfiguration(
     args: UpdateMediaStorageConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateMediaStorageConfigurationCommandOutput>;
   updateMediaStorageConfiguration(
     args: UpdateMediaStorageConfigurationCommandInput,
-    cb: (err: any, data?: UpdateMediaStorageConfigurationCommandOutput) => void
+    cb: (err: any, data?: UpdateMediaStorageConfigurationCommandOutput) => void,
   ): void;
   updateMediaStorageConfiguration(
     args: UpdateMediaStorageConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateMediaStorageConfigurationCommandOutput) => void
+    cb: (err: any, data?: UpdateMediaStorageConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -601,16 +601,16 @@ export interface KinesisVideo {
   updateNotificationConfiguration(): Promise<UpdateNotificationConfigurationCommandOutput>;
   updateNotificationConfiguration(
     args: UpdateNotificationConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateNotificationConfigurationCommandOutput>;
   updateNotificationConfiguration(
     args: UpdateNotificationConfigurationCommandInput,
-    cb: (err: any, data?: UpdateNotificationConfigurationCommandOutput) => void
+    cb: (err: any, data?: UpdateNotificationConfigurationCommandOutput) => void,
   ): void;
   updateNotificationConfiguration(
     args: UpdateNotificationConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateNotificationConfigurationCommandOutput) => void
+    cb: (err: any, data?: UpdateNotificationConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -618,16 +618,16 @@ export interface KinesisVideo {
    */
   updateSignalingChannel(
     args: UpdateSignalingChannelCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateSignalingChannelCommandOutput>;
   updateSignalingChannel(
     args: UpdateSignalingChannelCommandInput,
-    cb: (err: any, data?: UpdateSignalingChannelCommandOutput) => void
+    cb: (err: any, data?: UpdateSignalingChannelCommandOutput) => void,
   ): void;
   updateSignalingChannel(
     args: UpdateSignalingChannelCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateSignalingChannelCommandOutput) => void
+    cb: (err: any, data?: UpdateSignalingChannelCommandOutput) => void,
   ): void;
 
   /**
@@ -638,7 +638,7 @@ export interface KinesisVideo {
   updateStream(
     args: UpdateStreamCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateStreamCommandOutput) => void
+    cb: (err: any, data?: UpdateStreamCommandOutput) => void,
   ): void;
 }
 

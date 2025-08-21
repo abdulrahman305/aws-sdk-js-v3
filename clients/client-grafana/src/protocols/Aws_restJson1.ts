@@ -124,7 +124,7 @@ import {
  */
 export const se_AssociateLicenseCommand = async (
   input: AssociateLicenseCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -143,7 +143,7 @@ export const se_AssociateLicenseCommand = async (
  */
 export const se_CreateWorkspaceCommand = async (
   input: CreateWorkspaceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -170,7 +170,7 @@ export const se_CreateWorkspaceCommand = async (
       workspaceNotificationDestinations: (_) => _json(_),
       workspaceOrganizationalUnits: (_) => _json(_),
       workspaceRoleArn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -181,7 +181,7 @@ export const se_CreateWorkspaceCommand = async (
  */
 export const se_CreateWorkspaceApiKeyCommand = async (
   input: CreateWorkspaceApiKeyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -195,7 +195,7 @@ export const se_CreateWorkspaceApiKeyCommand = async (
       keyName: [],
       keyRole: [],
       secondsToLive: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -206,7 +206,7 @@ export const se_CreateWorkspaceApiKeyCommand = async (
  */
 export const se_CreateWorkspaceServiceAccountCommand = async (
   input: CreateWorkspaceServiceAccountCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -219,7 +219,7 @@ export const se_CreateWorkspaceServiceAccountCommand = async (
     take(input, {
       grafanaRole: [],
       name: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -230,7 +230,7 @@ export const se_CreateWorkspaceServiceAccountCommand = async (
  */
 export const se_CreateWorkspaceServiceAccountTokenCommand = async (
   input: CreateWorkspaceServiceAccountTokenCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -244,7 +244,7 @@ export const se_CreateWorkspaceServiceAccountTokenCommand = async (
     take(input, {
       name: [],
       secondsToLive: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -255,7 +255,7 @@ export const se_CreateWorkspaceServiceAccountTokenCommand = async (
  */
 export const se_DeleteWorkspaceCommand = async (
   input: DeleteWorkspaceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -271,7 +271,7 @@ export const se_DeleteWorkspaceCommand = async (
  */
 export const se_DeleteWorkspaceApiKeyCommand = async (
   input: DeleteWorkspaceApiKeyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -288,7 +288,7 @@ export const se_DeleteWorkspaceApiKeyCommand = async (
  */
 export const se_DeleteWorkspaceServiceAccountCommand = async (
   input: DeleteWorkspaceServiceAccountCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -305,7 +305,7 @@ export const se_DeleteWorkspaceServiceAccountCommand = async (
  */
 export const se_DeleteWorkspaceServiceAccountTokenCommand = async (
   input: DeleteWorkspaceServiceAccountTokenCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -323,7 +323,7 @@ export const se_DeleteWorkspaceServiceAccountTokenCommand = async (
  */
 export const se_DescribeWorkspaceCommand = async (
   input: DescribeWorkspaceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -339,7 +339,7 @@ export const se_DescribeWorkspaceCommand = async (
  */
 export const se_DescribeWorkspaceAuthenticationCommand = async (
   input: DescribeWorkspaceAuthenticationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -355,7 +355,7 @@ export const se_DescribeWorkspaceAuthenticationCommand = async (
  */
 export const se_DescribeWorkspaceConfigurationCommand = async (
   input: DescribeWorkspaceConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -371,7 +371,7 @@ export const se_DescribeWorkspaceConfigurationCommand = async (
  */
 export const se_DisassociateLicenseCommand = async (
   input: DisassociateLicenseCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -388,7 +388,7 @@ export const se_DisassociateLicenseCommand = async (
  */
 export const se_ListPermissionsCommand = async (
   input: ListPermissionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -411,7 +411,7 @@ export const se_ListPermissionsCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -427,7 +427,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_ListVersionsCommand = async (
   input: ListVersionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -447,7 +447,7 @@ export const se_ListVersionsCommand = async (
  */
 export const se_ListWorkspacesCommand = async (
   input: ListWorkspacesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -466,7 +466,7 @@ export const se_ListWorkspacesCommand = async (
  */
 export const se_ListWorkspaceServiceAccountsCommand = async (
   input: ListWorkspaceServiceAccountsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -486,7 +486,7 @@ export const se_ListWorkspaceServiceAccountsCommand = async (
  */
 export const se_ListWorkspaceServiceAccountTokensCommand = async (
   input: ListWorkspaceServiceAccountTokensCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -507,7 +507,7 @@ export const se_ListWorkspaceServiceAccountTokensCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -519,7 +519,7 @@ export const se_TagResourceCommand = async (
   body = JSON.stringify(
     take(input, {
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -530,7 +530,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -552,7 +552,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdatePermissionsCommand = async (
   input: UpdatePermissionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -564,7 +564,7 @@ export const se_UpdatePermissionsCommand = async (
   body = JSON.stringify(
     take(input, {
       updateInstructionBatch: (_) => _json(_),
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -575,7 +575,7 @@ export const se_UpdatePermissionsCommand = async (
  */
 export const se_UpdateWorkspaceCommand = async (
   input: UpdateWorkspaceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -600,7 +600,7 @@ export const se_UpdateWorkspaceCommand = async (
       workspaceNotificationDestinations: (_) => _json(_),
       workspaceOrganizationalUnits: (_) => _json(_),
       workspaceRoleArn: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -611,7 +611,7 @@ export const se_UpdateWorkspaceCommand = async (
  */
 export const se_UpdateWorkspaceAuthenticationCommand = async (
   input: UpdateWorkspaceAuthenticationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -624,7 +624,7 @@ export const se_UpdateWorkspaceAuthenticationCommand = async (
     take(input, {
       authenticationProviders: (_) => _json(_),
       samlConfiguration: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -635,7 +635,7 @@ export const se_UpdateWorkspaceAuthenticationCommand = async (
  */
 export const se_UpdateWorkspaceConfigurationCommand = async (
   input: UpdateWorkspaceConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -648,7 +648,7 @@ export const se_UpdateWorkspaceConfigurationCommand = async (
     take(input, {
       configuration: (_) => __LazyJsonString.fromObject(_),
       grafanaVersion: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -659,7 +659,7 @@ export const se_UpdateWorkspaceConfigurationCommand = async (
  */
 export const de_AssociateLicenseCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssociateLicenseCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -680,7 +680,7 @@ export const de_AssociateLicenseCommand = async (
  */
 export const de_CreateWorkspaceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateWorkspaceCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -701,7 +701,7 @@ export const de_CreateWorkspaceCommand = async (
  */
 export const de_CreateWorkspaceApiKeyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateWorkspaceApiKeyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -724,7 +724,7 @@ export const de_CreateWorkspaceApiKeyCommand = async (
  */
 export const de_CreateWorkspaceServiceAccountCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateWorkspaceServiceAccountCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -748,7 +748,7 @@ export const de_CreateWorkspaceServiceAccountCommand = async (
  */
 export const de_CreateWorkspaceServiceAccountTokenCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateWorkspaceServiceAccountTokenCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -771,7 +771,7 @@ export const de_CreateWorkspaceServiceAccountTokenCommand = async (
  */
 export const de_DeleteWorkspaceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteWorkspaceCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -792,7 +792,7 @@ export const de_DeleteWorkspaceCommand = async (
  */
 export const de_DeleteWorkspaceApiKeyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteWorkspaceApiKeyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -814,7 +814,7 @@ export const de_DeleteWorkspaceApiKeyCommand = async (
  */
 export const de_DeleteWorkspaceServiceAccountCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteWorkspaceServiceAccountCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -836,7 +836,7 @@ export const de_DeleteWorkspaceServiceAccountCommand = async (
  */
 export const de_DeleteWorkspaceServiceAccountTokenCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteWorkspaceServiceAccountTokenCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -859,7 +859,7 @@ export const de_DeleteWorkspaceServiceAccountTokenCommand = async (
  */
 export const de_DescribeWorkspaceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeWorkspaceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -880,7 +880,7 @@ export const de_DescribeWorkspaceCommand = async (
  */
 export const de_DescribeWorkspaceAuthenticationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeWorkspaceAuthenticationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -901,7 +901,7 @@ export const de_DescribeWorkspaceAuthenticationCommand = async (
  */
 export const de_DescribeWorkspaceConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeWorkspaceConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -923,7 +923,7 @@ export const de_DescribeWorkspaceConfigurationCommand = async (
  */
 export const de_DisassociateLicenseCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisassociateLicenseCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -944,7 +944,7 @@ export const de_DisassociateLicenseCommand = async (
  */
 export const de_ListPermissionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListPermissionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -966,7 +966,7 @@ export const de_ListPermissionsCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -987,7 +987,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_ListVersionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListVersionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1009,7 +1009,7 @@ export const de_ListVersionsCommand = async (
  */
 export const de_ListWorkspacesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListWorkspacesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1031,7 +1031,7 @@ export const de_ListWorkspacesCommand = async (
  */
 export const de_ListWorkspaceServiceAccountsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListWorkspaceServiceAccountsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1054,7 +1054,7 @@ export const de_ListWorkspaceServiceAccountsCommand = async (
  */
 export const de_ListWorkspaceServiceAccountTokensCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListWorkspaceServiceAccountTokensCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1078,7 +1078,7 @@ export const de_ListWorkspaceServiceAccountTokensCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1095,7 +1095,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1112,7 +1112,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdatePermissionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdatePermissionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1133,7 +1133,7 @@ export const de_UpdatePermissionsCommand = async (
  */
 export const de_UpdateWorkspaceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateWorkspaceCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1154,7 +1154,7 @@ export const de_UpdateWorkspaceCommand = async (
  */
 export const de_UpdateWorkspaceAuthenticationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateWorkspaceAuthenticationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1175,7 +1175,7 @@ export const de_UpdateWorkspaceAuthenticationCommand = async (
  */
 export const de_UpdateWorkspaceConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateWorkspaceConfigurationCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1234,7 +1234,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1273,7 +1273,7 @@ const de_ConflictExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_InternalServerExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerException> => {
   const contents: any = map({
     [_rAS]: [() => void 0 !== parsedOutput.headers[_ra], () => __strictParseInt32(parsedOutput.headers[_ra])],
@@ -1295,7 +1295,7 @@ const de_InternalServerExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1317,7 +1317,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_ServiceQuotaExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceQuotaExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;

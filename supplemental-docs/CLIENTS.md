@@ -14,7 +14,7 @@ await s3Client.send(
   new GetObjectCommand({
     Bucket: "",
     Key: "",
-  })
+  }),
 );
 ```
 
@@ -222,7 +222,7 @@ const client = new S3Client({
 const endpoint = await getEndpointFromInstructions(
   { Key: "foo", Bucket: "bar" }, // 1. the command's input.
   GetObjectCommand, // 2. the Command class.
-  client.config // 3. the client config.
+  client.config, // 3. the client config.
 );
 ```
 
@@ -408,7 +408,7 @@ new S3Client({
     5,
 
     // backoff 1 additional second per attempt
-    (attempt: number) => 500 + attempt * 1_000
+    (attempt: number) => 500 + attempt * 1_000,
   ),
 });
 ```
@@ -527,7 +527,7 @@ client.middlewareStack.add(
     name: "MyMiddleware",
     step: "build",
     override: true,
-  }
+  },
 );
 
 await client.listBuckets({});

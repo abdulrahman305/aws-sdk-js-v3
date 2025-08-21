@@ -65,14 +65,14 @@ export class EmptyInputAndEmptyOutputSerializer
 
 export const getEmptyInputAndEmptyOutputHandler = <Context>(
   operation: __Operation<EmptyInputAndEmptyOutputServerInput, EmptyInputAndEmptyOutputServerOutput, Context>,
-  customizer: __ValidationCustomizer<"EmptyInputAndEmptyOutput">
+  customizer: __ValidationCustomizer<"EmptyInputAndEmptyOutput">,
 ): __ServiceHandler<Context, __HttpRequest, __HttpResponse> => {
   const mux = new httpbinding.HttpBindingMux<"RestJson", "EmptyInputAndEmptyOutput">([
     new httpbinding.UriSpec<"RestJson", "EmptyInputAndEmptyOutput">(
       "POST",
       [{ type: "path_literal", value: "EmptyInputAndEmptyOutput" }],
       [],
-      { service: "RestJson", operation: "EmptyInputAndEmptyOutput" }
+      { service: "RestJson", operation: "EmptyInputAndEmptyOutput" },
     ),
   ]);
   return new EmptyInputAndEmptyOutputHandler(
@@ -80,7 +80,7 @@ export const getEmptyInputAndEmptyOutputHandler = <Context>(
     mux,
     new EmptyInputAndEmptyOutputSerializer(),
     serializeFrameworkException,
-    customizer
+    customizer,
   );
 };
 
@@ -101,7 +101,7 @@ async function handle<S, O extends keyof S & string, Context>(
   operation: __Operation<__OperationInput<S[O]>, __OperationOutput<S[O]>, Context>,
   serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
   validationFn: (input: __OperationInput<S[O]>) => __ValidationFailure[],
-  validationCustomizer: __ValidationCustomizer<O>
+  validationCustomizer: __ValidationCustomizer<O>,
 ): Promise<__HttpResponse> {
   let input;
   try {
@@ -147,7 +147,7 @@ export class EmptyInputAndEmptyOutputHandler<Context> implements __ServiceHandle
   >;
   private readonly serializeFrameworkException: (
     e: __SmithyFrameworkException,
-    ctx: __ServerSerdeContext
+    ctx: __ServerSerdeContext,
   ) => Promise<__HttpResponse>;
   private readonly validationCustomizer: __ValidationCustomizer<"EmptyInputAndEmptyOutput">;
   /**
@@ -168,7 +168,7 @@ export class EmptyInputAndEmptyOutputHandler<Context> implements __ServiceHandle
       EmptyInputAndEmptyOutputErrors
     >,
     serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
-    validationCustomizer: __ValidationCustomizer<"EmptyInputAndEmptyOutput">
+    validationCustomizer: __ValidationCustomizer<"EmptyInputAndEmptyOutput">,
   ) {
     this.operation = operation;
     this.mux = mux;
@@ -180,7 +180,7 @@ export class EmptyInputAndEmptyOutputHandler<Context> implements __ServiceHandle
     const target = this.mux.match(request);
     if (target === undefined) {
       console.log(
-        "Received a request that did not match aws.protocoltests.restjson#RestJson.EmptyInputAndEmptyOutput. This indicates a misconfiguration."
+        "Received a request that did not match aws.protocoltests.restjson#RestJson.EmptyInputAndEmptyOutput. This indicates a misconfiguration.",
       );
       return this.serializeFrameworkException(new __InternalFailureException(), serdeContextBase);
     }
@@ -192,7 +192,7 @@ export class EmptyInputAndEmptyOutputHandler<Context> implements __ServiceHandle
       this.operation,
       this.serializeFrameworkException,
       EmptyInputAndEmptyOutputServerInput.validate,
-      this.validationCustomizer
+      this.validationCustomizer,
     );
   }
 }

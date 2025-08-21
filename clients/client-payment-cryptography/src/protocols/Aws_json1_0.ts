@@ -115,7 +115,7 @@ import { PaymentCryptographyServiceException as __BaseException } from "../model
  */
 export const se_CreateAliasCommand = async (
   input: CreateAliasCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateAlias");
   let body: any;
@@ -128,7 +128,7 @@ export const se_CreateAliasCommand = async (
  */
 export const se_CreateKeyCommand = async (
   input: CreateKeyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateKey");
   let body: any;
@@ -141,7 +141,7 @@ export const se_CreateKeyCommand = async (
  */
 export const se_DeleteAliasCommand = async (
   input: DeleteAliasCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteAlias");
   let body: any;
@@ -154,7 +154,7 @@ export const se_DeleteAliasCommand = async (
  */
 export const se_DeleteKeyCommand = async (
   input: DeleteKeyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteKey");
   let body: any;
@@ -167,7 +167,7 @@ export const se_DeleteKeyCommand = async (
  */
 export const se_ExportKeyCommand = async (
   input: ExportKeyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ExportKey");
   let body: any;
@@ -180,7 +180,7 @@ export const se_ExportKeyCommand = async (
  */
 export const se_GetAliasCommand = async (
   input: GetAliasCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetAlias");
   let body: any;
@@ -203,7 +203,7 @@ export const se_GetKeyCommand = async (input: GetKeyCommandInput, context: __Ser
  */
 export const se_GetParametersForExportCommand = async (
   input: GetParametersForExportCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetParametersForExport");
   let body: any;
@@ -216,7 +216,7 @@ export const se_GetParametersForExportCommand = async (
  */
 export const se_GetParametersForImportCommand = async (
   input: GetParametersForImportCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetParametersForImport");
   let body: any;
@@ -229,7 +229,7 @@ export const se_GetParametersForImportCommand = async (
  */
 export const se_GetPublicKeyCertificateCommand = async (
   input: GetPublicKeyCertificateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetPublicKeyCertificate");
   let body: any;
@@ -242,7 +242,7 @@ export const se_GetPublicKeyCertificateCommand = async (
  */
 export const se_ImportKeyCommand = async (
   input: ImportKeyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ImportKey");
   let body: any;
@@ -255,7 +255,7 @@ export const se_ImportKeyCommand = async (
  */
 export const se_ListAliasesCommand = async (
   input: ListAliasesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListAliases");
   let body: any;
@@ -268,7 +268,7 @@ export const se_ListAliasesCommand = async (
  */
 export const se_ListKeysCommand = async (
   input: ListKeysCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListKeys");
   let body: any;
@@ -281,7 +281,7 @@ export const se_ListKeysCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListTagsForResource");
   let body: any;
@@ -294,7 +294,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_RestoreKeyCommand = async (
   input: RestoreKeyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("RestoreKey");
   let body: any;
@@ -307,7 +307,7 @@ export const se_RestoreKeyCommand = async (
  */
 export const se_StartKeyUsageCommand = async (
   input: StartKeyUsageCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StartKeyUsage");
   let body: any;
@@ -320,7 +320,7 @@ export const se_StartKeyUsageCommand = async (
  */
 export const se_StopKeyUsageCommand = async (
   input: StopKeyUsageCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StopKeyUsage");
   let body: any;
@@ -333,7 +333,7 @@ export const se_StopKeyUsageCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("TagResource");
   let body: any;
@@ -346,7 +346,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UntagResource");
   let body: any;
@@ -359,7 +359,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateAliasCommand = async (
   input: UpdateAliasCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateAlias");
   let body: any;
@@ -372,7 +372,7 @@ export const se_UpdateAliasCommand = async (
  */
 export const de_CreateAliasCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateAliasCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -392,7 +392,7 @@ export const de_CreateAliasCommand = async (
  */
 export const de_CreateKeyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateKeyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -412,7 +412,7 @@ export const de_CreateKeyCommand = async (
  */
 export const de_DeleteAliasCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteAliasCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -432,7 +432,7 @@ export const de_DeleteAliasCommand = async (
  */
 export const de_DeleteKeyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteKeyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -452,7 +452,7 @@ export const de_DeleteKeyCommand = async (
  */
 export const de_ExportKeyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ExportKeyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -472,7 +472,7 @@ export const de_ExportKeyCommand = async (
  */
 export const de_GetAliasCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetAliasCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -492,7 +492,7 @@ export const de_GetAliasCommand = async (
  */
 export const de_GetKeyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetKeyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -512,7 +512,7 @@ export const de_GetKeyCommand = async (
  */
 export const de_GetParametersForExportCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetParametersForExportCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -532,7 +532,7 @@ export const de_GetParametersForExportCommand = async (
  */
 export const de_GetParametersForImportCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetParametersForImportCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -552,7 +552,7 @@ export const de_GetParametersForImportCommand = async (
  */
 export const de_GetPublicKeyCertificateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetPublicKeyCertificateCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -572,7 +572,7 @@ export const de_GetPublicKeyCertificateCommand = async (
  */
 export const de_ImportKeyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ImportKeyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -592,7 +592,7 @@ export const de_ImportKeyCommand = async (
  */
 export const de_ListAliasesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAliasesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -612,7 +612,7 @@ export const de_ListAliasesCommand = async (
  */
 export const de_ListKeysCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListKeysCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -632,7 +632,7 @@ export const de_ListKeysCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -652,7 +652,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_RestoreKeyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RestoreKeyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -672,7 +672,7 @@ export const de_RestoreKeyCommand = async (
  */
 export const de_StartKeyUsageCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartKeyUsageCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -692,7 +692,7 @@ export const de_StartKeyUsageCommand = async (
  */
 export const de_StopKeyUsageCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StopKeyUsageCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -712,7 +712,7 @@ export const de_StopKeyUsageCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -732,7 +732,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -752,7 +752,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateAliasCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateAliasCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -816,7 +816,7 @@ const de_CommandError = async (output: __HttpResponse, context: __SerdeContext):
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -845,7 +845,7 @@ const de_ConflictExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_InternalServerExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -861,7 +861,7 @@ const de_InternalServerExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -877,7 +877,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_ServiceQuotaExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceQuotaExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -893,7 +893,7 @@ const de_ServiceQuotaExceededExceptionRes = async (
  */
 const de_ServiceUnavailableExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceUnavailableException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1192,7 +1192,7 @@ const buildHttpRpcRequest = async (
   headers: __HeaderBag,
   path: string,
   resolvedHostname: string | undefined,
-  body: any
+  body: any,
 ): Promise<__HttpRequest> => {
   const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
   const contents: any = {

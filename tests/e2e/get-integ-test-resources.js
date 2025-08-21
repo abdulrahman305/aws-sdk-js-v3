@@ -17,10 +17,10 @@ exports.getIntegTestResources = async () => {
   await ensureTestStack(
     cloudformation,
     stackName,
-    readFileSync(join(__dirname, "IntegTestResourcesStack.template.json"), { encoding: "utf-8" })
+    readFileSync(join(__dirname, "IntegTestResourcesStack.template.json"), { encoding: "utf-8" }),
   );
   const { StackResources: stackResources } = await cloudformation.send(
-    new DescribeStackResourcesCommand({ StackName: stackName })
+    new DescribeStackResourcesCommand({ StackName: stackName }),
   );
 
   console.log(`${stackName} Stack Resources: `, stackResources);
@@ -29,11 +29,11 @@ exports.getIntegTestResources = async () => {
     .PhysicalResourceId;
 
   const bucketName = stackResources.filter(
-    (resource) => resource.ResourceType === "AWS::S3::Bucket" && resource.LogicalResourceId.indexOf("IntegTest") === 0
+    (resource) => resource.ResourceType === "AWS::S3::Bucket" && resource.LogicalResourceId.indexOf("IntegTest") === 0,
   )[0].PhysicalResourceId;
 
   const multiRegionAccessPointName = stackResources.filter(
-    (resource) => resource.ResourceType === "AWS::S3::MultiRegionAccessPoint"
+    (resource) => resource.ResourceType === "AWS::S3::MultiRegionAccessPoint",
   )[0].PhysicalResourceId;
 
   const sts = new STSClient({ logger });

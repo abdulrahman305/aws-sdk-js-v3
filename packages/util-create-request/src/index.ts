@@ -4,10 +4,10 @@ import { BuildMiddleware, HttpRequest, MetadataBearer } from "@smithy/types";
 export async function createRequest<
   InputTypesUnion extends object,
   InputType extends InputTypesUnion,
-  OutputType extends MetadataBearer = MetadataBearer
+  OutputType extends MetadataBearer = MetadataBearer,
 >(
   client: Client<any, InputTypesUnion, MetadataBearer, any>,
-  command: Command<InputType, OutputType, any, InputTypesUnion, MetadataBearer>
+  command: Command<InputType, OutputType, any, InputTypesUnion, MetadataBearer>,
 ): Promise<HttpRequest> {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const interceptMiddleware: BuildMiddleware<InputType, OutputType> = (next) => async (args) => {

@@ -1495,7 +1495,7 @@ export const UpdateFleetPortSettingsInputFilterSensitiveLog = (obj: UpdateFleetP
   ...obj,
   ...(obj.InboundPermissionAuthorizations && {
     InboundPermissionAuthorizations: obj.InboundPermissionAuthorizations.map((item) =>
-      IpPermissionFilterSensitiveLog(item)
+      IpPermissionFilterSensitiveLog(item),
     ),
   }),
   ...(obj.InboundPermissionRevocations && {

@@ -18,7 +18,7 @@ export interface InspectorScan {
   scanSbom(
     args: ScanSbomCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ScanSbomCommandOutput) => void
+    cb: (err: any, data?: ScanSbomCommandOutput) => void,
   ): void;
 }
 

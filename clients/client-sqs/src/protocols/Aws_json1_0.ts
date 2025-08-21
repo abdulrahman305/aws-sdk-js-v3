@@ -134,7 +134,7 @@ import { SQSServiceException as __BaseException } from "../models/SQSServiceExce
  */
 export const se_AddPermissionCommand = async (
   input: AddPermissionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("AddPermission");
   let body: any;
@@ -147,7 +147,7 @@ export const se_AddPermissionCommand = async (
  */
 export const se_CancelMessageMoveTaskCommand = async (
   input: CancelMessageMoveTaskCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CancelMessageMoveTask");
   let body: any;
@@ -160,7 +160,7 @@ export const se_CancelMessageMoveTaskCommand = async (
  */
 export const se_ChangeMessageVisibilityCommand = async (
   input: ChangeMessageVisibilityCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ChangeMessageVisibility");
   let body: any;
@@ -173,7 +173,7 @@ export const se_ChangeMessageVisibilityCommand = async (
  */
 export const se_ChangeMessageVisibilityBatchCommand = async (
   input: ChangeMessageVisibilityBatchCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ChangeMessageVisibilityBatch");
   let body: any;
@@ -186,7 +186,7 @@ export const se_ChangeMessageVisibilityBatchCommand = async (
  */
 export const se_CreateQueueCommand = async (
   input: CreateQueueCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateQueue");
   let body: any;
@@ -199,7 +199,7 @@ export const se_CreateQueueCommand = async (
  */
 export const se_DeleteMessageCommand = async (
   input: DeleteMessageCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteMessage");
   let body: any;
@@ -212,7 +212,7 @@ export const se_DeleteMessageCommand = async (
  */
 export const se_DeleteMessageBatchCommand = async (
   input: DeleteMessageBatchCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteMessageBatch");
   let body: any;
@@ -225,7 +225,7 @@ export const se_DeleteMessageBatchCommand = async (
  */
 export const se_DeleteQueueCommand = async (
   input: DeleteQueueCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteQueue");
   let body: any;
@@ -238,7 +238,7 @@ export const se_DeleteQueueCommand = async (
  */
 export const se_GetQueueAttributesCommand = async (
   input: GetQueueAttributesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetQueueAttributes");
   let body: any;
@@ -251,7 +251,7 @@ export const se_GetQueueAttributesCommand = async (
  */
 export const se_GetQueueUrlCommand = async (
   input: GetQueueUrlCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetQueueUrl");
   let body: any;
@@ -264,7 +264,7 @@ export const se_GetQueueUrlCommand = async (
  */
 export const se_ListDeadLetterSourceQueuesCommand = async (
   input: ListDeadLetterSourceQueuesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListDeadLetterSourceQueues");
   let body: any;
@@ -277,7 +277,7 @@ export const se_ListDeadLetterSourceQueuesCommand = async (
  */
 export const se_ListMessageMoveTasksCommand = async (
   input: ListMessageMoveTasksCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListMessageMoveTasks");
   let body: any;
@@ -290,7 +290,7 @@ export const se_ListMessageMoveTasksCommand = async (
  */
 export const se_ListQueuesCommand = async (
   input: ListQueuesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListQueues");
   let body: any;
@@ -303,7 +303,7 @@ export const se_ListQueuesCommand = async (
  */
 export const se_ListQueueTagsCommand = async (
   input: ListQueueTagsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListQueueTags");
   let body: any;
@@ -316,7 +316,7 @@ export const se_ListQueueTagsCommand = async (
  */
 export const se_PurgeQueueCommand = async (
   input: PurgeQueueCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("PurgeQueue");
   let body: any;
@@ -329,7 +329,7 @@ export const se_PurgeQueueCommand = async (
  */
 export const se_ReceiveMessageCommand = async (
   input: ReceiveMessageCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ReceiveMessage");
   let body: any;
@@ -342,7 +342,7 @@ export const se_ReceiveMessageCommand = async (
  */
 export const se_RemovePermissionCommand = async (
   input: RemovePermissionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("RemovePermission");
   let body: any;
@@ -355,7 +355,7 @@ export const se_RemovePermissionCommand = async (
  */
 export const se_SendMessageCommand = async (
   input: SendMessageCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("SendMessage");
   let body: any;
@@ -368,7 +368,7 @@ export const se_SendMessageCommand = async (
  */
 export const se_SendMessageBatchCommand = async (
   input: SendMessageBatchCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("SendMessageBatch");
   let body: any;
@@ -381,7 +381,7 @@ export const se_SendMessageBatchCommand = async (
  */
 export const se_SetQueueAttributesCommand = async (
   input: SetQueueAttributesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("SetQueueAttributes");
   let body: any;
@@ -394,7 +394,7 @@ export const se_SetQueueAttributesCommand = async (
  */
 export const se_StartMessageMoveTaskCommand = async (
   input: StartMessageMoveTaskCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StartMessageMoveTask");
   let body: any;
@@ -407,7 +407,7 @@ export const se_StartMessageMoveTaskCommand = async (
  */
 export const se_TagQueueCommand = async (
   input: TagQueueCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("TagQueue");
   let body: any;
@@ -420,7 +420,7 @@ export const se_TagQueueCommand = async (
  */
 export const se_UntagQueueCommand = async (
   input: UntagQueueCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UntagQueue");
   let body: any;
@@ -433,7 +433,7 @@ export const se_UntagQueueCommand = async (
  */
 export const de_AddPermissionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AddPermissionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -450,7 +450,7 @@ export const de_AddPermissionCommand = async (
  */
 export const de_CancelMessageMoveTaskCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CancelMessageMoveTaskCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -470,7 +470,7 @@ export const de_CancelMessageMoveTaskCommand = async (
  */
 export const de_ChangeMessageVisibilityCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ChangeMessageVisibilityCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -487,7 +487,7 @@ export const de_ChangeMessageVisibilityCommand = async (
  */
 export const de_ChangeMessageVisibilityBatchCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ChangeMessageVisibilityBatchCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -507,7 +507,7 @@ export const de_ChangeMessageVisibilityBatchCommand = async (
  */
 export const de_CreateQueueCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateQueueCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -527,7 +527,7 @@ export const de_CreateQueueCommand = async (
  */
 export const de_DeleteMessageCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteMessageCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -544,7 +544,7 @@ export const de_DeleteMessageCommand = async (
  */
 export const de_DeleteMessageBatchCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteMessageBatchCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -564,7 +564,7 @@ export const de_DeleteMessageBatchCommand = async (
  */
 export const de_DeleteQueueCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteQueueCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -581,7 +581,7 @@ export const de_DeleteQueueCommand = async (
  */
 export const de_GetQueueAttributesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetQueueAttributesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -601,7 +601,7 @@ export const de_GetQueueAttributesCommand = async (
  */
 export const de_GetQueueUrlCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetQueueUrlCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -621,7 +621,7 @@ export const de_GetQueueUrlCommand = async (
  */
 export const de_ListDeadLetterSourceQueuesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListDeadLetterSourceQueuesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -641,7 +641,7 @@ export const de_ListDeadLetterSourceQueuesCommand = async (
  */
 export const de_ListMessageMoveTasksCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListMessageMoveTasksCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -661,7 +661,7 @@ export const de_ListMessageMoveTasksCommand = async (
  */
 export const de_ListQueuesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListQueuesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -681,7 +681,7 @@ export const de_ListQueuesCommand = async (
  */
 export const de_ListQueueTagsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListQueueTagsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -701,7 +701,7 @@ export const de_ListQueueTagsCommand = async (
  */
 export const de_PurgeQueueCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PurgeQueueCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -718,7 +718,7 @@ export const de_PurgeQueueCommand = async (
  */
 export const de_ReceiveMessageCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ReceiveMessageCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -738,7 +738,7 @@ export const de_ReceiveMessageCommand = async (
  */
 export const de_RemovePermissionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RemovePermissionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -755,7 +755,7 @@ export const de_RemovePermissionCommand = async (
  */
 export const de_SendMessageCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SendMessageCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -775,7 +775,7 @@ export const de_SendMessageCommand = async (
  */
 export const de_SendMessageBatchCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SendMessageBatchCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -795,7 +795,7 @@ export const de_SendMessageBatchCommand = async (
  */
 export const de_SetQueueAttributesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SetQueueAttributesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -812,7 +812,7 @@ export const de_SetQueueAttributesCommand = async (
  */
 export const de_StartMessageMoveTaskCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartMessageMoveTaskCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -832,7 +832,7 @@ export const de_StartMessageMoveTaskCommand = async (
  */
 export const de_TagQueueCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagQueueCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -849,7 +849,7 @@ export const de_TagQueueCommand = async (
  */
 export const de_UntagQueueCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagQueueCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -971,7 +971,7 @@ const de_CommandError = async (output: __HttpResponse, context: __SerdeContext):
  */
 const de_BatchEntryIdsNotDistinctRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchEntryIdsNotDistinct> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1026,7 +1026,7 @@ const de_InvalidAddressRes = async (parsedOutput: any, context: __SerdeContext):
  */
 const de_InvalidAttributeNameRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidAttributeName> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1042,7 +1042,7 @@ const de_InvalidAttributeNameRes = async (
  */
 const de_InvalidAttributeValueRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidAttributeValue> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1084,7 +1084,7 @@ const de_InvalidIdFormatRes = async (parsedOutput: any, context: __SerdeContext)
  */
 const de_InvalidMessageContentsRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidMessageContents> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1230,7 +1230,7 @@ const de_OverLimitRes = async (parsedOutput: any, context: __SerdeContext): Prom
  */
 const de_PurgeQueueInProgressRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PurgeQueueInProgress> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1246,7 +1246,7 @@ const de_PurgeQueueInProgressRes = async (
  */
 const de_QueueDeletedRecentlyRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<QueueDeletedRecently> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1288,7 +1288,7 @@ const de_QueueNameExistsRes = async (parsedOutput: any, context: __SerdeContext)
  */
 const de_ReceiptHandleIsInvalidRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ReceiptHandleIsInvalid> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1317,7 +1317,7 @@ const de_RequestThrottledRes = async (parsedOutput: any, context: __SerdeContext
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1333,7 +1333,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_TooManyEntriesInBatchRequestRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyEntriesInBatchRequest> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1349,7 +1349,7 @@ const de_TooManyEntriesInBatchRequestRes = async (
  */
 const de_UnsupportedOperationRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UnsupportedOperation> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1430,7 +1430,7 @@ const se_CancelMessageMoveTaskRequest = (input: CancelMessageMoveTaskRequest, co
  */
 const se_ChangeMessageVisibilityBatchRequest = (
   input: ChangeMessageVisibilityBatchRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     Entries: (_) => se_ChangeMessageVisibilityBatchRequestEntryList(_, context),
@@ -1443,7 +1443,7 @@ const se_ChangeMessageVisibilityBatchRequest = (
  */
 const se_ChangeMessageVisibilityBatchRequestEntry = (
   input: ChangeMessageVisibilityBatchRequestEntry,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     Id: _toStr,
@@ -1457,7 +1457,7 @@ const se_ChangeMessageVisibilityBatchRequestEntry = (
  */
 const se_ChangeMessageVisibilityBatchRequestEntryList = (
   input: ChangeMessageVisibilityBatchRequestEntry[],
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return input
     .filter((e: any) => e != null)
@@ -1513,7 +1513,7 @@ const se_DeleteMessageBatchRequestEntry = (input: DeleteMessageBatchRequestEntry
  */
 const se_DeleteMessageBatchRequestEntryList = (
   input: DeleteMessageBatchRequestEntry[],
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return input
     .filter((e: any) => e != null)
@@ -1566,7 +1566,7 @@ const se_GetQueueUrlRequest = (input: GetQueueUrlRequest, context: __SerdeContex
  */
 const se_ListDeadLetterSourceQueuesRequest = (
   input: ListDeadLetterSourceQueuesRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     MaxResults: _toNum,
@@ -1647,7 +1647,7 @@ const se_MessageBodyAttributeMap = (input: Record<string, MessageAttributeValue>
  */
 const se_MessageBodySystemAttributeMap = (
   input: Partial<Record<MessageSystemAttributeNameForSends, MessageSystemAttributeValue>>,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return Object.entries(input).reduce(
     (acc: Record<string, any>, [key, value]: [MessageSystemAttributeNameForSends | string, any]) => {
@@ -1657,7 +1657,7 @@ const se_MessageBodySystemAttributeMap = (
       acc[key] = se_MessageSystemAttributeValue(value, context);
       return acc;
     },
-    {}
+    {},
   );
 };
 
@@ -1974,13 +1974,16 @@ const de_MessageAttributeValue = (output: any, context: __SerdeContext): Message
  * deserializeAws_json1_0MessageBodyAttributeMap
  */
 const de_MessageBodyAttributeMap = (output: any, context: __SerdeContext): Record<string, MessageAttributeValue> => {
-  return Object.entries(output).reduce((acc: Record<string, MessageAttributeValue>, [key, value]: [string, any]) => {
-    if (value === null) {
+  return Object.entries(output).reduce(
+    (acc: Record<string, MessageAttributeValue>, [key, value]: [string, any]) => {
+      if (value === null) {
+        return acc;
+      }
+      acc[key as string] = de_MessageAttributeValue(value, context);
       return acc;
-    }
-    acc[key as string] = de_MessageAttributeValue(value, context);
-    return acc;
-  }, {} as Record<string, MessageAttributeValue>);
+    },
+    {} as Record<string, MessageAttributeValue>,
+  );
 };
 
 /**
@@ -2064,7 +2067,7 @@ const buildHttpRpcRequest = async (
   headers: __HeaderBag,
   path: string,
   resolvedHostname: string | undefined,
-  body: any
+  body: any,
 ): Promise<__HttpRequest> => {
   const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
   const contents: any = {

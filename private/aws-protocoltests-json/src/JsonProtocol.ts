@@ -102,13 +102,13 @@ export interface JsonProtocol {
   datetimeOffsets(): Promise<DatetimeOffsetsCommandOutput>;
   datetimeOffsets(
     args: DatetimeOffsetsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DatetimeOffsetsCommandOutput>;
   datetimeOffsets(args: DatetimeOffsetsCommandInput, cb: (err: any, data?: DatetimeOffsetsCommandOutput) => void): void;
   datetimeOffsets(
     args: DatetimeOffsetsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DatetimeOffsetsCommandOutput) => void
+    cb: (err: any, data?: DatetimeOffsetsCommandOutput) => void,
   ): void;
 
   /**
@@ -117,13 +117,13 @@ export interface JsonProtocol {
   emptyOperation(): Promise<EmptyOperationCommandOutput>;
   emptyOperation(
     args: EmptyOperationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<EmptyOperationCommandOutput>;
   emptyOperation(args: EmptyOperationCommandInput, cb: (err: any, data?: EmptyOperationCommandOutput) => void): void;
   emptyOperation(
     args: EmptyOperationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: EmptyOperationCommandOutput) => void
+    cb: (err: any, data?: EmptyOperationCommandOutput) => void,
   ): void;
 
   /**
@@ -132,16 +132,16 @@ export interface JsonProtocol {
   endpointOperation(): Promise<EndpointOperationCommandOutput>;
   endpointOperation(
     args: EndpointOperationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<EndpointOperationCommandOutput>;
   endpointOperation(
     args: EndpointOperationCommandInput,
-    cb: (err: any, data?: EndpointOperationCommandOutput) => void
+    cb: (err: any, data?: EndpointOperationCommandOutput) => void,
   ): void;
   endpointOperation(
     args: EndpointOperationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: EndpointOperationCommandOutput) => void
+    cb: (err: any, data?: EndpointOperationCommandOutput) => void,
   ): void;
 
   /**
@@ -149,16 +149,16 @@ export interface JsonProtocol {
    */
   endpointWithHostLabelOperation(
     args: EndpointWithHostLabelOperationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<EndpointWithHostLabelOperationCommandOutput>;
   endpointWithHostLabelOperation(
     args: EndpointWithHostLabelOperationCommandInput,
-    cb: (err: any, data?: EndpointWithHostLabelOperationCommandOutput) => void
+    cb: (err: any, data?: EndpointWithHostLabelOperationCommandOutput) => void,
   ): void;
   endpointWithHostLabelOperation(
     args: EndpointWithHostLabelOperationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: EndpointWithHostLabelOperationCommandOutput) => void
+    cb: (err: any, data?: EndpointWithHostLabelOperationCommandOutput) => void,
   ): void;
 
   /**
@@ -167,16 +167,16 @@ export interface JsonProtocol {
   fractionalSeconds(): Promise<FractionalSecondsCommandOutput>;
   fractionalSeconds(
     args: FractionalSecondsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<FractionalSecondsCommandOutput>;
   fractionalSeconds(
     args: FractionalSecondsCommandInput,
-    cb: (err: any, data?: FractionalSecondsCommandOutput) => void
+    cb: (err: any, data?: FractionalSecondsCommandOutput) => void,
   ): void;
   fractionalSeconds(
     args: FractionalSecondsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: FractionalSecondsCommandOutput) => void
+    cb: (err: any, data?: FractionalSecondsCommandOutput) => void,
   ): void;
 
   /**
@@ -185,16 +185,16 @@ export interface JsonProtocol {
   greetingWithErrors(): Promise<GreetingWithErrorsCommandOutput>;
   greetingWithErrors(
     args: GreetingWithErrorsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GreetingWithErrorsCommandOutput>;
   greetingWithErrors(
     args: GreetingWithErrorsCommandInput,
-    cb: (err: any, data?: GreetingWithErrorsCommandOutput) => void
+    cb: (err: any, data?: GreetingWithErrorsCommandOutput) => void,
   ): void;
   greetingWithErrors(
     args: GreetingWithErrorsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GreetingWithErrorsCommandOutput) => void
+    cb: (err: any, data?: GreetingWithErrorsCommandOutput) => void,
   ): void;
 
   /**
@@ -203,16 +203,16 @@ export interface JsonProtocol {
   hostWithPathOperation(): Promise<HostWithPathOperationCommandOutput>;
   hostWithPathOperation(
     args: HostWithPathOperationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<HostWithPathOperationCommandOutput>;
   hostWithPathOperation(
     args: HostWithPathOperationCommandInput,
-    cb: (err: any, data?: HostWithPathOperationCommandOutput) => void
+    cb: (err: any, data?: HostWithPathOperationCommandOutput) => void,
   ): void;
   hostWithPathOperation(
     args: HostWithPathOperationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: HostWithPathOperationCommandOutput) => void
+    cb: (err: any, data?: HostWithPathOperationCommandOutput) => void,
   ): void;
 
   /**
@@ -224,7 +224,7 @@ export interface JsonProtocol {
   jsonEnums(
     args: JsonEnumsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: JsonEnumsCommandOutput) => void
+    cb: (err: any, data?: JsonEnumsCommandOutput) => void,
   ): void;
 
   /**
@@ -236,7 +236,7 @@ export interface JsonProtocol {
   jsonUnions(
     args: JsonUnionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: JsonUnionsCommandOutput) => void
+    cb: (err: any, data?: JsonUnionsCommandOutput) => void,
   ): void;
 
   /**
@@ -245,16 +245,16 @@ export interface JsonProtocol {
   kitchenSinkOperation(): Promise<KitchenSinkOperationCommandOutput>;
   kitchenSinkOperation(
     args: KitchenSinkOperationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<KitchenSinkOperationCommandOutput>;
   kitchenSinkOperation(
     args: KitchenSinkOperationCommandInput,
-    cb: (err: any, data?: KitchenSinkOperationCommandOutput) => void
+    cb: (err: any, data?: KitchenSinkOperationCommandOutput) => void,
   ): void;
   kitchenSinkOperation(
     args: KitchenSinkOperationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: KitchenSinkOperationCommandOutput) => void
+    cb: (err: any, data?: KitchenSinkOperationCommandOutput) => void,
   ): void;
 
   /**
@@ -266,7 +266,7 @@ export interface JsonProtocol {
   nullOperation(
     args: NullOperationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: NullOperationCommandOutput) => void
+    cb: (err: any, data?: NullOperationCommandOutput) => void,
   ): void;
 
   /**
@@ -275,16 +275,16 @@ export interface JsonProtocol {
   operationWithOptionalInputOutput(): Promise<OperationWithOptionalInputOutputCommandOutput>;
   operationWithOptionalInputOutput(
     args: OperationWithOptionalInputOutputCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<OperationWithOptionalInputOutputCommandOutput>;
   operationWithOptionalInputOutput(
     args: OperationWithOptionalInputOutputCommandInput,
-    cb: (err: any, data?: OperationWithOptionalInputOutputCommandOutput) => void
+    cb: (err: any, data?: OperationWithOptionalInputOutputCommandOutput) => void,
   ): void;
   operationWithOptionalInputOutput(
     args: OperationWithOptionalInputOutputCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: OperationWithOptionalInputOutputCommandOutput) => void
+    cb: (err: any, data?: OperationWithOptionalInputOutputCommandOutput) => void,
   ): void;
 
   /**
@@ -293,16 +293,16 @@ export interface JsonProtocol {
   putAndGetInlineDocuments(): Promise<PutAndGetInlineDocumentsCommandOutput>;
   putAndGetInlineDocuments(
     args: PutAndGetInlineDocumentsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutAndGetInlineDocumentsCommandOutput>;
   putAndGetInlineDocuments(
     args: PutAndGetInlineDocumentsCommandInput,
-    cb: (err: any, data?: PutAndGetInlineDocumentsCommandOutput) => void
+    cb: (err: any, data?: PutAndGetInlineDocumentsCommandOutput) => void,
   ): void;
   putAndGetInlineDocuments(
     args: PutAndGetInlineDocumentsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutAndGetInlineDocumentsCommandOutput) => void
+    cb: (err: any, data?: PutAndGetInlineDocumentsCommandOutput) => void,
   ): void;
 
   /**
@@ -311,16 +311,16 @@ export interface JsonProtocol {
   putWithContentEncoding(): Promise<PutWithContentEncodingCommandOutput>;
   putWithContentEncoding(
     args: PutWithContentEncodingCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutWithContentEncodingCommandOutput>;
   putWithContentEncoding(
     args: PutWithContentEncodingCommandInput,
-    cb: (err: any, data?: PutWithContentEncodingCommandOutput) => void
+    cb: (err: any, data?: PutWithContentEncodingCommandOutput) => void,
   ): void;
   putWithContentEncoding(
     args: PutWithContentEncodingCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutWithContentEncodingCommandOutput) => void
+    cb: (err: any, data?: PutWithContentEncodingCommandOutput) => void,
   ): void;
 
   /**
@@ -329,16 +329,16 @@ export interface JsonProtocol {
   simpleScalarProperties(): Promise<SimpleScalarPropertiesCommandOutput>;
   simpleScalarProperties(
     args: SimpleScalarPropertiesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<SimpleScalarPropertiesCommandOutput>;
   simpleScalarProperties(
     args: SimpleScalarPropertiesCommandInput,
-    cb: (err: any, data?: SimpleScalarPropertiesCommandOutput) => void
+    cb: (err: any, data?: SimpleScalarPropertiesCommandOutput) => void,
   ): void;
   simpleScalarProperties(
     args: SimpleScalarPropertiesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SimpleScalarPropertiesCommandOutput) => void
+    cb: (err: any, data?: SimpleScalarPropertiesCommandOutput) => void,
   ): void;
 
   /**
@@ -347,16 +347,16 @@ export interface JsonProtocol {
   sparseNullsOperation(): Promise<SparseNullsOperationCommandOutput>;
   sparseNullsOperation(
     args: SparseNullsOperationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<SparseNullsOperationCommandOutput>;
   sparseNullsOperation(
     args: SparseNullsOperationCommandInput,
-    cb: (err: any, data?: SparseNullsOperationCommandOutput) => void
+    cb: (err: any, data?: SparseNullsOperationCommandOutput) => void,
   ): void;
   sparseNullsOperation(
     args: SparseNullsOperationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SparseNullsOperationCommandOutput) => void
+    cb: (err: any, data?: SparseNullsOperationCommandOutput) => void,
   ): void;
 }
 

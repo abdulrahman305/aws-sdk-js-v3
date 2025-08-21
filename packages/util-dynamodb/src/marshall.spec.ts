@@ -117,7 +117,7 @@ describe("marshall", () => {
         pk: "abc",
         sk: "xyz",
       },
-      {}
+      {},
     );
     expect(object2).toEqual({
       pk: { S: "abc" },
@@ -128,7 +128,7 @@ describe("marshall", () => {
         pk: "abc",
         sk: "xyz",
       },
-      { convertTopLevelContainer: true }
+      { convertTopLevelContainer: true },
     );
     expect(object3).toEqual({
       M: {
@@ -141,7 +141,7 @@ describe("marshall", () => {
         pk: "abc",
         sk: "xyz",
       },
-      { convertTopLevelContainer: true as boolean }
+      { convertTopLevelContainer: true as boolean },
     );
     expect(object4).toEqual({
       M: {
@@ -164,7 +164,7 @@ describe("marshall", () => {
       })(),
       {
         convertClassInstanceToMap: true,
-      }
+      },
     );
     expect(unrecognizedClassInstance2).toEqual({
       a: { S: "a" },
@@ -186,7 +186,10 @@ describe("marshall", () => {
 
   it("with class instance as an input", () => {
     class TestInputClass {
-      constructor(private readonly a: string, private readonly b: string) {}
+      constructor(
+        private readonly a: string,
+        private readonly b: string,
+      ) {}
     }
     const input = new TestInputClass("A", "B");
 

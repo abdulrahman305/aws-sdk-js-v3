@@ -50,7 +50,7 @@ const checkState = async (client: SageMakerClient, input: DescribeProcessingJobC
  */
 export const waitForProcessingJobCompletedOrStopped = async (
   params: WaiterConfiguration<SageMakerClient>,
-  input: DescribeProcessingJobCommandInput
+  input: DescribeProcessingJobCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 60, maxDelay: 120 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -62,7 +62,7 @@ export const waitForProcessingJobCompletedOrStopped = async (
  */
 export const waitUntilProcessingJobCompletedOrStopped = async (
   params: WaiterConfiguration<SageMakerClient>,
-  input: DescribeProcessingJobCommandInput
+  input: DescribeProcessingJobCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 60, maxDelay: 120 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

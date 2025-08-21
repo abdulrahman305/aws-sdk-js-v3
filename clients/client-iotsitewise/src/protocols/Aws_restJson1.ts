@@ -324,7 +324,7 @@ import { Datum, Image, Row, TooManyTagsException } from "../models/models_1";
  */
 export const se_AssociateAssetsCommand = async (
   input: AssociateAssetsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -338,7 +338,7 @@ export const se_AssociateAssetsCommand = async (
       childAssetId: [],
       clientToken: [true, (_) => _ ?? generateIdempotencyToken()],
       hierarchyId: [],
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -357,7 +357,7 @@ export const se_AssociateAssetsCommand = async (
  */
 export const se_AssociateTimeSeriesToAssetPropertyCommand = async (
   input: AssociateTimeSeriesToAssetPropertyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -373,7 +373,7 @@ export const se_AssociateTimeSeriesToAssetPropertyCommand = async (
   body = JSON.stringify(
     take(input, {
       clientToken: [true, (_) => _ ?? generateIdempotencyToken()],
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -392,7 +392,7 @@ export const se_AssociateTimeSeriesToAssetPropertyCommand = async (
  */
 export const se_BatchAssociateProjectAssetsCommand = async (
   input: BatchAssociateProjectAssetsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -405,7 +405,7 @@ export const se_BatchAssociateProjectAssetsCommand = async (
     take(input, {
       assetIds: (_) => _json(_),
       clientToken: [true, (_) => _ ?? generateIdempotencyToken()],
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -424,7 +424,7 @@ export const se_BatchAssociateProjectAssetsCommand = async (
  */
 export const se_BatchDisassociateProjectAssetsCommand = async (
   input: BatchDisassociateProjectAssetsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -437,7 +437,7 @@ export const se_BatchDisassociateProjectAssetsCommand = async (
     take(input, {
       assetIds: (_) => _json(_),
       clientToken: [true, (_) => _ ?? generateIdempotencyToken()],
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -456,7 +456,7 @@ export const se_BatchDisassociateProjectAssetsCommand = async (
  */
 export const se_BatchGetAssetPropertyAggregatesCommand = async (
   input: BatchGetAssetPropertyAggregatesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -469,7 +469,7 @@ export const se_BatchGetAssetPropertyAggregatesCommand = async (
       entries: (_) => se_BatchGetAssetPropertyAggregatesEntries(_, context),
       maxResults: [],
       nextToken: [],
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -488,7 +488,7 @@ export const se_BatchGetAssetPropertyAggregatesCommand = async (
  */
 export const se_BatchGetAssetPropertyValueCommand = async (
   input: BatchGetAssetPropertyValueCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -500,7 +500,7 @@ export const se_BatchGetAssetPropertyValueCommand = async (
     take(input, {
       entries: (_) => _json(_),
       nextToken: [],
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -519,7 +519,7 @@ export const se_BatchGetAssetPropertyValueCommand = async (
  */
 export const se_BatchGetAssetPropertyValueHistoryCommand = async (
   input: BatchGetAssetPropertyValueHistoryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -532,7 +532,7 @@ export const se_BatchGetAssetPropertyValueHistoryCommand = async (
       entries: (_) => se_BatchGetAssetPropertyValueHistoryEntries(_, context),
       maxResults: [],
       nextToken: [],
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -551,7 +551,7 @@ export const se_BatchGetAssetPropertyValueHistoryCommand = async (
  */
 export const se_BatchPutAssetPropertyValueCommand = async (
   input: BatchPutAssetPropertyValueCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -562,7 +562,7 @@ export const se_BatchPutAssetPropertyValueCommand = async (
   body = JSON.stringify(
     take(input, {
       entries: (_) => se_PutAssetPropertyValueEntries(_, context),
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -581,7 +581,7 @@ export const se_BatchPutAssetPropertyValueCommand = async (
  */
 export const se_CreateAccessPolicyCommand = async (
   input: CreateAccessPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -596,7 +596,7 @@ export const se_CreateAccessPolicyCommand = async (
       accessPolicyResource: (_) => _json(_),
       clientToken: [true, (_) => _ ?? generateIdempotencyToken()],
       tags: (_) => _json(_),
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -615,7 +615,7 @@ export const se_CreateAccessPolicyCommand = async (
  */
 export const se_CreateAssetCommand = async (
   input: CreateAssetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -632,7 +632,7 @@ export const se_CreateAssetCommand = async (
       assetName: [],
       clientToken: [true, (_) => _ ?? generateIdempotencyToken()],
       tags: (_) => _json(_),
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -651,7 +651,7 @@ export const se_CreateAssetCommand = async (
  */
 export const se_CreateAssetModelCommand = async (
   input: CreateAssetModelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -671,7 +671,7 @@ export const se_CreateAssetModelCommand = async (
       assetModelType: [],
       clientToken: [true, (_) => _ ?? generateIdempotencyToken()],
       tags: (_) => _json(_),
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -690,7 +690,7 @@ export const se_CreateAssetModelCommand = async (
  */
 export const se_CreateAssetModelCompositeModelCommand = async (
   input: CreateAssetModelCompositeModelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -710,7 +710,7 @@ export const se_CreateAssetModelCompositeModelCommand = async (
       clientToken: [true, (_) => _ ?? generateIdempotencyToken()],
       composedAssetModelId: [],
       parentAssetModelCompositeModelId: [],
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -729,7 +729,7 @@ export const se_CreateAssetModelCompositeModelCommand = async (
  */
 export const se_CreateBulkImportJobCommand = async (
   input: CreateBulkImportJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -746,7 +746,7 @@ export const se_CreateBulkImportJobCommand = async (
       jobConfiguration: (_) => _json(_),
       jobName: [],
       jobRoleArn: [],
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -765,7 +765,7 @@ export const se_CreateBulkImportJobCommand = async (
  */
 export const se_CreateDashboardCommand = async (
   input: CreateDashboardCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -781,7 +781,7 @@ export const se_CreateDashboardCommand = async (
       dashboardName: [],
       projectId: [],
       tags: (_) => _json(_),
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -800,7 +800,7 @@ export const se_CreateDashboardCommand = async (
  */
 export const se_CreateGatewayCommand = async (
   input: CreateGatewayCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -813,7 +813,7 @@ export const se_CreateGatewayCommand = async (
       gatewayName: [],
       gatewayPlatform: (_) => _json(_),
       tags: (_) => _json(_),
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -832,7 +832,7 @@ export const se_CreateGatewayCommand = async (
  */
 export const se_CreatePortalCommand = async (
   input: CreatePortalCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -852,7 +852,7 @@ export const se_CreatePortalCommand = async (
       portalName: [],
       roleArn: [],
       tags: (_) => _json(_),
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -871,7 +871,7 @@ export const se_CreatePortalCommand = async (
  */
 export const se_CreateProjectCommand = async (
   input: CreateProjectCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -886,7 +886,7 @@ export const se_CreateProjectCommand = async (
       projectDescription: [],
       projectName: [],
       tags: (_) => _json(_),
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -905,7 +905,7 @@ export const se_CreateProjectCommand = async (
  */
 export const se_DeleteAccessPolicyCommand = async (
   input: DeleteAccessPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -932,7 +932,7 @@ export const se_DeleteAccessPolicyCommand = async (
  */
 export const se_DeleteAssetCommand = async (
   input: DeleteAssetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -959,7 +959,7 @@ export const se_DeleteAssetCommand = async (
  */
 export const se_DeleteAssetModelCommand = async (
   input: DeleteAssetModelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -986,7 +986,7 @@ export const se_DeleteAssetModelCommand = async (
  */
 export const se_DeleteAssetModelCompositeModelCommand = async (
   input: DeleteAssetModelCompositeModelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1014,7 +1014,7 @@ export const se_DeleteAssetModelCompositeModelCommand = async (
  */
 export const se_DeleteDashboardCommand = async (
   input: DeleteDashboardCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1041,7 +1041,7 @@ export const se_DeleteDashboardCommand = async (
  */
 export const se_DeleteGatewayCommand = async (
   input: DeleteGatewayCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1065,7 +1065,7 @@ export const se_DeleteGatewayCommand = async (
  */
 export const se_DeletePortalCommand = async (
   input: DeletePortalCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1092,7 +1092,7 @@ export const se_DeletePortalCommand = async (
  */
 export const se_DeleteProjectCommand = async (
   input: DeleteProjectCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1119,7 +1119,7 @@ export const se_DeleteProjectCommand = async (
  */
 export const se_DeleteTimeSeriesCommand = async (
   input: DeleteTimeSeriesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1135,7 +1135,7 @@ export const se_DeleteTimeSeriesCommand = async (
   body = JSON.stringify(
     take(input, {
       clientToken: [true, (_) => _ ?? generateIdempotencyToken()],
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -1154,7 +1154,7 @@ export const se_DeleteTimeSeriesCommand = async (
  */
 export const se_DescribeAccessPolicyCommand = async (
   input: DescribeAccessPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1178,7 +1178,7 @@ export const se_DescribeAccessPolicyCommand = async (
  */
 export const se_DescribeActionCommand = async (
   input: DescribeActionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1202,7 +1202,7 @@ export const se_DescribeActionCommand = async (
  */
 export const se_DescribeAssetCommand = async (
   input: DescribeAssetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1229,7 +1229,7 @@ export const se_DescribeAssetCommand = async (
  */
 export const se_DescribeAssetCompositeModelCommand = async (
   input: DescribeAssetCompositeModelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1254,7 +1254,7 @@ export const se_DescribeAssetCompositeModelCommand = async (
  */
 export const se_DescribeAssetModelCommand = async (
   input: DescribeAssetModelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1281,7 +1281,7 @@ export const se_DescribeAssetModelCommand = async (
  */
 export const se_DescribeAssetModelCompositeModelCommand = async (
   input: DescribeAssetModelCompositeModelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1306,7 +1306,7 @@ export const se_DescribeAssetModelCompositeModelCommand = async (
  */
 export const se_DescribeAssetPropertyCommand = async (
   input: DescribeAssetPropertyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1331,7 +1331,7 @@ export const se_DescribeAssetPropertyCommand = async (
  */
 export const se_DescribeBulkImportJobCommand = async (
   input: DescribeBulkImportJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1355,7 +1355,7 @@ export const se_DescribeBulkImportJobCommand = async (
  */
 export const se_DescribeDashboardCommand = async (
   input: DescribeDashboardCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1379,7 +1379,7 @@ export const se_DescribeDashboardCommand = async (
  */
 export const se_DescribeDefaultEncryptionConfigurationCommand = async (
   input: DescribeDefaultEncryptionConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1405,7 +1405,7 @@ export const se_DescribeDefaultEncryptionConfigurationCommand = async (
  */
 export const se_DescribeGatewayCommand = async (
   input: DescribeGatewayCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1429,7 +1429,7 @@ export const se_DescribeGatewayCommand = async (
  */
 export const se_DescribeGatewayCapabilityConfigurationCommand = async (
   input: DescribeGatewayCapabilityConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1454,7 +1454,7 @@ export const se_DescribeGatewayCapabilityConfigurationCommand = async (
  */
 export const se_DescribeLoggingOptionsCommand = async (
   input: DescribeLoggingOptionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1480,7 +1480,7 @@ export const se_DescribeLoggingOptionsCommand = async (
  */
 export const se_DescribePortalCommand = async (
   input: DescribePortalCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1504,7 +1504,7 @@ export const se_DescribePortalCommand = async (
  */
 export const se_DescribeProjectCommand = async (
   input: DescribeProjectCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1528,7 +1528,7 @@ export const se_DescribeProjectCommand = async (
  */
 export const se_DescribeStorageConfigurationCommand = async (
   input: DescribeStorageConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1554,7 +1554,7 @@ export const se_DescribeStorageConfigurationCommand = async (
  */
 export const se_DescribeTimeSeriesCommand = async (
   input: DescribeTimeSeriesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1582,7 +1582,7 @@ export const se_DescribeTimeSeriesCommand = async (
  */
 export const se_DisassociateAssetsCommand = async (
   input: DisassociateAssetsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1596,7 +1596,7 @@ export const se_DisassociateAssetsCommand = async (
       childAssetId: [],
       clientToken: [true, (_) => _ ?? generateIdempotencyToken()],
       hierarchyId: [],
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -1615,7 +1615,7 @@ export const se_DisassociateAssetsCommand = async (
  */
 export const se_DisassociateTimeSeriesFromAssetPropertyCommand = async (
   input: DisassociateTimeSeriesFromAssetPropertyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1631,7 +1631,7 @@ export const se_DisassociateTimeSeriesFromAssetPropertyCommand = async (
   body = JSON.stringify(
     take(input, {
       clientToken: [true, (_) => _ ?? generateIdempotencyToken()],
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -1650,7 +1650,7 @@ export const se_DisassociateTimeSeriesFromAssetPropertyCommand = async (
  */
 export const se_ExecuteActionCommand = async (
   input: ExecuteActionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1664,7 +1664,7 @@ export const se_ExecuteActionCommand = async (
       actionPayload: (_) => _json(_),
       clientToken: [],
       targetResource: (_) => _json(_),
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -1683,7 +1683,7 @@ export const se_ExecuteActionCommand = async (
  */
 export const se_ExecuteQueryCommand = async (
   input: ExecuteQueryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1696,7 +1696,7 @@ export const se_ExecuteQueryCommand = async (
       maxResults: [],
       nextToken: [],
       queryStatement: [],
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -1715,7 +1715,7 @@ export const se_ExecuteQueryCommand = async (
  */
 export const se_GetAssetPropertyAggregatesCommand = async (
   input: GetAssetPropertyAggregatesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1754,7 +1754,7 @@ export const se_GetAssetPropertyAggregatesCommand = async (
  */
 export const se_GetAssetPropertyValueCommand = async (
   input: GetAssetPropertyValueCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1782,7 +1782,7 @@ export const se_GetAssetPropertyValueCommand = async (
  */
 export const se_GetAssetPropertyValueHistoryCommand = async (
   input: GetAssetPropertyValueHistoryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1816,7 +1816,7 @@ export const se_GetAssetPropertyValueHistoryCommand = async (
  */
 export const se_GetInterpolatedAssetPropertyValuesCommand = async (
   input: GetInterpolatedAssetPropertyValuesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1854,7 +1854,7 @@ export const se_GetInterpolatedAssetPropertyValuesCommand = async (
  */
 export const se_ListAccessPoliciesCommand = async (
   input: ListAccessPoliciesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1886,7 +1886,7 @@ export const se_ListAccessPoliciesCommand = async (
  */
 export const se_ListActionsCommand = async (
   input: ListActionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1915,7 +1915,7 @@ export const se_ListActionsCommand = async (
  */
 export const se_ListAssetModelCompositeModelsCommand = async (
   input: ListAssetModelCompositeModelsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1943,7 +1943,7 @@ export const se_ListAssetModelCompositeModelsCommand = async (
  */
 export const se_ListAssetModelPropertiesCommand = async (
   input: ListAssetModelPropertiesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1972,7 +1972,7 @@ export const se_ListAssetModelPropertiesCommand = async (
  */
 export const se_ListAssetModelsCommand = async (
   input: ListAssetModelsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -2000,7 +2000,7 @@ export const se_ListAssetModelsCommand = async (
  */
 export const se_ListAssetPropertiesCommand = async (
   input: ListAssetPropertiesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -2029,7 +2029,7 @@ export const se_ListAssetPropertiesCommand = async (
  */
 export const se_ListAssetRelationshipsCommand = async (
   input: ListAssetRelationshipsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -2058,7 +2058,7 @@ export const se_ListAssetRelationshipsCommand = async (
  */
 export const se_ListAssetsCommand = async (
   input: ListAssetsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -2087,7 +2087,7 @@ export const se_ListAssetsCommand = async (
  */
 export const se_ListAssociatedAssetsCommand = async (
   input: ListAssociatedAssetsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -2117,7 +2117,7 @@ export const se_ListAssociatedAssetsCommand = async (
  */
 export const se_ListBulkImportJobsCommand = async (
   input: ListBulkImportJobsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -2145,7 +2145,7 @@ export const se_ListBulkImportJobsCommand = async (
  */
 export const se_ListCompositionRelationshipsCommand = async (
   input: ListCompositionRelationshipsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -2173,7 +2173,7 @@ export const se_ListCompositionRelationshipsCommand = async (
  */
 export const se_ListDashboardsCommand = async (
   input: ListDashboardsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -2201,7 +2201,7 @@ export const se_ListDashboardsCommand = async (
  */
 export const se_ListGatewaysCommand = async (
   input: ListGatewaysCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -2228,7 +2228,7 @@ export const se_ListGatewaysCommand = async (
  */
 export const se_ListPortalsCommand = async (
   input: ListPortalsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -2255,7 +2255,7 @@ export const se_ListPortalsCommand = async (
  */
 export const se_ListProjectAssetsCommand = async (
   input: ListProjectAssetsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -2283,7 +2283,7 @@ export const se_ListProjectAssetsCommand = async (
  */
 export const se_ListProjectsCommand = async (
   input: ListProjectsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -2311,7 +2311,7 @@ export const se_ListProjectsCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -2337,7 +2337,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_ListTimeSeriesCommand = async (
   input: ListTimeSeriesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -2367,7 +2367,7 @@ export const se_ListTimeSeriesCommand = async (
  */
 export const se_PutDefaultEncryptionConfigurationCommand = async (
   input: PutDefaultEncryptionConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2379,7 +2379,7 @@ export const se_PutDefaultEncryptionConfigurationCommand = async (
     take(input, {
       encryptionType: [],
       kmsKeyId: [],
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -2398,7 +2398,7 @@ export const se_PutDefaultEncryptionConfigurationCommand = async (
  */
 export const se_PutLoggingOptionsCommand = async (
   input: PutLoggingOptionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2409,7 +2409,7 @@ export const se_PutLoggingOptionsCommand = async (
   body = JSON.stringify(
     take(input, {
       loggingOptions: (_) => _json(_),
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -2428,7 +2428,7 @@ export const se_PutLoggingOptionsCommand = async (
  */
 export const se_PutStorageConfigurationCommand = async (
   input: PutStorageConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2444,7 +2444,7 @@ export const se_PutStorageConfigurationCommand = async (
       storageType: [],
       warmTier: [],
       warmTierRetentionPeriod: (_) => _json(_),
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -2463,7 +2463,7 @@ export const se_PutStorageConfigurationCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2477,7 +2477,7 @@ export const se_TagResourceCommand = async (
   body = JSON.stringify(
     take(input, {
       tags: (_) => _json(_),
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -2496,7 +2496,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -2526,7 +2526,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateAccessPolicyCommand = async (
   input: UpdateAccessPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2541,7 +2541,7 @@ export const se_UpdateAccessPolicyCommand = async (
       accessPolicyPermission: [],
       accessPolicyResource: (_) => _json(_),
       clientToken: [true, (_) => _ ?? generateIdempotencyToken()],
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -2560,7 +2560,7 @@ export const se_UpdateAccessPolicyCommand = async (
  */
 export const se_UpdateAssetCommand = async (
   input: UpdateAssetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2575,7 +2575,7 @@ export const se_UpdateAssetCommand = async (
       assetExternalId: [],
       assetName: [],
       clientToken: [true, (_) => _ ?? generateIdempotencyToken()],
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -2594,7 +2594,7 @@ export const se_UpdateAssetCommand = async (
  */
 export const se_UpdateAssetModelCommand = async (
   input: UpdateAssetModelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2612,7 +2612,7 @@ export const se_UpdateAssetModelCommand = async (
       assetModelName: [],
       assetModelProperties: (_) => _json(_),
       clientToken: [true, (_) => _ ?? generateIdempotencyToken()],
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -2631,7 +2631,7 @@ export const se_UpdateAssetModelCommand = async (
  */
 export const se_UpdateAssetModelCompositeModelCommand = async (
   input: UpdateAssetModelCompositeModelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2648,7 +2648,7 @@ export const se_UpdateAssetModelCompositeModelCommand = async (
       assetModelCompositeModelName: [],
       assetModelCompositeModelProperties: (_) => _json(_),
       clientToken: [true, (_) => _ ?? generateIdempotencyToken()],
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -2667,7 +2667,7 @@ export const se_UpdateAssetModelCompositeModelCommand = async (
  */
 export const se_UpdateAssetPropertyCommand = async (
   input: UpdateAssetPropertyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2683,7 +2683,7 @@ export const se_UpdateAssetPropertyCommand = async (
       propertyAlias: [],
       propertyNotificationState: [],
       propertyUnit: [],
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -2702,7 +2702,7 @@ export const se_UpdateAssetPropertyCommand = async (
  */
 export const se_UpdateDashboardCommand = async (
   input: UpdateDashboardCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2717,7 +2717,7 @@ export const se_UpdateDashboardCommand = async (
       dashboardDefinition: [],
       dashboardDescription: [],
       dashboardName: [],
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -2736,7 +2736,7 @@ export const se_UpdateDashboardCommand = async (
  */
 export const se_UpdateGatewayCommand = async (
   input: UpdateGatewayCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2748,7 +2748,7 @@ export const se_UpdateGatewayCommand = async (
   body = JSON.stringify(
     take(input, {
       gatewayName: [],
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -2767,7 +2767,7 @@ export const se_UpdateGatewayCommand = async (
  */
 export const se_UpdateGatewayCapabilityConfigurationCommand = async (
   input: UpdateGatewayCapabilityConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2780,7 +2780,7 @@ export const se_UpdateGatewayCapabilityConfigurationCommand = async (
     take(input, {
       capabilityConfiguration: [],
       capabilityNamespace: [],
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -2799,7 +2799,7 @@ export const se_UpdateGatewayCapabilityConfigurationCommand = async (
  */
 export const se_UpdatePortalCommand = async (
   input: UpdatePortalCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2818,7 +2818,7 @@ export const se_UpdatePortalCommand = async (
       portalLogoImage: (_) => se_Image(_, context),
       portalName: [],
       roleArn: [],
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -2837,7 +2837,7 @@ export const se_UpdatePortalCommand = async (
  */
 export const se_UpdateProjectCommand = async (
   input: UpdateProjectCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2851,7 +2851,7 @@ export const se_UpdateProjectCommand = async (
       clientToken: [true, (_) => _ ?? generateIdempotencyToken()],
       projectDescription: [],
       projectName: [],
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -2870,7 +2870,7 @@ export const se_UpdateProjectCommand = async (
  */
 export const de_AssociateAssetsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssociateAssetsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2887,7 +2887,7 @@ export const de_AssociateAssetsCommand = async (
  */
 export const de_AssociateTimeSeriesToAssetPropertyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssociateTimeSeriesToAssetPropertyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2904,7 +2904,7 @@ export const de_AssociateTimeSeriesToAssetPropertyCommand = async (
  */
 export const de_BatchAssociateProjectAssetsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchAssociateProjectAssetsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2925,7 +2925,7 @@ export const de_BatchAssociateProjectAssetsCommand = async (
  */
 export const de_BatchDisassociateProjectAssetsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchDisassociateProjectAssetsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2946,7 +2946,7 @@ export const de_BatchDisassociateProjectAssetsCommand = async (
  */
 export const de_BatchGetAssetPropertyAggregatesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchGetAssetPropertyAggregatesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2970,7 +2970,7 @@ export const de_BatchGetAssetPropertyAggregatesCommand = async (
  */
 export const de_BatchGetAssetPropertyValueCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchGetAssetPropertyValueCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2994,7 +2994,7 @@ export const de_BatchGetAssetPropertyValueCommand = async (
  */
 export const de_BatchGetAssetPropertyValueHistoryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchGetAssetPropertyValueHistoryCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3018,7 +3018,7 @@ export const de_BatchGetAssetPropertyValueHistoryCommand = async (
  */
 export const de_BatchPutAssetPropertyValueCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchPutAssetPropertyValueCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3039,7 +3039,7 @@ export const de_BatchPutAssetPropertyValueCommand = async (
  */
 export const de_CreateAccessPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateAccessPolicyCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3061,7 +3061,7 @@ export const de_CreateAccessPolicyCommand = async (
  */
 export const de_CreateAssetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateAssetCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3084,7 +3084,7 @@ export const de_CreateAssetCommand = async (
  */
 export const de_CreateAssetModelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateAssetModelCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3107,7 +3107,7 @@ export const de_CreateAssetModelCommand = async (
  */
 export const de_CreateAssetModelCompositeModelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateAssetModelCompositeModelCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3130,7 +3130,7 @@ export const de_CreateAssetModelCompositeModelCommand = async (
  */
 export const de_CreateBulkImportJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateBulkImportJobCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3153,7 +3153,7 @@ export const de_CreateBulkImportJobCommand = async (
  */
 export const de_CreateDashboardCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateDashboardCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3175,7 +3175,7 @@ export const de_CreateDashboardCommand = async (
  */
 export const de_CreateGatewayCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateGatewayCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3197,7 +3197,7 @@ export const de_CreateGatewayCommand = async (
  */
 export const de_CreatePortalCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreatePortalCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3222,7 +3222,7 @@ export const de_CreatePortalCommand = async (
  */
 export const de_CreateProjectCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateProjectCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3244,7 +3244,7 @@ export const de_CreateProjectCommand = async (
  */
 export const de_DeleteAccessPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteAccessPolicyCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3261,7 +3261,7 @@ export const de_DeleteAccessPolicyCommand = async (
  */
 export const de_DeleteAssetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteAssetCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3282,7 +3282,7 @@ export const de_DeleteAssetCommand = async (
  */
 export const de_DeleteAssetModelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteAssetModelCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3303,7 +3303,7 @@ export const de_DeleteAssetModelCommand = async (
  */
 export const de_DeleteAssetModelCompositeModelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteAssetModelCompositeModelCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3324,7 +3324,7 @@ export const de_DeleteAssetModelCompositeModelCommand = async (
  */
 export const de_DeleteDashboardCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteDashboardCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3341,7 +3341,7 @@ export const de_DeleteDashboardCommand = async (
  */
 export const de_DeleteGatewayCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteGatewayCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3358,7 +3358,7 @@ export const de_DeleteGatewayCommand = async (
  */
 export const de_DeletePortalCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeletePortalCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3379,7 +3379,7 @@ export const de_DeletePortalCommand = async (
  */
 export const de_DeleteProjectCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteProjectCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3396,7 +3396,7 @@ export const de_DeleteProjectCommand = async (
  */
 export const de_DeleteTimeSeriesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteTimeSeriesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3413,7 +3413,7 @@ export const de_DeleteTimeSeriesCommand = async (
  */
 export const de_DescribeAccessPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeAccessPolicyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3440,7 +3440,7 @@ export const de_DescribeAccessPolicyCommand = async (
  */
 export const de_DescribeActionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeActionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3465,7 +3465,7 @@ export const de_DescribeActionCommand = async (
  */
 export const de_DescribeAssetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeAssetCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3498,7 +3498,7 @@ export const de_DescribeAssetCommand = async (
  */
 export const de_DescribeAssetCompositeModelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeAssetCompositeModelCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3528,7 +3528,7 @@ export const de_DescribeAssetCompositeModelCommand = async (
  */
 export const de_DescribeAssetModelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeAssetModelCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3561,7 +3561,7 @@ export const de_DescribeAssetModelCommand = async (
  */
 export const de_DescribeAssetModelCompositeModelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeAssetModelCompositeModelCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3592,7 +3592,7 @@ export const de_DescribeAssetModelCompositeModelCommand = async (
  */
 export const de_DescribeAssetPropertyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeAssetPropertyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3618,7 +3618,7 @@ export const de_DescribeAssetPropertyCommand = async (
  */
 export const de_DescribeBulkImportJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeBulkImportJobCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3649,7 +3649,7 @@ export const de_DescribeBulkImportJobCommand = async (
  */
 export const de_DescribeDashboardCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeDashboardCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3677,7 +3677,7 @@ export const de_DescribeDashboardCommand = async (
  */
 export const de_DescribeDefaultEncryptionConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeDefaultEncryptionConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3700,7 +3700,7 @@ export const de_DescribeDefaultEncryptionConfigurationCommand = async (
  */
 export const de_DescribeGatewayCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeGatewayCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3727,7 +3727,7 @@ export const de_DescribeGatewayCommand = async (
  */
 export const de_DescribeGatewayCapabilityConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeGatewayCapabilityConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3751,7 +3751,7 @@ export const de_DescribeGatewayCapabilityConfigurationCommand = async (
  */
 export const de_DescribeLoggingOptionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeLoggingOptionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3772,7 +3772,7 @@ export const de_DescribeLoggingOptionsCommand = async (
  */
 export const de_DescribePortalCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribePortalCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3807,7 +3807,7 @@ export const de_DescribePortalCommand = async (
  */
 export const de_DescribeProjectCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeProjectCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3834,7 +3834,7 @@ export const de_DescribeProjectCommand = async (
  */
 export const de_DescribeStorageConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeStorageConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3862,7 +3862,7 @@ export const de_DescribeStorageConfigurationCommand = async (
  */
 export const de_DescribeTimeSeriesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeTimeSeriesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3891,7 +3891,7 @@ export const de_DescribeTimeSeriesCommand = async (
  */
 export const de_DisassociateAssetsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisassociateAssetsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3908,7 +3908,7 @@ export const de_DisassociateAssetsCommand = async (
  */
 export const de_DisassociateTimeSeriesFromAssetPropertyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisassociateTimeSeriesFromAssetPropertyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3925,7 +3925,7 @@ export const de_DisassociateTimeSeriesFromAssetPropertyCommand = async (
  */
 export const de_ExecuteActionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ExecuteActionCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3946,7 +3946,7 @@ export const de_ExecuteActionCommand = async (
  */
 export const de_ExecuteQueryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ExecuteQueryCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3969,7 +3969,7 @@ export const de_ExecuteQueryCommand = async (
  */
 export const de_GetAssetPropertyAggregatesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetAssetPropertyAggregatesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3991,7 +3991,7 @@ export const de_GetAssetPropertyAggregatesCommand = async (
  */
 export const de_GetAssetPropertyValueCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetAssetPropertyValueCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4012,7 +4012,7 @@ export const de_GetAssetPropertyValueCommand = async (
  */
 export const de_GetAssetPropertyValueHistoryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetAssetPropertyValueHistoryCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4034,7 +4034,7 @@ export const de_GetAssetPropertyValueHistoryCommand = async (
  */
 export const de_GetInterpolatedAssetPropertyValuesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetInterpolatedAssetPropertyValuesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4056,7 +4056,7 @@ export const de_GetInterpolatedAssetPropertyValuesCommand = async (
  */
 export const de_ListAccessPoliciesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAccessPoliciesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4078,7 +4078,7 @@ export const de_ListAccessPoliciesCommand = async (
  */
 export const de_ListActionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListActionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4100,7 +4100,7 @@ export const de_ListActionsCommand = async (
  */
 export const de_ListAssetModelCompositeModelsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAssetModelCompositeModelsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4122,7 +4122,7 @@ export const de_ListAssetModelCompositeModelsCommand = async (
  */
 export const de_ListAssetModelPropertiesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAssetModelPropertiesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4144,7 +4144,7 @@ export const de_ListAssetModelPropertiesCommand = async (
  */
 export const de_ListAssetModelsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAssetModelsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4166,7 +4166,7 @@ export const de_ListAssetModelsCommand = async (
  */
 export const de_ListAssetPropertiesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAssetPropertiesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4188,7 +4188,7 @@ export const de_ListAssetPropertiesCommand = async (
  */
 export const de_ListAssetRelationshipsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAssetRelationshipsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4210,7 +4210,7 @@ export const de_ListAssetRelationshipsCommand = async (
  */
 export const de_ListAssetsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAssetsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4232,7 +4232,7 @@ export const de_ListAssetsCommand = async (
  */
 export const de_ListAssociatedAssetsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAssociatedAssetsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4254,7 +4254,7 @@ export const de_ListAssociatedAssetsCommand = async (
  */
 export const de_ListBulkImportJobsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListBulkImportJobsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4276,7 +4276,7 @@ export const de_ListBulkImportJobsCommand = async (
  */
 export const de_ListCompositionRelationshipsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListCompositionRelationshipsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4298,7 +4298,7 @@ export const de_ListCompositionRelationshipsCommand = async (
  */
 export const de_ListDashboardsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListDashboardsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4320,7 +4320,7 @@ export const de_ListDashboardsCommand = async (
  */
 export const de_ListGatewaysCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListGatewaysCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4342,7 +4342,7 @@ export const de_ListGatewaysCommand = async (
  */
 export const de_ListPortalsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListPortalsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4364,7 +4364,7 @@ export const de_ListPortalsCommand = async (
  */
 export const de_ListProjectAssetsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListProjectAssetsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4386,7 +4386,7 @@ export const de_ListProjectAssetsCommand = async (
  */
 export const de_ListProjectsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListProjectsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4408,7 +4408,7 @@ export const de_ListProjectsCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4429,7 +4429,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_ListTimeSeriesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTimeSeriesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4451,7 +4451,7 @@ export const de_ListTimeSeriesCommand = async (
  */
 export const de_PutDefaultEncryptionConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutDefaultEncryptionConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4474,7 +4474,7 @@ export const de_PutDefaultEncryptionConfigurationCommand = async (
  */
 export const de_PutLoggingOptionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutLoggingOptionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4491,7 +4491,7 @@ export const de_PutLoggingOptionsCommand = async (
  */
 export const de_PutStorageConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutStorageConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4518,7 +4518,7 @@ export const de_PutStorageConfigurationCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4535,7 +4535,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4552,7 +4552,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateAccessPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateAccessPolicyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4569,7 +4569,7 @@ export const de_UpdateAccessPolicyCommand = async (
  */
 export const de_UpdateAssetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateAssetCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4590,7 +4590,7 @@ export const de_UpdateAssetCommand = async (
  */
 export const de_UpdateAssetModelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateAssetModelCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4611,7 +4611,7 @@ export const de_UpdateAssetModelCommand = async (
  */
 export const de_UpdateAssetModelCompositeModelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateAssetModelCompositeModelCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4633,7 +4633,7 @@ export const de_UpdateAssetModelCompositeModelCommand = async (
  */
 export const de_UpdateAssetPropertyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateAssetPropertyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4650,7 +4650,7 @@ export const de_UpdateAssetPropertyCommand = async (
  */
 export const de_UpdateDashboardCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateDashboardCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4667,7 +4667,7 @@ export const de_UpdateDashboardCommand = async (
  */
 export const de_UpdateGatewayCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateGatewayCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4684,7 +4684,7 @@ export const de_UpdateGatewayCommand = async (
  */
 export const de_UpdateGatewayCapabilityConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateGatewayCapabilityConfigurationCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4706,7 +4706,7 @@ export const de_UpdateGatewayCapabilityConfigurationCommand = async (
  */
 export const de_UpdatePortalCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdatePortalCommandOutput> => {
   if (output.statusCode !== 202 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4727,7 +4727,7 @@ export const de_UpdatePortalCommand = async (
  */
 export const de_UpdateProjectCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateProjectCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4804,7 +4804,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -4824,7 +4824,7 @@ const de_AccessDeniedExceptionRes = async (
  */
 const de_ConflictingOperationExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ConflictingOperationException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -4846,7 +4846,7 @@ const de_ConflictingOperationExceptionRes = async (
  */
 const de_InternalFailureExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalFailureException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -4866,7 +4866,7 @@ const de_InternalFailureExceptionRes = async (
  */
 const de_InvalidRequestExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidRequestException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -4886,7 +4886,7 @@ const de_InvalidRequestExceptionRes = async (
  */
 const de_LimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<LimitExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -4906,7 +4906,7 @@ const de_LimitExceededExceptionRes = async (
  */
 const de_QueryTimeoutExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<QueryTimeoutException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -4926,7 +4926,7 @@ const de_QueryTimeoutExceptionRes = async (
  */
 const de_ResourceAlreadyExistsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceAlreadyExistsException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -4948,7 +4948,7 @@ const de_ResourceAlreadyExistsExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -4968,7 +4968,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_ServiceUnavailableExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceUnavailableException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -5005,7 +5005,7 @@ const de_ThrottlingExceptionRes = async (parsedOutput: any, context: __SerdeCont
  */
 const de_TooManyTagsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyTagsException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -5026,7 +5026,7 @@ const de_TooManyTagsExceptionRes = async (
  */
 const de_UnauthorizedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UnauthorizedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -5073,7 +5073,7 @@ const de_ValidationExceptionRes = async (parsedOutput: any, context: __SerdeCont
  */
 const se_AssetModelCompositeModelDefinitions = (
   input: AssetModelCompositeModelDefinition[],
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return input
     .filter((e: any) => e != null)
@@ -5142,7 +5142,7 @@ const se_AssetPropertyValues = (input: AssetPropertyValue[], context: __SerdeCon
  */
 const se_BatchGetAssetPropertyAggregatesEntries = (
   input: BatchGetAssetPropertyAggregatesEntry[],
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return input
     .filter((e: any) => e != null)
@@ -5156,7 +5156,7 @@ const se_BatchGetAssetPropertyAggregatesEntries = (
  */
 const se_BatchGetAssetPropertyAggregatesEntry = (
   input: BatchGetAssetPropertyAggregatesEntry,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     aggregateTypes: _json,
@@ -5181,7 +5181,7 @@ const se_BatchGetAssetPropertyAggregatesEntry = (
  */
 const se_BatchGetAssetPropertyValueHistoryEntries = (
   input: BatchGetAssetPropertyValueHistoryEntry[],
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return input
     .filter((e: any) => e != null)
@@ -5195,7 +5195,7 @@ const se_BatchGetAssetPropertyValueHistoryEntries = (
  */
 const se_BatchGetAssetPropertyValueHistoryEntry = (
   input: BatchGetAssetPropertyValueHistoryEntry,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     assetId: [],
@@ -5631,7 +5631,7 @@ const de_AssociatedAssetsSummary = (output: any, context: __SerdeContext): Assoc
  */
 const de_BatchGetAssetPropertyAggregatesErrorInfo = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): BatchGetAssetPropertyAggregatesErrorInfo => {
   return take(output, {
     errorCode: __expectString,
@@ -5644,7 +5644,7 @@ const de_BatchGetAssetPropertyAggregatesErrorInfo = (
  */
 const de_BatchGetAssetPropertyAggregatesSkippedEntries = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): BatchGetAssetPropertyAggregatesSkippedEntry[] => {
   const retVal = (output || [])
     .filter((e: any) => e != null)
@@ -5659,7 +5659,7 @@ const de_BatchGetAssetPropertyAggregatesSkippedEntries = (
  */
 const de_BatchGetAssetPropertyAggregatesSkippedEntry = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): BatchGetAssetPropertyAggregatesSkippedEntry => {
   return take(output, {
     completionStatus: __expectString,
@@ -5673,7 +5673,7 @@ const de_BatchGetAssetPropertyAggregatesSkippedEntry = (
  */
 const de_BatchGetAssetPropertyAggregatesSuccessEntries = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): BatchGetAssetPropertyAggregatesSuccessEntry[] => {
   const retVal = (output || [])
     .filter((e: any) => e != null)
@@ -5688,7 +5688,7 @@ const de_BatchGetAssetPropertyAggregatesSuccessEntries = (
  */
 const de_BatchGetAssetPropertyAggregatesSuccessEntry = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): BatchGetAssetPropertyAggregatesSuccessEntry => {
   return take(output, {
     aggregatedValues: (_: any) => de_AggregatedValues(_, context),
@@ -5705,7 +5705,7 @@ const de_BatchGetAssetPropertyAggregatesSuccessEntry = (
  */
 const de_BatchGetAssetPropertyValueErrorInfo = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): BatchGetAssetPropertyValueErrorInfo => {
   return take(output, {
     errorCode: __expectString,
@@ -5722,7 +5722,7 @@ const de_BatchGetAssetPropertyValueErrorInfo = (
  */
 const de_BatchGetAssetPropertyValueHistoryErrorInfo = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): BatchGetAssetPropertyValueHistoryErrorInfo => {
   return take(output, {
     errorCode: __expectString,
@@ -5735,7 +5735,7 @@ const de_BatchGetAssetPropertyValueHistoryErrorInfo = (
  */
 const de_BatchGetAssetPropertyValueHistorySkippedEntries = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): BatchGetAssetPropertyValueHistorySkippedEntry[] => {
   const retVal = (output || [])
     .filter((e: any) => e != null)
@@ -5750,7 +5750,7 @@ const de_BatchGetAssetPropertyValueHistorySkippedEntries = (
  */
 const de_BatchGetAssetPropertyValueHistorySkippedEntry = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): BatchGetAssetPropertyValueHistorySkippedEntry => {
   return take(output, {
     completionStatus: __expectString,
@@ -5764,7 +5764,7 @@ const de_BatchGetAssetPropertyValueHistorySkippedEntry = (
  */
 const de_BatchGetAssetPropertyValueHistorySuccessEntries = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): BatchGetAssetPropertyValueHistorySuccessEntry[] => {
   const retVal = (output || [])
     .filter((e: any) => e != null)
@@ -5779,7 +5779,7 @@ const de_BatchGetAssetPropertyValueHistorySuccessEntries = (
  */
 const de_BatchGetAssetPropertyValueHistorySuccessEntry = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): BatchGetAssetPropertyValueHistorySuccessEntry => {
   return take(output, {
     assetPropertyValueHistory: (_: any) => de_AssetPropertyValueHistory(_, context),
@@ -5792,7 +5792,7 @@ const de_BatchGetAssetPropertyValueHistorySuccessEntry = (
  */
 const de_BatchGetAssetPropertyValueSkippedEntries = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): BatchGetAssetPropertyValueSkippedEntry[] => {
   const retVal = (output || [])
     .filter((e: any) => e != null)
@@ -5807,7 +5807,7 @@ const de_BatchGetAssetPropertyValueSkippedEntries = (
  */
 const de_BatchGetAssetPropertyValueSkippedEntry = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): BatchGetAssetPropertyValueSkippedEntry => {
   return take(output, {
     completionStatus: __expectString,
@@ -5821,7 +5821,7 @@ const de_BatchGetAssetPropertyValueSkippedEntry = (
  */
 const de_BatchGetAssetPropertyValueSuccessEntries = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): BatchGetAssetPropertyValueSuccessEntry[] => {
   const retVal = (output || [])
     .filter((e: any) => e != null)
@@ -5836,7 +5836,7 @@ const de_BatchGetAssetPropertyValueSuccessEntries = (
  */
 const de_BatchGetAssetPropertyValueSuccessEntry = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): BatchGetAssetPropertyValueSuccessEntry => {
   return take(output, {
     assetPropertyValue: (_: any) => de_AssetPropertyValue(_, context),

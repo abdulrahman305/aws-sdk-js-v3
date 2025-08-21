@@ -44,7 +44,7 @@ export interface CognitoIdentityProviderHttpAuthSchemeParametersProvider
 export const defaultCognitoIdentityProviderHttpAuthSchemeParametersProvider = async (
   config: CognitoIdentityProviderClientResolvedConfig,
   context: HandlerExecutionContext,
-  input: object
+  input: object,
 ): Promise<CognitoIdentityProviderHttpAuthSchemeParameters> => {
   return {
     operation: getSmithyContext(context).operation as string,
@@ -57,7 +57,7 @@ export const defaultCognitoIdentityProviderHttpAuthSchemeParametersProvider = as
 };
 
 function createAwsAuthSigv4HttpAuthOption(
-  authParameters: CognitoIdentityProviderHttpAuthSchemeParameters
+  authParameters: CognitoIdentityProviderHttpAuthSchemeParameters,
 ): HttpAuthOption {
   return {
     schemeId: "aws.auth#sigv4",
@@ -78,7 +78,7 @@ function createAwsAuthSigv4HttpAuthOption(
 }
 
 function createSmithyApiNoAuthHttpAuthOption(
-  authParameters: CognitoIdentityProviderHttpAuthSchemeParameters
+  authParameters: CognitoIdentityProviderHttpAuthSchemeParameters,
 ): HttpAuthOption {
   return {
     schemeId: "smithy.api#noAuth",
@@ -95,7 +95,7 @@ export interface CognitoIdentityProviderHttpAuthSchemeProvider
  * @internal
  */
 export const defaultCognitoIdentityProviderHttpAuthSchemeProvider: CognitoIdentityProviderHttpAuthSchemeProvider = (
-  authParameters
+  authParameters,
 ) => {
   const options: HttpAuthOption[] = [];
   switch (authParameters.operation) {
@@ -248,7 +248,7 @@ export interface HttpAuthSchemeResolvedConfig extends AwsSdkSigV4AuthResolvedCon
  * @internal
  */
 export const resolveHttpAuthSchemeConfig = <T>(
-  config: T & HttpAuthSchemeInputConfig & AwsSdkSigV4PreviouslyResolved
+  config: T & HttpAuthSchemeInputConfig & AwsSdkSigV4PreviouslyResolved,
 ): T & HttpAuthSchemeResolvedConfig => {
   const config_0 = resolveAwsSdkSigV4Config(config);
   return {

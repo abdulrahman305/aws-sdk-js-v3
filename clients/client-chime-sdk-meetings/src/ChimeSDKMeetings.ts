@@ -97,16 +97,16 @@ export interface ChimeSDKMeetings {
    */
   batchCreateAttendee(
     args: BatchCreateAttendeeCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<BatchCreateAttendeeCommandOutput>;
   batchCreateAttendee(
     args: BatchCreateAttendeeCommandInput,
-    cb: (err: any, data?: BatchCreateAttendeeCommandOutput) => void
+    cb: (err: any, data?: BatchCreateAttendeeCommandOutput) => void,
   ): void;
   batchCreateAttendee(
     args: BatchCreateAttendeeCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: BatchCreateAttendeeCommandOutput) => void
+    cb: (err: any, data?: BatchCreateAttendeeCommandOutput) => void,
   ): void;
 
   /**
@@ -114,16 +114,16 @@ export interface ChimeSDKMeetings {
    */
   batchUpdateAttendeeCapabilitiesExcept(
     args: BatchUpdateAttendeeCapabilitiesExceptCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<BatchUpdateAttendeeCapabilitiesExceptCommandOutput>;
   batchUpdateAttendeeCapabilitiesExcept(
     args: BatchUpdateAttendeeCapabilitiesExceptCommandInput,
-    cb: (err: any, data?: BatchUpdateAttendeeCapabilitiesExceptCommandOutput) => void
+    cb: (err: any, data?: BatchUpdateAttendeeCapabilitiesExceptCommandOutput) => void,
   ): void;
   batchUpdateAttendeeCapabilitiesExcept(
     args: BatchUpdateAttendeeCapabilitiesExceptCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: BatchUpdateAttendeeCapabilitiesExceptCommandOutput) => void
+    cb: (err: any, data?: BatchUpdateAttendeeCapabilitiesExceptCommandOutput) => void,
   ): void;
 
   /**
@@ -131,13 +131,13 @@ export interface ChimeSDKMeetings {
    */
   createAttendee(
     args: CreateAttendeeCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateAttendeeCommandOutput>;
   createAttendee(args: CreateAttendeeCommandInput, cb: (err: any, data?: CreateAttendeeCommandOutput) => void): void;
   createAttendee(
     args: CreateAttendeeCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateAttendeeCommandOutput) => void
+    cb: (err: any, data?: CreateAttendeeCommandOutput) => void,
   ): void;
 
   /**
@@ -148,7 +148,7 @@ export interface ChimeSDKMeetings {
   createMeeting(
     args: CreateMeetingCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateMeetingCommandOutput) => void
+    cb: (err: any, data?: CreateMeetingCommandOutput) => void,
   ): void;
 
   /**
@@ -156,16 +156,16 @@ export interface ChimeSDKMeetings {
    */
   createMeetingWithAttendees(
     args: CreateMeetingWithAttendeesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateMeetingWithAttendeesCommandOutput>;
   createMeetingWithAttendees(
     args: CreateMeetingWithAttendeesCommandInput,
-    cb: (err: any, data?: CreateMeetingWithAttendeesCommandOutput) => void
+    cb: (err: any, data?: CreateMeetingWithAttendeesCommandOutput) => void,
   ): void;
   createMeetingWithAttendees(
     args: CreateMeetingWithAttendeesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateMeetingWithAttendeesCommandOutput) => void
+    cb: (err: any, data?: CreateMeetingWithAttendeesCommandOutput) => void,
   ): void;
 
   /**
@@ -173,13 +173,13 @@ export interface ChimeSDKMeetings {
    */
   deleteAttendee(
     args: DeleteAttendeeCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteAttendeeCommandOutput>;
   deleteAttendee(args: DeleteAttendeeCommandInput, cb: (err: any, data?: DeleteAttendeeCommandOutput) => void): void;
   deleteAttendee(
     args: DeleteAttendeeCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteAttendeeCommandOutput) => void
+    cb: (err: any, data?: DeleteAttendeeCommandOutput) => void,
   ): void;
 
   /**
@@ -190,7 +190,7 @@ export interface ChimeSDKMeetings {
   deleteMeeting(
     args: DeleteMeetingCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteMeetingCommandOutput) => void
+    cb: (err: any, data?: DeleteMeetingCommandOutput) => void,
   ): void;
 
   /**
@@ -201,7 +201,7 @@ export interface ChimeSDKMeetings {
   getAttendee(
     args: GetAttendeeCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetAttendeeCommandOutput) => void
+    cb: (err: any, data?: GetAttendeeCommandOutput) => void,
   ): void;
 
   /**
@@ -212,7 +212,7 @@ export interface ChimeSDKMeetings {
   getMeeting(
     args: GetMeetingCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetMeetingCommandOutput) => void
+    cb: (err: any, data?: GetMeetingCommandOutput) => void,
   ): void;
 
   /**
@@ -223,7 +223,7 @@ export interface ChimeSDKMeetings {
   listAttendees(
     args: ListAttendeesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListAttendeesCommandOutput) => void
+    cb: (err: any, data?: ListAttendeesCommandOutput) => void,
   ): void;
 
   /**
@@ -231,16 +231,16 @@ export interface ChimeSDKMeetings {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -248,16 +248,16 @@ export interface ChimeSDKMeetings {
    */
   startMeetingTranscription(
     args: StartMeetingTranscriptionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartMeetingTranscriptionCommandOutput>;
   startMeetingTranscription(
     args: StartMeetingTranscriptionCommandInput,
-    cb: (err: any, data?: StartMeetingTranscriptionCommandOutput) => void
+    cb: (err: any, data?: StartMeetingTranscriptionCommandOutput) => void,
   ): void;
   startMeetingTranscription(
     args: StartMeetingTranscriptionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartMeetingTranscriptionCommandOutput) => void
+    cb: (err: any, data?: StartMeetingTranscriptionCommandOutput) => void,
   ): void;
 
   /**
@@ -265,16 +265,16 @@ export interface ChimeSDKMeetings {
    */
   stopMeetingTranscription(
     args: StopMeetingTranscriptionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StopMeetingTranscriptionCommandOutput>;
   stopMeetingTranscription(
     args: StopMeetingTranscriptionCommandInput,
-    cb: (err: any, data?: StopMeetingTranscriptionCommandOutput) => void
+    cb: (err: any, data?: StopMeetingTranscriptionCommandOutput) => void,
   ): void;
   stopMeetingTranscription(
     args: StopMeetingTranscriptionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StopMeetingTranscriptionCommandOutput) => void
+    cb: (err: any, data?: StopMeetingTranscriptionCommandOutput) => void,
   ): void;
 
   /**
@@ -285,7 +285,7 @@ export interface ChimeSDKMeetings {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -296,7 +296,7 @@ export interface ChimeSDKMeetings {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -304,16 +304,16 @@ export interface ChimeSDKMeetings {
    */
   updateAttendeeCapabilities(
     args: UpdateAttendeeCapabilitiesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateAttendeeCapabilitiesCommandOutput>;
   updateAttendeeCapabilities(
     args: UpdateAttendeeCapabilitiesCommandInput,
-    cb: (err: any, data?: UpdateAttendeeCapabilitiesCommandOutput) => void
+    cb: (err: any, data?: UpdateAttendeeCapabilitiesCommandOutput) => void,
   ): void;
   updateAttendeeCapabilities(
     args: UpdateAttendeeCapabilitiesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateAttendeeCapabilitiesCommandOutput) => void
+    cb: (err: any, data?: UpdateAttendeeCapabilitiesCommandOutput) => void,
   ): void;
 }
 

@@ -87,16 +87,16 @@ export interface MarketplaceCatalog {
    */
   batchDescribeEntities(
     args: BatchDescribeEntitiesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<BatchDescribeEntitiesCommandOutput>;
   batchDescribeEntities(
     args: BatchDescribeEntitiesCommandInput,
-    cb: (err: any, data?: BatchDescribeEntitiesCommandOutput) => void
+    cb: (err: any, data?: BatchDescribeEntitiesCommandOutput) => void,
   ): void;
   batchDescribeEntities(
     args: BatchDescribeEntitiesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: BatchDescribeEntitiesCommandOutput) => void
+    cb: (err: any, data?: BatchDescribeEntitiesCommandOutput) => void,
   ): void;
 
   /**
@@ -104,13 +104,13 @@ export interface MarketplaceCatalog {
    */
   cancelChangeSet(
     args: CancelChangeSetCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CancelChangeSetCommandOutput>;
   cancelChangeSet(args: CancelChangeSetCommandInput, cb: (err: any, data?: CancelChangeSetCommandOutput) => void): void;
   cancelChangeSet(
     args: CancelChangeSetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CancelChangeSetCommandOutput) => void
+    cb: (err: any, data?: CancelChangeSetCommandOutput) => void,
   ): void;
 
   /**
@@ -118,16 +118,16 @@ export interface MarketplaceCatalog {
    */
   deleteResourcePolicy(
     args: DeleteResourcePolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteResourcePolicyCommandOutput>;
   deleteResourcePolicy(
     args: DeleteResourcePolicyCommandInput,
-    cb: (err: any, data?: DeleteResourcePolicyCommandOutput) => void
+    cb: (err: any, data?: DeleteResourcePolicyCommandOutput) => void,
   ): void;
   deleteResourcePolicy(
     args: DeleteResourcePolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteResourcePolicyCommandOutput) => void
+    cb: (err: any, data?: DeleteResourcePolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -135,16 +135,16 @@ export interface MarketplaceCatalog {
    */
   describeChangeSet(
     args: DescribeChangeSetCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeChangeSetCommandOutput>;
   describeChangeSet(
     args: DescribeChangeSetCommandInput,
-    cb: (err: any, data?: DescribeChangeSetCommandOutput) => void
+    cb: (err: any, data?: DescribeChangeSetCommandOutput) => void,
   ): void;
   describeChangeSet(
     args: DescribeChangeSetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeChangeSetCommandOutput) => void
+    cb: (err: any, data?: DescribeChangeSetCommandOutput) => void,
   ): void;
 
   /**
@@ -152,13 +152,13 @@ export interface MarketplaceCatalog {
    */
   describeEntity(
     args: DescribeEntityCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeEntityCommandOutput>;
   describeEntity(args: DescribeEntityCommandInput, cb: (err: any, data?: DescribeEntityCommandOutput) => void): void;
   describeEntity(
     args: DescribeEntityCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeEntityCommandOutput) => void
+    cb: (err: any, data?: DescribeEntityCommandOutput) => void,
   ): void;
 
   /**
@@ -166,16 +166,16 @@ export interface MarketplaceCatalog {
    */
   getResourcePolicy(
     args: GetResourcePolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetResourcePolicyCommandOutput>;
   getResourcePolicy(
     args: GetResourcePolicyCommandInput,
-    cb: (err: any, data?: GetResourcePolicyCommandOutput) => void
+    cb: (err: any, data?: GetResourcePolicyCommandOutput) => void,
   ): void;
   getResourcePolicy(
     args: GetResourcePolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetResourcePolicyCommandOutput) => void
+    cb: (err: any, data?: GetResourcePolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -183,13 +183,13 @@ export interface MarketplaceCatalog {
    */
   listChangeSets(
     args: ListChangeSetsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListChangeSetsCommandOutput>;
   listChangeSets(args: ListChangeSetsCommandInput, cb: (err: any, data?: ListChangeSetsCommandOutput) => void): void;
   listChangeSets(
     args: ListChangeSetsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListChangeSetsCommandOutput) => void
+    cb: (err: any, data?: ListChangeSetsCommandOutput) => void,
   ): void;
 
   /**
@@ -200,7 +200,7 @@ export interface MarketplaceCatalog {
   listEntities(
     args: ListEntitiesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListEntitiesCommandOutput) => void
+    cb: (err: any, data?: ListEntitiesCommandOutput) => void,
   ): void;
 
   /**
@@ -208,16 +208,16 @@ export interface MarketplaceCatalog {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -225,16 +225,16 @@ export interface MarketplaceCatalog {
    */
   putResourcePolicy(
     args: PutResourcePolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutResourcePolicyCommandOutput>;
   putResourcePolicy(
     args: PutResourcePolicyCommandInput,
-    cb: (err: any, data?: PutResourcePolicyCommandOutput) => void
+    cb: (err: any, data?: PutResourcePolicyCommandOutput) => void,
   ): void;
   putResourcePolicy(
     args: PutResourcePolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutResourcePolicyCommandOutput) => void
+    cb: (err: any, data?: PutResourcePolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -242,13 +242,13 @@ export interface MarketplaceCatalog {
    */
   startChangeSet(
     args: StartChangeSetCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartChangeSetCommandOutput>;
   startChangeSet(args: StartChangeSetCommandInput, cb: (err: any, data?: StartChangeSetCommandOutput) => void): void;
   startChangeSet(
     args: StartChangeSetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartChangeSetCommandOutput) => void
+    cb: (err: any, data?: StartChangeSetCommandOutput) => void,
   ): void;
 
   /**
@@ -259,7 +259,7 @@ export interface MarketplaceCatalog {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -270,7 +270,7 @@ export interface MarketplaceCatalog {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 }
 

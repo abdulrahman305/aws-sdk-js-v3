@@ -36,7 +36,7 @@ import {
  */
 export const se_PredictCommand = async (
   input: PredictCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("Predict");
   let body: any;
@@ -49,7 +49,7 @@ export const se_PredictCommand = async (
  */
 export const de_PredictCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PredictCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -104,7 +104,7 @@ const de_CommandError = async (output: __HttpResponse, context: __SerdeContext):
  */
 const de_InternalServerExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -120,7 +120,7 @@ const de_InternalServerExceptionRes = async (
  */
 const de_InvalidInputExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidInputException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -136,7 +136,7 @@ const de_InvalidInputExceptionRes = async (
  */
 const de_LimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<LimitExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -152,7 +152,7 @@ const de_LimitExceededExceptionRes = async (
  */
 const de_PredictorNotMountedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PredictorNotMountedException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -168,7 +168,7 @@ const de_PredictorNotMountedExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -220,13 +220,16 @@ const de_PredictOutput = (output: any, context: __SerdeContext): PredictOutput =
  * deserializeAws_json1_1ScoreValuePerLabelMap
  */
 const de_ScoreValuePerLabelMap = (output: any, context: __SerdeContext): Record<string, number> => {
-  return Object.entries(output).reduce((acc: Record<string, number>, [key, value]: [string, any]) => {
-    if (value === null) {
+  return Object.entries(output).reduce(
+    (acc: Record<string, number>, [key, value]: [string, any]) => {
+      if (value === null) {
+        return acc;
+      }
+      acc[key as string] = __limitedParseFloat32(value) as any;
       return acc;
-    }
-    acc[key as string] = __limitedParseFloat32(value) as any;
-    return acc;
-  }, {} as Record<string, number>);
+    },
+    {} as Record<string, number>,
+  );
 };
 
 const deserializeMetadata = (output: __HttpResponse): __ResponseMetadata => ({
@@ -247,7 +250,7 @@ const buildHttpRpcRequest = async (
   headers: __HeaderBag,
   path: string,
   resolvedHostname: string | undefined,
-  body: any
+  body: any,
 ): Promise<__HttpRequest> => {
   const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
   const contents: any = {

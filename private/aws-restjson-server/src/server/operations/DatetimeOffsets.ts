@@ -60,14 +60,14 @@ export class DatetimeOffsetsSerializer
 
 export const getDatetimeOffsetsHandler = <Context>(
   operation: __Operation<DatetimeOffsetsServerInput, DatetimeOffsetsServerOutput, Context>,
-  customizer: __ValidationCustomizer<"DatetimeOffsets">
+  customizer: __ValidationCustomizer<"DatetimeOffsets">,
 ): __ServiceHandler<Context, __HttpRequest, __HttpResponse> => {
   const mux = new httpbinding.HttpBindingMux<"RestJson", "DatetimeOffsets">([
     new httpbinding.UriSpec<"RestJson", "DatetimeOffsets">(
       "POST",
       [{ type: "path_literal", value: "DatetimeOffsets" }],
       [],
-      { service: "RestJson", operation: "DatetimeOffsets" }
+      { service: "RestJson", operation: "DatetimeOffsets" },
     ),
   ]);
   return new DatetimeOffsetsHandler(
@@ -75,7 +75,7 @@ export const getDatetimeOffsetsHandler = <Context>(
     mux,
     new DatetimeOffsetsSerializer(),
     serializeFrameworkException,
-    customizer
+    customizer,
   );
 };
 
@@ -96,7 +96,7 @@ async function handle<S, O extends keyof S & string, Context>(
   operation: __Operation<__OperationInput<S[O]>, __OperationOutput<S[O]>, Context>,
   serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
   validationFn: (input: __OperationInput<S[O]>) => __ValidationFailure[],
-  validationCustomizer: __ValidationCustomizer<O>
+  validationCustomizer: __ValidationCustomizer<O>,
 ): Promise<__HttpResponse> {
   let input;
   try {
@@ -138,7 +138,7 @@ export class DatetimeOffsetsHandler<Context> implements __ServiceHandler<Context
   >;
   private readonly serializeFrameworkException: (
     e: __SmithyFrameworkException,
-    ctx: __ServerSerdeContext
+    ctx: __ServerSerdeContext,
   ) => Promise<__HttpResponse>;
   private readonly validationCustomizer: __ValidationCustomizer<"DatetimeOffsets">;
   /**
@@ -155,7 +155,7 @@ export class DatetimeOffsetsHandler<Context> implements __ServiceHandler<Context
     mux: __Mux<"RestJson", "DatetimeOffsets">,
     serializer: __OperationSerializer<RestJsonService<Context>, "DatetimeOffsets", DatetimeOffsetsErrors>,
     serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
-    validationCustomizer: __ValidationCustomizer<"DatetimeOffsets">
+    validationCustomizer: __ValidationCustomizer<"DatetimeOffsets">,
   ) {
     this.operation = operation;
     this.mux = mux;
@@ -167,7 +167,7 @@ export class DatetimeOffsetsHandler<Context> implements __ServiceHandler<Context
     const target = this.mux.match(request);
     if (target === undefined) {
       console.log(
-        "Received a request that did not match aws.protocoltests.restjson#RestJson.DatetimeOffsets. This indicates a misconfiguration."
+        "Received a request that did not match aws.protocoltests.restjson#RestJson.DatetimeOffsets. This indicates a misconfiguration.",
       );
       return this.serializeFrameworkException(new __InternalFailureException(), serdeContextBase);
     }
@@ -179,7 +179,7 @@ export class DatetimeOffsetsHandler<Context> implements __ServiceHandler<Context
       this.operation,
       this.serializeFrameworkException,
       DatetimeOffsetsServerInput.validate,
-      this.validationCustomizer
+      this.validationCustomizer,
     );
   }
 }

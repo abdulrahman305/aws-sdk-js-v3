@@ -236,7 +236,7 @@ export interface CloudWatch {
   deleteAlarms(
     args: DeleteAlarmsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteAlarmsCommandOutput) => void
+    cb: (err: any, data?: DeleteAlarmsCommandOutput) => void,
   ): void;
 
   /**
@@ -245,16 +245,16 @@ export interface CloudWatch {
   deleteAnomalyDetector(): Promise<DeleteAnomalyDetectorCommandOutput>;
   deleteAnomalyDetector(
     args: DeleteAnomalyDetectorCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteAnomalyDetectorCommandOutput>;
   deleteAnomalyDetector(
     args: DeleteAnomalyDetectorCommandInput,
-    cb: (err: any, data?: DeleteAnomalyDetectorCommandOutput) => void
+    cb: (err: any, data?: DeleteAnomalyDetectorCommandOutput) => void,
   ): void;
   deleteAnomalyDetector(
     args: DeleteAnomalyDetectorCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteAnomalyDetectorCommandOutput) => void
+    cb: (err: any, data?: DeleteAnomalyDetectorCommandOutput) => void,
   ): void;
 
   /**
@@ -262,16 +262,16 @@ export interface CloudWatch {
    */
   deleteDashboards(
     args: DeleteDashboardsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteDashboardsCommandOutput>;
   deleteDashboards(
     args: DeleteDashboardsCommandInput,
-    cb: (err: any, data?: DeleteDashboardsCommandOutput) => void
+    cb: (err: any, data?: DeleteDashboardsCommandOutput) => void,
   ): void;
   deleteDashboards(
     args: DeleteDashboardsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteDashboardsCommandOutput) => void
+    cb: (err: any, data?: DeleteDashboardsCommandOutput) => void,
   ): void;
 
   /**
@@ -279,16 +279,16 @@ export interface CloudWatch {
    */
   deleteInsightRules(
     args: DeleteInsightRulesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteInsightRulesCommandOutput>;
   deleteInsightRules(
     args: DeleteInsightRulesCommandInput,
-    cb: (err: any, data?: DeleteInsightRulesCommandOutput) => void
+    cb: (err: any, data?: DeleteInsightRulesCommandOutput) => void,
   ): void;
   deleteInsightRules(
     args: DeleteInsightRulesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteInsightRulesCommandOutput) => void
+    cb: (err: any, data?: DeleteInsightRulesCommandOutput) => void,
   ): void;
 
   /**
@@ -296,16 +296,16 @@ export interface CloudWatch {
    */
   deleteMetricStream(
     args: DeleteMetricStreamCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteMetricStreamCommandOutput>;
   deleteMetricStream(
     args: DeleteMetricStreamCommandInput,
-    cb: (err: any, data?: DeleteMetricStreamCommandOutput) => void
+    cb: (err: any, data?: DeleteMetricStreamCommandOutput) => void,
   ): void;
   deleteMetricStream(
     args: DeleteMetricStreamCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteMetricStreamCommandOutput) => void
+    cb: (err: any, data?: DeleteMetricStreamCommandOutput) => void,
   ): void;
 
   /**
@@ -314,16 +314,16 @@ export interface CloudWatch {
   describeAlarmHistory(): Promise<DescribeAlarmHistoryCommandOutput>;
   describeAlarmHistory(
     args: DescribeAlarmHistoryCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeAlarmHistoryCommandOutput>;
   describeAlarmHistory(
     args: DescribeAlarmHistoryCommandInput,
-    cb: (err: any, data?: DescribeAlarmHistoryCommandOutput) => void
+    cb: (err: any, data?: DescribeAlarmHistoryCommandOutput) => void,
   ): void;
   describeAlarmHistory(
     args: DescribeAlarmHistoryCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeAlarmHistoryCommandOutput) => void
+    cb: (err: any, data?: DescribeAlarmHistoryCommandOutput) => void,
   ): void;
 
   /**
@@ -332,13 +332,13 @@ export interface CloudWatch {
   describeAlarms(): Promise<DescribeAlarmsCommandOutput>;
   describeAlarms(
     args: DescribeAlarmsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeAlarmsCommandOutput>;
   describeAlarms(args: DescribeAlarmsCommandInput, cb: (err: any, data?: DescribeAlarmsCommandOutput) => void): void;
   describeAlarms(
     args: DescribeAlarmsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeAlarmsCommandOutput) => void
+    cb: (err: any, data?: DescribeAlarmsCommandOutput) => void,
   ): void;
 
   /**
@@ -346,16 +346,16 @@ export interface CloudWatch {
    */
   describeAlarmsForMetric(
     args: DescribeAlarmsForMetricCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeAlarmsForMetricCommandOutput>;
   describeAlarmsForMetric(
     args: DescribeAlarmsForMetricCommandInput,
-    cb: (err: any, data?: DescribeAlarmsForMetricCommandOutput) => void
+    cb: (err: any, data?: DescribeAlarmsForMetricCommandOutput) => void,
   ): void;
   describeAlarmsForMetric(
     args: DescribeAlarmsForMetricCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeAlarmsForMetricCommandOutput) => void
+    cb: (err: any, data?: DescribeAlarmsForMetricCommandOutput) => void,
   ): void;
 
   /**
@@ -364,16 +364,16 @@ export interface CloudWatch {
   describeAnomalyDetectors(): Promise<DescribeAnomalyDetectorsCommandOutput>;
   describeAnomalyDetectors(
     args: DescribeAnomalyDetectorsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeAnomalyDetectorsCommandOutput>;
   describeAnomalyDetectors(
     args: DescribeAnomalyDetectorsCommandInput,
-    cb: (err: any, data?: DescribeAnomalyDetectorsCommandOutput) => void
+    cb: (err: any, data?: DescribeAnomalyDetectorsCommandOutput) => void,
   ): void;
   describeAnomalyDetectors(
     args: DescribeAnomalyDetectorsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeAnomalyDetectorsCommandOutput) => void
+    cb: (err: any, data?: DescribeAnomalyDetectorsCommandOutput) => void,
   ): void;
 
   /**
@@ -382,16 +382,16 @@ export interface CloudWatch {
   describeInsightRules(): Promise<DescribeInsightRulesCommandOutput>;
   describeInsightRules(
     args: DescribeInsightRulesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeInsightRulesCommandOutput>;
   describeInsightRules(
     args: DescribeInsightRulesCommandInput,
-    cb: (err: any, data?: DescribeInsightRulesCommandOutput) => void
+    cb: (err: any, data?: DescribeInsightRulesCommandOutput) => void,
   ): void;
   describeInsightRules(
     args: DescribeInsightRulesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeInsightRulesCommandOutput) => void
+    cb: (err: any, data?: DescribeInsightRulesCommandOutput) => void,
   ): void;
 
   /**
@@ -399,16 +399,16 @@ export interface CloudWatch {
    */
   disableAlarmActions(
     args: DisableAlarmActionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DisableAlarmActionsCommandOutput>;
   disableAlarmActions(
     args: DisableAlarmActionsCommandInput,
-    cb: (err: any, data?: DisableAlarmActionsCommandOutput) => void
+    cb: (err: any, data?: DisableAlarmActionsCommandOutput) => void,
   ): void;
   disableAlarmActions(
     args: DisableAlarmActionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DisableAlarmActionsCommandOutput) => void
+    cb: (err: any, data?: DisableAlarmActionsCommandOutput) => void,
   ): void;
 
   /**
@@ -416,16 +416,16 @@ export interface CloudWatch {
    */
   disableInsightRules(
     args: DisableInsightRulesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DisableInsightRulesCommandOutput>;
   disableInsightRules(
     args: DisableInsightRulesCommandInput,
-    cb: (err: any, data?: DisableInsightRulesCommandOutput) => void
+    cb: (err: any, data?: DisableInsightRulesCommandOutput) => void,
   ): void;
   disableInsightRules(
     args: DisableInsightRulesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DisableInsightRulesCommandOutput) => void
+    cb: (err: any, data?: DisableInsightRulesCommandOutput) => void,
   ): void;
 
   /**
@@ -433,16 +433,16 @@ export interface CloudWatch {
    */
   enableAlarmActions(
     args: EnableAlarmActionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<EnableAlarmActionsCommandOutput>;
   enableAlarmActions(
     args: EnableAlarmActionsCommandInput,
-    cb: (err: any, data?: EnableAlarmActionsCommandOutput) => void
+    cb: (err: any, data?: EnableAlarmActionsCommandOutput) => void,
   ): void;
   enableAlarmActions(
     args: EnableAlarmActionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: EnableAlarmActionsCommandOutput) => void
+    cb: (err: any, data?: EnableAlarmActionsCommandOutput) => void,
   ): void;
 
   /**
@@ -450,16 +450,16 @@ export interface CloudWatch {
    */
   enableInsightRules(
     args: EnableInsightRulesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<EnableInsightRulesCommandOutput>;
   enableInsightRules(
     args: EnableInsightRulesCommandInput,
-    cb: (err: any, data?: EnableInsightRulesCommandOutput) => void
+    cb: (err: any, data?: EnableInsightRulesCommandOutput) => void,
   ): void;
   enableInsightRules(
     args: EnableInsightRulesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: EnableInsightRulesCommandOutput) => void
+    cb: (err: any, data?: EnableInsightRulesCommandOutput) => void,
   ): void;
 
   /**
@@ -470,7 +470,7 @@ export interface CloudWatch {
   getDashboard(
     args: GetDashboardCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetDashboardCommandOutput) => void
+    cb: (err: any, data?: GetDashboardCommandOutput) => void,
   ): void;
 
   /**
@@ -478,16 +478,16 @@ export interface CloudWatch {
    */
   getInsightRuleReport(
     args: GetInsightRuleReportCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetInsightRuleReportCommandOutput>;
   getInsightRuleReport(
     args: GetInsightRuleReportCommandInput,
-    cb: (err: any, data?: GetInsightRuleReportCommandOutput) => void
+    cb: (err: any, data?: GetInsightRuleReportCommandOutput) => void,
   ): void;
   getInsightRuleReport(
     args: GetInsightRuleReportCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetInsightRuleReportCommandOutput) => void
+    cb: (err: any, data?: GetInsightRuleReportCommandOutput) => void,
   ): void;
 
   /**
@@ -498,7 +498,7 @@ export interface CloudWatch {
   getMetricData(
     args: GetMetricDataCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetMetricDataCommandOutput) => void
+    cb: (err: any, data?: GetMetricDataCommandOutput) => void,
   ): void;
 
   /**
@@ -506,16 +506,16 @@ export interface CloudWatch {
    */
   getMetricStatistics(
     args: GetMetricStatisticsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetMetricStatisticsCommandOutput>;
   getMetricStatistics(
     args: GetMetricStatisticsCommandInput,
-    cb: (err: any, data?: GetMetricStatisticsCommandOutput) => void
+    cb: (err: any, data?: GetMetricStatisticsCommandOutput) => void,
   ): void;
   getMetricStatistics(
     args: GetMetricStatisticsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetMetricStatisticsCommandOutput) => void
+    cb: (err: any, data?: GetMetricStatisticsCommandOutput) => void,
   ): void;
 
   /**
@@ -523,13 +523,13 @@ export interface CloudWatch {
    */
   getMetricStream(
     args: GetMetricStreamCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetMetricStreamCommandOutput>;
   getMetricStream(args: GetMetricStreamCommandInput, cb: (err: any, data?: GetMetricStreamCommandOutput) => void): void;
   getMetricStream(
     args: GetMetricStreamCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetMetricStreamCommandOutput) => void
+    cb: (err: any, data?: GetMetricStreamCommandOutput) => void,
   ): void;
 
   /**
@@ -537,16 +537,16 @@ export interface CloudWatch {
    */
   getMetricWidgetImage(
     args: GetMetricWidgetImageCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetMetricWidgetImageCommandOutput>;
   getMetricWidgetImage(
     args: GetMetricWidgetImageCommandInput,
-    cb: (err: any, data?: GetMetricWidgetImageCommandOutput) => void
+    cb: (err: any, data?: GetMetricWidgetImageCommandOutput) => void,
   ): void;
   getMetricWidgetImage(
     args: GetMetricWidgetImageCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetMetricWidgetImageCommandOutput) => void
+    cb: (err: any, data?: GetMetricWidgetImageCommandOutput) => void,
   ): void;
 
   /**
@@ -555,13 +555,13 @@ export interface CloudWatch {
   listDashboards(): Promise<ListDashboardsCommandOutput>;
   listDashboards(
     args: ListDashboardsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListDashboardsCommandOutput>;
   listDashboards(args: ListDashboardsCommandInput, cb: (err: any, data?: ListDashboardsCommandOutput) => void): void;
   listDashboards(
     args: ListDashboardsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListDashboardsCommandOutput) => void
+    cb: (err: any, data?: ListDashboardsCommandOutput) => void,
   ): void;
 
   /**
@@ -569,16 +569,16 @@ export interface CloudWatch {
    */
   listManagedInsightRules(
     args: ListManagedInsightRulesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListManagedInsightRulesCommandOutput>;
   listManagedInsightRules(
     args: ListManagedInsightRulesCommandInput,
-    cb: (err: any, data?: ListManagedInsightRulesCommandOutput) => void
+    cb: (err: any, data?: ListManagedInsightRulesCommandOutput) => void,
   ): void;
   listManagedInsightRules(
     args: ListManagedInsightRulesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListManagedInsightRulesCommandOutput) => void
+    cb: (err: any, data?: ListManagedInsightRulesCommandOutput) => void,
   ): void;
 
   /**
@@ -590,7 +590,7 @@ export interface CloudWatch {
   listMetrics(
     args: ListMetricsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListMetricsCommandOutput) => void
+    cb: (err: any, data?: ListMetricsCommandOutput) => void,
   ): void;
 
   /**
@@ -599,16 +599,16 @@ export interface CloudWatch {
   listMetricStreams(): Promise<ListMetricStreamsCommandOutput>;
   listMetricStreams(
     args: ListMetricStreamsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListMetricStreamsCommandOutput>;
   listMetricStreams(
     args: ListMetricStreamsCommandInput,
-    cb: (err: any, data?: ListMetricStreamsCommandOutput) => void
+    cb: (err: any, data?: ListMetricStreamsCommandOutput) => void,
   ): void;
   listMetricStreams(
     args: ListMetricStreamsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListMetricStreamsCommandOutput) => void
+    cb: (err: any, data?: ListMetricStreamsCommandOutput) => void,
   ): void;
 
   /**
@@ -616,16 +616,16 @@ export interface CloudWatch {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -634,16 +634,16 @@ export interface CloudWatch {
   putAnomalyDetector(): Promise<PutAnomalyDetectorCommandOutput>;
   putAnomalyDetector(
     args: PutAnomalyDetectorCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutAnomalyDetectorCommandOutput>;
   putAnomalyDetector(
     args: PutAnomalyDetectorCommandInput,
-    cb: (err: any, data?: PutAnomalyDetectorCommandOutput) => void
+    cb: (err: any, data?: PutAnomalyDetectorCommandOutput) => void,
   ): void;
   putAnomalyDetector(
     args: PutAnomalyDetectorCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutAnomalyDetectorCommandOutput) => void
+    cb: (err: any, data?: PutAnomalyDetectorCommandOutput) => void,
   ): void;
 
   /**
@@ -651,16 +651,16 @@ export interface CloudWatch {
    */
   putCompositeAlarm(
     args: PutCompositeAlarmCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutCompositeAlarmCommandOutput>;
   putCompositeAlarm(
     args: PutCompositeAlarmCommandInput,
-    cb: (err: any, data?: PutCompositeAlarmCommandOutput) => void
+    cb: (err: any, data?: PutCompositeAlarmCommandOutput) => void,
   ): void;
   putCompositeAlarm(
     args: PutCompositeAlarmCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutCompositeAlarmCommandOutput) => void
+    cb: (err: any, data?: PutCompositeAlarmCommandOutput) => void,
   ): void;
 
   /**
@@ -671,7 +671,7 @@ export interface CloudWatch {
   putDashboard(
     args: PutDashboardCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutDashboardCommandOutput) => void
+    cb: (err: any, data?: PutDashboardCommandOutput) => void,
   ): void;
 
   /**
@@ -679,13 +679,13 @@ export interface CloudWatch {
    */
   putInsightRule(
     args: PutInsightRuleCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutInsightRuleCommandOutput>;
   putInsightRule(args: PutInsightRuleCommandInput, cb: (err: any, data?: PutInsightRuleCommandOutput) => void): void;
   putInsightRule(
     args: PutInsightRuleCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutInsightRuleCommandOutput) => void
+    cb: (err: any, data?: PutInsightRuleCommandOutput) => void,
   ): void;
 
   /**
@@ -693,16 +693,16 @@ export interface CloudWatch {
    */
   putManagedInsightRules(
     args: PutManagedInsightRulesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutManagedInsightRulesCommandOutput>;
   putManagedInsightRules(
     args: PutManagedInsightRulesCommandInput,
-    cb: (err: any, data?: PutManagedInsightRulesCommandOutput) => void
+    cb: (err: any, data?: PutManagedInsightRulesCommandOutput) => void,
   ): void;
   putManagedInsightRules(
     args: PutManagedInsightRulesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutManagedInsightRulesCommandOutput) => void
+    cb: (err: any, data?: PutManagedInsightRulesCommandOutput) => void,
   ): void;
 
   /**
@@ -710,13 +710,13 @@ export interface CloudWatch {
    */
   putMetricAlarm(
     args: PutMetricAlarmCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutMetricAlarmCommandOutput>;
   putMetricAlarm(args: PutMetricAlarmCommandInput, cb: (err: any, data?: PutMetricAlarmCommandOutput) => void): void;
   putMetricAlarm(
     args: PutMetricAlarmCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutMetricAlarmCommandOutput) => void
+    cb: (err: any, data?: PutMetricAlarmCommandOutput) => void,
   ): void;
 
   /**
@@ -727,7 +727,7 @@ export interface CloudWatch {
   putMetricData(
     args: PutMetricDataCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutMetricDataCommandOutput) => void
+    cb: (err: any, data?: PutMetricDataCommandOutput) => void,
   ): void;
 
   /**
@@ -735,13 +735,13 @@ export interface CloudWatch {
    */
   putMetricStream(
     args: PutMetricStreamCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutMetricStreamCommandOutput>;
   putMetricStream(args: PutMetricStreamCommandInput, cb: (err: any, data?: PutMetricStreamCommandOutput) => void): void;
   putMetricStream(
     args: PutMetricStreamCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutMetricStreamCommandOutput) => void
+    cb: (err: any, data?: PutMetricStreamCommandOutput) => void,
   ): void;
 
   /**
@@ -752,7 +752,7 @@ export interface CloudWatch {
   setAlarmState(
     args: SetAlarmStateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SetAlarmStateCommandOutput) => void
+    cb: (err: any, data?: SetAlarmStateCommandOutput) => void,
   ): void;
 
   /**
@@ -760,16 +760,16 @@ export interface CloudWatch {
    */
   startMetricStreams(
     args: StartMetricStreamsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartMetricStreamsCommandOutput>;
   startMetricStreams(
     args: StartMetricStreamsCommandInput,
-    cb: (err: any, data?: StartMetricStreamsCommandOutput) => void
+    cb: (err: any, data?: StartMetricStreamsCommandOutput) => void,
   ): void;
   startMetricStreams(
     args: StartMetricStreamsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartMetricStreamsCommandOutput) => void
+    cb: (err: any, data?: StartMetricStreamsCommandOutput) => void,
   ): void;
 
   /**
@@ -777,16 +777,16 @@ export interface CloudWatch {
    */
   stopMetricStreams(
     args: StopMetricStreamsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StopMetricStreamsCommandOutput>;
   stopMetricStreams(
     args: StopMetricStreamsCommandInput,
-    cb: (err: any, data?: StopMetricStreamsCommandOutput) => void
+    cb: (err: any, data?: StopMetricStreamsCommandOutput) => void,
   ): void;
   stopMetricStreams(
     args: StopMetricStreamsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StopMetricStreamsCommandOutput) => void
+    cb: (err: any, data?: StopMetricStreamsCommandOutput) => void,
   ): void;
 
   /**
@@ -797,7 +797,7 @@ export interface CloudWatch {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -808,7 +808,7 @@ export interface CloudWatch {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 }
 

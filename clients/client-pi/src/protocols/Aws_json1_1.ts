@@ -104,7 +104,7 @@ import { PIServiceException as __BaseException } from "../models/PIServiceExcept
  */
 export const se_CreatePerformanceAnalysisReportCommand = async (
   input: CreatePerformanceAnalysisReportCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreatePerformanceAnalysisReport");
   let body: any;
@@ -117,7 +117,7 @@ export const se_CreatePerformanceAnalysisReportCommand = async (
  */
 export const se_DeletePerformanceAnalysisReportCommand = async (
   input: DeletePerformanceAnalysisReportCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeletePerformanceAnalysisReport");
   let body: any;
@@ -130,7 +130,7 @@ export const se_DeletePerformanceAnalysisReportCommand = async (
  */
 export const se_DescribeDimensionKeysCommand = async (
   input: DescribeDimensionKeysCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeDimensionKeys");
   let body: any;
@@ -143,7 +143,7 @@ export const se_DescribeDimensionKeysCommand = async (
  */
 export const se_GetDimensionKeyDetailsCommand = async (
   input: GetDimensionKeyDetailsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetDimensionKeyDetails");
   let body: any;
@@ -156,7 +156,7 @@ export const se_GetDimensionKeyDetailsCommand = async (
  */
 export const se_GetPerformanceAnalysisReportCommand = async (
   input: GetPerformanceAnalysisReportCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetPerformanceAnalysisReport");
   let body: any;
@@ -169,7 +169,7 @@ export const se_GetPerformanceAnalysisReportCommand = async (
  */
 export const se_GetResourceMetadataCommand = async (
   input: GetResourceMetadataCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetResourceMetadata");
   let body: any;
@@ -182,7 +182,7 @@ export const se_GetResourceMetadataCommand = async (
  */
 export const se_GetResourceMetricsCommand = async (
   input: GetResourceMetricsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetResourceMetrics");
   let body: any;
@@ -195,7 +195,7 @@ export const se_GetResourceMetricsCommand = async (
  */
 export const se_ListAvailableResourceDimensionsCommand = async (
   input: ListAvailableResourceDimensionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListAvailableResourceDimensions");
   let body: any;
@@ -208,7 +208,7 @@ export const se_ListAvailableResourceDimensionsCommand = async (
  */
 export const se_ListAvailableResourceMetricsCommand = async (
   input: ListAvailableResourceMetricsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListAvailableResourceMetrics");
   let body: any;
@@ -221,7 +221,7 @@ export const se_ListAvailableResourceMetricsCommand = async (
  */
 export const se_ListPerformanceAnalysisReportsCommand = async (
   input: ListPerformanceAnalysisReportsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListPerformanceAnalysisReports");
   let body: any;
@@ -234,7 +234,7 @@ export const se_ListPerformanceAnalysisReportsCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListTagsForResource");
   let body: any;
@@ -247,7 +247,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("TagResource");
   let body: any;
@@ -260,7 +260,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UntagResource");
   let body: any;
@@ -273,7 +273,7 @@ export const se_UntagResourceCommand = async (
  */
 export const de_CreatePerformanceAnalysisReportCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreatePerformanceAnalysisReportCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -293,7 +293,7 @@ export const de_CreatePerformanceAnalysisReportCommand = async (
  */
 export const de_DeletePerformanceAnalysisReportCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeletePerformanceAnalysisReportCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -313,7 +313,7 @@ export const de_DeletePerformanceAnalysisReportCommand = async (
  */
 export const de_DescribeDimensionKeysCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeDimensionKeysCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -333,7 +333,7 @@ export const de_DescribeDimensionKeysCommand = async (
  */
 export const de_GetDimensionKeyDetailsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetDimensionKeyDetailsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -353,7 +353,7 @@ export const de_GetDimensionKeyDetailsCommand = async (
  */
 export const de_GetPerformanceAnalysisReportCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetPerformanceAnalysisReportCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -373,7 +373,7 @@ export const de_GetPerformanceAnalysisReportCommand = async (
  */
 export const de_GetResourceMetadataCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetResourceMetadataCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -393,7 +393,7 @@ export const de_GetResourceMetadataCommand = async (
  */
 export const de_GetResourceMetricsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetResourceMetricsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -413,7 +413,7 @@ export const de_GetResourceMetricsCommand = async (
  */
 export const de_ListAvailableResourceDimensionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAvailableResourceDimensionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -433,7 +433,7 @@ export const de_ListAvailableResourceDimensionsCommand = async (
  */
 export const de_ListAvailableResourceMetricsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAvailableResourceMetricsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -453,7 +453,7 @@ export const de_ListAvailableResourceMetricsCommand = async (
  */
 export const de_ListPerformanceAnalysisReportsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListPerformanceAnalysisReportsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -473,7 +473,7 @@ export const de_ListPerformanceAnalysisReportsCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -493,7 +493,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -513,7 +513,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -562,7 +562,7 @@ const de_CommandError = async (output: __HttpResponse, context: __SerdeContext):
  */
 const de_InternalServiceErrorRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServiceError> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -578,7 +578,7 @@ const de_InternalServiceErrorRes = async (
  */
 const de_InvalidArgumentExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidArgumentException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -594,7 +594,7 @@ const de_InvalidArgumentExceptionRes = async (
  */
 const de_NotAuthorizedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<NotAuthorizedException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -614,7 +614,7 @@ const de_NotAuthorizedExceptionRes = async (
  */
 const se_CreatePerformanceAnalysisReportRequest = (
   input: CreatePerformanceAnalysisReportRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     EndTime: (_) => _.getTime() / 1_000,
@@ -708,13 +708,16 @@ const se_GetResourceMetricsRequest = (input: GetResourceMetricsRequest, context:
  * deserializeAws_json1_1AdditionalMetricsMap
  */
 const de_AdditionalMetricsMap = (output: any, context: __SerdeContext): Record<string, number> => {
-  return Object.entries(output).reduce((acc: Record<string, number>, [key, value]: [string, any]) => {
-    if (value === null) {
+  return Object.entries(output).reduce(
+    (acc: Record<string, number>, [key, value]: [string, any]) => {
+      if (value === null) {
+        return acc;
+      }
+      acc[key as string] = __limitedParseDouble(value) as any;
       return acc;
-    }
-    acc[key as string] = __limitedParseDouble(value) as any;
-    return acc;
-  }, {} as Record<string, number>);
+    },
+    {} as Record<string, number>,
+  );
 };
 
 /**
@@ -870,7 +873,7 @@ const de_DimensionKeyDescriptionList = (output: any, context: __SerdeContext): D
  */
 const de_GetPerformanceAnalysisReportResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): GetPerformanceAnalysisReportResponse => {
   return take(output, {
     AnalysisReport: (_: any) => de_AnalysisReport(_, context),
@@ -936,7 +939,7 @@ const de_InsightList = (output: any, context: __SerdeContext): Insight[] => {
  */
 const de_ListPerformanceAnalysisReportsResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ListPerformanceAnalysisReportsResponse => {
   return take(output, {
     AnalysisReports: (_: any) => de_AnalysisReportSummaryList(_, context),
@@ -1038,7 +1041,7 @@ const buildHttpRpcRequest = async (
   headers: __HeaderBag,
   path: string,
   resolvedHostname: string | undefined,
-  body: any
+  body: any,
 ): Promise<__HttpRequest> => {
   const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
   const contents: any = {

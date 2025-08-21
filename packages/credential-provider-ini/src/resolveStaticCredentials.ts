@@ -27,7 +27,7 @@ export const isStaticCredsProfile = (arg: any): arg is StaticCredsProfile =>
  */
 export const resolveStaticCredentials = (
   profile: StaticCredsProfile,
-  options?: FromIniInit
+  options?: FromIniInit,
 ): Promise<AwsCredentialIdentity> => {
   options?.logger?.debug("@aws-sdk/credential-provider-ini - resolveStaticCredentials");
   return Promise.resolve({

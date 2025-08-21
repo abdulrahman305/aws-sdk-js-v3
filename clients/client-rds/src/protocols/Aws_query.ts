@@ -1111,7 +1111,7 @@ import { RDSServiceException as __BaseException } from "../models/RDSServiceExce
  */
 export const se_AddRoleToDBClusterCommand = async (
   input: AddRoleToDBClusterCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1128,7 +1128,7 @@ export const se_AddRoleToDBClusterCommand = async (
  */
 export const se_AddRoleToDBInstanceCommand = async (
   input: AddRoleToDBInstanceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1145,7 +1145,7 @@ export const se_AddRoleToDBInstanceCommand = async (
  */
 export const se_AddSourceIdentifierToSubscriptionCommand = async (
   input: AddSourceIdentifierToSubscriptionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1162,7 +1162,7 @@ export const se_AddSourceIdentifierToSubscriptionCommand = async (
  */
 export const se_AddTagsToResourceCommand = async (
   input: AddTagsToResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1179,7 +1179,7 @@ export const se_AddTagsToResourceCommand = async (
  */
 export const se_ApplyPendingMaintenanceActionCommand = async (
   input: ApplyPendingMaintenanceActionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1196,7 +1196,7 @@ export const se_ApplyPendingMaintenanceActionCommand = async (
  */
 export const se_AuthorizeDBSecurityGroupIngressCommand = async (
   input: AuthorizeDBSecurityGroupIngressCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1213,7 +1213,7 @@ export const se_AuthorizeDBSecurityGroupIngressCommand = async (
  */
 export const se_BacktrackDBClusterCommand = async (
   input: BacktrackDBClusterCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1230,7 +1230,7 @@ export const se_BacktrackDBClusterCommand = async (
  */
 export const se_CancelExportTaskCommand = async (
   input: CancelExportTaskCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1247,7 +1247,7 @@ export const se_CancelExportTaskCommand = async (
  */
 export const se_CopyDBClusterParameterGroupCommand = async (
   input: CopyDBClusterParameterGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1264,7 +1264,7 @@ export const se_CopyDBClusterParameterGroupCommand = async (
  */
 export const se_CopyDBClusterSnapshotCommand = async (
   input: CopyDBClusterSnapshotCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1281,7 +1281,7 @@ export const se_CopyDBClusterSnapshotCommand = async (
  */
 export const se_CopyDBParameterGroupCommand = async (
   input: CopyDBParameterGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1298,7 +1298,7 @@ export const se_CopyDBParameterGroupCommand = async (
  */
 export const se_CopyDBSnapshotCommand = async (
   input: CopyDBSnapshotCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1315,7 +1315,7 @@ export const se_CopyDBSnapshotCommand = async (
  */
 export const se_CopyOptionGroupCommand = async (
   input: CopyOptionGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1332,7 +1332,7 @@ export const se_CopyOptionGroupCommand = async (
  */
 export const se_CreateBlueGreenDeploymentCommand = async (
   input: CreateBlueGreenDeploymentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1349,7 +1349,7 @@ export const se_CreateBlueGreenDeploymentCommand = async (
  */
 export const se_CreateCustomDBEngineVersionCommand = async (
   input: CreateCustomDBEngineVersionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1366,7 +1366,7 @@ export const se_CreateCustomDBEngineVersionCommand = async (
  */
 export const se_CreateDBClusterCommand = async (
   input: CreateDBClusterCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1383,7 +1383,7 @@ export const se_CreateDBClusterCommand = async (
  */
 export const se_CreateDBClusterEndpointCommand = async (
   input: CreateDBClusterEndpointCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1400,7 +1400,7 @@ export const se_CreateDBClusterEndpointCommand = async (
  */
 export const se_CreateDBClusterParameterGroupCommand = async (
   input: CreateDBClusterParameterGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1417,7 +1417,7 @@ export const se_CreateDBClusterParameterGroupCommand = async (
  */
 export const se_CreateDBClusterSnapshotCommand = async (
   input: CreateDBClusterSnapshotCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1434,7 +1434,7 @@ export const se_CreateDBClusterSnapshotCommand = async (
  */
 export const se_CreateDBInstanceCommand = async (
   input: CreateDBInstanceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1451,7 +1451,7 @@ export const se_CreateDBInstanceCommand = async (
  */
 export const se_CreateDBInstanceReadReplicaCommand = async (
   input: CreateDBInstanceReadReplicaCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1468,7 +1468,7 @@ export const se_CreateDBInstanceReadReplicaCommand = async (
  */
 export const se_CreateDBParameterGroupCommand = async (
   input: CreateDBParameterGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1485,7 +1485,7 @@ export const se_CreateDBParameterGroupCommand = async (
  */
 export const se_CreateDBProxyCommand = async (
   input: CreateDBProxyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1502,7 +1502,7 @@ export const se_CreateDBProxyCommand = async (
  */
 export const se_CreateDBProxyEndpointCommand = async (
   input: CreateDBProxyEndpointCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1519,7 +1519,7 @@ export const se_CreateDBProxyEndpointCommand = async (
  */
 export const se_CreateDBSecurityGroupCommand = async (
   input: CreateDBSecurityGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1536,7 +1536,7 @@ export const se_CreateDBSecurityGroupCommand = async (
  */
 export const se_CreateDBShardGroupCommand = async (
   input: CreateDBShardGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1553,7 +1553,7 @@ export const se_CreateDBShardGroupCommand = async (
  */
 export const se_CreateDBSnapshotCommand = async (
   input: CreateDBSnapshotCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1570,7 +1570,7 @@ export const se_CreateDBSnapshotCommand = async (
  */
 export const se_CreateDBSubnetGroupCommand = async (
   input: CreateDBSubnetGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1587,7 +1587,7 @@ export const se_CreateDBSubnetGroupCommand = async (
  */
 export const se_CreateEventSubscriptionCommand = async (
   input: CreateEventSubscriptionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1604,7 +1604,7 @@ export const se_CreateEventSubscriptionCommand = async (
  */
 export const se_CreateGlobalClusterCommand = async (
   input: CreateGlobalClusterCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1621,7 +1621,7 @@ export const se_CreateGlobalClusterCommand = async (
  */
 export const se_CreateIntegrationCommand = async (
   input: CreateIntegrationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1638,7 +1638,7 @@ export const se_CreateIntegrationCommand = async (
  */
 export const se_CreateOptionGroupCommand = async (
   input: CreateOptionGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1655,7 +1655,7 @@ export const se_CreateOptionGroupCommand = async (
  */
 export const se_CreateTenantDatabaseCommand = async (
   input: CreateTenantDatabaseCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1672,7 +1672,7 @@ export const se_CreateTenantDatabaseCommand = async (
  */
 export const se_DeleteBlueGreenDeploymentCommand = async (
   input: DeleteBlueGreenDeploymentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1689,7 +1689,7 @@ export const se_DeleteBlueGreenDeploymentCommand = async (
  */
 export const se_DeleteCustomDBEngineVersionCommand = async (
   input: DeleteCustomDBEngineVersionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1706,7 +1706,7 @@ export const se_DeleteCustomDBEngineVersionCommand = async (
  */
 export const se_DeleteDBClusterCommand = async (
   input: DeleteDBClusterCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1723,7 +1723,7 @@ export const se_DeleteDBClusterCommand = async (
  */
 export const se_DeleteDBClusterAutomatedBackupCommand = async (
   input: DeleteDBClusterAutomatedBackupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1740,7 +1740,7 @@ export const se_DeleteDBClusterAutomatedBackupCommand = async (
  */
 export const se_DeleteDBClusterEndpointCommand = async (
   input: DeleteDBClusterEndpointCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1757,7 +1757,7 @@ export const se_DeleteDBClusterEndpointCommand = async (
  */
 export const se_DeleteDBClusterParameterGroupCommand = async (
   input: DeleteDBClusterParameterGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1774,7 +1774,7 @@ export const se_DeleteDBClusterParameterGroupCommand = async (
  */
 export const se_DeleteDBClusterSnapshotCommand = async (
   input: DeleteDBClusterSnapshotCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1791,7 +1791,7 @@ export const se_DeleteDBClusterSnapshotCommand = async (
  */
 export const se_DeleteDBInstanceCommand = async (
   input: DeleteDBInstanceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1808,7 +1808,7 @@ export const se_DeleteDBInstanceCommand = async (
  */
 export const se_DeleteDBInstanceAutomatedBackupCommand = async (
   input: DeleteDBInstanceAutomatedBackupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1825,7 +1825,7 @@ export const se_DeleteDBInstanceAutomatedBackupCommand = async (
  */
 export const se_DeleteDBParameterGroupCommand = async (
   input: DeleteDBParameterGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1842,7 +1842,7 @@ export const se_DeleteDBParameterGroupCommand = async (
  */
 export const se_DeleteDBProxyCommand = async (
   input: DeleteDBProxyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1859,7 +1859,7 @@ export const se_DeleteDBProxyCommand = async (
  */
 export const se_DeleteDBProxyEndpointCommand = async (
   input: DeleteDBProxyEndpointCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1876,7 +1876,7 @@ export const se_DeleteDBProxyEndpointCommand = async (
  */
 export const se_DeleteDBSecurityGroupCommand = async (
   input: DeleteDBSecurityGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1893,7 +1893,7 @@ export const se_DeleteDBSecurityGroupCommand = async (
  */
 export const se_DeleteDBShardGroupCommand = async (
   input: DeleteDBShardGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1910,7 +1910,7 @@ export const se_DeleteDBShardGroupCommand = async (
  */
 export const se_DeleteDBSnapshotCommand = async (
   input: DeleteDBSnapshotCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1927,7 +1927,7 @@ export const se_DeleteDBSnapshotCommand = async (
  */
 export const se_DeleteDBSubnetGroupCommand = async (
   input: DeleteDBSubnetGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1944,7 +1944,7 @@ export const se_DeleteDBSubnetGroupCommand = async (
  */
 export const se_DeleteEventSubscriptionCommand = async (
   input: DeleteEventSubscriptionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1961,7 +1961,7 @@ export const se_DeleteEventSubscriptionCommand = async (
  */
 export const se_DeleteGlobalClusterCommand = async (
   input: DeleteGlobalClusterCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1978,7 +1978,7 @@ export const se_DeleteGlobalClusterCommand = async (
  */
 export const se_DeleteIntegrationCommand = async (
   input: DeleteIntegrationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1995,7 +1995,7 @@ export const se_DeleteIntegrationCommand = async (
  */
 export const se_DeleteOptionGroupCommand = async (
   input: DeleteOptionGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -2012,7 +2012,7 @@ export const se_DeleteOptionGroupCommand = async (
  */
 export const se_DeleteTenantDatabaseCommand = async (
   input: DeleteTenantDatabaseCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -2029,7 +2029,7 @@ export const se_DeleteTenantDatabaseCommand = async (
  */
 export const se_DeregisterDBProxyTargetsCommand = async (
   input: DeregisterDBProxyTargetsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -2046,7 +2046,7 @@ export const se_DeregisterDBProxyTargetsCommand = async (
  */
 export const se_DescribeAccountAttributesCommand = async (
   input: DescribeAccountAttributesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -2063,7 +2063,7 @@ export const se_DescribeAccountAttributesCommand = async (
  */
 export const se_DescribeBlueGreenDeploymentsCommand = async (
   input: DescribeBlueGreenDeploymentsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -2080,7 +2080,7 @@ export const se_DescribeBlueGreenDeploymentsCommand = async (
  */
 export const se_DescribeCertificatesCommand = async (
   input: DescribeCertificatesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -2097,7 +2097,7 @@ export const se_DescribeCertificatesCommand = async (
  */
 export const se_DescribeDBClusterAutomatedBackupsCommand = async (
   input: DescribeDBClusterAutomatedBackupsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -2114,7 +2114,7 @@ export const se_DescribeDBClusterAutomatedBackupsCommand = async (
  */
 export const se_DescribeDBClusterBacktracksCommand = async (
   input: DescribeDBClusterBacktracksCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -2131,7 +2131,7 @@ export const se_DescribeDBClusterBacktracksCommand = async (
  */
 export const se_DescribeDBClusterEndpointsCommand = async (
   input: DescribeDBClusterEndpointsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -2148,7 +2148,7 @@ export const se_DescribeDBClusterEndpointsCommand = async (
  */
 export const se_DescribeDBClusterParameterGroupsCommand = async (
   input: DescribeDBClusterParameterGroupsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -2165,7 +2165,7 @@ export const se_DescribeDBClusterParameterGroupsCommand = async (
  */
 export const se_DescribeDBClusterParametersCommand = async (
   input: DescribeDBClusterParametersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -2182,7 +2182,7 @@ export const se_DescribeDBClusterParametersCommand = async (
  */
 export const se_DescribeDBClustersCommand = async (
   input: DescribeDBClustersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -2199,7 +2199,7 @@ export const se_DescribeDBClustersCommand = async (
  */
 export const se_DescribeDBClusterSnapshotAttributesCommand = async (
   input: DescribeDBClusterSnapshotAttributesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -2216,7 +2216,7 @@ export const se_DescribeDBClusterSnapshotAttributesCommand = async (
  */
 export const se_DescribeDBClusterSnapshotsCommand = async (
   input: DescribeDBClusterSnapshotsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -2233,7 +2233,7 @@ export const se_DescribeDBClusterSnapshotsCommand = async (
  */
 export const se_DescribeDBEngineVersionsCommand = async (
   input: DescribeDBEngineVersionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -2250,7 +2250,7 @@ export const se_DescribeDBEngineVersionsCommand = async (
  */
 export const se_DescribeDBInstanceAutomatedBackupsCommand = async (
   input: DescribeDBInstanceAutomatedBackupsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -2267,7 +2267,7 @@ export const se_DescribeDBInstanceAutomatedBackupsCommand = async (
  */
 export const se_DescribeDBInstancesCommand = async (
   input: DescribeDBInstancesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -2284,7 +2284,7 @@ export const se_DescribeDBInstancesCommand = async (
  */
 export const se_DescribeDBLogFilesCommand = async (
   input: DescribeDBLogFilesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -2301,7 +2301,7 @@ export const se_DescribeDBLogFilesCommand = async (
  */
 export const se_DescribeDBParameterGroupsCommand = async (
   input: DescribeDBParameterGroupsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -2318,7 +2318,7 @@ export const se_DescribeDBParameterGroupsCommand = async (
  */
 export const se_DescribeDBParametersCommand = async (
   input: DescribeDBParametersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -2335,7 +2335,7 @@ export const se_DescribeDBParametersCommand = async (
  */
 export const se_DescribeDBProxiesCommand = async (
   input: DescribeDBProxiesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -2352,7 +2352,7 @@ export const se_DescribeDBProxiesCommand = async (
  */
 export const se_DescribeDBProxyEndpointsCommand = async (
   input: DescribeDBProxyEndpointsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -2369,7 +2369,7 @@ export const se_DescribeDBProxyEndpointsCommand = async (
  */
 export const se_DescribeDBProxyTargetGroupsCommand = async (
   input: DescribeDBProxyTargetGroupsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -2386,7 +2386,7 @@ export const se_DescribeDBProxyTargetGroupsCommand = async (
  */
 export const se_DescribeDBProxyTargetsCommand = async (
   input: DescribeDBProxyTargetsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -2403,7 +2403,7 @@ export const se_DescribeDBProxyTargetsCommand = async (
  */
 export const se_DescribeDBRecommendationsCommand = async (
   input: DescribeDBRecommendationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -2420,7 +2420,7 @@ export const se_DescribeDBRecommendationsCommand = async (
  */
 export const se_DescribeDBSecurityGroupsCommand = async (
   input: DescribeDBSecurityGroupsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -2437,7 +2437,7 @@ export const se_DescribeDBSecurityGroupsCommand = async (
  */
 export const se_DescribeDBShardGroupsCommand = async (
   input: DescribeDBShardGroupsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -2454,7 +2454,7 @@ export const se_DescribeDBShardGroupsCommand = async (
  */
 export const se_DescribeDBSnapshotAttributesCommand = async (
   input: DescribeDBSnapshotAttributesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -2471,7 +2471,7 @@ export const se_DescribeDBSnapshotAttributesCommand = async (
  */
 export const se_DescribeDBSnapshotsCommand = async (
   input: DescribeDBSnapshotsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -2488,7 +2488,7 @@ export const se_DescribeDBSnapshotsCommand = async (
  */
 export const se_DescribeDBSnapshotTenantDatabasesCommand = async (
   input: DescribeDBSnapshotTenantDatabasesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -2505,7 +2505,7 @@ export const se_DescribeDBSnapshotTenantDatabasesCommand = async (
  */
 export const se_DescribeDBSubnetGroupsCommand = async (
   input: DescribeDBSubnetGroupsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -2522,7 +2522,7 @@ export const se_DescribeDBSubnetGroupsCommand = async (
  */
 export const se_DescribeEngineDefaultClusterParametersCommand = async (
   input: DescribeEngineDefaultClusterParametersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -2539,7 +2539,7 @@ export const se_DescribeEngineDefaultClusterParametersCommand = async (
  */
 export const se_DescribeEngineDefaultParametersCommand = async (
   input: DescribeEngineDefaultParametersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -2556,7 +2556,7 @@ export const se_DescribeEngineDefaultParametersCommand = async (
  */
 export const se_DescribeEventCategoriesCommand = async (
   input: DescribeEventCategoriesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -2573,7 +2573,7 @@ export const se_DescribeEventCategoriesCommand = async (
  */
 export const se_DescribeEventsCommand = async (
   input: DescribeEventsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -2590,7 +2590,7 @@ export const se_DescribeEventsCommand = async (
  */
 export const se_DescribeEventSubscriptionsCommand = async (
   input: DescribeEventSubscriptionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -2607,7 +2607,7 @@ export const se_DescribeEventSubscriptionsCommand = async (
  */
 export const se_DescribeExportTasksCommand = async (
   input: DescribeExportTasksCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -2624,7 +2624,7 @@ export const se_DescribeExportTasksCommand = async (
  */
 export const se_DescribeGlobalClustersCommand = async (
   input: DescribeGlobalClustersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -2641,7 +2641,7 @@ export const se_DescribeGlobalClustersCommand = async (
  */
 export const se_DescribeIntegrationsCommand = async (
   input: DescribeIntegrationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -2658,7 +2658,7 @@ export const se_DescribeIntegrationsCommand = async (
  */
 export const se_DescribeOptionGroupOptionsCommand = async (
   input: DescribeOptionGroupOptionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -2675,7 +2675,7 @@ export const se_DescribeOptionGroupOptionsCommand = async (
  */
 export const se_DescribeOptionGroupsCommand = async (
   input: DescribeOptionGroupsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -2692,7 +2692,7 @@ export const se_DescribeOptionGroupsCommand = async (
  */
 export const se_DescribeOrderableDBInstanceOptionsCommand = async (
   input: DescribeOrderableDBInstanceOptionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -2709,7 +2709,7 @@ export const se_DescribeOrderableDBInstanceOptionsCommand = async (
  */
 export const se_DescribePendingMaintenanceActionsCommand = async (
   input: DescribePendingMaintenanceActionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -2726,7 +2726,7 @@ export const se_DescribePendingMaintenanceActionsCommand = async (
  */
 export const se_DescribeReservedDBInstancesCommand = async (
   input: DescribeReservedDBInstancesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -2743,7 +2743,7 @@ export const se_DescribeReservedDBInstancesCommand = async (
  */
 export const se_DescribeReservedDBInstancesOfferingsCommand = async (
   input: DescribeReservedDBInstancesOfferingsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -2760,7 +2760,7 @@ export const se_DescribeReservedDBInstancesOfferingsCommand = async (
  */
 export const se_DescribeSourceRegionsCommand = async (
   input: DescribeSourceRegionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -2777,7 +2777,7 @@ export const se_DescribeSourceRegionsCommand = async (
  */
 export const se_DescribeTenantDatabasesCommand = async (
   input: DescribeTenantDatabasesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -2794,7 +2794,7 @@ export const se_DescribeTenantDatabasesCommand = async (
  */
 export const se_DescribeValidDBInstanceModificationsCommand = async (
   input: DescribeValidDBInstanceModificationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -2811,7 +2811,7 @@ export const se_DescribeValidDBInstanceModificationsCommand = async (
  */
 export const se_DisableHttpEndpointCommand = async (
   input: DisableHttpEndpointCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -2828,7 +2828,7 @@ export const se_DisableHttpEndpointCommand = async (
  */
 export const se_DownloadDBLogFilePortionCommand = async (
   input: DownloadDBLogFilePortionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -2845,7 +2845,7 @@ export const se_DownloadDBLogFilePortionCommand = async (
  */
 export const se_EnableHttpEndpointCommand = async (
   input: EnableHttpEndpointCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -2862,7 +2862,7 @@ export const se_EnableHttpEndpointCommand = async (
  */
 export const se_FailoverDBClusterCommand = async (
   input: FailoverDBClusterCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -2879,7 +2879,7 @@ export const se_FailoverDBClusterCommand = async (
  */
 export const se_FailoverGlobalClusterCommand = async (
   input: FailoverGlobalClusterCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -2896,7 +2896,7 @@ export const se_FailoverGlobalClusterCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -2913,7 +2913,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_ModifyActivityStreamCommand = async (
   input: ModifyActivityStreamCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -2930,7 +2930,7 @@ export const se_ModifyActivityStreamCommand = async (
  */
 export const se_ModifyCertificatesCommand = async (
   input: ModifyCertificatesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -2947,7 +2947,7 @@ export const se_ModifyCertificatesCommand = async (
  */
 export const se_ModifyCurrentDBClusterCapacityCommand = async (
   input: ModifyCurrentDBClusterCapacityCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -2964,7 +2964,7 @@ export const se_ModifyCurrentDBClusterCapacityCommand = async (
  */
 export const se_ModifyCustomDBEngineVersionCommand = async (
   input: ModifyCustomDBEngineVersionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -2981,7 +2981,7 @@ export const se_ModifyCustomDBEngineVersionCommand = async (
  */
 export const se_ModifyDBClusterCommand = async (
   input: ModifyDBClusterCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -2998,7 +2998,7 @@ export const se_ModifyDBClusterCommand = async (
  */
 export const se_ModifyDBClusterEndpointCommand = async (
   input: ModifyDBClusterEndpointCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -3015,7 +3015,7 @@ export const se_ModifyDBClusterEndpointCommand = async (
  */
 export const se_ModifyDBClusterParameterGroupCommand = async (
   input: ModifyDBClusterParameterGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -3032,7 +3032,7 @@ export const se_ModifyDBClusterParameterGroupCommand = async (
  */
 export const se_ModifyDBClusterSnapshotAttributeCommand = async (
   input: ModifyDBClusterSnapshotAttributeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -3049,7 +3049,7 @@ export const se_ModifyDBClusterSnapshotAttributeCommand = async (
  */
 export const se_ModifyDBInstanceCommand = async (
   input: ModifyDBInstanceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -3066,7 +3066,7 @@ export const se_ModifyDBInstanceCommand = async (
  */
 export const se_ModifyDBParameterGroupCommand = async (
   input: ModifyDBParameterGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -3083,7 +3083,7 @@ export const se_ModifyDBParameterGroupCommand = async (
  */
 export const se_ModifyDBProxyCommand = async (
   input: ModifyDBProxyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -3100,7 +3100,7 @@ export const se_ModifyDBProxyCommand = async (
  */
 export const se_ModifyDBProxyEndpointCommand = async (
   input: ModifyDBProxyEndpointCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -3117,7 +3117,7 @@ export const se_ModifyDBProxyEndpointCommand = async (
  */
 export const se_ModifyDBProxyTargetGroupCommand = async (
   input: ModifyDBProxyTargetGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -3134,7 +3134,7 @@ export const se_ModifyDBProxyTargetGroupCommand = async (
  */
 export const se_ModifyDBRecommendationCommand = async (
   input: ModifyDBRecommendationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -3151,7 +3151,7 @@ export const se_ModifyDBRecommendationCommand = async (
  */
 export const se_ModifyDBShardGroupCommand = async (
   input: ModifyDBShardGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -3168,7 +3168,7 @@ export const se_ModifyDBShardGroupCommand = async (
  */
 export const se_ModifyDBSnapshotCommand = async (
   input: ModifyDBSnapshotCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -3185,7 +3185,7 @@ export const se_ModifyDBSnapshotCommand = async (
  */
 export const se_ModifyDBSnapshotAttributeCommand = async (
   input: ModifyDBSnapshotAttributeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -3202,7 +3202,7 @@ export const se_ModifyDBSnapshotAttributeCommand = async (
  */
 export const se_ModifyDBSubnetGroupCommand = async (
   input: ModifyDBSubnetGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -3219,7 +3219,7 @@ export const se_ModifyDBSubnetGroupCommand = async (
  */
 export const se_ModifyEventSubscriptionCommand = async (
   input: ModifyEventSubscriptionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -3236,7 +3236,7 @@ export const se_ModifyEventSubscriptionCommand = async (
  */
 export const se_ModifyGlobalClusterCommand = async (
   input: ModifyGlobalClusterCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -3253,7 +3253,7 @@ export const se_ModifyGlobalClusterCommand = async (
  */
 export const se_ModifyIntegrationCommand = async (
   input: ModifyIntegrationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -3270,7 +3270,7 @@ export const se_ModifyIntegrationCommand = async (
  */
 export const se_ModifyOptionGroupCommand = async (
   input: ModifyOptionGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -3287,7 +3287,7 @@ export const se_ModifyOptionGroupCommand = async (
  */
 export const se_ModifyTenantDatabaseCommand = async (
   input: ModifyTenantDatabaseCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -3304,7 +3304,7 @@ export const se_ModifyTenantDatabaseCommand = async (
  */
 export const se_PromoteReadReplicaCommand = async (
   input: PromoteReadReplicaCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -3321,7 +3321,7 @@ export const se_PromoteReadReplicaCommand = async (
  */
 export const se_PromoteReadReplicaDBClusterCommand = async (
   input: PromoteReadReplicaDBClusterCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -3338,7 +3338,7 @@ export const se_PromoteReadReplicaDBClusterCommand = async (
  */
 export const se_PurchaseReservedDBInstancesOfferingCommand = async (
   input: PurchaseReservedDBInstancesOfferingCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -3355,7 +3355,7 @@ export const se_PurchaseReservedDBInstancesOfferingCommand = async (
  */
 export const se_RebootDBClusterCommand = async (
   input: RebootDBClusterCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -3372,7 +3372,7 @@ export const se_RebootDBClusterCommand = async (
  */
 export const se_RebootDBInstanceCommand = async (
   input: RebootDBInstanceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -3389,7 +3389,7 @@ export const se_RebootDBInstanceCommand = async (
  */
 export const se_RebootDBShardGroupCommand = async (
   input: RebootDBShardGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -3406,7 +3406,7 @@ export const se_RebootDBShardGroupCommand = async (
  */
 export const se_RegisterDBProxyTargetsCommand = async (
   input: RegisterDBProxyTargetsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -3423,7 +3423,7 @@ export const se_RegisterDBProxyTargetsCommand = async (
  */
 export const se_RemoveFromGlobalClusterCommand = async (
   input: RemoveFromGlobalClusterCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -3440,7 +3440,7 @@ export const se_RemoveFromGlobalClusterCommand = async (
  */
 export const se_RemoveRoleFromDBClusterCommand = async (
   input: RemoveRoleFromDBClusterCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -3457,7 +3457,7 @@ export const se_RemoveRoleFromDBClusterCommand = async (
  */
 export const se_RemoveRoleFromDBInstanceCommand = async (
   input: RemoveRoleFromDBInstanceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -3474,7 +3474,7 @@ export const se_RemoveRoleFromDBInstanceCommand = async (
  */
 export const se_RemoveSourceIdentifierFromSubscriptionCommand = async (
   input: RemoveSourceIdentifierFromSubscriptionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -3491,7 +3491,7 @@ export const se_RemoveSourceIdentifierFromSubscriptionCommand = async (
  */
 export const se_RemoveTagsFromResourceCommand = async (
   input: RemoveTagsFromResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -3508,7 +3508,7 @@ export const se_RemoveTagsFromResourceCommand = async (
  */
 export const se_ResetDBClusterParameterGroupCommand = async (
   input: ResetDBClusterParameterGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -3525,7 +3525,7 @@ export const se_ResetDBClusterParameterGroupCommand = async (
  */
 export const se_ResetDBParameterGroupCommand = async (
   input: ResetDBParameterGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -3542,7 +3542,7 @@ export const se_ResetDBParameterGroupCommand = async (
  */
 export const se_RestoreDBClusterFromS3Command = async (
   input: RestoreDBClusterFromS3CommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -3559,7 +3559,7 @@ export const se_RestoreDBClusterFromS3Command = async (
  */
 export const se_RestoreDBClusterFromSnapshotCommand = async (
   input: RestoreDBClusterFromSnapshotCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -3576,7 +3576,7 @@ export const se_RestoreDBClusterFromSnapshotCommand = async (
  */
 export const se_RestoreDBClusterToPointInTimeCommand = async (
   input: RestoreDBClusterToPointInTimeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -3593,7 +3593,7 @@ export const se_RestoreDBClusterToPointInTimeCommand = async (
  */
 export const se_RestoreDBInstanceFromDBSnapshotCommand = async (
   input: RestoreDBInstanceFromDBSnapshotCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -3610,7 +3610,7 @@ export const se_RestoreDBInstanceFromDBSnapshotCommand = async (
  */
 export const se_RestoreDBInstanceFromS3Command = async (
   input: RestoreDBInstanceFromS3CommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -3627,7 +3627,7 @@ export const se_RestoreDBInstanceFromS3Command = async (
  */
 export const se_RestoreDBInstanceToPointInTimeCommand = async (
   input: RestoreDBInstanceToPointInTimeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -3644,7 +3644,7 @@ export const se_RestoreDBInstanceToPointInTimeCommand = async (
  */
 export const se_RevokeDBSecurityGroupIngressCommand = async (
   input: RevokeDBSecurityGroupIngressCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -3661,7 +3661,7 @@ export const se_RevokeDBSecurityGroupIngressCommand = async (
  */
 export const se_StartActivityStreamCommand = async (
   input: StartActivityStreamCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -3678,7 +3678,7 @@ export const se_StartActivityStreamCommand = async (
  */
 export const se_StartDBClusterCommand = async (
   input: StartDBClusterCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -3695,7 +3695,7 @@ export const se_StartDBClusterCommand = async (
  */
 export const se_StartDBInstanceCommand = async (
   input: StartDBInstanceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -3712,7 +3712,7 @@ export const se_StartDBInstanceCommand = async (
  */
 export const se_StartDBInstanceAutomatedBackupsReplicationCommand = async (
   input: StartDBInstanceAutomatedBackupsReplicationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -3729,7 +3729,7 @@ export const se_StartDBInstanceAutomatedBackupsReplicationCommand = async (
  */
 export const se_StartExportTaskCommand = async (
   input: StartExportTaskCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -3746,7 +3746,7 @@ export const se_StartExportTaskCommand = async (
  */
 export const se_StopActivityStreamCommand = async (
   input: StopActivityStreamCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -3763,7 +3763,7 @@ export const se_StopActivityStreamCommand = async (
  */
 export const se_StopDBClusterCommand = async (
   input: StopDBClusterCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -3780,7 +3780,7 @@ export const se_StopDBClusterCommand = async (
  */
 export const se_StopDBInstanceCommand = async (
   input: StopDBInstanceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -3797,7 +3797,7 @@ export const se_StopDBInstanceCommand = async (
  */
 export const se_StopDBInstanceAutomatedBackupsReplicationCommand = async (
   input: StopDBInstanceAutomatedBackupsReplicationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -3814,7 +3814,7 @@ export const se_StopDBInstanceAutomatedBackupsReplicationCommand = async (
  */
 export const se_SwitchoverBlueGreenDeploymentCommand = async (
   input: SwitchoverBlueGreenDeploymentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -3831,7 +3831,7 @@ export const se_SwitchoverBlueGreenDeploymentCommand = async (
  */
 export const se_SwitchoverGlobalClusterCommand = async (
   input: SwitchoverGlobalClusterCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -3848,7 +3848,7 @@ export const se_SwitchoverGlobalClusterCommand = async (
  */
 export const se_SwitchoverReadReplicaCommand = async (
   input: SwitchoverReadReplicaCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -3865,7 +3865,7 @@ export const se_SwitchoverReadReplicaCommand = async (
  */
 export const de_AddRoleToDBClusterCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AddRoleToDBClusterCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3882,7 +3882,7 @@ export const de_AddRoleToDBClusterCommand = async (
  */
 export const de_AddRoleToDBInstanceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AddRoleToDBInstanceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3899,7 +3899,7 @@ export const de_AddRoleToDBInstanceCommand = async (
  */
 export const de_AddSourceIdentifierToSubscriptionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AddSourceIdentifierToSubscriptionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3919,7 +3919,7 @@ export const de_AddSourceIdentifierToSubscriptionCommand = async (
  */
 export const de_AddTagsToResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AddTagsToResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3936,7 +3936,7 @@ export const de_AddTagsToResourceCommand = async (
  */
 export const de_ApplyPendingMaintenanceActionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ApplyPendingMaintenanceActionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3956,7 +3956,7 @@ export const de_ApplyPendingMaintenanceActionCommand = async (
  */
 export const de_AuthorizeDBSecurityGroupIngressCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AuthorizeDBSecurityGroupIngressCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3976,7 +3976,7 @@ export const de_AuthorizeDBSecurityGroupIngressCommand = async (
  */
 export const de_BacktrackDBClusterCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BacktrackDBClusterCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3996,7 +3996,7 @@ export const de_BacktrackDBClusterCommand = async (
  */
 export const de_CancelExportTaskCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CancelExportTaskCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4016,7 +4016,7 @@ export const de_CancelExportTaskCommand = async (
  */
 export const de_CopyDBClusterParameterGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CopyDBClusterParameterGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4036,7 +4036,7 @@ export const de_CopyDBClusterParameterGroupCommand = async (
  */
 export const de_CopyDBClusterSnapshotCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CopyDBClusterSnapshotCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4056,7 +4056,7 @@ export const de_CopyDBClusterSnapshotCommand = async (
  */
 export const de_CopyDBParameterGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CopyDBParameterGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4076,7 +4076,7 @@ export const de_CopyDBParameterGroupCommand = async (
  */
 export const de_CopyDBSnapshotCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CopyDBSnapshotCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4096,7 +4096,7 @@ export const de_CopyDBSnapshotCommand = async (
  */
 export const de_CopyOptionGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CopyOptionGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4116,7 +4116,7 @@ export const de_CopyOptionGroupCommand = async (
  */
 export const de_CreateBlueGreenDeploymentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateBlueGreenDeploymentCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4136,7 +4136,7 @@ export const de_CreateBlueGreenDeploymentCommand = async (
  */
 export const de_CreateCustomDBEngineVersionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateCustomDBEngineVersionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4156,7 +4156,7 @@ export const de_CreateCustomDBEngineVersionCommand = async (
  */
 export const de_CreateDBClusterCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateDBClusterCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4176,7 +4176,7 @@ export const de_CreateDBClusterCommand = async (
  */
 export const de_CreateDBClusterEndpointCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateDBClusterEndpointCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4196,7 +4196,7 @@ export const de_CreateDBClusterEndpointCommand = async (
  */
 export const de_CreateDBClusterParameterGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateDBClusterParameterGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4216,7 +4216,7 @@ export const de_CreateDBClusterParameterGroupCommand = async (
  */
 export const de_CreateDBClusterSnapshotCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateDBClusterSnapshotCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4236,7 +4236,7 @@ export const de_CreateDBClusterSnapshotCommand = async (
  */
 export const de_CreateDBInstanceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateDBInstanceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4256,7 +4256,7 @@ export const de_CreateDBInstanceCommand = async (
  */
 export const de_CreateDBInstanceReadReplicaCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateDBInstanceReadReplicaCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4276,7 +4276,7 @@ export const de_CreateDBInstanceReadReplicaCommand = async (
  */
 export const de_CreateDBParameterGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateDBParameterGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4296,7 +4296,7 @@ export const de_CreateDBParameterGroupCommand = async (
  */
 export const de_CreateDBProxyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateDBProxyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4316,7 +4316,7 @@ export const de_CreateDBProxyCommand = async (
  */
 export const de_CreateDBProxyEndpointCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateDBProxyEndpointCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4336,7 +4336,7 @@ export const de_CreateDBProxyEndpointCommand = async (
  */
 export const de_CreateDBSecurityGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateDBSecurityGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4356,7 +4356,7 @@ export const de_CreateDBSecurityGroupCommand = async (
  */
 export const de_CreateDBShardGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateDBShardGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4376,7 +4376,7 @@ export const de_CreateDBShardGroupCommand = async (
  */
 export const de_CreateDBSnapshotCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateDBSnapshotCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4396,7 +4396,7 @@ export const de_CreateDBSnapshotCommand = async (
  */
 export const de_CreateDBSubnetGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateDBSubnetGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4416,7 +4416,7 @@ export const de_CreateDBSubnetGroupCommand = async (
  */
 export const de_CreateEventSubscriptionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateEventSubscriptionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4436,7 +4436,7 @@ export const de_CreateEventSubscriptionCommand = async (
  */
 export const de_CreateGlobalClusterCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateGlobalClusterCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4456,7 +4456,7 @@ export const de_CreateGlobalClusterCommand = async (
  */
 export const de_CreateIntegrationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateIntegrationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4476,7 +4476,7 @@ export const de_CreateIntegrationCommand = async (
  */
 export const de_CreateOptionGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateOptionGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4496,7 +4496,7 @@ export const de_CreateOptionGroupCommand = async (
  */
 export const de_CreateTenantDatabaseCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateTenantDatabaseCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4516,7 +4516,7 @@ export const de_CreateTenantDatabaseCommand = async (
  */
 export const de_DeleteBlueGreenDeploymentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteBlueGreenDeploymentCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4536,7 +4536,7 @@ export const de_DeleteBlueGreenDeploymentCommand = async (
  */
 export const de_DeleteCustomDBEngineVersionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteCustomDBEngineVersionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4556,7 +4556,7 @@ export const de_DeleteCustomDBEngineVersionCommand = async (
  */
 export const de_DeleteDBClusterCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteDBClusterCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4576,7 +4576,7 @@ export const de_DeleteDBClusterCommand = async (
  */
 export const de_DeleteDBClusterAutomatedBackupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteDBClusterAutomatedBackupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4596,7 +4596,7 @@ export const de_DeleteDBClusterAutomatedBackupCommand = async (
  */
 export const de_DeleteDBClusterEndpointCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteDBClusterEndpointCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4616,7 +4616,7 @@ export const de_DeleteDBClusterEndpointCommand = async (
  */
 export const de_DeleteDBClusterParameterGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteDBClusterParameterGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4633,7 +4633,7 @@ export const de_DeleteDBClusterParameterGroupCommand = async (
  */
 export const de_DeleteDBClusterSnapshotCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteDBClusterSnapshotCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4653,7 +4653,7 @@ export const de_DeleteDBClusterSnapshotCommand = async (
  */
 export const de_DeleteDBInstanceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteDBInstanceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4673,7 +4673,7 @@ export const de_DeleteDBInstanceCommand = async (
  */
 export const de_DeleteDBInstanceAutomatedBackupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteDBInstanceAutomatedBackupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4693,7 +4693,7 @@ export const de_DeleteDBInstanceAutomatedBackupCommand = async (
  */
 export const de_DeleteDBParameterGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteDBParameterGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4710,7 +4710,7 @@ export const de_DeleteDBParameterGroupCommand = async (
  */
 export const de_DeleteDBProxyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteDBProxyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4730,7 +4730,7 @@ export const de_DeleteDBProxyCommand = async (
  */
 export const de_DeleteDBProxyEndpointCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteDBProxyEndpointCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4750,7 +4750,7 @@ export const de_DeleteDBProxyEndpointCommand = async (
  */
 export const de_DeleteDBSecurityGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteDBSecurityGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4767,7 +4767,7 @@ export const de_DeleteDBSecurityGroupCommand = async (
  */
 export const de_DeleteDBShardGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteDBShardGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4787,7 +4787,7 @@ export const de_DeleteDBShardGroupCommand = async (
  */
 export const de_DeleteDBSnapshotCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteDBSnapshotCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4807,7 +4807,7 @@ export const de_DeleteDBSnapshotCommand = async (
  */
 export const de_DeleteDBSubnetGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteDBSubnetGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4824,7 +4824,7 @@ export const de_DeleteDBSubnetGroupCommand = async (
  */
 export const de_DeleteEventSubscriptionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteEventSubscriptionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4844,7 +4844,7 @@ export const de_DeleteEventSubscriptionCommand = async (
  */
 export const de_DeleteGlobalClusterCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteGlobalClusterCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4864,7 +4864,7 @@ export const de_DeleteGlobalClusterCommand = async (
  */
 export const de_DeleteIntegrationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteIntegrationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4884,7 +4884,7 @@ export const de_DeleteIntegrationCommand = async (
  */
 export const de_DeleteOptionGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteOptionGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4901,7 +4901,7 @@ export const de_DeleteOptionGroupCommand = async (
  */
 export const de_DeleteTenantDatabaseCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteTenantDatabaseCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4921,7 +4921,7 @@ export const de_DeleteTenantDatabaseCommand = async (
  */
 export const de_DeregisterDBProxyTargetsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeregisterDBProxyTargetsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4941,7 +4941,7 @@ export const de_DeregisterDBProxyTargetsCommand = async (
  */
 export const de_DescribeAccountAttributesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeAccountAttributesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4961,7 +4961,7 @@ export const de_DescribeAccountAttributesCommand = async (
  */
 export const de_DescribeBlueGreenDeploymentsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeBlueGreenDeploymentsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -4981,7 +4981,7 @@ export const de_DescribeBlueGreenDeploymentsCommand = async (
  */
 export const de_DescribeCertificatesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeCertificatesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5001,7 +5001,7 @@ export const de_DescribeCertificatesCommand = async (
  */
 export const de_DescribeDBClusterAutomatedBackupsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeDBClusterAutomatedBackupsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5021,7 +5021,7 @@ export const de_DescribeDBClusterAutomatedBackupsCommand = async (
  */
 export const de_DescribeDBClusterBacktracksCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeDBClusterBacktracksCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5041,7 +5041,7 @@ export const de_DescribeDBClusterBacktracksCommand = async (
  */
 export const de_DescribeDBClusterEndpointsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeDBClusterEndpointsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5061,7 +5061,7 @@ export const de_DescribeDBClusterEndpointsCommand = async (
  */
 export const de_DescribeDBClusterParameterGroupsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeDBClusterParameterGroupsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5081,7 +5081,7 @@ export const de_DescribeDBClusterParameterGroupsCommand = async (
  */
 export const de_DescribeDBClusterParametersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeDBClusterParametersCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5101,7 +5101,7 @@ export const de_DescribeDBClusterParametersCommand = async (
  */
 export const de_DescribeDBClustersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeDBClustersCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5121,7 +5121,7 @@ export const de_DescribeDBClustersCommand = async (
  */
 export const de_DescribeDBClusterSnapshotAttributesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeDBClusterSnapshotAttributesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5141,7 +5141,7 @@ export const de_DescribeDBClusterSnapshotAttributesCommand = async (
  */
 export const de_DescribeDBClusterSnapshotsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeDBClusterSnapshotsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5161,7 +5161,7 @@ export const de_DescribeDBClusterSnapshotsCommand = async (
  */
 export const de_DescribeDBEngineVersionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeDBEngineVersionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5181,7 +5181,7 @@ export const de_DescribeDBEngineVersionsCommand = async (
  */
 export const de_DescribeDBInstanceAutomatedBackupsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeDBInstanceAutomatedBackupsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5201,7 +5201,7 @@ export const de_DescribeDBInstanceAutomatedBackupsCommand = async (
  */
 export const de_DescribeDBInstancesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeDBInstancesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5221,7 +5221,7 @@ export const de_DescribeDBInstancesCommand = async (
  */
 export const de_DescribeDBLogFilesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeDBLogFilesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5241,7 +5241,7 @@ export const de_DescribeDBLogFilesCommand = async (
  */
 export const de_DescribeDBParameterGroupsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeDBParameterGroupsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5261,7 +5261,7 @@ export const de_DescribeDBParameterGroupsCommand = async (
  */
 export const de_DescribeDBParametersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeDBParametersCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5281,7 +5281,7 @@ export const de_DescribeDBParametersCommand = async (
  */
 export const de_DescribeDBProxiesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeDBProxiesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5301,7 +5301,7 @@ export const de_DescribeDBProxiesCommand = async (
  */
 export const de_DescribeDBProxyEndpointsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeDBProxyEndpointsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5321,7 +5321,7 @@ export const de_DescribeDBProxyEndpointsCommand = async (
  */
 export const de_DescribeDBProxyTargetGroupsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeDBProxyTargetGroupsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5341,7 +5341,7 @@ export const de_DescribeDBProxyTargetGroupsCommand = async (
  */
 export const de_DescribeDBProxyTargetsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeDBProxyTargetsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5361,7 +5361,7 @@ export const de_DescribeDBProxyTargetsCommand = async (
  */
 export const de_DescribeDBRecommendationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeDBRecommendationsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5381,7 +5381,7 @@ export const de_DescribeDBRecommendationsCommand = async (
  */
 export const de_DescribeDBSecurityGroupsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeDBSecurityGroupsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5401,7 +5401,7 @@ export const de_DescribeDBSecurityGroupsCommand = async (
  */
 export const de_DescribeDBShardGroupsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeDBShardGroupsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5421,7 +5421,7 @@ export const de_DescribeDBShardGroupsCommand = async (
  */
 export const de_DescribeDBSnapshotAttributesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeDBSnapshotAttributesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5441,7 +5441,7 @@ export const de_DescribeDBSnapshotAttributesCommand = async (
  */
 export const de_DescribeDBSnapshotsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeDBSnapshotsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5461,7 +5461,7 @@ export const de_DescribeDBSnapshotsCommand = async (
  */
 export const de_DescribeDBSnapshotTenantDatabasesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeDBSnapshotTenantDatabasesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5481,7 +5481,7 @@ export const de_DescribeDBSnapshotTenantDatabasesCommand = async (
  */
 export const de_DescribeDBSubnetGroupsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeDBSubnetGroupsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5501,7 +5501,7 @@ export const de_DescribeDBSubnetGroupsCommand = async (
  */
 export const de_DescribeEngineDefaultClusterParametersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeEngineDefaultClusterParametersCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5510,7 +5510,7 @@ export const de_DescribeEngineDefaultClusterParametersCommand = async (
   let contents: any = {};
   contents = de_DescribeEngineDefaultClusterParametersResult(
     data.DescribeEngineDefaultClusterParametersResult,
-    context
+    context,
   );
   const response: DescribeEngineDefaultClusterParametersCommandOutput = {
     $metadata: deserializeMetadata(output),
@@ -5524,7 +5524,7 @@ export const de_DescribeEngineDefaultClusterParametersCommand = async (
  */
 export const de_DescribeEngineDefaultParametersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeEngineDefaultParametersCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5544,7 +5544,7 @@ export const de_DescribeEngineDefaultParametersCommand = async (
  */
 export const de_DescribeEventCategoriesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeEventCategoriesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5564,7 +5564,7 @@ export const de_DescribeEventCategoriesCommand = async (
  */
 export const de_DescribeEventsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeEventsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5584,7 +5584,7 @@ export const de_DescribeEventsCommand = async (
  */
 export const de_DescribeEventSubscriptionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeEventSubscriptionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5604,7 +5604,7 @@ export const de_DescribeEventSubscriptionsCommand = async (
  */
 export const de_DescribeExportTasksCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeExportTasksCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5624,7 +5624,7 @@ export const de_DescribeExportTasksCommand = async (
  */
 export const de_DescribeGlobalClustersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeGlobalClustersCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5644,7 +5644,7 @@ export const de_DescribeGlobalClustersCommand = async (
  */
 export const de_DescribeIntegrationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeIntegrationsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5664,7 +5664,7 @@ export const de_DescribeIntegrationsCommand = async (
  */
 export const de_DescribeOptionGroupOptionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeOptionGroupOptionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5684,7 +5684,7 @@ export const de_DescribeOptionGroupOptionsCommand = async (
  */
 export const de_DescribeOptionGroupsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeOptionGroupsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5704,7 +5704,7 @@ export const de_DescribeOptionGroupsCommand = async (
  */
 export const de_DescribeOrderableDBInstanceOptionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeOrderableDBInstanceOptionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5724,7 +5724,7 @@ export const de_DescribeOrderableDBInstanceOptionsCommand = async (
  */
 export const de_DescribePendingMaintenanceActionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribePendingMaintenanceActionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5744,7 +5744,7 @@ export const de_DescribePendingMaintenanceActionsCommand = async (
  */
 export const de_DescribeReservedDBInstancesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeReservedDBInstancesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5764,7 +5764,7 @@ export const de_DescribeReservedDBInstancesCommand = async (
  */
 export const de_DescribeReservedDBInstancesOfferingsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeReservedDBInstancesOfferingsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5784,7 +5784,7 @@ export const de_DescribeReservedDBInstancesOfferingsCommand = async (
  */
 export const de_DescribeSourceRegionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeSourceRegionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5804,7 +5804,7 @@ export const de_DescribeSourceRegionsCommand = async (
  */
 export const de_DescribeTenantDatabasesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeTenantDatabasesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5824,7 +5824,7 @@ export const de_DescribeTenantDatabasesCommand = async (
  */
 export const de_DescribeValidDBInstanceModificationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeValidDBInstanceModificationsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5844,7 +5844,7 @@ export const de_DescribeValidDBInstanceModificationsCommand = async (
  */
 export const de_DisableHttpEndpointCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisableHttpEndpointCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5864,7 +5864,7 @@ export const de_DisableHttpEndpointCommand = async (
  */
 export const de_DownloadDBLogFilePortionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DownloadDBLogFilePortionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5884,7 +5884,7 @@ export const de_DownloadDBLogFilePortionCommand = async (
  */
 export const de_EnableHttpEndpointCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<EnableHttpEndpointCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5904,7 +5904,7 @@ export const de_EnableHttpEndpointCommand = async (
  */
 export const de_FailoverDBClusterCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<FailoverDBClusterCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5924,7 +5924,7 @@ export const de_FailoverDBClusterCommand = async (
  */
 export const de_FailoverGlobalClusterCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<FailoverGlobalClusterCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5944,7 +5944,7 @@ export const de_FailoverGlobalClusterCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5964,7 +5964,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_ModifyActivityStreamCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModifyActivityStreamCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -5984,7 +5984,7 @@ export const de_ModifyActivityStreamCommand = async (
  */
 export const de_ModifyCertificatesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModifyCertificatesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -6004,7 +6004,7 @@ export const de_ModifyCertificatesCommand = async (
  */
 export const de_ModifyCurrentDBClusterCapacityCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModifyCurrentDBClusterCapacityCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -6024,7 +6024,7 @@ export const de_ModifyCurrentDBClusterCapacityCommand = async (
  */
 export const de_ModifyCustomDBEngineVersionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModifyCustomDBEngineVersionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -6044,7 +6044,7 @@ export const de_ModifyCustomDBEngineVersionCommand = async (
  */
 export const de_ModifyDBClusterCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModifyDBClusterCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -6064,7 +6064,7 @@ export const de_ModifyDBClusterCommand = async (
  */
 export const de_ModifyDBClusterEndpointCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModifyDBClusterEndpointCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -6084,7 +6084,7 @@ export const de_ModifyDBClusterEndpointCommand = async (
  */
 export const de_ModifyDBClusterParameterGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModifyDBClusterParameterGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -6104,7 +6104,7 @@ export const de_ModifyDBClusterParameterGroupCommand = async (
  */
 export const de_ModifyDBClusterSnapshotAttributeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModifyDBClusterSnapshotAttributeCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -6124,7 +6124,7 @@ export const de_ModifyDBClusterSnapshotAttributeCommand = async (
  */
 export const de_ModifyDBInstanceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModifyDBInstanceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -6144,7 +6144,7 @@ export const de_ModifyDBInstanceCommand = async (
  */
 export const de_ModifyDBParameterGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModifyDBParameterGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -6164,7 +6164,7 @@ export const de_ModifyDBParameterGroupCommand = async (
  */
 export const de_ModifyDBProxyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModifyDBProxyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -6184,7 +6184,7 @@ export const de_ModifyDBProxyCommand = async (
  */
 export const de_ModifyDBProxyEndpointCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModifyDBProxyEndpointCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -6204,7 +6204,7 @@ export const de_ModifyDBProxyEndpointCommand = async (
  */
 export const de_ModifyDBProxyTargetGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModifyDBProxyTargetGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -6224,7 +6224,7 @@ export const de_ModifyDBProxyTargetGroupCommand = async (
  */
 export const de_ModifyDBRecommendationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModifyDBRecommendationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -6244,7 +6244,7 @@ export const de_ModifyDBRecommendationCommand = async (
  */
 export const de_ModifyDBShardGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModifyDBShardGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -6264,7 +6264,7 @@ export const de_ModifyDBShardGroupCommand = async (
  */
 export const de_ModifyDBSnapshotCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModifyDBSnapshotCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -6284,7 +6284,7 @@ export const de_ModifyDBSnapshotCommand = async (
  */
 export const de_ModifyDBSnapshotAttributeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModifyDBSnapshotAttributeCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -6304,7 +6304,7 @@ export const de_ModifyDBSnapshotAttributeCommand = async (
  */
 export const de_ModifyDBSubnetGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModifyDBSubnetGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -6324,7 +6324,7 @@ export const de_ModifyDBSubnetGroupCommand = async (
  */
 export const de_ModifyEventSubscriptionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModifyEventSubscriptionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -6344,7 +6344,7 @@ export const de_ModifyEventSubscriptionCommand = async (
  */
 export const de_ModifyGlobalClusterCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModifyGlobalClusterCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -6364,7 +6364,7 @@ export const de_ModifyGlobalClusterCommand = async (
  */
 export const de_ModifyIntegrationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModifyIntegrationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -6384,7 +6384,7 @@ export const de_ModifyIntegrationCommand = async (
  */
 export const de_ModifyOptionGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModifyOptionGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -6404,7 +6404,7 @@ export const de_ModifyOptionGroupCommand = async (
  */
 export const de_ModifyTenantDatabaseCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModifyTenantDatabaseCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -6424,7 +6424,7 @@ export const de_ModifyTenantDatabaseCommand = async (
  */
 export const de_PromoteReadReplicaCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PromoteReadReplicaCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -6444,7 +6444,7 @@ export const de_PromoteReadReplicaCommand = async (
  */
 export const de_PromoteReadReplicaDBClusterCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PromoteReadReplicaDBClusterCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -6464,7 +6464,7 @@ export const de_PromoteReadReplicaDBClusterCommand = async (
  */
 export const de_PurchaseReservedDBInstancesOfferingCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PurchaseReservedDBInstancesOfferingCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -6484,7 +6484,7 @@ export const de_PurchaseReservedDBInstancesOfferingCommand = async (
  */
 export const de_RebootDBClusterCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RebootDBClusterCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -6504,7 +6504,7 @@ export const de_RebootDBClusterCommand = async (
  */
 export const de_RebootDBInstanceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RebootDBInstanceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -6524,7 +6524,7 @@ export const de_RebootDBInstanceCommand = async (
  */
 export const de_RebootDBShardGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RebootDBShardGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -6544,7 +6544,7 @@ export const de_RebootDBShardGroupCommand = async (
  */
 export const de_RegisterDBProxyTargetsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RegisterDBProxyTargetsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -6564,7 +6564,7 @@ export const de_RegisterDBProxyTargetsCommand = async (
  */
 export const de_RemoveFromGlobalClusterCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RemoveFromGlobalClusterCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -6584,7 +6584,7 @@ export const de_RemoveFromGlobalClusterCommand = async (
  */
 export const de_RemoveRoleFromDBClusterCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RemoveRoleFromDBClusterCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -6601,7 +6601,7 @@ export const de_RemoveRoleFromDBClusterCommand = async (
  */
 export const de_RemoveRoleFromDBInstanceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RemoveRoleFromDBInstanceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -6618,7 +6618,7 @@ export const de_RemoveRoleFromDBInstanceCommand = async (
  */
 export const de_RemoveSourceIdentifierFromSubscriptionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RemoveSourceIdentifierFromSubscriptionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -6627,7 +6627,7 @@ export const de_RemoveSourceIdentifierFromSubscriptionCommand = async (
   let contents: any = {};
   contents = de_RemoveSourceIdentifierFromSubscriptionResult(
     data.RemoveSourceIdentifierFromSubscriptionResult,
-    context
+    context,
   );
   const response: RemoveSourceIdentifierFromSubscriptionCommandOutput = {
     $metadata: deserializeMetadata(output),
@@ -6641,7 +6641,7 @@ export const de_RemoveSourceIdentifierFromSubscriptionCommand = async (
  */
 export const de_RemoveTagsFromResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RemoveTagsFromResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -6658,7 +6658,7 @@ export const de_RemoveTagsFromResourceCommand = async (
  */
 export const de_ResetDBClusterParameterGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResetDBClusterParameterGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -6678,7 +6678,7 @@ export const de_ResetDBClusterParameterGroupCommand = async (
  */
 export const de_ResetDBParameterGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResetDBParameterGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -6698,7 +6698,7 @@ export const de_ResetDBParameterGroupCommand = async (
  */
 export const de_RestoreDBClusterFromS3Command = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RestoreDBClusterFromS3CommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -6718,7 +6718,7 @@ export const de_RestoreDBClusterFromS3Command = async (
  */
 export const de_RestoreDBClusterFromSnapshotCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RestoreDBClusterFromSnapshotCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -6738,7 +6738,7 @@ export const de_RestoreDBClusterFromSnapshotCommand = async (
  */
 export const de_RestoreDBClusterToPointInTimeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RestoreDBClusterToPointInTimeCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -6758,7 +6758,7 @@ export const de_RestoreDBClusterToPointInTimeCommand = async (
  */
 export const de_RestoreDBInstanceFromDBSnapshotCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RestoreDBInstanceFromDBSnapshotCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -6778,7 +6778,7 @@ export const de_RestoreDBInstanceFromDBSnapshotCommand = async (
  */
 export const de_RestoreDBInstanceFromS3Command = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RestoreDBInstanceFromS3CommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -6798,7 +6798,7 @@ export const de_RestoreDBInstanceFromS3Command = async (
  */
 export const de_RestoreDBInstanceToPointInTimeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RestoreDBInstanceToPointInTimeCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -6818,7 +6818,7 @@ export const de_RestoreDBInstanceToPointInTimeCommand = async (
  */
 export const de_RevokeDBSecurityGroupIngressCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RevokeDBSecurityGroupIngressCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -6838,7 +6838,7 @@ export const de_RevokeDBSecurityGroupIngressCommand = async (
  */
 export const de_StartActivityStreamCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartActivityStreamCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -6858,7 +6858,7 @@ export const de_StartActivityStreamCommand = async (
  */
 export const de_StartDBClusterCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartDBClusterCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -6878,7 +6878,7 @@ export const de_StartDBClusterCommand = async (
  */
 export const de_StartDBInstanceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartDBInstanceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -6898,7 +6898,7 @@ export const de_StartDBInstanceCommand = async (
  */
 export const de_StartDBInstanceAutomatedBackupsReplicationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartDBInstanceAutomatedBackupsReplicationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -6907,7 +6907,7 @@ export const de_StartDBInstanceAutomatedBackupsReplicationCommand = async (
   let contents: any = {};
   contents = de_StartDBInstanceAutomatedBackupsReplicationResult(
     data.StartDBInstanceAutomatedBackupsReplicationResult,
-    context
+    context,
   );
   const response: StartDBInstanceAutomatedBackupsReplicationCommandOutput = {
     $metadata: deserializeMetadata(output),
@@ -6921,7 +6921,7 @@ export const de_StartDBInstanceAutomatedBackupsReplicationCommand = async (
  */
 export const de_StartExportTaskCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartExportTaskCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -6941,7 +6941,7 @@ export const de_StartExportTaskCommand = async (
  */
 export const de_StopActivityStreamCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StopActivityStreamCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -6961,7 +6961,7 @@ export const de_StopActivityStreamCommand = async (
  */
 export const de_StopDBClusterCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StopDBClusterCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -6981,7 +6981,7 @@ export const de_StopDBClusterCommand = async (
  */
 export const de_StopDBInstanceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StopDBInstanceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -7001,7 +7001,7 @@ export const de_StopDBInstanceCommand = async (
  */
 export const de_StopDBInstanceAutomatedBackupsReplicationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StopDBInstanceAutomatedBackupsReplicationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -7010,7 +7010,7 @@ export const de_StopDBInstanceAutomatedBackupsReplicationCommand = async (
   let contents: any = {};
   contents = de_StopDBInstanceAutomatedBackupsReplicationResult(
     data.StopDBInstanceAutomatedBackupsReplicationResult,
-    context
+    context,
   );
   const response: StopDBInstanceAutomatedBackupsReplicationCommandOutput = {
     $metadata: deserializeMetadata(output),
@@ -7024,7 +7024,7 @@ export const de_StopDBInstanceAutomatedBackupsReplicationCommand = async (
  */
 export const de_SwitchoverBlueGreenDeploymentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SwitchoverBlueGreenDeploymentCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -7044,7 +7044,7 @@ export const de_SwitchoverBlueGreenDeploymentCommand = async (
  */
 export const de_SwitchoverGlobalClusterCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SwitchoverGlobalClusterCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -7064,7 +7064,7 @@ export const de_SwitchoverGlobalClusterCommand = async (
  */
 export const de_SwitchoverReadReplicaCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SwitchoverReadReplicaCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -7539,7 +7539,7 @@ const de_CommandError = async (output: __HttpResponse, context: __SerdeContext):
  */
 const de_AuthorizationAlreadyExistsFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AuthorizationAlreadyExistsFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_AuthorizationAlreadyExistsFault(body.Error, context);
@@ -7555,7 +7555,7 @@ const de_AuthorizationAlreadyExistsFaultRes = async (
  */
 const de_AuthorizationNotFoundFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AuthorizationNotFoundFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_AuthorizationNotFoundFault(body.Error, context);
@@ -7571,7 +7571,7 @@ const de_AuthorizationNotFoundFaultRes = async (
  */
 const de_AuthorizationQuotaExceededFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AuthorizationQuotaExceededFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_AuthorizationQuotaExceededFault(body.Error, context);
@@ -7587,7 +7587,7 @@ const de_AuthorizationQuotaExceededFaultRes = async (
  */
 const de_BackupPolicyNotFoundFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BackupPolicyNotFoundFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_BackupPolicyNotFoundFault(body.Error, context);
@@ -7603,7 +7603,7 @@ const de_BackupPolicyNotFoundFaultRes = async (
  */
 const de_BlueGreenDeploymentAlreadyExistsFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BlueGreenDeploymentAlreadyExistsFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_BlueGreenDeploymentAlreadyExistsFault(body.Error, context);
@@ -7619,7 +7619,7 @@ const de_BlueGreenDeploymentAlreadyExistsFaultRes = async (
  */
 const de_BlueGreenDeploymentNotFoundFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BlueGreenDeploymentNotFoundFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_BlueGreenDeploymentNotFoundFault(body.Error, context);
@@ -7635,7 +7635,7 @@ const de_BlueGreenDeploymentNotFoundFaultRes = async (
  */
 const de_CertificateNotFoundFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CertificateNotFoundFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_CertificateNotFoundFault(body.Error, context);
@@ -7651,7 +7651,7 @@ const de_CertificateNotFoundFaultRes = async (
  */
 const de_CreateCustomDBEngineVersionFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateCustomDBEngineVersionFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_CreateCustomDBEngineVersionFault(body.Error, context);
@@ -7667,7 +7667,7 @@ const de_CreateCustomDBEngineVersionFaultRes = async (
  */
 const de_CustomAvailabilityZoneNotFoundFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CustomAvailabilityZoneNotFoundFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_CustomAvailabilityZoneNotFoundFault(body.Error, context);
@@ -7683,7 +7683,7 @@ const de_CustomAvailabilityZoneNotFoundFaultRes = async (
  */
 const de_CustomDBEngineVersionAlreadyExistsFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CustomDBEngineVersionAlreadyExistsFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_CustomDBEngineVersionAlreadyExistsFault(body.Error, context);
@@ -7699,7 +7699,7 @@ const de_CustomDBEngineVersionAlreadyExistsFaultRes = async (
  */
 const de_CustomDBEngineVersionNotFoundFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CustomDBEngineVersionNotFoundFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_CustomDBEngineVersionNotFoundFault(body.Error, context);
@@ -7715,7 +7715,7 @@ const de_CustomDBEngineVersionNotFoundFaultRes = async (
  */
 const de_CustomDBEngineVersionQuotaExceededFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CustomDBEngineVersionQuotaExceededFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_CustomDBEngineVersionQuotaExceededFault(body.Error, context);
@@ -7731,7 +7731,7 @@ const de_CustomDBEngineVersionQuotaExceededFaultRes = async (
  */
 const de_DBClusterAlreadyExistsFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DBClusterAlreadyExistsFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_DBClusterAlreadyExistsFault(body.Error, context);
@@ -7747,7 +7747,7 @@ const de_DBClusterAlreadyExistsFaultRes = async (
  */
 const de_DBClusterAutomatedBackupNotFoundFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DBClusterAutomatedBackupNotFoundFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_DBClusterAutomatedBackupNotFoundFault(body.Error, context);
@@ -7763,7 +7763,7 @@ const de_DBClusterAutomatedBackupNotFoundFaultRes = async (
  */
 const de_DBClusterAutomatedBackupQuotaExceededFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DBClusterAutomatedBackupQuotaExceededFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_DBClusterAutomatedBackupQuotaExceededFault(body.Error, context);
@@ -7779,7 +7779,7 @@ const de_DBClusterAutomatedBackupQuotaExceededFaultRes = async (
  */
 const de_DBClusterBacktrackNotFoundFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DBClusterBacktrackNotFoundFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_DBClusterBacktrackNotFoundFault(body.Error, context);
@@ -7795,7 +7795,7 @@ const de_DBClusterBacktrackNotFoundFaultRes = async (
  */
 const de_DBClusterEndpointAlreadyExistsFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DBClusterEndpointAlreadyExistsFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_DBClusterEndpointAlreadyExistsFault(body.Error, context);
@@ -7811,7 +7811,7 @@ const de_DBClusterEndpointAlreadyExistsFaultRes = async (
  */
 const de_DBClusterEndpointNotFoundFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DBClusterEndpointNotFoundFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_DBClusterEndpointNotFoundFault(body.Error, context);
@@ -7827,7 +7827,7 @@ const de_DBClusterEndpointNotFoundFaultRes = async (
  */
 const de_DBClusterEndpointQuotaExceededFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DBClusterEndpointQuotaExceededFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_DBClusterEndpointQuotaExceededFault(body.Error, context);
@@ -7843,7 +7843,7 @@ const de_DBClusterEndpointQuotaExceededFaultRes = async (
  */
 const de_DBClusterNotFoundFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DBClusterNotFoundFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_DBClusterNotFoundFault(body.Error, context);
@@ -7859,7 +7859,7 @@ const de_DBClusterNotFoundFaultRes = async (
  */
 const de_DBClusterParameterGroupNotFoundFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DBClusterParameterGroupNotFoundFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_DBClusterParameterGroupNotFoundFault(body.Error, context);
@@ -7875,7 +7875,7 @@ const de_DBClusterParameterGroupNotFoundFaultRes = async (
  */
 const de_DBClusterQuotaExceededFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DBClusterQuotaExceededFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_DBClusterQuotaExceededFault(body.Error, context);
@@ -7891,7 +7891,7 @@ const de_DBClusterQuotaExceededFaultRes = async (
  */
 const de_DBClusterRoleAlreadyExistsFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DBClusterRoleAlreadyExistsFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_DBClusterRoleAlreadyExistsFault(body.Error, context);
@@ -7907,7 +7907,7 @@ const de_DBClusterRoleAlreadyExistsFaultRes = async (
  */
 const de_DBClusterRoleNotFoundFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DBClusterRoleNotFoundFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_DBClusterRoleNotFoundFault(body.Error, context);
@@ -7923,7 +7923,7 @@ const de_DBClusterRoleNotFoundFaultRes = async (
  */
 const de_DBClusterRoleQuotaExceededFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DBClusterRoleQuotaExceededFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_DBClusterRoleQuotaExceededFault(body.Error, context);
@@ -7939,7 +7939,7 @@ const de_DBClusterRoleQuotaExceededFaultRes = async (
  */
 const de_DBClusterSnapshotAlreadyExistsFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DBClusterSnapshotAlreadyExistsFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_DBClusterSnapshotAlreadyExistsFault(body.Error, context);
@@ -7955,7 +7955,7 @@ const de_DBClusterSnapshotAlreadyExistsFaultRes = async (
  */
 const de_DBClusterSnapshotNotFoundFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DBClusterSnapshotNotFoundFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_DBClusterSnapshotNotFoundFault(body.Error, context);
@@ -7971,7 +7971,7 @@ const de_DBClusterSnapshotNotFoundFaultRes = async (
  */
 const de_DBInstanceAlreadyExistsFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DBInstanceAlreadyExistsFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_DBInstanceAlreadyExistsFault(body.Error, context);
@@ -7987,7 +7987,7 @@ const de_DBInstanceAlreadyExistsFaultRes = async (
  */
 const de_DBInstanceAutomatedBackupNotFoundFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DBInstanceAutomatedBackupNotFoundFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_DBInstanceAutomatedBackupNotFoundFault(body.Error, context);
@@ -8003,7 +8003,7 @@ const de_DBInstanceAutomatedBackupNotFoundFaultRes = async (
  */
 const de_DBInstanceAutomatedBackupQuotaExceededFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DBInstanceAutomatedBackupQuotaExceededFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_DBInstanceAutomatedBackupQuotaExceededFault(body.Error, context);
@@ -8019,7 +8019,7 @@ const de_DBInstanceAutomatedBackupQuotaExceededFaultRes = async (
  */
 const de_DBInstanceNotFoundFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DBInstanceNotFoundFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_DBInstanceNotFoundFault(body.Error, context);
@@ -8035,7 +8035,7 @@ const de_DBInstanceNotFoundFaultRes = async (
  */
 const de_DBInstanceRoleAlreadyExistsFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DBInstanceRoleAlreadyExistsFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_DBInstanceRoleAlreadyExistsFault(body.Error, context);
@@ -8051,7 +8051,7 @@ const de_DBInstanceRoleAlreadyExistsFaultRes = async (
  */
 const de_DBInstanceRoleNotFoundFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DBInstanceRoleNotFoundFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_DBInstanceRoleNotFoundFault(body.Error, context);
@@ -8067,7 +8067,7 @@ const de_DBInstanceRoleNotFoundFaultRes = async (
  */
 const de_DBInstanceRoleQuotaExceededFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DBInstanceRoleQuotaExceededFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_DBInstanceRoleQuotaExceededFault(body.Error, context);
@@ -8083,7 +8083,7 @@ const de_DBInstanceRoleQuotaExceededFaultRes = async (
  */
 const de_DBLogFileNotFoundFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DBLogFileNotFoundFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_DBLogFileNotFoundFault(body.Error, context);
@@ -8099,7 +8099,7 @@ const de_DBLogFileNotFoundFaultRes = async (
  */
 const de_DBParameterGroupAlreadyExistsFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DBParameterGroupAlreadyExistsFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_DBParameterGroupAlreadyExistsFault(body.Error, context);
@@ -8115,7 +8115,7 @@ const de_DBParameterGroupAlreadyExistsFaultRes = async (
  */
 const de_DBParameterGroupNotFoundFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DBParameterGroupNotFoundFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_DBParameterGroupNotFoundFault(body.Error, context);
@@ -8131,7 +8131,7 @@ const de_DBParameterGroupNotFoundFaultRes = async (
  */
 const de_DBParameterGroupQuotaExceededFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DBParameterGroupQuotaExceededFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_DBParameterGroupQuotaExceededFault(body.Error, context);
@@ -8147,7 +8147,7 @@ const de_DBParameterGroupQuotaExceededFaultRes = async (
  */
 const de_DBProxyAlreadyExistsFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DBProxyAlreadyExistsFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_DBProxyAlreadyExistsFault(body.Error, context);
@@ -8163,7 +8163,7 @@ const de_DBProxyAlreadyExistsFaultRes = async (
  */
 const de_DBProxyEndpointAlreadyExistsFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DBProxyEndpointAlreadyExistsFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_DBProxyEndpointAlreadyExistsFault(body.Error, context);
@@ -8179,7 +8179,7 @@ const de_DBProxyEndpointAlreadyExistsFaultRes = async (
  */
 const de_DBProxyEndpointNotFoundFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DBProxyEndpointNotFoundFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_DBProxyEndpointNotFoundFault(body.Error, context);
@@ -8195,7 +8195,7 @@ const de_DBProxyEndpointNotFoundFaultRes = async (
  */
 const de_DBProxyEndpointQuotaExceededFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DBProxyEndpointQuotaExceededFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_DBProxyEndpointQuotaExceededFault(body.Error, context);
@@ -8211,7 +8211,7 @@ const de_DBProxyEndpointQuotaExceededFaultRes = async (
  */
 const de_DBProxyNotFoundFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DBProxyNotFoundFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_DBProxyNotFoundFault(body.Error, context);
@@ -8227,7 +8227,7 @@ const de_DBProxyNotFoundFaultRes = async (
  */
 const de_DBProxyQuotaExceededFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DBProxyQuotaExceededFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_DBProxyQuotaExceededFault(body.Error, context);
@@ -8243,7 +8243,7 @@ const de_DBProxyQuotaExceededFaultRes = async (
  */
 const de_DBProxyTargetAlreadyRegisteredFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DBProxyTargetAlreadyRegisteredFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_DBProxyTargetAlreadyRegisteredFault(body.Error, context);
@@ -8259,7 +8259,7 @@ const de_DBProxyTargetAlreadyRegisteredFaultRes = async (
  */
 const de_DBProxyTargetGroupNotFoundFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DBProxyTargetGroupNotFoundFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_DBProxyTargetGroupNotFoundFault(body.Error, context);
@@ -8275,7 +8275,7 @@ const de_DBProxyTargetGroupNotFoundFaultRes = async (
  */
 const de_DBProxyTargetNotFoundFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DBProxyTargetNotFoundFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_DBProxyTargetNotFoundFault(body.Error, context);
@@ -8291,7 +8291,7 @@ const de_DBProxyTargetNotFoundFaultRes = async (
  */
 const de_DBSecurityGroupAlreadyExistsFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DBSecurityGroupAlreadyExistsFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_DBSecurityGroupAlreadyExistsFault(body.Error, context);
@@ -8307,7 +8307,7 @@ const de_DBSecurityGroupAlreadyExistsFaultRes = async (
  */
 const de_DBSecurityGroupNotFoundFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DBSecurityGroupNotFoundFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_DBSecurityGroupNotFoundFault(body.Error, context);
@@ -8323,7 +8323,7 @@ const de_DBSecurityGroupNotFoundFaultRes = async (
  */
 const de_DBSecurityGroupNotSupportedFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DBSecurityGroupNotSupportedFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_DBSecurityGroupNotSupportedFault(body.Error, context);
@@ -8339,7 +8339,7 @@ const de_DBSecurityGroupNotSupportedFaultRes = async (
  */
 const de_DBSecurityGroupQuotaExceededFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DBSecurityGroupQuotaExceededFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_DBSecurityGroupQuotaExceededFault(body.Error, context);
@@ -8355,7 +8355,7 @@ const de_DBSecurityGroupQuotaExceededFaultRes = async (
  */
 const de_DBShardGroupAlreadyExistsFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DBShardGroupAlreadyExistsFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_DBShardGroupAlreadyExistsFault(body.Error, context);
@@ -8371,7 +8371,7 @@ const de_DBShardGroupAlreadyExistsFaultRes = async (
  */
 const de_DBShardGroupNotFoundFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DBShardGroupNotFoundFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_DBShardGroupNotFoundFault(body.Error, context);
@@ -8387,7 +8387,7 @@ const de_DBShardGroupNotFoundFaultRes = async (
  */
 const de_DBSnapshotAlreadyExistsFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DBSnapshotAlreadyExistsFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_DBSnapshotAlreadyExistsFault(body.Error, context);
@@ -8403,7 +8403,7 @@ const de_DBSnapshotAlreadyExistsFaultRes = async (
  */
 const de_DBSnapshotNotFoundFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DBSnapshotNotFoundFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_DBSnapshotNotFoundFault(body.Error, context);
@@ -8419,7 +8419,7 @@ const de_DBSnapshotNotFoundFaultRes = async (
  */
 const de_DBSnapshotTenantDatabaseNotFoundFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DBSnapshotTenantDatabaseNotFoundFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_DBSnapshotTenantDatabaseNotFoundFault(body.Error, context);
@@ -8435,7 +8435,7 @@ const de_DBSnapshotTenantDatabaseNotFoundFaultRes = async (
  */
 const de_DBSubnetGroupAlreadyExistsFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DBSubnetGroupAlreadyExistsFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_DBSubnetGroupAlreadyExistsFault(body.Error, context);
@@ -8451,7 +8451,7 @@ const de_DBSubnetGroupAlreadyExistsFaultRes = async (
  */
 const de_DBSubnetGroupDoesNotCoverEnoughAZsRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DBSubnetGroupDoesNotCoverEnoughAZs> => {
   const body = parsedOutput.body;
   const deserialized: any = de_DBSubnetGroupDoesNotCoverEnoughAZs(body.Error, context);
@@ -8467,7 +8467,7 @@ const de_DBSubnetGroupDoesNotCoverEnoughAZsRes = async (
  */
 const de_DBSubnetGroupNotAllowedFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DBSubnetGroupNotAllowedFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_DBSubnetGroupNotAllowedFault(body.Error, context);
@@ -8483,7 +8483,7 @@ const de_DBSubnetGroupNotAllowedFaultRes = async (
  */
 const de_DBSubnetGroupNotFoundFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DBSubnetGroupNotFoundFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_DBSubnetGroupNotFoundFault(body.Error, context);
@@ -8499,7 +8499,7 @@ const de_DBSubnetGroupNotFoundFaultRes = async (
  */
 const de_DBSubnetGroupQuotaExceededFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DBSubnetGroupQuotaExceededFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_DBSubnetGroupQuotaExceededFault(body.Error, context);
@@ -8515,7 +8515,7 @@ const de_DBSubnetGroupQuotaExceededFaultRes = async (
  */
 const de_DBSubnetQuotaExceededFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DBSubnetQuotaExceededFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_DBSubnetQuotaExceededFault(body.Error, context);
@@ -8531,7 +8531,7 @@ const de_DBSubnetQuotaExceededFaultRes = async (
  */
 const de_DBUpgradeDependencyFailureFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DBUpgradeDependencyFailureFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_DBUpgradeDependencyFailureFault(body.Error, context);
@@ -8560,7 +8560,7 @@ const de_DomainNotFoundFaultRes = async (parsedOutput: any, context: __SerdeCont
  */
 const de_Ec2ImagePropertiesNotSupportedFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<Ec2ImagePropertiesNotSupportedFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_Ec2ImagePropertiesNotSupportedFault(body.Error, context);
@@ -8576,7 +8576,7 @@ const de_Ec2ImagePropertiesNotSupportedFaultRes = async (
  */
 const de_EventSubscriptionQuotaExceededFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<EventSubscriptionQuotaExceededFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_EventSubscriptionQuotaExceededFault(body.Error, context);
@@ -8592,7 +8592,7 @@ const de_EventSubscriptionQuotaExceededFaultRes = async (
  */
 const de_ExportTaskAlreadyExistsFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ExportTaskAlreadyExistsFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_ExportTaskAlreadyExistsFault(body.Error, context);
@@ -8608,7 +8608,7 @@ const de_ExportTaskAlreadyExistsFaultRes = async (
  */
 const de_ExportTaskNotFoundFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ExportTaskNotFoundFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_ExportTaskNotFoundFault(body.Error, context);
@@ -8624,7 +8624,7 @@ const de_ExportTaskNotFoundFaultRes = async (
  */
 const de_GlobalClusterAlreadyExistsFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GlobalClusterAlreadyExistsFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_GlobalClusterAlreadyExistsFault(body.Error, context);
@@ -8640,7 +8640,7 @@ const de_GlobalClusterAlreadyExistsFaultRes = async (
  */
 const de_GlobalClusterNotFoundFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GlobalClusterNotFoundFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_GlobalClusterNotFoundFault(body.Error, context);
@@ -8656,7 +8656,7 @@ const de_GlobalClusterNotFoundFaultRes = async (
  */
 const de_GlobalClusterQuotaExceededFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GlobalClusterQuotaExceededFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_GlobalClusterQuotaExceededFault(body.Error, context);
@@ -8672,7 +8672,7 @@ const de_GlobalClusterQuotaExceededFaultRes = async (
  */
 const de_IamRoleMissingPermissionsFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<IamRoleMissingPermissionsFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_IamRoleMissingPermissionsFault(body.Error, context);
@@ -8688,7 +8688,7 @@ const de_IamRoleMissingPermissionsFaultRes = async (
  */
 const de_IamRoleNotFoundFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<IamRoleNotFoundFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_IamRoleNotFoundFault(body.Error, context);
@@ -8704,7 +8704,7 @@ const de_IamRoleNotFoundFaultRes = async (
  */
 const de_InstanceQuotaExceededFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InstanceQuotaExceededFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_InstanceQuotaExceededFault(body.Error, context);
@@ -8720,7 +8720,7 @@ const de_InstanceQuotaExceededFaultRes = async (
  */
 const de_InsufficientAvailableIPsInSubnetFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InsufficientAvailableIPsInSubnetFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_InsufficientAvailableIPsInSubnetFault(body.Error, context);
@@ -8736,7 +8736,7 @@ const de_InsufficientAvailableIPsInSubnetFaultRes = async (
  */
 const de_InsufficientDBClusterCapacityFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InsufficientDBClusterCapacityFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_InsufficientDBClusterCapacityFault(body.Error, context);
@@ -8752,7 +8752,7 @@ const de_InsufficientDBClusterCapacityFaultRes = async (
  */
 const de_InsufficientDBInstanceCapacityFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InsufficientDBInstanceCapacityFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_InsufficientDBInstanceCapacityFault(body.Error, context);
@@ -8768,7 +8768,7 @@ const de_InsufficientDBInstanceCapacityFaultRes = async (
  */
 const de_InsufficientStorageClusterCapacityFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InsufficientStorageClusterCapacityFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_InsufficientStorageClusterCapacityFault(body.Error, context);
@@ -8784,7 +8784,7 @@ const de_InsufficientStorageClusterCapacityFaultRes = async (
  */
 const de_IntegrationAlreadyExistsFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<IntegrationAlreadyExistsFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_IntegrationAlreadyExistsFault(body.Error, context);
@@ -8800,7 +8800,7 @@ const de_IntegrationAlreadyExistsFaultRes = async (
  */
 const de_IntegrationConflictOperationFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<IntegrationConflictOperationFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_IntegrationConflictOperationFault(body.Error, context);
@@ -8816,7 +8816,7 @@ const de_IntegrationConflictOperationFaultRes = async (
  */
 const de_IntegrationNotFoundFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<IntegrationNotFoundFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_IntegrationNotFoundFault(body.Error, context);
@@ -8832,7 +8832,7 @@ const de_IntegrationNotFoundFaultRes = async (
  */
 const de_IntegrationQuotaExceededFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<IntegrationQuotaExceededFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_IntegrationQuotaExceededFault(body.Error, context);
@@ -8848,7 +8848,7 @@ const de_IntegrationQuotaExceededFaultRes = async (
  */
 const de_InvalidBlueGreenDeploymentStateFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidBlueGreenDeploymentStateFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_InvalidBlueGreenDeploymentStateFault(body.Error, context);
@@ -8864,7 +8864,7 @@ const de_InvalidBlueGreenDeploymentStateFaultRes = async (
  */
 const de_InvalidCustomDBEngineVersionStateFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidCustomDBEngineVersionStateFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_InvalidCustomDBEngineVersionStateFault(body.Error, context);
@@ -8880,7 +8880,7 @@ const de_InvalidCustomDBEngineVersionStateFaultRes = async (
  */
 const de_InvalidDBClusterAutomatedBackupStateFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidDBClusterAutomatedBackupStateFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_InvalidDBClusterAutomatedBackupStateFault(body.Error, context);
@@ -8896,7 +8896,7 @@ const de_InvalidDBClusterAutomatedBackupStateFaultRes = async (
  */
 const de_InvalidDBClusterCapacityFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidDBClusterCapacityFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_InvalidDBClusterCapacityFault(body.Error, context);
@@ -8912,7 +8912,7 @@ const de_InvalidDBClusterCapacityFaultRes = async (
  */
 const de_InvalidDBClusterEndpointStateFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidDBClusterEndpointStateFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_InvalidDBClusterEndpointStateFault(body.Error, context);
@@ -8928,7 +8928,7 @@ const de_InvalidDBClusterEndpointStateFaultRes = async (
  */
 const de_InvalidDBClusterSnapshotStateFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidDBClusterSnapshotStateFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_InvalidDBClusterSnapshotStateFault(body.Error, context);
@@ -8944,7 +8944,7 @@ const de_InvalidDBClusterSnapshotStateFaultRes = async (
  */
 const de_InvalidDBClusterStateFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidDBClusterStateFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_InvalidDBClusterStateFault(body.Error, context);
@@ -8960,7 +8960,7 @@ const de_InvalidDBClusterStateFaultRes = async (
  */
 const de_InvalidDBInstanceAutomatedBackupStateFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidDBInstanceAutomatedBackupStateFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_InvalidDBInstanceAutomatedBackupStateFault(body.Error, context);
@@ -8976,7 +8976,7 @@ const de_InvalidDBInstanceAutomatedBackupStateFaultRes = async (
  */
 const de_InvalidDBInstanceStateFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidDBInstanceStateFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_InvalidDBInstanceStateFault(body.Error, context);
@@ -8992,7 +8992,7 @@ const de_InvalidDBInstanceStateFaultRes = async (
  */
 const de_InvalidDBParameterGroupStateFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidDBParameterGroupStateFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_InvalidDBParameterGroupStateFault(body.Error, context);
@@ -9008,7 +9008,7 @@ const de_InvalidDBParameterGroupStateFaultRes = async (
  */
 const de_InvalidDBProxyEndpointStateFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidDBProxyEndpointStateFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_InvalidDBProxyEndpointStateFault(body.Error, context);
@@ -9024,7 +9024,7 @@ const de_InvalidDBProxyEndpointStateFaultRes = async (
  */
 const de_InvalidDBProxyStateFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidDBProxyStateFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_InvalidDBProxyStateFault(body.Error, context);
@@ -9040,7 +9040,7 @@ const de_InvalidDBProxyStateFaultRes = async (
  */
 const de_InvalidDBSecurityGroupStateFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidDBSecurityGroupStateFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_InvalidDBSecurityGroupStateFault(body.Error, context);
@@ -9056,7 +9056,7 @@ const de_InvalidDBSecurityGroupStateFaultRes = async (
  */
 const de_InvalidDBShardGroupStateFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidDBShardGroupStateFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_InvalidDBShardGroupStateFault(body.Error, context);
@@ -9072,7 +9072,7 @@ const de_InvalidDBShardGroupStateFaultRes = async (
  */
 const de_InvalidDBSnapshotStateFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidDBSnapshotStateFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_InvalidDBSnapshotStateFault(body.Error, context);
@@ -9088,7 +9088,7 @@ const de_InvalidDBSnapshotStateFaultRes = async (
  */
 const de_InvalidDBSubnetGroupFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidDBSubnetGroupFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_InvalidDBSubnetGroupFault(body.Error, context);
@@ -9104,7 +9104,7 @@ const de_InvalidDBSubnetGroupFaultRes = async (
  */
 const de_InvalidDBSubnetGroupStateFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidDBSubnetGroupStateFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_InvalidDBSubnetGroupStateFault(body.Error, context);
@@ -9120,7 +9120,7 @@ const de_InvalidDBSubnetGroupStateFaultRes = async (
  */
 const de_InvalidDBSubnetStateFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidDBSubnetStateFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_InvalidDBSubnetStateFault(body.Error, context);
@@ -9136,7 +9136,7 @@ const de_InvalidDBSubnetStateFaultRes = async (
  */
 const de_InvalidEventSubscriptionStateFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidEventSubscriptionStateFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_InvalidEventSubscriptionStateFault(body.Error, context);
@@ -9152,7 +9152,7 @@ const de_InvalidEventSubscriptionStateFaultRes = async (
  */
 const de_InvalidExportOnlyFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidExportOnlyFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_InvalidExportOnlyFault(body.Error, context);
@@ -9168,7 +9168,7 @@ const de_InvalidExportOnlyFaultRes = async (
  */
 const de_InvalidExportSourceStateFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidExportSourceStateFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_InvalidExportSourceStateFault(body.Error, context);
@@ -9184,7 +9184,7 @@ const de_InvalidExportSourceStateFaultRes = async (
  */
 const de_InvalidExportTaskStateFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidExportTaskStateFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_InvalidExportTaskStateFault(body.Error, context);
@@ -9200,7 +9200,7 @@ const de_InvalidExportTaskStateFaultRes = async (
  */
 const de_InvalidGlobalClusterStateFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidGlobalClusterStateFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_InvalidGlobalClusterStateFault(body.Error, context);
@@ -9216,7 +9216,7 @@ const de_InvalidGlobalClusterStateFaultRes = async (
  */
 const de_InvalidIntegrationStateFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidIntegrationStateFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_InvalidIntegrationStateFault(body.Error, context);
@@ -9245,7 +9245,7 @@ const de_InvalidMaxAcuFaultRes = async (parsedOutput: any, context: __SerdeConte
  */
 const de_InvalidOptionGroupStateFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidOptionGroupStateFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_InvalidOptionGroupStateFault(body.Error, context);
@@ -9261,7 +9261,7 @@ const de_InvalidOptionGroupStateFaultRes = async (
  */
 const de_InvalidResourceStateFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidResourceStateFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_InvalidResourceStateFault(body.Error, context);
@@ -9290,7 +9290,7 @@ const de_InvalidRestoreFaultRes = async (parsedOutput: any, context: __SerdeCont
  */
 const de_InvalidS3BucketFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidS3BucketFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_InvalidS3BucketFault(body.Error, context);
@@ -9319,7 +9319,7 @@ const de_InvalidSubnetRes = async (parsedOutput: any, context: __SerdeContext): 
  */
 const de_InvalidVPCNetworkStateFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidVPCNetworkStateFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_InvalidVPCNetworkStateFault(body.Error, context);
@@ -9335,7 +9335,7 @@ const de_InvalidVPCNetworkStateFaultRes = async (
  */
 const de_KMSKeyNotAccessibleFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<KMSKeyNotAccessibleFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_KMSKeyNotAccessibleFault(body.Error, context);
@@ -9351,7 +9351,7 @@ const de_KMSKeyNotAccessibleFaultRes = async (
  */
 const de_MaxDBShardGroupLimitReachedRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<MaxDBShardGroupLimitReached> => {
   const body = parsedOutput.body;
   const deserialized: any = de_MaxDBShardGroupLimitReached(body.Error, context);
@@ -9367,7 +9367,7 @@ const de_MaxDBShardGroupLimitReachedRes = async (
  */
 const de_NetworkTypeNotSupportedRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<NetworkTypeNotSupported> => {
   const body = parsedOutput.body;
   const deserialized: any = de_NetworkTypeNotSupported(body.Error, context);
@@ -9383,7 +9383,7 @@ const de_NetworkTypeNotSupportedRes = async (
  */
 const de_OptionGroupAlreadyExistsFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<OptionGroupAlreadyExistsFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_OptionGroupAlreadyExistsFault(body.Error, context);
@@ -9399,7 +9399,7 @@ const de_OptionGroupAlreadyExistsFaultRes = async (
  */
 const de_OptionGroupNotFoundFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<OptionGroupNotFoundFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_OptionGroupNotFoundFault(body.Error, context);
@@ -9415,7 +9415,7 @@ const de_OptionGroupNotFoundFaultRes = async (
  */
 const de_OptionGroupQuotaExceededFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<OptionGroupQuotaExceededFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_OptionGroupQuotaExceededFault(body.Error, context);
@@ -9431,7 +9431,7 @@ const de_OptionGroupQuotaExceededFaultRes = async (
  */
 const de_PointInTimeRestoreNotEnabledFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PointInTimeRestoreNotEnabledFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_PointInTimeRestoreNotEnabledFault(body.Error, context);
@@ -9447,7 +9447,7 @@ const de_PointInTimeRestoreNotEnabledFaultRes = async (
  */
 const de_ProvisionedIopsNotAvailableInAZFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ProvisionedIopsNotAvailableInAZFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_ProvisionedIopsNotAvailableInAZFault(body.Error, context);
@@ -9463,7 +9463,7 @@ const de_ProvisionedIopsNotAvailableInAZFaultRes = async (
  */
 const de_ReservedDBInstanceAlreadyExistsFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ReservedDBInstanceAlreadyExistsFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_ReservedDBInstanceAlreadyExistsFault(body.Error, context);
@@ -9479,7 +9479,7 @@ const de_ReservedDBInstanceAlreadyExistsFaultRes = async (
  */
 const de_ReservedDBInstanceNotFoundFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ReservedDBInstanceNotFoundFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_ReservedDBInstanceNotFoundFault(body.Error, context);
@@ -9495,7 +9495,7 @@ const de_ReservedDBInstanceNotFoundFaultRes = async (
  */
 const de_ReservedDBInstanceQuotaExceededFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ReservedDBInstanceQuotaExceededFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_ReservedDBInstanceQuotaExceededFault(body.Error, context);
@@ -9511,7 +9511,7 @@ const de_ReservedDBInstanceQuotaExceededFaultRes = async (
  */
 const de_ReservedDBInstancesOfferingNotFoundFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ReservedDBInstancesOfferingNotFoundFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_ReservedDBInstancesOfferingNotFoundFault(body.Error, context);
@@ -9527,7 +9527,7 @@ const de_ReservedDBInstancesOfferingNotFoundFaultRes = async (
  */
 const de_ResourceNotFoundFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_ResourceNotFoundFault(body.Error, context);
@@ -9543,7 +9543,7 @@ const de_ResourceNotFoundFaultRes = async (
  */
 const de_SharedSnapshotQuotaExceededFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SharedSnapshotQuotaExceededFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_SharedSnapshotQuotaExceededFault(body.Error, context);
@@ -9559,7 +9559,7 @@ const de_SharedSnapshotQuotaExceededFaultRes = async (
  */
 const de_SnapshotQuotaExceededFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SnapshotQuotaExceededFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_SnapshotQuotaExceededFault(body.Error, context);
@@ -9575,7 +9575,7 @@ const de_SnapshotQuotaExceededFaultRes = async (
  */
 const de_SNSInvalidTopicFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SNSInvalidTopicFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_SNSInvalidTopicFault(body.Error, context);
@@ -9591,7 +9591,7 @@ const de_SNSInvalidTopicFaultRes = async (
  */
 const de_SNSNoAuthorizationFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SNSNoAuthorizationFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_SNSNoAuthorizationFault(body.Error, context);
@@ -9607,7 +9607,7 @@ const de_SNSNoAuthorizationFaultRes = async (
  */
 const de_SNSTopicArnNotFoundFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SNSTopicArnNotFoundFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_SNSTopicArnNotFoundFault(body.Error, context);
@@ -9623,7 +9623,7 @@ const de_SNSTopicArnNotFoundFaultRes = async (
  */
 const de_SourceClusterNotSupportedFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SourceClusterNotSupportedFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_SourceClusterNotSupportedFault(body.Error, context);
@@ -9639,7 +9639,7 @@ const de_SourceClusterNotSupportedFaultRes = async (
  */
 const de_SourceDatabaseNotSupportedFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SourceDatabaseNotSupportedFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_SourceDatabaseNotSupportedFault(body.Error, context);
@@ -9668,7 +9668,7 @@ const de_SourceNotFoundFaultRes = async (parsedOutput: any, context: __SerdeCont
  */
 const de_StorageQuotaExceededFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StorageQuotaExceededFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_StorageQuotaExceededFault(body.Error, context);
@@ -9684,7 +9684,7 @@ const de_StorageQuotaExceededFaultRes = async (
  */
 const de_StorageTypeNotAvailableFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StorageTypeNotAvailableFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_StorageTypeNotAvailableFault(body.Error, context);
@@ -9700,7 +9700,7 @@ const de_StorageTypeNotAvailableFaultRes = async (
  */
 const de_StorageTypeNotSupportedFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StorageTypeNotSupportedFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_StorageTypeNotSupportedFault(body.Error, context);
@@ -9729,7 +9729,7 @@ const de_SubnetAlreadyInUseRes = async (parsedOutput: any, context: __SerdeConte
  */
 const de_SubscriptionAlreadyExistFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SubscriptionAlreadyExistFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_SubscriptionAlreadyExistFault(body.Error, context);
@@ -9745,7 +9745,7 @@ const de_SubscriptionAlreadyExistFaultRes = async (
  */
 const de_SubscriptionCategoryNotFoundFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SubscriptionCategoryNotFoundFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_SubscriptionCategoryNotFoundFault(body.Error, context);
@@ -9761,7 +9761,7 @@ const de_SubscriptionCategoryNotFoundFaultRes = async (
  */
 const de_SubscriptionNotFoundFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SubscriptionNotFoundFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_SubscriptionNotFoundFault(body.Error, context);
@@ -9777,7 +9777,7 @@ const de_SubscriptionNotFoundFaultRes = async (
  */
 const de_TenantDatabaseAlreadyExistsFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TenantDatabaseAlreadyExistsFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_TenantDatabaseAlreadyExistsFault(body.Error, context);
@@ -9793,7 +9793,7 @@ const de_TenantDatabaseAlreadyExistsFaultRes = async (
  */
 const de_TenantDatabaseNotFoundFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TenantDatabaseNotFoundFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_TenantDatabaseNotFoundFault(body.Error, context);
@@ -9809,7 +9809,7 @@ const de_TenantDatabaseNotFoundFaultRes = async (
  */
 const de_TenantDatabaseQuotaExceededFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TenantDatabaseQuotaExceededFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_TenantDatabaseQuotaExceededFault(body.Error, context);
@@ -9825,7 +9825,7 @@ const de_TenantDatabaseQuotaExceededFaultRes = async (
  */
 const de_UnsupportedDBEngineVersionFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UnsupportedDBEngineVersionFault> => {
   const body = parsedOutput.body;
   const deserialized: any = de_UnsupportedDBEngineVersionFault(body.Error, context);
@@ -9875,7 +9875,7 @@ const se_AddRoleToDBInstanceMessage = (input: AddRoleToDBInstanceMessage, contex
  */
 const se_AddSourceIdentifierToSubscriptionMessage = (
   input: AddSourceIdentifierToSubscriptionMessage,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_SN] != null) {
@@ -9913,7 +9913,7 @@ const se_AddTagsToResourceMessage = (input: AddTagsToResourceMessage, context: _
  */
 const se_ApplyPendingMaintenanceActionMessage = (
   input: ApplyPendingMaintenanceActionMessage,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_RI] != null) {
@@ -9949,7 +9949,7 @@ const se_AttributeValueList = (input: string[], context: __SerdeContext): any =>
  */
 const se_AuthorizeDBSecurityGroupIngressMessage = (
   input: AuthorizeDBSecurityGroupIngressMessage,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DBSGN] != null) {
@@ -10022,7 +10022,7 @@ const se_CancelExportTaskMessage = (input: CancelExportTaskMessage, context: __S
  */
 const se_CloudwatchLogsExportConfiguration = (
   input: CloudwatchLogsExportConfiguration,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_ELT] != null) {
@@ -10083,7 +10083,7 @@ const se_ConnectionPoolConfiguration = (input: ConnectionPoolConfiguration, cont
  */
 const se_CopyDBClusterParameterGroupMessage = (
   input: CopyDBClusterParameterGroupMessage,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_SDBCPGI] != null) {
@@ -10281,7 +10281,7 @@ const se_CreateBlueGreenDeploymentRequest = (input: CreateBlueGreenDeploymentReq
  */
 const se_CreateCustomDBEngineVersionMessage = (
   input: CreateCustomDBEngineVersionMessage,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_E] != null) {
@@ -10589,7 +10589,7 @@ const se_CreateDBClusterMessage = (input: CreateDBClusterMessage, context: __Ser
  */
 const se_CreateDBClusterParameterGroupMessage = (
   input: CreateDBClusterParameterGroupMessage,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DBCPGN] != null) {
@@ -10882,7 +10882,7 @@ const se_CreateDBInstanceMessage = (input: CreateDBInstanceMessage, context: __S
  */
 const se_CreateDBInstanceReadReplicaMessage = (
   input: CreateDBInstanceReadReplicaMessage,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DBII] != null) {
@@ -11529,7 +11529,7 @@ const se_DeleteBlueGreenDeploymentRequest = (input: DeleteBlueGreenDeploymentReq
  */
 const se_DeleteCustomDBEngineVersionMessage = (
   input: DeleteCustomDBEngineVersionMessage,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_E] != null) {
@@ -11546,7 +11546,7 @@ const se_DeleteCustomDBEngineVersionMessage = (
  */
 const se_DeleteDBClusterAutomatedBackupMessage = (
   input: DeleteDBClusterAutomatedBackupMessage,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DCRI] != null) {
@@ -11591,7 +11591,7 @@ const se_DeleteDBClusterMessage = (input: DeleteDBClusterMessage, context: __Ser
  */
 const se_DeleteDBClusterParameterGroupMessage = (
   input: DeleteDBClusterParameterGroupMessage,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DBCPGN] != null) {
@@ -11616,7 +11616,7 @@ const se_DeleteDBClusterSnapshotMessage = (input: DeleteDBClusterSnapshotMessage
  */
 const se_DeleteDBInstanceAutomatedBackupMessage = (
   input: DeleteDBInstanceAutomatedBackupMessage,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DRI] != null) {
@@ -11836,7 +11836,7 @@ const se_DescribeAccountAttributesMessage = (input: DescribeAccountAttributesMes
  */
 const se_DescribeBlueGreenDeploymentsRequest = (
   input: DescribeBlueGreenDeploymentsRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_BGDI] != null) {
@@ -11893,7 +11893,7 @@ const se_DescribeCertificatesMessage = (input: DescribeCertificatesMessage, cont
  */
 const se_DescribeDBClusterAutomatedBackupsMessage = (
   input: DescribeDBClusterAutomatedBackupsMessage,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DCRI] != null) {
@@ -11926,7 +11926,7 @@ const se_DescribeDBClusterAutomatedBackupsMessage = (
  */
 const se_DescribeDBClusterBacktracksMessage = (
   input: DescribeDBClusterBacktracksMessage,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DBCI] != null) {
@@ -11959,7 +11959,7 @@ const se_DescribeDBClusterBacktracksMessage = (
  */
 const se_DescribeDBClusterEndpointsMessage = (
   input: DescribeDBClusterEndpointsMessage,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DBCI] != null) {
@@ -11992,7 +11992,7 @@ const se_DescribeDBClusterEndpointsMessage = (
  */
 const se_DescribeDBClusterParameterGroupsMessage = (
   input: DescribeDBClusterParameterGroupsMessage,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DBCPGN] != null) {
@@ -12022,7 +12022,7 @@ const se_DescribeDBClusterParameterGroupsMessage = (
  */
 const se_DescribeDBClusterParametersMessage = (
   input: DescribeDBClusterParametersMessage,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DBCPGN] != null) {
@@ -12085,7 +12085,7 @@ const se_DescribeDBClustersMessage = (input: DescribeDBClustersMessage, context:
  */
 const se_DescribeDBClusterSnapshotAttributesMessage = (
   input: DescribeDBClusterSnapshotAttributesMessage,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DBCSI] != null) {
@@ -12099,7 +12099,7 @@ const se_DescribeDBClusterSnapshotAttributesMessage = (
  */
 const se_DescribeDBClusterSnapshotsMessage = (
   input: DescribeDBClusterSnapshotsMessage,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DBCI] != null) {
@@ -12189,7 +12189,7 @@ const se_DescribeDBEngineVersionsMessage = (input: DescribeDBEngineVersionsMessa
  */
 const se_DescribeDBInstanceAutomatedBackupsMessage = (
   input: DescribeDBInstanceAutomatedBackupsMessage,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DRI] != null) {
@@ -12402,7 +12402,7 @@ const se_DescribeDBProxyEndpointsRequest = (input: DescribeDBProxyEndpointsReque
  */
 const se_DescribeDBProxyTargetGroupsRequest = (
   input: DescribeDBProxyTargetGroupsRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DBPN] != null) {
@@ -12552,7 +12552,7 @@ const se_DescribeDBShardGroupsMessage = (input: DescribeDBShardGroupsMessage, co
  */
 const se_DescribeDBSnapshotAttributesMessage = (
   input: DescribeDBSnapshotAttributesMessage,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DBSIn] != null) {
@@ -12608,7 +12608,7 @@ const se_DescribeDBSnapshotsMessage = (input: DescribeDBSnapshotsMessage, contex
  */
 const se_DescribeDBSnapshotTenantDatabasesMessage = (
   input: DescribeDBSnapshotTenantDatabasesMessage,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DBII] != null) {
@@ -12674,7 +12674,7 @@ const se_DescribeDBSubnetGroupsMessage = (input: DescribeDBSubnetGroupsMessage, 
  */
 const se_DescribeEngineDefaultClusterParametersMessage = (
   input: DescribeEngineDefaultClusterParametersMessage,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DBPGF] != null) {
@@ -12704,7 +12704,7 @@ const se_DescribeEngineDefaultClusterParametersMessage = (
  */
 const se_DescribeEngineDefaultParametersMessage = (
   input: DescribeEngineDefaultParametersMessage,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DBPGF] != null) {
@@ -12804,7 +12804,7 @@ const se_DescribeEventsMessage = (input: DescribeEventsMessage, context: __Serde
  */
 const se_DescribeEventSubscriptionsMessage = (
   input: DescribeEventSubscriptionsMessage,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_SN] != null) {
@@ -12921,7 +12921,7 @@ const se_DescribeIntegrationsMessage = (input: DescribeIntegrationsMessage, cont
  */
 const se_DescribeOptionGroupOptionsMessage = (
   input: DescribeOptionGroupOptionsMessage,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_EN] != null) {
@@ -12987,7 +12987,7 @@ const se_DescribeOptionGroupsMessage = (input: DescribeOptionGroupsMessage, cont
  */
 const se_DescribeOrderableDBInstanceOptionsMessage = (
   input: DescribeOrderableDBInstanceOptionsMessage,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_E] != null) {
@@ -13032,7 +13032,7 @@ const se_DescribeOrderableDBInstanceOptionsMessage = (
  */
 const se_DescribePendingMaintenanceActionsMessage = (
   input: DescribePendingMaintenanceActionsMessage,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_RI] != null) {
@@ -13062,7 +13062,7 @@ const se_DescribePendingMaintenanceActionsMessage = (
  */
 const se_DescribeReservedDBInstancesMessage = (
   input: DescribeReservedDBInstancesMessage,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_RDBII] != null) {
@@ -13113,7 +13113,7 @@ const se_DescribeReservedDBInstancesMessage = (
  */
 const se_DescribeReservedDBInstancesOfferingsMessage = (
   input: DescribeReservedDBInstancesOfferingsMessage,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_RDBIOI] != null) {
@@ -13215,7 +13215,7 @@ const se_DescribeTenantDatabasesMessage = (input: DescribeTenantDatabasesMessage
  */
 const se_DescribeValidDBInstanceModificationsMessage = (
   input: DescribeValidDBInstanceModificationsMessage,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DBII] != null) {
@@ -13490,7 +13490,7 @@ const se_ModifyCertificatesMessage = (input: ModifyCertificatesMessage, context:
  */
 const se_ModifyCurrentDBClusterCapacityMessage = (
   input: ModifyCurrentDBClusterCapacityMessage,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DBCI] != null) {
@@ -13513,7 +13513,7 @@ const se_ModifyCurrentDBClusterCapacityMessage = (
  */
 const se_ModifyCustomDBEngineVersionMessage = (
   input: ModifyCustomDBEngineVersionMessage,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_E] != null) {
@@ -13732,7 +13732,7 @@ const se_ModifyDBClusterMessage = (input: ModifyDBClusterMessage, context: __Ser
  */
 const se_ModifyDBClusterParameterGroupMessage = (
   input: ModifyDBClusterParameterGroupMessage,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DBCPGN] != null) {
@@ -13756,7 +13756,7 @@ const se_ModifyDBClusterParameterGroupMessage = (
  */
 const se_ModifyDBClusterSnapshotAttributeMessage = (
   input: ModifyDBClusterSnapshotAttributeMessage,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DBCSI] != null) {
@@ -14607,7 +14607,7 @@ const se_ProcessorFeatureList = (input: ProcessorFeature[], context: __SerdeCont
  */
 const se_PromoteReadReplicaDBClusterMessage = (
   input: PromoteReadReplicaDBClusterMessage,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DBCI] != null) {
@@ -14638,7 +14638,7 @@ const se_PromoteReadReplicaMessage = (input: PromoteReadReplicaMessage, context:
  */
 const se_PurchaseReservedDBInstancesOfferingMessage = (
   input: PurchaseReservedDBInstancesOfferingMessage,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_RDBIOI] != null) {
@@ -14836,7 +14836,7 @@ const se_RemoveRoleFromDBInstanceMessage = (input: RemoveRoleFromDBInstanceMessa
  */
 const se_RemoveSourceIdentifierFromSubscriptionMessage = (
   input: RemoveSourceIdentifierFromSubscriptionMessage,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_SN] != null) {
@@ -14874,7 +14874,7 @@ const se_RemoveTagsFromResourceMessage = (input: RemoveTagsFromResourceMessage, 
  */
 const se_ResetDBClusterParameterGroupMessage = (
   input: ResetDBClusterParameterGroupMessage,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DBCPGN] != null) {
@@ -15076,7 +15076,7 @@ const se_RestoreDBClusterFromS3Message = (input: RestoreDBClusterFromS3Message, 
  */
 const se_RestoreDBClusterFromSnapshotMessage = (
   input: RestoreDBClusterFromSnapshotMessage,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_AZ] != null) {
@@ -15217,7 +15217,7 @@ const se_RestoreDBClusterFromSnapshotMessage = (
  */
 const se_RestoreDBClusterToPointInTimeMessage = (
   input: RestoreDBClusterToPointInTimeMessage,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DBCI] != null) {
@@ -15351,7 +15351,7 @@ const se_RestoreDBClusterToPointInTimeMessage = (
  */
 const se_RestoreDBInstanceFromDBSnapshotMessage = (
   input: RestoreDBInstanceFromDBSnapshotMessage,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DBII] != null) {
@@ -15719,7 +15719,7 @@ const se_RestoreDBInstanceFromS3Message = (input: RestoreDBInstanceFromS3Message
  */
 const se_RestoreDBInstanceToPointInTimeMessage = (
   input: RestoreDBInstanceToPointInTimeMessage,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_SDBII] != null) {
@@ -15903,7 +15903,7 @@ const se_RestoreDBInstanceToPointInTimeMessage = (
  */
 const se_RevokeDBSecurityGroupIngressMessage = (
   input: RevokeDBSecurityGroupIngressMessage,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_DBSGN] != null) {
@@ -16019,7 +16019,7 @@ const se_StartDBClusterMessage = (input: StartDBClusterMessage, context: __Serde
  */
 const se_StartDBInstanceAutomatedBackupsReplicationMessage = (
   input: StartDBInstanceAutomatedBackupsReplicationMessage,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_SDBIA] != null) {
@@ -16114,7 +16114,7 @@ const se_StopDBClusterMessage = (input: StopDBClusterMessage, context: __SerdeCo
  */
 const se_StopDBInstanceAutomatedBackupsReplicationMessage = (
   input: StopDBInstanceAutomatedBackupsReplicationMessage,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_SDBIA] != null) {
@@ -16174,7 +16174,7 @@ const se_SubnetIdentifierList = (input: string[], context: __SerdeContext): any 
  */
 const se_SwitchoverBlueGreenDeploymentRequest = (
   input: SwitchoverBlueGreenDeploymentRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_BGDI] != null) {
@@ -16362,7 +16362,7 @@ const de_ActivityStreamModeList = (output: any, context: __SerdeContext): string
  */
 const de_AddSourceIdentifierToSubscriptionResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): AddSourceIdentifierToSubscriptionResult => {
   const contents: any = {};
   if (output[_ES] != null) {
@@ -16376,7 +16376,7 @@ const de_AddSourceIdentifierToSubscriptionResult = (
  */
 const de_ApplyPendingMaintenanceActionResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ApplyPendingMaintenanceActionResult => {
   const contents: any = {};
   if (output[_RPMA] != null) {
@@ -16434,7 +16434,7 @@ const de_AuthorizationQuotaExceededFault = (output: any, context: __SerdeContext
  */
 const de_AuthorizeDBSecurityGroupIngressResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): AuthorizeDBSecurityGroupIngressResult => {
   const contents: any = {};
   if (output[_DBSGe] != null) {
@@ -16567,7 +16567,7 @@ const de_BlueGreenDeployment = (output: any, context: __SerdeContext): BlueGreen
  */
 const de_BlueGreenDeploymentAlreadyExistsFault = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): BlueGreenDeploymentAlreadyExistsFault => {
   const contents: any = {};
   if (output[_m] != null) {
@@ -16592,7 +16592,7 @@ const de_BlueGreenDeploymentList = (output: any, context: __SerdeContext): BlueG
  */
 const de_BlueGreenDeploymentNotFoundFault = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): BlueGreenDeploymentNotFoundFault => {
   const contents: any = {};
   if (output[_m] != null) {
@@ -16834,7 +16834,7 @@ const de_ContextAttributeList = (output: any, context: __SerdeContext): ContextA
  */
 const de_CopyDBClusterParameterGroupResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CopyDBClusterParameterGroupResult => {
   const contents: any = {};
   if (output[_DBCPG] != null) {
@@ -16892,7 +16892,7 @@ const de_CopyOptionGroupResult = (output: any, context: __SerdeContext): CopyOpt
  */
 const de_CreateBlueGreenDeploymentResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CreateBlueGreenDeploymentResponse => {
   const contents: any = {};
   if (output[_BGD] != null) {
@@ -16906,7 +16906,7 @@ const de_CreateBlueGreenDeploymentResponse = (
  */
 const de_CreateCustomDBEngineVersionFault = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CreateCustomDBEngineVersionFault => {
   const contents: any = {};
   if (output[_m] != null) {
@@ -16920,7 +16920,7 @@ const de_CreateCustomDBEngineVersionFault = (
  */
 const de_CreateDBClusterParameterGroupResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CreateDBClusterParameterGroupResult => {
   const contents: any = {};
   if (output[_DBCPG] != null) {
@@ -16956,7 +16956,7 @@ const de_CreateDBClusterSnapshotResult = (output: any, context: __SerdeContext):
  */
 const de_CreateDBInstanceReadReplicaResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CreateDBInstanceReadReplicaResult => {
   const contents: any = {};
   if (output[_DBI] != null) {
@@ -17091,7 +17091,7 @@ const de_CreateTenantDatabaseResult = (output: any, context: __SerdeContext): Cr
  */
 const de_CustomAvailabilityZoneNotFoundFault = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CustomAvailabilityZoneNotFoundFault => {
   const contents: any = {};
   if (output[_m] != null) {
@@ -17105,7 +17105,7 @@ const de_CustomAvailabilityZoneNotFoundFault = (
  */
 const de_CustomDBEngineVersionAlreadyExistsFault = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CustomDBEngineVersionAlreadyExistsFault => {
   const contents: any = {};
   if (output[_m] != null) {
@@ -17133,7 +17133,7 @@ const de_CustomDBEngineVersionAMI = (output: any, context: __SerdeContext): Cust
  */
 const de_CustomDBEngineVersionNotFoundFault = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CustomDBEngineVersionNotFoundFault => {
   const contents: any = {};
   if (output[_m] != null) {
@@ -17147,7 +17147,7 @@ const de_CustomDBEngineVersionNotFoundFault = (
  */
 const de_CustomDBEngineVersionQuotaExceededFault = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CustomDBEngineVersionQuotaExceededFault => {
   const contents: any = {};
   if (output[_m] != null) {
@@ -17554,7 +17554,7 @@ const de_DBClusterAutomatedBackupMessage = (output: any, context: __SerdeContext
  */
 const de_DBClusterAutomatedBackupNotFoundFault = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DBClusterAutomatedBackupNotFoundFault => {
   const contents: any = {};
   if (output[_m] != null) {
@@ -17568,7 +17568,7 @@ const de_DBClusterAutomatedBackupNotFoundFault = (
  */
 const de_DBClusterAutomatedBackupQuotaExceededFault = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DBClusterAutomatedBackupQuotaExceededFault => {
   const contents: any = {};
   if (output[_m] != null) {
@@ -17711,7 +17711,7 @@ const de_DBClusterEndpoint = (output: any, context: __SerdeContext): DBClusterEn
  */
 const de_DBClusterEndpointAlreadyExistsFault = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DBClusterEndpointAlreadyExistsFault => {
   const contents: any = {};
   if (output[_m] != null) {
@@ -17763,7 +17763,7 @@ const de_DBClusterEndpointNotFoundFault = (output: any, context: __SerdeContext)
  */
 const de_DBClusterEndpointQuotaExceededFault = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DBClusterEndpointQuotaExceededFault => {
   const contents: any = {};
   if (output[_m] != null) {
@@ -17918,7 +17918,7 @@ const de_DBClusterParameterGroupList = (output: any, context: __SerdeContext): D
  */
 const de_DBClusterParameterGroupNameMessage = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DBClusterParameterGroupNameMessage => {
   const contents: any = {};
   if (output[_DBCPGN] != null) {
@@ -17932,7 +17932,7 @@ const de_DBClusterParameterGroupNameMessage = (
  */
 const de_DBClusterParameterGroupNotFoundFault = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DBClusterParameterGroupNotFoundFault => {
   const contents: any = {};
   if (output[_m] != null) {
@@ -18124,7 +18124,7 @@ const de_DBClusterSnapshot = (output: any, context: __SerdeContext): DBClusterSn
  */
 const de_DBClusterSnapshotAlreadyExistsFault = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DBClusterSnapshotAlreadyExistsFault => {
   const contents: any = {};
   if (output[_m] != null) {
@@ -18165,7 +18165,7 @@ const de_DBClusterSnapshotAttributeList = (output: any, context: __SerdeContext)
  */
 const de_DBClusterSnapshotAttributesResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DBClusterSnapshotAttributesResult => {
   const contents: any = {};
   if (output[_DBCSI] != null) {
@@ -18491,7 +18491,7 @@ const de_DBInstance = (output: any, context: __SerdeContext): DBInstance => {
   } else if (output[_RRDBII] != null && output[_RRDBII][_RRDBIIe] != null) {
     contents[_RRDBII] = de_ReadReplicaDBInstanceIdentifierList(
       __getArrayIfSingleItem(output[_RRDBII][_RRDBIIe]),
-      context
+      context,
     );
   }
   if (output.ReadReplicaDBClusterIdentifiers === "") {
@@ -18499,7 +18499,7 @@ const de_DBInstance = (output: any, context: __SerdeContext): DBInstance => {
   } else if (output[_RRDBCI] != null && output[_RRDBCI][_RRDBCIe] != null) {
     contents[_RRDBCI] = de_ReadReplicaDBClusterIdentifierList(
       __getArrayIfSingleItem(output[_RRDBCI][_RRDBCIe]),
-      context
+      context,
     );
   }
   if (output[_RM] != null) {
@@ -18629,7 +18629,7 @@ const de_DBInstance = (output: any, context: __SerdeContext): DBInstance => {
   } else if (output[_DBIABR] != null && output[_DBIABR][_DBIABRn] != null) {
     contents[_DBIABR] = de_DBInstanceAutomatedBackupsReplicationList(
       __getArrayIfSingleItem(output[_DBIABR][_DBIABRn]),
-      context
+      context,
     );
   }
   if (output[_COIE] != null) {
@@ -18800,7 +18800,7 @@ const de_DBInstanceAutomatedBackup = (output: any, context: __SerdeContext): DBI
   } else if (output[_DBIABR] != null && output[_DBIABR][_DBIABRn] != null) {
     contents[_DBIABR] = de_DBInstanceAutomatedBackupsReplicationList(
       __getArrayIfSingleItem(output[_DBIABR][_DBIABRn]),
-      context
+      context,
     );
   }
   if (output[_BTa] != null) {
@@ -18837,7 +18837,7 @@ const de_DBInstanceAutomatedBackupList = (output: any, context: __SerdeContext):
  */
 const de_DBInstanceAutomatedBackupMessage = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DBInstanceAutomatedBackupMessage => {
   const contents: any = {};
   if (output[_Ma] != null) {
@@ -18856,7 +18856,7 @@ const de_DBInstanceAutomatedBackupMessage = (
  */
 const de_DBInstanceAutomatedBackupNotFoundFault = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DBInstanceAutomatedBackupNotFoundFault => {
   const contents: any = {};
   if (output[_m] != null) {
@@ -18870,7 +18870,7 @@ const de_DBInstanceAutomatedBackupNotFoundFault = (
  */
 const de_DBInstanceAutomatedBackupQuotaExceededFault = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DBInstanceAutomatedBackupQuotaExceededFault => {
   const contents: any = {};
   if (output[_m] != null) {
@@ -18884,7 +18884,7 @@ const de_DBInstanceAutomatedBackupQuotaExceededFault = (
  */
 const de_DBInstanceAutomatedBackupsReplication = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DBInstanceAutomatedBackupsReplication => {
   const contents: any = {};
   if (output[_DBIABA] != null) {
@@ -18898,7 +18898,7 @@ const de_DBInstanceAutomatedBackupsReplication = (
  */
 const de_DBInstanceAutomatedBackupsReplicationList = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DBInstanceAutomatedBackupsReplication[] => {
   return (output || [])
     .filter((e: any) => e != null)
@@ -18967,7 +18967,7 @@ const de_DBInstanceRole = (output: any, context: __SerdeContext): DBInstanceRole
  */
 const de_DBInstanceRoleAlreadyExistsFault = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DBInstanceRoleAlreadyExistsFault => {
   const contents: any = {};
   if (output[_m] != null) {
@@ -18992,7 +18992,7 @@ const de_DBInstanceRoleNotFoundFault = (output: any, context: __SerdeContext): D
  */
 const de_DBInstanceRoleQuotaExceededFault = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DBInstanceRoleQuotaExceededFault => {
   const contents: any = {};
   if (output[_m] != null) {
@@ -19079,7 +19079,7 @@ const de_DBParameterGroup = (output: any, context: __SerdeContext): DBParameterG
  */
 const de_DBParameterGroupAlreadyExistsFault = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DBParameterGroupAlreadyExistsFault => {
   const contents: any = {};
   if (output[_m] != null) {
@@ -19142,7 +19142,7 @@ const de_DBParameterGroupNotFoundFault = (output: any, context: __SerdeContext):
  */
 const de_DBParameterGroupQuotaExceededFault = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DBParameterGroupQuotaExceededFault => {
   const contents: any = {};
   if (output[_m] != null) {
@@ -19312,7 +19312,7 @@ const de_DBProxyEndpoint = (output: any, context: __SerdeContext): DBProxyEndpoi
  */
 const de_DBProxyEndpointAlreadyExistsFault = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DBProxyEndpointAlreadyExistsFault => {
   const contents: any = {};
   if (output[_m] != null) {
@@ -19348,7 +19348,7 @@ const de_DBProxyEndpointNotFoundFault = (output: any, context: __SerdeContext): 
  */
 const de_DBProxyEndpointQuotaExceededFault = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DBProxyEndpointQuotaExceededFault => {
   const contents: any = {};
   if (output[_m] != null) {
@@ -19427,7 +19427,7 @@ const de_DBProxyTarget = (output: any, context: __SerdeContext): DBProxyTarget =
  */
 const de_DBProxyTargetAlreadyRegisteredFault = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DBProxyTargetAlreadyRegisteredFault => {
   const contents: any = {};
   if (output[_m] != null) {
@@ -19638,7 +19638,7 @@ const de_DBSecurityGroup = (output: any, context: __SerdeContext): DBSecurityGro
  */
 const de_DBSecurityGroupAlreadyExistsFault = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DBSecurityGroupAlreadyExistsFault => {
   const contents: any = {};
   if (output[_m] != null) {
@@ -19704,7 +19704,7 @@ const de_DBSecurityGroupNotFoundFault = (output: any, context: __SerdeContext): 
  */
 const de_DBSecurityGroupNotSupportedFault = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DBSecurityGroupNotSupportedFault => {
   const contents: any = {};
   if (output[_m] != null) {
@@ -19718,7 +19718,7 @@ const de_DBSecurityGroupNotSupportedFault = (
  */
 const de_DBSecurityGroupQuotaExceededFault = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DBSecurityGroupQuotaExceededFault => {
   const contents: any = {};
   if (output[_m] != null) {
@@ -20069,7 +20069,7 @@ const de_DBSnapshotTenantDatabase = (output: any, context: __SerdeContext): DBSn
  */
 const de_DBSnapshotTenantDatabaseNotFoundFault = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DBSnapshotTenantDatabaseNotFoundFault => {
   const contents: any = {};
   if (output[_m] != null) {
@@ -20094,7 +20094,7 @@ const de_DBSnapshotTenantDatabasesList = (output: any, context: __SerdeContext):
  */
 const de_DBSnapshotTenantDatabasesMessage = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DBSnapshotTenantDatabasesMessage => {
   const contents: any = {};
   if (output[_Ma] != null) {
@@ -20157,7 +20157,7 @@ const de_DBSubnetGroupAlreadyExistsFault = (output: any, context: __SerdeContext
  */
 const de_DBSubnetGroupDoesNotCoverEnoughAZs = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DBSubnetGroupDoesNotCoverEnoughAZs => {
   const contents: any = {};
   if (output[_m] != null) {
@@ -20253,7 +20253,7 @@ const de_DBUpgradeDependencyFailureFault = (output: any, context: __SerdeContext
  */
 const de_DeleteBlueGreenDeploymentResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DeleteBlueGreenDeploymentResponse => {
   const contents: any = {};
   if (output[_BGD] != null) {
@@ -20267,7 +20267,7 @@ const de_DeleteBlueGreenDeploymentResponse = (
  */
 const de_DeleteDBClusterAutomatedBackupResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DeleteDBClusterAutomatedBackupResult => {
   const contents: any = {};
   if (output[_DBCABl] != null) {
@@ -20303,7 +20303,7 @@ const de_DeleteDBClusterSnapshotResult = (output: any, context: __SerdeContext):
  */
 const de_DeleteDBInstanceAutomatedBackupResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DeleteDBInstanceAutomatedBackupResult => {
   const contents: any = {};
   if (output[_DBIABn] != null) {
@@ -20394,7 +20394,7 @@ const de_DeleteTenantDatabaseResult = (output: any, context: __SerdeContext): De
  */
 const de_DeregisterDBProxyTargetsResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DeregisterDBProxyTargetsResponse => {
   const contents: any = {};
   return contents;
@@ -20405,7 +20405,7 @@ const de_DeregisterDBProxyTargetsResponse = (
  */
 const de_DescribeBlueGreenDeploymentsResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeBlueGreenDeploymentsResponse => {
   const contents: any = {};
   if (output.BlueGreenDeployments === "") {
@@ -20424,7 +20424,7 @@ const de_DescribeBlueGreenDeploymentsResponse = (
  */
 const de_DescribeDBClusterSnapshotAttributesResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeDBClusterSnapshotAttributesResult => {
   const contents: any = {};
   if (output[_DBCSAR] != null) {
@@ -20498,7 +20498,7 @@ const de_DescribeDBProxiesResponse = (output: any, context: __SerdeContext): Des
  */
 const de_DescribeDBProxyEndpointsResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeDBProxyEndpointsResponse => {
   const contents: any = {};
   if (output.DBProxyEndpoints === "") {
@@ -20517,7 +20517,7 @@ const de_DescribeDBProxyEndpointsResponse = (
  */
 const de_DescribeDBProxyTargetGroupsResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeDBProxyTargetGroupsResponse => {
   const contents: any = {};
   if (output.TargetGroups === "") {
@@ -20568,7 +20568,7 @@ const de_DescribeDBShardGroupsResponse = (output: any, context: __SerdeContext):
  */
 const de_DescribeDBSnapshotAttributesResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeDBSnapshotAttributesResult => {
   const contents: any = {};
   if (output[_DBSAR] != null) {
@@ -20582,7 +20582,7 @@ const de_DescribeDBSnapshotAttributesResult = (
  */
 const de_DescribeEngineDefaultClusterParametersResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeEngineDefaultClusterParametersResult => {
   const contents: any = {};
   if (output[_ED] != null) {
@@ -20596,7 +20596,7 @@ const de_DescribeEngineDefaultClusterParametersResult = (
  */
 const de_DescribeEngineDefaultParametersResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeEngineDefaultParametersResult => {
   const contents: any = {};
   if (output[_ED] != null) {
@@ -20626,7 +20626,7 @@ const de_DescribeIntegrationsResponse = (output: any, context: __SerdeContext): 
  */
 const de_DescribeValidDBInstanceModificationsResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeValidDBInstanceModificationsResult => {
   const contents: any = {};
   if (output[_VDBIMM] != null) {
@@ -20774,7 +20774,7 @@ const de_DownloadDBLogFilePortionDetails = (output: any, context: __SerdeContext
  */
 const de_Ec2ImagePropertiesNotSupportedFault = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Ec2ImagePropertiesNotSupportedFault => {
   const contents: any = {};
   if (output[_m] != null) {
@@ -21041,7 +21041,7 @@ const de_EventSubscription = (output: any, context: __SerdeContext): EventSubscr
  */
 const de_EventSubscriptionQuotaExceededFault = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): EventSubscriptionQuotaExceededFault => {
   const contents: any = {};
   if (output[_m] != null) {
@@ -21417,7 +21417,7 @@ const de_InstanceQuotaExceededFault = (output: any, context: __SerdeContext): In
  */
 const de_InsufficientAvailableIPsInSubnetFault = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): InsufficientAvailableIPsInSubnetFault => {
   const contents: any = {};
   if (output[_m] != null) {
@@ -21431,7 +21431,7 @@ const de_InsufficientAvailableIPsInSubnetFault = (
  */
 const de_InsufficientDBClusterCapacityFault = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): InsufficientDBClusterCapacityFault => {
   const contents: any = {};
   if (output[_m] != null) {
@@ -21445,7 +21445,7 @@ const de_InsufficientDBClusterCapacityFault = (
  */
 const de_InsufficientDBInstanceCapacityFault = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): InsufficientDBInstanceCapacityFault => {
   const contents: any = {};
   if (output[_m] != null) {
@@ -21459,7 +21459,7 @@ const de_InsufficientDBInstanceCapacityFault = (
  */
 const de_InsufficientStorageClusterCapacityFault = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): InsufficientStorageClusterCapacityFault => {
   const contents: any = {};
   if (output[_m] != null) {
@@ -21534,7 +21534,7 @@ const de_IntegrationAlreadyExistsFault = (output: any, context: __SerdeContext):
  */
 const de_IntegrationConflictOperationFault = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): IntegrationConflictOperationFault => {
   const contents: any = {};
   if (output[_m] != null) {
@@ -21606,7 +21606,7 @@ const de_IntegrationQuotaExceededFault = (output: any, context: __SerdeContext):
  */
 const de_InvalidBlueGreenDeploymentStateFault = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): InvalidBlueGreenDeploymentStateFault => {
   const contents: any = {};
   if (output[_m] != null) {
@@ -21620,7 +21620,7 @@ const de_InvalidBlueGreenDeploymentStateFault = (
  */
 const de_InvalidCustomDBEngineVersionStateFault = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): InvalidCustomDBEngineVersionStateFault => {
   const contents: any = {};
   if (output[_m] != null) {
@@ -21634,7 +21634,7 @@ const de_InvalidCustomDBEngineVersionStateFault = (
  */
 const de_InvalidDBClusterAutomatedBackupStateFault = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): InvalidDBClusterAutomatedBackupStateFault => {
   const contents: any = {};
   if (output[_m] != null) {
@@ -21659,7 +21659,7 @@ const de_InvalidDBClusterCapacityFault = (output: any, context: __SerdeContext):
  */
 const de_InvalidDBClusterEndpointStateFault = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): InvalidDBClusterEndpointStateFault => {
   const contents: any = {};
   if (output[_m] != null) {
@@ -21673,7 +21673,7 @@ const de_InvalidDBClusterEndpointStateFault = (
  */
 const de_InvalidDBClusterSnapshotStateFault = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): InvalidDBClusterSnapshotStateFault => {
   const contents: any = {};
   if (output[_m] != null) {
@@ -21698,7 +21698,7 @@ const de_InvalidDBClusterStateFault = (output: any, context: __SerdeContext): In
  */
 const de_InvalidDBInstanceAutomatedBackupStateFault = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): InvalidDBInstanceAutomatedBackupStateFault => {
   const contents: any = {};
   if (output[_m] != null) {
@@ -21723,7 +21723,7 @@ const de_InvalidDBInstanceStateFault = (output: any, context: __SerdeContext): I
  */
 const de_InvalidDBParameterGroupStateFault = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): InvalidDBParameterGroupStateFault => {
   const contents: any = {};
   if (output[_m] != null) {
@@ -21737,7 +21737,7 @@ const de_InvalidDBParameterGroupStateFault = (
  */
 const de_InvalidDBProxyEndpointStateFault = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): InvalidDBProxyEndpointStateFault => {
   const contents: any = {};
   if (output[_m] != null) {
@@ -21762,7 +21762,7 @@ const de_InvalidDBProxyStateFault = (output: any, context: __SerdeContext): Inva
  */
 const de_InvalidDBSecurityGroupStateFault = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): InvalidDBSecurityGroupStateFault => {
   const contents: any = {};
   if (output[_m] != null) {
@@ -21831,7 +21831,7 @@ const de_InvalidDBSubnetStateFault = (output: any, context: __SerdeContext): Inv
  */
 const de_InvalidEventSubscriptionStateFault = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): InvalidEventSubscriptionStateFault => {
   const contents: any = {};
   if (output[_m] != null) {
@@ -22146,7 +22146,7 @@ const de_MetricReferenceList = (output: any, context: __SerdeContext): MetricRef
  */
 const de_MinimumEngineVersionPerAllowedValue = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): MinimumEngineVersionPerAllowedValue => {
   const contents: any = {};
   if (output[_AVl] != null) {
@@ -22163,7 +22163,7 @@ const de_MinimumEngineVersionPerAllowedValue = (
  */
 const de_MinimumEngineVersionPerAllowedValueList = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): MinimumEngineVersionPerAllowedValue[] => {
   return (output || [])
     .filter((e: any) => e != null)
@@ -22225,7 +22225,7 @@ const de_ModifyDBClusterResult = (output: any, context: __SerdeContext): ModifyD
  */
 const de_ModifyDBClusterSnapshotAttributeResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ModifyDBClusterSnapshotAttributeResult => {
   const contents: any = {};
   if (output[_DBCSAR] != null) {
@@ -22272,7 +22272,7 @@ const de_ModifyDBProxyResponse = (output: any, context: __SerdeContext): ModifyD
  */
 const de_ModifyDBProxyTargetGroupResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ModifyDBProxyTargetGroupResponse => {
   const contents: any = {};
   if (output[_DBPTG] != null) {
@@ -22598,7 +22598,7 @@ const de_OptionGroupOptionSetting = (output: any, context: __SerdeContext): Opti
   } else if (output[_MEVPAV] != null && output[_MEVPAV][_MEVPAV] != null) {
     contents[_MEVPAV] = de_MinimumEngineVersionPerAllowedValueList(
       __getArrayIfSingleItem(output[_MEVPAV][_MEVPAV]),
-      context
+      context,
     );
   }
   return contents;
@@ -22926,7 +22926,7 @@ const de_OrderableDBInstanceOptionsList = (output: any, context: __SerdeContext)
  */
 const de_OrderableDBInstanceOptionsMessage = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): OrderableDBInstanceOptionsMessage => {
   const contents: any = {};
   if (output.OrderableDBInstanceOptions === "") {
@@ -23076,7 +23076,7 @@ const de_PendingMaintenanceActions = (output: any, context: __SerdeContext): Res
  */
 const de_PendingMaintenanceActionsMessage = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): PendingMaintenanceActionsMessage => {
   const contents: any = {};
   if (output.PendingMaintenanceActions === "") {
@@ -23171,7 +23171,7 @@ const de_PendingModifiedValues = (output: any, context: __SerdeContext): Pending
  */
 const de_PerformanceInsightsMetricDimensionGroup = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): PerformanceInsightsMetricDimensionGroup => {
   const contents: any = {};
   if (output.Dimensions === "") {
@@ -23229,7 +23229,7 @@ const de_PerformanceIssueDetails = (output: any, context: __SerdeContext): Perfo
  */
 const de_PointInTimeRestoreNotEnabledFault = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): PointInTimeRestoreNotEnabledFault => {
   const contents: any = {};
   if (output[_m] != null) {
@@ -23268,7 +23268,7 @@ const de_ProcessorFeatureList = (output: any, context: __SerdeContext): Processo
  */
 const de_PromoteReadReplicaDBClusterResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): PromoteReadReplicaDBClusterResult => {
   const contents: any = {};
   if (output[_DBC] != null) {
@@ -23293,7 +23293,7 @@ const de_PromoteReadReplicaResult = (output: any, context: __SerdeContext): Prom
  */
 const de_ProvisionedIopsNotAvailableInAZFault = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ProvisionedIopsNotAvailableInAZFault => {
   const contents: any = {};
   if (output[_m] != null) {
@@ -23307,7 +23307,7 @@ const de_ProvisionedIopsNotAvailableInAZFault = (
  */
 const de_PurchaseReservedDBInstancesOfferingResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): PurchaseReservedDBInstancesOfferingResult => {
   const contents: any = {};
   if (output[_RDBIe] != null) {
@@ -23569,7 +23569,7 @@ const de_RemoveFromGlobalClusterResult = (output: any, context: __SerdeContext):
  */
 const de_RemoveSourceIdentifierFromSubscriptionResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): RemoveSourceIdentifierFromSubscriptionResult => {
   const contents: any = {};
   if (output[_ES] != null) {
@@ -23641,7 +23641,7 @@ const de_ReservedDBInstance = (output: any, context: __SerdeContext): ReservedDB
  */
 const de_ReservedDBInstanceAlreadyExistsFault = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ReservedDBInstanceAlreadyExistsFault => {
   const contents: any = {};
   if (output[_m] != null) {
@@ -23693,7 +23693,7 @@ const de_ReservedDBInstanceNotFoundFault = (output: any, context: __SerdeContext
  */
 const de_ReservedDBInstanceQuotaExceededFault = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ReservedDBInstanceQuotaExceededFault => {
   const contents: any = {};
   if (output[_m] != null) {
@@ -23758,7 +23758,7 @@ const de_ReservedDBInstancesOfferingList = (output: any, context: __SerdeContext
  */
 const de_ReservedDBInstancesOfferingMessage = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ReservedDBInstancesOfferingMessage => {
   const contents: any = {};
   if (output[_Ma] != null) {
@@ -23777,7 +23777,7 @@ const de_ReservedDBInstancesOfferingMessage = (
  */
 const de_ReservedDBInstancesOfferingNotFoundFault = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ReservedDBInstancesOfferingNotFoundFault => {
   const contents: any = {};
   if (output[_m] != null) {
@@ -23802,7 +23802,7 @@ const de_ResourceNotFoundFault = (output: any, context: __SerdeContext): Resourc
  */
 const de_ResourcePendingMaintenanceActions = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ResourcePendingMaintenanceActions => {
   const contents: any = {};
   if (output[_RI] != null) {
@@ -23832,7 +23832,7 @@ const de_RestoreDBClusterFromS3Result = (output: any, context: __SerdeContext): 
  */
 const de_RestoreDBClusterFromSnapshotResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): RestoreDBClusterFromSnapshotResult => {
   const contents: any = {};
   if (output[_DBC] != null) {
@@ -23846,7 +23846,7 @@ const de_RestoreDBClusterFromSnapshotResult = (
  */
 const de_RestoreDBClusterToPointInTimeResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): RestoreDBClusterToPointInTimeResult => {
   const contents: any = {};
   if (output[_DBC] != null) {
@@ -23860,7 +23860,7 @@ const de_RestoreDBClusterToPointInTimeResult = (
  */
 const de_RestoreDBInstanceFromDBSnapshotResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): RestoreDBInstanceFromDBSnapshotResult => {
   const contents: any = {};
   if (output[_DBI] != null) {
@@ -23885,7 +23885,7 @@ const de_RestoreDBInstanceFromS3Result = (output: any, context: __SerdeContext):
  */
 const de_RestoreDBInstanceToPointInTimeResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): RestoreDBInstanceToPointInTimeResult => {
   const contents: any = {};
   if (output[_DBI] != null) {
@@ -23913,7 +23913,7 @@ const de_RestoreWindow = (output: any, context: __SerdeContext): RestoreWindow =
  */
 const de_RevokeDBSecurityGroupIngressResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): RevokeDBSecurityGroupIngressResult => {
   const contents: any = {};
   if (output[_DBSGe] != null) {
@@ -23964,7 +23964,7 @@ const de_ScalingConfigurationInfo = (output: any, context: __SerdeContext): Scal
  */
 const de_ServerlessV2ScalingConfigurationInfo = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ServerlessV2ScalingConfigurationInfo => {
   const contents: any = {};
   if (output[_MCi] != null) {
@@ -23981,7 +23981,7 @@ const de_ServerlessV2ScalingConfigurationInfo = (
  */
 const de_SharedSnapshotQuotaExceededFault = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): SharedSnapshotQuotaExceededFault => {
   const contents: any = {};
   if (output[_m] != null) {
@@ -24167,7 +24167,7 @@ const de_StartDBClusterResult = (output: any, context: __SerdeContext): StartDBC
  */
 const de_StartDBInstanceAutomatedBackupsReplicationResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): StartDBInstanceAutomatedBackupsReplicationResult => {
   const contents: any = {};
   if (output[_DBIABn] != null) {
@@ -24220,7 +24220,7 @@ const de_StopDBClusterResult = (output: any, context: __SerdeContext): StopDBClu
  */
 const de_StopDBInstanceAutomatedBackupsReplicationResult = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): StopDBInstanceAutomatedBackupsReplicationResult => {
   const contents: any = {};
   if (output[_DBIABn] != null) {
@@ -24342,7 +24342,7 @@ const de_SubscriptionAlreadyExistFault = (output: any, context: __SerdeContext):
  */
 const de_SubscriptionCategoryNotFoundFault = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): SubscriptionCategoryNotFoundFault => {
   const contents: any = {};
   if (output[_m] != null) {
@@ -24389,7 +24389,7 @@ const de_SupportedTimezonesList = (output: any, context: __SerdeContext): Timezo
  */
 const de_SwitchoverBlueGreenDeploymentResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): SwitchoverBlueGreenDeploymentResponse => {
   const contents: any = {};
   if (output[_BGD] != null) {
@@ -24579,7 +24579,7 @@ const de_TenantDatabase = (output: any, context: __SerdeContext): TenantDatabase
  */
 const de_TenantDatabaseAlreadyExistsFault = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): TenantDatabaseAlreadyExistsFault => {
   const contents: any = {};
   if (output[_m] != null) {
@@ -24604,7 +24604,7 @@ const de_TenantDatabaseNotFoundFault = (output: any, context: __SerdeContext): T
  */
 const de_TenantDatabasePendingModifiedValues = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): TenantDatabasePendingModifiedValues => {
   const contents: any = {};
   if (output[_MUP] != null) {
@@ -24621,7 +24621,7 @@ const de_TenantDatabasePendingModifiedValues = (
  */
 const de_TenantDatabaseQuotaExceededFault = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): TenantDatabaseQuotaExceededFault => {
   const contents: any = {};
   if (output[_m] != null) {
@@ -24767,7 +24767,7 @@ const de_UserAuthConfigInfoList = (output: any, context: __SerdeContext): UserAu
  */
 const de_ValidDBInstanceModificationsMessage = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ValidDBInstanceModificationsMessage => {
   const contents: any = {};
   if (output.Storage === "") {
@@ -24890,7 +24890,7 @@ const buildHttpRpcRequest = async (
   headers: __HeaderBag,
   path: string,
   resolvedHostname: string | undefined,
-  body: any
+  body: any,
 ): Promise<__HttpRequest> => {
   const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
   const contents: any = {

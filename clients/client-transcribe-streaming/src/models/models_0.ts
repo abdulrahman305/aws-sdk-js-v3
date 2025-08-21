@@ -2650,7 +2650,7 @@ export const AudioStreamFilterSensitiveLog = (obj: AudioStream): any => {
  * @internal
  */
 export const CallAnalyticsTranscriptResultStreamFilterSensitiveLog = (
-  obj: CallAnalyticsTranscriptResultStream
+  obj: CallAnalyticsTranscriptResultStream,
 ): any => {
   if (obj.UtteranceEvent !== undefined) return { UtteranceEvent: obj.UtteranceEvent };
   if (obj.CategoryEvent !== undefined) return { CategoryEvent: obj.CategoryEvent };
@@ -2681,7 +2681,7 @@ export const MedicalTranscriptResultStreamFilterSensitiveLog = (obj: MedicalTran
  * @internal
  */
 export const StartCallAnalyticsStreamTranscriptionRequestFilterSensitiveLog = (
-  obj: StartCallAnalyticsStreamTranscriptionRequest
+  obj: StartCallAnalyticsStreamTranscriptionRequest,
 ): any => ({
   ...obj,
   ...(obj.AudioStream && { AudioStream: "STREAMING_CONTENT" }),
@@ -2691,7 +2691,7 @@ export const StartCallAnalyticsStreamTranscriptionRequestFilterSensitiveLog = (
  * @internal
  */
 export const StartCallAnalyticsStreamTranscriptionResponseFilterSensitiveLog = (
-  obj: StartCallAnalyticsStreamTranscriptionResponse
+  obj: StartCallAnalyticsStreamTranscriptionResponse,
 ): any => ({
   ...obj,
   ...(obj.CallAnalyticsTranscriptResultStream && { CallAnalyticsTranscriptResultStream: "STREAMING_CONTENT" }),
@@ -2701,7 +2701,7 @@ export const StartCallAnalyticsStreamTranscriptionResponseFilterSensitiveLog = (
  * @internal
  */
 export const StartMedicalStreamTranscriptionRequestFilterSensitiveLog = (
-  obj: StartMedicalStreamTranscriptionRequest
+  obj: StartMedicalStreamTranscriptionRequest,
 ): any => ({
   ...obj,
   ...(obj.AudioStream && { AudioStream: "STREAMING_CONTENT" }),
@@ -2711,7 +2711,7 @@ export const StartMedicalStreamTranscriptionRequestFilterSensitiveLog = (
  * @internal
  */
 export const StartMedicalStreamTranscriptionResponseFilterSensitiveLog = (
-  obj: StartMedicalStreamTranscriptionResponse
+  obj: StartMedicalStreamTranscriptionResponse,
 ): any => ({
   ...obj,
   ...(obj.TranscriptResultStream && { TranscriptResultStream: "STREAMING_CONTENT" }),

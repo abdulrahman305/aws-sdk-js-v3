@@ -64,7 +64,7 @@ import {
  */
 export const se_CreateDeploymentCommand = async (
   input: CreateDeploymentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -80,7 +80,7 @@ export const se_CreateDeploymentCommand = async (
       specifications: (_) => _json(_),
       tags: (_) => _json(_),
       workloadName: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -91,7 +91,7 @@ export const se_CreateDeploymentCommand = async (
  */
 export const se_DeleteDeploymentCommand = async (
   input: DeleteDeploymentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -102,7 +102,7 @@ export const se_DeleteDeploymentCommand = async (
   body = JSON.stringify(
     take(input, {
       deploymentId: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -113,7 +113,7 @@ export const se_DeleteDeploymentCommand = async (
  */
 export const se_GetDeploymentCommand = async (
   input: GetDeploymentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -124,7 +124,7 @@ export const se_GetDeploymentCommand = async (
   body = JSON.stringify(
     take(input, {
       deploymentId: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -135,7 +135,7 @@ export const se_GetDeploymentCommand = async (
  */
 export const se_GetWorkloadCommand = async (
   input: GetWorkloadCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -146,7 +146,7 @@ export const se_GetWorkloadCommand = async (
   body = JSON.stringify(
     take(input, {
       workloadName: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -157,7 +157,7 @@ export const se_GetWorkloadCommand = async (
  */
 export const se_GetWorkloadDeploymentPatternCommand = async (
   input: GetWorkloadDeploymentPatternCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -169,7 +169,7 @@ export const se_GetWorkloadDeploymentPatternCommand = async (
     take(input, {
       deploymentPatternName: [],
       workloadName: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -180,7 +180,7 @@ export const se_GetWorkloadDeploymentPatternCommand = async (
  */
 export const se_ListDeploymentEventsCommand = async (
   input: ListDeploymentEventsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -193,7 +193,7 @@ export const se_ListDeploymentEventsCommand = async (
       deploymentId: [],
       maxResults: [],
       nextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -204,7 +204,7 @@ export const se_ListDeploymentEventsCommand = async (
  */
 export const se_ListDeploymentsCommand = async (
   input: ListDeploymentsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -217,7 +217,7 @@ export const se_ListDeploymentsCommand = async (
       filters: (_) => _json(_),
       maxResults: [],
       nextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -228,7 +228,7 @@ export const se_ListDeploymentsCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -244,7 +244,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_ListWorkloadDeploymentPatternsCommand = async (
   input: ListWorkloadDeploymentPatternsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -257,7 +257,7 @@ export const se_ListWorkloadDeploymentPatternsCommand = async (
       maxResults: [],
       nextToken: [],
       workloadName: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -268,7 +268,7 @@ export const se_ListWorkloadDeploymentPatternsCommand = async (
  */
 export const se_ListWorkloadsCommand = async (
   input: ListWorkloadsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -280,7 +280,7 @@ export const se_ListWorkloadsCommand = async (
     take(input, {
       maxResults: [],
       nextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -291,7 +291,7 @@ export const se_ListWorkloadsCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -303,7 +303,7 @@ export const se_TagResourceCommand = async (
   body = JSON.stringify(
     take(input, {
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -314,7 +314,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -336,7 +336,7 @@ export const se_UntagResourceCommand = async (
  */
 export const de_CreateDeploymentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateDeploymentCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -357,7 +357,7 @@ export const de_CreateDeploymentCommand = async (
  */
 export const de_DeleteDeploymentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteDeploymentCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -379,7 +379,7 @@ export const de_DeleteDeploymentCommand = async (
  */
 export const de_GetDeploymentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetDeploymentCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -400,7 +400,7 @@ export const de_GetDeploymentCommand = async (
  */
 export const de_GetWorkloadCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetWorkloadCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -421,7 +421,7 @@ export const de_GetWorkloadCommand = async (
  */
 export const de_GetWorkloadDeploymentPatternCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetWorkloadDeploymentPatternCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -442,7 +442,7 @@ export const de_GetWorkloadDeploymentPatternCommand = async (
  */
 export const de_ListDeploymentEventsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListDeploymentEventsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -464,7 +464,7 @@ export const de_ListDeploymentEventsCommand = async (
  */
 export const de_ListDeploymentsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListDeploymentsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -486,7 +486,7 @@ export const de_ListDeploymentsCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -507,7 +507,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_ListWorkloadDeploymentPatternsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListWorkloadDeploymentPatternsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -529,7 +529,7 @@ export const de_ListWorkloadDeploymentPatternsCommand = async (
  */
 export const de_ListWorkloadsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListWorkloadsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -551,7 +551,7 @@ export const de_ListWorkloadsCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -568,7 +568,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -618,7 +618,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_InternalServerExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -638,7 +638,7 @@ const de_InternalServerExceptionRes = async (
  */
 const de_ResourceLimitExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceLimitException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -658,7 +658,7 @@ const de_ResourceLimitExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;

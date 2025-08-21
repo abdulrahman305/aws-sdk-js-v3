@@ -34,7 +34,7 @@ export interface PreviouslyResolved {
 }
 
 export const resolveQueueUrlConfig = <T>(
-  config: T & PreviouslyResolved & QueueUrlInputConfig
+  config: T & PreviouslyResolved & QueueUrlInputConfig,
 ): T & QueueUrlResolvedConfig => {
   return {
     ...config,
@@ -48,7 +48,7 @@ export const resolveQueueUrlConfig = <T>(
 export function queueUrlMiddleware({ useQueueUrlAsEndpoint, endpoint }: QueueUrlResolvedConfig & PreviouslyResolved) {
   return <Output extends object>(
     next: (args: FinalizeHandlerArguments<any>) => Promise<FinalizeHandlerOutput<Output>>,
-    context: HandlerExecutionContext
+    context: HandlerExecutionContext,
   ): ((args: FinalizeHandlerArguments<any>) => Promise<FinalizeHandlerOutput<Output>>) => {
     return async (args: FinalizeHandlerArguments<any>): Promise<FinalizeHandlerOutput<Output>> => {
       const { input } = args;
@@ -64,7 +64,7 @@ export function queueUrlMiddleware({ useQueueUrlAsEndpoint, endpoint }: QueueUrl
               `QueueUrl=${
                 input.QueueUrl
               } differs from SQSClient resolved endpoint=${resolvedEndpoint.url.toString()}, using QueueUrl host as endpoint.
-Set [endpoint=string] or [useQueueUrlAsEndpoint=false] on the SQSClient.`
+Set [endpoint=string] or [useQueueUrlAsEndpoint=false] on the SQSClient.`,
             );
             resolvedEndpoint.url = queueUrlOrigin;
           }

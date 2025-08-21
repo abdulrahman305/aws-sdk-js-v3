@@ -48,7 +48,7 @@ export interface Pipes {
   createPipe(
     args: CreatePipeCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreatePipeCommandOutput) => void
+    cb: (err: any, data?: CreatePipeCommandOutput) => void,
   ): void;
 
   /**
@@ -59,7 +59,7 @@ export interface Pipes {
   deletePipe(
     args: DeletePipeCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeletePipeCommandOutput) => void
+    cb: (err: any, data?: DeletePipeCommandOutput) => void,
   ): void;
 
   /**
@@ -70,7 +70,7 @@ export interface Pipes {
   describePipe(
     args: DescribePipeCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribePipeCommandOutput) => void
+    cb: (err: any, data?: DescribePipeCommandOutput) => void,
   ): void;
 
   /**
@@ -82,7 +82,7 @@ export interface Pipes {
   listPipes(
     args: ListPipesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListPipesCommandOutput) => void
+    cb: (err: any, data?: ListPipesCommandOutput) => void,
   ): void;
 
   /**
@@ -90,16 +90,16 @@ export interface Pipes {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -110,7 +110,7 @@ export interface Pipes {
   startPipe(
     args: StartPipeCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartPipeCommandOutput) => void
+    cb: (err: any, data?: StartPipeCommandOutput) => void,
   ): void;
 
   /**
@@ -121,7 +121,7 @@ export interface Pipes {
   stopPipe(
     args: StopPipeCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StopPipeCommandOutput) => void
+    cb: (err: any, data?: StopPipeCommandOutput) => void,
   ): void;
 
   /**
@@ -132,7 +132,7 @@ export interface Pipes {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -143,7 +143,7 @@ export interface Pipes {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -154,7 +154,7 @@ export interface Pipes {
   updatePipe(
     args: UpdatePipeCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdatePipeCommandOutput) => void
+    cb: (err: any, data?: UpdatePipeCommandOutput) => void,
   ): void;
 }
 

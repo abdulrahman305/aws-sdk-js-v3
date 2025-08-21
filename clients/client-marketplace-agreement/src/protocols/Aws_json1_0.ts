@@ -54,7 +54,7 @@ import {
  */
 export const se_DescribeAgreementCommand = async (
   input: DescribeAgreementCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeAgreement");
   let body: any;
@@ -67,7 +67,7 @@ export const se_DescribeAgreementCommand = async (
  */
 export const se_GetAgreementTermsCommand = async (
   input: GetAgreementTermsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetAgreementTerms");
   let body: any;
@@ -80,7 +80,7 @@ export const se_GetAgreementTermsCommand = async (
  */
 export const se_SearchAgreementsCommand = async (
   input: SearchAgreementsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("SearchAgreements");
   let body: any;
@@ -93,7 +93,7 @@ export const se_SearchAgreementsCommand = async (
  */
 export const de_DescribeAgreementCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeAgreementCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -113,7 +113,7 @@ export const de_DescribeAgreementCommand = async (
  */
 export const de_GetAgreementTermsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetAgreementTermsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -133,7 +133,7 @@ export const de_GetAgreementTermsCommand = async (
  */
 export const de_SearchAgreementsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SearchAgreementsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -188,7 +188,7 @@ const de_CommandError = async (output: __HttpResponse, context: __SerdeContext):
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -204,7 +204,7 @@ const de_AccessDeniedExceptionRes = async (
  */
 const de_InternalServerExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -220,7 +220,7 @@ const de_InternalServerExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -551,7 +551,7 @@ const buildHttpRpcRequest = async (
   headers: __HeaderBag,
   path: string,
   resolvedHostname: string | undefined,
-  body: any
+  body: any,
 ): Promise<__HttpRequest> => {
   const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
   const contents: any = {

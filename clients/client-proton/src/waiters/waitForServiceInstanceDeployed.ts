@@ -36,7 +36,7 @@ const checkState = async (client: ProtonClient, input: GetServiceInstanceCommand
  */
 export const waitForServiceInstanceDeployed = async (
   params: WaiterConfiguration<ProtonClient>,
-  input: GetServiceInstanceCommandInput
+  input: GetServiceInstanceCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 5, maxDelay: 4999 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -48,7 +48,7 @@ export const waitForServiceInstanceDeployed = async (
  */
 export const waitUntilServiceInstanceDeployed = async (
   params: WaiterConfiguration<ProtonClient>,
-  input: GetServiceInstanceCommandInput
+  input: GetServiceInstanceCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 5, maxDelay: 4999 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

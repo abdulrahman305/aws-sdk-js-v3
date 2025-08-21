@@ -9,7 +9,7 @@ import { SageMakerClient } from "../SageMakerClient";
 
 const checkState = async (
   client: SageMakerClient,
-  input: DescribeNotebookInstanceCommandInput
+  input: DescribeNotebookInstanceCommandInput,
 ): Promise<WaiterResult> => {
   let reason;
   try {
@@ -42,7 +42,7 @@ const checkState = async (
  */
 export const waitForNotebookInstanceInService = async (
   params: WaiterConfiguration<SageMakerClient>,
-  input: DescribeNotebookInstanceCommandInput
+  input: DescribeNotebookInstanceCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 30, maxDelay: 120 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -54,7 +54,7 @@ export const waitForNotebookInstanceInService = async (
  */
 export const waitUntilNotebookInstanceInService = async (
   params: WaiterConfiguration<SageMakerClient>,
-  input: DescribeNotebookInstanceCommandInput
+  input: DescribeNotebookInstanceCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 30, maxDelay: 120 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

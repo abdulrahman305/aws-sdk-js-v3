@@ -297,7 +297,7 @@ export class PersonalizeRuntimeClient extends __Client<
       getHttpAuthSchemeEndpointRuleSetPlugin(this.config, {
         httpAuthSchemeParametersProvider: this.getDefaultHttpAuthSchemeParametersProvider(),
         identityProviderConfigProvider: this.getIdentityProviderConfigProvider(),
-      })
+      }),
     );
     this.middlewareStack.use(getHttpSigningPlugin(this.config));
   }

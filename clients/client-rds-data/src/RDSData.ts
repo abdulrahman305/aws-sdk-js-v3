@@ -45,16 +45,16 @@ export interface RDSData {
    */
   batchExecuteStatement(
     args: BatchExecuteStatementCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<BatchExecuteStatementCommandOutput>;
   batchExecuteStatement(
     args: BatchExecuteStatementCommandInput,
-    cb: (err: any, data?: BatchExecuteStatementCommandOutput) => void
+    cb: (err: any, data?: BatchExecuteStatementCommandOutput) => void,
   ): void;
   batchExecuteStatement(
     args: BatchExecuteStatementCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: BatchExecuteStatementCommandOutput) => void
+    cb: (err: any, data?: BatchExecuteStatementCommandOutput) => void,
   ): void;
 
   /**
@@ -62,16 +62,16 @@ export interface RDSData {
    */
   beginTransaction(
     args: BeginTransactionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<BeginTransactionCommandOutput>;
   beginTransaction(
     args: BeginTransactionCommandInput,
-    cb: (err: any, data?: BeginTransactionCommandOutput) => void
+    cb: (err: any, data?: BeginTransactionCommandOutput) => void,
   ): void;
   beginTransaction(
     args: BeginTransactionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: BeginTransactionCommandOutput) => void
+    cb: (err: any, data?: BeginTransactionCommandOutput) => void,
   ): void;
 
   /**
@@ -79,16 +79,16 @@ export interface RDSData {
    */
   commitTransaction(
     args: CommitTransactionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CommitTransactionCommandOutput>;
   commitTransaction(
     args: CommitTransactionCommandInput,
-    cb: (err: any, data?: CommitTransactionCommandOutput) => void
+    cb: (err: any, data?: CommitTransactionCommandOutput) => void,
   ): void;
   commitTransaction(
     args: CommitTransactionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CommitTransactionCommandOutput) => void
+    cb: (err: any, data?: CommitTransactionCommandOutput) => void,
   ): void;
 
   /**
@@ -99,7 +99,7 @@ export interface RDSData {
   executeSql(
     args: ExecuteSqlCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ExecuteSqlCommandOutput) => void
+    cb: (err: any, data?: ExecuteSqlCommandOutput) => void,
   ): void;
 
   /**
@@ -107,16 +107,16 @@ export interface RDSData {
    */
   executeStatement(
     args: ExecuteStatementCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ExecuteStatementCommandOutput>;
   executeStatement(
     args: ExecuteStatementCommandInput,
-    cb: (err: any, data?: ExecuteStatementCommandOutput) => void
+    cb: (err: any, data?: ExecuteStatementCommandOutput) => void,
   ): void;
   executeStatement(
     args: ExecuteStatementCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ExecuteStatementCommandOutput) => void
+    cb: (err: any, data?: ExecuteStatementCommandOutput) => void,
   ): void;
 
   /**
@@ -124,16 +124,16 @@ export interface RDSData {
    */
   rollbackTransaction(
     args: RollbackTransactionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<RollbackTransactionCommandOutput>;
   rollbackTransaction(
     args: RollbackTransactionCommandInput,
-    cb: (err: any, data?: RollbackTransactionCommandOutput) => void
+    cb: (err: any, data?: RollbackTransactionCommandOutput) => void,
   ): void;
   rollbackTransaction(
     args: RollbackTransactionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RollbackTransactionCommandOutput) => void
+    cb: (err: any, data?: RollbackTransactionCommandOutput) => void,
   ): void;
 }
 

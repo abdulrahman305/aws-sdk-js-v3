@@ -122,7 +122,7 @@ import {
  */
 export const se_DatetimeOffsetsCommand = async (
   input: DatetimeOffsetsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   const body = buildFormUrlencodedString({
@@ -137,7 +137,7 @@ export const se_DatetimeOffsetsCommand = async (
  */
 export const se_EmptyInputAndEmptyOutputCommand = async (
   input: EmptyInputAndEmptyOutputCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -154,7 +154,7 @@ export const se_EmptyInputAndEmptyOutputCommand = async (
  */
 export const se_EndpointOperationCommand = async (
   input: EndpointOperationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   const body = buildFormUrlencodedString({
@@ -176,7 +176,7 @@ export const se_EndpointOperationCommand = async (
  */
 export const se_EndpointWithHostLabelOperationCommand = async (
   input: EndpointWithHostLabelOperationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -204,7 +204,7 @@ export const se_EndpointWithHostLabelOperationCommand = async (
  */
 export const se_FractionalSecondsCommand = async (
   input: FractionalSecondsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   const body = buildFormUrlencodedString({
@@ -219,7 +219,7 @@ export const se_FractionalSecondsCommand = async (
  */
 export const se_GreetingWithErrorsCommand = async (
   input: GreetingWithErrorsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   const body = buildFormUrlencodedString({
@@ -234,7 +234,7 @@ export const se_GreetingWithErrorsCommand = async (
  */
 export const se_HostWithPathOperationCommand = async (
   input: HostWithPathOperationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   const body = buildFormUrlencodedString({
@@ -249,7 +249,7 @@ export const se_HostWithPathOperationCommand = async (
  */
 export const se_IgnoresWrappingXmlNameCommand = async (
   input: IgnoresWrappingXmlNameCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   const body = buildFormUrlencodedString({
@@ -264,7 +264,7 @@ export const se_IgnoresWrappingXmlNameCommand = async (
  */
 export const se_NestedStructuresCommand = async (
   input: NestedStructuresCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -281,7 +281,7 @@ export const se_NestedStructuresCommand = async (
  */
 export const se_NoInputAndOutputCommand = async (
   input: NoInputAndOutputCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   const body = buildFormUrlencodedString({
@@ -296,7 +296,7 @@ export const se_NoInputAndOutputCommand = async (
  */
 export const se_PutWithContentEncodingCommand = async (
   input: PutWithContentEncodingCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -313,7 +313,7 @@ export const se_PutWithContentEncodingCommand = async (
  */
 export const se_QueryIdempotencyTokenAutoFillCommand = async (
   input: QueryIdempotencyTokenAutoFillCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -330,7 +330,7 @@ export const se_QueryIdempotencyTokenAutoFillCommand = async (
  */
 export const se_QueryListsCommand = async (
   input: QueryListsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -347,7 +347,7 @@ export const se_QueryListsCommand = async (
  */
 export const se_QueryTimestampsCommand = async (
   input: QueryTimestampsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -364,7 +364,7 @@ export const se_QueryTimestampsCommand = async (
  */
 export const se_RecursiveXmlShapesCommand = async (
   input: RecursiveXmlShapesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   const body = buildFormUrlencodedString({
@@ -379,7 +379,7 @@ export const se_RecursiveXmlShapesCommand = async (
  */
 export const se_SimpleInputParamsCommand = async (
   input: SimpleInputParamsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -396,7 +396,7 @@ export const se_SimpleInputParamsCommand = async (
  */
 export const se_SimpleScalarXmlPropertiesCommand = async (
   input: SimpleScalarXmlPropertiesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   const body = buildFormUrlencodedString({
@@ -411,7 +411,7 @@ export const se_SimpleScalarXmlPropertiesCommand = async (
  */
 export const se_XmlBlobsCommand = async (
   input: XmlBlobsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   const body = buildFormUrlencodedString({
@@ -426,7 +426,7 @@ export const se_XmlBlobsCommand = async (
  */
 export const se_XmlEmptyBlobsCommand = async (
   input: XmlEmptyBlobsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   const body = buildFormUrlencodedString({
@@ -441,7 +441,7 @@ export const se_XmlEmptyBlobsCommand = async (
  */
 export const se_XmlEmptyListsCommand = async (
   input: XmlEmptyListsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   const body = buildFormUrlencodedString({
@@ -456,7 +456,7 @@ export const se_XmlEmptyListsCommand = async (
  */
 export const se_XmlEnumsCommand = async (
   input: XmlEnumsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   const body = buildFormUrlencodedString({
@@ -471,7 +471,7 @@ export const se_XmlEnumsCommand = async (
  */
 export const se_XmlIntEnumsCommand = async (
   input: XmlIntEnumsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   const body = buildFormUrlencodedString({
@@ -486,7 +486,7 @@ export const se_XmlIntEnumsCommand = async (
  */
 export const se_XmlListsCommand = async (
   input: XmlListsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   const body = buildFormUrlencodedString({
@@ -501,7 +501,7 @@ export const se_XmlListsCommand = async (
  */
 export const se_XmlNamespacesCommand = async (
   input: XmlNamespacesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   const body = buildFormUrlencodedString({
@@ -516,7 +516,7 @@ export const se_XmlNamespacesCommand = async (
  */
 export const se_XmlTimestampsCommand = async (
   input: XmlTimestampsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   const body = buildFormUrlencodedString({
@@ -531,7 +531,7 @@ export const se_XmlTimestampsCommand = async (
  */
 export const de_DatetimeOffsetsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DatetimeOffsetsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -551,7 +551,7 @@ export const de_DatetimeOffsetsCommand = async (
  */
 export const de_EmptyInputAndEmptyOutputCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<EmptyInputAndEmptyOutputCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -571,7 +571,7 @@ export const de_EmptyInputAndEmptyOutputCommand = async (
  */
 export const de_EndpointOperationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<EndpointOperationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -588,7 +588,7 @@ export const de_EndpointOperationCommand = async (
  */
 export const de_EndpointWithHostLabelOperationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<EndpointWithHostLabelOperationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -605,7 +605,7 @@ export const de_EndpointWithHostLabelOperationCommand = async (
  */
 export const de_FractionalSecondsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<FractionalSecondsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -625,7 +625,7 @@ export const de_FractionalSecondsCommand = async (
  */
 export const de_GreetingWithErrorsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GreetingWithErrorsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -645,7 +645,7 @@ export const de_GreetingWithErrorsCommand = async (
  */
 export const de_HostWithPathOperationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<HostWithPathOperationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -662,7 +662,7 @@ export const de_HostWithPathOperationCommand = async (
  */
 export const de_IgnoresWrappingXmlNameCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<IgnoresWrappingXmlNameCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -682,7 +682,7 @@ export const de_IgnoresWrappingXmlNameCommand = async (
  */
 export const de_NestedStructuresCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<NestedStructuresCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -699,7 +699,7 @@ export const de_NestedStructuresCommand = async (
  */
 export const de_NoInputAndOutputCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<NoInputAndOutputCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -719,7 +719,7 @@ export const de_NoInputAndOutputCommand = async (
  */
 export const de_PutWithContentEncodingCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutWithContentEncodingCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -736,7 +736,7 @@ export const de_PutWithContentEncodingCommand = async (
  */
 export const de_QueryIdempotencyTokenAutoFillCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<QueryIdempotencyTokenAutoFillCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -753,7 +753,7 @@ export const de_QueryIdempotencyTokenAutoFillCommand = async (
  */
 export const de_QueryListsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<QueryListsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -770,7 +770,7 @@ export const de_QueryListsCommand = async (
  */
 export const de_QueryTimestampsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<QueryTimestampsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -787,7 +787,7 @@ export const de_QueryTimestampsCommand = async (
  */
 export const de_RecursiveXmlShapesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RecursiveXmlShapesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -807,7 +807,7 @@ export const de_RecursiveXmlShapesCommand = async (
  */
 export const de_SimpleInputParamsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SimpleInputParamsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -824,7 +824,7 @@ export const de_SimpleInputParamsCommand = async (
  */
 export const de_SimpleScalarXmlPropertiesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SimpleScalarXmlPropertiesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -844,7 +844,7 @@ export const de_SimpleScalarXmlPropertiesCommand = async (
  */
 export const de_XmlBlobsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<XmlBlobsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -864,7 +864,7 @@ export const de_XmlBlobsCommand = async (
  */
 export const de_XmlEmptyBlobsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<XmlEmptyBlobsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -884,7 +884,7 @@ export const de_XmlEmptyBlobsCommand = async (
  */
 export const de_XmlEmptyListsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<XmlEmptyListsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -904,7 +904,7 @@ export const de_XmlEmptyListsCommand = async (
  */
 export const de_XmlEnumsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<XmlEnumsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -924,7 +924,7 @@ export const de_XmlEnumsCommand = async (
  */
 export const de_XmlIntEnumsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<XmlIntEnumsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -944,7 +944,7 @@ export const de_XmlIntEnumsCommand = async (
  */
 export const de_XmlListsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<XmlListsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -964,7 +964,7 @@ export const de_XmlListsCommand = async (
  */
 export const de_XmlNamespacesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<XmlNamespacesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -984,7 +984,7 @@ export const de_XmlNamespacesCommand = async (
  */
 export const de_XmlTimestampsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<XmlTimestampsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1135,7 +1135,7 @@ const se_PutWithContentEncodingInput = (input: PutWithContentEncodingInput, cont
  */
 const se_QueryIdempotencyTokenAutoFillInput = (
   input: QueryIdempotencyTokenAutoFillInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_t] === undefined) {
@@ -1920,7 +1920,7 @@ const buildHttpRpcRequest = async (
   headers: __HeaderBag,
   path: string,
   resolvedHostname: string | undefined,
-  body: any
+  body: any,
 ): Promise<__HttpRequest> => {
   const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
   const contents: any = {

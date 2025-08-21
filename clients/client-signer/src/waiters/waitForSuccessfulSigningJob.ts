@@ -39,7 +39,7 @@ const checkState = async (client: SignerClient, input: DescribeSigningJobCommand
  */
 export const waitForSuccessfulSigningJob = async (
   params: WaiterConfiguration<SignerClient>,
-  input: DescribeSigningJobCommandInput
+  input: DescribeSigningJobCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 20, maxDelay: 120 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -51,7 +51,7 @@ export const waitForSuccessfulSigningJob = async (
  */
 export const waitUntilSuccessfulSigningJob = async (
   params: WaiterConfiguration<SignerClient>,
-  input: DescribeSigningJobCommandInput
+  input: DescribeSigningJobCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 20, maxDelay: 120 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

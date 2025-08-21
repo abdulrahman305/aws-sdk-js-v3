@@ -31,16 +31,16 @@ export interface SupplyChain {
    */
   createBillOfMaterialsImportJob(
     args: CreateBillOfMaterialsImportJobCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateBillOfMaterialsImportJobCommandOutput>;
   createBillOfMaterialsImportJob(
     args: CreateBillOfMaterialsImportJobCommandInput,
-    cb: (err: any, data?: CreateBillOfMaterialsImportJobCommandOutput) => void
+    cb: (err: any, data?: CreateBillOfMaterialsImportJobCommandOutput) => void,
   ): void;
   createBillOfMaterialsImportJob(
     args: CreateBillOfMaterialsImportJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateBillOfMaterialsImportJobCommandOutput) => void
+    cb: (err: any, data?: CreateBillOfMaterialsImportJobCommandOutput) => void,
   ): void;
 
   /**
@@ -48,16 +48,16 @@ export interface SupplyChain {
    */
   getBillOfMaterialsImportJob(
     args: GetBillOfMaterialsImportJobCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetBillOfMaterialsImportJobCommandOutput>;
   getBillOfMaterialsImportJob(
     args: GetBillOfMaterialsImportJobCommandInput,
-    cb: (err: any, data?: GetBillOfMaterialsImportJobCommandOutput) => void
+    cb: (err: any, data?: GetBillOfMaterialsImportJobCommandOutput) => void,
   ): void;
   getBillOfMaterialsImportJob(
     args: GetBillOfMaterialsImportJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetBillOfMaterialsImportJobCommandOutput) => void
+    cb: (err: any, data?: GetBillOfMaterialsImportJobCommandOutput) => void,
   ): void;
 
   /**
@@ -65,16 +65,16 @@ export interface SupplyChain {
    */
   sendDataIntegrationEvent(
     args: SendDataIntegrationEventCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<SendDataIntegrationEventCommandOutput>;
   sendDataIntegrationEvent(
     args: SendDataIntegrationEventCommandInput,
-    cb: (err: any, data?: SendDataIntegrationEventCommandOutput) => void
+    cb: (err: any, data?: SendDataIntegrationEventCommandOutput) => void,
   ): void;
   sendDataIntegrationEvent(
     args: SendDataIntegrationEventCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SendDataIntegrationEventCommandOutput) => void
+    cb: (err: any, data?: SendDataIntegrationEventCommandOutput) => void,
   ): void;
 }
 

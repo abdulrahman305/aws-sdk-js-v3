@@ -114,7 +114,7 @@ import {
  */
 export const se_DatetimeOffsetsCommand = async (
   input: DatetimeOffsetsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DatetimeOffsets");
   const body = "{}";
@@ -126,7 +126,7 @@ export const se_DatetimeOffsetsCommand = async (
  */
 export const se_EmptyOperationCommand = async (
   input: EmptyOperationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("EmptyOperation");
   const body = "{}";
@@ -138,7 +138,7 @@ export const se_EmptyOperationCommand = async (
  */
 export const se_EndpointOperationCommand = async (
   input: EndpointOperationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("EndpointOperation");
   const body = "{}";
@@ -157,7 +157,7 @@ export const se_EndpointOperationCommand = async (
  */
 export const se_EndpointWithHostLabelOperationCommand = async (
   input: EndpointWithHostLabelOperationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("EndpointWithHostLabelOperation");
   let body: any;
@@ -181,7 +181,7 @@ export const se_EndpointWithHostLabelOperationCommand = async (
  */
 export const se_FractionalSecondsCommand = async (
   input: FractionalSecondsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("FractionalSeconds");
   const body = "{}";
@@ -193,7 +193,7 @@ export const se_FractionalSecondsCommand = async (
  */
 export const se_GreetingWithErrorsCommand = async (
   input: GreetingWithErrorsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GreetingWithErrors");
   const body = "{}";
@@ -205,7 +205,7 @@ export const se_GreetingWithErrorsCommand = async (
  */
 export const se_HostWithPathOperationCommand = async (
   input: HostWithPathOperationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("HostWithPathOperation");
   const body = "{}";
@@ -217,7 +217,7 @@ export const se_HostWithPathOperationCommand = async (
  */
 export const se_JsonEnumsCommand = async (
   input: JsonEnumsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("JsonEnums");
   let body: any;
@@ -230,7 +230,7 @@ export const se_JsonEnumsCommand = async (
  */
 export const se_JsonUnionsCommand = async (
   input: JsonUnionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("JsonUnions");
   let body: any;
@@ -243,7 +243,7 @@ export const se_JsonUnionsCommand = async (
  */
 export const se_KitchenSinkOperationCommand = async (
   input: KitchenSinkOperationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("KitchenSinkOperation");
   let body: any;
@@ -256,7 +256,7 @@ export const se_KitchenSinkOperationCommand = async (
  */
 export const se_NullOperationCommand = async (
   input: NullOperationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("NullOperation");
   let body: any;
@@ -269,7 +269,7 @@ export const se_NullOperationCommand = async (
  */
 export const se_OperationWithOptionalInputOutputCommand = async (
   input: OperationWithOptionalInputOutputCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("OperationWithOptionalInputOutput");
   let body: any;
@@ -282,7 +282,7 @@ export const se_OperationWithOptionalInputOutputCommand = async (
  */
 export const se_PutAndGetInlineDocumentsCommand = async (
   input: PutAndGetInlineDocumentsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("PutAndGetInlineDocuments");
   let body: any;
@@ -295,7 +295,7 @@ export const se_PutAndGetInlineDocumentsCommand = async (
  */
 export const se_PutWithContentEncodingCommand = async (
   input: PutWithContentEncodingCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("PutWithContentEncoding");
   let body: any;
@@ -308,7 +308,7 @@ export const se_PutWithContentEncodingCommand = async (
  */
 export const se_SimpleScalarPropertiesCommand = async (
   input: SimpleScalarPropertiesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("SimpleScalarProperties");
   let body: any;
@@ -321,7 +321,7 @@ export const se_SimpleScalarPropertiesCommand = async (
  */
 export const se_SparseNullsOperationCommand = async (
   input: SparseNullsOperationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("SparseNullsOperation");
   let body: any;
@@ -334,7 +334,7 @@ export const se_SparseNullsOperationCommand = async (
  */
 export const de_DatetimeOffsetsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DatetimeOffsetsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -354,7 +354,7 @@ export const de_DatetimeOffsetsCommand = async (
  */
 export const de_EmptyOperationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<EmptyOperationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -371,7 +371,7 @@ export const de_EmptyOperationCommand = async (
  */
 export const de_EndpointOperationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<EndpointOperationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -388,7 +388,7 @@ export const de_EndpointOperationCommand = async (
  */
 export const de_EndpointWithHostLabelOperationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<EndpointWithHostLabelOperationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -405,7 +405,7 @@ export const de_EndpointWithHostLabelOperationCommand = async (
  */
 export const de_FractionalSecondsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<FractionalSecondsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -425,7 +425,7 @@ export const de_FractionalSecondsCommand = async (
  */
 export const de_GreetingWithErrorsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GreetingWithErrorsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -445,7 +445,7 @@ export const de_GreetingWithErrorsCommand = async (
  */
 export const de_HostWithPathOperationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<HostWithPathOperationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -462,7 +462,7 @@ export const de_HostWithPathOperationCommand = async (
  */
 export const de_JsonEnumsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<JsonEnumsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -482,7 +482,7 @@ export const de_JsonEnumsCommand = async (
  */
 export const de_JsonUnionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<JsonUnionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -502,7 +502,7 @@ export const de_JsonUnionsCommand = async (
  */
 export const de_KitchenSinkOperationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<KitchenSinkOperationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -522,7 +522,7 @@ export const de_KitchenSinkOperationCommand = async (
  */
 export const de_NullOperationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<NullOperationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -542,7 +542,7 @@ export const de_NullOperationCommand = async (
  */
 export const de_OperationWithOptionalInputOutputCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<OperationWithOptionalInputOutputCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -562,7 +562,7 @@ export const de_OperationWithOptionalInputOutputCommand = async (
  */
 export const de_PutAndGetInlineDocumentsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutAndGetInlineDocumentsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -582,7 +582,7 @@ export const de_PutAndGetInlineDocumentsCommand = async (
  */
 export const de_PutWithContentEncodingCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutWithContentEncodingCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -599,7 +599,7 @@ export const de_PutWithContentEncodingCommand = async (
  */
 export const de_SimpleScalarPropertiesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SimpleScalarPropertiesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -619,7 +619,7 @@ export const de_SimpleScalarPropertiesCommand = async (
  */
 export const de_SparseNullsOperationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SparseNullsOperationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -835,7 +835,7 @@ const se_MyUnion = (input: MyUnion, context: __SerdeContext): any => {
     stringValue: (value) => ({ stringValue: value }),
     structureValue: (value) => ({ structureValue: _json(value) }),
     timestampValue: (value) => ({ timestampValue: value.getTime() / 1_000 }),
-    _: (name, value) => ({ name: value } as any),
+    _: (name, value) => ({ name: value }) as any,
   });
 };
 
@@ -848,7 +848,7 @@ const se_MyUnion = (input: MyUnion, context: __SerdeContext): any => {
  */
 const se_PutAndGetInlineDocumentsInputOutput = (
   input: PutAndGetInlineDocumentsInputOutput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     inlineDocument: (_) => se_Document(_, context),
@@ -862,7 +862,7 @@ const se_PutAndGetInlineDocumentsInputOutput = (
  */
 const se_SimpleScalarPropertiesInputOutput = (
   input: SimpleScalarPropertiesInputOutput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     doubleValue: __serializeFloat,
@@ -1062,13 +1062,16 @@ const de_ListOfKitchenSinks = (output: any, context: __SerdeContext): KitchenSin
  * deserializeAws_json1_1MapOfKitchenSinks
  */
 const de_MapOfKitchenSinks = (output: any, context: __SerdeContext): Record<string, KitchenSink> => {
-  return Object.entries(output).reduce((acc: Record<string, KitchenSink>, [key, value]: [string, any]) => {
-    if (value === null) {
+  return Object.entries(output).reduce(
+    (acc: Record<string, KitchenSink>, [key, value]: [string, any]) => {
+      if (value === null) {
+        return acc;
+      }
+      acc[key as string] = de_KitchenSink(value, context);
       return acc;
-    }
-    acc[key as string] = de_KitchenSink(value, context);
-    return acc;
-  }, {} as Record<string, KitchenSink>);
+    },
+    {} as Record<string, KitchenSink>,
+  );
 };
 
 // de_MapOfListsOfStrings omitted.
@@ -1132,7 +1135,7 @@ const de_MyUnion = (output: any, context: __SerdeContext): MyUnion => {
  */
 const de_PutAndGetInlineDocumentsInputOutput = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): PutAndGetInlineDocumentsInputOutput => {
   return take(output, {
     inlineDocument: (_: any) => de_Document(_, context),
@@ -1144,7 +1147,7 @@ const de_PutAndGetInlineDocumentsInputOutput = (
  */
 const de_SimpleScalarPropertiesInputOutput = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): SimpleScalarPropertiesInputOutput => {
   return take(output, {
     doubleValue: __limitedParseDouble,
@@ -1207,14 +1210,17 @@ const de_SparseStringList = (output: any, context: __SerdeContext): string[] => 
  * deserializeAws_json1_1SparseStringMap
  */
 const de_SparseStringMap = (output: any, context: __SerdeContext): Record<string, string> => {
-  return Object.entries(output).reduce((acc: Record<string, string>, [key, value]: [string, any]) => {
-    if (value === null) {
-      acc[key as string] = null as any;
+  return Object.entries(output).reduce(
+    (acc: Record<string, string>, [key, value]: [string, any]) => {
+      if (value === null) {
+        acc[key as string] = null as any;
+        return acc;
+      }
+      acc[key as string] = __expectString(value) as any;
       return acc;
-    }
-    acc[key as string] = __expectString(value) as any;
-    return acc;
-  }, {} as Record<string, string>);
+    },
+    {} as Record<string, string>,
+  );
 };
 
 // de_StringList omitted.
@@ -1239,7 +1245,7 @@ const buildHttpRpcRequest = async (
   headers: __HeaderBag,
   path: string,
   resolvedHostname: string | undefined,
-  body: any
+  body: any,
 ): Promise<__HttpRequest> => {
   const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
   const contents: any = {

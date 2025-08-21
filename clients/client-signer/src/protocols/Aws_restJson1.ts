@@ -107,7 +107,7 @@ import { SignerServiceException as __BaseException } from "../models/SignerServi
  */
 export const se_AddProfilePermissionCommand = async (
   input: AddProfilePermissionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -123,7 +123,7 @@ export const se_AddProfilePermissionCommand = async (
       profileVersion: [],
       revisionId: [],
       statementId: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -134,7 +134,7 @@ export const se_AddProfilePermissionCommand = async (
  */
 export const se_CancelSigningProfileCommand = async (
   input: CancelSigningProfileCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -150,7 +150,7 @@ export const se_CancelSigningProfileCommand = async (
  */
 export const se_DescribeSigningJobCommand = async (
   input: DescribeSigningJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -166,7 +166,7 @@ export const se_DescribeSigningJobCommand = async (
  */
 export const se_GetRevocationStatusCommand = async (
   input: GetRevocationStatusCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -202,7 +202,7 @@ export const se_GetRevocationStatusCommand = async (
  */
 export const se_GetSigningPlatformCommand = async (
   input: GetSigningPlatformCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -218,7 +218,7 @@ export const se_GetSigningPlatformCommand = async (
  */
 export const se_GetSigningProfileCommand = async (
   input: GetSigningProfileCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -237,7 +237,7 @@ export const se_GetSigningProfileCommand = async (
  */
 export const se_ListProfilePermissionsCommand = async (
   input: ListProfilePermissionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -256,7 +256,7 @@ export const se_ListProfilePermissionsCommand = async (
  */
 export const se_ListSigningJobsCommand = async (
   input: ListSigningJobsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -282,7 +282,7 @@ export const se_ListSigningJobsCommand = async (
  */
 export const se_ListSigningPlatformsCommand = async (
   input: ListSigningPlatformsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -304,7 +304,7 @@ export const se_ListSigningPlatformsCommand = async (
  */
 export const se_ListSigningProfilesCommand = async (
   input: ListSigningProfilesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -326,7 +326,7 @@ export const se_ListSigningProfilesCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -342,7 +342,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_PutSigningProfileCommand = async (
   input: PutSigningProfileCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -359,7 +359,7 @@ export const se_PutSigningProfileCommand = async (
       signingMaterial: (_) => _json(_),
       signingParameters: (_) => _json(_),
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -370,7 +370,7 @@ export const se_PutSigningProfileCommand = async (
  */
 export const se_RemoveProfilePermissionCommand = async (
   input: RemoveProfilePermissionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -390,7 +390,7 @@ export const se_RemoveProfilePermissionCommand = async (
  */
 export const se_RevokeSignatureCommand = async (
   input: RevokeSignatureCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -403,7 +403,7 @@ export const se_RevokeSignatureCommand = async (
     take(input, {
       jobOwner: [],
       reason: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -414,7 +414,7 @@ export const se_RevokeSignatureCommand = async (
  */
 export const se_RevokeSigningProfileCommand = async (
   input: RevokeSigningProfileCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -428,7 +428,7 @@ export const se_RevokeSigningProfileCommand = async (
       effectiveTime: (_) => _.getTime() / 1_000,
       profileVersion: [],
       reason: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -439,7 +439,7 @@ export const se_RevokeSigningProfileCommand = async (
  */
 export const se_SignPayloadCommand = async (
   input: SignPayloadCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -453,7 +453,7 @@ export const se_SignPayloadCommand = async (
       payloadFormat: [],
       profileName: [],
       profileOwner: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -464,7 +464,7 @@ export const se_SignPayloadCommand = async (
  */
 export const se_StartSigningJobCommand = async (
   input: StartSigningJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -479,7 +479,7 @@ export const se_StartSigningJobCommand = async (
       profileName: [],
       profileOwner: [],
       source: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -490,7 +490,7 @@ export const se_StartSigningJobCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -502,7 +502,7 @@ export const se_TagResourceCommand = async (
   body = JSON.stringify(
     take(input, {
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -513,7 +513,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -535,7 +535,7 @@ export const se_UntagResourceCommand = async (
  */
 export const de_AddProfilePermissionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AddProfilePermissionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -556,7 +556,7 @@ export const de_AddProfilePermissionCommand = async (
  */
 export const de_CancelSigningProfileCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CancelSigningProfileCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -573,7 +573,7 @@ export const de_CancelSigningProfileCommand = async (
  */
 export const de_DescribeSigningJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeSigningJobCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -612,7 +612,7 @@ export const de_DescribeSigningJobCommand = async (
  */
 export const de_GetRevocationStatusCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetRevocationStatusCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -633,7 +633,7 @@ export const de_GetRevocationStatusCommand = async (
  */
 export const de_GetSigningPlatformCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetSigningPlatformCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -662,7 +662,7 @@ export const de_GetSigningPlatformCommand = async (
  */
 export const de_GetSigningProfileCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetSigningProfileCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -696,7 +696,7 @@ export const de_GetSigningProfileCommand = async (
  */
 export const de_ListProfilePermissionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListProfilePermissionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -720,7 +720,7 @@ export const de_ListProfilePermissionsCommand = async (
  */
 export const de_ListSigningJobsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListSigningJobsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -742,7 +742,7 @@ export const de_ListSigningJobsCommand = async (
  */
 export const de_ListSigningPlatformsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListSigningPlatformsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -764,7 +764,7 @@ export const de_ListSigningPlatformsCommand = async (
  */
 export const de_ListSigningProfilesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListSigningProfilesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -786,7 +786,7 @@ export const de_ListSigningProfilesCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -807,7 +807,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_PutSigningProfileCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutSigningProfileCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -830,7 +830,7 @@ export const de_PutSigningProfileCommand = async (
  */
 export const de_RemoveProfilePermissionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RemoveProfilePermissionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -851,7 +851,7 @@ export const de_RemoveProfilePermissionCommand = async (
  */
 export const de_RevokeSignatureCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RevokeSignatureCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -868,7 +868,7 @@ export const de_RevokeSignatureCommand = async (
  */
 export const de_RevokeSigningProfileCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RevokeSigningProfileCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -885,7 +885,7 @@ export const de_RevokeSigningProfileCommand = async (
  */
 export const de_SignPayloadCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SignPayloadCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -909,7 +909,7 @@ export const de_SignPayloadCommand = async (
  */
 export const de_StartSigningJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartSigningJobCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -931,7 +931,7 @@ export const de_StartSigningJobCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -948,7 +948,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1016,7 +1016,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1073,7 +1073,7 @@ const de_ConflictExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_InternalServiceErrorExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServiceErrorException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1112,7 +1112,7 @@ const de_NotFoundExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1133,7 +1133,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_ServiceLimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceLimitExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1172,7 +1172,7 @@ const de_ThrottlingExceptionRes = async (parsedOutput: any, context: __SerdeCont
  */
 const de_TooManyRequestsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyRequestsException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;

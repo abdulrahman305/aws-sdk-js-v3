@@ -24,7 +24,7 @@ const checkState = async (client: IAMClient, input: GetUserCommandInput): Promis
  */
 export const waitForUserExists = async (
   params: WaiterConfiguration<IAMClient>,
-  input: GetUserCommandInput
+  input: GetUserCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 1, maxDelay: 120 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -36,7 +36,7 @@ export const waitForUserExists = async (
  */
 export const waitUntilUserExists = async (
   params: WaiterConfiguration<IAMClient>,
-  input: GetUserCommandInput
+  input: GetUserCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 1, maxDelay: 120 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

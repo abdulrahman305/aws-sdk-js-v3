@@ -79,7 +79,7 @@ const checkState = async (client: OmicsClient, input: GetReadSetActivationJobCom
  */
 export const waitForReadSetActivationJobCompleted = async (
   params: WaiterConfiguration<OmicsClient>,
-  input: GetReadSetActivationJobCommandInput
+  input: GetReadSetActivationJobCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 30, maxDelay: 600 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -91,7 +91,7 @@ export const waitForReadSetActivationJobCompleted = async (
  */
 export const waitUntilReadSetActivationJobCompleted = async (
   params: WaiterConfiguration<OmicsClient>,
-  input: GetReadSetActivationJobCommandInput
+  input: GetReadSetActivationJobCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 30, maxDelay: 600 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

@@ -19,7 +19,7 @@ describe(AwsSdkSigV4Signer.name, () => {
             },
             statusCode: 500,
           },
-        })
+        }),
       );
     } catch (e) {
       error = e as Error;

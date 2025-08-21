@@ -129,7 +129,7 @@ import {
  */
 export const se_CreateTestCaseCommand = async (
   input: CreateTestCaseCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -144,7 +144,7 @@ export const se_CreateTestCaseCommand = async (
       name: [],
       steps: (_) => _json(_),
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -155,7 +155,7 @@ export const se_CreateTestCaseCommand = async (
  */
 export const se_CreateTestConfigurationCommand = async (
   input: CreateTestConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -172,7 +172,7 @@ export const se_CreateTestConfigurationCommand = async (
       resources: (_) => _json(_),
       serviceSettings: (_) => _json(_),
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -183,7 +183,7 @@ export const se_CreateTestConfigurationCommand = async (
  */
 export const se_CreateTestSuiteCommand = async (
   input: CreateTestSuiteCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -200,7 +200,7 @@ export const se_CreateTestSuiteCommand = async (
       name: [],
       tags: (_) => _json(_),
       testCases: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -211,7 +211,7 @@ export const se_CreateTestSuiteCommand = async (
  */
 export const se_DeleteTestCaseCommand = async (
   input: DeleteTestCaseCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -227,7 +227,7 @@ export const se_DeleteTestCaseCommand = async (
  */
 export const se_DeleteTestConfigurationCommand = async (
   input: DeleteTestConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -243,7 +243,7 @@ export const se_DeleteTestConfigurationCommand = async (
  */
 export const se_DeleteTestRunCommand = async (
   input: DeleteTestRunCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -259,7 +259,7 @@ export const se_DeleteTestRunCommand = async (
  */
 export const se_DeleteTestSuiteCommand = async (
   input: DeleteTestSuiteCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -275,7 +275,7 @@ export const se_DeleteTestSuiteCommand = async (
  */
 export const se_GetTestCaseCommand = async (
   input: GetTestCaseCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -294,7 +294,7 @@ export const se_GetTestCaseCommand = async (
  */
 export const se_GetTestConfigurationCommand = async (
   input: GetTestConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -313,7 +313,7 @@ export const se_GetTestConfigurationCommand = async (
  */
 export const se_GetTestRunStepCommand = async (
   input: GetTestRunStepCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -334,7 +334,7 @@ export const se_GetTestRunStepCommand = async (
  */
 export const se_GetTestSuiteCommand = async (
   input: GetTestSuiteCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -353,7 +353,7 @@ export const se_GetTestSuiteCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -369,7 +369,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_ListTestCasesCommand = async (
   input: ListTestCasesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -389,7 +389,7 @@ export const se_ListTestCasesCommand = async (
  */
 export const se_ListTestConfigurationsCommand = async (
   input: ListTestConfigurationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -412,7 +412,7 @@ export const se_ListTestConfigurationsCommand = async (
  */
 export const se_ListTestRunsCommand = async (
   input: ListTestRunsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -433,7 +433,7 @@ export const se_ListTestRunsCommand = async (
  */
 export const se_ListTestRunStepsCommand = async (
   input: ListTestRunStepsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -455,7 +455,7 @@ export const se_ListTestRunStepsCommand = async (
  */
 export const se_ListTestRunTestCasesCommand = async (
   input: ListTestRunTestCasesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -475,7 +475,7 @@ export const se_ListTestRunTestCasesCommand = async (
  */
 export const se_ListTestSuitesCommand = async (
   input: ListTestSuitesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -495,7 +495,7 @@ export const se_ListTestSuitesCommand = async (
  */
 export const se_StartTestRunCommand = async (
   input: StartTestRunCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -509,7 +509,7 @@ export const se_StartTestRunCommand = async (
       tags: (_) => _json(_),
       testConfigurationId: [],
       testSuiteId: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -520,7 +520,7 @@ export const se_StartTestRunCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -532,7 +532,7 @@ export const se_TagResourceCommand = async (
   body = JSON.stringify(
     take(input, {
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -543,7 +543,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -565,7 +565,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateTestCaseCommand = async (
   input: UpdateTestCaseCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -578,7 +578,7 @@ export const se_UpdateTestCaseCommand = async (
     take(input, {
       description: [],
       steps: (_) => _json(_),
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -589,7 +589,7 @@ export const se_UpdateTestCaseCommand = async (
  */
 export const se_UpdateTestConfigurationCommand = async (
   input: UpdateTestConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -604,7 +604,7 @@ export const se_UpdateTestConfigurationCommand = async (
       properties: (_) => _json(_),
       resources: (_) => _json(_),
       serviceSettings: (_) => _json(_),
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -615,7 +615,7 @@ export const se_UpdateTestConfigurationCommand = async (
  */
 export const se_UpdateTestSuiteCommand = async (
   input: UpdateTestSuiteCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -630,7 +630,7 @@ export const se_UpdateTestSuiteCommand = async (
       beforeSteps: (_) => _json(_),
       description: [],
       testCases: (_) => _json(_),
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -641,7 +641,7 @@ export const se_UpdateTestSuiteCommand = async (
  */
 export const de_CreateTestCaseCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateTestCaseCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -663,7 +663,7 @@ export const de_CreateTestCaseCommand = async (
  */
 export const de_CreateTestConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateTestConfigurationCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -685,7 +685,7 @@ export const de_CreateTestConfigurationCommand = async (
  */
 export const de_CreateTestSuiteCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateTestSuiteCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -707,7 +707,7 @@ export const de_CreateTestSuiteCommand = async (
  */
 export const de_DeleteTestCaseCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteTestCaseCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -724,7 +724,7 @@ export const de_DeleteTestCaseCommand = async (
  */
 export const de_DeleteTestConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteTestConfigurationCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -741,7 +741,7 @@ export const de_DeleteTestConfigurationCommand = async (
  */
 export const de_DeleteTestRunCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteTestRunCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -758,7 +758,7 @@ export const de_DeleteTestRunCommand = async (
  */
 export const de_DeleteTestSuiteCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteTestSuiteCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -775,7 +775,7 @@ export const de_DeleteTestSuiteCommand = async (
  */
 export const de_GetTestCaseCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetTestCaseCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -807,7 +807,7 @@ export const de_GetTestCaseCommand = async (
  */
 export const de_GetTestConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetTestConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -841,7 +841,7 @@ export const de_GetTestConfigurationCommand = async (
  */
 export const de_GetTestRunStepCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetTestRunStepCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -874,7 +874,7 @@ export const de_GetTestRunStepCommand = async (
  */
 export const de_GetTestSuiteCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetTestSuiteCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -908,7 +908,7 @@ export const de_GetTestSuiteCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -929,7 +929,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_ListTestCasesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTestCasesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -951,7 +951,7 @@ export const de_ListTestCasesCommand = async (
  */
 export const de_ListTestConfigurationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTestConfigurationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -973,7 +973,7 @@ export const de_ListTestConfigurationsCommand = async (
  */
 export const de_ListTestRunsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTestRunsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -995,7 +995,7 @@ export const de_ListTestRunsCommand = async (
  */
 export const de_ListTestRunStepsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTestRunStepsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1017,7 +1017,7 @@ export const de_ListTestRunStepsCommand = async (
  */
 export const de_ListTestRunTestCasesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTestRunTestCasesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1039,7 +1039,7 @@ export const de_ListTestRunTestCasesCommand = async (
  */
 export const de_ListTestSuitesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTestSuitesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1061,7 +1061,7 @@ export const de_ListTestSuitesCommand = async (
  */
 export const de_StartTestRunCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartTestRunCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1083,7 +1083,7 @@ export const de_StartTestRunCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1100,7 +1100,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1117,7 +1117,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateTestCaseCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateTestCaseCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1139,7 +1139,7 @@ export const de_UpdateTestCaseCommand = async (
  */
 export const de_UpdateTestConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateTestConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1161,7 +1161,7 @@ export const de_UpdateTestConfigurationCommand = async (
  */
 export const de_UpdateTestSuiteCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateTestSuiteCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1225,7 +1225,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1264,7 +1264,7 @@ const de_ConflictExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_InternalServerExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerException> => {
   const contents: any = map({
     [_rAS]: [() => void 0 !== parsedOutput.headers[_ra], () => __strictParseInt32(parsedOutput.headers[_ra])],
@@ -1286,7 +1286,7 @@ const de_InternalServerExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1308,7 +1308,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_ServiceQuotaExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceQuotaExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;

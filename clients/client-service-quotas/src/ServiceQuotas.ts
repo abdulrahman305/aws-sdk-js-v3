@@ -124,16 +124,16 @@ export interface ServiceQuotas {
   associateServiceQuotaTemplate(): Promise<AssociateServiceQuotaTemplateCommandOutput>;
   associateServiceQuotaTemplate(
     args: AssociateServiceQuotaTemplateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AssociateServiceQuotaTemplateCommandOutput>;
   associateServiceQuotaTemplate(
     args: AssociateServiceQuotaTemplateCommandInput,
-    cb: (err: any, data?: AssociateServiceQuotaTemplateCommandOutput) => void
+    cb: (err: any, data?: AssociateServiceQuotaTemplateCommandOutput) => void,
   ): void;
   associateServiceQuotaTemplate(
     args: AssociateServiceQuotaTemplateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AssociateServiceQuotaTemplateCommandOutput) => void
+    cb: (err: any, data?: AssociateServiceQuotaTemplateCommandOutput) => void,
   ): void;
 
   /**
@@ -141,16 +141,16 @@ export interface ServiceQuotas {
    */
   deleteServiceQuotaIncreaseRequestFromTemplate(
     args: DeleteServiceQuotaIncreaseRequestFromTemplateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteServiceQuotaIncreaseRequestFromTemplateCommandOutput>;
   deleteServiceQuotaIncreaseRequestFromTemplate(
     args: DeleteServiceQuotaIncreaseRequestFromTemplateCommandInput,
-    cb: (err: any, data?: DeleteServiceQuotaIncreaseRequestFromTemplateCommandOutput) => void
+    cb: (err: any, data?: DeleteServiceQuotaIncreaseRequestFromTemplateCommandOutput) => void,
   ): void;
   deleteServiceQuotaIncreaseRequestFromTemplate(
     args: DeleteServiceQuotaIncreaseRequestFromTemplateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteServiceQuotaIncreaseRequestFromTemplateCommandOutput) => void
+    cb: (err: any, data?: DeleteServiceQuotaIncreaseRequestFromTemplateCommandOutput) => void,
   ): void;
 
   /**
@@ -159,16 +159,16 @@ export interface ServiceQuotas {
   disassociateServiceQuotaTemplate(): Promise<DisassociateServiceQuotaTemplateCommandOutput>;
   disassociateServiceQuotaTemplate(
     args: DisassociateServiceQuotaTemplateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DisassociateServiceQuotaTemplateCommandOutput>;
   disassociateServiceQuotaTemplate(
     args: DisassociateServiceQuotaTemplateCommandInput,
-    cb: (err: any, data?: DisassociateServiceQuotaTemplateCommandOutput) => void
+    cb: (err: any, data?: DisassociateServiceQuotaTemplateCommandOutput) => void,
   ): void;
   disassociateServiceQuotaTemplate(
     args: DisassociateServiceQuotaTemplateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DisassociateServiceQuotaTemplateCommandOutput) => void
+    cb: (err: any, data?: DisassociateServiceQuotaTemplateCommandOutput) => void,
   ): void;
 
   /**
@@ -177,16 +177,16 @@ export interface ServiceQuotas {
   getAssociationForServiceQuotaTemplate(): Promise<GetAssociationForServiceQuotaTemplateCommandOutput>;
   getAssociationForServiceQuotaTemplate(
     args: GetAssociationForServiceQuotaTemplateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetAssociationForServiceQuotaTemplateCommandOutput>;
   getAssociationForServiceQuotaTemplate(
     args: GetAssociationForServiceQuotaTemplateCommandInput,
-    cb: (err: any, data?: GetAssociationForServiceQuotaTemplateCommandOutput) => void
+    cb: (err: any, data?: GetAssociationForServiceQuotaTemplateCommandOutput) => void,
   ): void;
   getAssociationForServiceQuotaTemplate(
     args: GetAssociationForServiceQuotaTemplateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetAssociationForServiceQuotaTemplateCommandOutput) => void
+    cb: (err: any, data?: GetAssociationForServiceQuotaTemplateCommandOutput) => void,
   ): void;
 
   /**
@@ -194,16 +194,16 @@ export interface ServiceQuotas {
    */
   getAWSDefaultServiceQuota(
     args: GetAWSDefaultServiceQuotaCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetAWSDefaultServiceQuotaCommandOutput>;
   getAWSDefaultServiceQuota(
     args: GetAWSDefaultServiceQuotaCommandInput,
-    cb: (err: any, data?: GetAWSDefaultServiceQuotaCommandOutput) => void
+    cb: (err: any, data?: GetAWSDefaultServiceQuotaCommandOutput) => void,
   ): void;
   getAWSDefaultServiceQuota(
     args: GetAWSDefaultServiceQuotaCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetAWSDefaultServiceQuotaCommandOutput) => void
+    cb: (err: any, data?: GetAWSDefaultServiceQuotaCommandOutput) => void,
   ): void;
 
   /**
@@ -211,16 +211,16 @@ export interface ServiceQuotas {
    */
   getRequestedServiceQuotaChange(
     args: GetRequestedServiceQuotaChangeCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetRequestedServiceQuotaChangeCommandOutput>;
   getRequestedServiceQuotaChange(
     args: GetRequestedServiceQuotaChangeCommandInput,
-    cb: (err: any, data?: GetRequestedServiceQuotaChangeCommandOutput) => void
+    cb: (err: any, data?: GetRequestedServiceQuotaChangeCommandOutput) => void,
   ): void;
   getRequestedServiceQuotaChange(
     args: GetRequestedServiceQuotaChangeCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetRequestedServiceQuotaChangeCommandOutput) => void
+    cb: (err: any, data?: GetRequestedServiceQuotaChangeCommandOutput) => void,
   ): void;
 
   /**
@@ -228,13 +228,13 @@ export interface ServiceQuotas {
    */
   getServiceQuota(
     args: GetServiceQuotaCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetServiceQuotaCommandOutput>;
   getServiceQuota(args: GetServiceQuotaCommandInput, cb: (err: any, data?: GetServiceQuotaCommandOutput) => void): void;
   getServiceQuota(
     args: GetServiceQuotaCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetServiceQuotaCommandOutput) => void
+    cb: (err: any, data?: GetServiceQuotaCommandOutput) => void,
   ): void;
 
   /**
@@ -242,16 +242,16 @@ export interface ServiceQuotas {
    */
   getServiceQuotaIncreaseRequestFromTemplate(
     args: GetServiceQuotaIncreaseRequestFromTemplateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetServiceQuotaIncreaseRequestFromTemplateCommandOutput>;
   getServiceQuotaIncreaseRequestFromTemplate(
     args: GetServiceQuotaIncreaseRequestFromTemplateCommandInput,
-    cb: (err: any, data?: GetServiceQuotaIncreaseRequestFromTemplateCommandOutput) => void
+    cb: (err: any, data?: GetServiceQuotaIncreaseRequestFromTemplateCommandOutput) => void,
   ): void;
   getServiceQuotaIncreaseRequestFromTemplate(
     args: GetServiceQuotaIncreaseRequestFromTemplateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetServiceQuotaIncreaseRequestFromTemplateCommandOutput) => void
+    cb: (err: any, data?: GetServiceQuotaIncreaseRequestFromTemplateCommandOutput) => void,
   ): void;
 
   /**
@@ -259,16 +259,16 @@ export interface ServiceQuotas {
    */
   listAWSDefaultServiceQuotas(
     args: ListAWSDefaultServiceQuotasCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListAWSDefaultServiceQuotasCommandOutput>;
   listAWSDefaultServiceQuotas(
     args: ListAWSDefaultServiceQuotasCommandInput,
-    cb: (err: any, data?: ListAWSDefaultServiceQuotasCommandOutput) => void
+    cb: (err: any, data?: ListAWSDefaultServiceQuotasCommandOutput) => void,
   ): void;
   listAWSDefaultServiceQuotas(
     args: ListAWSDefaultServiceQuotasCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListAWSDefaultServiceQuotasCommandOutput) => void
+    cb: (err: any, data?: ListAWSDefaultServiceQuotasCommandOutput) => void,
   ): void;
 
   /**
@@ -277,16 +277,16 @@ export interface ServiceQuotas {
   listRequestedServiceQuotaChangeHistory(): Promise<ListRequestedServiceQuotaChangeHistoryCommandOutput>;
   listRequestedServiceQuotaChangeHistory(
     args: ListRequestedServiceQuotaChangeHistoryCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListRequestedServiceQuotaChangeHistoryCommandOutput>;
   listRequestedServiceQuotaChangeHistory(
     args: ListRequestedServiceQuotaChangeHistoryCommandInput,
-    cb: (err: any, data?: ListRequestedServiceQuotaChangeHistoryCommandOutput) => void
+    cb: (err: any, data?: ListRequestedServiceQuotaChangeHistoryCommandOutput) => void,
   ): void;
   listRequestedServiceQuotaChangeHistory(
     args: ListRequestedServiceQuotaChangeHistoryCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListRequestedServiceQuotaChangeHistoryCommandOutput) => void
+    cb: (err: any, data?: ListRequestedServiceQuotaChangeHistoryCommandOutput) => void,
   ): void;
 
   /**
@@ -294,16 +294,16 @@ export interface ServiceQuotas {
    */
   listRequestedServiceQuotaChangeHistoryByQuota(
     args: ListRequestedServiceQuotaChangeHistoryByQuotaCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListRequestedServiceQuotaChangeHistoryByQuotaCommandOutput>;
   listRequestedServiceQuotaChangeHistoryByQuota(
     args: ListRequestedServiceQuotaChangeHistoryByQuotaCommandInput,
-    cb: (err: any, data?: ListRequestedServiceQuotaChangeHistoryByQuotaCommandOutput) => void
+    cb: (err: any, data?: ListRequestedServiceQuotaChangeHistoryByQuotaCommandOutput) => void,
   ): void;
   listRequestedServiceQuotaChangeHistoryByQuota(
     args: ListRequestedServiceQuotaChangeHistoryByQuotaCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListRequestedServiceQuotaChangeHistoryByQuotaCommandOutput) => void
+    cb: (err: any, data?: ListRequestedServiceQuotaChangeHistoryByQuotaCommandOutput) => void,
   ): void;
 
   /**
@@ -312,16 +312,16 @@ export interface ServiceQuotas {
   listServiceQuotaIncreaseRequestsInTemplate(): Promise<ListServiceQuotaIncreaseRequestsInTemplateCommandOutput>;
   listServiceQuotaIncreaseRequestsInTemplate(
     args: ListServiceQuotaIncreaseRequestsInTemplateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListServiceQuotaIncreaseRequestsInTemplateCommandOutput>;
   listServiceQuotaIncreaseRequestsInTemplate(
     args: ListServiceQuotaIncreaseRequestsInTemplateCommandInput,
-    cb: (err: any, data?: ListServiceQuotaIncreaseRequestsInTemplateCommandOutput) => void
+    cb: (err: any, data?: ListServiceQuotaIncreaseRequestsInTemplateCommandOutput) => void,
   ): void;
   listServiceQuotaIncreaseRequestsInTemplate(
     args: ListServiceQuotaIncreaseRequestsInTemplateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListServiceQuotaIncreaseRequestsInTemplateCommandOutput) => void
+    cb: (err: any, data?: ListServiceQuotaIncreaseRequestsInTemplateCommandOutput) => void,
   ): void;
 
   /**
@@ -329,16 +329,16 @@ export interface ServiceQuotas {
    */
   listServiceQuotas(
     args: ListServiceQuotasCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListServiceQuotasCommandOutput>;
   listServiceQuotas(
     args: ListServiceQuotasCommandInput,
-    cb: (err: any, data?: ListServiceQuotasCommandOutput) => void
+    cb: (err: any, data?: ListServiceQuotasCommandOutput) => void,
   ): void;
   listServiceQuotas(
     args: ListServiceQuotasCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListServiceQuotasCommandOutput) => void
+    cb: (err: any, data?: ListServiceQuotasCommandOutput) => void,
   ): void;
 
   /**
@@ -350,7 +350,7 @@ export interface ServiceQuotas {
   listServices(
     args: ListServicesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListServicesCommandOutput) => void
+    cb: (err: any, data?: ListServicesCommandOutput) => void,
   ): void;
 
   /**
@@ -358,16 +358,16 @@ export interface ServiceQuotas {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -375,16 +375,16 @@ export interface ServiceQuotas {
    */
   putServiceQuotaIncreaseRequestIntoTemplate(
     args: PutServiceQuotaIncreaseRequestIntoTemplateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutServiceQuotaIncreaseRequestIntoTemplateCommandOutput>;
   putServiceQuotaIncreaseRequestIntoTemplate(
     args: PutServiceQuotaIncreaseRequestIntoTemplateCommandInput,
-    cb: (err: any, data?: PutServiceQuotaIncreaseRequestIntoTemplateCommandOutput) => void
+    cb: (err: any, data?: PutServiceQuotaIncreaseRequestIntoTemplateCommandOutput) => void,
   ): void;
   putServiceQuotaIncreaseRequestIntoTemplate(
     args: PutServiceQuotaIncreaseRequestIntoTemplateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutServiceQuotaIncreaseRequestIntoTemplateCommandOutput) => void
+    cb: (err: any, data?: PutServiceQuotaIncreaseRequestIntoTemplateCommandOutput) => void,
   ): void;
 
   /**
@@ -392,16 +392,16 @@ export interface ServiceQuotas {
    */
   requestServiceQuotaIncrease(
     args: RequestServiceQuotaIncreaseCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<RequestServiceQuotaIncreaseCommandOutput>;
   requestServiceQuotaIncrease(
     args: RequestServiceQuotaIncreaseCommandInput,
-    cb: (err: any, data?: RequestServiceQuotaIncreaseCommandOutput) => void
+    cb: (err: any, data?: RequestServiceQuotaIncreaseCommandOutput) => void,
   ): void;
   requestServiceQuotaIncrease(
     args: RequestServiceQuotaIncreaseCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RequestServiceQuotaIncreaseCommandOutput) => void
+    cb: (err: any, data?: RequestServiceQuotaIncreaseCommandOutput) => void,
   ): void;
 
   /**
@@ -412,7 +412,7 @@ export interface ServiceQuotas {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -423,7 +423,7 @@ export interface ServiceQuotas {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 }
 

@@ -54,16 +54,16 @@ export interface CostAndUsageReportService {
    */
   deleteReportDefinition(
     args: DeleteReportDefinitionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteReportDefinitionCommandOutput>;
   deleteReportDefinition(
     args: DeleteReportDefinitionCommandInput,
-    cb: (err: any, data?: DeleteReportDefinitionCommandOutput) => void
+    cb: (err: any, data?: DeleteReportDefinitionCommandOutput) => void,
   ): void;
   deleteReportDefinition(
     args: DeleteReportDefinitionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteReportDefinitionCommandOutput) => void
+    cb: (err: any, data?: DeleteReportDefinitionCommandOutput) => void,
   ): void;
 
   /**
@@ -72,16 +72,16 @@ export interface CostAndUsageReportService {
   describeReportDefinitions(): Promise<DescribeReportDefinitionsCommandOutput>;
   describeReportDefinitions(
     args: DescribeReportDefinitionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeReportDefinitionsCommandOutput>;
   describeReportDefinitions(
     args: DescribeReportDefinitionsCommandInput,
-    cb: (err: any, data?: DescribeReportDefinitionsCommandOutput) => void
+    cb: (err: any, data?: DescribeReportDefinitionsCommandOutput) => void,
   ): void;
   describeReportDefinitions(
     args: DescribeReportDefinitionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeReportDefinitionsCommandOutput) => void
+    cb: (err: any, data?: DescribeReportDefinitionsCommandOutput) => void,
   ): void;
 
   /**
@@ -89,16 +89,16 @@ export interface CostAndUsageReportService {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -106,16 +106,16 @@ export interface CostAndUsageReportService {
    */
   modifyReportDefinition(
     args: ModifyReportDefinitionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ModifyReportDefinitionCommandOutput>;
   modifyReportDefinition(
     args: ModifyReportDefinitionCommandInput,
-    cb: (err: any, data?: ModifyReportDefinitionCommandOutput) => void
+    cb: (err: any, data?: ModifyReportDefinitionCommandOutput) => void,
   ): void;
   modifyReportDefinition(
     args: ModifyReportDefinitionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ModifyReportDefinitionCommandOutput) => void
+    cb: (err: any, data?: ModifyReportDefinitionCommandOutput) => void,
   ): void;
 
   /**
@@ -123,16 +123,16 @@ export interface CostAndUsageReportService {
    */
   putReportDefinition(
     args: PutReportDefinitionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutReportDefinitionCommandOutput>;
   putReportDefinition(
     args: PutReportDefinitionCommandInput,
-    cb: (err: any, data?: PutReportDefinitionCommandOutput) => void
+    cb: (err: any, data?: PutReportDefinitionCommandOutput) => void,
   ): void;
   putReportDefinition(
     args: PutReportDefinitionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutReportDefinitionCommandOutput) => void
+    cb: (err: any, data?: PutReportDefinitionCommandOutput) => void,
   ): void;
 
   /**
@@ -143,7 +143,7 @@ export interface CostAndUsageReportService {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -154,7 +154,7 @@ export interface CostAndUsageReportService {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 }
 

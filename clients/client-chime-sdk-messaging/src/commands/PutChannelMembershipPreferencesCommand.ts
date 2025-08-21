@@ -141,7 +141,7 @@ export class PutChannelMembershipPreferencesCommand extends $Command
   .n("ChimeSDKMessagingClient", "PutChannelMembershipPreferencesCommand")
   .f(
     PutChannelMembershipPreferencesRequestFilterSensitiveLog,
-    PutChannelMembershipPreferencesResponseFilterSensitiveLog
+    PutChannelMembershipPreferencesResponseFilterSensitiveLog,
   )
   .ser(se_PutChannelMembershipPreferencesCommand)
   .de(de_PutChannelMembershipPreferencesCommand)

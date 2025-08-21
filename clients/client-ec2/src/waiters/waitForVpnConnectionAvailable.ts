@@ -67,7 +67,7 @@ const checkState = async (client: EC2Client, input: DescribeVpnConnectionsComman
  */
 export const waitForVpnConnectionAvailable = async (
   params: WaiterConfiguration<EC2Client>,
-  input: DescribeVpnConnectionsCommandInput
+  input: DescribeVpnConnectionsCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 15, maxDelay: 120 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -79,7 +79,7 @@ export const waitForVpnConnectionAvailable = async (
  */
 export const waitUntilVpnConnectionAvailable = async (
   params: WaiterConfiguration<EC2Client>,
-  input: DescribeVpnConnectionsCommandInput
+  input: DescribeVpnConnectionsCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 15, maxDelay: 120 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

@@ -42,7 +42,7 @@ export namespace OmitsNullSerializesEmptyStringServerInput {
    * @internal
    */
   export const validate: (
-    obj: Parameters<typeof OmitsNullSerializesEmptyStringInput.validate>[0]
+    obj: Parameters<typeof OmitsNullSerializesEmptyStringInput.validate>[0],
   ) => __ValidationFailure[] = OmitsNullSerializesEmptyStringInput.validate;
 }
 export interface OmitsNullSerializesEmptyStringServerOutput {}
@@ -71,14 +71,14 @@ export const getOmitsNullSerializesEmptyStringHandler = <Context>(
     OmitsNullSerializesEmptyStringServerOutput,
     Context
   >,
-  customizer: __ValidationCustomizer<"OmitsNullSerializesEmptyString">
+  customizer: __ValidationCustomizer<"OmitsNullSerializesEmptyString">,
 ): __ServiceHandler<Context, __HttpRequest, __HttpResponse> => {
   const mux = new httpbinding.HttpBindingMux<"RestJson", "OmitsNullSerializesEmptyString">([
     new httpbinding.UriSpec<"RestJson", "OmitsNullSerializesEmptyString">(
       "GET",
       [{ type: "path_literal", value: "OmitsNullSerializesEmptyString" }],
       [],
-      { service: "RestJson", operation: "OmitsNullSerializesEmptyString" }
+      { service: "RestJson", operation: "OmitsNullSerializesEmptyString" },
     ),
   ]);
   return new OmitsNullSerializesEmptyStringHandler(
@@ -86,7 +86,7 @@ export const getOmitsNullSerializesEmptyStringHandler = <Context>(
     mux,
     new OmitsNullSerializesEmptyStringSerializer(),
     serializeFrameworkException,
-    customizer
+    customizer,
   );
 };
 
@@ -107,7 +107,7 @@ async function handle<S, O extends keyof S & string, Context>(
   operation: __Operation<__OperationInput<S[O]>, __OperationOutput<S[O]>, Context>,
   serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
   validationFn: (input: __OperationInput<S[O]>) => __ValidationFailure[],
-  validationCustomizer: __ValidationCustomizer<O>
+  validationCustomizer: __ValidationCustomizer<O>,
 ): Promise<__HttpResponse> {
   let input;
   try {
@@ -153,7 +153,7 @@ export class OmitsNullSerializesEmptyStringHandler<Context> implements __Service
   >;
   private readonly serializeFrameworkException: (
     e: __SmithyFrameworkException,
-    ctx: __ServerSerdeContext
+    ctx: __ServerSerdeContext,
   ) => Promise<__HttpResponse>;
   private readonly validationCustomizer: __ValidationCustomizer<"OmitsNullSerializesEmptyString">;
   /**
@@ -178,7 +178,7 @@ export class OmitsNullSerializesEmptyStringHandler<Context> implements __Service
       OmitsNullSerializesEmptyStringErrors
     >,
     serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
-    validationCustomizer: __ValidationCustomizer<"OmitsNullSerializesEmptyString">
+    validationCustomizer: __ValidationCustomizer<"OmitsNullSerializesEmptyString">,
   ) {
     this.operation = operation;
     this.mux = mux;
@@ -190,7 +190,7 @@ export class OmitsNullSerializesEmptyStringHandler<Context> implements __Service
     const target = this.mux.match(request);
     if (target === undefined) {
       console.log(
-        "Received a request that did not match aws.protocoltests.restjson#RestJson.OmitsNullSerializesEmptyString. This indicates a misconfiguration."
+        "Received a request that did not match aws.protocoltests.restjson#RestJson.OmitsNullSerializesEmptyString. This indicates a misconfiguration.",
       );
       return this.serializeFrameworkException(new __InternalFailureException(), serdeContextBase);
     }
@@ -202,7 +202,7 @@ export class OmitsNullSerializesEmptyStringHandler<Context> implements __Service
       this.operation,
       this.serializeFrameworkException,
       OmitsNullSerializesEmptyStringServerInput.validate,
-      this.validationCustomizer
+      this.validationCustomizer,
     );
   }
 }

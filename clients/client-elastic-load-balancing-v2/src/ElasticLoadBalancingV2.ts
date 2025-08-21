@@ -253,16 +253,16 @@ export interface ElasticLoadBalancingV2 {
    */
   addListenerCertificates(
     args: AddListenerCertificatesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AddListenerCertificatesCommandOutput>;
   addListenerCertificates(
     args: AddListenerCertificatesCommandInput,
-    cb: (err: any, data?: AddListenerCertificatesCommandOutput) => void
+    cb: (err: any, data?: AddListenerCertificatesCommandOutput) => void,
   ): void;
   addListenerCertificates(
     args: AddListenerCertificatesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AddListenerCertificatesCommandOutput) => void
+    cb: (err: any, data?: AddListenerCertificatesCommandOutput) => void,
   ): void;
 
   /**
@@ -273,7 +273,7 @@ export interface ElasticLoadBalancingV2 {
   addTags(
     args: AddTagsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AddTagsCommandOutput) => void
+    cb: (err: any, data?: AddTagsCommandOutput) => void,
   ): void;
 
   /**
@@ -281,16 +281,16 @@ export interface ElasticLoadBalancingV2 {
    */
   addTrustStoreRevocations(
     args: AddTrustStoreRevocationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AddTrustStoreRevocationsCommandOutput>;
   addTrustStoreRevocations(
     args: AddTrustStoreRevocationsCommandInput,
-    cb: (err: any, data?: AddTrustStoreRevocationsCommandOutput) => void
+    cb: (err: any, data?: AddTrustStoreRevocationsCommandOutput) => void,
   ): void;
   addTrustStoreRevocations(
     args: AddTrustStoreRevocationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AddTrustStoreRevocationsCommandOutput) => void
+    cb: (err: any, data?: AddTrustStoreRevocationsCommandOutput) => void,
   ): void;
 
   /**
@@ -298,13 +298,13 @@ export interface ElasticLoadBalancingV2 {
    */
   createListener(
     args: CreateListenerCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateListenerCommandOutput>;
   createListener(args: CreateListenerCommandInput, cb: (err: any, data?: CreateListenerCommandOutput) => void): void;
   createListener(
     args: CreateListenerCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateListenerCommandOutput) => void
+    cb: (err: any, data?: CreateListenerCommandOutput) => void,
   ): void;
 
   /**
@@ -312,16 +312,16 @@ export interface ElasticLoadBalancingV2 {
    */
   createLoadBalancer(
     args: CreateLoadBalancerCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateLoadBalancerCommandOutput>;
   createLoadBalancer(
     args: CreateLoadBalancerCommandInput,
-    cb: (err: any, data?: CreateLoadBalancerCommandOutput) => void
+    cb: (err: any, data?: CreateLoadBalancerCommandOutput) => void,
   ): void;
   createLoadBalancer(
     args: CreateLoadBalancerCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateLoadBalancerCommandOutput) => void
+    cb: (err: any, data?: CreateLoadBalancerCommandOutput) => void,
   ): void;
 
   /**
@@ -332,7 +332,7 @@ export interface ElasticLoadBalancingV2 {
   createRule(
     args: CreateRuleCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateRuleCommandOutput) => void
+    cb: (err: any, data?: CreateRuleCommandOutput) => void,
   ): void;
 
   /**
@@ -340,16 +340,16 @@ export interface ElasticLoadBalancingV2 {
    */
   createTargetGroup(
     args: CreateTargetGroupCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateTargetGroupCommandOutput>;
   createTargetGroup(
     args: CreateTargetGroupCommandInput,
-    cb: (err: any, data?: CreateTargetGroupCommandOutput) => void
+    cb: (err: any, data?: CreateTargetGroupCommandOutput) => void,
   ): void;
   createTargetGroup(
     args: CreateTargetGroupCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateTargetGroupCommandOutput) => void
+    cb: (err: any, data?: CreateTargetGroupCommandOutput) => void,
   ): void;
 
   /**
@@ -357,16 +357,16 @@ export interface ElasticLoadBalancingV2 {
    */
   createTrustStore(
     args: CreateTrustStoreCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateTrustStoreCommandOutput>;
   createTrustStore(
     args: CreateTrustStoreCommandInput,
-    cb: (err: any, data?: CreateTrustStoreCommandOutput) => void
+    cb: (err: any, data?: CreateTrustStoreCommandOutput) => void,
   ): void;
   createTrustStore(
     args: CreateTrustStoreCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateTrustStoreCommandOutput) => void
+    cb: (err: any, data?: CreateTrustStoreCommandOutput) => void,
   ): void;
 
   /**
@@ -374,13 +374,13 @@ export interface ElasticLoadBalancingV2 {
    */
   deleteListener(
     args: DeleteListenerCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteListenerCommandOutput>;
   deleteListener(args: DeleteListenerCommandInput, cb: (err: any, data?: DeleteListenerCommandOutput) => void): void;
   deleteListener(
     args: DeleteListenerCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteListenerCommandOutput) => void
+    cb: (err: any, data?: DeleteListenerCommandOutput) => void,
   ): void;
 
   /**
@@ -388,16 +388,16 @@ export interface ElasticLoadBalancingV2 {
    */
   deleteLoadBalancer(
     args: DeleteLoadBalancerCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteLoadBalancerCommandOutput>;
   deleteLoadBalancer(
     args: DeleteLoadBalancerCommandInput,
-    cb: (err: any, data?: DeleteLoadBalancerCommandOutput) => void
+    cb: (err: any, data?: DeleteLoadBalancerCommandOutput) => void,
   ): void;
   deleteLoadBalancer(
     args: DeleteLoadBalancerCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteLoadBalancerCommandOutput) => void
+    cb: (err: any, data?: DeleteLoadBalancerCommandOutput) => void,
   ): void;
 
   /**
@@ -408,7 +408,7 @@ export interface ElasticLoadBalancingV2 {
   deleteRule(
     args: DeleteRuleCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteRuleCommandOutput) => void
+    cb: (err: any, data?: DeleteRuleCommandOutput) => void,
   ): void;
 
   /**
@@ -416,16 +416,16 @@ export interface ElasticLoadBalancingV2 {
    */
   deleteTargetGroup(
     args: DeleteTargetGroupCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteTargetGroupCommandOutput>;
   deleteTargetGroup(
     args: DeleteTargetGroupCommandInput,
-    cb: (err: any, data?: DeleteTargetGroupCommandOutput) => void
+    cb: (err: any, data?: DeleteTargetGroupCommandOutput) => void,
   ): void;
   deleteTargetGroup(
     args: DeleteTargetGroupCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteTargetGroupCommandOutput) => void
+    cb: (err: any, data?: DeleteTargetGroupCommandOutput) => void,
   ): void;
 
   /**
@@ -433,16 +433,16 @@ export interface ElasticLoadBalancingV2 {
    */
   deleteTrustStore(
     args: DeleteTrustStoreCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteTrustStoreCommandOutput>;
   deleteTrustStore(
     args: DeleteTrustStoreCommandInput,
-    cb: (err: any, data?: DeleteTrustStoreCommandOutput) => void
+    cb: (err: any, data?: DeleteTrustStoreCommandOutput) => void,
   ): void;
   deleteTrustStore(
     args: DeleteTrustStoreCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteTrustStoreCommandOutput) => void
+    cb: (err: any, data?: DeleteTrustStoreCommandOutput) => void,
   ): void;
 
   /**
@@ -450,16 +450,16 @@ export interface ElasticLoadBalancingV2 {
    */
   deregisterTargets(
     args: DeregisterTargetsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeregisterTargetsCommandOutput>;
   deregisterTargets(
     args: DeregisterTargetsCommandInput,
-    cb: (err: any, data?: DeregisterTargetsCommandOutput) => void
+    cb: (err: any, data?: DeregisterTargetsCommandOutput) => void,
   ): void;
   deregisterTargets(
     args: DeregisterTargetsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeregisterTargetsCommandOutput) => void
+    cb: (err: any, data?: DeregisterTargetsCommandOutput) => void,
   ): void;
 
   /**
@@ -468,16 +468,16 @@ export interface ElasticLoadBalancingV2 {
   describeAccountLimits(): Promise<DescribeAccountLimitsCommandOutput>;
   describeAccountLimits(
     args: DescribeAccountLimitsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeAccountLimitsCommandOutput>;
   describeAccountLimits(
     args: DescribeAccountLimitsCommandInput,
-    cb: (err: any, data?: DescribeAccountLimitsCommandOutput) => void
+    cb: (err: any, data?: DescribeAccountLimitsCommandOutput) => void,
   ): void;
   describeAccountLimits(
     args: DescribeAccountLimitsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeAccountLimitsCommandOutput) => void
+    cb: (err: any, data?: DescribeAccountLimitsCommandOutput) => void,
   ): void;
 
   /**
@@ -485,16 +485,16 @@ export interface ElasticLoadBalancingV2 {
    */
   describeListenerCertificates(
     args: DescribeListenerCertificatesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeListenerCertificatesCommandOutput>;
   describeListenerCertificates(
     args: DescribeListenerCertificatesCommandInput,
-    cb: (err: any, data?: DescribeListenerCertificatesCommandOutput) => void
+    cb: (err: any, data?: DescribeListenerCertificatesCommandOutput) => void,
   ): void;
   describeListenerCertificates(
     args: DescribeListenerCertificatesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeListenerCertificatesCommandOutput) => void
+    cb: (err: any, data?: DescribeListenerCertificatesCommandOutput) => void,
   ): void;
 
   /**
@@ -503,16 +503,16 @@ export interface ElasticLoadBalancingV2 {
   describeListeners(): Promise<DescribeListenersCommandOutput>;
   describeListeners(
     args: DescribeListenersCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeListenersCommandOutput>;
   describeListeners(
     args: DescribeListenersCommandInput,
-    cb: (err: any, data?: DescribeListenersCommandOutput) => void
+    cb: (err: any, data?: DescribeListenersCommandOutput) => void,
   ): void;
   describeListeners(
     args: DescribeListenersCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeListenersCommandOutput) => void
+    cb: (err: any, data?: DescribeListenersCommandOutput) => void,
   ): void;
 
   /**
@@ -520,16 +520,16 @@ export interface ElasticLoadBalancingV2 {
    */
   describeLoadBalancerAttributes(
     args: DescribeLoadBalancerAttributesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeLoadBalancerAttributesCommandOutput>;
   describeLoadBalancerAttributes(
     args: DescribeLoadBalancerAttributesCommandInput,
-    cb: (err: any, data?: DescribeLoadBalancerAttributesCommandOutput) => void
+    cb: (err: any, data?: DescribeLoadBalancerAttributesCommandOutput) => void,
   ): void;
   describeLoadBalancerAttributes(
     args: DescribeLoadBalancerAttributesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeLoadBalancerAttributesCommandOutput) => void
+    cb: (err: any, data?: DescribeLoadBalancerAttributesCommandOutput) => void,
   ): void;
 
   /**
@@ -538,16 +538,16 @@ export interface ElasticLoadBalancingV2 {
   describeLoadBalancers(): Promise<DescribeLoadBalancersCommandOutput>;
   describeLoadBalancers(
     args: DescribeLoadBalancersCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeLoadBalancersCommandOutput>;
   describeLoadBalancers(
     args: DescribeLoadBalancersCommandInput,
-    cb: (err: any, data?: DescribeLoadBalancersCommandOutput) => void
+    cb: (err: any, data?: DescribeLoadBalancersCommandOutput) => void,
   ): void;
   describeLoadBalancers(
     args: DescribeLoadBalancersCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeLoadBalancersCommandOutput) => void
+    cb: (err: any, data?: DescribeLoadBalancersCommandOutput) => void,
   ): void;
 
   /**
@@ -559,7 +559,7 @@ export interface ElasticLoadBalancingV2 {
   describeRules(
     args: DescribeRulesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeRulesCommandOutput) => void
+    cb: (err: any, data?: DescribeRulesCommandOutput) => void,
   ): void;
 
   /**
@@ -568,16 +568,16 @@ export interface ElasticLoadBalancingV2 {
   describeSSLPolicies(): Promise<DescribeSSLPoliciesCommandOutput>;
   describeSSLPolicies(
     args: DescribeSSLPoliciesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeSSLPoliciesCommandOutput>;
   describeSSLPolicies(
     args: DescribeSSLPoliciesCommandInput,
-    cb: (err: any, data?: DescribeSSLPoliciesCommandOutput) => void
+    cb: (err: any, data?: DescribeSSLPoliciesCommandOutput) => void,
   ): void;
   describeSSLPolicies(
     args: DescribeSSLPoliciesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeSSLPoliciesCommandOutput) => void
+    cb: (err: any, data?: DescribeSSLPoliciesCommandOutput) => void,
   ): void;
 
   /**
@@ -588,7 +588,7 @@ export interface ElasticLoadBalancingV2 {
   describeTags(
     args: DescribeTagsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeTagsCommandOutput) => void
+    cb: (err: any, data?: DescribeTagsCommandOutput) => void,
   ): void;
 
   /**
@@ -596,16 +596,16 @@ export interface ElasticLoadBalancingV2 {
    */
   describeTargetGroupAttributes(
     args: DescribeTargetGroupAttributesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeTargetGroupAttributesCommandOutput>;
   describeTargetGroupAttributes(
     args: DescribeTargetGroupAttributesCommandInput,
-    cb: (err: any, data?: DescribeTargetGroupAttributesCommandOutput) => void
+    cb: (err: any, data?: DescribeTargetGroupAttributesCommandOutput) => void,
   ): void;
   describeTargetGroupAttributes(
     args: DescribeTargetGroupAttributesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeTargetGroupAttributesCommandOutput) => void
+    cb: (err: any, data?: DescribeTargetGroupAttributesCommandOutput) => void,
   ): void;
 
   /**
@@ -614,16 +614,16 @@ export interface ElasticLoadBalancingV2 {
   describeTargetGroups(): Promise<DescribeTargetGroupsCommandOutput>;
   describeTargetGroups(
     args: DescribeTargetGroupsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeTargetGroupsCommandOutput>;
   describeTargetGroups(
     args: DescribeTargetGroupsCommandInput,
-    cb: (err: any, data?: DescribeTargetGroupsCommandOutput) => void
+    cb: (err: any, data?: DescribeTargetGroupsCommandOutput) => void,
   ): void;
   describeTargetGroups(
     args: DescribeTargetGroupsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeTargetGroupsCommandOutput) => void
+    cb: (err: any, data?: DescribeTargetGroupsCommandOutput) => void,
   ): void;
 
   /**
@@ -631,16 +631,16 @@ export interface ElasticLoadBalancingV2 {
    */
   describeTargetHealth(
     args: DescribeTargetHealthCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeTargetHealthCommandOutput>;
   describeTargetHealth(
     args: DescribeTargetHealthCommandInput,
-    cb: (err: any, data?: DescribeTargetHealthCommandOutput) => void
+    cb: (err: any, data?: DescribeTargetHealthCommandOutput) => void,
   ): void;
   describeTargetHealth(
     args: DescribeTargetHealthCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeTargetHealthCommandOutput) => void
+    cb: (err: any, data?: DescribeTargetHealthCommandOutput) => void,
   ): void;
 
   /**
@@ -648,16 +648,16 @@ export interface ElasticLoadBalancingV2 {
    */
   describeTrustStoreAssociations(
     args: DescribeTrustStoreAssociationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeTrustStoreAssociationsCommandOutput>;
   describeTrustStoreAssociations(
     args: DescribeTrustStoreAssociationsCommandInput,
-    cb: (err: any, data?: DescribeTrustStoreAssociationsCommandOutput) => void
+    cb: (err: any, data?: DescribeTrustStoreAssociationsCommandOutput) => void,
   ): void;
   describeTrustStoreAssociations(
     args: DescribeTrustStoreAssociationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeTrustStoreAssociationsCommandOutput) => void
+    cb: (err: any, data?: DescribeTrustStoreAssociationsCommandOutput) => void,
   ): void;
 
   /**
@@ -665,16 +665,16 @@ export interface ElasticLoadBalancingV2 {
    */
   describeTrustStoreRevocations(
     args: DescribeTrustStoreRevocationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeTrustStoreRevocationsCommandOutput>;
   describeTrustStoreRevocations(
     args: DescribeTrustStoreRevocationsCommandInput,
-    cb: (err: any, data?: DescribeTrustStoreRevocationsCommandOutput) => void
+    cb: (err: any, data?: DescribeTrustStoreRevocationsCommandOutput) => void,
   ): void;
   describeTrustStoreRevocations(
     args: DescribeTrustStoreRevocationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeTrustStoreRevocationsCommandOutput) => void
+    cb: (err: any, data?: DescribeTrustStoreRevocationsCommandOutput) => void,
   ): void;
 
   /**
@@ -683,16 +683,16 @@ export interface ElasticLoadBalancingV2 {
   describeTrustStores(): Promise<DescribeTrustStoresCommandOutput>;
   describeTrustStores(
     args: DescribeTrustStoresCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeTrustStoresCommandOutput>;
   describeTrustStores(
     args: DescribeTrustStoresCommandInput,
-    cb: (err: any, data?: DescribeTrustStoresCommandOutput) => void
+    cb: (err: any, data?: DescribeTrustStoresCommandOutput) => void,
   ): void;
   describeTrustStores(
     args: DescribeTrustStoresCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeTrustStoresCommandOutput) => void
+    cb: (err: any, data?: DescribeTrustStoresCommandOutput) => void,
   ): void;
 
   /**
@@ -700,16 +700,16 @@ export interface ElasticLoadBalancingV2 {
    */
   getTrustStoreCaCertificatesBundle(
     args: GetTrustStoreCaCertificatesBundleCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetTrustStoreCaCertificatesBundleCommandOutput>;
   getTrustStoreCaCertificatesBundle(
     args: GetTrustStoreCaCertificatesBundleCommandInput,
-    cb: (err: any, data?: GetTrustStoreCaCertificatesBundleCommandOutput) => void
+    cb: (err: any, data?: GetTrustStoreCaCertificatesBundleCommandOutput) => void,
   ): void;
   getTrustStoreCaCertificatesBundle(
     args: GetTrustStoreCaCertificatesBundleCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetTrustStoreCaCertificatesBundleCommandOutput) => void
+    cb: (err: any, data?: GetTrustStoreCaCertificatesBundleCommandOutput) => void,
   ): void;
 
   /**
@@ -717,16 +717,16 @@ export interface ElasticLoadBalancingV2 {
    */
   getTrustStoreRevocationContent(
     args: GetTrustStoreRevocationContentCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetTrustStoreRevocationContentCommandOutput>;
   getTrustStoreRevocationContent(
     args: GetTrustStoreRevocationContentCommandInput,
-    cb: (err: any, data?: GetTrustStoreRevocationContentCommandOutput) => void
+    cb: (err: any, data?: GetTrustStoreRevocationContentCommandOutput) => void,
   ): void;
   getTrustStoreRevocationContent(
     args: GetTrustStoreRevocationContentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetTrustStoreRevocationContentCommandOutput) => void
+    cb: (err: any, data?: GetTrustStoreRevocationContentCommandOutput) => void,
   ): void;
 
   /**
@@ -734,13 +734,13 @@ export interface ElasticLoadBalancingV2 {
    */
   modifyListener(
     args: ModifyListenerCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ModifyListenerCommandOutput>;
   modifyListener(args: ModifyListenerCommandInput, cb: (err: any, data?: ModifyListenerCommandOutput) => void): void;
   modifyListener(
     args: ModifyListenerCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ModifyListenerCommandOutput) => void
+    cb: (err: any, data?: ModifyListenerCommandOutput) => void,
   ): void;
 
   /**
@@ -748,16 +748,16 @@ export interface ElasticLoadBalancingV2 {
    */
   modifyLoadBalancerAttributes(
     args: ModifyLoadBalancerAttributesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ModifyLoadBalancerAttributesCommandOutput>;
   modifyLoadBalancerAttributes(
     args: ModifyLoadBalancerAttributesCommandInput,
-    cb: (err: any, data?: ModifyLoadBalancerAttributesCommandOutput) => void
+    cb: (err: any, data?: ModifyLoadBalancerAttributesCommandOutput) => void,
   ): void;
   modifyLoadBalancerAttributes(
     args: ModifyLoadBalancerAttributesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ModifyLoadBalancerAttributesCommandOutput) => void
+    cb: (err: any, data?: ModifyLoadBalancerAttributesCommandOutput) => void,
   ): void;
 
   /**
@@ -768,7 +768,7 @@ export interface ElasticLoadBalancingV2 {
   modifyRule(
     args: ModifyRuleCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ModifyRuleCommandOutput) => void
+    cb: (err: any, data?: ModifyRuleCommandOutput) => void,
   ): void;
 
   /**
@@ -776,16 +776,16 @@ export interface ElasticLoadBalancingV2 {
    */
   modifyTargetGroup(
     args: ModifyTargetGroupCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ModifyTargetGroupCommandOutput>;
   modifyTargetGroup(
     args: ModifyTargetGroupCommandInput,
-    cb: (err: any, data?: ModifyTargetGroupCommandOutput) => void
+    cb: (err: any, data?: ModifyTargetGroupCommandOutput) => void,
   ): void;
   modifyTargetGroup(
     args: ModifyTargetGroupCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ModifyTargetGroupCommandOutput) => void
+    cb: (err: any, data?: ModifyTargetGroupCommandOutput) => void,
   ): void;
 
   /**
@@ -793,16 +793,16 @@ export interface ElasticLoadBalancingV2 {
    */
   modifyTargetGroupAttributes(
     args: ModifyTargetGroupAttributesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ModifyTargetGroupAttributesCommandOutput>;
   modifyTargetGroupAttributes(
     args: ModifyTargetGroupAttributesCommandInput,
-    cb: (err: any, data?: ModifyTargetGroupAttributesCommandOutput) => void
+    cb: (err: any, data?: ModifyTargetGroupAttributesCommandOutput) => void,
   ): void;
   modifyTargetGroupAttributes(
     args: ModifyTargetGroupAttributesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ModifyTargetGroupAttributesCommandOutput) => void
+    cb: (err: any, data?: ModifyTargetGroupAttributesCommandOutput) => void,
   ): void;
 
   /**
@@ -810,16 +810,16 @@ export interface ElasticLoadBalancingV2 {
    */
   modifyTrustStore(
     args: ModifyTrustStoreCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ModifyTrustStoreCommandOutput>;
   modifyTrustStore(
     args: ModifyTrustStoreCommandInput,
-    cb: (err: any, data?: ModifyTrustStoreCommandOutput) => void
+    cb: (err: any, data?: ModifyTrustStoreCommandOutput) => void,
   ): void;
   modifyTrustStore(
     args: ModifyTrustStoreCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ModifyTrustStoreCommandOutput) => void
+    cb: (err: any, data?: ModifyTrustStoreCommandOutput) => void,
   ): void;
 
   /**
@@ -827,13 +827,13 @@ export interface ElasticLoadBalancingV2 {
    */
   registerTargets(
     args: RegisterTargetsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<RegisterTargetsCommandOutput>;
   registerTargets(args: RegisterTargetsCommandInput, cb: (err: any, data?: RegisterTargetsCommandOutput) => void): void;
   registerTargets(
     args: RegisterTargetsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RegisterTargetsCommandOutput) => void
+    cb: (err: any, data?: RegisterTargetsCommandOutput) => void,
   ): void;
 
   /**
@@ -841,16 +841,16 @@ export interface ElasticLoadBalancingV2 {
    */
   removeListenerCertificates(
     args: RemoveListenerCertificatesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<RemoveListenerCertificatesCommandOutput>;
   removeListenerCertificates(
     args: RemoveListenerCertificatesCommandInput,
-    cb: (err: any, data?: RemoveListenerCertificatesCommandOutput) => void
+    cb: (err: any, data?: RemoveListenerCertificatesCommandOutput) => void,
   ): void;
   removeListenerCertificates(
     args: RemoveListenerCertificatesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RemoveListenerCertificatesCommandOutput) => void
+    cb: (err: any, data?: RemoveListenerCertificatesCommandOutput) => void,
   ): void;
 
   /**
@@ -861,7 +861,7 @@ export interface ElasticLoadBalancingV2 {
   removeTags(
     args: RemoveTagsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RemoveTagsCommandOutput) => void
+    cb: (err: any, data?: RemoveTagsCommandOutput) => void,
   ): void;
 
   /**
@@ -869,16 +869,16 @@ export interface ElasticLoadBalancingV2 {
    */
   removeTrustStoreRevocations(
     args: RemoveTrustStoreRevocationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<RemoveTrustStoreRevocationsCommandOutput>;
   removeTrustStoreRevocations(
     args: RemoveTrustStoreRevocationsCommandInput,
-    cb: (err: any, data?: RemoveTrustStoreRevocationsCommandOutput) => void
+    cb: (err: any, data?: RemoveTrustStoreRevocationsCommandOutput) => void,
   ): void;
   removeTrustStoreRevocations(
     args: RemoveTrustStoreRevocationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RemoveTrustStoreRevocationsCommandOutput) => void
+    cb: (err: any, data?: RemoveTrustStoreRevocationsCommandOutput) => void,
   ): void;
 
   /**
@@ -886,16 +886,16 @@ export interface ElasticLoadBalancingV2 {
    */
   setIpAddressType(
     args: SetIpAddressTypeCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<SetIpAddressTypeCommandOutput>;
   setIpAddressType(
     args: SetIpAddressTypeCommandInput,
-    cb: (err: any, data?: SetIpAddressTypeCommandOutput) => void
+    cb: (err: any, data?: SetIpAddressTypeCommandOutput) => void,
   ): void;
   setIpAddressType(
     args: SetIpAddressTypeCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SetIpAddressTypeCommandOutput) => void
+    cb: (err: any, data?: SetIpAddressTypeCommandOutput) => void,
   ): void;
 
   /**
@@ -903,16 +903,16 @@ export interface ElasticLoadBalancingV2 {
    */
   setRulePriorities(
     args: SetRulePrioritiesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<SetRulePrioritiesCommandOutput>;
   setRulePriorities(
     args: SetRulePrioritiesCommandInput,
-    cb: (err: any, data?: SetRulePrioritiesCommandOutput) => void
+    cb: (err: any, data?: SetRulePrioritiesCommandOutput) => void,
   ): void;
   setRulePriorities(
     args: SetRulePrioritiesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SetRulePrioritiesCommandOutput) => void
+    cb: (err: any, data?: SetRulePrioritiesCommandOutput) => void,
   ): void;
 
   /**
@@ -920,16 +920,16 @@ export interface ElasticLoadBalancingV2 {
    */
   setSecurityGroups(
     args: SetSecurityGroupsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<SetSecurityGroupsCommandOutput>;
   setSecurityGroups(
     args: SetSecurityGroupsCommandInput,
-    cb: (err: any, data?: SetSecurityGroupsCommandOutput) => void
+    cb: (err: any, data?: SetSecurityGroupsCommandOutput) => void,
   ): void;
   setSecurityGroups(
     args: SetSecurityGroupsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SetSecurityGroupsCommandOutput) => void
+    cb: (err: any, data?: SetSecurityGroupsCommandOutput) => void,
   ): void;
 
   /**
@@ -940,7 +940,7 @@ export interface ElasticLoadBalancingV2 {
   setSubnets(
     args: SetSubnetsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SetSubnetsCommandOutput) => void
+    cb: (err: any, data?: SetSubnetsCommandOutput) => void,
   ): void;
 }
 

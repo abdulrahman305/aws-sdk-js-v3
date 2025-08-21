@@ -20,16 +20,16 @@ export interface FreeTier {
   getFreeTierUsage(): Promise<GetFreeTierUsageCommandOutput>;
   getFreeTierUsage(
     args: GetFreeTierUsageCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetFreeTierUsageCommandOutput>;
   getFreeTierUsage(
     args: GetFreeTierUsageCommandInput,
-    cb: (err: any, data?: GetFreeTierUsageCommandOutput) => void
+    cb: (err: any, data?: GetFreeTierUsageCommandOutput) => void,
   ): void;
   getFreeTierUsage(
     args: GetFreeTierUsageCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetFreeTierUsageCommandOutput) => void
+    cb: (err: any, data?: GetFreeTierUsageCommandOutput) => void,
   ): void;
 }
 

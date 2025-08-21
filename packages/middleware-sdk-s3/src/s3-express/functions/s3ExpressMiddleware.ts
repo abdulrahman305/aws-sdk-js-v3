@@ -37,7 +37,7 @@ export interface S3ExpressResolvedConfig {
  * @internal
  */
 export const s3ExpressMiddleware: (options: S3ExpressResolvedConfig) => BuildMiddleware<any, any> = (
-  options: S3ExpressResolvedConfig
+  options: S3ExpressResolvedConfig,
 ) => {
   return (next: BuildHandler<any, any>, context: HandlerExecutionContext) =>
     async (args: BuildHandlerArguments<any>) => {
@@ -61,7 +61,7 @@ export const s3ExpressMiddleware: (options: S3ExpressResolvedConfig) => BuildMid
               await options.credentials(),
               {
                 Bucket: requestBucket,
-              }
+              },
             );
 
             context.s3ExpressIdentity = s3ExpressIdentity;

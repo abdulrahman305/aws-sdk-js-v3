@@ -41,7 +41,7 @@ describe(getCredentials.name, () => {
           Code: "ERROR_CODE",
           Message: "ERROR_MESSAGE",
           ExtraneousField: "EXTRANEOUS_FIELD",
-        })
+        }),
       ),
     });
     const credentials = await getCredentials(response).catch((_) => _);
@@ -49,7 +49,7 @@ describe(getCredentials.name, () => {
       Object.assign(new CredentialsProviderError("Server responded with status: 400"), {
         Code: "ERROR_CODE",
         Message: "ERROR_MESSAGE",
-      })
+      }),
     );
   });
 

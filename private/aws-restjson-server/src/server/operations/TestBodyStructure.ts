@@ -65,7 +65,7 @@ export class TestBodyStructureSerializer
 
 export const getTestBodyStructureHandler = <Context>(
   operation: __Operation<TestBodyStructureServerInput, TestBodyStructureServerOutput, Context>,
-  customizer: __ValidationCustomizer<"TestBodyStructure">
+  customizer: __ValidationCustomizer<"TestBodyStructure">,
 ): __ServiceHandler<Context, __HttpRequest, __HttpResponse> => {
   const mux = new httpbinding.HttpBindingMux<"RestJson", "TestBodyStructure">([
     new httpbinding.UriSpec<"RestJson", "TestBodyStructure">("POST", [{ type: "path_literal", value: "body" }], [], {
@@ -78,7 +78,7 @@ export const getTestBodyStructureHandler = <Context>(
     mux,
     new TestBodyStructureSerializer(),
     serializeFrameworkException,
-    customizer
+    customizer,
   );
 };
 
@@ -99,7 +99,7 @@ async function handle<S, O extends keyof S & string, Context>(
   operation: __Operation<__OperationInput<S[O]>, __OperationOutput<S[O]>, Context>,
   serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
   validationFn: (input: __OperationInput<S[O]>) => __ValidationFailure[],
-  validationCustomizer: __ValidationCustomizer<O>
+  validationCustomizer: __ValidationCustomizer<O>,
 ): Promise<__HttpResponse> {
   let input;
   try {
@@ -141,7 +141,7 @@ export class TestBodyStructureHandler<Context> implements __ServiceHandler<Conte
   >;
   private readonly serializeFrameworkException: (
     e: __SmithyFrameworkException,
-    ctx: __ServerSerdeContext
+    ctx: __ServerSerdeContext,
   ) => Promise<__HttpResponse>;
   private readonly validationCustomizer: __ValidationCustomizer<"TestBodyStructure">;
   /**
@@ -158,7 +158,7 @@ export class TestBodyStructureHandler<Context> implements __ServiceHandler<Conte
     mux: __Mux<"RestJson", "TestBodyStructure">,
     serializer: __OperationSerializer<RestJsonService<Context>, "TestBodyStructure", TestBodyStructureErrors>,
     serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
-    validationCustomizer: __ValidationCustomizer<"TestBodyStructure">
+    validationCustomizer: __ValidationCustomizer<"TestBodyStructure">,
   ) {
     this.operation = operation;
     this.mux = mux;
@@ -170,7 +170,7 @@ export class TestBodyStructureHandler<Context> implements __ServiceHandler<Conte
     const target = this.mux.match(request);
     if (target === undefined) {
       console.log(
-        "Received a request that did not match aws.protocoltests.restjson#RestJson.TestBodyStructure. This indicates a misconfiguration."
+        "Received a request that did not match aws.protocoltests.restjson#RestJson.TestBodyStructure. This indicates a misconfiguration.",
       );
       return this.serializeFrameworkException(new __InternalFailureException(), serdeContextBase);
     }
@@ -182,7 +182,7 @@ export class TestBodyStructureHandler<Context> implements __ServiceHandler<Conte
       this.operation,
       this.serializeFrameworkException,
       TestBodyStructureServerInput.validate,
-      this.validationCustomizer
+      this.validationCustomizer,
     );
   }
 }

@@ -20,7 +20,7 @@ describe(chunkFromReadable.name, () => {
   const getChunks = async (
     streamYieldSize: number,
     streamYieldCount: number,
-    partsize: number
+    partsize: number,
   ): Promise<DataPart[]> => {
     const stream = Readable.from(getUnknownEnding(streamYieldSize, streamYieldCount));
     const chunks: DataPart[] = [];

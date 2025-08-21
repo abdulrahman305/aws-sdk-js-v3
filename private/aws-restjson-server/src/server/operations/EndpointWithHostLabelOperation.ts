@@ -70,14 +70,14 @@ export const getEndpointWithHostLabelOperationHandler = <Context>(
     EndpointWithHostLabelOperationServerOutput,
     Context
   >,
-  customizer: __ValidationCustomizer<"EndpointWithHostLabelOperation">
+  customizer: __ValidationCustomizer<"EndpointWithHostLabelOperation">,
 ): __ServiceHandler<Context, __HttpRequest, __HttpResponse> => {
   const mux = new httpbinding.HttpBindingMux<"RestJson", "EndpointWithHostLabelOperation">([
     new httpbinding.UriSpec<"RestJson", "EndpointWithHostLabelOperation">(
       "POST",
       [{ type: "path_literal", value: "EndpointWithHostLabelOperation" }],
       [],
-      { service: "RestJson", operation: "EndpointWithHostLabelOperation" }
+      { service: "RestJson", operation: "EndpointWithHostLabelOperation" },
     ),
   ]);
   return new EndpointWithHostLabelOperationHandler(
@@ -85,7 +85,7 @@ export const getEndpointWithHostLabelOperationHandler = <Context>(
     mux,
     new EndpointWithHostLabelOperationSerializer(),
     serializeFrameworkException,
-    customizer
+    customizer,
   );
 };
 
@@ -106,7 +106,7 @@ async function handle<S, O extends keyof S & string, Context>(
   operation: __Operation<__OperationInput<S[O]>, __OperationOutput<S[O]>, Context>,
   serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
   validationFn: (input: __OperationInput<S[O]>) => __ValidationFailure[],
-  validationCustomizer: __ValidationCustomizer<O>
+  validationCustomizer: __ValidationCustomizer<O>,
 ): Promise<__HttpResponse> {
   let input;
   try {
@@ -152,7 +152,7 @@ export class EndpointWithHostLabelOperationHandler<Context> implements __Service
   >;
   private readonly serializeFrameworkException: (
     e: __SmithyFrameworkException,
-    ctx: __ServerSerdeContext
+    ctx: __ServerSerdeContext,
   ) => Promise<__HttpResponse>;
   private readonly validationCustomizer: __ValidationCustomizer<"EndpointWithHostLabelOperation">;
   /**
@@ -177,7 +177,7 @@ export class EndpointWithHostLabelOperationHandler<Context> implements __Service
       EndpointWithHostLabelOperationErrors
     >,
     serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
-    validationCustomizer: __ValidationCustomizer<"EndpointWithHostLabelOperation">
+    validationCustomizer: __ValidationCustomizer<"EndpointWithHostLabelOperation">,
   ) {
     this.operation = operation;
     this.mux = mux;
@@ -189,7 +189,7 @@ export class EndpointWithHostLabelOperationHandler<Context> implements __Service
     const target = this.mux.match(request);
     if (target === undefined) {
       console.log(
-        "Received a request that did not match aws.protocoltests.restjson#RestJson.EndpointWithHostLabelOperation. This indicates a misconfiguration."
+        "Received a request that did not match aws.protocoltests.restjson#RestJson.EndpointWithHostLabelOperation. This indicates a misconfiguration.",
       );
       return this.serializeFrameworkException(new __InternalFailureException(), serdeContextBase);
     }
@@ -201,7 +201,7 @@ export class EndpointWithHostLabelOperationHandler<Context> implements __Service
       this.operation,
       this.serializeFrameworkException,
       EndpointWithHostLabelOperationServerInput.validate,
-      this.validationCustomizer
+      this.validationCustomizer,
     );
   }
 }

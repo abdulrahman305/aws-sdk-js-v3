@@ -21,7 +21,7 @@ export interface GetChecksumAlgorithmForRequestOptions {
 export const getChecksumAlgorithmForRequest = (
   input: any,
   { requestChecksumRequired, requestAlgorithmMember }: GetChecksumAlgorithmForRequestOptions,
-  isS3Express?: boolean
+  isS3Express?: boolean,
 ): ChecksumAlgorithm | undefined => {
   const defaultAlgorithm = isS3Express ? S3_EXPRESS_DEFAULT_CHECKSUM_ALGORITHM : DEFAULT_CHECKSUM_ALGORITHM;
 
@@ -37,7 +37,7 @@ export const getChecksumAlgorithmForRequest = (
   if (!CLIENT_SUPPORTED_ALGORITHMS.includes(checksumAlgorithm)) {
     throw new Error(
       `The checksum algorithm "${checksumAlgorithm}" is not supported by the client.` +
-        ` Select one of ${CLIENT_SUPPORTED_ALGORITHMS}.`
+        ` Select one of ${CLIENT_SUPPORTED_ALGORITHMS}.`,
     );
   }
 

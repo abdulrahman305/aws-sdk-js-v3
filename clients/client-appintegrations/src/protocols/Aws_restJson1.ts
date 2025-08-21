@@ -109,7 +109,7 @@ import {
  */
 export const se_CreateApplicationCommand = async (
   input: CreateApplicationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -128,7 +128,7 @@ export const se_CreateApplicationCommand = async (
       Publications: (_) => _json(_),
       Subscriptions: (_) => _json(_),
       Tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -139,7 +139,7 @@ export const se_CreateApplicationCommand = async (
  */
 export const se_CreateDataIntegrationCommand = async (
   input: CreateDataIntegrationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -158,7 +158,7 @@ export const se_CreateDataIntegrationCommand = async (
       ScheduleConfig: (_) => _json(_),
       SourceURI: [],
       Tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -169,7 +169,7 @@ export const se_CreateDataIntegrationCommand = async (
  */
 export const se_CreateEventIntegrationCommand = async (
   input: CreateEventIntegrationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -185,7 +185,7 @@ export const se_CreateEventIntegrationCommand = async (
       EventFilter: (_) => _json(_),
       Name: [],
       Tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -196,7 +196,7 @@ export const se_CreateEventIntegrationCommand = async (
  */
 export const se_DeleteApplicationCommand = async (
   input: DeleteApplicationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -212,7 +212,7 @@ export const se_DeleteApplicationCommand = async (
  */
 export const se_DeleteDataIntegrationCommand = async (
   input: DeleteDataIntegrationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -228,7 +228,7 @@ export const se_DeleteDataIntegrationCommand = async (
  */
 export const se_DeleteEventIntegrationCommand = async (
   input: DeleteEventIntegrationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -244,7 +244,7 @@ export const se_DeleteEventIntegrationCommand = async (
  */
 export const se_GetApplicationCommand = async (
   input: GetApplicationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -260,7 +260,7 @@ export const se_GetApplicationCommand = async (
  */
 export const se_GetDataIntegrationCommand = async (
   input: GetDataIntegrationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -276,7 +276,7 @@ export const se_GetDataIntegrationCommand = async (
  */
 export const se_GetEventIntegrationCommand = async (
   input: GetEventIntegrationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -292,7 +292,7 @@ export const se_GetEventIntegrationCommand = async (
  */
 export const se_ListApplicationAssociationsCommand = async (
   input: ListApplicationAssociationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -312,7 +312,7 @@ export const se_ListApplicationAssociationsCommand = async (
  */
 export const se_ListApplicationsCommand = async (
   input: ListApplicationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -331,7 +331,7 @@ export const se_ListApplicationsCommand = async (
  */
 export const se_ListDataIntegrationAssociationsCommand = async (
   input: ListDataIntegrationAssociationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -351,7 +351,7 @@ export const se_ListDataIntegrationAssociationsCommand = async (
  */
 export const se_ListDataIntegrationsCommand = async (
   input: ListDataIntegrationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -370,7 +370,7 @@ export const se_ListDataIntegrationsCommand = async (
  */
 export const se_ListEventIntegrationAssociationsCommand = async (
   input: ListEventIntegrationAssociationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -390,7 +390,7 @@ export const se_ListEventIntegrationAssociationsCommand = async (
  */
 export const se_ListEventIntegrationsCommand = async (
   input: ListEventIntegrationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -409,7 +409,7 @@ export const se_ListEventIntegrationsCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -425,7 +425,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -437,7 +437,7 @@ export const se_TagResourceCommand = async (
   body = JSON.stringify(
     take(input, {
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -448,7 +448,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -470,7 +470,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateApplicationCommand = async (
   input: UpdateApplicationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -487,7 +487,7 @@ export const se_UpdateApplicationCommand = async (
       Permissions: (_) => _json(_),
       Publications: (_) => _json(_),
       Subscriptions: (_) => _json(_),
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -498,7 +498,7 @@ export const se_UpdateApplicationCommand = async (
  */
 export const se_UpdateDataIntegrationCommand = async (
   input: UpdateDataIntegrationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -511,7 +511,7 @@ export const se_UpdateDataIntegrationCommand = async (
     take(input, {
       Description: [],
       Name: [],
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -522,7 +522,7 @@ export const se_UpdateDataIntegrationCommand = async (
  */
 export const se_UpdateEventIntegrationCommand = async (
   input: UpdateEventIntegrationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -534,7 +534,7 @@ export const se_UpdateEventIntegrationCommand = async (
   body = JSON.stringify(
     take(input, {
       Description: [],
-    })
+    }),
   );
   b.m("PATCH").h(headers).b(body);
   return b.build();
@@ -545,7 +545,7 @@ export const se_UpdateEventIntegrationCommand = async (
  */
 export const de_CreateApplicationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateApplicationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -567,7 +567,7 @@ export const de_CreateApplicationCommand = async (
  */
 export const de_CreateDataIntegrationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateDataIntegrationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -598,7 +598,7 @@ export const de_CreateDataIntegrationCommand = async (
  */
 export const de_CreateEventIntegrationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateEventIntegrationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -619,7 +619,7 @@ export const de_CreateEventIntegrationCommand = async (
  */
 export const de_DeleteApplicationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteApplicationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -636,7 +636,7 @@ export const de_DeleteApplicationCommand = async (
  */
 export const de_DeleteDataIntegrationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteDataIntegrationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -653,7 +653,7 @@ export const de_DeleteDataIntegrationCommand = async (
  */
 export const de_DeleteEventIntegrationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteEventIntegrationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -670,7 +670,7 @@ export const de_DeleteEventIntegrationCommand = async (
  */
 export const de_GetApplicationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetApplicationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -702,7 +702,7 @@ export const de_GetApplicationCommand = async (
  */
 export const de_GetDataIntegrationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetDataIntegrationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -732,7 +732,7 @@ export const de_GetDataIntegrationCommand = async (
  */
 export const de_GetEventIntegrationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetEventIntegrationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -758,7 +758,7 @@ export const de_GetEventIntegrationCommand = async (
  */
 export const de_ListApplicationAssociationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListApplicationAssociationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -780,7 +780,7 @@ export const de_ListApplicationAssociationsCommand = async (
  */
 export const de_ListApplicationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListApplicationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -802,7 +802,7 @@ export const de_ListApplicationsCommand = async (
  */
 export const de_ListDataIntegrationAssociationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListDataIntegrationAssociationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -824,7 +824,7 @@ export const de_ListDataIntegrationAssociationsCommand = async (
  */
 export const de_ListDataIntegrationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListDataIntegrationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -846,7 +846,7 @@ export const de_ListDataIntegrationsCommand = async (
  */
 export const de_ListEventIntegrationAssociationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListEventIntegrationAssociationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -868,7 +868,7 @@ export const de_ListEventIntegrationAssociationsCommand = async (
  */
 export const de_ListEventIntegrationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListEventIntegrationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -890,7 +890,7 @@ export const de_ListEventIntegrationsCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -911,7 +911,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -928,7 +928,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -945,7 +945,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateApplicationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateApplicationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -962,7 +962,7 @@ export const de_UpdateApplicationCommand = async (
  */
 export const de_UpdateDataIntegrationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateDataIntegrationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -979,7 +979,7 @@ export const de_UpdateDataIntegrationCommand = async (
  */
 export const de_UpdateEventIntegrationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateEventIntegrationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1041,7 +1041,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1061,7 +1061,7 @@ const de_AccessDeniedExceptionRes = async (
  */
 const de_DuplicateResourceExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DuplicateResourceException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1081,7 +1081,7 @@ const de_DuplicateResourceExceptionRes = async (
  */
 const de_InternalServiceErrorRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServiceError> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1101,7 +1101,7 @@ const de_InternalServiceErrorRes = async (
  */
 const de_InvalidRequestExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidRequestException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1121,7 +1121,7 @@ const de_InvalidRequestExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1141,7 +1141,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_ResourceQuotaExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceQuotaExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1178,7 +1178,7 @@ const de_ThrottlingExceptionRes = async (parsedOutput: any, context: __SerdeCont
  */
 const de_UnsupportedOperationExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UnsupportedOperationException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;

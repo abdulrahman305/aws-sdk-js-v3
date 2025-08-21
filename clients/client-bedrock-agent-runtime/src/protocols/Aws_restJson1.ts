@@ -95,7 +95,7 @@ import {
  */
 export const se_InvokeAgentCommand = async (
   input: InvokeAgentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -112,7 +112,7 @@ export const se_InvokeAgentCommand = async (
       endSession: [],
       inputText: [],
       sessionState: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -123,7 +123,7 @@ export const se_InvokeAgentCommand = async (
  */
 export const se_RetrieveCommand = async (
   input: RetrieveCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -137,7 +137,7 @@ export const se_RetrieveCommand = async (
       nextToken: [],
       retrievalConfiguration: (_) => se_KnowledgeBaseRetrievalConfiguration(_, context),
       retrievalQuery: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -148,7 +148,7 @@ export const se_RetrieveCommand = async (
  */
 export const se_RetrieveAndGenerateCommand = async (
   input: RetrieveAndGenerateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -162,7 +162,7 @@ export const se_RetrieveAndGenerateCommand = async (
       retrieveAndGenerateConfiguration: (_) => se_RetrieveAndGenerateConfiguration(_, context),
       sessionConfiguration: (_) => _json(_),
       sessionId: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -173,7 +173,7 @@ export const se_RetrieveAndGenerateCommand = async (
  */
 export const de_InvokeAgentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext & __EventStreamSerdeContext
+  context: __SerdeContext & __EventStreamSerdeContext,
 ): Promise<InvokeAgentCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -193,7 +193,7 @@ export const de_InvokeAgentCommand = async (
  */
 export const de_RetrieveCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RetrieveCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -215,7 +215,7 @@ export const de_RetrieveCommand = async (
  */
 export const de_RetrieveAndGenerateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RetrieveAndGenerateCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -287,7 +287,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -342,7 +342,7 @@ const de_ConflictExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_DependencyFailedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DependencyFailedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -363,7 +363,7 @@ const de_DependencyFailedExceptionRes = async (
  */
 const de_InternalServerExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -383,7 +383,7 @@ const de_InternalServerExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -403,7 +403,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_ServiceQuotaExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceQuotaExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -457,7 +457,7 @@ const de_ValidationExceptionRes = async (parsedOutput: any, context: __SerdeCont
  */
 const de_ResponseStream = (
   output: any,
-  context: __SerdeContext & __EventStreamSerdeContext
+  context: __SerdeContext & __EventStreamSerdeContext,
 ): AsyncIterable<ResponseStream> => {
   return context.eventStreamMarshaller.deserialize(output, async (event) => {
     if (event["chunk"] != null) {
@@ -489,7 +489,7 @@ const de_ResponseStream = (
       return {
         resourceNotFoundException: await de_ResourceNotFoundException_event(
           event["resourceNotFoundException"],
-          context
+          context,
         ),
       };
     }
@@ -497,7 +497,7 @@ const de_ResponseStream = (
       return {
         serviceQuotaExceededException: await de_ServiceQuotaExceededException_event(
           event["serviceQuotaExceededException"],
-          context
+          context,
         ),
       };
     }
@@ -520,7 +520,7 @@ const de_ResponseStream = (
       return {
         dependencyFailedException: await de_DependencyFailedException_event(
           event["dependencyFailedException"],
-          context
+          context,
         ),
       };
     }
@@ -555,7 +555,7 @@ const de_ConflictException_event = async (output: any, context: __SerdeContext):
 };
 const de_DependencyFailedException_event = async (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DependencyFailedException> => {
   const parsedOutput: any = {
     ...output,
@@ -565,7 +565,7 @@ const de_DependencyFailedException_event = async (
 };
 const de_InternalServerException_event = async (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerException> => {
   const parsedOutput: any = {
     ...output,
@@ -581,7 +581,7 @@ const de_PayloadPart_event = async (output: any, context: __SerdeContext): Promi
 };
 const de_ResourceNotFoundException_event = async (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const parsedOutput: any = {
     ...output,
@@ -597,7 +597,7 @@ const de_ReturnControlPayload_event = async (output: any, context: __SerdeContex
 };
 const de_ServiceQuotaExceededException_event = async (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceQuotaExceededException> => {
   const parsedOutput: any = {
     ...output,
@@ -687,7 +687,7 @@ const se_ExternalSources = (input: ExternalSource[], context: __SerdeContext): a
  */
 const se_ExternalSourcesGenerationConfiguration = (
   input: ExternalSourcesGenerationConfiguration,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     additionalModelRequestFields: (_) => se_AdditionalModelRequestFields(_, context),
@@ -702,7 +702,7 @@ const se_ExternalSourcesGenerationConfiguration = (
  */
 const se_ExternalSourcesRetrieveAndGenerateConfiguration = (
   input: ExternalSourcesRetrieveAndGenerateConfiguration,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     generationConfiguration: (_) => se_ExternalSourcesGenerationConfiguration(_, context),
@@ -762,7 +762,7 @@ const se_InferenceConfig = (input: InferenceConfig, context: __SerdeContext): an
  */
 const se_KnowledgeBaseRetrievalConfiguration = (
   input: KnowledgeBaseRetrievalConfiguration,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     vectorSearchConfiguration: (_) => se_KnowledgeBaseVectorSearchConfiguration(_, context),
@@ -774,7 +774,7 @@ const se_KnowledgeBaseRetrievalConfiguration = (
  */
 const se_KnowledgeBaseRetrieveAndGenerateConfiguration = (
   input: KnowledgeBaseRetrieveAndGenerateConfiguration,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     generationConfiguration: (_) => se_GenerationConfiguration(_, context),
@@ -789,7 +789,7 @@ const se_KnowledgeBaseRetrieveAndGenerateConfiguration = (
  */
 const se_KnowledgeBaseVectorSearchConfiguration = (
   input: KnowledgeBaseVectorSearchConfiguration,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     filter: (_) => se_RetrievalFilter(_, context),
@@ -824,7 +824,7 @@ const se_RetrievalFilter = (input: RetrievalFilter, context: __SerdeContext): an
     orAll: (value) => ({ orAll: se_RetrievalFilterList(value, context) }),
     startsWith: (value) => ({ startsWith: se_FilterAttribute(value, context) }),
     stringContains: (value) => ({ stringContains: se_FilterAttribute(value, context) }),
-    _: (name, value) => ({ name: value } as any),
+    _: (name, value) => ({ name: value }) as any,
   });
 };
 
@@ -1155,13 +1155,16 @@ const de_PreProcessingTrace = (output: any, context: __SerdeContext): PreProcess
  * deserializeAws_restJson1RetrievalResultMetadata
  */
 const de_RetrievalResultMetadata = (output: any, context: __SerdeContext): Record<string, __DocumentType> => {
-  return Object.entries(output).reduce((acc: Record<string, __DocumentType>, [key, value]: [string, any]) => {
-    if (value === null) {
+  return Object.entries(output).reduce(
+    (acc: Record<string, __DocumentType>, [key, value]: [string, any]) => {
+      if (value === null) {
+        return acc;
+      }
+      acc[key as string] = de_RetrievalResultMetadataValue(value, context);
       return acc;
-    }
-    acc[key as string] = de_RetrievalResultMetadataValue(value, context);
-    return acc;
-  }, {} as Record<string, __DocumentType>);
+    },
+    {} as Record<string, __DocumentType>,
+  );
 };
 
 /**

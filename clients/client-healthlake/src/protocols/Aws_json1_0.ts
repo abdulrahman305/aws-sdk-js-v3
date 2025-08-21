@@ -105,7 +105,7 @@ import {
  */
 export const se_CreateFHIRDatastoreCommand = async (
   input: CreateFHIRDatastoreCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateFHIRDatastore");
   let body: any;
@@ -118,7 +118,7 @@ export const se_CreateFHIRDatastoreCommand = async (
  */
 export const se_DeleteFHIRDatastoreCommand = async (
   input: DeleteFHIRDatastoreCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteFHIRDatastore");
   let body: any;
@@ -131,7 +131,7 @@ export const se_DeleteFHIRDatastoreCommand = async (
  */
 export const se_DescribeFHIRDatastoreCommand = async (
   input: DescribeFHIRDatastoreCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeFHIRDatastore");
   let body: any;
@@ -144,7 +144,7 @@ export const se_DescribeFHIRDatastoreCommand = async (
  */
 export const se_DescribeFHIRExportJobCommand = async (
   input: DescribeFHIRExportJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeFHIRExportJob");
   let body: any;
@@ -157,7 +157,7 @@ export const se_DescribeFHIRExportJobCommand = async (
  */
 export const se_DescribeFHIRImportJobCommand = async (
   input: DescribeFHIRImportJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeFHIRImportJob");
   let body: any;
@@ -170,7 +170,7 @@ export const se_DescribeFHIRImportJobCommand = async (
  */
 export const se_ListFHIRDatastoresCommand = async (
   input: ListFHIRDatastoresCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListFHIRDatastores");
   let body: any;
@@ -183,7 +183,7 @@ export const se_ListFHIRDatastoresCommand = async (
  */
 export const se_ListFHIRExportJobsCommand = async (
   input: ListFHIRExportJobsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListFHIRExportJobs");
   let body: any;
@@ -196,7 +196,7 @@ export const se_ListFHIRExportJobsCommand = async (
  */
 export const se_ListFHIRImportJobsCommand = async (
   input: ListFHIRImportJobsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListFHIRImportJobs");
   let body: any;
@@ -209,7 +209,7 @@ export const se_ListFHIRImportJobsCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListTagsForResource");
   let body: any;
@@ -222,7 +222,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_StartFHIRExportJobCommand = async (
   input: StartFHIRExportJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StartFHIRExportJob");
   let body: any;
@@ -235,7 +235,7 @@ export const se_StartFHIRExportJobCommand = async (
  */
 export const se_StartFHIRImportJobCommand = async (
   input: StartFHIRImportJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StartFHIRImportJob");
   let body: any;
@@ -248,7 +248,7 @@ export const se_StartFHIRImportJobCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("TagResource");
   let body: any;
@@ -261,7 +261,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UntagResource");
   let body: any;
@@ -274,7 +274,7 @@ export const se_UntagResourceCommand = async (
  */
 export const de_CreateFHIRDatastoreCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateFHIRDatastoreCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -294,7 +294,7 @@ export const de_CreateFHIRDatastoreCommand = async (
  */
 export const de_DeleteFHIRDatastoreCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteFHIRDatastoreCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -314,7 +314,7 @@ export const de_DeleteFHIRDatastoreCommand = async (
  */
 export const de_DescribeFHIRDatastoreCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeFHIRDatastoreCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -334,7 +334,7 @@ export const de_DescribeFHIRDatastoreCommand = async (
  */
 export const de_DescribeFHIRExportJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeFHIRExportJobCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -354,7 +354,7 @@ export const de_DescribeFHIRExportJobCommand = async (
  */
 export const de_DescribeFHIRImportJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeFHIRImportJobCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -374,7 +374,7 @@ export const de_DescribeFHIRImportJobCommand = async (
  */
 export const de_ListFHIRDatastoresCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListFHIRDatastoresCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -394,7 +394,7 @@ export const de_ListFHIRDatastoresCommand = async (
  */
 export const de_ListFHIRExportJobsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListFHIRExportJobsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -414,7 +414,7 @@ export const de_ListFHIRExportJobsCommand = async (
  */
 export const de_ListFHIRImportJobsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListFHIRImportJobsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -434,7 +434,7 @@ export const de_ListFHIRImportJobsCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -454,7 +454,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_StartFHIRExportJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartFHIRExportJobCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -474,7 +474,7 @@ export const de_StartFHIRExportJobCommand = async (
  */
 export const de_StartFHIRImportJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartFHIRImportJobCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -494,7 +494,7 @@ export const de_StartFHIRImportJobCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -514,7 +514,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -572,7 +572,7 @@ const de_CommandError = async (output: __HttpResponse, context: __SerdeContext):
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -601,7 +601,7 @@ const de_ConflictExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_InternalServerExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -617,7 +617,7 @@ const de_InternalServerExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1011,7 +1011,7 @@ const buildHttpRpcRequest = async (
   headers: __HeaderBag,
   path: string,
   resolvedHostname: string | undefined,
-  body: any
+  body: any,
 ): Promise<__HttpRequest> => {
   const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
   const contents: any = {

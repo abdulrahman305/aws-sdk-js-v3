@@ -240,7 +240,7 @@ import {
  */
 export const se_AssociateTrackerConsumerCommand = async (
   input: AssociateTrackerConsumerCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -252,7 +252,7 @@ export const se_AssociateTrackerConsumerCommand = async (
   body = JSON.stringify(
     take(input, {
       ConsumerArn: [],
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -271,7 +271,7 @@ export const se_AssociateTrackerConsumerCommand = async (
  */
 export const se_BatchDeleteDevicePositionHistoryCommand = async (
   input: BatchDeleteDevicePositionHistoryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -283,7 +283,7 @@ export const se_BatchDeleteDevicePositionHistoryCommand = async (
   body = JSON.stringify(
     take(input, {
       DeviceIds: (_) => _json(_),
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -302,7 +302,7 @@ export const se_BatchDeleteDevicePositionHistoryCommand = async (
  */
 export const se_BatchDeleteGeofenceCommand = async (
   input: BatchDeleteGeofenceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -314,7 +314,7 @@ export const se_BatchDeleteGeofenceCommand = async (
   body = JSON.stringify(
     take(input, {
       GeofenceIds: (_) => _json(_),
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -333,7 +333,7 @@ export const se_BatchDeleteGeofenceCommand = async (
  */
 export const se_BatchEvaluateGeofencesCommand = async (
   input: BatchEvaluateGeofencesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -345,7 +345,7 @@ export const se_BatchEvaluateGeofencesCommand = async (
   body = JSON.stringify(
     take(input, {
       DevicePositionUpdates: (_) => se_DevicePositionUpdateList(_, context),
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -364,7 +364,7 @@ export const se_BatchEvaluateGeofencesCommand = async (
  */
 export const se_BatchGetDevicePositionCommand = async (
   input: BatchGetDevicePositionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -376,7 +376,7 @@ export const se_BatchGetDevicePositionCommand = async (
   body = JSON.stringify(
     take(input, {
       DeviceIds: (_) => _json(_),
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -395,7 +395,7 @@ export const se_BatchGetDevicePositionCommand = async (
  */
 export const se_BatchPutGeofenceCommand = async (
   input: BatchPutGeofenceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -407,7 +407,7 @@ export const se_BatchPutGeofenceCommand = async (
   body = JSON.stringify(
     take(input, {
       Entries: (_) => se_BatchPutGeofenceRequestEntryList(_, context),
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -426,7 +426,7 @@ export const se_BatchPutGeofenceCommand = async (
  */
 export const se_BatchUpdateDevicePositionCommand = async (
   input: BatchUpdateDevicePositionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -438,7 +438,7 @@ export const se_BatchUpdateDevicePositionCommand = async (
   body = JSON.stringify(
     take(input, {
       Updates: (_) => se_DevicePositionUpdateList(_, context),
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -457,7 +457,7 @@ export const se_BatchUpdateDevicePositionCommand = async (
  */
 export const se_CalculateRouteCommand = async (
   input: CalculateRouteCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -483,7 +483,7 @@ export const se_CalculateRouteCommand = async (
       TravelMode: [],
       TruckModeOptions: (_) => se_CalculateRouteTruckModeOptions(_, context),
       WaypointPositions: (_) => se_WaypointPositionList(_, context),
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -502,7 +502,7 @@ export const se_CalculateRouteCommand = async (
  */
 export const se_CalculateRouteMatrixCommand = async (
   input: CalculateRouteMatrixCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -524,7 +524,7 @@ export const se_CalculateRouteMatrixCommand = async (
       DistanceUnit: [],
       TravelMode: [],
       TruckModeOptions: (_) => se_CalculateRouteTruckModeOptions(_, context),
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -543,7 +543,7 @@ export const se_CalculateRouteMatrixCommand = async (
  */
 export const se_CreateGeofenceCollectionCommand = async (
   input: CreateGeofenceCollectionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -559,7 +559,7 @@ export const se_CreateGeofenceCollectionCommand = async (
       PricingPlan: [],
       PricingPlanDataSource: [],
       Tags: (_) => _json(_),
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -578,7 +578,7 @@ export const se_CreateGeofenceCollectionCommand = async (
  */
 export const se_CreateKeyCommand = async (
   input: CreateKeyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -594,7 +594,7 @@ export const se_CreateKeyCommand = async (
       NoExpiry: [],
       Restrictions: (_) => _json(_),
       Tags: (_) => _json(_),
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -613,7 +613,7 @@ export const se_CreateKeyCommand = async (
  */
 export const se_CreateMapCommand = async (
   input: CreateMapCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -628,7 +628,7 @@ export const se_CreateMapCommand = async (
       MapName: [],
       PricingPlan: [],
       Tags: (_) => _json(_),
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -647,7 +647,7 @@ export const se_CreateMapCommand = async (
  */
 export const se_CreatePlaceIndexCommand = async (
   input: CreatePlaceIndexCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -663,7 +663,7 @@ export const se_CreatePlaceIndexCommand = async (
       IndexName: [],
       PricingPlan: [],
       Tags: (_) => _json(_),
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -682,7 +682,7 @@ export const se_CreatePlaceIndexCommand = async (
  */
 export const se_CreateRouteCalculatorCommand = async (
   input: CreateRouteCalculatorCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -697,7 +697,7 @@ export const se_CreateRouteCalculatorCommand = async (
       Description: [],
       PricingPlan: [],
       Tags: (_) => _json(_),
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -716,7 +716,7 @@ export const se_CreateRouteCalculatorCommand = async (
  */
 export const se_CreateTrackerCommand = async (
   input: CreateTrackerCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -735,7 +735,7 @@ export const se_CreateTrackerCommand = async (
       PricingPlanDataSource: [],
       Tags: (_) => _json(_),
       TrackerName: [],
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -754,7 +754,7 @@ export const se_CreateTrackerCommand = async (
  */
 export const se_DeleteGeofenceCollectionCommand = async (
   input: DeleteGeofenceCollectionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -778,7 +778,7 @@ export const se_DeleteGeofenceCollectionCommand = async (
  */
 export const se_DeleteKeyCommand = async (
   input: DeleteKeyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -805,7 +805,7 @@ export const se_DeleteKeyCommand = async (
  */
 export const se_DeleteMapCommand = async (
   input: DeleteMapCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -829,7 +829,7 @@ export const se_DeleteMapCommand = async (
  */
 export const se_DeletePlaceIndexCommand = async (
   input: DeletePlaceIndexCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -853,7 +853,7 @@ export const se_DeletePlaceIndexCommand = async (
  */
 export const se_DeleteRouteCalculatorCommand = async (
   input: DeleteRouteCalculatorCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -877,7 +877,7 @@ export const se_DeleteRouteCalculatorCommand = async (
  */
 export const se_DeleteTrackerCommand = async (
   input: DeleteTrackerCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -901,7 +901,7 @@ export const se_DeleteTrackerCommand = async (
  */
 export const se_DescribeGeofenceCollectionCommand = async (
   input: DescribeGeofenceCollectionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -925,7 +925,7 @@ export const se_DescribeGeofenceCollectionCommand = async (
  */
 export const se_DescribeKeyCommand = async (
   input: DescribeKeyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -949,7 +949,7 @@ export const se_DescribeKeyCommand = async (
  */
 export const se_DescribeMapCommand = async (
   input: DescribeMapCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -973,7 +973,7 @@ export const se_DescribeMapCommand = async (
  */
 export const se_DescribePlaceIndexCommand = async (
   input: DescribePlaceIndexCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -997,7 +997,7 @@ export const se_DescribePlaceIndexCommand = async (
  */
 export const se_DescribeRouteCalculatorCommand = async (
   input: DescribeRouteCalculatorCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1021,7 +1021,7 @@ export const se_DescribeRouteCalculatorCommand = async (
  */
 export const se_DescribeTrackerCommand = async (
   input: DescribeTrackerCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1045,7 +1045,7 @@ export const se_DescribeTrackerCommand = async (
  */
 export const se_DisassociateTrackerConsumerCommand = async (
   input: DisassociateTrackerConsumerCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1070,7 +1070,7 @@ export const se_DisassociateTrackerConsumerCommand = async (
  */
 export const se_ForecastGeofenceEventsCommand = async (
   input: ForecastGeofenceEventsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1087,7 +1087,7 @@ export const se_ForecastGeofenceEventsCommand = async (
       NextToken: [],
       SpeedUnit: [],
       TimeHorizonMinutes: (_) => __serializeFloat(_),
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -1106,7 +1106,7 @@ export const se_ForecastGeofenceEventsCommand = async (
  */
 export const se_GetDevicePositionCommand = async (
   input: GetDevicePositionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1131,7 +1131,7 @@ export const se_GetDevicePositionCommand = async (
  */
 export const se_GetDevicePositionHistoryCommand = async (
   input: GetDevicePositionHistoryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1147,7 +1147,7 @@ export const se_GetDevicePositionHistoryCommand = async (
       MaxResults: [],
       NextToken: [],
       StartTimeInclusive: (_) => __serializeDateTime(_),
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -1166,7 +1166,7 @@ export const se_GetDevicePositionHistoryCommand = async (
  */
 export const se_GetGeofenceCommand = async (
   input: GetGeofenceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1191,7 +1191,7 @@ export const se_GetGeofenceCommand = async (
  */
 export const se_GetMapGlyphsCommand = async (
   input: GetMapGlyphsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1220,7 +1220,7 @@ export const se_GetMapGlyphsCommand = async (
  */
 export const se_GetMapSpritesCommand = async (
   input: GetMapSpritesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1248,7 +1248,7 @@ export const se_GetMapSpritesCommand = async (
  */
 export const se_GetMapStyleDescriptorCommand = async (
   input: GetMapStyleDescriptorCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1275,7 +1275,7 @@ export const se_GetMapStyleDescriptorCommand = async (
  */
 export const se_GetMapTileCommand = async (
   input: GetMapTileCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1305,7 +1305,7 @@ export const se_GetMapTileCommand = async (
  */
 export const se_GetPlaceCommand = async (
   input: GetPlaceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1334,7 +1334,7 @@ export const se_GetPlaceCommand = async (
  */
 export const se_ListDevicePositionsCommand = async (
   input: ListDevicePositionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1348,7 +1348,7 @@ export const se_ListDevicePositionsCommand = async (
       FilterGeometry: (_) => se_TrackingFilterGeometry(_, context),
       MaxResults: [],
       NextToken: [],
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -1367,7 +1367,7 @@ export const se_ListDevicePositionsCommand = async (
  */
 export const se_ListGeofenceCollectionsCommand = async (
   input: ListGeofenceCollectionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1379,7 +1379,7 @@ export const se_ListGeofenceCollectionsCommand = async (
     take(input, {
       MaxResults: [],
       NextToken: [],
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -1398,7 +1398,7 @@ export const se_ListGeofenceCollectionsCommand = async (
  */
 export const se_ListGeofencesCommand = async (
   input: ListGeofencesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1411,7 +1411,7 @@ export const se_ListGeofencesCommand = async (
     take(input, {
       MaxResults: [],
       NextToken: [],
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -1430,7 +1430,7 @@ export const se_ListGeofencesCommand = async (
  */
 export const se_ListKeysCommand = async (
   input: ListKeysCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1443,7 +1443,7 @@ export const se_ListKeysCommand = async (
       Filter: (_) => _json(_),
       MaxResults: [],
       NextToken: [],
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -1462,7 +1462,7 @@ export const se_ListKeysCommand = async (
  */
 export const se_ListMapsCommand = async (
   input: ListMapsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1474,7 +1474,7 @@ export const se_ListMapsCommand = async (
     take(input, {
       MaxResults: [],
       NextToken: [],
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -1493,7 +1493,7 @@ export const se_ListMapsCommand = async (
  */
 export const se_ListPlaceIndexesCommand = async (
   input: ListPlaceIndexesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1505,7 +1505,7 @@ export const se_ListPlaceIndexesCommand = async (
     take(input, {
       MaxResults: [],
       NextToken: [],
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -1524,7 +1524,7 @@ export const se_ListPlaceIndexesCommand = async (
  */
 export const se_ListRouteCalculatorsCommand = async (
   input: ListRouteCalculatorsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1536,7 +1536,7 @@ export const se_ListRouteCalculatorsCommand = async (
     take(input, {
       MaxResults: [],
       NextToken: [],
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -1555,7 +1555,7 @@ export const se_ListRouteCalculatorsCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1579,7 +1579,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_ListTrackerConsumersCommand = async (
   input: ListTrackerConsumersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1592,7 +1592,7 @@ export const se_ListTrackerConsumersCommand = async (
     take(input, {
       MaxResults: [],
       NextToken: [],
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -1611,7 +1611,7 @@ export const se_ListTrackerConsumersCommand = async (
  */
 export const se_ListTrackersCommand = async (
   input: ListTrackersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1623,7 +1623,7 @@ export const se_ListTrackersCommand = async (
     take(input, {
       MaxResults: [],
       NextToken: [],
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -1642,7 +1642,7 @@ export const se_ListTrackersCommand = async (
  */
 export const se_PutGeofenceCommand = async (
   input: PutGeofenceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1656,7 +1656,7 @@ export const se_PutGeofenceCommand = async (
     take(input, {
       GeofenceProperties: (_) => _json(_),
       Geometry: (_) => se_GeofenceGeometry(_, context),
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -1675,7 +1675,7 @@ export const se_PutGeofenceCommand = async (
  */
 export const se_SearchPlaceIndexForPositionCommand = async (
   input: SearchPlaceIndexForPositionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1692,7 +1692,7 @@ export const se_SearchPlaceIndexForPositionCommand = async (
       Language: [],
       MaxResults: [],
       Position: (_) => se_Position(_, context),
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -1711,7 +1711,7 @@ export const se_SearchPlaceIndexForPositionCommand = async (
  */
 export const se_SearchPlaceIndexForSuggestionsCommand = async (
   input: SearchPlaceIndexForSuggestionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1732,7 +1732,7 @@ export const se_SearchPlaceIndexForSuggestionsCommand = async (
       Language: [],
       MaxResults: [],
       Text: [],
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -1751,7 +1751,7 @@ export const se_SearchPlaceIndexForSuggestionsCommand = async (
  */
 export const se_SearchPlaceIndexForTextCommand = async (
   input: SearchPlaceIndexForTextCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1772,7 +1772,7 @@ export const se_SearchPlaceIndexForTextCommand = async (
       Language: [],
       MaxResults: [],
       Text: [],
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -1791,7 +1791,7 @@ export const se_SearchPlaceIndexForTextCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1803,7 +1803,7 @@ export const se_TagResourceCommand = async (
   body = JSON.stringify(
     take(input, {
       Tags: (_) => _json(_),
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -1822,7 +1822,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1852,7 +1852,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateGeofenceCollectionCommand = async (
   input: UpdateGeofenceCollectionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1866,7 +1866,7 @@ export const se_UpdateGeofenceCollectionCommand = async (
       Description: [],
       PricingPlan: [],
       PricingPlanDataSource: [],
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -1885,7 +1885,7 @@ export const se_UpdateGeofenceCollectionCommand = async (
  */
 export const se_UpdateKeyCommand = async (
   input: UpdateKeyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1901,7 +1901,7 @@ export const se_UpdateKeyCommand = async (
       ForceUpdate: [],
       NoExpiry: [],
       Restrictions: (_) => _json(_),
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -1920,7 +1920,7 @@ export const se_UpdateKeyCommand = async (
  */
 export const se_UpdateMapCommand = async (
   input: UpdateMapCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1934,7 +1934,7 @@ export const se_UpdateMapCommand = async (
       ConfigurationUpdate: (_) => _json(_),
       Description: [],
       PricingPlan: [],
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -1953,7 +1953,7 @@ export const se_UpdateMapCommand = async (
  */
 export const se_UpdatePlaceIndexCommand = async (
   input: UpdatePlaceIndexCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1967,7 +1967,7 @@ export const se_UpdatePlaceIndexCommand = async (
       DataSourceConfiguration: (_) => _json(_),
       Description: [],
       PricingPlan: [],
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -1986,7 +1986,7 @@ export const se_UpdatePlaceIndexCommand = async (
  */
 export const se_UpdateRouteCalculatorCommand = async (
   input: UpdateRouteCalculatorCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1999,7 +1999,7 @@ export const se_UpdateRouteCalculatorCommand = async (
     take(input, {
       Description: [],
       PricingPlan: [],
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -2018,7 +2018,7 @@ export const se_UpdateRouteCalculatorCommand = async (
  */
 export const se_UpdateTrackerCommand = async (
   input: UpdateTrackerCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2035,7 +2035,7 @@ export const se_UpdateTrackerCommand = async (
       PositionFiltering: [],
       PricingPlan: [],
       PricingPlanDataSource: [],
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -2054,7 +2054,7 @@ export const se_UpdateTrackerCommand = async (
  */
 export const se_VerifyDevicePositionCommand = async (
   input: VerifyDevicePositionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -2067,7 +2067,7 @@ export const se_VerifyDevicePositionCommand = async (
     take(input, {
       DeviceState: (_) => se_DeviceState(_, context),
       DistanceUnit: [],
-    })
+    }),
   );
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -2086,7 +2086,7 @@ export const se_VerifyDevicePositionCommand = async (
  */
 export const de_AssociateTrackerConsumerCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssociateTrackerConsumerCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2103,7 +2103,7 @@ export const de_AssociateTrackerConsumerCommand = async (
  */
 export const de_BatchDeleteDevicePositionHistoryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchDeleteDevicePositionHistoryCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2124,7 +2124,7 @@ export const de_BatchDeleteDevicePositionHistoryCommand = async (
  */
 export const de_BatchDeleteGeofenceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchDeleteGeofenceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2145,7 +2145,7 @@ export const de_BatchDeleteGeofenceCommand = async (
  */
 export const de_BatchEvaluateGeofencesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchEvaluateGeofencesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2166,7 +2166,7 @@ export const de_BatchEvaluateGeofencesCommand = async (
  */
 export const de_BatchGetDevicePositionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchGetDevicePositionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2188,7 +2188,7 @@ export const de_BatchGetDevicePositionCommand = async (
  */
 export const de_BatchPutGeofenceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchPutGeofenceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2210,7 +2210,7 @@ export const de_BatchPutGeofenceCommand = async (
  */
 export const de_BatchUpdateDevicePositionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchUpdateDevicePositionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2231,7 +2231,7 @@ export const de_BatchUpdateDevicePositionCommand = async (
  */
 export const de_CalculateRouteCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CalculateRouteCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2253,7 +2253,7 @@ export const de_CalculateRouteCommand = async (
  */
 export const de_CalculateRouteMatrixCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CalculateRouteMatrixCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2277,7 +2277,7 @@ export const de_CalculateRouteMatrixCommand = async (
  */
 export const de_CreateGeofenceCollectionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateGeofenceCollectionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2300,7 +2300,7 @@ export const de_CreateGeofenceCollectionCommand = async (
  */
 export const de_CreateKeyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateKeyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2324,7 +2324,7 @@ export const de_CreateKeyCommand = async (
  */
 export const de_CreateMapCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateMapCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2347,7 +2347,7 @@ export const de_CreateMapCommand = async (
  */
 export const de_CreatePlaceIndexCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreatePlaceIndexCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2370,7 +2370,7 @@ export const de_CreatePlaceIndexCommand = async (
  */
 export const de_CreateRouteCalculatorCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateRouteCalculatorCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2393,7 +2393,7 @@ export const de_CreateRouteCalculatorCommand = async (
  */
 export const de_CreateTrackerCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateTrackerCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2416,7 +2416,7 @@ export const de_CreateTrackerCommand = async (
  */
 export const de_DeleteGeofenceCollectionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteGeofenceCollectionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2433,7 +2433,7 @@ export const de_DeleteGeofenceCollectionCommand = async (
  */
 export const de_DeleteKeyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteKeyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2450,7 +2450,7 @@ export const de_DeleteKeyCommand = async (
  */
 export const de_DeleteMapCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteMapCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2467,7 +2467,7 @@ export const de_DeleteMapCommand = async (
  */
 export const de_DeletePlaceIndexCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeletePlaceIndexCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2484,7 +2484,7 @@ export const de_DeletePlaceIndexCommand = async (
  */
 export const de_DeleteRouteCalculatorCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteRouteCalculatorCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2501,7 +2501,7 @@ export const de_DeleteRouteCalculatorCommand = async (
  */
 export const de_DeleteTrackerCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteTrackerCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2518,7 +2518,7 @@ export const de_DeleteTrackerCommand = async (
  */
 export const de_DescribeGeofenceCollectionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeGeofenceCollectionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2548,7 +2548,7 @@ export const de_DescribeGeofenceCollectionCommand = async (
  */
 export const de_DescribeKeyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeKeyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2577,7 +2577,7 @@ export const de_DescribeKeyCommand = async (
  */
 export const de_DescribeMapCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeMapCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2606,7 +2606,7 @@ export const de_DescribeMapCommand = async (
  */
 export const de_DescribePlaceIndexCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribePlaceIndexCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2635,7 +2635,7 @@ export const de_DescribePlaceIndexCommand = async (
  */
 export const de_DescribeRouteCalculatorCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeRouteCalculatorCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2663,7 +2663,7 @@ export const de_DescribeRouteCalculatorCommand = async (
  */
 export const de_DescribeTrackerCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeTrackerCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2695,7 +2695,7 @@ export const de_DescribeTrackerCommand = async (
  */
 export const de_DisassociateTrackerConsumerCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisassociateTrackerConsumerCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2712,7 +2712,7 @@ export const de_DisassociateTrackerConsumerCommand = async (
  */
 export const de_ForecastGeofenceEventsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ForecastGeofenceEventsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2736,7 +2736,7 @@ export const de_ForecastGeofenceEventsCommand = async (
  */
 export const de_GetDevicePositionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetDevicePositionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2762,7 +2762,7 @@ export const de_GetDevicePositionCommand = async (
  */
 export const de_GetDevicePositionHistoryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetDevicePositionHistoryCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2784,7 +2784,7 @@ export const de_GetDevicePositionHistoryCommand = async (
  */
 export const de_GetGeofenceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetGeofenceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2810,7 +2810,7 @@ export const de_GetGeofenceCommand = async (
  */
 export const de_GetMapGlyphsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetMapGlyphsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2830,7 +2830,7 @@ export const de_GetMapGlyphsCommand = async (
  */
 export const de_GetMapSpritesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetMapSpritesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2850,7 +2850,7 @@ export const de_GetMapSpritesCommand = async (
  */
 export const de_GetMapStyleDescriptorCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetMapStyleDescriptorCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2870,7 +2870,7 @@ export const de_GetMapStyleDescriptorCommand = async (
  */
 export const de_GetMapTileCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetMapTileCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2890,7 +2890,7 @@ export const de_GetMapTileCommand = async (
  */
 export const de_GetPlaceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetPlaceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2911,7 +2911,7 @@ export const de_GetPlaceCommand = async (
  */
 export const de_ListDevicePositionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListDevicePositionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2933,7 +2933,7 @@ export const de_ListDevicePositionsCommand = async (
  */
 export const de_ListGeofenceCollectionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListGeofenceCollectionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2955,7 +2955,7 @@ export const de_ListGeofenceCollectionsCommand = async (
  */
 export const de_ListGeofencesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListGeofencesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2977,7 +2977,7 @@ export const de_ListGeofencesCommand = async (
  */
 export const de_ListKeysCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListKeysCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2999,7 +2999,7 @@ export const de_ListKeysCommand = async (
  */
 export const de_ListMapsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListMapsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3021,7 +3021,7 @@ export const de_ListMapsCommand = async (
  */
 export const de_ListPlaceIndexesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListPlaceIndexesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3043,7 +3043,7 @@ export const de_ListPlaceIndexesCommand = async (
  */
 export const de_ListRouteCalculatorsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListRouteCalculatorsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3065,7 +3065,7 @@ export const de_ListRouteCalculatorsCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3086,7 +3086,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_ListTrackerConsumersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTrackerConsumersCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3108,7 +3108,7 @@ export const de_ListTrackerConsumersCommand = async (
  */
 export const de_ListTrackersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTrackersCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3130,7 +3130,7 @@ export const de_ListTrackersCommand = async (
  */
 export const de_PutGeofenceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutGeofenceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3153,7 +3153,7 @@ export const de_PutGeofenceCommand = async (
  */
 export const de_SearchPlaceIndexForPositionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SearchPlaceIndexForPositionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3175,7 +3175,7 @@ export const de_SearchPlaceIndexForPositionCommand = async (
  */
 export const de_SearchPlaceIndexForSuggestionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SearchPlaceIndexForSuggestionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3197,7 +3197,7 @@ export const de_SearchPlaceIndexForSuggestionsCommand = async (
  */
 export const de_SearchPlaceIndexForTextCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SearchPlaceIndexForTextCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3219,7 +3219,7 @@ export const de_SearchPlaceIndexForTextCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3236,7 +3236,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3253,7 +3253,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateGeofenceCollectionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateGeofenceCollectionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3276,7 +3276,7 @@ export const de_UpdateGeofenceCollectionCommand = async (
  */
 export const de_UpdateKeyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateKeyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3299,7 +3299,7 @@ export const de_UpdateKeyCommand = async (
  */
 export const de_UpdateMapCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateMapCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3322,7 +3322,7 @@ export const de_UpdateMapCommand = async (
  */
 export const de_UpdatePlaceIndexCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdatePlaceIndexCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3345,7 +3345,7 @@ export const de_UpdatePlaceIndexCommand = async (
  */
 export const de_UpdateRouteCalculatorCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateRouteCalculatorCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3368,7 +3368,7 @@ export const de_UpdateRouteCalculatorCommand = async (
  */
 export const de_UpdateTrackerCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateTrackerCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3391,7 +3391,7 @@ export const de_UpdateTrackerCommand = async (
  */
 export const de_VerifyDevicePositionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<VerifyDevicePositionCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3458,7 +3458,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -3495,7 +3495,7 @@ const de_ConflictExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_InternalServerExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -3515,7 +3515,7 @@ const de_InternalServerExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -3535,7 +3535,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_ServiceQuotaExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceQuotaExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -3712,7 +3712,7 @@ const se_DeviceState = (input: DeviceState, context: __SerdeContext): any => {
  */
 const se_ForecastGeofenceEventsDeviceState = (
   input: ForecastGeofenceEventsDeviceState,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     Position: (_) => se_Position(_, context),
@@ -3985,7 +3985,7 @@ const de_BatchUpdateDevicePositionError = (output: any, context: __SerdeContext)
  */
 const de_BatchUpdateDevicePositionErrorList = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): BatchUpdateDevicePositionError[] => {
   const retVal = (output || [])
     .filter((e: any) => e != null)
@@ -4194,7 +4194,7 @@ const de_LineString = (output: any, context: __SerdeContext): number[][] => {
  */
 const de_ListDevicePositionsResponseEntry = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ListDevicePositionsResponseEntry => {
   return take(output, {
     Accuracy: (_: any) => de_PositionalAccuracy(_, context),
@@ -4210,7 +4210,7 @@ const de_ListDevicePositionsResponseEntry = (
  */
 const de_ListDevicePositionsResponseEntryList = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ListDevicePositionsResponseEntry[] => {
   const retVal = (output || [])
     .filter((e: any) => e != null)
@@ -4225,7 +4225,7 @@ const de_ListDevicePositionsResponseEntryList = (
  */
 const de_ListGeofenceCollectionsResponseEntry = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ListGeofenceCollectionsResponseEntry => {
   return take(output, {
     CollectionName: __expectString,
@@ -4242,7 +4242,7 @@ const de_ListGeofenceCollectionsResponseEntry = (
  */
 const de_ListGeofenceCollectionsResponseEntryList = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ListGeofenceCollectionsResponseEntry[] => {
   const retVal = (output || [])
     .filter((e: any) => e != null)
@@ -4349,7 +4349,7 @@ const de_ListPlaceIndexesResponseEntry = (output: any, context: __SerdeContext):
  */
 const de_ListPlaceIndexesResponseEntryList = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ListPlaceIndexesResponseEntry[] => {
   const retVal = (output || [])
     .filter((e: any) => e != null)
@@ -4364,7 +4364,7 @@ const de_ListPlaceIndexesResponseEntryList = (
  */
 const de_ListRouteCalculatorsResponseEntry = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ListRouteCalculatorsResponseEntry => {
   return take(output, {
     CalculatorName: __expectString,
@@ -4381,7 +4381,7 @@ const de_ListRouteCalculatorsResponseEntry = (
  */
 const de_ListRouteCalculatorsResponseEntryList = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ListRouteCalculatorsResponseEntry[] => {
   const retVal = (output || [])
     .filter((e: any) => e != null)
@@ -4587,7 +4587,7 @@ const de_SearchForTextResultList = (output: any, context: __SerdeContext): Searc
  */
 const de_SearchPlaceIndexForPositionSummary = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): SearchPlaceIndexForPositionSummary => {
   return take(output, {
     DataSource: __expectString,
@@ -4602,7 +4602,7 @@ const de_SearchPlaceIndexForPositionSummary = (
  */
 const de_SearchPlaceIndexForSuggestionsSummary = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): SearchPlaceIndexForSuggestionsSummary => {
   return take(output, {
     BiasPosition: (_: any) => de_Position(_, context),

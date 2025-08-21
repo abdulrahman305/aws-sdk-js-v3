@@ -16,7 +16,7 @@ import {
 export const websocketEndpointMiddleware =
   (
     config: { requestHandler: RequestHandler<any, any> },
-    options: { headerPrefix: string }
+    options: { headerPrefix: string },
   ): BuildMiddleware<any, any> =>
   (next: BuildHandler<any, any>) =>
   (args: BuildHandlerArguments<any>) => {

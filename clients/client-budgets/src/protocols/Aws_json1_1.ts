@@ -156,7 +156,7 @@ import {
  */
 export const se_CreateBudgetCommand = async (
   input: CreateBudgetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateBudget");
   let body: any;
@@ -169,7 +169,7 @@ export const se_CreateBudgetCommand = async (
  */
 export const se_CreateBudgetActionCommand = async (
   input: CreateBudgetActionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateBudgetAction");
   let body: any;
@@ -182,7 +182,7 @@ export const se_CreateBudgetActionCommand = async (
  */
 export const se_CreateNotificationCommand = async (
   input: CreateNotificationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateNotification");
   let body: any;
@@ -195,7 +195,7 @@ export const se_CreateNotificationCommand = async (
  */
 export const se_CreateSubscriberCommand = async (
   input: CreateSubscriberCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateSubscriber");
   let body: any;
@@ -208,7 +208,7 @@ export const se_CreateSubscriberCommand = async (
  */
 export const se_DeleteBudgetCommand = async (
   input: DeleteBudgetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteBudget");
   let body: any;
@@ -221,7 +221,7 @@ export const se_DeleteBudgetCommand = async (
  */
 export const se_DeleteBudgetActionCommand = async (
   input: DeleteBudgetActionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteBudgetAction");
   let body: any;
@@ -234,7 +234,7 @@ export const se_DeleteBudgetActionCommand = async (
  */
 export const se_DeleteNotificationCommand = async (
   input: DeleteNotificationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteNotification");
   let body: any;
@@ -247,7 +247,7 @@ export const se_DeleteNotificationCommand = async (
  */
 export const se_DeleteSubscriberCommand = async (
   input: DeleteSubscriberCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteSubscriber");
   let body: any;
@@ -260,7 +260,7 @@ export const se_DeleteSubscriberCommand = async (
  */
 export const se_DescribeBudgetCommand = async (
   input: DescribeBudgetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeBudget");
   let body: any;
@@ -273,7 +273,7 @@ export const se_DescribeBudgetCommand = async (
  */
 export const se_DescribeBudgetActionCommand = async (
   input: DescribeBudgetActionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeBudgetAction");
   let body: any;
@@ -286,7 +286,7 @@ export const se_DescribeBudgetActionCommand = async (
  */
 export const se_DescribeBudgetActionHistoriesCommand = async (
   input: DescribeBudgetActionHistoriesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeBudgetActionHistories");
   let body: any;
@@ -299,7 +299,7 @@ export const se_DescribeBudgetActionHistoriesCommand = async (
  */
 export const se_DescribeBudgetActionsForAccountCommand = async (
   input: DescribeBudgetActionsForAccountCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeBudgetActionsForAccount");
   let body: any;
@@ -312,7 +312,7 @@ export const se_DescribeBudgetActionsForAccountCommand = async (
  */
 export const se_DescribeBudgetActionsForBudgetCommand = async (
   input: DescribeBudgetActionsForBudgetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeBudgetActionsForBudget");
   let body: any;
@@ -325,7 +325,7 @@ export const se_DescribeBudgetActionsForBudgetCommand = async (
  */
 export const se_DescribeBudgetNotificationsForAccountCommand = async (
   input: DescribeBudgetNotificationsForAccountCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeBudgetNotificationsForAccount");
   let body: any;
@@ -338,7 +338,7 @@ export const se_DescribeBudgetNotificationsForAccountCommand = async (
  */
 export const se_DescribeBudgetPerformanceHistoryCommand = async (
   input: DescribeBudgetPerformanceHistoryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeBudgetPerformanceHistory");
   let body: any;
@@ -351,7 +351,7 @@ export const se_DescribeBudgetPerformanceHistoryCommand = async (
  */
 export const se_DescribeBudgetsCommand = async (
   input: DescribeBudgetsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeBudgets");
   let body: any;
@@ -364,7 +364,7 @@ export const se_DescribeBudgetsCommand = async (
  */
 export const se_DescribeNotificationsForBudgetCommand = async (
   input: DescribeNotificationsForBudgetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeNotificationsForBudget");
   let body: any;
@@ -377,7 +377,7 @@ export const se_DescribeNotificationsForBudgetCommand = async (
  */
 export const se_DescribeSubscribersForNotificationCommand = async (
   input: DescribeSubscribersForNotificationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeSubscribersForNotification");
   let body: any;
@@ -390,7 +390,7 @@ export const se_DescribeSubscribersForNotificationCommand = async (
  */
 export const se_ExecuteBudgetActionCommand = async (
   input: ExecuteBudgetActionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ExecuteBudgetAction");
   let body: any;
@@ -403,7 +403,7 @@ export const se_ExecuteBudgetActionCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListTagsForResource");
   let body: any;
@@ -416,7 +416,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("TagResource");
   let body: any;
@@ -429,7 +429,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UntagResource");
   let body: any;
@@ -442,7 +442,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateBudgetCommand = async (
   input: UpdateBudgetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateBudget");
   let body: any;
@@ -455,7 +455,7 @@ export const se_UpdateBudgetCommand = async (
  */
 export const se_UpdateBudgetActionCommand = async (
   input: UpdateBudgetActionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateBudgetAction");
   let body: any;
@@ -468,7 +468,7 @@ export const se_UpdateBudgetActionCommand = async (
  */
 export const se_UpdateNotificationCommand = async (
   input: UpdateNotificationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateNotification");
   let body: any;
@@ -481,7 +481,7 @@ export const se_UpdateNotificationCommand = async (
  */
 export const se_UpdateSubscriberCommand = async (
   input: UpdateSubscriberCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateSubscriber");
   let body: any;
@@ -494,7 +494,7 @@ export const se_UpdateSubscriberCommand = async (
  */
 export const de_CreateBudgetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateBudgetCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -514,7 +514,7 @@ export const de_CreateBudgetCommand = async (
  */
 export const de_CreateBudgetActionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateBudgetActionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -534,7 +534,7 @@ export const de_CreateBudgetActionCommand = async (
  */
 export const de_CreateNotificationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateNotificationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -554,7 +554,7 @@ export const de_CreateNotificationCommand = async (
  */
 export const de_CreateSubscriberCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateSubscriberCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -574,7 +574,7 @@ export const de_CreateSubscriberCommand = async (
  */
 export const de_DeleteBudgetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteBudgetCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -594,7 +594,7 @@ export const de_DeleteBudgetCommand = async (
  */
 export const de_DeleteBudgetActionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteBudgetActionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -614,7 +614,7 @@ export const de_DeleteBudgetActionCommand = async (
  */
 export const de_DeleteNotificationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteNotificationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -634,7 +634,7 @@ export const de_DeleteNotificationCommand = async (
  */
 export const de_DeleteSubscriberCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteSubscriberCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -654,7 +654,7 @@ export const de_DeleteSubscriberCommand = async (
  */
 export const de_DescribeBudgetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeBudgetCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -674,7 +674,7 @@ export const de_DescribeBudgetCommand = async (
  */
 export const de_DescribeBudgetActionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeBudgetActionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -694,7 +694,7 @@ export const de_DescribeBudgetActionCommand = async (
  */
 export const de_DescribeBudgetActionHistoriesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeBudgetActionHistoriesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -714,7 +714,7 @@ export const de_DescribeBudgetActionHistoriesCommand = async (
  */
 export const de_DescribeBudgetActionsForAccountCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeBudgetActionsForAccountCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -734,7 +734,7 @@ export const de_DescribeBudgetActionsForAccountCommand = async (
  */
 export const de_DescribeBudgetActionsForBudgetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeBudgetActionsForBudgetCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -754,7 +754,7 @@ export const de_DescribeBudgetActionsForBudgetCommand = async (
  */
 export const de_DescribeBudgetNotificationsForAccountCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeBudgetNotificationsForAccountCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -774,7 +774,7 @@ export const de_DescribeBudgetNotificationsForAccountCommand = async (
  */
 export const de_DescribeBudgetPerformanceHistoryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeBudgetPerformanceHistoryCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -794,7 +794,7 @@ export const de_DescribeBudgetPerformanceHistoryCommand = async (
  */
 export const de_DescribeBudgetsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeBudgetsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -814,7 +814,7 @@ export const de_DescribeBudgetsCommand = async (
  */
 export const de_DescribeNotificationsForBudgetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeNotificationsForBudgetCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -834,7 +834,7 @@ export const de_DescribeNotificationsForBudgetCommand = async (
  */
 export const de_DescribeSubscribersForNotificationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeSubscribersForNotificationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -854,7 +854,7 @@ export const de_DescribeSubscribersForNotificationCommand = async (
  */
 export const de_ExecuteBudgetActionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ExecuteBudgetActionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -874,7 +874,7 @@ export const de_ExecuteBudgetActionCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -894,7 +894,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -914,7 +914,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -934,7 +934,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateBudgetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateBudgetCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -954,7 +954,7 @@ export const de_UpdateBudgetCommand = async (
  */
 export const de_UpdateBudgetActionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateBudgetActionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -974,7 +974,7 @@ export const de_UpdateBudgetActionCommand = async (
  */
 export const de_UpdateNotificationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateNotificationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -994,7 +994,7 @@ export const de_UpdateNotificationCommand = async (
  */
 export const de_UpdateSubscriberCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateSubscriberCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1067,7 +1067,7 @@ const de_CommandError = async (output: __HttpResponse, context: __SerdeContext):
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1083,7 +1083,7 @@ const de_AccessDeniedExceptionRes = async (
  */
 const de_CreationLimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreationLimitExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1099,7 +1099,7 @@ const de_CreationLimitExceededExceptionRes = async (
  */
 const de_DuplicateRecordExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DuplicateRecordException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1115,7 +1115,7 @@ const de_DuplicateRecordExceptionRes = async (
  */
 const de_ExpiredNextTokenExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ExpiredNextTokenException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1131,7 +1131,7 @@ const de_ExpiredNextTokenExceptionRes = async (
  */
 const de_InternalErrorExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalErrorException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1147,7 +1147,7 @@ const de_InternalErrorExceptionRes = async (
  */
 const de_InvalidNextTokenExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidNextTokenException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1163,7 +1163,7 @@ const de_InvalidNextTokenExceptionRes = async (
  */
 const de_InvalidParameterExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidParameterException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1192,7 +1192,7 @@ const de_NotFoundExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_ResourceLockedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceLockedException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1208,7 +1208,7 @@ const de_ResourceLockedExceptionRes = async (
  */
 const de_ServiceQuotaExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceQuotaExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1366,7 +1366,7 @@ const se_DeleteSubscriberRequest = (input: DeleteSubscriberRequest, context: __S
  */
 const se_DescribeBudgetActionHistoriesRequest = (
   input: DescribeBudgetActionHistoriesRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     AccountId: [],
@@ -1391,7 +1391,7 @@ const se_DescribeBudgetActionHistoriesRequest = (
  */
 const se_DescribeBudgetPerformanceHistoryRequest = (
   input: DescribeBudgetPerformanceHistoryRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     AccountId: [],
@@ -1413,7 +1413,7 @@ const se_DescribeBudgetPerformanceHistoryRequest = (
  */
 const se_DescribeSubscribersForNotificationRequest = (
   input: DescribeSubscribersForNotificationRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     AccountId: [],
@@ -1706,7 +1706,7 @@ const de_BudgetNotificationsForAccount = (output: any, context: __SerdeContext):
  */
 const de_BudgetNotificationsForAccountList = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): BudgetNotificationsForAccount[] => {
   const retVal = (output || [])
     .filter((e: any) => e != null)
@@ -1782,7 +1782,7 @@ const de_DeleteBudgetActionResponse = (output: any, context: __SerdeContext): De
  */
 const de_DescribeBudgetActionHistoriesResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeBudgetActionHistoriesResponse => {
   return take(output, {
     ActionHistories: (_: any) => de_ActionHistories(_, context),
@@ -1806,7 +1806,7 @@ const de_DescribeBudgetActionResponse = (output: any, context: __SerdeContext): 
  */
 const de_DescribeBudgetActionsForAccountResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeBudgetActionsForAccountResponse => {
   return take(output, {
     Actions: (_: any) => de_Actions(_, context),
@@ -1819,7 +1819,7 @@ const de_DescribeBudgetActionsForAccountResponse = (
  */
 const de_DescribeBudgetActionsForBudgetResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeBudgetActionsForBudgetResponse => {
   return take(output, {
     Actions: (_: any) => de_Actions(_, context),
@@ -1832,7 +1832,7 @@ const de_DescribeBudgetActionsForBudgetResponse = (
  */
 const de_DescribeBudgetNotificationsForAccountResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeBudgetNotificationsForAccountResponse => {
   return take(output, {
     BudgetNotificationsForAccount: (_: any) => de_BudgetNotificationsForAccountList(_, context),
@@ -1845,7 +1845,7 @@ const de_DescribeBudgetNotificationsForAccountResponse = (
  */
 const de_DescribeBudgetPerformanceHistoryResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeBudgetPerformanceHistoryResponse => {
   return take(output, {
     BudgetPerformanceHistory: (_: any) => de_BudgetPerformanceHistory(_, context),
@@ -1877,7 +1877,7 @@ const de_DescribeBudgetsResponse = (output: any, context: __SerdeContext): Descr
  */
 const de_DescribeNotificationsForBudgetResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeNotificationsForBudgetResponse => {
   return take(output, {
     NextToken: __expectString,
@@ -2016,7 +2016,7 @@ const buildHttpRpcRequest = async (
   headers: __HeaderBag,
   path: string,
   resolvedHostname: string | undefined,
-  body: any
+  body: any,
 ): Promise<__HttpRequest> => {
   const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
   const contents: any = {

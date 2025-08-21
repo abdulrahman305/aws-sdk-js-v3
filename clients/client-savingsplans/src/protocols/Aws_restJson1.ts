@@ -71,7 +71,7 @@ import { SavingsplansServiceException as __BaseException } from "../models/Savin
  */
 export const se_CreateSavingsPlanCommand = async (
   input: CreateSavingsPlanCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -87,7 +87,7 @@ export const se_CreateSavingsPlanCommand = async (
       savingsPlanOfferingId: [],
       tags: (_) => _json(_),
       upfrontPaymentAmount: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -98,7 +98,7 @@ export const se_CreateSavingsPlanCommand = async (
  */
 export const se_DeleteQueuedSavingsPlanCommand = async (
   input: DeleteQueuedSavingsPlanCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -109,7 +109,7 @@ export const se_DeleteQueuedSavingsPlanCommand = async (
   body = JSON.stringify(
     take(input, {
       savingsPlanId: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -120,7 +120,7 @@ export const se_DeleteQueuedSavingsPlanCommand = async (
  */
 export const se_DescribeSavingsPlanRatesCommand = async (
   input: DescribeSavingsPlanRatesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -134,7 +134,7 @@ export const se_DescribeSavingsPlanRatesCommand = async (
       maxResults: [],
       nextToken: [],
       savingsPlanId: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -145,7 +145,7 @@ export const se_DescribeSavingsPlanRatesCommand = async (
  */
 export const se_DescribeSavingsPlansCommand = async (
   input: DescribeSavingsPlansCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -161,7 +161,7 @@ export const se_DescribeSavingsPlansCommand = async (
       savingsPlanArns: (_) => _json(_),
       savingsPlanIds: (_) => _json(_),
       states: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -172,7 +172,7 @@ export const se_DescribeSavingsPlansCommand = async (
  */
 export const se_DescribeSavingsPlansOfferingRatesCommand = async (
   input: DescribeSavingsPlansOfferingRatesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -192,7 +192,7 @@ export const se_DescribeSavingsPlansOfferingRatesCommand = async (
       savingsPlanTypes: (_) => _json(_),
       serviceCodes: (_) => _json(_),
       usageTypes: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -203,7 +203,7 @@ export const se_DescribeSavingsPlansOfferingRatesCommand = async (
  */
 export const se_DescribeSavingsPlansOfferingsCommand = async (
   input: DescribeSavingsPlansOfferingsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -226,7 +226,7 @@ export const se_DescribeSavingsPlansOfferingsCommand = async (
       productType: [],
       serviceCodes: (_) => _json(_),
       usageTypes: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -237,7 +237,7 @@ export const se_DescribeSavingsPlansOfferingsCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -248,7 +248,7 @@ export const se_ListTagsForResourceCommand = async (
   body = JSON.stringify(
     take(input, {
       resourceArn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -259,7 +259,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_ReturnSavingsPlanCommand = async (
   input: ReturnSavingsPlanCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -271,7 +271,7 @@ export const se_ReturnSavingsPlanCommand = async (
     take(input, {
       clientToken: [true, (_) => _ ?? generateIdempotencyToken()],
       savingsPlanId: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -282,7 +282,7 @@ export const se_ReturnSavingsPlanCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -294,7 +294,7 @@ export const se_TagResourceCommand = async (
     take(input, {
       resourceArn: [],
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -305,7 +305,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -317,7 +317,7 @@ export const se_UntagResourceCommand = async (
     take(input, {
       resourceArn: [],
       tagKeys: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -328,7 +328,7 @@ export const se_UntagResourceCommand = async (
  */
 export const de_CreateSavingsPlanCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateSavingsPlanCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -349,7 +349,7 @@ export const de_CreateSavingsPlanCommand = async (
  */
 export const de_DeleteQueuedSavingsPlanCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteQueuedSavingsPlanCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -366,7 +366,7 @@ export const de_DeleteQueuedSavingsPlanCommand = async (
  */
 export const de_DescribeSavingsPlanRatesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeSavingsPlanRatesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -389,7 +389,7 @@ export const de_DescribeSavingsPlanRatesCommand = async (
  */
 export const de_DescribeSavingsPlansCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeSavingsPlansCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -411,7 +411,7 @@ export const de_DescribeSavingsPlansCommand = async (
  */
 export const de_DescribeSavingsPlansOfferingRatesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeSavingsPlansOfferingRatesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -433,7 +433,7 @@ export const de_DescribeSavingsPlansOfferingRatesCommand = async (
  */
 export const de_DescribeSavingsPlansOfferingsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeSavingsPlansOfferingsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -455,7 +455,7 @@ export const de_DescribeSavingsPlansOfferingsCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -476,7 +476,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_ReturnSavingsPlanCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ReturnSavingsPlanCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -497,7 +497,7 @@ export const de_ReturnSavingsPlanCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -514,7 +514,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -564,7 +564,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_InternalServerExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -584,7 +584,7 @@ const de_InternalServerExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -604,7 +604,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_ServiceQuotaExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceQuotaExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;

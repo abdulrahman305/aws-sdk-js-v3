@@ -60,14 +60,14 @@ export class HttpResponseCodeSerializer
 
 export const getHttpResponseCodeHandler = <Context>(
   operation: __Operation<HttpResponseCodeServerInput, HttpResponseCodeServerOutput, Context>,
-  customizer: __ValidationCustomizer<"HttpResponseCode">
+  customizer: __ValidationCustomizer<"HttpResponseCode">,
 ): __ServiceHandler<Context, __HttpRequest, __HttpResponse> => {
   const mux = new httpbinding.HttpBindingMux<"RestJson", "HttpResponseCode">([
     new httpbinding.UriSpec<"RestJson", "HttpResponseCode">(
       "PUT",
       [{ type: "path_literal", value: "HttpResponseCode" }],
       [],
-      { service: "RestJson", operation: "HttpResponseCode" }
+      { service: "RestJson", operation: "HttpResponseCode" },
     ),
   ]);
   return new HttpResponseCodeHandler(
@@ -75,7 +75,7 @@ export const getHttpResponseCodeHandler = <Context>(
     mux,
     new HttpResponseCodeSerializer(),
     serializeFrameworkException,
-    customizer
+    customizer,
   );
 };
 
@@ -96,7 +96,7 @@ async function handle<S, O extends keyof S & string, Context>(
   operation: __Operation<__OperationInput<S[O]>, __OperationOutput<S[O]>, Context>,
   serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
   validationFn: (input: __OperationInput<S[O]>) => __ValidationFailure[],
-  validationCustomizer: __ValidationCustomizer<O>
+  validationCustomizer: __ValidationCustomizer<O>,
 ): Promise<__HttpResponse> {
   let input;
   try {
@@ -138,7 +138,7 @@ export class HttpResponseCodeHandler<Context> implements __ServiceHandler<Contex
   >;
   private readonly serializeFrameworkException: (
     e: __SmithyFrameworkException,
-    ctx: __ServerSerdeContext
+    ctx: __ServerSerdeContext,
   ) => Promise<__HttpResponse>;
   private readonly validationCustomizer: __ValidationCustomizer<"HttpResponseCode">;
   /**
@@ -155,7 +155,7 @@ export class HttpResponseCodeHandler<Context> implements __ServiceHandler<Contex
     mux: __Mux<"RestJson", "HttpResponseCode">,
     serializer: __OperationSerializer<RestJsonService<Context>, "HttpResponseCode", HttpResponseCodeErrors>,
     serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
-    validationCustomizer: __ValidationCustomizer<"HttpResponseCode">
+    validationCustomizer: __ValidationCustomizer<"HttpResponseCode">,
   ) {
     this.operation = operation;
     this.mux = mux;
@@ -167,7 +167,7 @@ export class HttpResponseCodeHandler<Context> implements __ServiceHandler<Contex
     const target = this.mux.match(request);
     if (target === undefined) {
       console.log(
-        "Received a request that did not match aws.protocoltests.restjson#RestJson.HttpResponseCode. This indicates a misconfiguration."
+        "Received a request that did not match aws.protocoltests.restjson#RestJson.HttpResponseCode. This indicates a misconfiguration.",
       );
       return this.serializeFrameworkException(new __InternalFailureException(), serdeContextBase);
     }
@@ -179,7 +179,7 @@ export class HttpResponseCodeHandler<Context> implements __ServiceHandler<Contex
       this.operation,
       this.serializeFrameworkException,
       HttpResponseCodeServerInput.validate,
-      this.validationCustomizer
+      this.validationCustomizer,
     );
   }
 }

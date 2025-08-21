@@ -123,7 +123,7 @@ export const fromSSO =
 
       const { sso_start_url, sso_account_id, sso_region, sso_role_name, sso_session } = validateSsoProfile(
         profile,
-        init.logger
+        init.logger,
       );
       return resolveSSOCredentials({
         ssoStartUrl: sso_start_url,
@@ -139,7 +139,7 @@ export const fromSSO =
       throw new CredentialsProviderError(
         "Incomplete configuration. The fromSSO() argument hash must include " +
           '"ssoStartUrl", "ssoAccountId", "ssoRegion", "ssoRoleName"',
-        { tryNextLink: false, logger: init.logger }
+        { tryNextLink: false, logger: init.logger },
       );
     } else {
       return resolveSSOCredentials({

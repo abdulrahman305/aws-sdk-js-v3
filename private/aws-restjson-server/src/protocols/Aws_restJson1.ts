@@ -334,10 +334,10 @@ import { UnitInputAndOutputServerInput, UnitInputAndOutputServerOutput } from ".
 
 export const deserializeAllQueryStringTypesRequest = async (
   output: __HttpRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AllQueryStringTypesServerInput> => {
   const contentTypeHeaderKey: string | undefined = Object.keys(output.headers).find(
-    (key) => key.toLowerCase() === "content-type"
+    (key) => key.toLowerCase() === "content-type",
   );
   if (contentTypeHeaderKey != null) {
     const contentType = output.headers[contentTypeHeaderKey];
@@ -566,10 +566,10 @@ export const deserializeAllQueryStringTypesRequest = async (
 
 export const deserializeConstantAndVariableQueryStringRequest = async (
   output: __HttpRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ConstantAndVariableQueryStringServerInput> => {
   const contentTypeHeaderKey: string | undefined = Object.keys(output.headers).find(
-    (key) => key.toLowerCase() === "content-type"
+    (key) => key.toLowerCase() === "content-type",
   );
   if (contentTypeHeaderKey != null) {
     const contentType = output.headers[contentTypeHeaderKey];
@@ -620,10 +620,10 @@ export const deserializeConstantAndVariableQueryStringRequest = async (
 
 export const deserializeConstantQueryStringRequest = async (
   output: __HttpRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ConstantQueryStringServerInput> => {
   const contentTypeHeaderKey: string | undefined = Object.keys(output.headers).find(
-    (key) => key.toLowerCase() === "content-type"
+    (key) => key.toLowerCase() === "content-type",
   );
   if (contentTypeHeaderKey != null) {
     const contentType = output.headers[contentTypeHeaderKey];
@@ -650,10 +650,10 @@ export const deserializeConstantQueryStringRequest = async (
 
 export const deserializeDatetimeOffsetsRequest = async (
   output: __HttpRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DatetimeOffsetsServerInput> => {
   const contentTypeHeaderKey: string | undefined = Object.keys(output.headers).find(
-    (key) => key.toLowerCase() === "content-type"
+    (key) => key.toLowerCase() === "content-type",
   );
   if (contentTypeHeaderKey != null) {
     const contentType = output.headers[contentTypeHeaderKey];
@@ -675,10 +675,10 @@ export const deserializeDatetimeOffsetsRequest = async (
 
 export const deserializeDocumentTypeRequest = async (
   output: __HttpRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DocumentTypeServerInput> => {
   const contentTypeHeaderKey: string | undefined = Object.keys(output.headers).find(
-    (key) => key.toLowerCase() === "content-type"
+    (key) => key.toLowerCase() === "content-type",
   );
   if (contentTypeHeaderKey != null) {
     const contentType = output.headers[contentTypeHeaderKey];
@@ -705,10 +705,10 @@ export const deserializeDocumentTypeRequest = async (
 
 export const deserializeDocumentTypeAsMapValueRequest = async (
   output: __HttpRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DocumentTypeAsMapValueServerInput> => {
   const contentTypeHeaderKey: string | undefined = Object.keys(output.headers).find(
-    (key) => key.toLowerCase() === "content-type"
+    (key) => key.toLowerCase() === "content-type",
   );
   if (contentTypeHeaderKey != null) {
     const contentType = output.headers[contentTypeHeaderKey];
@@ -734,10 +734,10 @@ export const deserializeDocumentTypeAsMapValueRequest = async (
 
 export const deserializeDocumentTypeAsPayloadRequest = async (
   output: __HttpRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DocumentTypeAsPayloadServerInput> => {
   const contentTypeHeaderKey: string | undefined = Object.keys(output.headers).find(
-    (key) => key.toLowerCase() === "content-type"
+    (key) => key.toLowerCase() === "content-type",
   );
   if (contentTypeHeaderKey != null) {
     const contentType = output.headers[contentTypeHeaderKey];
@@ -761,10 +761,10 @@ export const deserializeDocumentTypeAsPayloadRequest = async (
 
 export const deserializeEmptyInputAndEmptyOutputRequest = async (
   output: __HttpRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<EmptyInputAndEmptyOutputServerInput> => {
   const contentTypeHeaderKey: string | undefined = Object.keys(output.headers).find(
-    (key) => key.toLowerCase() === "content-type"
+    (key) => key.toLowerCase() === "content-type",
   );
   if (contentTypeHeaderKey != null) {
     const contentType = output.headers[contentTypeHeaderKey];
@@ -786,10 +786,10 @@ export const deserializeEmptyInputAndEmptyOutputRequest = async (
 
 export const deserializeEndpointOperationRequest = async (
   output: __HttpRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<EndpointOperationServerInput> => {
   const contentTypeHeaderKey: string | undefined = Object.keys(output.headers).find(
-    (key) => key.toLowerCase() === "content-type"
+    (key) => key.toLowerCase() === "content-type",
   );
   if (contentTypeHeaderKey != null) {
     const contentType = output.headers[contentTypeHeaderKey];
@@ -811,10 +811,10 @@ export const deserializeEndpointOperationRequest = async (
 
 export const deserializeEndpointWithHostLabelOperationRequest = async (
   output: __HttpRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<EndpointWithHostLabelOperationServerInput> => {
   const contentTypeHeaderKey: string | undefined = Object.keys(output.headers).find(
-    (key) => key.toLowerCase() === "content-type"
+    (key) => key.toLowerCase() === "content-type",
   );
   if (contentTypeHeaderKey != null) {
     const contentType = output.headers[contentTypeHeaderKey];
@@ -845,10 +845,10 @@ export const deserializeEndpointWithHostLabelOperationRequest = async (
 
 export const deserializeFractionalSecondsRequest = async (
   output: __HttpRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<FractionalSecondsServerInput> => {
   const contentTypeHeaderKey: string | undefined = Object.keys(output.headers).find(
-    (key) => key.toLowerCase() === "content-type"
+    (key) => key.toLowerCase() === "content-type",
   );
   if (contentTypeHeaderKey != null) {
     const contentType = output.headers[contentTypeHeaderKey];
@@ -870,10 +870,10 @@ export const deserializeFractionalSecondsRequest = async (
 
 export const deserializeGreetingWithErrorsRequest = async (
   output: __HttpRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GreetingWithErrorsServerInput> => {
   const contentTypeHeaderKey: string | undefined = Object.keys(output.headers).find(
-    (key) => key.toLowerCase() === "content-type"
+    (key) => key.toLowerCase() === "content-type",
   );
   if (contentTypeHeaderKey != null) {
     const contentType = output.headers[contentTypeHeaderKey];
@@ -895,10 +895,10 @@ export const deserializeGreetingWithErrorsRequest = async (
 
 export const deserializeHostWithPathOperationRequest = async (
   output: __HttpRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<HostWithPathOperationServerInput> => {
   const contentTypeHeaderKey: string | undefined = Object.keys(output.headers).find(
-    (key) => key.toLowerCase() === "content-type"
+    (key) => key.toLowerCase() === "content-type",
   );
   if (contentTypeHeaderKey != null) {
     const contentType = output.headers[contentTypeHeaderKey];
@@ -920,10 +920,10 @@ export const deserializeHostWithPathOperationRequest = async (
 
 export const deserializeHttpChecksumRequiredRequest = async (
   output: __HttpRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<HttpChecksumRequiredServerInput> => {
   const contentTypeHeaderKey: string | undefined = Object.keys(output.headers).find(
-    (key) => key.toLowerCase() === "content-type"
+    (key) => key.toLowerCase() === "content-type",
   );
   if (contentTypeHeaderKey != null) {
     const contentType = output.headers[contentTypeHeaderKey];
@@ -949,10 +949,10 @@ export const deserializeHttpChecksumRequiredRequest = async (
 
 export const deserializeHttpEnumPayloadRequest = async (
   output: __HttpRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<HttpEnumPayloadServerInput> => {
   const contentTypeHeaderKey: string | undefined = Object.keys(output.headers).find(
-    (key) => key.toLowerCase() === "content-type"
+    (key) => key.toLowerCase() === "content-type",
   );
   if (contentTypeHeaderKey != null) {
     const contentType = output.headers[contentTypeHeaderKey];
@@ -975,7 +975,7 @@ export const deserializeHttpEnumPayloadRequest = async (
 
 export const deserializeHttpPayloadTraitsRequest = async (
   output: __HttpRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<HttpPayloadTraitsServerInput> => {
   const contents: any = map({
     [_f]: [, output.headers[_xf]],
@@ -987,10 +987,10 @@ export const deserializeHttpPayloadTraitsRequest = async (
 
 export const deserializeHttpPayloadTraitsWithMediaTypeRequest = async (
   output: __HttpRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<HttpPayloadTraitsWithMediaTypeServerInput> => {
   const contentTypeHeaderKey: string | undefined = Object.keys(output.headers).find(
-    (key) => key.toLowerCase() === "content-type"
+    (key) => key.toLowerCase() === "content-type",
   );
   if (contentTypeHeaderKey != null) {
     const contentType = output.headers[contentTypeHeaderKey];
@@ -1015,10 +1015,10 @@ export const deserializeHttpPayloadTraitsWithMediaTypeRequest = async (
 
 export const deserializeHttpPayloadWithStructureRequest = async (
   output: __HttpRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<HttpPayloadWithStructureServerInput> => {
   const contentTypeHeaderKey: string | undefined = Object.keys(output.headers).find(
-    (key) => key.toLowerCase() === "content-type"
+    (key) => key.toLowerCase() === "content-type",
   );
   if (contentTypeHeaderKey != null) {
     const contentType = output.headers[contentTypeHeaderKey];
@@ -1041,10 +1041,10 @@ export const deserializeHttpPayloadWithStructureRequest = async (
 
 export const deserializeHttpPayloadWithUnionRequest = async (
   output: __HttpRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<HttpPayloadWithUnionServerInput> => {
   const contentTypeHeaderKey: string | undefined = Object.keys(output.headers).find(
-    (key) => key.toLowerCase() === "content-type"
+    (key) => key.toLowerCase() === "content-type",
   );
   if (contentTypeHeaderKey != null) {
     const contentType = output.headers[contentTypeHeaderKey];
@@ -1067,10 +1067,10 @@ export const deserializeHttpPayloadWithUnionRequest = async (
 
 export const deserializeHttpPrefixHeadersRequest = async (
   output: __HttpRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<HttpPrefixHeadersServerInput> => {
   const contentTypeHeaderKey: string | undefined = Object.keys(output.headers).find(
-    (key) => key.toLowerCase() === "content-type"
+    (key) => key.toLowerCase() === "content-type",
   );
   if (contentTypeHeaderKey != null) {
     const contentType = output.headers[contentTypeHeaderKey];
@@ -1103,10 +1103,10 @@ export const deserializeHttpPrefixHeadersRequest = async (
 
 export const deserializeHttpPrefixHeadersInResponseRequest = async (
   output: __HttpRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<HttpPrefixHeadersInResponseServerInput> => {
   const contentTypeHeaderKey: string | undefined = Object.keys(output.headers).find(
-    (key) => key.toLowerCase() === "content-type"
+    (key) => key.toLowerCase() === "content-type",
   );
   if (contentTypeHeaderKey != null) {
     const contentType = output.headers[contentTypeHeaderKey];
@@ -1128,10 +1128,10 @@ export const deserializeHttpPrefixHeadersInResponseRequest = async (
 
 export const deserializeHttpRequestWithFloatLabelsRequest = async (
   output: __HttpRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<HttpRequestWithFloatLabelsServerInput> => {
   const contentTypeHeaderKey: string | undefined = Object.keys(output.headers).find(
-    (key) => key.toLowerCase() === "content-type"
+    (key) => key.toLowerCase() === "content-type",
   );
   if (contentTypeHeaderKey != null) {
     const contentType = output.headers[contentTypeHeaderKey];
@@ -1159,10 +1159,10 @@ export const deserializeHttpRequestWithFloatLabelsRequest = async (
 
 export const deserializeHttpRequestWithGreedyLabelInPathRequest = async (
   output: __HttpRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<HttpRequestWithGreedyLabelInPathServerInput> => {
   const contentTypeHeaderKey: string | undefined = Object.keys(output.headers).find(
-    (key) => key.toLowerCase() === "content-type"
+    (key) => key.toLowerCase() === "content-type",
   );
   if (contentTypeHeaderKey != null) {
     const contentType = output.headers[contentTypeHeaderKey];
@@ -1190,10 +1190,10 @@ export const deserializeHttpRequestWithGreedyLabelInPathRequest = async (
 
 export const deserializeHttpRequestWithLabelsRequest = async (
   output: __HttpRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<HttpRequestWithLabelsServerInput> => {
   const contentTypeHeaderKey: string | undefined = Object.keys(output.headers).find(
-    (key) => key.toLowerCase() === "content-type"
+    (key) => key.toLowerCase() === "content-type",
   );
   if (contentTypeHeaderKey != null) {
     const contentType = output.headers[contentTypeHeaderKey];
@@ -1210,7 +1210,7 @@ export const deserializeHttpRequestWithLabelsRequest = async (
   }
   const contents: any = map({});
   const pathRegex = new RegExp(
-    "/HttpRequestWithLabels/(?<string>[^/]+)/(?<short>[^/]+)/(?<integer>[^/]+)/(?<long>[^/]+)/(?<float>[^/]+)/(?<double>[^/]+)/(?<boolean>[^/]+)/(?<timestamp>[^/]+)"
+    "/HttpRequestWithLabels/(?<string>[^/]+)/(?<short>[^/]+)/(?<integer>[^/]+)/(?<long>[^/]+)/(?<float>[^/]+)/(?<double>[^/]+)/(?<boolean>[^/]+)/(?<timestamp>[^/]+)",
   );
   const parsedPath = output.path.match(pathRegex);
   if (parsedPath?.groups !== undefined) {
@@ -1229,10 +1229,10 @@ export const deserializeHttpRequestWithLabelsRequest = async (
 
 export const deserializeHttpRequestWithLabelsAndTimestampFormatRequest = async (
   output: __HttpRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<HttpRequestWithLabelsAndTimestampFormatServerInput> => {
   const contentTypeHeaderKey: string | undefined = Object.keys(output.headers).find(
-    (key) => key.toLowerCase() === "content-type"
+    (key) => key.toLowerCase() === "content-type",
   );
   if (contentTypeHeaderKey != null) {
     const contentType = output.headers[contentTypeHeaderKey];
@@ -1249,30 +1249,30 @@ export const deserializeHttpRequestWithLabelsAndTimestampFormatRequest = async (
   }
   const contents: any = map({});
   const pathRegex = new RegExp(
-    "/HttpRequestWithLabelsAndTimestampFormat/(?<memberEpochSeconds>[^/]+)/(?<memberHttpDate>[^/]+)/(?<memberDateTime>[^/]+)/(?<defaultFormat>[^/]+)/(?<targetEpochSeconds>[^/]+)/(?<targetHttpDate>[^/]+)/(?<targetDateTime>[^/]+)"
+    "/HttpRequestWithLabelsAndTimestampFormat/(?<memberEpochSeconds>[^/]+)/(?<memberHttpDate>[^/]+)/(?<memberDateTime>[^/]+)/(?<defaultFormat>[^/]+)/(?<targetEpochSeconds>[^/]+)/(?<targetHttpDate>[^/]+)/(?<targetDateTime>[^/]+)",
   );
   const parsedPath = output.path.match(pathRegex);
   if (parsedPath?.groups !== undefined) {
     contents.memberEpochSeconds = __expectNonNull(
-      __parseEpochTimestamp(decodeURIComponent(parsedPath.groups.memberEpochSeconds))
+      __parseEpochTimestamp(decodeURIComponent(parsedPath.groups.memberEpochSeconds)),
     );
     contents.memberHttpDate = __expectNonNull(
-      __parseRfc7231DateTime(decodeURIComponent(parsedPath.groups.memberHttpDate))
+      __parseRfc7231DateTime(decodeURIComponent(parsedPath.groups.memberHttpDate)),
     );
     contents.memberDateTime = __expectNonNull(
-      __parseRfc3339DateTime(decodeURIComponent(parsedPath.groups.memberDateTime))
+      __parseRfc3339DateTime(decodeURIComponent(parsedPath.groups.memberDateTime)),
     );
     contents.defaultFormat = __expectNonNull(
-      __parseRfc3339DateTime(decodeURIComponent(parsedPath.groups.defaultFormat))
+      __parseRfc3339DateTime(decodeURIComponent(parsedPath.groups.defaultFormat)),
     );
     contents.targetEpochSeconds = __expectNonNull(
-      __parseEpochTimestamp(decodeURIComponent(parsedPath.groups.targetEpochSeconds))
+      __parseEpochTimestamp(decodeURIComponent(parsedPath.groups.targetEpochSeconds)),
     );
     contents.targetHttpDate = __expectNonNull(
-      __parseRfc7231DateTime(decodeURIComponent(parsedPath.groups.targetHttpDate))
+      __parseRfc7231DateTime(decodeURIComponent(parsedPath.groups.targetHttpDate)),
     );
     contents.targetDateTime = __expectNonNull(
-      __parseRfc3339DateTime(decodeURIComponent(parsedPath.groups.targetDateTime))
+      __parseRfc3339DateTime(decodeURIComponent(parsedPath.groups.targetDateTime)),
     );
   }
   await collectBody(output.body, context);
@@ -1281,10 +1281,10 @@ export const deserializeHttpRequestWithLabelsAndTimestampFormatRequest = async (
 
 export const deserializeHttpRequestWithRegexLiteralRequest = async (
   output: __HttpRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<HttpRequestWithRegexLiteralServerInput> => {
   const contentTypeHeaderKey: string | undefined = Object.keys(output.headers).find(
-    (key) => key.toLowerCase() === "content-type"
+    (key) => key.toLowerCase() === "content-type",
   );
   if (contentTypeHeaderKey != null) {
     const contentType = output.headers[contentTypeHeaderKey];
@@ -1311,10 +1311,10 @@ export const deserializeHttpRequestWithRegexLiteralRequest = async (
 
 export const deserializeHttpResponseCodeRequest = async (
   output: __HttpRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<HttpResponseCodeServerInput> => {
   const contentTypeHeaderKey: string | undefined = Object.keys(output.headers).find(
-    (key) => key.toLowerCase() === "content-type"
+    (key) => key.toLowerCase() === "content-type",
   );
   if (contentTypeHeaderKey != null) {
     const contentType = output.headers[contentTypeHeaderKey];
@@ -1336,10 +1336,10 @@ export const deserializeHttpResponseCodeRequest = async (
 
 export const deserializeHttpStringPayloadRequest = async (
   output: __HttpRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<HttpStringPayloadServerInput> => {
   const contentTypeHeaderKey: string | undefined = Object.keys(output.headers).find(
-    (key) => key.toLowerCase() === "content-type"
+    (key) => key.toLowerCase() === "content-type",
   );
   if (contentTypeHeaderKey != null) {
     const contentType = output.headers[contentTypeHeaderKey];
@@ -1362,10 +1362,10 @@ export const deserializeHttpStringPayloadRequest = async (
 
 export const deserializeIgnoreQueryParamsInResponseRequest = async (
   output: __HttpRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<IgnoreQueryParamsInResponseServerInput> => {
   const contentTypeHeaderKey: string | undefined = Object.keys(output.headers).find(
-    (key) => key.toLowerCase() === "content-type"
+    (key) => key.toLowerCase() === "content-type",
   );
   if (contentTypeHeaderKey != null) {
     const contentType = output.headers[contentTypeHeaderKey];
@@ -1387,10 +1387,10 @@ export const deserializeIgnoreQueryParamsInResponseRequest = async (
 
 export const deserializeInputAndOutputWithHeadersRequest = async (
   output: __HttpRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InputAndOutputWithHeadersServerInput> => {
   const contentTypeHeaderKey: string | undefined = Object.keys(output.headers).find(
-    (key) => key.toLowerCase() === "content-type"
+    (key) => key.toLowerCase() === "content-type",
   );
   if (contentTypeHeaderKey != null) {
     const contentType = output.headers[contentTypeHeaderKey];
@@ -1435,7 +1435,7 @@ export const deserializeInputAndOutputWithHeadersRequest = async (
       () => void 0 !== output.headers[_xt],
       () =>
         __splitEvery(output.headers[_xt] || "", ",", 2).map(
-          (_entry) => __expectNonNull(__parseRfc7231DateTime(_entry.trim())) as any
+          (_entry) => __expectNonNull(__parseRfc7231DateTime(_entry.trim())) as any,
         ),
     ],
     [_hE]: [, output.headers[_xe]],
@@ -1455,10 +1455,10 @@ export const deserializeInputAndOutputWithHeadersRequest = async (
 
 export const deserializeJsonBlobsRequest = async (
   output: __HttpRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<JsonBlobsServerInput> => {
   const contentTypeHeaderKey: string | undefined = Object.keys(output.headers).find(
-    (key) => key.toLowerCase() === "content-type"
+    (key) => key.toLowerCase() === "content-type",
   );
   if (contentTypeHeaderKey != null) {
     const contentType = output.headers[contentTypeHeaderKey];
@@ -1484,10 +1484,10 @@ export const deserializeJsonBlobsRequest = async (
 
 export const deserializeJsonEnumsRequest = async (
   output: __HttpRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<JsonEnumsServerInput> => {
   const contentTypeHeaderKey: string | undefined = Object.keys(output.headers).find(
-    (key) => key.toLowerCase() === "content-type"
+    (key) => key.toLowerCase() === "content-type",
   );
   if (contentTypeHeaderKey != null) {
     const contentType = output.headers[contentTypeHeaderKey];
@@ -1518,10 +1518,10 @@ export const deserializeJsonEnumsRequest = async (
 
 export const deserializeJsonIntEnumsRequest = async (
   output: __HttpRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<JsonIntEnumsServerInput> => {
   const contentTypeHeaderKey: string | undefined = Object.keys(output.headers).find(
-    (key) => key.toLowerCase() === "content-type"
+    (key) => key.toLowerCase() === "content-type",
   );
   if (contentTypeHeaderKey != null) {
     const contentType = output.headers[contentTypeHeaderKey];
@@ -1552,10 +1552,10 @@ export const deserializeJsonIntEnumsRequest = async (
 
 export const deserializeJsonListsRequest = async (
   output: __HttpRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<JsonListsServerInput> => {
   const contentTypeHeaderKey: string | undefined = Object.keys(output.headers).find(
-    (key) => key.toLowerCase() === "content-type"
+    (key) => key.toLowerCase() === "content-type",
   );
   if (contentTypeHeaderKey != null) {
     const contentType = output.headers[contentTypeHeaderKey];
@@ -1589,10 +1589,10 @@ export const deserializeJsonListsRequest = async (
 
 export const deserializeJsonMapsRequest = async (
   output: __HttpRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<JsonMapsServerInput> => {
   const contentTypeHeaderKey: string | undefined = Object.keys(output.headers).find(
-    (key) => key.toLowerCase() === "content-type"
+    (key) => key.toLowerCase() === "content-type",
   );
   if (contentTypeHeaderKey != null) {
     const contentType = output.headers[contentTypeHeaderKey];
@@ -1622,10 +1622,10 @@ export const deserializeJsonMapsRequest = async (
 
 export const deserializeJsonTimestampsRequest = async (
   output: __HttpRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<JsonTimestampsServerInput> => {
   const contentTypeHeaderKey: string | undefined = Object.keys(output.headers).find(
-    (key) => key.toLowerCase() === "content-type"
+    (key) => key.toLowerCase() === "content-type",
   );
   if (contentTypeHeaderKey != null) {
     const contentType = output.headers[contentTypeHeaderKey];
@@ -1657,10 +1657,10 @@ export const deserializeJsonTimestampsRequest = async (
 
 export const deserializeJsonUnionsRequest = async (
   output: __HttpRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<JsonUnionsServerInput> => {
   const contentTypeHeaderKey: string | undefined = Object.keys(output.headers).find(
-    (key) => key.toLowerCase() === "content-type"
+    (key) => key.toLowerCase() === "content-type",
   );
   if (contentTypeHeaderKey != null) {
     const contentType = output.headers[contentTypeHeaderKey];
@@ -1686,10 +1686,10 @@ export const deserializeJsonUnionsRequest = async (
 
 export const deserializeMalformedAcceptWithBodyRequest = async (
   output: __HttpRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<MalformedAcceptWithBodyServerInput> => {
   const contentTypeHeaderKey: string | undefined = Object.keys(output.headers).find(
-    (key) => key.toLowerCase() === "content-type"
+    (key) => key.toLowerCase() === "content-type",
   );
   if (contentTypeHeaderKey != null) {
     const contentType = output.headers[contentTypeHeaderKey];
@@ -1711,10 +1711,10 @@ export const deserializeMalformedAcceptWithBodyRequest = async (
 
 export const deserializeMalformedAcceptWithGenericStringRequest = async (
   output: __HttpRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<MalformedAcceptWithGenericStringServerInput> => {
   const contentTypeHeaderKey: string | undefined = Object.keys(output.headers).find(
-    (key) => key.toLowerCase() === "content-type"
+    (key) => key.toLowerCase() === "content-type",
   );
   if (contentTypeHeaderKey != null) {
     const contentType = output.headers[contentTypeHeaderKey];
@@ -1736,10 +1736,10 @@ export const deserializeMalformedAcceptWithGenericStringRequest = async (
 
 export const deserializeMalformedAcceptWithPayloadRequest = async (
   output: __HttpRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<MalformedAcceptWithPayloadServerInput> => {
   const contentTypeHeaderKey: string | undefined = Object.keys(output.headers).find(
-    (key) => key.toLowerCase() === "content-type"
+    (key) => key.toLowerCase() === "content-type",
   );
   if (contentTypeHeaderKey != null) {
     const contentType = output.headers[contentTypeHeaderKey];
@@ -1761,10 +1761,10 @@ export const deserializeMalformedAcceptWithPayloadRequest = async (
 
 export const deserializeMalformedBlobRequest = async (
   output: __HttpRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<MalformedBlobServerInput> => {
   const contentTypeHeaderKey: string | undefined = Object.keys(output.headers).find(
-    (key) => key.toLowerCase() === "content-type"
+    (key) => key.toLowerCase() === "content-type",
   );
   if (contentTypeHeaderKey != null) {
     const contentType = output.headers[contentTypeHeaderKey];
@@ -1790,10 +1790,10 @@ export const deserializeMalformedBlobRequest = async (
 
 export const deserializeMalformedBooleanRequest = async (
   output: __HttpRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<MalformedBooleanServerInput> => {
   const contentTypeHeaderKey: string | undefined = Object.keys(output.headers).find(
-    (key) => key.toLowerCase() === "content-type"
+    (key) => key.toLowerCase() === "content-type",
   );
   if (contentTypeHeaderKey != null) {
     const contentType = output.headers[contentTypeHeaderKey];
@@ -1842,10 +1842,10 @@ export const deserializeMalformedBooleanRequest = async (
 
 export const deserializeMalformedByteRequest = async (
   output: __HttpRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<MalformedByteServerInput> => {
   const contentTypeHeaderKey: string | undefined = Object.keys(output.headers).find(
-    (key) => key.toLowerCase() === "content-type"
+    (key) => key.toLowerCase() === "content-type",
   );
   if (contentTypeHeaderKey != null) {
     const contentType = output.headers[contentTypeHeaderKey];
@@ -1894,10 +1894,10 @@ export const deserializeMalformedByteRequest = async (
 
 export const deserializeMalformedContentTypeWithBodyRequest = async (
   output: __HttpRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<MalformedContentTypeWithBodyServerInput> => {
   const contentTypeHeaderKey: string | undefined = Object.keys(output.headers).find(
-    (key) => key.toLowerCase() === "content-type"
+    (key) => key.toLowerCase() === "content-type",
   );
   if (contentTypeHeaderKey != null) {
     const contentType = output.headers[contentTypeHeaderKey];
@@ -1923,10 +1923,10 @@ export const deserializeMalformedContentTypeWithBodyRequest = async (
 
 export const deserializeMalformedContentTypeWithGenericStringRequest = async (
   output: __HttpRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<MalformedContentTypeWithGenericStringServerInput> => {
   const contentTypeHeaderKey: string | undefined = Object.keys(output.headers).find(
-    (key) => key.toLowerCase() === "content-type"
+    (key) => key.toLowerCase() === "content-type",
   );
   if (contentTypeHeaderKey != null) {
     const contentType = output.headers[contentTypeHeaderKey];
@@ -1949,10 +1949,10 @@ export const deserializeMalformedContentTypeWithGenericStringRequest = async (
 
 export const deserializeMalformedContentTypeWithoutBodyRequest = async (
   output: __HttpRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<MalformedContentTypeWithoutBodyServerInput> => {
   const contentTypeHeaderKey: string | undefined = Object.keys(output.headers).find(
-    (key) => key.toLowerCase() === "content-type"
+    (key) => key.toLowerCase() === "content-type",
   );
   if (contentTypeHeaderKey != null) {
     const contentType = output.headers[contentTypeHeaderKey];
@@ -1974,10 +1974,10 @@ export const deserializeMalformedContentTypeWithoutBodyRequest = async (
 
 export const deserializeMalformedContentTypeWithPayloadRequest = async (
   output: __HttpRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<MalformedContentTypeWithPayloadServerInput> => {
   const contentTypeHeaderKey: string | undefined = Object.keys(output.headers).find(
-    (key) => key.toLowerCase() === "content-type"
+    (key) => key.toLowerCase() === "content-type",
   );
   if (contentTypeHeaderKey != null) {
     const contentType = output.headers[contentTypeHeaderKey];
@@ -2000,10 +2000,10 @@ export const deserializeMalformedContentTypeWithPayloadRequest = async (
 
 export const deserializeMalformedDoubleRequest = async (
   output: __HttpRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<MalformedDoubleServerInput> => {
   const contentTypeHeaderKey: string | undefined = Object.keys(output.headers).find(
-    (key) => key.toLowerCase() === "content-type"
+    (key) => key.toLowerCase() === "content-type",
   );
   if (contentTypeHeaderKey != null) {
     const contentType = output.headers[contentTypeHeaderKey];
@@ -2052,10 +2052,10 @@ export const deserializeMalformedDoubleRequest = async (
 
 export const deserializeMalformedFloatRequest = async (
   output: __HttpRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<MalformedFloatServerInput> => {
   const contentTypeHeaderKey: string | undefined = Object.keys(output.headers).find(
-    (key) => key.toLowerCase() === "content-type"
+    (key) => key.toLowerCase() === "content-type",
   );
   if (contentTypeHeaderKey != null) {
     const contentType = output.headers[contentTypeHeaderKey];
@@ -2104,10 +2104,10 @@ export const deserializeMalformedFloatRequest = async (
 
 export const deserializeMalformedIntegerRequest = async (
   output: __HttpRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<MalformedIntegerServerInput> => {
   const contentTypeHeaderKey: string | undefined = Object.keys(output.headers).find(
-    (key) => key.toLowerCase() === "content-type"
+    (key) => key.toLowerCase() === "content-type",
   );
   if (contentTypeHeaderKey != null) {
     const contentType = output.headers[contentTypeHeaderKey];
@@ -2156,10 +2156,10 @@ export const deserializeMalformedIntegerRequest = async (
 
 export const deserializeMalformedListRequest = async (
   output: __HttpRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<MalformedListServerInput> => {
   const contentTypeHeaderKey: string | undefined = Object.keys(output.headers).find(
-    (key) => key.toLowerCase() === "content-type"
+    (key) => key.toLowerCase() === "content-type",
   );
   if (contentTypeHeaderKey != null) {
     const contentType = output.headers[contentTypeHeaderKey];
@@ -2185,10 +2185,10 @@ export const deserializeMalformedListRequest = async (
 
 export const deserializeMalformedLongRequest = async (
   output: __HttpRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<MalformedLongServerInput> => {
   const contentTypeHeaderKey: string | undefined = Object.keys(output.headers).find(
-    (key) => key.toLowerCase() === "content-type"
+    (key) => key.toLowerCase() === "content-type",
   );
   if (contentTypeHeaderKey != null) {
     const contentType = output.headers[contentTypeHeaderKey];
@@ -2237,10 +2237,10 @@ export const deserializeMalformedLongRequest = async (
 
 export const deserializeMalformedMapRequest = async (
   output: __HttpRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<MalformedMapServerInput> => {
   const contentTypeHeaderKey: string | undefined = Object.keys(output.headers).find(
-    (key) => key.toLowerCase() === "content-type"
+    (key) => key.toLowerCase() === "content-type",
   );
   if (contentTypeHeaderKey != null) {
     const contentType = output.headers[contentTypeHeaderKey];
@@ -2266,10 +2266,10 @@ export const deserializeMalformedMapRequest = async (
 
 export const deserializeMalformedRequestBodyRequest = async (
   output: __HttpRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<MalformedRequestBodyServerInput> => {
   const contentTypeHeaderKey: string | undefined = Object.keys(output.headers).find(
-    (key) => key.toLowerCase() === "content-type"
+    (key) => key.toLowerCase() === "content-type",
   );
   if (contentTypeHeaderKey != null) {
     const contentType = output.headers[contentTypeHeaderKey];
@@ -2296,10 +2296,10 @@ export const deserializeMalformedRequestBodyRequest = async (
 
 export const deserializeMalformedShortRequest = async (
   output: __HttpRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<MalformedShortServerInput> => {
   const contentTypeHeaderKey: string | undefined = Object.keys(output.headers).find(
-    (key) => key.toLowerCase() === "content-type"
+    (key) => key.toLowerCase() === "content-type",
   );
   if (contentTypeHeaderKey != null) {
     const contentType = output.headers[contentTypeHeaderKey];
@@ -2348,10 +2348,10 @@ export const deserializeMalformedShortRequest = async (
 
 export const deserializeMalformedStringRequest = async (
   output: __HttpRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<MalformedStringServerInput> => {
   const contentTypeHeaderKey: string | undefined = Object.keys(output.headers).find(
-    (key) => key.toLowerCase() === "content-type"
+    (key) => key.toLowerCase() === "content-type",
   );
   if (contentTypeHeaderKey != null) {
     const contentType = output.headers[contentTypeHeaderKey];
@@ -2378,10 +2378,10 @@ export const deserializeMalformedStringRequest = async (
 
 export const deserializeMalformedTimestampBodyDateTimeRequest = async (
   output: __HttpRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<MalformedTimestampBodyDateTimeServerInput> => {
   const contentTypeHeaderKey: string | undefined = Object.keys(output.headers).find(
-    (key) => key.toLowerCase() === "content-type"
+    (key) => key.toLowerCase() === "content-type",
   );
   if (contentTypeHeaderKey != null) {
     const contentType = output.headers[contentTypeHeaderKey];
@@ -2407,10 +2407,10 @@ export const deserializeMalformedTimestampBodyDateTimeRequest = async (
 
 export const deserializeMalformedTimestampBodyDefaultRequest = async (
   output: __HttpRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<MalformedTimestampBodyDefaultServerInput> => {
   const contentTypeHeaderKey: string | undefined = Object.keys(output.headers).find(
-    (key) => key.toLowerCase() === "content-type"
+    (key) => key.toLowerCase() === "content-type",
   );
   if (contentTypeHeaderKey != null) {
     const contentType = output.headers[contentTypeHeaderKey];
@@ -2436,10 +2436,10 @@ export const deserializeMalformedTimestampBodyDefaultRequest = async (
 
 export const deserializeMalformedTimestampBodyHttpDateRequest = async (
   output: __HttpRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<MalformedTimestampBodyHttpDateServerInput> => {
   const contentTypeHeaderKey: string | undefined = Object.keys(output.headers).find(
-    (key) => key.toLowerCase() === "content-type"
+    (key) => key.toLowerCase() === "content-type",
   );
   if (contentTypeHeaderKey != null) {
     const contentType = output.headers[contentTypeHeaderKey];
@@ -2465,10 +2465,10 @@ export const deserializeMalformedTimestampBodyHttpDateRequest = async (
 
 export const deserializeMalformedTimestampHeaderDateTimeRequest = async (
   output: __HttpRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<MalformedTimestampHeaderDateTimeServerInput> => {
   const contentTypeHeaderKey: string | undefined = Object.keys(output.headers).find(
-    (key) => key.toLowerCase() === "content-type"
+    (key) => key.toLowerCase() === "content-type",
   );
   if (contentTypeHeaderKey != null) {
     const contentType = output.headers[contentTypeHeaderKey];
@@ -2492,10 +2492,10 @@ export const deserializeMalformedTimestampHeaderDateTimeRequest = async (
 
 export const deserializeMalformedTimestampHeaderDefaultRequest = async (
   output: __HttpRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<MalformedTimestampHeaderDefaultServerInput> => {
   const contentTypeHeaderKey: string | undefined = Object.keys(output.headers).find(
-    (key) => key.toLowerCase() === "content-type"
+    (key) => key.toLowerCase() === "content-type",
   );
   if (contentTypeHeaderKey != null) {
     const contentType = output.headers[contentTypeHeaderKey];
@@ -2519,10 +2519,10 @@ export const deserializeMalformedTimestampHeaderDefaultRequest = async (
 
 export const deserializeMalformedTimestampHeaderEpochRequest = async (
   output: __HttpRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<MalformedTimestampHeaderEpochServerInput> => {
   const contentTypeHeaderKey: string | undefined = Object.keys(output.headers).find(
-    (key) => key.toLowerCase() === "content-type"
+    (key) => key.toLowerCase() === "content-type",
   );
   if (contentTypeHeaderKey != null) {
     const contentType = output.headers[contentTypeHeaderKey];
@@ -2546,10 +2546,10 @@ export const deserializeMalformedTimestampHeaderEpochRequest = async (
 
 export const deserializeMalformedTimestampPathDefaultRequest = async (
   output: __HttpRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<MalformedTimestampPathDefaultServerInput> => {
   const contentTypeHeaderKey: string | undefined = Object.keys(output.headers).find(
-    (key) => key.toLowerCase() === "content-type"
+    (key) => key.toLowerCase() === "content-type",
   );
   if (contentTypeHeaderKey != null) {
     const contentType = output.headers[contentTypeHeaderKey];
@@ -2576,10 +2576,10 @@ export const deserializeMalformedTimestampPathDefaultRequest = async (
 
 export const deserializeMalformedTimestampPathEpochRequest = async (
   output: __HttpRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<MalformedTimestampPathEpochServerInput> => {
   const contentTypeHeaderKey: string | undefined = Object.keys(output.headers).find(
-    (key) => key.toLowerCase() === "content-type"
+    (key) => key.toLowerCase() === "content-type",
   );
   if (contentTypeHeaderKey != null) {
     const contentType = output.headers[contentTypeHeaderKey];
@@ -2606,10 +2606,10 @@ export const deserializeMalformedTimestampPathEpochRequest = async (
 
 export const deserializeMalformedTimestampPathHttpDateRequest = async (
   output: __HttpRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<MalformedTimestampPathHttpDateServerInput> => {
   const contentTypeHeaderKey: string | undefined = Object.keys(output.headers).find(
-    (key) => key.toLowerCase() === "content-type"
+    (key) => key.toLowerCase() === "content-type",
   );
   if (contentTypeHeaderKey != null) {
     const contentType = output.headers[contentTypeHeaderKey];
@@ -2636,10 +2636,10 @@ export const deserializeMalformedTimestampPathHttpDateRequest = async (
 
 export const deserializeMalformedTimestampQueryDefaultRequest = async (
   output: __HttpRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<MalformedTimestampQueryDefaultServerInput> => {
   const contentTypeHeaderKey: string | undefined = Object.keys(output.headers).find(
-    (key) => key.toLowerCase() === "content-type"
+    (key) => key.toLowerCase() === "content-type",
   );
   if (contentTypeHeaderKey != null) {
     const contentType = output.headers[contentTypeHeaderKey];
@@ -2677,10 +2677,10 @@ export const deserializeMalformedTimestampQueryDefaultRequest = async (
 
 export const deserializeMalformedTimestampQueryEpochRequest = async (
   output: __HttpRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<MalformedTimestampQueryEpochServerInput> => {
   const contentTypeHeaderKey: string | undefined = Object.keys(output.headers).find(
-    (key) => key.toLowerCase() === "content-type"
+    (key) => key.toLowerCase() === "content-type",
   );
   if (contentTypeHeaderKey != null) {
     const contentType = output.headers[contentTypeHeaderKey];
@@ -2718,10 +2718,10 @@ export const deserializeMalformedTimestampQueryEpochRequest = async (
 
 export const deserializeMalformedTimestampQueryHttpDateRequest = async (
   output: __HttpRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<MalformedTimestampQueryHttpDateServerInput> => {
   const contentTypeHeaderKey: string | undefined = Object.keys(output.headers).find(
-    (key) => key.toLowerCase() === "content-type"
+    (key) => key.toLowerCase() === "content-type",
   );
   if (contentTypeHeaderKey != null) {
     const contentType = output.headers[contentTypeHeaderKey];
@@ -2759,10 +2759,10 @@ export const deserializeMalformedTimestampQueryHttpDateRequest = async (
 
 export const deserializeMalformedUnionRequest = async (
   output: __HttpRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<MalformedUnionServerInput> => {
   const contentTypeHeaderKey: string | undefined = Object.keys(output.headers).find(
-    (key) => key.toLowerCase() === "content-type"
+    (key) => key.toLowerCase() === "content-type",
   );
   if (contentTypeHeaderKey != null) {
     const contentType = output.headers[contentTypeHeaderKey];
@@ -2788,10 +2788,10 @@ export const deserializeMalformedUnionRequest = async (
 
 export const deserializeMediaTypeHeaderRequest = async (
   output: __HttpRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<MediaTypeHeaderServerInput> => {
   const contentTypeHeaderKey: string | undefined = Object.keys(output.headers).find(
-    (key) => key.toLowerCase() === "content-type"
+    (key) => key.toLowerCase() === "content-type",
   );
   if (contentTypeHeaderKey != null) {
     const contentType = output.headers[contentTypeHeaderKey];
@@ -2818,10 +2818,10 @@ export const deserializeMediaTypeHeaderRequest = async (
 
 export const deserializeNoInputAndNoOutputRequest = async (
   output: __HttpRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<NoInputAndNoOutputServerInput> => {
   const contentTypeHeaderKey: string | undefined = Object.keys(output.headers).find(
-    (key) => key.toLowerCase() === "content-type"
+    (key) => key.toLowerCase() === "content-type",
   );
   if (contentTypeHeaderKey != null) {
     const contentType = output.headers[contentTypeHeaderKey];
@@ -2843,10 +2843,10 @@ export const deserializeNoInputAndNoOutputRequest = async (
 
 export const deserializeNoInputAndOutputRequest = async (
   output: __HttpRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<NoInputAndOutputServerInput> => {
   const contentTypeHeaderKey: string | undefined = Object.keys(output.headers).find(
-    (key) => key.toLowerCase() === "content-type"
+    (key) => key.toLowerCase() === "content-type",
   );
   if (contentTypeHeaderKey != null) {
     const contentType = output.headers[contentTypeHeaderKey];
@@ -2868,10 +2868,10 @@ export const deserializeNoInputAndOutputRequest = async (
 
 export const deserializeNullAndEmptyHeadersClientRequest = async (
   output: __HttpRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<NullAndEmptyHeadersClientServerInput> => {
   const contentTypeHeaderKey: string | undefined = Object.keys(output.headers).find(
-    (key) => key.toLowerCase() === "content-type"
+    (key) => key.toLowerCase() === "content-type",
   );
   if (contentTypeHeaderKey != null) {
     const contentType = output.headers[contentTypeHeaderKey];
@@ -2900,10 +2900,10 @@ export const deserializeNullAndEmptyHeadersClientRequest = async (
 
 export const deserializeNullAndEmptyHeadersServerRequest = async (
   output: __HttpRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<NullAndEmptyHeadersServerServerInput> => {
   const contentTypeHeaderKey: string | undefined = Object.keys(output.headers).find(
-    (key) => key.toLowerCase() === "content-type"
+    (key) => key.toLowerCase() === "content-type",
   );
   if (contentTypeHeaderKey != null) {
     const contentType = output.headers[contentTypeHeaderKey];
@@ -2932,10 +2932,10 @@ export const deserializeNullAndEmptyHeadersServerRequest = async (
 
 export const deserializeOmitsNullSerializesEmptyStringRequest = async (
   output: __HttpRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<OmitsNullSerializesEmptyStringServerInput> => {
   const contentTypeHeaderKey: string | undefined = Object.keys(output.headers).find(
-    (key) => key.toLowerCase() === "content-type"
+    (key) => key.toLowerCase() === "content-type",
   );
   if (contentTypeHeaderKey != null) {
     const contentType = output.headers[contentTypeHeaderKey];
@@ -2986,10 +2986,10 @@ export const deserializeOmitsNullSerializesEmptyStringRequest = async (
 
 export const deserializeOmitsSerializingEmptyListsRequest = async (
   output: __HttpRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<OmitsSerializingEmptyListsServerInput> => {
   const contentTypeHeaderKey: string | undefined = Object.keys(output.headers).find(
-    (key) => key.toLowerCase() === "content-type"
+    (key) => key.toLowerCase() === "content-type",
   );
   if (contentTypeHeaderKey != null) {
     const contentType = output.headers[contentTypeHeaderKey];
@@ -3056,10 +3056,10 @@ export const deserializeOmitsSerializingEmptyListsRequest = async (
 
 export const deserializePostPlayerActionRequest = async (
   output: __HttpRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PostPlayerActionServerInput> => {
   const contentTypeHeaderKey: string | undefined = Object.keys(output.headers).find(
-    (key) => key.toLowerCase() === "content-type"
+    (key) => key.toLowerCase() === "content-type",
   );
   if (contentTypeHeaderKey != null) {
     const contentType = output.headers[contentTypeHeaderKey];
@@ -3085,10 +3085,10 @@ export const deserializePostPlayerActionRequest = async (
 
 export const deserializePostUnionWithJsonNameRequest = async (
   output: __HttpRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PostUnionWithJsonNameServerInput> => {
   const contentTypeHeaderKey: string | undefined = Object.keys(output.headers).find(
-    (key) => key.toLowerCase() === "content-type"
+    (key) => key.toLowerCase() === "content-type",
   );
   if (contentTypeHeaderKey != null) {
     const contentType = output.headers[contentTypeHeaderKey];
@@ -3114,10 +3114,10 @@ export const deserializePostUnionWithJsonNameRequest = async (
 
 export const deserializePutWithContentEncodingRequest = async (
   output: __HttpRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutWithContentEncodingServerInput> => {
   const contentTypeHeaderKey: string | undefined = Object.keys(output.headers).find(
-    (key) => key.toLowerCase() === "content-type"
+    (key) => key.toLowerCase() === "content-type",
   );
   if (contentTypeHeaderKey != null) {
     const contentType = output.headers[contentTypeHeaderKey];
@@ -3145,10 +3145,10 @@ export const deserializePutWithContentEncodingRequest = async (
 
 export const deserializeQueryIdempotencyTokenAutoFillRequest = async (
   output: __HttpRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<QueryIdempotencyTokenAutoFillServerInput> => {
   const contentTypeHeaderKey: string | undefined = Object.keys(output.headers).find(
-    (key) => key.toLowerCase() === "content-type"
+    (key) => key.toLowerCase() === "content-type",
   );
   if (contentTypeHeaderKey != null) {
     const contentType = output.headers[contentTypeHeaderKey];
@@ -3186,10 +3186,10 @@ export const deserializeQueryIdempotencyTokenAutoFillRequest = async (
 
 export const deserializeQueryParamsAsStringListMapRequest = async (
   output: __HttpRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<QueryParamsAsStringListMapServerInput> => {
   const contentTypeHeaderKey: string | undefined = Object.keys(output.headers).find(
-    (key) => key.toLowerCase() === "content-type"
+    (key) => key.toLowerCase() === "content-type",
   );
   if (contentTypeHeaderKey != null) {
     const contentType = output.headers[contentTypeHeaderKey];
@@ -3234,10 +3234,10 @@ export const deserializeQueryParamsAsStringListMapRequest = async (
 
 export const deserializeQueryPrecedenceRequest = async (
   output: __HttpRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<QueryPrecedenceServerInput> => {
   const contentTypeHeaderKey: string | undefined = Object.keys(output.headers).find(
-    (key) => key.toLowerCase() === "content-type"
+    (key) => key.toLowerCase() === "content-type",
   );
   if (contentTypeHeaderKey != null) {
     const contentType = output.headers[contentTypeHeaderKey];
@@ -3290,10 +3290,10 @@ export const deserializeQueryPrecedenceRequest = async (
 
 export const deserializeRecursiveShapesRequest = async (
   output: __HttpRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RecursiveShapesServerInput> => {
   const contentTypeHeaderKey: string | undefined = Object.keys(output.headers).find(
-    (key) => key.toLowerCase() === "content-type"
+    (key) => key.toLowerCase() === "content-type",
   );
   if (contentTypeHeaderKey != null) {
     const contentType = output.headers[contentTypeHeaderKey];
@@ -3319,10 +3319,10 @@ export const deserializeRecursiveShapesRequest = async (
 
 export const deserializeSimpleScalarPropertiesRequest = async (
   output: __HttpRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SimpleScalarPropertiesServerInput> => {
   const contentTypeHeaderKey: string | undefined = Object.keys(output.headers).find(
-    (key) => key.toLowerCase() === "content-type"
+    (key) => key.toLowerCase() === "content-type",
   );
   if (contentTypeHeaderKey != null) {
     const contentType = output.headers[contentTypeHeaderKey];
@@ -3358,10 +3358,10 @@ export const deserializeSimpleScalarPropertiesRequest = async (
 
 export const deserializeSparseJsonListsRequest = async (
   output: __HttpRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SparseJsonListsServerInput> => {
   const contentTypeHeaderKey: string | undefined = Object.keys(output.headers).find(
-    (key) => key.toLowerCase() === "content-type"
+    (key) => key.toLowerCase() === "content-type",
   );
   if (contentTypeHeaderKey != null) {
     const contentType = output.headers[contentTypeHeaderKey];
@@ -3387,10 +3387,10 @@ export const deserializeSparseJsonListsRequest = async (
 
 export const deserializeSparseJsonMapsRequest = async (
   output: __HttpRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SparseJsonMapsServerInput> => {
   const contentTypeHeaderKey: string | undefined = Object.keys(output.headers).find(
-    (key) => key.toLowerCase() === "content-type"
+    (key) => key.toLowerCase() === "content-type",
   );
   if (contentTypeHeaderKey != null) {
     const contentType = output.headers[contentTypeHeaderKey];
@@ -3420,7 +3420,7 @@ export const deserializeSparseJsonMapsRequest = async (
 
 export const deserializeStreamingTraitsRequest = async (
   output: __HttpRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StreamingTraitsServerInput> => {
   const contents: any = map({
     [_f]: [, output.headers[_xf]],
@@ -3432,7 +3432,7 @@ export const deserializeStreamingTraitsRequest = async (
 
 export const deserializeStreamingTraitsRequireLengthRequest = async (
   output: __HttpRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StreamingTraitsRequireLengthServerInput> => {
   const acceptHeaderKey: string | undefined = Object.keys(output.headers).find((key) => key.toLowerCase() === "accept");
   if (acceptHeaderKey != null) {
@@ -3451,10 +3451,10 @@ export const deserializeStreamingTraitsRequireLengthRequest = async (
 
 export const deserializeStreamingTraitsWithMediaTypeRequest = async (
   output: __HttpRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StreamingTraitsWithMediaTypeServerInput> => {
   const contentTypeHeaderKey: string | undefined = Object.keys(output.headers).find(
-    (key) => key.toLowerCase() === "content-type"
+    (key) => key.toLowerCase() === "content-type",
   );
   if (contentTypeHeaderKey != null) {
     const contentType = output.headers[contentTypeHeaderKey];
@@ -3479,10 +3479,10 @@ export const deserializeStreamingTraitsWithMediaTypeRequest = async (
 
 export const deserializeTestBodyStructureRequest = async (
   output: __HttpRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TestBodyStructureServerInput> => {
   const contentTypeHeaderKey: string | undefined = Object.keys(output.headers).find(
-    (key) => key.toLowerCase() === "content-type"
+    (key) => key.toLowerCase() === "content-type",
   );
   if (contentTypeHeaderKey != null) {
     const contentType = output.headers[contentTypeHeaderKey];
@@ -3510,10 +3510,10 @@ export const deserializeTestBodyStructureRequest = async (
 
 export const deserializeTestNoPayloadRequest = async (
   output: __HttpRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TestNoPayloadServerInput> => {
   const contentTypeHeaderKey: string | undefined = Object.keys(output.headers).find(
-    (key) => key.toLowerCase() === "content-type"
+    (key) => key.toLowerCase() === "content-type",
   );
   if (contentTypeHeaderKey != null) {
     const contentType = output.headers[contentTypeHeaderKey];
@@ -3537,7 +3537,7 @@ export const deserializeTestNoPayloadRequest = async (
 
 export const deserializeTestPayloadBlobRequest = async (
   output: __HttpRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TestPayloadBlobServerInput> => {
   const contents: any = map({
     [_cT]: [, output.headers[_ct]],
@@ -3549,10 +3549,10 @@ export const deserializeTestPayloadBlobRequest = async (
 
 export const deserializeTestPayloadStructureRequest = async (
   output: __HttpRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TestPayloadStructureServerInput> => {
   const contentTypeHeaderKey: string | undefined = Object.keys(output.headers).find(
-    (key) => key.toLowerCase() === "content-type"
+    (key) => key.toLowerCase() === "content-type",
   );
   if (contentTypeHeaderKey != null) {
     const contentType = output.headers[contentTypeHeaderKey];
@@ -3577,10 +3577,10 @@ export const deserializeTestPayloadStructureRequest = async (
 
 export const deserializeTimestampFormatHeadersRequest = async (
   output: __HttpRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TimestampFormatHeadersServerInput> => {
   const contentTypeHeaderKey: string | undefined = Object.keys(output.headers).find(
-    (key) => key.toLowerCase() === "content-type"
+    (key) => key.toLowerCase() === "content-type",
   );
   if (contentTypeHeaderKey != null) {
     const contentType = output.headers[contentTypeHeaderKey];
@@ -3622,10 +3622,10 @@ export const deserializeTimestampFormatHeadersRequest = async (
 
 export const deserializeUnitInputAndOutputRequest = async (
   output: __HttpRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UnitInputAndOutputServerInput> => {
   const contentTypeHeaderKey: string | undefined = Object.keys(output.headers).find(
-    (key) => key.toLowerCase() === "content-type"
+    (key) => key.toLowerCase() === "content-type",
   );
   if (contentTypeHeaderKey != null) {
     const contentType = output.headers[contentTypeHeaderKey];
@@ -3647,7 +3647,7 @@ export const deserializeUnitInputAndOutputRequest = async (
 
 export const serializeAllQueryStringTypesResponse = async (
   input: AllQueryStringTypesServerOutput,
-  ctx: ServerSerdeContext
+  ctx: ServerSerdeContext,
 ): Promise<__HttpResponse> => {
   const context: __SerdeContext = {
     ...ctx,
@@ -3681,7 +3681,7 @@ export const serializeAllQueryStringTypesResponse = async (
 
 export const serializeConstantAndVariableQueryStringResponse = async (
   input: ConstantAndVariableQueryStringServerOutput,
-  ctx: ServerSerdeContext
+  ctx: ServerSerdeContext,
 ): Promise<__HttpResponse> => {
   const context: __SerdeContext = {
     ...ctx,
@@ -3715,7 +3715,7 @@ export const serializeConstantAndVariableQueryStringResponse = async (
 
 export const serializeConstantQueryStringResponse = async (
   input: ConstantQueryStringServerOutput,
-  ctx: ServerSerdeContext
+  ctx: ServerSerdeContext,
 ): Promise<__HttpResponse> => {
   const context: __SerdeContext = {
     ...ctx,
@@ -3749,7 +3749,7 @@ export const serializeConstantQueryStringResponse = async (
 
 export const serializeDatetimeOffsetsResponse = async (
   input: DatetimeOffsetsServerOutput,
-  ctx: ServerSerdeContext
+  ctx: ServerSerdeContext,
 ): Promise<__HttpResponse> => {
   const context: __SerdeContext = {
     ...ctx,
@@ -3768,7 +3768,7 @@ export const serializeDatetimeOffsetsResponse = async (
   body = JSON.stringify(
     take(input, {
       datetime: (_) => __serializeDateTime(_),
-    })
+    }),
   );
   if (
     body &&
@@ -3790,7 +3790,7 @@ export const serializeDatetimeOffsetsResponse = async (
 
 export const serializeDocumentTypeResponse = async (
   input: DocumentTypeServerOutput,
-  ctx: ServerSerdeContext
+  ctx: ServerSerdeContext,
 ): Promise<__HttpResponse> => {
   const context: __SerdeContext = {
     ...ctx,
@@ -3810,7 +3810,7 @@ export const serializeDocumentTypeResponse = async (
     take(input, {
       documentValue: (_) => se_Document(_, context),
       stringValue: [],
-    })
+    }),
   );
   if (
     body &&
@@ -3832,7 +3832,7 @@ export const serializeDocumentTypeResponse = async (
 
 export const serializeDocumentTypeAsMapValueResponse = async (
   input: DocumentTypeAsMapValueServerOutput,
-  ctx: ServerSerdeContext
+  ctx: ServerSerdeContext,
 ): Promise<__HttpResponse> => {
   const context: __SerdeContext = {
     ...ctx,
@@ -3851,7 +3851,7 @@ export const serializeDocumentTypeAsMapValueResponse = async (
   body = JSON.stringify(
     take(input, {
       docValuedMap: (_) => se_DocumentValuedMap(_, context),
-    })
+    }),
   );
   if (
     body &&
@@ -3873,7 +3873,7 @@ export const serializeDocumentTypeAsMapValueResponse = async (
 
 export const serializeDocumentTypeAsPayloadResponse = async (
   input: DocumentTypeAsPayloadServerOutput,
-  ctx: ServerSerdeContext
+  ctx: ServerSerdeContext,
 ): Promise<__HttpResponse> => {
   const context: __SerdeContext = {
     ...ctx,
@@ -3917,7 +3917,7 @@ export const serializeDocumentTypeAsPayloadResponse = async (
 
 export const serializeEmptyInputAndEmptyOutputResponse = async (
   input: EmptyInputAndEmptyOutputServerOutput,
-  ctx: ServerSerdeContext
+  ctx: ServerSerdeContext,
 ): Promise<__HttpResponse> => {
   const context: __SerdeContext = {
     ...ctx,
@@ -3954,7 +3954,7 @@ export const serializeEmptyInputAndEmptyOutputResponse = async (
 
 export const serializeEndpointOperationResponse = async (
   input: EndpointOperationServerOutput,
-  ctx: ServerSerdeContext
+  ctx: ServerSerdeContext,
 ): Promise<__HttpResponse> => {
   const context: __SerdeContext = {
     ...ctx,
@@ -3988,7 +3988,7 @@ export const serializeEndpointOperationResponse = async (
 
 export const serializeEndpointWithHostLabelOperationResponse = async (
   input: EndpointWithHostLabelOperationServerOutput,
-  ctx: ServerSerdeContext
+  ctx: ServerSerdeContext,
 ): Promise<__HttpResponse> => {
   const context: __SerdeContext = {
     ...ctx,
@@ -4022,7 +4022,7 @@ export const serializeEndpointWithHostLabelOperationResponse = async (
 
 export const serializeFractionalSecondsResponse = async (
   input: FractionalSecondsServerOutput,
-  ctx: ServerSerdeContext
+  ctx: ServerSerdeContext,
 ): Promise<__HttpResponse> => {
   const context: __SerdeContext = {
     ...ctx,
@@ -4041,7 +4041,7 @@ export const serializeFractionalSecondsResponse = async (
   body = JSON.stringify(
     take(input, {
       datetime: (_) => __serializeDateTime(_),
-    })
+    }),
   );
   if (
     body &&
@@ -4063,7 +4063,7 @@ export const serializeFractionalSecondsResponse = async (
 
 export const serializeGreetingWithErrorsResponse = async (
   input: GreetingWithErrorsServerOutput,
-  ctx: ServerSerdeContext
+  ctx: ServerSerdeContext,
 ): Promise<__HttpResponse> => {
   const context: __SerdeContext = {
     ...ctx,
@@ -4101,7 +4101,7 @@ export const serializeGreetingWithErrorsResponse = async (
 
 export const serializeHostWithPathOperationResponse = async (
   input: HostWithPathOperationServerOutput,
-  ctx: ServerSerdeContext
+  ctx: ServerSerdeContext,
 ): Promise<__HttpResponse> => {
   const context: __SerdeContext = {
     ...ctx,
@@ -4135,7 +4135,7 @@ export const serializeHostWithPathOperationResponse = async (
 
 export const serializeHttpChecksumRequiredResponse = async (
   input: HttpChecksumRequiredServerOutput,
-  ctx: ServerSerdeContext
+  ctx: ServerSerdeContext,
 ): Promise<__HttpResponse> => {
   const context: __SerdeContext = {
     ...ctx,
@@ -4154,7 +4154,7 @@ export const serializeHttpChecksumRequiredResponse = async (
   body = JSON.stringify(
     take(input, {
       foo: [],
-    })
+    }),
   );
   if (
     body &&
@@ -4176,7 +4176,7 @@ export const serializeHttpChecksumRequiredResponse = async (
 
 export const serializeHttpEnumPayloadResponse = async (
   input: HttpEnumPayloadServerOutput,
-  ctx: ServerSerdeContext
+  ctx: ServerSerdeContext,
 ): Promise<__HttpResponse> => {
   const context: __SerdeContext = {
     ...ctx,
@@ -4215,7 +4215,7 @@ export const serializeHttpEnumPayloadResponse = async (
 
 export const serializeHttpPayloadTraitsResponse = async (
   input: HttpPayloadTraitsServerOutput,
-  ctx: ServerSerdeContext
+  ctx: ServerSerdeContext,
 ): Promise<__HttpResponse> => {
   const context: __SerdeContext = {
     ...ctx,
@@ -4255,7 +4255,7 @@ export const serializeHttpPayloadTraitsResponse = async (
 
 export const serializeHttpPayloadTraitsWithMediaTypeResponse = async (
   input: HttpPayloadTraitsWithMediaTypeServerOutput,
-  ctx: ServerSerdeContext
+  ctx: ServerSerdeContext,
 ): Promise<__HttpResponse> => {
   const context: __SerdeContext = {
     ...ctx,
@@ -4295,7 +4295,7 @@ export const serializeHttpPayloadTraitsWithMediaTypeResponse = async (
 
 export const serializeHttpPayloadWithStructureResponse = async (
   input: HttpPayloadWithStructureServerOutput,
-  ctx: ServerSerdeContext
+  ctx: ServerSerdeContext,
 ): Promise<__HttpResponse> => {
   const context: __SerdeContext = {
     ...ctx,
@@ -4338,7 +4338,7 @@ export const serializeHttpPayloadWithStructureResponse = async (
 
 export const serializeHttpPayloadWithUnionResponse = async (
   input: HttpPayloadWithUnionServerOutput,
-  ctx: ServerSerdeContext
+  ctx: ServerSerdeContext,
 ): Promise<__HttpResponse> => {
   const context: __SerdeContext = {
     ...ctx,
@@ -4381,7 +4381,7 @@ export const serializeHttpPayloadWithUnionResponse = async (
 
 export const serializeHttpPrefixHeadersResponse = async (
   input: HttpPrefixHeadersServerOutput,
-  ctx: ServerSerdeContext
+  ctx: ServerSerdeContext,
 ): Promise<__HttpResponse> => {
   const context: __SerdeContext = {
     ...ctx,
@@ -4424,7 +4424,7 @@ export const serializeHttpPrefixHeadersResponse = async (
 
 export const serializeHttpPrefixHeadersInResponseResponse = async (
   input: HttpPrefixHeadersInResponseServerOutput,
-  ctx: ServerSerdeContext
+  ctx: ServerSerdeContext,
 ): Promise<__HttpResponse> => {
   const context: __SerdeContext = {
     ...ctx,
@@ -4466,7 +4466,7 @@ export const serializeHttpPrefixHeadersInResponseResponse = async (
 
 export const serializeHttpRequestWithFloatLabelsResponse = async (
   input: HttpRequestWithFloatLabelsServerOutput,
-  ctx: ServerSerdeContext
+  ctx: ServerSerdeContext,
 ): Promise<__HttpResponse> => {
   const context: __SerdeContext = {
     ...ctx,
@@ -4500,7 +4500,7 @@ export const serializeHttpRequestWithFloatLabelsResponse = async (
 
 export const serializeHttpRequestWithGreedyLabelInPathResponse = async (
   input: HttpRequestWithGreedyLabelInPathServerOutput,
-  ctx: ServerSerdeContext
+  ctx: ServerSerdeContext,
 ): Promise<__HttpResponse> => {
   const context: __SerdeContext = {
     ...ctx,
@@ -4534,7 +4534,7 @@ export const serializeHttpRequestWithGreedyLabelInPathResponse = async (
 
 export const serializeHttpRequestWithLabelsResponse = async (
   input: HttpRequestWithLabelsServerOutput,
-  ctx: ServerSerdeContext
+  ctx: ServerSerdeContext,
 ): Promise<__HttpResponse> => {
   const context: __SerdeContext = {
     ...ctx,
@@ -4568,7 +4568,7 @@ export const serializeHttpRequestWithLabelsResponse = async (
 
 export const serializeHttpRequestWithLabelsAndTimestampFormatResponse = async (
   input: HttpRequestWithLabelsAndTimestampFormatServerOutput,
-  ctx: ServerSerdeContext
+  ctx: ServerSerdeContext,
 ): Promise<__HttpResponse> => {
   const context: __SerdeContext = {
     ...ctx,
@@ -4602,7 +4602,7 @@ export const serializeHttpRequestWithLabelsAndTimestampFormatResponse = async (
 
 export const serializeHttpRequestWithRegexLiteralResponse = async (
   input: HttpRequestWithRegexLiteralServerOutput,
-  ctx: ServerSerdeContext
+  ctx: ServerSerdeContext,
 ): Promise<__HttpResponse> => {
   const context: __SerdeContext = {
     ...ctx,
@@ -4636,7 +4636,7 @@ export const serializeHttpRequestWithRegexLiteralResponse = async (
 
 export const serializeHttpResponseCodeResponse = async (
   input: HttpResponseCodeServerOutput,
-  ctx: ServerSerdeContext
+  ctx: ServerSerdeContext,
 ): Promise<__HttpResponse> => {
   const context: __SerdeContext = {
     ...ctx,
@@ -4676,7 +4676,7 @@ export const serializeHttpResponseCodeResponse = async (
 
 export const serializeHttpStringPayloadResponse = async (
   input: HttpStringPayloadServerOutput,
-  ctx: ServerSerdeContext
+  ctx: ServerSerdeContext,
 ): Promise<__HttpResponse> => {
   const context: __SerdeContext = {
     ...ctx,
@@ -4715,7 +4715,7 @@ export const serializeHttpStringPayloadResponse = async (
 
 export const serializeIgnoreQueryParamsInResponseResponse = async (
   input: IgnoreQueryParamsInResponseServerOutput,
-  ctx: ServerSerdeContext
+  ctx: ServerSerdeContext,
 ): Promise<__HttpResponse> => {
   const context: __SerdeContext = {
     ...ctx,
@@ -4734,7 +4734,7 @@ export const serializeIgnoreQueryParamsInResponseResponse = async (
   body = JSON.stringify(
     take(input, {
       baz: [],
-    })
+    }),
   );
   if (
     body &&
@@ -4756,7 +4756,7 @@ export const serializeIgnoreQueryParamsInResponseResponse = async (
 
 export const serializeInputAndOutputWithHeadersResponse = async (
   input: InputAndOutputWithHeadersServerOutput,
-  ctx: ServerSerdeContext
+  ctx: ServerSerdeContext,
 ): Promise<__HttpResponse> => {
   const context: __SerdeContext = {
     ...ctx,
@@ -4838,7 +4838,7 @@ export const serializeInputAndOutputWithHeadersResponse = async (
 
 export const serializeJsonBlobsResponse = async (
   input: JsonBlobsServerOutput,
-  ctx: ServerSerdeContext
+  ctx: ServerSerdeContext,
 ): Promise<__HttpResponse> => {
   const context: __SerdeContext = {
     ...ctx,
@@ -4857,7 +4857,7 @@ export const serializeJsonBlobsResponse = async (
   body = JSON.stringify(
     take(input, {
       data: (_) => context.base64Encoder(_),
-    })
+    }),
   );
   if (
     body &&
@@ -4879,7 +4879,7 @@ export const serializeJsonBlobsResponse = async (
 
 export const serializeJsonEnumsResponse = async (
   input: JsonEnumsServerOutput,
-  ctx: ServerSerdeContext
+  ctx: ServerSerdeContext,
 ): Promise<__HttpResponse> => {
   const context: __SerdeContext = {
     ...ctx,
@@ -4903,7 +4903,7 @@ export const serializeJsonEnumsResponse = async (
       fooEnumList: (_) => se_FooEnumList(_, context),
       fooEnumMap: (_) => se_FooEnumMap(_, context),
       fooEnumSet: (_) => se_FooEnumSet(_, context),
-    })
+    }),
   );
   if (
     body &&
@@ -4925,7 +4925,7 @@ export const serializeJsonEnumsResponse = async (
 
 export const serializeJsonIntEnumsResponse = async (
   input: JsonIntEnumsServerOutput,
-  ctx: ServerSerdeContext
+  ctx: ServerSerdeContext,
 ): Promise<__HttpResponse> => {
   const context: __SerdeContext = {
     ...ctx,
@@ -4949,7 +4949,7 @@ export const serializeJsonIntEnumsResponse = async (
       integerEnumList: (_) => se_IntegerEnumList(_, context),
       integerEnumMap: (_) => se_IntegerEnumMap(_, context),
       integerEnumSet: (_) => se_IntegerEnumSet(_, context),
-    })
+    }),
   );
   if (
     body &&
@@ -4971,7 +4971,7 @@ export const serializeJsonIntEnumsResponse = async (
 
 export const serializeJsonListsResponse = async (
   input: JsonListsServerOutput,
-  ctx: ServerSerdeContext
+  ctx: ServerSerdeContext,
 ): Promise<__HttpResponse> => {
   const context: __SerdeContext = {
     ...ctx,
@@ -4998,7 +4998,7 @@ export const serializeJsonListsResponse = async (
       stringSet: (_) => se_StringSet(_, context),
       myStructureList: [, (_) => se_StructureList(_, context), `structureList`],
       timestampList: (_) => se_TimestampList(_, context),
-    })
+    }),
   );
   if (
     body &&
@@ -5020,7 +5020,7 @@ export const serializeJsonListsResponse = async (
 
 export const serializeJsonMapsResponse = async (
   input: JsonMapsServerOutput,
-  ctx: ServerSerdeContext
+  ctx: ServerSerdeContext,
 ): Promise<__HttpResponse> => {
   const context: __SerdeContext = {
     ...ctx,
@@ -5043,7 +5043,7 @@ export const serializeJsonMapsResponse = async (
       denseSetMap: (_) => se_DenseSetMap(_, context),
       denseStringMap: (_) => se_DenseStringMap(_, context),
       denseStructMap: (_) => se_DenseStructMap(_, context),
-    })
+    }),
   );
   if (
     body &&
@@ -5065,7 +5065,7 @@ export const serializeJsonMapsResponse = async (
 
 export const serializeJsonTimestampsResponse = async (
   input: JsonTimestampsServerOutput,
-  ctx: ServerSerdeContext
+  ctx: ServerSerdeContext,
 ): Promise<__HttpResponse> => {
   const context: __SerdeContext = {
     ...ctx,
@@ -5090,7 +5090,7 @@ export const serializeJsonTimestampsResponse = async (
       httpDate: (_) => __dateToUtcString(_),
       httpDateOnTarget: (_) => __dateToUtcString(_),
       normal: (_) => _.getTime() / 1_000,
-    })
+    }),
   );
   if (
     body &&
@@ -5112,7 +5112,7 @@ export const serializeJsonTimestampsResponse = async (
 
 export const serializeJsonUnionsResponse = async (
   input: JsonUnionsServerOutput,
-  ctx: ServerSerdeContext
+  ctx: ServerSerdeContext,
 ): Promise<__HttpResponse> => {
   const context: __SerdeContext = {
     ...ctx,
@@ -5131,7 +5131,7 @@ export const serializeJsonUnionsResponse = async (
   body = JSON.stringify(
     take(input, {
       contents: (_) => se_MyUnion(_, context),
-    })
+    }),
   );
   if (
     body &&
@@ -5153,7 +5153,7 @@ export const serializeJsonUnionsResponse = async (
 
 export const serializeMalformedAcceptWithBodyResponse = async (
   input: MalformedAcceptWithBodyServerOutput,
-  ctx: ServerSerdeContext
+  ctx: ServerSerdeContext,
 ): Promise<__HttpResponse> => {
   const context: __SerdeContext = {
     ...ctx,
@@ -5172,7 +5172,7 @@ export const serializeMalformedAcceptWithBodyResponse = async (
   body = JSON.stringify(
     take(input, {
       hi: [],
-    })
+    }),
   );
   if (
     body &&
@@ -5194,7 +5194,7 @@ export const serializeMalformedAcceptWithBodyResponse = async (
 
 export const serializeMalformedAcceptWithGenericStringResponse = async (
   input: MalformedAcceptWithGenericStringServerOutput,
-  ctx: ServerSerdeContext
+  ctx: ServerSerdeContext,
 ): Promise<__HttpResponse> => {
   const context: __SerdeContext = {
     ...ctx,
@@ -5233,7 +5233,7 @@ export const serializeMalformedAcceptWithGenericStringResponse = async (
 
 export const serializeMalformedAcceptWithPayloadResponse = async (
   input: MalformedAcceptWithPayloadServerOutput,
-  ctx: ServerSerdeContext
+  ctx: ServerSerdeContext,
 ): Promise<__HttpResponse> => {
   const context: __SerdeContext = {
     ...ctx,
@@ -5272,7 +5272,7 @@ export const serializeMalformedAcceptWithPayloadResponse = async (
 
 export const serializeMalformedBlobResponse = async (
   input: MalformedBlobServerOutput,
-  ctx: ServerSerdeContext
+  ctx: ServerSerdeContext,
 ): Promise<__HttpResponse> => {
   const context: __SerdeContext = {
     ...ctx,
@@ -5306,7 +5306,7 @@ export const serializeMalformedBlobResponse = async (
 
 export const serializeMalformedBooleanResponse = async (
   input: MalformedBooleanServerOutput,
-  ctx: ServerSerdeContext
+  ctx: ServerSerdeContext,
 ): Promise<__HttpResponse> => {
   const context: __SerdeContext = {
     ...ctx,
@@ -5340,7 +5340,7 @@ export const serializeMalformedBooleanResponse = async (
 
 export const serializeMalformedByteResponse = async (
   input: MalformedByteServerOutput,
-  ctx: ServerSerdeContext
+  ctx: ServerSerdeContext,
 ): Promise<__HttpResponse> => {
   const context: __SerdeContext = {
     ...ctx,
@@ -5374,7 +5374,7 @@ export const serializeMalformedByteResponse = async (
 
 export const serializeMalformedContentTypeWithBodyResponse = async (
   input: MalformedContentTypeWithBodyServerOutput,
-  ctx: ServerSerdeContext
+  ctx: ServerSerdeContext,
 ): Promise<__HttpResponse> => {
   const context: __SerdeContext = {
     ...ctx,
@@ -5408,7 +5408,7 @@ export const serializeMalformedContentTypeWithBodyResponse = async (
 
 export const serializeMalformedContentTypeWithGenericStringResponse = async (
   input: MalformedContentTypeWithGenericStringServerOutput,
-  ctx: ServerSerdeContext
+  ctx: ServerSerdeContext,
 ): Promise<__HttpResponse> => {
   const context: __SerdeContext = {
     ...ctx,
@@ -5442,7 +5442,7 @@ export const serializeMalformedContentTypeWithGenericStringResponse = async (
 
 export const serializeMalformedContentTypeWithoutBodyResponse = async (
   input: MalformedContentTypeWithoutBodyServerOutput,
-  ctx: ServerSerdeContext
+  ctx: ServerSerdeContext,
 ): Promise<__HttpResponse> => {
   const context: __SerdeContext = {
     ...ctx,
@@ -5476,7 +5476,7 @@ export const serializeMalformedContentTypeWithoutBodyResponse = async (
 
 export const serializeMalformedContentTypeWithPayloadResponse = async (
   input: MalformedContentTypeWithPayloadServerOutput,
-  ctx: ServerSerdeContext
+  ctx: ServerSerdeContext,
 ): Promise<__HttpResponse> => {
   const context: __SerdeContext = {
     ...ctx,
@@ -5510,7 +5510,7 @@ export const serializeMalformedContentTypeWithPayloadResponse = async (
 
 export const serializeMalformedDoubleResponse = async (
   input: MalformedDoubleServerOutput,
-  ctx: ServerSerdeContext
+  ctx: ServerSerdeContext,
 ): Promise<__HttpResponse> => {
   const context: __SerdeContext = {
     ...ctx,
@@ -5544,7 +5544,7 @@ export const serializeMalformedDoubleResponse = async (
 
 export const serializeMalformedFloatResponse = async (
   input: MalformedFloatServerOutput,
-  ctx: ServerSerdeContext
+  ctx: ServerSerdeContext,
 ): Promise<__HttpResponse> => {
   const context: __SerdeContext = {
     ...ctx,
@@ -5578,7 +5578,7 @@ export const serializeMalformedFloatResponse = async (
 
 export const serializeMalformedIntegerResponse = async (
   input: MalformedIntegerServerOutput,
-  ctx: ServerSerdeContext
+  ctx: ServerSerdeContext,
 ): Promise<__HttpResponse> => {
   const context: __SerdeContext = {
     ...ctx,
@@ -5612,7 +5612,7 @@ export const serializeMalformedIntegerResponse = async (
 
 export const serializeMalformedListResponse = async (
   input: MalformedListServerOutput,
-  ctx: ServerSerdeContext
+  ctx: ServerSerdeContext,
 ): Promise<__HttpResponse> => {
   const context: __SerdeContext = {
     ...ctx,
@@ -5646,7 +5646,7 @@ export const serializeMalformedListResponse = async (
 
 export const serializeMalformedLongResponse = async (
   input: MalformedLongServerOutput,
-  ctx: ServerSerdeContext
+  ctx: ServerSerdeContext,
 ): Promise<__HttpResponse> => {
   const context: __SerdeContext = {
     ...ctx,
@@ -5680,7 +5680,7 @@ export const serializeMalformedLongResponse = async (
 
 export const serializeMalformedMapResponse = async (
   input: MalformedMapServerOutput,
-  ctx: ServerSerdeContext
+  ctx: ServerSerdeContext,
 ): Promise<__HttpResponse> => {
   const context: __SerdeContext = {
     ...ctx,
@@ -5714,7 +5714,7 @@ export const serializeMalformedMapResponse = async (
 
 export const serializeMalformedRequestBodyResponse = async (
   input: MalformedRequestBodyServerOutput,
-  ctx: ServerSerdeContext
+  ctx: ServerSerdeContext,
 ): Promise<__HttpResponse> => {
   const context: __SerdeContext = {
     ...ctx,
@@ -5748,7 +5748,7 @@ export const serializeMalformedRequestBodyResponse = async (
 
 export const serializeMalformedShortResponse = async (
   input: MalformedShortServerOutput,
-  ctx: ServerSerdeContext
+  ctx: ServerSerdeContext,
 ): Promise<__HttpResponse> => {
   const context: __SerdeContext = {
     ...ctx,
@@ -5782,7 +5782,7 @@ export const serializeMalformedShortResponse = async (
 
 export const serializeMalformedStringResponse = async (
   input: MalformedStringServerOutput,
-  ctx: ServerSerdeContext
+  ctx: ServerSerdeContext,
 ): Promise<__HttpResponse> => {
   const context: __SerdeContext = {
     ...ctx,
@@ -5816,7 +5816,7 @@ export const serializeMalformedStringResponse = async (
 
 export const serializeMalformedTimestampBodyDateTimeResponse = async (
   input: MalformedTimestampBodyDateTimeServerOutput,
-  ctx: ServerSerdeContext
+  ctx: ServerSerdeContext,
 ): Promise<__HttpResponse> => {
   const context: __SerdeContext = {
     ...ctx,
@@ -5850,7 +5850,7 @@ export const serializeMalformedTimestampBodyDateTimeResponse = async (
 
 export const serializeMalformedTimestampBodyDefaultResponse = async (
   input: MalformedTimestampBodyDefaultServerOutput,
-  ctx: ServerSerdeContext
+  ctx: ServerSerdeContext,
 ): Promise<__HttpResponse> => {
   const context: __SerdeContext = {
     ...ctx,
@@ -5884,7 +5884,7 @@ export const serializeMalformedTimestampBodyDefaultResponse = async (
 
 export const serializeMalformedTimestampBodyHttpDateResponse = async (
   input: MalformedTimestampBodyHttpDateServerOutput,
-  ctx: ServerSerdeContext
+  ctx: ServerSerdeContext,
 ): Promise<__HttpResponse> => {
   const context: __SerdeContext = {
     ...ctx,
@@ -5918,7 +5918,7 @@ export const serializeMalformedTimestampBodyHttpDateResponse = async (
 
 export const serializeMalformedTimestampHeaderDateTimeResponse = async (
   input: MalformedTimestampHeaderDateTimeServerOutput,
-  ctx: ServerSerdeContext
+  ctx: ServerSerdeContext,
 ): Promise<__HttpResponse> => {
   const context: __SerdeContext = {
     ...ctx,
@@ -5952,7 +5952,7 @@ export const serializeMalformedTimestampHeaderDateTimeResponse = async (
 
 export const serializeMalformedTimestampHeaderDefaultResponse = async (
   input: MalformedTimestampHeaderDefaultServerOutput,
-  ctx: ServerSerdeContext
+  ctx: ServerSerdeContext,
 ): Promise<__HttpResponse> => {
   const context: __SerdeContext = {
     ...ctx,
@@ -5986,7 +5986,7 @@ export const serializeMalformedTimestampHeaderDefaultResponse = async (
 
 export const serializeMalformedTimestampHeaderEpochResponse = async (
   input: MalformedTimestampHeaderEpochServerOutput,
-  ctx: ServerSerdeContext
+  ctx: ServerSerdeContext,
 ): Promise<__HttpResponse> => {
   const context: __SerdeContext = {
     ...ctx,
@@ -6020,7 +6020,7 @@ export const serializeMalformedTimestampHeaderEpochResponse = async (
 
 export const serializeMalformedTimestampPathDefaultResponse = async (
   input: MalformedTimestampPathDefaultServerOutput,
-  ctx: ServerSerdeContext
+  ctx: ServerSerdeContext,
 ): Promise<__HttpResponse> => {
   const context: __SerdeContext = {
     ...ctx,
@@ -6054,7 +6054,7 @@ export const serializeMalformedTimestampPathDefaultResponse = async (
 
 export const serializeMalformedTimestampPathEpochResponse = async (
   input: MalformedTimestampPathEpochServerOutput,
-  ctx: ServerSerdeContext
+  ctx: ServerSerdeContext,
 ): Promise<__HttpResponse> => {
   const context: __SerdeContext = {
     ...ctx,
@@ -6088,7 +6088,7 @@ export const serializeMalformedTimestampPathEpochResponse = async (
 
 export const serializeMalformedTimestampPathHttpDateResponse = async (
   input: MalformedTimestampPathHttpDateServerOutput,
-  ctx: ServerSerdeContext
+  ctx: ServerSerdeContext,
 ): Promise<__HttpResponse> => {
   const context: __SerdeContext = {
     ...ctx,
@@ -6122,7 +6122,7 @@ export const serializeMalformedTimestampPathHttpDateResponse = async (
 
 export const serializeMalformedTimestampQueryDefaultResponse = async (
   input: MalformedTimestampQueryDefaultServerOutput,
-  ctx: ServerSerdeContext
+  ctx: ServerSerdeContext,
 ): Promise<__HttpResponse> => {
   const context: __SerdeContext = {
     ...ctx,
@@ -6156,7 +6156,7 @@ export const serializeMalformedTimestampQueryDefaultResponse = async (
 
 export const serializeMalformedTimestampQueryEpochResponse = async (
   input: MalformedTimestampQueryEpochServerOutput,
-  ctx: ServerSerdeContext
+  ctx: ServerSerdeContext,
 ): Promise<__HttpResponse> => {
   const context: __SerdeContext = {
     ...ctx,
@@ -6190,7 +6190,7 @@ export const serializeMalformedTimestampQueryEpochResponse = async (
 
 export const serializeMalformedTimestampQueryHttpDateResponse = async (
   input: MalformedTimestampQueryHttpDateServerOutput,
-  ctx: ServerSerdeContext
+  ctx: ServerSerdeContext,
 ): Promise<__HttpResponse> => {
   const context: __SerdeContext = {
     ...ctx,
@@ -6224,7 +6224,7 @@ export const serializeMalformedTimestampQueryHttpDateResponse = async (
 
 export const serializeMalformedUnionResponse = async (
   input: MalformedUnionServerOutput,
-  ctx: ServerSerdeContext
+  ctx: ServerSerdeContext,
 ): Promise<__HttpResponse> => {
   const context: __SerdeContext = {
     ...ctx,
@@ -6258,7 +6258,7 @@ export const serializeMalformedUnionResponse = async (
 
 export const serializeMediaTypeHeaderResponse = async (
   input: MediaTypeHeaderServerOutput,
-  ctx: ServerSerdeContext
+  ctx: ServerSerdeContext,
 ): Promise<__HttpResponse> => {
   const context: __SerdeContext = {
     ...ctx,
@@ -6299,7 +6299,7 @@ export const serializeMediaTypeHeaderResponse = async (
 
 export const serializeNoInputAndNoOutputResponse = async (
   input: NoInputAndNoOutputServerOutput,
-  ctx: ServerSerdeContext
+  ctx: ServerSerdeContext,
 ): Promise<__HttpResponse> => {
   const context: __SerdeContext = {
     ...ctx,
@@ -6333,7 +6333,7 @@ export const serializeNoInputAndNoOutputResponse = async (
 
 export const serializeNoInputAndOutputResponse = async (
   input: NoInputAndOutputServerOutput,
-  ctx: ServerSerdeContext
+  ctx: ServerSerdeContext,
 ): Promise<__HttpResponse> => {
   const context: __SerdeContext = {
     ...ctx,
@@ -6370,7 +6370,7 @@ export const serializeNoInputAndOutputResponse = async (
 
 export const serializeNullAndEmptyHeadersClientResponse = async (
   input: NullAndEmptyHeadersClientServerOutput,
-  ctx: ServerSerdeContext
+  ctx: ServerSerdeContext,
 ): Promise<__HttpResponse> => {
   const context: __SerdeContext = {
     ...ctx,
@@ -6413,7 +6413,7 @@ export const serializeNullAndEmptyHeadersClientResponse = async (
 
 export const serializeNullAndEmptyHeadersServerResponse = async (
   input: NullAndEmptyHeadersServerServerOutput,
-  ctx: ServerSerdeContext
+  ctx: ServerSerdeContext,
 ): Promise<__HttpResponse> => {
   const context: __SerdeContext = {
     ...ctx,
@@ -6456,7 +6456,7 @@ export const serializeNullAndEmptyHeadersServerResponse = async (
 
 export const serializeOmitsNullSerializesEmptyStringResponse = async (
   input: OmitsNullSerializesEmptyStringServerOutput,
-  ctx: ServerSerdeContext
+  ctx: ServerSerdeContext,
 ): Promise<__HttpResponse> => {
   const context: __SerdeContext = {
     ...ctx,
@@ -6490,7 +6490,7 @@ export const serializeOmitsNullSerializesEmptyStringResponse = async (
 
 export const serializeOmitsSerializingEmptyListsResponse = async (
   input: OmitsSerializingEmptyListsServerOutput,
-  ctx: ServerSerdeContext
+  ctx: ServerSerdeContext,
 ): Promise<__HttpResponse> => {
   const context: __SerdeContext = {
     ...ctx,
@@ -6524,7 +6524,7 @@ export const serializeOmitsSerializingEmptyListsResponse = async (
 
 export const serializePostPlayerActionResponse = async (
   input: PostPlayerActionServerOutput,
-  ctx: ServerSerdeContext
+  ctx: ServerSerdeContext,
 ): Promise<__HttpResponse> => {
   const context: __SerdeContext = {
     ...ctx,
@@ -6543,7 +6543,7 @@ export const serializePostPlayerActionResponse = async (
   body = JSON.stringify(
     take(input, {
       action: (_) => se_PlayerAction(_, context),
-    })
+    }),
   );
   if (
     body &&
@@ -6565,7 +6565,7 @@ export const serializePostPlayerActionResponse = async (
 
 export const serializePostUnionWithJsonNameResponse = async (
   input: PostUnionWithJsonNameServerOutput,
-  ctx: ServerSerdeContext
+  ctx: ServerSerdeContext,
 ): Promise<__HttpResponse> => {
   const context: __SerdeContext = {
     ...ctx,
@@ -6584,7 +6584,7 @@ export const serializePostUnionWithJsonNameResponse = async (
   body = JSON.stringify(
     take(input, {
       value: (_) => se_UnionWithJsonName(_, context),
-    })
+    }),
   );
   if (
     body &&
@@ -6606,7 +6606,7 @@ export const serializePostUnionWithJsonNameResponse = async (
 
 export const serializePutWithContentEncodingResponse = async (
   input: PutWithContentEncodingServerOutput,
-  ctx: ServerSerdeContext
+  ctx: ServerSerdeContext,
 ): Promise<__HttpResponse> => {
   const context: __SerdeContext = {
     ...ctx,
@@ -6640,7 +6640,7 @@ export const serializePutWithContentEncodingResponse = async (
 
 export const serializeQueryIdempotencyTokenAutoFillResponse = async (
   input: QueryIdempotencyTokenAutoFillServerOutput,
-  ctx: ServerSerdeContext
+  ctx: ServerSerdeContext,
 ): Promise<__HttpResponse> => {
   const context: __SerdeContext = {
     ...ctx,
@@ -6674,7 +6674,7 @@ export const serializeQueryIdempotencyTokenAutoFillResponse = async (
 
 export const serializeQueryParamsAsStringListMapResponse = async (
   input: QueryParamsAsStringListMapServerOutput,
-  ctx: ServerSerdeContext
+  ctx: ServerSerdeContext,
 ): Promise<__HttpResponse> => {
   const context: __SerdeContext = {
     ...ctx,
@@ -6708,7 +6708,7 @@ export const serializeQueryParamsAsStringListMapResponse = async (
 
 export const serializeQueryPrecedenceResponse = async (
   input: QueryPrecedenceServerOutput,
-  ctx: ServerSerdeContext
+  ctx: ServerSerdeContext,
 ): Promise<__HttpResponse> => {
   const context: __SerdeContext = {
     ...ctx,
@@ -6742,7 +6742,7 @@ export const serializeQueryPrecedenceResponse = async (
 
 export const serializeRecursiveShapesResponse = async (
   input: RecursiveShapesServerOutput,
-  ctx: ServerSerdeContext
+  ctx: ServerSerdeContext,
 ): Promise<__HttpResponse> => {
   const context: __SerdeContext = {
     ...ctx,
@@ -6761,7 +6761,7 @@ export const serializeRecursiveShapesResponse = async (
   body = JSON.stringify(
     take(input, {
       nested: (_) => se_RecursiveShapesInputOutputNested1(_, context),
-    })
+    }),
   );
   if (
     body &&
@@ -6783,7 +6783,7 @@ export const serializeRecursiveShapesResponse = async (
 
 export const serializeSimpleScalarPropertiesResponse = async (
   input: SimpleScalarPropertiesServerOutput,
-  ctx: ServerSerdeContext
+  ctx: ServerSerdeContext,
 ): Promise<__HttpResponse> => {
   const context: __SerdeContext = {
     ...ctx,
@@ -6811,7 +6811,7 @@ export const serializeSimpleScalarPropertiesResponse = async (
       shortValue: [],
       stringValue: [],
       trueBooleanValue: [],
-    })
+    }),
   );
   if (
     body &&
@@ -6833,7 +6833,7 @@ export const serializeSimpleScalarPropertiesResponse = async (
 
 export const serializeSparseJsonListsResponse = async (
   input: SparseJsonListsServerOutput,
-  ctx: ServerSerdeContext
+  ctx: ServerSerdeContext,
 ): Promise<__HttpResponse> => {
   const context: __SerdeContext = {
     ...ctx,
@@ -6852,7 +6852,7 @@ export const serializeSparseJsonListsResponse = async (
   body = JSON.stringify(
     take(input, {
       sparseStringList: (_) => se_SparseStringList(_, context),
-    })
+    }),
   );
   if (
     body &&
@@ -6874,7 +6874,7 @@ export const serializeSparseJsonListsResponse = async (
 
 export const serializeSparseJsonMapsResponse = async (
   input: SparseJsonMapsServerOutput,
-  ctx: ServerSerdeContext
+  ctx: ServerSerdeContext,
 ): Promise<__HttpResponse> => {
   const context: __SerdeContext = {
     ...ctx,
@@ -6897,7 +6897,7 @@ export const serializeSparseJsonMapsResponse = async (
       sparseSetMap: (_) => se_SparseSetMap(_, context),
       sparseStringMap: (_) => se_SparseStringMap(_, context),
       sparseStructMap: (_) => se_SparseStructMap(_, context),
-    })
+    }),
   );
   if (
     body &&
@@ -6919,7 +6919,7 @@ export const serializeSparseJsonMapsResponse = async (
 
 export const serializeStreamingTraitsResponse = async (
   input: StreamingTraitsServerOutput,
-  ctx: ServerSerdeContext
+  ctx: ServerSerdeContext,
 ): Promise<__HttpResponse> => {
   const context: __SerdeContext = {
     ...ctx,
@@ -6959,7 +6959,7 @@ export const serializeStreamingTraitsResponse = async (
 
 export const serializeStreamingTraitsRequireLengthResponse = async (
   input: StreamingTraitsRequireLengthServerOutput,
-  ctx: ServerSerdeContext
+  ctx: ServerSerdeContext,
 ): Promise<__HttpResponse> => {
   const context: __SerdeContext = {
     ...ctx,
@@ -6993,7 +6993,7 @@ export const serializeStreamingTraitsRequireLengthResponse = async (
 
 export const serializeStreamingTraitsWithMediaTypeResponse = async (
   input: StreamingTraitsWithMediaTypeServerOutput,
-  ctx: ServerSerdeContext
+  ctx: ServerSerdeContext,
 ): Promise<__HttpResponse> => {
   const context: __SerdeContext = {
     ...ctx,
@@ -7033,7 +7033,7 @@ export const serializeStreamingTraitsWithMediaTypeResponse = async (
 
 export const serializeTestBodyStructureResponse = async (
   input: TestBodyStructureServerOutput,
-  ctx: ServerSerdeContext
+  ctx: ServerSerdeContext,
 ): Promise<__HttpResponse> => {
   const context: __SerdeContext = {
     ...ctx,
@@ -7053,7 +7053,7 @@ export const serializeTestBodyStructureResponse = async (
   body = JSON.stringify(
     take(input, {
       testConfig: (_) => se_TestConfig(_, context),
-    })
+    }),
   );
   if (
     body &&
@@ -7075,7 +7075,7 @@ export const serializeTestBodyStructureResponse = async (
 
 export const serializeTestNoPayloadResponse = async (
   input: TestNoPayloadServerOutput,
-  ctx: ServerSerdeContext
+  ctx: ServerSerdeContext,
 ): Promise<__HttpResponse> => {
   const context: __SerdeContext = {
     ...ctx,
@@ -7113,7 +7113,7 @@ export const serializeTestNoPayloadResponse = async (
 
 export const serializeTestPayloadBlobResponse = async (
   input: TestPayloadBlobServerOutput,
-  ctx: ServerSerdeContext
+  ctx: ServerSerdeContext,
 ): Promise<__HttpResponse> => {
   const context: __SerdeContext = {
     ...ctx,
@@ -7152,7 +7152,7 @@ export const serializeTestPayloadBlobResponse = async (
 
 export const serializeTestPayloadStructureResponse = async (
   input: TestPayloadStructureServerOutput,
-  ctx: ServerSerdeContext
+  ctx: ServerSerdeContext,
 ): Promise<__HttpResponse> => {
   const context: __SerdeContext = {
     ...ctx,
@@ -7196,7 +7196,7 @@ export const serializeTestPayloadStructureResponse = async (
 
 export const serializeTimestampFormatHeadersResponse = async (
   input: TimestampFormatHeadersServerOutput,
-  ctx: ServerSerdeContext
+  ctx: ServerSerdeContext,
 ): Promise<__HttpResponse> => {
   const context: __SerdeContext = {
     ...ctx,
@@ -7240,7 +7240,7 @@ export const serializeTimestampFormatHeadersResponse = async (
 
 export const serializeUnitInputAndOutputResponse = async (
   input: UnitInputAndOutputServerOutput,
-  ctx: ServerSerdeContext
+  ctx: ServerSerdeContext,
 ): Promise<__HttpResponse> => {
   const context: __SerdeContext = {
     ...ctx,
@@ -7274,7 +7274,7 @@ export const serializeUnitInputAndOutputResponse = async (
 
 export const serializeFrameworkException = async (
   input: __SmithyFrameworkException,
-  ctx: ServerSerdeContext
+  ctx: ServerSerdeContext,
 ): Promise<__HttpResponse> => {
   const context: __SerdeContext = {
     ...ctx,
@@ -7361,7 +7361,7 @@ export const serializeFrameworkException = async (
 
 export const serializeComplexErrorError = async (
   input: ComplexError,
-  ctx: ServerSerdeContext
+  ctx: ServerSerdeContext,
 ): Promise<__HttpResponse> => {
   const context: __SerdeContext = {
     ...ctx,
@@ -7383,7 +7383,7 @@ export const serializeComplexErrorError = async (
     take(input, {
       Nested: (_) => se_ComplexNestedErrorData(_, context),
       TopLevel: [],
-    })
+    }),
   );
   return new __HttpResponse({
     headers,
@@ -7418,7 +7418,7 @@ export const serializeFooErrorError = async (input: FooError, ctx: ServerSerdeCo
 
 export const serializeInvalidGreetingError = async (
   input: InvalidGreeting,
-  ctx: ServerSerdeContext
+  ctx: ServerSerdeContext,
 ): Promise<__HttpResponse> => {
   const context: __SerdeContext = {
     ...ctx,
@@ -7438,7 +7438,7 @@ export const serializeInvalidGreetingError = async (
   body = JSON.stringify(
     take(input, {
       Message: [],
-    })
+    }),
   );
   return new __HttpResponse({
     headers,
@@ -7556,7 +7556,7 @@ const se_MyUnion = (input: MyUnion, context: __SerdeContext): any => {
     stringValue: (value) => ({ stringValue: value }),
     structureValue: (value) => ({ structureValue: se_GreetingStruct(value, context) }),
     timestampValue: (value) => ({ timestampValue: value.getTime() / 1_000 }),
-    _: (name, value) => ({ name: value } as any),
+    _: (name, value) => ({ name: value }) as any,
   });
 };
 
@@ -7585,7 +7585,7 @@ const se_PayloadConfig = (input: PayloadConfig, context: __SerdeContext): any =>
 const se_PlayerAction = (input: PlayerAction, context: __SerdeContext): any => {
   return PlayerAction.visit(input, {
     quit: (value) => ({ quit: se_Unit(value, context) }),
-    _: (name, value) => ({ name: value } as any),
+    _: (name, value) => ({ name: value }) as any,
   });
 };
 
@@ -7594,7 +7594,7 @@ const se_PlayerAction = (input: PlayerAction, context: __SerdeContext): any => {
  */
 const se_RecursiveShapesInputOutputNested1 = (
   input: RecursiveShapesInputOutputNested1,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     foo: [],
@@ -7607,7 +7607,7 @@ const se_RecursiveShapesInputOutputNested1 = (
  */
 const se_RecursiveShapesInputOutputNested2 = (
   input: RecursiveShapesInputOutputNested2,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     bar: [],
@@ -7707,7 +7707,7 @@ const se_TestConfig = (input: TestConfig, context: __SerdeContext): any => {
 const se_UnionPayload = (input: UnionPayload, context: __SerdeContext): any => {
   return UnionPayload.visit(input, {
     greeting: (value) => ({ greeting: value }),
-    _: (name, value) => ({ name: value } as any),
+    _: (name, value) => ({ name: value }) as any,
   });
 };
 
@@ -7719,7 +7719,7 @@ const se_UnionWithJsonName = (input: UnionWithJsonName, context: __SerdeContext)
     bar: (value) => ({ bar: value }),
     baz: (value) => ({ _baz: value }),
     foo: (value) => ({ FOO: value }),
-    _: (name, value) => ({ name: value } as any),
+    _: (name, value) => ({ name: value }) as any,
   });
 };
 
@@ -7890,65 +7890,80 @@ const se_Unit = (input: Unit, context: __SerdeContext): any => {
  * deserializeAws_restJson1DenseBooleanMap
  */
 const de_DenseBooleanMap = (output: any, context: __SerdeContext): Record<string, boolean> => {
-  return Object.entries(output).reduce((acc: Record<string, boolean>, [key, value]: [string, any]) => {
-    if (value === null) {
+  return Object.entries(output).reduce(
+    (acc: Record<string, boolean>, [key, value]: [string, any]) => {
+      if (value === null) {
+        return acc;
+      }
+      acc[key as string] = __expectBoolean(value) as any;
       return acc;
-    }
-    acc[key as string] = __expectBoolean(value) as any;
-    return acc;
-  }, {} as Record<string, boolean>);
+    },
+    {} as Record<string, boolean>,
+  );
 };
 
 /**
  * deserializeAws_restJson1DenseNumberMap
  */
 const de_DenseNumberMap = (output: any, context: __SerdeContext): Record<string, number> => {
-  return Object.entries(output).reduce((acc: Record<string, number>, [key, value]: [string, any]) => {
-    if (value === null) {
+  return Object.entries(output).reduce(
+    (acc: Record<string, number>, [key, value]: [string, any]) => {
+      if (value === null) {
+        return acc;
+      }
+      acc[key as string] = __expectInt32(value) as any;
       return acc;
-    }
-    acc[key as string] = __expectInt32(value) as any;
-    return acc;
-  }, {} as Record<string, number>);
+    },
+    {} as Record<string, number>,
+  );
 };
 
 /**
  * deserializeAws_restJson1DenseSetMap
  */
 const de_DenseSetMap = (output: any, context: __SerdeContext): Record<string, string[]> => {
-  return Object.entries(output).reduce((acc: Record<string, string[]>, [key, value]: [string, any]) => {
-    if (value === null) {
+  return Object.entries(output).reduce(
+    (acc: Record<string, string[]>, [key, value]: [string, any]) => {
+      if (value === null) {
+        return acc;
+      }
+      acc[key as string] = de_StringSet(value, context);
       return acc;
-    }
-    acc[key as string] = de_StringSet(value, context);
-    return acc;
-  }, {} as Record<string, string[]>);
+    },
+    {} as Record<string, string[]>,
+  );
 };
 
 /**
  * deserializeAws_restJson1DenseStringMap
  */
 const de_DenseStringMap = (output: any, context: __SerdeContext): Record<string, string> => {
-  return Object.entries(output).reduce((acc: Record<string, string>, [key, value]: [string, any]) => {
-    if (value === null) {
+  return Object.entries(output).reduce(
+    (acc: Record<string, string>, [key, value]: [string, any]) => {
+      if (value === null) {
+        return acc;
+      }
+      acc[key as string] = __expectString(value) as any;
       return acc;
-    }
-    acc[key as string] = __expectString(value) as any;
-    return acc;
-  }, {} as Record<string, string>);
+    },
+    {} as Record<string, string>,
+  );
 };
 
 /**
  * deserializeAws_restJson1DenseStructMap
  */
 const de_DenseStructMap = (output: any, context: __SerdeContext): Record<string, GreetingStruct> => {
-  return Object.entries(output).reduce((acc: Record<string, GreetingStruct>, [key, value]: [string, any]) => {
-    if (value === null) {
+  return Object.entries(output).reduce(
+    (acc: Record<string, GreetingStruct>, [key, value]: [string, any]) => {
+      if (value === null) {
+        return acc;
+      }
+      acc[key as string] = de_GreetingStruct(value, context);
       return acc;
-    }
-    acc[key as string] = de_GreetingStruct(value, context);
-    return acc;
-  }, {} as Record<string, GreetingStruct>);
+    },
+    {} as Record<string, GreetingStruct>,
+  );
 };
 
 /**
@@ -7962,13 +7977,16 @@ const de_Document = (output: any, context: __SerdeContext): __DocumentType => {
  * deserializeAws_restJson1DocumentValuedMap
  */
 const de_DocumentValuedMap = (output: any, context: __SerdeContext): Record<string, __DocumentType> => {
-  return Object.entries(output).reduce((acc: Record<string, __DocumentType>, [key, value]: [string, any]) => {
-    if (value === null) {
+  return Object.entries(output).reduce(
+    (acc: Record<string, __DocumentType>, [key, value]: [string, any]) => {
+      if (value === null) {
+        return acc;
+      }
+      acc[key as string] = de_Document(value, context);
       return acc;
-    }
-    acc[key as string] = de_Document(value, context);
-    return acc;
-  }, {} as Record<string, __DocumentType>);
+    },
+    {} as Record<string, __DocumentType>,
+  );
 };
 
 /**
@@ -8056,7 +8074,7 @@ const de_PlayerAction = (output: any, context: __SerdeContext): PlayerAction => 
  */
 const de_RecursiveShapesInputOutputNested1 = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): RecursiveShapesInputOutputNested1 => {
   return take(output, {
     foo: __expectString,
@@ -8069,7 +8087,7 @@ const de_RecursiveShapesInputOutputNested1 = (
  */
 const de_RecursiveShapesInputOutputNested2 = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): RecursiveShapesInputOutputNested2 => {
   return take(output, {
     bar: __expectString,
@@ -8084,7 +8102,7 @@ const de_SimpleList = (output: any, context: __SerdeContext): string[] => {
   const retVal = (output || []).map((entry: any) => {
     if (entry === null) {
       throw new TypeError(
-        'All elements of the non-sparse list "aws.protocoltests.restjson#SimpleList" must be non-null.'
+        'All elements of the non-sparse list "aws.protocoltests.restjson#SimpleList" must be non-null.',
       );
     }
     return __expectString(entry) as any;
@@ -8096,13 +8114,16 @@ const de_SimpleList = (output: any, context: __SerdeContext): string[] => {
  * deserializeAws_restJson1SimpleMap
  */
 const de_SimpleMap = (output: any, context: __SerdeContext): Record<string, string> => {
-  return Object.entries(output).reduce((acc: Record<string, string>, [key, value]: [string, any]) => {
-    if (value === null) {
+  return Object.entries(output).reduce(
+    (acc: Record<string, string>, [key, value]: [string, any]) => {
+      if (value === null) {
+        return acc;
+      }
+      acc[key as string] = __expectString(value) as any;
       return acc;
-    }
-    acc[key as string] = __expectString(value) as any;
-    return acc;
-  }, {} as Record<string, string>);
+    },
+    {} as Record<string, string>,
+  );
 };
 
 /**
@@ -8122,56 +8143,68 @@ const de_SimpleUnion = (output: any, context: __SerdeContext): SimpleUnion => {
  * deserializeAws_restJson1SparseBooleanMap
  */
 const de_SparseBooleanMap = (output: any, context: __SerdeContext): Record<string, boolean> => {
-  return Object.entries(output).reduce((acc: Record<string, boolean>, [key, value]: [string, any]) => {
-    if (value === null) {
-      acc[key as string] = null as any;
+  return Object.entries(output).reduce(
+    (acc: Record<string, boolean>, [key, value]: [string, any]) => {
+      if (value === null) {
+        acc[key as string] = null as any;
+        return acc;
+      }
+      acc[key as string] = __expectBoolean(value) as any;
       return acc;
-    }
-    acc[key as string] = __expectBoolean(value) as any;
-    return acc;
-  }, {} as Record<string, boolean>);
+    },
+    {} as Record<string, boolean>,
+  );
 };
 
 /**
  * deserializeAws_restJson1SparseNumberMap
  */
 const de_SparseNumberMap = (output: any, context: __SerdeContext): Record<string, number> => {
-  return Object.entries(output).reduce((acc: Record<string, number>, [key, value]: [string, any]) => {
-    if (value === null) {
-      acc[key as string] = null as any;
+  return Object.entries(output).reduce(
+    (acc: Record<string, number>, [key, value]: [string, any]) => {
+      if (value === null) {
+        acc[key as string] = null as any;
+        return acc;
+      }
+      acc[key as string] = __expectInt32(value) as any;
       return acc;
-    }
-    acc[key as string] = __expectInt32(value) as any;
-    return acc;
-  }, {} as Record<string, number>);
+    },
+    {} as Record<string, number>,
+  );
 };
 
 /**
  * deserializeAws_restJson1SparseSetMap
  */
 const de_SparseSetMap = (output: any, context: __SerdeContext): Record<string, string[]> => {
-  return Object.entries(output).reduce((acc: Record<string, string[]>, [key, value]: [string, any]) => {
-    if (value === null) {
-      acc[key as string] = null as any;
+  return Object.entries(output).reduce(
+    (acc: Record<string, string[]>, [key, value]: [string, any]) => {
+      if (value === null) {
+        acc[key as string] = null as any;
+        return acc;
+      }
+      acc[key as string] = de_StringSet(value, context);
       return acc;
-    }
-    acc[key as string] = de_StringSet(value, context);
-    return acc;
-  }, {} as Record<string, string[]>);
+    },
+    {} as Record<string, string[]>,
+  );
 };
 
 /**
  * deserializeAws_restJson1SparseStructMap
  */
 const de_SparseStructMap = (output: any, context: __SerdeContext): Record<string, GreetingStruct> => {
-  return Object.entries(output).reduce((acc: Record<string, GreetingStruct>, [key, value]: [string, any]) => {
-    if (value === null) {
-      acc[key as string] = null as any;
+  return Object.entries(output).reduce(
+    (acc: Record<string, GreetingStruct>, [key, value]: [string, any]) => {
+      if (value === null) {
+        acc[key as string] = null as any;
+        return acc;
+      }
+      acc[key as string] = de_GreetingStruct(value, context);
       return acc;
-    }
-    acc[key as string] = de_GreetingStruct(value, context);
-    return acc;
-  }, {} as Record<string, GreetingStruct>);
+    },
+    {} as Record<string, GreetingStruct>,
+  );
 };
 
 /**
@@ -8181,7 +8214,7 @@ const de_StructureList = (output: any, context: __SerdeContext): StructureListMe
   const retVal = (output || []).map((entry: any) => {
     if (entry === null) {
       throw new TypeError(
-        'All elements of the non-sparse list "aws.protocoltests.restjson#StructureList" must be non-null.'
+        'All elements of the non-sparse list "aws.protocoltests.restjson#StructureList" must be non-null.',
       );
     }
     return de_StructureListMember(entry, context);
@@ -8250,7 +8283,7 @@ const de_BooleanList = (output: any, context: __SerdeContext): boolean[] => {
   const retVal = (output || []).map((entry: any) => {
     if (entry === null) {
       throw new TypeError(
-        'All elements of the non-sparse list "aws.protocoltests.shared#BooleanList" must be non-null.'
+        'All elements of the non-sparse list "aws.protocoltests.shared#BooleanList" must be non-null.',
       );
     }
     return __expectBoolean(entry) as any;
@@ -8265,7 +8298,7 @@ const de_FooEnumList = (output: any, context: __SerdeContext): FooEnum[] => {
   const retVal = (output || []).map((entry: any) => {
     if (entry === null) {
       throw new TypeError(
-        'All elements of the non-sparse list "aws.protocoltests.shared#FooEnumList" must be non-null.'
+        'All elements of the non-sparse list "aws.protocoltests.shared#FooEnumList" must be non-null.',
       );
     }
     return __expectString(entry) as any;
@@ -8277,13 +8310,16 @@ const de_FooEnumList = (output: any, context: __SerdeContext): FooEnum[] => {
  * deserializeAws_restJson1FooEnumMap
  */
 const de_FooEnumMap = (output: any, context: __SerdeContext): Record<string, FooEnum> => {
-  return Object.entries(output).reduce((acc: Record<string, FooEnum>, [key, value]: [string, any]) => {
-    if (value === null) {
+  return Object.entries(output).reduce(
+    (acc: Record<string, FooEnum>, [key, value]: [string, any]) => {
+      if (value === null) {
+        return acc;
+      }
+      acc[key as string] = __expectString(value) as any;
       return acc;
-    }
-    acc[key as string] = __expectString(value) as any;
-    return acc;
-  }, {} as Record<string, FooEnum>);
+    },
+    {} as Record<string, FooEnum>,
+  );
 };
 
 /**
@@ -8293,7 +8329,7 @@ const de_FooEnumSet = (output: any, context: __SerdeContext): FooEnum[] => {
   const retVal = (output || []).map((entry: any) => {
     if (entry === null) {
       throw new TypeError(
-        'All elements of the non-sparse list "aws.protocoltests.shared#FooEnumSet" must be non-null.'
+        'All elements of the non-sparse list "aws.protocoltests.shared#FooEnumSet" must be non-null.',
       );
     }
     return __expectString(entry) as any;
@@ -8317,7 +8353,7 @@ const de_IntegerEnumList = (output: any, context: __SerdeContext): IntegerEnum[]
   const retVal = (output || []).map((entry: any) => {
     if (entry === null) {
       throw new TypeError(
-        'All elements of the non-sparse list "aws.protocoltests.shared#IntegerEnumList" must be non-null.'
+        'All elements of the non-sparse list "aws.protocoltests.shared#IntegerEnumList" must be non-null.',
       );
     }
     return __expectInt32(entry) as any;
@@ -8329,13 +8365,16 @@ const de_IntegerEnumList = (output: any, context: __SerdeContext): IntegerEnum[]
  * deserializeAws_restJson1IntegerEnumMap
  */
 const de_IntegerEnumMap = (output: any, context: __SerdeContext): Record<string, IntegerEnum> => {
-  return Object.entries(output).reduce((acc: Record<string, IntegerEnum>, [key, value]: [string, any]) => {
-    if (value === null) {
+  return Object.entries(output).reduce(
+    (acc: Record<string, IntegerEnum>, [key, value]: [string, any]) => {
+      if (value === null) {
+        return acc;
+      }
+      acc[key as string] = __expectInt32(value) as any;
       return acc;
-    }
-    acc[key as string] = __expectInt32(value) as any;
-    return acc;
-  }, {} as Record<string, IntegerEnum>);
+    },
+    {} as Record<string, IntegerEnum>,
+  );
 };
 
 /**
@@ -8345,7 +8384,7 @@ const de_IntegerEnumSet = (output: any, context: __SerdeContext): IntegerEnum[] 
   const retVal = (output || []).map((entry: any) => {
     if (entry === null) {
       throw new TypeError(
-        'All elements of the non-sparse list "aws.protocoltests.shared#IntegerEnumSet" must be non-null.'
+        'All elements of the non-sparse list "aws.protocoltests.shared#IntegerEnumSet" must be non-null.',
       );
     }
     return __expectInt32(entry) as any;
@@ -8360,7 +8399,7 @@ const de_IntegerList = (output: any, context: __SerdeContext): number[] => {
   const retVal = (output || []).map((entry: any) => {
     if (entry === null) {
       throw new TypeError(
-        'All elements of the non-sparse list "aws.protocoltests.shared#IntegerList" must be non-null.'
+        'All elements of the non-sparse list "aws.protocoltests.shared#IntegerList" must be non-null.',
       );
     }
     return __expectInt32(entry) as any;
@@ -8375,7 +8414,7 @@ const de_NestedStringList = (output: any, context: __SerdeContext): string[][] =
   const retVal = (output || []).map((entry: any) => {
     if (entry === null) {
       throw new TypeError(
-        'All elements of the non-sparse list "aws.protocoltests.shared#NestedStringList" must be non-null.'
+        'All elements of the non-sparse list "aws.protocoltests.shared#NestedStringList" must be non-null.',
       );
     }
     return de_StringList(entry, context);
@@ -8400,14 +8439,17 @@ const de_SparseStringList = (output: any, context: __SerdeContext): string[] => 
  * deserializeAws_restJson1SparseStringMap
  */
 const de_SparseStringMap = (output: any, context: __SerdeContext): Record<string, string> => {
-  return Object.entries(output).reduce((acc: Record<string, string>, [key, value]: [string, any]) => {
-    if (value === null) {
-      acc[key as string] = null as any;
+  return Object.entries(output).reduce(
+    (acc: Record<string, string>, [key, value]: [string, any]) => {
+      if (value === null) {
+        acc[key as string] = null as any;
+        return acc;
+      }
+      acc[key as string] = __expectString(value) as any;
       return acc;
-    }
-    acc[key as string] = __expectString(value) as any;
-    return acc;
-  }, {} as Record<string, string>);
+    },
+    {} as Record<string, string>,
+  );
 };
 
 /**
@@ -8417,7 +8459,7 @@ const de_StringList = (output: any, context: __SerdeContext): string[] => {
   const retVal = (output || []).map((entry: any) => {
     if (entry === null) {
       throw new TypeError(
-        'All elements of the non-sparse list "aws.protocoltests.shared#StringList" must be non-null.'
+        'All elements of the non-sparse list "aws.protocoltests.shared#StringList" must be non-null.',
       );
     }
     return __expectString(entry) as any;
@@ -8429,13 +8471,16 @@ const de_StringList = (output: any, context: __SerdeContext): string[] => {
  * deserializeAws_restJson1StringMap
  */
 const de_StringMap = (output: any, context: __SerdeContext): Record<string, string> => {
-  return Object.entries(output).reduce((acc: Record<string, string>, [key, value]: [string, any]) => {
-    if (value === null) {
+  return Object.entries(output).reduce(
+    (acc: Record<string, string>, [key, value]: [string, any]) => {
+      if (value === null) {
+        return acc;
+      }
+      acc[key as string] = __expectString(value) as any;
       return acc;
-    }
-    acc[key as string] = __expectString(value) as any;
-    return acc;
-  }, {} as Record<string, string>);
+    },
+    {} as Record<string, string>,
+  );
 };
 
 /**
@@ -8458,7 +8503,7 @@ const de_TimestampList = (output: any, context: __SerdeContext): Date[] => {
   const retVal = (output || []).map((entry: any) => {
     if (entry === null) {
       throw new TypeError(
-        'All elements of the non-sparse list "aws.protocoltests.shared#TimestampList" must be non-null.'
+        'All elements of the non-sparse list "aws.protocoltests.shared#TimestampList" must be non-null.',
       );
     }
     return __expectNonNull(__parseEpochTimestamp(__expectNumber(entry)));

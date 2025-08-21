@@ -6,7 +6,7 @@ import { DescribeChangeSetCommand, DescribeChangeSetCommandInput } from "../comm
 
 const checkState = async (
   client: CloudFormationClient,
-  input: DescribeChangeSetCommandInput
+  input: DescribeChangeSetCommandInput,
 ): Promise<WaiterResult> => {
   let reason;
   try {
@@ -42,7 +42,7 @@ const checkState = async (
  */
 export const waitForChangeSetCreateComplete = async (
   params: WaiterConfiguration<CloudFormationClient>,
-  input: DescribeChangeSetCommandInput
+  input: DescribeChangeSetCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 30, maxDelay: 120 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -54,7 +54,7 @@ export const waitForChangeSetCreateComplete = async (
  */
 export const waitUntilChangeSetCreateComplete = async (
   params: WaiterConfiguration<CloudFormationClient>,
-  input: DescribeChangeSetCommandInput
+  input: DescribeChangeSetCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 30, maxDelay: 120 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

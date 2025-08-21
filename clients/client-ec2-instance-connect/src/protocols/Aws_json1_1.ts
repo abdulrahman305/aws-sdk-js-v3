@@ -42,7 +42,7 @@ import {
  */
 export const se_SendSerialConsoleSSHPublicKeyCommand = async (
   input: SendSerialConsoleSSHPublicKeyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("SendSerialConsoleSSHPublicKey");
   let body: any;
@@ -55,7 +55,7 @@ export const se_SendSerialConsoleSSHPublicKeyCommand = async (
  */
 export const se_SendSSHPublicKeyCommand = async (
   input: SendSSHPublicKeyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("SendSSHPublicKey");
   let body: any;
@@ -68,7 +68,7 @@ export const se_SendSSHPublicKeyCommand = async (
  */
 export const de_SendSerialConsoleSSHPublicKeyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SendSerialConsoleSSHPublicKeyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -88,7 +88,7 @@ export const de_SendSerialConsoleSSHPublicKeyCommand = async (
  */
 export const de_SendSSHPublicKeyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SendSSHPublicKeyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -177,7 +177,7 @@ const de_AuthExceptionRes = async (parsedOutput: any, context: __SerdeContext): 
  */
 const de_EC2InstanceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<EC2InstanceNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -193,7 +193,7 @@ const de_EC2InstanceNotFoundExceptionRes = async (
  */
 const de_EC2InstanceStateInvalidExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<EC2InstanceStateInvalidException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -209,7 +209,7 @@ const de_EC2InstanceStateInvalidExceptionRes = async (
  */
 const de_EC2InstanceTypeInvalidExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<EC2InstanceTypeInvalidException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -225,7 +225,7 @@ const de_EC2InstanceTypeInvalidExceptionRes = async (
  */
 const de_EC2InstanceUnavailableExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<EC2InstanceUnavailableException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -241,7 +241,7 @@ const de_EC2InstanceUnavailableExceptionRes = async (
  */
 const de_InvalidArgsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidArgsException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -257,7 +257,7 @@ const de_InvalidArgsExceptionRes = async (
  */
 const de_SerialConsoleAccessDisabledExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SerialConsoleAccessDisabledException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -273,7 +273,7 @@ const de_SerialConsoleAccessDisabledExceptionRes = async (
  */
 const de_SerialConsoleSessionLimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SerialConsoleSessionLimitExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -289,7 +289,7 @@ const de_SerialConsoleSessionLimitExceededExceptionRes = async (
  */
 const de_SerialConsoleSessionUnavailableExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SerialConsoleSessionUnavailableException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -305,7 +305,7 @@ const de_SerialConsoleSessionUnavailableExceptionRes = async (
  */
 const de_SerialConsoleSessionUnsupportedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SerialConsoleSessionUnsupportedException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -392,7 +392,7 @@ const buildHttpRpcRequest = async (
   headers: __HeaderBag,
   path: string,
   resolvedHostname: string | undefined,
-  body: any
+  body: any,
 ): Promise<__HttpRequest> => {
   const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
   const contents: any = {

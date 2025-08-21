@@ -15,7 +15,7 @@ import { ServiceInputTypes, ServiceOutputTypes, STSClient, STSClientConfig } fro
 
 const getCustomizableStsClientCtor = (
   baseCtor: new (config: STSClientConfig) => STSClient,
-  customizations?: Pluggable<ServiceInputTypes, ServiceOutputTypes>[]
+  customizations?: Pluggable<ServiceInputTypes, ServiceOutputTypes>[],
 ) => {
   if (!customizations) return baseCtor;
   else
@@ -34,7 +34,7 @@ const getCustomizableStsClientCtor = (
  */
 export const getDefaultRoleAssumer = (
   stsOptions: STSRoleAssumerOptions = {},
-  stsPlugins?: Pluggable<ServiceInputTypes, ServiceOutputTypes>[]
+  stsPlugins?: Pluggable<ServiceInputTypes, ServiceOutputTypes>[],
 ): RoleAssumer => StsGetDefaultRoleAssumer(stsOptions, getCustomizableStsClientCtor(STSClient, stsPlugins));
 
 /**
@@ -42,7 +42,7 @@ export const getDefaultRoleAssumer = (
  */
 export const getDefaultRoleAssumerWithWebIdentity = (
   stsOptions: STSRoleAssumerOptions = {},
-  stsPlugins?: Pluggable<ServiceInputTypes, ServiceOutputTypes>[]
+  stsPlugins?: Pluggable<ServiceInputTypes, ServiceOutputTypes>[],
 ): RoleAssumerWithWebIdentity =>
   StsGetDefaultRoleAssumerWithWebIdentity(stsOptions, getCustomizableStsClientCtor(STSClient, stsPlugins));
 

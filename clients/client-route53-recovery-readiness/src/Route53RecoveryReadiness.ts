@@ -180,7 +180,7 @@ export interface Route53RecoveryReadiness {
   createCell(
     args: CreateCellCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateCellCommandOutput) => void
+    cb: (err: any, data?: CreateCellCommandOutput) => void,
   ): void;
 
   /**
@@ -188,16 +188,16 @@ export interface Route53RecoveryReadiness {
    */
   createCrossAccountAuthorization(
     args: CreateCrossAccountAuthorizationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateCrossAccountAuthorizationCommandOutput>;
   createCrossAccountAuthorization(
     args: CreateCrossAccountAuthorizationCommandInput,
-    cb: (err: any, data?: CreateCrossAccountAuthorizationCommandOutput) => void
+    cb: (err: any, data?: CreateCrossAccountAuthorizationCommandOutput) => void,
   ): void;
   createCrossAccountAuthorization(
     args: CreateCrossAccountAuthorizationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateCrossAccountAuthorizationCommandOutput) => void
+    cb: (err: any, data?: CreateCrossAccountAuthorizationCommandOutput) => void,
   ): void;
 
   /**
@@ -205,16 +205,16 @@ export interface Route53RecoveryReadiness {
    */
   createReadinessCheck(
     args: CreateReadinessCheckCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateReadinessCheckCommandOutput>;
   createReadinessCheck(
     args: CreateReadinessCheckCommandInput,
-    cb: (err: any, data?: CreateReadinessCheckCommandOutput) => void
+    cb: (err: any, data?: CreateReadinessCheckCommandOutput) => void,
   ): void;
   createReadinessCheck(
     args: CreateReadinessCheckCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateReadinessCheckCommandOutput) => void
+    cb: (err: any, data?: CreateReadinessCheckCommandOutput) => void,
   ): void;
 
   /**
@@ -222,16 +222,16 @@ export interface Route53RecoveryReadiness {
    */
   createRecoveryGroup(
     args: CreateRecoveryGroupCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateRecoveryGroupCommandOutput>;
   createRecoveryGroup(
     args: CreateRecoveryGroupCommandInput,
-    cb: (err: any, data?: CreateRecoveryGroupCommandOutput) => void
+    cb: (err: any, data?: CreateRecoveryGroupCommandOutput) => void,
   ): void;
   createRecoveryGroup(
     args: CreateRecoveryGroupCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateRecoveryGroupCommandOutput) => void
+    cb: (err: any, data?: CreateRecoveryGroupCommandOutput) => void,
   ): void;
 
   /**
@@ -239,16 +239,16 @@ export interface Route53RecoveryReadiness {
    */
   createResourceSet(
     args: CreateResourceSetCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateResourceSetCommandOutput>;
   createResourceSet(
     args: CreateResourceSetCommandInput,
-    cb: (err: any, data?: CreateResourceSetCommandOutput) => void
+    cb: (err: any, data?: CreateResourceSetCommandOutput) => void,
   ): void;
   createResourceSet(
     args: CreateResourceSetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateResourceSetCommandOutput) => void
+    cb: (err: any, data?: CreateResourceSetCommandOutput) => void,
   ): void;
 
   /**
@@ -259,7 +259,7 @@ export interface Route53RecoveryReadiness {
   deleteCell(
     args: DeleteCellCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteCellCommandOutput) => void
+    cb: (err: any, data?: DeleteCellCommandOutput) => void,
   ): void;
 
   /**
@@ -267,16 +267,16 @@ export interface Route53RecoveryReadiness {
    */
   deleteCrossAccountAuthorization(
     args: DeleteCrossAccountAuthorizationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteCrossAccountAuthorizationCommandOutput>;
   deleteCrossAccountAuthorization(
     args: DeleteCrossAccountAuthorizationCommandInput,
-    cb: (err: any, data?: DeleteCrossAccountAuthorizationCommandOutput) => void
+    cb: (err: any, data?: DeleteCrossAccountAuthorizationCommandOutput) => void,
   ): void;
   deleteCrossAccountAuthorization(
     args: DeleteCrossAccountAuthorizationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteCrossAccountAuthorizationCommandOutput) => void
+    cb: (err: any, data?: DeleteCrossAccountAuthorizationCommandOutput) => void,
   ): void;
 
   /**
@@ -284,16 +284,16 @@ export interface Route53RecoveryReadiness {
    */
   deleteReadinessCheck(
     args: DeleteReadinessCheckCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteReadinessCheckCommandOutput>;
   deleteReadinessCheck(
     args: DeleteReadinessCheckCommandInput,
-    cb: (err: any, data?: DeleteReadinessCheckCommandOutput) => void
+    cb: (err: any, data?: DeleteReadinessCheckCommandOutput) => void,
   ): void;
   deleteReadinessCheck(
     args: DeleteReadinessCheckCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteReadinessCheckCommandOutput) => void
+    cb: (err: any, data?: DeleteReadinessCheckCommandOutput) => void,
   ): void;
 
   /**
@@ -301,16 +301,16 @@ export interface Route53RecoveryReadiness {
    */
   deleteRecoveryGroup(
     args: DeleteRecoveryGroupCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteRecoveryGroupCommandOutput>;
   deleteRecoveryGroup(
     args: DeleteRecoveryGroupCommandInput,
-    cb: (err: any, data?: DeleteRecoveryGroupCommandOutput) => void
+    cb: (err: any, data?: DeleteRecoveryGroupCommandOutput) => void,
   ): void;
   deleteRecoveryGroup(
     args: DeleteRecoveryGroupCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteRecoveryGroupCommandOutput) => void
+    cb: (err: any, data?: DeleteRecoveryGroupCommandOutput) => void,
   ): void;
 
   /**
@@ -318,16 +318,16 @@ export interface Route53RecoveryReadiness {
    */
   deleteResourceSet(
     args: DeleteResourceSetCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteResourceSetCommandOutput>;
   deleteResourceSet(
     args: DeleteResourceSetCommandInput,
-    cb: (err: any, data?: DeleteResourceSetCommandOutput) => void
+    cb: (err: any, data?: DeleteResourceSetCommandOutput) => void,
   ): void;
   deleteResourceSet(
     args: DeleteResourceSetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteResourceSetCommandOutput) => void
+    cb: (err: any, data?: DeleteResourceSetCommandOutput) => void,
   ): void;
 
   /**
@@ -335,16 +335,16 @@ export interface Route53RecoveryReadiness {
    */
   getArchitectureRecommendations(
     args: GetArchitectureRecommendationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetArchitectureRecommendationsCommandOutput>;
   getArchitectureRecommendations(
     args: GetArchitectureRecommendationsCommandInput,
-    cb: (err: any, data?: GetArchitectureRecommendationsCommandOutput) => void
+    cb: (err: any, data?: GetArchitectureRecommendationsCommandOutput) => void,
   ): void;
   getArchitectureRecommendations(
     args: GetArchitectureRecommendationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetArchitectureRecommendationsCommandOutput) => void
+    cb: (err: any, data?: GetArchitectureRecommendationsCommandOutput) => void,
   ): void;
 
   /**
@@ -355,7 +355,7 @@ export interface Route53RecoveryReadiness {
   getCell(
     args: GetCellCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetCellCommandOutput) => void
+    cb: (err: any, data?: GetCellCommandOutput) => void,
   ): void;
 
   /**
@@ -363,16 +363,16 @@ export interface Route53RecoveryReadiness {
    */
   getCellReadinessSummary(
     args: GetCellReadinessSummaryCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetCellReadinessSummaryCommandOutput>;
   getCellReadinessSummary(
     args: GetCellReadinessSummaryCommandInput,
-    cb: (err: any, data?: GetCellReadinessSummaryCommandOutput) => void
+    cb: (err: any, data?: GetCellReadinessSummaryCommandOutput) => void,
   ): void;
   getCellReadinessSummary(
     args: GetCellReadinessSummaryCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetCellReadinessSummaryCommandOutput) => void
+    cb: (err: any, data?: GetCellReadinessSummaryCommandOutput) => void,
   ): void;
 
   /**
@@ -380,16 +380,16 @@ export interface Route53RecoveryReadiness {
    */
   getReadinessCheck(
     args: GetReadinessCheckCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetReadinessCheckCommandOutput>;
   getReadinessCheck(
     args: GetReadinessCheckCommandInput,
-    cb: (err: any, data?: GetReadinessCheckCommandOutput) => void
+    cb: (err: any, data?: GetReadinessCheckCommandOutput) => void,
   ): void;
   getReadinessCheck(
     args: GetReadinessCheckCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetReadinessCheckCommandOutput) => void
+    cb: (err: any, data?: GetReadinessCheckCommandOutput) => void,
   ): void;
 
   /**
@@ -397,16 +397,16 @@ export interface Route53RecoveryReadiness {
    */
   getReadinessCheckResourceStatus(
     args: GetReadinessCheckResourceStatusCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetReadinessCheckResourceStatusCommandOutput>;
   getReadinessCheckResourceStatus(
     args: GetReadinessCheckResourceStatusCommandInput,
-    cb: (err: any, data?: GetReadinessCheckResourceStatusCommandOutput) => void
+    cb: (err: any, data?: GetReadinessCheckResourceStatusCommandOutput) => void,
   ): void;
   getReadinessCheckResourceStatus(
     args: GetReadinessCheckResourceStatusCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetReadinessCheckResourceStatusCommandOutput) => void
+    cb: (err: any, data?: GetReadinessCheckResourceStatusCommandOutput) => void,
   ): void;
 
   /**
@@ -414,16 +414,16 @@ export interface Route53RecoveryReadiness {
    */
   getReadinessCheckStatus(
     args: GetReadinessCheckStatusCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetReadinessCheckStatusCommandOutput>;
   getReadinessCheckStatus(
     args: GetReadinessCheckStatusCommandInput,
-    cb: (err: any, data?: GetReadinessCheckStatusCommandOutput) => void
+    cb: (err: any, data?: GetReadinessCheckStatusCommandOutput) => void,
   ): void;
   getReadinessCheckStatus(
     args: GetReadinessCheckStatusCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetReadinessCheckStatusCommandOutput) => void
+    cb: (err: any, data?: GetReadinessCheckStatusCommandOutput) => void,
   ): void;
 
   /**
@@ -431,16 +431,16 @@ export interface Route53RecoveryReadiness {
    */
   getRecoveryGroup(
     args: GetRecoveryGroupCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetRecoveryGroupCommandOutput>;
   getRecoveryGroup(
     args: GetRecoveryGroupCommandInput,
-    cb: (err: any, data?: GetRecoveryGroupCommandOutput) => void
+    cb: (err: any, data?: GetRecoveryGroupCommandOutput) => void,
   ): void;
   getRecoveryGroup(
     args: GetRecoveryGroupCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetRecoveryGroupCommandOutput) => void
+    cb: (err: any, data?: GetRecoveryGroupCommandOutput) => void,
   ): void;
 
   /**
@@ -448,16 +448,16 @@ export interface Route53RecoveryReadiness {
    */
   getRecoveryGroupReadinessSummary(
     args: GetRecoveryGroupReadinessSummaryCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetRecoveryGroupReadinessSummaryCommandOutput>;
   getRecoveryGroupReadinessSummary(
     args: GetRecoveryGroupReadinessSummaryCommandInput,
-    cb: (err: any, data?: GetRecoveryGroupReadinessSummaryCommandOutput) => void
+    cb: (err: any, data?: GetRecoveryGroupReadinessSummaryCommandOutput) => void,
   ): void;
   getRecoveryGroupReadinessSummary(
     args: GetRecoveryGroupReadinessSummaryCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetRecoveryGroupReadinessSummaryCommandOutput) => void
+    cb: (err: any, data?: GetRecoveryGroupReadinessSummaryCommandOutput) => void,
   ): void;
 
   /**
@@ -465,13 +465,13 @@ export interface Route53RecoveryReadiness {
    */
   getResourceSet(
     args: GetResourceSetCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetResourceSetCommandOutput>;
   getResourceSet(args: GetResourceSetCommandInput, cb: (err: any, data?: GetResourceSetCommandOutput) => void): void;
   getResourceSet(
     args: GetResourceSetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetResourceSetCommandOutput) => void
+    cb: (err: any, data?: GetResourceSetCommandOutput) => void,
   ): void;
 
   /**
@@ -483,7 +483,7 @@ export interface Route53RecoveryReadiness {
   listCells(
     args: ListCellsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListCellsCommandOutput) => void
+    cb: (err: any, data?: ListCellsCommandOutput) => void,
   ): void;
 
   /**
@@ -492,16 +492,16 @@ export interface Route53RecoveryReadiness {
   listCrossAccountAuthorizations(): Promise<ListCrossAccountAuthorizationsCommandOutput>;
   listCrossAccountAuthorizations(
     args: ListCrossAccountAuthorizationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListCrossAccountAuthorizationsCommandOutput>;
   listCrossAccountAuthorizations(
     args: ListCrossAccountAuthorizationsCommandInput,
-    cb: (err: any, data?: ListCrossAccountAuthorizationsCommandOutput) => void
+    cb: (err: any, data?: ListCrossAccountAuthorizationsCommandOutput) => void,
   ): void;
   listCrossAccountAuthorizations(
     args: ListCrossAccountAuthorizationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListCrossAccountAuthorizationsCommandOutput) => void
+    cb: (err: any, data?: ListCrossAccountAuthorizationsCommandOutput) => void,
   ): void;
 
   /**
@@ -510,16 +510,16 @@ export interface Route53RecoveryReadiness {
   listReadinessChecks(): Promise<ListReadinessChecksCommandOutput>;
   listReadinessChecks(
     args: ListReadinessChecksCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListReadinessChecksCommandOutput>;
   listReadinessChecks(
     args: ListReadinessChecksCommandInput,
-    cb: (err: any, data?: ListReadinessChecksCommandOutput) => void
+    cb: (err: any, data?: ListReadinessChecksCommandOutput) => void,
   ): void;
   listReadinessChecks(
     args: ListReadinessChecksCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListReadinessChecksCommandOutput) => void
+    cb: (err: any, data?: ListReadinessChecksCommandOutput) => void,
   ): void;
 
   /**
@@ -528,16 +528,16 @@ export interface Route53RecoveryReadiness {
   listRecoveryGroups(): Promise<ListRecoveryGroupsCommandOutput>;
   listRecoveryGroups(
     args: ListRecoveryGroupsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListRecoveryGroupsCommandOutput>;
   listRecoveryGroups(
     args: ListRecoveryGroupsCommandInput,
-    cb: (err: any, data?: ListRecoveryGroupsCommandOutput) => void
+    cb: (err: any, data?: ListRecoveryGroupsCommandOutput) => void,
   ): void;
   listRecoveryGroups(
     args: ListRecoveryGroupsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListRecoveryGroupsCommandOutput) => void
+    cb: (err: any, data?: ListRecoveryGroupsCommandOutput) => void,
   ): void;
 
   /**
@@ -546,16 +546,16 @@ export interface Route53RecoveryReadiness {
   listResourceSets(): Promise<ListResourceSetsCommandOutput>;
   listResourceSets(
     args: ListResourceSetsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListResourceSetsCommandOutput>;
   listResourceSets(
     args: ListResourceSetsCommandInput,
-    cb: (err: any, data?: ListResourceSetsCommandOutput) => void
+    cb: (err: any, data?: ListResourceSetsCommandOutput) => void,
   ): void;
   listResourceSets(
     args: ListResourceSetsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListResourceSetsCommandOutput) => void
+    cb: (err: any, data?: ListResourceSetsCommandOutput) => void,
   ): void;
 
   /**
@@ -567,7 +567,7 @@ export interface Route53RecoveryReadiness {
   listRules(
     args: ListRulesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListRulesCommandOutput) => void
+    cb: (err: any, data?: ListRulesCommandOutput) => void,
   ): void;
 
   /**
@@ -575,16 +575,16 @@ export interface Route53RecoveryReadiness {
    */
   listTagsForResources(
     args: ListTagsForResourcesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourcesCommandOutput>;
   listTagsForResources(
     args: ListTagsForResourcesCommandInput,
-    cb: (err: any, data?: ListTagsForResourcesCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourcesCommandOutput) => void,
   ): void;
   listTagsForResources(
     args: ListTagsForResourcesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourcesCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourcesCommandOutput) => void,
   ): void;
 
   /**
@@ -595,7 +595,7 @@ export interface Route53RecoveryReadiness {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -606,7 +606,7 @@ export interface Route53RecoveryReadiness {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -617,7 +617,7 @@ export interface Route53RecoveryReadiness {
   updateCell(
     args: UpdateCellCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateCellCommandOutput) => void
+    cb: (err: any, data?: UpdateCellCommandOutput) => void,
   ): void;
 
   /**
@@ -625,16 +625,16 @@ export interface Route53RecoveryReadiness {
    */
   updateReadinessCheck(
     args: UpdateReadinessCheckCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateReadinessCheckCommandOutput>;
   updateReadinessCheck(
     args: UpdateReadinessCheckCommandInput,
-    cb: (err: any, data?: UpdateReadinessCheckCommandOutput) => void
+    cb: (err: any, data?: UpdateReadinessCheckCommandOutput) => void,
   ): void;
   updateReadinessCheck(
     args: UpdateReadinessCheckCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateReadinessCheckCommandOutput) => void
+    cb: (err: any, data?: UpdateReadinessCheckCommandOutput) => void,
   ): void;
 
   /**
@@ -642,16 +642,16 @@ export interface Route53RecoveryReadiness {
    */
   updateRecoveryGroup(
     args: UpdateRecoveryGroupCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateRecoveryGroupCommandOutput>;
   updateRecoveryGroup(
     args: UpdateRecoveryGroupCommandInput,
-    cb: (err: any, data?: UpdateRecoveryGroupCommandOutput) => void
+    cb: (err: any, data?: UpdateRecoveryGroupCommandOutput) => void,
   ): void;
   updateRecoveryGroup(
     args: UpdateRecoveryGroupCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateRecoveryGroupCommandOutput) => void
+    cb: (err: any, data?: UpdateRecoveryGroupCommandOutput) => void,
   ): void;
 
   /**
@@ -659,16 +659,16 @@ export interface Route53RecoveryReadiness {
    */
   updateResourceSet(
     args: UpdateResourceSetCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateResourceSetCommandOutput>;
   updateResourceSet(
     args: UpdateResourceSetCommandInput,
-    cb: (err: any, data?: UpdateResourceSetCommandOutput) => void
+    cb: (err: any, data?: UpdateResourceSetCommandOutput) => void,
   ): void;
   updateResourceSet(
     args: UpdateResourceSetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateResourceSetCommandOutput) => void
+    cb: (err: any, data?: UpdateResourceSetCommandOutput) => void,
   ): void;
 }
 

@@ -32,7 +32,7 @@ export interface CloudFrontKeyValueStore {
   deleteKey(
     args: DeleteKeyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteKeyCommandOutput) => void
+    cb: (err: any, data?: DeleteKeyCommandOutput) => void,
   ): void;
 
   /**
@@ -40,16 +40,16 @@ export interface CloudFrontKeyValueStore {
    */
   describeKeyValueStore(
     args: DescribeKeyValueStoreCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeKeyValueStoreCommandOutput>;
   describeKeyValueStore(
     args: DescribeKeyValueStoreCommandInput,
-    cb: (err: any, data?: DescribeKeyValueStoreCommandOutput) => void
+    cb: (err: any, data?: DescribeKeyValueStoreCommandOutput) => void,
   ): void;
   describeKeyValueStore(
     args: DescribeKeyValueStoreCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeKeyValueStoreCommandOutput) => void
+    cb: (err: any, data?: DescribeKeyValueStoreCommandOutput) => void,
   ): void;
 
   /**
@@ -60,7 +60,7 @@ export interface CloudFrontKeyValueStore {
   getKey(
     args: GetKeyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetKeyCommandOutput) => void
+    cb: (err: any, data?: GetKeyCommandOutput) => void,
   ): void;
 
   /**
@@ -71,7 +71,7 @@ export interface CloudFrontKeyValueStore {
   listKeys(
     args: ListKeysCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListKeysCommandOutput) => void
+    cb: (err: any, data?: ListKeysCommandOutput) => void,
   ): void;
 
   /**
@@ -82,7 +82,7 @@ export interface CloudFrontKeyValueStore {
   putKey(
     args: PutKeyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutKeyCommandOutput) => void
+    cb: (err: any, data?: PutKeyCommandOutput) => void,
   ): void;
 
   /**
@@ -93,7 +93,7 @@ export interface CloudFrontKeyValueStore {
   updateKeys(
     args: UpdateKeysCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateKeysCommandOutput) => void
+    cb: (err: any, data?: UpdateKeysCommandOutput) => void,
   ): void;
 }
 

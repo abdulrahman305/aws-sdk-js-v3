@@ -54,15 +54,15 @@ describe(endpointDiscoveryMiddleware.name, () => {
       try {
         await endpointDiscoveryMiddleware(
           { ...mockConfig, isCustomEndpoint: true, isClientEndpointDiscoveryEnabled: true },
-          mockMiddlewareConfig
+          mockMiddlewareConfig,
         )(
           mockNext,
-          mockContext
+          mockContext,
         )(mockArgs as BuildHandlerArguments<any>);
         fail("should throw error when isCustomEndpoint=true and isClientEndpointDiscoveryEnabled=true");
       } catch (error) {
         expect(error).toStrictEqual(
-          new Error(`Custom endpoint is supplied; endpointDiscoveryEnabled must not be true.`)
+          new Error(`Custom endpoint is supplied; endpointDiscoveryEnabled must not be true.`),
         );
       }
       expect(mockNext).not.toHaveBeenCalled();
@@ -72,7 +72,7 @@ describe(endpointDiscoveryMiddleware.name, () => {
     it(`returns without endpoint discovery`, async () => {
       await endpointDiscoveryMiddleware({ ...mockConfig, isCustomEndpoint: true }, mockMiddlewareConfig)(
         mockNext,
-        mockContext
+        mockContext,
       )(mockArgs as BuildHandlerArguments<any>);
       expect(mockNext).toHaveBeenCalledWith(mockArgs);
       expect(updateDiscoveredEndpointInCache as jest.Mock).not.toHaveBeenCalled();
@@ -85,15 +85,15 @@ describe(endpointDiscoveryMiddleware.name, () => {
       try {
         await endpointDiscoveryMiddleware(mockConfig, { ...mockMiddlewareConfig, isDiscoveredEndpointRequired: true })(
           mockNext,
-          mockContext
+          mockContext,
         )(mockArgs as BuildHandlerArguments<any>);
         fail("should throw error when isDiscoveredEndpointRequired=true and isEndpointDiscoveryEnabled=false");
       } catch (error) {
         expect(error).toStrictEqual(
           new Error(
             `Endpoint Discovery is disabled but ${mockContext.commandName} on ${mockContext.clientName} requires it.` +
-              ` Please check your configurations.`
-          )
+              ` Please check your configurations.`,
+          ),
         );
       }
       expect(mockNext).not.toHaveBeenCalled();
@@ -104,7 +104,7 @@ describe(endpointDiscoveryMiddleware.name, () => {
       it(`when isEndpointDiscoveryEnabled=undefined`, async () => {
         await endpointDiscoveryMiddleware(mockConfig, { ...mockMiddlewareConfig, isDiscoveredEndpointRequired: true })(
           mockNext,
-          mockContext
+          mockContext,
         )(mockArgs as BuildHandlerArguments<any>);
         expect(mockNext).toHaveBeenCalledWith(mockArgs);
         expect(mockNext).toHaveBeenCalledWith({ request: { hostname: endpoint } });
@@ -115,7 +115,7 @@ describe(endpointDiscoveryMiddleware.name, () => {
         mockConfig.endpointDiscoveryEnabled.mockResolvedValueOnce(true);
         await endpointDiscoveryMiddleware(mockConfig, { ...mockMiddlewareConfig, isDiscoveredEndpointRequired: true })(
           mockNext,
-          mockContext
+          mockContext,
         )(mockArgs as BuildHandlerArguments<any>);
         expect(mockNext).toHaveBeenCalledWith(mockArgs);
         expect(mockNext).toHaveBeenCalledWith({ request: { hostname: endpoint } });
@@ -127,7 +127,7 @@ describe(endpointDiscoveryMiddleware.name, () => {
       it(`calls updateDiscoveredEndpointInCache when isEndpointDiscoveryEnabled=true`, async () => {
         mockConfig.endpointDiscoveryEnabled.mockResolvedValueOnce(true);
         await endpointDiscoveryMiddleware(mockConfig, mockMiddlewareConfig)(mockNext, mockContext)(
-          mockArgs as BuildHandlerArguments<any>
+          mockArgs as BuildHandlerArguments<any>,
         );
         expect(mockNext).toHaveBeenCalledWith(mockArgs);
         expect(updateDiscoveredEndpointInCache).toHaveBeenCalled();
@@ -135,7 +135,7 @@ describe(endpointDiscoveryMiddleware.name, () => {
 
       it(`does not call updateDiscoveredEndpointInCache when isEndpointDiscoveryEnabled=false`, async () => {
         await endpointDiscoveryMiddleware(mockConfig, mockMiddlewareConfig)(mockNext, mockContext)(
-          mockArgs as BuildHandlerArguments<any>
+          mockArgs as BuildHandlerArguments<any>,
         );
         expect(mockNext).toHaveBeenCalledWith(mockArgs);
         expect(updateDiscoveredEndpointInCache).not.toHaveBeenCalled();

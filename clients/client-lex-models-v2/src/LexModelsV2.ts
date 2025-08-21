@@ -569,16 +569,16 @@ export interface LexModelsV2 {
    */
   batchCreateCustomVocabularyItem(
     args: BatchCreateCustomVocabularyItemCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<BatchCreateCustomVocabularyItemCommandOutput>;
   batchCreateCustomVocabularyItem(
     args: BatchCreateCustomVocabularyItemCommandInput,
-    cb: (err: any, data?: BatchCreateCustomVocabularyItemCommandOutput) => void
+    cb: (err: any, data?: BatchCreateCustomVocabularyItemCommandOutput) => void,
   ): void;
   batchCreateCustomVocabularyItem(
     args: BatchCreateCustomVocabularyItemCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: BatchCreateCustomVocabularyItemCommandOutput) => void
+    cb: (err: any, data?: BatchCreateCustomVocabularyItemCommandOutput) => void,
   ): void;
 
   /**
@@ -586,16 +586,16 @@ export interface LexModelsV2 {
    */
   batchDeleteCustomVocabularyItem(
     args: BatchDeleteCustomVocabularyItemCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<BatchDeleteCustomVocabularyItemCommandOutput>;
   batchDeleteCustomVocabularyItem(
     args: BatchDeleteCustomVocabularyItemCommandInput,
-    cb: (err: any, data?: BatchDeleteCustomVocabularyItemCommandOutput) => void
+    cb: (err: any, data?: BatchDeleteCustomVocabularyItemCommandOutput) => void,
   ): void;
   batchDeleteCustomVocabularyItem(
     args: BatchDeleteCustomVocabularyItemCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: BatchDeleteCustomVocabularyItemCommandOutput) => void
+    cb: (err: any, data?: BatchDeleteCustomVocabularyItemCommandOutput) => void,
   ): void;
 
   /**
@@ -603,16 +603,16 @@ export interface LexModelsV2 {
    */
   batchUpdateCustomVocabularyItem(
     args: BatchUpdateCustomVocabularyItemCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<BatchUpdateCustomVocabularyItemCommandOutput>;
   batchUpdateCustomVocabularyItem(
     args: BatchUpdateCustomVocabularyItemCommandInput,
-    cb: (err: any, data?: BatchUpdateCustomVocabularyItemCommandOutput) => void
+    cb: (err: any, data?: BatchUpdateCustomVocabularyItemCommandOutput) => void,
   ): void;
   batchUpdateCustomVocabularyItem(
     args: BatchUpdateCustomVocabularyItemCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: BatchUpdateCustomVocabularyItemCommandOutput) => void
+    cb: (err: any, data?: BatchUpdateCustomVocabularyItemCommandOutput) => void,
   ): void;
 
   /**
@@ -620,13 +620,13 @@ export interface LexModelsV2 {
    */
   buildBotLocale(
     args: BuildBotLocaleCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<BuildBotLocaleCommandOutput>;
   buildBotLocale(args: BuildBotLocaleCommandInput, cb: (err: any, data?: BuildBotLocaleCommandOutput) => void): void;
   buildBotLocale(
     args: BuildBotLocaleCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: BuildBotLocaleCommandOutput) => void
+    cb: (err: any, data?: BuildBotLocaleCommandOutput) => void,
   ): void;
 
   /**
@@ -637,7 +637,7 @@ export interface LexModelsV2 {
   createBot(
     args: CreateBotCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateBotCommandOutput) => void
+    cb: (err: any, data?: CreateBotCommandOutput) => void,
   ): void;
 
   /**
@@ -645,13 +645,13 @@ export interface LexModelsV2 {
    */
   createBotAlias(
     args: CreateBotAliasCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateBotAliasCommandOutput>;
   createBotAlias(args: CreateBotAliasCommandInput, cb: (err: any, data?: CreateBotAliasCommandOutput) => void): void;
   createBotAlias(
     args: CreateBotAliasCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateBotAliasCommandOutput) => void
+    cb: (err: any, data?: CreateBotAliasCommandOutput) => void,
   ): void;
 
   /**
@@ -659,13 +659,13 @@ export interface LexModelsV2 {
    */
   createBotLocale(
     args: CreateBotLocaleCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateBotLocaleCommandOutput>;
   createBotLocale(args: CreateBotLocaleCommandInput, cb: (err: any, data?: CreateBotLocaleCommandOutput) => void): void;
   createBotLocale(
     args: CreateBotLocaleCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateBotLocaleCommandOutput) => void
+    cb: (err: any, data?: CreateBotLocaleCommandOutput) => void,
   ): void;
 
   /**
@@ -673,16 +673,16 @@ export interface LexModelsV2 {
    */
   createBotReplica(
     args: CreateBotReplicaCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateBotReplicaCommandOutput>;
   createBotReplica(
     args: CreateBotReplicaCommandInput,
-    cb: (err: any, data?: CreateBotReplicaCommandOutput) => void
+    cb: (err: any, data?: CreateBotReplicaCommandOutput) => void,
   ): void;
   createBotReplica(
     args: CreateBotReplicaCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateBotReplicaCommandOutput) => void
+    cb: (err: any, data?: CreateBotReplicaCommandOutput) => void,
   ): void;
 
   /**
@@ -690,16 +690,16 @@ export interface LexModelsV2 {
    */
   createBotVersion(
     args: CreateBotVersionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateBotVersionCommandOutput>;
   createBotVersion(
     args: CreateBotVersionCommandInput,
-    cb: (err: any, data?: CreateBotVersionCommandOutput) => void
+    cb: (err: any, data?: CreateBotVersionCommandOutput) => void,
   ): void;
   createBotVersion(
     args: CreateBotVersionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateBotVersionCommandOutput) => void
+    cb: (err: any, data?: CreateBotVersionCommandOutput) => void,
   ): void;
 
   /**
@@ -710,7 +710,7 @@ export interface LexModelsV2 {
   createExport(
     args: CreateExportCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateExportCommandOutput) => void
+    cb: (err: any, data?: CreateExportCommandOutput) => void,
   ): void;
 
   /**
@@ -721,7 +721,7 @@ export interface LexModelsV2 {
   createIntent(
     args: CreateIntentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateIntentCommandOutput) => void
+    cb: (err: any, data?: CreateIntentCommandOutput) => void,
   ): void;
 
   /**
@@ -729,16 +729,16 @@ export interface LexModelsV2 {
    */
   createResourcePolicy(
     args: CreateResourcePolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateResourcePolicyCommandOutput>;
   createResourcePolicy(
     args: CreateResourcePolicyCommandInput,
-    cb: (err: any, data?: CreateResourcePolicyCommandOutput) => void
+    cb: (err: any, data?: CreateResourcePolicyCommandOutput) => void,
   ): void;
   createResourcePolicy(
     args: CreateResourcePolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateResourcePolicyCommandOutput) => void
+    cb: (err: any, data?: CreateResourcePolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -746,16 +746,16 @@ export interface LexModelsV2 {
    */
   createResourcePolicyStatement(
     args: CreateResourcePolicyStatementCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateResourcePolicyStatementCommandOutput>;
   createResourcePolicyStatement(
     args: CreateResourcePolicyStatementCommandInput,
-    cb: (err: any, data?: CreateResourcePolicyStatementCommandOutput) => void
+    cb: (err: any, data?: CreateResourcePolicyStatementCommandOutput) => void,
   ): void;
   createResourcePolicyStatement(
     args: CreateResourcePolicyStatementCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateResourcePolicyStatementCommandOutput) => void
+    cb: (err: any, data?: CreateResourcePolicyStatementCommandOutput) => void,
   ): void;
 
   /**
@@ -766,7 +766,7 @@ export interface LexModelsV2 {
   createSlot(
     args: CreateSlotCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateSlotCommandOutput) => void
+    cb: (err: any, data?: CreateSlotCommandOutput) => void,
   ): void;
 
   /**
@@ -774,13 +774,13 @@ export interface LexModelsV2 {
    */
   createSlotType(
     args: CreateSlotTypeCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateSlotTypeCommandOutput>;
   createSlotType(args: CreateSlotTypeCommandInput, cb: (err: any, data?: CreateSlotTypeCommandOutput) => void): void;
   createSlotType(
     args: CreateSlotTypeCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateSlotTypeCommandOutput) => void
+    cb: (err: any, data?: CreateSlotTypeCommandOutput) => void,
   ): void;
 
   /**
@@ -788,16 +788,16 @@ export interface LexModelsV2 {
    */
   createTestSetDiscrepancyReport(
     args: CreateTestSetDiscrepancyReportCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateTestSetDiscrepancyReportCommandOutput>;
   createTestSetDiscrepancyReport(
     args: CreateTestSetDiscrepancyReportCommandInput,
-    cb: (err: any, data?: CreateTestSetDiscrepancyReportCommandOutput) => void
+    cb: (err: any, data?: CreateTestSetDiscrepancyReportCommandOutput) => void,
   ): void;
   createTestSetDiscrepancyReport(
     args: CreateTestSetDiscrepancyReportCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateTestSetDiscrepancyReportCommandOutput) => void
+    cb: (err: any, data?: CreateTestSetDiscrepancyReportCommandOutput) => void,
   ): void;
 
   /**
@@ -806,13 +806,13 @@ export interface LexModelsV2 {
   createUploadUrl(): Promise<CreateUploadUrlCommandOutput>;
   createUploadUrl(
     args: CreateUploadUrlCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateUploadUrlCommandOutput>;
   createUploadUrl(args: CreateUploadUrlCommandInput, cb: (err: any, data?: CreateUploadUrlCommandOutput) => void): void;
   createUploadUrl(
     args: CreateUploadUrlCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateUploadUrlCommandOutput) => void
+    cb: (err: any, data?: CreateUploadUrlCommandOutput) => void,
   ): void;
 
   /**
@@ -823,7 +823,7 @@ export interface LexModelsV2 {
   deleteBot(
     args: DeleteBotCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteBotCommandOutput) => void
+    cb: (err: any, data?: DeleteBotCommandOutput) => void,
   ): void;
 
   /**
@@ -831,13 +831,13 @@ export interface LexModelsV2 {
    */
   deleteBotAlias(
     args: DeleteBotAliasCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteBotAliasCommandOutput>;
   deleteBotAlias(args: DeleteBotAliasCommandInput, cb: (err: any, data?: DeleteBotAliasCommandOutput) => void): void;
   deleteBotAlias(
     args: DeleteBotAliasCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteBotAliasCommandOutput) => void
+    cb: (err: any, data?: DeleteBotAliasCommandOutput) => void,
   ): void;
 
   /**
@@ -845,13 +845,13 @@ export interface LexModelsV2 {
    */
   deleteBotLocale(
     args: DeleteBotLocaleCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteBotLocaleCommandOutput>;
   deleteBotLocale(args: DeleteBotLocaleCommandInput, cb: (err: any, data?: DeleteBotLocaleCommandOutput) => void): void;
   deleteBotLocale(
     args: DeleteBotLocaleCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteBotLocaleCommandOutput) => void
+    cb: (err: any, data?: DeleteBotLocaleCommandOutput) => void,
   ): void;
 
   /**
@@ -859,16 +859,16 @@ export interface LexModelsV2 {
    */
   deleteBotReplica(
     args: DeleteBotReplicaCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteBotReplicaCommandOutput>;
   deleteBotReplica(
     args: DeleteBotReplicaCommandInput,
-    cb: (err: any, data?: DeleteBotReplicaCommandOutput) => void
+    cb: (err: any, data?: DeleteBotReplicaCommandOutput) => void,
   ): void;
   deleteBotReplica(
     args: DeleteBotReplicaCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteBotReplicaCommandOutput) => void
+    cb: (err: any, data?: DeleteBotReplicaCommandOutput) => void,
   ): void;
 
   /**
@@ -876,16 +876,16 @@ export interface LexModelsV2 {
    */
   deleteBotVersion(
     args: DeleteBotVersionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteBotVersionCommandOutput>;
   deleteBotVersion(
     args: DeleteBotVersionCommandInput,
-    cb: (err: any, data?: DeleteBotVersionCommandOutput) => void
+    cb: (err: any, data?: DeleteBotVersionCommandOutput) => void,
   ): void;
   deleteBotVersion(
     args: DeleteBotVersionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteBotVersionCommandOutput) => void
+    cb: (err: any, data?: DeleteBotVersionCommandOutput) => void,
   ): void;
 
   /**
@@ -893,16 +893,16 @@ export interface LexModelsV2 {
    */
   deleteCustomVocabulary(
     args: DeleteCustomVocabularyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteCustomVocabularyCommandOutput>;
   deleteCustomVocabulary(
     args: DeleteCustomVocabularyCommandInput,
-    cb: (err: any, data?: DeleteCustomVocabularyCommandOutput) => void
+    cb: (err: any, data?: DeleteCustomVocabularyCommandOutput) => void,
   ): void;
   deleteCustomVocabulary(
     args: DeleteCustomVocabularyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteCustomVocabularyCommandOutput) => void
+    cb: (err: any, data?: DeleteCustomVocabularyCommandOutput) => void,
   ): void;
 
   /**
@@ -913,7 +913,7 @@ export interface LexModelsV2 {
   deleteExport(
     args: DeleteExportCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteExportCommandOutput) => void
+    cb: (err: any, data?: DeleteExportCommandOutput) => void,
   ): void;
 
   /**
@@ -924,7 +924,7 @@ export interface LexModelsV2 {
   deleteImport(
     args: DeleteImportCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteImportCommandOutput) => void
+    cb: (err: any, data?: DeleteImportCommandOutput) => void,
   ): void;
 
   /**
@@ -935,7 +935,7 @@ export interface LexModelsV2 {
   deleteIntent(
     args: DeleteIntentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteIntentCommandOutput) => void
+    cb: (err: any, data?: DeleteIntentCommandOutput) => void,
   ): void;
 
   /**
@@ -943,16 +943,16 @@ export interface LexModelsV2 {
    */
   deleteResourcePolicy(
     args: DeleteResourcePolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteResourcePolicyCommandOutput>;
   deleteResourcePolicy(
     args: DeleteResourcePolicyCommandInput,
-    cb: (err: any, data?: DeleteResourcePolicyCommandOutput) => void
+    cb: (err: any, data?: DeleteResourcePolicyCommandOutput) => void,
   ): void;
   deleteResourcePolicy(
     args: DeleteResourcePolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteResourcePolicyCommandOutput) => void
+    cb: (err: any, data?: DeleteResourcePolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -960,16 +960,16 @@ export interface LexModelsV2 {
    */
   deleteResourcePolicyStatement(
     args: DeleteResourcePolicyStatementCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteResourcePolicyStatementCommandOutput>;
   deleteResourcePolicyStatement(
     args: DeleteResourcePolicyStatementCommandInput,
-    cb: (err: any, data?: DeleteResourcePolicyStatementCommandOutput) => void
+    cb: (err: any, data?: DeleteResourcePolicyStatementCommandOutput) => void,
   ): void;
   deleteResourcePolicyStatement(
     args: DeleteResourcePolicyStatementCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteResourcePolicyStatementCommandOutput) => void
+    cb: (err: any, data?: DeleteResourcePolicyStatementCommandOutput) => void,
   ): void;
 
   /**
@@ -980,7 +980,7 @@ export interface LexModelsV2 {
   deleteSlot(
     args: DeleteSlotCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteSlotCommandOutput) => void
+    cb: (err: any, data?: DeleteSlotCommandOutput) => void,
   ): void;
 
   /**
@@ -988,13 +988,13 @@ export interface LexModelsV2 {
    */
   deleteSlotType(
     args: DeleteSlotTypeCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteSlotTypeCommandOutput>;
   deleteSlotType(args: DeleteSlotTypeCommandInput, cb: (err: any, data?: DeleteSlotTypeCommandOutput) => void): void;
   deleteSlotType(
     args: DeleteSlotTypeCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteSlotTypeCommandOutput) => void
+    cb: (err: any, data?: DeleteSlotTypeCommandOutput) => void,
   ): void;
 
   /**
@@ -1005,7 +1005,7 @@ export interface LexModelsV2 {
   deleteTestSet(
     args: DeleteTestSetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteTestSetCommandOutput) => void
+    cb: (err: any, data?: DeleteTestSetCommandOutput) => void,
   ): void;
 
   /**
@@ -1013,16 +1013,16 @@ export interface LexModelsV2 {
    */
   deleteUtterances(
     args: DeleteUtterancesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteUtterancesCommandOutput>;
   deleteUtterances(
     args: DeleteUtterancesCommandInput,
-    cb: (err: any, data?: DeleteUtterancesCommandOutput) => void
+    cb: (err: any, data?: DeleteUtterancesCommandOutput) => void,
   ): void;
   deleteUtterances(
     args: DeleteUtterancesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteUtterancesCommandOutput) => void
+    cb: (err: any, data?: DeleteUtterancesCommandOutput) => void,
   ): void;
 
   /**
@@ -1033,7 +1033,7 @@ export interface LexModelsV2 {
   describeBot(
     args: DescribeBotCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeBotCommandOutput) => void
+    cb: (err: any, data?: DescribeBotCommandOutput) => void,
   ): void;
 
   /**
@@ -1041,16 +1041,16 @@ export interface LexModelsV2 {
    */
   describeBotAlias(
     args: DescribeBotAliasCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeBotAliasCommandOutput>;
   describeBotAlias(
     args: DescribeBotAliasCommandInput,
-    cb: (err: any, data?: DescribeBotAliasCommandOutput) => void
+    cb: (err: any, data?: DescribeBotAliasCommandOutput) => void,
   ): void;
   describeBotAlias(
     args: DescribeBotAliasCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeBotAliasCommandOutput) => void
+    cb: (err: any, data?: DescribeBotAliasCommandOutput) => void,
   ): void;
 
   /**
@@ -1058,16 +1058,16 @@ export interface LexModelsV2 {
    */
   describeBotLocale(
     args: DescribeBotLocaleCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeBotLocaleCommandOutput>;
   describeBotLocale(
     args: DescribeBotLocaleCommandInput,
-    cb: (err: any, data?: DescribeBotLocaleCommandOutput) => void
+    cb: (err: any, data?: DescribeBotLocaleCommandOutput) => void,
   ): void;
   describeBotLocale(
     args: DescribeBotLocaleCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeBotLocaleCommandOutput) => void
+    cb: (err: any, data?: DescribeBotLocaleCommandOutput) => void,
   ): void;
 
   /**
@@ -1075,16 +1075,16 @@ export interface LexModelsV2 {
    */
   describeBotRecommendation(
     args: DescribeBotRecommendationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeBotRecommendationCommandOutput>;
   describeBotRecommendation(
     args: DescribeBotRecommendationCommandInput,
-    cb: (err: any, data?: DescribeBotRecommendationCommandOutput) => void
+    cb: (err: any, data?: DescribeBotRecommendationCommandOutput) => void,
   ): void;
   describeBotRecommendation(
     args: DescribeBotRecommendationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeBotRecommendationCommandOutput) => void
+    cb: (err: any, data?: DescribeBotRecommendationCommandOutput) => void,
   ): void;
 
   /**
@@ -1092,16 +1092,16 @@ export interface LexModelsV2 {
    */
   describeBotReplica(
     args: DescribeBotReplicaCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeBotReplicaCommandOutput>;
   describeBotReplica(
     args: DescribeBotReplicaCommandInput,
-    cb: (err: any, data?: DescribeBotReplicaCommandOutput) => void
+    cb: (err: any, data?: DescribeBotReplicaCommandOutput) => void,
   ): void;
   describeBotReplica(
     args: DescribeBotReplicaCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeBotReplicaCommandOutput) => void
+    cb: (err: any, data?: DescribeBotReplicaCommandOutput) => void,
   ): void;
 
   /**
@@ -1109,16 +1109,16 @@ export interface LexModelsV2 {
    */
   describeBotResourceGeneration(
     args: DescribeBotResourceGenerationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeBotResourceGenerationCommandOutput>;
   describeBotResourceGeneration(
     args: DescribeBotResourceGenerationCommandInput,
-    cb: (err: any, data?: DescribeBotResourceGenerationCommandOutput) => void
+    cb: (err: any, data?: DescribeBotResourceGenerationCommandOutput) => void,
   ): void;
   describeBotResourceGeneration(
     args: DescribeBotResourceGenerationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeBotResourceGenerationCommandOutput) => void
+    cb: (err: any, data?: DescribeBotResourceGenerationCommandOutput) => void,
   ): void;
 
   /**
@@ -1126,16 +1126,16 @@ export interface LexModelsV2 {
    */
   describeBotVersion(
     args: DescribeBotVersionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeBotVersionCommandOutput>;
   describeBotVersion(
     args: DescribeBotVersionCommandInput,
-    cb: (err: any, data?: DescribeBotVersionCommandOutput) => void
+    cb: (err: any, data?: DescribeBotVersionCommandOutput) => void,
   ): void;
   describeBotVersion(
     args: DescribeBotVersionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeBotVersionCommandOutput) => void
+    cb: (err: any, data?: DescribeBotVersionCommandOutput) => void,
   ): void;
 
   /**
@@ -1143,16 +1143,16 @@ export interface LexModelsV2 {
    */
   describeCustomVocabularyMetadata(
     args: DescribeCustomVocabularyMetadataCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeCustomVocabularyMetadataCommandOutput>;
   describeCustomVocabularyMetadata(
     args: DescribeCustomVocabularyMetadataCommandInput,
-    cb: (err: any, data?: DescribeCustomVocabularyMetadataCommandOutput) => void
+    cb: (err: any, data?: DescribeCustomVocabularyMetadataCommandOutput) => void,
   ): void;
   describeCustomVocabularyMetadata(
     args: DescribeCustomVocabularyMetadataCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeCustomVocabularyMetadataCommandOutput) => void
+    cb: (err: any, data?: DescribeCustomVocabularyMetadataCommandOutput) => void,
   ): void;
 
   /**
@@ -1160,13 +1160,13 @@ export interface LexModelsV2 {
    */
   describeExport(
     args: DescribeExportCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeExportCommandOutput>;
   describeExport(args: DescribeExportCommandInput, cb: (err: any, data?: DescribeExportCommandOutput) => void): void;
   describeExport(
     args: DescribeExportCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeExportCommandOutput) => void
+    cb: (err: any, data?: DescribeExportCommandOutput) => void,
   ): void;
 
   /**
@@ -1174,13 +1174,13 @@ export interface LexModelsV2 {
    */
   describeImport(
     args: DescribeImportCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeImportCommandOutput>;
   describeImport(args: DescribeImportCommandInput, cb: (err: any, data?: DescribeImportCommandOutput) => void): void;
   describeImport(
     args: DescribeImportCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeImportCommandOutput) => void
+    cb: (err: any, data?: DescribeImportCommandOutput) => void,
   ): void;
 
   /**
@@ -1188,13 +1188,13 @@ export interface LexModelsV2 {
    */
   describeIntent(
     args: DescribeIntentCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeIntentCommandOutput>;
   describeIntent(args: DescribeIntentCommandInput, cb: (err: any, data?: DescribeIntentCommandOutput) => void): void;
   describeIntent(
     args: DescribeIntentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeIntentCommandOutput) => void
+    cb: (err: any, data?: DescribeIntentCommandOutput) => void,
   ): void;
 
   /**
@@ -1202,16 +1202,16 @@ export interface LexModelsV2 {
    */
   describeResourcePolicy(
     args: DescribeResourcePolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeResourcePolicyCommandOutput>;
   describeResourcePolicy(
     args: DescribeResourcePolicyCommandInput,
-    cb: (err: any, data?: DescribeResourcePolicyCommandOutput) => void
+    cb: (err: any, data?: DescribeResourcePolicyCommandOutput) => void,
   ): void;
   describeResourcePolicy(
     args: DescribeResourcePolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeResourcePolicyCommandOutput) => void
+    cb: (err: any, data?: DescribeResourcePolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -1222,7 +1222,7 @@ export interface LexModelsV2 {
   describeSlot(
     args: DescribeSlotCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeSlotCommandOutput) => void
+    cb: (err: any, data?: DescribeSlotCommandOutput) => void,
   ): void;
 
   /**
@@ -1230,16 +1230,16 @@ export interface LexModelsV2 {
    */
   describeSlotType(
     args: DescribeSlotTypeCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeSlotTypeCommandOutput>;
   describeSlotType(
     args: DescribeSlotTypeCommandInput,
-    cb: (err: any, data?: DescribeSlotTypeCommandOutput) => void
+    cb: (err: any, data?: DescribeSlotTypeCommandOutput) => void,
   ): void;
   describeSlotType(
     args: DescribeSlotTypeCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeSlotTypeCommandOutput) => void
+    cb: (err: any, data?: DescribeSlotTypeCommandOutput) => void,
   ): void;
 
   /**
@@ -1247,16 +1247,16 @@ export interface LexModelsV2 {
    */
   describeTestExecution(
     args: DescribeTestExecutionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeTestExecutionCommandOutput>;
   describeTestExecution(
     args: DescribeTestExecutionCommandInput,
-    cb: (err: any, data?: DescribeTestExecutionCommandOutput) => void
+    cb: (err: any, data?: DescribeTestExecutionCommandOutput) => void,
   ): void;
   describeTestExecution(
     args: DescribeTestExecutionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeTestExecutionCommandOutput) => void
+    cb: (err: any, data?: DescribeTestExecutionCommandOutput) => void,
   ): void;
 
   /**
@@ -1264,13 +1264,13 @@ export interface LexModelsV2 {
    */
   describeTestSet(
     args: DescribeTestSetCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeTestSetCommandOutput>;
   describeTestSet(args: DescribeTestSetCommandInput, cb: (err: any, data?: DescribeTestSetCommandOutput) => void): void;
   describeTestSet(
     args: DescribeTestSetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeTestSetCommandOutput) => void
+    cb: (err: any, data?: DescribeTestSetCommandOutput) => void,
   ): void;
 
   /**
@@ -1278,16 +1278,16 @@ export interface LexModelsV2 {
    */
   describeTestSetDiscrepancyReport(
     args: DescribeTestSetDiscrepancyReportCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeTestSetDiscrepancyReportCommandOutput>;
   describeTestSetDiscrepancyReport(
     args: DescribeTestSetDiscrepancyReportCommandInput,
-    cb: (err: any, data?: DescribeTestSetDiscrepancyReportCommandOutput) => void
+    cb: (err: any, data?: DescribeTestSetDiscrepancyReportCommandOutput) => void,
   ): void;
   describeTestSetDiscrepancyReport(
     args: DescribeTestSetDiscrepancyReportCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeTestSetDiscrepancyReportCommandOutput) => void
+    cb: (err: any, data?: DescribeTestSetDiscrepancyReportCommandOutput) => void,
   ): void;
 
   /**
@@ -1295,16 +1295,16 @@ export interface LexModelsV2 {
    */
   describeTestSetGeneration(
     args: DescribeTestSetGenerationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeTestSetGenerationCommandOutput>;
   describeTestSetGeneration(
     args: DescribeTestSetGenerationCommandInput,
-    cb: (err: any, data?: DescribeTestSetGenerationCommandOutput) => void
+    cb: (err: any, data?: DescribeTestSetGenerationCommandOutput) => void,
   ): void;
   describeTestSetGeneration(
     args: DescribeTestSetGenerationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeTestSetGenerationCommandOutput) => void
+    cb: (err: any, data?: DescribeTestSetGenerationCommandOutput) => void,
   ): void;
 
   /**
@@ -1312,16 +1312,16 @@ export interface LexModelsV2 {
    */
   generateBotElement(
     args: GenerateBotElementCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GenerateBotElementCommandOutput>;
   generateBotElement(
     args: GenerateBotElementCommandInput,
-    cb: (err: any, data?: GenerateBotElementCommandOutput) => void
+    cb: (err: any, data?: GenerateBotElementCommandOutput) => void,
   ): void;
   generateBotElement(
     args: GenerateBotElementCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GenerateBotElementCommandOutput) => void
+    cb: (err: any, data?: GenerateBotElementCommandOutput) => void,
   ): void;
 
   /**
@@ -1329,16 +1329,16 @@ export interface LexModelsV2 {
    */
   getTestExecutionArtifactsUrl(
     args: GetTestExecutionArtifactsUrlCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetTestExecutionArtifactsUrlCommandOutput>;
   getTestExecutionArtifactsUrl(
     args: GetTestExecutionArtifactsUrlCommandInput,
-    cb: (err: any, data?: GetTestExecutionArtifactsUrlCommandOutput) => void
+    cb: (err: any, data?: GetTestExecutionArtifactsUrlCommandOutput) => void,
   ): void;
   getTestExecutionArtifactsUrl(
     args: GetTestExecutionArtifactsUrlCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetTestExecutionArtifactsUrlCommandOutput) => void
+    cb: (err: any, data?: GetTestExecutionArtifactsUrlCommandOutput) => void,
   ): void;
 
   /**
@@ -1346,16 +1346,16 @@ export interface LexModelsV2 {
    */
   listAggregatedUtterances(
     args: ListAggregatedUtterancesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListAggregatedUtterancesCommandOutput>;
   listAggregatedUtterances(
     args: ListAggregatedUtterancesCommandInput,
-    cb: (err: any, data?: ListAggregatedUtterancesCommandOutput) => void
+    cb: (err: any, data?: ListAggregatedUtterancesCommandOutput) => void,
   ): void;
   listAggregatedUtterances(
     args: ListAggregatedUtterancesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListAggregatedUtterancesCommandOutput) => void
+    cb: (err: any, data?: ListAggregatedUtterancesCommandOutput) => void,
   ): void;
 
   /**
@@ -1363,13 +1363,13 @@ export interface LexModelsV2 {
    */
   listBotAliases(
     args: ListBotAliasesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListBotAliasesCommandOutput>;
   listBotAliases(args: ListBotAliasesCommandInput, cb: (err: any, data?: ListBotAliasesCommandOutput) => void): void;
   listBotAliases(
     args: ListBotAliasesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListBotAliasesCommandOutput) => void
+    cb: (err: any, data?: ListBotAliasesCommandOutput) => void,
   ): void;
 
   /**
@@ -1377,16 +1377,16 @@ export interface LexModelsV2 {
    */
   listBotAliasReplicas(
     args: ListBotAliasReplicasCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListBotAliasReplicasCommandOutput>;
   listBotAliasReplicas(
     args: ListBotAliasReplicasCommandInput,
-    cb: (err: any, data?: ListBotAliasReplicasCommandOutput) => void
+    cb: (err: any, data?: ListBotAliasReplicasCommandOutput) => void,
   ): void;
   listBotAliasReplicas(
     args: ListBotAliasReplicasCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListBotAliasReplicasCommandOutput) => void
+    cb: (err: any, data?: ListBotAliasReplicasCommandOutput) => void,
   ): void;
 
   /**
@@ -1394,13 +1394,13 @@ export interface LexModelsV2 {
    */
   listBotLocales(
     args: ListBotLocalesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListBotLocalesCommandOutput>;
   listBotLocales(args: ListBotLocalesCommandInput, cb: (err: any, data?: ListBotLocalesCommandOutput) => void): void;
   listBotLocales(
     args: ListBotLocalesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListBotLocalesCommandOutput) => void
+    cb: (err: any, data?: ListBotLocalesCommandOutput) => void,
   ): void;
 
   /**
@@ -1408,16 +1408,16 @@ export interface LexModelsV2 {
    */
   listBotRecommendations(
     args: ListBotRecommendationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListBotRecommendationsCommandOutput>;
   listBotRecommendations(
     args: ListBotRecommendationsCommandInput,
-    cb: (err: any, data?: ListBotRecommendationsCommandOutput) => void
+    cb: (err: any, data?: ListBotRecommendationsCommandOutput) => void,
   ): void;
   listBotRecommendations(
     args: ListBotRecommendationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListBotRecommendationsCommandOutput) => void
+    cb: (err: any, data?: ListBotRecommendationsCommandOutput) => void,
   ): void;
 
   /**
@@ -1425,13 +1425,13 @@ export interface LexModelsV2 {
    */
   listBotReplicas(
     args: ListBotReplicasCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListBotReplicasCommandOutput>;
   listBotReplicas(args: ListBotReplicasCommandInput, cb: (err: any, data?: ListBotReplicasCommandOutput) => void): void;
   listBotReplicas(
     args: ListBotReplicasCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListBotReplicasCommandOutput) => void
+    cb: (err: any, data?: ListBotReplicasCommandOutput) => void,
   ): void;
 
   /**
@@ -1439,16 +1439,16 @@ export interface LexModelsV2 {
    */
   listBotResourceGenerations(
     args: ListBotResourceGenerationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListBotResourceGenerationsCommandOutput>;
   listBotResourceGenerations(
     args: ListBotResourceGenerationsCommandInput,
-    cb: (err: any, data?: ListBotResourceGenerationsCommandOutput) => void
+    cb: (err: any, data?: ListBotResourceGenerationsCommandOutput) => void,
   ): void;
   listBotResourceGenerations(
     args: ListBotResourceGenerationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListBotResourceGenerationsCommandOutput) => void
+    cb: (err: any, data?: ListBotResourceGenerationsCommandOutput) => void,
   ): void;
 
   /**
@@ -1460,7 +1460,7 @@ export interface LexModelsV2 {
   listBots(
     args: ListBotsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListBotsCommandOutput) => void
+    cb: (err: any, data?: ListBotsCommandOutput) => void,
   ): void;
 
   /**
@@ -1468,16 +1468,16 @@ export interface LexModelsV2 {
    */
   listBotVersionReplicas(
     args: ListBotVersionReplicasCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListBotVersionReplicasCommandOutput>;
   listBotVersionReplicas(
     args: ListBotVersionReplicasCommandInput,
-    cb: (err: any, data?: ListBotVersionReplicasCommandOutput) => void
+    cb: (err: any, data?: ListBotVersionReplicasCommandOutput) => void,
   ): void;
   listBotVersionReplicas(
     args: ListBotVersionReplicasCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListBotVersionReplicasCommandOutput) => void
+    cb: (err: any, data?: ListBotVersionReplicasCommandOutput) => void,
   ): void;
 
   /**
@@ -1485,13 +1485,13 @@ export interface LexModelsV2 {
    */
   listBotVersions(
     args: ListBotVersionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListBotVersionsCommandOutput>;
   listBotVersions(args: ListBotVersionsCommandInput, cb: (err: any, data?: ListBotVersionsCommandOutput) => void): void;
   listBotVersions(
     args: ListBotVersionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListBotVersionsCommandOutput) => void
+    cb: (err: any, data?: ListBotVersionsCommandOutput) => void,
   ): void;
 
   /**
@@ -1499,16 +1499,16 @@ export interface LexModelsV2 {
    */
   listBuiltInIntents(
     args: ListBuiltInIntentsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListBuiltInIntentsCommandOutput>;
   listBuiltInIntents(
     args: ListBuiltInIntentsCommandInput,
-    cb: (err: any, data?: ListBuiltInIntentsCommandOutput) => void
+    cb: (err: any, data?: ListBuiltInIntentsCommandOutput) => void,
   ): void;
   listBuiltInIntents(
     args: ListBuiltInIntentsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListBuiltInIntentsCommandOutput) => void
+    cb: (err: any, data?: ListBuiltInIntentsCommandOutput) => void,
   ): void;
 
   /**
@@ -1516,16 +1516,16 @@ export interface LexModelsV2 {
    */
   listBuiltInSlotTypes(
     args: ListBuiltInSlotTypesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListBuiltInSlotTypesCommandOutput>;
   listBuiltInSlotTypes(
     args: ListBuiltInSlotTypesCommandInput,
-    cb: (err: any, data?: ListBuiltInSlotTypesCommandOutput) => void
+    cb: (err: any, data?: ListBuiltInSlotTypesCommandOutput) => void,
   ): void;
   listBuiltInSlotTypes(
     args: ListBuiltInSlotTypesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListBuiltInSlotTypesCommandOutput) => void
+    cb: (err: any, data?: ListBuiltInSlotTypesCommandOutput) => void,
   ): void;
 
   /**
@@ -1533,16 +1533,16 @@ export interface LexModelsV2 {
    */
   listCustomVocabularyItems(
     args: ListCustomVocabularyItemsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListCustomVocabularyItemsCommandOutput>;
   listCustomVocabularyItems(
     args: ListCustomVocabularyItemsCommandInput,
-    cb: (err: any, data?: ListCustomVocabularyItemsCommandOutput) => void
+    cb: (err: any, data?: ListCustomVocabularyItemsCommandOutput) => void,
   ): void;
   listCustomVocabularyItems(
     args: ListCustomVocabularyItemsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListCustomVocabularyItemsCommandOutput) => void
+    cb: (err: any, data?: ListCustomVocabularyItemsCommandOutput) => void,
   ): void;
 
   /**
@@ -1554,7 +1554,7 @@ export interface LexModelsV2 {
   listExports(
     args: ListExportsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListExportsCommandOutput) => void
+    cb: (err: any, data?: ListExportsCommandOutput) => void,
   ): void;
 
   /**
@@ -1566,7 +1566,7 @@ export interface LexModelsV2 {
   listImports(
     args: ListImportsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListImportsCommandOutput) => void
+    cb: (err: any, data?: ListImportsCommandOutput) => void,
   ): void;
 
   /**
@@ -1574,16 +1574,16 @@ export interface LexModelsV2 {
    */
   listIntentMetrics(
     args: ListIntentMetricsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListIntentMetricsCommandOutput>;
   listIntentMetrics(
     args: ListIntentMetricsCommandInput,
-    cb: (err: any, data?: ListIntentMetricsCommandOutput) => void
+    cb: (err: any, data?: ListIntentMetricsCommandOutput) => void,
   ): void;
   listIntentMetrics(
     args: ListIntentMetricsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListIntentMetricsCommandOutput) => void
+    cb: (err: any, data?: ListIntentMetricsCommandOutput) => void,
   ): void;
 
   /**
@@ -1591,13 +1591,13 @@ export interface LexModelsV2 {
    */
   listIntentPaths(
     args: ListIntentPathsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListIntentPathsCommandOutput>;
   listIntentPaths(args: ListIntentPathsCommandInput, cb: (err: any, data?: ListIntentPathsCommandOutput) => void): void;
   listIntentPaths(
     args: ListIntentPathsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListIntentPathsCommandOutput) => void
+    cb: (err: any, data?: ListIntentPathsCommandOutput) => void,
   ): void;
 
   /**
@@ -1608,7 +1608,7 @@ export interface LexModelsV2 {
   listIntents(
     args: ListIntentsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListIntentsCommandOutput) => void
+    cb: (err: any, data?: ListIntentsCommandOutput) => void,
   ): void;
 
   /**
@@ -1616,16 +1616,16 @@ export interface LexModelsV2 {
    */
   listIntentStageMetrics(
     args: ListIntentStageMetricsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListIntentStageMetricsCommandOutput>;
   listIntentStageMetrics(
     args: ListIntentStageMetricsCommandInput,
-    cb: (err: any, data?: ListIntentStageMetricsCommandOutput) => void
+    cb: (err: any, data?: ListIntentStageMetricsCommandOutput) => void,
   ): void;
   listIntentStageMetrics(
     args: ListIntentStageMetricsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListIntentStageMetricsCommandOutput) => void
+    cb: (err: any, data?: ListIntentStageMetricsCommandOutput) => void,
   ): void;
 
   /**
@@ -1633,16 +1633,16 @@ export interface LexModelsV2 {
    */
   listRecommendedIntents(
     args: ListRecommendedIntentsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListRecommendedIntentsCommandOutput>;
   listRecommendedIntents(
     args: ListRecommendedIntentsCommandInput,
-    cb: (err: any, data?: ListRecommendedIntentsCommandOutput) => void
+    cb: (err: any, data?: ListRecommendedIntentsCommandOutput) => void,
   ): void;
   listRecommendedIntents(
     args: ListRecommendedIntentsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListRecommendedIntentsCommandOutput) => void
+    cb: (err: any, data?: ListRecommendedIntentsCommandOutput) => void,
   ): void;
 
   /**
@@ -1650,16 +1650,16 @@ export interface LexModelsV2 {
    */
   listSessionAnalyticsData(
     args: ListSessionAnalyticsDataCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListSessionAnalyticsDataCommandOutput>;
   listSessionAnalyticsData(
     args: ListSessionAnalyticsDataCommandInput,
-    cb: (err: any, data?: ListSessionAnalyticsDataCommandOutput) => void
+    cb: (err: any, data?: ListSessionAnalyticsDataCommandOutput) => void,
   ): void;
   listSessionAnalyticsData(
     args: ListSessionAnalyticsDataCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListSessionAnalyticsDataCommandOutput) => void
+    cb: (err: any, data?: ListSessionAnalyticsDataCommandOutput) => void,
   ): void;
 
   /**
@@ -1667,16 +1667,16 @@ export interface LexModelsV2 {
    */
   listSessionMetrics(
     args: ListSessionMetricsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListSessionMetricsCommandOutput>;
   listSessionMetrics(
     args: ListSessionMetricsCommandInput,
-    cb: (err: any, data?: ListSessionMetricsCommandOutput) => void
+    cb: (err: any, data?: ListSessionMetricsCommandOutput) => void,
   ): void;
   listSessionMetrics(
     args: ListSessionMetricsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListSessionMetricsCommandOutput) => void
+    cb: (err: any, data?: ListSessionMetricsCommandOutput) => void,
   ): void;
 
   /**
@@ -1687,7 +1687,7 @@ export interface LexModelsV2 {
   listSlots(
     args: ListSlotsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListSlotsCommandOutput) => void
+    cb: (err: any, data?: ListSlotsCommandOutput) => void,
   ): void;
 
   /**
@@ -1698,7 +1698,7 @@ export interface LexModelsV2 {
   listSlotTypes(
     args: ListSlotTypesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListSlotTypesCommandOutput) => void
+    cb: (err: any, data?: ListSlotTypesCommandOutput) => void,
   ): void;
 
   /**
@@ -1706,16 +1706,16 @@ export interface LexModelsV2 {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -1723,16 +1723,16 @@ export interface LexModelsV2 {
    */
   listTestExecutionResultItems(
     args: ListTestExecutionResultItemsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTestExecutionResultItemsCommandOutput>;
   listTestExecutionResultItems(
     args: ListTestExecutionResultItemsCommandInput,
-    cb: (err: any, data?: ListTestExecutionResultItemsCommandOutput) => void
+    cb: (err: any, data?: ListTestExecutionResultItemsCommandOutput) => void,
   ): void;
   listTestExecutionResultItems(
     args: ListTestExecutionResultItemsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTestExecutionResultItemsCommandOutput) => void
+    cb: (err: any, data?: ListTestExecutionResultItemsCommandOutput) => void,
   ): void;
 
   /**
@@ -1741,16 +1741,16 @@ export interface LexModelsV2 {
   listTestExecutions(): Promise<ListTestExecutionsCommandOutput>;
   listTestExecutions(
     args: ListTestExecutionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTestExecutionsCommandOutput>;
   listTestExecutions(
     args: ListTestExecutionsCommandInput,
-    cb: (err: any, data?: ListTestExecutionsCommandOutput) => void
+    cb: (err: any, data?: ListTestExecutionsCommandOutput) => void,
   ): void;
   listTestExecutions(
     args: ListTestExecutionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTestExecutionsCommandOutput) => void
+    cb: (err: any, data?: ListTestExecutionsCommandOutput) => void,
   ): void;
 
   /**
@@ -1758,16 +1758,16 @@ export interface LexModelsV2 {
    */
   listTestSetRecords(
     args: ListTestSetRecordsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTestSetRecordsCommandOutput>;
   listTestSetRecords(
     args: ListTestSetRecordsCommandInput,
-    cb: (err: any, data?: ListTestSetRecordsCommandOutput) => void
+    cb: (err: any, data?: ListTestSetRecordsCommandOutput) => void,
   ): void;
   listTestSetRecords(
     args: ListTestSetRecordsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTestSetRecordsCommandOutput) => void
+    cb: (err: any, data?: ListTestSetRecordsCommandOutput) => void,
   ): void;
 
   /**
@@ -1779,7 +1779,7 @@ export interface LexModelsV2 {
   listTestSets(
     args: ListTestSetsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTestSetsCommandOutput) => void
+    cb: (err: any, data?: ListTestSetsCommandOutput) => void,
   ): void;
 
   /**
@@ -1787,16 +1787,16 @@ export interface LexModelsV2 {
    */
   listUtteranceAnalyticsData(
     args: ListUtteranceAnalyticsDataCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListUtteranceAnalyticsDataCommandOutput>;
   listUtteranceAnalyticsData(
     args: ListUtteranceAnalyticsDataCommandInput,
-    cb: (err: any, data?: ListUtteranceAnalyticsDataCommandOutput) => void
+    cb: (err: any, data?: ListUtteranceAnalyticsDataCommandOutput) => void,
   ): void;
   listUtteranceAnalyticsData(
     args: ListUtteranceAnalyticsDataCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListUtteranceAnalyticsDataCommandOutput) => void
+    cb: (err: any, data?: ListUtteranceAnalyticsDataCommandOutput) => void,
   ): void;
 
   /**
@@ -1804,16 +1804,16 @@ export interface LexModelsV2 {
    */
   listUtteranceMetrics(
     args: ListUtteranceMetricsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListUtteranceMetricsCommandOutput>;
   listUtteranceMetrics(
     args: ListUtteranceMetricsCommandInput,
-    cb: (err: any, data?: ListUtteranceMetricsCommandOutput) => void
+    cb: (err: any, data?: ListUtteranceMetricsCommandOutput) => void,
   ): void;
   listUtteranceMetrics(
     args: ListUtteranceMetricsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListUtteranceMetricsCommandOutput) => void
+    cb: (err: any, data?: ListUtteranceMetricsCommandOutput) => void,
   ): void;
 
   /**
@@ -1821,16 +1821,16 @@ export interface LexModelsV2 {
    */
   searchAssociatedTranscripts(
     args: SearchAssociatedTranscriptsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<SearchAssociatedTranscriptsCommandOutput>;
   searchAssociatedTranscripts(
     args: SearchAssociatedTranscriptsCommandInput,
-    cb: (err: any, data?: SearchAssociatedTranscriptsCommandOutput) => void
+    cb: (err: any, data?: SearchAssociatedTranscriptsCommandOutput) => void,
   ): void;
   searchAssociatedTranscripts(
     args: SearchAssociatedTranscriptsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SearchAssociatedTranscriptsCommandOutput) => void
+    cb: (err: any, data?: SearchAssociatedTranscriptsCommandOutput) => void,
   ): void;
 
   /**
@@ -1838,16 +1838,16 @@ export interface LexModelsV2 {
    */
   startBotRecommendation(
     args: StartBotRecommendationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartBotRecommendationCommandOutput>;
   startBotRecommendation(
     args: StartBotRecommendationCommandInput,
-    cb: (err: any, data?: StartBotRecommendationCommandOutput) => void
+    cb: (err: any, data?: StartBotRecommendationCommandOutput) => void,
   ): void;
   startBotRecommendation(
     args: StartBotRecommendationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartBotRecommendationCommandOutput) => void
+    cb: (err: any, data?: StartBotRecommendationCommandOutput) => void,
   ): void;
 
   /**
@@ -1855,16 +1855,16 @@ export interface LexModelsV2 {
    */
   startBotResourceGeneration(
     args: StartBotResourceGenerationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartBotResourceGenerationCommandOutput>;
   startBotResourceGeneration(
     args: StartBotResourceGenerationCommandInput,
-    cb: (err: any, data?: StartBotResourceGenerationCommandOutput) => void
+    cb: (err: any, data?: StartBotResourceGenerationCommandOutput) => void,
   ): void;
   startBotResourceGeneration(
     args: StartBotResourceGenerationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartBotResourceGenerationCommandOutput) => void
+    cb: (err: any, data?: StartBotResourceGenerationCommandOutput) => void,
   ): void;
 
   /**
@@ -1875,7 +1875,7 @@ export interface LexModelsV2 {
   startImport(
     args: StartImportCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartImportCommandOutput) => void
+    cb: (err: any, data?: StartImportCommandOutput) => void,
   ): void;
 
   /**
@@ -1883,16 +1883,16 @@ export interface LexModelsV2 {
    */
   startTestExecution(
     args: StartTestExecutionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartTestExecutionCommandOutput>;
   startTestExecution(
     args: StartTestExecutionCommandInput,
-    cb: (err: any, data?: StartTestExecutionCommandOutput) => void
+    cb: (err: any, data?: StartTestExecutionCommandOutput) => void,
   ): void;
   startTestExecution(
     args: StartTestExecutionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartTestExecutionCommandOutput) => void
+    cb: (err: any, data?: StartTestExecutionCommandOutput) => void,
   ): void;
 
   /**
@@ -1900,16 +1900,16 @@ export interface LexModelsV2 {
    */
   startTestSetGeneration(
     args: StartTestSetGenerationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartTestSetGenerationCommandOutput>;
   startTestSetGeneration(
     args: StartTestSetGenerationCommandInput,
-    cb: (err: any, data?: StartTestSetGenerationCommandOutput) => void
+    cb: (err: any, data?: StartTestSetGenerationCommandOutput) => void,
   ): void;
   startTestSetGeneration(
     args: StartTestSetGenerationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartTestSetGenerationCommandOutput) => void
+    cb: (err: any, data?: StartTestSetGenerationCommandOutput) => void,
   ): void;
 
   /**
@@ -1917,16 +1917,16 @@ export interface LexModelsV2 {
    */
   stopBotRecommendation(
     args: StopBotRecommendationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StopBotRecommendationCommandOutput>;
   stopBotRecommendation(
     args: StopBotRecommendationCommandInput,
-    cb: (err: any, data?: StopBotRecommendationCommandOutput) => void
+    cb: (err: any, data?: StopBotRecommendationCommandOutput) => void,
   ): void;
   stopBotRecommendation(
     args: StopBotRecommendationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StopBotRecommendationCommandOutput) => void
+    cb: (err: any, data?: StopBotRecommendationCommandOutput) => void,
   ): void;
 
   /**
@@ -1937,7 +1937,7 @@ export interface LexModelsV2 {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -1948,7 +1948,7 @@ export interface LexModelsV2 {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -1959,7 +1959,7 @@ export interface LexModelsV2 {
   updateBot(
     args: UpdateBotCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateBotCommandOutput) => void
+    cb: (err: any, data?: UpdateBotCommandOutput) => void,
   ): void;
 
   /**
@@ -1967,13 +1967,13 @@ export interface LexModelsV2 {
    */
   updateBotAlias(
     args: UpdateBotAliasCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateBotAliasCommandOutput>;
   updateBotAlias(args: UpdateBotAliasCommandInput, cb: (err: any, data?: UpdateBotAliasCommandOutput) => void): void;
   updateBotAlias(
     args: UpdateBotAliasCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateBotAliasCommandOutput) => void
+    cb: (err: any, data?: UpdateBotAliasCommandOutput) => void,
   ): void;
 
   /**
@@ -1981,13 +1981,13 @@ export interface LexModelsV2 {
    */
   updateBotLocale(
     args: UpdateBotLocaleCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateBotLocaleCommandOutput>;
   updateBotLocale(args: UpdateBotLocaleCommandInput, cb: (err: any, data?: UpdateBotLocaleCommandOutput) => void): void;
   updateBotLocale(
     args: UpdateBotLocaleCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateBotLocaleCommandOutput) => void
+    cb: (err: any, data?: UpdateBotLocaleCommandOutput) => void,
   ): void;
 
   /**
@@ -1995,16 +1995,16 @@ export interface LexModelsV2 {
    */
   updateBotRecommendation(
     args: UpdateBotRecommendationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateBotRecommendationCommandOutput>;
   updateBotRecommendation(
     args: UpdateBotRecommendationCommandInput,
-    cb: (err: any, data?: UpdateBotRecommendationCommandOutput) => void
+    cb: (err: any, data?: UpdateBotRecommendationCommandOutput) => void,
   ): void;
   updateBotRecommendation(
     args: UpdateBotRecommendationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateBotRecommendationCommandOutput) => void
+    cb: (err: any, data?: UpdateBotRecommendationCommandOutput) => void,
   ): void;
 
   /**
@@ -2015,7 +2015,7 @@ export interface LexModelsV2 {
   updateExport(
     args: UpdateExportCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateExportCommandOutput) => void
+    cb: (err: any, data?: UpdateExportCommandOutput) => void,
   ): void;
 
   /**
@@ -2026,7 +2026,7 @@ export interface LexModelsV2 {
   updateIntent(
     args: UpdateIntentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateIntentCommandOutput) => void
+    cb: (err: any, data?: UpdateIntentCommandOutput) => void,
   ): void;
 
   /**
@@ -2034,16 +2034,16 @@ export interface LexModelsV2 {
    */
   updateResourcePolicy(
     args: UpdateResourcePolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateResourcePolicyCommandOutput>;
   updateResourcePolicy(
     args: UpdateResourcePolicyCommandInput,
-    cb: (err: any, data?: UpdateResourcePolicyCommandOutput) => void
+    cb: (err: any, data?: UpdateResourcePolicyCommandOutput) => void,
   ): void;
   updateResourcePolicy(
     args: UpdateResourcePolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateResourcePolicyCommandOutput) => void
+    cb: (err: any, data?: UpdateResourcePolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -2054,7 +2054,7 @@ export interface LexModelsV2 {
   updateSlot(
     args: UpdateSlotCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateSlotCommandOutput) => void
+    cb: (err: any, data?: UpdateSlotCommandOutput) => void,
   ): void;
 
   /**
@@ -2062,13 +2062,13 @@ export interface LexModelsV2 {
    */
   updateSlotType(
     args: UpdateSlotTypeCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateSlotTypeCommandOutput>;
   updateSlotType(args: UpdateSlotTypeCommandInput, cb: (err: any, data?: UpdateSlotTypeCommandOutput) => void): void;
   updateSlotType(
     args: UpdateSlotTypeCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateSlotTypeCommandOutput) => void
+    cb: (err: any, data?: UpdateSlotTypeCommandOutput) => void,
   ): void;
 
   /**
@@ -2079,7 +2079,7 @@ export interface LexModelsV2 {
   updateTestSet(
     args: UpdateTestSetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateTestSetCommandOutput) => void
+    cb: (err: any, data?: UpdateTestSetCommandOutput) => void,
   ): void;
 }
 

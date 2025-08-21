@@ -77,14 +77,14 @@ export class MalformedPatternOverrideSerializer
 }
 
 export const getMalformedPatternOverrideHandler = <Context>(
-  operation: __Operation<MalformedPatternOverrideServerInput, MalformedPatternOverrideServerOutput, Context>
+  operation: __Operation<MalformedPatternOverrideServerInput, MalformedPatternOverrideServerOutput, Context>,
 ): __ServiceHandler<Context, __HttpRequest, __HttpResponse> => {
   const mux = new httpbinding.HttpBindingMux<"RestJsonValidation", "MalformedPatternOverride">([
     new httpbinding.UriSpec<"RestJsonValidation", "MalformedPatternOverride">(
       "POST",
       [{ type: "path_literal", value: "MalformedPatternOverride" }],
       [],
-      { service: "RestJsonValidation", operation: "MalformedPatternOverride" }
+      { service: "RestJsonValidation", operation: "MalformedPatternOverride" },
     ),
   ]);
   const customizer: __ValidationCustomizer<"MalformedPatternOverride"> = (ctx, failures) => {
@@ -106,7 +106,7 @@ export const getMalformedPatternOverrideHandler = <Context>(
     mux,
     new MalformedPatternOverrideSerializer(),
     serializeFrameworkException,
-    customizer
+    customizer,
   );
 };
 
@@ -127,7 +127,7 @@ async function handle<S, O extends keyof S & string, Context>(
   operation: __Operation<__OperationInput<S[O]>, __OperationOutput<S[O]>, Context>,
   serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
   validationFn: (input: __OperationInput<S[O]>) => __ValidationFailure[],
-  validationCustomizer: __ValidationCustomizer<O>
+  validationCustomizer: __ValidationCustomizer<O>,
 ): Promise<__HttpResponse> {
   let input;
   try {
@@ -173,7 +173,7 @@ export class MalformedPatternOverrideHandler<Context> implements __ServiceHandle
   >;
   private readonly serializeFrameworkException: (
     e: __SmithyFrameworkException,
-    ctx: __ServerSerdeContext
+    ctx: __ServerSerdeContext,
   ) => Promise<__HttpResponse>;
   private readonly validationCustomizer: __ValidationCustomizer<"MalformedPatternOverride">;
   /**
@@ -194,7 +194,7 @@ export class MalformedPatternOverrideHandler<Context> implements __ServiceHandle
       MalformedPatternOverrideErrors
     >,
     serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
-    validationCustomizer: __ValidationCustomizer<"MalformedPatternOverride">
+    validationCustomizer: __ValidationCustomizer<"MalformedPatternOverride">,
   ) {
     this.operation = operation;
     this.mux = mux;
@@ -206,7 +206,7 @@ export class MalformedPatternOverrideHandler<Context> implements __ServiceHandle
     const target = this.mux.match(request);
     if (target === undefined) {
       console.log(
-        "Received a request that did not match aws.protocoltests.restjson.validation#RestJsonValidation.MalformedPatternOverride. This indicates a misconfiguration."
+        "Received a request that did not match aws.protocoltests.restjson.validation#RestJsonValidation.MalformedPatternOverride. This indicates a misconfiguration.",
       );
       return this.serializeFrameworkException(new __InternalFailureException(), serdeContextBase);
     }
@@ -218,7 +218,7 @@ export class MalformedPatternOverrideHandler<Context> implements __ServiceHandle
       this.operation,
       this.serializeFrameworkException,
       MalformedPatternOverrideServerInput.validate,
-      this.validationCustomizer
+      this.validationCustomizer,
     );
   }
 }

@@ -46,7 +46,7 @@ const getSizeReportContext = async (options: { port: number }): Promise<SizeRepo
 };
 
 const loadProjectTemplates = async (
-  projectTemplatesPath: string = PROJECT_TEMPLATES_DIR
+  projectTemplatesPath: string = PROJECT_TEMPLATES_DIR,
 ): Promise<{
   [name: string]: hbs.TemplateDelegate;
 }> => {
@@ -55,10 +55,10 @@ const loadProjectTemplates = async (
     (acc, templateFile) => ({
       ...acc,
       [templateFile.replace(/.hbs$/g, "")]: hbs.compile(
-        readFileSync(join(projectTemplatesPath, templateFile), { encoding: "utf8" })
+        readFileSync(join(projectTemplatesPath, templateFile), { encoding: "utf8" }),
       ),
     }),
-    {}
+    {},
   );
 };
 
@@ -101,7 +101,7 @@ export const sizeReport = async (options: SizeReportOptions) => {
           packageContext,
         });
       },
-      { concurrency: 10 }
+      { concurrency: 10 },
     );
   } finally {
     localRegistryProcess.kill();

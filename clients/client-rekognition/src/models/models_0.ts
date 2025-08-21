@@ -8253,7 +8253,7 @@ export const AuditImageFilterSensitiveLog = (obj: AuditImage): any => ({
  * @internal
  */
 export const GetFaceLivenessSessionResultsResponseFilterSensitiveLog = (
-  obj: GetFaceLivenessSessionResultsResponse
+  obj: GetFaceLivenessSessionResultsResponse,
 ): any => ({
   ...obj,
   ...(obj.ReferenceImage && { ReferenceImage: AuditImageFilterSensitiveLog(obj.ReferenceImage) }),

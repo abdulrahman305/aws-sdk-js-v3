@@ -23,7 +23,7 @@ const checkState = async (client: IoTSiteWiseClient, input: DescribePortalComman
  */
 export const waitForPortalNotExists = async (
   params: WaiterConfiguration<IoTSiteWiseClient>,
-  input: DescribePortalCommandInput
+  input: DescribePortalCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 3, maxDelay: 120 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -35,7 +35,7 @@ export const waitForPortalNotExists = async (
  */
 export const waitUntilPortalNotExists = async (
   params: WaiterConfiguration<IoTSiteWiseClient>,
-  input: DescribePortalCommandInput
+  input: DescribePortalCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 3, maxDelay: 120 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

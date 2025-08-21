@@ -111,16 +111,16 @@ export interface DataPipeline {
    */
   activatePipeline(
     args: ActivatePipelineCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ActivatePipelineCommandOutput>;
   activatePipeline(
     args: ActivatePipelineCommandInput,
-    cb: (err: any, data?: ActivatePipelineCommandOutput) => void
+    cb: (err: any, data?: ActivatePipelineCommandOutput) => void,
   ): void;
   activatePipeline(
     args: ActivatePipelineCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ActivatePipelineCommandOutput) => void
+    cb: (err: any, data?: ActivatePipelineCommandOutput) => void,
   ): void;
 
   /**
@@ -131,7 +131,7 @@ export interface DataPipeline {
   addTags(
     args: AddTagsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AddTagsCommandOutput) => void
+    cb: (err: any, data?: AddTagsCommandOutput) => void,
   ): void;
 
   /**
@@ -139,13 +139,13 @@ export interface DataPipeline {
    */
   createPipeline(
     args: CreatePipelineCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreatePipelineCommandOutput>;
   createPipeline(args: CreatePipelineCommandInput, cb: (err: any, data?: CreatePipelineCommandOutput) => void): void;
   createPipeline(
     args: CreatePipelineCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreatePipelineCommandOutput) => void
+    cb: (err: any, data?: CreatePipelineCommandOutput) => void,
   ): void;
 
   /**
@@ -153,16 +153,16 @@ export interface DataPipeline {
    */
   deactivatePipeline(
     args: DeactivatePipelineCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeactivatePipelineCommandOutput>;
   deactivatePipeline(
     args: DeactivatePipelineCommandInput,
-    cb: (err: any, data?: DeactivatePipelineCommandOutput) => void
+    cb: (err: any, data?: DeactivatePipelineCommandOutput) => void,
   ): void;
   deactivatePipeline(
     args: DeactivatePipelineCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeactivatePipelineCommandOutput) => void
+    cb: (err: any, data?: DeactivatePipelineCommandOutput) => void,
   ): void;
 
   /**
@@ -170,13 +170,13 @@ export interface DataPipeline {
    */
   deletePipeline(
     args: DeletePipelineCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeletePipelineCommandOutput>;
   deletePipeline(args: DeletePipelineCommandInput, cb: (err: any, data?: DeletePipelineCommandOutput) => void): void;
   deletePipeline(
     args: DeletePipelineCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeletePipelineCommandOutput) => void
+    cb: (err: any, data?: DeletePipelineCommandOutput) => void,
   ): void;
 
   /**
@@ -184,13 +184,13 @@ export interface DataPipeline {
    */
   describeObjects(
     args: DescribeObjectsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeObjectsCommandOutput>;
   describeObjects(args: DescribeObjectsCommandInput, cb: (err: any, data?: DescribeObjectsCommandOutput) => void): void;
   describeObjects(
     args: DescribeObjectsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeObjectsCommandOutput) => void
+    cb: (err: any, data?: DescribeObjectsCommandOutput) => void,
   ): void;
 
   /**
@@ -198,16 +198,16 @@ export interface DataPipeline {
    */
   describePipelines(
     args: DescribePipelinesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribePipelinesCommandOutput>;
   describePipelines(
     args: DescribePipelinesCommandInput,
-    cb: (err: any, data?: DescribePipelinesCommandOutput) => void
+    cb: (err: any, data?: DescribePipelinesCommandOutput) => void,
   ): void;
   describePipelines(
     args: DescribePipelinesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribePipelinesCommandOutput) => void
+    cb: (err: any, data?: DescribePipelinesCommandOutput) => void,
   ): void;
 
   /**
@@ -215,16 +215,16 @@ export interface DataPipeline {
    */
   evaluateExpression(
     args: EvaluateExpressionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<EvaluateExpressionCommandOutput>;
   evaluateExpression(
     args: EvaluateExpressionCommandInput,
-    cb: (err: any, data?: EvaluateExpressionCommandOutput) => void
+    cb: (err: any, data?: EvaluateExpressionCommandOutput) => void,
   ): void;
   evaluateExpression(
     args: EvaluateExpressionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: EvaluateExpressionCommandOutput) => void
+    cb: (err: any, data?: EvaluateExpressionCommandOutput) => void,
   ): void;
 
   /**
@@ -232,16 +232,16 @@ export interface DataPipeline {
    */
   getPipelineDefinition(
     args: GetPipelineDefinitionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetPipelineDefinitionCommandOutput>;
   getPipelineDefinition(
     args: GetPipelineDefinitionCommandInput,
-    cb: (err: any, data?: GetPipelineDefinitionCommandOutput) => void
+    cb: (err: any, data?: GetPipelineDefinitionCommandOutput) => void,
   ): void;
   getPipelineDefinition(
     args: GetPipelineDefinitionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetPipelineDefinitionCommandOutput) => void
+    cb: (err: any, data?: GetPipelineDefinitionCommandOutput) => void,
   ): void;
 
   /**
@@ -253,7 +253,7 @@ export interface DataPipeline {
   listPipelines(
     args: ListPipelinesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListPipelinesCommandOutput) => void
+    cb: (err: any, data?: ListPipelinesCommandOutput) => void,
   ): void;
 
   /**
@@ -264,7 +264,7 @@ export interface DataPipeline {
   pollForTask(
     args: PollForTaskCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PollForTaskCommandOutput) => void
+    cb: (err: any, data?: PollForTaskCommandOutput) => void,
   ): void;
 
   /**
@@ -272,16 +272,16 @@ export interface DataPipeline {
    */
   putPipelineDefinition(
     args: PutPipelineDefinitionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutPipelineDefinitionCommandOutput>;
   putPipelineDefinition(
     args: PutPipelineDefinitionCommandInput,
-    cb: (err: any, data?: PutPipelineDefinitionCommandOutput) => void
+    cb: (err: any, data?: PutPipelineDefinitionCommandOutput) => void,
   ): void;
   putPipelineDefinition(
     args: PutPipelineDefinitionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutPipelineDefinitionCommandOutput) => void
+    cb: (err: any, data?: PutPipelineDefinitionCommandOutput) => void,
   ): void;
 
   /**
@@ -292,7 +292,7 @@ export interface DataPipeline {
   queryObjects(
     args: QueryObjectsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: QueryObjectsCommandOutput) => void
+    cb: (err: any, data?: QueryObjectsCommandOutput) => void,
   ): void;
 
   /**
@@ -303,7 +303,7 @@ export interface DataPipeline {
   removeTags(
     args: RemoveTagsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RemoveTagsCommandOutput) => void
+    cb: (err: any, data?: RemoveTagsCommandOutput) => void,
   ): void;
 
   /**
@@ -311,16 +311,16 @@ export interface DataPipeline {
    */
   reportTaskProgress(
     args: ReportTaskProgressCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ReportTaskProgressCommandOutput>;
   reportTaskProgress(
     args: ReportTaskProgressCommandInput,
-    cb: (err: any, data?: ReportTaskProgressCommandOutput) => void
+    cb: (err: any, data?: ReportTaskProgressCommandOutput) => void,
   ): void;
   reportTaskProgress(
     args: ReportTaskProgressCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ReportTaskProgressCommandOutput) => void
+    cb: (err: any, data?: ReportTaskProgressCommandOutput) => void,
   ): void;
 
   /**
@@ -328,16 +328,16 @@ export interface DataPipeline {
    */
   reportTaskRunnerHeartbeat(
     args: ReportTaskRunnerHeartbeatCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ReportTaskRunnerHeartbeatCommandOutput>;
   reportTaskRunnerHeartbeat(
     args: ReportTaskRunnerHeartbeatCommandInput,
-    cb: (err: any, data?: ReportTaskRunnerHeartbeatCommandOutput) => void
+    cb: (err: any, data?: ReportTaskRunnerHeartbeatCommandOutput) => void,
   ): void;
   reportTaskRunnerHeartbeat(
     args: ReportTaskRunnerHeartbeatCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ReportTaskRunnerHeartbeatCommandOutput) => void
+    cb: (err: any, data?: ReportTaskRunnerHeartbeatCommandOutput) => void,
   ): void;
 
   /**
@@ -348,7 +348,7 @@ export interface DataPipeline {
   setStatus(
     args: SetStatusCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SetStatusCommandOutput) => void
+    cb: (err: any, data?: SetStatusCommandOutput) => void,
   ): void;
 
   /**
@@ -359,7 +359,7 @@ export interface DataPipeline {
   setTaskStatus(
     args: SetTaskStatusCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SetTaskStatusCommandOutput) => void
+    cb: (err: any, data?: SetTaskStatusCommandOutput) => void,
   ): void;
 
   /**
@@ -367,16 +367,16 @@ export interface DataPipeline {
    */
   validatePipelineDefinition(
     args: ValidatePipelineDefinitionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ValidatePipelineDefinitionCommandOutput>;
   validatePipelineDefinition(
     args: ValidatePipelineDefinitionCommandInput,
-    cb: (err: any, data?: ValidatePipelineDefinitionCommandOutput) => void
+    cb: (err: any, data?: ValidatePipelineDefinitionCommandOutput) => void,
   ): void;
   validatePipelineDefinition(
     args: ValidatePipelineDefinitionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ValidatePipelineDefinitionCommandOutput) => void
+    cb: (err: any, data?: ValidatePipelineDefinitionCommandOutput) => void,
   ): void;
 }
 

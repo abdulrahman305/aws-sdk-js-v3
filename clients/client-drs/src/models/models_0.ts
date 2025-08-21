@@ -4973,7 +4973,7 @@ export const JobFilterSensitiveLog = (obj: Job): any => ({
  * @internal
  */
 export const AssociateSourceNetworkStackResponseFilterSensitiveLog = (
-  obj: AssociateSourceNetworkStackResponse
+  obj: AssociateSourceNetworkStackResponse,
 ): any => ({
   ...obj,
   ...(obj.job && { job: JobFilterSensitiveLog(obj.job) }),
@@ -5007,7 +5007,7 @@ export const CreateExtendedSourceServerResponseFilterSensitiveLog = (obj: Create
  * @internal
  */
 export const CreateLaunchConfigurationTemplateRequestFilterSensitiveLog = (
-  obj: CreateLaunchConfigurationTemplateRequest
+  obj: CreateLaunchConfigurationTemplateRequest,
 ): any => ({
   ...obj,
   ...(obj.tags && { tags: SENSITIVE_STRING }),
@@ -5025,7 +5025,7 @@ export const LaunchConfigurationTemplateFilterSensitiveLog = (obj: LaunchConfigu
  * @internal
  */
 export const CreateLaunchConfigurationTemplateResponseFilterSensitiveLog = (
-  obj: CreateLaunchConfigurationTemplateResponse
+  obj: CreateLaunchConfigurationTemplateResponse,
 ): any => ({
   ...obj,
   ...(obj.launchConfigurationTemplate && {
@@ -5037,7 +5037,7 @@ export const CreateLaunchConfigurationTemplateResponseFilterSensitiveLog = (
  * @internal
  */
 export const CreateReplicationConfigurationTemplateRequestFilterSensitiveLog = (
-  obj: CreateReplicationConfigurationTemplateRequest
+  obj: CreateReplicationConfigurationTemplateRequest,
 ): any => ({
   ...obj,
   ...(obj.stagingAreaTags && { stagingAreaTags: SENSITIVE_STRING }),
@@ -5073,7 +5073,7 @@ export const DescribeJobsResponseFilterSensitiveLog = (obj: DescribeJobsResponse
  * @internal
  */
 export const DescribeLaunchConfigurationTemplatesResponseFilterSensitiveLog = (
-  obj: DescribeLaunchConfigurationTemplatesResponse
+  obj: DescribeLaunchConfigurationTemplatesResponse,
 ): any => ({
   ...obj,
   ...(obj.items && { items: obj.items.map((item) => LaunchConfigurationTemplateFilterSensitiveLog(item)) }),
@@ -5099,7 +5099,7 @@ export const DescribeRecoveryInstancesResponseFilterSensitiveLog = (obj: Describ
  * @internal
  */
 export const DescribeReplicationConfigurationTemplatesResponseFilterSensitiveLog = (
-  obj: DescribeReplicationConfigurationTemplatesResponse
+  obj: DescribeReplicationConfigurationTemplatesResponse,
 ): any => ({
   ...obj,
   ...(obj.items && { items: obj.items.map((item) => ReplicationConfigurationTemplateFilterSensitiveLog(item)) }),
@@ -5135,7 +5135,7 @@ export const DescribeSourceServersResponseFilterSensitiveLog = (obj: DescribeSou
  * @internal
  */
 export const UpdateLaunchConfigurationTemplateResponseFilterSensitiveLog = (
-  obj: UpdateLaunchConfigurationTemplateResponse
+  obj: UpdateLaunchConfigurationTemplateResponse,
 ): any => ({
   ...obj,
   ...(obj.launchConfigurationTemplate && {
@@ -5155,7 +5155,7 @@ export const StagingSourceServerFilterSensitiveLog = (obj: StagingSourceServer):
  * @internal
  */
 export const ListExtensibleSourceServersResponseFilterSensitiveLog = (
-  obj: ListExtensibleSourceServersResponse
+  obj: ListExtensibleSourceServersResponse,
 ): any => ({
   ...obj,
   ...(obj.items && { items: obj.items.map((item) => StagingSourceServerFilterSensitiveLog(item)) }),
@@ -5197,7 +5197,7 @@ export const TerminateRecoveryInstancesResponseFilterSensitiveLog = (obj: Termin
  * @internal
  */
 export const UpdateReplicationConfigurationTemplateRequestFilterSensitiveLog = (
-  obj: UpdateReplicationConfigurationTemplateRequest
+  obj: UpdateReplicationConfigurationTemplateRequest,
 ): any => ({
   ...obj,
   ...(obj.stagingAreaTags && { stagingAreaTags: SENSITIVE_STRING }),
@@ -5207,7 +5207,7 @@ export const UpdateReplicationConfigurationTemplateRequestFilterSensitiveLog = (
  * @internal
  */
 export const StartSourceNetworkRecoveryRequestNetworkEntryFilterSensitiveLog = (
-  obj: StartSourceNetworkRecoveryRequestNetworkEntry
+  obj: StartSourceNetworkRecoveryRequestNetworkEntry,
 ): any => ({
   ...obj,
   ...(obj.cfnStackName && { cfnStackName: SENSITIVE_STRING }),
@@ -5220,7 +5220,7 @@ export const StartSourceNetworkRecoveryRequestFilterSensitiveLog = (obj: StartSo
   ...obj,
   ...(obj.sourceNetworks && {
     sourceNetworks: obj.sourceNetworks.map((item) =>
-      StartSourceNetworkRecoveryRequestNetworkEntryFilterSensitiveLog(item)
+      StartSourceNetworkRecoveryRequestNetworkEntryFilterSensitiveLog(item),
     ),
   }),
   ...(obj.tags && { tags: SENSITIVE_STRING }),
@@ -5238,7 +5238,7 @@ export const StartSourceNetworkRecoveryResponseFilterSensitiveLog = (obj: StartS
  * @internal
  */
 export const StartSourceNetworkReplicationResponseFilterSensitiveLog = (
-  obj: StartSourceNetworkReplicationResponse
+  obj: StartSourceNetworkReplicationResponse,
 ): any => ({
   ...obj,
   ...(obj.sourceNetwork && { sourceNetwork: SourceNetworkFilterSensitiveLog(obj.sourceNetwork) }),
@@ -5248,7 +5248,7 @@ export const StartSourceNetworkReplicationResponseFilterSensitiveLog = (
  * @internal
  */
 export const StopSourceNetworkReplicationResponseFilterSensitiveLog = (
-  obj: StopSourceNetworkReplicationResponse
+  obj: StopSourceNetworkReplicationResponse,
 ): any => ({
   ...obj,
   ...(obj.sourceNetwork && { sourceNetwork: SourceNetworkFilterSensitiveLog(obj.sourceNetwork) }),
@@ -5298,7 +5298,7 @@ export const StopReplicationResponseFilterSensitiveLog = (obj: StopReplicationRe
  * @internal
  */
 export const UpdateReplicationConfigurationRequestFilterSensitiveLog = (
-  obj: UpdateReplicationConfigurationRequest
+  obj: UpdateReplicationConfigurationRequest,
 ): any => ({
   ...obj,
   ...(obj.stagingAreaTags && { stagingAreaTags: SENSITIVE_STRING }),

@@ -23,7 +23,7 @@ describe("chunkFromReadable.name", () => {
   const getChunks = async (
     streamYieldSize: number,
     streamYieldCount: number,
-    partsize: number
+    partsize: number,
   ): Promise<DataPart[]> => {
     const stream = getStreamOfUnknownlength(streamYieldSize, streamYieldCount);
     const chunks: DataPart[] = [];

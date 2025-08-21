@@ -61,14 +61,14 @@ export class MalformedFloatSerializer
 
 export const getMalformedFloatHandler = <Context>(
   operation: __Operation<MalformedFloatServerInput, MalformedFloatServerOutput, Context>,
-  customizer: __ValidationCustomizer<"MalformedFloat">
+  customizer: __ValidationCustomizer<"MalformedFloat">,
 ): __ServiceHandler<Context, __HttpRequest, __HttpResponse> => {
   const mux = new httpbinding.HttpBindingMux<"RestJson", "MalformedFloat">([
     new httpbinding.UriSpec<"RestJson", "MalformedFloat">(
       "POST",
       [{ type: "path_literal", value: "MalformedFloat" }, { type: "path" }],
       [],
-      { service: "RestJson", operation: "MalformedFloat" }
+      { service: "RestJson", operation: "MalformedFloat" },
     ),
   ]);
   return new MalformedFloatHandler(
@@ -76,7 +76,7 @@ export const getMalformedFloatHandler = <Context>(
     mux,
     new MalformedFloatSerializer(),
     serializeFrameworkException,
-    customizer
+    customizer,
   );
 };
 
@@ -97,7 +97,7 @@ async function handle<S, O extends keyof S & string, Context>(
   operation: __Operation<__OperationInput<S[O]>, __OperationOutput<S[O]>, Context>,
   serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
   validationFn: (input: __OperationInput<S[O]>) => __ValidationFailure[],
-  validationCustomizer: __ValidationCustomizer<O>
+  validationCustomizer: __ValidationCustomizer<O>,
 ): Promise<__HttpResponse> {
   let input;
   try {
@@ -135,7 +135,7 @@ export class MalformedFloatHandler<Context> implements __ServiceHandler<Context>
   private readonly serializer: __OperationSerializer<RestJsonService<Context>, "MalformedFloat", MalformedFloatErrors>;
   private readonly serializeFrameworkException: (
     e: __SmithyFrameworkException,
-    ctx: __ServerSerdeContext
+    ctx: __ServerSerdeContext,
   ) => Promise<__HttpResponse>;
   private readonly validationCustomizer: __ValidationCustomizer<"MalformedFloat">;
   /**
@@ -152,7 +152,7 @@ export class MalformedFloatHandler<Context> implements __ServiceHandler<Context>
     mux: __Mux<"RestJson", "MalformedFloat">,
     serializer: __OperationSerializer<RestJsonService<Context>, "MalformedFloat", MalformedFloatErrors>,
     serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
-    validationCustomizer: __ValidationCustomizer<"MalformedFloat">
+    validationCustomizer: __ValidationCustomizer<"MalformedFloat">,
   ) {
     this.operation = operation;
     this.mux = mux;
@@ -164,7 +164,7 @@ export class MalformedFloatHandler<Context> implements __ServiceHandler<Context>
     const target = this.mux.match(request);
     if (target === undefined) {
       console.log(
-        "Received a request that did not match aws.protocoltests.restjson#RestJson.MalformedFloat. This indicates a misconfiguration."
+        "Received a request that did not match aws.protocoltests.restjson#RestJson.MalformedFloat. This indicates a misconfiguration.",
       );
       return this.serializeFrameworkException(new __InternalFailureException(), serdeContextBase);
     }
@@ -176,7 +176,7 @@ export class MalformedFloatHandler<Context> implements __ServiceHandler<Context>
       this.operation,
       this.serializeFrameworkException,
       MalformedFloatServerInput.validate,
-      this.validationCustomizer
+      this.validationCustomizer,
     );
   }
 }

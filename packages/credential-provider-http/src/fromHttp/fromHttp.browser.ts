@@ -40,6 +40,6 @@ export const fromHttp = (options: FromHttpOptions = {}): AwsCredentialIdentityPr
       return getCredentials(result.response);
     },
     options.maxRetries ?? 3,
-    options.timeout ?? 1000
+    options.timeout ?? 1000,
   );
 };

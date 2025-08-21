@@ -143,7 +143,7 @@ import {
  */
 export const se_CreateComponentCommand = async (
   input: CreateComponentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -172,7 +172,7 @@ export const se_CreateComponentCommand = async (
  */
 export const se_CreateFormCommand = async (
   input: CreateFormCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -201,7 +201,7 @@ export const se_CreateFormCommand = async (
  */
 export const se_CreateThemeCommand = async (
   input: CreateThemeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -230,7 +230,7 @@ export const se_CreateThemeCommand = async (
  */
 export const se_DeleteComponentCommand = async (
   input: DeleteComponentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -248,7 +248,7 @@ export const se_DeleteComponentCommand = async (
  */
 export const se_DeleteFormCommand = async (
   input: DeleteFormCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -266,7 +266,7 @@ export const se_DeleteFormCommand = async (
  */
 export const se_DeleteThemeCommand = async (
   input: DeleteThemeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -284,7 +284,7 @@ export const se_DeleteThemeCommand = async (
  */
 export const se_ExchangeCodeForTokenCommand = async (
   input: ExchangeCodeForTokenCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -309,7 +309,7 @@ export const se_ExchangeCodeForTokenCommand = async (
  */
 export const se_ExportComponentsCommand = async (
   input: ExportComponentsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -329,7 +329,7 @@ export const se_ExportComponentsCommand = async (
  */
 export const se_ExportFormsCommand = async (
   input: ExportFormsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -349,7 +349,7 @@ export const se_ExportFormsCommand = async (
  */
 export const se_ExportThemesCommand = async (
   input: ExportThemesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -369,7 +369,7 @@ export const se_ExportThemesCommand = async (
  */
 export const se_GetCodegenJobCommand = async (
   input: GetCodegenJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -387,7 +387,7 @@ export const se_GetCodegenJobCommand = async (
  */
 export const se_GetComponentCommand = async (
   input: GetComponentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -405,7 +405,7 @@ export const se_GetComponentCommand = async (
  */
 export const se_GetFormCommand = async (
   input: GetFormCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -423,7 +423,7 @@ export const se_GetFormCommand = async (
  */
 export const se_GetMetadataCommand = async (
   input: GetMetadataCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -440,7 +440,7 @@ export const se_GetMetadataCommand = async (
  */
 export const se_GetThemeCommand = async (
   input: GetThemeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -458,7 +458,7 @@ export const se_GetThemeCommand = async (
  */
 export const se_ListCodegenJobsCommand = async (
   input: ListCodegenJobsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -479,7 +479,7 @@ export const se_ListCodegenJobsCommand = async (
  */
 export const se_ListComponentsCommand = async (
   input: ListComponentsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -500,7 +500,7 @@ export const se_ListComponentsCommand = async (
  */
 export const se_ListFormsCommand = async (
   input: ListFormsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -521,7 +521,7 @@ export const se_ListFormsCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -537,7 +537,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_ListThemesCommand = async (
   input: ListThemesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -558,7 +558,7 @@ export const se_ListThemesCommand = async (
  */
 export const se_PutMetadataFlagCommand = async (
   input: PutMetadataFlagCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -585,7 +585,7 @@ export const se_PutMetadataFlagCommand = async (
  */
 export const se_RefreshTokenCommand = async (
   input: RefreshTokenCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -610,7 +610,7 @@ export const se_RefreshTokenCommand = async (
  */
 export const se_StartCodegenJobCommand = async (
   input: StartCodegenJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -639,7 +639,7 @@ export const se_StartCodegenJobCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -651,7 +651,7 @@ export const se_TagResourceCommand = async (
   body = JSON.stringify(
     take(input, {
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -662,7 +662,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -684,7 +684,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateComponentCommand = async (
   input: UpdateComponentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -714,7 +714,7 @@ export const se_UpdateComponentCommand = async (
  */
 export const se_UpdateFormCommand = async (
   input: UpdateFormCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -744,7 +744,7 @@ export const se_UpdateFormCommand = async (
  */
 export const se_UpdateThemeCommand = async (
   input: UpdateThemeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -774,7 +774,7 @@ export const se_UpdateThemeCommand = async (
  */
 export const de_CreateComponentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateComponentCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -792,7 +792,7 @@ export const de_CreateComponentCommand = async (
  */
 export const de_CreateFormCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateFormCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -810,7 +810,7 @@ export const de_CreateFormCommand = async (
  */
 export const de_CreateThemeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateThemeCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -828,7 +828,7 @@ export const de_CreateThemeCommand = async (
  */
 export const de_DeleteComponentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteComponentCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -845,7 +845,7 @@ export const de_DeleteComponentCommand = async (
  */
 export const de_DeleteFormCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteFormCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -862,7 +862,7 @@ export const de_DeleteFormCommand = async (
  */
 export const de_DeleteThemeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteThemeCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -879,7 +879,7 @@ export const de_DeleteThemeCommand = async (
  */
 export const de_ExchangeCodeForTokenCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ExchangeCodeForTokenCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -902,7 +902,7 @@ export const de_ExchangeCodeForTokenCommand = async (
  */
 export const de_ExportComponentsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ExportComponentsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -924,7 +924,7 @@ export const de_ExportComponentsCommand = async (
  */
 export const de_ExportFormsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ExportFormsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -946,7 +946,7 @@ export const de_ExportFormsCommand = async (
  */
 export const de_ExportThemesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ExportThemesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -968,7 +968,7 @@ export const de_ExportThemesCommand = async (
  */
 export const de_GetCodegenJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetCodegenJobCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -986,7 +986,7 @@ export const de_GetCodegenJobCommand = async (
  */
 export const de_GetComponentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetComponentCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1004,7 +1004,7 @@ export const de_GetComponentCommand = async (
  */
 export const de_GetFormCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetFormCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1022,7 +1022,7 @@ export const de_GetFormCommand = async (
  */
 export const de_GetMetadataCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetMetadataCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1043,7 +1043,7 @@ export const de_GetMetadataCommand = async (
  */
 export const de_GetThemeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetThemeCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1061,7 +1061,7 @@ export const de_GetThemeCommand = async (
  */
 export const de_ListCodegenJobsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListCodegenJobsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1083,7 +1083,7 @@ export const de_ListCodegenJobsCommand = async (
  */
 export const de_ListComponentsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListComponentsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1105,7 +1105,7 @@ export const de_ListComponentsCommand = async (
  */
 export const de_ListFormsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListFormsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1127,7 +1127,7 @@ export const de_ListFormsCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1148,7 +1148,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_ListThemesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListThemesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1170,7 +1170,7 @@ export const de_ListThemesCommand = async (
  */
 export const de_PutMetadataFlagCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutMetadataFlagCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1187,7 +1187,7 @@ export const de_PutMetadataFlagCommand = async (
  */
 export const de_RefreshTokenCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RefreshTokenCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1209,7 +1209,7 @@ export const de_RefreshTokenCommand = async (
  */
 export const de_StartCodegenJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartCodegenJobCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1227,7 +1227,7 @@ export const de_StartCodegenJobCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1244,7 +1244,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1261,7 +1261,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateComponentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateComponentCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1279,7 +1279,7 @@ export const de_UpdateComponentCommand = async (
  */
 export const de_UpdateFormCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateFormCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1297,7 +1297,7 @@ export const de_UpdateFormCommand = async (
  */
 export const de_UpdateThemeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateThemeCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1357,7 +1357,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_InternalServerExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1377,7 +1377,7 @@ const de_InternalServerExceptionRes = async (
  */
 const de_InvalidParameterExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidParameterException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1397,7 +1397,7 @@ const de_InvalidParameterExceptionRes = async (
  */
 const de_ResourceConflictExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceConflictException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1417,7 +1417,7 @@ const de_ResourceConflictExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1437,7 +1437,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_ServiceQuotaExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceQuotaExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1474,7 +1474,7 @@ const de_ThrottlingExceptionRes = async (parsedOutput: any, context: __SerdeCont
  */
 const de_UnauthorizedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UnauthorizedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1545,7 +1545,7 @@ const se_ActionParameters = (input: ActionParameters, context: __SerdeContext): 
  */
 const se_ComponentBindingProperties = (
   input: Record<string, ComponentBindingPropertiesValue>,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return Object.entries(input).reduce((acc: Record<string, any>, [key, value]: [string, any]) => {
     if (value === null) {
@@ -1572,7 +1572,7 @@ const se_ComponentBindingPropertiesValue = (input: ComponentBindingPropertiesVal
  */
 const se_ComponentBindingPropertiesValueProperties = (
   input: ComponentBindingPropertiesValueProperties,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     bucket: [],
@@ -1616,7 +1616,7 @@ const se_ComponentChildList = (input: ComponentChild[], context: __SerdeContext)
  */
 const se_ComponentCollectionProperties = (
   input: Record<string, ComponentDataConfiguration>,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return Object.entries(input).reduce((acc: Record<string, any>, [key, value]: [string, any]) => {
     if (value === null) {
@@ -2206,7 +2206,7 @@ const de_Component = (output: any, context: __SerdeContext): Component => {
  */
 const de_ComponentBindingProperties = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Record<string, ComponentBindingPropertiesValue> => {
   return Object.entries(output).reduce(
     (acc: Record<string, ComponentBindingPropertiesValue>, [key, value]: [string, any]) => {
@@ -2216,7 +2216,7 @@ const de_ComponentBindingProperties = (
       acc[key as string] = de_ComponentBindingPropertiesValue(value, context);
       return acc;
     },
-    {} as Record<string, ComponentBindingPropertiesValue>
+    {} as Record<string, ComponentBindingPropertiesValue>,
   );
 };
 
@@ -2236,7 +2236,7 @@ const de_ComponentBindingPropertiesValue = (output: any, context: __SerdeContext
  */
 const de_ComponentBindingPropertiesValueProperties = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ComponentBindingPropertiesValueProperties => {
   return take(output, {
     bucket: __expectString,
@@ -2281,7 +2281,7 @@ const de_ComponentChildList = (output: any, context: __SerdeContext): ComponentC
  */
 const de_ComponentCollectionProperties = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Record<string, ComponentDataConfiguration> => {
   return Object.entries(output).reduce(
     (acc: Record<string, ComponentDataConfiguration>, [key, value]: [string, any]) => {
@@ -2291,7 +2291,7 @@ const de_ComponentCollectionProperties = (
       acc[key as string] = de_ComponentDataConfiguration(value, context);
       return acc;
     },
-    {} as Record<string, ComponentDataConfiguration>
+    {} as Record<string, ComponentDataConfiguration>,
   );
 };
 
@@ -2337,13 +2337,16 @@ const de_ComponentEvent = (output: any, context: __SerdeContext): ComponentEvent
  * deserializeAws_restJson1ComponentEvents
  */
 const de_ComponentEvents = (output: any, context: __SerdeContext): Record<string, ComponentEvent> => {
-  return Object.entries(output).reduce((acc: Record<string, ComponentEvent>, [key, value]: [string, any]) => {
-    if (value === null) {
+  return Object.entries(output).reduce(
+    (acc: Record<string, ComponentEvent>, [key, value]: [string, any]) => {
+      if (value === null) {
+        return acc;
+      }
+      acc[key as string] = de_ComponentEvent(value, context);
       return acc;
-    }
-    acc[key as string] = de_ComponentEvent(value, context);
-    return acc;
-  }, {} as Record<string, ComponentEvent>);
+    },
+    {} as Record<string, ComponentEvent>,
+  );
 };
 
 /**
@@ -2366,13 +2369,16 @@ const de_ComponentList = (output: any, context: __SerdeContext): Component[] => 
  * deserializeAws_restJson1ComponentProperties
  */
 const de_ComponentProperties = (output: any, context: __SerdeContext): Record<string, ComponentProperty> => {
-  return Object.entries(output).reduce((acc: Record<string, ComponentProperty>, [key, value]: [string, any]) => {
-    if (value === null) {
+  return Object.entries(output).reduce(
+    (acc: Record<string, ComponentProperty>, [key, value]: [string, any]) => {
+      if (value === null) {
+        return acc;
+      }
+      acc[key as string] = de_ComponentProperty(value, context);
       return acc;
-    }
-    acc[key as string] = de_ComponentProperty(value, context);
-    return acc;
-  }, {} as Record<string, ComponentProperty>);
+    },
+    {} as Record<string, ComponentProperty>,
+  );
 };
 
 /**
@@ -2469,13 +2475,16 @@ const de_FieldInputConfig = (output: any, context: __SerdeContext): FieldInputCo
  * deserializeAws_restJson1FieldsMap
  */
 const de_FieldsMap = (output: any, context: __SerdeContext): Record<string, FieldConfig> => {
-  return Object.entries(output).reduce((acc: Record<string, FieldConfig>, [key, value]: [string, any]) => {
-    if (value === null) {
+  return Object.entries(output).reduce(
+    (acc: Record<string, FieldConfig>, [key, value]: [string, any]) => {
+      if (value === null) {
+        return acc;
+      }
+      acc[key as string] = de_FieldConfig(value, context);
       return acc;
-    }
-    acc[key as string] = de_FieldConfig(value, context);
-    return acc;
-  }, {} as Record<string, FieldConfig>);
+    },
+    {} as Record<string, FieldConfig>,
+  );
 };
 
 // de_FieldValidationConfiguration omitted.

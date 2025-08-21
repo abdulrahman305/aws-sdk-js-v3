@@ -51,7 +51,7 @@ export const fromSso =
       // Sso Session not found. This is a terminal error.
       throw new TokenProviderError(
         `Sso session '${ssoSessionName}' could not be found in shared credentials file.`,
-        false
+        false,
       );
     }
 
@@ -60,7 +60,7 @@ export const fromSso =
         // Sso session found but it does not contain ssoSessionRequiredKey. This is a terminal error.
         throw new TokenProviderError(
           `Sso session '${ssoSessionName}' is missing required property '${ssoSessionRequiredKey}'.`,
-          false
+          false,
         );
       }
     }
@@ -74,7 +74,7 @@ export const fromSso =
     } catch (e) {
       throw new TokenProviderError(
         `The SSO session token associated with profile=${profileName} was not found or is invalid. ${REFRESH_MESSAGE}`,
-        false
+        false,
       );
     }
 

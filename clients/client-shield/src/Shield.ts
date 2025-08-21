@@ -221,16 +221,16 @@ export interface Shield {
    */
   associateDRTLogBucket(
     args: AssociateDRTLogBucketCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AssociateDRTLogBucketCommandOutput>;
   associateDRTLogBucket(
     args: AssociateDRTLogBucketCommandInput,
-    cb: (err: any, data?: AssociateDRTLogBucketCommandOutput) => void
+    cb: (err: any, data?: AssociateDRTLogBucketCommandOutput) => void,
   ): void;
   associateDRTLogBucket(
     args: AssociateDRTLogBucketCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AssociateDRTLogBucketCommandOutput) => void
+    cb: (err: any, data?: AssociateDRTLogBucketCommandOutput) => void,
   ): void;
 
   /**
@@ -238,16 +238,16 @@ export interface Shield {
    */
   associateDRTRole(
     args: AssociateDRTRoleCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AssociateDRTRoleCommandOutput>;
   associateDRTRole(
     args: AssociateDRTRoleCommandInput,
-    cb: (err: any, data?: AssociateDRTRoleCommandOutput) => void
+    cb: (err: any, data?: AssociateDRTRoleCommandOutput) => void,
   ): void;
   associateDRTRole(
     args: AssociateDRTRoleCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AssociateDRTRoleCommandOutput) => void
+    cb: (err: any, data?: AssociateDRTRoleCommandOutput) => void,
   ): void;
 
   /**
@@ -255,16 +255,16 @@ export interface Shield {
    */
   associateHealthCheck(
     args: AssociateHealthCheckCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AssociateHealthCheckCommandOutput>;
   associateHealthCheck(
     args: AssociateHealthCheckCommandInput,
-    cb: (err: any, data?: AssociateHealthCheckCommandOutput) => void
+    cb: (err: any, data?: AssociateHealthCheckCommandOutput) => void,
   ): void;
   associateHealthCheck(
     args: AssociateHealthCheckCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AssociateHealthCheckCommandOutput) => void
+    cb: (err: any, data?: AssociateHealthCheckCommandOutput) => void,
   ): void;
 
   /**
@@ -272,16 +272,16 @@ export interface Shield {
    */
   associateProactiveEngagementDetails(
     args: AssociateProactiveEngagementDetailsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AssociateProactiveEngagementDetailsCommandOutput>;
   associateProactiveEngagementDetails(
     args: AssociateProactiveEngagementDetailsCommandInput,
-    cb: (err: any, data?: AssociateProactiveEngagementDetailsCommandOutput) => void
+    cb: (err: any, data?: AssociateProactiveEngagementDetailsCommandOutput) => void,
   ): void;
   associateProactiveEngagementDetails(
     args: AssociateProactiveEngagementDetailsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AssociateProactiveEngagementDetailsCommandOutput) => void
+    cb: (err: any, data?: AssociateProactiveEngagementDetailsCommandOutput) => void,
   ): void;
 
   /**
@@ -289,16 +289,16 @@ export interface Shield {
    */
   createProtection(
     args: CreateProtectionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateProtectionCommandOutput>;
   createProtection(
     args: CreateProtectionCommandInput,
-    cb: (err: any, data?: CreateProtectionCommandOutput) => void
+    cb: (err: any, data?: CreateProtectionCommandOutput) => void,
   ): void;
   createProtection(
     args: CreateProtectionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateProtectionCommandOutput) => void
+    cb: (err: any, data?: CreateProtectionCommandOutput) => void,
   ): void;
 
   /**
@@ -306,16 +306,16 @@ export interface Shield {
    */
   createProtectionGroup(
     args: CreateProtectionGroupCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateProtectionGroupCommandOutput>;
   createProtectionGroup(
     args: CreateProtectionGroupCommandInput,
-    cb: (err: any, data?: CreateProtectionGroupCommandOutput) => void
+    cb: (err: any, data?: CreateProtectionGroupCommandOutput) => void,
   ): void;
   createProtectionGroup(
     args: CreateProtectionGroupCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateProtectionGroupCommandOutput) => void
+    cb: (err: any, data?: CreateProtectionGroupCommandOutput) => void,
   ): void;
 
   /**
@@ -324,16 +324,16 @@ export interface Shield {
   createSubscription(): Promise<CreateSubscriptionCommandOutput>;
   createSubscription(
     args: CreateSubscriptionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateSubscriptionCommandOutput>;
   createSubscription(
     args: CreateSubscriptionCommandInput,
-    cb: (err: any, data?: CreateSubscriptionCommandOutput) => void
+    cb: (err: any, data?: CreateSubscriptionCommandOutput) => void,
   ): void;
   createSubscription(
     args: CreateSubscriptionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateSubscriptionCommandOutput) => void
+    cb: (err: any, data?: CreateSubscriptionCommandOutput) => void,
   ): void;
 
   /**
@@ -341,16 +341,16 @@ export interface Shield {
    */
   deleteProtection(
     args: DeleteProtectionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteProtectionCommandOutput>;
   deleteProtection(
     args: DeleteProtectionCommandInput,
-    cb: (err: any, data?: DeleteProtectionCommandOutput) => void
+    cb: (err: any, data?: DeleteProtectionCommandOutput) => void,
   ): void;
   deleteProtection(
     args: DeleteProtectionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteProtectionCommandOutput) => void
+    cb: (err: any, data?: DeleteProtectionCommandOutput) => void,
   ): void;
 
   /**
@@ -358,16 +358,16 @@ export interface Shield {
    */
   deleteProtectionGroup(
     args: DeleteProtectionGroupCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteProtectionGroupCommandOutput>;
   deleteProtectionGroup(
     args: DeleteProtectionGroupCommandInput,
-    cb: (err: any, data?: DeleteProtectionGroupCommandOutput) => void
+    cb: (err: any, data?: DeleteProtectionGroupCommandOutput) => void,
   ): void;
   deleteProtectionGroup(
     args: DeleteProtectionGroupCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteProtectionGroupCommandOutput) => void
+    cb: (err: any, data?: DeleteProtectionGroupCommandOutput) => void,
   ): void;
 
   /**
@@ -376,16 +376,16 @@ export interface Shield {
   deleteSubscription(): Promise<DeleteSubscriptionCommandOutput>;
   deleteSubscription(
     args: DeleteSubscriptionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteSubscriptionCommandOutput>;
   deleteSubscription(
     args: DeleteSubscriptionCommandInput,
-    cb: (err: any, data?: DeleteSubscriptionCommandOutput) => void
+    cb: (err: any, data?: DeleteSubscriptionCommandOutput) => void,
   ): void;
   deleteSubscription(
     args: DeleteSubscriptionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteSubscriptionCommandOutput) => void
+    cb: (err: any, data?: DeleteSubscriptionCommandOutput) => void,
   ): void;
 
   /**
@@ -393,13 +393,13 @@ export interface Shield {
    */
   describeAttack(
     args: DescribeAttackCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeAttackCommandOutput>;
   describeAttack(args: DescribeAttackCommandInput, cb: (err: any, data?: DescribeAttackCommandOutput) => void): void;
   describeAttack(
     args: DescribeAttackCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeAttackCommandOutput) => void
+    cb: (err: any, data?: DescribeAttackCommandOutput) => void,
   ): void;
 
   /**
@@ -408,16 +408,16 @@ export interface Shield {
   describeAttackStatistics(): Promise<DescribeAttackStatisticsCommandOutput>;
   describeAttackStatistics(
     args: DescribeAttackStatisticsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeAttackStatisticsCommandOutput>;
   describeAttackStatistics(
     args: DescribeAttackStatisticsCommandInput,
-    cb: (err: any, data?: DescribeAttackStatisticsCommandOutput) => void
+    cb: (err: any, data?: DescribeAttackStatisticsCommandOutput) => void,
   ): void;
   describeAttackStatistics(
     args: DescribeAttackStatisticsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeAttackStatisticsCommandOutput) => void
+    cb: (err: any, data?: DescribeAttackStatisticsCommandOutput) => void,
   ): void;
 
   /**
@@ -426,16 +426,16 @@ export interface Shield {
   describeDRTAccess(): Promise<DescribeDRTAccessCommandOutput>;
   describeDRTAccess(
     args: DescribeDRTAccessCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeDRTAccessCommandOutput>;
   describeDRTAccess(
     args: DescribeDRTAccessCommandInput,
-    cb: (err: any, data?: DescribeDRTAccessCommandOutput) => void
+    cb: (err: any, data?: DescribeDRTAccessCommandOutput) => void,
   ): void;
   describeDRTAccess(
     args: DescribeDRTAccessCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeDRTAccessCommandOutput) => void
+    cb: (err: any, data?: DescribeDRTAccessCommandOutput) => void,
   ): void;
 
   /**
@@ -444,16 +444,16 @@ export interface Shield {
   describeEmergencyContactSettings(): Promise<DescribeEmergencyContactSettingsCommandOutput>;
   describeEmergencyContactSettings(
     args: DescribeEmergencyContactSettingsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeEmergencyContactSettingsCommandOutput>;
   describeEmergencyContactSettings(
     args: DescribeEmergencyContactSettingsCommandInput,
-    cb: (err: any, data?: DescribeEmergencyContactSettingsCommandOutput) => void
+    cb: (err: any, data?: DescribeEmergencyContactSettingsCommandOutput) => void,
   ): void;
   describeEmergencyContactSettings(
     args: DescribeEmergencyContactSettingsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeEmergencyContactSettingsCommandOutput) => void
+    cb: (err: any, data?: DescribeEmergencyContactSettingsCommandOutput) => void,
   ): void;
 
   /**
@@ -462,16 +462,16 @@ export interface Shield {
   describeProtection(): Promise<DescribeProtectionCommandOutput>;
   describeProtection(
     args: DescribeProtectionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeProtectionCommandOutput>;
   describeProtection(
     args: DescribeProtectionCommandInput,
-    cb: (err: any, data?: DescribeProtectionCommandOutput) => void
+    cb: (err: any, data?: DescribeProtectionCommandOutput) => void,
   ): void;
   describeProtection(
     args: DescribeProtectionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeProtectionCommandOutput) => void
+    cb: (err: any, data?: DescribeProtectionCommandOutput) => void,
   ): void;
 
   /**
@@ -479,16 +479,16 @@ export interface Shield {
    */
   describeProtectionGroup(
     args: DescribeProtectionGroupCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeProtectionGroupCommandOutput>;
   describeProtectionGroup(
     args: DescribeProtectionGroupCommandInput,
-    cb: (err: any, data?: DescribeProtectionGroupCommandOutput) => void
+    cb: (err: any, data?: DescribeProtectionGroupCommandOutput) => void,
   ): void;
   describeProtectionGroup(
     args: DescribeProtectionGroupCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeProtectionGroupCommandOutput) => void
+    cb: (err: any, data?: DescribeProtectionGroupCommandOutput) => void,
   ): void;
 
   /**
@@ -497,16 +497,16 @@ export interface Shield {
   describeSubscription(): Promise<DescribeSubscriptionCommandOutput>;
   describeSubscription(
     args: DescribeSubscriptionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeSubscriptionCommandOutput>;
   describeSubscription(
     args: DescribeSubscriptionCommandInput,
-    cb: (err: any, data?: DescribeSubscriptionCommandOutput) => void
+    cb: (err: any, data?: DescribeSubscriptionCommandOutput) => void,
   ): void;
   describeSubscription(
     args: DescribeSubscriptionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeSubscriptionCommandOutput) => void
+    cb: (err: any, data?: DescribeSubscriptionCommandOutput) => void,
   ): void;
 
   /**
@@ -514,16 +514,16 @@ export interface Shield {
    */
   disableApplicationLayerAutomaticResponse(
     args: DisableApplicationLayerAutomaticResponseCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DisableApplicationLayerAutomaticResponseCommandOutput>;
   disableApplicationLayerAutomaticResponse(
     args: DisableApplicationLayerAutomaticResponseCommandInput,
-    cb: (err: any, data?: DisableApplicationLayerAutomaticResponseCommandOutput) => void
+    cb: (err: any, data?: DisableApplicationLayerAutomaticResponseCommandOutput) => void,
   ): void;
   disableApplicationLayerAutomaticResponse(
     args: DisableApplicationLayerAutomaticResponseCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DisableApplicationLayerAutomaticResponseCommandOutput) => void
+    cb: (err: any, data?: DisableApplicationLayerAutomaticResponseCommandOutput) => void,
   ): void;
 
   /**
@@ -532,16 +532,16 @@ export interface Shield {
   disableProactiveEngagement(): Promise<DisableProactiveEngagementCommandOutput>;
   disableProactiveEngagement(
     args: DisableProactiveEngagementCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DisableProactiveEngagementCommandOutput>;
   disableProactiveEngagement(
     args: DisableProactiveEngagementCommandInput,
-    cb: (err: any, data?: DisableProactiveEngagementCommandOutput) => void
+    cb: (err: any, data?: DisableProactiveEngagementCommandOutput) => void,
   ): void;
   disableProactiveEngagement(
     args: DisableProactiveEngagementCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DisableProactiveEngagementCommandOutput) => void
+    cb: (err: any, data?: DisableProactiveEngagementCommandOutput) => void,
   ): void;
 
   /**
@@ -549,16 +549,16 @@ export interface Shield {
    */
   disassociateDRTLogBucket(
     args: DisassociateDRTLogBucketCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DisassociateDRTLogBucketCommandOutput>;
   disassociateDRTLogBucket(
     args: DisassociateDRTLogBucketCommandInput,
-    cb: (err: any, data?: DisassociateDRTLogBucketCommandOutput) => void
+    cb: (err: any, data?: DisassociateDRTLogBucketCommandOutput) => void,
   ): void;
   disassociateDRTLogBucket(
     args: DisassociateDRTLogBucketCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DisassociateDRTLogBucketCommandOutput) => void
+    cb: (err: any, data?: DisassociateDRTLogBucketCommandOutput) => void,
   ): void;
 
   /**
@@ -567,16 +567,16 @@ export interface Shield {
   disassociateDRTRole(): Promise<DisassociateDRTRoleCommandOutput>;
   disassociateDRTRole(
     args: DisassociateDRTRoleCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DisassociateDRTRoleCommandOutput>;
   disassociateDRTRole(
     args: DisassociateDRTRoleCommandInput,
-    cb: (err: any, data?: DisassociateDRTRoleCommandOutput) => void
+    cb: (err: any, data?: DisassociateDRTRoleCommandOutput) => void,
   ): void;
   disassociateDRTRole(
     args: DisassociateDRTRoleCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DisassociateDRTRoleCommandOutput) => void
+    cb: (err: any, data?: DisassociateDRTRoleCommandOutput) => void,
   ): void;
 
   /**
@@ -584,16 +584,16 @@ export interface Shield {
    */
   disassociateHealthCheck(
     args: DisassociateHealthCheckCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DisassociateHealthCheckCommandOutput>;
   disassociateHealthCheck(
     args: DisassociateHealthCheckCommandInput,
-    cb: (err: any, data?: DisassociateHealthCheckCommandOutput) => void
+    cb: (err: any, data?: DisassociateHealthCheckCommandOutput) => void,
   ): void;
   disassociateHealthCheck(
     args: DisassociateHealthCheckCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DisassociateHealthCheckCommandOutput) => void
+    cb: (err: any, data?: DisassociateHealthCheckCommandOutput) => void,
   ): void;
 
   /**
@@ -601,16 +601,16 @@ export interface Shield {
    */
   enableApplicationLayerAutomaticResponse(
     args: EnableApplicationLayerAutomaticResponseCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<EnableApplicationLayerAutomaticResponseCommandOutput>;
   enableApplicationLayerAutomaticResponse(
     args: EnableApplicationLayerAutomaticResponseCommandInput,
-    cb: (err: any, data?: EnableApplicationLayerAutomaticResponseCommandOutput) => void
+    cb: (err: any, data?: EnableApplicationLayerAutomaticResponseCommandOutput) => void,
   ): void;
   enableApplicationLayerAutomaticResponse(
     args: EnableApplicationLayerAutomaticResponseCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: EnableApplicationLayerAutomaticResponseCommandOutput) => void
+    cb: (err: any, data?: EnableApplicationLayerAutomaticResponseCommandOutput) => void,
   ): void;
 
   /**
@@ -619,16 +619,16 @@ export interface Shield {
   enableProactiveEngagement(): Promise<EnableProactiveEngagementCommandOutput>;
   enableProactiveEngagement(
     args: EnableProactiveEngagementCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<EnableProactiveEngagementCommandOutput>;
   enableProactiveEngagement(
     args: EnableProactiveEngagementCommandInput,
-    cb: (err: any, data?: EnableProactiveEngagementCommandOutput) => void
+    cb: (err: any, data?: EnableProactiveEngagementCommandOutput) => void,
   ): void;
   enableProactiveEngagement(
     args: EnableProactiveEngagementCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: EnableProactiveEngagementCommandOutput) => void
+    cb: (err: any, data?: EnableProactiveEngagementCommandOutput) => void,
   ): void;
 
   /**
@@ -637,16 +637,16 @@ export interface Shield {
   getSubscriptionState(): Promise<GetSubscriptionStateCommandOutput>;
   getSubscriptionState(
     args: GetSubscriptionStateCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetSubscriptionStateCommandOutput>;
   getSubscriptionState(
     args: GetSubscriptionStateCommandInput,
-    cb: (err: any, data?: GetSubscriptionStateCommandOutput) => void
+    cb: (err: any, data?: GetSubscriptionStateCommandOutput) => void,
   ): void;
   getSubscriptionState(
     args: GetSubscriptionStateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetSubscriptionStateCommandOutput) => void
+    cb: (err: any, data?: GetSubscriptionStateCommandOutput) => void,
   ): void;
 
   /**
@@ -658,7 +658,7 @@ export interface Shield {
   listAttacks(
     args: ListAttacksCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListAttacksCommandOutput) => void
+    cb: (err: any, data?: ListAttacksCommandOutput) => void,
   ): void;
 
   /**
@@ -667,16 +667,16 @@ export interface Shield {
   listProtectionGroups(): Promise<ListProtectionGroupsCommandOutput>;
   listProtectionGroups(
     args: ListProtectionGroupsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListProtectionGroupsCommandOutput>;
   listProtectionGroups(
     args: ListProtectionGroupsCommandInput,
-    cb: (err: any, data?: ListProtectionGroupsCommandOutput) => void
+    cb: (err: any, data?: ListProtectionGroupsCommandOutput) => void,
   ): void;
   listProtectionGroups(
     args: ListProtectionGroupsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListProtectionGroupsCommandOutput) => void
+    cb: (err: any, data?: ListProtectionGroupsCommandOutput) => void,
   ): void;
 
   /**
@@ -685,13 +685,13 @@ export interface Shield {
   listProtections(): Promise<ListProtectionsCommandOutput>;
   listProtections(
     args: ListProtectionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListProtectionsCommandOutput>;
   listProtections(args: ListProtectionsCommandInput, cb: (err: any, data?: ListProtectionsCommandOutput) => void): void;
   listProtections(
     args: ListProtectionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListProtectionsCommandOutput) => void
+    cb: (err: any, data?: ListProtectionsCommandOutput) => void,
   ): void;
 
   /**
@@ -699,16 +699,16 @@ export interface Shield {
    */
   listResourcesInProtectionGroup(
     args: ListResourcesInProtectionGroupCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListResourcesInProtectionGroupCommandOutput>;
   listResourcesInProtectionGroup(
     args: ListResourcesInProtectionGroupCommandInput,
-    cb: (err: any, data?: ListResourcesInProtectionGroupCommandOutput) => void
+    cb: (err: any, data?: ListResourcesInProtectionGroupCommandOutput) => void,
   ): void;
   listResourcesInProtectionGroup(
     args: ListResourcesInProtectionGroupCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListResourcesInProtectionGroupCommandOutput) => void
+    cb: (err: any, data?: ListResourcesInProtectionGroupCommandOutput) => void,
   ): void;
 
   /**
@@ -716,16 +716,16 @@ export interface Shield {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -736,7 +736,7 @@ export interface Shield {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -747,7 +747,7 @@ export interface Shield {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -755,16 +755,16 @@ export interface Shield {
    */
   updateApplicationLayerAutomaticResponse(
     args: UpdateApplicationLayerAutomaticResponseCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateApplicationLayerAutomaticResponseCommandOutput>;
   updateApplicationLayerAutomaticResponse(
     args: UpdateApplicationLayerAutomaticResponseCommandInput,
-    cb: (err: any, data?: UpdateApplicationLayerAutomaticResponseCommandOutput) => void
+    cb: (err: any, data?: UpdateApplicationLayerAutomaticResponseCommandOutput) => void,
   ): void;
   updateApplicationLayerAutomaticResponse(
     args: UpdateApplicationLayerAutomaticResponseCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateApplicationLayerAutomaticResponseCommandOutput) => void
+    cb: (err: any, data?: UpdateApplicationLayerAutomaticResponseCommandOutput) => void,
   ): void;
 
   /**
@@ -773,16 +773,16 @@ export interface Shield {
   updateEmergencyContactSettings(): Promise<UpdateEmergencyContactSettingsCommandOutput>;
   updateEmergencyContactSettings(
     args: UpdateEmergencyContactSettingsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateEmergencyContactSettingsCommandOutput>;
   updateEmergencyContactSettings(
     args: UpdateEmergencyContactSettingsCommandInput,
-    cb: (err: any, data?: UpdateEmergencyContactSettingsCommandOutput) => void
+    cb: (err: any, data?: UpdateEmergencyContactSettingsCommandOutput) => void,
   ): void;
   updateEmergencyContactSettings(
     args: UpdateEmergencyContactSettingsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateEmergencyContactSettingsCommandOutput) => void
+    cb: (err: any, data?: UpdateEmergencyContactSettingsCommandOutput) => void,
   ): void;
 
   /**
@@ -790,16 +790,16 @@ export interface Shield {
    */
   updateProtectionGroup(
     args: UpdateProtectionGroupCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateProtectionGroupCommandOutput>;
   updateProtectionGroup(
     args: UpdateProtectionGroupCommandInput,
-    cb: (err: any, data?: UpdateProtectionGroupCommandOutput) => void
+    cb: (err: any, data?: UpdateProtectionGroupCommandOutput) => void,
   ): void;
   updateProtectionGroup(
     args: UpdateProtectionGroupCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateProtectionGroupCommandOutput) => void
+    cb: (err: any, data?: UpdateProtectionGroupCommandOutput) => void,
   ): void;
 
   /**
@@ -808,16 +808,16 @@ export interface Shield {
   updateSubscription(): Promise<UpdateSubscriptionCommandOutput>;
   updateSubscription(
     args: UpdateSubscriptionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateSubscriptionCommandOutput>;
   updateSubscription(
     args: UpdateSubscriptionCommandInput,
-    cb: (err: any, data?: UpdateSubscriptionCommandOutput) => void
+    cb: (err: any, data?: UpdateSubscriptionCommandOutput) => void,
   ): void;
   updateSubscription(
     args: UpdateSubscriptionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateSubscriptionCommandOutput) => void
+    cb: (err: any, data?: UpdateSubscriptionCommandOutput) => void,
   ): void;
 }
 

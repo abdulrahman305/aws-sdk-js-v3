@@ -42,7 +42,7 @@ const checkState = async (client: EC2Client, input: DescribeInstanceStatusComman
  */
 export const waitForInstanceStatusOk = async (
   params: WaiterConfiguration<EC2Client>,
-  input: DescribeInstanceStatusCommandInput
+  input: DescribeInstanceStatusCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 15, maxDelay: 120 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -54,7 +54,7 @@ export const waitForInstanceStatusOk = async (
  */
 export const waitUntilInstanceStatusOk = async (
   params: WaiterConfiguration<EC2Client>,
-  input: DescribeInstanceStatusCommandInput
+  input: DescribeInstanceStatusCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 15, maxDelay: 120 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

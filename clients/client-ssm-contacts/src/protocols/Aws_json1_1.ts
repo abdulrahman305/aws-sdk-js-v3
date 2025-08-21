@@ -190,7 +190,7 @@ import { SSMContactsServiceException as __BaseException } from "../models/SSMCon
  */
 export const se_AcceptPageCommand = async (
   input: AcceptPageCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("AcceptPage");
   let body: any;
@@ -203,7 +203,7 @@ export const se_AcceptPageCommand = async (
  */
 export const se_ActivateContactChannelCommand = async (
   input: ActivateContactChannelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ActivateContactChannel");
   let body: any;
@@ -216,7 +216,7 @@ export const se_ActivateContactChannelCommand = async (
  */
 export const se_CreateContactCommand = async (
   input: CreateContactCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateContact");
   let body: any;
@@ -229,7 +229,7 @@ export const se_CreateContactCommand = async (
  */
 export const se_CreateContactChannelCommand = async (
   input: CreateContactChannelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateContactChannel");
   let body: any;
@@ -242,7 +242,7 @@ export const se_CreateContactChannelCommand = async (
  */
 export const se_CreateRotationCommand = async (
   input: CreateRotationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateRotation");
   let body: any;
@@ -255,7 +255,7 @@ export const se_CreateRotationCommand = async (
  */
 export const se_CreateRotationOverrideCommand = async (
   input: CreateRotationOverrideCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateRotationOverride");
   let body: any;
@@ -268,7 +268,7 @@ export const se_CreateRotationOverrideCommand = async (
  */
 export const se_DeactivateContactChannelCommand = async (
   input: DeactivateContactChannelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeactivateContactChannel");
   let body: any;
@@ -281,7 +281,7 @@ export const se_DeactivateContactChannelCommand = async (
  */
 export const se_DeleteContactCommand = async (
   input: DeleteContactCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteContact");
   let body: any;
@@ -294,7 +294,7 @@ export const se_DeleteContactCommand = async (
  */
 export const se_DeleteContactChannelCommand = async (
   input: DeleteContactChannelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteContactChannel");
   let body: any;
@@ -307,7 +307,7 @@ export const se_DeleteContactChannelCommand = async (
  */
 export const se_DeleteRotationCommand = async (
   input: DeleteRotationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteRotation");
   let body: any;
@@ -320,7 +320,7 @@ export const se_DeleteRotationCommand = async (
  */
 export const se_DeleteRotationOverrideCommand = async (
   input: DeleteRotationOverrideCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteRotationOverride");
   let body: any;
@@ -333,7 +333,7 @@ export const se_DeleteRotationOverrideCommand = async (
  */
 export const se_DescribeEngagementCommand = async (
   input: DescribeEngagementCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeEngagement");
   let body: any;
@@ -346,7 +346,7 @@ export const se_DescribeEngagementCommand = async (
  */
 export const se_DescribePageCommand = async (
   input: DescribePageCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribePage");
   let body: any;
@@ -359,7 +359,7 @@ export const se_DescribePageCommand = async (
  */
 export const se_GetContactCommand = async (
   input: GetContactCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetContact");
   let body: any;
@@ -372,7 +372,7 @@ export const se_GetContactCommand = async (
  */
 export const se_GetContactChannelCommand = async (
   input: GetContactChannelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetContactChannel");
   let body: any;
@@ -385,7 +385,7 @@ export const se_GetContactChannelCommand = async (
  */
 export const se_GetContactPolicyCommand = async (
   input: GetContactPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetContactPolicy");
   let body: any;
@@ -398,7 +398,7 @@ export const se_GetContactPolicyCommand = async (
  */
 export const se_GetRotationCommand = async (
   input: GetRotationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetRotation");
   let body: any;
@@ -411,7 +411,7 @@ export const se_GetRotationCommand = async (
  */
 export const se_GetRotationOverrideCommand = async (
   input: GetRotationOverrideCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetRotationOverride");
   let body: any;
@@ -424,7 +424,7 @@ export const se_GetRotationOverrideCommand = async (
  */
 export const se_ListContactChannelsCommand = async (
   input: ListContactChannelsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListContactChannels");
   let body: any;
@@ -437,7 +437,7 @@ export const se_ListContactChannelsCommand = async (
  */
 export const se_ListContactsCommand = async (
   input: ListContactsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListContacts");
   let body: any;
@@ -450,7 +450,7 @@ export const se_ListContactsCommand = async (
  */
 export const se_ListEngagementsCommand = async (
   input: ListEngagementsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListEngagements");
   let body: any;
@@ -463,7 +463,7 @@ export const se_ListEngagementsCommand = async (
  */
 export const se_ListPageReceiptsCommand = async (
   input: ListPageReceiptsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListPageReceipts");
   let body: any;
@@ -476,7 +476,7 @@ export const se_ListPageReceiptsCommand = async (
  */
 export const se_ListPageResolutionsCommand = async (
   input: ListPageResolutionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListPageResolutions");
   let body: any;
@@ -489,7 +489,7 @@ export const se_ListPageResolutionsCommand = async (
  */
 export const se_ListPagesByContactCommand = async (
   input: ListPagesByContactCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListPagesByContact");
   let body: any;
@@ -502,7 +502,7 @@ export const se_ListPagesByContactCommand = async (
  */
 export const se_ListPagesByEngagementCommand = async (
   input: ListPagesByEngagementCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListPagesByEngagement");
   let body: any;
@@ -515,7 +515,7 @@ export const se_ListPagesByEngagementCommand = async (
  */
 export const se_ListPreviewRotationShiftsCommand = async (
   input: ListPreviewRotationShiftsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListPreviewRotationShifts");
   let body: any;
@@ -528,7 +528,7 @@ export const se_ListPreviewRotationShiftsCommand = async (
  */
 export const se_ListRotationOverridesCommand = async (
   input: ListRotationOverridesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListRotationOverrides");
   let body: any;
@@ -541,7 +541,7 @@ export const se_ListRotationOverridesCommand = async (
  */
 export const se_ListRotationsCommand = async (
   input: ListRotationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListRotations");
   let body: any;
@@ -554,7 +554,7 @@ export const se_ListRotationsCommand = async (
  */
 export const se_ListRotationShiftsCommand = async (
   input: ListRotationShiftsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListRotationShifts");
   let body: any;
@@ -567,7 +567,7 @@ export const se_ListRotationShiftsCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListTagsForResource");
   let body: any;
@@ -580,7 +580,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_PutContactPolicyCommand = async (
   input: PutContactPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("PutContactPolicy");
   let body: any;
@@ -593,7 +593,7 @@ export const se_PutContactPolicyCommand = async (
  */
 export const se_SendActivationCodeCommand = async (
   input: SendActivationCodeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("SendActivationCode");
   let body: any;
@@ -606,7 +606,7 @@ export const se_SendActivationCodeCommand = async (
  */
 export const se_StartEngagementCommand = async (
   input: StartEngagementCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StartEngagement");
   let body: any;
@@ -619,7 +619,7 @@ export const se_StartEngagementCommand = async (
  */
 export const se_StopEngagementCommand = async (
   input: StopEngagementCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StopEngagement");
   let body: any;
@@ -632,7 +632,7 @@ export const se_StopEngagementCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("TagResource");
   let body: any;
@@ -645,7 +645,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UntagResource");
   let body: any;
@@ -658,7 +658,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateContactCommand = async (
   input: UpdateContactCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateContact");
   let body: any;
@@ -671,7 +671,7 @@ export const se_UpdateContactCommand = async (
  */
 export const se_UpdateContactChannelCommand = async (
   input: UpdateContactChannelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateContactChannel");
   let body: any;
@@ -684,7 +684,7 @@ export const se_UpdateContactChannelCommand = async (
  */
 export const se_UpdateRotationCommand = async (
   input: UpdateRotationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateRotation");
   let body: any;
@@ -697,7 +697,7 @@ export const se_UpdateRotationCommand = async (
  */
 export const de_AcceptPageCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AcceptPageCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -717,7 +717,7 @@ export const de_AcceptPageCommand = async (
  */
 export const de_ActivateContactChannelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ActivateContactChannelCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -737,7 +737,7 @@ export const de_ActivateContactChannelCommand = async (
  */
 export const de_CreateContactCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateContactCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -757,7 +757,7 @@ export const de_CreateContactCommand = async (
  */
 export const de_CreateContactChannelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateContactChannelCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -777,7 +777,7 @@ export const de_CreateContactChannelCommand = async (
  */
 export const de_CreateRotationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateRotationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -797,7 +797,7 @@ export const de_CreateRotationCommand = async (
  */
 export const de_CreateRotationOverrideCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateRotationOverrideCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -817,7 +817,7 @@ export const de_CreateRotationOverrideCommand = async (
  */
 export const de_DeactivateContactChannelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeactivateContactChannelCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -837,7 +837,7 @@ export const de_DeactivateContactChannelCommand = async (
  */
 export const de_DeleteContactCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteContactCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -857,7 +857,7 @@ export const de_DeleteContactCommand = async (
  */
 export const de_DeleteContactChannelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteContactChannelCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -877,7 +877,7 @@ export const de_DeleteContactChannelCommand = async (
  */
 export const de_DeleteRotationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteRotationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -897,7 +897,7 @@ export const de_DeleteRotationCommand = async (
  */
 export const de_DeleteRotationOverrideCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteRotationOverrideCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -917,7 +917,7 @@ export const de_DeleteRotationOverrideCommand = async (
  */
 export const de_DescribeEngagementCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeEngagementCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -937,7 +937,7 @@ export const de_DescribeEngagementCommand = async (
  */
 export const de_DescribePageCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribePageCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -957,7 +957,7 @@ export const de_DescribePageCommand = async (
  */
 export const de_GetContactCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetContactCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -977,7 +977,7 @@ export const de_GetContactCommand = async (
  */
 export const de_GetContactChannelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetContactChannelCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -997,7 +997,7 @@ export const de_GetContactChannelCommand = async (
  */
 export const de_GetContactPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetContactPolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1017,7 +1017,7 @@ export const de_GetContactPolicyCommand = async (
  */
 export const de_GetRotationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetRotationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1037,7 +1037,7 @@ export const de_GetRotationCommand = async (
  */
 export const de_GetRotationOverrideCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetRotationOverrideCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1057,7 +1057,7 @@ export const de_GetRotationOverrideCommand = async (
  */
 export const de_ListContactChannelsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListContactChannelsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1077,7 +1077,7 @@ export const de_ListContactChannelsCommand = async (
  */
 export const de_ListContactsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListContactsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1097,7 +1097,7 @@ export const de_ListContactsCommand = async (
  */
 export const de_ListEngagementsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListEngagementsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1117,7 +1117,7 @@ export const de_ListEngagementsCommand = async (
  */
 export const de_ListPageReceiptsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListPageReceiptsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1137,7 +1137,7 @@ export const de_ListPageReceiptsCommand = async (
  */
 export const de_ListPageResolutionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListPageResolutionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1157,7 +1157,7 @@ export const de_ListPageResolutionsCommand = async (
  */
 export const de_ListPagesByContactCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListPagesByContactCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1177,7 +1177,7 @@ export const de_ListPagesByContactCommand = async (
  */
 export const de_ListPagesByEngagementCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListPagesByEngagementCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1197,7 +1197,7 @@ export const de_ListPagesByEngagementCommand = async (
  */
 export const de_ListPreviewRotationShiftsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListPreviewRotationShiftsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1217,7 +1217,7 @@ export const de_ListPreviewRotationShiftsCommand = async (
  */
 export const de_ListRotationOverridesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListRotationOverridesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1237,7 +1237,7 @@ export const de_ListRotationOverridesCommand = async (
  */
 export const de_ListRotationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListRotationsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1257,7 +1257,7 @@ export const de_ListRotationsCommand = async (
  */
 export const de_ListRotationShiftsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListRotationShiftsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1277,7 +1277,7 @@ export const de_ListRotationShiftsCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1297,7 +1297,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_PutContactPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutContactPolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1317,7 +1317,7 @@ export const de_PutContactPolicyCommand = async (
  */
 export const de_SendActivationCodeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SendActivationCodeCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1337,7 +1337,7 @@ export const de_SendActivationCodeCommand = async (
  */
 export const de_StartEngagementCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartEngagementCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1357,7 +1357,7 @@ export const de_StartEngagementCommand = async (
  */
 export const de_StopEngagementCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StopEngagementCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1377,7 +1377,7 @@ export const de_StopEngagementCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1397,7 +1397,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1417,7 +1417,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateContactCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateContactCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1437,7 +1437,7 @@ export const de_UpdateContactCommand = async (
  */
 export const de_UpdateContactChannelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateContactChannelCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1457,7 +1457,7 @@ export const de_UpdateContactChannelCommand = async (
  */
 export const de_UpdateRotationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateRotationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1521,7 +1521,7 @@ const de_CommandError = async (output: __HttpResponse, context: __SerdeContext):
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1550,7 +1550,7 @@ const de_ConflictExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_DataEncryptionExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DataEncryptionException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1566,7 +1566,7 @@ const de_DataEncryptionExceptionRes = async (
  */
 const de_InternalServerExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1582,7 +1582,7 @@ const de_InternalServerExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1598,7 +1598,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_ServiceQuotaExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceQuotaExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2371,7 +2371,7 @@ const buildHttpRpcRequest = async (
   headers: __HeaderBag,
   path: string,
   resolvedHostname: string | undefined,
-  body: any
+  body: any,
 ): Promise<__HttpRequest> => {
   const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
   const contents: any = {

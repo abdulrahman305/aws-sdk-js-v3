@@ -33,16 +33,16 @@ export interface MarketplaceDeployment {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -50,16 +50,16 @@ export interface MarketplaceDeployment {
    */
   putDeploymentParameter(
     args: PutDeploymentParameterCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutDeploymentParameterCommandOutput>;
   putDeploymentParameter(
     args: PutDeploymentParameterCommandInput,
-    cb: (err: any, data?: PutDeploymentParameterCommandOutput) => void
+    cb: (err: any, data?: PutDeploymentParameterCommandOutput) => void,
   ): void;
   putDeploymentParameter(
     args: PutDeploymentParameterCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutDeploymentParameterCommandOutput) => void
+    cb: (err: any, data?: PutDeploymentParameterCommandOutput) => void,
   ): void;
 
   /**
@@ -70,7 +70,7 @@ export interface MarketplaceDeployment {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -81,7 +81,7 @@ export interface MarketplaceDeployment {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 }
 

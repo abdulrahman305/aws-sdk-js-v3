@@ -184,13 +184,13 @@ export interface QueryProtocol {
   datetimeOffsets(): Promise<DatetimeOffsetsCommandOutput>;
   datetimeOffsets(
     args: DatetimeOffsetsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DatetimeOffsetsCommandOutput>;
   datetimeOffsets(args: DatetimeOffsetsCommandInput, cb: (err: any, data?: DatetimeOffsetsCommandOutput) => void): void;
   datetimeOffsets(
     args: DatetimeOffsetsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DatetimeOffsetsCommandOutput) => void
+    cb: (err: any, data?: DatetimeOffsetsCommandOutput) => void,
   ): void;
 
   /**
@@ -199,16 +199,16 @@ export interface QueryProtocol {
   emptyInputAndEmptyOutput(): Promise<EmptyInputAndEmptyOutputCommandOutput>;
   emptyInputAndEmptyOutput(
     args: EmptyInputAndEmptyOutputCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<EmptyInputAndEmptyOutputCommandOutput>;
   emptyInputAndEmptyOutput(
     args: EmptyInputAndEmptyOutputCommandInput,
-    cb: (err: any, data?: EmptyInputAndEmptyOutputCommandOutput) => void
+    cb: (err: any, data?: EmptyInputAndEmptyOutputCommandOutput) => void,
   ): void;
   emptyInputAndEmptyOutput(
     args: EmptyInputAndEmptyOutputCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: EmptyInputAndEmptyOutputCommandOutput) => void
+    cb: (err: any, data?: EmptyInputAndEmptyOutputCommandOutput) => void,
   ): void;
 
   /**
@@ -217,16 +217,16 @@ export interface QueryProtocol {
   endpointOperation(): Promise<EndpointOperationCommandOutput>;
   endpointOperation(
     args: EndpointOperationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<EndpointOperationCommandOutput>;
   endpointOperation(
     args: EndpointOperationCommandInput,
-    cb: (err: any, data?: EndpointOperationCommandOutput) => void
+    cb: (err: any, data?: EndpointOperationCommandOutput) => void,
   ): void;
   endpointOperation(
     args: EndpointOperationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: EndpointOperationCommandOutput) => void
+    cb: (err: any, data?: EndpointOperationCommandOutput) => void,
   ): void;
 
   /**
@@ -234,16 +234,16 @@ export interface QueryProtocol {
    */
   endpointWithHostLabelOperation(
     args: EndpointWithHostLabelOperationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<EndpointWithHostLabelOperationCommandOutput>;
   endpointWithHostLabelOperation(
     args: EndpointWithHostLabelOperationCommandInput,
-    cb: (err: any, data?: EndpointWithHostLabelOperationCommandOutput) => void
+    cb: (err: any, data?: EndpointWithHostLabelOperationCommandOutput) => void,
   ): void;
   endpointWithHostLabelOperation(
     args: EndpointWithHostLabelOperationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: EndpointWithHostLabelOperationCommandOutput) => void
+    cb: (err: any, data?: EndpointWithHostLabelOperationCommandOutput) => void,
   ): void;
 
   /**
@@ -252,13 +252,13 @@ export interface QueryProtocol {
   flattenedXmlMap(): Promise<FlattenedXmlMapCommandOutput>;
   flattenedXmlMap(
     args: FlattenedXmlMapCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<FlattenedXmlMapCommandOutput>;
   flattenedXmlMap(args: FlattenedXmlMapCommandInput, cb: (err: any, data?: FlattenedXmlMapCommandOutput) => void): void;
   flattenedXmlMap(
     args: FlattenedXmlMapCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: FlattenedXmlMapCommandOutput) => void
+    cb: (err: any, data?: FlattenedXmlMapCommandOutput) => void,
   ): void;
 
   /**
@@ -267,16 +267,16 @@ export interface QueryProtocol {
   flattenedXmlMapWithXmlName(): Promise<FlattenedXmlMapWithXmlNameCommandOutput>;
   flattenedXmlMapWithXmlName(
     args: FlattenedXmlMapWithXmlNameCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<FlattenedXmlMapWithXmlNameCommandOutput>;
   flattenedXmlMapWithXmlName(
     args: FlattenedXmlMapWithXmlNameCommandInput,
-    cb: (err: any, data?: FlattenedXmlMapWithXmlNameCommandOutput) => void
+    cb: (err: any, data?: FlattenedXmlMapWithXmlNameCommandOutput) => void,
   ): void;
   flattenedXmlMapWithXmlName(
     args: FlattenedXmlMapWithXmlNameCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: FlattenedXmlMapWithXmlNameCommandOutput) => void
+    cb: (err: any, data?: FlattenedXmlMapWithXmlNameCommandOutput) => void,
   ): void;
 
   /**
@@ -285,16 +285,16 @@ export interface QueryProtocol {
   flattenedXmlMapWithXmlNamespace(): Promise<FlattenedXmlMapWithXmlNamespaceCommandOutput>;
   flattenedXmlMapWithXmlNamespace(
     args: FlattenedXmlMapWithXmlNamespaceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<FlattenedXmlMapWithXmlNamespaceCommandOutput>;
   flattenedXmlMapWithXmlNamespace(
     args: FlattenedXmlMapWithXmlNamespaceCommandInput,
-    cb: (err: any, data?: FlattenedXmlMapWithXmlNamespaceCommandOutput) => void
+    cb: (err: any, data?: FlattenedXmlMapWithXmlNamespaceCommandOutput) => void,
   ): void;
   flattenedXmlMapWithXmlNamespace(
     args: FlattenedXmlMapWithXmlNamespaceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: FlattenedXmlMapWithXmlNamespaceCommandOutput) => void
+    cb: (err: any, data?: FlattenedXmlMapWithXmlNamespaceCommandOutput) => void,
   ): void;
 
   /**
@@ -303,16 +303,16 @@ export interface QueryProtocol {
   fractionalSeconds(): Promise<FractionalSecondsCommandOutput>;
   fractionalSeconds(
     args: FractionalSecondsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<FractionalSecondsCommandOutput>;
   fractionalSeconds(
     args: FractionalSecondsCommandInput,
-    cb: (err: any, data?: FractionalSecondsCommandOutput) => void
+    cb: (err: any, data?: FractionalSecondsCommandOutput) => void,
   ): void;
   fractionalSeconds(
     args: FractionalSecondsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: FractionalSecondsCommandOutput) => void
+    cb: (err: any, data?: FractionalSecondsCommandOutput) => void,
   ): void;
 
   /**
@@ -321,16 +321,16 @@ export interface QueryProtocol {
   greetingWithErrors(): Promise<GreetingWithErrorsCommandOutput>;
   greetingWithErrors(
     args: GreetingWithErrorsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GreetingWithErrorsCommandOutput>;
   greetingWithErrors(
     args: GreetingWithErrorsCommandInput,
-    cb: (err: any, data?: GreetingWithErrorsCommandOutput) => void
+    cb: (err: any, data?: GreetingWithErrorsCommandOutput) => void,
   ): void;
   greetingWithErrors(
     args: GreetingWithErrorsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GreetingWithErrorsCommandOutput) => void
+    cb: (err: any, data?: GreetingWithErrorsCommandOutput) => void,
   ): void;
 
   /**
@@ -339,16 +339,16 @@ export interface QueryProtocol {
   hostWithPathOperation(): Promise<HostWithPathOperationCommandOutput>;
   hostWithPathOperation(
     args: HostWithPathOperationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<HostWithPathOperationCommandOutput>;
   hostWithPathOperation(
     args: HostWithPathOperationCommandInput,
-    cb: (err: any, data?: HostWithPathOperationCommandOutput) => void
+    cb: (err: any, data?: HostWithPathOperationCommandOutput) => void,
   ): void;
   hostWithPathOperation(
     args: HostWithPathOperationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: HostWithPathOperationCommandOutput) => void
+    cb: (err: any, data?: HostWithPathOperationCommandOutput) => void,
   ): void;
 
   /**
@@ -357,16 +357,16 @@ export interface QueryProtocol {
   ignoresWrappingXmlName(): Promise<IgnoresWrappingXmlNameCommandOutput>;
   ignoresWrappingXmlName(
     args: IgnoresWrappingXmlNameCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<IgnoresWrappingXmlNameCommandOutput>;
   ignoresWrappingXmlName(
     args: IgnoresWrappingXmlNameCommandInput,
-    cb: (err: any, data?: IgnoresWrappingXmlNameCommandOutput) => void
+    cb: (err: any, data?: IgnoresWrappingXmlNameCommandOutput) => void,
   ): void;
   ignoresWrappingXmlName(
     args: IgnoresWrappingXmlNameCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: IgnoresWrappingXmlNameCommandOutput) => void
+    cb: (err: any, data?: IgnoresWrappingXmlNameCommandOutput) => void,
   ): void;
 
   /**
@@ -375,16 +375,16 @@ export interface QueryProtocol {
   nestedStructures(): Promise<NestedStructuresCommandOutput>;
   nestedStructures(
     args: NestedStructuresCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<NestedStructuresCommandOutput>;
   nestedStructures(
     args: NestedStructuresCommandInput,
-    cb: (err: any, data?: NestedStructuresCommandOutput) => void
+    cb: (err: any, data?: NestedStructuresCommandOutput) => void,
   ): void;
   nestedStructures(
     args: NestedStructuresCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: NestedStructuresCommandOutput) => void
+    cb: (err: any, data?: NestedStructuresCommandOutput) => void,
   ): void;
 
   /**
@@ -393,16 +393,16 @@ export interface QueryProtocol {
   noInputAndNoOutput(): Promise<NoInputAndNoOutputCommandOutput>;
   noInputAndNoOutput(
     args: NoInputAndNoOutputCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<NoInputAndNoOutputCommandOutput>;
   noInputAndNoOutput(
     args: NoInputAndNoOutputCommandInput,
-    cb: (err: any, data?: NoInputAndNoOutputCommandOutput) => void
+    cb: (err: any, data?: NoInputAndNoOutputCommandOutput) => void,
   ): void;
   noInputAndNoOutput(
     args: NoInputAndNoOutputCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: NoInputAndNoOutputCommandOutput) => void
+    cb: (err: any, data?: NoInputAndNoOutputCommandOutput) => void,
   ): void;
 
   /**
@@ -411,16 +411,16 @@ export interface QueryProtocol {
   noInputAndOutput(): Promise<NoInputAndOutputCommandOutput>;
   noInputAndOutput(
     args: NoInputAndOutputCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<NoInputAndOutputCommandOutput>;
   noInputAndOutput(
     args: NoInputAndOutputCommandInput,
-    cb: (err: any, data?: NoInputAndOutputCommandOutput) => void
+    cb: (err: any, data?: NoInputAndOutputCommandOutput) => void,
   ): void;
   noInputAndOutput(
     args: NoInputAndOutputCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: NoInputAndOutputCommandOutput) => void
+    cb: (err: any, data?: NoInputAndOutputCommandOutput) => void,
   ): void;
 
   /**
@@ -429,16 +429,16 @@ export interface QueryProtocol {
   putWithContentEncoding(): Promise<PutWithContentEncodingCommandOutput>;
   putWithContentEncoding(
     args: PutWithContentEncodingCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutWithContentEncodingCommandOutput>;
   putWithContentEncoding(
     args: PutWithContentEncodingCommandInput,
-    cb: (err: any, data?: PutWithContentEncodingCommandOutput) => void
+    cb: (err: any, data?: PutWithContentEncodingCommandOutput) => void,
   ): void;
   putWithContentEncoding(
     args: PutWithContentEncodingCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutWithContentEncodingCommandOutput) => void
+    cb: (err: any, data?: PutWithContentEncodingCommandOutput) => void,
   ): void;
 
   /**
@@ -447,16 +447,16 @@ export interface QueryProtocol {
   queryIdempotencyTokenAutoFill(): Promise<QueryIdempotencyTokenAutoFillCommandOutput>;
   queryIdempotencyTokenAutoFill(
     args: QueryIdempotencyTokenAutoFillCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<QueryIdempotencyTokenAutoFillCommandOutput>;
   queryIdempotencyTokenAutoFill(
     args: QueryIdempotencyTokenAutoFillCommandInput,
-    cb: (err: any, data?: QueryIdempotencyTokenAutoFillCommandOutput) => void
+    cb: (err: any, data?: QueryIdempotencyTokenAutoFillCommandOutput) => void,
   ): void;
   queryIdempotencyTokenAutoFill(
     args: QueryIdempotencyTokenAutoFillCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: QueryIdempotencyTokenAutoFillCommandOutput) => void
+    cb: (err: any, data?: QueryIdempotencyTokenAutoFillCommandOutput) => void,
   ): void;
 
   /**
@@ -468,7 +468,7 @@ export interface QueryProtocol {
   queryLists(
     args: QueryListsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: QueryListsCommandOutput) => void
+    cb: (err: any, data?: QueryListsCommandOutput) => void,
   ): void;
 
   /**
@@ -480,7 +480,7 @@ export interface QueryProtocol {
   queryMaps(
     args: QueryMapsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: QueryMapsCommandOutput) => void
+    cb: (err: any, data?: QueryMapsCommandOutput) => void,
   ): void;
 
   /**
@@ -489,13 +489,13 @@ export interface QueryProtocol {
   queryTimestamps(): Promise<QueryTimestampsCommandOutput>;
   queryTimestamps(
     args: QueryTimestampsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<QueryTimestampsCommandOutput>;
   queryTimestamps(args: QueryTimestampsCommandInput, cb: (err: any, data?: QueryTimestampsCommandOutput) => void): void;
   queryTimestamps(
     args: QueryTimestampsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: QueryTimestampsCommandOutput) => void
+    cb: (err: any, data?: QueryTimestampsCommandOutput) => void,
   ): void;
 
   /**
@@ -504,16 +504,16 @@ export interface QueryProtocol {
   recursiveXmlShapes(): Promise<RecursiveXmlShapesCommandOutput>;
   recursiveXmlShapes(
     args: RecursiveXmlShapesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<RecursiveXmlShapesCommandOutput>;
   recursiveXmlShapes(
     args: RecursiveXmlShapesCommandInput,
-    cb: (err: any, data?: RecursiveXmlShapesCommandOutput) => void
+    cb: (err: any, data?: RecursiveXmlShapesCommandOutput) => void,
   ): void;
   recursiveXmlShapes(
     args: RecursiveXmlShapesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RecursiveXmlShapesCommandOutput) => void
+    cb: (err: any, data?: RecursiveXmlShapesCommandOutput) => void,
   ): void;
 
   /**
@@ -522,16 +522,16 @@ export interface QueryProtocol {
   simpleInputParams(): Promise<SimpleInputParamsCommandOutput>;
   simpleInputParams(
     args: SimpleInputParamsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<SimpleInputParamsCommandOutput>;
   simpleInputParams(
     args: SimpleInputParamsCommandInput,
-    cb: (err: any, data?: SimpleInputParamsCommandOutput) => void
+    cb: (err: any, data?: SimpleInputParamsCommandOutput) => void,
   ): void;
   simpleInputParams(
     args: SimpleInputParamsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SimpleInputParamsCommandOutput) => void
+    cb: (err: any, data?: SimpleInputParamsCommandOutput) => void,
   ): void;
 
   /**
@@ -540,16 +540,16 @@ export interface QueryProtocol {
   simpleScalarXmlProperties(): Promise<SimpleScalarXmlPropertiesCommandOutput>;
   simpleScalarXmlProperties(
     args: SimpleScalarXmlPropertiesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<SimpleScalarXmlPropertiesCommandOutput>;
   simpleScalarXmlProperties(
     args: SimpleScalarXmlPropertiesCommandInput,
-    cb: (err: any, data?: SimpleScalarXmlPropertiesCommandOutput) => void
+    cb: (err: any, data?: SimpleScalarXmlPropertiesCommandOutput) => void,
   ): void;
   simpleScalarXmlProperties(
     args: SimpleScalarXmlPropertiesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SimpleScalarXmlPropertiesCommandOutput) => void
+    cb: (err: any, data?: SimpleScalarXmlPropertiesCommandOutput) => void,
   ): void;
 
   /**
@@ -561,7 +561,7 @@ export interface QueryProtocol {
   xmlBlobs(
     args: XmlBlobsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: XmlBlobsCommandOutput) => void
+    cb: (err: any, data?: XmlBlobsCommandOutput) => void,
   ): void;
 
   /**
@@ -573,7 +573,7 @@ export interface QueryProtocol {
   xmlEmptyBlobs(
     args: XmlEmptyBlobsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: XmlEmptyBlobsCommandOutput) => void
+    cb: (err: any, data?: XmlEmptyBlobsCommandOutput) => void,
   ): void;
 
   /**
@@ -585,7 +585,7 @@ export interface QueryProtocol {
   xmlEmptyLists(
     args: XmlEmptyListsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: XmlEmptyListsCommandOutput) => void
+    cb: (err: any, data?: XmlEmptyListsCommandOutput) => void,
   ): void;
 
   /**
@@ -597,7 +597,7 @@ export interface QueryProtocol {
   xmlEmptyMaps(
     args: XmlEmptyMapsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: XmlEmptyMapsCommandOutput) => void
+    cb: (err: any, data?: XmlEmptyMapsCommandOutput) => void,
   ): void;
 
   /**
@@ -609,7 +609,7 @@ export interface QueryProtocol {
   xmlEnums(
     args: XmlEnumsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: XmlEnumsCommandOutput) => void
+    cb: (err: any, data?: XmlEnumsCommandOutput) => void,
   ): void;
 
   /**
@@ -621,7 +621,7 @@ export interface QueryProtocol {
   xmlIntEnums(
     args: XmlIntEnumsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: XmlIntEnumsCommandOutput) => void
+    cb: (err: any, data?: XmlIntEnumsCommandOutput) => void,
   ): void;
 
   /**
@@ -633,7 +633,7 @@ export interface QueryProtocol {
   xmlLists(
     args: XmlListsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: XmlListsCommandOutput) => void
+    cb: (err: any, data?: XmlListsCommandOutput) => void,
   ): void;
 
   /**
@@ -645,7 +645,7 @@ export interface QueryProtocol {
   xmlMaps(
     args: XmlMapsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: XmlMapsCommandOutput) => void
+    cb: (err: any, data?: XmlMapsCommandOutput) => void,
   ): void;
 
   /**
@@ -654,13 +654,13 @@ export interface QueryProtocol {
   xmlMapsXmlName(): Promise<XmlMapsXmlNameCommandOutput>;
   xmlMapsXmlName(
     args: XmlMapsXmlNameCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<XmlMapsXmlNameCommandOutput>;
   xmlMapsXmlName(args: XmlMapsXmlNameCommandInput, cb: (err: any, data?: XmlMapsXmlNameCommandOutput) => void): void;
   xmlMapsXmlName(
     args: XmlMapsXmlNameCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: XmlMapsXmlNameCommandOutput) => void
+    cb: (err: any, data?: XmlMapsXmlNameCommandOutput) => void,
   ): void;
 
   /**
@@ -672,7 +672,7 @@ export interface QueryProtocol {
   xmlNamespaces(
     args: XmlNamespacesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: XmlNamespacesCommandOutput) => void
+    cb: (err: any, data?: XmlNamespacesCommandOutput) => void,
   ): void;
 
   /**
@@ -684,7 +684,7 @@ export interface QueryProtocol {
   xmlTimestamps(
     args: XmlTimestampsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: XmlTimestampsCommandOutput) => void
+    cb: (err: any, data?: XmlTimestampsCommandOutput) => void,
   ): void;
 }
 

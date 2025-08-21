@@ -75,13 +75,13 @@ export interface MWAA {
    */
   createCliToken(
     args: CreateCliTokenCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateCliTokenCommandOutput>;
   createCliToken(args: CreateCliTokenCommandInput, cb: (err: any, data?: CreateCliTokenCommandOutput) => void): void;
   createCliToken(
     args: CreateCliTokenCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateCliTokenCommandOutput) => void
+    cb: (err: any, data?: CreateCliTokenCommandOutput) => void,
   ): void;
 
   /**
@@ -89,16 +89,16 @@ export interface MWAA {
    */
   createEnvironment(
     args: CreateEnvironmentCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateEnvironmentCommandOutput>;
   createEnvironment(
     args: CreateEnvironmentCommandInput,
-    cb: (err: any, data?: CreateEnvironmentCommandOutput) => void
+    cb: (err: any, data?: CreateEnvironmentCommandOutput) => void,
   ): void;
   createEnvironment(
     args: CreateEnvironmentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateEnvironmentCommandOutput) => void
+    cb: (err: any, data?: CreateEnvironmentCommandOutput) => void,
   ): void;
 
   /**
@@ -106,16 +106,16 @@ export interface MWAA {
    */
   createWebLoginToken(
     args: CreateWebLoginTokenCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateWebLoginTokenCommandOutput>;
   createWebLoginToken(
     args: CreateWebLoginTokenCommandInput,
-    cb: (err: any, data?: CreateWebLoginTokenCommandOutput) => void
+    cb: (err: any, data?: CreateWebLoginTokenCommandOutput) => void,
   ): void;
   createWebLoginToken(
     args: CreateWebLoginTokenCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateWebLoginTokenCommandOutput) => void
+    cb: (err: any, data?: CreateWebLoginTokenCommandOutput) => void,
   ): void;
 
   /**
@@ -123,16 +123,16 @@ export interface MWAA {
    */
   deleteEnvironment(
     args: DeleteEnvironmentCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteEnvironmentCommandOutput>;
   deleteEnvironment(
     args: DeleteEnvironmentCommandInput,
-    cb: (err: any, data?: DeleteEnvironmentCommandOutput) => void
+    cb: (err: any, data?: DeleteEnvironmentCommandOutput) => void,
   ): void;
   deleteEnvironment(
     args: DeleteEnvironmentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteEnvironmentCommandOutput) => void
+    cb: (err: any, data?: DeleteEnvironmentCommandOutput) => void,
   ): void;
 
   /**
@@ -140,13 +140,13 @@ export interface MWAA {
    */
   getEnvironment(
     args: GetEnvironmentCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetEnvironmentCommandOutput>;
   getEnvironment(args: GetEnvironmentCommandInput, cb: (err: any, data?: GetEnvironmentCommandOutput) => void): void;
   getEnvironment(
     args: GetEnvironmentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetEnvironmentCommandOutput) => void
+    cb: (err: any, data?: GetEnvironmentCommandOutput) => void,
   ): void;
 
   /**
@@ -155,16 +155,16 @@ export interface MWAA {
   listEnvironments(): Promise<ListEnvironmentsCommandOutput>;
   listEnvironments(
     args: ListEnvironmentsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListEnvironmentsCommandOutput>;
   listEnvironments(
     args: ListEnvironmentsCommandInput,
-    cb: (err: any, data?: ListEnvironmentsCommandOutput) => void
+    cb: (err: any, data?: ListEnvironmentsCommandOutput) => void,
   ): void;
   listEnvironments(
     args: ListEnvironmentsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListEnvironmentsCommandOutput) => void
+    cb: (err: any, data?: ListEnvironmentsCommandOutput) => void,
   ): void;
 
   /**
@@ -172,16 +172,16 @@ export interface MWAA {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -189,13 +189,13 @@ export interface MWAA {
    */
   publishMetrics(
     args: PublishMetricsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PublishMetricsCommandOutput>;
   publishMetrics(args: PublishMetricsCommandInput, cb: (err: any, data?: PublishMetricsCommandOutput) => void): void;
   publishMetrics(
     args: PublishMetricsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PublishMetricsCommandOutput) => void
+    cb: (err: any, data?: PublishMetricsCommandOutput) => void,
   ): void;
 
   /**
@@ -206,7 +206,7 @@ export interface MWAA {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -217,7 +217,7 @@ export interface MWAA {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -225,16 +225,16 @@ export interface MWAA {
    */
   updateEnvironment(
     args: UpdateEnvironmentCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateEnvironmentCommandOutput>;
   updateEnvironment(
     args: UpdateEnvironmentCommandInput,
-    cb: (err: any, data?: UpdateEnvironmentCommandOutput) => void
+    cb: (err: any, data?: UpdateEnvironmentCommandOutput) => void,
   ): void;
   updateEnvironment(
     args: UpdateEnvironmentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateEnvironmentCommandOutput) => void
+    cb: (err: any, data?: UpdateEnvironmentCommandOutput) => void,
   ): void;
 }
 

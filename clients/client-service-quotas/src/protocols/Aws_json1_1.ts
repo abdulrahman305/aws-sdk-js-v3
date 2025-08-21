@@ -143,7 +143,7 @@ import { ServiceQuotasServiceException as __BaseException } from "../models/Serv
  */
 export const se_AssociateServiceQuotaTemplateCommand = async (
   input: AssociateServiceQuotaTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("AssociateServiceQuotaTemplate");
   let body: any;
@@ -156,7 +156,7 @@ export const se_AssociateServiceQuotaTemplateCommand = async (
  */
 export const se_DeleteServiceQuotaIncreaseRequestFromTemplateCommand = async (
   input: DeleteServiceQuotaIncreaseRequestFromTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteServiceQuotaIncreaseRequestFromTemplate");
   let body: any;
@@ -169,7 +169,7 @@ export const se_DeleteServiceQuotaIncreaseRequestFromTemplateCommand = async (
  */
 export const se_DisassociateServiceQuotaTemplateCommand = async (
   input: DisassociateServiceQuotaTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DisassociateServiceQuotaTemplate");
   let body: any;
@@ -182,7 +182,7 @@ export const se_DisassociateServiceQuotaTemplateCommand = async (
  */
 export const se_GetAssociationForServiceQuotaTemplateCommand = async (
   input: GetAssociationForServiceQuotaTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetAssociationForServiceQuotaTemplate");
   let body: any;
@@ -195,7 +195,7 @@ export const se_GetAssociationForServiceQuotaTemplateCommand = async (
  */
 export const se_GetAWSDefaultServiceQuotaCommand = async (
   input: GetAWSDefaultServiceQuotaCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetAWSDefaultServiceQuota");
   let body: any;
@@ -208,7 +208,7 @@ export const se_GetAWSDefaultServiceQuotaCommand = async (
  */
 export const se_GetRequestedServiceQuotaChangeCommand = async (
   input: GetRequestedServiceQuotaChangeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetRequestedServiceQuotaChange");
   let body: any;
@@ -221,7 +221,7 @@ export const se_GetRequestedServiceQuotaChangeCommand = async (
  */
 export const se_GetServiceQuotaCommand = async (
   input: GetServiceQuotaCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetServiceQuota");
   let body: any;
@@ -234,7 +234,7 @@ export const se_GetServiceQuotaCommand = async (
  */
 export const se_GetServiceQuotaIncreaseRequestFromTemplateCommand = async (
   input: GetServiceQuotaIncreaseRequestFromTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetServiceQuotaIncreaseRequestFromTemplate");
   let body: any;
@@ -247,7 +247,7 @@ export const se_GetServiceQuotaIncreaseRequestFromTemplateCommand = async (
  */
 export const se_ListAWSDefaultServiceQuotasCommand = async (
   input: ListAWSDefaultServiceQuotasCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListAWSDefaultServiceQuotas");
   let body: any;
@@ -260,7 +260,7 @@ export const se_ListAWSDefaultServiceQuotasCommand = async (
  */
 export const se_ListRequestedServiceQuotaChangeHistoryCommand = async (
   input: ListRequestedServiceQuotaChangeHistoryCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListRequestedServiceQuotaChangeHistory");
   let body: any;
@@ -273,7 +273,7 @@ export const se_ListRequestedServiceQuotaChangeHistoryCommand = async (
  */
 export const se_ListRequestedServiceQuotaChangeHistoryByQuotaCommand = async (
   input: ListRequestedServiceQuotaChangeHistoryByQuotaCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListRequestedServiceQuotaChangeHistoryByQuota");
   let body: any;
@@ -286,7 +286,7 @@ export const se_ListRequestedServiceQuotaChangeHistoryByQuotaCommand = async (
  */
 export const se_ListServiceQuotaIncreaseRequestsInTemplateCommand = async (
   input: ListServiceQuotaIncreaseRequestsInTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListServiceQuotaIncreaseRequestsInTemplate");
   let body: any;
@@ -299,7 +299,7 @@ export const se_ListServiceQuotaIncreaseRequestsInTemplateCommand = async (
  */
 export const se_ListServiceQuotasCommand = async (
   input: ListServiceQuotasCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListServiceQuotas");
   let body: any;
@@ -312,7 +312,7 @@ export const se_ListServiceQuotasCommand = async (
  */
 export const se_ListServicesCommand = async (
   input: ListServicesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListServices");
   let body: any;
@@ -325,7 +325,7 @@ export const se_ListServicesCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListTagsForResource");
   let body: any;
@@ -338,7 +338,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_PutServiceQuotaIncreaseRequestIntoTemplateCommand = async (
   input: PutServiceQuotaIncreaseRequestIntoTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("PutServiceQuotaIncreaseRequestIntoTemplate");
   let body: any;
@@ -351,7 +351,7 @@ export const se_PutServiceQuotaIncreaseRequestIntoTemplateCommand = async (
  */
 export const se_RequestServiceQuotaIncreaseCommand = async (
   input: RequestServiceQuotaIncreaseCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("RequestServiceQuotaIncrease");
   let body: any;
@@ -364,7 +364,7 @@ export const se_RequestServiceQuotaIncreaseCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("TagResource");
   let body: any;
@@ -377,7 +377,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UntagResource");
   let body: any;
@@ -390,7 +390,7 @@ export const se_UntagResourceCommand = async (
  */
 export const de_AssociateServiceQuotaTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssociateServiceQuotaTemplateCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -410,7 +410,7 @@ export const de_AssociateServiceQuotaTemplateCommand = async (
  */
 export const de_DeleteServiceQuotaIncreaseRequestFromTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteServiceQuotaIncreaseRequestFromTemplateCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -430,7 +430,7 @@ export const de_DeleteServiceQuotaIncreaseRequestFromTemplateCommand = async (
  */
 export const de_DisassociateServiceQuotaTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisassociateServiceQuotaTemplateCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -450,7 +450,7 @@ export const de_DisassociateServiceQuotaTemplateCommand = async (
  */
 export const de_GetAssociationForServiceQuotaTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetAssociationForServiceQuotaTemplateCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -470,7 +470,7 @@ export const de_GetAssociationForServiceQuotaTemplateCommand = async (
  */
 export const de_GetAWSDefaultServiceQuotaCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetAWSDefaultServiceQuotaCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -490,7 +490,7 @@ export const de_GetAWSDefaultServiceQuotaCommand = async (
  */
 export const de_GetRequestedServiceQuotaChangeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetRequestedServiceQuotaChangeCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -510,7 +510,7 @@ export const de_GetRequestedServiceQuotaChangeCommand = async (
  */
 export const de_GetServiceQuotaCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetServiceQuotaCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -530,7 +530,7 @@ export const de_GetServiceQuotaCommand = async (
  */
 export const de_GetServiceQuotaIncreaseRequestFromTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetServiceQuotaIncreaseRequestFromTemplateCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -550,7 +550,7 @@ export const de_GetServiceQuotaIncreaseRequestFromTemplateCommand = async (
  */
 export const de_ListAWSDefaultServiceQuotasCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAWSDefaultServiceQuotasCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -570,7 +570,7 @@ export const de_ListAWSDefaultServiceQuotasCommand = async (
  */
 export const de_ListRequestedServiceQuotaChangeHistoryCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListRequestedServiceQuotaChangeHistoryCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -590,7 +590,7 @@ export const de_ListRequestedServiceQuotaChangeHistoryCommand = async (
  */
 export const de_ListRequestedServiceQuotaChangeHistoryByQuotaCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListRequestedServiceQuotaChangeHistoryByQuotaCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -610,7 +610,7 @@ export const de_ListRequestedServiceQuotaChangeHistoryByQuotaCommand = async (
  */
 export const de_ListServiceQuotaIncreaseRequestsInTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListServiceQuotaIncreaseRequestsInTemplateCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -630,7 +630,7 @@ export const de_ListServiceQuotaIncreaseRequestsInTemplateCommand = async (
  */
 export const de_ListServiceQuotasCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListServiceQuotasCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -650,7 +650,7 @@ export const de_ListServiceQuotasCommand = async (
  */
 export const de_ListServicesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListServicesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -670,7 +670,7 @@ export const de_ListServicesCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -690,7 +690,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_PutServiceQuotaIncreaseRequestIntoTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutServiceQuotaIncreaseRequestIntoTemplateCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -710,7 +710,7 @@ export const de_PutServiceQuotaIncreaseRequestIntoTemplateCommand = async (
  */
 export const de_RequestServiceQuotaIncreaseCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RequestServiceQuotaIncreaseCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -730,7 +730,7 @@ export const de_RequestServiceQuotaIncreaseCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -750,7 +750,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -841,7 +841,7 @@ const de_CommandError = async (output: __HttpResponse, context: __SerdeContext):
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -857,7 +857,7 @@ const de_AccessDeniedExceptionRes = async (
  */
 const de_AWSServiceAccessNotEnabledExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AWSServiceAccessNotEnabledException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -873,7 +873,7 @@ const de_AWSServiceAccessNotEnabledExceptionRes = async (
  */
 const de_DependencyAccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DependencyAccessDeniedException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -889,7 +889,7 @@ const de_DependencyAccessDeniedExceptionRes = async (
  */
 const de_IllegalArgumentExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<IllegalArgumentException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -905,7 +905,7 @@ const de_IllegalArgumentExceptionRes = async (
  */
 const de_InvalidPaginationTokenExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidPaginationTokenException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -921,7 +921,7 @@ const de_InvalidPaginationTokenExceptionRes = async (
  */
 const de_InvalidResourceStateExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidResourceStateException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -937,7 +937,7 @@ const de_InvalidResourceStateExceptionRes = async (
  */
 const de_NoAvailableOrganizationExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<NoAvailableOrganizationException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -953,7 +953,7 @@ const de_NoAvailableOrganizationExceptionRes = async (
  */
 const de_NoSuchResourceExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<NoSuchResourceException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -969,7 +969,7 @@ const de_NoSuchResourceExceptionRes = async (
  */
 const de_OrganizationNotInAllFeaturesModeExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<OrganizationNotInAllFeaturesModeException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -985,7 +985,7 @@ const de_OrganizationNotInAllFeaturesModeExceptionRes = async (
  */
 const de_QuotaExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<QuotaExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1001,7 +1001,7 @@ const de_QuotaExceededExceptionRes = async (
  */
 const de_ResourceAlreadyExistsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceAlreadyExistsException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1030,7 +1030,7 @@ const de_ServiceExceptionRes = async (parsedOutput: any, context: __SerdeContext
  */
 const de_ServiceQuotaTemplateNotInUseExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceQuotaTemplateNotInUseException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1046,7 +1046,7 @@ const de_ServiceQuotaTemplateNotInUseExceptionRes = async (
  */
 const de_TagPolicyViolationExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagPolicyViolationException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1062,7 +1062,7 @@ const de_TagPolicyViolationExceptionRes = async (
  */
 const de_TemplatesNotAvailableInRegionExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TemplatesNotAvailableInRegionException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1078,7 +1078,7 @@ const de_TemplatesNotAvailableInRegionExceptionRes = async (
  */
 const de_TooManyRequestsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyRequestsException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1094,7 +1094,7 @@ const de_TooManyRequestsExceptionRes = async (
  */
 const de_TooManyTagsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyTagsException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1144,7 +1144,7 @@ const de_TooManyTagsExceptionRes = async (
  */
 const se_PutServiceQuotaIncreaseRequestIntoTemplateRequest = (
   input: PutServiceQuotaIncreaseRequestIntoTemplateRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     AwsRegion: [],
@@ -1159,7 +1159,7 @@ const se_PutServiceQuotaIncreaseRequestIntoTemplateRequest = (
  */
 const se_RequestServiceQuotaIncreaseRequest = (
   input: RequestServiceQuotaIncreaseRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     ContextId: [],
@@ -1196,7 +1196,7 @@ const se_RequestServiceQuotaIncreaseRequest = (
  */
 const de_GetAWSDefaultServiceQuotaResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): GetAWSDefaultServiceQuotaResponse => {
   return take(output, {
     Quota: (_: any) => de_ServiceQuota(_, context),
@@ -1208,7 +1208,7 @@ const de_GetAWSDefaultServiceQuotaResponse = (
  */
 const de_GetRequestedServiceQuotaChangeResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): GetRequestedServiceQuotaChangeResponse => {
   return take(output, {
     RequestedQuota: (_: any) => de_RequestedServiceQuotaChange(_, context),
@@ -1220,7 +1220,7 @@ const de_GetRequestedServiceQuotaChangeResponse = (
  */
 const de_GetServiceQuotaIncreaseRequestFromTemplateResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): GetServiceQuotaIncreaseRequestFromTemplateResponse => {
   return take(output, {
     ServiceQuotaIncreaseRequestInTemplate: (_: any) => de_ServiceQuotaIncreaseRequestInTemplate(_, context),
@@ -1247,7 +1247,7 @@ const de_GetServiceQuotaResponse = (output: any, context: __SerdeContext): GetSe
  */
 const de_ListAWSDefaultServiceQuotasResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ListAWSDefaultServiceQuotasResponse => {
   return take(output, {
     NextToken: __expectString,
@@ -1260,7 +1260,7 @@ const de_ListAWSDefaultServiceQuotasResponse = (
  */
 const de_ListRequestedServiceQuotaChangeHistoryByQuotaResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ListRequestedServiceQuotaChangeHistoryByQuotaResponse => {
   return take(output, {
     NextToken: __expectString,
@@ -1273,7 +1273,7 @@ const de_ListRequestedServiceQuotaChangeHistoryByQuotaResponse = (
  */
 const de_ListRequestedServiceQuotaChangeHistoryResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ListRequestedServiceQuotaChangeHistoryResponse => {
   return take(output, {
     NextToken: __expectString,
@@ -1286,7 +1286,7 @@ const de_ListRequestedServiceQuotaChangeHistoryResponse = (
  */
 const de_ListServiceQuotaIncreaseRequestsInTemplateResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ListServiceQuotaIncreaseRequestsInTemplateResponse => {
   return take(output, {
     NextToken: __expectString,
@@ -1325,7 +1325,7 @@ const de_ListServiceQuotasResponse = (output: any, context: __SerdeContext): Lis
  */
 const de_PutServiceQuotaIncreaseRequestIntoTemplateResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): PutServiceQuotaIncreaseRequestIntoTemplateResponse => {
   return take(output, {
     ServiceQuotaIncreaseRequestInTemplate: (_: any) => de_ServiceQuotaIncreaseRequestInTemplate(_, context),
@@ -1367,7 +1367,7 @@ const de_RequestedServiceQuotaChange = (output: any, context: __SerdeContext): R
  */
 const de_RequestedServiceQuotaChangeHistoryListDefinition = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): RequestedServiceQuotaChange[] => {
   const retVal = (output || [])
     .filter((e: any) => e != null)
@@ -1382,7 +1382,7 @@ const de_RequestedServiceQuotaChangeHistoryListDefinition = (
  */
 const de_RequestServiceQuotaIncreaseResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): RequestServiceQuotaIncreaseResponse => {
   return take(output, {
     RequestedQuota: (_: any) => de_RequestedServiceQuotaChange(_, context),
@@ -1424,7 +1424,7 @@ const de_ServiceQuota = (output: any, context: __SerdeContext): ServiceQuota => 
  */
 const de_ServiceQuotaIncreaseRequestInTemplate = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ServiceQuotaIncreaseRequestInTemplate => {
   return take(output, {
     AwsRegion: __expectString,
@@ -1443,7 +1443,7 @@ const de_ServiceQuotaIncreaseRequestInTemplate = (
  */
 const de_ServiceQuotaIncreaseRequestInTemplateList = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ServiceQuotaIncreaseRequestInTemplate[] => {
   const retVal = (output || [])
     .filter((e: any) => e != null)
@@ -1499,7 +1499,7 @@ const buildHttpRpcRequest = async (
   headers: __HeaderBag,
   path: string,
   resolvedHostname: string | undefined,
-  body: any
+  body: any,
 ): Promise<__HttpRequest> => {
   const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
   const contents: any = {

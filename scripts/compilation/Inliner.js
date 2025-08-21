@@ -87,7 +87,7 @@ module.exports = class Inliner {
         const keyFile = path.join(
           this.packageDirectory,
           "dist-cjs",
-          variantFile.replace(/(.*?)dist-cjs\//, "") + (variantFile.endsWith(".js") ? "" : ".js")
+          variantFile.replace(/(.*?)dist-cjs\//, "") + (variantFile.endsWith(".js") ? "" : ".js"),
         );
         const keyFileContents = fs.readFileSync(keyFile, "utf-8");
         const requireStatements = keyFileContents.matchAll(/require\("(.*?)"\)/g);
@@ -147,7 +147,7 @@ module.exports = class Inliner {
     }
 
     this.variantExternalsForEsBuild = this.variantExternals.map(
-      (variant) => "*/" + path.basename(variant).replace(/.js$/, "")
+      (variant) => "*/" + path.basename(variant).replace(/.js$/, ""),
     );
 
     const buildOptions = {
@@ -272,14 +272,14 @@ module.exports = class Inliner {
       return this;
     }
     const redundantRequireStatements = this.indexContents.matchAll(
-      /var import_([a-z_]+)(\d+) = require\("([@a-z\/-0-9]+)"\);/g
+      /var import_([a-z_]+)(\d+) = require\("([@a-z\/-0-9]+)"\);/g,
     );
     for (const requireStatement of redundantRequireStatements) {
       const variableSuffix = requireStatement[1];
       const packageName = requireStatement[3].replace("/", "\\/");
 
       const original = this.indexContents.match(
-        new RegExp(`var (import_${variableSuffix}(\d+)?) = require\\(\"${packageName}\"\\);`)
+        new RegExp(`var (import_${variableSuffix}(\d+)?) = require\\(\"${packageName}\"\\);`),
       );
 
       if (original) {
@@ -328,7 +328,7 @@ module.exports = class Inliner {
 0 && (module.exports = {
   ${exportNames.join(",\n  ")}
 });
-`
+`,
     );
     fs.writeFileSync(this.outfile, this.indexContents, "utf-8");
     return this;
@@ -347,7 +347,7 @@ module.exports = class Inliner {
     const externalsToCheck = new Set(
       Object.keys(this.variantMap)
         .filter((variant) => !this.transitiveVariants.includes(variant) && !variant.endsWith("index"))
-        .map((variant) => path.basename(variant).replace(/.js$/, ""))
+        .map((variant) => path.basename(variant).replace(/.js$/, "")),
     );
 
     for (const line of this.indexContents.split("\n")) {
@@ -368,7 +368,7 @@ module.exports = class Inliner {
       throw new Error(
         "require() statements for the following variant externals: " +
           [...externalsToCheck].join(", ") +
-          " were not found in the index."
+          " were not found in the index.",
       );
     }
 

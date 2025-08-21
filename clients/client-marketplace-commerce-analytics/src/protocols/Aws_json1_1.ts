@@ -32,7 +32,7 @@ import {
  */
 export const se_GenerateDataSetCommand = async (
   input: GenerateDataSetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GenerateDataSet");
   let body: any;
@@ -45,7 +45,7 @@ export const se_GenerateDataSetCommand = async (
  */
 export const se_StartSupportDataExportCommand = async (
   input: StartSupportDataExportCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StartSupportDataExport");
   let body: any;
@@ -58,7 +58,7 @@ export const se_StartSupportDataExportCommand = async (
  */
 export const de_GenerateDataSetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GenerateDataSetCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -78,7 +78,7 @@ export const de_GenerateDataSetCommand = async (
  */
 export const de_StartSupportDataExportCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartSupportDataExportCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -121,7 +121,7 @@ const de_CommandError = async (output: __HttpResponse, context: __SerdeContext):
  */
 const de_MarketplaceCommerceAnalyticsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<MarketplaceCommerceAnalyticsException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -188,7 +188,7 @@ const buildHttpRpcRequest = async (
   headers: __HeaderBag,
   path: string,
   resolvedHostname: string | undefined,
-  body: any
+  body: any,
 ): Promise<__HttpRequest> => {
   const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
   const contents: any = {

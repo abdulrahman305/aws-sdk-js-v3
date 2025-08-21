@@ -183,16 +183,16 @@ export interface Glacier {
    */
   abortMultipartUpload(
     args: AbortMultipartUploadCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AbortMultipartUploadCommandOutput>;
   abortMultipartUpload(
     args: AbortMultipartUploadCommandInput,
-    cb: (err: any, data?: AbortMultipartUploadCommandOutput) => void
+    cb: (err: any, data?: AbortMultipartUploadCommandOutput) => void,
   ): void;
   abortMultipartUpload(
     args: AbortMultipartUploadCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AbortMultipartUploadCommandOutput) => void
+    cb: (err: any, data?: AbortMultipartUploadCommandOutput) => void,
   ): void;
 
   /**
@@ -200,13 +200,13 @@ export interface Glacier {
    */
   abortVaultLock(
     args: AbortVaultLockCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AbortVaultLockCommandOutput>;
   abortVaultLock(args: AbortVaultLockCommandInput, cb: (err: any, data?: AbortVaultLockCommandOutput) => void): void;
   abortVaultLock(
     args: AbortVaultLockCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AbortVaultLockCommandOutput) => void
+    cb: (err: any, data?: AbortVaultLockCommandOutput) => void,
   ): void;
 
   /**
@@ -214,13 +214,13 @@ export interface Glacier {
    */
   addTagsToVault(
     args: AddTagsToVaultCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AddTagsToVaultCommandOutput>;
   addTagsToVault(args: AddTagsToVaultCommandInput, cb: (err: any, data?: AddTagsToVaultCommandOutput) => void): void;
   addTagsToVault(
     args: AddTagsToVaultCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AddTagsToVaultCommandOutput) => void
+    cb: (err: any, data?: AddTagsToVaultCommandOutput) => void,
   ): void;
 
   /**
@@ -228,16 +228,16 @@ export interface Glacier {
    */
   completeMultipartUpload(
     args: CompleteMultipartUploadCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CompleteMultipartUploadCommandOutput>;
   completeMultipartUpload(
     args: CompleteMultipartUploadCommandInput,
-    cb: (err: any, data?: CompleteMultipartUploadCommandOutput) => void
+    cb: (err: any, data?: CompleteMultipartUploadCommandOutput) => void,
   ): void;
   completeMultipartUpload(
     args: CompleteMultipartUploadCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CompleteMultipartUploadCommandOutput) => void
+    cb: (err: any, data?: CompleteMultipartUploadCommandOutput) => void,
   ): void;
 
   /**
@@ -245,16 +245,16 @@ export interface Glacier {
    */
   completeVaultLock(
     args: CompleteVaultLockCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CompleteVaultLockCommandOutput>;
   completeVaultLock(
     args: CompleteVaultLockCommandInput,
-    cb: (err: any, data?: CompleteVaultLockCommandOutput) => void
+    cb: (err: any, data?: CompleteVaultLockCommandOutput) => void,
   ): void;
   completeVaultLock(
     args: CompleteVaultLockCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CompleteVaultLockCommandOutput) => void
+    cb: (err: any, data?: CompleteVaultLockCommandOutput) => void,
   ): void;
 
   /**
@@ -265,7 +265,7 @@ export interface Glacier {
   createVault(
     args: CreateVaultCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateVaultCommandOutput) => void
+    cb: (err: any, data?: CreateVaultCommandOutput) => void,
   ): void;
 
   /**
@@ -276,7 +276,7 @@ export interface Glacier {
   deleteArchive(
     args: DeleteArchiveCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteArchiveCommandOutput) => void
+    cb: (err: any, data?: DeleteArchiveCommandOutput) => void,
   ): void;
 
   /**
@@ -287,7 +287,7 @@ export interface Glacier {
   deleteVault(
     args: DeleteVaultCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteVaultCommandOutput) => void
+    cb: (err: any, data?: DeleteVaultCommandOutput) => void,
   ): void;
 
   /**
@@ -295,16 +295,16 @@ export interface Glacier {
    */
   deleteVaultAccessPolicy(
     args: DeleteVaultAccessPolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteVaultAccessPolicyCommandOutput>;
   deleteVaultAccessPolicy(
     args: DeleteVaultAccessPolicyCommandInput,
-    cb: (err: any, data?: DeleteVaultAccessPolicyCommandOutput) => void
+    cb: (err: any, data?: DeleteVaultAccessPolicyCommandOutput) => void,
   ): void;
   deleteVaultAccessPolicy(
     args: DeleteVaultAccessPolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteVaultAccessPolicyCommandOutput) => void
+    cb: (err: any, data?: DeleteVaultAccessPolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -312,16 +312,16 @@ export interface Glacier {
    */
   deleteVaultNotifications(
     args: DeleteVaultNotificationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteVaultNotificationsCommandOutput>;
   deleteVaultNotifications(
     args: DeleteVaultNotificationsCommandInput,
-    cb: (err: any, data?: DeleteVaultNotificationsCommandOutput) => void
+    cb: (err: any, data?: DeleteVaultNotificationsCommandOutput) => void,
   ): void;
   deleteVaultNotifications(
     args: DeleteVaultNotificationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteVaultNotificationsCommandOutput) => void
+    cb: (err: any, data?: DeleteVaultNotificationsCommandOutput) => void,
   ): void;
 
   /**
@@ -332,7 +332,7 @@ export interface Glacier {
   describeJob(
     args: DescribeJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeJobCommandOutput) => void
+    cb: (err: any, data?: DescribeJobCommandOutput) => void,
   ): void;
 
   /**
@@ -343,7 +343,7 @@ export interface Glacier {
   describeVault(
     args: DescribeVaultCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeVaultCommandOutput) => void
+    cb: (err: any, data?: DescribeVaultCommandOutput) => void,
   ): void;
 
   /**
@@ -351,16 +351,16 @@ export interface Glacier {
    */
   getDataRetrievalPolicy(
     args: GetDataRetrievalPolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetDataRetrievalPolicyCommandOutput>;
   getDataRetrievalPolicy(
     args: GetDataRetrievalPolicyCommandInput,
-    cb: (err: any, data?: GetDataRetrievalPolicyCommandOutput) => void
+    cb: (err: any, data?: GetDataRetrievalPolicyCommandOutput) => void,
   ): void;
   getDataRetrievalPolicy(
     args: GetDataRetrievalPolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetDataRetrievalPolicyCommandOutput) => void
+    cb: (err: any, data?: GetDataRetrievalPolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -371,7 +371,7 @@ export interface Glacier {
   getJobOutput(
     args: GetJobOutputCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetJobOutputCommandOutput) => void
+    cb: (err: any, data?: GetJobOutputCommandOutput) => void,
   ): void;
 
   /**
@@ -379,16 +379,16 @@ export interface Glacier {
    */
   getVaultAccessPolicy(
     args: GetVaultAccessPolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetVaultAccessPolicyCommandOutput>;
   getVaultAccessPolicy(
     args: GetVaultAccessPolicyCommandInput,
-    cb: (err: any, data?: GetVaultAccessPolicyCommandOutput) => void
+    cb: (err: any, data?: GetVaultAccessPolicyCommandOutput) => void,
   ): void;
   getVaultAccessPolicy(
     args: GetVaultAccessPolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetVaultAccessPolicyCommandOutput) => void
+    cb: (err: any, data?: GetVaultAccessPolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -399,7 +399,7 @@ export interface Glacier {
   getVaultLock(
     args: GetVaultLockCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetVaultLockCommandOutput) => void
+    cb: (err: any, data?: GetVaultLockCommandOutput) => void,
   ): void;
 
   /**
@@ -407,16 +407,16 @@ export interface Glacier {
    */
   getVaultNotifications(
     args: GetVaultNotificationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetVaultNotificationsCommandOutput>;
   getVaultNotifications(
     args: GetVaultNotificationsCommandInput,
-    cb: (err: any, data?: GetVaultNotificationsCommandOutput) => void
+    cb: (err: any, data?: GetVaultNotificationsCommandOutput) => void,
   ): void;
   getVaultNotifications(
     args: GetVaultNotificationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetVaultNotificationsCommandOutput) => void
+    cb: (err: any, data?: GetVaultNotificationsCommandOutput) => void,
   ): void;
 
   /**
@@ -427,7 +427,7 @@ export interface Glacier {
   initiateJob(
     args: InitiateJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: InitiateJobCommandOutput) => void
+    cb: (err: any, data?: InitiateJobCommandOutput) => void,
   ): void;
 
   /**
@@ -435,16 +435,16 @@ export interface Glacier {
    */
   initiateMultipartUpload(
     args: InitiateMultipartUploadCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<InitiateMultipartUploadCommandOutput>;
   initiateMultipartUpload(
     args: InitiateMultipartUploadCommandInput,
-    cb: (err: any, data?: InitiateMultipartUploadCommandOutput) => void
+    cb: (err: any, data?: InitiateMultipartUploadCommandOutput) => void,
   ): void;
   initiateMultipartUpload(
     args: InitiateMultipartUploadCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: InitiateMultipartUploadCommandOutput) => void
+    cb: (err: any, data?: InitiateMultipartUploadCommandOutput) => void,
   ): void;
 
   /**
@@ -452,16 +452,16 @@ export interface Glacier {
    */
   initiateVaultLock(
     args: InitiateVaultLockCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<InitiateVaultLockCommandOutput>;
   initiateVaultLock(
     args: InitiateVaultLockCommandInput,
-    cb: (err: any, data?: InitiateVaultLockCommandOutput) => void
+    cb: (err: any, data?: InitiateVaultLockCommandOutput) => void,
   ): void;
   initiateVaultLock(
     args: InitiateVaultLockCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: InitiateVaultLockCommandOutput) => void
+    cb: (err: any, data?: InitiateVaultLockCommandOutput) => void,
   ): void;
 
   /**
@@ -472,7 +472,7 @@ export interface Glacier {
   listJobs(
     args: ListJobsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListJobsCommandOutput) => void
+    cb: (err: any, data?: ListJobsCommandOutput) => void,
   ): void;
 
   /**
@@ -480,16 +480,16 @@ export interface Glacier {
    */
   listMultipartUploads(
     args: ListMultipartUploadsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListMultipartUploadsCommandOutput>;
   listMultipartUploads(
     args: ListMultipartUploadsCommandInput,
-    cb: (err: any, data?: ListMultipartUploadsCommandOutput) => void
+    cb: (err: any, data?: ListMultipartUploadsCommandOutput) => void,
   ): void;
   listMultipartUploads(
     args: ListMultipartUploadsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListMultipartUploadsCommandOutput) => void
+    cb: (err: any, data?: ListMultipartUploadsCommandOutput) => void,
   ): void;
 
   /**
@@ -500,7 +500,7 @@ export interface Glacier {
   listParts(
     args: ListPartsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListPartsCommandOutput) => void
+    cb: (err: any, data?: ListPartsCommandOutput) => void,
   ): void;
 
   /**
@@ -508,16 +508,16 @@ export interface Glacier {
    */
   listProvisionedCapacity(
     args: ListProvisionedCapacityCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListProvisionedCapacityCommandOutput>;
   listProvisionedCapacity(
     args: ListProvisionedCapacityCommandInput,
-    cb: (err: any, data?: ListProvisionedCapacityCommandOutput) => void
+    cb: (err: any, data?: ListProvisionedCapacityCommandOutput) => void,
   ): void;
   listProvisionedCapacity(
     args: ListProvisionedCapacityCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListProvisionedCapacityCommandOutput) => void
+    cb: (err: any, data?: ListProvisionedCapacityCommandOutput) => void,
   ): void;
 
   /**
@@ -525,16 +525,16 @@ export interface Glacier {
    */
   listTagsForVault(
     args: ListTagsForVaultCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForVaultCommandOutput>;
   listTagsForVault(
     args: ListTagsForVaultCommandInput,
-    cb: (err: any, data?: ListTagsForVaultCommandOutput) => void
+    cb: (err: any, data?: ListTagsForVaultCommandOutput) => void,
   ): void;
   listTagsForVault(
     args: ListTagsForVaultCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForVaultCommandOutput) => void
+    cb: (err: any, data?: ListTagsForVaultCommandOutput) => void,
   ): void;
 
   /**
@@ -545,7 +545,7 @@ export interface Glacier {
   listVaults(
     args: ListVaultsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListVaultsCommandOutput) => void
+    cb: (err: any, data?: ListVaultsCommandOutput) => void,
   ): void;
 
   /**
@@ -553,16 +553,16 @@ export interface Glacier {
    */
   purchaseProvisionedCapacity(
     args: PurchaseProvisionedCapacityCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PurchaseProvisionedCapacityCommandOutput>;
   purchaseProvisionedCapacity(
     args: PurchaseProvisionedCapacityCommandInput,
-    cb: (err: any, data?: PurchaseProvisionedCapacityCommandOutput) => void
+    cb: (err: any, data?: PurchaseProvisionedCapacityCommandOutput) => void,
   ): void;
   purchaseProvisionedCapacity(
     args: PurchaseProvisionedCapacityCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PurchaseProvisionedCapacityCommandOutput) => void
+    cb: (err: any, data?: PurchaseProvisionedCapacityCommandOutput) => void,
   ): void;
 
   /**
@@ -570,16 +570,16 @@ export interface Glacier {
    */
   removeTagsFromVault(
     args: RemoveTagsFromVaultCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<RemoveTagsFromVaultCommandOutput>;
   removeTagsFromVault(
     args: RemoveTagsFromVaultCommandInput,
-    cb: (err: any, data?: RemoveTagsFromVaultCommandOutput) => void
+    cb: (err: any, data?: RemoveTagsFromVaultCommandOutput) => void,
   ): void;
   removeTagsFromVault(
     args: RemoveTagsFromVaultCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RemoveTagsFromVaultCommandOutput) => void
+    cb: (err: any, data?: RemoveTagsFromVaultCommandOutput) => void,
   ): void;
 
   /**
@@ -587,16 +587,16 @@ export interface Glacier {
    */
   setDataRetrievalPolicy(
     args: SetDataRetrievalPolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<SetDataRetrievalPolicyCommandOutput>;
   setDataRetrievalPolicy(
     args: SetDataRetrievalPolicyCommandInput,
-    cb: (err: any, data?: SetDataRetrievalPolicyCommandOutput) => void
+    cb: (err: any, data?: SetDataRetrievalPolicyCommandOutput) => void,
   ): void;
   setDataRetrievalPolicy(
     args: SetDataRetrievalPolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SetDataRetrievalPolicyCommandOutput) => void
+    cb: (err: any, data?: SetDataRetrievalPolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -604,16 +604,16 @@ export interface Glacier {
    */
   setVaultAccessPolicy(
     args: SetVaultAccessPolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<SetVaultAccessPolicyCommandOutput>;
   setVaultAccessPolicy(
     args: SetVaultAccessPolicyCommandInput,
-    cb: (err: any, data?: SetVaultAccessPolicyCommandOutput) => void
+    cb: (err: any, data?: SetVaultAccessPolicyCommandOutput) => void,
   ): void;
   setVaultAccessPolicy(
     args: SetVaultAccessPolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SetVaultAccessPolicyCommandOutput) => void
+    cb: (err: any, data?: SetVaultAccessPolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -621,16 +621,16 @@ export interface Glacier {
    */
   setVaultNotifications(
     args: SetVaultNotificationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<SetVaultNotificationsCommandOutput>;
   setVaultNotifications(
     args: SetVaultNotificationsCommandInput,
-    cb: (err: any, data?: SetVaultNotificationsCommandOutput) => void
+    cb: (err: any, data?: SetVaultNotificationsCommandOutput) => void,
   ): void;
   setVaultNotifications(
     args: SetVaultNotificationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SetVaultNotificationsCommandOutput) => void
+    cb: (err: any, data?: SetVaultNotificationsCommandOutput) => void,
   ): void;
 
   /**
@@ -641,7 +641,7 @@ export interface Glacier {
   uploadArchive(
     args: UploadArchiveCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UploadArchiveCommandOutput) => void
+    cb: (err: any, data?: UploadArchiveCommandOutput) => void,
   ): void;
 
   /**
@@ -649,16 +649,16 @@ export interface Glacier {
    */
   uploadMultipartPart(
     args: UploadMultipartPartCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UploadMultipartPartCommandOutput>;
   uploadMultipartPart(
     args: UploadMultipartPartCommandInput,
-    cb: (err: any, data?: UploadMultipartPartCommandOutput) => void
+    cb: (err: any, data?: UploadMultipartPartCommandOutput) => void,
   ): void;
   uploadMultipartPart(
     args: UploadMultipartPartCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UploadMultipartPartCommandOutput) => void
+    cb: (err: any, data?: UploadMultipartPartCommandOutput) => void,
   ): void;
 }
 

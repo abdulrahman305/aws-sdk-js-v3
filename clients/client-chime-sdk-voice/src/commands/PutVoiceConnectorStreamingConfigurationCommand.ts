@@ -135,7 +135,7 @@ export class PutVoiceConnectorStreamingConfigurationCommand extends $Command
   .n("ChimeSDKVoiceClient", "PutVoiceConnectorStreamingConfigurationCommand")
   .f(
     PutVoiceConnectorStreamingConfigurationRequestFilterSensitiveLog,
-    PutVoiceConnectorStreamingConfigurationResponseFilterSensitiveLog
+    PutVoiceConnectorStreamingConfigurationResponseFilterSensitiveLog,
   )
   .ser(se_PutVoiceConnectorStreamingConfigurationCommand)
   .de(de_PutVoiceConnectorStreamingConfigurationCommand)

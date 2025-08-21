@@ -130,7 +130,7 @@ export class PutAppInstanceStreamingConfigurationsCommand extends $Command
   .n("ChimeClient", "PutAppInstanceStreamingConfigurationsCommand")
   .f(
     PutAppInstanceStreamingConfigurationsRequestFilterSensitiveLog,
-    PutAppInstanceStreamingConfigurationsResponseFilterSensitiveLog
+    PutAppInstanceStreamingConfigurationsResponseFilterSensitiveLog,
   )
   .ser(se_PutAppInstanceStreamingConfigurationsCommand)
   .de(de_PutAppInstanceStreamingConfigurationsCommand)

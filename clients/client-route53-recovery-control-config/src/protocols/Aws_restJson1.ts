@@ -91,7 +91,7 @@ import { Route53RecoveryControlConfigServiceException as __BaseException } from 
  */
 export const se_CreateClusterCommand = async (
   input: CreateClusterCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -104,7 +104,7 @@ export const se_CreateClusterCommand = async (
       ClientToken: [true, (_) => _ ?? generateIdempotencyToken()],
       ClusterName: [],
       Tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -115,7 +115,7 @@ export const se_CreateClusterCommand = async (
  */
 export const se_CreateControlPanelCommand = async (
   input: CreateControlPanelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -129,7 +129,7 @@ export const se_CreateControlPanelCommand = async (
       ClusterArn: [],
       ControlPanelName: [],
       Tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -140,7 +140,7 @@ export const se_CreateControlPanelCommand = async (
  */
 export const se_CreateRoutingControlCommand = async (
   input: CreateRoutingControlCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -154,7 +154,7 @@ export const se_CreateRoutingControlCommand = async (
       ClusterArn: [],
       ControlPanelArn: [],
       RoutingControlName: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -165,7 +165,7 @@ export const se_CreateRoutingControlCommand = async (
  */
 export const se_CreateSafetyRuleCommand = async (
   input: CreateSafetyRuleCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -179,7 +179,7 @@ export const se_CreateSafetyRuleCommand = async (
       ClientToken: [true, (_) => _ ?? generateIdempotencyToken()],
       GatingRule: (_) => _json(_),
       Tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -190,7 +190,7 @@ export const se_CreateSafetyRuleCommand = async (
  */
 export const se_DeleteClusterCommand = async (
   input: DeleteClusterCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -206,7 +206,7 @@ export const se_DeleteClusterCommand = async (
  */
 export const se_DeleteControlPanelCommand = async (
   input: DeleteControlPanelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -222,7 +222,7 @@ export const se_DeleteControlPanelCommand = async (
  */
 export const se_DeleteRoutingControlCommand = async (
   input: DeleteRoutingControlCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -238,7 +238,7 @@ export const se_DeleteRoutingControlCommand = async (
  */
 export const se_DeleteSafetyRuleCommand = async (
   input: DeleteSafetyRuleCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -254,7 +254,7 @@ export const se_DeleteSafetyRuleCommand = async (
  */
 export const se_DescribeClusterCommand = async (
   input: DescribeClusterCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -270,7 +270,7 @@ export const se_DescribeClusterCommand = async (
  */
 export const se_DescribeControlPanelCommand = async (
   input: DescribeControlPanelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -286,7 +286,7 @@ export const se_DescribeControlPanelCommand = async (
  */
 export const se_DescribeRoutingControlCommand = async (
   input: DescribeRoutingControlCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -302,7 +302,7 @@ export const se_DescribeRoutingControlCommand = async (
  */
 export const se_DescribeSafetyRuleCommand = async (
   input: DescribeSafetyRuleCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -318,7 +318,7 @@ export const se_DescribeSafetyRuleCommand = async (
  */
 export const se_GetResourcePolicyCommand = async (
   input: GetResourcePolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -334,7 +334,7 @@ export const se_GetResourcePolicyCommand = async (
  */
 export const se_ListAssociatedRoute53HealthChecksCommand = async (
   input: ListAssociatedRoute53HealthChecksCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -354,7 +354,7 @@ export const se_ListAssociatedRoute53HealthChecksCommand = async (
  */
 export const se_ListClustersCommand = async (
   input: ListClustersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -373,7 +373,7 @@ export const se_ListClustersCommand = async (
  */
 export const se_ListControlPanelsCommand = async (
   input: ListControlPanelsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -393,7 +393,7 @@ export const se_ListControlPanelsCommand = async (
  */
 export const se_ListRoutingControlsCommand = async (
   input: ListRoutingControlsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -413,7 +413,7 @@ export const se_ListRoutingControlsCommand = async (
  */
 export const se_ListSafetyRulesCommand = async (
   input: ListSafetyRulesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -433,7 +433,7 @@ export const se_ListSafetyRulesCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -449,7 +449,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -461,7 +461,7 @@ export const se_TagResourceCommand = async (
   body = JSON.stringify(
     take(input, {
       Tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -472,7 +472,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -494,7 +494,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateControlPanelCommand = async (
   input: UpdateControlPanelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -506,7 +506,7 @@ export const se_UpdateControlPanelCommand = async (
     take(input, {
       ControlPanelArn: [],
       ControlPanelName: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -517,7 +517,7 @@ export const se_UpdateControlPanelCommand = async (
  */
 export const se_UpdateRoutingControlCommand = async (
   input: UpdateRoutingControlCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -529,7 +529,7 @@ export const se_UpdateRoutingControlCommand = async (
     take(input, {
       RoutingControlArn: [],
       RoutingControlName: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -540,7 +540,7 @@ export const se_UpdateRoutingControlCommand = async (
  */
 export const se_UpdateSafetyRuleCommand = async (
   input: UpdateSafetyRuleCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -552,7 +552,7 @@ export const se_UpdateSafetyRuleCommand = async (
     take(input, {
       AssertionRuleUpdate: (_) => _json(_),
       GatingRuleUpdate: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -563,7 +563,7 @@ export const se_UpdateSafetyRuleCommand = async (
  */
 export const de_CreateClusterCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateClusterCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -584,7 +584,7 @@ export const de_CreateClusterCommand = async (
  */
 export const de_CreateControlPanelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateControlPanelCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -605,7 +605,7 @@ export const de_CreateControlPanelCommand = async (
  */
 export const de_CreateRoutingControlCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateRoutingControlCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -626,7 +626,7 @@ export const de_CreateRoutingControlCommand = async (
  */
 export const de_CreateSafetyRuleCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateSafetyRuleCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -648,7 +648,7 @@ export const de_CreateSafetyRuleCommand = async (
  */
 export const de_DeleteClusterCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteClusterCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -665,7 +665,7 @@ export const de_DeleteClusterCommand = async (
  */
 export const de_DeleteControlPanelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteControlPanelCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -682,7 +682,7 @@ export const de_DeleteControlPanelCommand = async (
  */
 export const de_DeleteRoutingControlCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteRoutingControlCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -699,7 +699,7 @@ export const de_DeleteRoutingControlCommand = async (
  */
 export const de_DeleteSafetyRuleCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteSafetyRuleCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -716,7 +716,7 @@ export const de_DeleteSafetyRuleCommand = async (
  */
 export const de_DescribeClusterCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeClusterCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -737,7 +737,7 @@ export const de_DescribeClusterCommand = async (
  */
 export const de_DescribeControlPanelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeControlPanelCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -758,7 +758,7 @@ export const de_DescribeControlPanelCommand = async (
  */
 export const de_DescribeRoutingControlCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeRoutingControlCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -779,7 +779,7 @@ export const de_DescribeRoutingControlCommand = async (
  */
 export const de_DescribeSafetyRuleCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeSafetyRuleCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -801,7 +801,7 @@ export const de_DescribeSafetyRuleCommand = async (
  */
 export const de_GetResourcePolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetResourcePolicyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -822,7 +822,7 @@ export const de_GetResourcePolicyCommand = async (
  */
 export const de_ListAssociatedRoute53HealthChecksCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAssociatedRoute53HealthChecksCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -844,7 +844,7 @@ export const de_ListAssociatedRoute53HealthChecksCommand = async (
  */
 export const de_ListClustersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListClustersCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -866,7 +866,7 @@ export const de_ListClustersCommand = async (
  */
 export const de_ListControlPanelsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListControlPanelsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -888,7 +888,7 @@ export const de_ListControlPanelsCommand = async (
  */
 export const de_ListRoutingControlsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListRoutingControlsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -910,7 +910,7 @@ export const de_ListRoutingControlsCommand = async (
  */
 export const de_ListSafetyRulesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListSafetyRulesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -932,7 +932,7 @@ export const de_ListSafetyRulesCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -953,7 +953,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -970,7 +970,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -987,7 +987,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateControlPanelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateControlPanelCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1008,7 +1008,7 @@ export const de_UpdateControlPanelCommand = async (
  */
 export const de_UpdateRoutingControlCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateRoutingControlCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1029,7 +1029,7 @@ export const de_UpdateRoutingControlCommand = async (
  */
 export const de_UpdateSafetyRuleCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateSafetyRuleCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1093,7 +1093,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1130,7 +1130,7 @@ const de_ConflictExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_InternalServerExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1150,7 +1150,7 @@ const de_InternalServerExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1170,7 +1170,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_ServiceQuotaExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceQuotaExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;

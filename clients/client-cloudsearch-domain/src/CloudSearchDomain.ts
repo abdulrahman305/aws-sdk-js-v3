@@ -26,7 +26,7 @@ export interface CloudSearchDomain {
   search(
     args: SearchCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SearchCommandOutput) => void
+    cb: (err: any, data?: SearchCommandOutput) => void,
   ): void;
 
   /**
@@ -37,7 +37,7 @@ export interface CloudSearchDomain {
   suggest(
     args: SuggestCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SuggestCommandOutput) => void
+    cb: (err: any, data?: SuggestCommandOutput) => void,
   ): void;
 
   /**
@@ -45,13 +45,13 @@ export interface CloudSearchDomain {
    */
   uploadDocuments(
     args: UploadDocumentsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UploadDocumentsCommandOutput>;
   uploadDocuments(args: UploadDocumentsCommandInput, cb: (err: any, data?: UploadDocumentsCommandOutput) => void): void;
   uploadDocuments(
     args: UploadDocumentsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UploadDocumentsCommandOutput) => void
+    cb: (err: any, data?: UploadDocumentsCommandOutput) => void,
   ): void;
 }
 

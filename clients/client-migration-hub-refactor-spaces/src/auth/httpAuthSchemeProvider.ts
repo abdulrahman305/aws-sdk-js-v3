@@ -44,7 +44,7 @@ export interface MigrationHubRefactorSpacesHttpAuthSchemeParametersProvider
 export const defaultMigrationHubRefactorSpacesHttpAuthSchemeParametersProvider = async (
   config: MigrationHubRefactorSpacesClientResolvedConfig,
   context: HandlerExecutionContext,
-  input: object
+  input: object,
 ): Promise<MigrationHubRefactorSpacesHttpAuthSchemeParameters> => {
   return {
     operation: getSmithyContext(context).operation as string,
@@ -57,7 +57,7 @@ export const defaultMigrationHubRefactorSpacesHttpAuthSchemeParametersProvider =
 };
 
 function createAwsAuthSigv4HttpAuthOption(
-  authParameters: MigrationHubRefactorSpacesHttpAuthSchemeParameters
+  authParameters: MigrationHubRefactorSpacesHttpAuthSchemeParameters,
 ): HttpAuthOption {
   return {
     schemeId: "aws.auth#sigv4",
@@ -135,7 +135,7 @@ export interface HttpAuthSchemeResolvedConfig extends AwsSdkSigV4AuthResolvedCon
  * @internal
  */
 export const resolveHttpAuthSchemeConfig = <T>(
-  config: T & HttpAuthSchemeInputConfig & AwsSdkSigV4PreviouslyResolved
+  config: T & HttpAuthSchemeInputConfig & AwsSdkSigV4PreviouslyResolved,
 ): T & HttpAuthSchemeResolvedConfig => {
   const config_0 = resolveAwsSdkSigV4Config(config);
   return {

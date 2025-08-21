@@ -121,7 +121,7 @@ import { PipesServiceException as __BaseException } from "../models/PipesService
  */
 export const se_CreatePipeCommand = async (
   input: CreatePipeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -143,7 +143,7 @@ export const se_CreatePipeCommand = async (
       Tags: (_) => _json(_),
       Target: [],
       TargetParameters: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -154,7 +154,7 @@ export const se_CreatePipeCommand = async (
  */
 export const se_DeletePipeCommand = async (
   input: DeletePipeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -170,7 +170,7 @@ export const se_DeletePipeCommand = async (
  */
 export const se_DescribePipeCommand = async (
   input: DescribePipeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -186,7 +186,7 @@ export const se_DescribePipeCommand = async (
  */
 export const se_ListPipesCommand = async (
   input: ListPipesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -210,7 +210,7 @@ export const se_ListPipesCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -226,7 +226,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_StartPipeCommand = async (
   input: StartPipeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -242,7 +242,7 @@ export const se_StartPipeCommand = async (
  */
 export const se_StopPipeCommand = async (
   input: StopPipeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -258,7 +258,7 @@ export const se_StopPipeCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -270,7 +270,7 @@ export const se_TagResourceCommand = async (
   body = JSON.stringify(
     take(input, {
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -281,7 +281,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -303,7 +303,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdatePipeCommand = async (
   input: UpdatePipeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -323,7 +323,7 @@ export const se_UpdatePipeCommand = async (
       SourceParameters: (_) => _json(_),
       Target: [],
       TargetParameters: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -334,7 +334,7 @@ export const se_UpdatePipeCommand = async (
  */
 export const de_CreatePipeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreatePipeCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -360,7 +360,7 @@ export const de_CreatePipeCommand = async (
  */
 export const de_DeletePipeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeletePipeCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -386,7 +386,7 @@ export const de_DeletePipeCommand = async (
  */
 export const de_DescribePipeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribePipeCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -423,7 +423,7 @@ export const de_DescribePipeCommand = async (
  */
 export const de_ListPipesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListPipesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -445,7 +445,7 @@ export const de_ListPipesCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -466,7 +466,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_StartPipeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartPipeCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -492,7 +492,7 @@ export const de_StartPipeCommand = async (
  */
 export const de_StopPipeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StopPipeCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -518,7 +518,7 @@ export const de_StopPipeCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -535,7 +535,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -552,7 +552,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdatePipeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdatePipeCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -672,7 +672,7 @@ const de_NotFoundExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_ServiceQuotaExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceQuotaExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -835,7 +835,7 @@ const de_ValidationExceptionRes = async (parsedOutput: any, context: __SerdeCont
  */
 const se_PipeSourceKinesisStreamParameters = (
   input: PipeSourceKinesisStreamParameters,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     BatchSize: [],
@@ -1093,7 +1093,7 @@ const de_PipeList = (output: any, context: __SerdeContext): Pipe[] => {
  */
 const de_PipeSourceKinesisStreamParameters = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): PipeSourceKinesisStreamParameters => {
   return take(output, {
     BatchSize: __expectInt32,

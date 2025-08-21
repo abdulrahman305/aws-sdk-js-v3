@@ -75,16 +75,16 @@ export interface TrustedAdvisor {
    */
   batchUpdateRecommendationResourceExclusion(
     args: BatchUpdateRecommendationResourceExclusionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<BatchUpdateRecommendationResourceExclusionCommandOutput>;
   batchUpdateRecommendationResourceExclusion(
     args: BatchUpdateRecommendationResourceExclusionCommandInput,
-    cb: (err: any, data?: BatchUpdateRecommendationResourceExclusionCommandOutput) => void
+    cb: (err: any, data?: BatchUpdateRecommendationResourceExclusionCommandOutput) => void,
   ): void;
   batchUpdateRecommendationResourceExclusion(
     args: BatchUpdateRecommendationResourceExclusionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: BatchUpdateRecommendationResourceExclusionCommandOutput) => void
+    cb: (err: any, data?: BatchUpdateRecommendationResourceExclusionCommandOutput) => void,
   ): void;
 
   /**
@@ -92,16 +92,16 @@ export interface TrustedAdvisor {
    */
   getOrganizationRecommendation(
     args: GetOrganizationRecommendationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetOrganizationRecommendationCommandOutput>;
   getOrganizationRecommendation(
     args: GetOrganizationRecommendationCommandInput,
-    cb: (err: any, data?: GetOrganizationRecommendationCommandOutput) => void
+    cb: (err: any, data?: GetOrganizationRecommendationCommandOutput) => void,
   ): void;
   getOrganizationRecommendation(
     args: GetOrganizationRecommendationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetOrganizationRecommendationCommandOutput) => void
+    cb: (err: any, data?: GetOrganizationRecommendationCommandOutput) => void,
   ): void;
 
   /**
@@ -109,16 +109,16 @@ export interface TrustedAdvisor {
    */
   getRecommendation(
     args: GetRecommendationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetRecommendationCommandOutput>;
   getRecommendation(
     args: GetRecommendationCommandInput,
-    cb: (err: any, data?: GetRecommendationCommandOutput) => void
+    cb: (err: any, data?: GetRecommendationCommandOutput) => void,
   ): void;
   getRecommendation(
     args: GetRecommendationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetRecommendationCommandOutput) => void
+    cb: (err: any, data?: GetRecommendationCommandOutput) => void,
   ): void;
 
   /**
@@ -130,7 +130,7 @@ export interface TrustedAdvisor {
   listChecks(
     args: ListChecksCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListChecksCommandOutput) => void
+    cb: (err: any, data?: ListChecksCommandOutput) => void,
   ): void;
 
   /**
@@ -138,16 +138,16 @@ export interface TrustedAdvisor {
    */
   listOrganizationRecommendationAccounts(
     args: ListOrganizationRecommendationAccountsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListOrganizationRecommendationAccountsCommandOutput>;
   listOrganizationRecommendationAccounts(
     args: ListOrganizationRecommendationAccountsCommandInput,
-    cb: (err: any, data?: ListOrganizationRecommendationAccountsCommandOutput) => void
+    cb: (err: any, data?: ListOrganizationRecommendationAccountsCommandOutput) => void,
   ): void;
   listOrganizationRecommendationAccounts(
     args: ListOrganizationRecommendationAccountsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListOrganizationRecommendationAccountsCommandOutput) => void
+    cb: (err: any, data?: ListOrganizationRecommendationAccountsCommandOutput) => void,
   ): void;
 
   /**
@@ -155,16 +155,16 @@ export interface TrustedAdvisor {
    */
   listOrganizationRecommendationResources(
     args: ListOrganizationRecommendationResourcesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListOrganizationRecommendationResourcesCommandOutput>;
   listOrganizationRecommendationResources(
     args: ListOrganizationRecommendationResourcesCommandInput,
-    cb: (err: any, data?: ListOrganizationRecommendationResourcesCommandOutput) => void
+    cb: (err: any, data?: ListOrganizationRecommendationResourcesCommandOutput) => void,
   ): void;
   listOrganizationRecommendationResources(
     args: ListOrganizationRecommendationResourcesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListOrganizationRecommendationResourcesCommandOutput) => void
+    cb: (err: any, data?: ListOrganizationRecommendationResourcesCommandOutput) => void,
   ): void;
 
   /**
@@ -173,16 +173,16 @@ export interface TrustedAdvisor {
   listOrganizationRecommendations(): Promise<ListOrganizationRecommendationsCommandOutput>;
   listOrganizationRecommendations(
     args: ListOrganizationRecommendationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListOrganizationRecommendationsCommandOutput>;
   listOrganizationRecommendations(
     args: ListOrganizationRecommendationsCommandInput,
-    cb: (err: any, data?: ListOrganizationRecommendationsCommandOutput) => void
+    cb: (err: any, data?: ListOrganizationRecommendationsCommandOutput) => void,
   ): void;
   listOrganizationRecommendations(
     args: ListOrganizationRecommendationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListOrganizationRecommendationsCommandOutput) => void
+    cb: (err: any, data?: ListOrganizationRecommendationsCommandOutput) => void,
   ): void;
 
   /**
@@ -190,16 +190,16 @@ export interface TrustedAdvisor {
    */
   listRecommendationResources(
     args: ListRecommendationResourcesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListRecommendationResourcesCommandOutput>;
   listRecommendationResources(
     args: ListRecommendationResourcesCommandInput,
-    cb: (err: any, data?: ListRecommendationResourcesCommandOutput) => void
+    cb: (err: any, data?: ListRecommendationResourcesCommandOutput) => void,
   ): void;
   listRecommendationResources(
     args: ListRecommendationResourcesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListRecommendationResourcesCommandOutput) => void
+    cb: (err: any, data?: ListRecommendationResourcesCommandOutput) => void,
   ): void;
 
   /**
@@ -208,16 +208,16 @@ export interface TrustedAdvisor {
   listRecommendations(): Promise<ListRecommendationsCommandOutput>;
   listRecommendations(
     args: ListRecommendationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListRecommendationsCommandOutput>;
   listRecommendations(
     args: ListRecommendationsCommandInput,
-    cb: (err: any, data?: ListRecommendationsCommandOutput) => void
+    cb: (err: any, data?: ListRecommendationsCommandOutput) => void,
   ): void;
   listRecommendations(
     args: ListRecommendationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListRecommendationsCommandOutput) => void
+    cb: (err: any, data?: ListRecommendationsCommandOutput) => void,
   ): void;
 
   /**
@@ -225,16 +225,16 @@ export interface TrustedAdvisor {
    */
   updateOrganizationRecommendationLifecycle(
     args: UpdateOrganizationRecommendationLifecycleCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateOrganizationRecommendationLifecycleCommandOutput>;
   updateOrganizationRecommendationLifecycle(
     args: UpdateOrganizationRecommendationLifecycleCommandInput,
-    cb: (err: any, data?: UpdateOrganizationRecommendationLifecycleCommandOutput) => void
+    cb: (err: any, data?: UpdateOrganizationRecommendationLifecycleCommandOutput) => void,
   ): void;
   updateOrganizationRecommendationLifecycle(
     args: UpdateOrganizationRecommendationLifecycleCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateOrganizationRecommendationLifecycleCommandOutput) => void
+    cb: (err: any, data?: UpdateOrganizationRecommendationLifecycleCommandOutput) => void,
   ): void;
 
   /**
@@ -242,16 +242,16 @@ export interface TrustedAdvisor {
    */
   updateRecommendationLifecycle(
     args: UpdateRecommendationLifecycleCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateRecommendationLifecycleCommandOutput>;
   updateRecommendationLifecycle(
     args: UpdateRecommendationLifecycleCommandInput,
-    cb: (err: any, data?: UpdateRecommendationLifecycleCommandOutput) => void
+    cb: (err: any, data?: UpdateRecommendationLifecycleCommandOutput) => void,
   ): void;
   updateRecommendationLifecycle(
     args: UpdateRecommendationLifecycleCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateRecommendationLifecycleCommandOutput) => void
+    cb: (err: any, data?: UpdateRecommendationLifecycleCommandOutput) => void,
   ): void;
 }
 

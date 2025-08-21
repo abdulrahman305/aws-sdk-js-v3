@@ -1193,16 +1193,16 @@ export interface Glue {
    */
   batchCreatePartition(
     args: BatchCreatePartitionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<BatchCreatePartitionCommandOutput>;
   batchCreatePartition(
     args: BatchCreatePartitionCommandInput,
-    cb: (err: any, data?: BatchCreatePartitionCommandOutput) => void
+    cb: (err: any, data?: BatchCreatePartitionCommandOutput) => void,
   ): void;
   batchCreatePartition(
     args: BatchCreatePartitionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: BatchCreatePartitionCommandOutput) => void
+    cb: (err: any, data?: BatchCreatePartitionCommandOutput) => void,
   ): void;
 
   /**
@@ -1210,16 +1210,16 @@ export interface Glue {
    */
   batchDeleteConnection(
     args: BatchDeleteConnectionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<BatchDeleteConnectionCommandOutput>;
   batchDeleteConnection(
     args: BatchDeleteConnectionCommandInput,
-    cb: (err: any, data?: BatchDeleteConnectionCommandOutput) => void
+    cb: (err: any, data?: BatchDeleteConnectionCommandOutput) => void,
   ): void;
   batchDeleteConnection(
     args: BatchDeleteConnectionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: BatchDeleteConnectionCommandOutput) => void
+    cb: (err: any, data?: BatchDeleteConnectionCommandOutput) => void,
   ): void;
 
   /**
@@ -1227,16 +1227,16 @@ export interface Glue {
    */
   batchDeletePartition(
     args: BatchDeletePartitionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<BatchDeletePartitionCommandOutput>;
   batchDeletePartition(
     args: BatchDeletePartitionCommandInput,
-    cb: (err: any, data?: BatchDeletePartitionCommandOutput) => void
+    cb: (err: any, data?: BatchDeletePartitionCommandOutput) => void,
   ): void;
   batchDeletePartition(
     args: BatchDeletePartitionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: BatchDeletePartitionCommandOutput) => void
+    cb: (err: any, data?: BatchDeletePartitionCommandOutput) => void,
   ): void;
 
   /**
@@ -1244,16 +1244,16 @@ export interface Glue {
    */
   batchDeleteTable(
     args: BatchDeleteTableCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<BatchDeleteTableCommandOutput>;
   batchDeleteTable(
     args: BatchDeleteTableCommandInput,
-    cb: (err: any, data?: BatchDeleteTableCommandOutput) => void
+    cb: (err: any, data?: BatchDeleteTableCommandOutput) => void,
   ): void;
   batchDeleteTable(
     args: BatchDeleteTableCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: BatchDeleteTableCommandOutput) => void
+    cb: (err: any, data?: BatchDeleteTableCommandOutput) => void,
   ): void;
 
   /**
@@ -1261,16 +1261,16 @@ export interface Glue {
    */
   batchDeleteTableVersion(
     args: BatchDeleteTableVersionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<BatchDeleteTableVersionCommandOutput>;
   batchDeleteTableVersion(
     args: BatchDeleteTableVersionCommandInput,
-    cb: (err: any, data?: BatchDeleteTableVersionCommandOutput) => void
+    cb: (err: any, data?: BatchDeleteTableVersionCommandOutput) => void,
   ): void;
   batchDeleteTableVersion(
     args: BatchDeleteTableVersionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: BatchDeleteTableVersionCommandOutput) => void
+    cb: (err: any, data?: BatchDeleteTableVersionCommandOutput) => void,
   ): void;
 
   /**
@@ -1278,16 +1278,16 @@ export interface Glue {
    */
   batchGetBlueprints(
     args: BatchGetBlueprintsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<BatchGetBlueprintsCommandOutput>;
   batchGetBlueprints(
     args: BatchGetBlueprintsCommandInput,
-    cb: (err: any, data?: BatchGetBlueprintsCommandOutput) => void
+    cb: (err: any, data?: BatchGetBlueprintsCommandOutput) => void,
   ): void;
   batchGetBlueprints(
     args: BatchGetBlueprintsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: BatchGetBlueprintsCommandOutput) => void
+    cb: (err: any, data?: BatchGetBlueprintsCommandOutput) => void,
   ): void;
 
   /**
@@ -1295,16 +1295,16 @@ export interface Glue {
    */
   batchGetCrawlers(
     args: BatchGetCrawlersCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<BatchGetCrawlersCommandOutput>;
   batchGetCrawlers(
     args: BatchGetCrawlersCommandInput,
-    cb: (err: any, data?: BatchGetCrawlersCommandOutput) => void
+    cb: (err: any, data?: BatchGetCrawlersCommandOutput) => void,
   ): void;
   batchGetCrawlers(
     args: BatchGetCrawlersCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: BatchGetCrawlersCommandOutput) => void
+    cb: (err: any, data?: BatchGetCrawlersCommandOutput) => void,
   ): void;
 
   /**
@@ -1312,16 +1312,16 @@ export interface Glue {
    */
   batchGetCustomEntityTypes(
     args: BatchGetCustomEntityTypesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<BatchGetCustomEntityTypesCommandOutput>;
   batchGetCustomEntityTypes(
     args: BatchGetCustomEntityTypesCommandInput,
-    cb: (err: any, data?: BatchGetCustomEntityTypesCommandOutput) => void
+    cb: (err: any, data?: BatchGetCustomEntityTypesCommandOutput) => void,
   ): void;
   batchGetCustomEntityTypes(
     args: BatchGetCustomEntityTypesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: BatchGetCustomEntityTypesCommandOutput) => void
+    cb: (err: any, data?: BatchGetCustomEntityTypesCommandOutput) => void,
   ): void;
 
   /**
@@ -1329,16 +1329,16 @@ export interface Glue {
    */
   batchGetDataQualityResult(
     args: BatchGetDataQualityResultCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<BatchGetDataQualityResultCommandOutput>;
   batchGetDataQualityResult(
     args: BatchGetDataQualityResultCommandInput,
-    cb: (err: any, data?: BatchGetDataQualityResultCommandOutput) => void
+    cb: (err: any, data?: BatchGetDataQualityResultCommandOutput) => void,
   ): void;
   batchGetDataQualityResult(
     args: BatchGetDataQualityResultCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: BatchGetDataQualityResultCommandOutput) => void
+    cb: (err: any, data?: BatchGetDataQualityResultCommandOutput) => void,
   ): void;
 
   /**
@@ -1346,16 +1346,16 @@ export interface Glue {
    */
   batchGetDevEndpoints(
     args: BatchGetDevEndpointsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<BatchGetDevEndpointsCommandOutput>;
   batchGetDevEndpoints(
     args: BatchGetDevEndpointsCommandInput,
-    cb: (err: any, data?: BatchGetDevEndpointsCommandOutput) => void
+    cb: (err: any, data?: BatchGetDevEndpointsCommandOutput) => void,
   ): void;
   batchGetDevEndpoints(
     args: BatchGetDevEndpointsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: BatchGetDevEndpointsCommandOutput) => void
+    cb: (err: any, data?: BatchGetDevEndpointsCommandOutput) => void,
   ): void;
 
   /**
@@ -1366,7 +1366,7 @@ export interface Glue {
   batchGetJobs(
     args: BatchGetJobsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: BatchGetJobsCommandOutput) => void
+    cb: (err: any, data?: BatchGetJobsCommandOutput) => void,
   ): void;
 
   /**
@@ -1374,16 +1374,16 @@ export interface Glue {
    */
   batchGetPartition(
     args: BatchGetPartitionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<BatchGetPartitionCommandOutput>;
   batchGetPartition(
     args: BatchGetPartitionCommandInput,
-    cb: (err: any, data?: BatchGetPartitionCommandOutput) => void
+    cb: (err: any, data?: BatchGetPartitionCommandOutput) => void,
   ): void;
   batchGetPartition(
     args: BatchGetPartitionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: BatchGetPartitionCommandOutput) => void
+    cb: (err: any, data?: BatchGetPartitionCommandOutput) => void,
   ): void;
 
   /**
@@ -1391,16 +1391,16 @@ export interface Glue {
    */
   batchGetTableOptimizer(
     args: BatchGetTableOptimizerCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<BatchGetTableOptimizerCommandOutput>;
   batchGetTableOptimizer(
     args: BatchGetTableOptimizerCommandInput,
-    cb: (err: any, data?: BatchGetTableOptimizerCommandOutput) => void
+    cb: (err: any, data?: BatchGetTableOptimizerCommandOutput) => void,
   ): void;
   batchGetTableOptimizer(
     args: BatchGetTableOptimizerCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: BatchGetTableOptimizerCommandOutput) => void
+    cb: (err: any, data?: BatchGetTableOptimizerCommandOutput) => void,
   ): void;
 
   /**
@@ -1408,16 +1408,16 @@ export interface Glue {
    */
   batchGetTriggers(
     args: BatchGetTriggersCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<BatchGetTriggersCommandOutput>;
   batchGetTriggers(
     args: BatchGetTriggersCommandInput,
-    cb: (err: any, data?: BatchGetTriggersCommandOutput) => void
+    cb: (err: any, data?: BatchGetTriggersCommandOutput) => void,
   ): void;
   batchGetTriggers(
     args: BatchGetTriggersCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: BatchGetTriggersCommandOutput) => void
+    cb: (err: any, data?: BatchGetTriggersCommandOutput) => void,
   ): void;
 
   /**
@@ -1425,16 +1425,16 @@ export interface Glue {
    */
   batchGetWorkflows(
     args: BatchGetWorkflowsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<BatchGetWorkflowsCommandOutput>;
   batchGetWorkflows(
     args: BatchGetWorkflowsCommandInput,
-    cb: (err: any, data?: BatchGetWorkflowsCommandOutput) => void
+    cb: (err: any, data?: BatchGetWorkflowsCommandOutput) => void,
   ): void;
   batchGetWorkflows(
     args: BatchGetWorkflowsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: BatchGetWorkflowsCommandOutput) => void
+    cb: (err: any, data?: BatchGetWorkflowsCommandOutput) => void,
   ): void;
 
   /**
@@ -1442,13 +1442,13 @@ export interface Glue {
    */
   batchStopJobRun(
     args: BatchStopJobRunCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<BatchStopJobRunCommandOutput>;
   batchStopJobRun(args: BatchStopJobRunCommandInput, cb: (err: any, data?: BatchStopJobRunCommandOutput) => void): void;
   batchStopJobRun(
     args: BatchStopJobRunCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: BatchStopJobRunCommandOutput) => void
+    cb: (err: any, data?: BatchStopJobRunCommandOutput) => void,
   ): void;
 
   /**
@@ -1456,16 +1456,16 @@ export interface Glue {
    */
   batchUpdatePartition(
     args: BatchUpdatePartitionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<BatchUpdatePartitionCommandOutput>;
   batchUpdatePartition(
     args: BatchUpdatePartitionCommandInput,
-    cb: (err: any, data?: BatchUpdatePartitionCommandOutput) => void
+    cb: (err: any, data?: BatchUpdatePartitionCommandOutput) => void,
   ): void;
   batchUpdatePartition(
     args: BatchUpdatePartitionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: BatchUpdatePartitionCommandOutput) => void
+    cb: (err: any, data?: BatchUpdatePartitionCommandOutput) => void,
   ): void;
 
   /**
@@ -1473,16 +1473,16 @@ export interface Glue {
    */
   cancelDataQualityRuleRecommendationRun(
     args: CancelDataQualityRuleRecommendationRunCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CancelDataQualityRuleRecommendationRunCommandOutput>;
   cancelDataQualityRuleRecommendationRun(
     args: CancelDataQualityRuleRecommendationRunCommandInput,
-    cb: (err: any, data?: CancelDataQualityRuleRecommendationRunCommandOutput) => void
+    cb: (err: any, data?: CancelDataQualityRuleRecommendationRunCommandOutput) => void,
   ): void;
   cancelDataQualityRuleRecommendationRun(
     args: CancelDataQualityRuleRecommendationRunCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CancelDataQualityRuleRecommendationRunCommandOutput) => void
+    cb: (err: any, data?: CancelDataQualityRuleRecommendationRunCommandOutput) => void,
   ): void;
 
   /**
@@ -1490,16 +1490,16 @@ export interface Glue {
    */
   cancelDataQualityRulesetEvaluationRun(
     args: CancelDataQualityRulesetEvaluationRunCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CancelDataQualityRulesetEvaluationRunCommandOutput>;
   cancelDataQualityRulesetEvaluationRun(
     args: CancelDataQualityRulesetEvaluationRunCommandInput,
-    cb: (err: any, data?: CancelDataQualityRulesetEvaluationRunCommandOutput) => void
+    cb: (err: any, data?: CancelDataQualityRulesetEvaluationRunCommandOutput) => void,
   ): void;
   cancelDataQualityRulesetEvaluationRun(
     args: CancelDataQualityRulesetEvaluationRunCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CancelDataQualityRulesetEvaluationRunCommandOutput) => void
+    cb: (err: any, data?: CancelDataQualityRulesetEvaluationRunCommandOutput) => void,
   ): void;
 
   /**
@@ -1507,13 +1507,13 @@ export interface Glue {
    */
   cancelMLTaskRun(
     args: CancelMLTaskRunCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CancelMLTaskRunCommandOutput>;
   cancelMLTaskRun(args: CancelMLTaskRunCommandInput, cb: (err: any, data?: CancelMLTaskRunCommandOutput) => void): void;
   cancelMLTaskRun(
     args: CancelMLTaskRunCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CancelMLTaskRunCommandOutput) => void
+    cb: (err: any, data?: CancelMLTaskRunCommandOutput) => void,
   ): void;
 
   /**
@@ -1521,13 +1521,13 @@ export interface Glue {
    */
   cancelStatement(
     args: CancelStatementCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CancelStatementCommandOutput>;
   cancelStatement(args: CancelStatementCommandInput, cb: (err: any, data?: CancelStatementCommandOutput) => void): void;
   cancelStatement(
     args: CancelStatementCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CancelStatementCommandOutput) => void
+    cb: (err: any, data?: CancelStatementCommandOutput) => void,
   ): void;
 
   /**
@@ -1535,16 +1535,16 @@ export interface Glue {
    */
   checkSchemaVersionValidity(
     args: CheckSchemaVersionValidityCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CheckSchemaVersionValidityCommandOutput>;
   checkSchemaVersionValidity(
     args: CheckSchemaVersionValidityCommandInput,
-    cb: (err: any, data?: CheckSchemaVersionValidityCommandOutput) => void
+    cb: (err: any, data?: CheckSchemaVersionValidityCommandOutput) => void,
   ): void;
   checkSchemaVersionValidity(
     args: CheckSchemaVersionValidityCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CheckSchemaVersionValidityCommandOutput) => void
+    cb: (err: any, data?: CheckSchemaVersionValidityCommandOutput) => void,
   ): void;
 
   /**
@@ -1552,13 +1552,13 @@ export interface Glue {
    */
   createBlueprint(
     args: CreateBlueprintCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateBlueprintCommandOutput>;
   createBlueprint(args: CreateBlueprintCommandInput, cb: (err: any, data?: CreateBlueprintCommandOutput) => void): void;
   createBlueprint(
     args: CreateBlueprintCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateBlueprintCommandOutput) => void
+    cb: (err: any, data?: CreateBlueprintCommandOutput) => void,
   ): void;
 
   /**
@@ -1567,16 +1567,16 @@ export interface Glue {
   createClassifier(): Promise<CreateClassifierCommandOutput>;
   createClassifier(
     args: CreateClassifierCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateClassifierCommandOutput>;
   createClassifier(
     args: CreateClassifierCommandInput,
-    cb: (err: any, data?: CreateClassifierCommandOutput) => void
+    cb: (err: any, data?: CreateClassifierCommandOutput) => void,
   ): void;
   createClassifier(
     args: CreateClassifierCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateClassifierCommandOutput) => void
+    cb: (err: any, data?: CreateClassifierCommandOutput) => void,
   ): void;
 
   /**
@@ -1584,16 +1584,16 @@ export interface Glue {
    */
   createConnection(
     args: CreateConnectionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateConnectionCommandOutput>;
   createConnection(
     args: CreateConnectionCommandInput,
-    cb: (err: any, data?: CreateConnectionCommandOutput) => void
+    cb: (err: any, data?: CreateConnectionCommandOutput) => void,
   ): void;
   createConnection(
     args: CreateConnectionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateConnectionCommandOutput) => void
+    cb: (err: any, data?: CreateConnectionCommandOutput) => void,
   ): void;
 
   /**
@@ -1604,7 +1604,7 @@ export interface Glue {
   createCrawler(
     args: CreateCrawlerCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateCrawlerCommandOutput) => void
+    cb: (err: any, data?: CreateCrawlerCommandOutput) => void,
   ): void;
 
   /**
@@ -1612,16 +1612,16 @@ export interface Glue {
    */
   createCustomEntityType(
     args: CreateCustomEntityTypeCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateCustomEntityTypeCommandOutput>;
   createCustomEntityType(
     args: CreateCustomEntityTypeCommandInput,
-    cb: (err: any, data?: CreateCustomEntityTypeCommandOutput) => void
+    cb: (err: any, data?: CreateCustomEntityTypeCommandOutput) => void,
   ): void;
   createCustomEntityType(
     args: CreateCustomEntityTypeCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateCustomEntityTypeCommandOutput) => void
+    cb: (err: any, data?: CreateCustomEntityTypeCommandOutput) => void,
   ): void;
 
   /**
@@ -1629,13 +1629,13 @@ export interface Glue {
    */
   createDatabase(
     args: CreateDatabaseCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateDatabaseCommandOutput>;
   createDatabase(args: CreateDatabaseCommandInput, cb: (err: any, data?: CreateDatabaseCommandOutput) => void): void;
   createDatabase(
     args: CreateDatabaseCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateDatabaseCommandOutput) => void
+    cb: (err: any, data?: CreateDatabaseCommandOutput) => void,
   ): void;
 
   /**
@@ -1643,16 +1643,16 @@ export interface Glue {
    */
   createDataQualityRuleset(
     args: CreateDataQualityRulesetCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateDataQualityRulesetCommandOutput>;
   createDataQualityRuleset(
     args: CreateDataQualityRulesetCommandInput,
-    cb: (err: any, data?: CreateDataQualityRulesetCommandOutput) => void
+    cb: (err: any, data?: CreateDataQualityRulesetCommandOutput) => void,
   ): void;
   createDataQualityRuleset(
     args: CreateDataQualityRulesetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateDataQualityRulesetCommandOutput) => void
+    cb: (err: any, data?: CreateDataQualityRulesetCommandOutput) => void,
   ): void;
 
   /**
@@ -1660,16 +1660,16 @@ export interface Glue {
    */
   createDevEndpoint(
     args: CreateDevEndpointCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateDevEndpointCommandOutput>;
   createDevEndpoint(
     args: CreateDevEndpointCommandInput,
-    cb: (err: any, data?: CreateDevEndpointCommandOutput) => void
+    cb: (err: any, data?: CreateDevEndpointCommandOutput) => void,
   ): void;
   createDevEndpoint(
     args: CreateDevEndpointCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateDevEndpointCommandOutput) => void
+    cb: (err: any, data?: CreateDevEndpointCommandOutput) => void,
   ): void;
 
   /**
@@ -1680,7 +1680,7 @@ export interface Glue {
   createJob(
     args: CreateJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateJobCommandOutput) => void
+    cb: (err: any, data?: CreateJobCommandOutput) => void,
   ): void;
 
   /**
@@ -1688,16 +1688,16 @@ export interface Glue {
    */
   createMLTransform(
     args: CreateMLTransformCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateMLTransformCommandOutput>;
   createMLTransform(
     args: CreateMLTransformCommandInput,
-    cb: (err: any, data?: CreateMLTransformCommandOutput) => void
+    cb: (err: any, data?: CreateMLTransformCommandOutput) => void,
   ): void;
   createMLTransform(
     args: CreateMLTransformCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateMLTransformCommandOutput) => void
+    cb: (err: any, data?: CreateMLTransformCommandOutput) => void,
   ): void;
 
   /**
@@ -1705,13 +1705,13 @@ export interface Glue {
    */
   createPartition(
     args: CreatePartitionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreatePartitionCommandOutput>;
   createPartition(args: CreatePartitionCommandInput, cb: (err: any, data?: CreatePartitionCommandOutput) => void): void;
   createPartition(
     args: CreatePartitionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreatePartitionCommandOutput) => void
+    cb: (err: any, data?: CreatePartitionCommandOutput) => void,
   ): void;
 
   /**
@@ -1719,16 +1719,16 @@ export interface Glue {
    */
   createPartitionIndex(
     args: CreatePartitionIndexCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreatePartitionIndexCommandOutput>;
   createPartitionIndex(
     args: CreatePartitionIndexCommandInput,
-    cb: (err: any, data?: CreatePartitionIndexCommandOutput) => void
+    cb: (err: any, data?: CreatePartitionIndexCommandOutput) => void,
   ): void;
   createPartitionIndex(
     args: CreatePartitionIndexCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreatePartitionIndexCommandOutput) => void
+    cb: (err: any, data?: CreatePartitionIndexCommandOutput) => void,
   ): void;
 
   /**
@@ -1736,13 +1736,13 @@ export interface Glue {
    */
   createRegistry(
     args: CreateRegistryCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateRegistryCommandOutput>;
   createRegistry(args: CreateRegistryCommandInput, cb: (err: any, data?: CreateRegistryCommandOutput) => void): void;
   createRegistry(
     args: CreateRegistryCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateRegistryCommandOutput) => void
+    cb: (err: any, data?: CreateRegistryCommandOutput) => void,
   ): void;
 
   /**
@@ -1753,7 +1753,7 @@ export interface Glue {
   createSchema(
     args: CreateSchemaCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateSchemaCommandOutput) => void
+    cb: (err: any, data?: CreateSchemaCommandOutput) => void,
   ): void;
 
   /**
@@ -1765,7 +1765,7 @@ export interface Glue {
   createScript(
     args: CreateScriptCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateScriptCommandOutput) => void
+    cb: (err: any, data?: CreateScriptCommandOutput) => void,
   ): void;
 
   /**
@@ -1773,16 +1773,16 @@ export interface Glue {
    */
   createSecurityConfiguration(
     args: CreateSecurityConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateSecurityConfigurationCommandOutput>;
   createSecurityConfiguration(
     args: CreateSecurityConfigurationCommandInput,
-    cb: (err: any, data?: CreateSecurityConfigurationCommandOutput) => void
+    cb: (err: any, data?: CreateSecurityConfigurationCommandOutput) => void,
   ): void;
   createSecurityConfiguration(
     args: CreateSecurityConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateSecurityConfigurationCommandOutput) => void
+    cb: (err: any, data?: CreateSecurityConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -1793,7 +1793,7 @@ export interface Glue {
   createSession(
     args: CreateSessionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateSessionCommandOutput) => void
+    cb: (err: any, data?: CreateSessionCommandOutput) => void,
   ): void;
 
   /**
@@ -1804,7 +1804,7 @@ export interface Glue {
   createTable(
     args: CreateTableCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateTableCommandOutput) => void
+    cb: (err: any, data?: CreateTableCommandOutput) => void,
   ): void;
 
   /**
@@ -1812,16 +1812,16 @@ export interface Glue {
    */
   createTableOptimizer(
     args: CreateTableOptimizerCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateTableOptimizerCommandOutput>;
   createTableOptimizer(
     args: CreateTableOptimizerCommandInput,
-    cb: (err: any, data?: CreateTableOptimizerCommandOutput) => void
+    cb: (err: any, data?: CreateTableOptimizerCommandOutput) => void,
   ): void;
   createTableOptimizer(
     args: CreateTableOptimizerCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateTableOptimizerCommandOutput) => void
+    cb: (err: any, data?: CreateTableOptimizerCommandOutput) => void,
   ): void;
 
   /**
@@ -1832,7 +1832,7 @@ export interface Glue {
   createTrigger(
     args: CreateTriggerCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateTriggerCommandOutput) => void
+    cb: (err: any, data?: CreateTriggerCommandOutput) => void,
   ): void;
 
   /**
@@ -1840,16 +1840,16 @@ export interface Glue {
    */
   createUsageProfile(
     args: CreateUsageProfileCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateUsageProfileCommandOutput>;
   createUsageProfile(
     args: CreateUsageProfileCommandInput,
-    cb: (err: any, data?: CreateUsageProfileCommandOutput) => void
+    cb: (err: any, data?: CreateUsageProfileCommandOutput) => void,
   ): void;
   createUsageProfile(
     args: CreateUsageProfileCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateUsageProfileCommandOutput) => void
+    cb: (err: any, data?: CreateUsageProfileCommandOutput) => void,
   ): void;
 
   /**
@@ -1857,16 +1857,16 @@ export interface Glue {
    */
   createUserDefinedFunction(
     args: CreateUserDefinedFunctionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateUserDefinedFunctionCommandOutput>;
   createUserDefinedFunction(
     args: CreateUserDefinedFunctionCommandInput,
-    cb: (err: any, data?: CreateUserDefinedFunctionCommandOutput) => void
+    cb: (err: any, data?: CreateUserDefinedFunctionCommandOutput) => void,
   ): void;
   createUserDefinedFunction(
     args: CreateUserDefinedFunctionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateUserDefinedFunctionCommandOutput) => void
+    cb: (err: any, data?: CreateUserDefinedFunctionCommandOutput) => void,
   ): void;
 
   /**
@@ -1874,13 +1874,13 @@ export interface Glue {
    */
   createWorkflow(
     args: CreateWorkflowCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateWorkflowCommandOutput>;
   createWorkflow(args: CreateWorkflowCommandInput, cb: (err: any, data?: CreateWorkflowCommandOutput) => void): void;
   createWorkflow(
     args: CreateWorkflowCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateWorkflowCommandOutput) => void
+    cb: (err: any, data?: CreateWorkflowCommandOutput) => void,
   ): void;
 
   /**
@@ -1888,13 +1888,13 @@ export interface Glue {
    */
   deleteBlueprint(
     args: DeleteBlueprintCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteBlueprintCommandOutput>;
   deleteBlueprint(args: DeleteBlueprintCommandInput, cb: (err: any, data?: DeleteBlueprintCommandOutput) => void): void;
   deleteBlueprint(
     args: DeleteBlueprintCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteBlueprintCommandOutput) => void
+    cb: (err: any, data?: DeleteBlueprintCommandOutput) => void,
   ): void;
 
   /**
@@ -1902,16 +1902,16 @@ export interface Glue {
    */
   deleteClassifier(
     args: DeleteClassifierCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteClassifierCommandOutput>;
   deleteClassifier(
     args: DeleteClassifierCommandInput,
-    cb: (err: any, data?: DeleteClassifierCommandOutput) => void
+    cb: (err: any, data?: DeleteClassifierCommandOutput) => void,
   ): void;
   deleteClassifier(
     args: DeleteClassifierCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteClassifierCommandOutput) => void
+    cb: (err: any, data?: DeleteClassifierCommandOutput) => void,
   ): void;
 
   /**
@@ -1919,16 +1919,16 @@ export interface Glue {
    */
   deleteColumnStatisticsForPartition(
     args: DeleteColumnStatisticsForPartitionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteColumnStatisticsForPartitionCommandOutput>;
   deleteColumnStatisticsForPartition(
     args: DeleteColumnStatisticsForPartitionCommandInput,
-    cb: (err: any, data?: DeleteColumnStatisticsForPartitionCommandOutput) => void
+    cb: (err: any, data?: DeleteColumnStatisticsForPartitionCommandOutput) => void,
   ): void;
   deleteColumnStatisticsForPartition(
     args: DeleteColumnStatisticsForPartitionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteColumnStatisticsForPartitionCommandOutput) => void
+    cb: (err: any, data?: DeleteColumnStatisticsForPartitionCommandOutput) => void,
   ): void;
 
   /**
@@ -1936,16 +1936,16 @@ export interface Glue {
    */
   deleteColumnStatisticsForTable(
     args: DeleteColumnStatisticsForTableCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteColumnStatisticsForTableCommandOutput>;
   deleteColumnStatisticsForTable(
     args: DeleteColumnStatisticsForTableCommandInput,
-    cb: (err: any, data?: DeleteColumnStatisticsForTableCommandOutput) => void
+    cb: (err: any, data?: DeleteColumnStatisticsForTableCommandOutput) => void,
   ): void;
   deleteColumnStatisticsForTable(
     args: DeleteColumnStatisticsForTableCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteColumnStatisticsForTableCommandOutput) => void
+    cb: (err: any, data?: DeleteColumnStatisticsForTableCommandOutput) => void,
   ): void;
 
   /**
@@ -1953,16 +1953,16 @@ export interface Glue {
    */
   deleteConnection(
     args: DeleteConnectionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteConnectionCommandOutput>;
   deleteConnection(
     args: DeleteConnectionCommandInput,
-    cb: (err: any, data?: DeleteConnectionCommandOutput) => void
+    cb: (err: any, data?: DeleteConnectionCommandOutput) => void,
   ): void;
   deleteConnection(
     args: DeleteConnectionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteConnectionCommandOutput) => void
+    cb: (err: any, data?: DeleteConnectionCommandOutput) => void,
   ): void;
 
   /**
@@ -1973,7 +1973,7 @@ export interface Glue {
   deleteCrawler(
     args: DeleteCrawlerCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteCrawlerCommandOutput) => void
+    cb: (err: any, data?: DeleteCrawlerCommandOutput) => void,
   ): void;
 
   /**
@@ -1981,16 +1981,16 @@ export interface Glue {
    */
   deleteCustomEntityType(
     args: DeleteCustomEntityTypeCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteCustomEntityTypeCommandOutput>;
   deleteCustomEntityType(
     args: DeleteCustomEntityTypeCommandInput,
-    cb: (err: any, data?: DeleteCustomEntityTypeCommandOutput) => void
+    cb: (err: any, data?: DeleteCustomEntityTypeCommandOutput) => void,
   ): void;
   deleteCustomEntityType(
     args: DeleteCustomEntityTypeCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteCustomEntityTypeCommandOutput) => void
+    cb: (err: any, data?: DeleteCustomEntityTypeCommandOutput) => void,
   ): void;
 
   /**
@@ -1998,13 +1998,13 @@ export interface Glue {
    */
   deleteDatabase(
     args: DeleteDatabaseCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteDatabaseCommandOutput>;
   deleteDatabase(args: DeleteDatabaseCommandInput, cb: (err: any, data?: DeleteDatabaseCommandOutput) => void): void;
   deleteDatabase(
     args: DeleteDatabaseCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteDatabaseCommandOutput) => void
+    cb: (err: any, data?: DeleteDatabaseCommandOutput) => void,
   ): void;
 
   /**
@@ -2012,16 +2012,16 @@ export interface Glue {
    */
   deleteDataQualityRuleset(
     args: DeleteDataQualityRulesetCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteDataQualityRulesetCommandOutput>;
   deleteDataQualityRuleset(
     args: DeleteDataQualityRulesetCommandInput,
-    cb: (err: any, data?: DeleteDataQualityRulesetCommandOutput) => void
+    cb: (err: any, data?: DeleteDataQualityRulesetCommandOutput) => void,
   ): void;
   deleteDataQualityRuleset(
     args: DeleteDataQualityRulesetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteDataQualityRulesetCommandOutput) => void
+    cb: (err: any, data?: DeleteDataQualityRulesetCommandOutput) => void,
   ): void;
 
   /**
@@ -2029,16 +2029,16 @@ export interface Glue {
    */
   deleteDevEndpoint(
     args: DeleteDevEndpointCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteDevEndpointCommandOutput>;
   deleteDevEndpoint(
     args: DeleteDevEndpointCommandInput,
-    cb: (err: any, data?: DeleteDevEndpointCommandOutput) => void
+    cb: (err: any, data?: DeleteDevEndpointCommandOutput) => void,
   ): void;
   deleteDevEndpoint(
     args: DeleteDevEndpointCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteDevEndpointCommandOutput) => void
+    cb: (err: any, data?: DeleteDevEndpointCommandOutput) => void,
   ): void;
 
   /**
@@ -2049,7 +2049,7 @@ export interface Glue {
   deleteJob(
     args: DeleteJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteJobCommandOutput) => void
+    cb: (err: any, data?: DeleteJobCommandOutput) => void,
   ): void;
 
   /**
@@ -2057,16 +2057,16 @@ export interface Glue {
    */
   deleteMLTransform(
     args: DeleteMLTransformCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteMLTransformCommandOutput>;
   deleteMLTransform(
     args: DeleteMLTransformCommandInput,
-    cb: (err: any, data?: DeleteMLTransformCommandOutput) => void
+    cb: (err: any, data?: DeleteMLTransformCommandOutput) => void,
   ): void;
   deleteMLTransform(
     args: DeleteMLTransformCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteMLTransformCommandOutput) => void
+    cb: (err: any, data?: DeleteMLTransformCommandOutput) => void,
   ): void;
 
   /**
@@ -2074,13 +2074,13 @@ export interface Glue {
    */
   deletePartition(
     args: DeletePartitionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeletePartitionCommandOutput>;
   deletePartition(args: DeletePartitionCommandInput, cb: (err: any, data?: DeletePartitionCommandOutput) => void): void;
   deletePartition(
     args: DeletePartitionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeletePartitionCommandOutput) => void
+    cb: (err: any, data?: DeletePartitionCommandOutput) => void,
   ): void;
 
   /**
@@ -2088,16 +2088,16 @@ export interface Glue {
    */
   deletePartitionIndex(
     args: DeletePartitionIndexCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeletePartitionIndexCommandOutput>;
   deletePartitionIndex(
     args: DeletePartitionIndexCommandInput,
-    cb: (err: any, data?: DeletePartitionIndexCommandOutput) => void
+    cb: (err: any, data?: DeletePartitionIndexCommandOutput) => void,
   ): void;
   deletePartitionIndex(
     args: DeletePartitionIndexCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeletePartitionIndexCommandOutput) => void
+    cb: (err: any, data?: DeletePartitionIndexCommandOutput) => void,
   ): void;
 
   /**
@@ -2105,13 +2105,13 @@ export interface Glue {
    */
   deleteRegistry(
     args: DeleteRegistryCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteRegistryCommandOutput>;
   deleteRegistry(args: DeleteRegistryCommandInput, cb: (err: any, data?: DeleteRegistryCommandOutput) => void): void;
   deleteRegistry(
     args: DeleteRegistryCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteRegistryCommandOutput) => void
+    cb: (err: any, data?: DeleteRegistryCommandOutput) => void,
   ): void;
 
   /**
@@ -2120,16 +2120,16 @@ export interface Glue {
   deleteResourcePolicy(): Promise<DeleteResourcePolicyCommandOutput>;
   deleteResourcePolicy(
     args: DeleteResourcePolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteResourcePolicyCommandOutput>;
   deleteResourcePolicy(
     args: DeleteResourcePolicyCommandInput,
-    cb: (err: any, data?: DeleteResourcePolicyCommandOutput) => void
+    cb: (err: any, data?: DeleteResourcePolicyCommandOutput) => void,
   ): void;
   deleteResourcePolicy(
     args: DeleteResourcePolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteResourcePolicyCommandOutput) => void
+    cb: (err: any, data?: DeleteResourcePolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -2140,7 +2140,7 @@ export interface Glue {
   deleteSchema(
     args: DeleteSchemaCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteSchemaCommandOutput) => void
+    cb: (err: any, data?: DeleteSchemaCommandOutput) => void,
   ): void;
 
   /**
@@ -2148,16 +2148,16 @@ export interface Glue {
    */
   deleteSchemaVersions(
     args: DeleteSchemaVersionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteSchemaVersionsCommandOutput>;
   deleteSchemaVersions(
     args: DeleteSchemaVersionsCommandInput,
-    cb: (err: any, data?: DeleteSchemaVersionsCommandOutput) => void
+    cb: (err: any, data?: DeleteSchemaVersionsCommandOutput) => void,
   ): void;
   deleteSchemaVersions(
     args: DeleteSchemaVersionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteSchemaVersionsCommandOutput) => void
+    cb: (err: any, data?: DeleteSchemaVersionsCommandOutput) => void,
   ): void;
 
   /**
@@ -2165,16 +2165,16 @@ export interface Glue {
    */
   deleteSecurityConfiguration(
     args: DeleteSecurityConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteSecurityConfigurationCommandOutput>;
   deleteSecurityConfiguration(
     args: DeleteSecurityConfigurationCommandInput,
-    cb: (err: any, data?: DeleteSecurityConfigurationCommandOutput) => void
+    cb: (err: any, data?: DeleteSecurityConfigurationCommandOutput) => void,
   ): void;
   deleteSecurityConfiguration(
     args: DeleteSecurityConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteSecurityConfigurationCommandOutput) => void
+    cb: (err: any, data?: DeleteSecurityConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -2185,7 +2185,7 @@ export interface Glue {
   deleteSession(
     args: DeleteSessionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteSessionCommandOutput) => void
+    cb: (err: any, data?: DeleteSessionCommandOutput) => void,
   ): void;
 
   /**
@@ -2196,7 +2196,7 @@ export interface Glue {
   deleteTable(
     args: DeleteTableCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteTableCommandOutput) => void
+    cb: (err: any, data?: DeleteTableCommandOutput) => void,
   ): void;
 
   /**
@@ -2204,16 +2204,16 @@ export interface Glue {
    */
   deleteTableOptimizer(
     args: DeleteTableOptimizerCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteTableOptimizerCommandOutput>;
   deleteTableOptimizer(
     args: DeleteTableOptimizerCommandInput,
-    cb: (err: any, data?: DeleteTableOptimizerCommandOutput) => void
+    cb: (err: any, data?: DeleteTableOptimizerCommandOutput) => void,
   ): void;
   deleteTableOptimizer(
     args: DeleteTableOptimizerCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteTableOptimizerCommandOutput) => void
+    cb: (err: any, data?: DeleteTableOptimizerCommandOutput) => void,
   ): void;
 
   /**
@@ -2221,16 +2221,16 @@ export interface Glue {
    */
   deleteTableVersion(
     args: DeleteTableVersionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteTableVersionCommandOutput>;
   deleteTableVersion(
     args: DeleteTableVersionCommandInput,
-    cb: (err: any, data?: DeleteTableVersionCommandOutput) => void
+    cb: (err: any, data?: DeleteTableVersionCommandOutput) => void,
   ): void;
   deleteTableVersion(
     args: DeleteTableVersionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteTableVersionCommandOutput) => void
+    cb: (err: any, data?: DeleteTableVersionCommandOutput) => void,
   ): void;
 
   /**
@@ -2241,7 +2241,7 @@ export interface Glue {
   deleteTrigger(
     args: DeleteTriggerCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteTriggerCommandOutput) => void
+    cb: (err: any, data?: DeleteTriggerCommandOutput) => void,
   ): void;
 
   /**
@@ -2249,16 +2249,16 @@ export interface Glue {
    */
   deleteUsageProfile(
     args: DeleteUsageProfileCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteUsageProfileCommandOutput>;
   deleteUsageProfile(
     args: DeleteUsageProfileCommandInput,
-    cb: (err: any, data?: DeleteUsageProfileCommandOutput) => void
+    cb: (err: any, data?: DeleteUsageProfileCommandOutput) => void,
   ): void;
   deleteUsageProfile(
     args: DeleteUsageProfileCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteUsageProfileCommandOutput) => void
+    cb: (err: any, data?: DeleteUsageProfileCommandOutput) => void,
   ): void;
 
   /**
@@ -2266,16 +2266,16 @@ export interface Glue {
    */
   deleteUserDefinedFunction(
     args: DeleteUserDefinedFunctionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteUserDefinedFunctionCommandOutput>;
   deleteUserDefinedFunction(
     args: DeleteUserDefinedFunctionCommandInput,
-    cb: (err: any, data?: DeleteUserDefinedFunctionCommandOutput) => void
+    cb: (err: any, data?: DeleteUserDefinedFunctionCommandOutput) => void,
   ): void;
   deleteUserDefinedFunction(
     args: DeleteUserDefinedFunctionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteUserDefinedFunctionCommandOutput) => void
+    cb: (err: any, data?: DeleteUserDefinedFunctionCommandOutput) => void,
   ): void;
 
   /**
@@ -2283,13 +2283,13 @@ export interface Glue {
    */
   deleteWorkflow(
     args: DeleteWorkflowCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteWorkflowCommandOutput>;
   deleteWorkflow(args: DeleteWorkflowCommandInput, cb: (err: any, data?: DeleteWorkflowCommandOutput) => void): void;
   deleteWorkflow(
     args: DeleteWorkflowCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteWorkflowCommandOutput) => void
+    cb: (err: any, data?: DeleteWorkflowCommandOutput) => void,
   ): void;
 
   /**
@@ -2300,7 +2300,7 @@ export interface Glue {
   getBlueprint(
     args: GetBlueprintCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetBlueprintCommandOutput) => void
+    cb: (err: any, data?: GetBlueprintCommandOutput) => void,
   ): void;
 
   /**
@@ -2308,13 +2308,13 @@ export interface Glue {
    */
   getBlueprintRun(
     args: GetBlueprintRunCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetBlueprintRunCommandOutput>;
   getBlueprintRun(args: GetBlueprintRunCommandInput, cb: (err: any, data?: GetBlueprintRunCommandOutput) => void): void;
   getBlueprintRun(
     args: GetBlueprintRunCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetBlueprintRunCommandOutput) => void
+    cb: (err: any, data?: GetBlueprintRunCommandOutput) => void,
   ): void;
 
   /**
@@ -2322,16 +2322,16 @@ export interface Glue {
    */
   getBlueprintRuns(
     args: GetBlueprintRunsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetBlueprintRunsCommandOutput>;
   getBlueprintRuns(
     args: GetBlueprintRunsCommandInput,
-    cb: (err: any, data?: GetBlueprintRunsCommandOutput) => void
+    cb: (err: any, data?: GetBlueprintRunsCommandOutput) => void,
   ): void;
   getBlueprintRuns(
     args: GetBlueprintRunsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetBlueprintRunsCommandOutput) => void
+    cb: (err: any, data?: GetBlueprintRunsCommandOutput) => void,
   ): void;
 
   /**
@@ -2340,16 +2340,16 @@ export interface Glue {
   getCatalogImportStatus(): Promise<GetCatalogImportStatusCommandOutput>;
   getCatalogImportStatus(
     args: GetCatalogImportStatusCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetCatalogImportStatusCommandOutput>;
   getCatalogImportStatus(
     args: GetCatalogImportStatusCommandInput,
-    cb: (err: any, data?: GetCatalogImportStatusCommandOutput) => void
+    cb: (err: any, data?: GetCatalogImportStatusCommandOutput) => void,
   ): void;
   getCatalogImportStatus(
     args: GetCatalogImportStatusCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetCatalogImportStatusCommandOutput) => void
+    cb: (err: any, data?: GetCatalogImportStatusCommandOutput) => void,
   ): void;
 
   /**
@@ -2360,7 +2360,7 @@ export interface Glue {
   getClassifier(
     args: GetClassifierCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetClassifierCommandOutput) => void
+    cb: (err: any, data?: GetClassifierCommandOutput) => void,
   ): void;
 
   /**
@@ -2369,13 +2369,13 @@ export interface Glue {
   getClassifiers(): Promise<GetClassifiersCommandOutput>;
   getClassifiers(
     args: GetClassifiersCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetClassifiersCommandOutput>;
   getClassifiers(args: GetClassifiersCommandInput, cb: (err: any, data?: GetClassifiersCommandOutput) => void): void;
   getClassifiers(
     args: GetClassifiersCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetClassifiersCommandOutput) => void
+    cb: (err: any, data?: GetClassifiersCommandOutput) => void,
   ): void;
 
   /**
@@ -2383,16 +2383,16 @@ export interface Glue {
    */
   getColumnStatisticsForPartition(
     args: GetColumnStatisticsForPartitionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetColumnStatisticsForPartitionCommandOutput>;
   getColumnStatisticsForPartition(
     args: GetColumnStatisticsForPartitionCommandInput,
-    cb: (err: any, data?: GetColumnStatisticsForPartitionCommandOutput) => void
+    cb: (err: any, data?: GetColumnStatisticsForPartitionCommandOutput) => void,
   ): void;
   getColumnStatisticsForPartition(
     args: GetColumnStatisticsForPartitionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetColumnStatisticsForPartitionCommandOutput) => void
+    cb: (err: any, data?: GetColumnStatisticsForPartitionCommandOutput) => void,
   ): void;
 
   /**
@@ -2400,16 +2400,16 @@ export interface Glue {
    */
   getColumnStatisticsForTable(
     args: GetColumnStatisticsForTableCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetColumnStatisticsForTableCommandOutput>;
   getColumnStatisticsForTable(
     args: GetColumnStatisticsForTableCommandInput,
-    cb: (err: any, data?: GetColumnStatisticsForTableCommandOutput) => void
+    cb: (err: any, data?: GetColumnStatisticsForTableCommandOutput) => void,
   ): void;
   getColumnStatisticsForTable(
     args: GetColumnStatisticsForTableCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetColumnStatisticsForTableCommandOutput) => void
+    cb: (err: any, data?: GetColumnStatisticsForTableCommandOutput) => void,
   ): void;
 
   /**
@@ -2417,16 +2417,16 @@ export interface Glue {
    */
   getColumnStatisticsTaskRun(
     args: GetColumnStatisticsTaskRunCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetColumnStatisticsTaskRunCommandOutput>;
   getColumnStatisticsTaskRun(
     args: GetColumnStatisticsTaskRunCommandInput,
-    cb: (err: any, data?: GetColumnStatisticsTaskRunCommandOutput) => void
+    cb: (err: any, data?: GetColumnStatisticsTaskRunCommandOutput) => void,
   ): void;
   getColumnStatisticsTaskRun(
     args: GetColumnStatisticsTaskRunCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetColumnStatisticsTaskRunCommandOutput) => void
+    cb: (err: any, data?: GetColumnStatisticsTaskRunCommandOutput) => void,
   ): void;
 
   /**
@@ -2434,16 +2434,16 @@ export interface Glue {
    */
   getColumnStatisticsTaskRuns(
     args: GetColumnStatisticsTaskRunsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetColumnStatisticsTaskRunsCommandOutput>;
   getColumnStatisticsTaskRuns(
     args: GetColumnStatisticsTaskRunsCommandInput,
-    cb: (err: any, data?: GetColumnStatisticsTaskRunsCommandOutput) => void
+    cb: (err: any, data?: GetColumnStatisticsTaskRunsCommandOutput) => void,
   ): void;
   getColumnStatisticsTaskRuns(
     args: GetColumnStatisticsTaskRunsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetColumnStatisticsTaskRunsCommandOutput) => void
+    cb: (err: any, data?: GetColumnStatisticsTaskRunsCommandOutput) => void,
   ): void;
 
   /**
@@ -2454,7 +2454,7 @@ export interface Glue {
   getConnection(
     args: GetConnectionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetConnectionCommandOutput) => void
+    cb: (err: any, data?: GetConnectionCommandOutput) => void,
   ): void;
 
   /**
@@ -2463,13 +2463,13 @@ export interface Glue {
   getConnections(): Promise<GetConnectionsCommandOutput>;
   getConnections(
     args: GetConnectionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetConnectionsCommandOutput>;
   getConnections(args: GetConnectionsCommandInput, cb: (err: any, data?: GetConnectionsCommandOutput) => void): void;
   getConnections(
     args: GetConnectionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetConnectionsCommandOutput) => void
+    cb: (err: any, data?: GetConnectionsCommandOutput) => void,
   ): void;
 
   /**
@@ -2480,7 +2480,7 @@ export interface Glue {
   getCrawler(
     args: GetCrawlerCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetCrawlerCommandOutput) => void
+    cb: (err: any, data?: GetCrawlerCommandOutput) => void,
   ): void;
 
   /**
@@ -2489,16 +2489,16 @@ export interface Glue {
   getCrawlerMetrics(): Promise<GetCrawlerMetricsCommandOutput>;
   getCrawlerMetrics(
     args: GetCrawlerMetricsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetCrawlerMetricsCommandOutput>;
   getCrawlerMetrics(
     args: GetCrawlerMetricsCommandInput,
-    cb: (err: any, data?: GetCrawlerMetricsCommandOutput) => void
+    cb: (err: any, data?: GetCrawlerMetricsCommandOutput) => void,
   ): void;
   getCrawlerMetrics(
     args: GetCrawlerMetricsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetCrawlerMetricsCommandOutput) => void
+    cb: (err: any, data?: GetCrawlerMetricsCommandOutput) => void,
   ): void;
 
   /**
@@ -2510,7 +2510,7 @@ export interface Glue {
   getCrawlers(
     args: GetCrawlersCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetCrawlersCommandOutput) => void
+    cb: (err: any, data?: GetCrawlersCommandOutput) => void,
   ): void;
 
   /**
@@ -2518,16 +2518,16 @@ export interface Glue {
    */
   getCustomEntityType(
     args: GetCustomEntityTypeCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetCustomEntityTypeCommandOutput>;
   getCustomEntityType(
     args: GetCustomEntityTypeCommandInput,
-    cb: (err: any, data?: GetCustomEntityTypeCommandOutput) => void
+    cb: (err: any, data?: GetCustomEntityTypeCommandOutput) => void,
   ): void;
   getCustomEntityType(
     args: GetCustomEntityTypeCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetCustomEntityTypeCommandOutput) => void
+    cb: (err: any, data?: GetCustomEntityTypeCommandOutput) => void,
   ): void;
 
   /**
@@ -2538,7 +2538,7 @@ export interface Glue {
   getDatabase(
     args: GetDatabaseCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetDatabaseCommandOutput) => void
+    cb: (err: any, data?: GetDatabaseCommandOutput) => void,
   ): void;
 
   /**
@@ -2550,7 +2550,7 @@ export interface Glue {
   getDatabases(
     args: GetDatabasesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetDatabasesCommandOutput) => void
+    cb: (err: any, data?: GetDatabasesCommandOutput) => void,
   ): void;
 
   /**
@@ -2559,16 +2559,16 @@ export interface Glue {
   getDataCatalogEncryptionSettings(): Promise<GetDataCatalogEncryptionSettingsCommandOutput>;
   getDataCatalogEncryptionSettings(
     args: GetDataCatalogEncryptionSettingsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetDataCatalogEncryptionSettingsCommandOutput>;
   getDataCatalogEncryptionSettings(
     args: GetDataCatalogEncryptionSettingsCommandInput,
-    cb: (err: any, data?: GetDataCatalogEncryptionSettingsCommandOutput) => void
+    cb: (err: any, data?: GetDataCatalogEncryptionSettingsCommandOutput) => void,
   ): void;
   getDataCatalogEncryptionSettings(
     args: GetDataCatalogEncryptionSettingsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetDataCatalogEncryptionSettingsCommandOutput) => void
+    cb: (err: any, data?: GetDataCatalogEncryptionSettingsCommandOutput) => void,
   ): void;
 
   /**
@@ -2577,16 +2577,16 @@ export interface Glue {
   getDataflowGraph(): Promise<GetDataflowGraphCommandOutput>;
   getDataflowGraph(
     args: GetDataflowGraphCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetDataflowGraphCommandOutput>;
   getDataflowGraph(
     args: GetDataflowGraphCommandInput,
-    cb: (err: any, data?: GetDataflowGraphCommandOutput) => void
+    cb: (err: any, data?: GetDataflowGraphCommandOutput) => void,
   ): void;
   getDataflowGraph(
     args: GetDataflowGraphCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetDataflowGraphCommandOutput) => void
+    cb: (err: any, data?: GetDataflowGraphCommandOutput) => void,
   ): void;
 
   /**
@@ -2594,16 +2594,16 @@ export interface Glue {
    */
   getDataQualityResult(
     args: GetDataQualityResultCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetDataQualityResultCommandOutput>;
   getDataQualityResult(
     args: GetDataQualityResultCommandInput,
-    cb: (err: any, data?: GetDataQualityResultCommandOutput) => void
+    cb: (err: any, data?: GetDataQualityResultCommandOutput) => void,
   ): void;
   getDataQualityResult(
     args: GetDataQualityResultCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetDataQualityResultCommandOutput) => void
+    cb: (err: any, data?: GetDataQualityResultCommandOutput) => void,
   ): void;
 
   /**
@@ -2611,16 +2611,16 @@ export interface Glue {
    */
   getDataQualityRuleRecommendationRun(
     args: GetDataQualityRuleRecommendationRunCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetDataQualityRuleRecommendationRunCommandOutput>;
   getDataQualityRuleRecommendationRun(
     args: GetDataQualityRuleRecommendationRunCommandInput,
-    cb: (err: any, data?: GetDataQualityRuleRecommendationRunCommandOutput) => void
+    cb: (err: any, data?: GetDataQualityRuleRecommendationRunCommandOutput) => void,
   ): void;
   getDataQualityRuleRecommendationRun(
     args: GetDataQualityRuleRecommendationRunCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetDataQualityRuleRecommendationRunCommandOutput) => void
+    cb: (err: any, data?: GetDataQualityRuleRecommendationRunCommandOutput) => void,
   ): void;
 
   /**
@@ -2628,16 +2628,16 @@ export interface Glue {
    */
   getDataQualityRuleset(
     args: GetDataQualityRulesetCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetDataQualityRulesetCommandOutput>;
   getDataQualityRuleset(
     args: GetDataQualityRulesetCommandInput,
-    cb: (err: any, data?: GetDataQualityRulesetCommandOutput) => void
+    cb: (err: any, data?: GetDataQualityRulesetCommandOutput) => void,
   ): void;
   getDataQualityRuleset(
     args: GetDataQualityRulesetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetDataQualityRulesetCommandOutput) => void
+    cb: (err: any, data?: GetDataQualityRulesetCommandOutput) => void,
   ): void;
 
   /**
@@ -2645,16 +2645,16 @@ export interface Glue {
    */
   getDataQualityRulesetEvaluationRun(
     args: GetDataQualityRulesetEvaluationRunCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetDataQualityRulesetEvaluationRunCommandOutput>;
   getDataQualityRulesetEvaluationRun(
     args: GetDataQualityRulesetEvaluationRunCommandInput,
-    cb: (err: any, data?: GetDataQualityRulesetEvaluationRunCommandOutput) => void
+    cb: (err: any, data?: GetDataQualityRulesetEvaluationRunCommandOutput) => void,
   ): void;
   getDataQualityRulesetEvaluationRun(
     args: GetDataQualityRulesetEvaluationRunCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetDataQualityRulesetEvaluationRunCommandOutput) => void
+    cb: (err: any, data?: GetDataQualityRulesetEvaluationRunCommandOutput) => void,
   ): void;
 
   /**
@@ -2662,13 +2662,13 @@ export interface Glue {
    */
   getDevEndpoint(
     args: GetDevEndpointCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetDevEndpointCommandOutput>;
   getDevEndpoint(args: GetDevEndpointCommandInput, cb: (err: any, data?: GetDevEndpointCommandOutput) => void): void;
   getDevEndpoint(
     args: GetDevEndpointCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetDevEndpointCommandOutput) => void
+    cb: (err: any, data?: GetDevEndpointCommandOutput) => void,
   ): void;
 
   /**
@@ -2677,13 +2677,13 @@ export interface Glue {
   getDevEndpoints(): Promise<GetDevEndpointsCommandOutput>;
   getDevEndpoints(
     args: GetDevEndpointsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetDevEndpointsCommandOutput>;
   getDevEndpoints(args: GetDevEndpointsCommandInput, cb: (err: any, data?: GetDevEndpointsCommandOutput) => void): void;
   getDevEndpoints(
     args: GetDevEndpointsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetDevEndpointsCommandOutput) => void
+    cb: (err: any, data?: GetDevEndpointsCommandOutput) => void,
   ): void;
 
   /**
@@ -2694,7 +2694,7 @@ export interface Glue {
   getJob(
     args: GetJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetJobCommandOutput) => void
+    cb: (err: any, data?: GetJobCommandOutput) => void,
   ): void;
 
   /**
@@ -2702,13 +2702,13 @@ export interface Glue {
    */
   getJobBookmark(
     args: GetJobBookmarkCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetJobBookmarkCommandOutput>;
   getJobBookmark(args: GetJobBookmarkCommandInput, cb: (err: any, data?: GetJobBookmarkCommandOutput) => void): void;
   getJobBookmark(
     args: GetJobBookmarkCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetJobBookmarkCommandOutput) => void
+    cb: (err: any, data?: GetJobBookmarkCommandOutput) => void,
   ): void;
 
   /**
@@ -2719,7 +2719,7 @@ export interface Glue {
   getJobRun(
     args: GetJobRunCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetJobRunCommandOutput) => void
+    cb: (err: any, data?: GetJobRunCommandOutput) => void,
   ): void;
 
   /**
@@ -2730,7 +2730,7 @@ export interface Glue {
   getJobRuns(
     args: GetJobRunsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetJobRunsCommandOutput) => void
+    cb: (err: any, data?: GetJobRunsCommandOutput) => void,
   ): void;
 
   /**
@@ -2742,7 +2742,7 @@ export interface Glue {
   getJobs(
     args: GetJobsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetJobsCommandOutput) => void
+    cb: (err: any, data?: GetJobsCommandOutput) => void,
   ): void;
 
   /**
@@ -2753,7 +2753,7 @@ export interface Glue {
   getMapping(
     args: GetMappingCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetMappingCommandOutput) => void
+    cb: (err: any, data?: GetMappingCommandOutput) => void,
   ): void;
 
   /**
@@ -2764,7 +2764,7 @@ export interface Glue {
   getMLTaskRun(
     args: GetMLTaskRunCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetMLTaskRunCommandOutput) => void
+    cb: (err: any, data?: GetMLTaskRunCommandOutput) => void,
   ): void;
 
   /**
@@ -2775,7 +2775,7 @@ export interface Glue {
   getMLTaskRuns(
     args: GetMLTaskRunsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetMLTaskRunsCommandOutput) => void
+    cb: (err: any, data?: GetMLTaskRunsCommandOutput) => void,
   ): void;
 
   /**
@@ -2783,13 +2783,13 @@ export interface Glue {
    */
   getMLTransform(
     args: GetMLTransformCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetMLTransformCommandOutput>;
   getMLTransform(args: GetMLTransformCommandInput, cb: (err: any, data?: GetMLTransformCommandOutput) => void): void;
   getMLTransform(
     args: GetMLTransformCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetMLTransformCommandOutput) => void
+    cb: (err: any, data?: GetMLTransformCommandOutput) => void,
   ): void;
 
   /**
@@ -2798,13 +2798,13 @@ export interface Glue {
   getMLTransforms(): Promise<GetMLTransformsCommandOutput>;
   getMLTransforms(
     args: GetMLTransformsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetMLTransformsCommandOutput>;
   getMLTransforms(args: GetMLTransformsCommandInput, cb: (err: any, data?: GetMLTransformsCommandOutput) => void): void;
   getMLTransforms(
     args: GetMLTransformsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetMLTransformsCommandOutput) => void
+    cb: (err: any, data?: GetMLTransformsCommandOutput) => void,
   ): void;
 
   /**
@@ -2815,7 +2815,7 @@ export interface Glue {
   getPartition(
     args: GetPartitionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetPartitionCommandOutput) => void
+    cb: (err: any, data?: GetPartitionCommandOutput) => void,
   ): void;
 
   /**
@@ -2823,16 +2823,16 @@ export interface Glue {
    */
   getPartitionIndexes(
     args: GetPartitionIndexesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetPartitionIndexesCommandOutput>;
   getPartitionIndexes(
     args: GetPartitionIndexesCommandInput,
-    cb: (err: any, data?: GetPartitionIndexesCommandOutput) => void
+    cb: (err: any, data?: GetPartitionIndexesCommandOutput) => void,
   ): void;
   getPartitionIndexes(
     args: GetPartitionIndexesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetPartitionIndexesCommandOutput) => void
+    cb: (err: any, data?: GetPartitionIndexesCommandOutput) => void,
   ): void;
 
   /**
@@ -2843,7 +2843,7 @@ export interface Glue {
   getPartitions(
     args: GetPartitionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetPartitionsCommandOutput) => void
+    cb: (err: any, data?: GetPartitionsCommandOutput) => void,
   ): void;
 
   /**
@@ -2854,7 +2854,7 @@ export interface Glue {
   getPlan(
     args: GetPlanCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetPlanCommandOutput) => void
+    cb: (err: any, data?: GetPlanCommandOutput) => void,
   ): void;
 
   /**
@@ -2865,7 +2865,7 @@ export interface Glue {
   getRegistry(
     args: GetRegistryCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetRegistryCommandOutput) => void
+    cb: (err: any, data?: GetRegistryCommandOutput) => void,
   ): void;
 
   /**
@@ -2874,16 +2874,16 @@ export interface Glue {
   getResourcePolicies(): Promise<GetResourcePoliciesCommandOutput>;
   getResourcePolicies(
     args: GetResourcePoliciesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetResourcePoliciesCommandOutput>;
   getResourcePolicies(
     args: GetResourcePoliciesCommandInput,
-    cb: (err: any, data?: GetResourcePoliciesCommandOutput) => void
+    cb: (err: any, data?: GetResourcePoliciesCommandOutput) => void,
   ): void;
   getResourcePolicies(
     args: GetResourcePoliciesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetResourcePoliciesCommandOutput) => void
+    cb: (err: any, data?: GetResourcePoliciesCommandOutput) => void,
   ): void;
 
   /**
@@ -2892,16 +2892,16 @@ export interface Glue {
   getResourcePolicy(): Promise<GetResourcePolicyCommandOutput>;
   getResourcePolicy(
     args: GetResourcePolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetResourcePolicyCommandOutput>;
   getResourcePolicy(
     args: GetResourcePolicyCommandInput,
-    cb: (err: any, data?: GetResourcePolicyCommandOutput) => void
+    cb: (err: any, data?: GetResourcePolicyCommandOutput) => void,
   ): void;
   getResourcePolicy(
     args: GetResourcePolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetResourcePolicyCommandOutput) => void
+    cb: (err: any, data?: GetResourcePolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -2912,7 +2912,7 @@ export interface Glue {
   getSchema(
     args: GetSchemaCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetSchemaCommandOutput) => void
+    cb: (err: any, data?: GetSchemaCommandOutput) => void,
   ): void;
 
   /**
@@ -2920,16 +2920,16 @@ export interface Glue {
    */
   getSchemaByDefinition(
     args: GetSchemaByDefinitionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetSchemaByDefinitionCommandOutput>;
   getSchemaByDefinition(
     args: GetSchemaByDefinitionCommandInput,
-    cb: (err: any, data?: GetSchemaByDefinitionCommandOutput) => void
+    cb: (err: any, data?: GetSchemaByDefinitionCommandOutput) => void,
   ): void;
   getSchemaByDefinition(
     args: GetSchemaByDefinitionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetSchemaByDefinitionCommandOutput) => void
+    cb: (err: any, data?: GetSchemaByDefinitionCommandOutput) => void,
   ): void;
 
   /**
@@ -2938,16 +2938,16 @@ export interface Glue {
   getSchemaVersion(): Promise<GetSchemaVersionCommandOutput>;
   getSchemaVersion(
     args: GetSchemaVersionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetSchemaVersionCommandOutput>;
   getSchemaVersion(
     args: GetSchemaVersionCommandInput,
-    cb: (err: any, data?: GetSchemaVersionCommandOutput) => void
+    cb: (err: any, data?: GetSchemaVersionCommandOutput) => void,
   ): void;
   getSchemaVersion(
     args: GetSchemaVersionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetSchemaVersionCommandOutput) => void
+    cb: (err: any, data?: GetSchemaVersionCommandOutput) => void,
   ): void;
 
   /**
@@ -2955,16 +2955,16 @@ export interface Glue {
    */
   getSchemaVersionsDiff(
     args: GetSchemaVersionsDiffCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetSchemaVersionsDiffCommandOutput>;
   getSchemaVersionsDiff(
     args: GetSchemaVersionsDiffCommandInput,
-    cb: (err: any, data?: GetSchemaVersionsDiffCommandOutput) => void
+    cb: (err: any, data?: GetSchemaVersionsDiffCommandOutput) => void,
   ): void;
   getSchemaVersionsDiff(
     args: GetSchemaVersionsDiffCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetSchemaVersionsDiffCommandOutput) => void
+    cb: (err: any, data?: GetSchemaVersionsDiffCommandOutput) => void,
   ): void;
 
   /**
@@ -2972,16 +2972,16 @@ export interface Glue {
    */
   getSecurityConfiguration(
     args: GetSecurityConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetSecurityConfigurationCommandOutput>;
   getSecurityConfiguration(
     args: GetSecurityConfigurationCommandInput,
-    cb: (err: any, data?: GetSecurityConfigurationCommandOutput) => void
+    cb: (err: any, data?: GetSecurityConfigurationCommandOutput) => void,
   ): void;
   getSecurityConfiguration(
     args: GetSecurityConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetSecurityConfigurationCommandOutput) => void
+    cb: (err: any, data?: GetSecurityConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -2990,16 +2990,16 @@ export interface Glue {
   getSecurityConfigurations(): Promise<GetSecurityConfigurationsCommandOutput>;
   getSecurityConfigurations(
     args: GetSecurityConfigurationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetSecurityConfigurationsCommandOutput>;
   getSecurityConfigurations(
     args: GetSecurityConfigurationsCommandInput,
-    cb: (err: any, data?: GetSecurityConfigurationsCommandOutput) => void
+    cb: (err: any, data?: GetSecurityConfigurationsCommandOutput) => void,
   ): void;
   getSecurityConfigurations(
     args: GetSecurityConfigurationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetSecurityConfigurationsCommandOutput) => void
+    cb: (err: any, data?: GetSecurityConfigurationsCommandOutput) => void,
   ): void;
 
   /**
@@ -3010,7 +3010,7 @@ export interface Glue {
   getSession(
     args: GetSessionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetSessionCommandOutput) => void
+    cb: (err: any, data?: GetSessionCommandOutput) => void,
   ): void;
 
   /**
@@ -3021,7 +3021,7 @@ export interface Glue {
   getStatement(
     args: GetStatementCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetStatementCommandOutput) => void
+    cb: (err: any, data?: GetStatementCommandOutput) => void,
   ): void;
 
   /**
@@ -3032,7 +3032,7 @@ export interface Glue {
   getTable(
     args: GetTableCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetTableCommandOutput) => void
+    cb: (err: any, data?: GetTableCommandOutput) => void,
   ): void;
 
   /**
@@ -3040,16 +3040,16 @@ export interface Glue {
    */
   getTableOptimizer(
     args: GetTableOptimizerCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetTableOptimizerCommandOutput>;
   getTableOptimizer(
     args: GetTableOptimizerCommandInput,
-    cb: (err: any, data?: GetTableOptimizerCommandOutput) => void
+    cb: (err: any, data?: GetTableOptimizerCommandOutput) => void,
   ): void;
   getTableOptimizer(
     args: GetTableOptimizerCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetTableOptimizerCommandOutput) => void
+    cb: (err: any, data?: GetTableOptimizerCommandOutput) => void,
   ): void;
 
   /**
@@ -3060,7 +3060,7 @@ export interface Glue {
   getTables(
     args: GetTablesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetTablesCommandOutput) => void
+    cb: (err: any, data?: GetTablesCommandOutput) => void,
   ): void;
 
   /**
@@ -3068,13 +3068,13 @@ export interface Glue {
    */
   getTableVersion(
     args: GetTableVersionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetTableVersionCommandOutput>;
   getTableVersion(args: GetTableVersionCommandInput, cb: (err: any, data?: GetTableVersionCommandOutput) => void): void;
   getTableVersion(
     args: GetTableVersionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetTableVersionCommandOutput) => void
+    cb: (err: any, data?: GetTableVersionCommandOutput) => void,
   ): void;
 
   /**
@@ -3082,16 +3082,16 @@ export interface Glue {
    */
   getTableVersions(
     args: GetTableVersionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetTableVersionsCommandOutput>;
   getTableVersions(
     args: GetTableVersionsCommandInput,
-    cb: (err: any, data?: GetTableVersionsCommandOutput) => void
+    cb: (err: any, data?: GetTableVersionsCommandOutput) => void,
   ): void;
   getTableVersions(
     args: GetTableVersionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetTableVersionsCommandOutput) => void
+    cb: (err: any, data?: GetTableVersionsCommandOutput) => void,
   ): void;
 
   /**
@@ -3102,7 +3102,7 @@ export interface Glue {
   getTags(
     args: GetTagsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetTagsCommandOutput) => void
+    cb: (err: any, data?: GetTagsCommandOutput) => void,
   ): void;
 
   /**
@@ -3113,7 +3113,7 @@ export interface Glue {
   getTrigger(
     args: GetTriggerCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetTriggerCommandOutput) => void
+    cb: (err: any, data?: GetTriggerCommandOutput) => void,
   ): void;
 
   /**
@@ -3125,7 +3125,7 @@ export interface Glue {
   getTriggers(
     args: GetTriggersCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetTriggersCommandOutput) => void
+    cb: (err: any, data?: GetTriggersCommandOutput) => void,
   ): void;
 
   /**
@@ -3133,16 +3133,16 @@ export interface Glue {
    */
   getUnfilteredPartitionMetadata(
     args: GetUnfilteredPartitionMetadataCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetUnfilteredPartitionMetadataCommandOutput>;
   getUnfilteredPartitionMetadata(
     args: GetUnfilteredPartitionMetadataCommandInput,
-    cb: (err: any, data?: GetUnfilteredPartitionMetadataCommandOutput) => void
+    cb: (err: any, data?: GetUnfilteredPartitionMetadataCommandOutput) => void,
   ): void;
   getUnfilteredPartitionMetadata(
     args: GetUnfilteredPartitionMetadataCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetUnfilteredPartitionMetadataCommandOutput) => void
+    cb: (err: any, data?: GetUnfilteredPartitionMetadataCommandOutput) => void,
   ): void;
 
   /**
@@ -3150,16 +3150,16 @@ export interface Glue {
    */
   getUnfilteredPartitionsMetadata(
     args: GetUnfilteredPartitionsMetadataCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetUnfilteredPartitionsMetadataCommandOutput>;
   getUnfilteredPartitionsMetadata(
     args: GetUnfilteredPartitionsMetadataCommandInput,
-    cb: (err: any, data?: GetUnfilteredPartitionsMetadataCommandOutput) => void
+    cb: (err: any, data?: GetUnfilteredPartitionsMetadataCommandOutput) => void,
   ): void;
   getUnfilteredPartitionsMetadata(
     args: GetUnfilteredPartitionsMetadataCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetUnfilteredPartitionsMetadataCommandOutput) => void
+    cb: (err: any, data?: GetUnfilteredPartitionsMetadataCommandOutput) => void,
   ): void;
 
   /**
@@ -3167,16 +3167,16 @@ export interface Glue {
    */
   getUnfilteredTableMetadata(
     args: GetUnfilteredTableMetadataCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetUnfilteredTableMetadataCommandOutput>;
   getUnfilteredTableMetadata(
     args: GetUnfilteredTableMetadataCommandInput,
-    cb: (err: any, data?: GetUnfilteredTableMetadataCommandOutput) => void
+    cb: (err: any, data?: GetUnfilteredTableMetadataCommandOutput) => void,
   ): void;
   getUnfilteredTableMetadata(
     args: GetUnfilteredTableMetadataCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetUnfilteredTableMetadataCommandOutput) => void
+    cb: (err: any, data?: GetUnfilteredTableMetadataCommandOutput) => void,
   ): void;
 
   /**
@@ -3184,13 +3184,13 @@ export interface Glue {
    */
   getUsageProfile(
     args: GetUsageProfileCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetUsageProfileCommandOutput>;
   getUsageProfile(args: GetUsageProfileCommandInput, cb: (err: any, data?: GetUsageProfileCommandOutput) => void): void;
   getUsageProfile(
     args: GetUsageProfileCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetUsageProfileCommandOutput) => void
+    cb: (err: any, data?: GetUsageProfileCommandOutput) => void,
   ): void;
 
   /**
@@ -3198,16 +3198,16 @@ export interface Glue {
    */
   getUserDefinedFunction(
     args: GetUserDefinedFunctionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetUserDefinedFunctionCommandOutput>;
   getUserDefinedFunction(
     args: GetUserDefinedFunctionCommandInput,
-    cb: (err: any, data?: GetUserDefinedFunctionCommandOutput) => void
+    cb: (err: any, data?: GetUserDefinedFunctionCommandOutput) => void,
   ): void;
   getUserDefinedFunction(
     args: GetUserDefinedFunctionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetUserDefinedFunctionCommandOutput) => void
+    cb: (err: any, data?: GetUserDefinedFunctionCommandOutput) => void,
   ): void;
 
   /**
@@ -3215,16 +3215,16 @@ export interface Glue {
    */
   getUserDefinedFunctions(
     args: GetUserDefinedFunctionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetUserDefinedFunctionsCommandOutput>;
   getUserDefinedFunctions(
     args: GetUserDefinedFunctionsCommandInput,
-    cb: (err: any, data?: GetUserDefinedFunctionsCommandOutput) => void
+    cb: (err: any, data?: GetUserDefinedFunctionsCommandOutput) => void,
   ): void;
   getUserDefinedFunctions(
     args: GetUserDefinedFunctionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetUserDefinedFunctionsCommandOutput) => void
+    cb: (err: any, data?: GetUserDefinedFunctionsCommandOutput) => void,
   ): void;
 
   /**
@@ -3235,7 +3235,7 @@ export interface Glue {
   getWorkflow(
     args: GetWorkflowCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetWorkflowCommandOutput) => void
+    cb: (err: any, data?: GetWorkflowCommandOutput) => void,
   ): void;
 
   /**
@@ -3243,13 +3243,13 @@ export interface Glue {
    */
   getWorkflowRun(
     args: GetWorkflowRunCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetWorkflowRunCommandOutput>;
   getWorkflowRun(args: GetWorkflowRunCommandInput, cb: (err: any, data?: GetWorkflowRunCommandOutput) => void): void;
   getWorkflowRun(
     args: GetWorkflowRunCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetWorkflowRunCommandOutput) => void
+    cb: (err: any, data?: GetWorkflowRunCommandOutput) => void,
   ): void;
 
   /**
@@ -3257,16 +3257,16 @@ export interface Glue {
    */
   getWorkflowRunProperties(
     args: GetWorkflowRunPropertiesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetWorkflowRunPropertiesCommandOutput>;
   getWorkflowRunProperties(
     args: GetWorkflowRunPropertiesCommandInput,
-    cb: (err: any, data?: GetWorkflowRunPropertiesCommandOutput) => void
+    cb: (err: any, data?: GetWorkflowRunPropertiesCommandOutput) => void,
   ): void;
   getWorkflowRunProperties(
     args: GetWorkflowRunPropertiesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetWorkflowRunPropertiesCommandOutput) => void
+    cb: (err: any, data?: GetWorkflowRunPropertiesCommandOutput) => void,
   ): void;
 
   /**
@@ -3274,13 +3274,13 @@ export interface Glue {
    */
   getWorkflowRuns(
     args: GetWorkflowRunsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetWorkflowRunsCommandOutput>;
   getWorkflowRuns(args: GetWorkflowRunsCommandInput, cb: (err: any, data?: GetWorkflowRunsCommandOutput) => void): void;
   getWorkflowRuns(
     args: GetWorkflowRunsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetWorkflowRunsCommandOutput) => void
+    cb: (err: any, data?: GetWorkflowRunsCommandOutput) => void,
   ): void;
 
   /**
@@ -3289,16 +3289,16 @@ export interface Glue {
   importCatalogToGlue(): Promise<ImportCatalogToGlueCommandOutput>;
   importCatalogToGlue(
     args: ImportCatalogToGlueCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ImportCatalogToGlueCommandOutput>;
   importCatalogToGlue(
     args: ImportCatalogToGlueCommandInput,
-    cb: (err: any, data?: ImportCatalogToGlueCommandOutput) => void
+    cb: (err: any, data?: ImportCatalogToGlueCommandOutput) => void,
   ): void;
   importCatalogToGlue(
     args: ImportCatalogToGlueCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ImportCatalogToGlueCommandOutput) => void
+    cb: (err: any, data?: ImportCatalogToGlueCommandOutput) => void,
   ): void;
 
   /**
@@ -3307,13 +3307,13 @@ export interface Glue {
   listBlueprints(): Promise<ListBlueprintsCommandOutput>;
   listBlueprints(
     args: ListBlueprintsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListBlueprintsCommandOutput>;
   listBlueprints(args: ListBlueprintsCommandInput, cb: (err: any, data?: ListBlueprintsCommandOutput) => void): void;
   listBlueprints(
     args: ListBlueprintsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListBlueprintsCommandOutput) => void
+    cb: (err: any, data?: ListBlueprintsCommandOutput) => void,
   ): void;
 
   /**
@@ -3322,16 +3322,16 @@ export interface Glue {
   listColumnStatisticsTaskRuns(): Promise<ListColumnStatisticsTaskRunsCommandOutput>;
   listColumnStatisticsTaskRuns(
     args: ListColumnStatisticsTaskRunsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListColumnStatisticsTaskRunsCommandOutput>;
   listColumnStatisticsTaskRuns(
     args: ListColumnStatisticsTaskRunsCommandInput,
-    cb: (err: any, data?: ListColumnStatisticsTaskRunsCommandOutput) => void
+    cb: (err: any, data?: ListColumnStatisticsTaskRunsCommandOutput) => void,
   ): void;
   listColumnStatisticsTaskRuns(
     args: ListColumnStatisticsTaskRunsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListColumnStatisticsTaskRunsCommandOutput) => void
+    cb: (err: any, data?: ListColumnStatisticsTaskRunsCommandOutput) => void,
   ): void;
 
   /**
@@ -3343,7 +3343,7 @@ export interface Glue {
   listCrawlers(
     args: ListCrawlersCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListCrawlersCommandOutput) => void
+    cb: (err: any, data?: ListCrawlersCommandOutput) => void,
   ): void;
 
   /**
@@ -3354,7 +3354,7 @@ export interface Glue {
   listCrawls(
     args: ListCrawlsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListCrawlsCommandOutput) => void
+    cb: (err: any, data?: ListCrawlsCommandOutput) => void,
   ): void;
 
   /**
@@ -3363,16 +3363,16 @@ export interface Glue {
   listCustomEntityTypes(): Promise<ListCustomEntityTypesCommandOutput>;
   listCustomEntityTypes(
     args: ListCustomEntityTypesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListCustomEntityTypesCommandOutput>;
   listCustomEntityTypes(
     args: ListCustomEntityTypesCommandInput,
-    cb: (err: any, data?: ListCustomEntityTypesCommandOutput) => void
+    cb: (err: any, data?: ListCustomEntityTypesCommandOutput) => void,
   ): void;
   listCustomEntityTypes(
     args: ListCustomEntityTypesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListCustomEntityTypesCommandOutput) => void
+    cb: (err: any, data?: ListCustomEntityTypesCommandOutput) => void,
   ): void;
 
   /**
@@ -3381,16 +3381,16 @@ export interface Glue {
   listDataQualityResults(): Promise<ListDataQualityResultsCommandOutput>;
   listDataQualityResults(
     args: ListDataQualityResultsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListDataQualityResultsCommandOutput>;
   listDataQualityResults(
     args: ListDataQualityResultsCommandInput,
-    cb: (err: any, data?: ListDataQualityResultsCommandOutput) => void
+    cb: (err: any, data?: ListDataQualityResultsCommandOutput) => void,
   ): void;
   listDataQualityResults(
     args: ListDataQualityResultsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListDataQualityResultsCommandOutput) => void
+    cb: (err: any, data?: ListDataQualityResultsCommandOutput) => void,
   ): void;
 
   /**
@@ -3399,16 +3399,16 @@ export interface Glue {
   listDataQualityRuleRecommendationRuns(): Promise<ListDataQualityRuleRecommendationRunsCommandOutput>;
   listDataQualityRuleRecommendationRuns(
     args: ListDataQualityRuleRecommendationRunsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListDataQualityRuleRecommendationRunsCommandOutput>;
   listDataQualityRuleRecommendationRuns(
     args: ListDataQualityRuleRecommendationRunsCommandInput,
-    cb: (err: any, data?: ListDataQualityRuleRecommendationRunsCommandOutput) => void
+    cb: (err: any, data?: ListDataQualityRuleRecommendationRunsCommandOutput) => void,
   ): void;
   listDataQualityRuleRecommendationRuns(
     args: ListDataQualityRuleRecommendationRunsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListDataQualityRuleRecommendationRunsCommandOutput) => void
+    cb: (err: any, data?: ListDataQualityRuleRecommendationRunsCommandOutput) => void,
   ): void;
 
   /**
@@ -3417,16 +3417,16 @@ export interface Glue {
   listDataQualityRulesetEvaluationRuns(): Promise<ListDataQualityRulesetEvaluationRunsCommandOutput>;
   listDataQualityRulesetEvaluationRuns(
     args: ListDataQualityRulesetEvaluationRunsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListDataQualityRulesetEvaluationRunsCommandOutput>;
   listDataQualityRulesetEvaluationRuns(
     args: ListDataQualityRulesetEvaluationRunsCommandInput,
-    cb: (err: any, data?: ListDataQualityRulesetEvaluationRunsCommandOutput) => void
+    cb: (err: any, data?: ListDataQualityRulesetEvaluationRunsCommandOutput) => void,
   ): void;
   listDataQualityRulesetEvaluationRuns(
     args: ListDataQualityRulesetEvaluationRunsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListDataQualityRulesetEvaluationRunsCommandOutput) => void
+    cb: (err: any, data?: ListDataQualityRulesetEvaluationRunsCommandOutput) => void,
   ): void;
 
   /**
@@ -3435,16 +3435,16 @@ export interface Glue {
   listDataQualityRulesets(): Promise<ListDataQualityRulesetsCommandOutput>;
   listDataQualityRulesets(
     args: ListDataQualityRulesetsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListDataQualityRulesetsCommandOutput>;
   listDataQualityRulesets(
     args: ListDataQualityRulesetsCommandInput,
-    cb: (err: any, data?: ListDataQualityRulesetsCommandOutput) => void
+    cb: (err: any, data?: ListDataQualityRulesetsCommandOutput) => void,
   ): void;
   listDataQualityRulesets(
     args: ListDataQualityRulesetsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListDataQualityRulesetsCommandOutput) => void
+    cb: (err: any, data?: ListDataQualityRulesetsCommandOutput) => void,
   ): void;
 
   /**
@@ -3453,16 +3453,16 @@ export interface Glue {
   listDevEndpoints(): Promise<ListDevEndpointsCommandOutput>;
   listDevEndpoints(
     args: ListDevEndpointsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListDevEndpointsCommandOutput>;
   listDevEndpoints(
     args: ListDevEndpointsCommandInput,
-    cb: (err: any, data?: ListDevEndpointsCommandOutput) => void
+    cb: (err: any, data?: ListDevEndpointsCommandOutput) => void,
   ): void;
   listDevEndpoints(
     args: ListDevEndpointsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListDevEndpointsCommandOutput) => void
+    cb: (err: any, data?: ListDevEndpointsCommandOutput) => void,
   ): void;
 
   /**
@@ -3474,7 +3474,7 @@ export interface Glue {
   listJobs(
     args: ListJobsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListJobsCommandOutput) => void
+    cb: (err: any, data?: ListJobsCommandOutput) => void,
   ): void;
 
   /**
@@ -3483,16 +3483,16 @@ export interface Glue {
   listMLTransforms(): Promise<ListMLTransformsCommandOutput>;
   listMLTransforms(
     args: ListMLTransformsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListMLTransformsCommandOutput>;
   listMLTransforms(
     args: ListMLTransformsCommandInput,
-    cb: (err: any, data?: ListMLTransformsCommandOutput) => void
+    cb: (err: any, data?: ListMLTransformsCommandOutput) => void,
   ): void;
   listMLTransforms(
     args: ListMLTransformsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListMLTransformsCommandOutput) => void
+    cb: (err: any, data?: ListMLTransformsCommandOutput) => void,
   ): void;
 
   /**
@@ -3501,13 +3501,13 @@ export interface Glue {
   listRegistries(): Promise<ListRegistriesCommandOutput>;
   listRegistries(
     args: ListRegistriesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListRegistriesCommandOutput>;
   listRegistries(args: ListRegistriesCommandInput, cb: (err: any, data?: ListRegistriesCommandOutput) => void): void;
   listRegistries(
     args: ListRegistriesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListRegistriesCommandOutput) => void
+    cb: (err: any, data?: ListRegistriesCommandOutput) => void,
   ): void;
 
   /**
@@ -3519,7 +3519,7 @@ export interface Glue {
   listSchemas(
     args: ListSchemasCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListSchemasCommandOutput) => void
+    cb: (err: any, data?: ListSchemasCommandOutput) => void,
   ): void;
 
   /**
@@ -3527,16 +3527,16 @@ export interface Glue {
    */
   listSchemaVersions(
     args: ListSchemaVersionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListSchemaVersionsCommandOutput>;
   listSchemaVersions(
     args: ListSchemaVersionsCommandInput,
-    cb: (err: any, data?: ListSchemaVersionsCommandOutput) => void
+    cb: (err: any, data?: ListSchemaVersionsCommandOutput) => void,
   ): void;
   listSchemaVersions(
     args: ListSchemaVersionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListSchemaVersionsCommandOutput) => void
+    cb: (err: any, data?: ListSchemaVersionsCommandOutput) => void,
   ): void;
 
   /**
@@ -3548,7 +3548,7 @@ export interface Glue {
   listSessions(
     args: ListSessionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListSessionsCommandOutput) => void
+    cb: (err: any, data?: ListSessionsCommandOutput) => void,
   ): void;
 
   /**
@@ -3556,13 +3556,13 @@ export interface Glue {
    */
   listStatements(
     args: ListStatementsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListStatementsCommandOutput>;
   listStatements(args: ListStatementsCommandInput, cb: (err: any, data?: ListStatementsCommandOutput) => void): void;
   listStatements(
     args: ListStatementsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListStatementsCommandOutput) => void
+    cb: (err: any, data?: ListStatementsCommandOutput) => void,
   ): void;
 
   /**
@@ -3570,16 +3570,16 @@ export interface Glue {
    */
   listTableOptimizerRuns(
     args: ListTableOptimizerRunsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTableOptimizerRunsCommandOutput>;
   listTableOptimizerRuns(
     args: ListTableOptimizerRunsCommandInput,
-    cb: (err: any, data?: ListTableOptimizerRunsCommandOutput) => void
+    cb: (err: any, data?: ListTableOptimizerRunsCommandOutput) => void,
   ): void;
   listTableOptimizerRuns(
     args: ListTableOptimizerRunsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTableOptimizerRunsCommandOutput) => void
+    cb: (err: any, data?: ListTableOptimizerRunsCommandOutput) => void,
   ): void;
 
   /**
@@ -3591,7 +3591,7 @@ export interface Glue {
   listTriggers(
     args: ListTriggersCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTriggersCommandOutput) => void
+    cb: (err: any, data?: ListTriggersCommandOutput) => void,
   ): void;
 
   /**
@@ -3600,16 +3600,16 @@ export interface Glue {
   listUsageProfiles(): Promise<ListUsageProfilesCommandOutput>;
   listUsageProfiles(
     args: ListUsageProfilesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListUsageProfilesCommandOutput>;
   listUsageProfiles(
     args: ListUsageProfilesCommandInput,
-    cb: (err: any, data?: ListUsageProfilesCommandOutput) => void
+    cb: (err: any, data?: ListUsageProfilesCommandOutput) => void,
   ): void;
   listUsageProfiles(
     args: ListUsageProfilesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListUsageProfilesCommandOutput) => void
+    cb: (err: any, data?: ListUsageProfilesCommandOutput) => void,
   ): void;
 
   /**
@@ -3621,7 +3621,7 @@ export interface Glue {
   listWorkflows(
     args: ListWorkflowsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListWorkflowsCommandOutput) => void
+    cb: (err: any, data?: ListWorkflowsCommandOutput) => void,
   ): void;
 
   /**
@@ -3629,16 +3629,16 @@ export interface Glue {
    */
   putDataCatalogEncryptionSettings(
     args: PutDataCatalogEncryptionSettingsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutDataCatalogEncryptionSettingsCommandOutput>;
   putDataCatalogEncryptionSettings(
     args: PutDataCatalogEncryptionSettingsCommandInput,
-    cb: (err: any, data?: PutDataCatalogEncryptionSettingsCommandOutput) => void
+    cb: (err: any, data?: PutDataCatalogEncryptionSettingsCommandOutput) => void,
   ): void;
   putDataCatalogEncryptionSettings(
     args: PutDataCatalogEncryptionSettingsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutDataCatalogEncryptionSettingsCommandOutput) => void
+    cb: (err: any, data?: PutDataCatalogEncryptionSettingsCommandOutput) => void,
   ): void;
 
   /**
@@ -3646,16 +3646,16 @@ export interface Glue {
    */
   putResourcePolicy(
     args: PutResourcePolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutResourcePolicyCommandOutput>;
   putResourcePolicy(
     args: PutResourcePolicyCommandInput,
-    cb: (err: any, data?: PutResourcePolicyCommandOutput) => void
+    cb: (err: any, data?: PutResourcePolicyCommandOutput) => void,
   ): void;
   putResourcePolicy(
     args: PutResourcePolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutResourcePolicyCommandOutput) => void
+    cb: (err: any, data?: PutResourcePolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -3663,16 +3663,16 @@ export interface Glue {
    */
   putSchemaVersionMetadata(
     args: PutSchemaVersionMetadataCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutSchemaVersionMetadataCommandOutput>;
   putSchemaVersionMetadata(
     args: PutSchemaVersionMetadataCommandInput,
-    cb: (err: any, data?: PutSchemaVersionMetadataCommandOutput) => void
+    cb: (err: any, data?: PutSchemaVersionMetadataCommandOutput) => void,
   ): void;
   putSchemaVersionMetadata(
     args: PutSchemaVersionMetadataCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutSchemaVersionMetadataCommandOutput) => void
+    cb: (err: any, data?: PutSchemaVersionMetadataCommandOutput) => void,
   ): void;
 
   /**
@@ -3680,16 +3680,16 @@ export interface Glue {
    */
   putWorkflowRunProperties(
     args: PutWorkflowRunPropertiesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutWorkflowRunPropertiesCommandOutput>;
   putWorkflowRunProperties(
     args: PutWorkflowRunPropertiesCommandInput,
-    cb: (err: any, data?: PutWorkflowRunPropertiesCommandOutput) => void
+    cb: (err: any, data?: PutWorkflowRunPropertiesCommandOutput) => void,
   ): void;
   putWorkflowRunProperties(
     args: PutWorkflowRunPropertiesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutWorkflowRunPropertiesCommandOutput) => void
+    cb: (err: any, data?: PutWorkflowRunPropertiesCommandOutput) => void,
   ): void;
 
   /**
@@ -3698,16 +3698,16 @@ export interface Glue {
   querySchemaVersionMetadata(): Promise<QuerySchemaVersionMetadataCommandOutput>;
   querySchemaVersionMetadata(
     args: QuerySchemaVersionMetadataCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<QuerySchemaVersionMetadataCommandOutput>;
   querySchemaVersionMetadata(
     args: QuerySchemaVersionMetadataCommandInput,
-    cb: (err: any, data?: QuerySchemaVersionMetadataCommandOutput) => void
+    cb: (err: any, data?: QuerySchemaVersionMetadataCommandOutput) => void,
   ): void;
   querySchemaVersionMetadata(
     args: QuerySchemaVersionMetadataCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: QuerySchemaVersionMetadataCommandOutput) => void
+    cb: (err: any, data?: QuerySchemaVersionMetadataCommandOutput) => void,
   ): void;
 
   /**
@@ -3715,16 +3715,16 @@ export interface Glue {
    */
   registerSchemaVersion(
     args: RegisterSchemaVersionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<RegisterSchemaVersionCommandOutput>;
   registerSchemaVersion(
     args: RegisterSchemaVersionCommandInput,
-    cb: (err: any, data?: RegisterSchemaVersionCommandOutput) => void
+    cb: (err: any, data?: RegisterSchemaVersionCommandOutput) => void,
   ): void;
   registerSchemaVersion(
     args: RegisterSchemaVersionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RegisterSchemaVersionCommandOutput) => void
+    cb: (err: any, data?: RegisterSchemaVersionCommandOutput) => void,
   ): void;
 
   /**
@@ -3732,16 +3732,16 @@ export interface Glue {
    */
   removeSchemaVersionMetadata(
     args: RemoveSchemaVersionMetadataCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<RemoveSchemaVersionMetadataCommandOutput>;
   removeSchemaVersionMetadata(
     args: RemoveSchemaVersionMetadataCommandInput,
-    cb: (err: any, data?: RemoveSchemaVersionMetadataCommandOutput) => void
+    cb: (err: any, data?: RemoveSchemaVersionMetadataCommandOutput) => void,
   ): void;
   removeSchemaVersionMetadata(
     args: RemoveSchemaVersionMetadataCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RemoveSchemaVersionMetadataCommandOutput) => void
+    cb: (err: any, data?: RemoveSchemaVersionMetadataCommandOutput) => void,
   ): void;
 
   /**
@@ -3749,16 +3749,16 @@ export interface Glue {
    */
   resetJobBookmark(
     args: ResetJobBookmarkCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ResetJobBookmarkCommandOutput>;
   resetJobBookmark(
     args: ResetJobBookmarkCommandInput,
-    cb: (err: any, data?: ResetJobBookmarkCommandOutput) => void
+    cb: (err: any, data?: ResetJobBookmarkCommandOutput) => void,
   ): void;
   resetJobBookmark(
     args: ResetJobBookmarkCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ResetJobBookmarkCommandOutput) => void
+    cb: (err: any, data?: ResetJobBookmarkCommandOutput) => void,
   ): void;
 
   /**
@@ -3766,16 +3766,16 @@ export interface Glue {
    */
   resumeWorkflowRun(
     args: ResumeWorkflowRunCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ResumeWorkflowRunCommandOutput>;
   resumeWorkflowRun(
     args: ResumeWorkflowRunCommandInput,
-    cb: (err: any, data?: ResumeWorkflowRunCommandOutput) => void
+    cb: (err: any, data?: ResumeWorkflowRunCommandOutput) => void,
   ): void;
   resumeWorkflowRun(
     args: ResumeWorkflowRunCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ResumeWorkflowRunCommandOutput) => void
+    cb: (err: any, data?: ResumeWorkflowRunCommandOutput) => void,
   ): void;
 
   /**
@@ -3786,7 +3786,7 @@ export interface Glue {
   runStatement(
     args: RunStatementCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RunStatementCommandOutput) => void
+    cb: (err: any, data?: RunStatementCommandOutput) => void,
   ): void;
 
   /**
@@ -3798,7 +3798,7 @@ export interface Glue {
   searchTables(
     args: SearchTablesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SearchTablesCommandOutput) => void
+    cb: (err: any, data?: SearchTablesCommandOutput) => void,
   ): void;
 
   /**
@@ -3806,16 +3806,16 @@ export interface Glue {
    */
   startBlueprintRun(
     args: StartBlueprintRunCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartBlueprintRunCommandOutput>;
   startBlueprintRun(
     args: StartBlueprintRunCommandInput,
-    cb: (err: any, data?: StartBlueprintRunCommandOutput) => void
+    cb: (err: any, data?: StartBlueprintRunCommandOutput) => void,
   ): void;
   startBlueprintRun(
     args: StartBlueprintRunCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartBlueprintRunCommandOutput) => void
+    cb: (err: any, data?: StartBlueprintRunCommandOutput) => void,
   ): void;
 
   /**
@@ -3823,16 +3823,16 @@ export interface Glue {
    */
   startColumnStatisticsTaskRun(
     args: StartColumnStatisticsTaskRunCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartColumnStatisticsTaskRunCommandOutput>;
   startColumnStatisticsTaskRun(
     args: StartColumnStatisticsTaskRunCommandInput,
-    cb: (err: any, data?: StartColumnStatisticsTaskRunCommandOutput) => void
+    cb: (err: any, data?: StartColumnStatisticsTaskRunCommandOutput) => void,
   ): void;
   startColumnStatisticsTaskRun(
     args: StartColumnStatisticsTaskRunCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartColumnStatisticsTaskRunCommandOutput) => void
+    cb: (err: any, data?: StartColumnStatisticsTaskRunCommandOutput) => void,
   ): void;
 
   /**
@@ -3843,7 +3843,7 @@ export interface Glue {
   startCrawler(
     args: StartCrawlerCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartCrawlerCommandOutput) => void
+    cb: (err: any, data?: StartCrawlerCommandOutput) => void,
   ): void;
 
   /**
@@ -3851,16 +3851,16 @@ export interface Glue {
    */
   startCrawlerSchedule(
     args: StartCrawlerScheduleCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartCrawlerScheduleCommandOutput>;
   startCrawlerSchedule(
     args: StartCrawlerScheduleCommandInput,
-    cb: (err: any, data?: StartCrawlerScheduleCommandOutput) => void
+    cb: (err: any, data?: StartCrawlerScheduleCommandOutput) => void,
   ): void;
   startCrawlerSchedule(
     args: StartCrawlerScheduleCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartCrawlerScheduleCommandOutput) => void
+    cb: (err: any, data?: StartCrawlerScheduleCommandOutput) => void,
   ): void;
 
   /**
@@ -3868,16 +3868,16 @@ export interface Glue {
    */
   startDataQualityRuleRecommendationRun(
     args: StartDataQualityRuleRecommendationRunCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartDataQualityRuleRecommendationRunCommandOutput>;
   startDataQualityRuleRecommendationRun(
     args: StartDataQualityRuleRecommendationRunCommandInput,
-    cb: (err: any, data?: StartDataQualityRuleRecommendationRunCommandOutput) => void
+    cb: (err: any, data?: StartDataQualityRuleRecommendationRunCommandOutput) => void,
   ): void;
   startDataQualityRuleRecommendationRun(
     args: StartDataQualityRuleRecommendationRunCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartDataQualityRuleRecommendationRunCommandOutput) => void
+    cb: (err: any, data?: StartDataQualityRuleRecommendationRunCommandOutput) => void,
   ): void;
 
   /**
@@ -3885,16 +3885,16 @@ export interface Glue {
    */
   startDataQualityRulesetEvaluationRun(
     args: StartDataQualityRulesetEvaluationRunCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartDataQualityRulesetEvaluationRunCommandOutput>;
   startDataQualityRulesetEvaluationRun(
     args: StartDataQualityRulesetEvaluationRunCommandInput,
-    cb: (err: any, data?: StartDataQualityRulesetEvaluationRunCommandOutput) => void
+    cb: (err: any, data?: StartDataQualityRulesetEvaluationRunCommandOutput) => void,
   ): void;
   startDataQualityRulesetEvaluationRun(
     args: StartDataQualityRulesetEvaluationRunCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartDataQualityRulesetEvaluationRunCommandOutput) => void
+    cb: (err: any, data?: StartDataQualityRulesetEvaluationRunCommandOutput) => void,
   ): void;
 
   /**
@@ -3902,16 +3902,16 @@ export interface Glue {
    */
   startExportLabelsTaskRun(
     args: StartExportLabelsTaskRunCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartExportLabelsTaskRunCommandOutput>;
   startExportLabelsTaskRun(
     args: StartExportLabelsTaskRunCommandInput,
-    cb: (err: any, data?: StartExportLabelsTaskRunCommandOutput) => void
+    cb: (err: any, data?: StartExportLabelsTaskRunCommandOutput) => void,
   ): void;
   startExportLabelsTaskRun(
     args: StartExportLabelsTaskRunCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartExportLabelsTaskRunCommandOutput) => void
+    cb: (err: any, data?: StartExportLabelsTaskRunCommandOutput) => void,
   ): void;
 
   /**
@@ -3919,16 +3919,16 @@ export interface Glue {
    */
   startImportLabelsTaskRun(
     args: StartImportLabelsTaskRunCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartImportLabelsTaskRunCommandOutput>;
   startImportLabelsTaskRun(
     args: StartImportLabelsTaskRunCommandInput,
-    cb: (err: any, data?: StartImportLabelsTaskRunCommandOutput) => void
+    cb: (err: any, data?: StartImportLabelsTaskRunCommandOutput) => void,
   ): void;
   startImportLabelsTaskRun(
     args: StartImportLabelsTaskRunCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartImportLabelsTaskRunCommandOutput) => void
+    cb: (err: any, data?: StartImportLabelsTaskRunCommandOutput) => void,
   ): void;
 
   /**
@@ -3939,7 +3939,7 @@ export interface Glue {
   startJobRun(
     args: StartJobRunCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartJobRunCommandOutput) => void
+    cb: (err: any, data?: StartJobRunCommandOutput) => void,
   ): void;
 
   /**
@@ -3947,16 +3947,16 @@ export interface Glue {
    */
   startMLEvaluationTaskRun(
     args: StartMLEvaluationTaskRunCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartMLEvaluationTaskRunCommandOutput>;
   startMLEvaluationTaskRun(
     args: StartMLEvaluationTaskRunCommandInput,
-    cb: (err: any, data?: StartMLEvaluationTaskRunCommandOutput) => void
+    cb: (err: any, data?: StartMLEvaluationTaskRunCommandOutput) => void,
   ): void;
   startMLEvaluationTaskRun(
     args: StartMLEvaluationTaskRunCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartMLEvaluationTaskRunCommandOutput) => void
+    cb: (err: any, data?: StartMLEvaluationTaskRunCommandOutput) => void,
   ): void;
 
   /**
@@ -3964,16 +3964,16 @@ export interface Glue {
    */
   startMLLabelingSetGenerationTaskRun(
     args: StartMLLabelingSetGenerationTaskRunCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartMLLabelingSetGenerationTaskRunCommandOutput>;
   startMLLabelingSetGenerationTaskRun(
     args: StartMLLabelingSetGenerationTaskRunCommandInput,
-    cb: (err: any, data?: StartMLLabelingSetGenerationTaskRunCommandOutput) => void
+    cb: (err: any, data?: StartMLLabelingSetGenerationTaskRunCommandOutput) => void,
   ): void;
   startMLLabelingSetGenerationTaskRun(
     args: StartMLLabelingSetGenerationTaskRunCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartMLLabelingSetGenerationTaskRunCommandOutput) => void
+    cb: (err: any, data?: StartMLLabelingSetGenerationTaskRunCommandOutput) => void,
   ): void;
 
   /**
@@ -3984,7 +3984,7 @@ export interface Glue {
   startTrigger(
     args: StartTriggerCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartTriggerCommandOutput) => void
+    cb: (err: any, data?: StartTriggerCommandOutput) => void,
   ): void;
 
   /**
@@ -3992,16 +3992,16 @@ export interface Glue {
    */
   startWorkflowRun(
     args: StartWorkflowRunCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartWorkflowRunCommandOutput>;
   startWorkflowRun(
     args: StartWorkflowRunCommandInput,
-    cb: (err: any, data?: StartWorkflowRunCommandOutput) => void
+    cb: (err: any, data?: StartWorkflowRunCommandOutput) => void,
   ): void;
   startWorkflowRun(
     args: StartWorkflowRunCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartWorkflowRunCommandOutput) => void
+    cb: (err: any, data?: StartWorkflowRunCommandOutput) => void,
   ): void;
 
   /**
@@ -4009,16 +4009,16 @@ export interface Glue {
    */
   stopColumnStatisticsTaskRun(
     args: StopColumnStatisticsTaskRunCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StopColumnStatisticsTaskRunCommandOutput>;
   stopColumnStatisticsTaskRun(
     args: StopColumnStatisticsTaskRunCommandInput,
-    cb: (err: any, data?: StopColumnStatisticsTaskRunCommandOutput) => void
+    cb: (err: any, data?: StopColumnStatisticsTaskRunCommandOutput) => void,
   ): void;
   stopColumnStatisticsTaskRun(
     args: StopColumnStatisticsTaskRunCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StopColumnStatisticsTaskRunCommandOutput) => void
+    cb: (err: any, data?: StopColumnStatisticsTaskRunCommandOutput) => void,
   ): void;
 
   /**
@@ -4029,7 +4029,7 @@ export interface Glue {
   stopCrawler(
     args: StopCrawlerCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StopCrawlerCommandOutput) => void
+    cb: (err: any, data?: StopCrawlerCommandOutput) => void,
   ): void;
 
   /**
@@ -4037,16 +4037,16 @@ export interface Glue {
    */
   stopCrawlerSchedule(
     args: StopCrawlerScheduleCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StopCrawlerScheduleCommandOutput>;
   stopCrawlerSchedule(
     args: StopCrawlerScheduleCommandInput,
-    cb: (err: any, data?: StopCrawlerScheduleCommandOutput) => void
+    cb: (err: any, data?: StopCrawlerScheduleCommandOutput) => void,
   ): void;
   stopCrawlerSchedule(
     args: StopCrawlerScheduleCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StopCrawlerScheduleCommandOutput) => void
+    cb: (err: any, data?: StopCrawlerScheduleCommandOutput) => void,
   ): void;
 
   /**
@@ -4057,7 +4057,7 @@ export interface Glue {
   stopSession(
     args: StopSessionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StopSessionCommandOutput) => void
+    cb: (err: any, data?: StopSessionCommandOutput) => void,
   ): void;
 
   /**
@@ -4068,7 +4068,7 @@ export interface Glue {
   stopTrigger(
     args: StopTriggerCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StopTriggerCommandOutput) => void
+    cb: (err: any, data?: StopTriggerCommandOutput) => void,
   ): void;
 
   /**
@@ -4076,13 +4076,13 @@ export interface Glue {
    */
   stopWorkflowRun(
     args: StopWorkflowRunCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StopWorkflowRunCommandOutput>;
   stopWorkflowRun(args: StopWorkflowRunCommandInput, cb: (err: any, data?: StopWorkflowRunCommandOutput) => void): void;
   stopWorkflowRun(
     args: StopWorkflowRunCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StopWorkflowRunCommandOutput) => void
+    cb: (err: any, data?: StopWorkflowRunCommandOutput) => void,
   ): void;
 
   /**
@@ -4093,7 +4093,7 @@ export interface Glue {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -4104,7 +4104,7 @@ export interface Glue {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -4112,13 +4112,13 @@ export interface Glue {
    */
   updateBlueprint(
     args: UpdateBlueprintCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateBlueprintCommandOutput>;
   updateBlueprint(args: UpdateBlueprintCommandInput, cb: (err: any, data?: UpdateBlueprintCommandOutput) => void): void;
   updateBlueprint(
     args: UpdateBlueprintCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateBlueprintCommandOutput) => void
+    cb: (err: any, data?: UpdateBlueprintCommandOutput) => void,
   ): void;
 
   /**
@@ -4127,16 +4127,16 @@ export interface Glue {
   updateClassifier(): Promise<UpdateClassifierCommandOutput>;
   updateClassifier(
     args: UpdateClassifierCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateClassifierCommandOutput>;
   updateClassifier(
     args: UpdateClassifierCommandInput,
-    cb: (err: any, data?: UpdateClassifierCommandOutput) => void
+    cb: (err: any, data?: UpdateClassifierCommandOutput) => void,
   ): void;
   updateClassifier(
     args: UpdateClassifierCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateClassifierCommandOutput) => void
+    cb: (err: any, data?: UpdateClassifierCommandOutput) => void,
   ): void;
 
   /**
@@ -4144,16 +4144,16 @@ export interface Glue {
    */
   updateColumnStatisticsForPartition(
     args: UpdateColumnStatisticsForPartitionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateColumnStatisticsForPartitionCommandOutput>;
   updateColumnStatisticsForPartition(
     args: UpdateColumnStatisticsForPartitionCommandInput,
-    cb: (err: any, data?: UpdateColumnStatisticsForPartitionCommandOutput) => void
+    cb: (err: any, data?: UpdateColumnStatisticsForPartitionCommandOutput) => void,
   ): void;
   updateColumnStatisticsForPartition(
     args: UpdateColumnStatisticsForPartitionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateColumnStatisticsForPartitionCommandOutput) => void
+    cb: (err: any, data?: UpdateColumnStatisticsForPartitionCommandOutput) => void,
   ): void;
 
   /**
@@ -4161,16 +4161,16 @@ export interface Glue {
    */
   updateColumnStatisticsForTable(
     args: UpdateColumnStatisticsForTableCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateColumnStatisticsForTableCommandOutput>;
   updateColumnStatisticsForTable(
     args: UpdateColumnStatisticsForTableCommandInput,
-    cb: (err: any, data?: UpdateColumnStatisticsForTableCommandOutput) => void
+    cb: (err: any, data?: UpdateColumnStatisticsForTableCommandOutput) => void,
   ): void;
   updateColumnStatisticsForTable(
     args: UpdateColumnStatisticsForTableCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateColumnStatisticsForTableCommandOutput) => void
+    cb: (err: any, data?: UpdateColumnStatisticsForTableCommandOutput) => void,
   ): void;
 
   /**
@@ -4178,16 +4178,16 @@ export interface Glue {
    */
   updateConnection(
     args: UpdateConnectionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateConnectionCommandOutput>;
   updateConnection(
     args: UpdateConnectionCommandInput,
-    cb: (err: any, data?: UpdateConnectionCommandOutput) => void
+    cb: (err: any, data?: UpdateConnectionCommandOutput) => void,
   ): void;
   updateConnection(
     args: UpdateConnectionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateConnectionCommandOutput) => void
+    cb: (err: any, data?: UpdateConnectionCommandOutput) => void,
   ): void;
 
   /**
@@ -4198,7 +4198,7 @@ export interface Glue {
   updateCrawler(
     args: UpdateCrawlerCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateCrawlerCommandOutput) => void
+    cb: (err: any, data?: UpdateCrawlerCommandOutput) => void,
   ): void;
 
   /**
@@ -4206,16 +4206,16 @@ export interface Glue {
    */
   updateCrawlerSchedule(
     args: UpdateCrawlerScheduleCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateCrawlerScheduleCommandOutput>;
   updateCrawlerSchedule(
     args: UpdateCrawlerScheduleCommandInput,
-    cb: (err: any, data?: UpdateCrawlerScheduleCommandOutput) => void
+    cb: (err: any, data?: UpdateCrawlerScheduleCommandOutput) => void,
   ): void;
   updateCrawlerSchedule(
     args: UpdateCrawlerScheduleCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateCrawlerScheduleCommandOutput) => void
+    cb: (err: any, data?: UpdateCrawlerScheduleCommandOutput) => void,
   ): void;
 
   /**
@@ -4223,13 +4223,13 @@ export interface Glue {
    */
   updateDatabase(
     args: UpdateDatabaseCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateDatabaseCommandOutput>;
   updateDatabase(args: UpdateDatabaseCommandInput, cb: (err: any, data?: UpdateDatabaseCommandOutput) => void): void;
   updateDatabase(
     args: UpdateDatabaseCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateDatabaseCommandOutput) => void
+    cb: (err: any, data?: UpdateDatabaseCommandOutput) => void,
   ): void;
 
   /**
@@ -4237,16 +4237,16 @@ export interface Glue {
    */
   updateDataQualityRuleset(
     args: UpdateDataQualityRulesetCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateDataQualityRulesetCommandOutput>;
   updateDataQualityRuleset(
     args: UpdateDataQualityRulesetCommandInput,
-    cb: (err: any, data?: UpdateDataQualityRulesetCommandOutput) => void
+    cb: (err: any, data?: UpdateDataQualityRulesetCommandOutput) => void,
   ): void;
   updateDataQualityRuleset(
     args: UpdateDataQualityRulesetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateDataQualityRulesetCommandOutput) => void
+    cb: (err: any, data?: UpdateDataQualityRulesetCommandOutput) => void,
   ): void;
 
   /**
@@ -4254,16 +4254,16 @@ export interface Glue {
    */
   updateDevEndpoint(
     args: UpdateDevEndpointCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateDevEndpointCommandOutput>;
   updateDevEndpoint(
     args: UpdateDevEndpointCommandInput,
-    cb: (err: any, data?: UpdateDevEndpointCommandOutput) => void
+    cb: (err: any, data?: UpdateDevEndpointCommandOutput) => void,
   ): void;
   updateDevEndpoint(
     args: UpdateDevEndpointCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateDevEndpointCommandOutput) => void
+    cb: (err: any, data?: UpdateDevEndpointCommandOutput) => void,
   ): void;
 
   /**
@@ -4274,7 +4274,7 @@ export interface Glue {
   updateJob(
     args: UpdateJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateJobCommandOutput) => void
+    cb: (err: any, data?: UpdateJobCommandOutput) => void,
   ): void;
 
   /**
@@ -4283,16 +4283,16 @@ export interface Glue {
   updateJobFromSourceControl(): Promise<UpdateJobFromSourceControlCommandOutput>;
   updateJobFromSourceControl(
     args: UpdateJobFromSourceControlCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateJobFromSourceControlCommandOutput>;
   updateJobFromSourceControl(
     args: UpdateJobFromSourceControlCommandInput,
-    cb: (err: any, data?: UpdateJobFromSourceControlCommandOutput) => void
+    cb: (err: any, data?: UpdateJobFromSourceControlCommandOutput) => void,
   ): void;
   updateJobFromSourceControl(
     args: UpdateJobFromSourceControlCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateJobFromSourceControlCommandOutput) => void
+    cb: (err: any, data?: UpdateJobFromSourceControlCommandOutput) => void,
   ): void;
 
   /**
@@ -4300,16 +4300,16 @@ export interface Glue {
    */
   updateMLTransform(
     args: UpdateMLTransformCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateMLTransformCommandOutput>;
   updateMLTransform(
     args: UpdateMLTransformCommandInput,
-    cb: (err: any, data?: UpdateMLTransformCommandOutput) => void
+    cb: (err: any, data?: UpdateMLTransformCommandOutput) => void,
   ): void;
   updateMLTransform(
     args: UpdateMLTransformCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateMLTransformCommandOutput) => void
+    cb: (err: any, data?: UpdateMLTransformCommandOutput) => void,
   ): void;
 
   /**
@@ -4317,13 +4317,13 @@ export interface Glue {
    */
   updatePartition(
     args: UpdatePartitionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdatePartitionCommandOutput>;
   updatePartition(args: UpdatePartitionCommandInput, cb: (err: any, data?: UpdatePartitionCommandOutput) => void): void;
   updatePartition(
     args: UpdatePartitionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdatePartitionCommandOutput) => void
+    cb: (err: any, data?: UpdatePartitionCommandOutput) => void,
   ): void;
 
   /**
@@ -4331,13 +4331,13 @@ export interface Glue {
    */
   updateRegistry(
     args: UpdateRegistryCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateRegistryCommandOutput>;
   updateRegistry(args: UpdateRegistryCommandInput, cb: (err: any, data?: UpdateRegistryCommandOutput) => void): void;
   updateRegistry(
     args: UpdateRegistryCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateRegistryCommandOutput) => void
+    cb: (err: any, data?: UpdateRegistryCommandOutput) => void,
   ): void;
 
   /**
@@ -4348,7 +4348,7 @@ export interface Glue {
   updateSchema(
     args: UpdateSchemaCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateSchemaCommandOutput) => void
+    cb: (err: any, data?: UpdateSchemaCommandOutput) => void,
   ): void;
 
   /**
@@ -4357,16 +4357,16 @@ export interface Glue {
   updateSourceControlFromJob(): Promise<UpdateSourceControlFromJobCommandOutput>;
   updateSourceControlFromJob(
     args: UpdateSourceControlFromJobCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateSourceControlFromJobCommandOutput>;
   updateSourceControlFromJob(
     args: UpdateSourceControlFromJobCommandInput,
-    cb: (err: any, data?: UpdateSourceControlFromJobCommandOutput) => void
+    cb: (err: any, data?: UpdateSourceControlFromJobCommandOutput) => void,
   ): void;
   updateSourceControlFromJob(
     args: UpdateSourceControlFromJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateSourceControlFromJobCommandOutput) => void
+    cb: (err: any, data?: UpdateSourceControlFromJobCommandOutput) => void,
   ): void;
 
   /**
@@ -4377,7 +4377,7 @@ export interface Glue {
   updateTable(
     args: UpdateTableCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateTableCommandOutput) => void
+    cb: (err: any, data?: UpdateTableCommandOutput) => void,
   ): void;
 
   /**
@@ -4385,16 +4385,16 @@ export interface Glue {
    */
   updateTableOptimizer(
     args: UpdateTableOptimizerCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateTableOptimizerCommandOutput>;
   updateTableOptimizer(
     args: UpdateTableOptimizerCommandInput,
-    cb: (err: any, data?: UpdateTableOptimizerCommandOutput) => void
+    cb: (err: any, data?: UpdateTableOptimizerCommandOutput) => void,
   ): void;
   updateTableOptimizer(
     args: UpdateTableOptimizerCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateTableOptimizerCommandOutput) => void
+    cb: (err: any, data?: UpdateTableOptimizerCommandOutput) => void,
   ): void;
 
   /**
@@ -4405,7 +4405,7 @@ export interface Glue {
   updateTrigger(
     args: UpdateTriggerCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateTriggerCommandOutput) => void
+    cb: (err: any, data?: UpdateTriggerCommandOutput) => void,
   ): void;
 
   /**
@@ -4413,16 +4413,16 @@ export interface Glue {
    */
   updateUsageProfile(
     args: UpdateUsageProfileCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateUsageProfileCommandOutput>;
   updateUsageProfile(
     args: UpdateUsageProfileCommandInput,
-    cb: (err: any, data?: UpdateUsageProfileCommandOutput) => void
+    cb: (err: any, data?: UpdateUsageProfileCommandOutput) => void,
   ): void;
   updateUsageProfile(
     args: UpdateUsageProfileCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateUsageProfileCommandOutput) => void
+    cb: (err: any, data?: UpdateUsageProfileCommandOutput) => void,
   ): void;
 
   /**
@@ -4430,16 +4430,16 @@ export interface Glue {
    */
   updateUserDefinedFunction(
     args: UpdateUserDefinedFunctionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateUserDefinedFunctionCommandOutput>;
   updateUserDefinedFunction(
     args: UpdateUserDefinedFunctionCommandInput,
-    cb: (err: any, data?: UpdateUserDefinedFunctionCommandOutput) => void
+    cb: (err: any, data?: UpdateUserDefinedFunctionCommandOutput) => void,
   ): void;
   updateUserDefinedFunction(
     args: UpdateUserDefinedFunctionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateUserDefinedFunctionCommandOutput) => void
+    cb: (err: any, data?: UpdateUserDefinedFunctionCommandOutput) => void,
   ): void;
 
   /**
@@ -4447,13 +4447,13 @@ export interface Glue {
    */
   updateWorkflow(
     args: UpdateWorkflowCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateWorkflowCommandOutput>;
   updateWorkflow(args: UpdateWorkflowCommandInput, cb: (err: any, data?: UpdateWorkflowCommandOutput) => void): void;
   updateWorkflow(
     args: UpdateWorkflowCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateWorkflowCommandOutput) => void
+    cb: (err: any, data?: UpdateWorkflowCommandOutput) => void,
   ): void;
 }
 

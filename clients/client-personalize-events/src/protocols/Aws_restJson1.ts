@@ -45,7 +45,7 @@ import { PersonalizeEventsServiceException as __BaseException } from "../models/
  */
 export const se_PutActionInteractionsCommand = async (
   input: PutActionInteractionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -57,7 +57,7 @@ export const se_PutActionInteractionsCommand = async (
     take(input, {
       actionInteractions: (_) => se_ActionInteractionsList(_, context),
       trackingId: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -68,7 +68,7 @@ export const se_PutActionInteractionsCommand = async (
  */
 export const se_PutActionsCommand = async (
   input: PutActionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -80,7 +80,7 @@ export const se_PutActionsCommand = async (
     take(input, {
       actions: (_) => se_ActionList(_, context),
       datasetArn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -91,7 +91,7 @@ export const se_PutActionsCommand = async (
  */
 export const se_PutEventsCommand = async (
   input: PutEventsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -105,7 +105,7 @@ export const se_PutEventsCommand = async (
       sessionId: [],
       trackingId: [],
       userId: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -116,7 +116,7 @@ export const se_PutEventsCommand = async (
  */
 export const se_PutItemsCommand = async (
   input: PutItemsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -128,7 +128,7 @@ export const se_PutItemsCommand = async (
     take(input, {
       datasetArn: [],
       items: (_) => se_ItemList(_, context),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -139,7 +139,7 @@ export const se_PutItemsCommand = async (
  */
 export const se_PutUsersCommand = async (
   input: PutUsersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -151,7 +151,7 @@ export const se_PutUsersCommand = async (
     take(input, {
       datasetArn: [],
       users: (_) => se_UserList(_, context),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -162,7 +162,7 @@ export const se_PutUsersCommand = async (
  */
 export const de_PutActionInteractionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutActionInteractionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -179,7 +179,7 @@ export const de_PutActionInteractionsCommand = async (
  */
 export const de_PutActionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutActionsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -196,7 +196,7 @@ export const de_PutActionsCommand = async (
  */
 export const de_PutEventsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutEventsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -213,7 +213,7 @@ export const de_PutEventsCommand = async (
  */
 export const de_PutItemsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutItemsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -230,7 +230,7 @@ export const de_PutItemsCommand = async (
  */
 export const de_PutUsersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutUsersCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -277,7 +277,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_InvalidInputExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidInputException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -297,7 +297,7 @@ const de_InvalidInputExceptionRes = async (
  */
 const de_ResourceInUseExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceInUseException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -317,7 +317,7 @@ const de_ResourceInUseExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;

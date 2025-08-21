@@ -77,7 +77,7 @@ import { TaxSettingsServiceException as __BaseException } from "../models/TaxSet
  */
 export const se_BatchDeleteTaxRegistrationCommand = async (
   input: BatchDeleteTaxRegistrationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -88,7 +88,7 @@ export const se_BatchDeleteTaxRegistrationCommand = async (
   body = JSON.stringify(
     take(input, {
       accountIds: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -99,7 +99,7 @@ export const se_BatchDeleteTaxRegistrationCommand = async (
  */
 export const se_BatchPutTaxRegistrationCommand = async (
   input: BatchPutTaxRegistrationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -111,7 +111,7 @@ export const se_BatchPutTaxRegistrationCommand = async (
     take(input, {
       accountIds: (_) => _json(_),
       taxRegistrationEntry: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -122,7 +122,7 @@ export const se_BatchPutTaxRegistrationCommand = async (
  */
 export const se_DeleteTaxRegistrationCommand = async (
   input: DeleteTaxRegistrationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -133,7 +133,7 @@ export const se_DeleteTaxRegistrationCommand = async (
   body = JSON.stringify(
     take(input, {
       accountId: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -144,7 +144,7 @@ export const se_DeleteTaxRegistrationCommand = async (
  */
 export const se_GetTaxRegistrationCommand = async (
   input: GetTaxRegistrationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -155,7 +155,7 @@ export const se_GetTaxRegistrationCommand = async (
   body = JSON.stringify(
     take(input, {
       accountId: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -166,7 +166,7 @@ export const se_GetTaxRegistrationCommand = async (
  */
 export const se_GetTaxRegistrationDocumentCommand = async (
   input: GetTaxRegistrationDocumentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -178,7 +178,7 @@ export const se_GetTaxRegistrationDocumentCommand = async (
     take(input, {
       destinationS3Location: (_) => _json(_),
       taxDocumentMetadata: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -189,7 +189,7 @@ export const se_GetTaxRegistrationDocumentCommand = async (
  */
 export const se_ListTaxRegistrationsCommand = async (
   input: ListTaxRegistrationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -201,7 +201,7 @@ export const se_ListTaxRegistrationsCommand = async (
     take(input, {
       maxResults: [],
       nextToken: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -212,7 +212,7 @@ export const se_ListTaxRegistrationsCommand = async (
  */
 export const se_PutTaxRegistrationCommand = async (
   input: PutTaxRegistrationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -224,7 +224,7 @@ export const se_PutTaxRegistrationCommand = async (
     take(input, {
       accountId: [],
       taxRegistrationEntry: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -235,7 +235,7 @@ export const se_PutTaxRegistrationCommand = async (
  */
 export const de_BatchDeleteTaxRegistrationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchDeleteTaxRegistrationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -256,7 +256,7 @@ export const de_BatchDeleteTaxRegistrationCommand = async (
  */
 export const de_BatchPutTaxRegistrationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchPutTaxRegistrationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -278,7 +278,7 @@ export const de_BatchPutTaxRegistrationCommand = async (
  */
 export const de_DeleteTaxRegistrationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteTaxRegistrationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -295,7 +295,7 @@ export const de_DeleteTaxRegistrationCommand = async (
  */
 export const de_GetTaxRegistrationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetTaxRegistrationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -316,7 +316,7 @@ export const de_GetTaxRegistrationCommand = async (
  */
 export const de_GetTaxRegistrationDocumentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetTaxRegistrationDocumentCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -337,7 +337,7 @@ export const de_GetTaxRegistrationDocumentCommand = async (
  */
 export const de_ListTaxRegistrationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTaxRegistrationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -359,7 +359,7 @@ export const de_ListTaxRegistrationsCommand = async (
  */
 export const de_PutTaxRegistrationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutTaxRegistrationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -431,7 +431,7 @@ const de_ConflictExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_InternalServerExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -452,7 +452,7 @@ const de_InternalServerExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;

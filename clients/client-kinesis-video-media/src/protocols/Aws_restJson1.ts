@@ -35,7 +35,7 @@ import {
  */
 export const se_GetMediaCommand = async (
   input: GetMediaCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -48,7 +48,7 @@ export const se_GetMediaCommand = async (
       StartSelector: (_) => se_StartSelector(_, context),
       StreamARN: [],
       StreamName: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -59,7 +59,7 @@ export const se_GetMediaCommand = async (
  */
 export const de_GetMediaCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext & __SdkStreamSerdeContext
+  context: __SerdeContext & __SdkStreamSerdeContext,
 ): Promise<GetMediaCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -118,7 +118,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_ClientLimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ClientLimitExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -138,7 +138,7 @@ const de_ClientLimitExceededExceptionRes = async (
  */
 const de_ConnectionLimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ConnectionLimitExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -158,7 +158,7 @@ const de_ConnectionLimitExceededExceptionRes = async (
  */
 const de_InvalidArgumentExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidArgumentException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -178,7 +178,7 @@ const de_InvalidArgumentExceptionRes = async (
  */
 const de_InvalidEndpointExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidEndpointException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -198,7 +198,7 @@ const de_InvalidEndpointExceptionRes = async (
  */
 const de_NotAuthorizedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<NotAuthorizedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -218,7 +218,7 @@ const de_NotAuthorizedExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;

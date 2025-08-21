@@ -459,7 +459,7 @@ import { SESServiceException as __BaseException } from "../models/SESServiceExce
  */
 export const se_CloneReceiptRuleSetCommand = async (
   input: CloneReceiptRuleSetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -476,7 +476,7 @@ export const se_CloneReceiptRuleSetCommand = async (
  */
 export const se_CreateConfigurationSetCommand = async (
   input: CreateConfigurationSetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -493,7 +493,7 @@ export const se_CreateConfigurationSetCommand = async (
  */
 export const se_CreateConfigurationSetEventDestinationCommand = async (
   input: CreateConfigurationSetEventDestinationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -510,7 +510,7 @@ export const se_CreateConfigurationSetEventDestinationCommand = async (
  */
 export const se_CreateConfigurationSetTrackingOptionsCommand = async (
   input: CreateConfigurationSetTrackingOptionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -527,7 +527,7 @@ export const se_CreateConfigurationSetTrackingOptionsCommand = async (
  */
 export const se_CreateCustomVerificationEmailTemplateCommand = async (
   input: CreateCustomVerificationEmailTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -544,7 +544,7 @@ export const se_CreateCustomVerificationEmailTemplateCommand = async (
  */
 export const se_CreateReceiptFilterCommand = async (
   input: CreateReceiptFilterCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -561,7 +561,7 @@ export const se_CreateReceiptFilterCommand = async (
  */
 export const se_CreateReceiptRuleCommand = async (
   input: CreateReceiptRuleCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -578,7 +578,7 @@ export const se_CreateReceiptRuleCommand = async (
  */
 export const se_CreateReceiptRuleSetCommand = async (
   input: CreateReceiptRuleSetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -595,7 +595,7 @@ export const se_CreateReceiptRuleSetCommand = async (
  */
 export const se_CreateTemplateCommand = async (
   input: CreateTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -612,7 +612,7 @@ export const se_CreateTemplateCommand = async (
  */
 export const se_DeleteConfigurationSetCommand = async (
   input: DeleteConfigurationSetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -629,7 +629,7 @@ export const se_DeleteConfigurationSetCommand = async (
  */
 export const se_DeleteConfigurationSetEventDestinationCommand = async (
   input: DeleteConfigurationSetEventDestinationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -646,7 +646,7 @@ export const se_DeleteConfigurationSetEventDestinationCommand = async (
  */
 export const se_DeleteConfigurationSetTrackingOptionsCommand = async (
   input: DeleteConfigurationSetTrackingOptionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -663,7 +663,7 @@ export const se_DeleteConfigurationSetTrackingOptionsCommand = async (
  */
 export const se_DeleteCustomVerificationEmailTemplateCommand = async (
   input: DeleteCustomVerificationEmailTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -680,7 +680,7 @@ export const se_DeleteCustomVerificationEmailTemplateCommand = async (
  */
 export const se_DeleteIdentityCommand = async (
   input: DeleteIdentityCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -697,7 +697,7 @@ export const se_DeleteIdentityCommand = async (
  */
 export const se_DeleteIdentityPolicyCommand = async (
   input: DeleteIdentityPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -714,7 +714,7 @@ export const se_DeleteIdentityPolicyCommand = async (
  */
 export const se_DeleteReceiptFilterCommand = async (
   input: DeleteReceiptFilterCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -731,7 +731,7 @@ export const se_DeleteReceiptFilterCommand = async (
  */
 export const se_DeleteReceiptRuleCommand = async (
   input: DeleteReceiptRuleCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -748,7 +748,7 @@ export const se_DeleteReceiptRuleCommand = async (
  */
 export const se_DeleteReceiptRuleSetCommand = async (
   input: DeleteReceiptRuleSetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -765,7 +765,7 @@ export const se_DeleteReceiptRuleSetCommand = async (
  */
 export const se_DeleteTemplateCommand = async (
   input: DeleteTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -782,7 +782,7 @@ export const se_DeleteTemplateCommand = async (
  */
 export const se_DeleteVerifiedEmailAddressCommand = async (
   input: DeleteVerifiedEmailAddressCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -799,7 +799,7 @@ export const se_DeleteVerifiedEmailAddressCommand = async (
  */
 export const se_DescribeActiveReceiptRuleSetCommand = async (
   input: DescribeActiveReceiptRuleSetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -816,7 +816,7 @@ export const se_DescribeActiveReceiptRuleSetCommand = async (
  */
 export const se_DescribeConfigurationSetCommand = async (
   input: DescribeConfigurationSetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -833,7 +833,7 @@ export const se_DescribeConfigurationSetCommand = async (
  */
 export const se_DescribeReceiptRuleCommand = async (
   input: DescribeReceiptRuleCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -850,7 +850,7 @@ export const se_DescribeReceiptRuleCommand = async (
  */
 export const se_DescribeReceiptRuleSetCommand = async (
   input: DescribeReceiptRuleSetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -867,7 +867,7 @@ export const se_DescribeReceiptRuleSetCommand = async (
  */
 export const se_GetAccountSendingEnabledCommand = async (
   input: GetAccountSendingEnabledCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   const body = buildFormUrlencodedString({
@@ -882,7 +882,7 @@ export const se_GetAccountSendingEnabledCommand = async (
  */
 export const se_GetCustomVerificationEmailTemplateCommand = async (
   input: GetCustomVerificationEmailTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -899,7 +899,7 @@ export const se_GetCustomVerificationEmailTemplateCommand = async (
  */
 export const se_GetIdentityDkimAttributesCommand = async (
   input: GetIdentityDkimAttributesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -916,7 +916,7 @@ export const se_GetIdentityDkimAttributesCommand = async (
  */
 export const se_GetIdentityMailFromDomainAttributesCommand = async (
   input: GetIdentityMailFromDomainAttributesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -933,7 +933,7 @@ export const se_GetIdentityMailFromDomainAttributesCommand = async (
  */
 export const se_GetIdentityNotificationAttributesCommand = async (
   input: GetIdentityNotificationAttributesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -950,7 +950,7 @@ export const se_GetIdentityNotificationAttributesCommand = async (
  */
 export const se_GetIdentityPoliciesCommand = async (
   input: GetIdentityPoliciesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -967,7 +967,7 @@ export const se_GetIdentityPoliciesCommand = async (
  */
 export const se_GetIdentityVerificationAttributesCommand = async (
   input: GetIdentityVerificationAttributesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -984,7 +984,7 @@ export const se_GetIdentityVerificationAttributesCommand = async (
  */
 export const se_GetSendQuotaCommand = async (
   input: GetSendQuotaCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   const body = buildFormUrlencodedString({
@@ -999,7 +999,7 @@ export const se_GetSendQuotaCommand = async (
  */
 export const se_GetSendStatisticsCommand = async (
   input: GetSendStatisticsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   const body = buildFormUrlencodedString({
@@ -1014,7 +1014,7 @@ export const se_GetSendStatisticsCommand = async (
  */
 export const se_GetTemplateCommand = async (
   input: GetTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1031,7 +1031,7 @@ export const se_GetTemplateCommand = async (
  */
 export const se_ListConfigurationSetsCommand = async (
   input: ListConfigurationSetsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1048,7 +1048,7 @@ export const se_ListConfigurationSetsCommand = async (
  */
 export const se_ListCustomVerificationEmailTemplatesCommand = async (
   input: ListCustomVerificationEmailTemplatesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1065,7 +1065,7 @@ export const se_ListCustomVerificationEmailTemplatesCommand = async (
  */
 export const se_ListIdentitiesCommand = async (
   input: ListIdentitiesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1082,7 +1082,7 @@ export const se_ListIdentitiesCommand = async (
  */
 export const se_ListIdentityPoliciesCommand = async (
   input: ListIdentityPoliciesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1099,7 +1099,7 @@ export const se_ListIdentityPoliciesCommand = async (
  */
 export const se_ListReceiptFiltersCommand = async (
   input: ListReceiptFiltersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1116,7 +1116,7 @@ export const se_ListReceiptFiltersCommand = async (
  */
 export const se_ListReceiptRuleSetsCommand = async (
   input: ListReceiptRuleSetsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1133,7 +1133,7 @@ export const se_ListReceiptRuleSetsCommand = async (
  */
 export const se_ListTemplatesCommand = async (
   input: ListTemplatesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1150,7 +1150,7 @@ export const se_ListTemplatesCommand = async (
  */
 export const se_ListVerifiedEmailAddressesCommand = async (
   input: ListVerifiedEmailAddressesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   const body = buildFormUrlencodedString({
@@ -1165,7 +1165,7 @@ export const se_ListVerifiedEmailAddressesCommand = async (
  */
 export const se_PutConfigurationSetDeliveryOptionsCommand = async (
   input: PutConfigurationSetDeliveryOptionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1182,7 +1182,7 @@ export const se_PutConfigurationSetDeliveryOptionsCommand = async (
  */
 export const se_PutIdentityPolicyCommand = async (
   input: PutIdentityPolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1199,7 +1199,7 @@ export const se_PutIdentityPolicyCommand = async (
  */
 export const se_ReorderReceiptRuleSetCommand = async (
   input: ReorderReceiptRuleSetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1216,7 +1216,7 @@ export const se_ReorderReceiptRuleSetCommand = async (
  */
 export const se_SendBounceCommand = async (
   input: SendBounceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1233,7 +1233,7 @@ export const se_SendBounceCommand = async (
  */
 export const se_SendBulkTemplatedEmailCommand = async (
   input: SendBulkTemplatedEmailCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1250,7 +1250,7 @@ export const se_SendBulkTemplatedEmailCommand = async (
  */
 export const se_SendCustomVerificationEmailCommand = async (
   input: SendCustomVerificationEmailCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1267,7 +1267,7 @@ export const se_SendCustomVerificationEmailCommand = async (
  */
 export const se_SendEmailCommand = async (
   input: SendEmailCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1284,7 +1284,7 @@ export const se_SendEmailCommand = async (
  */
 export const se_SendRawEmailCommand = async (
   input: SendRawEmailCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1301,7 +1301,7 @@ export const se_SendRawEmailCommand = async (
  */
 export const se_SendTemplatedEmailCommand = async (
   input: SendTemplatedEmailCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1318,7 +1318,7 @@ export const se_SendTemplatedEmailCommand = async (
  */
 export const se_SetActiveReceiptRuleSetCommand = async (
   input: SetActiveReceiptRuleSetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1335,7 +1335,7 @@ export const se_SetActiveReceiptRuleSetCommand = async (
  */
 export const se_SetIdentityDkimEnabledCommand = async (
   input: SetIdentityDkimEnabledCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1352,7 +1352,7 @@ export const se_SetIdentityDkimEnabledCommand = async (
  */
 export const se_SetIdentityFeedbackForwardingEnabledCommand = async (
   input: SetIdentityFeedbackForwardingEnabledCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1369,7 +1369,7 @@ export const se_SetIdentityFeedbackForwardingEnabledCommand = async (
  */
 export const se_SetIdentityHeadersInNotificationsEnabledCommand = async (
   input: SetIdentityHeadersInNotificationsEnabledCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1386,7 +1386,7 @@ export const se_SetIdentityHeadersInNotificationsEnabledCommand = async (
  */
 export const se_SetIdentityMailFromDomainCommand = async (
   input: SetIdentityMailFromDomainCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1403,7 +1403,7 @@ export const se_SetIdentityMailFromDomainCommand = async (
  */
 export const se_SetIdentityNotificationTopicCommand = async (
   input: SetIdentityNotificationTopicCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1420,7 +1420,7 @@ export const se_SetIdentityNotificationTopicCommand = async (
  */
 export const se_SetReceiptRulePositionCommand = async (
   input: SetReceiptRulePositionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1437,7 +1437,7 @@ export const se_SetReceiptRulePositionCommand = async (
  */
 export const se_TestRenderTemplateCommand = async (
   input: TestRenderTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1454,7 +1454,7 @@ export const se_TestRenderTemplateCommand = async (
  */
 export const se_UpdateAccountSendingEnabledCommand = async (
   input: UpdateAccountSendingEnabledCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1471,7 +1471,7 @@ export const se_UpdateAccountSendingEnabledCommand = async (
  */
 export const se_UpdateConfigurationSetEventDestinationCommand = async (
   input: UpdateConfigurationSetEventDestinationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1488,7 +1488,7 @@ export const se_UpdateConfigurationSetEventDestinationCommand = async (
  */
 export const se_UpdateConfigurationSetReputationMetricsEnabledCommand = async (
   input: UpdateConfigurationSetReputationMetricsEnabledCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1505,7 +1505,7 @@ export const se_UpdateConfigurationSetReputationMetricsEnabledCommand = async (
  */
 export const se_UpdateConfigurationSetSendingEnabledCommand = async (
   input: UpdateConfigurationSetSendingEnabledCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1522,7 +1522,7 @@ export const se_UpdateConfigurationSetSendingEnabledCommand = async (
  */
 export const se_UpdateConfigurationSetTrackingOptionsCommand = async (
   input: UpdateConfigurationSetTrackingOptionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1539,7 +1539,7 @@ export const se_UpdateConfigurationSetTrackingOptionsCommand = async (
  */
 export const se_UpdateCustomVerificationEmailTemplateCommand = async (
   input: UpdateCustomVerificationEmailTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1556,7 +1556,7 @@ export const se_UpdateCustomVerificationEmailTemplateCommand = async (
  */
 export const se_UpdateReceiptRuleCommand = async (
   input: UpdateReceiptRuleCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1573,7 +1573,7 @@ export const se_UpdateReceiptRuleCommand = async (
  */
 export const se_UpdateTemplateCommand = async (
   input: UpdateTemplateCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1590,7 +1590,7 @@ export const se_UpdateTemplateCommand = async (
  */
 export const se_VerifyDomainDkimCommand = async (
   input: VerifyDomainDkimCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1607,7 +1607,7 @@ export const se_VerifyDomainDkimCommand = async (
  */
 export const se_VerifyDomainIdentityCommand = async (
   input: VerifyDomainIdentityCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1624,7 +1624,7 @@ export const se_VerifyDomainIdentityCommand = async (
  */
 export const se_VerifyEmailAddressCommand = async (
   input: VerifyEmailAddressCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1641,7 +1641,7 @@ export const se_VerifyEmailAddressCommand = async (
  */
 export const se_VerifyEmailIdentityCommand = async (
   input: VerifyEmailIdentityCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1658,7 +1658,7 @@ export const se_VerifyEmailIdentityCommand = async (
  */
 export const de_CloneReceiptRuleSetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CloneReceiptRuleSetCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1678,7 +1678,7 @@ export const de_CloneReceiptRuleSetCommand = async (
  */
 export const de_CreateConfigurationSetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateConfigurationSetCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1698,7 +1698,7 @@ export const de_CreateConfigurationSetCommand = async (
  */
 export const de_CreateConfigurationSetEventDestinationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateConfigurationSetEventDestinationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1707,7 +1707,7 @@ export const de_CreateConfigurationSetEventDestinationCommand = async (
   let contents: any = {};
   contents = de_CreateConfigurationSetEventDestinationResponse(
     data.CreateConfigurationSetEventDestinationResult,
-    context
+    context,
   );
   const response: CreateConfigurationSetEventDestinationCommandOutput = {
     $metadata: deserializeMetadata(output),
@@ -1721,7 +1721,7 @@ export const de_CreateConfigurationSetEventDestinationCommand = async (
  */
 export const de_CreateConfigurationSetTrackingOptionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateConfigurationSetTrackingOptionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1730,7 +1730,7 @@ export const de_CreateConfigurationSetTrackingOptionsCommand = async (
   let contents: any = {};
   contents = de_CreateConfigurationSetTrackingOptionsResponse(
     data.CreateConfigurationSetTrackingOptionsResult,
-    context
+    context,
   );
   const response: CreateConfigurationSetTrackingOptionsCommandOutput = {
     $metadata: deserializeMetadata(output),
@@ -1744,7 +1744,7 @@ export const de_CreateConfigurationSetTrackingOptionsCommand = async (
  */
 export const de_CreateCustomVerificationEmailTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateCustomVerificationEmailTemplateCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1761,7 +1761,7 @@ export const de_CreateCustomVerificationEmailTemplateCommand = async (
  */
 export const de_CreateReceiptFilterCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateReceiptFilterCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1781,7 +1781,7 @@ export const de_CreateReceiptFilterCommand = async (
  */
 export const de_CreateReceiptRuleCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateReceiptRuleCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1801,7 +1801,7 @@ export const de_CreateReceiptRuleCommand = async (
  */
 export const de_CreateReceiptRuleSetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateReceiptRuleSetCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1821,7 +1821,7 @@ export const de_CreateReceiptRuleSetCommand = async (
  */
 export const de_CreateTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateTemplateCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1841,7 +1841,7 @@ export const de_CreateTemplateCommand = async (
  */
 export const de_DeleteConfigurationSetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteConfigurationSetCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1861,7 +1861,7 @@ export const de_DeleteConfigurationSetCommand = async (
  */
 export const de_DeleteConfigurationSetEventDestinationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteConfigurationSetEventDestinationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1870,7 +1870,7 @@ export const de_DeleteConfigurationSetEventDestinationCommand = async (
   let contents: any = {};
   contents = de_DeleteConfigurationSetEventDestinationResponse(
     data.DeleteConfigurationSetEventDestinationResult,
-    context
+    context,
   );
   const response: DeleteConfigurationSetEventDestinationCommandOutput = {
     $metadata: deserializeMetadata(output),
@@ -1884,7 +1884,7 @@ export const de_DeleteConfigurationSetEventDestinationCommand = async (
  */
 export const de_DeleteConfigurationSetTrackingOptionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteConfigurationSetTrackingOptionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1893,7 +1893,7 @@ export const de_DeleteConfigurationSetTrackingOptionsCommand = async (
   let contents: any = {};
   contents = de_DeleteConfigurationSetTrackingOptionsResponse(
     data.DeleteConfigurationSetTrackingOptionsResult,
-    context
+    context,
   );
   const response: DeleteConfigurationSetTrackingOptionsCommandOutput = {
     $metadata: deserializeMetadata(output),
@@ -1907,7 +1907,7 @@ export const de_DeleteConfigurationSetTrackingOptionsCommand = async (
  */
 export const de_DeleteCustomVerificationEmailTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteCustomVerificationEmailTemplateCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1924,7 +1924,7 @@ export const de_DeleteCustomVerificationEmailTemplateCommand = async (
  */
 export const de_DeleteIdentityCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteIdentityCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1944,7 +1944,7 @@ export const de_DeleteIdentityCommand = async (
  */
 export const de_DeleteIdentityPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteIdentityPolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1964,7 +1964,7 @@ export const de_DeleteIdentityPolicyCommand = async (
  */
 export const de_DeleteReceiptFilterCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteReceiptFilterCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1984,7 +1984,7 @@ export const de_DeleteReceiptFilterCommand = async (
  */
 export const de_DeleteReceiptRuleCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteReceiptRuleCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2004,7 +2004,7 @@ export const de_DeleteReceiptRuleCommand = async (
  */
 export const de_DeleteReceiptRuleSetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteReceiptRuleSetCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2024,7 +2024,7 @@ export const de_DeleteReceiptRuleSetCommand = async (
  */
 export const de_DeleteTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteTemplateCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2044,7 +2044,7 @@ export const de_DeleteTemplateCommand = async (
  */
 export const de_DeleteVerifiedEmailAddressCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteVerifiedEmailAddressCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2061,7 +2061,7 @@ export const de_DeleteVerifiedEmailAddressCommand = async (
  */
 export const de_DescribeActiveReceiptRuleSetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeActiveReceiptRuleSetCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2081,7 +2081,7 @@ export const de_DescribeActiveReceiptRuleSetCommand = async (
  */
 export const de_DescribeConfigurationSetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeConfigurationSetCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2101,7 +2101,7 @@ export const de_DescribeConfigurationSetCommand = async (
  */
 export const de_DescribeReceiptRuleCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeReceiptRuleCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2121,7 +2121,7 @@ export const de_DescribeReceiptRuleCommand = async (
  */
 export const de_DescribeReceiptRuleSetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeReceiptRuleSetCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2141,7 +2141,7 @@ export const de_DescribeReceiptRuleSetCommand = async (
  */
 export const de_GetAccountSendingEnabledCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetAccountSendingEnabledCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2161,7 +2161,7 @@ export const de_GetAccountSendingEnabledCommand = async (
  */
 export const de_GetCustomVerificationEmailTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetCustomVerificationEmailTemplateCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2181,7 +2181,7 @@ export const de_GetCustomVerificationEmailTemplateCommand = async (
  */
 export const de_GetIdentityDkimAttributesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetIdentityDkimAttributesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2201,7 +2201,7 @@ export const de_GetIdentityDkimAttributesCommand = async (
  */
 export const de_GetIdentityMailFromDomainAttributesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetIdentityMailFromDomainAttributesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2221,7 +2221,7 @@ export const de_GetIdentityMailFromDomainAttributesCommand = async (
  */
 export const de_GetIdentityNotificationAttributesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetIdentityNotificationAttributesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2241,7 +2241,7 @@ export const de_GetIdentityNotificationAttributesCommand = async (
  */
 export const de_GetIdentityPoliciesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetIdentityPoliciesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2261,7 +2261,7 @@ export const de_GetIdentityPoliciesCommand = async (
  */
 export const de_GetIdentityVerificationAttributesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetIdentityVerificationAttributesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2281,7 +2281,7 @@ export const de_GetIdentityVerificationAttributesCommand = async (
  */
 export const de_GetSendQuotaCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetSendQuotaCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2301,7 +2301,7 @@ export const de_GetSendQuotaCommand = async (
  */
 export const de_GetSendStatisticsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetSendStatisticsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2321,7 +2321,7 @@ export const de_GetSendStatisticsCommand = async (
  */
 export const de_GetTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetTemplateCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2341,7 +2341,7 @@ export const de_GetTemplateCommand = async (
  */
 export const de_ListConfigurationSetsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListConfigurationSetsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2361,7 +2361,7 @@ export const de_ListConfigurationSetsCommand = async (
  */
 export const de_ListCustomVerificationEmailTemplatesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListCustomVerificationEmailTemplatesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2381,7 +2381,7 @@ export const de_ListCustomVerificationEmailTemplatesCommand = async (
  */
 export const de_ListIdentitiesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListIdentitiesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2401,7 +2401,7 @@ export const de_ListIdentitiesCommand = async (
  */
 export const de_ListIdentityPoliciesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListIdentityPoliciesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2421,7 +2421,7 @@ export const de_ListIdentityPoliciesCommand = async (
  */
 export const de_ListReceiptFiltersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListReceiptFiltersCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2441,7 +2441,7 @@ export const de_ListReceiptFiltersCommand = async (
  */
 export const de_ListReceiptRuleSetsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListReceiptRuleSetsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2461,7 +2461,7 @@ export const de_ListReceiptRuleSetsCommand = async (
  */
 export const de_ListTemplatesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTemplatesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2481,7 +2481,7 @@ export const de_ListTemplatesCommand = async (
  */
 export const de_ListVerifiedEmailAddressesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListVerifiedEmailAddressesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2501,7 +2501,7 @@ export const de_ListVerifiedEmailAddressesCommand = async (
  */
 export const de_PutConfigurationSetDeliveryOptionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutConfigurationSetDeliveryOptionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2521,7 +2521,7 @@ export const de_PutConfigurationSetDeliveryOptionsCommand = async (
  */
 export const de_PutIdentityPolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutIdentityPolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2541,7 +2541,7 @@ export const de_PutIdentityPolicyCommand = async (
  */
 export const de_ReorderReceiptRuleSetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ReorderReceiptRuleSetCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2561,7 +2561,7 @@ export const de_ReorderReceiptRuleSetCommand = async (
  */
 export const de_SendBounceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SendBounceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2581,7 +2581,7 @@ export const de_SendBounceCommand = async (
  */
 export const de_SendBulkTemplatedEmailCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SendBulkTemplatedEmailCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2601,7 +2601,7 @@ export const de_SendBulkTemplatedEmailCommand = async (
  */
 export const de_SendCustomVerificationEmailCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SendCustomVerificationEmailCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2621,7 +2621,7 @@ export const de_SendCustomVerificationEmailCommand = async (
  */
 export const de_SendEmailCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SendEmailCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2641,7 +2641,7 @@ export const de_SendEmailCommand = async (
  */
 export const de_SendRawEmailCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SendRawEmailCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2661,7 +2661,7 @@ export const de_SendRawEmailCommand = async (
  */
 export const de_SendTemplatedEmailCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SendTemplatedEmailCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2681,7 +2681,7 @@ export const de_SendTemplatedEmailCommand = async (
  */
 export const de_SetActiveReceiptRuleSetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SetActiveReceiptRuleSetCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2701,7 +2701,7 @@ export const de_SetActiveReceiptRuleSetCommand = async (
  */
 export const de_SetIdentityDkimEnabledCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SetIdentityDkimEnabledCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2721,7 +2721,7 @@ export const de_SetIdentityDkimEnabledCommand = async (
  */
 export const de_SetIdentityFeedbackForwardingEnabledCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SetIdentityFeedbackForwardingEnabledCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2741,7 +2741,7 @@ export const de_SetIdentityFeedbackForwardingEnabledCommand = async (
  */
 export const de_SetIdentityHeadersInNotificationsEnabledCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SetIdentityHeadersInNotificationsEnabledCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2750,7 +2750,7 @@ export const de_SetIdentityHeadersInNotificationsEnabledCommand = async (
   let contents: any = {};
   contents = de_SetIdentityHeadersInNotificationsEnabledResponse(
     data.SetIdentityHeadersInNotificationsEnabledResult,
-    context
+    context,
   );
   const response: SetIdentityHeadersInNotificationsEnabledCommandOutput = {
     $metadata: deserializeMetadata(output),
@@ -2764,7 +2764,7 @@ export const de_SetIdentityHeadersInNotificationsEnabledCommand = async (
  */
 export const de_SetIdentityMailFromDomainCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SetIdentityMailFromDomainCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2784,7 +2784,7 @@ export const de_SetIdentityMailFromDomainCommand = async (
  */
 export const de_SetIdentityNotificationTopicCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SetIdentityNotificationTopicCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2804,7 +2804,7 @@ export const de_SetIdentityNotificationTopicCommand = async (
  */
 export const de_SetReceiptRulePositionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SetReceiptRulePositionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2824,7 +2824,7 @@ export const de_SetReceiptRulePositionCommand = async (
  */
 export const de_TestRenderTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TestRenderTemplateCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2844,7 +2844,7 @@ export const de_TestRenderTemplateCommand = async (
  */
 export const de_UpdateAccountSendingEnabledCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateAccountSendingEnabledCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2861,7 +2861,7 @@ export const de_UpdateAccountSendingEnabledCommand = async (
  */
 export const de_UpdateConfigurationSetEventDestinationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateConfigurationSetEventDestinationCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2870,7 +2870,7 @@ export const de_UpdateConfigurationSetEventDestinationCommand = async (
   let contents: any = {};
   contents = de_UpdateConfigurationSetEventDestinationResponse(
     data.UpdateConfigurationSetEventDestinationResult,
-    context
+    context,
   );
   const response: UpdateConfigurationSetEventDestinationCommandOutput = {
     $metadata: deserializeMetadata(output),
@@ -2884,7 +2884,7 @@ export const de_UpdateConfigurationSetEventDestinationCommand = async (
  */
 export const de_UpdateConfigurationSetReputationMetricsEnabledCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateConfigurationSetReputationMetricsEnabledCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2901,7 +2901,7 @@ export const de_UpdateConfigurationSetReputationMetricsEnabledCommand = async (
  */
 export const de_UpdateConfigurationSetSendingEnabledCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateConfigurationSetSendingEnabledCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2918,7 +2918,7 @@ export const de_UpdateConfigurationSetSendingEnabledCommand = async (
  */
 export const de_UpdateConfigurationSetTrackingOptionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateConfigurationSetTrackingOptionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2927,7 +2927,7 @@ export const de_UpdateConfigurationSetTrackingOptionsCommand = async (
   let contents: any = {};
   contents = de_UpdateConfigurationSetTrackingOptionsResponse(
     data.UpdateConfigurationSetTrackingOptionsResult,
-    context
+    context,
   );
   const response: UpdateConfigurationSetTrackingOptionsCommandOutput = {
     $metadata: deserializeMetadata(output),
@@ -2941,7 +2941,7 @@ export const de_UpdateConfigurationSetTrackingOptionsCommand = async (
  */
 export const de_UpdateCustomVerificationEmailTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateCustomVerificationEmailTemplateCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2958,7 +2958,7 @@ export const de_UpdateCustomVerificationEmailTemplateCommand = async (
  */
 export const de_UpdateReceiptRuleCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateReceiptRuleCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2978,7 +2978,7 @@ export const de_UpdateReceiptRuleCommand = async (
  */
 export const de_UpdateTemplateCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateTemplateCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2998,7 +2998,7 @@ export const de_UpdateTemplateCommand = async (
  */
 export const de_VerifyDomainDkimCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<VerifyDomainDkimCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3018,7 +3018,7 @@ export const de_VerifyDomainDkimCommand = async (
  */
 export const de_VerifyDomainIdentityCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<VerifyDomainIdentityCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3038,7 +3038,7 @@ export const de_VerifyDomainIdentityCommand = async (
  */
 export const de_VerifyEmailAddressCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<VerifyEmailAddressCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3055,7 +3055,7 @@ export const de_VerifyEmailAddressCommand = async (
  */
 export const de_VerifyEmailIdentityCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<VerifyEmailIdentityCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -3197,7 +3197,7 @@ const de_CommandError = async (output: __HttpResponse, context: __SerdeContext):
  */
 const de_AccountSendingPausedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccountSendingPausedException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_AccountSendingPausedException(body.Error, context);
@@ -3213,7 +3213,7 @@ const de_AccountSendingPausedExceptionRes = async (
  */
 const de_AlreadyExistsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AlreadyExistsException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_AlreadyExistsException(body.Error, context);
@@ -3229,7 +3229,7 @@ const de_AlreadyExistsExceptionRes = async (
  */
 const de_CannotDeleteExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CannotDeleteException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_CannotDeleteException(body.Error, context);
@@ -3245,7 +3245,7 @@ const de_CannotDeleteExceptionRes = async (
  */
 const de_ConfigurationSetAlreadyExistsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ConfigurationSetAlreadyExistsException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_ConfigurationSetAlreadyExistsException(body.Error, context);
@@ -3261,7 +3261,7 @@ const de_ConfigurationSetAlreadyExistsExceptionRes = async (
  */
 const de_ConfigurationSetDoesNotExistExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ConfigurationSetDoesNotExistException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_ConfigurationSetDoesNotExistException(body.Error, context);
@@ -3277,7 +3277,7 @@ const de_ConfigurationSetDoesNotExistExceptionRes = async (
  */
 const de_ConfigurationSetSendingPausedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ConfigurationSetSendingPausedException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_ConfigurationSetSendingPausedException(body.Error, context);
@@ -3293,7 +3293,7 @@ const de_ConfigurationSetSendingPausedExceptionRes = async (
  */
 const de_CustomVerificationEmailInvalidContentExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CustomVerificationEmailInvalidContentException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_CustomVerificationEmailInvalidContentException(body.Error, context);
@@ -3309,7 +3309,7 @@ const de_CustomVerificationEmailInvalidContentExceptionRes = async (
  */
 const de_CustomVerificationEmailTemplateAlreadyExistsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CustomVerificationEmailTemplateAlreadyExistsException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_CustomVerificationEmailTemplateAlreadyExistsException(body.Error, context);
@@ -3325,7 +3325,7 @@ const de_CustomVerificationEmailTemplateAlreadyExistsExceptionRes = async (
  */
 const de_CustomVerificationEmailTemplateDoesNotExistExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CustomVerificationEmailTemplateDoesNotExistException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_CustomVerificationEmailTemplateDoesNotExistException(body.Error, context);
@@ -3341,7 +3341,7 @@ const de_CustomVerificationEmailTemplateDoesNotExistExceptionRes = async (
  */
 const de_EventDestinationAlreadyExistsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<EventDestinationAlreadyExistsException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_EventDestinationAlreadyExistsException(body.Error, context);
@@ -3357,7 +3357,7 @@ const de_EventDestinationAlreadyExistsExceptionRes = async (
  */
 const de_EventDestinationDoesNotExistExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<EventDestinationDoesNotExistException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_EventDestinationDoesNotExistException(body.Error, context);
@@ -3373,7 +3373,7 @@ const de_EventDestinationDoesNotExistExceptionRes = async (
  */
 const de_FromEmailAddressNotVerifiedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<FromEmailAddressNotVerifiedException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_FromEmailAddressNotVerifiedException(body.Error, context);
@@ -3389,7 +3389,7 @@ const de_FromEmailAddressNotVerifiedExceptionRes = async (
  */
 const de_InvalidCloudWatchDestinationExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidCloudWatchDestinationException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_InvalidCloudWatchDestinationException(body.Error, context);
@@ -3405,7 +3405,7 @@ const de_InvalidCloudWatchDestinationExceptionRes = async (
  */
 const de_InvalidConfigurationSetExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidConfigurationSetException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_InvalidConfigurationSetException(body.Error, context);
@@ -3421,7 +3421,7 @@ const de_InvalidConfigurationSetExceptionRes = async (
  */
 const de_InvalidDeliveryOptionsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidDeliveryOptionsException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_InvalidDeliveryOptionsException(body.Error, context);
@@ -3437,7 +3437,7 @@ const de_InvalidDeliveryOptionsExceptionRes = async (
  */
 const de_InvalidFirehoseDestinationExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidFirehoseDestinationException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_InvalidFirehoseDestinationException(body.Error, context);
@@ -3453,7 +3453,7 @@ const de_InvalidFirehoseDestinationExceptionRes = async (
  */
 const de_InvalidLambdaFunctionExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidLambdaFunctionException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_InvalidLambdaFunctionException(body.Error, context);
@@ -3469,7 +3469,7 @@ const de_InvalidLambdaFunctionExceptionRes = async (
  */
 const de_InvalidPolicyExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidPolicyException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_InvalidPolicyException(body.Error, context);
@@ -3485,7 +3485,7 @@ const de_InvalidPolicyExceptionRes = async (
  */
 const de_InvalidRenderingParameterExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidRenderingParameterException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_InvalidRenderingParameterException(body.Error, context);
@@ -3501,7 +3501,7 @@ const de_InvalidRenderingParameterExceptionRes = async (
  */
 const de_InvalidS3ConfigurationExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidS3ConfigurationException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_InvalidS3ConfigurationException(body.Error, context);
@@ -3517,7 +3517,7 @@ const de_InvalidS3ConfigurationExceptionRes = async (
  */
 const de_InvalidSNSDestinationExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidSNSDestinationException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_InvalidSNSDestinationException(body.Error, context);
@@ -3533,7 +3533,7 @@ const de_InvalidSNSDestinationExceptionRes = async (
  */
 const de_InvalidSnsTopicExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidSnsTopicException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_InvalidSnsTopicException(body.Error, context);
@@ -3549,7 +3549,7 @@ const de_InvalidSnsTopicExceptionRes = async (
  */
 const de_InvalidTemplateExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidTemplateException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_InvalidTemplateException(body.Error, context);
@@ -3565,7 +3565,7 @@ const de_InvalidTemplateExceptionRes = async (
  */
 const de_InvalidTrackingOptionsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidTrackingOptionsException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_InvalidTrackingOptionsException(body.Error, context);
@@ -3581,7 +3581,7 @@ const de_InvalidTrackingOptionsExceptionRes = async (
  */
 const de_LimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<LimitExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_LimitExceededException(body.Error, context);
@@ -3597,7 +3597,7 @@ const de_LimitExceededExceptionRes = async (
  */
 const de_MailFromDomainNotVerifiedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<MailFromDomainNotVerifiedException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_MailFromDomainNotVerifiedException(body.Error, context);
@@ -3626,7 +3626,7 @@ const de_MessageRejectedRes = async (parsedOutput: any, context: __SerdeContext)
  */
 const de_MissingRenderingAttributeExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<MissingRenderingAttributeException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_MissingRenderingAttributeException(body.Error, context);
@@ -3642,7 +3642,7 @@ const de_MissingRenderingAttributeExceptionRes = async (
  */
 const de_ProductionAccessNotGrantedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ProductionAccessNotGrantedException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_ProductionAccessNotGrantedException(body.Error, context);
@@ -3658,7 +3658,7 @@ const de_ProductionAccessNotGrantedExceptionRes = async (
  */
 const de_RuleDoesNotExistExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RuleDoesNotExistException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_RuleDoesNotExistException(body.Error, context);
@@ -3674,7 +3674,7 @@ const de_RuleDoesNotExistExceptionRes = async (
  */
 const de_RuleSetDoesNotExistExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RuleSetDoesNotExistException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_RuleSetDoesNotExistException(body.Error, context);
@@ -3690,7 +3690,7 @@ const de_RuleSetDoesNotExistExceptionRes = async (
  */
 const de_TemplateDoesNotExistExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TemplateDoesNotExistException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_TemplateDoesNotExistException(body.Error, context);
@@ -3706,7 +3706,7 @@ const de_TemplateDoesNotExistExceptionRes = async (
  */
 const de_TrackingOptionsAlreadyExistsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TrackingOptionsAlreadyExistsException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_TrackingOptionsAlreadyExistsException(body.Error, context);
@@ -3722,7 +3722,7 @@ const de_TrackingOptionsAlreadyExistsExceptionRes = async (
  */
 const de_TrackingOptionsDoesNotExistExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TrackingOptionsDoesNotExistException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_TrackingOptionsDoesNotExistException(body.Error, context);
@@ -3952,7 +3952,7 @@ const se_CloudWatchDimensionConfiguration = (input: CloudWatchDimensionConfigura
  */
 const se_CloudWatchDimensionConfigurations = (
   input: CloudWatchDimensionConfiguration[],
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   let counter = 1;
@@ -4015,7 +4015,7 @@ const se_Content = (input: Content, context: __SerdeContext): any => {
  */
 const se_CreateConfigurationSetEventDestinationRequest = (
   input: CreateConfigurationSetEventDestinationRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_CSN] != null) {
@@ -4051,7 +4051,7 @@ const se_CreateConfigurationSetRequest = (input: CreateConfigurationSetRequest, 
  */
 const se_CreateConfigurationSetTrackingOptionsRequest = (
   input: CreateConfigurationSetTrackingOptionsRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_CSN] != null) {
@@ -4072,7 +4072,7 @@ const se_CreateConfigurationSetTrackingOptionsRequest = (
  */
 const se_CreateCustomVerificationEmailTemplateRequest = (
   input: CreateCustomVerificationEmailTemplateRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_TN] != null) {
@@ -4163,7 +4163,7 @@ const se_CreateTemplateRequest = (input: CreateTemplateRequest, context: __Serde
  */
 const se_DeleteConfigurationSetEventDestinationRequest = (
   input: DeleteConfigurationSetEventDestinationRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_CSN] != null) {
@@ -4191,7 +4191,7 @@ const se_DeleteConfigurationSetRequest = (input: DeleteConfigurationSetRequest, 
  */
 const se_DeleteConfigurationSetTrackingOptionsRequest = (
   input: DeleteConfigurationSetTrackingOptionsRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_CSN] != null) {
@@ -4205,7 +4205,7 @@ const se_DeleteConfigurationSetTrackingOptionsRequest = (
  */
 const se_DeleteCustomVerificationEmailTemplateRequest = (
   input: DeleteCustomVerificationEmailTemplateRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_TN] != null) {
@@ -4291,7 +4291,7 @@ const se_DeleteTemplateRequest = (input: DeleteTemplateRequest, context: __Serde
  */
 const se_DeleteVerifiedEmailAddressRequest = (
   input: DeleteVerifiedEmailAddressRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_EA] != null) {
@@ -4316,7 +4316,7 @@ const se_DeliveryOptions = (input: DeliveryOptions, context: __SerdeContext): an
  */
 const se_DescribeActiveReceiptRuleSetRequest = (
   input: DescribeActiveReceiptRuleSetRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   return entries;
@@ -4505,7 +4505,7 @@ const se_ExtensionFieldList = (input: ExtensionField[], context: __SerdeContext)
  */
 const se_GetCustomVerificationEmailTemplateRequest = (
   input: GetCustomVerificationEmailTemplateRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_TN] != null) {
@@ -4537,7 +4537,7 @@ const se_GetIdentityDkimAttributesRequest = (input: GetIdentityDkimAttributesReq
  */
 const se_GetIdentityMailFromDomainAttributesRequest = (
   input: GetIdentityMailFromDomainAttributesRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_Id] != null) {
@@ -4558,7 +4558,7 @@ const se_GetIdentityMailFromDomainAttributesRequest = (
  */
 const se_GetIdentityNotificationAttributesRequest = (
   input: GetIdentityNotificationAttributesRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_Id] != null) {
@@ -4600,7 +4600,7 @@ const se_GetIdentityPoliciesRequest = (input: GetIdentityPoliciesRequest, contex
  */
 const se_GetIdentityVerificationAttributesRequest = (
   input: GetIdentityVerificationAttributesRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_Id] != null) {
@@ -4693,7 +4693,7 @@ const se_ListConfigurationSetsRequest = (input: ListConfigurationSetsRequest, co
  */
 const se_ListCustomVerificationEmailTemplatesRequest = (
   input: ListCustomVerificationEmailTemplatesRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_NT] != null) {
@@ -4866,7 +4866,7 @@ const se_PolicyNameList = (input: string[], context: __SerdeContext): any => {
  */
 const se_PutConfigurationSetDeliveryOptionsRequest = (
   input: PutConfigurationSetDeliveryOptionsRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_CSN] != null) {
@@ -5271,7 +5271,7 @@ const se_SendBulkTemplatedEmailRequest = (input: SendBulkTemplatedEmailRequest, 
  */
 const se_SendCustomVerificationEmailRequest = (
   input: SendCustomVerificationEmailRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_EA] != null) {
@@ -5482,7 +5482,7 @@ const se_SetIdentityDkimEnabledRequest = (input: SetIdentityDkimEnabledRequest, 
  */
 const se_SetIdentityFeedbackForwardingEnabledRequest = (
   input: SetIdentityFeedbackForwardingEnabledRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_I] != null) {
@@ -5499,7 +5499,7 @@ const se_SetIdentityFeedbackForwardingEnabledRequest = (
  */
 const se_SetIdentityHeadersInNotificationsEnabledRequest = (
   input: SetIdentityHeadersInNotificationsEnabledRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_I] != null) {
@@ -5536,7 +5536,7 @@ const se_SetIdentityMailFromDomainRequest = (input: SetIdentityMailFromDomainReq
  */
 const se_SetIdentityNotificationTopicRequest = (
   input: SetIdentityNotificationTopicRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_I] != null) {
@@ -5657,7 +5657,7 @@ const se_TrackingOptions = (input: TrackingOptions, context: __SerdeContext): an
  */
 const se_UpdateAccountSendingEnabledRequest = (
   input: UpdateAccountSendingEnabledRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_E] != null) {
@@ -5671,7 +5671,7 @@ const se_UpdateAccountSendingEnabledRequest = (
  */
 const se_UpdateConfigurationSetEventDestinationRequest = (
   input: UpdateConfigurationSetEventDestinationRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_CSN] != null) {
@@ -5692,7 +5692,7 @@ const se_UpdateConfigurationSetEventDestinationRequest = (
  */
 const se_UpdateConfigurationSetReputationMetricsEnabledRequest = (
   input: UpdateConfigurationSetReputationMetricsEnabledRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_CSN] != null) {
@@ -5709,7 +5709,7 @@ const se_UpdateConfigurationSetReputationMetricsEnabledRequest = (
  */
 const se_UpdateConfigurationSetSendingEnabledRequest = (
   input: UpdateConfigurationSetSendingEnabledRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_CSN] != null) {
@@ -5726,7 +5726,7 @@ const se_UpdateConfigurationSetSendingEnabledRequest = (
  */
 const se_UpdateConfigurationSetTrackingOptionsRequest = (
   input: UpdateConfigurationSetTrackingOptionsRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_CSN] != null) {
@@ -5747,7 +5747,7 @@ const se_UpdateConfigurationSetTrackingOptionsRequest = (
  */
 const se_UpdateCustomVerificationEmailTemplateRequest = (
   input: UpdateCustomVerificationEmailTemplateRequest,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_TN] != null) {
@@ -6003,7 +6003,7 @@ const de_CloudWatchDestination = (output: any, context: __SerdeContext): CloudWa
  */
 const de_CloudWatchDimensionConfiguration = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CloudWatchDimensionConfiguration => {
   const contents: any = {};
   if (output[_DN] != null) {
@@ -6023,7 +6023,7 @@ const de_CloudWatchDimensionConfiguration = (
  */
 const de_CloudWatchDimensionConfigurations = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CloudWatchDimensionConfiguration[] => {
   return (output || [])
     .filter((e: any) => e != null)
@@ -6048,7 +6048,7 @@ const de_ConfigurationSet = (output: any, context: __SerdeContext): Configuratio
  */
 const de_ConfigurationSetAlreadyExistsException = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ConfigurationSetAlreadyExistsException => {
   const contents: any = {};
   if (output[_CSN] != null) {
@@ -6065,7 +6065,7 @@ const de_ConfigurationSetAlreadyExistsException = (
  */
 const de_ConfigurationSetDoesNotExistException = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ConfigurationSetDoesNotExistException => {
   const contents: any = {};
   if (output[_CSN] != null) {
@@ -6093,7 +6093,7 @@ const de_ConfigurationSets = (output: any, context: __SerdeContext): Configurati
  */
 const de_ConfigurationSetSendingPausedException = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ConfigurationSetSendingPausedException => {
   const contents: any = {};
   if (output[_CSN] != null) {
@@ -6110,7 +6110,7 @@ const de_ConfigurationSetSendingPausedException = (
  */
 const de_CreateConfigurationSetEventDestinationResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CreateConfigurationSetEventDestinationResponse => {
   const contents: any = {};
   return contents;
@@ -6129,7 +6129,7 @@ const de_CreateConfigurationSetResponse = (output: any, context: __SerdeContext)
  */
 const de_CreateConfigurationSetTrackingOptionsResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CreateConfigurationSetTrackingOptionsResponse => {
   const contents: any = {};
   return contents;
@@ -6172,7 +6172,7 @@ const de_CreateTemplateResponse = (output: any, context: __SerdeContext): Create
  */
 const de_CustomVerificationEmailInvalidContentException = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CustomVerificationEmailInvalidContentException => {
   const contents: any = {};
   if (output[_m] != null) {
@@ -6209,7 +6209,7 @@ const de_CustomVerificationEmailTemplate = (output: any, context: __SerdeContext
  */
 const de_CustomVerificationEmailTemplateAlreadyExistsException = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CustomVerificationEmailTemplateAlreadyExistsException => {
   const contents: any = {};
   if (output[_CVETN] != null) {
@@ -6226,7 +6226,7 @@ const de_CustomVerificationEmailTemplateAlreadyExistsException = (
  */
 const de_CustomVerificationEmailTemplateDoesNotExistException = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CustomVerificationEmailTemplateDoesNotExistException => {
   const contents: any = {};
   if (output[_CVETN] != null) {
@@ -6243,7 +6243,7 @@ const de_CustomVerificationEmailTemplateDoesNotExistException = (
  */
 const de_CustomVerificationEmailTemplates = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CustomVerificationEmailTemplate[] => {
   return (output || [])
     .filter((e: any) => e != null)
@@ -6257,7 +6257,7 @@ const de_CustomVerificationEmailTemplates = (
  */
 const de_DeleteConfigurationSetEventDestinationResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DeleteConfigurationSetEventDestinationResponse => {
   const contents: any = {};
   return contents;
@@ -6276,7 +6276,7 @@ const de_DeleteConfigurationSetResponse = (output: any, context: __SerdeContext)
  */
 const de_DeleteConfigurationSetTrackingOptionsResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DeleteConfigurationSetTrackingOptionsResponse => {
   const contents: any = {};
   return contents;
@@ -6346,7 +6346,7 @@ const de_DeliveryOptions = (output: any, context: __SerdeContext): DeliveryOptio
  */
 const de_DescribeActiveReceiptRuleSetResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeActiveReceiptRuleSetResponse => {
   const contents: any = {};
   if (output[_Me] != null) {
@@ -6365,7 +6365,7 @@ const de_DescribeActiveReceiptRuleSetResponse = (
  */
 const de_DescribeConfigurationSetResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeConfigurationSetResponse => {
   const contents: any = {};
   if (output[_CS] != null) {
@@ -6461,7 +6461,7 @@ const de_EventDestination = (output: any, context: __SerdeContext): EventDestina
  */
 const de_EventDestinationAlreadyExistsException = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): EventDestinationAlreadyExistsException => {
   const contents: any = {};
   if (output[_CSN] != null) {
@@ -6481,7 +6481,7 @@ const de_EventDestinationAlreadyExistsException = (
  */
 const de_EventDestinationDoesNotExistException = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): EventDestinationDoesNotExistException => {
   const contents: any = {};
   if (output[_CSN] != null) {
@@ -6523,7 +6523,7 @@ const de_EventTypes = (output: any, context: __SerdeContext): EventType[] => {
  */
 const de_FromEmailAddressNotVerifiedException = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): FromEmailAddressNotVerifiedException => {
   const contents: any = {};
   if (output[_FEA] != null) {
@@ -6540,7 +6540,7 @@ const de_FromEmailAddressNotVerifiedException = (
  */
 const de_GetAccountSendingEnabledResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): GetAccountSendingEnabledResponse => {
   const contents: any = {};
   if (output[_E] != null) {
@@ -6554,7 +6554,7 @@ const de_GetAccountSendingEnabledResponse = (
  */
 const de_GetCustomVerificationEmailTemplateResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): GetCustomVerificationEmailTemplateResponse => {
   const contents: any = {};
   if (output[_TN] != null) {
@@ -6583,7 +6583,7 @@ const de_GetCustomVerificationEmailTemplateResponse = (
  */
 const de_GetIdentityDkimAttributesResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): GetIdentityDkimAttributesResponse => {
   const contents: any = {};
   if (output.DkimAttributes === "") {
@@ -6599,7 +6599,7 @@ const de_GetIdentityDkimAttributesResponse = (
  */
 const de_GetIdentityMailFromDomainAttributesResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): GetIdentityMailFromDomainAttributesResponse => {
   const contents: any = {};
   if (output.MailFromDomainAttributes === "") {
@@ -6615,7 +6615,7 @@ const de_GetIdentityMailFromDomainAttributesResponse = (
  */
 const de_GetIdentityNotificationAttributesResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): GetIdentityNotificationAttributesResponse => {
   const contents: any = {};
   if (output.NotificationAttributes === "") {
@@ -6644,7 +6644,7 @@ const de_GetIdentityPoliciesResponse = (output: any, context: __SerdeContext): G
  */
 const de_GetIdentityVerificationAttributesResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): GetIdentityVerificationAttributesResponse => {
   const contents: any = {};
   if (output.VerificationAttributes === "") {
@@ -6731,7 +6731,7 @@ const de_IdentityList = (output: any, context: __SerdeContext): string[] => {
  */
 const de_IdentityMailFromDomainAttributes = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): IdentityMailFromDomainAttributes => {
   const contents: any = {};
   if (output[_MFD] != null) {
@@ -6794,7 +6794,7 @@ const de_IdentityVerificationAttributes = (output: any, context: __SerdeContext)
  */
 const de_InvalidCloudWatchDestinationException = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): InvalidCloudWatchDestinationException => {
   const contents: any = {};
   if (output[_CSN] != null) {
@@ -6814,7 +6814,7 @@ const de_InvalidCloudWatchDestinationException = (
  */
 const de_InvalidConfigurationSetException = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): InvalidConfigurationSetException => {
   const contents: any = {};
   if (output[_m] != null) {
@@ -6839,7 +6839,7 @@ const de_InvalidDeliveryOptionsException = (output: any, context: __SerdeContext
  */
 const de_InvalidFirehoseDestinationException = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): InvalidFirehoseDestinationException => {
   const contents: any = {};
   if (output[_CSN] != null) {
@@ -6884,7 +6884,7 @@ const de_InvalidPolicyException = (output: any, context: __SerdeContext): Invali
  */
 const de_InvalidRenderingParameterException = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): InvalidRenderingParameterException => {
   const contents: any = {};
   if (output[_TN] != null) {
@@ -7029,7 +7029,7 @@ const de_ListConfigurationSetsResponse = (output: any, context: __SerdeContext):
  */
 const de_ListCustomVerificationEmailTemplatesResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ListCustomVerificationEmailTemplatesResponse => {
   const contents: any = {};
   if (output.CustomVerificationEmailTemplates === "") {
@@ -7122,7 +7122,7 @@ const de_ListTemplatesResponse = (output: any, context: __SerdeContext): ListTem
  */
 const de_ListVerifiedEmailAddressesResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ListVerifiedEmailAddressesResponse => {
   const contents: any = {};
   if (output.VerifiedEmailAddresses === "") {
@@ -7138,7 +7138,7 @@ const de_ListVerifiedEmailAddressesResponse = (
  */
 const de_MailFromDomainAttributes = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Record<string, IdentityMailFromDomainAttributes> => {
   return output.reduce((acc: any, pair: any) => {
     if (pair["value"] === null) {
@@ -7154,7 +7154,7 @@ const de_MailFromDomainAttributes = (
  */
 const de_MailFromDomainNotVerifiedException = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): MailFromDomainNotVerifiedException => {
   const contents: any = {};
   if (output[_m] != null) {
@@ -7179,7 +7179,7 @@ const de_MessageRejected = (output: any, context: __SerdeContext): MessageReject
  */
 const de_MissingRenderingAttributeException = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): MissingRenderingAttributeException => {
   const contents: any = {};
   if (output[_TN] != null) {
@@ -7196,7 +7196,7 @@ const de_MissingRenderingAttributeException = (
  */
 const de_NotificationAttributes = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Record<string, IdentityNotificationAttributes> => {
   return output.reduce((acc: any, pair: any) => {
     if (pair["value"] === null) {
@@ -7236,7 +7236,7 @@ const de_PolicyNameList = (output: any, context: __SerdeContext): string[] => {
  */
 const de_ProductionAccessNotGrantedException = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ProductionAccessNotGrantedException => {
   const contents: any = {};
   if (output[_m] != null) {
@@ -7250,7 +7250,7 @@ const de_ProductionAccessNotGrantedException = (
  */
 const de_PutConfigurationSetDeliveryOptionsResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): PutConfigurationSetDeliveryOptionsResponse => {
   const contents: any = {};
   return contents;
@@ -7522,7 +7522,7 @@ const de_SendBulkTemplatedEmailResponse = (output: any, context: __SerdeContext)
  */
 const de_SendCustomVerificationEmailResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): SendCustomVerificationEmailResponse => {
   const contents: any = {};
   if (output[_MIe] != null) {
@@ -7619,7 +7619,7 @@ const de_SetIdentityDkimEnabledResponse = (output: any, context: __SerdeContext)
  */
 const de_SetIdentityFeedbackForwardingEnabledResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): SetIdentityFeedbackForwardingEnabledResponse => {
   const contents: any = {};
   return contents;
@@ -7630,7 +7630,7 @@ const de_SetIdentityFeedbackForwardingEnabledResponse = (
  */
 const de_SetIdentityHeadersInNotificationsEnabledResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): SetIdentityHeadersInNotificationsEnabledResponse => {
   const contents: any = {};
   return contents;
@@ -7641,7 +7641,7 @@ const de_SetIdentityHeadersInNotificationsEnabledResponse = (
  */
 const de_SetIdentityMailFromDomainResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): SetIdentityMailFromDomainResponse => {
   const contents: any = {};
   return contents;
@@ -7652,7 +7652,7 @@ const de_SetIdentityMailFromDomainResponse = (
  */
 const de_SetIdentityNotificationTopicResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): SetIdentityNotificationTopicResponse => {
   const contents: any = {};
   return contents;
@@ -7791,7 +7791,7 @@ const de_TrackingOptions = (output: any, context: __SerdeContext): TrackingOptio
  */
 const de_TrackingOptionsAlreadyExistsException = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): TrackingOptionsAlreadyExistsException => {
   const contents: any = {};
   if (output[_CSN] != null) {
@@ -7808,7 +7808,7 @@ const de_TrackingOptionsAlreadyExistsException = (
  */
 const de_TrackingOptionsDoesNotExistException = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): TrackingOptionsDoesNotExistException => {
   const contents: any = {};
   if (output[_CSN] != null) {
@@ -7825,7 +7825,7 @@ const de_TrackingOptionsDoesNotExistException = (
  */
 const de_UpdateConfigurationSetEventDestinationResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): UpdateConfigurationSetEventDestinationResponse => {
   const contents: any = {};
   return contents;
@@ -7836,7 +7836,7 @@ const de_UpdateConfigurationSetEventDestinationResponse = (
  */
 const de_UpdateConfigurationSetTrackingOptionsResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): UpdateConfigurationSetTrackingOptionsResponse => {
   const contents: any = {};
   return contents;
@@ -7863,7 +7863,7 @@ const de_UpdateTemplateResponse = (output: any, context: __SerdeContext): Update
  */
 const de_VerificationAttributes = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Record<string, IdentityVerificationAttributes> => {
   return output.reduce((acc: any, pair: any) => {
     if (pair["value"] === null) {
@@ -7949,7 +7949,7 @@ const buildHttpRpcRequest = async (
   headers: __HeaderBag,
   path: string,
   resolvedHostname: string | undefined,
-  body: any
+  body: any,
 ): Promise<__HttpRequest> => {
   const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
   const contents: any = {

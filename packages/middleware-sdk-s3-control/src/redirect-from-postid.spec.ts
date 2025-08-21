@@ -11,7 +11,7 @@ describe("redirectFromPostIdMiddleware", () => {
       useFipsEndpoint: () => Promise.resolve(false),
     })(
       next,
-      context
+      context,
     )({
       input: { OutpostId: "op-123" },
       request: new HttpRequest({ hostname: "123456789012.s3-control.us-west-2.amazonaws.com" }),

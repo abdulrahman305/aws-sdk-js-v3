@@ -249,7 +249,7 @@ import {
  */
 export const se_BatchDeleteBuildsCommand = async (
   input: BatchDeleteBuildsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("BatchDeleteBuilds");
   let body: any;
@@ -262,7 +262,7 @@ export const se_BatchDeleteBuildsCommand = async (
  */
 export const se_BatchGetBuildBatchesCommand = async (
   input: BatchGetBuildBatchesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("BatchGetBuildBatches");
   let body: any;
@@ -275,7 +275,7 @@ export const se_BatchGetBuildBatchesCommand = async (
  */
 export const se_BatchGetBuildsCommand = async (
   input: BatchGetBuildsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("BatchGetBuilds");
   let body: any;
@@ -288,7 +288,7 @@ export const se_BatchGetBuildsCommand = async (
  */
 export const se_BatchGetFleetsCommand = async (
   input: BatchGetFleetsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("BatchGetFleets");
   let body: any;
@@ -301,7 +301,7 @@ export const se_BatchGetFleetsCommand = async (
  */
 export const se_BatchGetProjectsCommand = async (
   input: BatchGetProjectsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("BatchGetProjects");
   let body: any;
@@ -314,7 +314,7 @@ export const se_BatchGetProjectsCommand = async (
  */
 export const se_BatchGetReportGroupsCommand = async (
   input: BatchGetReportGroupsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("BatchGetReportGroups");
   let body: any;
@@ -327,7 +327,7 @@ export const se_BatchGetReportGroupsCommand = async (
  */
 export const se_BatchGetReportsCommand = async (
   input: BatchGetReportsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("BatchGetReports");
   let body: any;
@@ -340,7 +340,7 @@ export const se_BatchGetReportsCommand = async (
  */
 export const se_CreateFleetCommand = async (
   input: CreateFleetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateFleet");
   let body: any;
@@ -353,7 +353,7 @@ export const se_CreateFleetCommand = async (
  */
 export const se_CreateProjectCommand = async (
   input: CreateProjectCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateProject");
   let body: any;
@@ -366,7 +366,7 @@ export const se_CreateProjectCommand = async (
  */
 export const se_CreateReportGroupCommand = async (
   input: CreateReportGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateReportGroup");
   let body: any;
@@ -379,7 +379,7 @@ export const se_CreateReportGroupCommand = async (
  */
 export const se_CreateWebhookCommand = async (
   input: CreateWebhookCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateWebhook");
   let body: any;
@@ -392,7 +392,7 @@ export const se_CreateWebhookCommand = async (
  */
 export const se_DeleteBuildBatchCommand = async (
   input: DeleteBuildBatchCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteBuildBatch");
   let body: any;
@@ -405,7 +405,7 @@ export const se_DeleteBuildBatchCommand = async (
  */
 export const se_DeleteFleetCommand = async (
   input: DeleteFleetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteFleet");
   let body: any;
@@ -418,7 +418,7 @@ export const se_DeleteFleetCommand = async (
  */
 export const se_DeleteProjectCommand = async (
   input: DeleteProjectCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteProject");
   let body: any;
@@ -431,7 +431,7 @@ export const se_DeleteProjectCommand = async (
  */
 export const se_DeleteReportCommand = async (
   input: DeleteReportCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteReport");
   let body: any;
@@ -444,7 +444,7 @@ export const se_DeleteReportCommand = async (
  */
 export const se_DeleteReportGroupCommand = async (
   input: DeleteReportGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteReportGroup");
   let body: any;
@@ -457,7 +457,7 @@ export const se_DeleteReportGroupCommand = async (
  */
 export const se_DeleteResourcePolicyCommand = async (
   input: DeleteResourcePolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteResourcePolicy");
   let body: any;
@@ -470,7 +470,7 @@ export const se_DeleteResourcePolicyCommand = async (
  */
 export const se_DeleteSourceCredentialsCommand = async (
   input: DeleteSourceCredentialsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteSourceCredentials");
   let body: any;
@@ -483,7 +483,7 @@ export const se_DeleteSourceCredentialsCommand = async (
  */
 export const se_DeleteWebhookCommand = async (
   input: DeleteWebhookCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteWebhook");
   let body: any;
@@ -496,7 +496,7 @@ export const se_DeleteWebhookCommand = async (
  */
 export const se_DescribeCodeCoveragesCommand = async (
   input: DescribeCodeCoveragesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeCodeCoverages");
   let body: any;
@@ -509,7 +509,7 @@ export const se_DescribeCodeCoveragesCommand = async (
  */
 export const se_DescribeTestCasesCommand = async (
   input: DescribeTestCasesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeTestCases");
   let body: any;
@@ -522,7 +522,7 @@ export const se_DescribeTestCasesCommand = async (
  */
 export const se_GetReportGroupTrendCommand = async (
   input: GetReportGroupTrendCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetReportGroupTrend");
   let body: any;
@@ -535,7 +535,7 @@ export const se_GetReportGroupTrendCommand = async (
  */
 export const se_GetResourcePolicyCommand = async (
   input: GetResourcePolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetResourcePolicy");
   let body: any;
@@ -548,7 +548,7 @@ export const se_GetResourcePolicyCommand = async (
  */
 export const se_ImportSourceCredentialsCommand = async (
   input: ImportSourceCredentialsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ImportSourceCredentials");
   let body: any;
@@ -561,7 +561,7 @@ export const se_ImportSourceCredentialsCommand = async (
  */
 export const se_InvalidateProjectCacheCommand = async (
   input: InvalidateProjectCacheCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("InvalidateProjectCache");
   let body: any;
@@ -574,7 +574,7 @@ export const se_InvalidateProjectCacheCommand = async (
  */
 export const se_ListBuildBatchesCommand = async (
   input: ListBuildBatchesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListBuildBatches");
   let body: any;
@@ -587,7 +587,7 @@ export const se_ListBuildBatchesCommand = async (
  */
 export const se_ListBuildBatchesForProjectCommand = async (
   input: ListBuildBatchesForProjectCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListBuildBatchesForProject");
   let body: any;
@@ -600,7 +600,7 @@ export const se_ListBuildBatchesForProjectCommand = async (
  */
 export const se_ListBuildsCommand = async (
   input: ListBuildsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListBuilds");
   let body: any;
@@ -613,7 +613,7 @@ export const se_ListBuildsCommand = async (
  */
 export const se_ListBuildsForProjectCommand = async (
   input: ListBuildsForProjectCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListBuildsForProject");
   let body: any;
@@ -626,7 +626,7 @@ export const se_ListBuildsForProjectCommand = async (
  */
 export const se_ListCuratedEnvironmentImagesCommand = async (
   input: ListCuratedEnvironmentImagesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListCuratedEnvironmentImages");
   let body: any;
@@ -639,7 +639,7 @@ export const se_ListCuratedEnvironmentImagesCommand = async (
  */
 export const se_ListFleetsCommand = async (
   input: ListFleetsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListFleets");
   let body: any;
@@ -652,7 +652,7 @@ export const se_ListFleetsCommand = async (
  */
 export const se_ListProjectsCommand = async (
   input: ListProjectsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListProjects");
   let body: any;
@@ -665,7 +665,7 @@ export const se_ListProjectsCommand = async (
  */
 export const se_ListReportGroupsCommand = async (
   input: ListReportGroupsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListReportGroups");
   let body: any;
@@ -678,7 +678,7 @@ export const se_ListReportGroupsCommand = async (
  */
 export const se_ListReportsCommand = async (
   input: ListReportsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListReports");
   let body: any;
@@ -691,7 +691,7 @@ export const se_ListReportsCommand = async (
  */
 export const se_ListReportsForReportGroupCommand = async (
   input: ListReportsForReportGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListReportsForReportGroup");
   let body: any;
@@ -704,7 +704,7 @@ export const se_ListReportsForReportGroupCommand = async (
  */
 export const se_ListSharedProjectsCommand = async (
   input: ListSharedProjectsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListSharedProjects");
   let body: any;
@@ -717,7 +717,7 @@ export const se_ListSharedProjectsCommand = async (
  */
 export const se_ListSharedReportGroupsCommand = async (
   input: ListSharedReportGroupsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListSharedReportGroups");
   let body: any;
@@ -730,7 +730,7 @@ export const se_ListSharedReportGroupsCommand = async (
  */
 export const se_ListSourceCredentialsCommand = async (
   input: ListSourceCredentialsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListSourceCredentials");
   let body: any;
@@ -743,7 +743,7 @@ export const se_ListSourceCredentialsCommand = async (
  */
 export const se_PutResourcePolicyCommand = async (
   input: PutResourcePolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("PutResourcePolicy");
   let body: any;
@@ -756,7 +756,7 @@ export const se_PutResourcePolicyCommand = async (
  */
 export const se_RetryBuildCommand = async (
   input: RetryBuildCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("RetryBuild");
   let body: any;
@@ -769,7 +769,7 @@ export const se_RetryBuildCommand = async (
  */
 export const se_RetryBuildBatchCommand = async (
   input: RetryBuildBatchCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("RetryBuildBatch");
   let body: any;
@@ -782,7 +782,7 @@ export const se_RetryBuildBatchCommand = async (
  */
 export const se_StartBuildCommand = async (
   input: StartBuildCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StartBuild");
   let body: any;
@@ -795,7 +795,7 @@ export const se_StartBuildCommand = async (
  */
 export const se_StartBuildBatchCommand = async (
   input: StartBuildBatchCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StartBuildBatch");
   let body: any;
@@ -808,7 +808,7 @@ export const se_StartBuildBatchCommand = async (
  */
 export const se_StopBuildCommand = async (
   input: StopBuildCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StopBuild");
   let body: any;
@@ -821,7 +821,7 @@ export const se_StopBuildCommand = async (
  */
 export const se_StopBuildBatchCommand = async (
   input: StopBuildBatchCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StopBuildBatch");
   let body: any;
@@ -834,7 +834,7 @@ export const se_StopBuildBatchCommand = async (
  */
 export const se_UpdateFleetCommand = async (
   input: UpdateFleetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateFleet");
   let body: any;
@@ -847,7 +847,7 @@ export const se_UpdateFleetCommand = async (
  */
 export const se_UpdateProjectCommand = async (
   input: UpdateProjectCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateProject");
   let body: any;
@@ -860,7 +860,7 @@ export const se_UpdateProjectCommand = async (
  */
 export const se_UpdateProjectVisibilityCommand = async (
   input: UpdateProjectVisibilityCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateProjectVisibility");
   let body: any;
@@ -873,7 +873,7 @@ export const se_UpdateProjectVisibilityCommand = async (
  */
 export const se_UpdateReportGroupCommand = async (
   input: UpdateReportGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateReportGroup");
   let body: any;
@@ -886,7 +886,7 @@ export const se_UpdateReportGroupCommand = async (
  */
 export const se_UpdateWebhookCommand = async (
   input: UpdateWebhookCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateWebhook");
   let body: any;
@@ -899,7 +899,7 @@ export const se_UpdateWebhookCommand = async (
  */
 export const de_BatchDeleteBuildsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchDeleteBuildsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -919,7 +919,7 @@ export const de_BatchDeleteBuildsCommand = async (
  */
 export const de_BatchGetBuildBatchesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchGetBuildBatchesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -939,7 +939,7 @@ export const de_BatchGetBuildBatchesCommand = async (
  */
 export const de_BatchGetBuildsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchGetBuildsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -959,7 +959,7 @@ export const de_BatchGetBuildsCommand = async (
  */
 export const de_BatchGetFleetsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchGetFleetsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -979,7 +979,7 @@ export const de_BatchGetFleetsCommand = async (
  */
 export const de_BatchGetProjectsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchGetProjectsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -999,7 +999,7 @@ export const de_BatchGetProjectsCommand = async (
  */
 export const de_BatchGetReportGroupsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchGetReportGroupsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1019,7 +1019,7 @@ export const de_BatchGetReportGroupsCommand = async (
  */
 export const de_BatchGetReportsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchGetReportsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1039,7 +1039,7 @@ export const de_BatchGetReportsCommand = async (
  */
 export const de_CreateFleetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateFleetCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1059,7 +1059,7 @@ export const de_CreateFleetCommand = async (
  */
 export const de_CreateProjectCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateProjectCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1079,7 +1079,7 @@ export const de_CreateProjectCommand = async (
  */
 export const de_CreateReportGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateReportGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1099,7 +1099,7 @@ export const de_CreateReportGroupCommand = async (
  */
 export const de_CreateWebhookCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateWebhookCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1119,7 +1119,7 @@ export const de_CreateWebhookCommand = async (
  */
 export const de_DeleteBuildBatchCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteBuildBatchCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1139,7 +1139,7 @@ export const de_DeleteBuildBatchCommand = async (
  */
 export const de_DeleteFleetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteFleetCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1159,7 +1159,7 @@ export const de_DeleteFleetCommand = async (
  */
 export const de_DeleteProjectCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteProjectCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1179,7 +1179,7 @@ export const de_DeleteProjectCommand = async (
  */
 export const de_DeleteReportCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteReportCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1199,7 +1199,7 @@ export const de_DeleteReportCommand = async (
  */
 export const de_DeleteReportGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteReportGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1219,7 +1219,7 @@ export const de_DeleteReportGroupCommand = async (
  */
 export const de_DeleteResourcePolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteResourcePolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1239,7 +1239,7 @@ export const de_DeleteResourcePolicyCommand = async (
  */
 export const de_DeleteSourceCredentialsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteSourceCredentialsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1259,7 +1259,7 @@ export const de_DeleteSourceCredentialsCommand = async (
  */
 export const de_DeleteWebhookCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteWebhookCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1279,7 +1279,7 @@ export const de_DeleteWebhookCommand = async (
  */
 export const de_DescribeCodeCoveragesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeCodeCoveragesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1299,7 +1299,7 @@ export const de_DescribeCodeCoveragesCommand = async (
  */
 export const de_DescribeTestCasesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeTestCasesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1319,7 +1319,7 @@ export const de_DescribeTestCasesCommand = async (
  */
 export const de_GetReportGroupTrendCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetReportGroupTrendCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1339,7 +1339,7 @@ export const de_GetReportGroupTrendCommand = async (
  */
 export const de_GetResourcePolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetResourcePolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1359,7 +1359,7 @@ export const de_GetResourcePolicyCommand = async (
  */
 export const de_ImportSourceCredentialsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ImportSourceCredentialsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1379,7 +1379,7 @@ export const de_ImportSourceCredentialsCommand = async (
  */
 export const de_InvalidateProjectCacheCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidateProjectCacheCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1399,7 +1399,7 @@ export const de_InvalidateProjectCacheCommand = async (
  */
 export const de_ListBuildBatchesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListBuildBatchesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1419,7 +1419,7 @@ export const de_ListBuildBatchesCommand = async (
  */
 export const de_ListBuildBatchesForProjectCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListBuildBatchesForProjectCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1439,7 +1439,7 @@ export const de_ListBuildBatchesForProjectCommand = async (
  */
 export const de_ListBuildsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListBuildsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1459,7 +1459,7 @@ export const de_ListBuildsCommand = async (
  */
 export const de_ListBuildsForProjectCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListBuildsForProjectCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1479,7 +1479,7 @@ export const de_ListBuildsForProjectCommand = async (
  */
 export const de_ListCuratedEnvironmentImagesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListCuratedEnvironmentImagesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1499,7 +1499,7 @@ export const de_ListCuratedEnvironmentImagesCommand = async (
  */
 export const de_ListFleetsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListFleetsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1519,7 +1519,7 @@ export const de_ListFleetsCommand = async (
  */
 export const de_ListProjectsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListProjectsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1539,7 +1539,7 @@ export const de_ListProjectsCommand = async (
  */
 export const de_ListReportGroupsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListReportGroupsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1559,7 +1559,7 @@ export const de_ListReportGroupsCommand = async (
  */
 export const de_ListReportsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListReportsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1579,7 +1579,7 @@ export const de_ListReportsCommand = async (
  */
 export const de_ListReportsForReportGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListReportsForReportGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1599,7 +1599,7 @@ export const de_ListReportsForReportGroupCommand = async (
  */
 export const de_ListSharedProjectsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListSharedProjectsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1619,7 +1619,7 @@ export const de_ListSharedProjectsCommand = async (
  */
 export const de_ListSharedReportGroupsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListSharedReportGroupsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1639,7 +1639,7 @@ export const de_ListSharedReportGroupsCommand = async (
  */
 export const de_ListSourceCredentialsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListSourceCredentialsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1659,7 +1659,7 @@ export const de_ListSourceCredentialsCommand = async (
  */
 export const de_PutResourcePolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutResourcePolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1679,7 +1679,7 @@ export const de_PutResourcePolicyCommand = async (
  */
 export const de_RetryBuildCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RetryBuildCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1699,7 +1699,7 @@ export const de_RetryBuildCommand = async (
  */
 export const de_RetryBuildBatchCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RetryBuildBatchCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1719,7 +1719,7 @@ export const de_RetryBuildBatchCommand = async (
  */
 export const de_StartBuildCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartBuildCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1739,7 +1739,7 @@ export const de_StartBuildCommand = async (
  */
 export const de_StartBuildBatchCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartBuildBatchCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1759,7 +1759,7 @@ export const de_StartBuildBatchCommand = async (
  */
 export const de_StopBuildCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StopBuildCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1779,7 +1779,7 @@ export const de_StopBuildCommand = async (
  */
 export const de_StopBuildBatchCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StopBuildBatchCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1799,7 +1799,7 @@ export const de_StopBuildBatchCommand = async (
  */
 export const de_UpdateFleetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateFleetCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1819,7 +1819,7 @@ export const de_UpdateFleetCommand = async (
  */
 export const de_UpdateProjectCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateProjectCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1839,7 +1839,7 @@ export const de_UpdateProjectCommand = async (
  */
 export const de_UpdateProjectVisibilityCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateProjectVisibilityCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1859,7 +1859,7 @@ export const de_UpdateProjectVisibilityCommand = async (
  */
 export const de_UpdateReportGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateReportGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1879,7 +1879,7 @@ export const de_UpdateReportGroupCommand = async (
  */
 export const de_UpdateWebhookCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateWebhookCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1934,7 +1934,7 @@ const de_CommandError = async (output: __HttpResponse, context: __SerdeContext):
  */
 const de_AccountLimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccountLimitExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1950,7 +1950,7 @@ const de_AccountLimitExceededExceptionRes = async (
  */
 const de_InvalidInputExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidInputException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1966,7 +1966,7 @@ const de_InvalidInputExceptionRes = async (
  */
 const de_OAuthProviderExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<OAuthProviderException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1982,7 +1982,7 @@ const de_OAuthProviderExceptionRes = async (
  */
 const de_ResourceAlreadyExistsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceAlreadyExistsException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1998,7 +1998,7 @@ const de_ResourceAlreadyExistsExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2225,7 +2225,7 @@ const se_ScalingConfigurationInput = (input: ScalingConfigurationInput, context:
  */
 const se_TargetTrackingScalingConfiguration = (
   input: TargetTrackingScalingConfiguration,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return take(input, {
     metricType: [],
@@ -2238,7 +2238,7 @@ const se_TargetTrackingScalingConfiguration = (
  */
 const se_TargetTrackingScalingConfigurations = (
   input: TargetTrackingScalingConfiguration[],
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   return input
     .filter((e: any) => e != null)
@@ -3061,7 +3061,7 @@ const de_StopBuildOutput = (output: any, context: __SerdeContext): StopBuildOutp
  */
 const de_TargetTrackingScalingConfiguration = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): TargetTrackingScalingConfiguration => {
   return take(output, {
     metricType: __expectString,
@@ -3074,7 +3074,7 @@ const de_TargetTrackingScalingConfiguration = (
  */
 const de_TargetTrackingScalingConfigurations = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): TargetTrackingScalingConfiguration[] => {
   const retVal = (output || [])
     .filter((e: any) => e != null)
@@ -3191,7 +3191,7 @@ const buildHttpRpcRequest = async (
   headers: __HeaderBag,
   path: string,
   resolvedHostname: string | undefined,
-  body: any
+  body: any,
 ): Promise<__HttpRequest> => {
   const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
   const contents: any = {

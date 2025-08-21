@@ -105,16 +105,16 @@ export interface IoT1ClickProjects {
    */
   associateDeviceWithPlacement(
     args: AssociateDeviceWithPlacementCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AssociateDeviceWithPlacementCommandOutput>;
   associateDeviceWithPlacement(
     args: AssociateDeviceWithPlacementCommandInput,
-    cb: (err: any, data?: AssociateDeviceWithPlacementCommandOutput) => void
+    cb: (err: any, data?: AssociateDeviceWithPlacementCommandOutput) => void,
   ): void;
   associateDeviceWithPlacement(
     args: AssociateDeviceWithPlacementCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AssociateDeviceWithPlacementCommandOutput) => void
+    cb: (err: any, data?: AssociateDeviceWithPlacementCommandOutput) => void,
   ): void;
 
   /**
@@ -122,13 +122,13 @@ export interface IoT1ClickProjects {
    */
   createPlacement(
     args: CreatePlacementCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreatePlacementCommandOutput>;
   createPlacement(args: CreatePlacementCommandInput, cb: (err: any, data?: CreatePlacementCommandOutput) => void): void;
   createPlacement(
     args: CreatePlacementCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreatePlacementCommandOutput) => void
+    cb: (err: any, data?: CreatePlacementCommandOutput) => void,
   ): void;
 
   /**
@@ -139,7 +139,7 @@ export interface IoT1ClickProjects {
   createProject(
     args: CreateProjectCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateProjectCommandOutput) => void
+    cb: (err: any, data?: CreateProjectCommandOutput) => void,
   ): void;
 
   /**
@@ -147,13 +147,13 @@ export interface IoT1ClickProjects {
    */
   deletePlacement(
     args: DeletePlacementCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeletePlacementCommandOutput>;
   deletePlacement(args: DeletePlacementCommandInput, cb: (err: any, data?: DeletePlacementCommandOutput) => void): void;
   deletePlacement(
     args: DeletePlacementCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeletePlacementCommandOutput) => void
+    cb: (err: any, data?: DeletePlacementCommandOutput) => void,
   ): void;
 
   /**
@@ -164,7 +164,7 @@ export interface IoT1ClickProjects {
   deleteProject(
     args: DeleteProjectCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteProjectCommandOutput) => void
+    cb: (err: any, data?: DeleteProjectCommandOutput) => void,
   ): void;
 
   /**
@@ -172,16 +172,16 @@ export interface IoT1ClickProjects {
    */
   describePlacement(
     args: DescribePlacementCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribePlacementCommandOutput>;
   describePlacement(
     args: DescribePlacementCommandInput,
-    cb: (err: any, data?: DescribePlacementCommandOutput) => void
+    cb: (err: any, data?: DescribePlacementCommandOutput) => void,
   ): void;
   describePlacement(
     args: DescribePlacementCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribePlacementCommandOutput) => void
+    cb: (err: any, data?: DescribePlacementCommandOutput) => void,
   ): void;
 
   /**
@@ -189,13 +189,13 @@ export interface IoT1ClickProjects {
    */
   describeProject(
     args: DescribeProjectCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeProjectCommandOutput>;
   describeProject(args: DescribeProjectCommandInput, cb: (err: any, data?: DescribeProjectCommandOutput) => void): void;
   describeProject(
     args: DescribeProjectCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeProjectCommandOutput) => void
+    cb: (err: any, data?: DescribeProjectCommandOutput) => void,
   ): void;
 
   /**
@@ -203,16 +203,16 @@ export interface IoT1ClickProjects {
    */
   disassociateDeviceFromPlacement(
     args: DisassociateDeviceFromPlacementCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DisassociateDeviceFromPlacementCommandOutput>;
   disassociateDeviceFromPlacement(
     args: DisassociateDeviceFromPlacementCommandInput,
-    cb: (err: any, data?: DisassociateDeviceFromPlacementCommandOutput) => void
+    cb: (err: any, data?: DisassociateDeviceFromPlacementCommandOutput) => void,
   ): void;
   disassociateDeviceFromPlacement(
     args: DisassociateDeviceFromPlacementCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DisassociateDeviceFromPlacementCommandOutput) => void
+    cb: (err: any, data?: DisassociateDeviceFromPlacementCommandOutput) => void,
   ): void;
 
   /**
@@ -220,16 +220,16 @@ export interface IoT1ClickProjects {
    */
   getDevicesInPlacement(
     args: GetDevicesInPlacementCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetDevicesInPlacementCommandOutput>;
   getDevicesInPlacement(
     args: GetDevicesInPlacementCommandInput,
-    cb: (err: any, data?: GetDevicesInPlacementCommandOutput) => void
+    cb: (err: any, data?: GetDevicesInPlacementCommandOutput) => void,
   ): void;
   getDevicesInPlacement(
     args: GetDevicesInPlacementCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetDevicesInPlacementCommandOutput) => void
+    cb: (err: any, data?: GetDevicesInPlacementCommandOutput) => void,
   ): void;
 
   /**
@@ -237,13 +237,13 @@ export interface IoT1ClickProjects {
    */
   listPlacements(
     args: ListPlacementsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListPlacementsCommandOutput>;
   listPlacements(args: ListPlacementsCommandInput, cb: (err: any, data?: ListPlacementsCommandOutput) => void): void;
   listPlacements(
     args: ListPlacementsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListPlacementsCommandOutput) => void
+    cb: (err: any, data?: ListPlacementsCommandOutput) => void,
   ): void;
 
   /**
@@ -255,7 +255,7 @@ export interface IoT1ClickProjects {
   listProjects(
     args: ListProjectsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListProjectsCommandOutput) => void
+    cb: (err: any, data?: ListProjectsCommandOutput) => void,
   ): void;
 
   /**
@@ -263,16 +263,16 @@ export interface IoT1ClickProjects {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -283,7 +283,7 @@ export interface IoT1ClickProjects {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -294,7 +294,7 @@ export interface IoT1ClickProjects {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -302,13 +302,13 @@ export interface IoT1ClickProjects {
    */
   updatePlacement(
     args: UpdatePlacementCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdatePlacementCommandOutput>;
   updatePlacement(args: UpdatePlacementCommandInput, cb: (err: any, data?: UpdatePlacementCommandOutput) => void): void;
   updatePlacement(
     args: UpdatePlacementCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdatePlacementCommandOutput) => void
+    cb: (err: any, data?: UpdatePlacementCommandOutput) => void,
   ): void;
 
   /**
@@ -319,7 +319,7 @@ export interface IoT1ClickProjects {
   updateProject(
     args: UpdateProjectCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateProjectCommandOutput) => void
+    cb: (err: any, data?: UpdateProjectCommandOutput) => void,
   ): void;
 }
 

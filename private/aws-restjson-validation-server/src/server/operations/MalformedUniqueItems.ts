@@ -76,14 +76,14 @@ export class MalformedUniqueItemsSerializer
 }
 
 export const getMalformedUniqueItemsHandler = <Context>(
-  operation: __Operation<MalformedUniqueItemsServerInput, MalformedUniqueItemsServerOutput, Context>
+  operation: __Operation<MalformedUniqueItemsServerInput, MalformedUniqueItemsServerOutput, Context>,
 ): __ServiceHandler<Context, __HttpRequest, __HttpResponse> => {
   const mux = new httpbinding.HttpBindingMux<"RestJsonValidation", "MalformedUniqueItems">([
     new httpbinding.UriSpec<"RestJsonValidation", "MalformedUniqueItems">(
       "POST",
       [{ type: "path_literal", value: "MalformedUniqueItems" }],
       [],
-      { service: "RestJsonValidation", operation: "MalformedUniqueItems" }
+      { service: "RestJsonValidation", operation: "MalformedUniqueItems" },
     ),
   ]);
   const customizer: __ValidationCustomizer<"MalformedUniqueItems"> = (ctx, failures) => {
@@ -105,7 +105,7 @@ export const getMalformedUniqueItemsHandler = <Context>(
     mux,
     new MalformedUniqueItemsSerializer(),
     serializeFrameworkException,
-    customizer
+    customizer,
   );
 };
 
@@ -126,7 +126,7 @@ async function handle<S, O extends keyof S & string, Context>(
   operation: __Operation<__OperationInput<S[O]>, __OperationOutput<S[O]>, Context>,
   serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
   validationFn: (input: __OperationInput<S[O]>) => __ValidationFailure[],
-  validationCustomizer: __ValidationCustomizer<O>
+  validationCustomizer: __ValidationCustomizer<O>,
 ): Promise<__HttpResponse> {
   let input;
   try {
@@ -168,7 +168,7 @@ export class MalformedUniqueItemsHandler<Context> implements __ServiceHandler<Co
   >;
   private readonly serializeFrameworkException: (
     e: __SmithyFrameworkException,
-    ctx: __ServerSerdeContext
+    ctx: __ServerSerdeContext,
   ) => Promise<__HttpResponse>;
   private readonly validationCustomizer: __ValidationCustomizer<"MalformedUniqueItems">;
   /**
@@ -189,7 +189,7 @@ export class MalformedUniqueItemsHandler<Context> implements __ServiceHandler<Co
       MalformedUniqueItemsErrors
     >,
     serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
-    validationCustomizer: __ValidationCustomizer<"MalformedUniqueItems">
+    validationCustomizer: __ValidationCustomizer<"MalformedUniqueItems">,
   ) {
     this.operation = operation;
     this.mux = mux;
@@ -201,7 +201,7 @@ export class MalformedUniqueItemsHandler<Context> implements __ServiceHandler<Co
     const target = this.mux.match(request);
     if (target === undefined) {
       console.log(
-        "Received a request that did not match aws.protocoltests.restjson.validation#RestJsonValidation.MalformedUniqueItems. This indicates a misconfiguration."
+        "Received a request that did not match aws.protocoltests.restjson.validation#RestJsonValidation.MalformedUniqueItems. This indicates a misconfiguration.",
       );
       return this.serializeFrameworkException(new __InternalFailureException(), serdeContextBase);
     }
@@ -213,7 +213,7 @@ export class MalformedUniqueItemsHandler<Context> implements __ServiceHandler<Co
       this.operation,
       this.serializeFrameworkException,
       MalformedUniqueItemsServerInput.validate,
-      this.validationCustomizer
+      this.validationCustomizer,
     );
   }
 }

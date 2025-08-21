@@ -9,7 +9,7 @@ import { MachineLearningClient } from "../MachineLearningClient";
 
 const checkState = async (
   client: MachineLearningClient,
-  input: DescribeBatchPredictionsCommandInput
+  input: DescribeBatchPredictionsCommandInput,
 ): Promise<WaiterResult> => {
   let reason;
   try {
@@ -56,7 +56,7 @@ const checkState = async (
  */
 export const waitForBatchPredictionAvailable = async (
   params: WaiterConfiguration<MachineLearningClient>,
-  input: DescribeBatchPredictionsCommandInput
+  input: DescribeBatchPredictionsCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 30, maxDelay: 120 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -68,7 +68,7 @@ export const waitForBatchPredictionAvailable = async (
  */
 export const waitUntilBatchPredictionAvailable = async (
   params: WaiterConfiguration<MachineLearningClient>,
-  input: DescribeBatchPredictionsCommandInput
+  input: DescribeBatchPredictionsCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 30, maxDelay: 120 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

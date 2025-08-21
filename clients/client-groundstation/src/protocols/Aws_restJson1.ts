@@ -152,7 +152,7 @@ import {
  */
 export const se_CancelContactCommand = async (
   input: CancelContactCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -168,7 +168,7 @@ export const se_CancelContactCommand = async (
  */
 export const se_CreateConfigCommand = async (
   input: CreateConfigCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -181,7 +181,7 @@ export const se_CreateConfigCommand = async (
       configData: (_) => se_ConfigTypeData(_, context),
       name: [],
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -192,7 +192,7 @@ export const se_CreateConfigCommand = async (
  */
 export const se_CreateDataflowEndpointGroupCommand = async (
   input: CreateDataflowEndpointGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -206,7 +206,7 @@ export const se_CreateDataflowEndpointGroupCommand = async (
       contactPrePassDurationSeconds: [],
       endpointDetails: (_) => _json(_),
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -217,7 +217,7 @@ export const se_CreateDataflowEndpointGroupCommand = async (
  */
 export const se_CreateEphemerisCommand = async (
   input: CreateEphemerisCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -235,7 +235,7 @@ export const se_CreateEphemerisCommand = async (
       priority: [],
       satelliteId: [],
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -246,7 +246,7 @@ export const se_CreateEphemerisCommand = async (
  */
 export const se_CreateMissionProfileCommand = async (
   input: CreateMissionProfileCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -265,7 +265,7 @@ export const se_CreateMissionProfileCommand = async (
       streamsKmsRole: [],
       tags: (_) => _json(_),
       trackingConfigArn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -276,7 +276,7 @@ export const se_CreateMissionProfileCommand = async (
  */
 export const se_DeleteConfigCommand = async (
   input: DeleteConfigCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -293,7 +293,7 @@ export const se_DeleteConfigCommand = async (
  */
 export const se_DeleteDataflowEndpointGroupCommand = async (
   input: DeleteDataflowEndpointGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -309,7 +309,7 @@ export const se_DeleteDataflowEndpointGroupCommand = async (
  */
 export const se_DeleteEphemerisCommand = async (
   input: DeleteEphemerisCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -325,7 +325,7 @@ export const se_DeleteEphemerisCommand = async (
  */
 export const se_DeleteMissionProfileCommand = async (
   input: DeleteMissionProfileCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -341,7 +341,7 @@ export const se_DeleteMissionProfileCommand = async (
  */
 export const se_DescribeContactCommand = async (
   input: DescribeContactCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -357,7 +357,7 @@ export const se_DescribeContactCommand = async (
  */
 export const se_DescribeEphemerisCommand = async (
   input: DescribeEphemerisCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -373,7 +373,7 @@ export const se_DescribeEphemerisCommand = async (
  */
 export const se_GetAgentConfigurationCommand = async (
   input: GetAgentConfigurationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -389,7 +389,7 @@ export const se_GetAgentConfigurationCommand = async (
  */
 export const se_GetConfigCommand = async (
   input: GetConfigCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -406,7 +406,7 @@ export const se_GetConfigCommand = async (
  */
 export const se_GetDataflowEndpointGroupCommand = async (
   input: GetDataflowEndpointGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -422,7 +422,7 @@ export const se_GetDataflowEndpointGroupCommand = async (
  */
 export const se_GetMinuteUsageCommand = async (
   input: GetMinuteUsageCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -434,7 +434,7 @@ export const se_GetMinuteUsageCommand = async (
     take(input, {
       month: [],
       year: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -445,7 +445,7 @@ export const se_GetMinuteUsageCommand = async (
  */
 export const se_GetMissionProfileCommand = async (
   input: GetMissionProfileCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -461,7 +461,7 @@ export const se_GetMissionProfileCommand = async (
  */
 export const se_GetSatelliteCommand = async (
   input: GetSatelliteCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -477,7 +477,7 @@ export const se_GetSatelliteCommand = async (
  */
 export const se_ListConfigsCommand = async (
   input: ListConfigsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -496,7 +496,7 @@ export const se_ListConfigsCommand = async (
  */
 export const se_ListContactsCommand = async (
   input: ListContactsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -514,7 +514,7 @@ export const se_ListContactsCommand = async (
       satelliteArn: [],
       startTime: (_) => _.getTime() / 1_000,
       statusList: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -525,7 +525,7 @@ export const se_ListContactsCommand = async (
  */
 export const se_ListDataflowEndpointGroupsCommand = async (
   input: ListDataflowEndpointGroupsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -544,7 +544,7 @@ export const se_ListDataflowEndpointGroupsCommand = async (
  */
 export const se_ListEphemeridesCommand = async (
   input: ListEphemeridesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -562,7 +562,7 @@ export const se_ListEphemeridesCommand = async (
       satelliteId: [],
       startTime: (_) => _.getTime() / 1_000,
       statusList: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).q(query).b(body);
   return b.build();
@@ -573,7 +573,7 @@ export const se_ListEphemeridesCommand = async (
  */
 export const se_ListGroundStationsCommand = async (
   input: ListGroundStationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -593,7 +593,7 @@ export const se_ListGroundStationsCommand = async (
  */
 export const se_ListMissionProfilesCommand = async (
   input: ListMissionProfilesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -612,7 +612,7 @@ export const se_ListMissionProfilesCommand = async (
  */
 export const se_ListSatellitesCommand = async (
   input: ListSatellitesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -631,7 +631,7 @@ export const se_ListSatellitesCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -647,7 +647,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_RegisterAgentCommand = async (
   input: RegisterAgentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -659,7 +659,7 @@ export const se_RegisterAgentCommand = async (
     take(input, {
       agentDetails: (_) => _json(_),
       discoveryData: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -670,7 +670,7 @@ export const se_RegisterAgentCommand = async (
  */
 export const se_ReserveContactCommand = async (
   input: ReserveContactCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -686,7 +686,7 @@ export const se_ReserveContactCommand = async (
       satelliteArn: [],
       startTime: (_) => _.getTime() / 1_000,
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -697,7 +697,7 @@ export const se_ReserveContactCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -709,7 +709,7 @@ export const se_TagResourceCommand = async (
   body = JSON.stringify(
     take(input, {
       tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -720,7 +720,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -742,7 +742,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateAgentStatusCommand = async (
   input: UpdateAgentStatusCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -756,7 +756,7 @@ export const se_UpdateAgentStatusCommand = async (
       aggregateStatus: (_) => _json(_),
       componentStatuses: (_) => _json(_),
       taskId: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -767,7 +767,7 @@ export const se_UpdateAgentStatusCommand = async (
  */
 export const se_UpdateConfigCommand = async (
   input: UpdateConfigCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -781,7 +781,7 @@ export const se_UpdateConfigCommand = async (
     take(input, {
       configData: (_) => se_ConfigTypeData(_, context),
       name: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -792,7 +792,7 @@ export const se_UpdateConfigCommand = async (
  */
 export const se_UpdateEphemerisCommand = async (
   input: UpdateEphemerisCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -806,7 +806,7 @@ export const se_UpdateEphemerisCommand = async (
       enabled: [],
       name: [],
       priority: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -817,7 +817,7 @@ export const se_UpdateEphemerisCommand = async (
  */
 export const se_UpdateMissionProfileCommand = async (
   input: UpdateMissionProfileCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -836,7 +836,7 @@ export const se_UpdateMissionProfileCommand = async (
       streamsKmsKey: (_) => _json(_),
       streamsKmsRole: [],
       trackingConfigArn: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -847,7 +847,7 @@ export const se_UpdateMissionProfileCommand = async (
  */
 export const de_CancelContactCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CancelContactCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -868,7 +868,7 @@ export const de_CancelContactCommand = async (
  */
 export const de_CreateConfigCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateConfigCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -891,7 +891,7 @@ export const de_CreateConfigCommand = async (
  */
 export const de_CreateDataflowEndpointGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateDataflowEndpointGroupCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -912,7 +912,7 @@ export const de_CreateDataflowEndpointGroupCommand = async (
  */
 export const de_CreateEphemerisCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateEphemerisCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -933,7 +933,7 @@ export const de_CreateEphemerisCommand = async (
  */
 export const de_CreateMissionProfileCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateMissionProfileCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -954,7 +954,7 @@ export const de_CreateMissionProfileCommand = async (
  */
 export const de_DeleteConfigCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteConfigCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -977,7 +977,7 @@ export const de_DeleteConfigCommand = async (
  */
 export const de_DeleteDataflowEndpointGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteDataflowEndpointGroupCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -998,7 +998,7 @@ export const de_DeleteDataflowEndpointGroupCommand = async (
  */
 export const de_DeleteEphemerisCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteEphemerisCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1019,7 +1019,7 @@ export const de_DeleteEphemerisCommand = async (
  */
 export const de_DeleteMissionProfileCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteMissionProfileCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1040,7 +1040,7 @@ export const de_DeleteMissionProfileCommand = async (
  */
 export const de_DescribeContactCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeContactCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1076,7 +1076,7 @@ export const de_DescribeContactCommand = async (
  */
 export const de_DescribeEphemerisCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeEphemerisCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1106,7 +1106,7 @@ export const de_DescribeEphemerisCommand = async (
  */
 export const de_GetAgentConfigurationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetAgentConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1128,7 +1128,7 @@ export const de_GetAgentConfigurationCommand = async (
  */
 export const de_GetConfigCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetConfigCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1154,7 +1154,7 @@ export const de_GetConfigCommand = async (
  */
 export const de_GetDataflowEndpointGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetDataflowEndpointGroupCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1180,7 +1180,7 @@ export const de_GetDataflowEndpointGroupCommand = async (
  */
 export const de_GetMinuteUsageCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetMinuteUsageCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1205,7 +1205,7 @@ export const de_GetMinuteUsageCommand = async (
  */
 export const de_GetMissionProfileCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetMissionProfileCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1237,7 +1237,7 @@ export const de_GetMissionProfileCommand = async (
  */
 export const de_GetSatelliteCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetSatelliteCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1262,7 +1262,7 @@ export const de_GetSatelliteCommand = async (
  */
 export const de_ListConfigsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListConfigsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1284,7 +1284,7 @@ export const de_ListConfigsCommand = async (
  */
 export const de_ListContactsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListContactsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1306,7 +1306,7 @@ export const de_ListContactsCommand = async (
  */
 export const de_ListDataflowEndpointGroupsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListDataflowEndpointGroupsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1328,7 +1328,7 @@ export const de_ListDataflowEndpointGroupsCommand = async (
  */
 export const de_ListEphemeridesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListEphemeridesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1350,7 +1350,7 @@ export const de_ListEphemeridesCommand = async (
  */
 export const de_ListGroundStationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListGroundStationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1372,7 +1372,7 @@ export const de_ListGroundStationsCommand = async (
  */
 export const de_ListMissionProfilesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListMissionProfilesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1394,7 +1394,7 @@ export const de_ListMissionProfilesCommand = async (
  */
 export const de_ListSatellitesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListSatellitesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1416,7 +1416,7 @@ export const de_ListSatellitesCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1437,7 +1437,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_RegisterAgentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RegisterAgentCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1458,7 +1458,7 @@ export const de_RegisterAgentCommand = async (
  */
 export const de_ReserveContactCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ReserveContactCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1479,7 +1479,7 @@ export const de_ReserveContactCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1496,7 +1496,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1513,7 +1513,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateAgentStatusCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateAgentStatusCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1534,7 +1534,7 @@ export const de_UpdateAgentStatusCommand = async (
  */
 export const de_UpdateConfigCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateConfigCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1557,7 +1557,7 @@ export const de_UpdateConfigCommand = async (
  */
 export const de_UpdateEphemerisCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateEphemerisCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1578,7 +1578,7 @@ export const de_UpdateEphemerisCommand = async (
  */
 export const de_UpdateMissionProfileCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateMissionProfileCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1650,7 +1650,7 @@ const de_DependencyExceptionRes = async (parsedOutput: any, context: __SerdeCont
  */
 const de_InvalidParameterExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidParameterException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1671,7 +1671,7 @@ const de_InvalidParameterExceptionRes = async (
  */
 const de_ResourceLimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceLimitExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1692,7 +1692,7 @@ const de_ResourceLimitExceededExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1772,7 +1772,7 @@ const se_ConfigTypeData = (input: ConfigTypeData, context: __SerdeContext): any 
     s3RecordingConfig: (value) => ({ s3RecordingConfig: _json(value) }),
     trackingConfig: (value) => ({ trackingConfig: _json(value) }),
     uplinkEchoConfig: (value) => ({ uplinkEchoConfig: _json(value) }),
-    _: (name, value) => ({ name: value } as any),
+    _: (name, value) => ({ name: value }) as any,
   });
 };
 
@@ -1813,7 +1813,7 @@ const se_EphemerisData = (input: EphemerisData, context: __SerdeContext): any =>
   return EphemerisData.visit(input, {
     oem: (value) => ({ oem: _json(value) }),
     tle: (value) => ({ tle: se_TLEEphemeris(value, context) }),
-    _: (name, value) => ({ name: value } as any),
+    _: (name, value) => ({ name: value }) as any,
   });
 };
 
@@ -1954,7 +1954,7 @@ const de_AntennaDownlinkConfig = (output: any, context: __SerdeContext): Antenna
  */
 const de_AntennaDownlinkDemodDecodeConfig = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): AntennaDownlinkDemodDecodeConfig => {
   return take(output, {
     decodeConfig: _json,
@@ -1997,7 +1997,7 @@ const de_ConfigTypeData = (output: any, context: __SerdeContext): ConfigTypeData
     return {
       antennaDownlinkDemodDecodeConfig: de_AntennaDownlinkDemodDecodeConfig(
         output.antennaDownlinkDemodDecodeConfig,
-        context
+        context,
       ),
     };
   }

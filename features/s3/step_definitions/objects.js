@@ -194,7 +194,7 @@ When("I get a pre-signed URL to GET the key {string}", function (key, callback) 
     function (err, url) {
       world.signedUrl = url;
       callback();
-    }
+    },
   );
 });
 
@@ -334,7 +334,7 @@ When(
       self.progress.push(p);
     });
     req.send(callback);
-  }
+  },
 );
 
 Then("more than {int} {string} event should fire", function (numEvents, eventName, callback) {
@@ -352,7 +352,7 @@ Then(
   function (prop, bytes, callback) {
     this.assert.compare(this.progress[0][prop], ">", bytes);
     callback();
-  }
+  },
 );
 
 When("I read the key {string} with progress events", function (key, callback) {
@@ -414,7 +414,7 @@ Then("I make an unauthenticated request to read object {string}", function (key,
       if (err) return next(err);
       this.data = data;
       next();
-    }.bind(this)
+    }.bind(this),
   );
 });
 

@@ -4780,7 +4780,7 @@ export const OpenIdConnectGroupConfigurationFilterSensitiveLog = (obj: OpenIdCon
  * @internal
  */
 export const OpenIdConnectAccessTokenConfigurationFilterSensitiveLog = (
-  obj: OpenIdConnectAccessTokenConfiguration
+  obj: OpenIdConnectAccessTokenConfiguration,
 ): any => ({
   ...obj,
   ...(obj.principalIdClaim && { principalIdClaim: SENSITIVE_STRING }),
@@ -4790,7 +4790,7 @@ export const OpenIdConnectAccessTokenConfigurationFilterSensitiveLog = (
  * @internal
  */
 export const OpenIdConnectIdentityTokenConfigurationFilterSensitiveLog = (
-  obj: OpenIdConnectIdentityTokenConfiguration
+  obj: OpenIdConnectIdentityTokenConfiguration,
 ): any => ({
   ...obj,
   ...(obj.principalIdClaim && { principalIdClaim: SENSITIVE_STRING }),
@@ -4837,7 +4837,7 @@ export const ConfigurationFilterSensitiveLog = (obj: Configuration): any => {
  * @internal
  */
 export const OpenIdConnectGroupConfigurationDetailFilterSensitiveLog = (
-  obj: OpenIdConnectGroupConfigurationDetail
+  obj: OpenIdConnectGroupConfigurationDetail,
 ): any => ({
   ...obj,
   ...(obj.groupClaim && { groupClaim: SENSITIVE_STRING }),
@@ -4848,7 +4848,7 @@ export const OpenIdConnectGroupConfigurationDetailFilterSensitiveLog = (
  * @internal
  */
 export const OpenIdConnectAccessTokenConfigurationDetailFilterSensitiveLog = (
-  obj: OpenIdConnectAccessTokenConfigurationDetail
+  obj: OpenIdConnectAccessTokenConfigurationDetail,
 ): any => ({
   ...obj,
   ...(obj.principalIdClaim && { principalIdClaim: SENSITIVE_STRING }),
@@ -4858,7 +4858,7 @@ export const OpenIdConnectAccessTokenConfigurationDetailFilterSensitiveLog = (
  * @internal
  */
 export const OpenIdConnectIdentityTokenConfigurationDetailFilterSensitiveLog = (
-  obj: OpenIdConnectIdentityTokenConfigurationDetail
+  obj: OpenIdConnectIdentityTokenConfigurationDetail,
 ): any => ({
   ...obj,
   ...(obj.principalIdClaim && { principalIdClaim: SENSITIVE_STRING }),
@@ -4899,7 +4899,7 @@ export const ConfigurationDetailFilterSensitiveLog = (obj: ConfigurationDetail):
   if (obj.cognitoUserPoolConfiguration !== undefined)
     return {
       cognitoUserPoolConfiguration: CognitoUserPoolConfigurationDetailFilterSensitiveLog(
-        obj.cognitoUserPoolConfiguration
+        obj.cognitoUserPoolConfiguration,
       ),
     };
   if (obj.openIdConnectConfiguration !== undefined)
@@ -4913,7 +4913,7 @@ export const ConfigurationDetailFilterSensitiveLog = (obj: ConfigurationDetail):
  * @internal
  */
 export const OpenIdConnectGroupConfigurationItemFilterSensitiveLog = (
-  obj: OpenIdConnectGroupConfigurationItem
+  obj: OpenIdConnectGroupConfigurationItem,
 ): any => ({
   ...obj,
   ...(obj.groupClaim && { groupClaim: SENSITIVE_STRING }),
@@ -4924,7 +4924,7 @@ export const OpenIdConnectGroupConfigurationItemFilterSensitiveLog = (
  * @internal
  */
 export const OpenIdConnectAccessTokenConfigurationItemFilterSensitiveLog = (
-  obj: OpenIdConnectAccessTokenConfigurationItem
+  obj: OpenIdConnectAccessTokenConfigurationItem,
 ): any => ({
   ...obj,
   ...(obj.principalIdClaim && { principalIdClaim: SENSITIVE_STRING }),
@@ -4934,7 +4934,7 @@ export const OpenIdConnectAccessTokenConfigurationItemFilterSensitiveLog = (
  * @internal
  */
 export const OpenIdConnectIdentityTokenConfigurationItemFilterSensitiveLog = (
-  obj: OpenIdConnectIdentityTokenConfigurationItem
+  obj: OpenIdConnectIdentityTokenConfigurationItem,
 ): any => ({
   ...obj,
   ...(obj.principalIdClaim && { principalIdClaim: SENSITIVE_STRING }),
@@ -4971,7 +4971,7 @@ export const ConfigurationItemFilterSensitiveLog = (obj: ConfigurationItem): any
   if (obj.cognitoUserPoolConfiguration !== undefined)
     return {
       cognitoUserPoolConfiguration: CognitoUserPoolConfigurationItemFilterSensitiveLog(
-        obj.cognitoUserPoolConfiguration
+        obj.cognitoUserPoolConfiguration,
       ),
     };
   if (obj.openIdConnectConfiguration !== undefined)
@@ -5093,7 +5093,7 @@ export const StaticPolicyDefinitionDetailFilterSensitiveLog = (obj: StaticPolicy
  * @internal
  */
 export const TemplateLinkedPolicyDefinitionDetailFilterSensitiveLog = (
-  obj: TemplateLinkedPolicyDefinitionDetail
+  obj: TemplateLinkedPolicyDefinitionDetail,
 ): any => ({
   ...obj,
   ...(obj.principal && { principal: EntityIdentifierFilterSensitiveLog(obj.principal) }),
@@ -5214,7 +5214,7 @@ export const UpdateCognitoUserPoolConfigurationFilterSensitiveLog = (obj: Update
  * @internal
  */
 export const UpdateOpenIdConnectGroupConfigurationFilterSensitiveLog = (
-  obj: UpdateOpenIdConnectGroupConfiguration
+  obj: UpdateOpenIdConnectGroupConfiguration,
 ): any => ({
   ...obj,
   ...(obj.groupClaim && { groupClaim: SENSITIVE_STRING }),
@@ -5225,7 +5225,7 @@ export const UpdateOpenIdConnectGroupConfigurationFilterSensitiveLog = (
  * @internal
  */
 export const UpdateOpenIdConnectAccessTokenConfigurationFilterSensitiveLog = (
-  obj: UpdateOpenIdConnectAccessTokenConfiguration
+  obj: UpdateOpenIdConnectAccessTokenConfiguration,
 ): any => ({
   ...obj,
   ...(obj.principalIdClaim && { principalIdClaim: SENSITIVE_STRING }),
@@ -5235,7 +5235,7 @@ export const UpdateOpenIdConnectAccessTokenConfigurationFilterSensitiveLog = (
  * @internal
  */
 export const UpdateOpenIdConnectIdentityTokenConfigurationFilterSensitiveLog = (
-  obj: UpdateOpenIdConnectIdentityTokenConfiguration
+  obj: UpdateOpenIdConnectIdentityTokenConfiguration,
 ): any => ({
   ...obj,
   ...(obj.principalIdClaim && { principalIdClaim: SENSITIVE_STRING }),
@@ -5276,7 +5276,7 @@ export const UpdateConfigurationFilterSensitiveLog = (obj: UpdateConfiguration):
   if (obj.cognitoUserPoolConfiguration !== undefined)
     return {
       cognitoUserPoolConfiguration: UpdateCognitoUserPoolConfigurationFilterSensitiveLog(
-        obj.cognitoUserPoolConfiguration
+        obj.cognitoUserPoolConfiguration,
       ),
     };
   if (obj.openIdConnectConfiguration !== undefined)
@@ -5501,9 +5501,10 @@ export const AttributeValueFilterSensitiveLog = (obj: AttributeValue): any => {
     return {
       record: Object.entries(obj.record).reduce(
         (acc: any, [key, value]: [string, AttributeValue]) => (
-          (acc[key] = AttributeValueFilterSensitiveLog(value)), acc
+          (acc[key] = AttributeValueFilterSensitiveLog(value)),
+          acc
         ),
-        {}
+        {},
       ),
     };
   if (obj.$unknown !== undefined) return { [obj.$unknown[0]]: "UNKNOWN" };
@@ -5526,7 +5527,7 @@ export const EntityItemFilterSensitiveLog = (obj: EntityItem): any => ({
   ...(obj.attributes && {
     attributes: Object.entries(obj.attributes).reduce(
       (acc: any, [key, value]: [string, AttributeValue]) => ((acc[key] = AttributeValueFilterSensitiveLog(value)), acc),
-      {}
+      {},
     ),
   }),
   ...(obj.parents && { parents: obj.parents.map((item) => EntityIdentifierFilterSensitiveLog(item)) }),
@@ -5547,7 +5548,7 @@ export const BatchIsAuthorizedInputItemFilterSensitiveLog = (obj: BatchIsAuthori
  * @internal
  */
 export const BatchIsAuthorizedWithTokenInputItemFilterSensitiveLog = (
-  obj: BatchIsAuthorizedWithTokenInputItem
+  obj: BatchIsAuthorizedWithTokenInputItem,
 ): any => ({
   ...obj,
   ...(obj.action && { action: ActionIdentifierFilterSensitiveLog(obj.action) }),
@@ -5568,7 +5569,7 @@ export const BatchIsAuthorizedOutputItemFilterSensitiveLog = (obj: BatchIsAuthor
  * @internal
  */
 export const BatchIsAuthorizedWithTokenOutputItemFilterSensitiveLog = (
-  obj: BatchIsAuthorizedWithTokenOutputItem
+  obj: BatchIsAuthorizedWithTokenOutputItem,
 ): any => ({
   ...obj,
   ...(obj.request && { request: BatchIsAuthorizedWithTokenInputItemFilterSensitiveLog(obj.request) }),

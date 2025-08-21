@@ -85,7 +85,7 @@ import {
  */
 export const se_CancelResourceRequestCommand = async (
   input: CancelResourceRequestCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CancelResourceRequest");
   let body: any;
@@ -98,7 +98,7 @@ export const se_CancelResourceRequestCommand = async (
  */
 export const se_CreateResourceCommand = async (
   input: CreateResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateResource");
   let body: any;
@@ -111,7 +111,7 @@ export const se_CreateResourceCommand = async (
  */
 export const se_DeleteResourceCommand = async (
   input: DeleteResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteResource");
   let body: any;
@@ -124,7 +124,7 @@ export const se_DeleteResourceCommand = async (
  */
 export const se_GetResourceCommand = async (
   input: GetResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetResource");
   let body: any;
@@ -137,7 +137,7 @@ export const se_GetResourceCommand = async (
  */
 export const se_GetResourceRequestStatusCommand = async (
   input: GetResourceRequestStatusCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetResourceRequestStatus");
   let body: any;
@@ -150,7 +150,7 @@ export const se_GetResourceRequestStatusCommand = async (
  */
 export const se_ListResourceRequestsCommand = async (
   input: ListResourceRequestsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListResourceRequests");
   let body: any;
@@ -163,7 +163,7 @@ export const se_ListResourceRequestsCommand = async (
  */
 export const se_ListResourcesCommand = async (
   input: ListResourcesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListResources");
   let body: any;
@@ -176,7 +176,7 @@ export const se_ListResourcesCommand = async (
  */
 export const se_UpdateResourceCommand = async (
   input: UpdateResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateResource");
   let body: any;
@@ -189,7 +189,7 @@ export const se_UpdateResourceCommand = async (
  */
 export const de_CancelResourceRequestCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CancelResourceRequestCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -209,7 +209,7 @@ export const de_CancelResourceRequestCommand = async (
  */
 export const de_CreateResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -229,7 +229,7 @@ export const de_CreateResourceCommand = async (
  */
 export const de_DeleteResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -249,7 +249,7 @@ export const de_DeleteResourceCommand = async (
  */
 export const de_GetResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -269,7 +269,7 @@ export const de_GetResourceCommand = async (
  */
 export const de_GetResourceRequestStatusCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetResourceRequestStatusCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -289,7 +289,7 @@ export const de_GetResourceRequestStatusCommand = async (
  */
 export const de_ListResourceRequestsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListResourceRequestsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -309,7 +309,7 @@ export const de_ListResourceRequestsCommand = async (
  */
 export const de_ListResourcesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListResourcesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -329,7 +329,7 @@ export const de_ListResourcesCommand = async (
  */
 export const de_UpdateResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -432,7 +432,7 @@ const de_CommandError = async (output: __HttpResponse, context: __SerdeContext):
  */
 const de_AlreadyExistsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AlreadyExistsException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -448,7 +448,7 @@ const de_AlreadyExistsExceptionRes = async (
  */
 const de_ClientTokenConflictExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ClientTokenConflictException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -464,7 +464,7 @@ const de_ClientTokenConflictExceptionRes = async (
  */
 const de_ConcurrentModificationExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ConcurrentModificationException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -480,7 +480,7 @@ const de_ConcurrentModificationExceptionRes = async (
  */
 const de_ConcurrentOperationExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ConcurrentOperationException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -496,7 +496,7 @@ const de_ConcurrentOperationExceptionRes = async (
  */
 const de_GeneralServiceExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GeneralServiceException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -512,7 +512,7 @@ const de_GeneralServiceExceptionRes = async (
  */
 const de_HandlerFailureExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<HandlerFailureException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -528,7 +528,7 @@ const de_HandlerFailureExceptionRes = async (
  */
 const de_HandlerInternalFailureExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<HandlerInternalFailureException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -544,7 +544,7 @@ const de_HandlerInternalFailureExceptionRes = async (
  */
 const de_InvalidCredentialsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidCredentialsException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -560,7 +560,7 @@ const de_InvalidCredentialsExceptionRes = async (
  */
 const de_InvalidRequestExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidRequestException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -576,7 +576,7 @@ const de_InvalidRequestExceptionRes = async (
  */
 const de_NetworkFailureExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<NetworkFailureException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -592,7 +592,7 @@ const de_NetworkFailureExceptionRes = async (
  */
 const de_NotStabilizedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<NotStabilizedException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -608,7 +608,7 @@ const de_NotStabilizedExceptionRes = async (
  */
 const de_NotUpdatableExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<NotUpdatableException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -624,7 +624,7 @@ const de_NotUpdatableExceptionRes = async (
  */
 const de_PrivateTypeExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PrivateTypeException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -640,7 +640,7 @@ const de_PrivateTypeExceptionRes = async (
  */
 const de_RequestTokenNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RequestTokenNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -656,7 +656,7 @@ const de_RequestTokenNotFoundExceptionRes = async (
  */
 const de_ResourceConflictExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceConflictException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -672,7 +672,7 @@ const de_ResourceConflictExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -688,7 +688,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_ServiceInternalErrorExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceInternalErrorException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -704,7 +704,7 @@ const de_ServiceInternalErrorExceptionRes = async (
  */
 const de_ServiceLimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceLimitExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -733,7 +733,7 @@ const de_ThrottlingExceptionRes = async (parsedOutput: any, context: __SerdeCont
  */
 const de_TypeNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TypeNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -749,7 +749,7 @@ const de_TypeNotFoundExceptionRes = async (
  */
 const de_UnsupportedActionExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UnsupportedActionException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -969,7 +969,7 @@ const buildHttpRpcRequest = async (
   headers: __HeaderBag,
   path: string,
   resolvedHostname: string | undefined,
-  body: any
+  body: any,
 ): Promise<__HttpRequest> => {
   const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
   const contents: any = {

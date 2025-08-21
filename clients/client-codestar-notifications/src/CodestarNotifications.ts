@@ -75,16 +75,16 @@ export interface CodestarNotifications {
    */
   createNotificationRule(
     args: CreateNotificationRuleCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateNotificationRuleCommandOutput>;
   createNotificationRule(
     args: CreateNotificationRuleCommandInput,
-    cb: (err: any, data?: CreateNotificationRuleCommandOutput) => void
+    cb: (err: any, data?: CreateNotificationRuleCommandOutput) => void,
   ): void;
   createNotificationRule(
     args: CreateNotificationRuleCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateNotificationRuleCommandOutput) => void
+    cb: (err: any, data?: CreateNotificationRuleCommandOutput) => void,
   ): void;
 
   /**
@@ -92,16 +92,16 @@ export interface CodestarNotifications {
    */
   deleteNotificationRule(
     args: DeleteNotificationRuleCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteNotificationRuleCommandOutput>;
   deleteNotificationRule(
     args: DeleteNotificationRuleCommandInput,
-    cb: (err: any, data?: DeleteNotificationRuleCommandOutput) => void
+    cb: (err: any, data?: DeleteNotificationRuleCommandOutput) => void,
   ): void;
   deleteNotificationRule(
     args: DeleteNotificationRuleCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteNotificationRuleCommandOutput) => void
+    cb: (err: any, data?: DeleteNotificationRuleCommandOutput) => void,
   ): void;
 
   /**
@@ -112,7 +112,7 @@ export interface CodestarNotifications {
   deleteTarget(
     args: DeleteTargetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteTargetCommandOutput) => void
+    cb: (err: any, data?: DeleteTargetCommandOutput) => void,
   ): void;
 
   /**
@@ -120,16 +120,16 @@ export interface CodestarNotifications {
    */
   describeNotificationRule(
     args: DescribeNotificationRuleCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeNotificationRuleCommandOutput>;
   describeNotificationRule(
     args: DescribeNotificationRuleCommandInput,
-    cb: (err: any, data?: DescribeNotificationRuleCommandOutput) => void
+    cb: (err: any, data?: DescribeNotificationRuleCommandOutput) => void,
   ): void;
   describeNotificationRule(
     args: DescribeNotificationRuleCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeNotificationRuleCommandOutput) => void
+    cb: (err: any, data?: DescribeNotificationRuleCommandOutput) => void,
   ): void;
 
   /**
@@ -138,13 +138,13 @@ export interface CodestarNotifications {
   listEventTypes(): Promise<ListEventTypesCommandOutput>;
   listEventTypes(
     args: ListEventTypesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListEventTypesCommandOutput>;
   listEventTypes(args: ListEventTypesCommandInput, cb: (err: any, data?: ListEventTypesCommandOutput) => void): void;
   listEventTypes(
     args: ListEventTypesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListEventTypesCommandOutput) => void
+    cb: (err: any, data?: ListEventTypesCommandOutput) => void,
   ): void;
 
   /**
@@ -153,16 +153,16 @@ export interface CodestarNotifications {
   listNotificationRules(): Promise<ListNotificationRulesCommandOutput>;
   listNotificationRules(
     args: ListNotificationRulesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListNotificationRulesCommandOutput>;
   listNotificationRules(
     args: ListNotificationRulesCommandInput,
-    cb: (err: any, data?: ListNotificationRulesCommandOutput) => void
+    cb: (err: any, data?: ListNotificationRulesCommandOutput) => void,
   ): void;
   listNotificationRules(
     args: ListNotificationRulesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListNotificationRulesCommandOutput) => void
+    cb: (err: any, data?: ListNotificationRulesCommandOutput) => void,
   ): void;
 
   /**
@@ -170,16 +170,16 @@ export interface CodestarNotifications {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -191,7 +191,7 @@ export interface CodestarNotifications {
   listTargets(
     args: ListTargetsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTargetsCommandOutput) => void
+    cb: (err: any, data?: ListTargetsCommandOutput) => void,
   ): void;
 
   /**
@@ -202,7 +202,7 @@ export interface CodestarNotifications {
   subscribe(
     args: SubscribeCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SubscribeCommandOutput) => void
+    cb: (err: any, data?: SubscribeCommandOutput) => void,
   ): void;
 
   /**
@@ -213,7 +213,7 @@ export interface CodestarNotifications {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -224,7 +224,7 @@ export interface CodestarNotifications {
   unsubscribe(
     args: UnsubscribeCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UnsubscribeCommandOutput) => void
+    cb: (err: any, data?: UnsubscribeCommandOutput) => void,
   ): void;
 
   /**
@@ -235,7 +235,7 @@ export interface CodestarNotifications {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -243,16 +243,16 @@ export interface CodestarNotifications {
    */
   updateNotificationRule(
     args: UpdateNotificationRuleCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateNotificationRuleCommandOutput>;
   updateNotificationRule(
     args: UpdateNotificationRuleCommandInput,
-    cb: (err: any, data?: UpdateNotificationRuleCommandOutput) => void
+    cb: (err: any, data?: UpdateNotificationRuleCommandOutput) => void,
   ): void;
   updateNotificationRule(
     args: UpdateNotificationRuleCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateNotificationRuleCommandOutput) => void
+    cb: (err: any, data?: UpdateNotificationRuleCommandOutput) => void,
   ): void;
 }
 

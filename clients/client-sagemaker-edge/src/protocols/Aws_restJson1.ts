@@ -34,7 +34,7 @@ import { SagemakerEdgeServiceException as __BaseException } from "../models/Sage
  */
 export const se_GetDeploymentsCommand = async (
   input: GetDeploymentsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -46,7 +46,7 @@ export const se_GetDeploymentsCommand = async (
     take(input, {
       DeviceFleetName: [],
       DeviceName: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -57,7 +57,7 @@ export const se_GetDeploymentsCommand = async (
  */
 export const se_GetDeviceRegistrationCommand = async (
   input: GetDeviceRegistrationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -69,7 +69,7 @@ export const se_GetDeviceRegistrationCommand = async (
     take(input, {
       DeviceFleetName: [],
       DeviceName: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -80,7 +80,7 @@ export const se_GetDeviceRegistrationCommand = async (
  */
 export const se_SendHeartbeatCommand = async (
   input: SendHeartbeatCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -96,7 +96,7 @@ export const se_SendHeartbeatCommand = async (
       DeviceFleetName: [],
       DeviceName: [],
       Models: (_) => se_Models(_, context),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -107,7 +107,7 @@ export const se_SendHeartbeatCommand = async (
  */
 export const de_GetDeploymentsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetDeploymentsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -128,7 +128,7 @@ export const de_GetDeploymentsCommand = async (
  */
 export const de_GetDeviceRegistrationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetDeviceRegistrationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -150,7 +150,7 @@ export const de_GetDeviceRegistrationCommand = async (
  */
 export const de_SendHeartbeatCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SendHeartbeatCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -191,7 +191,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_InternalServiceExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServiceException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;

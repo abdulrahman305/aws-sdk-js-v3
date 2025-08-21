@@ -31,7 +31,7 @@ describe("checkContentLengthHeaderMiddleware", () => {
     });
 
     expect(spy).toHaveBeenCalledWith(
-      "Are you using a Stream of unknown length as the Body of a PutObject request? Consider using Upload instead from @aws-sdk/lib-storage."
+      "Are you using a Stream of unknown length as the Body of a PutObject request? Consider using Upload instead from @aws-sdk/lib-storage.",
     );
   });
 
@@ -71,7 +71,7 @@ describe("checkContentLengthHeaderMiddleware", () => {
     });
 
     expect(spy).toHaveBeenCalledWith(
-      "Are you using a Stream of unknown length as the Body of a PutObject request? Consider using Upload instead from @aws-sdk/lib-storage."
+      "Are you using a Stream of unknown length as the Body of a PutObject request? Consider using Upload instead from @aws-sdk/lib-storage.",
     );
   });
 
@@ -106,7 +106,7 @@ describe("checkContentLengthHeaderMiddleware", () => {
     expect(spy).not.toHaveBeenCalled();
     expect(context.logger.called).toBe(true);
     expect(context.logger.calledWith).toEqual(
-      "Are you using a Stream of unknown length as the Body of a PutObject request? Consider using Upload instead from @aws-sdk/lib-storage."
+      "Are you using a Stream of unknown length as the Body of a PutObject request? Consider using Upload instead from @aws-sdk/lib-storage.",
     );
   });
 

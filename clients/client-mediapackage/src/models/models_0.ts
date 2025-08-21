@@ -2802,7 +2802,7 @@ export const RotateChannelCredentialsResponseFilterSensitiveLog = (obj: RotateCh
  * @internal
  */
 export const RotateIngestEndpointCredentialsResponseFilterSensitiveLog = (
-  obj: RotateIngestEndpointCredentialsResponse
+  obj: RotateIngestEndpointCredentialsResponse,
 ): any => ({
   ...obj,
   ...(obj.HlsIngest && { HlsIngest: HlsIngestFilterSensitiveLog(obj.HlsIngest) }),

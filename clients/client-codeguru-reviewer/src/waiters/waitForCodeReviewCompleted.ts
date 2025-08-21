@@ -6,7 +6,7 @@ import { DescribeCodeReviewCommand, DescribeCodeReviewCommandInput } from "../co
 
 const checkState = async (
   client: CodeGuruReviewerClient,
-  input: DescribeCodeReviewCommandInput
+  input: DescribeCodeReviewCommandInput,
 ): Promise<WaiterResult> => {
   let reason;
   try {
@@ -47,7 +47,7 @@ const checkState = async (
  */
 export const waitForCodeReviewCompleted = async (
   params: WaiterConfiguration<CodeGuruReviewerClient>,
-  input: DescribeCodeReviewCommandInput
+  input: DescribeCodeReviewCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 10, maxDelay: 120 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -59,7 +59,7 @@ export const waitForCodeReviewCompleted = async (
  */
 export const waitUntilCodeReviewCompleted = async (
   params: WaiterConfiguration<CodeGuruReviewerClient>,
-  input: DescribeCodeReviewCommandInput
+  input: DescribeCodeReviewCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 10, maxDelay: 120 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

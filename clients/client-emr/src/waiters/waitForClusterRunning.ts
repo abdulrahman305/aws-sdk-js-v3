@@ -60,7 +60,7 @@ const checkState = async (client: EMRClient, input: DescribeClusterCommandInput)
  */
 export const waitForClusterRunning = async (
   params: WaiterConfiguration<EMRClient>,
-  input: DescribeClusterCommandInput
+  input: DescribeClusterCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 30, maxDelay: 120 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -72,7 +72,7 @@ export const waitForClusterRunning = async (
  */
 export const waitUntilClusterRunning = async (
   params: WaiterConfiguration<EMRClient>,
-  input: DescribeClusterCommandInput
+  input: DescribeClusterCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 30, maxDelay: 120 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

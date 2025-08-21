@@ -31,13 +31,13 @@ export interface SageMakerRuntime {
    */
   invokeEndpoint(
     args: InvokeEndpointCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<InvokeEndpointCommandOutput>;
   invokeEndpoint(args: InvokeEndpointCommandInput, cb: (err: any, data?: InvokeEndpointCommandOutput) => void): void;
   invokeEndpoint(
     args: InvokeEndpointCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: InvokeEndpointCommandOutput) => void
+    cb: (err: any, data?: InvokeEndpointCommandOutput) => void,
   ): void;
 
   /**
@@ -45,16 +45,16 @@ export interface SageMakerRuntime {
    */
   invokeEndpointAsync(
     args: InvokeEndpointAsyncCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<InvokeEndpointAsyncCommandOutput>;
   invokeEndpointAsync(
     args: InvokeEndpointAsyncCommandInput,
-    cb: (err: any, data?: InvokeEndpointAsyncCommandOutput) => void
+    cb: (err: any, data?: InvokeEndpointAsyncCommandOutput) => void,
   ): void;
   invokeEndpointAsync(
     args: InvokeEndpointAsyncCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: InvokeEndpointAsyncCommandOutput) => void
+    cb: (err: any, data?: InvokeEndpointAsyncCommandOutput) => void,
   ): void;
 
   /**
@@ -62,16 +62,16 @@ export interface SageMakerRuntime {
    */
   invokeEndpointWithResponseStream(
     args: InvokeEndpointWithResponseStreamCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<InvokeEndpointWithResponseStreamCommandOutput>;
   invokeEndpointWithResponseStream(
     args: InvokeEndpointWithResponseStreamCommandInput,
-    cb: (err: any, data?: InvokeEndpointWithResponseStreamCommandOutput) => void
+    cb: (err: any, data?: InvokeEndpointWithResponseStreamCommandOutput) => void,
   ): void;
   invokeEndpointWithResponseStream(
     args: InvokeEndpointWithResponseStreamCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: InvokeEndpointWithResponseStreamCommandOutput) => void
+    cb: (err: any, data?: InvokeEndpointWithResponseStreamCommandOutput) => void,
   ): void;
 }
 

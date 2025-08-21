@@ -65,7 +65,7 @@ export class ConstantQueryStringSerializer
 
 export const getConstantQueryStringHandler = <Context>(
   operation: __Operation<ConstantQueryStringServerInput, ConstantQueryStringServerOutput, Context>,
-  customizer: __ValidationCustomizer<"ConstantQueryString">
+  customizer: __ValidationCustomizer<"ConstantQueryString">,
 ): __ServiceHandler<Context, __HttpRequest, __HttpResponse> => {
   const mux = new httpbinding.HttpBindingMux<"RestJson", "ConstantQueryString">([
     new httpbinding.UriSpec<"RestJson", "ConstantQueryString">(
@@ -75,7 +75,7 @@ export const getConstantQueryStringHandler = <Context>(
         { type: "query_literal", key: "foo", value: "bar" },
         { type: "query_literal", key: "hello", value: "" },
       ],
-      { service: "RestJson", operation: "ConstantQueryString" }
+      { service: "RestJson", operation: "ConstantQueryString" },
     ),
   ]);
   return new ConstantQueryStringHandler(
@@ -83,7 +83,7 @@ export const getConstantQueryStringHandler = <Context>(
     mux,
     new ConstantQueryStringSerializer(),
     serializeFrameworkException,
-    customizer
+    customizer,
   );
 };
 
@@ -104,7 +104,7 @@ async function handle<S, O extends keyof S & string, Context>(
   operation: __Operation<__OperationInput<S[O]>, __OperationOutput<S[O]>, Context>,
   serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
   validationFn: (input: __OperationInput<S[O]>) => __ValidationFailure[],
-  validationCustomizer: __ValidationCustomizer<O>
+  validationCustomizer: __ValidationCustomizer<O>,
 ): Promise<__HttpResponse> {
   let input;
   try {
@@ -146,7 +146,7 @@ export class ConstantQueryStringHandler<Context> implements __ServiceHandler<Con
   >;
   private readonly serializeFrameworkException: (
     e: __SmithyFrameworkException,
-    ctx: __ServerSerdeContext
+    ctx: __ServerSerdeContext,
   ) => Promise<__HttpResponse>;
   private readonly validationCustomizer: __ValidationCustomizer<"ConstantQueryString">;
   /**
@@ -163,7 +163,7 @@ export class ConstantQueryStringHandler<Context> implements __ServiceHandler<Con
     mux: __Mux<"RestJson", "ConstantQueryString">,
     serializer: __OperationSerializer<RestJsonService<Context>, "ConstantQueryString", ConstantQueryStringErrors>,
     serializeFrameworkException: (e: __SmithyFrameworkException, ctx: __ServerSerdeContext) => Promise<__HttpResponse>,
-    validationCustomizer: __ValidationCustomizer<"ConstantQueryString">
+    validationCustomizer: __ValidationCustomizer<"ConstantQueryString">,
   ) {
     this.operation = operation;
     this.mux = mux;
@@ -175,7 +175,7 @@ export class ConstantQueryStringHandler<Context> implements __ServiceHandler<Con
     const target = this.mux.match(request);
     if (target === undefined) {
       console.log(
-        "Received a request that did not match aws.protocoltests.restjson#RestJson.ConstantQueryString. This indicates a misconfiguration."
+        "Received a request that did not match aws.protocoltests.restjson#RestJson.ConstantQueryString. This indicates a misconfiguration.",
       );
       return this.serializeFrameworkException(new __InternalFailureException(), serdeContextBase);
     }
@@ -187,7 +187,7 @@ export class ConstantQueryStringHandler<Context> implements __ServiceHandler<Con
       this.operation,
       this.serializeFrameworkException,
       ConstantQueryStringServerInput.validate,
-      this.validationCustomizer
+      this.validationCustomizer,
     );
   }
 }

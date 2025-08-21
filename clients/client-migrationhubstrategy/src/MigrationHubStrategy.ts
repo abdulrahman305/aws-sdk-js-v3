@@ -141,16 +141,16 @@ export interface MigrationHubStrategy {
    */
   getApplicationComponentDetails(
     args: GetApplicationComponentDetailsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetApplicationComponentDetailsCommandOutput>;
   getApplicationComponentDetails(
     args: GetApplicationComponentDetailsCommandInput,
-    cb: (err: any, data?: GetApplicationComponentDetailsCommandOutput) => void
+    cb: (err: any, data?: GetApplicationComponentDetailsCommandOutput) => void,
   ): void;
   getApplicationComponentDetails(
     args: GetApplicationComponentDetailsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetApplicationComponentDetailsCommandOutput) => void
+    cb: (err: any, data?: GetApplicationComponentDetailsCommandOutput) => void,
   ): void;
 
   /**
@@ -158,16 +158,16 @@ export interface MigrationHubStrategy {
    */
   getApplicationComponentStrategies(
     args: GetApplicationComponentStrategiesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetApplicationComponentStrategiesCommandOutput>;
   getApplicationComponentStrategies(
     args: GetApplicationComponentStrategiesCommandInput,
-    cb: (err: any, data?: GetApplicationComponentStrategiesCommandOutput) => void
+    cb: (err: any, data?: GetApplicationComponentStrategiesCommandOutput) => void,
   ): void;
   getApplicationComponentStrategies(
     args: GetApplicationComponentStrategiesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetApplicationComponentStrategiesCommandOutput) => void
+    cb: (err: any, data?: GetApplicationComponentStrategiesCommandOutput) => void,
   ): void;
 
   /**
@@ -178,7 +178,7 @@ export interface MigrationHubStrategy {
   getAssessment(
     args: GetAssessmentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetAssessmentCommandOutput) => void
+    cb: (err: any, data?: GetAssessmentCommandOutput) => void,
   ): void;
 
   /**
@@ -186,16 +186,16 @@ export interface MigrationHubStrategy {
    */
   getImportFileTask(
     args: GetImportFileTaskCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetImportFileTaskCommandOutput>;
   getImportFileTask(
     args: GetImportFileTaskCommandInput,
-    cb: (err: any, data?: GetImportFileTaskCommandOutput) => void
+    cb: (err: any, data?: GetImportFileTaskCommandOutput) => void,
   ): void;
   getImportFileTask(
     args: GetImportFileTaskCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetImportFileTaskCommandOutput) => void
+    cb: (err: any, data?: GetImportFileTaskCommandOutput) => void,
   ): void;
 
   /**
@@ -204,16 +204,16 @@ export interface MigrationHubStrategy {
   getLatestAssessmentId(): Promise<GetLatestAssessmentIdCommandOutput>;
   getLatestAssessmentId(
     args: GetLatestAssessmentIdCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetLatestAssessmentIdCommandOutput>;
   getLatestAssessmentId(
     args: GetLatestAssessmentIdCommandInput,
-    cb: (err: any, data?: GetLatestAssessmentIdCommandOutput) => void
+    cb: (err: any, data?: GetLatestAssessmentIdCommandOutput) => void,
   ): void;
   getLatestAssessmentId(
     args: GetLatestAssessmentIdCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetLatestAssessmentIdCommandOutput) => void
+    cb: (err: any, data?: GetLatestAssessmentIdCommandOutput) => void,
   ): void;
 
   /**
@@ -222,16 +222,16 @@ export interface MigrationHubStrategy {
   getPortfolioPreferences(): Promise<GetPortfolioPreferencesCommandOutput>;
   getPortfolioPreferences(
     args: GetPortfolioPreferencesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetPortfolioPreferencesCommandOutput>;
   getPortfolioPreferences(
     args: GetPortfolioPreferencesCommandInput,
-    cb: (err: any, data?: GetPortfolioPreferencesCommandOutput) => void
+    cb: (err: any, data?: GetPortfolioPreferencesCommandOutput) => void,
   ): void;
   getPortfolioPreferences(
     args: GetPortfolioPreferencesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetPortfolioPreferencesCommandOutput) => void
+    cb: (err: any, data?: GetPortfolioPreferencesCommandOutput) => void,
   ): void;
 
   /**
@@ -240,16 +240,16 @@ export interface MigrationHubStrategy {
   getPortfolioSummary(): Promise<GetPortfolioSummaryCommandOutput>;
   getPortfolioSummary(
     args: GetPortfolioSummaryCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetPortfolioSummaryCommandOutput>;
   getPortfolioSummary(
     args: GetPortfolioSummaryCommandInput,
-    cb: (err: any, data?: GetPortfolioSummaryCommandOutput) => void
+    cb: (err: any, data?: GetPortfolioSummaryCommandOutput) => void,
   ): void;
   getPortfolioSummary(
     args: GetPortfolioSummaryCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetPortfolioSummaryCommandOutput) => void
+    cb: (err: any, data?: GetPortfolioSummaryCommandOutput) => void,
   ): void;
 
   /**
@@ -257,16 +257,16 @@ export interface MigrationHubStrategy {
    */
   getRecommendationReportDetails(
     args: GetRecommendationReportDetailsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetRecommendationReportDetailsCommandOutput>;
   getRecommendationReportDetails(
     args: GetRecommendationReportDetailsCommandInput,
-    cb: (err: any, data?: GetRecommendationReportDetailsCommandOutput) => void
+    cb: (err: any, data?: GetRecommendationReportDetailsCommandOutput) => void,
   ): void;
   getRecommendationReportDetails(
     args: GetRecommendationReportDetailsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetRecommendationReportDetailsCommandOutput) => void
+    cb: (err: any, data?: GetRecommendationReportDetailsCommandOutput) => void,
   ): void;
 
   /**
@@ -274,16 +274,16 @@ export interface MigrationHubStrategy {
    */
   getServerDetails(
     args: GetServerDetailsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetServerDetailsCommandOutput>;
   getServerDetails(
     args: GetServerDetailsCommandInput,
-    cb: (err: any, data?: GetServerDetailsCommandOutput) => void
+    cb: (err: any, data?: GetServerDetailsCommandOutput) => void,
   ): void;
   getServerDetails(
     args: GetServerDetailsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetServerDetailsCommandOutput) => void
+    cb: (err: any, data?: GetServerDetailsCommandOutput) => void,
   ): void;
 
   /**
@@ -291,16 +291,16 @@ export interface MigrationHubStrategy {
    */
   getServerStrategies(
     args: GetServerStrategiesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetServerStrategiesCommandOutput>;
   getServerStrategies(
     args: GetServerStrategiesCommandInput,
-    cb: (err: any, data?: GetServerStrategiesCommandOutput) => void
+    cb: (err: any, data?: GetServerStrategiesCommandOutput) => void,
   ): void;
   getServerStrategies(
     args: GetServerStrategiesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetServerStrategiesCommandOutput) => void
+    cb: (err: any, data?: GetServerStrategiesCommandOutput) => void,
   ): void;
 
   /**
@@ -309,16 +309,16 @@ export interface MigrationHubStrategy {
   listAnalyzableServers(): Promise<ListAnalyzableServersCommandOutput>;
   listAnalyzableServers(
     args: ListAnalyzableServersCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListAnalyzableServersCommandOutput>;
   listAnalyzableServers(
     args: ListAnalyzableServersCommandInput,
-    cb: (err: any, data?: ListAnalyzableServersCommandOutput) => void
+    cb: (err: any, data?: ListAnalyzableServersCommandOutput) => void,
   ): void;
   listAnalyzableServers(
     args: ListAnalyzableServersCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListAnalyzableServersCommandOutput) => void
+    cb: (err: any, data?: ListAnalyzableServersCommandOutput) => void,
   ): void;
 
   /**
@@ -327,16 +327,16 @@ export interface MigrationHubStrategy {
   listApplicationComponents(): Promise<ListApplicationComponentsCommandOutput>;
   listApplicationComponents(
     args: ListApplicationComponentsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListApplicationComponentsCommandOutput>;
   listApplicationComponents(
     args: ListApplicationComponentsCommandInput,
-    cb: (err: any, data?: ListApplicationComponentsCommandOutput) => void
+    cb: (err: any, data?: ListApplicationComponentsCommandOutput) => void,
   ): void;
   listApplicationComponents(
     args: ListApplicationComponentsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListApplicationComponentsCommandOutput) => void
+    cb: (err: any, data?: ListApplicationComponentsCommandOutput) => void,
   ): void;
 
   /**
@@ -345,13 +345,13 @@ export interface MigrationHubStrategy {
   listCollectors(): Promise<ListCollectorsCommandOutput>;
   listCollectors(
     args: ListCollectorsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListCollectorsCommandOutput>;
   listCollectors(args: ListCollectorsCommandInput, cb: (err: any, data?: ListCollectorsCommandOutput) => void): void;
   listCollectors(
     args: ListCollectorsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListCollectorsCommandOutput) => void
+    cb: (err: any, data?: ListCollectorsCommandOutput) => void,
   ): void;
 
   /**
@@ -360,16 +360,16 @@ export interface MigrationHubStrategy {
   listImportFileTask(): Promise<ListImportFileTaskCommandOutput>;
   listImportFileTask(
     args: ListImportFileTaskCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListImportFileTaskCommandOutput>;
   listImportFileTask(
     args: ListImportFileTaskCommandInput,
-    cb: (err: any, data?: ListImportFileTaskCommandOutput) => void
+    cb: (err: any, data?: ListImportFileTaskCommandOutput) => void,
   ): void;
   listImportFileTask(
     args: ListImportFileTaskCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListImportFileTaskCommandOutput) => void
+    cb: (err: any, data?: ListImportFileTaskCommandOutput) => void,
   ): void;
 
   /**
@@ -381,7 +381,7 @@ export interface MigrationHubStrategy {
   listServers(
     args: ListServersCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListServersCommandOutput) => void
+    cb: (err: any, data?: ListServersCommandOutput) => void,
   ): void;
 
   /**
@@ -390,16 +390,16 @@ export interface MigrationHubStrategy {
   putPortfolioPreferences(): Promise<PutPortfolioPreferencesCommandOutput>;
   putPortfolioPreferences(
     args: PutPortfolioPreferencesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutPortfolioPreferencesCommandOutput>;
   putPortfolioPreferences(
     args: PutPortfolioPreferencesCommandInput,
-    cb: (err: any, data?: PutPortfolioPreferencesCommandOutput) => void
+    cb: (err: any, data?: PutPortfolioPreferencesCommandOutput) => void,
   ): void;
   putPortfolioPreferences(
     args: PutPortfolioPreferencesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutPortfolioPreferencesCommandOutput) => void
+    cb: (err: any, data?: PutPortfolioPreferencesCommandOutput) => void,
   ): void;
 
   /**
@@ -408,13 +408,13 @@ export interface MigrationHubStrategy {
   startAssessment(): Promise<StartAssessmentCommandOutput>;
   startAssessment(
     args: StartAssessmentCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartAssessmentCommandOutput>;
   startAssessment(args: StartAssessmentCommandInput, cb: (err: any, data?: StartAssessmentCommandOutput) => void): void;
   startAssessment(
     args: StartAssessmentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartAssessmentCommandOutput) => void
+    cb: (err: any, data?: StartAssessmentCommandOutput) => void,
   ): void;
 
   /**
@@ -422,16 +422,16 @@ export interface MigrationHubStrategy {
    */
   startImportFileTask(
     args: StartImportFileTaskCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartImportFileTaskCommandOutput>;
   startImportFileTask(
     args: StartImportFileTaskCommandInput,
-    cb: (err: any, data?: StartImportFileTaskCommandOutput) => void
+    cb: (err: any, data?: StartImportFileTaskCommandOutput) => void,
   ): void;
   startImportFileTask(
     args: StartImportFileTaskCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartImportFileTaskCommandOutput) => void
+    cb: (err: any, data?: StartImportFileTaskCommandOutput) => void,
   ): void;
 
   /**
@@ -440,16 +440,16 @@ export interface MigrationHubStrategy {
   startRecommendationReportGeneration(): Promise<StartRecommendationReportGenerationCommandOutput>;
   startRecommendationReportGeneration(
     args: StartRecommendationReportGenerationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartRecommendationReportGenerationCommandOutput>;
   startRecommendationReportGeneration(
     args: StartRecommendationReportGenerationCommandInput,
-    cb: (err: any, data?: StartRecommendationReportGenerationCommandOutput) => void
+    cb: (err: any, data?: StartRecommendationReportGenerationCommandOutput) => void,
   ): void;
   startRecommendationReportGeneration(
     args: StartRecommendationReportGenerationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartRecommendationReportGenerationCommandOutput) => void
+    cb: (err: any, data?: StartRecommendationReportGenerationCommandOutput) => void,
   ): void;
 
   /**
@@ -457,13 +457,13 @@ export interface MigrationHubStrategy {
    */
   stopAssessment(
     args: StopAssessmentCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StopAssessmentCommandOutput>;
   stopAssessment(args: StopAssessmentCommandInput, cb: (err: any, data?: StopAssessmentCommandOutput) => void): void;
   stopAssessment(
     args: StopAssessmentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StopAssessmentCommandOutput) => void
+    cb: (err: any, data?: StopAssessmentCommandOutput) => void,
   ): void;
 
   /**
@@ -471,16 +471,16 @@ export interface MigrationHubStrategy {
    */
   updateApplicationComponentConfig(
     args: UpdateApplicationComponentConfigCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateApplicationComponentConfigCommandOutput>;
   updateApplicationComponentConfig(
     args: UpdateApplicationComponentConfigCommandInput,
-    cb: (err: any, data?: UpdateApplicationComponentConfigCommandOutput) => void
+    cb: (err: any, data?: UpdateApplicationComponentConfigCommandOutput) => void,
   ): void;
   updateApplicationComponentConfig(
     args: UpdateApplicationComponentConfigCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateApplicationComponentConfigCommandOutput) => void
+    cb: (err: any, data?: UpdateApplicationComponentConfigCommandOutput) => void,
   ): void;
 
   /**
@@ -488,16 +488,16 @@ export interface MigrationHubStrategy {
    */
   updateServerConfig(
     args: UpdateServerConfigCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateServerConfigCommandOutput>;
   updateServerConfig(
     args: UpdateServerConfigCommandInput,
-    cb: (err: any, data?: UpdateServerConfigCommandOutput) => void
+    cb: (err: any, data?: UpdateServerConfigCommandOutput) => void,
   ): void;
   updateServerConfig(
     args: UpdateServerConfigCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateServerConfigCommandOutput) => void
+    cb: (err: any, data?: UpdateServerConfigCommandOutput) => void,
   ): void;
 }
 

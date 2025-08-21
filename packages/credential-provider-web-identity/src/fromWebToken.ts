@@ -167,7 +167,7 @@ export const fromWebToken =
           credentialProviderLogger: init.logger,
           parentClientConfig: init.parentClientConfig,
         },
-        init.clientPlugins
+        init.clientPlugins,
       );
     }
 

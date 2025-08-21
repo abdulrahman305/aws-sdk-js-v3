@@ -17,7 +17,7 @@ export type ClientResolvedEndpointParameters = ClientInputEndpointParameters & {
 };
 
 export const resolveClientEndpointParameters = <T>(
-  options: T & ClientInputEndpointParameters
+  options: T & ClientInputEndpointParameters,
 ): T & ClientResolvedEndpointParameters => {
   return {
     ...options,

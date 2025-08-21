@@ -136,7 +136,7 @@ import {
  */
 export const se_CreateClusterCommand = async (
   input: CreateClusterCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateCluster");
   let body: any;
@@ -149,7 +149,7 @@ export const se_CreateClusterCommand = async (
  */
 export const se_CreateParameterGroupCommand = async (
   input: CreateParameterGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateParameterGroup");
   let body: any;
@@ -162,7 +162,7 @@ export const se_CreateParameterGroupCommand = async (
  */
 export const se_CreateSubnetGroupCommand = async (
   input: CreateSubnetGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateSubnetGroup");
   let body: any;
@@ -175,7 +175,7 @@ export const se_CreateSubnetGroupCommand = async (
  */
 export const se_DecreaseReplicationFactorCommand = async (
   input: DecreaseReplicationFactorCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DecreaseReplicationFactor");
   let body: any;
@@ -188,7 +188,7 @@ export const se_DecreaseReplicationFactorCommand = async (
  */
 export const se_DeleteClusterCommand = async (
   input: DeleteClusterCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteCluster");
   let body: any;
@@ -201,7 +201,7 @@ export const se_DeleteClusterCommand = async (
  */
 export const se_DeleteParameterGroupCommand = async (
   input: DeleteParameterGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteParameterGroup");
   let body: any;
@@ -214,7 +214,7 @@ export const se_DeleteParameterGroupCommand = async (
  */
 export const se_DeleteSubnetGroupCommand = async (
   input: DeleteSubnetGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteSubnetGroup");
   let body: any;
@@ -227,7 +227,7 @@ export const se_DeleteSubnetGroupCommand = async (
  */
 export const se_DescribeClustersCommand = async (
   input: DescribeClustersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeClusters");
   let body: any;
@@ -240,7 +240,7 @@ export const se_DescribeClustersCommand = async (
  */
 export const se_DescribeDefaultParametersCommand = async (
   input: DescribeDefaultParametersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeDefaultParameters");
   let body: any;
@@ -253,7 +253,7 @@ export const se_DescribeDefaultParametersCommand = async (
  */
 export const se_DescribeEventsCommand = async (
   input: DescribeEventsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeEvents");
   let body: any;
@@ -266,7 +266,7 @@ export const se_DescribeEventsCommand = async (
  */
 export const se_DescribeParameterGroupsCommand = async (
   input: DescribeParameterGroupsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeParameterGroups");
   let body: any;
@@ -279,7 +279,7 @@ export const se_DescribeParameterGroupsCommand = async (
  */
 export const se_DescribeParametersCommand = async (
   input: DescribeParametersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeParameters");
   let body: any;
@@ -292,7 +292,7 @@ export const se_DescribeParametersCommand = async (
  */
 export const se_DescribeSubnetGroupsCommand = async (
   input: DescribeSubnetGroupsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeSubnetGroups");
   let body: any;
@@ -305,7 +305,7 @@ export const se_DescribeSubnetGroupsCommand = async (
  */
 export const se_IncreaseReplicationFactorCommand = async (
   input: IncreaseReplicationFactorCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("IncreaseReplicationFactor");
   let body: any;
@@ -318,7 +318,7 @@ export const se_IncreaseReplicationFactorCommand = async (
  */
 export const se_ListTagsCommand = async (
   input: ListTagsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListTags");
   let body: any;
@@ -331,7 +331,7 @@ export const se_ListTagsCommand = async (
  */
 export const se_RebootNodeCommand = async (
   input: RebootNodeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("RebootNode");
   let body: any;
@@ -344,7 +344,7 @@ export const se_RebootNodeCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("TagResource");
   let body: any;
@@ -357,7 +357,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UntagResource");
   let body: any;
@@ -370,7 +370,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateClusterCommand = async (
   input: UpdateClusterCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateCluster");
   let body: any;
@@ -383,7 +383,7 @@ export const se_UpdateClusterCommand = async (
  */
 export const se_UpdateParameterGroupCommand = async (
   input: UpdateParameterGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateParameterGroup");
   let body: any;
@@ -396,7 +396,7 @@ export const se_UpdateParameterGroupCommand = async (
  */
 export const se_UpdateSubnetGroupCommand = async (
   input: UpdateSubnetGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateSubnetGroup");
   let body: any;
@@ -409,7 +409,7 @@ export const se_UpdateSubnetGroupCommand = async (
  */
 export const de_CreateClusterCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateClusterCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -429,7 +429,7 @@ export const de_CreateClusterCommand = async (
  */
 export const de_CreateParameterGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateParameterGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -449,7 +449,7 @@ export const de_CreateParameterGroupCommand = async (
  */
 export const de_CreateSubnetGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateSubnetGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -469,7 +469,7 @@ export const de_CreateSubnetGroupCommand = async (
  */
 export const de_DecreaseReplicationFactorCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DecreaseReplicationFactorCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -489,7 +489,7 @@ export const de_DecreaseReplicationFactorCommand = async (
  */
 export const de_DeleteClusterCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteClusterCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -509,7 +509,7 @@ export const de_DeleteClusterCommand = async (
  */
 export const de_DeleteParameterGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteParameterGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -529,7 +529,7 @@ export const de_DeleteParameterGroupCommand = async (
  */
 export const de_DeleteSubnetGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteSubnetGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -549,7 +549,7 @@ export const de_DeleteSubnetGroupCommand = async (
  */
 export const de_DescribeClustersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeClustersCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -569,7 +569,7 @@ export const de_DescribeClustersCommand = async (
  */
 export const de_DescribeDefaultParametersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeDefaultParametersCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -589,7 +589,7 @@ export const de_DescribeDefaultParametersCommand = async (
  */
 export const de_DescribeEventsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeEventsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -609,7 +609,7 @@ export const de_DescribeEventsCommand = async (
  */
 export const de_DescribeParameterGroupsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeParameterGroupsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -629,7 +629,7 @@ export const de_DescribeParameterGroupsCommand = async (
  */
 export const de_DescribeParametersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeParametersCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -649,7 +649,7 @@ export const de_DescribeParametersCommand = async (
  */
 export const de_DescribeSubnetGroupsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeSubnetGroupsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -669,7 +669,7 @@ export const de_DescribeSubnetGroupsCommand = async (
  */
 export const de_IncreaseReplicationFactorCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<IncreaseReplicationFactorCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -689,7 +689,7 @@ export const de_IncreaseReplicationFactorCommand = async (
  */
 export const de_ListTagsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -709,7 +709,7 @@ export const de_ListTagsCommand = async (
  */
 export const de_RebootNodeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RebootNodeCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -729,7 +729,7 @@ export const de_RebootNodeCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -749,7 +749,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -769,7 +769,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateClusterCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateClusterCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -789,7 +789,7 @@ export const de_UpdateClusterCommand = async (
  */
 export const de_UpdateParameterGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateParameterGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -809,7 +809,7 @@ export const de_UpdateParameterGroupCommand = async (
  */
 export const de_UpdateSubnetGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateSubnetGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -930,7 +930,7 @@ const de_CommandError = async (output: __HttpResponse, context: __SerdeContext):
  */
 const de_ClusterAlreadyExistsFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ClusterAlreadyExistsFault> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -946,7 +946,7 @@ const de_ClusterAlreadyExistsFaultRes = async (
  */
 const de_ClusterNotFoundFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ClusterNotFoundFault> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -962,7 +962,7 @@ const de_ClusterNotFoundFaultRes = async (
  */
 const de_ClusterQuotaForCustomerExceededFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ClusterQuotaForCustomerExceededFault> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -978,7 +978,7 @@ const de_ClusterQuotaForCustomerExceededFaultRes = async (
  */
 const de_InsufficientClusterCapacityFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InsufficientClusterCapacityFault> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1007,7 +1007,7 @@ const de_InvalidARNFaultRes = async (parsedOutput: any, context: __SerdeContext)
  */
 const de_InvalidClusterStateFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidClusterStateFault> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1023,7 +1023,7 @@ const de_InvalidClusterStateFaultRes = async (
  */
 const de_InvalidParameterCombinationExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidParameterCombinationException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1039,7 +1039,7 @@ const de_InvalidParameterCombinationExceptionRes = async (
  */
 const de_InvalidParameterGroupStateFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidParameterGroupStateFault> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1055,7 +1055,7 @@ const de_InvalidParameterGroupStateFaultRes = async (
  */
 const de_InvalidParameterValueExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidParameterValueException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1084,7 +1084,7 @@ const de_InvalidSubnetRes = async (parsedOutput: any, context: __SerdeContext): 
  */
 const de_InvalidVPCNetworkStateFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidVPCNetworkStateFault> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1113,7 +1113,7 @@ const de_NodeNotFoundFaultRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_NodeQuotaForClusterExceededFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<NodeQuotaForClusterExceededFault> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1129,7 +1129,7 @@ const de_NodeQuotaForClusterExceededFaultRes = async (
  */
 const de_NodeQuotaForCustomerExceededFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<NodeQuotaForCustomerExceededFault> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1145,7 +1145,7 @@ const de_NodeQuotaForCustomerExceededFaultRes = async (
  */
 const de_ParameterGroupAlreadyExistsFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ParameterGroupAlreadyExistsFault> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1161,7 +1161,7 @@ const de_ParameterGroupAlreadyExistsFaultRes = async (
  */
 const de_ParameterGroupNotFoundFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ParameterGroupNotFoundFault> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1177,7 +1177,7 @@ const de_ParameterGroupNotFoundFaultRes = async (
  */
 const de_ParameterGroupQuotaExceededFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ParameterGroupQuotaExceededFault> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1193,7 +1193,7 @@ const de_ParameterGroupQuotaExceededFaultRes = async (
  */
 const de_ServiceLinkedRoleNotFoundFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceLinkedRoleNotFoundFault> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1209,7 +1209,7 @@ const de_ServiceLinkedRoleNotFoundFaultRes = async (
  */
 const de_ServiceQuotaExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceQuotaExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1225,7 +1225,7 @@ const de_ServiceQuotaExceededExceptionRes = async (
  */
 const de_SubnetGroupAlreadyExistsFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SubnetGroupAlreadyExistsFault> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1241,7 +1241,7 @@ const de_SubnetGroupAlreadyExistsFaultRes = async (
  */
 const de_SubnetGroupInUseFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SubnetGroupInUseFault> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1257,7 +1257,7 @@ const de_SubnetGroupInUseFaultRes = async (
  */
 const de_SubnetGroupNotFoundFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SubnetGroupNotFoundFault> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1273,7 +1273,7 @@ const de_SubnetGroupNotFoundFaultRes = async (
  */
 const de_SubnetGroupQuotaExceededFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SubnetGroupQuotaExceededFault> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1302,7 +1302,7 @@ const de_SubnetInUseRes = async (parsedOutput: any, context: __SerdeContext): Pr
  */
 const de_SubnetQuotaExceededFaultRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SubnetQuotaExceededFault> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1331,7 +1331,7 @@ const de_TagNotFoundFaultRes = async (parsedOutput: any, context: __SerdeContext
  */
 const de_TagQuotaPerResourceExceededRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagQuotaPerResourceExceeded> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1485,7 +1485,7 @@ const de_CreateClusterResponse = (output: any, context: __SerdeContext): CreateC
  */
 const de_DecreaseReplicationFactorResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DecreaseReplicationFactorResponse => {
   return take(output, {
     Cluster: (_: any) => de_Cluster(_, context),
@@ -1564,7 +1564,7 @@ const de_EventList = (output: any, context: __SerdeContext): Event[] => {
  */
 const de_IncreaseReplicationFactorResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): IncreaseReplicationFactorResponse => {
   return take(output, {
     Cluster: (_: any) => de_Cluster(_, context),
@@ -1727,7 +1727,7 @@ const buildHttpRpcRequest = async (
   headers: __HeaderBag,
   path: string,
   resolvedHostname: string | undefined,
-  body: any
+  body: any,
 ): Promise<__HttpRequest> => {
   const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
   const contents: any = {

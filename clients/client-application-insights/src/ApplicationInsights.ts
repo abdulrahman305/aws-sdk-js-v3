@@ -206,7 +206,7 @@ export interface ApplicationInsights {
   addWorkload(
     args: AddWorkloadCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AddWorkloadCommandOutput) => void
+    cb: (err: any, data?: AddWorkloadCommandOutput) => void,
   ): void;
 
   /**
@@ -215,16 +215,16 @@ export interface ApplicationInsights {
   createApplication(): Promise<CreateApplicationCommandOutput>;
   createApplication(
     args: CreateApplicationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateApplicationCommandOutput>;
   createApplication(
     args: CreateApplicationCommandInput,
-    cb: (err: any, data?: CreateApplicationCommandOutput) => void
+    cb: (err: any, data?: CreateApplicationCommandOutput) => void,
   ): void;
   createApplication(
     args: CreateApplicationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateApplicationCommandOutput) => void
+    cb: (err: any, data?: CreateApplicationCommandOutput) => void,
   ): void;
 
   /**
@@ -232,13 +232,13 @@ export interface ApplicationInsights {
    */
   createComponent(
     args: CreateComponentCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateComponentCommandOutput>;
   createComponent(args: CreateComponentCommandInput, cb: (err: any, data?: CreateComponentCommandOutput) => void): void;
   createComponent(
     args: CreateComponentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateComponentCommandOutput) => void
+    cb: (err: any, data?: CreateComponentCommandOutput) => void,
   ): void;
 
   /**
@@ -246,16 +246,16 @@ export interface ApplicationInsights {
    */
   createLogPattern(
     args: CreateLogPatternCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateLogPatternCommandOutput>;
   createLogPattern(
     args: CreateLogPatternCommandInput,
-    cb: (err: any, data?: CreateLogPatternCommandOutput) => void
+    cb: (err: any, data?: CreateLogPatternCommandOutput) => void,
   ): void;
   createLogPattern(
     args: CreateLogPatternCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateLogPatternCommandOutput) => void
+    cb: (err: any, data?: CreateLogPatternCommandOutput) => void,
   ): void;
 
   /**
@@ -263,16 +263,16 @@ export interface ApplicationInsights {
    */
   deleteApplication(
     args: DeleteApplicationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteApplicationCommandOutput>;
   deleteApplication(
     args: DeleteApplicationCommandInput,
-    cb: (err: any, data?: DeleteApplicationCommandOutput) => void
+    cb: (err: any, data?: DeleteApplicationCommandOutput) => void,
   ): void;
   deleteApplication(
     args: DeleteApplicationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteApplicationCommandOutput) => void
+    cb: (err: any, data?: DeleteApplicationCommandOutput) => void,
   ): void;
 
   /**
@@ -280,13 +280,13 @@ export interface ApplicationInsights {
    */
   deleteComponent(
     args: DeleteComponentCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteComponentCommandOutput>;
   deleteComponent(args: DeleteComponentCommandInput, cb: (err: any, data?: DeleteComponentCommandOutput) => void): void;
   deleteComponent(
     args: DeleteComponentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteComponentCommandOutput) => void
+    cb: (err: any, data?: DeleteComponentCommandOutput) => void,
   ): void;
 
   /**
@@ -294,16 +294,16 @@ export interface ApplicationInsights {
    */
   deleteLogPattern(
     args: DeleteLogPatternCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteLogPatternCommandOutput>;
   deleteLogPattern(
     args: DeleteLogPatternCommandInput,
-    cb: (err: any, data?: DeleteLogPatternCommandOutput) => void
+    cb: (err: any, data?: DeleteLogPatternCommandOutput) => void,
   ): void;
   deleteLogPattern(
     args: DeleteLogPatternCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteLogPatternCommandOutput) => void
+    cb: (err: any, data?: DeleteLogPatternCommandOutput) => void,
   ): void;
 
   /**
@@ -311,16 +311,16 @@ export interface ApplicationInsights {
    */
   describeApplication(
     args: DescribeApplicationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeApplicationCommandOutput>;
   describeApplication(
     args: DescribeApplicationCommandInput,
-    cb: (err: any, data?: DescribeApplicationCommandOutput) => void
+    cb: (err: any, data?: DescribeApplicationCommandOutput) => void,
   ): void;
   describeApplication(
     args: DescribeApplicationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeApplicationCommandOutput) => void
+    cb: (err: any, data?: DescribeApplicationCommandOutput) => void,
   ): void;
 
   /**
@@ -328,16 +328,16 @@ export interface ApplicationInsights {
    */
   describeComponent(
     args: DescribeComponentCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeComponentCommandOutput>;
   describeComponent(
     args: DescribeComponentCommandInput,
-    cb: (err: any, data?: DescribeComponentCommandOutput) => void
+    cb: (err: any, data?: DescribeComponentCommandOutput) => void,
   ): void;
   describeComponent(
     args: DescribeComponentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeComponentCommandOutput) => void
+    cb: (err: any, data?: DescribeComponentCommandOutput) => void,
   ): void;
 
   /**
@@ -345,16 +345,16 @@ export interface ApplicationInsights {
    */
   describeComponentConfiguration(
     args: DescribeComponentConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeComponentConfigurationCommandOutput>;
   describeComponentConfiguration(
     args: DescribeComponentConfigurationCommandInput,
-    cb: (err: any, data?: DescribeComponentConfigurationCommandOutput) => void
+    cb: (err: any, data?: DescribeComponentConfigurationCommandOutput) => void,
   ): void;
   describeComponentConfiguration(
     args: DescribeComponentConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeComponentConfigurationCommandOutput) => void
+    cb: (err: any, data?: DescribeComponentConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -362,16 +362,16 @@ export interface ApplicationInsights {
    */
   describeComponentConfigurationRecommendation(
     args: DescribeComponentConfigurationRecommendationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeComponentConfigurationRecommendationCommandOutput>;
   describeComponentConfigurationRecommendation(
     args: DescribeComponentConfigurationRecommendationCommandInput,
-    cb: (err: any, data?: DescribeComponentConfigurationRecommendationCommandOutput) => void
+    cb: (err: any, data?: DescribeComponentConfigurationRecommendationCommandOutput) => void,
   ): void;
   describeComponentConfigurationRecommendation(
     args: DescribeComponentConfigurationRecommendationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeComponentConfigurationRecommendationCommandOutput) => void
+    cb: (err: any, data?: DescribeComponentConfigurationRecommendationCommandOutput) => void,
   ): void;
 
   /**
@@ -379,16 +379,16 @@ export interface ApplicationInsights {
    */
   describeLogPattern(
     args: DescribeLogPatternCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeLogPatternCommandOutput>;
   describeLogPattern(
     args: DescribeLogPatternCommandInput,
-    cb: (err: any, data?: DescribeLogPatternCommandOutput) => void
+    cb: (err: any, data?: DescribeLogPatternCommandOutput) => void,
   ): void;
   describeLogPattern(
     args: DescribeLogPatternCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeLogPatternCommandOutput) => void
+    cb: (err: any, data?: DescribeLogPatternCommandOutput) => void,
   ): void;
 
   /**
@@ -396,16 +396,16 @@ export interface ApplicationInsights {
    */
   describeObservation(
     args: DescribeObservationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeObservationCommandOutput>;
   describeObservation(
     args: DescribeObservationCommandInput,
-    cb: (err: any, data?: DescribeObservationCommandOutput) => void
+    cb: (err: any, data?: DescribeObservationCommandOutput) => void,
   ): void;
   describeObservation(
     args: DescribeObservationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeObservationCommandOutput) => void
+    cb: (err: any, data?: DescribeObservationCommandOutput) => void,
   ): void;
 
   /**
@@ -413,13 +413,13 @@ export interface ApplicationInsights {
    */
   describeProblem(
     args: DescribeProblemCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeProblemCommandOutput>;
   describeProblem(args: DescribeProblemCommandInput, cb: (err: any, data?: DescribeProblemCommandOutput) => void): void;
   describeProblem(
     args: DescribeProblemCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeProblemCommandOutput) => void
+    cb: (err: any, data?: DescribeProblemCommandOutput) => void,
   ): void;
 
   /**
@@ -427,16 +427,16 @@ export interface ApplicationInsights {
    */
   describeProblemObservations(
     args: DescribeProblemObservationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeProblemObservationsCommandOutput>;
   describeProblemObservations(
     args: DescribeProblemObservationsCommandInput,
-    cb: (err: any, data?: DescribeProblemObservationsCommandOutput) => void
+    cb: (err: any, data?: DescribeProblemObservationsCommandOutput) => void,
   ): void;
   describeProblemObservations(
     args: DescribeProblemObservationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeProblemObservationsCommandOutput) => void
+    cb: (err: any, data?: DescribeProblemObservationsCommandOutput) => void,
   ): void;
 
   /**
@@ -444,16 +444,16 @@ export interface ApplicationInsights {
    */
   describeWorkload(
     args: DescribeWorkloadCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeWorkloadCommandOutput>;
   describeWorkload(
     args: DescribeWorkloadCommandInput,
-    cb: (err: any, data?: DescribeWorkloadCommandOutput) => void
+    cb: (err: any, data?: DescribeWorkloadCommandOutput) => void,
   ): void;
   describeWorkload(
     args: DescribeWorkloadCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeWorkloadCommandOutput) => void
+    cb: (err: any, data?: DescribeWorkloadCommandOutput) => void,
   ): void;
 
   /**
@@ -462,16 +462,16 @@ export interface ApplicationInsights {
   listApplications(): Promise<ListApplicationsCommandOutput>;
   listApplications(
     args: ListApplicationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListApplicationsCommandOutput>;
   listApplications(
     args: ListApplicationsCommandInput,
-    cb: (err: any, data?: ListApplicationsCommandOutput) => void
+    cb: (err: any, data?: ListApplicationsCommandOutput) => void,
   ): void;
   listApplications(
     args: ListApplicationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListApplicationsCommandOutput) => void
+    cb: (err: any, data?: ListApplicationsCommandOutput) => void,
   ): void;
 
   /**
@@ -479,13 +479,13 @@ export interface ApplicationInsights {
    */
   listComponents(
     args: ListComponentsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListComponentsCommandOutput>;
   listComponents(args: ListComponentsCommandInput, cb: (err: any, data?: ListComponentsCommandOutput) => void): void;
   listComponents(
     args: ListComponentsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListComponentsCommandOutput) => void
+    cb: (err: any, data?: ListComponentsCommandOutput) => void,
   ): void;
 
   /**
@@ -494,16 +494,16 @@ export interface ApplicationInsights {
   listConfigurationHistory(): Promise<ListConfigurationHistoryCommandOutput>;
   listConfigurationHistory(
     args: ListConfigurationHistoryCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListConfigurationHistoryCommandOutput>;
   listConfigurationHistory(
     args: ListConfigurationHistoryCommandInput,
-    cb: (err: any, data?: ListConfigurationHistoryCommandOutput) => void
+    cb: (err: any, data?: ListConfigurationHistoryCommandOutput) => void,
   ): void;
   listConfigurationHistory(
     args: ListConfigurationHistoryCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListConfigurationHistoryCommandOutput) => void
+    cb: (err: any, data?: ListConfigurationHistoryCommandOutput) => void,
   ): void;
 
   /**
@@ -511,13 +511,13 @@ export interface ApplicationInsights {
    */
   listLogPatterns(
     args: ListLogPatternsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListLogPatternsCommandOutput>;
   listLogPatterns(args: ListLogPatternsCommandInput, cb: (err: any, data?: ListLogPatternsCommandOutput) => void): void;
   listLogPatterns(
     args: ListLogPatternsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListLogPatternsCommandOutput) => void
+    cb: (err: any, data?: ListLogPatternsCommandOutput) => void,
   ): void;
 
   /**
@@ -525,16 +525,16 @@ export interface ApplicationInsights {
    */
   listLogPatternSets(
     args: ListLogPatternSetsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListLogPatternSetsCommandOutput>;
   listLogPatternSets(
     args: ListLogPatternSetsCommandInput,
-    cb: (err: any, data?: ListLogPatternSetsCommandOutput) => void
+    cb: (err: any, data?: ListLogPatternSetsCommandOutput) => void,
   ): void;
   listLogPatternSets(
     args: ListLogPatternSetsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListLogPatternSetsCommandOutput) => void
+    cb: (err: any, data?: ListLogPatternSetsCommandOutput) => void,
   ): void;
 
   /**
@@ -546,7 +546,7 @@ export interface ApplicationInsights {
   listProblems(
     args: ListProblemsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListProblemsCommandOutput) => void
+    cb: (err: any, data?: ListProblemsCommandOutput) => void,
   ): void;
 
   /**
@@ -554,16 +554,16 @@ export interface ApplicationInsights {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -574,7 +574,7 @@ export interface ApplicationInsights {
   listWorkloads(
     args: ListWorkloadsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListWorkloadsCommandOutput) => void
+    cb: (err: any, data?: ListWorkloadsCommandOutput) => void,
   ): void;
 
   /**
@@ -582,13 +582,13 @@ export interface ApplicationInsights {
    */
   removeWorkload(
     args: RemoveWorkloadCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<RemoveWorkloadCommandOutput>;
   removeWorkload(args: RemoveWorkloadCommandInput, cb: (err: any, data?: RemoveWorkloadCommandOutput) => void): void;
   removeWorkload(
     args: RemoveWorkloadCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RemoveWorkloadCommandOutput) => void
+    cb: (err: any, data?: RemoveWorkloadCommandOutput) => void,
   ): void;
 
   /**
@@ -599,7 +599,7 @@ export interface ApplicationInsights {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -610,7 +610,7 @@ export interface ApplicationInsights {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -618,16 +618,16 @@ export interface ApplicationInsights {
    */
   updateApplication(
     args: UpdateApplicationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateApplicationCommandOutput>;
   updateApplication(
     args: UpdateApplicationCommandInput,
-    cb: (err: any, data?: UpdateApplicationCommandOutput) => void
+    cb: (err: any, data?: UpdateApplicationCommandOutput) => void,
   ): void;
   updateApplication(
     args: UpdateApplicationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateApplicationCommandOutput) => void
+    cb: (err: any, data?: UpdateApplicationCommandOutput) => void,
   ): void;
 
   /**
@@ -635,13 +635,13 @@ export interface ApplicationInsights {
    */
   updateComponent(
     args: UpdateComponentCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateComponentCommandOutput>;
   updateComponent(args: UpdateComponentCommandInput, cb: (err: any, data?: UpdateComponentCommandOutput) => void): void;
   updateComponent(
     args: UpdateComponentCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateComponentCommandOutput) => void
+    cb: (err: any, data?: UpdateComponentCommandOutput) => void,
   ): void;
 
   /**
@@ -649,16 +649,16 @@ export interface ApplicationInsights {
    */
   updateComponentConfiguration(
     args: UpdateComponentConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateComponentConfigurationCommandOutput>;
   updateComponentConfiguration(
     args: UpdateComponentConfigurationCommandInput,
-    cb: (err: any, data?: UpdateComponentConfigurationCommandOutput) => void
+    cb: (err: any, data?: UpdateComponentConfigurationCommandOutput) => void,
   ): void;
   updateComponentConfiguration(
     args: UpdateComponentConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateComponentConfigurationCommandOutput) => void
+    cb: (err: any, data?: UpdateComponentConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -666,16 +666,16 @@ export interface ApplicationInsights {
    */
   updateLogPattern(
     args: UpdateLogPatternCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateLogPatternCommandOutput>;
   updateLogPattern(
     args: UpdateLogPatternCommandInput,
-    cb: (err: any, data?: UpdateLogPatternCommandOutput) => void
+    cb: (err: any, data?: UpdateLogPatternCommandOutput) => void,
   ): void;
   updateLogPattern(
     args: UpdateLogPatternCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateLogPatternCommandOutput) => void
+    cb: (err: any, data?: UpdateLogPatternCommandOutput) => void,
   ): void;
 
   /**
@@ -686,7 +686,7 @@ export interface ApplicationInsights {
   updateProblem(
     args: UpdateProblemCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateProblemCommandOutput) => void
+    cb: (err: any, data?: UpdateProblemCommandOutput) => void,
   ): void;
 
   /**
@@ -694,13 +694,13 @@ export interface ApplicationInsights {
    */
   updateWorkload(
     args: UpdateWorkloadCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateWorkloadCommandOutput>;
   updateWorkload(args: UpdateWorkloadCommandInput, cb: (err: any, data?: UpdateWorkloadCommandOutput) => void): void;
   updateWorkload(
     args: UpdateWorkloadCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateWorkloadCommandOutput) => void
+    cb: (err: any, data?: UpdateWorkloadCommandOutput) => void,
   ): void;
 }
 

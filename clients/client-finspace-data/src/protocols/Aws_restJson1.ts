@@ -109,7 +109,7 @@ import {
  */
 export const se_AssociateUserToPermissionGroupCommand = async (
   input: AssociateUserToPermissionGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -122,7 +122,7 @@ export const se_AssociateUserToPermissionGroupCommand = async (
   body = JSON.stringify(
     take(input, {
       clientToken: [true, (_) => _ ?? generateIdempotencyToken()],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -133,7 +133,7 @@ export const se_AssociateUserToPermissionGroupCommand = async (
  */
 export const se_CreateChangesetCommand = async (
   input: CreateChangesetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -148,7 +148,7 @@ export const se_CreateChangesetCommand = async (
       clientToken: [true, (_) => _ ?? generateIdempotencyToken()],
       formatParams: (_) => _json(_),
       sourceParams: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -159,7 +159,7 @@ export const se_CreateChangesetCommand = async (
  */
 export const se_CreateDatasetCommand = async (
   input: CreateDatasetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -177,7 +177,7 @@ export const se_CreateDatasetCommand = async (
       ownerInfo: (_) => _json(_),
       permissionGroupParams: (_) => _json(_),
       schemaDefinition: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -188,7 +188,7 @@ export const se_CreateDatasetCommand = async (
  */
 export const se_CreateDataViewCommand = async (
   input: CreateDataViewCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -205,7 +205,7 @@ export const se_CreateDataViewCommand = async (
       destinationTypeParams: (_) => _json(_),
       partitionColumns: (_) => _json(_),
       sortColumns: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -216,7 +216,7 @@ export const se_CreateDataViewCommand = async (
  */
 export const se_CreatePermissionGroupCommand = async (
   input: CreatePermissionGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -230,7 +230,7 @@ export const se_CreatePermissionGroupCommand = async (
       clientToken: [true, (_) => _ ?? generateIdempotencyToken()],
       description: [],
       name: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -241,7 +241,7 @@ export const se_CreatePermissionGroupCommand = async (
  */
 export const se_CreateUserCommand = async (
   input: CreateUserCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -258,7 +258,7 @@ export const se_CreateUserCommand = async (
       firstName: [],
       lastName: [],
       type: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -269,7 +269,7 @@ export const se_CreateUserCommand = async (
  */
 export const se_DeleteDatasetCommand = async (
   input: DeleteDatasetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -288,7 +288,7 @@ export const se_DeleteDatasetCommand = async (
  */
 export const se_DeletePermissionGroupCommand = async (
   input: DeletePermissionGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -307,7 +307,7 @@ export const se_DeletePermissionGroupCommand = async (
  */
 export const se_DisableUserCommand = async (
   input: DisableUserCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -319,7 +319,7 @@ export const se_DisableUserCommand = async (
   body = JSON.stringify(
     take(input, {
       clientToken: [true, (_) => _ ?? generateIdempotencyToken()],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -330,7 +330,7 @@ export const se_DisableUserCommand = async (
  */
 export const se_DisassociateUserFromPermissionGroupCommand = async (
   input: DisassociateUserFromPermissionGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -350,7 +350,7 @@ export const se_DisassociateUserFromPermissionGroupCommand = async (
  */
 export const se_EnableUserCommand = async (
   input: EnableUserCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -362,7 +362,7 @@ export const se_EnableUserCommand = async (
   body = JSON.stringify(
     take(input, {
       clientToken: [true, (_) => _ ?? generateIdempotencyToken()],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -373,7 +373,7 @@ export const se_EnableUserCommand = async (
  */
 export const se_GetChangesetCommand = async (
   input: GetChangesetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -390,7 +390,7 @@ export const se_GetChangesetCommand = async (
  */
 export const se_GetDatasetCommand = async (
   input: GetDatasetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -406,7 +406,7 @@ export const se_GetDatasetCommand = async (
  */
 export const se_GetDataViewCommand = async (
   input: GetDataViewCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -423,7 +423,7 @@ export const se_GetDataViewCommand = async (
  */
 export const se_GetExternalDataViewAccessDetailsCommand = async (
   input: GetExternalDataViewAccessDetailsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -440,7 +440,7 @@ export const se_GetExternalDataViewAccessDetailsCommand = async (
  */
 export const se_GetPermissionGroupCommand = async (
   input: GetPermissionGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -456,7 +456,7 @@ export const se_GetPermissionGroupCommand = async (
  */
 export const se_GetProgrammaticAccessCredentialsCommand = async (
   input: GetProgrammaticAccessCredentialsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -475,7 +475,7 @@ export const se_GetProgrammaticAccessCredentialsCommand = async (
  */
 export const se_GetUserCommand = async (
   input: GetUserCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -491,7 +491,7 @@ export const se_GetUserCommand = async (
  */
 export const se_GetWorkingLocationCommand = async (
   input: GetWorkingLocationCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -502,7 +502,7 @@ export const se_GetWorkingLocationCommand = async (
   body = JSON.stringify(
     take(input, {
       locationType: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -513,7 +513,7 @@ export const se_GetWorkingLocationCommand = async (
  */
 export const se_ListChangesetsCommand = async (
   input: ListChangesetsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -533,7 +533,7 @@ export const se_ListChangesetsCommand = async (
  */
 export const se_ListDatasetsCommand = async (
   input: ListDatasetsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -552,7 +552,7 @@ export const se_ListDatasetsCommand = async (
  */
 export const se_ListDataViewsCommand = async (
   input: ListDataViewsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -572,7 +572,7 @@ export const se_ListDataViewsCommand = async (
  */
 export const se_ListPermissionGroupsCommand = async (
   input: ListPermissionGroupsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -591,7 +591,7 @@ export const se_ListPermissionGroupsCommand = async (
  */
 export const se_ListPermissionGroupsByUserCommand = async (
   input: ListPermissionGroupsByUserCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -611,7 +611,7 @@ export const se_ListPermissionGroupsByUserCommand = async (
  */
 export const se_ListUsersCommand = async (
   input: ListUsersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -630,7 +630,7 @@ export const se_ListUsersCommand = async (
  */
 export const se_ListUsersByPermissionGroupCommand = async (
   input: ListUsersByPermissionGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -650,7 +650,7 @@ export const se_ListUsersByPermissionGroupCommand = async (
  */
 export const se_ResetUserPasswordCommand = async (
   input: ResetUserPasswordCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -662,7 +662,7 @@ export const se_ResetUserPasswordCommand = async (
   body = JSON.stringify(
     take(input, {
       clientToken: [true, (_) => _ ?? generateIdempotencyToken()],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -673,7 +673,7 @@ export const se_ResetUserPasswordCommand = async (
  */
 export const se_UpdateChangesetCommand = async (
   input: UpdateChangesetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -688,7 +688,7 @@ export const se_UpdateChangesetCommand = async (
       clientToken: [true, (_) => _ ?? generateIdempotencyToken()],
       formatParams: (_) => _json(_),
       sourceParams: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -699,7 +699,7 @@ export const se_UpdateChangesetCommand = async (
  */
 export const se_UpdateDatasetCommand = async (
   input: UpdateDatasetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -716,7 +716,7 @@ export const se_UpdateDatasetCommand = async (
       datasetTitle: [],
       kind: [],
       schemaDefinition: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -727,7 +727,7 @@ export const se_UpdateDatasetCommand = async (
  */
 export const se_UpdatePermissionGroupCommand = async (
   input: UpdatePermissionGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -742,7 +742,7 @@ export const se_UpdatePermissionGroupCommand = async (
       clientToken: [true, (_) => _ ?? generateIdempotencyToken()],
       description: [],
       name: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -753,7 +753,7 @@ export const se_UpdatePermissionGroupCommand = async (
  */
 export const se_UpdateUserCommand = async (
   input: UpdateUserCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -770,7 +770,7 @@ export const se_UpdateUserCommand = async (
       firstName: [],
       lastName: [],
       type: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -781,7 +781,7 @@ export const se_UpdateUserCommand = async (
  */
 export const de_AssociateUserToPermissionGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssociateUserToPermissionGroupCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -801,7 +801,7 @@ export const de_AssociateUserToPermissionGroupCommand = async (
  */
 export const de_CreateChangesetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateChangesetCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -823,7 +823,7 @@ export const de_CreateChangesetCommand = async (
  */
 export const de_CreateDatasetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateDatasetCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -844,7 +844,7 @@ export const de_CreateDatasetCommand = async (
  */
 export const de_CreateDataViewCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateDataViewCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -866,7 +866,7 @@ export const de_CreateDataViewCommand = async (
  */
 export const de_CreatePermissionGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreatePermissionGroupCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -887,7 +887,7 @@ export const de_CreatePermissionGroupCommand = async (
  */
 export const de_CreateUserCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateUserCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -908,7 +908,7 @@ export const de_CreateUserCommand = async (
  */
 export const de_DeleteDatasetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteDatasetCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -929,7 +929,7 @@ export const de_DeleteDatasetCommand = async (
  */
 export const de_DeletePermissionGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeletePermissionGroupCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -950,7 +950,7 @@ export const de_DeletePermissionGroupCommand = async (
  */
 export const de_DisableUserCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisableUserCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -971,7 +971,7 @@ export const de_DisableUserCommand = async (
  */
 export const de_DisassociateUserFromPermissionGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisassociateUserFromPermissionGroupCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -991,7 +991,7 @@ export const de_DisassociateUserFromPermissionGroupCommand = async (
  */
 export const de_EnableUserCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<EnableUserCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1012,7 +1012,7 @@ export const de_EnableUserCommand = async (
  */
 export const de_GetChangesetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetChangesetCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1045,7 +1045,7 @@ export const de_GetChangesetCommand = async (
  */
 export const de_GetDatasetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetDatasetCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1075,7 +1075,7 @@ export const de_GetDatasetCommand = async (
  */
 export const de_GetDataViewCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetDataViewCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1107,7 +1107,7 @@ export const de_GetDataViewCommand = async (
  */
 export const de_GetExternalDataViewAccessDetailsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetExternalDataViewAccessDetailsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1129,7 +1129,7 @@ export const de_GetExternalDataViewAccessDetailsCommand = async (
  */
 export const de_GetPermissionGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetPermissionGroupCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1150,7 +1150,7 @@ export const de_GetPermissionGroupCommand = async (
  */
 export const de_GetProgrammaticAccessCredentialsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetProgrammaticAccessCredentialsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1172,7 +1172,7 @@ export const de_GetProgrammaticAccessCredentialsCommand = async (
  */
 export const de_GetUserCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetUserCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1205,7 +1205,7 @@ export const de_GetUserCommand = async (
  */
 export const de_GetWorkingLocationCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetWorkingLocationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1228,7 +1228,7 @@ export const de_GetWorkingLocationCommand = async (
  */
 export const de_ListChangesetsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListChangesetsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1250,7 +1250,7 @@ export const de_ListChangesetsCommand = async (
  */
 export const de_ListDatasetsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListDatasetsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1272,7 +1272,7 @@ export const de_ListDatasetsCommand = async (
  */
 export const de_ListDataViewsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListDataViewsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1294,7 +1294,7 @@ export const de_ListDataViewsCommand = async (
  */
 export const de_ListPermissionGroupsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListPermissionGroupsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1316,7 +1316,7 @@ export const de_ListPermissionGroupsCommand = async (
  */
 export const de_ListPermissionGroupsByUserCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListPermissionGroupsByUserCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1338,7 +1338,7 @@ export const de_ListPermissionGroupsByUserCommand = async (
  */
 export const de_ListUsersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListUsersCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1360,7 +1360,7 @@ export const de_ListUsersCommand = async (
  */
 export const de_ListUsersByPermissionGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListUsersByPermissionGroupCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1382,7 +1382,7 @@ export const de_ListUsersByPermissionGroupCommand = async (
  */
 export const de_ResetUserPasswordCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResetUserPasswordCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1404,7 +1404,7 @@ export const de_ResetUserPasswordCommand = async (
  */
 export const de_UpdateChangesetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateChangesetCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1426,7 +1426,7 @@ export const de_UpdateChangesetCommand = async (
  */
 export const de_UpdateDatasetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateDatasetCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1447,7 +1447,7 @@ export const de_UpdateDatasetCommand = async (
  */
 export const de_UpdatePermissionGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdatePermissionGroupCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1468,7 +1468,7 @@ export const de_UpdatePermissionGroupCommand = async (
  */
 export const de_UpdateUserCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateUserCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1531,7 +1531,7 @@ const throwDefaultError = withBaseException(__BaseException);
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1569,7 +1569,7 @@ const de_ConflictExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_InternalServerExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1589,7 +1589,7 @@ const de_InternalServerExceptionRes = async (
  */
 const de_LimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<LimitExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -1609,7 +1609,7 @@ const de_LimitExceededExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;

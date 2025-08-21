@@ -259,16 +259,16 @@ export interface ECR {
    */
   batchCheckLayerAvailability(
     args: BatchCheckLayerAvailabilityCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<BatchCheckLayerAvailabilityCommandOutput>;
   batchCheckLayerAvailability(
     args: BatchCheckLayerAvailabilityCommandInput,
-    cb: (err: any, data?: BatchCheckLayerAvailabilityCommandOutput) => void
+    cb: (err: any, data?: BatchCheckLayerAvailabilityCommandOutput) => void,
   ): void;
   batchCheckLayerAvailability(
     args: BatchCheckLayerAvailabilityCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: BatchCheckLayerAvailabilityCommandOutput) => void
+    cb: (err: any, data?: BatchCheckLayerAvailabilityCommandOutput) => void,
   ): void;
 
   /**
@@ -276,16 +276,16 @@ export interface ECR {
    */
   batchDeleteImage(
     args: BatchDeleteImageCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<BatchDeleteImageCommandOutput>;
   batchDeleteImage(
     args: BatchDeleteImageCommandInput,
-    cb: (err: any, data?: BatchDeleteImageCommandOutput) => void
+    cb: (err: any, data?: BatchDeleteImageCommandOutput) => void,
   ): void;
   batchDeleteImage(
     args: BatchDeleteImageCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: BatchDeleteImageCommandOutput) => void
+    cb: (err: any, data?: BatchDeleteImageCommandOutput) => void,
   ): void;
 
   /**
@@ -296,7 +296,7 @@ export interface ECR {
   batchGetImage(
     args: BatchGetImageCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: BatchGetImageCommandOutput) => void
+    cb: (err: any, data?: BatchGetImageCommandOutput) => void,
   ): void;
 
   /**
@@ -304,16 +304,16 @@ export interface ECR {
    */
   batchGetRepositoryScanningConfiguration(
     args: BatchGetRepositoryScanningConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<BatchGetRepositoryScanningConfigurationCommandOutput>;
   batchGetRepositoryScanningConfiguration(
     args: BatchGetRepositoryScanningConfigurationCommandInput,
-    cb: (err: any, data?: BatchGetRepositoryScanningConfigurationCommandOutput) => void
+    cb: (err: any, data?: BatchGetRepositoryScanningConfigurationCommandOutput) => void,
   ): void;
   batchGetRepositoryScanningConfiguration(
     args: BatchGetRepositoryScanningConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: BatchGetRepositoryScanningConfigurationCommandOutput) => void
+    cb: (err: any, data?: BatchGetRepositoryScanningConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -321,16 +321,16 @@ export interface ECR {
    */
   completeLayerUpload(
     args: CompleteLayerUploadCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CompleteLayerUploadCommandOutput>;
   completeLayerUpload(
     args: CompleteLayerUploadCommandInput,
-    cb: (err: any, data?: CompleteLayerUploadCommandOutput) => void
+    cb: (err: any, data?: CompleteLayerUploadCommandOutput) => void,
   ): void;
   completeLayerUpload(
     args: CompleteLayerUploadCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CompleteLayerUploadCommandOutput) => void
+    cb: (err: any, data?: CompleteLayerUploadCommandOutput) => void,
   ): void;
 
   /**
@@ -338,16 +338,16 @@ export interface ECR {
    */
   createPullThroughCacheRule(
     args: CreatePullThroughCacheRuleCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreatePullThroughCacheRuleCommandOutput>;
   createPullThroughCacheRule(
     args: CreatePullThroughCacheRuleCommandInput,
-    cb: (err: any, data?: CreatePullThroughCacheRuleCommandOutput) => void
+    cb: (err: any, data?: CreatePullThroughCacheRuleCommandOutput) => void,
   ): void;
   createPullThroughCacheRule(
     args: CreatePullThroughCacheRuleCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreatePullThroughCacheRuleCommandOutput) => void
+    cb: (err: any, data?: CreatePullThroughCacheRuleCommandOutput) => void,
   ): void;
 
   /**
@@ -355,16 +355,16 @@ export interface ECR {
    */
   createRepository(
     args: CreateRepositoryCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateRepositoryCommandOutput>;
   createRepository(
     args: CreateRepositoryCommandInput,
-    cb: (err: any, data?: CreateRepositoryCommandOutput) => void
+    cb: (err: any, data?: CreateRepositoryCommandOutput) => void,
   ): void;
   createRepository(
     args: CreateRepositoryCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateRepositoryCommandOutput) => void
+    cb: (err: any, data?: CreateRepositoryCommandOutput) => void,
   ): void;
 
   /**
@@ -372,16 +372,16 @@ export interface ECR {
    */
   deleteLifecyclePolicy(
     args: DeleteLifecyclePolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteLifecyclePolicyCommandOutput>;
   deleteLifecyclePolicy(
     args: DeleteLifecyclePolicyCommandInput,
-    cb: (err: any, data?: DeleteLifecyclePolicyCommandOutput) => void
+    cb: (err: any, data?: DeleteLifecyclePolicyCommandOutput) => void,
   ): void;
   deleteLifecyclePolicy(
     args: DeleteLifecyclePolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteLifecyclePolicyCommandOutput) => void
+    cb: (err: any, data?: DeleteLifecyclePolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -389,16 +389,16 @@ export interface ECR {
    */
   deletePullThroughCacheRule(
     args: DeletePullThroughCacheRuleCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeletePullThroughCacheRuleCommandOutput>;
   deletePullThroughCacheRule(
     args: DeletePullThroughCacheRuleCommandInput,
-    cb: (err: any, data?: DeletePullThroughCacheRuleCommandOutput) => void
+    cb: (err: any, data?: DeletePullThroughCacheRuleCommandOutput) => void,
   ): void;
   deletePullThroughCacheRule(
     args: DeletePullThroughCacheRuleCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeletePullThroughCacheRuleCommandOutput) => void
+    cb: (err: any, data?: DeletePullThroughCacheRuleCommandOutput) => void,
   ): void;
 
   /**
@@ -407,16 +407,16 @@ export interface ECR {
   deleteRegistryPolicy(): Promise<DeleteRegistryPolicyCommandOutput>;
   deleteRegistryPolicy(
     args: DeleteRegistryPolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteRegistryPolicyCommandOutput>;
   deleteRegistryPolicy(
     args: DeleteRegistryPolicyCommandInput,
-    cb: (err: any, data?: DeleteRegistryPolicyCommandOutput) => void
+    cb: (err: any, data?: DeleteRegistryPolicyCommandOutput) => void,
   ): void;
   deleteRegistryPolicy(
     args: DeleteRegistryPolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteRegistryPolicyCommandOutput) => void
+    cb: (err: any, data?: DeleteRegistryPolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -424,16 +424,16 @@ export interface ECR {
    */
   deleteRepository(
     args: DeleteRepositoryCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteRepositoryCommandOutput>;
   deleteRepository(
     args: DeleteRepositoryCommandInput,
-    cb: (err: any, data?: DeleteRepositoryCommandOutput) => void
+    cb: (err: any, data?: DeleteRepositoryCommandOutput) => void,
   ): void;
   deleteRepository(
     args: DeleteRepositoryCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteRepositoryCommandOutput) => void
+    cb: (err: any, data?: DeleteRepositoryCommandOutput) => void,
   ): void;
 
   /**
@@ -441,16 +441,16 @@ export interface ECR {
    */
   deleteRepositoryPolicy(
     args: DeleteRepositoryPolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteRepositoryPolicyCommandOutput>;
   deleteRepositoryPolicy(
     args: DeleteRepositoryPolicyCommandInput,
-    cb: (err: any, data?: DeleteRepositoryPolicyCommandOutput) => void
+    cb: (err: any, data?: DeleteRepositoryPolicyCommandOutput) => void,
   ): void;
   deleteRepositoryPolicy(
     args: DeleteRepositoryPolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteRepositoryPolicyCommandOutput) => void
+    cb: (err: any, data?: DeleteRepositoryPolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -458,16 +458,16 @@ export interface ECR {
    */
   describeImageReplicationStatus(
     args: DescribeImageReplicationStatusCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeImageReplicationStatusCommandOutput>;
   describeImageReplicationStatus(
     args: DescribeImageReplicationStatusCommandInput,
-    cb: (err: any, data?: DescribeImageReplicationStatusCommandOutput) => void
+    cb: (err: any, data?: DescribeImageReplicationStatusCommandOutput) => void,
   ): void;
   describeImageReplicationStatus(
     args: DescribeImageReplicationStatusCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeImageReplicationStatusCommandOutput) => void
+    cb: (err: any, data?: DescribeImageReplicationStatusCommandOutput) => void,
   ): void;
 
   /**
@@ -475,13 +475,13 @@ export interface ECR {
    */
   describeImages(
     args: DescribeImagesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeImagesCommandOutput>;
   describeImages(args: DescribeImagesCommandInput, cb: (err: any, data?: DescribeImagesCommandOutput) => void): void;
   describeImages(
     args: DescribeImagesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeImagesCommandOutput) => void
+    cb: (err: any, data?: DescribeImagesCommandOutput) => void,
   ): void;
 
   /**
@@ -489,16 +489,16 @@ export interface ECR {
    */
   describeImageScanFindings(
     args: DescribeImageScanFindingsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeImageScanFindingsCommandOutput>;
   describeImageScanFindings(
     args: DescribeImageScanFindingsCommandInput,
-    cb: (err: any, data?: DescribeImageScanFindingsCommandOutput) => void
+    cb: (err: any, data?: DescribeImageScanFindingsCommandOutput) => void,
   ): void;
   describeImageScanFindings(
     args: DescribeImageScanFindingsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeImageScanFindingsCommandOutput) => void
+    cb: (err: any, data?: DescribeImageScanFindingsCommandOutput) => void,
   ): void;
 
   /**
@@ -507,16 +507,16 @@ export interface ECR {
   describePullThroughCacheRules(): Promise<DescribePullThroughCacheRulesCommandOutput>;
   describePullThroughCacheRules(
     args: DescribePullThroughCacheRulesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribePullThroughCacheRulesCommandOutput>;
   describePullThroughCacheRules(
     args: DescribePullThroughCacheRulesCommandInput,
-    cb: (err: any, data?: DescribePullThroughCacheRulesCommandOutput) => void
+    cb: (err: any, data?: DescribePullThroughCacheRulesCommandOutput) => void,
   ): void;
   describePullThroughCacheRules(
     args: DescribePullThroughCacheRulesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribePullThroughCacheRulesCommandOutput) => void
+    cb: (err: any, data?: DescribePullThroughCacheRulesCommandOutput) => void,
   ): void;
 
   /**
@@ -525,16 +525,16 @@ export interface ECR {
   describeRegistry(): Promise<DescribeRegistryCommandOutput>;
   describeRegistry(
     args: DescribeRegistryCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeRegistryCommandOutput>;
   describeRegistry(
     args: DescribeRegistryCommandInput,
-    cb: (err: any, data?: DescribeRegistryCommandOutput) => void
+    cb: (err: any, data?: DescribeRegistryCommandOutput) => void,
   ): void;
   describeRegistry(
     args: DescribeRegistryCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeRegistryCommandOutput) => void
+    cb: (err: any, data?: DescribeRegistryCommandOutput) => void,
   ): void;
 
   /**
@@ -543,16 +543,16 @@ export interface ECR {
   describeRepositories(): Promise<DescribeRepositoriesCommandOutput>;
   describeRepositories(
     args: DescribeRepositoriesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeRepositoriesCommandOutput>;
   describeRepositories(
     args: DescribeRepositoriesCommandInput,
-    cb: (err: any, data?: DescribeRepositoriesCommandOutput) => void
+    cb: (err: any, data?: DescribeRepositoriesCommandOutput) => void,
   ): void;
   describeRepositories(
     args: DescribeRepositoriesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeRepositoriesCommandOutput) => void
+    cb: (err: any, data?: DescribeRepositoriesCommandOutput) => void,
   ): void;
 
   /**
@@ -561,16 +561,16 @@ export interface ECR {
   getAuthorizationToken(): Promise<GetAuthorizationTokenCommandOutput>;
   getAuthorizationToken(
     args: GetAuthorizationTokenCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetAuthorizationTokenCommandOutput>;
   getAuthorizationToken(
     args: GetAuthorizationTokenCommandInput,
-    cb: (err: any, data?: GetAuthorizationTokenCommandOutput) => void
+    cb: (err: any, data?: GetAuthorizationTokenCommandOutput) => void,
   ): void;
   getAuthorizationToken(
     args: GetAuthorizationTokenCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetAuthorizationTokenCommandOutput) => void
+    cb: (err: any, data?: GetAuthorizationTokenCommandOutput) => void,
   ): void;
 
   /**
@@ -578,16 +578,16 @@ export interface ECR {
    */
   getDownloadUrlForLayer(
     args: GetDownloadUrlForLayerCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetDownloadUrlForLayerCommandOutput>;
   getDownloadUrlForLayer(
     args: GetDownloadUrlForLayerCommandInput,
-    cb: (err: any, data?: GetDownloadUrlForLayerCommandOutput) => void
+    cb: (err: any, data?: GetDownloadUrlForLayerCommandOutput) => void,
   ): void;
   getDownloadUrlForLayer(
     args: GetDownloadUrlForLayerCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetDownloadUrlForLayerCommandOutput) => void
+    cb: (err: any, data?: GetDownloadUrlForLayerCommandOutput) => void,
   ): void;
 
   /**
@@ -595,16 +595,16 @@ export interface ECR {
    */
   getLifecyclePolicy(
     args: GetLifecyclePolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetLifecyclePolicyCommandOutput>;
   getLifecyclePolicy(
     args: GetLifecyclePolicyCommandInput,
-    cb: (err: any, data?: GetLifecyclePolicyCommandOutput) => void
+    cb: (err: any, data?: GetLifecyclePolicyCommandOutput) => void,
   ): void;
   getLifecyclePolicy(
     args: GetLifecyclePolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetLifecyclePolicyCommandOutput) => void
+    cb: (err: any, data?: GetLifecyclePolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -612,16 +612,16 @@ export interface ECR {
    */
   getLifecyclePolicyPreview(
     args: GetLifecyclePolicyPreviewCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetLifecyclePolicyPreviewCommandOutput>;
   getLifecyclePolicyPreview(
     args: GetLifecyclePolicyPreviewCommandInput,
-    cb: (err: any, data?: GetLifecyclePolicyPreviewCommandOutput) => void
+    cb: (err: any, data?: GetLifecyclePolicyPreviewCommandOutput) => void,
   ): void;
   getLifecyclePolicyPreview(
     args: GetLifecyclePolicyPreviewCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetLifecyclePolicyPreviewCommandOutput) => void
+    cb: (err: any, data?: GetLifecyclePolicyPreviewCommandOutput) => void,
   ): void;
 
   /**
@@ -630,16 +630,16 @@ export interface ECR {
   getRegistryPolicy(): Promise<GetRegistryPolicyCommandOutput>;
   getRegistryPolicy(
     args: GetRegistryPolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetRegistryPolicyCommandOutput>;
   getRegistryPolicy(
     args: GetRegistryPolicyCommandInput,
-    cb: (err: any, data?: GetRegistryPolicyCommandOutput) => void
+    cb: (err: any, data?: GetRegistryPolicyCommandOutput) => void,
   ): void;
   getRegistryPolicy(
     args: GetRegistryPolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetRegistryPolicyCommandOutput) => void
+    cb: (err: any, data?: GetRegistryPolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -648,16 +648,16 @@ export interface ECR {
   getRegistryScanningConfiguration(): Promise<GetRegistryScanningConfigurationCommandOutput>;
   getRegistryScanningConfiguration(
     args: GetRegistryScanningConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetRegistryScanningConfigurationCommandOutput>;
   getRegistryScanningConfiguration(
     args: GetRegistryScanningConfigurationCommandInput,
-    cb: (err: any, data?: GetRegistryScanningConfigurationCommandOutput) => void
+    cb: (err: any, data?: GetRegistryScanningConfigurationCommandOutput) => void,
   ): void;
   getRegistryScanningConfiguration(
     args: GetRegistryScanningConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetRegistryScanningConfigurationCommandOutput) => void
+    cb: (err: any, data?: GetRegistryScanningConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -665,16 +665,16 @@ export interface ECR {
    */
   getRepositoryPolicy(
     args: GetRepositoryPolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetRepositoryPolicyCommandOutput>;
   getRepositoryPolicy(
     args: GetRepositoryPolicyCommandInput,
-    cb: (err: any, data?: GetRepositoryPolicyCommandOutput) => void
+    cb: (err: any, data?: GetRepositoryPolicyCommandOutput) => void,
   ): void;
   getRepositoryPolicy(
     args: GetRepositoryPolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetRepositoryPolicyCommandOutput) => void
+    cb: (err: any, data?: GetRepositoryPolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -682,16 +682,16 @@ export interface ECR {
    */
   initiateLayerUpload(
     args: InitiateLayerUploadCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<InitiateLayerUploadCommandOutput>;
   initiateLayerUpload(
     args: InitiateLayerUploadCommandInput,
-    cb: (err: any, data?: InitiateLayerUploadCommandOutput) => void
+    cb: (err: any, data?: InitiateLayerUploadCommandOutput) => void,
   ): void;
   initiateLayerUpload(
     args: InitiateLayerUploadCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: InitiateLayerUploadCommandOutput) => void
+    cb: (err: any, data?: InitiateLayerUploadCommandOutput) => void,
   ): void;
 
   /**
@@ -702,7 +702,7 @@ export interface ECR {
   listImages(
     args: ListImagesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListImagesCommandOutput) => void
+    cb: (err: any, data?: ListImagesCommandOutput) => void,
   ): void;
 
   /**
@@ -710,16 +710,16 @@ export interface ECR {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -730,7 +730,7 @@ export interface ECR {
   putImage(
     args: PutImageCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutImageCommandOutput) => void
+    cb: (err: any, data?: PutImageCommandOutput) => void,
   ): void;
 
   /**
@@ -738,16 +738,16 @@ export interface ECR {
    */
   putImageScanningConfiguration(
     args: PutImageScanningConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutImageScanningConfigurationCommandOutput>;
   putImageScanningConfiguration(
     args: PutImageScanningConfigurationCommandInput,
-    cb: (err: any, data?: PutImageScanningConfigurationCommandOutput) => void
+    cb: (err: any, data?: PutImageScanningConfigurationCommandOutput) => void,
   ): void;
   putImageScanningConfiguration(
     args: PutImageScanningConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutImageScanningConfigurationCommandOutput) => void
+    cb: (err: any, data?: PutImageScanningConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -755,16 +755,16 @@ export interface ECR {
    */
   putImageTagMutability(
     args: PutImageTagMutabilityCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutImageTagMutabilityCommandOutput>;
   putImageTagMutability(
     args: PutImageTagMutabilityCommandInput,
-    cb: (err: any, data?: PutImageTagMutabilityCommandOutput) => void
+    cb: (err: any, data?: PutImageTagMutabilityCommandOutput) => void,
   ): void;
   putImageTagMutability(
     args: PutImageTagMutabilityCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutImageTagMutabilityCommandOutput) => void
+    cb: (err: any, data?: PutImageTagMutabilityCommandOutput) => void,
   ): void;
 
   /**
@@ -772,16 +772,16 @@ export interface ECR {
    */
   putLifecyclePolicy(
     args: PutLifecyclePolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutLifecyclePolicyCommandOutput>;
   putLifecyclePolicy(
     args: PutLifecyclePolicyCommandInput,
-    cb: (err: any, data?: PutLifecyclePolicyCommandOutput) => void
+    cb: (err: any, data?: PutLifecyclePolicyCommandOutput) => void,
   ): void;
   putLifecyclePolicy(
     args: PutLifecyclePolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutLifecyclePolicyCommandOutput) => void
+    cb: (err: any, data?: PutLifecyclePolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -789,16 +789,16 @@ export interface ECR {
    */
   putRegistryPolicy(
     args: PutRegistryPolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutRegistryPolicyCommandOutput>;
   putRegistryPolicy(
     args: PutRegistryPolicyCommandInput,
-    cb: (err: any, data?: PutRegistryPolicyCommandOutput) => void
+    cb: (err: any, data?: PutRegistryPolicyCommandOutput) => void,
   ): void;
   putRegistryPolicy(
     args: PutRegistryPolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutRegistryPolicyCommandOutput) => void
+    cb: (err: any, data?: PutRegistryPolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -807,16 +807,16 @@ export interface ECR {
   putRegistryScanningConfiguration(): Promise<PutRegistryScanningConfigurationCommandOutput>;
   putRegistryScanningConfiguration(
     args: PutRegistryScanningConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutRegistryScanningConfigurationCommandOutput>;
   putRegistryScanningConfiguration(
     args: PutRegistryScanningConfigurationCommandInput,
-    cb: (err: any, data?: PutRegistryScanningConfigurationCommandOutput) => void
+    cb: (err: any, data?: PutRegistryScanningConfigurationCommandOutput) => void,
   ): void;
   putRegistryScanningConfiguration(
     args: PutRegistryScanningConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutRegistryScanningConfigurationCommandOutput) => void
+    cb: (err: any, data?: PutRegistryScanningConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -824,16 +824,16 @@ export interface ECR {
    */
   putReplicationConfiguration(
     args: PutReplicationConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PutReplicationConfigurationCommandOutput>;
   putReplicationConfiguration(
     args: PutReplicationConfigurationCommandInput,
-    cb: (err: any, data?: PutReplicationConfigurationCommandOutput) => void
+    cb: (err: any, data?: PutReplicationConfigurationCommandOutput) => void,
   ): void;
   putReplicationConfiguration(
     args: PutReplicationConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PutReplicationConfigurationCommandOutput) => void
+    cb: (err: any, data?: PutReplicationConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -841,16 +841,16 @@ export interface ECR {
    */
   setRepositoryPolicy(
     args: SetRepositoryPolicyCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<SetRepositoryPolicyCommandOutput>;
   setRepositoryPolicy(
     args: SetRepositoryPolicyCommandInput,
-    cb: (err: any, data?: SetRepositoryPolicyCommandOutput) => void
+    cb: (err: any, data?: SetRepositoryPolicyCommandOutput) => void,
   ): void;
   setRepositoryPolicy(
     args: SetRepositoryPolicyCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SetRepositoryPolicyCommandOutput) => void
+    cb: (err: any, data?: SetRepositoryPolicyCommandOutput) => void,
   ): void;
 
   /**
@@ -858,13 +858,13 @@ export interface ECR {
    */
   startImageScan(
     args: StartImageScanCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartImageScanCommandOutput>;
   startImageScan(args: StartImageScanCommandInput, cb: (err: any, data?: StartImageScanCommandOutput) => void): void;
   startImageScan(
     args: StartImageScanCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartImageScanCommandOutput) => void
+    cb: (err: any, data?: StartImageScanCommandOutput) => void,
   ): void;
 
   /**
@@ -872,16 +872,16 @@ export interface ECR {
    */
   startLifecyclePolicyPreview(
     args: StartLifecyclePolicyPreviewCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartLifecyclePolicyPreviewCommandOutput>;
   startLifecyclePolicyPreview(
     args: StartLifecyclePolicyPreviewCommandInput,
-    cb: (err: any, data?: StartLifecyclePolicyPreviewCommandOutput) => void
+    cb: (err: any, data?: StartLifecyclePolicyPreviewCommandOutput) => void,
   ): void;
   startLifecyclePolicyPreview(
     args: StartLifecyclePolicyPreviewCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartLifecyclePolicyPreviewCommandOutput) => void
+    cb: (err: any, data?: StartLifecyclePolicyPreviewCommandOutput) => void,
   ): void;
 
   /**
@@ -892,7 +892,7 @@ export interface ECR {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -903,7 +903,7 @@ export interface ECR {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -911,16 +911,16 @@ export interface ECR {
    */
   updatePullThroughCacheRule(
     args: UpdatePullThroughCacheRuleCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdatePullThroughCacheRuleCommandOutput>;
   updatePullThroughCacheRule(
     args: UpdatePullThroughCacheRuleCommandInput,
-    cb: (err: any, data?: UpdatePullThroughCacheRuleCommandOutput) => void
+    cb: (err: any, data?: UpdatePullThroughCacheRuleCommandOutput) => void,
   ): void;
   updatePullThroughCacheRule(
     args: UpdatePullThroughCacheRuleCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdatePullThroughCacheRuleCommandOutput) => void
+    cb: (err: any, data?: UpdatePullThroughCacheRuleCommandOutput) => void,
   ): void;
 
   /**
@@ -928,13 +928,13 @@ export interface ECR {
    */
   uploadLayerPart(
     args: UploadLayerPartCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UploadLayerPartCommandOutput>;
   uploadLayerPart(args: UploadLayerPartCommandInput, cb: (err: any, data?: UploadLayerPartCommandOutput) => void): void;
   uploadLayerPart(
     args: UploadLayerPartCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UploadLayerPartCommandOutput) => void
+    cb: (err: any, data?: UploadLayerPartCommandOutput) => void,
   ): void;
 
   /**
@@ -942,16 +942,16 @@ export interface ECR {
    */
   validatePullThroughCacheRule(
     args: ValidatePullThroughCacheRuleCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ValidatePullThroughCacheRuleCommandOutput>;
   validatePullThroughCacheRule(
     args: ValidatePullThroughCacheRuleCommandInput,
-    cb: (err: any, data?: ValidatePullThroughCacheRuleCommandOutput) => void
+    cb: (err: any, data?: ValidatePullThroughCacheRuleCommandOutput) => void,
   ): void;
   validatePullThroughCacheRule(
     args: ValidatePullThroughCacheRuleCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ValidatePullThroughCacheRuleCommandOutput) => void
+    cb: (err: any, data?: ValidatePullThroughCacheRuleCommandOutput) => void,
   ): void;
 }
 

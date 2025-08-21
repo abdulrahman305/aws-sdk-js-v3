@@ -312,7 +312,7 @@ import {
  */
 export const se_AddListenerCertificatesCommand = async (
   input: AddListenerCertificatesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -329,7 +329,7 @@ export const se_AddListenerCertificatesCommand = async (
  */
 export const se_AddTagsCommand = async (
   input: AddTagsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -346,7 +346,7 @@ export const se_AddTagsCommand = async (
  */
 export const se_AddTrustStoreRevocationsCommand = async (
   input: AddTrustStoreRevocationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -363,7 +363,7 @@ export const se_AddTrustStoreRevocationsCommand = async (
  */
 export const se_CreateListenerCommand = async (
   input: CreateListenerCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -380,7 +380,7 @@ export const se_CreateListenerCommand = async (
  */
 export const se_CreateLoadBalancerCommand = async (
   input: CreateLoadBalancerCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -397,7 +397,7 @@ export const se_CreateLoadBalancerCommand = async (
  */
 export const se_CreateRuleCommand = async (
   input: CreateRuleCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -414,7 +414,7 @@ export const se_CreateRuleCommand = async (
  */
 export const se_CreateTargetGroupCommand = async (
   input: CreateTargetGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -431,7 +431,7 @@ export const se_CreateTargetGroupCommand = async (
  */
 export const se_CreateTrustStoreCommand = async (
   input: CreateTrustStoreCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -448,7 +448,7 @@ export const se_CreateTrustStoreCommand = async (
  */
 export const se_DeleteListenerCommand = async (
   input: DeleteListenerCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -465,7 +465,7 @@ export const se_DeleteListenerCommand = async (
  */
 export const se_DeleteLoadBalancerCommand = async (
   input: DeleteLoadBalancerCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -482,7 +482,7 @@ export const se_DeleteLoadBalancerCommand = async (
  */
 export const se_DeleteRuleCommand = async (
   input: DeleteRuleCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -499,7 +499,7 @@ export const se_DeleteRuleCommand = async (
  */
 export const se_DeleteTargetGroupCommand = async (
   input: DeleteTargetGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -516,7 +516,7 @@ export const se_DeleteTargetGroupCommand = async (
  */
 export const se_DeleteTrustStoreCommand = async (
   input: DeleteTrustStoreCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -533,7 +533,7 @@ export const se_DeleteTrustStoreCommand = async (
  */
 export const se_DeregisterTargetsCommand = async (
   input: DeregisterTargetsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -550,7 +550,7 @@ export const se_DeregisterTargetsCommand = async (
  */
 export const se_DescribeAccountLimitsCommand = async (
   input: DescribeAccountLimitsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -567,7 +567,7 @@ export const se_DescribeAccountLimitsCommand = async (
  */
 export const se_DescribeListenerCertificatesCommand = async (
   input: DescribeListenerCertificatesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -584,7 +584,7 @@ export const se_DescribeListenerCertificatesCommand = async (
  */
 export const se_DescribeListenersCommand = async (
   input: DescribeListenersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -601,7 +601,7 @@ export const se_DescribeListenersCommand = async (
  */
 export const se_DescribeLoadBalancerAttributesCommand = async (
   input: DescribeLoadBalancerAttributesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -618,7 +618,7 @@ export const se_DescribeLoadBalancerAttributesCommand = async (
  */
 export const se_DescribeLoadBalancersCommand = async (
   input: DescribeLoadBalancersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -635,7 +635,7 @@ export const se_DescribeLoadBalancersCommand = async (
  */
 export const se_DescribeRulesCommand = async (
   input: DescribeRulesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -652,7 +652,7 @@ export const se_DescribeRulesCommand = async (
  */
 export const se_DescribeSSLPoliciesCommand = async (
   input: DescribeSSLPoliciesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -669,7 +669,7 @@ export const se_DescribeSSLPoliciesCommand = async (
  */
 export const se_DescribeTagsCommand = async (
   input: DescribeTagsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -686,7 +686,7 @@ export const se_DescribeTagsCommand = async (
  */
 export const se_DescribeTargetGroupAttributesCommand = async (
   input: DescribeTargetGroupAttributesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -703,7 +703,7 @@ export const se_DescribeTargetGroupAttributesCommand = async (
  */
 export const se_DescribeTargetGroupsCommand = async (
   input: DescribeTargetGroupsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -720,7 +720,7 @@ export const se_DescribeTargetGroupsCommand = async (
  */
 export const se_DescribeTargetHealthCommand = async (
   input: DescribeTargetHealthCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -737,7 +737,7 @@ export const se_DescribeTargetHealthCommand = async (
  */
 export const se_DescribeTrustStoreAssociationsCommand = async (
   input: DescribeTrustStoreAssociationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -754,7 +754,7 @@ export const se_DescribeTrustStoreAssociationsCommand = async (
  */
 export const se_DescribeTrustStoreRevocationsCommand = async (
   input: DescribeTrustStoreRevocationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -771,7 +771,7 @@ export const se_DescribeTrustStoreRevocationsCommand = async (
  */
 export const se_DescribeTrustStoresCommand = async (
   input: DescribeTrustStoresCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -788,7 +788,7 @@ export const se_DescribeTrustStoresCommand = async (
  */
 export const se_GetTrustStoreCaCertificatesBundleCommand = async (
   input: GetTrustStoreCaCertificatesBundleCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -805,7 +805,7 @@ export const se_GetTrustStoreCaCertificatesBundleCommand = async (
  */
 export const se_GetTrustStoreRevocationContentCommand = async (
   input: GetTrustStoreRevocationContentCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -822,7 +822,7 @@ export const se_GetTrustStoreRevocationContentCommand = async (
  */
 export const se_ModifyListenerCommand = async (
   input: ModifyListenerCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -839,7 +839,7 @@ export const se_ModifyListenerCommand = async (
  */
 export const se_ModifyLoadBalancerAttributesCommand = async (
   input: ModifyLoadBalancerAttributesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -856,7 +856,7 @@ export const se_ModifyLoadBalancerAttributesCommand = async (
  */
 export const se_ModifyRuleCommand = async (
   input: ModifyRuleCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -873,7 +873,7 @@ export const se_ModifyRuleCommand = async (
  */
 export const se_ModifyTargetGroupCommand = async (
   input: ModifyTargetGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -890,7 +890,7 @@ export const se_ModifyTargetGroupCommand = async (
  */
 export const se_ModifyTargetGroupAttributesCommand = async (
   input: ModifyTargetGroupAttributesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -907,7 +907,7 @@ export const se_ModifyTargetGroupAttributesCommand = async (
  */
 export const se_ModifyTrustStoreCommand = async (
   input: ModifyTrustStoreCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -924,7 +924,7 @@ export const se_ModifyTrustStoreCommand = async (
  */
 export const se_RegisterTargetsCommand = async (
   input: RegisterTargetsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -941,7 +941,7 @@ export const se_RegisterTargetsCommand = async (
  */
 export const se_RemoveListenerCertificatesCommand = async (
   input: RemoveListenerCertificatesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -958,7 +958,7 @@ export const se_RemoveListenerCertificatesCommand = async (
  */
 export const se_RemoveTagsCommand = async (
   input: RemoveTagsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -975,7 +975,7 @@ export const se_RemoveTagsCommand = async (
  */
 export const se_RemoveTrustStoreRevocationsCommand = async (
   input: RemoveTrustStoreRevocationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -992,7 +992,7 @@ export const se_RemoveTrustStoreRevocationsCommand = async (
  */
 export const se_SetIpAddressTypeCommand = async (
   input: SetIpAddressTypeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1009,7 +1009,7 @@ export const se_SetIpAddressTypeCommand = async (
  */
 export const se_SetRulePrioritiesCommand = async (
   input: SetRulePrioritiesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1026,7 +1026,7 @@ export const se_SetRulePrioritiesCommand = async (
  */
 export const se_SetSecurityGroupsCommand = async (
   input: SetSecurityGroupsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1043,7 +1043,7 @@ export const se_SetSecurityGroupsCommand = async (
  */
 export const se_SetSubnetsCommand = async (
   input: SetSubnetsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = SHARED_HEADERS;
   let body: any;
@@ -1060,7 +1060,7 @@ export const se_SetSubnetsCommand = async (
  */
 export const de_AddListenerCertificatesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AddListenerCertificatesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1080,7 +1080,7 @@ export const de_AddListenerCertificatesCommand = async (
  */
 export const de_AddTagsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AddTagsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1100,7 +1100,7 @@ export const de_AddTagsCommand = async (
  */
 export const de_AddTrustStoreRevocationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AddTrustStoreRevocationsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1120,7 +1120,7 @@ export const de_AddTrustStoreRevocationsCommand = async (
  */
 export const de_CreateListenerCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateListenerCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1140,7 +1140,7 @@ export const de_CreateListenerCommand = async (
  */
 export const de_CreateLoadBalancerCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateLoadBalancerCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1160,7 +1160,7 @@ export const de_CreateLoadBalancerCommand = async (
  */
 export const de_CreateRuleCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateRuleCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1180,7 +1180,7 @@ export const de_CreateRuleCommand = async (
  */
 export const de_CreateTargetGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateTargetGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1200,7 +1200,7 @@ export const de_CreateTargetGroupCommand = async (
  */
 export const de_CreateTrustStoreCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateTrustStoreCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1220,7 +1220,7 @@ export const de_CreateTrustStoreCommand = async (
  */
 export const de_DeleteListenerCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteListenerCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1240,7 +1240,7 @@ export const de_DeleteListenerCommand = async (
  */
 export const de_DeleteLoadBalancerCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteLoadBalancerCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1260,7 +1260,7 @@ export const de_DeleteLoadBalancerCommand = async (
  */
 export const de_DeleteRuleCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteRuleCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1280,7 +1280,7 @@ export const de_DeleteRuleCommand = async (
  */
 export const de_DeleteTargetGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteTargetGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1300,7 +1300,7 @@ export const de_DeleteTargetGroupCommand = async (
  */
 export const de_DeleteTrustStoreCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteTrustStoreCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1320,7 +1320,7 @@ export const de_DeleteTrustStoreCommand = async (
  */
 export const de_DeregisterTargetsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeregisterTargetsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1340,7 +1340,7 @@ export const de_DeregisterTargetsCommand = async (
  */
 export const de_DescribeAccountLimitsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeAccountLimitsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1360,7 +1360,7 @@ export const de_DescribeAccountLimitsCommand = async (
  */
 export const de_DescribeListenerCertificatesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeListenerCertificatesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1380,7 +1380,7 @@ export const de_DescribeListenerCertificatesCommand = async (
  */
 export const de_DescribeListenersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeListenersCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1400,7 +1400,7 @@ export const de_DescribeListenersCommand = async (
  */
 export const de_DescribeLoadBalancerAttributesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeLoadBalancerAttributesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1420,7 +1420,7 @@ export const de_DescribeLoadBalancerAttributesCommand = async (
  */
 export const de_DescribeLoadBalancersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeLoadBalancersCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1440,7 +1440,7 @@ export const de_DescribeLoadBalancersCommand = async (
  */
 export const de_DescribeRulesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeRulesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1460,7 +1460,7 @@ export const de_DescribeRulesCommand = async (
  */
 export const de_DescribeSSLPoliciesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeSSLPoliciesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1480,7 +1480,7 @@ export const de_DescribeSSLPoliciesCommand = async (
  */
 export const de_DescribeTagsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeTagsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1500,7 +1500,7 @@ export const de_DescribeTagsCommand = async (
  */
 export const de_DescribeTargetGroupAttributesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeTargetGroupAttributesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1520,7 +1520,7 @@ export const de_DescribeTargetGroupAttributesCommand = async (
  */
 export const de_DescribeTargetGroupsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeTargetGroupsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1540,7 +1540,7 @@ export const de_DescribeTargetGroupsCommand = async (
  */
 export const de_DescribeTargetHealthCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeTargetHealthCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1560,7 +1560,7 @@ export const de_DescribeTargetHealthCommand = async (
  */
 export const de_DescribeTrustStoreAssociationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeTrustStoreAssociationsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1580,7 +1580,7 @@ export const de_DescribeTrustStoreAssociationsCommand = async (
  */
 export const de_DescribeTrustStoreRevocationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeTrustStoreRevocationsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1600,7 +1600,7 @@ export const de_DescribeTrustStoreRevocationsCommand = async (
  */
 export const de_DescribeTrustStoresCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeTrustStoresCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1620,7 +1620,7 @@ export const de_DescribeTrustStoresCommand = async (
  */
 export const de_GetTrustStoreCaCertificatesBundleCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetTrustStoreCaCertificatesBundleCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1640,7 +1640,7 @@ export const de_GetTrustStoreCaCertificatesBundleCommand = async (
  */
 export const de_GetTrustStoreRevocationContentCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetTrustStoreRevocationContentCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1660,7 +1660,7 @@ export const de_GetTrustStoreRevocationContentCommand = async (
  */
 export const de_ModifyListenerCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModifyListenerCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1680,7 +1680,7 @@ export const de_ModifyListenerCommand = async (
  */
 export const de_ModifyLoadBalancerAttributesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModifyLoadBalancerAttributesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1700,7 +1700,7 @@ export const de_ModifyLoadBalancerAttributesCommand = async (
  */
 export const de_ModifyRuleCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModifyRuleCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1720,7 +1720,7 @@ export const de_ModifyRuleCommand = async (
  */
 export const de_ModifyTargetGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModifyTargetGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1740,7 +1740,7 @@ export const de_ModifyTargetGroupCommand = async (
  */
 export const de_ModifyTargetGroupAttributesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModifyTargetGroupAttributesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1760,7 +1760,7 @@ export const de_ModifyTargetGroupAttributesCommand = async (
  */
 export const de_ModifyTrustStoreCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModifyTrustStoreCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1780,7 +1780,7 @@ export const de_ModifyTrustStoreCommand = async (
  */
 export const de_RegisterTargetsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RegisterTargetsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1800,7 +1800,7 @@ export const de_RegisterTargetsCommand = async (
  */
 export const de_RemoveListenerCertificatesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RemoveListenerCertificatesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1820,7 +1820,7 @@ export const de_RemoveListenerCertificatesCommand = async (
  */
 export const de_RemoveTagsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RemoveTagsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1840,7 +1840,7 @@ export const de_RemoveTagsCommand = async (
  */
 export const de_RemoveTrustStoreRevocationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RemoveTrustStoreRevocationsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1860,7 +1860,7 @@ export const de_RemoveTrustStoreRevocationsCommand = async (
  */
 export const de_SetIpAddressTypeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SetIpAddressTypeCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1880,7 +1880,7 @@ export const de_SetIpAddressTypeCommand = async (
  */
 export const de_SetRulePrioritiesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SetRulePrioritiesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1900,7 +1900,7 @@ export const de_SetRulePrioritiesCommand = async (
  */
 export const de_SetSecurityGroupsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SetSecurityGroupsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1920,7 +1920,7 @@ export const de_SetSecurityGroupsCommand = async (
  */
 export const de_SetSubnetsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SetSubnetsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2104,7 +2104,7 @@ const de_CommandError = async (output: __HttpResponse, context: __SerdeContext):
  */
 const de_AllocationIdNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AllocationIdNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_AllocationIdNotFoundException(body.Error, context);
@@ -2120,7 +2120,7 @@ const de_AllocationIdNotFoundExceptionRes = async (
  */
 const de_ALPNPolicyNotSupportedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ALPNPolicyNotSupportedException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_ALPNPolicyNotSupportedException(body.Error, context);
@@ -2136,7 +2136,7 @@ const de_ALPNPolicyNotSupportedExceptionRes = async (
  */
 const de_AvailabilityZoneNotSupportedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AvailabilityZoneNotSupportedException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_AvailabilityZoneNotSupportedException(body.Error, context);
@@ -2152,7 +2152,7 @@ const de_AvailabilityZoneNotSupportedExceptionRes = async (
  */
 const de_CaCertificatesBundleNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CaCertificatesBundleNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_CaCertificatesBundleNotFoundException(body.Error, context);
@@ -2168,7 +2168,7 @@ const de_CaCertificatesBundleNotFoundExceptionRes = async (
  */
 const de_CertificateNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CertificateNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_CertificateNotFoundException(body.Error, context);
@@ -2184,7 +2184,7 @@ const de_CertificateNotFoundExceptionRes = async (
  */
 const de_DuplicateListenerExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DuplicateListenerException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_DuplicateListenerException(body.Error, context);
@@ -2200,7 +2200,7 @@ const de_DuplicateListenerExceptionRes = async (
  */
 const de_DuplicateLoadBalancerNameExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DuplicateLoadBalancerNameException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_DuplicateLoadBalancerNameException(body.Error, context);
@@ -2216,7 +2216,7 @@ const de_DuplicateLoadBalancerNameExceptionRes = async (
  */
 const de_DuplicateTagKeysExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DuplicateTagKeysException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_DuplicateTagKeysException(body.Error, context);
@@ -2232,7 +2232,7 @@ const de_DuplicateTagKeysExceptionRes = async (
  */
 const de_DuplicateTargetGroupNameExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DuplicateTargetGroupNameException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_DuplicateTargetGroupNameException(body.Error, context);
@@ -2248,7 +2248,7 @@ const de_DuplicateTargetGroupNameExceptionRes = async (
  */
 const de_DuplicateTrustStoreNameExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DuplicateTrustStoreNameException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_DuplicateTrustStoreNameException(body.Error, context);
@@ -2264,7 +2264,7 @@ const de_DuplicateTrustStoreNameExceptionRes = async (
  */
 const de_HealthUnavailableExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<HealthUnavailableException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_HealthUnavailableException(body.Error, context);
@@ -2280,7 +2280,7 @@ const de_HealthUnavailableExceptionRes = async (
  */
 const de_IncompatibleProtocolsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<IncompatibleProtocolsException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_IncompatibleProtocolsException(body.Error, context);
@@ -2296,7 +2296,7 @@ const de_IncompatibleProtocolsExceptionRes = async (
  */
 const de_InvalidCaCertificatesBundleExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidCaCertificatesBundleException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_InvalidCaCertificatesBundleException(body.Error, context);
@@ -2312,7 +2312,7 @@ const de_InvalidCaCertificatesBundleExceptionRes = async (
  */
 const de_InvalidConfigurationRequestExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidConfigurationRequestException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_InvalidConfigurationRequestException(body.Error, context);
@@ -2328,7 +2328,7 @@ const de_InvalidConfigurationRequestExceptionRes = async (
  */
 const de_InvalidLoadBalancerActionExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidLoadBalancerActionException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_InvalidLoadBalancerActionException(body.Error, context);
@@ -2344,7 +2344,7 @@ const de_InvalidLoadBalancerActionExceptionRes = async (
  */
 const de_InvalidRevocationContentExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidRevocationContentException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_InvalidRevocationContentException(body.Error, context);
@@ -2360,7 +2360,7 @@ const de_InvalidRevocationContentExceptionRes = async (
  */
 const de_InvalidSchemeExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidSchemeException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_InvalidSchemeException(body.Error, context);
@@ -2376,7 +2376,7 @@ const de_InvalidSchemeExceptionRes = async (
  */
 const de_InvalidSecurityGroupExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidSecurityGroupException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_InvalidSecurityGroupException(body.Error, context);
@@ -2392,7 +2392,7 @@ const de_InvalidSecurityGroupExceptionRes = async (
  */
 const de_InvalidSubnetExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidSubnetException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_InvalidSubnetException(body.Error, context);
@@ -2408,7 +2408,7 @@ const de_InvalidSubnetExceptionRes = async (
  */
 const de_InvalidTargetExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidTargetException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_InvalidTargetException(body.Error, context);
@@ -2424,7 +2424,7 @@ const de_InvalidTargetExceptionRes = async (
  */
 const de_ListenerNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListenerNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_ListenerNotFoundException(body.Error, context);
@@ -2440,7 +2440,7 @@ const de_ListenerNotFoundExceptionRes = async (
  */
 const de_LoadBalancerNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<LoadBalancerNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_LoadBalancerNotFoundException(body.Error, context);
@@ -2456,7 +2456,7 @@ const de_LoadBalancerNotFoundExceptionRes = async (
  */
 const de_OperationNotPermittedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<OperationNotPermittedException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_OperationNotPermittedException(body.Error, context);
@@ -2472,7 +2472,7 @@ const de_OperationNotPermittedExceptionRes = async (
  */
 const de_PriorityInUseExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PriorityInUseException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_PriorityInUseException(body.Error, context);
@@ -2488,7 +2488,7 @@ const de_PriorityInUseExceptionRes = async (
  */
 const de_ResourceInUseExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceInUseException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_ResourceInUseException(body.Error, context);
@@ -2504,7 +2504,7 @@ const de_ResourceInUseExceptionRes = async (
  */
 const de_RevocationContentNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RevocationContentNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_RevocationContentNotFoundException(body.Error, context);
@@ -2520,7 +2520,7 @@ const de_RevocationContentNotFoundExceptionRes = async (
  */
 const de_RevocationIdNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RevocationIdNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_RevocationIdNotFoundException(body.Error, context);
@@ -2536,7 +2536,7 @@ const de_RevocationIdNotFoundExceptionRes = async (
  */
 const de_RuleNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RuleNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_RuleNotFoundException(body.Error, context);
@@ -2552,7 +2552,7 @@ const de_RuleNotFoundExceptionRes = async (
  */
 const de_SSLPolicyNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SSLPolicyNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_SSLPolicyNotFoundException(body.Error, context);
@@ -2568,7 +2568,7 @@ const de_SSLPolicyNotFoundExceptionRes = async (
  */
 const de_SubnetNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SubnetNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_SubnetNotFoundException(body.Error, context);
@@ -2584,7 +2584,7 @@ const de_SubnetNotFoundExceptionRes = async (
  */
 const de_TargetGroupAssociationLimitExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TargetGroupAssociationLimitException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_TargetGroupAssociationLimitException(body.Error, context);
@@ -2600,7 +2600,7 @@ const de_TargetGroupAssociationLimitExceptionRes = async (
  */
 const de_TargetGroupNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TargetGroupNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_TargetGroupNotFoundException(body.Error, context);
@@ -2616,7 +2616,7 @@ const de_TargetGroupNotFoundExceptionRes = async (
  */
 const de_TooManyActionsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyActionsException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_TooManyActionsException(body.Error, context);
@@ -2632,7 +2632,7 @@ const de_TooManyActionsExceptionRes = async (
  */
 const de_TooManyCertificatesExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyCertificatesException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_TooManyCertificatesException(body.Error, context);
@@ -2648,7 +2648,7 @@ const de_TooManyCertificatesExceptionRes = async (
  */
 const de_TooManyListenersExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyListenersException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_TooManyListenersException(body.Error, context);
@@ -2664,7 +2664,7 @@ const de_TooManyListenersExceptionRes = async (
  */
 const de_TooManyLoadBalancersExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyLoadBalancersException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_TooManyLoadBalancersException(body.Error, context);
@@ -2680,7 +2680,7 @@ const de_TooManyLoadBalancersExceptionRes = async (
  */
 const de_TooManyRegistrationsForTargetIdExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyRegistrationsForTargetIdException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_TooManyRegistrationsForTargetIdException(body.Error, context);
@@ -2696,7 +2696,7 @@ const de_TooManyRegistrationsForTargetIdExceptionRes = async (
  */
 const de_TooManyRulesExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyRulesException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_TooManyRulesException(body.Error, context);
@@ -2712,7 +2712,7 @@ const de_TooManyRulesExceptionRes = async (
  */
 const de_TooManyTagsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyTagsException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_TooManyTagsException(body.Error, context);
@@ -2728,7 +2728,7 @@ const de_TooManyTagsExceptionRes = async (
  */
 const de_TooManyTargetGroupsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyTargetGroupsException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_TooManyTargetGroupsException(body.Error, context);
@@ -2744,7 +2744,7 @@ const de_TooManyTargetGroupsExceptionRes = async (
  */
 const de_TooManyTargetsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyTargetsException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_TooManyTargetsException(body.Error, context);
@@ -2760,7 +2760,7 @@ const de_TooManyTargetsExceptionRes = async (
  */
 const de_TooManyTrustStoreRevocationEntriesExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyTrustStoreRevocationEntriesException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_TooManyTrustStoreRevocationEntriesException(body.Error, context);
@@ -2776,7 +2776,7 @@ const de_TooManyTrustStoreRevocationEntriesExceptionRes = async (
  */
 const de_TooManyTrustStoresExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyTrustStoresException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_TooManyTrustStoresException(body.Error, context);
@@ -2792,7 +2792,7 @@ const de_TooManyTrustStoresExceptionRes = async (
  */
 const de_TooManyUniqueTargetGroupsPerLoadBalancerExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyUniqueTargetGroupsPerLoadBalancerException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_TooManyUniqueTargetGroupsPerLoadBalancerException(body.Error, context);
@@ -2808,7 +2808,7 @@ const de_TooManyUniqueTargetGroupsPerLoadBalancerExceptionRes = async (
  */
 const de_TrustStoreInUseExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TrustStoreInUseException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_TrustStoreInUseException(body.Error, context);
@@ -2824,7 +2824,7 @@ const de_TrustStoreInUseExceptionRes = async (
  */
 const de_TrustStoreNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TrustStoreNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_TrustStoreNotFoundException(body.Error, context);
@@ -2840,7 +2840,7 @@ const de_TrustStoreNotFoundExceptionRes = async (
  */
 const de_TrustStoreNotReadyExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TrustStoreNotReadyException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_TrustStoreNotReadyException(body.Error, context);
@@ -2856,7 +2856,7 @@ const de_TrustStoreNotReadyExceptionRes = async (
  */
 const de_UnsupportedProtocolExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UnsupportedProtocolException> => {
   const body = parsedOutput.body;
   const deserialized: any = de_UnsupportedProtocolException(body.Error, context);
@@ -3029,7 +3029,7 @@ const se_AlpnPolicyName = (input: string[], context: __SerdeContext): any => {
  */
 const se_AuthenticateCognitoActionAuthenticationRequestExtraParams = (
   input: Record<string, string>,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   let counter = 1;
@@ -3084,7 +3084,7 @@ const se_AuthenticateCognitoActionConfig = (input: AuthenticateCognitoActionConf
  */
 const se_AuthenticateOidcActionAuthenticationRequestExtraParams = (
   input: Record<string, string>,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   let counter = 1;
@@ -3548,7 +3548,7 @@ const se_DescribeAccountLimitsInput = (input: DescribeAccountLimitsInput, contex
  */
 const se_DescribeListenerCertificatesInput = (
   input: DescribeListenerCertificatesInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_LA] != null) {
@@ -3595,7 +3595,7 @@ const se_DescribeListenersInput = (input: DescribeListenersInput, context: __Ser
  */
 const se_DescribeLoadBalancerAttributesInput = (
   input: DescribeLoadBalancerAttributesInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_LBA] != null) {
@@ -3715,7 +3715,7 @@ const se_DescribeTagsInput = (input: DescribeTagsInput, context: __SerdeContext)
  */
 const se_DescribeTargetGroupAttributesInput = (
   input: DescribeTargetGroupAttributesInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_TGA] != null) {
@@ -3797,7 +3797,7 @@ const se_DescribeTargetHealthInput = (input: DescribeTargetHealthInput, context:
  */
 const se_DescribeTrustStoreAssociationsInput = (
   input: DescribeTrustStoreAssociationsInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_TSA] != null) {
@@ -3817,7 +3817,7 @@ const se_DescribeTrustStoreAssociationsInput = (
  */
 const se_DescribeTrustStoreRevocationsInput = (
   input: DescribeTrustStoreRevocationsInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_TSA] != null) {
@@ -3923,7 +3923,7 @@ const se_ForwardActionConfig = (input: ForwardActionConfig, context: __SerdeCont
  */
 const se_GetTrustStoreCaCertificatesBundleInput = (
   input: GetTrustStoreCaCertificatesBundleInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_TSA] != null) {
@@ -3937,7 +3937,7 @@ const se_GetTrustStoreCaCertificatesBundleInput = (
  */
 const se_GetTrustStoreRevocationContentInput = (
   input: GetTrustStoreRevocationContentInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_TSA] != null) {
@@ -4027,7 +4027,7 @@ const se_ListenerArns = (input: string[], context: __SerdeContext): any => {
  */
 const se_ListOfDescribeTargetHealthIncludeOptions = (
   input: DescribeTargetHealthInputIncludeEnum[],
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   let counter = 1;
@@ -4198,7 +4198,7 @@ const se_ModifyListenerInput = (input: ModifyListenerInput, context: __SerdeCont
  */
 const se_ModifyLoadBalancerAttributesInput = (
   input: ModifyLoadBalancerAttributesInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): any => {
   const entries: any = {};
   if (input[_LBA] != null) {
@@ -5289,7 +5289,7 @@ const de_AnomalyDetection = (output: any, context: __SerdeContext): AnomalyDetec
  */
 const de_AuthenticateCognitoActionAuthenticationRequestExtraParams = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Record<string, string> => {
   return output.reduce((acc: any, pair: any) => {
     if (pair["value"] === null) {
@@ -5328,7 +5328,7 @@ const de_AuthenticateCognitoActionConfig = (output: any, context: __SerdeContext
   } else if (output[_AREP] != null && output[_AREP][_e] != null) {
     contents[_AREP] = de_AuthenticateCognitoActionAuthenticationRequestExtraParams(
       __getArrayIfSingleItem(output[_AREP][_e]),
-      context
+      context,
     );
   }
   if (output[_OUR] != null) {
@@ -5342,7 +5342,7 @@ const de_AuthenticateCognitoActionConfig = (output: any, context: __SerdeContext
  */
 const de_AuthenticateOidcActionAuthenticationRequestExtraParams = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Record<string, string> => {
   return output.reduce((acc: any, pair: any) => {
     if (pair["value"] === null) {
@@ -5390,7 +5390,7 @@ const de_AuthenticateOidcActionConfig = (output: any, context: __SerdeContext): 
   } else if (output[_AREP] != null && output[_AREP][_e] != null) {
     contents[_AREP] = de_AuthenticateOidcActionAuthenticationRequestExtraParams(
       __getArrayIfSingleItem(output[_AREP][_e]),
-      context
+      context,
     );
   }
   if (output[_OUR] != null) {
@@ -5429,7 +5429,7 @@ const de_AvailabilityZone = (output: any, context: __SerdeContext): Availability
  */
 const de_AvailabilityZoneNotSupportedException = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): AvailabilityZoneNotSupportedException => {
   const contents: any = {};
   if (output[_Me] != null) {
@@ -5454,7 +5454,7 @@ const de_AvailabilityZones = (output: any, context: __SerdeContext): Availabilit
  */
 const de_CaCertificatesBundleNotFoundException = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): CaCertificatesBundleNotFoundException => {
   const contents: any = {};
   if (output[_Me] != null) {
@@ -5658,7 +5658,7 @@ const de_DescribeAccountLimitsOutput = (output: any, context: __SerdeContext): D
  */
 const de_DescribeListenerCertificatesOutput = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeListenerCertificatesOutput => {
   const contents: any = {};
   if (output.Certificates === "") {
@@ -5693,7 +5693,7 @@ const de_DescribeListenersOutput = (output: any, context: __SerdeContext): Descr
  */
 const de_DescribeLoadBalancerAttributesOutput = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeLoadBalancerAttributesOutput => {
   const contents: any = {};
   if (output.Attributes === "") {
@@ -5770,7 +5770,7 @@ const de_DescribeTagsOutput = (output: any, context: __SerdeContext): DescribeTa
  */
 const de_DescribeTargetGroupAttributesOutput = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeTargetGroupAttributesOutput => {
   const contents: any = {};
   if (output.Attributes === "") {
@@ -5815,7 +5815,7 @@ const de_DescribeTargetHealthOutput = (output: any, context: __SerdeContext): De
  */
 const de_DescribeTrustStoreAssociationsOutput = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeTrustStoreAssociationsOutput => {
   const contents: any = {};
   if (output.TrustStoreAssociations === "") {
@@ -5854,7 +5854,7 @@ const de_DescribeTrustStoreRevocation = (output: any, context: __SerdeContext): 
  */
 const de_DescribeTrustStoreRevocationResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeTrustStoreRevocation[] => {
   return (output || [])
     .filter((e: any) => e != null)
@@ -5868,7 +5868,7 @@ const de_DescribeTrustStoreRevocationResponse = (
  */
 const de_DescribeTrustStoreRevocationsOutput = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeTrustStoreRevocationsOutput => {
   const contents: any = {};
   if (output.TrustStoreRevocations === "") {
@@ -5914,7 +5914,7 @@ const de_DuplicateListenerException = (output: any, context: __SerdeContext): Du
  */
 const de_DuplicateLoadBalancerNameException = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DuplicateLoadBalancerNameException => {
   const contents: any = {};
   if (output[_Me] != null) {
@@ -5939,7 +5939,7 @@ const de_DuplicateTagKeysException = (output: any, context: __SerdeContext): Dup
  */
 const de_DuplicateTargetGroupNameException = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DuplicateTargetGroupNameException => {
   const contents: any = {};
   if (output[_Me] != null) {
@@ -5953,7 +5953,7 @@ const de_DuplicateTargetGroupNameException = (
  */
 const de_DuplicateTrustStoreNameException = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DuplicateTrustStoreNameException => {
   const contents: any = {};
   if (output[_Me] != null) {
@@ -6000,7 +6000,7 @@ const de_ForwardActionConfig = (output: any, context: __SerdeContext): ForwardAc
  */
 const de_GetTrustStoreCaCertificatesBundleOutput = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): GetTrustStoreCaCertificatesBundleOutput => {
   const contents: any = {};
   if (output[_Lo] != null) {
@@ -6014,7 +6014,7 @@ const de_GetTrustStoreCaCertificatesBundleOutput = (
  */
 const de_GetTrustStoreRevocationContentOutput = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): GetTrustStoreRevocationContentOutput => {
   const contents: any = {};
   if (output[_Lo] != null) {
@@ -6068,7 +6068,7 @@ const de_HttpHeaderConditionConfig = (output: any, context: __SerdeContext): Htt
  */
 const de_HttpRequestMethodConditionConfig = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): HttpRequestMethodConditionConfig => {
   const contents: any = {};
   if (output.Values === "") {
@@ -6095,7 +6095,7 @@ const de_IncompatibleProtocolsException = (output: any, context: __SerdeContext)
  */
 const de_InvalidCaCertificatesBundleException = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): InvalidCaCertificatesBundleException => {
   const contents: any = {};
   if (output[_Me] != null) {
@@ -6109,7 +6109,7 @@ const de_InvalidCaCertificatesBundleException = (
  */
 const de_InvalidConfigurationRequestException = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): InvalidConfigurationRequestException => {
   const contents: any = {};
   if (output[_Me] != null) {
@@ -6123,7 +6123,7 @@ const de_InvalidConfigurationRequestException = (
  */
 const de_InvalidLoadBalancerActionException = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): InvalidLoadBalancerActionException => {
   const contents: any = {};
   if (output[_Me] != null) {
@@ -6137,7 +6137,7 @@ const de_InvalidLoadBalancerActionException = (
  */
 const de_InvalidRevocationContentException = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): InvalidRevocationContentException => {
   const contents: any = {};
   if (output[_Me] != null) {
@@ -6478,7 +6478,7 @@ const de_ModifyListenerOutput = (output: any, context: __SerdeContext): ModifyLi
  */
 const de_ModifyLoadBalancerAttributesOutput = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ModifyLoadBalancerAttributesOutput => {
   const contents: any = {};
   if (output.Attributes === "") {
@@ -6507,7 +6507,7 @@ const de_ModifyRuleOutput = (output: any, context: __SerdeContext): ModifyRuleOu
  */
 const de_ModifyTargetGroupAttributesOutput = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ModifyTargetGroupAttributesOutput => {
   const contents: any = {};
   if (output.Attributes === "") {
@@ -6673,7 +6673,7 @@ const de_RegisterTargetsOutput = (output: any, context: __SerdeContext): Registe
  */
 const de_RemoveListenerCertificatesOutput = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): RemoveListenerCertificatesOutput => {
   const contents: any = {};
   return contents;
@@ -6692,7 +6692,7 @@ const de_RemoveTagsOutput = (output: any, context: __SerdeContext): RemoveTagsOu
  */
 const de_RemoveTrustStoreRevocationsOutput = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): RemoveTrustStoreRevocationsOutput => {
   const contents: any = {};
   return contents;
@@ -6714,7 +6714,7 @@ const de_ResourceInUseException = (output: any, context: __SerdeContext): Resour
  */
 const de_RevocationContentNotFoundException = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): RevocationContentNotFoundException => {
   const contents: any = {};
   if (output[_Me] != null) {
@@ -7116,7 +7116,7 @@ const de_TargetGroup = (output: any, context: __SerdeContext): TargetGroup => {
  */
 const de_TargetGroupAssociationLimitException = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): TargetGroupAssociationLimitException => {
   const contents: any = {};
   if (output[_Me] != null) {
@@ -7308,7 +7308,7 @@ const de_TooManyLoadBalancersException = (output: any, context: __SerdeContext):
  */
 const de_TooManyRegistrationsForTargetIdException = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): TooManyRegistrationsForTargetIdException => {
   const contents: any = {};
   if (output[_Me] != null) {
@@ -7366,7 +7366,7 @@ const de_TooManyTargetsException = (output: any, context: __SerdeContext): TooMa
  */
 const de_TooManyTrustStoreRevocationEntriesException = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): TooManyTrustStoreRevocationEntriesException => {
   const contents: any = {};
   if (output[_Me] != null) {
@@ -7391,7 +7391,7 @@ const de_TooManyTrustStoresException = (output: any, context: __SerdeContext): T
  */
 const de_TooManyUniqueTargetGroupsPerLoadBalancerException = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): TooManyUniqueTargetGroupsPerLoadBalancerException => {
   const contents: any = {};
   if (output[_Me] != null) {
@@ -7549,7 +7549,7 @@ const buildHttpRpcRequest = async (
   headers: __HeaderBag,
   path: string,
   resolvedHostname: string | undefined,
-  body: any
+  body: any,
 ): Promise<__HttpRequest> => {
   const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
   const contents: any = {

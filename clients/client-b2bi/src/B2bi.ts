@@ -159,16 +159,16 @@ export interface B2bi {
    */
   createCapability(
     args: CreateCapabilityCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateCapabilityCommandOutput>;
   createCapability(
     args: CreateCapabilityCommandInput,
-    cb: (err: any, data?: CreateCapabilityCommandOutput) => void
+    cb: (err: any, data?: CreateCapabilityCommandOutput) => void,
   ): void;
   createCapability(
     args: CreateCapabilityCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateCapabilityCommandOutput) => void
+    cb: (err: any, data?: CreateCapabilityCommandOutput) => void,
   ): void;
 
   /**
@@ -176,16 +176,16 @@ export interface B2bi {
    */
   createPartnership(
     args: CreatePartnershipCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreatePartnershipCommandOutput>;
   createPartnership(
     args: CreatePartnershipCommandInput,
-    cb: (err: any, data?: CreatePartnershipCommandOutput) => void
+    cb: (err: any, data?: CreatePartnershipCommandOutput) => void,
   ): void;
   createPartnership(
     args: CreatePartnershipCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreatePartnershipCommandOutput) => void
+    cb: (err: any, data?: CreatePartnershipCommandOutput) => void,
   ): void;
 
   /**
@@ -196,7 +196,7 @@ export interface B2bi {
   createProfile(
     args: CreateProfileCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateProfileCommandOutput) => void
+    cb: (err: any, data?: CreateProfileCommandOutput) => void,
   ): void;
 
   /**
@@ -204,16 +204,16 @@ export interface B2bi {
    */
   createTransformer(
     args: CreateTransformerCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateTransformerCommandOutput>;
   createTransformer(
     args: CreateTransformerCommandInput,
-    cb: (err: any, data?: CreateTransformerCommandOutput) => void
+    cb: (err: any, data?: CreateTransformerCommandOutput) => void,
   ): void;
   createTransformer(
     args: CreateTransformerCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateTransformerCommandOutput) => void
+    cb: (err: any, data?: CreateTransformerCommandOutput) => void,
   ): void;
 
   /**
@@ -221,16 +221,16 @@ export interface B2bi {
    */
   deleteCapability(
     args: DeleteCapabilityCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteCapabilityCommandOutput>;
   deleteCapability(
     args: DeleteCapabilityCommandInput,
-    cb: (err: any, data?: DeleteCapabilityCommandOutput) => void
+    cb: (err: any, data?: DeleteCapabilityCommandOutput) => void,
   ): void;
   deleteCapability(
     args: DeleteCapabilityCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteCapabilityCommandOutput) => void
+    cb: (err: any, data?: DeleteCapabilityCommandOutput) => void,
   ): void;
 
   /**
@@ -238,16 +238,16 @@ export interface B2bi {
    */
   deletePartnership(
     args: DeletePartnershipCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeletePartnershipCommandOutput>;
   deletePartnership(
     args: DeletePartnershipCommandInput,
-    cb: (err: any, data?: DeletePartnershipCommandOutput) => void
+    cb: (err: any, data?: DeletePartnershipCommandOutput) => void,
   ): void;
   deletePartnership(
     args: DeletePartnershipCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeletePartnershipCommandOutput) => void
+    cb: (err: any, data?: DeletePartnershipCommandOutput) => void,
   ): void;
 
   /**
@@ -258,7 +258,7 @@ export interface B2bi {
   deleteProfile(
     args: DeleteProfileCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteProfileCommandOutput) => void
+    cb: (err: any, data?: DeleteProfileCommandOutput) => void,
   ): void;
 
   /**
@@ -266,16 +266,16 @@ export interface B2bi {
    */
   deleteTransformer(
     args: DeleteTransformerCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteTransformerCommandOutput>;
   deleteTransformer(
     args: DeleteTransformerCommandInput,
-    cb: (err: any, data?: DeleteTransformerCommandOutput) => void
+    cb: (err: any, data?: DeleteTransformerCommandOutput) => void,
   ): void;
   deleteTransformer(
     args: DeleteTransformerCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteTransformerCommandOutput) => void
+    cb: (err: any, data?: DeleteTransformerCommandOutput) => void,
   ): void;
 
   /**
@@ -286,7 +286,7 @@ export interface B2bi {
   getCapability(
     args: GetCapabilityCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetCapabilityCommandOutput) => void
+    cb: (err: any, data?: GetCapabilityCommandOutput) => void,
   ): void;
 
   /**
@@ -294,13 +294,13 @@ export interface B2bi {
    */
   getPartnership(
     args: GetPartnershipCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetPartnershipCommandOutput>;
   getPartnership(args: GetPartnershipCommandInput, cb: (err: any, data?: GetPartnershipCommandOutput) => void): void;
   getPartnership(
     args: GetPartnershipCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetPartnershipCommandOutput) => void
+    cb: (err: any, data?: GetPartnershipCommandOutput) => void,
   ): void;
 
   /**
@@ -311,7 +311,7 @@ export interface B2bi {
   getProfile(
     args: GetProfileCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetProfileCommandOutput) => void
+    cb: (err: any, data?: GetProfileCommandOutput) => void,
   ): void;
 
   /**
@@ -319,13 +319,13 @@ export interface B2bi {
    */
   getTransformer(
     args: GetTransformerCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetTransformerCommandOutput>;
   getTransformer(args: GetTransformerCommandInput, cb: (err: any, data?: GetTransformerCommandOutput) => void): void;
   getTransformer(
     args: GetTransformerCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetTransformerCommandOutput) => void
+    cb: (err: any, data?: GetTransformerCommandOutput) => void,
   ): void;
 
   /**
@@ -333,16 +333,16 @@ export interface B2bi {
    */
   getTransformerJob(
     args: GetTransformerJobCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetTransformerJobCommandOutput>;
   getTransformerJob(
     args: GetTransformerJobCommandInput,
-    cb: (err: any, data?: GetTransformerJobCommandOutput) => void
+    cb: (err: any, data?: GetTransformerJobCommandOutput) => void,
   ): void;
   getTransformerJob(
     args: GetTransformerJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetTransformerJobCommandOutput) => void
+    cb: (err: any, data?: GetTransformerJobCommandOutput) => void,
   ): void;
 
   /**
@@ -351,16 +351,16 @@ export interface B2bi {
   listCapabilities(): Promise<ListCapabilitiesCommandOutput>;
   listCapabilities(
     args: ListCapabilitiesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListCapabilitiesCommandOutput>;
   listCapabilities(
     args: ListCapabilitiesCommandInput,
-    cb: (err: any, data?: ListCapabilitiesCommandOutput) => void
+    cb: (err: any, data?: ListCapabilitiesCommandOutput) => void,
   ): void;
   listCapabilities(
     args: ListCapabilitiesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListCapabilitiesCommandOutput) => void
+    cb: (err: any, data?: ListCapabilitiesCommandOutput) => void,
   ): void;
 
   /**
@@ -369,16 +369,16 @@ export interface B2bi {
   listPartnerships(): Promise<ListPartnershipsCommandOutput>;
   listPartnerships(
     args: ListPartnershipsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListPartnershipsCommandOutput>;
   listPartnerships(
     args: ListPartnershipsCommandInput,
-    cb: (err: any, data?: ListPartnershipsCommandOutput) => void
+    cb: (err: any, data?: ListPartnershipsCommandOutput) => void,
   ): void;
   listPartnerships(
     args: ListPartnershipsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListPartnershipsCommandOutput) => void
+    cb: (err: any, data?: ListPartnershipsCommandOutput) => void,
   ): void;
 
   /**
@@ -390,7 +390,7 @@ export interface B2bi {
   listProfiles(
     args: ListProfilesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListProfilesCommandOutput) => void
+    cb: (err: any, data?: ListProfilesCommandOutput) => void,
   ): void;
 
   /**
@@ -398,16 +398,16 @@ export interface B2bi {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -416,16 +416,16 @@ export interface B2bi {
   listTransformers(): Promise<ListTransformersCommandOutput>;
   listTransformers(
     args: ListTransformersCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTransformersCommandOutput>;
   listTransformers(
     args: ListTransformersCommandInput,
-    cb: (err: any, data?: ListTransformersCommandOutput) => void
+    cb: (err: any, data?: ListTransformersCommandOutput) => void,
   ): void;
   listTransformers(
     args: ListTransformersCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTransformersCommandOutput) => void
+    cb: (err: any, data?: ListTransformersCommandOutput) => void,
   ): void;
 
   /**
@@ -433,16 +433,16 @@ export interface B2bi {
    */
   startTransformerJob(
     args: StartTransformerJobCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartTransformerJobCommandOutput>;
   startTransformerJob(
     args: StartTransformerJobCommandInput,
-    cb: (err: any, data?: StartTransformerJobCommandOutput) => void
+    cb: (err: any, data?: StartTransformerJobCommandOutput) => void,
   ): void;
   startTransformerJob(
     args: StartTransformerJobCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartTransformerJobCommandOutput) => void
+    cb: (err: any, data?: StartTransformerJobCommandOutput) => void,
   ): void;
 
   /**
@@ -453,7 +453,7 @@ export interface B2bi {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -464,7 +464,7 @@ export interface B2bi {
   testMapping(
     args: TestMappingCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TestMappingCommandOutput) => void
+    cb: (err: any, data?: TestMappingCommandOutput) => void,
   ): void;
 
   /**
@@ -475,7 +475,7 @@ export interface B2bi {
   testParsing(
     args: TestParsingCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TestParsingCommandOutput) => void
+    cb: (err: any, data?: TestParsingCommandOutput) => void,
   ): void;
 
   /**
@@ -486,7 +486,7 @@ export interface B2bi {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -494,16 +494,16 @@ export interface B2bi {
    */
   updateCapability(
     args: UpdateCapabilityCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateCapabilityCommandOutput>;
   updateCapability(
     args: UpdateCapabilityCommandInput,
-    cb: (err: any, data?: UpdateCapabilityCommandOutput) => void
+    cb: (err: any, data?: UpdateCapabilityCommandOutput) => void,
   ): void;
   updateCapability(
     args: UpdateCapabilityCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateCapabilityCommandOutput) => void
+    cb: (err: any, data?: UpdateCapabilityCommandOutput) => void,
   ): void;
 
   /**
@@ -511,16 +511,16 @@ export interface B2bi {
    */
   updatePartnership(
     args: UpdatePartnershipCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdatePartnershipCommandOutput>;
   updatePartnership(
     args: UpdatePartnershipCommandInput,
-    cb: (err: any, data?: UpdatePartnershipCommandOutput) => void
+    cb: (err: any, data?: UpdatePartnershipCommandOutput) => void,
   ): void;
   updatePartnership(
     args: UpdatePartnershipCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdatePartnershipCommandOutput) => void
+    cb: (err: any, data?: UpdatePartnershipCommandOutput) => void,
   ): void;
 
   /**
@@ -531,7 +531,7 @@ export interface B2bi {
   updateProfile(
     args: UpdateProfileCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateProfileCommandOutput) => void
+    cb: (err: any, data?: UpdateProfileCommandOutput) => void,
   ): void;
 
   /**
@@ -539,16 +539,16 @@ export interface B2bi {
    */
   updateTransformer(
     args: UpdateTransformerCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateTransformerCommandOutput>;
   updateTransformer(
     args: UpdateTransformerCommandInput,
-    cb: (err: any, data?: UpdateTransformerCommandOutput) => void
+    cb: (err: any, data?: UpdateTransformerCommandOutput) => void,
   ): void;
   updateTransformer(
     args: UpdateTransformerCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateTransformerCommandOutput) => void
+    cb: (err: any, data?: UpdateTransformerCommandOutput) => void,
   ): void;
 }
 

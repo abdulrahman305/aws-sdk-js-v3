@@ -6289,7 +6289,7 @@ export const AttributeDetailsFilterSensitiveLog = (obj: AttributeDetails): any =
  * @internal
  */
 export const ListCalculatedAttributeDefinitionItemFilterSensitiveLog = (
-  obj: ListCalculatedAttributeDefinitionItem
+  obj: ListCalculatedAttributeDefinitionItem,
 ): any => ({
   ...obj,
   ...(obj.Description && { Description: SENSITIVE_STRING }),
@@ -6306,7 +6306,7 @@ export const ConditionsFilterSensitiveLog = (obj: Conditions): any => ({
  * @internal
  */
 export const CreateCalculatedAttributeDefinitionRequestFilterSensitiveLog = (
-  obj: CreateCalculatedAttributeDefinitionRequest
+  obj: CreateCalculatedAttributeDefinitionRequest,
 ): any => ({
   ...obj,
   ...(obj.Description && { Description: SENSITIVE_STRING }),
@@ -6319,7 +6319,7 @@ export const CreateCalculatedAttributeDefinitionRequestFilterSensitiveLog = (
  * @internal
  */
 export const CreateCalculatedAttributeDefinitionResponseFilterSensitiveLog = (
-  obj: CreateCalculatedAttributeDefinitionResponse
+  obj: CreateCalculatedAttributeDefinitionResponse,
 ): any => ({
   ...obj,
   ...(obj.Description && { Description: SENSITIVE_STRING }),
@@ -6398,7 +6398,7 @@ export const DetectProfileObjectTypeResponseFilterSensitiveLog = (obj: DetectPro
   ...obj,
   ...(obj.DetectedProfileObjectTypes && {
     DetectedProfileObjectTypes: obj.DetectedProfileObjectTypes.map((item) =>
-      DetectedProfileObjectTypeFilterSensitiveLog(item)
+      DetectedProfileObjectTypeFilterSensitiveLog(item),
     ),
   }),
 });
@@ -6407,7 +6407,7 @@ export const DetectProfileObjectTypeResponseFilterSensitiveLog = (obj: DetectPro
  * @internal
  */
 export const GetCalculatedAttributeDefinitionResponseFilterSensitiveLog = (
-  obj: GetCalculatedAttributeDefinitionResponse
+  obj: GetCalculatedAttributeDefinitionResponse,
 ): any => ({
   ...obj,
   ...(obj.Description && { Description: SENSITIVE_STRING }),
@@ -6430,7 +6430,7 @@ export const GetProfileObjectTypeResponseFilterSensitiveLog = (obj: GetProfileOb
  * @internal
  */
 export const GetProfileObjectTypeTemplateResponseFilterSensitiveLog = (
-  obj: GetProfileObjectTypeTemplateResponse
+  obj: GetProfileObjectTypeTemplateResponse,
 ): any => ({
   ...obj,
   ...(obj.Fields && { Fields: SENSITIVE_STRING }),
@@ -6441,7 +6441,7 @@ export const GetProfileObjectTypeTemplateResponseFilterSensitiveLog = (
  * @internal
  */
 export const ListCalculatedAttributeDefinitionsResponseFilterSensitiveLog = (
-  obj: ListCalculatedAttributeDefinitionsResponse
+  obj: ListCalculatedAttributeDefinitionsResponse,
 ): any => ({
   ...obj,
   ...(obj.Items && { Items: SENSITIVE_STRING }),
@@ -6549,7 +6549,7 @@ export const SearchProfilesResponseFilterSensitiveLog = (obj: SearchProfilesResp
  * @internal
  */
 export const UpdateCalculatedAttributeDefinitionRequestFilterSensitiveLog = (
-  obj: UpdateCalculatedAttributeDefinitionRequest
+  obj: UpdateCalculatedAttributeDefinitionRequest,
 ): any => ({
   ...obj,
   ...(obj.Description && { Description: SENSITIVE_STRING }),
@@ -6560,7 +6560,7 @@ export const UpdateCalculatedAttributeDefinitionRequestFilterSensitiveLog = (
  * @internal
  */
 export const UpdateCalculatedAttributeDefinitionResponseFilterSensitiveLog = (
-  obj: UpdateCalculatedAttributeDefinitionResponse
+  obj: UpdateCalculatedAttributeDefinitionResponse,
 ): any => ({
   ...obj,
   ...(obj.Description && { Description: SENSITIVE_STRING }),

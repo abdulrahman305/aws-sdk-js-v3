@@ -256,7 +256,7 @@ import {
  */
 export const se_CreateDatasetCommand = async (
   input: CreateDatasetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateDataset");
   let body: any;
@@ -269,7 +269,7 @@ export const se_CreateDatasetCommand = async (
  */
 export const se_CreateInferenceSchedulerCommand = async (
   input: CreateInferenceSchedulerCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateInferenceScheduler");
   let body: any;
@@ -282,7 +282,7 @@ export const se_CreateInferenceSchedulerCommand = async (
  */
 export const se_CreateLabelCommand = async (
   input: CreateLabelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateLabel");
   let body: any;
@@ -295,7 +295,7 @@ export const se_CreateLabelCommand = async (
  */
 export const se_CreateLabelGroupCommand = async (
   input: CreateLabelGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateLabelGroup");
   let body: any;
@@ -308,7 +308,7 @@ export const se_CreateLabelGroupCommand = async (
  */
 export const se_CreateModelCommand = async (
   input: CreateModelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateModel");
   let body: any;
@@ -321,7 +321,7 @@ export const se_CreateModelCommand = async (
  */
 export const se_CreateRetrainingSchedulerCommand = async (
   input: CreateRetrainingSchedulerCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateRetrainingScheduler");
   let body: any;
@@ -334,7 +334,7 @@ export const se_CreateRetrainingSchedulerCommand = async (
  */
 export const se_DeleteDatasetCommand = async (
   input: DeleteDatasetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteDataset");
   let body: any;
@@ -347,7 +347,7 @@ export const se_DeleteDatasetCommand = async (
  */
 export const se_DeleteInferenceSchedulerCommand = async (
   input: DeleteInferenceSchedulerCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteInferenceScheduler");
   let body: any;
@@ -360,7 +360,7 @@ export const se_DeleteInferenceSchedulerCommand = async (
  */
 export const se_DeleteLabelCommand = async (
   input: DeleteLabelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteLabel");
   let body: any;
@@ -373,7 +373,7 @@ export const se_DeleteLabelCommand = async (
  */
 export const se_DeleteLabelGroupCommand = async (
   input: DeleteLabelGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteLabelGroup");
   let body: any;
@@ -386,7 +386,7 @@ export const se_DeleteLabelGroupCommand = async (
  */
 export const se_DeleteModelCommand = async (
   input: DeleteModelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteModel");
   let body: any;
@@ -399,7 +399,7 @@ export const se_DeleteModelCommand = async (
  */
 export const se_DeleteResourcePolicyCommand = async (
   input: DeleteResourcePolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteResourcePolicy");
   let body: any;
@@ -412,7 +412,7 @@ export const se_DeleteResourcePolicyCommand = async (
  */
 export const se_DeleteRetrainingSchedulerCommand = async (
   input: DeleteRetrainingSchedulerCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteRetrainingScheduler");
   let body: any;
@@ -425,7 +425,7 @@ export const se_DeleteRetrainingSchedulerCommand = async (
  */
 export const se_DescribeDataIngestionJobCommand = async (
   input: DescribeDataIngestionJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeDataIngestionJob");
   let body: any;
@@ -438,7 +438,7 @@ export const se_DescribeDataIngestionJobCommand = async (
  */
 export const se_DescribeDatasetCommand = async (
   input: DescribeDatasetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeDataset");
   let body: any;
@@ -451,7 +451,7 @@ export const se_DescribeDatasetCommand = async (
  */
 export const se_DescribeInferenceSchedulerCommand = async (
   input: DescribeInferenceSchedulerCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeInferenceScheduler");
   let body: any;
@@ -464,7 +464,7 @@ export const se_DescribeInferenceSchedulerCommand = async (
  */
 export const se_DescribeLabelCommand = async (
   input: DescribeLabelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeLabel");
   let body: any;
@@ -477,7 +477,7 @@ export const se_DescribeLabelCommand = async (
  */
 export const se_DescribeLabelGroupCommand = async (
   input: DescribeLabelGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeLabelGroup");
   let body: any;
@@ -490,7 +490,7 @@ export const se_DescribeLabelGroupCommand = async (
  */
 export const se_DescribeModelCommand = async (
   input: DescribeModelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeModel");
   let body: any;
@@ -503,7 +503,7 @@ export const se_DescribeModelCommand = async (
  */
 export const se_DescribeModelVersionCommand = async (
   input: DescribeModelVersionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeModelVersion");
   let body: any;
@@ -516,7 +516,7 @@ export const se_DescribeModelVersionCommand = async (
  */
 export const se_DescribeResourcePolicyCommand = async (
   input: DescribeResourcePolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeResourcePolicy");
   let body: any;
@@ -529,7 +529,7 @@ export const se_DescribeResourcePolicyCommand = async (
  */
 export const se_DescribeRetrainingSchedulerCommand = async (
   input: DescribeRetrainingSchedulerCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeRetrainingScheduler");
   let body: any;
@@ -542,7 +542,7 @@ export const se_DescribeRetrainingSchedulerCommand = async (
  */
 export const se_ImportDatasetCommand = async (
   input: ImportDatasetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ImportDataset");
   let body: any;
@@ -555,7 +555,7 @@ export const se_ImportDatasetCommand = async (
  */
 export const se_ImportModelVersionCommand = async (
   input: ImportModelVersionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ImportModelVersion");
   let body: any;
@@ -568,7 +568,7 @@ export const se_ImportModelVersionCommand = async (
  */
 export const se_ListDataIngestionJobsCommand = async (
   input: ListDataIngestionJobsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListDataIngestionJobs");
   let body: any;
@@ -581,7 +581,7 @@ export const se_ListDataIngestionJobsCommand = async (
  */
 export const se_ListDatasetsCommand = async (
   input: ListDatasetsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListDatasets");
   let body: any;
@@ -594,7 +594,7 @@ export const se_ListDatasetsCommand = async (
  */
 export const se_ListInferenceEventsCommand = async (
   input: ListInferenceEventsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListInferenceEvents");
   let body: any;
@@ -607,7 +607,7 @@ export const se_ListInferenceEventsCommand = async (
  */
 export const se_ListInferenceExecutionsCommand = async (
   input: ListInferenceExecutionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListInferenceExecutions");
   let body: any;
@@ -620,7 +620,7 @@ export const se_ListInferenceExecutionsCommand = async (
  */
 export const se_ListInferenceSchedulersCommand = async (
   input: ListInferenceSchedulersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListInferenceSchedulers");
   let body: any;
@@ -633,7 +633,7 @@ export const se_ListInferenceSchedulersCommand = async (
  */
 export const se_ListLabelGroupsCommand = async (
   input: ListLabelGroupsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListLabelGroups");
   let body: any;
@@ -646,7 +646,7 @@ export const se_ListLabelGroupsCommand = async (
  */
 export const se_ListLabelsCommand = async (
   input: ListLabelsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListLabels");
   let body: any;
@@ -659,7 +659,7 @@ export const se_ListLabelsCommand = async (
  */
 export const se_ListModelsCommand = async (
   input: ListModelsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListModels");
   let body: any;
@@ -672,7 +672,7 @@ export const se_ListModelsCommand = async (
  */
 export const se_ListModelVersionsCommand = async (
   input: ListModelVersionsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListModelVersions");
   let body: any;
@@ -685,7 +685,7 @@ export const se_ListModelVersionsCommand = async (
  */
 export const se_ListRetrainingSchedulersCommand = async (
   input: ListRetrainingSchedulersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListRetrainingSchedulers");
   let body: any;
@@ -698,7 +698,7 @@ export const se_ListRetrainingSchedulersCommand = async (
  */
 export const se_ListSensorStatisticsCommand = async (
   input: ListSensorStatisticsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListSensorStatistics");
   let body: any;
@@ -711,7 +711,7 @@ export const se_ListSensorStatisticsCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListTagsForResource");
   let body: any;
@@ -724,7 +724,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_PutResourcePolicyCommand = async (
   input: PutResourcePolicyCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("PutResourcePolicy");
   let body: any;
@@ -737,7 +737,7 @@ export const se_PutResourcePolicyCommand = async (
  */
 export const se_StartDataIngestionJobCommand = async (
   input: StartDataIngestionJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StartDataIngestionJob");
   let body: any;
@@ -750,7 +750,7 @@ export const se_StartDataIngestionJobCommand = async (
  */
 export const se_StartInferenceSchedulerCommand = async (
   input: StartInferenceSchedulerCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StartInferenceScheduler");
   let body: any;
@@ -763,7 +763,7 @@ export const se_StartInferenceSchedulerCommand = async (
  */
 export const se_StartRetrainingSchedulerCommand = async (
   input: StartRetrainingSchedulerCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StartRetrainingScheduler");
   let body: any;
@@ -776,7 +776,7 @@ export const se_StartRetrainingSchedulerCommand = async (
  */
 export const se_StopInferenceSchedulerCommand = async (
   input: StopInferenceSchedulerCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StopInferenceScheduler");
   let body: any;
@@ -789,7 +789,7 @@ export const se_StopInferenceSchedulerCommand = async (
  */
 export const se_StopRetrainingSchedulerCommand = async (
   input: StopRetrainingSchedulerCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StopRetrainingScheduler");
   let body: any;
@@ -802,7 +802,7 @@ export const se_StopRetrainingSchedulerCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("TagResource");
   let body: any;
@@ -815,7 +815,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UntagResource");
   let body: any;
@@ -828,7 +828,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateActiveModelVersionCommand = async (
   input: UpdateActiveModelVersionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateActiveModelVersion");
   let body: any;
@@ -841,7 +841,7 @@ export const se_UpdateActiveModelVersionCommand = async (
  */
 export const se_UpdateInferenceSchedulerCommand = async (
   input: UpdateInferenceSchedulerCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateInferenceScheduler");
   let body: any;
@@ -854,7 +854,7 @@ export const se_UpdateInferenceSchedulerCommand = async (
  */
 export const se_UpdateLabelGroupCommand = async (
   input: UpdateLabelGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateLabelGroup");
   let body: any;
@@ -867,7 +867,7 @@ export const se_UpdateLabelGroupCommand = async (
  */
 export const se_UpdateModelCommand = async (
   input: UpdateModelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateModel");
   let body: any;
@@ -880,7 +880,7 @@ export const se_UpdateModelCommand = async (
  */
 export const se_UpdateRetrainingSchedulerCommand = async (
   input: UpdateRetrainingSchedulerCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateRetrainingScheduler");
   let body: any;
@@ -893,7 +893,7 @@ export const se_UpdateRetrainingSchedulerCommand = async (
  */
 export const de_CreateDatasetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateDatasetCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -913,7 +913,7 @@ export const de_CreateDatasetCommand = async (
  */
 export const de_CreateInferenceSchedulerCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateInferenceSchedulerCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -933,7 +933,7 @@ export const de_CreateInferenceSchedulerCommand = async (
  */
 export const de_CreateLabelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateLabelCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -953,7 +953,7 @@ export const de_CreateLabelCommand = async (
  */
 export const de_CreateLabelGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateLabelGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -973,7 +973,7 @@ export const de_CreateLabelGroupCommand = async (
  */
 export const de_CreateModelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateModelCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -993,7 +993,7 @@ export const de_CreateModelCommand = async (
  */
 export const de_CreateRetrainingSchedulerCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateRetrainingSchedulerCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1013,7 +1013,7 @@ export const de_CreateRetrainingSchedulerCommand = async (
  */
 export const de_DeleteDatasetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteDatasetCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1030,7 +1030,7 @@ export const de_DeleteDatasetCommand = async (
  */
 export const de_DeleteInferenceSchedulerCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteInferenceSchedulerCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1047,7 +1047,7 @@ export const de_DeleteInferenceSchedulerCommand = async (
  */
 export const de_DeleteLabelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteLabelCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1064,7 +1064,7 @@ export const de_DeleteLabelCommand = async (
  */
 export const de_DeleteLabelGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteLabelGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1081,7 +1081,7 @@ export const de_DeleteLabelGroupCommand = async (
  */
 export const de_DeleteModelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteModelCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1098,7 +1098,7 @@ export const de_DeleteModelCommand = async (
  */
 export const de_DeleteResourcePolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteResourcePolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1115,7 +1115,7 @@ export const de_DeleteResourcePolicyCommand = async (
  */
 export const de_DeleteRetrainingSchedulerCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteRetrainingSchedulerCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1132,7 +1132,7 @@ export const de_DeleteRetrainingSchedulerCommand = async (
  */
 export const de_DescribeDataIngestionJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeDataIngestionJobCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1152,7 +1152,7 @@ export const de_DescribeDataIngestionJobCommand = async (
  */
 export const de_DescribeDatasetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeDatasetCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1172,7 +1172,7 @@ export const de_DescribeDatasetCommand = async (
  */
 export const de_DescribeInferenceSchedulerCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeInferenceSchedulerCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1192,7 +1192,7 @@ export const de_DescribeInferenceSchedulerCommand = async (
  */
 export const de_DescribeLabelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeLabelCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1212,7 +1212,7 @@ export const de_DescribeLabelCommand = async (
  */
 export const de_DescribeLabelGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeLabelGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1232,7 +1232,7 @@ export const de_DescribeLabelGroupCommand = async (
  */
 export const de_DescribeModelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeModelCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1252,7 +1252,7 @@ export const de_DescribeModelCommand = async (
  */
 export const de_DescribeModelVersionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeModelVersionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1272,7 +1272,7 @@ export const de_DescribeModelVersionCommand = async (
  */
 export const de_DescribeResourcePolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeResourcePolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1292,7 +1292,7 @@ export const de_DescribeResourcePolicyCommand = async (
  */
 export const de_DescribeRetrainingSchedulerCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeRetrainingSchedulerCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1312,7 +1312,7 @@ export const de_DescribeRetrainingSchedulerCommand = async (
  */
 export const de_ImportDatasetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ImportDatasetCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1332,7 +1332,7 @@ export const de_ImportDatasetCommand = async (
  */
 export const de_ImportModelVersionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ImportModelVersionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1352,7 +1352,7 @@ export const de_ImportModelVersionCommand = async (
  */
 export const de_ListDataIngestionJobsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListDataIngestionJobsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1372,7 +1372,7 @@ export const de_ListDataIngestionJobsCommand = async (
  */
 export const de_ListDatasetsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListDatasetsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1392,7 +1392,7 @@ export const de_ListDatasetsCommand = async (
  */
 export const de_ListInferenceEventsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListInferenceEventsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1412,7 +1412,7 @@ export const de_ListInferenceEventsCommand = async (
  */
 export const de_ListInferenceExecutionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListInferenceExecutionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1432,7 +1432,7 @@ export const de_ListInferenceExecutionsCommand = async (
  */
 export const de_ListInferenceSchedulersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListInferenceSchedulersCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1452,7 +1452,7 @@ export const de_ListInferenceSchedulersCommand = async (
  */
 export const de_ListLabelGroupsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListLabelGroupsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1472,7 +1472,7 @@ export const de_ListLabelGroupsCommand = async (
  */
 export const de_ListLabelsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListLabelsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1492,7 +1492,7 @@ export const de_ListLabelsCommand = async (
  */
 export const de_ListModelsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListModelsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1512,7 +1512,7 @@ export const de_ListModelsCommand = async (
  */
 export const de_ListModelVersionsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListModelVersionsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1532,7 +1532,7 @@ export const de_ListModelVersionsCommand = async (
  */
 export const de_ListRetrainingSchedulersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListRetrainingSchedulersCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1552,7 +1552,7 @@ export const de_ListRetrainingSchedulersCommand = async (
  */
 export const de_ListSensorStatisticsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListSensorStatisticsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1572,7 +1572,7 @@ export const de_ListSensorStatisticsCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1592,7 +1592,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_PutResourcePolicyCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutResourcePolicyCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1612,7 +1612,7 @@ export const de_PutResourcePolicyCommand = async (
  */
 export const de_StartDataIngestionJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartDataIngestionJobCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1632,7 +1632,7 @@ export const de_StartDataIngestionJobCommand = async (
  */
 export const de_StartInferenceSchedulerCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartInferenceSchedulerCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1652,7 +1652,7 @@ export const de_StartInferenceSchedulerCommand = async (
  */
 export const de_StartRetrainingSchedulerCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartRetrainingSchedulerCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1672,7 +1672,7 @@ export const de_StartRetrainingSchedulerCommand = async (
  */
 export const de_StopInferenceSchedulerCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StopInferenceSchedulerCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1692,7 +1692,7 @@ export const de_StopInferenceSchedulerCommand = async (
  */
 export const de_StopRetrainingSchedulerCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StopRetrainingSchedulerCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1712,7 +1712,7 @@ export const de_StopRetrainingSchedulerCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1732,7 +1732,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1752,7 +1752,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateActiveModelVersionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateActiveModelVersionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1772,7 +1772,7 @@ export const de_UpdateActiveModelVersionCommand = async (
  */
 export const de_UpdateInferenceSchedulerCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateInferenceSchedulerCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1789,7 +1789,7 @@ export const de_UpdateInferenceSchedulerCommand = async (
  */
 export const de_UpdateLabelGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateLabelGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1806,7 +1806,7 @@ export const de_UpdateLabelGroupCommand = async (
  */
 export const de_UpdateModelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateModelCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1823,7 +1823,7 @@ export const de_UpdateModelCommand = async (
  */
 export const de_UpdateRetrainingSchedulerCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateRetrainingSchedulerCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1881,7 +1881,7 @@ const de_CommandError = async (output: __HttpResponse, context: __SerdeContext):
  */
 const de_AccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AccessDeniedException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1910,7 +1910,7 @@ const de_ConflictExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_InternalServerExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalServerException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1926,7 +1926,7 @@ const de_InternalServerExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1942,7 +1942,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_ServiceQuotaExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceQuotaExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2375,7 +2375,7 @@ const de_DatasetSummary = (output: any, context: __SerdeContext): DatasetSummary
  */
 const de_DescribeDataIngestionJobResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeDataIngestionJobResponse => {
   return take(output, {
     CreatedAt: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
@@ -2422,7 +2422,7 @@ const de_DescribeDatasetResponse = (output: any, context: __SerdeContext): Descr
  */
 const de_DescribeInferenceSchedulerResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeInferenceSchedulerResponse => {
   return take(output, {
     CreatedAt: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
@@ -2583,7 +2583,7 @@ const de_DescribeResourcePolicyResponse = (output: any, context: __SerdeContext)
  */
 const de_DescribeRetrainingSchedulerResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeRetrainingSchedulerResponse => {
   return take(output, {
     CreatedAt: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
@@ -2832,7 +2832,7 @@ const de_ListModelVersionsResponse = (output: any, context: __SerdeContext): Lis
  */
 const de_ListRetrainingSchedulersResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ListRetrainingSchedulersResponse => {
   return take(output, {
     NextToken: __expectString,
@@ -3040,7 +3040,7 @@ const buildHttpRpcRequest = async (
   headers: __HeaderBag,
   path: string,
   resolvedHostname: string | undefined,
-  body: any
+  body: any,
 ): Promise<__HttpRequest> => {
   const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
   const contents: any = {

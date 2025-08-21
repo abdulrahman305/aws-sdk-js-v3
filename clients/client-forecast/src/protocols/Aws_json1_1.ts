@@ -361,7 +361,7 @@ import {
  */
 export const se_CreateAutoPredictorCommand = async (
   input: CreateAutoPredictorCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateAutoPredictor");
   let body: any;
@@ -374,7 +374,7 @@ export const se_CreateAutoPredictorCommand = async (
  */
 export const se_CreateDatasetCommand = async (
   input: CreateDatasetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateDataset");
   let body: any;
@@ -387,7 +387,7 @@ export const se_CreateDatasetCommand = async (
  */
 export const se_CreateDatasetGroupCommand = async (
   input: CreateDatasetGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateDatasetGroup");
   let body: any;
@@ -400,7 +400,7 @@ export const se_CreateDatasetGroupCommand = async (
  */
 export const se_CreateDatasetImportJobCommand = async (
   input: CreateDatasetImportJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateDatasetImportJob");
   let body: any;
@@ -413,7 +413,7 @@ export const se_CreateDatasetImportJobCommand = async (
  */
 export const se_CreateExplainabilityCommand = async (
   input: CreateExplainabilityCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateExplainability");
   let body: any;
@@ -426,7 +426,7 @@ export const se_CreateExplainabilityCommand = async (
  */
 export const se_CreateExplainabilityExportCommand = async (
   input: CreateExplainabilityExportCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateExplainabilityExport");
   let body: any;
@@ -439,7 +439,7 @@ export const se_CreateExplainabilityExportCommand = async (
  */
 export const se_CreateForecastCommand = async (
   input: CreateForecastCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateForecast");
   let body: any;
@@ -452,7 +452,7 @@ export const se_CreateForecastCommand = async (
  */
 export const se_CreateForecastExportJobCommand = async (
   input: CreateForecastExportJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateForecastExportJob");
   let body: any;
@@ -465,7 +465,7 @@ export const se_CreateForecastExportJobCommand = async (
  */
 export const se_CreateMonitorCommand = async (
   input: CreateMonitorCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateMonitor");
   let body: any;
@@ -478,7 +478,7 @@ export const se_CreateMonitorCommand = async (
  */
 export const se_CreatePredictorCommand = async (
   input: CreatePredictorCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreatePredictor");
   let body: any;
@@ -491,7 +491,7 @@ export const se_CreatePredictorCommand = async (
  */
 export const se_CreatePredictorBacktestExportJobCommand = async (
   input: CreatePredictorBacktestExportJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreatePredictorBacktestExportJob");
   let body: any;
@@ -504,7 +504,7 @@ export const se_CreatePredictorBacktestExportJobCommand = async (
  */
 export const se_CreateWhatIfAnalysisCommand = async (
   input: CreateWhatIfAnalysisCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateWhatIfAnalysis");
   let body: any;
@@ -517,7 +517,7 @@ export const se_CreateWhatIfAnalysisCommand = async (
  */
 export const se_CreateWhatIfForecastCommand = async (
   input: CreateWhatIfForecastCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateWhatIfForecast");
   let body: any;
@@ -530,7 +530,7 @@ export const se_CreateWhatIfForecastCommand = async (
  */
 export const se_CreateWhatIfForecastExportCommand = async (
   input: CreateWhatIfForecastExportCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateWhatIfForecastExport");
   let body: any;
@@ -543,7 +543,7 @@ export const se_CreateWhatIfForecastExportCommand = async (
  */
 export const se_DeleteDatasetCommand = async (
   input: DeleteDatasetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteDataset");
   let body: any;
@@ -556,7 +556,7 @@ export const se_DeleteDatasetCommand = async (
  */
 export const se_DeleteDatasetGroupCommand = async (
   input: DeleteDatasetGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteDatasetGroup");
   let body: any;
@@ -569,7 +569,7 @@ export const se_DeleteDatasetGroupCommand = async (
  */
 export const se_DeleteDatasetImportJobCommand = async (
   input: DeleteDatasetImportJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteDatasetImportJob");
   let body: any;
@@ -582,7 +582,7 @@ export const se_DeleteDatasetImportJobCommand = async (
  */
 export const se_DeleteExplainabilityCommand = async (
   input: DeleteExplainabilityCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteExplainability");
   let body: any;
@@ -595,7 +595,7 @@ export const se_DeleteExplainabilityCommand = async (
  */
 export const se_DeleteExplainabilityExportCommand = async (
   input: DeleteExplainabilityExportCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteExplainabilityExport");
   let body: any;
@@ -608,7 +608,7 @@ export const se_DeleteExplainabilityExportCommand = async (
  */
 export const se_DeleteForecastCommand = async (
   input: DeleteForecastCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteForecast");
   let body: any;
@@ -621,7 +621,7 @@ export const se_DeleteForecastCommand = async (
  */
 export const se_DeleteForecastExportJobCommand = async (
   input: DeleteForecastExportJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteForecastExportJob");
   let body: any;
@@ -634,7 +634,7 @@ export const se_DeleteForecastExportJobCommand = async (
  */
 export const se_DeleteMonitorCommand = async (
   input: DeleteMonitorCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteMonitor");
   let body: any;
@@ -647,7 +647,7 @@ export const se_DeleteMonitorCommand = async (
  */
 export const se_DeletePredictorCommand = async (
   input: DeletePredictorCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeletePredictor");
   let body: any;
@@ -660,7 +660,7 @@ export const se_DeletePredictorCommand = async (
  */
 export const se_DeletePredictorBacktestExportJobCommand = async (
   input: DeletePredictorBacktestExportJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeletePredictorBacktestExportJob");
   let body: any;
@@ -673,7 +673,7 @@ export const se_DeletePredictorBacktestExportJobCommand = async (
  */
 export const se_DeleteResourceTreeCommand = async (
   input: DeleteResourceTreeCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteResourceTree");
   let body: any;
@@ -686,7 +686,7 @@ export const se_DeleteResourceTreeCommand = async (
  */
 export const se_DeleteWhatIfAnalysisCommand = async (
   input: DeleteWhatIfAnalysisCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteWhatIfAnalysis");
   let body: any;
@@ -699,7 +699,7 @@ export const se_DeleteWhatIfAnalysisCommand = async (
  */
 export const se_DeleteWhatIfForecastCommand = async (
   input: DeleteWhatIfForecastCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteWhatIfForecast");
   let body: any;
@@ -712,7 +712,7 @@ export const se_DeleteWhatIfForecastCommand = async (
  */
 export const se_DeleteWhatIfForecastExportCommand = async (
   input: DeleteWhatIfForecastExportCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteWhatIfForecastExport");
   let body: any;
@@ -725,7 +725,7 @@ export const se_DeleteWhatIfForecastExportCommand = async (
  */
 export const se_DescribeAutoPredictorCommand = async (
   input: DescribeAutoPredictorCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeAutoPredictor");
   let body: any;
@@ -738,7 +738,7 @@ export const se_DescribeAutoPredictorCommand = async (
  */
 export const se_DescribeDatasetCommand = async (
   input: DescribeDatasetCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeDataset");
   let body: any;
@@ -751,7 +751,7 @@ export const se_DescribeDatasetCommand = async (
  */
 export const se_DescribeDatasetGroupCommand = async (
   input: DescribeDatasetGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeDatasetGroup");
   let body: any;
@@ -764,7 +764,7 @@ export const se_DescribeDatasetGroupCommand = async (
  */
 export const se_DescribeDatasetImportJobCommand = async (
   input: DescribeDatasetImportJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeDatasetImportJob");
   let body: any;
@@ -777,7 +777,7 @@ export const se_DescribeDatasetImportJobCommand = async (
  */
 export const se_DescribeExplainabilityCommand = async (
   input: DescribeExplainabilityCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeExplainability");
   let body: any;
@@ -790,7 +790,7 @@ export const se_DescribeExplainabilityCommand = async (
  */
 export const se_DescribeExplainabilityExportCommand = async (
   input: DescribeExplainabilityExportCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeExplainabilityExport");
   let body: any;
@@ -803,7 +803,7 @@ export const se_DescribeExplainabilityExportCommand = async (
  */
 export const se_DescribeForecastCommand = async (
   input: DescribeForecastCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeForecast");
   let body: any;
@@ -816,7 +816,7 @@ export const se_DescribeForecastCommand = async (
  */
 export const se_DescribeForecastExportJobCommand = async (
   input: DescribeForecastExportJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeForecastExportJob");
   let body: any;
@@ -829,7 +829,7 @@ export const se_DescribeForecastExportJobCommand = async (
  */
 export const se_DescribeMonitorCommand = async (
   input: DescribeMonitorCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeMonitor");
   let body: any;
@@ -842,7 +842,7 @@ export const se_DescribeMonitorCommand = async (
  */
 export const se_DescribePredictorCommand = async (
   input: DescribePredictorCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribePredictor");
   let body: any;
@@ -855,7 +855,7 @@ export const se_DescribePredictorCommand = async (
  */
 export const se_DescribePredictorBacktestExportJobCommand = async (
   input: DescribePredictorBacktestExportJobCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribePredictorBacktestExportJob");
   let body: any;
@@ -868,7 +868,7 @@ export const se_DescribePredictorBacktestExportJobCommand = async (
  */
 export const se_DescribeWhatIfAnalysisCommand = async (
   input: DescribeWhatIfAnalysisCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeWhatIfAnalysis");
   let body: any;
@@ -881,7 +881,7 @@ export const se_DescribeWhatIfAnalysisCommand = async (
  */
 export const se_DescribeWhatIfForecastCommand = async (
   input: DescribeWhatIfForecastCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeWhatIfForecast");
   let body: any;
@@ -894,7 +894,7 @@ export const se_DescribeWhatIfForecastCommand = async (
  */
 export const se_DescribeWhatIfForecastExportCommand = async (
   input: DescribeWhatIfForecastExportCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeWhatIfForecastExport");
   let body: any;
@@ -907,7 +907,7 @@ export const se_DescribeWhatIfForecastExportCommand = async (
  */
 export const se_GetAccuracyMetricsCommand = async (
   input: GetAccuracyMetricsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetAccuracyMetrics");
   let body: any;
@@ -920,7 +920,7 @@ export const se_GetAccuracyMetricsCommand = async (
  */
 export const se_ListDatasetGroupsCommand = async (
   input: ListDatasetGroupsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListDatasetGroups");
   let body: any;
@@ -933,7 +933,7 @@ export const se_ListDatasetGroupsCommand = async (
  */
 export const se_ListDatasetImportJobsCommand = async (
   input: ListDatasetImportJobsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListDatasetImportJobs");
   let body: any;
@@ -946,7 +946,7 @@ export const se_ListDatasetImportJobsCommand = async (
  */
 export const se_ListDatasetsCommand = async (
   input: ListDatasetsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListDatasets");
   let body: any;
@@ -959,7 +959,7 @@ export const se_ListDatasetsCommand = async (
  */
 export const se_ListExplainabilitiesCommand = async (
   input: ListExplainabilitiesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListExplainabilities");
   let body: any;
@@ -972,7 +972,7 @@ export const se_ListExplainabilitiesCommand = async (
  */
 export const se_ListExplainabilityExportsCommand = async (
   input: ListExplainabilityExportsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListExplainabilityExports");
   let body: any;
@@ -985,7 +985,7 @@ export const se_ListExplainabilityExportsCommand = async (
  */
 export const se_ListForecastExportJobsCommand = async (
   input: ListForecastExportJobsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListForecastExportJobs");
   let body: any;
@@ -998,7 +998,7 @@ export const se_ListForecastExportJobsCommand = async (
  */
 export const se_ListForecastsCommand = async (
   input: ListForecastsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListForecasts");
   let body: any;
@@ -1011,7 +1011,7 @@ export const se_ListForecastsCommand = async (
  */
 export const se_ListMonitorEvaluationsCommand = async (
   input: ListMonitorEvaluationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListMonitorEvaluations");
   let body: any;
@@ -1024,7 +1024,7 @@ export const se_ListMonitorEvaluationsCommand = async (
  */
 export const se_ListMonitorsCommand = async (
   input: ListMonitorsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListMonitors");
   let body: any;
@@ -1037,7 +1037,7 @@ export const se_ListMonitorsCommand = async (
  */
 export const se_ListPredictorBacktestExportJobsCommand = async (
   input: ListPredictorBacktestExportJobsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListPredictorBacktestExportJobs");
   let body: any;
@@ -1050,7 +1050,7 @@ export const se_ListPredictorBacktestExportJobsCommand = async (
  */
 export const se_ListPredictorsCommand = async (
   input: ListPredictorsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListPredictors");
   let body: any;
@@ -1063,7 +1063,7 @@ export const se_ListPredictorsCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListTagsForResource");
   let body: any;
@@ -1076,7 +1076,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_ListWhatIfAnalysesCommand = async (
   input: ListWhatIfAnalysesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListWhatIfAnalyses");
   let body: any;
@@ -1089,7 +1089,7 @@ export const se_ListWhatIfAnalysesCommand = async (
  */
 export const se_ListWhatIfForecastExportsCommand = async (
   input: ListWhatIfForecastExportsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListWhatIfForecastExports");
   let body: any;
@@ -1102,7 +1102,7 @@ export const se_ListWhatIfForecastExportsCommand = async (
  */
 export const se_ListWhatIfForecastsCommand = async (
   input: ListWhatIfForecastsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListWhatIfForecasts");
   let body: any;
@@ -1115,7 +1115,7 @@ export const se_ListWhatIfForecastsCommand = async (
  */
 export const se_ResumeResourceCommand = async (
   input: ResumeResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ResumeResource");
   let body: any;
@@ -1128,7 +1128,7 @@ export const se_ResumeResourceCommand = async (
  */
 export const se_StopResourceCommand = async (
   input: StopResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StopResource");
   let body: any;
@@ -1141,7 +1141,7 @@ export const se_StopResourceCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("TagResource");
   let body: any;
@@ -1154,7 +1154,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UntagResource");
   let body: any;
@@ -1167,7 +1167,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateDatasetGroupCommand = async (
   input: UpdateDatasetGroupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateDatasetGroup");
   let body: any;
@@ -1180,7 +1180,7 @@ export const se_UpdateDatasetGroupCommand = async (
  */
 export const de_CreateAutoPredictorCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateAutoPredictorCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1200,7 +1200,7 @@ export const de_CreateAutoPredictorCommand = async (
  */
 export const de_CreateDatasetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateDatasetCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1220,7 +1220,7 @@ export const de_CreateDatasetCommand = async (
  */
 export const de_CreateDatasetGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateDatasetGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1240,7 +1240,7 @@ export const de_CreateDatasetGroupCommand = async (
  */
 export const de_CreateDatasetImportJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateDatasetImportJobCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1260,7 +1260,7 @@ export const de_CreateDatasetImportJobCommand = async (
  */
 export const de_CreateExplainabilityCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateExplainabilityCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1280,7 +1280,7 @@ export const de_CreateExplainabilityCommand = async (
  */
 export const de_CreateExplainabilityExportCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateExplainabilityExportCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1300,7 +1300,7 @@ export const de_CreateExplainabilityExportCommand = async (
  */
 export const de_CreateForecastCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateForecastCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1320,7 +1320,7 @@ export const de_CreateForecastCommand = async (
  */
 export const de_CreateForecastExportJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateForecastExportJobCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1340,7 +1340,7 @@ export const de_CreateForecastExportJobCommand = async (
  */
 export const de_CreateMonitorCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateMonitorCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1360,7 +1360,7 @@ export const de_CreateMonitorCommand = async (
  */
 export const de_CreatePredictorCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreatePredictorCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1380,7 +1380,7 @@ export const de_CreatePredictorCommand = async (
  */
 export const de_CreatePredictorBacktestExportJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreatePredictorBacktestExportJobCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1400,7 +1400,7 @@ export const de_CreatePredictorBacktestExportJobCommand = async (
  */
 export const de_CreateWhatIfAnalysisCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateWhatIfAnalysisCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1420,7 +1420,7 @@ export const de_CreateWhatIfAnalysisCommand = async (
  */
 export const de_CreateWhatIfForecastCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateWhatIfForecastCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1440,7 +1440,7 @@ export const de_CreateWhatIfForecastCommand = async (
  */
 export const de_CreateWhatIfForecastExportCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateWhatIfForecastExportCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1460,7 +1460,7 @@ export const de_CreateWhatIfForecastExportCommand = async (
  */
 export const de_DeleteDatasetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteDatasetCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1477,7 +1477,7 @@ export const de_DeleteDatasetCommand = async (
  */
 export const de_DeleteDatasetGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteDatasetGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1494,7 +1494,7 @@ export const de_DeleteDatasetGroupCommand = async (
  */
 export const de_DeleteDatasetImportJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteDatasetImportJobCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1511,7 +1511,7 @@ export const de_DeleteDatasetImportJobCommand = async (
  */
 export const de_DeleteExplainabilityCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteExplainabilityCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1528,7 +1528,7 @@ export const de_DeleteExplainabilityCommand = async (
  */
 export const de_DeleteExplainabilityExportCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteExplainabilityExportCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1545,7 +1545,7 @@ export const de_DeleteExplainabilityExportCommand = async (
  */
 export const de_DeleteForecastCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteForecastCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1562,7 +1562,7 @@ export const de_DeleteForecastCommand = async (
  */
 export const de_DeleteForecastExportJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteForecastExportJobCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1579,7 +1579,7 @@ export const de_DeleteForecastExportJobCommand = async (
  */
 export const de_DeleteMonitorCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteMonitorCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1596,7 +1596,7 @@ export const de_DeleteMonitorCommand = async (
  */
 export const de_DeletePredictorCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeletePredictorCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1613,7 +1613,7 @@ export const de_DeletePredictorCommand = async (
  */
 export const de_DeletePredictorBacktestExportJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeletePredictorBacktestExportJobCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1630,7 +1630,7 @@ export const de_DeletePredictorBacktestExportJobCommand = async (
  */
 export const de_DeleteResourceTreeCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteResourceTreeCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1647,7 +1647,7 @@ export const de_DeleteResourceTreeCommand = async (
  */
 export const de_DeleteWhatIfAnalysisCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteWhatIfAnalysisCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1664,7 +1664,7 @@ export const de_DeleteWhatIfAnalysisCommand = async (
  */
 export const de_DeleteWhatIfForecastCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteWhatIfForecastCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1681,7 +1681,7 @@ export const de_DeleteWhatIfForecastCommand = async (
  */
 export const de_DeleteWhatIfForecastExportCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteWhatIfForecastExportCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1698,7 +1698,7 @@ export const de_DeleteWhatIfForecastExportCommand = async (
  */
 export const de_DescribeAutoPredictorCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeAutoPredictorCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1718,7 +1718,7 @@ export const de_DescribeAutoPredictorCommand = async (
  */
 export const de_DescribeDatasetCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeDatasetCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1738,7 +1738,7 @@ export const de_DescribeDatasetCommand = async (
  */
 export const de_DescribeDatasetGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeDatasetGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1758,7 +1758,7 @@ export const de_DescribeDatasetGroupCommand = async (
  */
 export const de_DescribeDatasetImportJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeDatasetImportJobCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1778,7 +1778,7 @@ export const de_DescribeDatasetImportJobCommand = async (
  */
 export const de_DescribeExplainabilityCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeExplainabilityCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1798,7 +1798,7 @@ export const de_DescribeExplainabilityCommand = async (
  */
 export const de_DescribeExplainabilityExportCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeExplainabilityExportCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1818,7 +1818,7 @@ export const de_DescribeExplainabilityExportCommand = async (
  */
 export const de_DescribeForecastCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeForecastCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1838,7 +1838,7 @@ export const de_DescribeForecastCommand = async (
  */
 export const de_DescribeForecastExportJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeForecastExportJobCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1858,7 +1858,7 @@ export const de_DescribeForecastExportJobCommand = async (
  */
 export const de_DescribeMonitorCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeMonitorCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1878,7 +1878,7 @@ export const de_DescribeMonitorCommand = async (
  */
 export const de_DescribePredictorCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribePredictorCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1898,7 +1898,7 @@ export const de_DescribePredictorCommand = async (
  */
 export const de_DescribePredictorBacktestExportJobCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribePredictorBacktestExportJobCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1918,7 +1918,7 @@ export const de_DescribePredictorBacktestExportJobCommand = async (
  */
 export const de_DescribeWhatIfAnalysisCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeWhatIfAnalysisCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1938,7 +1938,7 @@ export const de_DescribeWhatIfAnalysisCommand = async (
  */
 export const de_DescribeWhatIfForecastCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeWhatIfForecastCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1958,7 +1958,7 @@ export const de_DescribeWhatIfForecastCommand = async (
  */
 export const de_DescribeWhatIfForecastExportCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeWhatIfForecastExportCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1978,7 +1978,7 @@ export const de_DescribeWhatIfForecastExportCommand = async (
  */
 export const de_GetAccuracyMetricsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetAccuracyMetricsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1998,7 +1998,7 @@ export const de_GetAccuracyMetricsCommand = async (
  */
 export const de_ListDatasetGroupsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListDatasetGroupsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2018,7 +2018,7 @@ export const de_ListDatasetGroupsCommand = async (
  */
 export const de_ListDatasetImportJobsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListDatasetImportJobsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2038,7 +2038,7 @@ export const de_ListDatasetImportJobsCommand = async (
  */
 export const de_ListDatasetsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListDatasetsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2058,7 +2058,7 @@ export const de_ListDatasetsCommand = async (
  */
 export const de_ListExplainabilitiesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListExplainabilitiesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2078,7 +2078,7 @@ export const de_ListExplainabilitiesCommand = async (
  */
 export const de_ListExplainabilityExportsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListExplainabilityExportsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2098,7 +2098,7 @@ export const de_ListExplainabilityExportsCommand = async (
  */
 export const de_ListForecastExportJobsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListForecastExportJobsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2118,7 +2118,7 @@ export const de_ListForecastExportJobsCommand = async (
  */
 export const de_ListForecastsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListForecastsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2138,7 +2138,7 @@ export const de_ListForecastsCommand = async (
  */
 export const de_ListMonitorEvaluationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListMonitorEvaluationsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2158,7 +2158,7 @@ export const de_ListMonitorEvaluationsCommand = async (
  */
 export const de_ListMonitorsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListMonitorsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2178,7 +2178,7 @@ export const de_ListMonitorsCommand = async (
  */
 export const de_ListPredictorBacktestExportJobsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListPredictorBacktestExportJobsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2198,7 +2198,7 @@ export const de_ListPredictorBacktestExportJobsCommand = async (
  */
 export const de_ListPredictorsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListPredictorsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2218,7 +2218,7 @@ export const de_ListPredictorsCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2238,7 +2238,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_ListWhatIfAnalysesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListWhatIfAnalysesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2258,7 +2258,7 @@ export const de_ListWhatIfAnalysesCommand = async (
  */
 export const de_ListWhatIfForecastExportsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListWhatIfForecastExportsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2278,7 +2278,7 @@ export const de_ListWhatIfForecastExportsCommand = async (
  */
 export const de_ListWhatIfForecastsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListWhatIfForecastsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2298,7 +2298,7 @@ export const de_ListWhatIfForecastsCommand = async (
  */
 export const de_ResumeResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResumeResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2315,7 +2315,7 @@ export const de_ResumeResourceCommand = async (
  */
 export const de_StopResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StopResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2332,7 +2332,7 @@ export const de_StopResourceCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2352,7 +2352,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2372,7 +2372,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateDatasetGroupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateDatasetGroupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2430,7 +2430,7 @@ const de_CommandError = async (output: __HttpResponse, context: __SerdeContext):
  */
 const de_InvalidInputExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidInputException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2446,7 +2446,7 @@ const de_InvalidInputExceptionRes = async (
  */
 const de_InvalidNextTokenExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidNextTokenException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2462,7 +2462,7 @@ const de_InvalidNextTokenExceptionRes = async (
  */
 const de_LimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<LimitExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2478,7 +2478,7 @@ const de_LimitExceededExceptionRes = async (
  */
 const de_ResourceAlreadyExistsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceAlreadyExistsException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2494,7 +2494,7 @@ const de_ResourceAlreadyExistsExceptionRes = async (
  */
 const de_ResourceInUseExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceInUseException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -2510,7 +2510,7 @@ const de_ResourceInUseExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -3089,7 +3089,7 @@ const de_DescribeDatasetGroupResponse = (output: any, context: __SerdeContext): 
  */
 const de_DescribeDatasetImportJobResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeDatasetImportJobResponse => {
   return take(output, {
     CreationTime: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
@@ -3135,7 +3135,7 @@ const de_DescribeDatasetResponse = (output: any, context: __SerdeContext): Descr
  */
 const de_DescribeExplainabilityExportResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeExplainabilityExportResponse => {
   return take(output, {
     CreationTime: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
@@ -3177,7 +3177,7 @@ const de_DescribeExplainabilityResponse = (output: any, context: __SerdeContext)
  */
 const de_DescribeForecastExportJobResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeForecastExportJobResponse => {
   return take(output, {
     CreationTime: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
@@ -3235,7 +3235,7 @@ const de_DescribeMonitorResponse = (output: any, context: __SerdeContext): Descr
  */
 const de_DescribePredictorBacktestExportJobResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribePredictorBacktestExportJobResponse => {
   return take(output, {
     CreationTime: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
@@ -3304,7 +3304,7 @@ const de_DescribeWhatIfAnalysisResponse = (output: any, context: __SerdeContext)
  */
 const de_DescribeWhatIfForecastExportResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): DescribeWhatIfForecastExportResponse => {
   return take(output, {
     CreationTime: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
@@ -3453,13 +3453,16 @@ const de_ExplainabilitySummary = (output: any, context: __SerdeContext): Explain
  * deserializeAws_json1_1FieldStatistics
  */
 const de_FieldStatistics = (output: any, context: __SerdeContext): Record<string, Statistics> => {
-  return Object.entries(output).reduce((acc: Record<string, Statistics>, [key, value]: [string, any]) => {
-    if (value === null) {
+  return Object.entries(output).reduce(
+    (acc: Record<string, Statistics>, [key, value]: [string, any]) => {
+      if (value === null) {
+        return acc;
+      }
+      acc[key as string] = de_Statistics(value, context);
       return acc;
-    }
-    acc[key as string] = de_Statistics(value, context);
-    return acc;
-  }, {} as Record<string, Statistics>);
+    },
+    {} as Record<string, Statistics>,
+  );
 };
 
 // de_ForecastDimensions omitted.
@@ -3600,7 +3603,7 @@ const de_ListExplainabilitiesResponse = (output: any, context: __SerdeContext): 
  */
 const de_ListExplainabilityExportsResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ListExplainabilityExportsResponse => {
   return take(output, {
     ExplainabilityExports: (_: any) => de_ExplainabilityExports(_, context),
@@ -3653,7 +3656,7 @@ const de_ListMonitorsResponse = (output: any, context: __SerdeContext): ListMoni
  */
 const de_ListPredictorBacktestExportJobsResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ListPredictorBacktestExportJobsResponse => {
   return take(output, {
     NextToken: __expectString,
@@ -3688,7 +3691,7 @@ const de_ListWhatIfAnalysesResponse = (output: any, context: __SerdeContext): Li
  */
 const de_ListWhatIfForecastExportsResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ListWhatIfForecastExportsResponse => {
   return take(output, {
     NextToken: __expectString,
@@ -3800,7 +3803,7 @@ const de_PredictorBacktestExportJobs = (output: any, context: __SerdeContext): P
  */
 const de_PredictorBacktestExportJobSummary = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): PredictorBacktestExportJobSummary => {
   return take(output, {
     CreationTime: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
@@ -4198,7 +4201,7 @@ const buildHttpRpcRequest = async (
   headers: __HeaderBag,
   path: string,
   resolvedHostname: string | undefined,
-  body: any
+  body: any,
 ): Promise<__HttpRequest> => {
   const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
   const contents: any = {

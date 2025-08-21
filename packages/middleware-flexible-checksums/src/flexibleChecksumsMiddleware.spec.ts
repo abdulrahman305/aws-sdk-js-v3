@@ -115,7 +115,7 @@ describe(flexibleChecksumsMiddleware.name, () => {
           getAwsChunkedEncodingStream: mockGetAwsChunkedEncodingStream,
           streamHasher: mockStreamHasher,
         },
-        mockMiddlewareConfig
+        mockMiddlewareConfig,
       )(mockNext, {});
       await handler(mockArgs);
 
@@ -152,7 +152,7 @@ describe(flexibleChecksumsMiddleware.name, () => {
 
       const handler = flexibleChecksumsMiddleware(
         { ...mockConfig, base64Encoder: mockBase64Encoder },
-        mockMiddlewareConfig
+        mockMiddlewareConfig,
       )(mockNext, {});
       await handler(mockArgs);
       expect(hasHeader).toHaveBeenCalledTimes(1);

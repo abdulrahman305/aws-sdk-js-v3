@@ -223,13 +223,13 @@ export interface SFN {
    */
   createActivity(
     args: CreateActivityCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateActivityCommandOutput>;
   createActivity(args: CreateActivityCommandInput, cb: (err: any, data?: CreateActivityCommandOutput) => void): void;
   createActivity(
     args: CreateActivityCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateActivityCommandOutput) => void
+    cb: (err: any, data?: CreateActivityCommandOutput) => void,
   ): void;
 
   /**
@@ -237,16 +237,16 @@ export interface SFN {
    */
   createStateMachine(
     args: CreateStateMachineCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateStateMachineCommandOutput>;
   createStateMachine(
     args: CreateStateMachineCommandInput,
-    cb: (err: any, data?: CreateStateMachineCommandOutput) => void
+    cb: (err: any, data?: CreateStateMachineCommandOutput) => void,
   ): void;
   createStateMachine(
     args: CreateStateMachineCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateStateMachineCommandOutput) => void
+    cb: (err: any, data?: CreateStateMachineCommandOutput) => void,
   ): void;
 
   /**
@@ -254,16 +254,16 @@ export interface SFN {
    */
   createStateMachineAlias(
     args: CreateStateMachineAliasCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateStateMachineAliasCommandOutput>;
   createStateMachineAlias(
     args: CreateStateMachineAliasCommandInput,
-    cb: (err: any, data?: CreateStateMachineAliasCommandOutput) => void
+    cb: (err: any, data?: CreateStateMachineAliasCommandOutput) => void,
   ): void;
   createStateMachineAlias(
     args: CreateStateMachineAliasCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateStateMachineAliasCommandOutput) => void
+    cb: (err: any, data?: CreateStateMachineAliasCommandOutput) => void,
   ): void;
 
   /**
@@ -271,13 +271,13 @@ export interface SFN {
    */
   deleteActivity(
     args: DeleteActivityCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteActivityCommandOutput>;
   deleteActivity(args: DeleteActivityCommandInput, cb: (err: any, data?: DeleteActivityCommandOutput) => void): void;
   deleteActivity(
     args: DeleteActivityCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteActivityCommandOutput) => void
+    cb: (err: any, data?: DeleteActivityCommandOutput) => void,
   ): void;
 
   /**
@@ -285,16 +285,16 @@ export interface SFN {
    */
   deleteStateMachine(
     args: DeleteStateMachineCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteStateMachineCommandOutput>;
   deleteStateMachine(
     args: DeleteStateMachineCommandInput,
-    cb: (err: any, data?: DeleteStateMachineCommandOutput) => void
+    cb: (err: any, data?: DeleteStateMachineCommandOutput) => void,
   ): void;
   deleteStateMachine(
     args: DeleteStateMachineCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteStateMachineCommandOutput) => void
+    cb: (err: any, data?: DeleteStateMachineCommandOutput) => void,
   ): void;
 
   /**
@@ -302,16 +302,16 @@ export interface SFN {
    */
   deleteStateMachineAlias(
     args: DeleteStateMachineAliasCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteStateMachineAliasCommandOutput>;
   deleteStateMachineAlias(
     args: DeleteStateMachineAliasCommandInput,
-    cb: (err: any, data?: DeleteStateMachineAliasCommandOutput) => void
+    cb: (err: any, data?: DeleteStateMachineAliasCommandOutput) => void,
   ): void;
   deleteStateMachineAlias(
     args: DeleteStateMachineAliasCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteStateMachineAliasCommandOutput) => void
+    cb: (err: any, data?: DeleteStateMachineAliasCommandOutput) => void,
   ): void;
 
   /**
@@ -319,16 +319,16 @@ export interface SFN {
    */
   deleteStateMachineVersion(
     args: DeleteStateMachineVersionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteStateMachineVersionCommandOutput>;
   deleteStateMachineVersion(
     args: DeleteStateMachineVersionCommandInput,
-    cb: (err: any, data?: DeleteStateMachineVersionCommandOutput) => void
+    cb: (err: any, data?: DeleteStateMachineVersionCommandOutput) => void,
   ): void;
   deleteStateMachineVersion(
     args: DeleteStateMachineVersionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteStateMachineVersionCommandOutput) => void
+    cb: (err: any, data?: DeleteStateMachineVersionCommandOutput) => void,
   ): void;
 
   /**
@@ -336,16 +336,16 @@ export interface SFN {
    */
   describeActivity(
     args: DescribeActivityCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeActivityCommandOutput>;
   describeActivity(
     args: DescribeActivityCommandInput,
-    cb: (err: any, data?: DescribeActivityCommandOutput) => void
+    cb: (err: any, data?: DescribeActivityCommandOutput) => void,
   ): void;
   describeActivity(
     args: DescribeActivityCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeActivityCommandOutput) => void
+    cb: (err: any, data?: DescribeActivityCommandOutput) => void,
   ): void;
 
   /**
@@ -353,16 +353,16 @@ export interface SFN {
    */
   describeExecution(
     args: DescribeExecutionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeExecutionCommandOutput>;
   describeExecution(
     args: DescribeExecutionCommandInput,
-    cb: (err: any, data?: DescribeExecutionCommandOutput) => void
+    cb: (err: any, data?: DescribeExecutionCommandOutput) => void,
   ): void;
   describeExecution(
     args: DescribeExecutionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeExecutionCommandOutput) => void
+    cb: (err: any, data?: DescribeExecutionCommandOutput) => void,
   ): void;
 
   /**
@@ -370,13 +370,13 @@ export interface SFN {
    */
   describeMapRun(
     args: DescribeMapRunCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeMapRunCommandOutput>;
   describeMapRun(args: DescribeMapRunCommandInput, cb: (err: any, data?: DescribeMapRunCommandOutput) => void): void;
   describeMapRun(
     args: DescribeMapRunCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeMapRunCommandOutput) => void
+    cb: (err: any, data?: DescribeMapRunCommandOutput) => void,
   ): void;
 
   /**
@@ -384,16 +384,16 @@ export interface SFN {
    */
   describeStateMachine(
     args: DescribeStateMachineCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeStateMachineCommandOutput>;
   describeStateMachine(
     args: DescribeStateMachineCommandInput,
-    cb: (err: any, data?: DescribeStateMachineCommandOutput) => void
+    cb: (err: any, data?: DescribeStateMachineCommandOutput) => void,
   ): void;
   describeStateMachine(
     args: DescribeStateMachineCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeStateMachineCommandOutput) => void
+    cb: (err: any, data?: DescribeStateMachineCommandOutput) => void,
   ): void;
 
   /**
@@ -401,16 +401,16 @@ export interface SFN {
    */
   describeStateMachineAlias(
     args: DescribeStateMachineAliasCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeStateMachineAliasCommandOutput>;
   describeStateMachineAlias(
     args: DescribeStateMachineAliasCommandInput,
-    cb: (err: any, data?: DescribeStateMachineAliasCommandOutput) => void
+    cb: (err: any, data?: DescribeStateMachineAliasCommandOutput) => void,
   ): void;
   describeStateMachineAlias(
     args: DescribeStateMachineAliasCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeStateMachineAliasCommandOutput) => void
+    cb: (err: any, data?: DescribeStateMachineAliasCommandOutput) => void,
   ): void;
 
   /**
@@ -418,16 +418,16 @@ export interface SFN {
    */
   describeStateMachineForExecution(
     args: DescribeStateMachineForExecutionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeStateMachineForExecutionCommandOutput>;
   describeStateMachineForExecution(
     args: DescribeStateMachineForExecutionCommandInput,
-    cb: (err: any, data?: DescribeStateMachineForExecutionCommandOutput) => void
+    cb: (err: any, data?: DescribeStateMachineForExecutionCommandOutput) => void,
   ): void;
   describeStateMachineForExecution(
     args: DescribeStateMachineForExecutionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeStateMachineForExecutionCommandOutput) => void
+    cb: (err: any, data?: DescribeStateMachineForExecutionCommandOutput) => void,
   ): void;
 
   /**
@@ -435,13 +435,13 @@ export interface SFN {
    */
   getActivityTask(
     args: GetActivityTaskCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetActivityTaskCommandOutput>;
   getActivityTask(args: GetActivityTaskCommandInput, cb: (err: any, data?: GetActivityTaskCommandOutput) => void): void;
   getActivityTask(
     args: GetActivityTaskCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetActivityTaskCommandOutput) => void
+    cb: (err: any, data?: GetActivityTaskCommandOutput) => void,
   ): void;
 
   /**
@@ -449,16 +449,16 @@ export interface SFN {
    */
   getExecutionHistory(
     args: GetExecutionHistoryCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetExecutionHistoryCommandOutput>;
   getExecutionHistory(
     args: GetExecutionHistoryCommandInput,
-    cb: (err: any, data?: GetExecutionHistoryCommandOutput) => void
+    cb: (err: any, data?: GetExecutionHistoryCommandOutput) => void,
   ): void;
   getExecutionHistory(
     args: GetExecutionHistoryCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetExecutionHistoryCommandOutput) => void
+    cb: (err: any, data?: GetExecutionHistoryCommandOutput) => void,
   ): void;
 
   /**
@@ -467,13 +467,13 @@ export interface SFN {
   listActivities(): Promise<ListActivitiesCommandOutput>;
   listActivities(
     args: ListActivitiesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListActivitiesCommandOutput>;
   listActivities(args: ListActivitiesCommandInput, cb: (err: any, data?: ListActivitiesCommandOutput) => void): void;
   listActivities(
     args: ListActivitiesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListActivitiesCommandOutput) => void
+    cb: (err: any, data?: ListActivitiesCommandOutput) => void,
   ): void;
 
   /**
@@ -482,13 +482,13 @@ export interface SFN {
   listExecutions(): Promise<ListExecutionsCommandOutput>;
   listExecutions(
     args: ListExecutionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListExecutionsCommandOutput>;
   listExecutions(args: ListExecutionsCommandInput, cb: (err: any, data?: ListExecutionsCommandOutput) => void): void;
   listExecutions(
     args: ListExecutionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListExecutionsCommandOutput) => void
+    cb: (err: any, data?: ListExecutionsCommandOutput) => void,
   ): void;
 
   /**
@@ -499,7 +499,7 @@ export interface SFN {
   listMapRuns(
     args: ListMapRunsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListMapRunsCommandOutput) => void
+    cb: (err: any, data?: ListMapRunsCommandOutput) => void,
   ): void;
 
   /**
@@ -507,16 +507,16 @@ export interface SFN {
    */
   listStateMachineAliases(
     args: ListStateMachineAliasesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListStateMachineAliasesCommandOutput>;
   listStateMachineAliases(
     args: ListStateMachineAliasesCommandInput,
-    cb: (err: any, data?: ListStateMachineAliasesCommandOutput) => void
+    cb: (err: any, data?: ListStateMachineAliasesCommandOutput) => void,
   ): void;
   listStateMachineAliases(
     args: ListStateMachineAliasesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListStateMachineAliasesCommandOutput) => void
+    cb: (err: any, data?: ListStateMachineAliasesCommandOutput) => void,
   ): void;
 
   /**
@@ -525,16 +525,16 @@ export interface SFN {
   listStateMachines(): Promise<ListStateMachinesCommandOutput>;
   listStateMachines(
     args: ListStateMachinesCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListStateMachinesCommandOutput>;
   listStateMachines(
     args: ListStateMachinesCommandInput,
-    cb: (err: any, data?: ListStateMachinesCommandOutput) => void
+    cb: (err: any, data?: ListStateMachinesCommandOutput) => void,
   ): void;
   listStateMachines(
     args: ListStateMachinesCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListStateMachinesCommandOutput) => void
+    cb: (err: any, data?: ListStateMachinesCommandOutput) => void,
   ): void;
 
   /**
@@ -542,16 +542,16 @@ export interface SFN {
    */
   listStateMachineVersions(
     args: ListStateMachineVersionsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListStateMachineVersionsCommandOutput>;
   listStateMachineVersions(
     args: ListStateMachineVersionsCommandInput,
-    cb: (err: any, data?: ListStateMachineVersionsCommandOutput) => void
+    cb: (err: any, data?: ListStateMachineVersionsCommandOutput) => void,
   ): void;
   listStateMachineVersions(
     args: ListStateMachineVersionsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListStateMachineVersionsCommandOutput) => void
+    cb: (err: any, data?: ListStateMachineVersionsCommandOutput) => void,
   ): void;
 
   /**
@@ -559,16 +559,16 @@ export interface SFN {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -576,16 +576,16 @@ export interface SFN {
    */
   publishStateMachineVersion(
     args: PublishStateMachineVersionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<PublishStateMachineVersionCommandOutput>;
   publishStateMachineVersion(
     args: PublishStateMachineVersionCommandInput,
-    cb: (err: any, data?: PublishStateMachineVersionCommandOutput) => void
+    cb: (err: any, data?: PublishStateMachineVersionCommandOutput) => void,
   ): void;
   publishStateMachineVersion(
     args: PublishStateMachineVersionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: PublishStateMachineVersionCommandOutput) => void
+    cb: (err: any, data?: PublishStateMachineVersionCommandOutput) => void,
   ): void;
 
   /**
@@ -593,16 +593,16 @@ export interface SFN {
    */
   redriveExecution(
     args: RedriveExecutionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<RedriveExecutionCommandOutput>;
   redriveExecution(
     args: RedriveExecutionCommandInput,
-    cb: (err: any, data?: RedriveExecutionCommandOutput) => void
+    cb: (err: any, data?: RedriveExecutionCommandOutput) => void,
   ): void;
   redriveExecution(
     args: RedriveExecutionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: RedriveExecutionCommandOutput) => void
+    cb: (err: any, data?: RedriveExecutionCommandOutput) => void,
   ): void;
 
   /**
@@ -610,13 +610,13 @@ export interface SFN {
    */
   sendTaskFailure(
     args: SendTaskFailureCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<SendTaskFailureCommandOutput>;
   sendTaskFailure(args: SendTaskFailureCommandInput, cb: (err: any, data?: SendTaskFailureCommandOutput) => void): void;
   sendTaskFailure(
     args: SendTaskFailureCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SendTaskFailureCommandOutput) => void
+    cb: (err: any, data?: SendTaskFailureCommandOutput) => void,
   ): void;
 
   /**
@@ -624,16 +624,16 @@ export interface SFN {
    */
   sendTaskHeartbeat(
     args: SendTaskHeartbeatCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<SendTaskHeartbeatCommandOutput>;
   sendTaskHeartbeat(
     args: SendTaskHeartbeatCommandInput,
-    cb: (err: any, data?: SendTaskHeartbeatCommandOutput) => void
+    cb: (err: any, data?: SendTaskHeartbeatCommandOutput) => void,
   ): void;
   sendTaskHeartbeat(
     args: SendTaskHeartbeatCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SendTaskHeartbeatCommandOutput) => void
+    cb: (err: any, data?: SendTaskHeartbeatCommandOutput) => void,
   ): void;
 
   /**
@@ -641,13 +641,13 @@ export interface SFN {
    */
   sendTaskSuccess(
     args: SendTaskSuccessCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<SendTaskSuccessCommandOutput>;
   sendTaskSuccess(args: SendTaskSuccessCommandInput, cb: (err: any, data?: SendTaskSuccessCommandOutput) => void): void;
   sendTaskSuccess(
     args: SendTaskSuccessCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SendTaskSuccessCommandOutput) => void
+    cb: (err: any, data?: SendTaskSuccessCommandOutput) => void,
   ): void;
 
   /**
@@ -655,13 +655,13 @@ export interface SFN {
    */
   startExecution(
     args: StartExecutionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartExecutionCommandOutput>;
   startExecution(args: StartExecutionCommandInput, cb: (err: any, data?: StartExecutionCommandOutput) => void): void;
   startExecution(
     args: StartExecutionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartExecutionCommandOutput) => void
+    cb: (err: any, data?: StartExecutionCommandOutput) => void,
   ): void;
 
   /**
@@ -669,16 +669,16 @@ export interface SFN {
    */
   startSyncExecution(
     args: StartSyncExecutionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartSyncExecutionCommandOutput>;
   startSyncExecution(
     args: StartSyncExecutionCommandInput,
-    cb: (err: any, data?: StartSyncExecutionCommandOutput) => void
+    cb: (err: any, data?: StartSyncExecutionCommandOutput) => void,
   ): void;
   startSyncExecution(
     args: StartSyncExecutionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartSyncExecutionCommandOutput) => void
+    cb: (err: any, data?: StartSyncExecutionCommandOutput) => void,
   ): void;
 
   /**
@@ -689,7 +689,7 @@ export interface SFN {
   stopExecution(
     args: StopExecutionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StopExecutionCommandOutput) => void
+    cb: (err: any, data?: StopExecutionCommandOutput) => void,
   ): void;
 
   /**
@@ -700,7 +700,7 @@ export interface SFN {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -711,7 +711,7 @@ export interface SFN {
   testState(
     args: TestStateCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TestStateCommandOutput) => void
+    cb: (err: any, data?: TestStateCommandOutput) => void,
   ): void;
 
   /**
@@ -722,7 +722,7 @@ export interface SFN {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -733,7 +733,7 @@ export interface SFN {
   updateMapRun(
     args: UpdateMapRunCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateMapRunCommandOutput) => void
+    cb: (err: any, data?: UpdateMapRunCommandOutput) => void,
   ): void;
 
   /**
@@ -741,16 +741,16 @@ export interface SFN {
    */
   updateStateMachine(
     args: UpdateStateMachineCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateStateMachineCommandOutput>;
   updateStateMachine(
     args: UpdateStateMachineCommandInput,
-    cb: (err: any, data?: UpdateStateMachineCommandOutput) => void
+    cb: (err: any, data?: UpdateStateMachineCommandOutput) => void,
   ): void;
   updateStateMachine(
     args: UpdateStateMachineCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateStateMachineCommandOutput) => void
+    cb: (err: any, data?: UpdateStateMachineCommandOutput) => void,
   ): void;
 
   /**
@@ -758,16 +758,16 @@ export interface SFN {
    */
   updateStateMachineAlias(
     args: UpdateStateMachineAliasCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateStateMachineAliasCommandOutput>;
   updateStateMachineAlias(
     args: UpdateStateMachineAliasCommandInput,
-    cb: (err: any, data?: UpdateStateMachineAliasCommandOutput) => void
+    cb: (err: any, data?: UpdateStateMachineAliasCommandOutput) => void,
   ): void;
   updateStateMachineAlias(
     args: UpdateStateMachineAliasCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateStateMachineAliasCommandOutput) => void
+    cb: (err: any, data?: UpdateStateMachineAliasCommandOutput) => void,
   ): void;
 
   /**
@@ -775,16 +775,16 @@ export interface SFN {
    */
   validateStateMachineDefinition(
     args: ValidateStateMachineDefinitionCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ValidateStateMachineDefinitionCommandOutput>;
   validateStateMachineDefinition(
     args: ValidateStateMachineDefinitionCommandInput,
-    cb: (err: any, data?: ValidateStateMachineDefinitionCommandOutput) => void
+    cb: (err: any, data?: ValidateStateMachineDefinitionCommandOutput) => void,
   ): void;
   validateStateMachineDefinition(
     args: ValidateStateMachineDefinitionCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ValidateStateMachineDefinitionCommandOutput) => void
+    cb: (err: any, data?: ValidateStateMachineDefinitionCommandOutput) => void,
   ): void;
 }
 

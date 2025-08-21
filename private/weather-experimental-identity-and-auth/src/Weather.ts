@@ -79,13 +79,13 @@ export interface Weather {
   onlyCustomAuth(): Promise<OnlyCustomAuthCommandOutput>;
   onlyCustomAuth(
     args: OnlyCustomAuthCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<OnlyCustomAuthCommandOutput>;
   onlyCustomAuth(args: OnlyCustomAuthCommandInput, cb: (err: any, data?: OnlyCustomAuthCommandOutput) => void): void;
   onlyCustomAuth(
     args: OnlyCustomAuthCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: OnlyCustomAuthCommandOutput) => void
+    cb: (err: any, data?: OnlyCustomAuthCommandOutput) => void,
   ): void;
 
   /**
@@ -94,16 +94,16 @@ export interface Weather {
   onlyCustomAuthOptional(): Promise<OnlyCustomAuthOptionalCommandOutput>;
   onlyCustomAuthOptional(
     args: OnlyCustomAuthOptionalCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<OnlyCustomAuthOptionalCommandOutput>;
   onlyCustomAuthOptional(
     args: OnlyCustomAuthOptionalCommandInput,
-    cb: (err: any, data?: OnlyCustomAuthOptionalCommandOutput) => void
+    cb: (err: any, data?: OnlyCustomAuthOptionalCommandOutput) => void,
   ): void;
   onlyCustomAuthOptional(
     args: OnlyCustomAuthOptionalCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: OnlyCustomAuthOptionalCommandOutput) => void
+    cb: (err: any, data?: OnlyCustomAuthOptionalCommandOutput) => void,
   ): void;
 
   /**
@@ -112,16 +112,16 @@ export interface Weather {
   onlyHttpApiKeyAndBearerAuth(): Promise<OnlyHttpApiKeyAndBearerAuthCommandOutput>;
   onlyHttpApiKeyAndBearerAuth(
     args: OnlyHttpApiKeyAndBearerAuthCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<OnlyHttpApiKeyAndBearerAuthCommandOutput>;
   onlyHttpApiKeyAndBearerAuth(
     args: OnlyHttpApiKeyAndBearerAuthCommandInput,
-    cb: (err: any, data?: OnlyHttpApiKeyAndBearerAuthCommandOutput) => void
+    cb: (err: any, data?: OnlyHttpApiKeyAndBearerAuthCommandOutput) => void,
   ): void;
   onlyHttpApiKeyAndBearerAuth(
     args: OnlyHttpApiKeyAndBearerAuthCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: OnlyHttpApiKeyAndBearerAuthCommandOutput) => void
+    cb: (err: any, data?: OnlyHttpApiKeyAndBearerAuthCommandOutput) => void,
   ): void;
 
   /**
@@ -130,16 +130,16 @@ export interface Weather {
   onlyHttpApiKeyAndBearerAuthReversed(): Promise<OnlyHttpApiKeyAndBearerAuthReversedCommandOutput>;
   onlyHttpApiKeyAndBearerAuthReversed(
     args: OnlyHttpApiKeyAndBearerAuthReversedCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<OnlyHttpApiKeyAndBearerAuthReversedCommandOutput>;
   onlyHttpApiKeyAndBearerAuthReversed(
     args: OnlyHttpApiKeyAndBearerAuthReversedCommandInput,
-    cb: (err: any, data?: OnlyHttpApiKeyAndBearerAuthReversedCommandOutput) => void
+    cb: (err: any, data?: OnlyHttpApiKeyAndBearerAuthReversedCommandOutput) => void,
   ): void;
   onlyHttpApiKeyAndBearerAuthReversed(
     args: OnlyHttpApiKeyAndBearerAuthReversedCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: OnlyHttpApiKeyAndBearerAuthReversedCommandOutput) => void
+    cb: (err: any, data?: OnlyHttpApiKeyAndBearerAuthReversedCommandOutput) => void,
   ): void;
 
   /**
@@ -148,16 +148,16 @@ export interface Weather {
   onlyHttpApiKeyAuth(): Promise<OnlyHttpApiKeyAuthCommandOutput>;
   onlyHttpApiKeyAuth(
     args: OnlyHttpApiKeyAuthCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<OnlyHttpApiKeyAuthCommandOutput>;
   onlyHttpApiKeyAuth(
     args: OnlyHttpApiKeyAuthCommandInput,
-    cb: (err: any, data?: OnlyHttpApiKeyAuthCommandOutput) => void
+    cb: (err: any, data?: OnlyHttpApiKeyAuthCommandOutput) => void,
   ): void;
   onlyHttpApiKeyAuth(
     args: OnlyHttpApiKeyAuthCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: OnlyHttpApiKeyAuthCommandOutput) => void
+    cb: (err: any, data?: OnlyHttpApiKeyAuthCommandOutput) => void,
   ): void;
 
   /**
@@ -166,16 +166,16 @@ export interface Weather {
   onlyHttpApiKeyAuthOptional(): Promise<OnlyHttpApiKeyAuthOptionalCommandOutput>;
   onlyHttpApiKeyAuthOptional(
     args: OnlyHttpApiKeyAuthOptionalCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<OnlyHttpApiKeyAuthOptionalCommandOutput>;
   onlyHttpApiKeyAuthOptional(
     args: OnlyHttpApiKeyAuthOptionalCommandInput,
-    cb: (err: any, data?: OnlyHttpApiKeyAuthOptionalCommandOutput) => void
+    cb: (err: any, data?: OnlyHttpApiKeyAuthOptionalCommandOutput) => void,
   ): void;
   onlyHttpApiKeyAuthOptional(
     args: OnlyHttpApiKeyAuthOptionalCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: OnlyHttpApiKeyAuthOptionalCommandOutput) => void
+    cb: (err: any, data?: OnlyHttpApiKeyAuthOptionalCommandOutput) => void,
   ): void;
 
   /**
@@ -184,16 +184,16 @@ export interface Weather {
   onlyHttpBearerAuth(): Promise<OnlyHttpBearerAuthCommandOutput>;
   onlyHttpBearerAuth(
     args: OnlyHttpBearerAuthCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<OnlyHttpBearerAuthCommandOutput>;
   onlyHttpBearerAuth(
     args: OnlyHttpBearerAuthCommandInput,
-    cb: (err: any, data?: OnlyHttpBearerAuthCommandOutput) => void
+    cb: (err: any, data?: OnlyHttpBearerAuthCommandOutput) => void,
   ): void;
   onlyHttpBearerAuth(
     args: OnlyHttpBearerAuthCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: OnlyHttpBearerAuthCommandOutput) => void
+    cb: (err: any, data?: OnlyHttpBearerAuthCommandOutput) => void,
   ): void;
 
   /**
@@ -202,16 +202,16 @@ export interface Weather {
   onlyHttpBearerAuthOptional(): Promise<OnlyHttpBearerAuthOptionalCommandOutput>;
   onlyHttpBearerAuthOptional(
     args: OnlyHttpBearerAuthOptionalCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<OnlyHttpBearerAuthOptionalCommandOutput>;
   onlyHttpBearerAuthOptional(
     args: OnlyHttpBearerAuthOptionalCommandInput,
-    cb: (err: any, data?: OnlyHttpBearerAuthOptionalCommandOutput) => void
+    cb: (err: any, data?: OnlyHttpBearerAuthOptionalCommandOutput) => void,
   ): void;
   onlyHttpBearerAuthOptional(
     args: OnlyHttpBearerAuthOptionalCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: OnlyHttpBearerAuthOptionalCommandOutput) => void
+    cb: (err: any, data?: OnlyHttpBearerAuthOptionalCommandOutput) => void,
   ): void;
 
   /**
@@ -223,7 +223,7 @@ export interface Weather {
   onlySigv4Auth(
     args: OnlySigv4AuthCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: OnlySigv4AuthCommandOutput) => void
+    cb: (err: any, data?: OnlySigv4AuthCommandOutput) => void,
   ): void;
 
   /**
@@ -232,16 +232,16 @@ export interface Weather {
   onlySigv4AuthOptional(): Promise<OnlySigv4AuthOptionalCommandOutput>;
   onlySigv4AuthOptional(
     args: OnlySigv4AuthOptionalCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<OnlySigv4AuthOptionalCommandOutput>;
   onlySigv4AuthOptional(
     args: OnlySigv4AuthOptionalCommandInput,
-    cb: (err: any, data?: OnlySigv4AuthOptionalCommandOutput) => void
+    cb: (err: any, data?: OnlySigv4AuthOptionalCommandOutput) => void,
   ): void;
   onlySigv4AuthOptional(
     args: OnlySigv4AuthOptionalCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: OnlySigv4AuthOptionalCommandOutput) => void
+    cb: (err: any, data?: OnlySigv4AuthOptionalCommandOutput) => void,
   ): void;
 
   /**
@@ -253,7 +253,7 @@ export interface Weather {
   sameAsService(
     args: SameAsServiceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: SameAsServiceCommandOutput) => void
+    cb: (err: any, data?: SameAsServiceCommandOutput) => void,
   ): void;
 }
 

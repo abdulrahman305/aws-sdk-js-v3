@@ -409,16 +409,16 @@ export interface GuardDuty {
    */
   acceptAdministratorInvitation(
     args: AcceptAdministratorInvitationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AcceptAdministratorInvitationCommandOutput>;
   acceptAdministratorInvitation(
     args: AcceptAdministratorInvitationCommandInput,
-    cb: (err: any, data?: AcceptAdministratorInvitationCommandOutput) => void
+    cb: (err: any, data?: AcceptAdministratorInvitationCommandOutput) => void,
   ): void;
   acceptAdministratorInvitation(
     args: AcceptAdministratorInvitationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AcceptAdministratorInvitationCommandOutput) => void
+    cb: (err: any, data?: AcceptAdministratorInvitationCommandOutput) => void,
   ): void;
 
   /**
@@ -426,16 +426,16 @@ export interface GuardDuty {
    */
   acceptInvitation(
     args: AcceptInvitationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<AcceptInvitationCommandOutput>;
   acceptInvitation(
     args: AcceptInvitationCommandInput,
-    cb: (err: any, data?: AcceptInvitationCommandOutput) => void
+    cb: (err: any, data?: AcceptInvitationCommandOutput) => void,
   ): void;
   acceptInvitation(
     args: AcceptInvitationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: AcceptInvitationCommandOutput) => void
+    cb: (err: any, data?: AcceptInvitationCommandOutput) => void,
   ): void;
 
   /**
@@ -443,13 +443,13 @@ export interface GuardDuty {
    */
   archiveFindings(
     args: ArchiveFindingsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ArchiveFindingsCommandOutput>;
   archiveFindings(args: ArchiveFindingsCommandInput, cb: (err: any, data?: ArchiveFindingsCommandOutput) => void): void;
   archiveFindings(
     args: ArchiveFindingsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ArchiveFindingsCommandOutput) => void
+    cb: (err: any, data?: ArchiveFindingsCommandOutput) => void,
   ): void;
 
   /**
@@ -457,13 +457,13 @@ export interface GuardDuty {
    */
   createDetector(
     args: CreateDetectorCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateDetectorCommandOutput>;
   createDetector(args: CreateDetectorCommandInput, cb: (err: any, data?: CreateDetectorCommandOutput) => void): void;
   createDetector(
     args: CreateDetectorCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateDetectorCommandOutput) => void
+    cb: (err: any, data?: CreateDetectorCommandOutput) => void,
   ): void;
 
   /**
@@ -474,7 +474,7 @@ export interface GuardDuty {
   createFilter(
     args: CreateFilterCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateFilterCommandOutput) => void
+    cb: (err: any, data?: CreateFilterCommandOutput) => void,
   ): void;
 
   /**
@@ -485,7 +485,7 @@ export interface GuardDuty {
   createIPSet(
     args: CreateIPSetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateIPSetCommandOutput) => void
+    cb: (err: any, data?: CreateIPSetCommandOutput) => void,
   ): void;
 
   /**
@@ -493,16 +493,16 @@ export interface GuardDuty {
    */
   createMalwareProtectionPlan(
     args: CreateMalwareProtectionPlanCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateMalwareProtectionPlanCommandOutput>;
   createMalwareProtectionPlan(
     args: CreateMalwareProtectionPlanCommandInput,
-    cb: (err: any, data?: CreateMalwareProtectionPlanCommandOutput) => void
+    cb: (err: any, data?: CreateMalwareProtectionPlanCommandOutput) => void,
   ): void;
   createMalwareProtectionPlan(
     args: CreateMalwareProtectionPlanCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateMalwareProtectionPlanCommandOutput) => void
+    cb: (err: any, data?: CreateMalwareProtectionPlanCommandOutput) => void,
   ): void;
 
   /**
@@ -513,7 +513,7 @@ export interface GuardDuty {
   createMembers(
     args: CreateMembersCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateMembersCommandOutput) => void
+    cb: (err: any, data?: CreateMembersCommandOutput) => void,
   ): void;
 
   /**
@@ -521,16 +521,16 @@ export interface GuardDuty {
    */
   createPublishingDestination(
     args: CreatePublishingDestinationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreatePublishingDestinationCommandOutput>;
   createPublishingDestination(
     args: CreatePublishingDestinationCommandInput,
-    cb: (err: any, data?: CreatePublishingDestinationCommandOutput) => void
+    cb: (err: any, data?: CreatePublishingDestinationCommandOutput) => void,
   ): void;
   createPublishingDestination(
     args: CreatePublishingDestinationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreatePublishingDestinationCommandOutput) => void
+    cb: (err: any, data?: CreatePublishingDestinationCommandOutput) => void,
   ): void;
 
   /**
@@ -538,16 +538,16 @@ export interface GuardDuty {
    */
   createSampleFindings(
     args: CreateSampleFindingsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateSampleFindingsCommandOutput>;
   createSampleFindings(
     args: CreateSampleFindingsCommandInput,
-    cb: (err: any, data?: CreateSampleFindingsCommandOutput) => void
+    cb: (err: any, data?: CreateSampleFindingsCommandOutput) => void,
   ): void;
   createSampleFindings(
     args: CreateSampleFindingsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateSampleFindingsCommandOutput) => void
+    cb: (err: any, data?: CreateSampleFindingsCommandOutput) => void,
   ): void;
 
   /**
@@ -555,16 +555,16 @@ export interface GuardDuty {
    */
   createThreatIntelSet(
     args: CreateThreatIntelSetCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<CreateThreatIntelSetCommandOutput>;
   createThreatIntelSet(
     args: CreateThreatIntelSetCommandInput,
-    cb: (err: any, data?: CreateThreatIntelSetCommandOutput) => void
+    cb: (err: any, data?: CreateThreatIntelSetCommandOutput) => void,
   ): void;
   createThreatIntelSet(
     args: CreateThreatIntelSetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: CreateThreatIntelSetCommandOutput) => void
+    cb: (err: any, data?: CreateThreatIntelSetCommandOutput) => void,
   ): void;
 
   /**
@@ -572,16 +572,16 @@ export interface GuardDuty {
    */
   declineInvitations(
     args: DeclineInvitationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeclineInvitationsCommandOutput>;
   declineInvitations(
     args: DeclineInvitationsCommandInput,
-    cb: (err: any, data?: DeclineInvitationsCommandOutput) => void
+    cb: (err: any, data?: DeclineInvitationsCommandOutput) => void,
   ): void;
   declineInvitations(
     args: DeclineInvitationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeclineInvitationsCommandOutput) => void
+    cb: (err: any, data?: DeclineInvitationsCommandOutput) => void,
   ): void;
 
   /**
@@ -589,13 +589,13 @@ export interface GuardDuty {
    */
   deleteDetector(
     args: DeleteDetectorCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteDetectorCommandOutput>;
   deleteDetector(args: DeleteDetectorCommandInput, cb: (err: any, data?: DeleteDetectorCommandOutput) => void): void;
   deleteDetector(
     args: DeleteDetectorCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteDetectorCommandOutput) => void
+    cb: (err: any, data?: DeleteDetectorCommandOutput) => void,
   ): void;
 
   /**
@@ -606,7 +606,7 @@ export interface GuardDuty {
   deleteFilter(
     args: DeleteFilterCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteFilterCommandOutput) => void
+    cb: (err: any, data?: DeleteFilterCommandOutput) => void,
   ): void;
 
   /**
@@ -614,16 +614,16 @@ export interface GuardDuty {
    */
   deleteInvitations(
     args: DeleteInvitationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteInvitationsCommandOutput>;
   deleteInvitations(
     args: DeleteInvitationsCommandInput,
-    cb: (err: any, data?: DeleteInvitationsCommandOutput) => void
+    cb: (err: any, data?: DeleteInvitationsCommandOutput) => void,
   ): void;
   deleteInvitations(
     args: DeleteInvitationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteInvitationsCommandOutput) => void
+    cb: (err: any, data?: DeleteInvitationsCommandOutput) => void,
   ): void;
 
   /**
@@ -634,7 +634,7 @@ export interface GuardDuty {
   deleteIPSet(
     args: DeleteIPSetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteIPSetCommandOutput) => void
+    cb: (err: any, data?: DeleteIPSetCommandOutput) => void,
   ): void;
 
   /**
@@ -642,16 +642,16 @@ export interface GuardDuty {
    */
   deleteMalwareProtectionPlan(
     args: DeleteMalwareProtectionPlanCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteMalwareProtectionPlanCommandOutput>;
   deleteMalwareProtectionPlan(
     args: DeleteMalwareProtectionPlanCommandInput,
-    cb: (err: any, data?: DeleteMalwareProtectionPlanCommandOutput) => void
+    cb: (err: any, data?: DeleteMalwareProtectionPlanCommandOutput) => void,
   ): void;
   deleteMalwareProtectionPlan(
     args: DeleteMalwareProtectionPlanCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteMalwareProtectionPlanCommandOutput) => void
+    cb: (err: any, data?: DeleteMalwareProtectionPlanCommandOutput) => void,
   ): void;
 
   /**
@@ -662,7 +662,7 @@ export interface GuardDuty {
   deleteMembers(
     args: DeleteMembersCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteMembersCommandOutput) => void
+    cb: (err: any, data?: DeleteMembersCommandOutput) => void,
   ): void;
 
   /**
@@ -670,16 +670,16 @@ export interface GuardDuty {
    */
   deletePublishingDestination(
     args: DeletePublishingDestinationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeletePublishingDestinationCommandOutput>;
   deletePublishingDestination(
     args: DeletePublishingDestinationCommandInput,
-    cb: (err: any, data?: DeletePublishingDestinationCommandOutput) => void
+    cb: (err: any, data?: DeletePublishingDestinationCommandOutput) => void,
   ): void;
   deletePublishingDestination(
     args: DeletePublishingDestinationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeletePublishingDestinationCommandOutput) => void
+    cb: (err: any, data?: DeletePublishingDestinationCommandOutput) => void,
   ): void;
 
   /**
@@ -687,16 +687,16 @@ export interface GuardDuty {
    */
   deleteThreatIntelSet(
     args: DeleteThreatIntelSetCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DeleteThreatIntelSetCommandOutput>;
   deleteThreatIntelSet(
     args: DeleteThreatIntelSetCommandInput,
-    cb: (err: any, data?: DeleteThreatIntelSetCommandOutput) => void
+    cb: (err: any, data?: DeleteThreatIntelSetCommandOutput) => void,
   ): void;
   deleteThreatIntelSet(
     args: DeleteThreatIntelSetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DeleteThreatIntelSetCommandOutput) => void
+    cb: (err: any, data?: DeleteThreatIntelSetCommandOutput) => void,
   ): void;
 
   /**
@@ -704,16 +704,16 @@ export interface GuardDuty {
    */
   describeMalwareScans(
     args: DescribeMalwareScansCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeMalwareScansCommandOutput>;
   describeMalwareScans(
     args: DescribeMalwareScansCommandInput,
-    cb: (err: any, data?: DescribeMalwareScansCommandOutput) => void
+    cb: (err: any, data?: DescribeMalwareScansCommandOutput) => void,
   ): void;
   describeMalwareScans(
     args: DescribeMalwareScansCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeMalwareScansCommandOutput) => void
+    cb: (err: any, data?: DescribeMalwareScansCommandOutput) => void,
   ): void;
 
   /**
@@ -721,16 +721,16 @@ export interface GuardDuty {
    */
   describeOrganizationConfiguration(
     args: DescribeOrganizationConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribeOrganizationConfigurationCommandOutput>;
   describeOrganizationConfiguration(
     args: DescribeOrganizationConfigurationCommandInput,
-    cb: (err: any, data?: DescribeOrganizationConfigurationCommandOutput) => void
+    cb: (err: any, data?: DescribeOrganizationConfigurationCommandOutput) => void,
   ): void;
   describeOrganizationConfiguration(
     args: DescribeOrganizationConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribeOrganizationConfigurationCommandOutput) => void
+    cb: (err: any, data?: DescribeOrganizationConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -738,16 +738,16 @@ export interface GuardDuty {
    */
   describePublishingDestination(
     args: DescribePublishingDestinationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DescribePublishingDestinationCommandOutput>;
   describePublishingDestination(
     args: DescribePublishingDestinationCommandInput,
-    cb: (err: any, data?: DescribePublishingDestinationCommandOutput) => void
+    cb: (err: any, data?: DescribePublishingDestinationCommandOutput) => void,
   ): void;
   describePublishingDestination(
     args: DescribePublishingDestinationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DescribePublishingDestinationCommandOutput) => void
+    cb: (err: any, data?: DescribePublishingDestinationCommandOutput) => void,
   ): void;
 
   /**
@@ -755,16 +755,16 @@ export interface GuardDuty {
    */
   disableOrganizationAdminAccount(
     args: DisableOrganizationAdminAccountCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DisableOrganizationAdminAccountCommandOutput>;
   disableOrganizationAdminAccount(
     args: DisableOrganizationAdminAccountCommandInput,
-    cb: (err: any, data?: DisableOrganizationAdminAccountCommandOutput) => void
+    cb: (err: any, data?: DisableOrganizationAdminAccountCommandOutput) => void,
   ): void;
   disableOrganizationAdminAccount(
     args: DisableOrganizationAdminAccountCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DisableOrganizationAdminAccountCommandOutput) => void
+    cb: (err: any, data?: DisableOrganizationAdminAccountCommandOutput) => void,
   ): void;
 
   /**
@@ -772,16 +772,16 @@ export interface GuardDuty {
    */
   disassociateFromAdministratorAccount(
     args: DisassociateFromAdministratorAccountCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DisassociateFromAdministratorAccountCommandOutput>;
   disassociateFromAdministratorAccount(
     args: DisassociateFromAdministratorAccountCommandInput,
-    cb: (err: any, data?: DisassociateFromAdministratorAccountCommandOutput) => void
+    cb: (err: any, data?: DisassociateFromAdministratorAccountCommandOutput) => void,
   ): void;
   disassociateFromAdministratorAccount(
     args: DisassociateFromAdministratorAccountCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DisassociateFromAdministratorAccountCommandOutput) => void
+    cb: (err: any, data?: DisassociateFromAdministratorAccountCommandOutput) => void,
   ): void;
 
   /**
@@ -789,16 +789,16 @@ export interface GuardDuty {
    */
   disassociateFromMasterAccount(
     args: DisassociateFromMasterAccountCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DisassociateFromMasterAccountCommandOutput>;
   disassociateFromMasterAccount(
     args: DisassociateFromMasterAccountCommandInput,
-    cb: (err: any, data?: DisassociateFromMasterAccountCommandOutput) => void
+    cb: (err: any, data?: DisassociateFromMasterAccountCommandOutput) => void,
   ): void;
   disassociateFromMasterAccount(
     args: DisassociateFromMasterAccountCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DisassociateFromMasterAccountCommandOutput) => void
+    cb: (err: any, data?: DisassociateFromMasterAccountCommandOutput) => void,
   ): void;
 
   /**
@@ -806,16 +806,16 @@ export interface GuardDuty {
    */
   disassociateMembers(
     args: DisassociateMembersCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<DisassociateMembersCommandOutput>;
   disassociateMembers(
     args: DisassociateMembersCommandInput,
-    cb: (err: any, data?: DisassociateMembersCommandOutput) => void
+    cb: (err: any, data?: DisassociateMembersCommandOutput) => void,
   ): void;
   disassociateMembers(
     args: DisassociateMembersCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: DisassociateMembersCommandOutput) => void
+    cb: (err: any, data?: DisassociateMembersCommandOutput) => void,
   ): void;
 
   /**
@@ -823,16 +823,16 @@ export interface GuardDuty {
    */
   enableOrganizationAdminAccount(
     args: EnableOrganizationAdminAccountCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<EnableOrganizationAdminAccountCommandOutput>;
   enableOrganizationAdminAccount(
     args: EnableOrganizationAdminAccountCommandInput,
-    cb: (err: any, data?: EnableOrganizationAdminAccountCommandOutput) => void
+    cb: (err: any, data?: EnableOrganizationAdminAccountCommandOutput) => void,
   ): void;
   enableOrganizationAdminAccount(
     args: EnableOrganizationAdminAccountCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: EnableOrganizationAdminAccountCommandOutput) => void
+    cb: (err: any, data?: EnableOrganizationAdminAccountCommandOutput) => void,
   ): void;
 
   /**
@@ -840,16 +840,16 @@ export interface GuardDuty {
    */
   getAdministratorAccount(
     args: GetAdministratorAccountCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetAdministratorAccountCommandOutput>;
   getAdministratorAccount(
     args: GetAdministratorAccountCommandInput,
-    cb: (err: any, data?: GetAdministratorAccountCommandOutput) => void
+    cb: (err: any, data?: GetAdministratorAccountCommandOutput) => void,
   ): void;
   getAdministratorAccount(
     args: GetAdministratorAccountCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetAdministratorAccountCommandOutput) => void
+    cb: (err: any, data?: GetAdministratorAccountCommandOutput) => void,
   ): void;
 
   /**
@@ -857,16 +857,16 @@ export interface GuardDuty {
    */
   getCoverageStatistics(
     args: GetCoverageStatisticsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetCoverageStatisticsCommandOutput>;
   getCoverageStatistics(
     args: GetCoverageStatisticsCommandInput,
-    cb: (err: any, data?: GetCoverageStatisticsCommandOutput) => void
+    cb: (err: any, data?: GetCoverageStatisticsCommandOutput) => void,
   ): void;
   getCoverageStatistics(
     args: GetCoverageStatisticsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetCoverageStatisticsCommandOutput) => void
+    cb: (err: any, data?: GetCoverageStatisticsCommandOutput) => void,
   ): void;
 
   /**
@@ -877,7 +877,7 @@ export interface GuardDuty {
   getDetector(
     args: GetDetectorCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetDetectorCommandOutput) => void
+    cb: (err: any, data?: GetDetectorCommandOutput) => void,
   ): void;
 
   /**
@@ -888,7 +888,7 @@ export interface GuardDuty {
   getFilter(
     args: GetFilterCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetFilterCommandOutput) => void
+    cb: (err: any, data?: GetFilterCommandOutput) => void,
   ): void;
 
   /**
@@ -899,7 +899,7 @@ export interface GuardDuty {
   getFindings(
     args: GetFindingsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetFindingsCommandOutput) => void
+    cb: (err: any, data?: GetFindingsCommandOutput) => void,
   ): void;
 
   /**
@@ -907,16 +907,16 @@ export interface GuardDuty {
    */
   getFindingsStatistics(
     args: GetFindingsStatisticsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetFindingsStatisticsCommandOutput>;
   getFindingsStatistics(
     args: GetFindingsStatisticsCommandInput,
-    cb: (err: any, data?: GetFindingsStatisticsCommandOutput) => void
+    cb: (err: any, data?: GetFindingsStatisticsCommandOutput) => void,
   ): void;
   getFindingsStatistics(
     args: GetFindingsStatisticsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetFindingsStatisticsCommandOutput) => void
+    cb: (err: any, data?: GetFindingsStatisticsCommandOutput) => void,
   ): void;
 
   /**
@@ -925,16 +925,16 @@ export interface GuardDuty {
   getInvitationsCount(): Promise<GetInvitationsCountCommandOutput>;
   getInvitationsCount(
     args: GetInvitationsCountCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetInvitationsCountCommandOutput>;
   getInvitationsCount(
     args: GetInvitationsCountCommandInput,
-    cb: (err: any, data?: GetInvitationsCountCommandOutput) => void
+    cb: (err: any, data?: GetInvitationsCountCommandOutput) => void,
   ): void;
   getInvitationsCount(
     args: GetInvitationsCountCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetInvitationsCountCommandOutput) => void
+    cb: (err: any, data?: GetInvitationsCountCommandOutput) => void,
   ): void;
 
   /**
@@ -945,7 +945,7 @@ export interface GuardDuty {
   getIPSet(
     args: GetIPSetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetIPSetCommandOutput) => void
+    cb: (err: any, data?: GetIPSetCommandOutput) => void,
   ): void;
 
   /**
@@ -953,16 +953,16 @@ export interface GuardDuty {
    */
   getMalwareProtectionPlan(
     args: GetMalwareProtectionPlanCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetMalwareProtectionPlanCommandOutput>;
   getMalwareProtectionPlan(
     args: GetMalwareProtectionPlanCommandInput,
-    cb: (err: any, data?: GetMalwareProtectionPlanCommandOutput) => void
+    cb: (err: any, data?: GetMalwareProtectionPlanCommandOutput) => void,
   ): void;
   getMalwareProtectionPlan(
     args: GetMalwareProtectionPlanCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetMalwareProtectionPlanCommandOutput) => void
+    cb: (err: any, data?: GetMalwareProtectionPlanCommandOutput) => void,
   ): void;
 
   /**
@@ -970,16 +970,16 @@ export interface GuardDuty {
    */
   getMalwareScanSettings(
     args: GetMalwareScanSettingsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetMalwareScanSettingsCommandOutput>;
   getMalwareScanSettings(
     args: GetMalwareScanSettingsCommandInput,
-    cb: (err: any, data?: GetMalwareScanSettingsCommandOutput) => void
+    cb: (err: any, data?: GetMalwareScanSettingsCommandOutput) => void,
   ): void;
   getMalwareScanSettings(
     args: GetMalwareScanSettingsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetMalwareScanSettingsCommandOutput) => void
+    cb: (err: any, data?: GetMalwareScanSettingsCommandOutput) => void,
   ): void;
 
   /**
@@ -987,16 +987,16 @@ export interface GuardDuty {
    */
   getMasterAccount(
     args: GetMasterAccountCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetMasterAccountCommandOutput>;
   getMasterAccount(
     args: GetMasterAccountCommandInput,
-    cb: (err: any, data?: GetMasterAccountCommandOutput) => void
+    cb: (err: any, data?: GetMasterAccountCommandOutput) => void,
   ): void;
   getMasterAccount(
     args: GetMasterAccountCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetMasterAccountCommandOutput) => void
+    cb: (err: any, data?: GetMasterAccountCommandOutput) => void,
   ): void;
 
   /**
@@ -1004,16 +1004,16 @@ export interface GuardDuty {
    */
   getMemberDetectors(
     args: GetMemberDetectorsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetMemberDetectorsCommandOutput>;
   getMemberDetectors(
     args: GetMemberDetectorsCommandInput,
-    cb: (err: any, data?: GetMemberDetectorsCommandOutput) => void
+    cb: (err: any, data?: GetMemberDetectorsCommandOutput) => void,
   ): void;
   getMemberDetectors(
     args: GetMemberDetectorsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetMemberDetectorsCommandOutput) => void
+    cb: (err: any, data?: GetMemberDetectorsCommandOutput) => void,
   ): void;
 
   /**
@@ -1024,7 +1024,7 @@ export interface GuardDuty {
   getMembers(
     args: GetMembersCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetMembersCommandOutput) => void
+    cb: (err: any, data?: GetMembersCommandOutput) => void,
   ): void;
 
   /**
@@ -1033,16 +1033,16 @@ export interface GuardDuty {
   getOrganizationStatistics(): Promise<GetOrganizationStatisticsCommandOutput>;
   getOrganizationStatistics(
     args: GetOrganizationStatisticsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetOrganizationStatisticsCommandOutput>;
   getOrganizationStatistics(
     args: GetOrganizationStatisticsCommandInput,
-    cb: (err: any, data?: GetOrganizationStatisticsCommandOutput) => void
+    cb: (err: any, data?: GetOrganizationStatisticsCommandOutput) => void,
   ): void;
   getOrganizationStatistics(
     args: GetOrganizationStatisticsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetOrganizationStatisticsCommandOutput) => void
+    cb: (err: any, data?: GetOrganizationStatisticsCommandOutput) => void,
   ): void;
 
   /**
@@ -1050,16 +1050,16 @@ export interface GuardDuty {
    */
   getRemainingFreeTrialDays(
     args: GetRemainingFreeTrialDaysCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetRemainingFreeTrialDaysCommandOutput>;
   getRemainingFreeTrialDays(
     args: GetRemainingFreeTrialDaysCommandInput,
-    cb: (err: any, data?: GetRemainingFreeTrialDaysCommandOutput) => void
+    cb: (err: any, data?: GetRemainingFreeTrialDaysCommandOutput) => void,
   ): void;
   getRemainingFreeTrialDays(
     args: GetRemainingFreeTrialDaysCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetRemainingFreeTrialDaysCommandOutput) => void
+    cb: (err: any, data?: GetRemainingFreeTrialDaysCommandOutput) => void,
   ): void;
 
   /**
@@ -1067,16 +1067,16 @@ export interface GuardDuty {
    */
   getThreatIntelSet(
     args: GetThreatIntelSetCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetThreatIntelSetCommandOutput>;
   getThreatIntelSet(
     args: GetThreatIntelSetCommandInput,
-    cb: (err: any, data?: GetThreatIntelSetCommandOutput) => void
+    cb: (err: any, data?: GetThreatIntelSetCommandOutput) => void,
   ): void;
   getThreatIntelSet(
     args: GetThreatIntelSetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetThreatIntelSetCommandOutput) => void
+    cb: (err: any, data?: GetThreatIntelSetCommandOutput) => void,
   ): void;
 
   /**
@@ -1084,16 +1084,16 @@ export interface GuardDuty {
    */
   getUsageStatistics(
     args: GetUsageStatisticsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<GetUsageStatisticsCommandOutput>;
   getUsageStatistics(
     args: GetUsageStatisticsCommandInput,
-    cb: (err: any, data?: GetUsageStatisticsCommandOutput) => void
+    cb: (err: any, data?: GetUsageStatisticsCommandOutput) => void,
   ): void;
   getUsageStatistics(
     args: GetUsageStatisticsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: GetUsageStatisticsCommandOutput) => void
+    cb: (err: any, data?: GetUsageStatisticsCommandOutput) => void,
   ): void;
 
   /**
@@ -1104,7 +1104,7 @@ export interface GuardDuty {
   inviteMembers(
     args: InviteMembersCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: InviteMembersCommandOutput) => void
+    cb: (err: any, data?: InviteMembersCommandOutput) => void,
   ): void;
 
   /**
@@ -1115,7 +1115,7 @@ export interface GuardDuty {
   listCoverage(
     args: ListCoverageCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListCoverageCommandOutput) => void
+    cb: (err: any, data?: ListCoverageCommandOutput) => void,
   ): void;
 
   /**
@@ -1127,7 +1127,7 @@ export interface GuardDuty {
   listDetectors(
     args: ListDetectorsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListDetectorsCommandOutput) => void
+    cb: (err: any, data?: ListDetectorsCommandOutput) => void,
   ): void;
 
   /**
@@ -1138,7 +1138,7 @@ export interface GuardDuty {
   listFilters(
     args: ListFiltersCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListFiltersCommandOutput) => void
+    cb: (err: any, data?: ListFiltersCommandOutput) => void,
   ): void;
 
   /**
@@ -1149,7 +1149,7 @@ export interface GuardDuty {
   listFindings(
     args: ListFindingsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListFindingsCommandOutput) => void
+    cb: (err: any, data?: ListFindingsCommandOutput) => void,
   ): void;
 
   /**
@@ -1158,13 +1158,13 @@ export interface GuardDuty {
   listInvitations(): Promise<ListInvitationsCommandOutput>;
   listInvitations(
     args: ListInvitationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListInvitationsCommandOutput>;
   listInvitations(args: ListInvitationsCommandInput, cb: (err: any, data?: ListInvitationsCommandOutput) => void): void;
   listInvitations(
     args: ListInvitationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListInvitationsCommandOutput) => void
+    cb: (err: any, data?: ListInvitationsCommandOutput) => void,
   ): void;
 
   /**
@@ -1175,7 +1175,7 @@ export interface GuardDuty {
   listIPSets(
     args: ListIPSetsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListIPSetsCommandOutput) => void
+    cb: (err: any, data?: ListIPSetsCommandOutput) => void,
   ): void;
 
   /**
@@ -1184,16 +1184,16 @@ export interface GuardDuty {
   listMalwareProtectionPlans(): Promise<ListMalwareProtectionPlansCommandOutput>;
   listMalwareProtectionPlans(
     args: ListMalwareProtectionPlansCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListMalwareProtectionPlansCommandOutput>;
   listMalwareProtectionPlans(
     args: ListMalwareProtectionPlansCommandInput,
-    cb: (err: any, data?: ListMalwareProtectionPlansCommandOutput) => void
+    cb: (err: any, data?: ListMalwareProtectionPlansCommandOutput) => void,
   ): void;
   listMalwareProtectionPlans(
     args: ListMalwareProtectionPlansCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListMalwareProtectionPlansCommandOutput) => void
+    cb: (err: any, data?: ListMalwareProtectionPlansCommandOutput) => void,
   ): void;
 
   /**
@@ -1204,7 +1204,7 @@ export interface GuardDuty {
   listMembers(
     args: ListMembersCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListMembersCommandOutput) => void
+    cb: (err: any, data?: ListMembersCommandOutput) => void,
   ): void;
 
   /**
@@ -1213,16 +1213,16 @@ export interface GuardDuty {
   listOrganizationAdminAccounts(): Promise<ListOrganizationAdminAccountsCommandOutput>;
   listOrganizationAdminAccounts(
     args: ListOrganizationAdminAccountsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListOrganizationAdminAccountsCommandOutput>;
   listOrganizationAdminAccounts(
     args: ListOrganizationAdminAccountsCommandInput,
-    cb: (err: any, data?: ListOrganizationAdminAccountsCommandOutput) => void
+    cb: (err: any, data?: ListOrganizationAdminAccountsCommandOutput) => void,
   ): void;
   listOrganizationAdminAccounts(
     args: ListOrganizationAdminAccountsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListOrganizationAdminAccountsCommandOutput) => void
+    cb: (err: any, data?: ListOrganizationAdminAccountsCommandOutput) => void,
   ): void;
 
   /**
@@ -1230,16 +1230,16 @@ export interface GuardDuty {
    */
   listPublishingDestinations(
     args: ListPublishingDestinationsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListPublishingDestinationsCommandOutput>;
   listPublishingDestinations(
     args: ListPublishingDestinationsCommandInput,
-    cb: (err: any, data?: ListPublishingDestinationsCommandOutput) => void
+    cb: (err: any, data?: ListPublishingDestinationsCommandOutput) => void,
   ): void;
   listPublishingDestinations(
     args: ListPublishingDestinationsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListPublishingDestinationsCommandOutput) => void
+    cb: (err: any, data?: ListPublishingDestinationsCommandOutput) => void,
   ): void;
 
   /**
@@ -1247,16 +1247,16 @@ export interface GuardDuty {
    */
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListTagsForResourceCommandOutput>;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
   listTagsForResource(
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+    cb: (err: any, data?: ListTagsForResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -1264,16 +1264,16 @@ export interface GuardDuty {
    */
   listThreatIntelSets(
     args: ListThreatIntelSetsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<ListThreatIntelSetsCommandOutput>;
   listThreatIntelSets(
     args: ListThreatIntelSetsCommandInput,
-    cb: (err: any, data?: ListThreatIntelSetsCommandOutput) => void
+    cb: (err: any, data?: ListThreatIntelSetsCommandOutput) => void,
   ): void;
   listThreatIntelSets(
     args: ListThreatIntelSetsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: ListThreatIntelSetsCommandOutput) => void
+    cb: (err: any, data?: ListThreatIntelSetsCommandOutput) => void,
   ): void;
 
   /**
@@ -1281,16 +1281,16 @@ export interface GuardDuty {
    */
   startMalwareScan(
     args: StartMalwareScanCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartMalwareScanCommandOutput>;
   startMalwareScan(
     args: StartMalwareScanCommandInput,
-    cb: (err: any, data?: StartMalwareScanCommandOutput) => void
+    cb: (err: any, data?: StartMalwareScanCommandOutput) => void,
   ): void;
   startMalwareScan(
     args: StartMalwareScanCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartMalwareScanCommandOutput) => void
+    cb: (err: any, data?: StartMalwareScanCommandOutput) => void,
   ): void;
 
   /**
@@ -1298,16 +1298,16 @@ export interface GuardDuty {
    */
   startMonitoringMembers(
     args: StartMonitoringMembersCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StartMonitoringMembersCommandOutput>;
   startMonitoringMembers(
     args: StartMonitoringMembersCommandInput,
-    cb: (err: any, data?: StartMonitoringMembersCommandOutput) => void
+    cb: (err: any, data?: StartMonitoringMembersCommandOutput) => void,
   ): void;
   startMonitoringMembers(
     args: StartMonitoringMembersCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StartMonitoringMembersCommandOutput) => void
+    cb: (err: any, data?: StartMonitoringMembersCommandOutput) => void,
   ): void;
 
   /**
@@ -1315,16 +1315,16 @@ export interface GuardDuty {
    */
   stopMonitoringMembers(
     args: StopMonitoringMembersCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<StopMonitoringMembersCommandOutput>;
   stopMonitoringMembers(
     args: StopMonitoringMembersCommandInput,
-    cb: (err: any, data?: StopMonitoringMembersCommandOutput) => void
+    cb: (err: any, data?: StopMonitoringMembersCommandOutput) => void,
   ): void;
   stopMonitoringMembers(
     args: StopMonitoringMembersCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: StopMonitoringMembersCommandOutput) => void
+    cb: (err: any, data?: StopMonitoringMembersCommandOutput) => void,
   ): void;
 
   /**
@@ -1335,7 +1335,7 @@ export interface GuardDuty {
   tagResource(
     args: TagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: TagResourceCommandOutput) => void
+    cb: (err: any, data?: TagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -1343,16 +1343,16 @@ export interface GuardDuty {
    */
   unarchiveFindings(
     args: UnarchiveFindingsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UnarchiveFindingsCommandOutput>;
   unarchiveFindings(
     args: UnarchiveFindingsCommandInput,
-    cb: (err: any, data?: UnarchiveFindingsCommandOutput) => void
+    cb: (err: any, data?: UnarchiveFindingsCommandOutput) => void,
   ): void;
   unarchiveFindings(
     args: UnarchiveFindingsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UnarchiveFindingsCommandOutput) => void
+    cb: (err: any, data?: UnarchiveFindingsCommandOutput) => void,
   ): void;
 
   /**
@@ -1363,7 +1363,7 @@ export interface GuardDuty {
   untagResource(
     args: UntagResourceCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UntagResourceCommandOutput) => void
+    cb: (err: any, data?: UntagResourceCommandOutput) => void,
   ): void;
 
   /**
@@ -1371,13 +1371,13 @@ export interface GuardDuty {
    */
   updateDetector(
     args: UpdateDetectorCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateDetectorCommandOutput>;
   updateDetector(args: UpdateDetectorCommandInput, cb: (err: any, data?: UpdateDetectorCommandOutput) => void): void;
   updateDetector(
     args: UpdateDetectorCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateDetectorCommandOutput) => void
+    cb: (err: any, data?: UpdateDetectorCommandOutput) => void,
   ): void;
 
   /**
@@ -1388,7 +1388,7 @@ export interface GuardDuty {
   updateFilter(
     args: UpdateFilterCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateFilterCommandOutput) => void
+    cb: (err: any, data?: UpdateFilterCommandOutput) => void,
   ): void;
 
   /**
@@ -1396,16 +1396,16 @@ export interface GuardDuty {
    */
   updateFindingsFeedback(
     args: UpdateFindingsFeedbackCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateFindingsFeedbackCommandOutput>;
   updateFindingsFeedback(
     args: UpdateFindingsFeedbackCommandInput,
-    cb: (err: any, data?: UpdateFindingsFeedbackCommandOutput) => void
+    cb: (err: any, data?: UpdateFindingsFeedbackCommandOutput) => void,
   ): void;
   updateFindingsFeedback(
     args: UpdateFindingsFeedbackCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateFindingsFeedbackCommandOutput) => void
+    cb: (err: any, data?: UpdateFindingsFeedbackCommandOutput) => void,
   ): void;
 
   /**
@@ -1416,7 +1416,7 @@ export interface GuardDuty {
   updateIPSet(
     args: UpdateIPSetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateIPSetCommandOutput) => void
+    cb: (err: any, data?: UpdateIPSetCommandOutput) => void,
   ): void;
 
   /**
@@ -1424,16 +1424,16 @@ export interface GuardDuty {
    */
   updateMalwareProtectionPlan(
     args: UpdateMalwareProtectionPlanCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateMalwareProtectionPlanCommandOutput>;
   updateMalwareProtectionPlan(
     args: UpdateMalwareProtectionPlanCommandInput,
-    cb: (err: any, data?: UpdateMalwareProtectionPlanCommandOutput) => void
+    cb: (err: any, data?: UpdateMalwareProtectionPlanCommandOutput) => void,
   ): void;
   updateMalwareProtectionPlan(
     args: UpdateMalwareProtectionPlanCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateMalwareProtectionPlanCommandOutput) => void
+    cb: (err: any, data?: UpdateMalwareProtectionPlanCommandOutput) => void,
   ): void;
 
   /**
@@ -1441,16 +1441,16 @@ export interface GuardDuty {
    */
   updateMalwareScanSettings(
     args: UpdateMalwareScanSettingsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateMalwareScanSettingsCommandOutput>;
   updateMalwareScanSettings(
     args: UpdateMalwareScanSettingsCommandInput,
-    cb: (err: any, data?: UpdateMalwareScanSettingsCommandOutput) => void
+    cb: (err: any, data?: UpdateMalwareScanSettingsCommandOutput) => void,
   ): void;
   updateMalwareScanSettings(
     args: UpdateMalwareScanSettingsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateMalwareScanSettingsCommandOutput) => void
+    cb: (err: any, data?: UpdateMalwareScanSettingsCommandOutput) => void,
   ): void;
 
   /**
@@ -1458,16 +1458,16 @@ export interface GuardDuty {
    */
   updateMemberDetectors(
     args: UpdateMemberDetectorsCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateMemberDetectorsCommandOutput>;
   updateMemberDetectors(
     args: UpdateMemberDetectorsCommandInput,
-    cb: (err: any, data?: UpdateMemberDetectorsCommandOutput) => void
+    cb: (err: any, data?: UpdateMemberDetectorsCommandOutput) => void,
   ): void;
   updateMemberDetectors(
     args: UpdateMemberDetectorsCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateMemberDetectorsCommandOutput) => void
+    cb: (err: any, data?: UpdateMemberDetectorsCommandOutput) => void,
   ): void;
 
   /**
@@ -1475,16 +1475,16 @@ export interface GuardDuty {
    */
   updateOrganizationConfiguration(
     args: UpdateOrganizationConfigurationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateOrganizationConfigurationCommandOutput>;
   updateOrganizationConfiguration(
     args: UpdateOrganizationConfigurationCommandInput,
-    cb: (err: any, data?: UpdateOrganizationConfigurationCommandOutput) => void
+    cb: (err: any, data?: UpdateOrganizationConfigurationCommandOutput) => void,
   ): void;
   updateOrganizationConfiguration(
     args: UpdateOrganizationConfigurationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateOrganizationConfigurationCommandOutput) => void
+    cb: (err: any, data?: UpdateOrganizationConfigurationCommandOutput) => void,
   ): void;
 
   /**
@@ -1492,16 +1492,16 @@ export interface GuardDuty {
    */
   updatePublishingDestination(
     args: UpdatePublishingDestinationCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdatePublishingDestinationCommandOutput>;
   updatePublishingDestination(
     args: UpdatePublishingDestinationCommandInput,
-    cb: (err: any, data?: UpdatePublishingDestinationCommandOutput) => void
+    cb: (err: any, data?: UpdatePublishingDestinationCommandOutput) => void,
   ): void;
   updatePublishingDestination(
     args: UpdatePublishingDestinationCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdatePublishingDestinationCommandOutput) => void
+    cb: (err: any, data?: UpdatePublishingDestinationCommandOutput) => void,
   ): void;
 
   /**
@@ -1509,16 +1509,16 @@ export interface GuardDuty {
    */
   updateThreatIntelSet(
     args: UpdateThreatIntelSetCommandInput,
-    options?: __HttpHandlerOptions
+    options?: __HttpHandlerOptions,
   ): Promise<UpdateThreatIntelSetCommandOutput>;
   updateThreatIntelSet(
     args: UpdateThreatIntelSetCommandInput,
-    cb: (err: any, data?: UpdateThreatIntelSetCommandOutput) => void
+    cb: (err: any, data?: UpdateThreatIntelSetCommandOutput) => void,
   ): void;
   updateThreatIntelSet(
     args: UpdateThreatIntelSetCommandInput,
     options: __HttpHandlerOptions,
-    cb: (err: any, data?: UpdateThreatIntelSetCommandOutput) => void
+    cb: (err: any, data?: UpdateThreatIntelSetCommandOutput) => void,
   ): void;
 }
 

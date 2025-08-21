@@ -126,7 +126,7 @@ import {
  */
 export const se_CreateIdentityPoolCommand = async (
   input: CreateIdentityPoolCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateIdentityPool");
   let body: any;
@@ -139,7 +139,7 @@ export const se_CreateIdentityPoolCommand = async (
  */
 export const se_DeleteIdentitiesCommand = async (
   input: DeleteIdentitiesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteIdentities");
   let body: any;
@@ -152,7 +152,7 @@ export const se_DeleteIdentitiesCommand = async (
  */
 export const se_DeleteIdentityPoolCommand = async (
   input: DeleteIdentityPoolCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteIdentityPool");
   let body: any;
@@ -165,7 +165,7 @@ export const se_DeleteIdentityPoolCommand = async (
  */
 export const se_DescribeIdentityCommand = async (
   input: DescribeIdentityCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeIdentity");
   let body: any;
@@ -178,7 +178,7 @@ export const se_DescribeIdentityCommand = async (
  */
 export const se_DescribeIdentityPoolCommand = async (
   input: DescribeIdentityPoolCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeIdentityPool");
   let body: any;
@@ -191,7 +191,7 @@ export const se_DescribeIdentityPoolCommand = async (
  */
 export const se_GetCredentialsForIdentityCommand = async (
   input: GetCredentialsForIdentityCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetCredentialsForIdentity");
   let body: any;
@@ -214,7 +214,7 @@ export const se_GetIdCommand = async (input: GetIdCommandInput, context: __Serde
  */
 export const se_GetIdentityPoolRolesCommand = async (
   input: GetIdentityPoolRolesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetIdentityPoolRoles");
   let body: any;
@@ -227,7 +227,7 @@ export const se_GetIdentityPoolRolesCommand = async (
  */
 export const se_GetOpenIdTokenCommand = async (
   input: GetOpenIdTokenCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetOpenIdToken");
   let body: any;
@@ -240,7 +240,7 @@ export const se_GetOpenIdTokenCommand = async (
  */
 export const se_GetOpenIdTokenForDeveloperIdentityCommand = async (
   input: GetOpenIdTokenForDeveloperIdentityCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetOpenIdTokenForDeveloperIdentity");
   let body: any;
@@ -253,7 +253,7 @@ export const se_GetOpenIdTokenForDeveloperIdentityCommand = async (
  */
 export const se_GetPrincipalTagAttributeMapCommand = async (
   input: GetPrincipalTagAttributeMapCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetPrincipalTagAttributeMap");
   let body: any;
@@ -266,7 +266,7 @@ export const se_GetPrincipalTagAttributeMapCommand = async (
  */
 export const se_ListIdentitiesCommand = async (
   input: ListIdentitiesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListIdentities");
   let body: any;
@@ -279,7 +279,7 @@ export const se_ListIdentitiesCommand = async (
  */
 export const se_ListIdentityPoolsCommand = async (
   input: ListIdentityPoolsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListIdentityPools");
   let body: any;
@@ -292,7 +292,7 @@ export const se_ListIdentityPoolsCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListTagsForResource");
   let body: any;
@@ -305,7 +305,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_LookupDeveloperIdentityCommand = async (
   input: LookupDeveloperIdentityCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("LookupDeveloperIdentity");
   let body: any;
@@ -318,7 +318,7 @@ export const se_LookupDeveloperIdentityCommand = async (
  */
 export const se_MergeDeveloperIdentitiesCommand = async (
   input: MergeDeveloperIdentitiesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("MergeDeveloperIdentities");
   let body: any;
@@ -331,7 +331,7 @@ export const se_MergeDeveloperIdentitiesCommand = async (
  */
 export const se_SetIdentityPoolRolesCommand = async (
   input: SetIdentityPoolRolesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("SetIdentityPoolRoles");
   let body: any;
@@ -344,7 +344,7 @@ export const se_SetIdentityPoolRolesCommand = async (
  */
 export const se_SetPrincipalTagAttributeMapCommand = async (
   input: SetPrincipalTagAttributeMapCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("SetPrincipalTagAttributeMap");
   let body: any;
@@ -357,7 +357,7 @@ export const se_SetPrincipalTagAttributeMapCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("TagResource");
   let body: any;
@@ -370,7 +370,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UnlinkDeveloperIdentityCommand = async (
   input: UnlinkDeveloperIdentityCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UnlinkDeveloperIdentity");
   let body: any;
@@ -383,7 +383,7 @@ export const se_UnlinkDeveloperIdentityCommand = async (
  */
 export const se_UnlinkIdentityCommand = async (
   input: UnlinkIdentityCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UnlinkIdentity");
   let body: any;
@@ -396,7 +396,7 @@ export const se_UnlinkIdentityCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UntagResource");
   let body: any;
@@ -409,7 +409,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateIdentityPoolCommand = async (
   input: UpdateIdentityPoolCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateIdentityPool");
   let body: any;
@@ -422,7 +422,7 @@ export const se_UpdateIdentityPoolCommand = async (
  */
 export const de_CreateIdentityPoolCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateIdentityPoolCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -442,7 +442,7 @@ export const de_CreateIdentityPoolCommand = async (
  */
 export const de_DeleteIdentitiesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteIdentitiesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -462,7 +462,7 @@ export const de_DeleteIdentitiesCommand = async (
  */
 export const de_DeleteIdentityPoolCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteIdentityPoolCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -479,7 +479,7 @@ export const de_DeleteIdentityPoolCommand = async (
  */
 export const de_DescribeIdentityCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeIdentityCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -499,7 +499,7 @@ export const de_DescribeIdentityCommand = async (
  */
 export const de_DescribeIdentityPoolCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeIdentityPoolCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -519,7 +519,7 @@ export const de_DescribeIdentityPoolCommand = async (
  */
 export const de_GetCredentialsForIdentityCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetCredentialsForIdentityCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -556,7 +556,7 @@ export const de_GetIdCommand = async (output: __HttpResponse, context: __SerdeCo
  */
 export const de_GetIdentityPoolRolesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetIdentityPoolRolesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -576,7 +576,7 @@ export const de_GetIdentityPoolRolesCommand = async (
  */
 export const de_GetOpenIdTokenCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetOpenIdTokenCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -596,7 +596,7 @@ export const de_GetOpenIdTokenCommand = async (
  */
 export const de_GetOpenIdTokenForDeveloperIdentityCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetOpenIdTokenForDeveloperIdentityCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -616,7 +616,7 @@ export const de_GetOpenIdTokenForDeveloperIdentityCommand = async (
  */
 export const de_GetPrincipalTagAttributeMapCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetPrincipalTagAttributeMapCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -636,7 +636,7 @@ export const de_GetPrincipalTagAttributeMapCommand = async (
  */
 export const de_ListIdentitiesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListIdentitiesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -656,7 +656,7 @@ export const de_ListIdentitiesCommand = async (
  */
 export const de_ListIdentityPoolsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListIdentityPoolsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -676,7 +676,7 @@ export const de_ListIdentityPoolsCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -696,7 +696,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_LookupDeveloperIdentityCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<LookupDeveloperIdentityCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -716,7 +716,7 @@ export const de_LookupDeveloperIdentityCommand = async (
  */
 export const de_MergeDeveloperIdentitiesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<MergeDeveloperIdentitiesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -736,7 +736,7 @@ export const de_MergeDeveloperIdentitiesCommand = async (
  */
 export const de_SetIdentityPoolRolesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SetIdentityPoolRolesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -753,7 +753,7 @@ export const de_SetIdentityPoolRolesCommand = async (
  */
 export const de_SetPrincipalTagAttributeMapCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SetPrincipalTagAttributeMapCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -773,7 +773,7 @@ export const de_SetPrincipalTagAttributeMapCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -793,7 +793,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UnlinkDeveloperIdentityCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UnlinkDeveloperIdentityCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -810,7 +810,7 @@ export const de_UnlinkDeveloperIdentityCommand = async (
  */
 export const de_UnlinkIdentityCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UnlinkIdentityCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -827,7 +827,7 @@ export const de_UnlinkIdentityCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -847,7 +847,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateIdentityPoolCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateIdentityPoolCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -920,7 +920,7 @@ const de_CommandError = async (output: __HttpResponse, context: __SerdeContext):
  */
 const de_ConcurrentModificationExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ConcurrentModificationException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -936,7 +936,7 @@ const de_ConcurrentModificationExceptionRes = async (
  */
 const de_DeveloperUserAlreadyRegisteredExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeveloperUserAlreadyRegisteredException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -952,7 +952,7 @@ const de_DeveloperUserAlreadyRegisteredExceptionRes = async (
  */
 const de_ExternalServiceExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ExternalServiceException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -968,7 +968,7 @@ const de_ExternalServiceExceptionRes = async (
  */
 const de_InternalErrorExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InternalErrorException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -984,7 +984,7 @@ const de_InternalErrorExceptionRes = async (
  */
 const de_InvalidIdentityPoolConfigurationExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidIdentityPoolConfigurationException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1000,7 +1000,7 @@ const de_InvalidIdentityPoolConfigurationExceptionRes = async (
  */
 const de_InvalidParameterExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InvalidParameterException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1016,7 +1016,7 @@ const de_InvalidParameterExceptionRes = async (
  */
 const de_LimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<LimitExceededException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1032,7 +1032,7 @@ const de_LimitExceededExceptionRes = async (
  */
 const de_NotAuthorizedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<NotAuthorizedException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1048,7 +1048,7 @@ const de_NotAuthorizedExceptionRes = async (
  */
 const de_ResourceConflictExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceConflictException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1064,7 +1064,7 @@ const de_ResourceConflictExceptionRes = async (
  */
 const de_ResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1080,7 +1080,7 @@ const de_ResourceNotFoundExceptionRes = async (
  */
 const de_TooManyRequestsExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TooManyRequestsException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -1202,7 +1202,7 @@ const de_Credentials = (output: any, context: __SerdeContext): Credentials => {
  */
 const de_GetCredentialsForIdentityResponse = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): GetCredentialsForIdentityResponse => {
   return take(output, {
     Credentials: (_: any) => de_Credentials(_, context),
@@ -1337,7 +1337,7 @@ const buildHttpRpcRequest = async (
   headers: __HeaderBag,
   path: string,
   resolvedHostname: string | undefined,
-  body: any
+  body: any,
 ): Promise<__HttpRequest> => {
   const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
   const contents: any = {

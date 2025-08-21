@@ -28,6 +28,6 @@ import { WorkSpacesThinClient } from "./WorkSpacesThinClient";
 export const WorkSpacesThin = WorkSpacesThinClient;
 
 export type { WorkSpacesThinClientPaginationConfiguration as WorkSpacesThinPaginationConfiguration } from "./pagination/Interfaces";
-`
+`,
     );
 };

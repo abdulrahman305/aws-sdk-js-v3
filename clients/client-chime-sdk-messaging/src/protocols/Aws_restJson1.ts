@@ -216,7 +216,7 @@ import {
  */
 export const se_AssociateChannelFlowCommand = async (
   input: AssociateChannelFlowCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -229,7 +229,7 @@ export const se_AssociateChannelFlowCommand = async (
   body = JSON.stringify(
     take(input, {
       ChannelFlowArn: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -240,7 +240,7 @@ export const se_AssociateChannelFlowCommand = async (
  */
 export const se_BatchCreateChannelMembershipCommand = async (
   input: BatchCreateChannelMembershipCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -258,7 +258,7 @@ export const se_BatchCreateChannelMembershipCommand = async (
       MemberArns: (_) => _json(_),
       SubChannelId: [],
       Type: [],
-    })
+    }),
   );
   b.m("POST").h(headers).q(query).b(body);
   return b.build();
@@ -269,7 +269,7 @@ export const se_BatchCreateChannelMembershipCommand = async (
  */
 export const se_ChannelFlowCallbackCommand = async (
   input: ChannelFlowCallbackCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -286,7 +286,7 @@ export const se_ChannelFlowCallbackCommand = async (
       CallbackId: [true, (_) => _ ?? generateIdempotencyToken()],
       ChannelMessage: (_) => _json(_),
       DeleteResource: [],
-    })
+    }),
   );
   b.m("POST").h(headers).q(query).b(body);
   return b.build();
@@ -297,7 +297,7 @@ export const se_ChannelFlowCallbackCommand = async (
  */
 export const se_CreateChannelCommand = async (
   input: CreateChannelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -320,7 +320,7 @@ export const se_CreateChannelCommand = async (
       Name: [],
       Privacy: [],
       Tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -331,7 +331,7 @@ export const se_CreateChannelCommand = async (
  */
 export const se_CreateChannelBanCommand = async (
   input: CreateChannelBanCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -344,7 +344,7 @@ export const se_CreateChannelBanCommand = async (
   body = JSON.stringify(
     take(input, {
       MemberArn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -355,7 +355,7 @@ export const se_CreateChannelBanCommand = async (
  */
 export const se_CreateChannelFlowCommand = async (
   input: CreateChannelFlowCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -370,7 +370,7 @@ export const se_CreateChannelFlowCommand = async (
       Name: [],
       Processors: (_) => _json(_),
       Tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -381,7 +381,7 @@ export const se_CreateChannelFlowCommand = async (
  */
 export const se_CreateChannelMembershipCommand = async (
   input: CreateChannelMembershipCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -396,7 +396,7 @@ export const se_CreateChannelMembershipCommand = async (
       MemberArn: [],
       SubChannelId: [],
       Type: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -407,7 +407,7 @@ export const se_CreateChannelMembershipCommand = async (
  */
 export const se_CreateChannelModeratorCommand = async (
   input: CreateChannelModeratorCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -420,7 +420,7 @@ export const se_CreateChannelModeratorCommand = async (
   body = JSON.stringify(
     take(input, {
       ChannelModeratorArn: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -431,7 +431,7 @@ export const se_CreateChannelModeratorCommand = async (
  */
 export const se_DeleteChannelCommand = async (
   input: DeleteChannelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -449,7 +449,7 @@ export const se_DeleteChannelCommand = async (
  */
 export const se_DeleteChannelBanCommand = async (
   input: DeleteChannelBanCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -468,7 +468,7 @@ export const se_DeleteChannelBanCommand = async (
  */
 export const se_DeleteChannelFlowCommand = async (
   input: DeleteChannelFlowCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -484,7 +484,7 @@ export const se_DeleteChannelFlowCommand = async (
  */
 export const se_DeleteChannelMembershipCommand = async (
   input: DeleteChannelMembershipCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -506,7 +506,7 @@ export const se_DeleteChannelMembershipCommand = async (
  */
 export const se_DeleteChannelMessageCommand = async (
   input: DeleteChannelMessageCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -528,7 +528,7 @@ export const se_DeleteChannelMessageCommand = async (
  */
 export const se_DeleteChannelModeratorCommand = async (
   input: DeleteChannelModeratorCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -547,7 +547,7 @@ export const se_DeleteChannelModeratorCommand = async (
  */
 export const se_DeleteMessagingStreamingConfigurationsCommand = async (
   input: DeleteMessagingStreamingConfigurationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -563,7 +563,7 @@ export const se_DeleteMessagingStreamingConfigurationsCommand = async (
  */
 export const se_DescribeChannelCommand = async (
   input: DescribeChannelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -581,7 +581,7 @@ export const se_DescribeChannelCommand = async (
  */
 export const se_DescribeChannelBanCommand = async (
   input: DescribeChannelBanCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -600,7 +600,7 @@ export const se_DescribeChannelBanCommand = async (
  */
 export const se_DescribeChannelFlowCommand = async (
   input: DescribeChannelFlowCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -616,7 +616,7 @@ export const se_DescribeChannelFlowCommand = async (
  */
 export const se_DescribeChannelMembershipCommand = async (
   input: DescribeChannelMembershipCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -638,7 +638,7 @@ export const se_DescribeChannelMembershipCommand = async (
  */
 export const se_DescribeChannelMembershipForAppInstanceUserCommand = async (
   input: DescribeChannelMembershipForAppInstanceUserCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -660,7 +660,7 @@ export const se_DescribeChannelMembershipForAppInstanceUserCommand = async (
  */
 export const se_DescribeChannelModeratedByAppInstanceUserCommand = async (
   input: DescribeChannelModeratedByAppInstanceUserCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -682,7 +682,7 @@ export const se_DescribeChannelModeratedByAppInstanceUserCommand = async (
  */
 export const se_DescribeChannelModeratorCommand = async (
   input: DescribeChannelModeratorCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -701,7 +701,7 @@ export const se_DescribeChannelModeratorCommand = async (
  */
 export const se_DisassociateChannelFlowCommand = async (
   input: DisassociateChannelFlowCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -720,7 +720,7 @@ export const se_DisassociateChannelFlowCommand = async (
  */
 export const se_GetChannelMembershipPreferencesCommand = async (
   input: GetChannelMembershipPreferencesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -739,7 +739,7 @@ export const se_GetChannelMembershipPreferencesCommand = async (
  */
 export const se_GetChannelMessageCommand = async (
   input: GetChannelMessageCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -761,7 +761,7 @@ export const se_GetChannelMessageCommand = async (
  */
 export const se_GetChannelMessageStatusCommand = async (
   input: GetChannelMessageStatusCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -784,7 +784,7 @@ export const se_GetChannelMessageStatusCommand = async (
  */
 export const se_GetMessagingSessionEndpointCommand = async (
   input: GetMessagingSessionEndpointCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -802,7 +802,7 @@ export const se_GetMessagingSessionEndpointCommand = async (
  */
 export const se_GetMessagingStreamingConfigurationsCommand = async (
   input: GetMessagingStreamingConfigurationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -818,7 +818,7 @@ export const se_GetMessagingStreamingConfigurationsCommand = async (
  */
 export const se_ListChannelBansCommand = async (
   input: ListChannelBansCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -840,7 +840,7 @@ export const se_ListChannelBansCommand = async (
  */
 export const se_ListChannelFlowsCommand = async (
   input: ListChannelFlowsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -860,7 +860,7 @@ export const se_ListChannelFlowsCommand = async (
  */
 export const se_ListChannelMembershipsCommand = async (
   input: ListChannelMembershipsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -884,7 +884,7 @@ export const se_ListChannelMembershipsCommand = async (
  */
 export const se_ListChannelMembershipsForAppInstanceUserCommand = async (
   input: ListChannelMembershipsForAppInstanceUserCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -907,7 +907,7 @@ export const se_ListChannelMembershipsForAppInstanceUserCommand = async (
  */
 export const se_ListChannelMessagesCommand = async (
   input: ListChannelMessagesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -933,7 +933,7 @@ export const se_ListChannelMessagesCommand = async (
  */
 export const se_ListChannelModeratorsCommand = async (
   input: ListChannelModeratorsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -955,7 +955,7 @@ export const se_ListChannelModeratorsCommand = async (
  */
 export const se_ListChannelsCommand = async (
   input: ListChannelsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -978,7 +978,7 @@ export const se_ListChannelsCommand = async (
  */
 export const se_ListChannelsAssociatedWithChannelFlowCommand = async (
   input: ListChannelsAssociatedWithChannelFlowCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -999,7 +999,7 @@ export const se_ListChannelsAssociatedWithChannelFlowCommand = async (
  */
 export const se_ListChannelsModeratedByAppInstanceUserCommand = async (
   input: ListChannelsModeratedByAppInstanceUserCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1022,7 +1022,7 @@ export const se_ListChannelsModeratedByAppInstanceUserCommand = async (
  */
 export const se_ListSubChannelsCommand = async (
   input: ListSubChannelsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1044,7 +1044,7 @@ export const se_ListSubChannelsCommand = async (
  */
 export const se_ListTagsForResourceCommand = async (
   input: ListTagsForResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {};
@@ -1062,7 +1062,7 @@ export const se_ListTagsForResourceCommand = async (
  */
 export const se_PutChannelExpirationSettingsCommand = async (
   input: PutChannelExpirationSettingsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1075,7 +1075,7 @@ export const se_PutChannelExpirationSettingsCommand = async (
   body = JSON.stringify(
     take(input, {
       ExpirationSettings: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1086,7 +1086,7 @@ export const se_PutChannelExpirationSettingsCommand = async (
  */
 export const se_PutChannelMembershipPreferencesCommand = async (
   input: PutChannelMembershipPreferencesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1100,7 +1100,7 @@ export const se_PutChannelMembershipPreferencesCommand = async (
   body = JSON.stringify(
     take(input, {
       Preferences: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1111,7 +1111,7 @@ export const se_PutChannelMembershipPreferencesCommand = async (
  */
 export const se_PutMessagingStreamingConfigurationsCommand = async (
   input: PutMessagingStreamingConfigurationsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1123,7 +1123,7 @@ export const se_PutMessagingStreamingConfigurationsCommand = async (
   body = JSON.stringify(
     take(input, {
       StreamingConfigurations: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1134,7 +1134,7 @@ export const se_PutMessagingStreamingConfigurationsCommand = async (
  */
 export const se_RedactChannelMessageCommand = async (
   input: RedactChannelMessageCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1151,7 +1151,7 @@ export const se_RedactChannelMessageCommand = async (
   body = JSON.stringify(
     take(input, {
       SubChannelId: [],
-    })
+    }),
   );
   b.m("POST").h(headers).q(query).b(body);
   return b.build();
@@ -1162,7 +1162,7 @@ export const se_RedactChannelMessageCommand = async (
  */
 export const se_SearchChannelsCommand = async (
   input: SearchChannelsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1179,7 +1179,7 @@ export const se_SearchChannelsCommand = async (
   body = JSON.stringify(
     take(input, {
       Fields: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).q(query).b(body);
   return b.build();
@@ -1190,7 +1190,7 @@ export const se_SearchChannelsCommand = async (
  */
 export const se_SendChannelMessageCommand = async (
   input: SendChannelMessageCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1212,7 +1212,7 @@ export const se_SendChannelMessageCommand = async (
       SubChannelId: [],
       Target: (_) => _json(_),
       Type: [],
-    })
+    }),
   );
   b.m("POST").h(headers).b(body);
   return b.build();
@@ -1223,7 +1223,7 @@ export const se_SendChannelMessageCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1238,7 +1238,7 @@ export const se_TagResourceCommand = async (
     take(input, {
       ResourceARN: [],
       Tags: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).q(query).b(body);
   return b.build();
@@ -1249,7 +1249,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1264,7 +1264,7 @@ export const se_UntagResourceCommand = async (
     take(input, {
       ResourceARN: [],
       TagKeys: (_) => _json(_),
-    })
+    }),
   );
   b.m("POST").h(headers).q(query).b(body);
   return b.build();
@@ -1275,7 +1275,7 @@ export const se_UntagResourceCommand = async (
  */
 export const se_UpdateChannelCommand = async (
   input: UpdateChannelCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1290,7 +1290,7 @@ export const se_UpdateChannelCommand = async (
       Metadata: [],
       Mode: [],
       Name: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1301,7 +1301,7 @@ export const se_UpdateChannelCommand = async (
  */
 export const se_UpdateChannelFlowCommand = async (
   input: UpdateChannelFlowCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = {
@@ -1314,7 +1314,7 @@ export const se_UpdateChannelFlowCommand = async (
     take(input, {
       Name: [],
       Processors: (_) => _json(_),
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1325,7 +1325,7 @@ export const se_UpdateChannelFlowCommand = async (
  */
 export const se_UpdateChannelMessageCommand = async (
   input: UpdateChannelMessageCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1342,7 +1342,7 @@ export const se_UpdateChannelMessageCommand = async (
       ContentType: [],
       Metadata: [],
       SubChannelId: [],
-    })
+    }),
   );
   b.m("PUT").h(headers).b(body);
   return b.build();
@@ -1353,7 +1353,7 @@ export const se_UpdateChannelMessageCommand = async (
  */
 export const se_UpdateChannelReadMarkerCommand = async (
   input: UpdateChannelReadMarkerCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
@@ -1371,7 +1371,7 @@ export const se_UpdateChannelReadMarkerCommand = async (
  */
 export const de_AssociateChannelFlowCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssociateChannelFlowCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1388,7 +1388,7 @@ export const de_AssociateChannelFlowCommand = async (
  */
 export const de_BatchCreateChannelMembershipCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchCreateChannelMembershipCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1410,7 +1410,7 @@ export const de_BatchCreateChannelMembershipCommand = async (
  */
 export const de_ChannelFlowCallbackCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ChannelFlowCallbackCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1432,7 +1432,7 @@ export const de_ChannelFlowCallbackCommand = async (
  */
 export const de_CreateChannelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateChannelCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1453,7 +1453,7 @@ export const de_CreateChannelCommand = async (
  */
 export const de_CreateChannelBanCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateChannelBanCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1475,7 +1475,7 @@ export const de_CreateChannelBanCommand = async (
  */
 export const de_CreateChannelFlowCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateChannelFlowCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1496,7 +1496,7 @@ export const de_CreateChannelFlowCommand = async (
  */
 export const de_CreateChannelMembershipCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateChannelMembershipCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1519,7 +1519,7 @@ export const de_CreateChannelMembershipCommand = async (
  */
 export const de_CreateChannelModeratorCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateChannelModeratorCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1541,7 +1541,7 @@ export const de_CreateChannelModeratorCommand = async (
  */
 export const de_DeleteChannelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteChannelCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1558,7 +1558,7 @@ export const de_DeleteChannelCommand = async (
  */
 export const de_DeleteChannelBanCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteChannelBanCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1575,7 +1575,7 @@ export const de_DeleteChannelBanCommand = async (
  */
 export const de_DeleteChannelFlowCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteChannelFlowCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1592,7 +1592,7 @@ export const de_DeleteChannelFlowCommand = async (
  */
 export const de_DeleteChannelMembershipCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteChannelMembershipCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1609,7 +1609,7 @@ export const de_DeleteChannelMembershipCommand = async (
  */
 export const de_DeleteChannelMessageCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteChannelMessageCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1626,7 +1626,7 @@ export const de_DeleteChannelMessageCommand = async (
  */
 export const de_DeleteChannelModeratorCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteChannelModeratorCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1643,7 +1643,7 @@ export const de_DeleteChannelModeratorCommand = async (
  */
 export const de_DeleteMessagingStreamingConfigurationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteMessagingStreamingConfigurationsCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1660,7 +1660,7 @@ export const de_DeleteMessagingStreamingConfigurationsCommand = async (
  */
 export const de_DescribeChannelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeChannelCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1681,7 +1681,7 @@ export const de_DescribeChannelCommand = async (
  */
 export const de_DescribeChannelBanCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeChannelBanCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1702,7 +1702,7 @@ export const de_DescribeChannelBanCommand = async (
  */
 export const de_DescribeChannelFlowCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeChannelFlowCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1723,7 +1723,7 @@ export const de_DescribeChannelFlowCommand = async (
  */
 export const de_DescribeChannelMembershipCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeChannelMembershipCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1744,7 +1744,7 @@ export const de_DescribeChannelMembershipCommand = async (
  */
 export const de_DescribeChannelMembershipForAppInstanceUserCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeChannelMembershipForAppInstanceUserCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1765,7 +1765,7 @@ export const de_DescribeChannelMembershipForAppInstanceUserCommand = async (
  */
 export const de_DescribeChannelModeratedByAppInstanceUserCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeChannelModeratedByAppInstanceUserCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1786,7 +1786,7 @@ export const de_DescribeChannelModeratedByAppInstanceUserCommand = async (
  */
 export const de_DescribeChannelModeratorCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeChannelModeratorCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1807,7 +1807,7 @@ export const de_DescribeChannelModeratorCommand = async (
  */
 export const de_DisassociateChannelFlowCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisassociateChannelFlowCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1824,7 +1824,7 @@ export const de_DisassociateChannelFlowCommand = async (
  */
 export const de_GetChannelMembershipPreferencesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetChannelMembershipPreferencesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1847,7 +1847,7 @@ export const de_GetChannelMembershipPreferencesCommand = async (
  */
 export const de_GetChannelMessageCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetChannelMessageCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1868,7 +1868,7 @@ export const de_GetChannelMessageCommand = async (
  */
 export const de_GetChannelMessageStatusCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetChannelMessageStatusCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1889,7 +1889,7 @@ export const de_GetChannelMessageStatusCommand = async (
  */
 export const de_GetMessagingSessionEndpointCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetMessagingSessionEndpointCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1910,7 +1910,7 @@ export const de_GetMessagingSessionEndpointCommand = async (
  */
 export const de_GetMessagingStreamingConfigurationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetMessagingStreamingConfigurationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1931,7 +1931,7 @@ export const de_GetMessagingStreamingConfigurationsCommand = async (
  */
 export const de_ListChannelBansCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListChannelBansCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1954,7 +1954,7 @@ export const de_ListChannelBansCommand = async (
  */
 export const de_ListChannelFlowsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListChannelFlowsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1976,7 +1976,7 @@ export const de_ListChannelFlowsCommand = async (
  */
 export const de_ListChannelMembershipsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListChannelMembershipsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -1999,7 +1999,7 @@ export const de_ListChannelMembershipsCommand = async (
  */
 export const de_ListChannelMembershipsForAppInstanceUserCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListChannelMembershipsForAppInstanceUserCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2021,7 +2021,7 @@ export const de_ListChannelMembershipsForAppInstanceUserCommand = async (
  */
 export const de_ListChannelMessagesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListChannelMessagesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2045,7 +2045,7 @@ export const de_ListChannelMessagesCommand = async (
  */
 export const de_ListChannelModeratorsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListChannelModeratorsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2068,7 +2068,7 @@ export const de_ListChannelModeratorsCommand = async (
  */
 export const de_ListChannelsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListChannelsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2090,7 +2090,7 @@ export const de_ListChannelsCommand = async (
  */
 export const de_ListChannelsAssociatedWithChannelFlowCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListChannelsAssociatedWithChannelFlowCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2112,7 +2112,7 @@ export const de_ListChannelsAssociatedWithChannelFlowCommand = async (
  */
 export const de_ListChannelsModeratedByAppInstanceUserCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListChannelsModeratedByAppInstanceUserCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2134,7 +2134,7 @@ export const de_ListChannelsModeratedByAppInstanceUserCommand = async (
  */
 export const de_ListSubChannelsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListSubChannelsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2157,7 +2157,7 @@ export const de_ListSubChannelsCommand = async (
  */
 export const de_ListTagsForResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2178,7 +2178,7 @@ export const de_ListTagsForResourceCommand = async (
  */
 export const de_PutChannelExpirationSettingsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutChannelExpirationSettingsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2200,7 +2200,7 @@ export const de_PutChannelExpirationSettingsCommand = async (
  */
 export const de_PutChannelMembershipPreferencesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutChannelMembershipPreferencesCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2223,7 +2223,7 @@ export const de_PutChannelMembershipPreferencesCommand = async (
  */
 export const de_PutMessagingStreamingConfigurationsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutMessagingStreamingConfigurationsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2244,7 +2244,7 @@ export const de_PutMessagingStreamingConfigurationsCommand = async (
  */
 export const de_RedactChannelMessageCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RedactChannelMessageCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2267,7 +2267,7 @@ export const de_RedactChannelMessageCommand = async (
  */
 export const de_SearchChannelsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SearchChannelsCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2289,7 +2289,7 @@ export const de_SearchChannelsCommand = async (
  */
 export const de_SendChannelMessageCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SendChannelMessageCommandOutput> => {
   if (output.statusCode !== 201 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2313,7 +2313,7 @@ export const de_SendChannelMessageCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2330,7 +2330,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2347,7 +2347,7 @@ export const de_UntagResourceCommand = async (
  */
 export const de_UpdateChannelCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateChannelCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2368,7 +2368,7 @@ export const de_UpdateChannelCommand = async (
  */
 export const de_UpdateChannelFlowCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateChannelFlowCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2389,7 +2389,7 @@ export const de_UpdateChannelFlowCommand = async (
  */
 export const de_UpdateChannelMessageCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateChannelMessageCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2413,7 +2413,7 @@ export const de_UpdateChannelMessageCommand = async (
  */
 export const de_UpdateChannelReadMarkerCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateChannelReadMarkerCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -2554,7 +2554,7 @@ const de_NotFoundExceptionRes = async (parsedOutput: any, context: __SerdeContex
  */
 const de_ResourceLimitExceededExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ResourceLimitExceededException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2575,7 +2575,7 @@ const de_ResourceLimitExceededExceptionRes = async (
  */
 const de_ServiceFailureExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceFailureException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2596,7 +2596,7 @@ const de_ServiceFailureExceptionRes = async (
  */
 const de_ServiceUnavailableExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ServiceUnavailableException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2617,7 +2617,7 @@ const de_ServiceUnavailableExceptionRes = async (
  */
 const de_ThrottledClientExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ThrottledClientException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2638,7 +2638,7 @@ const de_ThrottledClientExceptionRes = async (
  */
 const de_UnauthorizedClientExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UnauthorizedClientException> => {
   const contents: any = map({});
   const data: any = parsedOutput.body;
@@ -2711,7 +2711,7 @@ const de_UnauthorizedClientExceptionRes = async (
  */
 const de_AppInstanceUserMembershipSummary = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): AppInstanceUserMembershipSummary => {
   return take(output, {
     ReadMarkerTimestamp: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
@@ -2803,7 +2803,7 @@ const de_ChannelMembership = (output: any, context: __SerdeContext): ChannelMemb
  */
 const de_ChannelMembershipForAppInstanceUserSummary = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ChannelMembershipForAppInstanceUserSummary => {
   return take(output, {
     AppInstanceUserMembershipSummary: (_: any) => de_AppInstanceUserMembershipSummary(_, context),
@@ -2816,7 +2816,7 @@ const de_ChannelMembershipForAppInstanceUserSummary = (
  */
 const de_ChannelMembershipForAppInstanceUserSummaryList = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ChannelMembershipForAppInstanceUserSummary[] => {
   const retVal = (output || [])
     .filter((e: any) => e != null)
@@ -2896,7 +2896,7 @@ const de_ChannelMessageSummaryList = (output: any, context: __SerdeContext): Cha
  */
 const de_ChannelModeratedByAppInstanceUserSummary = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ChannelModeratedByAppInstanceUserSummary => {
   return take(output, {
     ChannelSummary: (_: any) => de_ChannelSummary(_, context),
@@ -2908,7 +2908,7 @@ const de_ChannelModeratedByAppInstanceUserSummary = (
  */
 const de_ChannelModeratedByAppInstanceUserSummaryList = (
   output: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): ChannelModeratedByAppInstanceUserSummary[] => {
   const retVal = (output || [])
     .filter((e: any) => e != null)

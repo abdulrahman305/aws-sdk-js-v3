@@ -41,7 +41,7 @@ export interface MediaPackageV2HttpAuthSchemeParametersProvider
 export const defaultMediaPackageV2HttpAuthSchemeParametersProvider = async (
   config: MediaPackageV2ClientResolvedConfig,
   context: HandlerExecutionContext,
-  input: object
+  input: object,
 ): Promise<MediaPackageV2HttpAuthSchemeParameters> => {
   return {
     operation: getSmithyContext(context).operation as string,
@@ -129,7 +129,7 @@ export interface HttpAuthSchemeResolvedConfig extends AwsSdkSigV4AuthResolvedCon
  * @internal
  */
 export const resolveHttpAuthSchemeConfig = <T>(
-  config: T & HttpAuthSchemeInputConfig & AwsSdkSigV4PreviouslyResolved
+  config: T & HttpAuthSchemeInputConfig & AwsSdkSigV4PreviouslyResolved,
 ): T & HttpAuthSchemeResolvedConfig => {
   const config_0 = resolveAwsSdkSigV4Config(config);
   return {

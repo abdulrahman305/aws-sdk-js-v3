@@ -50,7 +50,7 @@ const checkState = async (client: EC2Client, input: DescribeBundleTasksCommandIn
  */
 export const waitForBundleTaskComplete = async (
   params: WaiterConfiguration<EC2Client>,
-  input: DescribeBundleTasksCommandInput
+  input: DescribeBundleTasksCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 15, maxDelay: 120 };
   return createWaiter({ ...serviceDefaults, ...params }, input, checkState);
@@ -62,7 +62,7 @@ export const waitForBundleTaskComplete = async (
  */
 export const waitUntilBundleTaskComplete = async (
   params: WaiterConfiguration<EC2Client>,
-  input: DescribeBundleTasksCommandInput
+  input: DescribeBundleTasksCommandInput,
 ): Promise<WaiterResult> => {
   const serviceDefaults = { minDelay: 15, maxDelay: 120 };
   const result = await createWaiter({ ...serviceDefaults, ...params }, input, checkState);

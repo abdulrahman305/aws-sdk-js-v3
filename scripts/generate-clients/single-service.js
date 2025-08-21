@@ -18,7 +18,7 @@ const { solo } = yargs(process.argv.slice(2))
     await copyToClients(
       normalize(join(__dirname, "..", "..", "codegen", "sdk-codegen", "build-single", solo)),
       SDK_CLIENTS_DIR,
-      solo
+      solo,
     );
     await codeOrdering(join(SDK_CLIENTS_DIR, `client-${solo}`));
 

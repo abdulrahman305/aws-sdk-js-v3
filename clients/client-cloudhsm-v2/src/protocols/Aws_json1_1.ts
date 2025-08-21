@@ -82,7 +82,7 @@ import {
  */
 export const se_CopyBackupToRegionCommand = async (
   input: CopyBackupToRegionCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CopyBackupToRegion");
   let body: any;
@@ -95,7 +95,7 @@ export const se_CopyBackupToRegionCommand = async (
  */
 export const se_CreateClusterCommand = async (
   input: CreateClusterCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateCluster");
   let body: any;
@@ -108,7 +108,7 @@ export const se_CreateClusterCommand = async (
  */
 export const se_CreateHsmCommand = async (
   input: CreateHsmCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateHsm");
   let body: any;
@@ -121,7 +121,7 @@ export const se_CreateHsmCommand = async (
  */
 export const se_DeleteBackupCommand = async (
   input: DeleteBackupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteBackup");
   let body: any;
@@ -134,7 +134,7 @@ export const se_DeleteBackupCommand = async (
  */
 export const se_DeleteClusterCommand = async (
   input: DeleteClusterCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteCluster");
   let body: any;
@@ -147,7 +147,7 @@ export const se_DeleteClusterCommand = async (
  */
 export const se_DeleteHsmCommand = async (
   input: DeleteHsmCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteHsm");
   let body: any;
@@ -160,7 +160,7 @@ export const se_DeleteHsmCommand = async (
  */
 export const se_DescribeBackupsCommand = async (
   input: DescribeBackupsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeBackups");
   let body: any;
@@ -173,7 +173,7 @@ export const se_DescribeBackupsCommand = async (
  */
 export const se_DescribeClustersCommand = async (
   input: DescribeClustersCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeClusters");
   let body: any;
@@ -186,7 +186,7 @@ export const se_DescribeClustersCommand = async (
  */
 export const se_InitializeClusterCommand = async (
   input: InitializeClusterCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("InitializeCluster");
   let body: any;
@@ -199,7 +199,7 @@ export const se_InitializeClusterCommand = async (
  */
 export const se_ListTagsCommand = async (
   input: ListTagsCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListTags");
   let body: any;
@@ -212,7 +212,7 @@ export const se_ListTagsCommand = async (
  */
 export const se_ModifyBackupAttributesCommand = async (
   input: ModifyBackupAttributesCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ModifyBackupAttributes");
   let body: any;
@@ -225,7 +225,7 @@ export const se_ModifyBackupAttributesCommand = async (
  */
 export const se_ModifyClusterCommand = async (
   input: ModifyClusterCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ModifyCluster");
   let body: any;
@@ -238,7 +238,7 @@ export const se_ModifyClusterCommand = async (
  */
 export const se_RestoreBackupCommand = async (
   input: RestoreBackupCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("RestoreBackup");
   let body: any;
@@ -251,7 +251,7 @@ export const se_RestoreBackupCommand = async (
  */
 export const se_TagResourceCommand = async (
   input: TagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("TagResource");
   let body: any;
@@ -264,7 +264,7 @@ export const se_TagResourceCommand = async (
  */
 export const se_UntagResourceCommand = async (
   input: UntagResourceCommandInput,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UntagResource");
   let body: any;
@@ -277,7 +277,7 @@ export const se_UntagResourceCommand = async (
  */
 export const de_CopyBackupToRegionCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CopyBackupToRegionCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -297,7 +297,7 @@ export const de_CopyBackupToRegionCommand = async (
  */
 export const de_CreateClusterCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateClusterCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -317,7 +317,7 @@ export const de_CreateClusterCommand = async (
  */
 export const de_CreateHsmCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateHsmCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -337,7 +337,7 @@ export const de_CreateHsmCommand = async (
  */
 export const de_DeleteBackupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteBackupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -357,7 +357,7 @@ export const de_DeleteBackupCommand = async (
  */
 export const de_DeleteClusterCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteClusterCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -377,7 +377,7 @@ export const de_DeleteClusterCommand = async (
  */
 export const de_DeleteHsmCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteHsmCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -397,7 +397,7 @@ export const de_DeleteHsmCommand = async (
  */
 export const de_DescribeBackupsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeBackupsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -417,7 +417,7 @@ export const de_DescribeBackupsCommand = async (
  */
 export const de_DescribeClustersCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeClustersCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -437,7 +437,7 @@ export const de_DescribeClustersCommand = async (
  */
 export const de_InitializeClusterCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<InitializeClusterCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -457,7 +457,7 @@ export const de_InitializeClusterCommand = async (
  */
 export const de_ListTagsCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -477,7 +477,7 @@ export const de_ListTagsCommand = async (
  */
 export const de_ModifyBackupAttributesCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModifyBackupAttributesCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -497,7 +497,7 @@ export const de_ModifyBackupAttributesCommand = async (
  */
 export const de_ModifyClusterCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ModifyClusterCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -517,7 +517,7 @@ export const de_ModifyClusterCommand = async (
  */
 export const de_RestoreBackupCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RestoreBackupCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -537,7 +537,7 @@ export const de_RestoreBackupCommand = async (
  */
 export const de_TagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -557,7 +557,7 @@ export const de_TagResourceCommand = async (
  */
 export const de_UntagResourceCommand = async (
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -615,7 +615,7 @@ const de_CommandError = async (output: __HttpResponse, context: __SerdeContext):
  */
 const de_CloudHsmAccessDeniedExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CloudHsmAccessDeniedException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -631,7 +631,7 @@ const de_CloudHsmAccessDeniedExceptionRes = async (
  */
 const de_CloudHsmInternalFailureExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CloudHsmInternalFailureException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -647,7 +647,7 @@ const de_CloudHsmInternalFailureExceptionRes = async (
  */
 const de_CloudHsmInvalidRequestExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CloudHsmInvalidRequestException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -663,7 +663,7 @@ const de_CloudHsmInvalidRequestExceptionRes = async (
  */
 const de_CloudHsmResourceNotFoundExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CloudHsmResourceNotFoundException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -679,7 +679,7 @@ const de_CloudHsmResourceNotFoundExceptionRes = async (
  */
 const de_CloudHsmServiceExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CloudHsmServiceException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -695,7 +695,7 @@ const de_CloudHsmServiceExceptionRes = async (
  */
 const de_CloudHsmTagExceptionRes = async (
   parsedOutput: any,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CloudHsmTagException> => {
   const body = parsedOutput.body;
   const deserialized: any = _json(body);
@@ -970,7 +970,7 @@ const buildHttpRpcRequest = async (
   headers: __HeaderBag,
   path: string,
   resolvedHostname: string | undefined,
-  body: any
+  body: any,
 ): Promise<__HttpRequest> => {
   const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
   const contents: any = {
